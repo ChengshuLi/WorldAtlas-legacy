@@ -149,13 +149,23 @@ export function createAcquisition({repo, loadTree, loadDescriptor, execute = exe
     const row = loadDescriptor ? await loadDescriptor(version, name) : (await tree(version)).get(name);
     requireValue(row?.type === 'blob' && ['100644', '100755'].includes(row.mode) && oid(row.sha)
       && Number.isSafeInteger(row.size) && row.size >= 0, 'Missing or nonordinary declared geography input');
+    // Report only validated immutable metadata, never raw subprocess output or
+    // source bodies. JSON escaping keeps even unusual literal paths one line.
+    const mismatch = actual => 'Remote descriptor differs from actual immutable Git tree: ' + JSON.stringify({
+      commit: oid(version) ? version : null, path: name, expected: {type: row.type, mode: row.mode, git_blob_oid: row.sha}, actual});
     const original = originPaths.get(version + ':' + name);
     if (original) requireValue(original.mode === row.mode && original.git_blob_oid === row.sha,
-      'Remote descriptor differs from actual immutable Git tree');
+      mismatch({type: 'blob', mode: original.mode, git_blob_oid: original.git_blob_oid}));
     else {
       const expectedTreeRow = `${row.mode} blob ${row.sha}\t${name}\0`;
-      requireValue(git(['ls-tree', '-z', version, '--', name], undefined, Buffer.byteLength(expectedTreeRow)).toString() === expectedTreeRow,
-        'Remote descriptor differs from actual immutable Git tree');
+      const actualTreeRow = git(['ls-tree', '-z', version, '--', name], undefined, Buffer.byteLength(expectedTreeRow)).toString();
+      if (actualTreeRow !== expectedTreeRow) {
+        const match = actualTreeRow.match(/^(100644|100755|120000|040000|160000) (blob|tree|commit) ([a-f0-9]{40})\t/);
+        const actual = match && actualTreeRow === `${match[0]}${name}\0`
+          ? {type: match[2], mode: match[1], git_blob_oid: match[3]}
+          : {status: actualTreeRow === '' ? 'missing' : 'unrecognized'};
+        throw Error(mismatch(actual));
+      }
     }
     requireValue((expected.mode === undefined || expected.mode === row.mode)
       && (expected.git_blob_oid === undefined || expected.git_blob_oid === row.sha)
