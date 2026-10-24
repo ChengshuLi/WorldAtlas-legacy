@@ -67,3 +67,12 @@ for(const cleanup of [undefined,null,false,0])test('owned publication propagates
   assert.equal(closed.size,2);assert.deepEqual(fs.readdirSync(scratch),[]);
  }finally{fs.openSync=original.open;fs.closeSync=original.close;for(const p of Object.values(products??{}))p.close();fs.rmSync(root,{recursive:true});fs.rmdirSync(scratch);}
 });
+
+test('explicit product staging directories still reject symlinks and symlinked ancestors',()=>{
+ const root=fs.realpathSync(temporary()),real=path.join(root,'real'),alias=path.join(root,'alias');
+ try{fs.mkdirSync(path.join(real,'child'),{recursive:true});fs.symlinkSync(real,alias);
+  for(const directory of [alias,path.join(alias,'child')])
+   assert.throws(()=>stageProduct(['unchanged'],{directory}),/Require ordinary product staging directory/);
+  assert.deepEqual(fs.readdirSync(real),['child']);assert.deepEqual(fs.readdirSync(path.join(real,'child')),[]);
+ }finally{fs.rmSync(root,{recursive:true});}
+});

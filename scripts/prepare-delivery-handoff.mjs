@@ -141,7 +141,7 @@ function admitDestination(root, destination, resume) {
 // Required output bytes may live in one invocation-owned file. A plain object
 // with a path/hash is never admitted as a staged product.
 const stagedProducts=new WeakMap();
-export function stageProduct(chunks,{directory=os.tmpdir()}={}) {
+export function stageProduct(chunks,{directory=fs.realpathSync(os.tmpdir())}={}) {
  const parent=fs.lstatSync(directory);
  need(parent.isDirectory()&&fs.realpathSync(directory)===directory,'Require ordinary product staging directory');
  const folder=fs.mkdtempSync(path.join(directory,'authority-product-')),file=path.join(folder,'body');
@@ -1678,7 +1678,7 @@ export async function nativeAuthority(config, reader, root, diagnostic = false) 
     result = diagnoseSourceTargetNativeAuthority(authorityReader, preimage, binding);
     products = {'native-diagnostic.json': jsonBytes(result)};
   } else {
-    const owned=await flow.constructOriginalAuthorityStored(authorityReader,inputs,{directory:os.tmpdir()});
+    const owned=await flow.constructOriginalAuthorityStored(authorityReader,inputs);
     let failed=false;try{result=owned.result;
     const {canonicalNativeJsonChunks}=await import('./native-patch-store.mjs');
     need(Array.isArray(result.ledger_rows) && result.ledger_rows.length > 0

@@ -75,7 +75,7 @@ function gitFixture(t) {
   const config={version:1,
     source_evidence:{commit:head,path:'source-evidence.json'},native_patch:{commit:original,path:'patch.json'}};
   const script=new URL('../scripts/prepare-delivery-handoff.mjs',import.meta.url).pathname;
-  const run=(destination,flags=[])=>{save('config.json',JSON.stringify(config));return spawnSync(process.execPath,[script,'native-authority','config.json',destination,...flags],{cwd:root,encoding:'utf8',env:{...process.env,NODE_OPTIONS:'',NODE_PATH:'',GIT_NO_LAZY_FETCH:'1'}});};
+  const run=(destination,flags=[],environment={})=>{save('config.json',JSON.stringify(config));return spawnSync(process.execPath,[script,'native-authority','config.json',destination,...flags],{cwd:root,encoding:'utf8',env:{...process.env,NODE_OPTIONS:'',NODE_PATH:'',GIT_NO_LAZY_FETCH:'1',...environment}});};
   return {root,save,git,config,run,reader};
 }
 test('plain Node native-authority entry publishes genuine complete constructor products and exact resume',t=>{
@@ -164,4 +164,18 @@ test('native-authority entry refuses missing pins, handwritten descriptors, and 
   }
   const f=gitFixture(t);fs.mkdirSync(path.join(f.root,'coordination/engineering'),{recursive:true});fs.symlinkSync(os.tmpdir(),path.join(f.root,'coordination/engineering/link'));
   assert.notEqual(f.run('coordination/engineering/link/authority').status,0);
+});
+
+// The system default may include a platform alias such as macOS /var. Explicit
+// caller paths still use the ordinary-directory guards tested by the stores.
+test('native-authority default scratch resolves a symlinked system TMPDIR and cleans its owned files',t=>{
+  const f=gitFixture(t),real=path.join(f.root,'system-temp'),alias=path.join(f.root,'system-temp-alias');
+  fs.mkdirSync(path.join(real,'child'),{recursive:true});fs.symlinkSync(real,alias);
+  const destination='coordination/engineering/fixture/default-temp';
+  const result=f.run(destination,[],{TMPDIR:path.join(alias,'child')});
+  assert.equal(result.status,0,result.stderr);
+  const output=JSON.parse(fs.readFileSync(path.join(f.root,destination,'constructor-result.json')));
+  assert.equal(output.ledger_rows.length,1);assert.equal(output.ledger_rows[0].native_cells,1);
+  assert.deepEqual(fs.readdirSync(path.join(real,'child')),[],'all invocation-owned stores and staged products are removed');
+  assert.equal(fs.lstatSync(alias).isSymbolicLink(),true,'the caller alias is not rewritten');
 });
