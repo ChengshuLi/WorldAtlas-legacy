@@ -555,34 +555,6 @@ class FinalBankRunnerControls(unittest.TestCase):
 
 
 
-    def test_large_prefetch_summary_keeps_completion_truth_and_owned_cleanup(self):
-        import io
-        summary = {'complete_scientific_closure': False, 'status': 'scoped-prefetch-completed',
-                   'note': 'x' * (2 * 1024 * 1024)}
-        for status in [0, 1]:
-            child = self.mock.Mock(pid=123456, returncode=status)
-            child.communicate.return_value = (json.dumps(summary).encode(), b'')
-            stream = io.StringIO()
-            with self.mock.patch.object(self.g.subprocess, 'Popen', return_value=child), \
-                 self.mock.patch.object(self.g.os, 'killpg') as kill, \
-                 self.mock.patch.object(self.g.sys, 'stderr', stream):
-                self.g.prefetch_declared_inputs(ROOT, self.baseline, self.candidate)
-            result = json.loads(stream.getvalue())['geography_prefetch']
-            self.assertEqual(result['note'], summary['note'])
-            self.assertFalse(result['complete_scientific_closure'])
-            self.assertEqual(result['status'], 'scoped-prefetch-unavailable' if status else summary['status'])
-            if status:
-                self.assertTrue(result['partial_import_possible'])
-            kill.assert_called_once_with(child.pid, self.g.signal.SIGKILL)
-            self.assertEqual(child.communicate.call_args_list, [self.mock.call(timeout=120), self.mock.call(timeout=5)])
-
-
-
-
-
-
-
-
 
     def test_final_bank_summary_never_labels_changed_or_incomplete_bindings_unchanged(self):
         import copy
@@ -653,7 +625,7 @@ class FinalBankRunnerControls(unittest.TestCase):
              self.mock.patch.object(g, 'git', return_value=b'') as selected_inventory, \
              self.mock.patch.object(g.importlib.util, 'spec_from_file_location', side_effect=RuntimeError('full-check-reached')):
             with self.assertRaisesRegex(RuntimeError, 'full-check-reached'):
-                g.inspect(ROOT, self.baseline, self.candidate, prefetch=True)
+                g.inspect(ROOT, self.baseline, self.candidate)
         self.assertEqual(selected_inventory.call_args_list, [
             self.mock.call(ROOT, 'ls-tree', '-z', version, '--', 'data/ownership-selection.json')
             for version in [self.baseline, self.candidate]])

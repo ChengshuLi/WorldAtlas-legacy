@@ -223,54 +223,6 @@ export function createAcquisition({repo, loadTree, loadDescriptor, execute = exe
   return {tree, descriptor, pin, acquire, body, json, resolvePath, stats};
 }
 
-export async function prefetchSelectedGeography(acquisition, baseline, candidate) {
-  const a = acquisition, banks = [], leaves = [];
-  for (const version of new Set([baseline, candidate])) {
-    const tree = await a.tree(version);
-    if (!tree.has('data/ownership-selection.json')) continue;
-    const selection = await a.json(version, 'data/ownership-selection.json');
-    requireValue(selection.version === 1 && safe(selection.manifest_path), 'Unsupported selected geography');
-    const manifest = await a.json(version, selection.manifest_path, {sha256: selection.sha256});
-    requireValue(Array.isArray(manifest.parts), 'Unsupported native part roster');
-    requireValue(manifest.parts.every(p => safe(p.path)), 'Unsafe native part path');
-    const root = path.posix.dirname(selection.manifest_path);
-    const missingParts = manifest.parts.filter(p => !tree.has(path.posix.join(root, p.path)));
-    for (const p of manifest.parts.filter(p => tree.has(path.posix.join(root, p.path))))
-      leaves.push(await a.descriptor(version, path.posix.join(root, p.path), p));
-    if (missingParts.length) {
-      const transport = manifest.native_asset_transport;
-      requireValue(transport?.kind === 'ordered-exact-original-byte-fragments' && transport.index, 'Unrecognized native transport; retain ordinary checker acquisition');
-      const index = await a.json(version, transport.index.path, transport.index);
-      requireValue(Array.isArray(index.parts), 'Unsupported native transport roster');
-      const directory = path.posix.dirname(transport.index.path);
-      for (const p of index.parts) { requireValue(safe(p.path), 'Unsafe transport part'); leaves.push(await a.descriptor(version, path.posix.join(directory, p.path), p)); }
-    }
-    const declared = selection.selected_geography;
-    requireValue(declared?.kind === 'complete-world-index-with-exact-encoded-overrides', 'Unrecognized source bank; retain ordinary checker acquisition');
-    const bank = await a.json(version, declared.path, declared);
-    requireValue(Array.isArray(bank.unchanged_files) && Array.isArray(bank.overrides), 'Unsupported selected source roster');
-    for (const p of [bank.world_index, ...bank.unchanged_files, ...bank.overrides]) leaves.push(await a.pin(version, p));
-    if (selection.additive_release) {
-      const p = selection.additive_release, sidecar = await a.json(version, p.path, p);
-      requireValue(sidecar.kind === 'retained-native-additive-selection-v2' && sidecar.logical_asset_map
-        && Object.keys(sidecar.logical_asset_map).sort().join(',') === 'base_manifest,ledger,owner_roster,patch', 'Unsupported additive acquisition scope');
-      for (const pin of [sidecar.runtime_envelope, sidecar.authority_registry, ...Object.values(sidecar.logical_asset_map)]) leaves.push(await a.pin(version, pin));
-    }
-    if (selection.artifact_consumption) {
-      const {certificate: p, review} = selection.artifact_consumption;
-      const certificate = await a.json(version, p.path, p);
-      for (const pin of [review, certificate.application_consumer_code, certificate.qualification_inventory,
-        certificate.release_product_catalogue, certificate.selected_artifact_bindings?.registry].filter(Boolean)) leaves.push(await a.pin(version, pin));
-    }
-    banks.push(version);
-  }
-  a.acquire(leaves);
-  return {...a.stats, selected_commits: banks, status: 'scoped-prefetch-completed',
-    limits: ['No scientific or full dependency-closure claim. Deeper historical authority/rebind inputs and unknown formats retain the unchanged checker acquisition.']};
-}
-
-
-
 export async function githubTree(version, recursive = true) {
   const value = await githubMetadata(`trees/${version}${recursive ? '?recursive=1' : ''}`);
   if (!recursive || value?.truncated !== true) return value;
@@ -359,17 +311,6 @@ async function githubMetadata(locator) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const [repo, baseline, candidate] = process.argv.slice(2), start = performance.now();
-  const acquisition = createAcquisition({repo, loadTree: githubTree});
-  try {
-    const result = await prefetchSelectedGeography(acquisition, baseline, candidate);
-    process.stdout.write(JSON.stringify({...result, elapsed_ms: Math.round(performance.now() - start)}) + '\n');
-  } catch (error) {
-    // Acquisition is optional. Never conceal a partial attempt or convert it to
-    // science success; the original trusted checker still runs in full.
-    process.stdout.write(JSON.stringify({...acquisition.stats, status: 'scoped-prefetch-unavailable', partial_import_possible: true,
-      reason: error instanceof SyntaxError ? 'Invalid declared JSON metadata' : error.message,
-      elapsed_ms: Math.round(performance.now() - start)}) + '\n');
-    process.exitCode = 1;
-  }
+  process.stderr.write('Standalone legacy geography prefetch is retired; use run-geographic-check.py for the current trusted comparison.\n');
+  process.exitCode = 1;
 }

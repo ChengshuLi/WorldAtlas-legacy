@@ -10,7 +10,6 @@ import re
 import subprocess
 import tempfile
 import time
-import signal
 import sys
 from contextlib import contextmanager
 
@@ -21,46 +20,6 @@ def stage_timing(name):
         yield
     finally:
         print(json.dumps({'geography_stage': name, 'elapsed_ms': round((time.monotonic() - started) * 1000)}), file=sys.stderr, flush=True)
-
-
-def prefetch_declared_inputs(repo, baseline, candidate, timeout=120):
-    # Optional transport preparation only. The original checker still consumes
-    # every required input and establishes all scientific/identity guarantees.
-    env = dict(os.environ)
-    for name in ['NODE_OPTIONS', 'NODE_PATH']:
-        env.pop(name, None)
-    try:
-        if os.name != 'posix':
-            raise ValueError('Prefetch requires owned process-group cleanup')
-        child = subprocess.Popen([env.get('NODE', 'node'), str(repo / 'scripts/geography-prefetch.mjs'),
-                                  str(repo), baseline, candidate], env=env, stdout=subprocess.PIPE,
-                                 stderr=subprocess.PIPE, start_new_session=True)
-        try:
-            stdout, _ = child.communicate(timeout=timeout)
-        finally:
-            # Kill the owned group even if Node exited after a Git failure. A
-            # launcher timeout must not leave a Git descendant writing while
-            # the ordinary checker resumes. Failure to reap blocks continuation.
-            try:
-                os.killpg(child.pid, signal.SIGKILL)
-            except ProcessLookupError:
-                pass
-            except OSError as error:
-                raise RuntimeError('Cannot terminate owned prefetch process group') from error
-            try:
-                child.communicate(timeout=5)
-            except subprocess.TimeoutExpired as error:
-                raise RuntimeError('Prefetch process group did not terminate') from error
-        summary = json.loads(stdout)
-        if not isinstance(summary, dict) or summary.get('complete_scientific_closure') is not False:
-            raise ValueError('Prefetch cannot assert scientific closure')
-        if child.returncode != 0:
-            summary['status'] = 'scoped-prefetch-unavailable'
-            summary['partial_import_possible'] = True
-        print(json.dumps({'geography_prefetch': summary}), file=sys.stderr, flush=True)
-    except (subprocess.TimeoutExpired, OSError, ValueError):
-        print(json.dumps({'geography_prefetch': {'status': 'scoped-prefetch-unavailable',
-              'complete_scientific_closure': False, 'partial_import_possible': True}}), file=sys.stderr, flush=True)
 
 
 TRUSTED_PATHS = ['scripts/run-geographic-check.py', 'scripts/geography-prefetch.mjs', 'scripts/geography-routing-metadata.mjs', 'scripts/check-geographic-regression.py',
@@ -223,7 +182,7 @@ def selected_joint(repo, baseline, candidate, *, trusted=None):
 
 
 
-def inspect(repo, baseline, candidate, *, code_commit=None, prefetch=False):
+def inspect(repo, baseline, candidate, *, code_commit=None):
     immutable_sha(baseline)
     immutable_sha(candidate)
     code_commit = code_commit or baseline
@@ -437,7 +396,7 @@ def main():
         if comparison != 'pull-request-merge-v1':
             raise ValueError('Unsupported geographic comparison')
         verify_pr_candidate(repo, args.baseline, args.candidate, os.environ.get('GEOGRAPHY_REVIEWED_HEAD'))
-    result = inspect(repo, args.baseline, args.candidate, code_commit=args.code_commit, prefetch=args.fetch)
+    result = inspect(repo, args.baseline, args.candidate, code_commit=args.code_commit)
     if not software:
         result = apply_adjudications(repo, args.candidate, result)
     passed = result['status'] in ['not-applicable', 'no-footprint-change', 'no-new-regression', 'no-new-native-loss', 'validated-native-map-transition'] or (
