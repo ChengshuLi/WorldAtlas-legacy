@@ -1,0 +1,15 @@
+# Bondo 57: source-specific researched-unresolved proposal
+
+The earlier proposal omitted ten CAF ADM3 operands from an auxiliary overlay. This delivery preserves that withdrawal and supplies the actual all-operand results from the single completed full COD3905 diagnostic, together with Bondo's substantive primary-source research. It proposes independent researched-unresolved consideration for exactly57 cells. All57 native holds remain; no map/owner change or acceptance is claimed.
+
+Start with [the proposal](proposal.json), [source assessment](evidence/bondo57-post-observation/assessment.md) and [source-author follow-through](evidence/residual_land_east/bondo57-postobservation-author-assessment.md). [Actual rows](evidence/bondo57-post-observation/actual-native57-all18-v2.json) retain all1,026 original operand records. Mbomou43, Rafaï18 and Zémio11 are72 nonadditive native interior incidences across57 keys. Empty kinds are native-predicate absence only, never full-footprint or sovereignty clearance.
+
+Every source/assessment body in [custody.json](custody.json) is byte-identical to the independently examined Libraryv3 handoff. The source-author assessment is not independent acceptance. Root's cloud reviewer conditionally supported source sufficiency; an independent bridge to this exact public head, ordinary stock delivery and separate root acceptance remain required.
+
+The consumed CAF products are simplified release geometries, distinct from original source archives. Actual source maps, construction records, census/producer methods, treaty texts, historical map interpretation and bounded archival searches support the proposal. Physical Bondo-atlas and cartothèque293/113 bodies remain potentially useful uninspected opportunities; no public digital body was found, no appointment was requested, and none is called exhausted or an automatic universal prerequisite.
+
+Current COD accounting is2977 positive +710 accepted researched-unresolved +218 pending =3905. Only if these exact57 later receive independent acceptance would it become2977+767+161. Ango36 is separately accepted. This PR does not complete COD or issue2453/2649.
+
+No producer, build, diagnostic, polygon test or datum transform was rerun. The earlier full report retains temporary CODE8d38ff36, unchanged executable/map code from accepted0eb64fbc, original DATA and both adopted decisions. The complete report/preparation/parity and temporary-tree proof remain in the existing custody identity. Original earlier counts and mistaken readiness notes remain clearly historical and are superseded by the explicit corrections, not silently erased.
+
+Validation: exact57 scope equality and all1,026 original ordinal/source/hash matches; reviewed Library member equality; applicable evidence-quality validation and Git diff checks. These are evidence-preservation checks, not scientific acceptance. No new software tests are warranted for these inert research additions; standard focused hosted checks and exact-head review still apply.

@@ -1,0 +1,45 @@
+# Junker / Hassenstein 1889: river naming and limits for northern COD contact interpretation
+
+Status: primary-reading supplement only, 2026-10-24. All Mobayi9/Bondo57 and other COD holds remain. No geometry, coordinate-to-key assignment, ledger acceptance, credit, or Git mutation was performed. Coordinator retains ownership of the forthcoming single full3905 contact diagnostic.
+
+## Result
+
+The contemporary text supports distinguishing the northern **Mbomú / Kéngo** branch from **Uélle-Makua / Mobángi**. Hassenstein's printed p 94 footnote explicitly identifies the river called **Kuta**, or Bahr-Urschal / Warschal, in Lupton's reported geography with Uélle-Makua. The retained map's downstream label was read as **KUTU**. The spelling difference is preserved: this passage supports the historical naming interpretation but is not an exact spelling identity assertion or a modern spatial crosswalk.
+
+Crucially, the same contemporary work says the Mbomú junction was not precisely known and describes an earlier candidate confluence identification that the cartographer abandoned. A river name can therefore identify a branch concept without authenticating every drawn segment as directly surveyed.
+
+## Custody and finite work actually performed
+
+Bavarian State Library record: https://www.digitale-sammlungen.de/de/details/bsb11626010 . Title: *Wissenschaftliche Ergebnisse von Dr. W. Junkers Reisen in Zentral-Afrika*, Gotha, Perthes, 1889; 114 text pages, four maps in catalog. Holding: Bayerische Staatsbibliothek, Hbks/V 1 b-90/94; URN urn:nbn:de:bvb:12-bsb11626010-8. The official IIIF manifest has 120 canvases. Canvas 3 is printed p 1, and canvas 116 is printed p 114.
+
+Manifest: https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11626010/manifest . Official API documentation previously read at https://www.digitale-sammlungen.de/de/schnittstellen . Exact manifest `seeAlso` URLs supplied OCR, and exact manifest image resource URLs supplied six selected scans. Ordinary sandbox DNS had failed; narrow per-command approved source reads succeeded. No challenge or access denial occurred on this route. No browser or CUA tool, bulk map download, CAPTCHA route, or new georeference was used.
+
+Actual bounded reading: title and contents; printed pp 1–16; named cartographic introduction pp 87–88, Congo-position section pp 93–94, and compilation/conclusion pp 113–114. Twenty-four selected OCR pages total, including title/contents. Six scans visually checked: pp 3, 8, 12, 13, 94, 114. OCR is preserved uncorrected; key readings below were checked visually. No assertion of full-volume search or absence outside these pages.
+
+The manifest supplies a NoC-NC rights statement: https://rightsstatements.org/vocab/NoC-NC/1.0/ . Preserve this source notice. This report paraphrases findings and cites custody; source scans/OCR remain local reading evidence and have not been published or relicensed.
+
+## Decisive passages, with observation type
+
+- **Printed p 3, right column, visual scan:** Junker deliberately uses Uélle for the whole course; explains Mákua as a western name; identifies Mobángi and Uélle-Makua on the strength of van Gèle's voyage. This is the author's river-continuity interpretation, not an exact modern coordinate transformation.
+- **Printed p 8, right top, visual scan:** the stretch between 22° and 23° E, with the probable mouth of the strongest northern tributary Mbomú, remained outside the author's knowledge. The left column distinguishes directly seen island/channel portions from reported ones. Named channels and islands cannot be equated to pending native cells without evidence.
+- **Printed p 12, left column, visual scan:** the Mbomú's mouth in Uélle was not precisely known and was estimated near 22° E. Approximate lengths/heights are explicitly inferential. These historical figures are not new control coordinates.
+- **Printed p 13, left column, visual scan:** the course west of the author's Mbaua crossing was unknown to him; downstream direction was inferred. The paragraph before the northern tributaries names Mbomú **Kéngo** among western Nsákkara. OCR had misread this as Kéogo; visual spelling is Kéngo. This directly explains the retained map's `KENGO ODER MBOMU` label.
+- **Printed p 94, main left column and footnote, visual scan:** approximately 115 km of the river remained unexplored between the known travel endpoints; Hassenstein lacked a verified astronomical or nautical observation basis for van Gèle's reported endpoint. Do not convert this historical distance into a buffer or modern uncertainty radius.
+- **Printed p 94 footnote, visual scan:** the cartographer originally associated van Gèle's river of Bangusso with Mbomú. At Junker's request that identification was abandoned in the four-sheet map, section III. The footnote instead considers Bangusso river probably Lupton's Foro–Engi. It explains that Lupton, using traders' reports, placed combined Foro and Engi downstream of Mbomú into **Kuta or Bahr-Urschal / Warschal**, explicitly identified as Uélle-Makua. The text preserves conjectural terms and reported provenance; it is not a newly measured confluence.
+- **Printed pp 87–88, OCR read:** Hassenstein calls the four-sheet map a compilation of Junker's and other travel routes, discusses its methods and remaining questions, and names supplements 92 and 93. This agrees with Afriterra's publication-family evidence, without proving every retained impression identical.
+- **Printed p 113, OCR read, continuing to visually checked p 114:** construction combined route networks from two baseline regions; the westernmost endpoint placement remained a question for future assessment. Printed p 114 reports Ndóruma position differences from five route constructions of seven minutes longitude and four latitude, and differences at Semio/Ombanga/Abd-Allah/Bagbinne of 10–15 minutes longitude and 7–10 latitude. These are the author's construction comparisons at specified stations, not a statistical confidence interval, universal map accuracy, or correction for a held key.
+
+## Consolidation for the coordinator's contact interpretation
+
+1. The actual 1887 protocol uses Ubangi thalweg to 4° N. The actual 1894 treaty follows Ubangi to M'Bomou/Ouellé, then M'Bomou thalweg to its source; its original footnote references Junker, Gotha, Justus Perthes, 1888 for M'Bomou and its sources. IBS109 agrees at the river-rule level but its English Article1 extract omits that source-defining footnote. These readings are already recorded in `ubangi-bomu-original-treaty-reading.md` and must not be rerun or treated as fresh observations.
+2. The retained map and Afriterra panels match the relevant Hassenstein/Junker publication family, with impression/header/title differences preserved. The retained southwest sheet shows the junction region, not remote headwaters. No universal map identity proof is required; neither may unresolved impression details be silently erased.
+3. Contemporary textual naming now explains **Mbomú/Kéngo**, **Uélle-Makua/Mobángi**, and reported **Kuta** in this regional discussion. KUTU/Kuta spelling difference remains explicit. Expedition routes, broken river linework, and legal boundary rules are separate objects. Dashes alone do not identify a route or boundary.
+4. The author and cartographer themselves describe unknown reaches, reported geography, abandoned identifications and reconstructed positions. Accordingly a historical branch-name match does not establish which modern retained polygon edge, channel, island, bank, or whole cell implements the treaty thalweg.
+5. When the coordinator's one diagnostic arrives, preserve complete native operands and separate whole-cell contacts from center observations. Mobayi9's earlier 537 overlay omitted CAF ADM3 entirely; its absence there is not absence of contact. Source-vintage/body evidence and all12 CAF ADM3 operands must accompany interpretation. Gbadolite2 inherited provenance remains separate. No new producer is warranted here.
+6. A diagnostic intersection or owner-zero observation will describe retained geometry only. This historical work neither clears an adverse operand automatically nor converts a contact into a territorial verdict. It can explain source-relative uncertainty and guide finite qualification. Independent disposition remains required.
+
+## Remaining limits and stopped routes
+
+The specific naming question has a readable contemporary passage and a bounded answer. Literal Kutu was not found in the selected OCR pages; printed p94's Kuta passage is sufficient to report the qualified connection without claiming exhaustive search. No further broad modern search was run.
+
+Chambéry's previously encountered human-verification challenge remains untouched; no bypass or retry occurred. The BSB scan route succeeded, so there is no pending download or denied action for this reading. The coordinator's full3905 diagnostic is not yet supplied to this worker; per-key contact interpretation remains pending that input. All holds remain.
