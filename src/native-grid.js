@@ -505,7 +505,7 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
     if(!item){item={id:String(negatives.size),pixelIndex:negatives.size+1,
       geometry:feature.geometry,uses:[]};negatives.set(feature.geometry,item);}
     item.uses.push({owner:feature.pixelIndex,
-      ...(territorialApplicability===undefined?{}:{exclusion_index:ordinal})});
+      ...(territorialApplicability===undefined&&diagnosticRows===undefined?{}:{exclusion_index:ordinal})});
   }
   const negativeShapes=[...negatives.values()],excluded=scan(negativeShapes);
   const expandNegative=span=>negativeShapes[span.owner-1].uses.map(use=>({...span,...use}));
@@ -537,7 +537,7 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
     // Optional observations are restricted to complete, nonoverlapping requested
     // intervals. They share the scans and decision order below; no second geometry
     // operator or alternate coverage policy is used.
-    const requested = new Map(), diagnostic = [];
+    const requested = new Map(), diagnostic = [], diagnosticTerritorial = [];
     if (diagnosticRows !== undefined) {
       require(Array.isArray(diagnosticRows), 'Invalid native diagnostic request');
       let previousY = -1;
@@ -564,7 +564,7 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
       for(const record of contextual.values())if(record.y===y){cuts.add(record.x);cuts.add(record.x+1);}
       for (const run of [...source, ...support, ...holes]) { cuts.add(run.start); cuts.add(run.end); }
       for (const run of [...owned, ...boundary]) { cuts.add(run[0]); cuts.add(run[1]); }
-      const points = [...cuts].sort((a, b) => a - b), runs = [], trace = [];
+      const points = [...cuts].sort((a, b) => a - b), runs = [], trace = [], contacts = [];
       const decide = start => {
         const owners = new Set(source.filter(run => run.start <= start && start < run.end).map(run => run.owner));
         if (![...owners].some(owner => targetByOwner.has(owner))) return {reason: 'no-target-source-domain'};
@@ -590,6 +590,22 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
         const start = points[i], end = points[i + 1], decision = decide(start), count = end - start;
         const request = (requested.get(y) ?? []).find(run => run[0] <= start && start < run[1]);
         if (request) {
+          // Report every operand independently of decision priority or adopted
+          // applicability. These are the same complete native scans, not a
+          // centre overlay; empty kinds explicitly records measured absence.
+          const operands = territorialExclusions.flatMap((negative, exclusion_index) => {
+            if (negative.pixelIndex !== request[2]) return [];
+            const kinds = [];
+            if (holes.some(run => run.exclusion_index === exclusion_index
+              && run.start <= start && start < run.end)) kinds.push('interior');
+            for (const tie of excluded.ties) if (tie.exclusion_index === exclusion_index && tie.y === y
+              && (tie.start ?? tie.x) <= start && start < (tie.end ?? tie.x + 1)) kinds.push(tie.kind);
+            return [{exclusion_index, kinds: [...new Set(kinds)].sort()}];
+          });
+          const priorContact = contacts.at(-1);
+          if (priorContact && priorContact[1] === start && priorContact[2] === request[2]
+            && JSON.stringify(priorContact[3]) === JSON.stringify(operands)) priorContact[1] = end;
+          else contacts.push([start, end, request[2], operands]);
           const reason = decision.reason === 'assigned_cells' && decision.owner !== request[2]
             ? 'source-target-owner-mismatch' : decision.reason;
           const previous = trace.at(-1);
@@ -606,6 +622,7 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
       }
       if (runs.length) rows.push({y, runs});
       if (trace.length) diagnostic.push({y, runs: trace});
+      if (contacts.length) diagnosticTerritorial.push({y, runs: contacts});
     }
     const territorialContacts=[];
     if(territorialApplicability!==undefined){
@@ -630,7 +647,7 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
     return {rows, ...counts, removed_cells: 0, reassigned_cells: 0,
       targets: targets.map(target => ({...target, native_cells: perTarget.get(target.id)})),
       ...(territorialApplicability===undefined?{}:{territorial_contacts:territorialContacts}),
-      ...(diagnosticRows === undefined ? {} : {diagnostic_rows: diagnostic})};
+      ...(diagnosticRows === undefined ? {} : {diagnostic_rows: diagnostic, diagnostic_territorial_rows: diagnosticTerritorial})};
   };
   const result=evaluate(coverage,diagnosticRows);
   // Internal member-level view of the already scanned domain. A successful

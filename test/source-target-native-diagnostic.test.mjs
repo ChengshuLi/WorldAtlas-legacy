@@ -366,7 +366,8 @@ for(const mode of ['source','coverage','overlap','territory','owned','tie'])test
  if(mode==='owned')v.ownerRows[3].complete_owner_intervals=[[2,3,2]];
  if(mode==='tie')v.territorialExclusions=[feature('A',1,rectangle(-67.5,0))];
  const d=deriveSourceTargetNativeDelta(v),plain=deriveSourceTargetNativeDelta({...v,diagnosticRows:undefined});
- const {diagnostic_rows,...same}=d;assert.deepEqual(same,plain);
+ const {diagnostic_rows,diagnostic_territorial_rows,...same}=d;assert.deepEqual(same,plain);
+ assert.equal(diagnostic_territorial_rows.reduce((n,row)=>n+row.runs.reduce((m,r)=>m+r[1]-r[0],0),0),16);
  const reasons=new Set(diagnostic_rows.flatMap(r=>r.runs.map(run=>run[3])));
  const expected={source:'no-target-source-domain',coverage:'unsupported_coverage_cells',overlap:'ambiguous_owner_cells',territory:'territorial_exclusion_cells',owned:'already_owned_cells',tie:'boundary_cells'}[mode];assert.ok(reasons.has(expected),JSON.stringify(diagnostic_rows));
  assert.equal(diagnostic_rows.reduce((n,r)=>n+r.runs.reduce((m,v)=>m+v[1]-v[0],0),0),16);
@@ -559,7 +560,9 @@ function negativeReferenceFixture(compact,change=()=>{},kind='interior'){
 }
 const withoutCustodyComponent=rows=>rows.map(({component_id,...row})=>row);
 // Only custody identities change when an equivalent input encoding changes.
-const referenceDecision=({original_pins,rule_sha256,...decisions})=>decisions;
+const referenceDecision=({original_pins,rule_sha256,diagnostic_territorial_rows,...decisions})=>({...decisions,
+ diagnostic_territorial_rows:diagnostic_territorial_rows.map(row=>({...row,runs:row.runs.map(([start,end,owner,operands])=>
+  [start,end,owner,operands.map(({original_source,...operand})=>operand)])}))});
 const referenceConstruct=f=>constructOriginalAuthority(f.reader(),{
   source_evidence:{commit:version,path:f.binding.source_evidence.path},
   native_patch:{commit:version,path:f.binding.native_patch.path}});
@@ -719,4 +722,47 @@ test('witness attribution does not coalesce across a supported gap or different 
  });
  const mixed=g.diagnose();assertPartition(mixed);
  assert.deepEqual(mixed.physical_witness_kind_rows,[{y,runs:[[x,x+1,2,68],[x+1,x+3,2,64]]}]);
+});
+
+
+test('diagnostic negative observations retain simultaneous interior, boundary and explicit absence without changing priority',()=>{
+ const row=18,width=36,table=Float64Array.from({length:width},(_,i)=>18-i-.5);
+ const source={id:'a',pixelIndex:1,geometry:rectangle(-21,21,-2,2)};
+ const shared=rectangle(-16,16,-2,2);
+ const negatives=[shared,shared,rectangle(5,16,-2,2),rectangle(60,61,-2,2)];
+ const input={targets:[{id:'a',pixelIndex:1}],sourceFeatures:[source],coverageFeatures:[source],
+  territorialExclusions:negatives.map(geometry=>({id:'a',pixelIndex:1,geometry})),
+  ownerRows:[{y:row,complete_owner_intervals:[[18,19,9]]}],size:width,latitudes:table,rowStart:row,rowEnd:row+1};
+ const original=structuredClone(input),plain=deriveSourceTargetNativeDelta(input);
+ const observed=deriveSourceTargetNativeDelta({...input,diagnosticRows:[{y:row,runs:[[16,21,1]]}]});
+ const {diagnostic_rows,diagnostic_territorial_rows,...unchanged}=observed;
+ assert.deepEqual(unchanged,plain,'observation cannot alter outcomes, counts or authority shape');
+ const at=x=>diagnostic_territorial_rows[0].runs.find(r=>r[0]<=x&&x<r[1])[3];
+ assert.deepEqual(at(18).slice(0,2),[{exclusion_index:0,kinds:['interior']},{exclusion_index:1,kinds:['interior']}],
+  'geometry sharing retains both original operands');
+ assert.ok(at(18)[2].kinds.some(kind=>kind!=='interior'),'native boundary kind survives earlier owned-cell reason');
+ assert.deepEqual(at(18)[3],{exclusion_index:3,kinds:[]});
+ assert.equal(diagnostic_rows[0].runs.find(r=>r[0]<=18&&18<r[1])[3],'already_owned_cells');
+ assert.ok(at(20).every(o=>o.kinds.length===0),'outside source domain is still scanned, not silently omitted');
+ assert.equal(diagnostic_territorial_rows[0].runs.reduce((n,r)=>n+r[1]-r[0],0),5);
+ assert.deepEqual(input,original);
+ assert.equal(Object.hasOwn(plain,'diagnostic_territorial_rows'),false);
+});
+
+test('authenticated diagnostic preserves complete negative source references, ordinals and no-contact scope',()=>{
+ const f=negativeReferenceFixture(true),report=f.diagnose();assertPartition(report);
+ const observations=report.diagnostic_territorial_rows.flatMap(row=>row.runs);
+ assert.equal(observations.reduce((n,r)=>n+r[1]-r[0],0),report.requested_cells);
+ for(const run of observations){
+  assert.deepEqual(run[3].map(o=>o.negative_ordinal),[0,1,2]);
+  assert.deepEqual(run[3].slice(0,2).map(o=>o.kinds),[['interior'],['interior']]);
+  assert.deepEqual(run[3][2].kinds,[]);
+  assert.equal(run[3][0].source_id,c);
+  assert.equal(run[3][0].original_source.source_id,'negative:whole');
+  assert.equal(run[3][0].original_source.feature_ordinal,0);
+  assert.equal(run[3][0].original_source.geometry_sha256,run[3][0].geometry_sha256);
+ }
+ const absent=negativeReferenceFixture(true,()=>{},'disjoint').diagnose();
+ assert.ok(absent.diagnostic_territorial_rows.every(row=>row.runs.every(run=>run[3].every(o=>!o.kinds.length))));
+ assert.equal(Object.hasOwn(negativeReferenceFixture(true,()=>{},'disjoint').run(),'diagnostic_territorial_rows'),false);
 });

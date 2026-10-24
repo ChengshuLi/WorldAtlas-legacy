@@ -491,6 +491,21 @@ still aborts. Outputs are only `native-diagnostic.json` and the ordinary
 Exit status zero means screening completed, even if every requested cell is held.
 Supported cells still require the unchanged qualification and delivery checks.
 
+`diagnostic_territorial_rows` covers every requested interval as
+`[start,end,owner,operands]`. Each operand preserves its original negative ordinal,
+source member, geometry hash and available authenticated original source reference;
+provider/split competitors retain their distinct identities instead of fabricated
+original ordinals. `kinds` contains every simultaneous native interior/boundary
+contact from the existing complete exclusion scan. Empty `kinds` means no contact
+under those native predicates for that interval, **not** absence of geographic
+intersection, source applicability, or scientific clearance. Inline legacy operands
+without original feature references remain identified by the pinned source evidence,
+source member, original ordinal and geometry hash; no source ID is inferred.
+This view is independent of priority `decision_rows` and adopted
+`territorial_contacts`; an earlier owner/boundary/physical veto does not hide other
+contacts. Select research keys from this complete report without narrowing the
+original source/request configuration or inventing contextual decisions.
+
 `physical_witness_kind_rows` records raw contacts as `[start,end,owner,mask]`
 intervals, with bits indexed by `physical_witness_kind_legend`. These are collected
 in the existing witness traversal, not a second geometry scan or hold decision.

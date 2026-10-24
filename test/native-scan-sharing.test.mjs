@@ -78,12 +78,14 @@ function compare(native, value, groups=value.groups) {
   }));
   const separateScans=structuredClone(reference.__testScans);
   const {coverage_groups,...actualBase}=actual;
-  assert.deepEqual(actualBase,expectedBase,'base result and diagnostics retain the legacy shape and values');
+  const withoutNewObservation=({diagnostic_territorial_rows,...result})=>result;
+  assert.deepEqual(withoutNewObservation(actualBase),withoutNewObservation(expectedBase),'base decisions and prior diagnostics retain the legacy shape and values');
   assert.deepEqual(coverage_groups,expectedGroups,'each group equals an independent legacy call');
-  assert.deepEqual(native.deriveSourceTargetNativeDelta(base),expectedBase,
+  assert.deepEqual(withoutNewObservation(native.deriveSourceTargetNativeDelta(base)),withoutNewObservation(expectedBase),
     'candidate plain path also equals the reference plain path');
   for(const group of coverage_groups) {
     assert.equal(Object.hasOwn(group,'diagnostic_rows'),false);
+    assert.equal(Object.hasOwn(group,'diagnostic_territorial_rows'),false);
     assert.equal(Object.hasOwn(group,'coverage_groups'),false);
   }
   assert.deepEqual({base,groups},before,'original arrays, geometries, IDs and rows are untouched');
@@ -227,7 +229,11 @@ function compareNegatives(native,v) {
   const separate={...v,territorialExclusions:v.territorialExclusions.map(f=>({
     ...f,geometry:structuredClone(f.geometry)}))};
   const expected=native.reference.deriveSourceTargetNativeDelta(separate);
-  assert.deepEqual(actual,expected,'all rows, reasons, counts and operand contacts equal unshared whole negatives');
+  const {diagnostic_territorial_rows:observed,...priorActual}=actual;
+  const {diagnostic_territorial_rows:priorObserved,...priorExpected}=expected;
+  assert.deepEqual(priorActual,priorExpected,'all prior rows, reasons, counts and operand contacts equal unshared whole negatives');
+  assert.deepEqual(observed,native.deriveSourceTargetNativeDelta(separate).diagnostic_territorial_rows,
+    'new observations preserve every unshared original operand');
   assert.deepEqual(v,before,'whole inputs and every owner/ordinal binding stay unchanged');
   return {actual,scans};
 }
