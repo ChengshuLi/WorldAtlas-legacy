@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {supportedInputs} from '../scripts/prepare-delivery-handoff.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import fs from 'node:fs';
@@ -178,7 +179,7 @@ function constructorFixture(change=()=>{},applicability){
           negative_ordinal:0,geometry_sha256:valueSha(geometry)}];
       }
     }
-    applicability.change?.(data,state);
+    applicability.change?.(data,state,put);
     const name='adopted-territorial-applicability.json';
     territorialApplicability=put(name,data);
     const head=execFileSync('git',['-c','protocol.allow=never','-C',fileURLToPath(new URL('../',import.meta.url)),'rev-parse','HEAD'],{encoding:'utf8'}).trim();
@@ -244,7 +245,7 @@ function constructorFixture(change=()=>{},applicability){
   const binding={version:1,kind:'source-target-native-custody-v1',...operands};
   return {run:()=>qualifySourceTargetNativeAuthority(reader(),preimage,binding),
     diagnose:()=>diagnoseSourceTargetNativeAuthority(reader(),preimage,binding),
-    preimage,binding,files,byBlob,membership,reader,state};
+    preimage,binding,files,byBlob,membership,reader,state,put};
 }
 function directTarget(state,{membership=true,overlap=false}={}){
   const geometry=state.originals[2].geometry;
@@ -765,4 +766,87 @@ test('authenticated diagnostic preserves complete negative source references, or
  const absent=negativeReferenceFixture(true,()=>{},'disjoint').diagnose();
  assert.ok(absent.diagnostic_territorial_rows.every(row=>row.runs.every(run=>run[3].every(o=>!o.kinds.length))));
  assert.equal(Object.hasOwn(negativeReferenceFixture(true,()=>{},'disjoint').run(),'diagnostic_territorial_rows'),false);
+});
+
+
+test('supported-inputs removes only the empty contextual hook after narrowing',()=>{
+ const f=constructorFixture(state=>{
+  directTarget(state);
+  const run=state.proposed.rows[0].runs[0],lon=(run[0]+.5)/size*360-180;
+  run[1]++;
+  state.targets[0].territorial_exclusions=[rectangle(lon-.0005,lon+.0005,-.01,.01)];
+ },{multipart:true,compact:true});
+ const diagnostic=f.diagnose();assert.equal(diagnostic.supported_cells,2);
+ const pin=f.put('diagnostic.json',diagnostic),first=diagnostic.requested_rows[0];
+ const prior=f.put('prior-holds.json',{rows:[{y:first.y,runs:[[first.runs[0][0],first.runs[0][0]+1,2,'prior-hold']]}]});
+ const read=p=>JSON.parse(f.files.get(p.path).raw),reader={json:read,read:p=>f.files.get(p.path).raw,pin:(commit,path)=>f.files.get(path).pin,git:()=>Buffer.from(version)};
+ const output=supportedInputs({version:1,diagnostic:{commit:version,path:pin.path},prior_holds:{commit:version,path:prior.path}},reader);
+ const pins={source_evidence:f.put('narrowed-source.json',output['source-evidence.json']),
+  native_patch:f.put('narrowed-patch.json',output['native-patch.json'])};
+ const binding={version:1,kind:'source-target-native-custody-v1',...pins};
+ assert.equal(qualifySourceTargetNativeAuthority(f.reader(),{...binding,kind:'source-target-native-rule-v1'},binding).source_rows[0].native_cells,1);
+ assert(!JSON.parse(output['source-evidence.json']).territorial_applicability);
+ assert.equal(JSON.parse(output['original-scope-partition.json']).territorial_applicability.status,'no-applicable-records');
+});
+
+
+function projectedApplicabilityFixture() {
+ const f=constructorFixture(state=>{
+  directTarget(state);const run=state.proposed.rows[0].runs[0];run[1]=run[0]+3;
+  state.targets[0].territorial_exclusions=[structuredClone(state.originals[2].geometry)];
+ },{multipart:true,compact:true,change(data,state,put){
+  const row=state.proposed.rows[0],x=row.runs[0][0],record=data.records[0];
+  data.provenance.find(p=>p.id==='scope').pin=put('applicability-scope.json',
+   {records:[0,1,2].map(i=>({owner:2,y:row.y,x:x+i}))});
+  data.records=[0,1,2].map(i=>({...record,x:x+i,scope:{...record.scope,pointer:'/records/'+i}}));
+ }});
+ const diagnostic=f.diagnose();assert.equal(diagnostic.supported_cells,3);
+ const dp=f.put('diagnostic.json',diagnostic),row=diagnostic.requested_rows[0],x=row.runs[0][0];
+ const prior=f.put('prior-holds.json',{rows:[{y:row.y,runs:[[x,x+2,2,'prior-hold']]}]});
+ const reader={json:p=>JSON.parse(f.files.get(p.path).raw),read:p=>f.files.get(p.path).raw,
+  pin:(commit,path)=>f.files.get(path).pin,git:()=>Buffer.from(version)};
+ const config={version:1,diagnostic:{commit:version,path:dp.path},prior_holds:{commit:version,path:prior.path}};
+ return {...f,readerForPreparation:reader,config,diagnostic,x,y:row.y};
+}
+
+test('supported-inputs binds exact committed applicability projection before genuine authority',()=>{
+ const f=projectedApplicabilityFixture(),original=f.files.get('adopted-territorial-applicability.json').raw;
+ const full=JSON.parse(original),first=supportedInputs(f.config,f.readerForPreparation);
+ assert(!first['source-evidence.json'],'unbound source is never executable output');
+ assert(first['unbound-source-evidence.json']);
+ const projection=JSON.parse(first['territorial-applicability.json']);
+ assert.deepEqual(projection,{...full,records:[full.records[2]]});
+ const account=JSON.parse(first['original-scope-partition.json']).territorial_applicability;
+ assert.deepEqual(account.selected_record_ordinals,[2]);assert.deepEqual(account.omitted_record_ordinals,[0,1]);
+ assert.equal(account.status,'requires-immutable-projection-binding');
+ const projected=f.put('projected-applicability.json',first['territorial-applicability.json']);
+ const at=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();f.put(projected.path,first['territorial-applicability.json'],at);
+ const config={...f.config,territorial_applicability:{commit:version,path:projected.path}};
+ const second=supportedInputs(config,f.readerForPreparation);
+ assert(!second['unbound-source-evidence.json']);
+ const pins={source_evidence:f.put('novel-source.json',second['source-evidence.json']),native_patch:f.put('novel-patch.json',second['native-patch.json'])};
+ const binding={version:1,kind:'source-target-native-custody-v1',...pins};
+ const result=qualifySourceTargetNativeAuthority(f.reader(),{...binding,kind:'source-target-native-rule-v1'},binding);
+ assert.equal(result.source_rows[0].native_cells,1);assert.equal(result.territorial_contacts.length,1);
+ assert.equal(result.territorial_contacts[0].x,f.x+2);
+ assert.deepEqual(f.files.get('adopted-territorial-applicability.json').raw,original,'full accepted decisions remain unchanged');
+ const finalAccount=JSON.parse(second['original-scope-partition.json']).territorial_applicability;
+ assert.equal(finalAccount.status,'bound-exact-projection');assert.deepEqual(finalAccount.projected,projected);
+ // Current-tree admission is not replaced by producer custody.
+ f.put(projected.path,{...projection,records:[]});
+ assert.throws(()=>qualifySourceTargetNativeAuthority(f.reader(),{...binding,kind:'source-target-native-rule-v1'},binding),/selected candidate input/);
+});
+
+for(const [name,change] of Object.entries({
+ 'omitted remaining record':d=>d.records=[],
+ 'added old record':d=>d.records.push({...d.records[0],x:d.records[0].x-1}),
+ 'changed decision reference':d=>d.records[0].adoption.pointer='/other',
+ 'changed provenance':d=>d.provenance[0].pin.sha256='f'.repeat(64),
+ 'duplicate record':d=>d.records.push(d.records[0]),
+ 'extra unused provenance':d=>d.provenance.push({...d.provenance[0],id:'extra'})
+}))test('supported-inputs refuses committed projection '+name,()=>{
+ const f=projectedApplicabilityFixture(),first=supportedInputs(f.config,f.readerForPreparation);
+ const d=JSON.parse(first['territorial-applicability.json']);change(d);f.put('bad-projection.json',d);
+ assert.throws(()=>supportedInputs({...f.config,territorial_applicability:{commit:version,path:'bad-projection.json'}},f.readerForPreparation),
+  /differs from exact original subset/);
 });
