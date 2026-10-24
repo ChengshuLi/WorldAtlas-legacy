@@ -1,0 +1,32 @@
+{
+  "status": "draft-evidence-delivery-not-final-map",
+  "current_accepted_accounting": {
+    "original": 3905,
+    "positive": 2977,
+    "researched_unresolved": 767,
+    "pending": 161
+  },
+  "proposed_researched_unresolved": 160,
+  "new_contextual_key": [
+    14501,
+    135354,
+    143074
+  ],
+  "completed_changed_diagnostic": {
+    "requested": 3905,
+    "supported": 2978,
+    "held": 927,
+    "report_sha256": "7694ed38d5b346f324da3f7edf4b7064213fe540bb6afc7bc6e3cbe5618b33d7",
+    "only_changed_key": [
+      14501,
+      135354,
+      143074
+    ]
+  },
+  "incremental_partition": "Interrupted; no output or terminal receipt, cause unknown. Not retried while machinery inspects full-to-incremental applicability contract.",
+  "native_authority_invoked": false,
+  "map_change": false,
+  "review_request": "Do not perform final public-head review until stock qualification/finalization succeeds or the exact key is explicitly retained pending in a final source-only scope. Reuse existing independent substantive160 review.",
+  "stock_dispatches": 0,
+  "machinery_issue_comment": "https://github.com/ChengshuLi/WorldAtlas/issues/2453#issuecomment-6390576116"
+}

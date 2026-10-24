@@ -11,3 +11,9 @@ popokabaka1/contextual-decision.json records the exact authorization at issue245
 The original full3905 source, physical, lattice, catalogue and negative inputs remain intact. A new stock qualification is required solely because the exact applicability semantics changed. Failed and successful operation receipts must be read separately; this document does not claim success before a completed receipt and current selected-output comparison. No unrelated source or physical producer is rerun. The original one unchanged diagnostic is retained as prior evidence; any new output is explicitly bound to the changed candidate CODE and original DATA.
 
 Independent exact-public-head review, current-base joint comparison, one stock request/dispatch and canonical terminal receipt remain required. Accepted counts and package completion are a separate root decision after actual delivery.
+
+## Actual changed-semantics result and current delivery boundary
+
+The single full3905 diagnostic completed:2978 supported and927 held. Exact parity shows only [14501,135354,143074] changes from territorial exclusion to supported; every original operand-contact row and physical row and both prior contextual records are unchanged. Read popokabaka1/changed-semantics-diagnostic/parity.json and terminal.json. This is screening, not authority or accepted map output.
+
+The subsequent stock supported-inputs session disappeared with no matching process, no output directory and no terminal receipt. Termination cause is unknown. The separate full-to-incremental applicability contract is under machinery inspection; no custom narrowing or constructor invocation was attempted. delivery-status.json records the draft boundary. There is no dispatch or final review request yet.
