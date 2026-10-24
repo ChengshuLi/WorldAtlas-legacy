@@ -1,0 +1,94 @@
+{
+  "kind": "CAF ADM3 SIGCAF and 2003 census primary-method follow-through",
+  "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+  "date": "2026-10-24",
+  "scope": {
+    "Ango_ADM3_ordinals": [
+      53,
+      90,
+      107,
+      108,
+      110
+    ],
+    "Bondo_ADM3_ordinals": [
+      54,
+      55,
+      57,
+      58,
+      59,
+      90,
+      101,
+      110,
+      111,
+      113
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://ireda.ceped.org/inventaire/ressources/caf-2003-rec-o_rca_en_chiffres.pdf",
+      "title": "La RCA en Chiffres; government census results, Bangui 30 June 2005",
+      "local": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/caf-rgph2003-government-summary-2005.pdf",
+        "bytes": 5706696,
+        "sha256": "c6b12ab9e3f815d6cb0502e4709962582d7101ee7a9f51b8eacc7759d121e17f"
+      },
+      "actual_read": [
+        "Printed introduction page2 and technical note page3/PDF4",
+        "Annex map PDF25 visually read"
+      ],
+      "findings": [
+        "Government technical note dates census cartography to 1999 and reports 3,426 enumeration areas. Pilot March2002; enumeration 8–22December2003; postenumeration survey March2004 concerns coverage/count adjustment.",
+        "Annex depicts regional/prefectural divisions, including Mbomou and Haut-Mbomou, with 0–500km scale and regional colours. No ADM3 municipality boundaries, channel-control specification or coordinate grid appears."
+      ],
+      "limits": "Enumeration preparation and population coverage are not tests of international-boundary positioning; this booklet does not bind its maps to the 175 consumed ADM3 polygons."
+    },
+    {
+      "url": "https://www.icasees.org/nada/index.php/catalog/40",
+      "json_url": "https://www.icasees.org/nada/index.php/metadata/export/40/json",
+      "title": "ICASEES RGPH3 2003 catalog40, DDI-IHSN-RGPH3-2003",
+      "actual_read": "Public catalog and linked JSON metadata",
+      "findings": [
+        "Catalog identifies BCR/government census and UNFPA assistance, preparation 1995–1997 and enumeration in December2003.",
+        "Inspected links/JSON expose metadata, not a spatial-control manual or exact polygon inventory."
+      ],
+      "limits": "Some metadata mixes sampling/MICS material and conflicts on decree year; do not use those fields for census spatial control. Catalog requires authorization for underlying data; no request or access attempted."
+    },
+    {
+      "url": "https://www.ipisresearch.be/maps/CAR/20090217_Mapping_CAR.pdf",
+      "title": "Mapping Conflict Motives: Central African Republic, IPIS,17February2009",
+      "actual_read": "Printed21–22/PDF20–21 source inventory text",
+      "findings": [
+        "Producer says SIGCAF1996 systematically GPS-recorded village locations. Other inputs were HDPT CAR, University of Bangui LACCEG, IGN1:200000 maps1955–1984 and IGN tourist map1980.",
+        "IPIS basic map uses several sources for boundaries and other features; its own incomplete village-location handling is described."
+      ],
+      "limits": "Primary account of IPIS source use, not the original SIGCAF survey manual. GPS village points do not prove surveyed municipality edges; IPIS placement limits are not automatically errors in the consumed CAF polygons."
+    },
+    {
+      "url": "https://www.thegef.org/sites/default/files/ncsa-documents/EAU_RAPPORT_2006_final_jeud__2_.pdf",
+      "action": "web open of identified2006 government hydrology/source-inventory lead",
+      "outcome": "403 Forbidden; stopped, no retry, no body inspected",
+      "state": "denied"
+    }
+  ],
+  "inference": [
+    "The archive screenshot’s 1996/2003/1:200000 lineage is consistent with multiple stages, not one authenticated boundary survey.1999 enumeration cartography is separately documented.",
+    "No recovered method record supplies municipality-edge observation, original coordinates, channel convention, positional control or exact175-feature lineage. Neither census success nor point GPS work substitutes for these.",
+    "For Ango, five ADM3 operands now have explicit empty native kinds; their source history is preserved without using it to clear active CAF1/2 conflicts. Bondo application belongs to coordinator."
+  ],
+  "finite_limit": "Named public census catalog, linked metadata, actual government booklet and producer source inventory read. No original detailed SIGCAF technical manual recovered. GEF lead denied; no universal absence claimed.",
+  "local_read_images": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/caf-rgph2003-method-p3.png",
+      "bytes": 153743,
+      "sha256": "ae2980726384f9476a92a1fa096bfdba47a89f09783731961d69a33cf0645a8f"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/caf-rgph2003-annex-pdf25.png",
+      "bytes": 831462,
+      "sha256": "20e879839b35ebfbece305262c62929dd3b113cc435195ca24c8cf6c24e27066"
+    }
+  ],
+  "render_note": "Earlier caf-rgph2003-annex-p25.png is blank PDF26 and was not used as map evidence.",
+  "geometry_runs": 0,
+  "accepted_cells": 0
+}

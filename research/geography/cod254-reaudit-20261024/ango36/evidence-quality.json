@@ -1,0 +1,613 @@
+{
+  "version": 1,
+  "issue": 2453,
+  "lane": "geography",
+  "worker_id": "01a16f2d-2749-7641-a3d4-090e251490ec",
+  "subject_ids": [
+    "gb:CAF:ADM1:63714938B78522502559544",
+    "gb:CAF:ADM1:63714938B95555008029378",
+    "gb:CAF:ADM2:33826404B2470815195032",
+    "gb:CAF:ADM2:33826404B37622790924059",
+    "gb:CAF:ADM2:33826404B4042011562142",
+    "gb:CAF:ADM2:33826404B40761150188578",
+    "gb:CAF:ADM3:52401652B10274630546415",
+    "gb:CAF:ADM3:52401652B18967628609342",
+    "gb:CAF:ADM3:52401652B60998928048694",
+    "gb:CAF:ADM3:52401652B67617163165287",
+    "gb:CAF:ADM3:52401652B70517020130267",
+    "gb:COD:ADM2:63176286B24678106401017",
+    "gb:SSD:ADM1:48771326B90797869503386",
+    "gb:SSD:ADM2:79223893B47853667167464",
+    "gb:SSD:ADM2:79223893B74346966367837"
+  ],
+  "subject_ids_sha256": "aaf084d1ce2533ed7a5b55758b262fdbb4748b00f511eb7ba940f7d0adbd6bfe",
+  "baseline": {
+    "commit": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239",
+    "files": [
+      {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "bytes": 1074327,
+        "sha256": "a75f184d075817469627f2b9eff892ff043597fefccdb9d61d2503f31a8486db",
+        "hash_kind": "file-bytes",
+        "uncompressed_bytes": 3294607,
+        "uncompressed_sha256": "922427143fcff23010af3931fb3f5e4ffea8b05c5d2b797ca02fc04c6c8b1baa",
+        "role": "original-source"
+      },
+      {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM1-000.bin.gz",
+        "bytes": 35452,
+        "sha256": "3d66ea0099b0b03ca75ea3e9dc1c098c7501f3360506acdc3fe5b75e790968ea",
+        "hash_kind": "file-bytes",
+        "uncompressed_bytes": 115127,
+        "uncompressed_sha256": "f9180594ed02a19e423a94f226c489b128d755d306cdd5f00669019b6eb980e8",
+        "role": "original-source"
+      },
+      {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM2-000.bin.gz",
+        "bytes": 165838,
+        "sha256": "beed24d4682d1a3083093c53d435399860d23f615a449caf35d8ce5eec723066",
+        "hash_kind": "file-bytes",
+        "uncompressed_bytes": 597126,
+        "uncompressed_sha256": "891357fe42dcc29a7c2ef847bef6422eea857602c515e0141ab015a78b1899bc",
+        "role": "original-source"
+      },
+      {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+        "bytes": 230764,
+        "sha256": "9888409cb3cc0f35d2e49e9e6877e2b1e548cece703c6b8553819ca80171b9b5",
+        "hash_kind": "file-bytes",
+        "uncompressed_bytes": 807513,
+        "uncompressed_sha256": "e368afac2f5c1ac7503a181e3e62541df88167cf9072a84c5453ffea999ee88a",
+        "role": "original-source"
+      },
+      {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SSD-ADM1-000.bin.gz",
+        "bytes": 66722,
+        "sha256": "dd3f6d493e13c5f7f03ee7b9a9a3b1d17141690bdae288ccb0d919ffa75720bc",
+        "hash_kind": "file-bytes",
+        "uncompressed_bytes": 217377,
+        "uncompressed_sha256": "4c3d08c1be9bf6d68b49799dd33048acf538db1ea02b4aedd761abf974173702",
+        "role": "original-source"
+      },
+      {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SSD-ADM2-000.bin.gz",
+        "bytes": 84873,
+        "sha256": "185cc3302ad30874cf1e5f2fb13f059a509b9bb517db062a233f7b554b028ff9",
+        "hash_kind": "file-bytes",
+        "uncompressed_bytes": 317281,
+        "uncompressed_sha256": "c873ae91e1109a727d17aa75eb7d4f604ec8cb990ece3eac3c73b2c2ab45efee",
+        "role": "original-source"
+      }
+    ],
+    "pins": {},
+    "pin_files": {},
+    "subject_files": {
+      "gb:COD:ADM2:63176286B24678106401017": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM1:63714938B78522502559544": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM1-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM1:63714938B95555008029378": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM1-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM2:33826404B2470815195032": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM2:33826404B37622790924059": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM2:33826404B4042011562142": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM2:33826404B40761150188578": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM3:52401652B10274630546415": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM3:52401652B18967628609342": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM3:52401652B60998928048694": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM3:52401652B67617163165287": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:CAF:ADM3:52401652B70517020130267": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:SSD:ADM1:48771326B90797869503386": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SSD-ADM1-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:SSD:ADM2:79223893B47853667167464": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SSD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:SSD:ADM2:79223893B74346966367837": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SSD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      }
+    }
+  },
+  "sources": [
+    {
+      "id": "unhcr-caf-subprefectures-2015",
+      "url": "https://data.unhcr.org/en/documents/details/32968",
+      "role": "Actually inspected overview map and legend; context without cell registration",
+      "vintage": "Published2015-06-09",
+      "retrieved_at": "2026-10-24",
+      "license": {
+        "status": "unknown",
+        "terms": "Portal default CC BY4.0 unless otherwise stated; pinned derivative separately statesCC BY3.0. No sourcePDF redistributed."
+      },
+      "retention": "restoration-only",
+      "verification": "verified",
+      "restoration": "Original PDF653647bytes SHA256f4766eab7ee816a485423cf46c9c673d19c954b49fb31602886ca370d1fb7be9; obtain through original portal download. Actual local image inspections are recorded in proposal and distinct native reviewer report.",
+      "limit": "Overview map has50km scale, no coordinate grid/cell registration or demonstrated exact frozen-feature equality; cloud reviewer did not newly inspectPDF.",
+      "temporal_status": "reference"
+    },
+    {
+      "id": "retained-native-evidence",
+      "url": "https://github.com/ChengshuLi/WorldAtlas/issues/2453",
+      "role": "Original generated native evidence, copied prior inputs and new project research assessments; source-specific archival references and limitations retained.",
+      "vintage": "Original diagnostic693ecabeb31f53f1cec6116df2f78624bba5181d; source inputd3fff65b349a75b9cbfcaa40d15ade06e7f27770; retained work2026-10-23/24",
+      "retrieved_at": "2026-10-24",
+      "license": {
+        "status": "redistributable",
+        "terms": "Project-generated evidence explicitly authorized public by owner; original corpus provenance and source-specific licenses remain preserved in referenced baseline."
+      },
+      "retention": "retained",
+      "verification": "verified",
+      "files": [
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/native-diagnostic.json",
+          "bytes": 327626,
+          "sha256": "a06c68b928bb6ce4f8c450712150d3e95a3284e7dbf9bcb12729b8c316fbda51",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/source-evidence.json",
+          "bytes": 486052,
+          "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/0-cod-pending-254-reconciliation-20261024.json",
+          "bytes": 20130,
+          "sha256": "58d503cf6804e37f3d9cd0b6945065051ea98b3da887b410a9a6a33018b99f66",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/1-cod-uige-and-ango-source-review-20261024.md",
+          "bytes": 9396,
+          "sha256": "3ace36a1c5eeb12ec7ae5e8fd7e78207ded749787831ee295f5ac445b48f4fc5",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/2-partition-a.json",
+          "bytes": 907137,
+          "sha256": "cbab29ff875d9d5fdb79cefe1e8c84910f4a4f98c9b4f251d3c8ba6769ce7d4b",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/3-frozen-mask-support-join-20261023.local.json",
+          "bytes": 355735,
+          "sha256": "d73a0d7f0d3e3c83d2ed2b4da5387ff3336204d47931be052bbe844f339e8ef5",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/4-complete-family-center-overlay-20261023.local.json",
+          "bytes": 799945,
+          "sha256": "00fc57c3290d4d0cf1ef7df68860ac6d2c3ee82e67509d0ae2f9d1c550cdf24d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/5-center-conflict-disposition-candidate-20261023.local.json",
+          "bytes": 1977447,
+          "sha256": "1b3805a65d528b24d9327bd4c13f1e0b4a8cc0ef908addd728dc2482ff986174",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/6-source-specific-provenance-matrix.local.json",
+          "bytes": 20969,
+          "sha256": "52ff1bb5c53d559e4dc7b77aaf0a321d980163b090ec300f1aa8fb890b8a5a46",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod254-reaudit-20261024/ango36/retained/inputs/7-ango36-prior-reviewer-record.json",
+          "bytes": 4208,
+          "sha256": "5b481386e40c1643998543f009309841a347f3ff7045ce85b639b70886eeb603",
+          "hash_kind": "file-bytes"
+        }
+      ],
+      "temporal_status": "reference"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/proposal.json",
+      "bytes": 404351,
+      "sha256": "a5186b8c2e0d80dee907eafea0acedb2594f0e8aca2c69259b2acbcb449e3046",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/review/actual-prior-reviewer-record.json",
+      "bytes": 4208,
+      "sha256": "5b481386e40c1643998543f009309841a347f3ff7045ce85b639b70886eeb603",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/review/independent-checks.json",
+      "bytes": 8164,
+      "sha256": "3135e4b2f9adf865c4b6a52009573b226a56e2b6f572774667f618c628c57b12",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/review/original-issue-readback.json",
+      "bytes": 80112,
+      "sha256": "7dd80a2c349d6ca4eaf27a329eeae9c1841ea1208e5b0d51a003c866adf00b9f",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/cod254-verified-partition.json",
+      "bytes": 22858,
+      "sha256": "656ba6320dc96c390c91250ec4b0599e1fec8e19c5f3a924bc0c5653fc443f2f",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/independent-audit.json",
+      "bytes": 19746,
+      "sha256": "9ffa503832e35dbb887d5ed04c463a26f7d2e74ed6d742704f940148f5a9a367",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Aru9.json",
+      "bytes": 3723,
+      "sha256": "5a4dbfdd104822648de88ac6ad70d2d63334e31106109c12ad0b5813dc38335f",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Gbadolite2.md",
+      "bytes": 4522,
+      "sha256": "40857f264edbe54e7d16b92ad76608577fd23cc6fb2ab4b41780bcf60c3a9f74",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Irumu112.json",
+      "bytes": 10714,
+      "sha256": "c602f5a214591f4819885cef8e32d99cede7b8f5b358ca75069e26b0b2dc0856",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Kahemba47.json",
+      "bytes": 25576,
+      "sha256": "9c048476716cb8dd90b7f423337442b829dad7aaa713f44ad29cf207b89acce7",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Kasongo59.json",
+      "bytes": 8296,
+      "sha256": "31de32d1d82c706fed37f06b30d25dfaaa73595db2742763c41b53d5753b4f51",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Kimvula4.json",
+      "bytes": 3125,
+      "sha256": "0e77f2fe3986250e6e396c21b17560d1bcbfbe06282690fc77337eb65b594c2e",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Lunda115.json",
+      "bytes": 9282,
+      "sha256": "f5c4750c20f2005e7952636ecf3cc3312f3d19a35d7a972dc306d6a6932ceeb7",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Mahagi16.md",
+      "bytes": 13662,
+      "sha256": "f802ecd87ffdf270a842cdd0dd9b984af3058d02d3a65a8ca764b4ca026c37aa",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Moxico93.json",
+      "bytes": 9360,
+      "sha256": "5aca12ceb683a92cd982b64b2fe5968cfd9a8e08d36b9f34cffdf7fb720e97b2",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Oicha33.json",
+      "bytes": 17730,
+      "sha256": "0351895c3ec23412ad855865217526035da68038a06f1b7cfb9be4aeedd7682d",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Oicha50.json",
+      "bytes": 22862,
+      "sha256": "0685ba6ff4055b4890c4b85b4d4715cb55cf57f3266d39048466ccc61e24f724",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Okoro28.json",
+      "bytes": 1683,
+      "sha256": "7e3aa3edbf9818cca3982e1d4cf904ec0fa53f1cb62b2df09396fcb163521b29",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Padyere1.json",
+      "bytes": 1314,
+      "sha256": "192dd26ab31f7dd94a9db1cdf0cf543611b692ff257911178179f5c611d68526",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/accounting/accepted-group-inputs/Rutshuru105.json",
+      "bytes": 14220,
+      "sha256": "9ef6d444f8a82cbc497dc875bbaea111285b2d3954bd74211b2a52482e62a749",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/retained/custody-map.json",
+      "bytes": 4734,
+      "sha256": "1471d1eea1b2e6b86605e4220ab4c5fe8365e1e420b65184d5c24b3ebc7f3411",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/review/caf-adm3-scientific-addendum.json",
+      "bytes": 5666,
+      "sha256": "a86448996884ed185a1b77c80a43098e161fe1c3e31299e61f7185e6bfdc5616",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/current-status.json",
+      "bytes": 3918,
+      "sha256": "060ffa576232dcaa3c6924ccc302a9bb3f3c6345355d8f265ee5924432ad8d48",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/ango36-direct-caf-source-application.json",
+      "bytes": 399265,
+      "sha256": "7c94359c6a84239ed780b7adacf1c06aeabe11d61eaa0e3277dbd5617e8aaa83",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/caf-adm12-original-archive-inspection.json",
+      "bytes": 44345,
+      "sha256": "f880c18c1f6e45cf5e99ee7cbb65b15d3c6c5d5dc12e77598c54e7a2fbe86d34",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/ango36-three-ssd-original-source-assessment.json",
+      "bytes": 75934,
+      "sha256": "7e6bdd43caf14f6ec82b02d1bc38e08003b996bce8865e1ec61d52e8212c9311",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/cod2019-ango-bomongo-target-source-findings.json",
+      "bytes": 32717,
+      "sha256": "d3ff8c2b62ba1121b3f85efed349d74003bb43bb7acd75905df366e77313b9ef",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/proposal-v2.json",
+      "hash_kind": "file-bytes",
+      "bytes": 729258,
+      "sha256": "fd9cf9ab005bed0829efa0bcaae2fa1863f889a36a2a662ed15c712f24817d36"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/review/native42-independent-binding-and-contact-assessment.json",
+      "hash_kind": "file-bytes",
+      "bytes": 57261,
+      "sha256": "e74869217492edb647d2080e583fb4ae0c5872011600d52d72d2bb1c5ad73f7c"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/caf-adm3-sigcaf-census-primary-method.json",
+      "hash_kind": "file-bytes",
+      "bytes": 5147,
+      "sha256": "0c1365208d4a38385881e4533627199bbabcbbfb7e4f6eba2455757484bb9c96"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/observation/terminal.json",
+      "hash_kind": "file-bytes",
+      "bytes": 1698,
+      "sha256": "7690be2ce52eebfdcc8886eb32f9754d1fd265710b23b0fba2c0168ba75687cd"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/observation/temporary-code-bridge.json",
+      "hash_kind": "file-bytes",
+      "bytes": 599,
+      "sha256": "aca8c05cf41c81e87b49d12076a1cda74397fe736dae02a87531e4cc0ec480a6"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/observation/full-extraction-receipt.json",
+      "hash_kind": "file-bytes",
+      "bytes": 2853,
+      "sha256": "d0a8339aed7d493058f9bdcca676ad5519ebcdf09103f05831de0efc96f22ff5"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/observation/full-parity-summary.json",
+      "hash_kind": "file-bytes",
+      "bytes": 3432,
+      "sha256": "bea48c09f9ebbfed3983b4ff7664682b0fa47c1115d5972675fbe81f4169f213"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/observation/library-custody-local-receipt.json",
+      "hash_kind": "file-bytes",
+      "bytes": 309,
+      "sha256": "93214b32280fe17cc01fad44349b4d23846f1147538dc9f69f9c601c1dbc2969"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/observation/preparation.json",
+      "hash_kind": "file-bytes",
+      "bytes": 269,
+      "sha256": "4ec67562b703c79fed2e2772e5a30ea157d8f6e6a27e6c2a6f40db3803303282"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/observation/ango36-exact-native-rows.json",
+      "hash_kind": "file-bytes",
+      "bytes": 303986,
+      "sha256": "612bfc10878ca6a22fcd901e53c8e7602ce995e7c13b71b6cf3f2904f335b005"
+    }
+  ],
+  "methods": [
+    {
+      "id": "source-relative-research-review",
+      "kind": "source",
+      "description": "Actual primary source and original archive research for all14 operands, followed by lossless extraction from the single full3905 stock diagnostic. All11 prior supported/held/physical/adopted/contact/native-contract fields have exact parity. Native absence is not semantic clearance. Proposed/accepted count metrics are documentary scope counts at the public author baseline0eb64fbc, not measurements executed by that head; the separate observation receipt preserves actual bridgeCODE8d38ff36.",
+      "software": "Stock Node24 diagnostic on temporary research CODE8d38ff36, executable code/maps unchanged from accepted0eb64fbc; original DATA/config preserved. Python3.12 lossless row extraction; no duplicate producers or observations.",
+      "units": "Exact native[owner,y,x] keys and source-feature identities"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "proposed_cells",
+      "value": 36,
+      "unit": "native-map-cells",
+      "vintage": "current",
+      "input_sha256": "fd9cf9ab005bed0829efa0bcaae2fa1863f889a36a2a662ed15c712f24817d36",
+      "evaluation_commit": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239"
+    },
+    {
+      "id": "accepted_cells",
+      "value": 0,
+      "unit": "native-map-cells",
+      "vintage": "current",
+      "input_sha256": "fd9cf9ab005bed0829efa0bcaae2fa1863f889a36a2a662ed15c712f24817d36",
+      "evaluation_commit": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239"
+    }
+  ],
+  "metric_bindings": [
+    {
+      "metric_id": "proposed_cells",
+      "path": "research/geography/cod254-reaudit-20261024/ango36/proposal-v2.json",
+      "json_pointer": "/scope/count"
+    },
+    {
+      "metric_id": "accepted_cells",
+      "path": "research/geography/cod254-reaudit-20261024/ango36/proposal-v2.json",
+      "json_pointer": "/accepted_cells"
+    }
+  ],
+  "summaries": [],
+  "conclusions": [
+    {
+      "text": "Ango36 is proposed researched-unresolved based on actual source construction and measured original-native attribution, pending independent exact-public-head scientific review and delivery. All36 remain held with zero credit; historical omitted-family readiness is superseded.",
+      "status": "unresolved",
+      "source_ids": [
+        "unhcr-caf-subprefectures-2015",
+        "retained-native-evidence"
+      ]
+    }
+  ],
+  "stages": {
+    "research": "partial",
+    "implementation": "not-proposed",
+    "geographic_approval": "unapproved"
+  },
+  "commands": [
+    "node scripts/evidence-quality.mjs research/geography/cod254-reaudit-20261024/ango36/evidence-quality.json"
+  ]
+}
