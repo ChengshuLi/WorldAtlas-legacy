@@ -254,6 +254,56 @@ test('wrong tree, mode, size, OID and hash are not accepted as scoped completion
   } finally { f.close(); }
 });
 
+for (const cached of [false, true]) test(`descriptor mismatch identifies exact immutable metadata, cached original=${cached}`, async () => {
+  const f = fixture(); try {
+    const original = f.maps.get(f.baseline).tree.find(row => row.path === 'data/source.json');
+    const replacement = f.maps.get(f.candidate).tree.find(row => row.path === original.path);
+    const a = f.acquisition({loadDescriptor: async () => replacement});
+    if (cached) await a.resolvePath(f.baseline, original.path);
+    await assert.rejects(a.descriptor(f.baseline, original.path), error => {
+      assert.match(error.message, /^Remote descriptor differs from actual immutable Git tree: /);
+      assert.deepEqual(JSON.parse(error.message.split(': ').slice(1).join(': ')), {
+        commit: f.baseline, path: original.path,
+        expected: {type: 'blob', mode: replacement.mode, git_blob_oid: replacement.sha},
+        actual: {type: 'blob', mode: original.mode, git_blob_oid: original.sha}});
+      assert(!error.message.includes('fixture-secret')); return true;
+    });
+    assert.deepEqual(f.batches, [], 'A metadata refusal never fetches a source body');
+  } finally { f.close(); }
+});
+
+for (const response of ['', 'fixture-secret invalid stdout']) test(`descriptor refusal redacts nonmetadata output (${response ? 'malformed' : 'missing'})`, async () => {
+  const f = fixture(); try {
+    const original = f.maps.get(f.baseline).tree.find(row => row.path === 'data/source.json');
+    const a = f.acquisition({loadDescriptor: async () => original, execute(command, args, options) {
+      if (args.includes('ls-tree')) return Buffer.from(response);
+      return f.execute(command, args, options);
+    }});
+    await assert.rejects(a.descriptor(f.baseline, original.path), error => {
+      const detail = JSON.parse(error.message.split(': ').slice(1).join(': '));
+      assert.equal(detail.commit, f.baseline); assert.equal(detail.path, original.path);
+      assert.deepEqual(detail.actual, {status: response ? 'unrecognized' : 'missing'});
+      assert(!error.message.includes('fixture-secret')); return true;
+    });
+    assert.deepEqual(f.batches, []);
+  } finally { f.close(); }
+});
+
+test('descriptor diagnostics escape literal paths and never expose an unvalidated commit', async () => {
+  const f = fixture(); try {
+    const row = f.maps.get(f.baseline).tree[0], name = 'input\nname.json';
+    const a = f.acquisition({loadDescriptor: async () => row, execute(command, args, options) {
+      if (args.includes('ls-tree')) return Buffer.alloc(0);
+      return f.execute(command, args, options);
+    }});
+    await assert.rejects(a.descriptor('fixture-secret', name), error => {
+      const detail = JSON.parse(error.message.split(': ').slice(1).join(': '));
+      assert.equal(detail.commit, null); assert.equal(detail.path, name);
+      assert(!error.message.includes('\n')); assert(!error.message.includes('fixture-secret')); return true;
+    });
+  } finally { f.close(); }
+});
+
 test('all immutable tree identities are loaded and duplicate metadata paths still fail', async () => {
   const f = fixture(); try {
     const commits = Array.from({length: 2}, (_, i) => f.commit({'input.json': {i}})); f.importMetadata();
