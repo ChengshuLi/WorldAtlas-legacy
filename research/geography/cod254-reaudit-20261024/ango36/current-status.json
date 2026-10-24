@@ -1,0 +1,102 @@
+{
+  "status": "bounded-proposal-pending-independent-exact-public-head-review",
+  "original_proposal_sha256": "a5186b8c2e0d80dee907eafea0acedb2594f0e8aca2c69259b2acbcb449e3046",
+  "scope": {
+    "count": 36,
+    "land": 36,
+    "inland_water": 0,
+    "keys_order": [
+      "owner",
+      "y",
+      "x"
+    ],
+    "owner": 14459,
+    "target_id": "gb:COD:ADM2:63176286B24678106401017",
+    "all_in_pending254": true,
+    "all_in_native_held928": true
+  },
+  "family_counts": {
+    "gb:CAF:ADM1": 2,
+    "gb:CAF:ADM2": 4,
+    "gb:CAF:ADM3": 5,
+    "gb:SSD:ADM1": 1,
+    "gb:SSD:ADM2": 2
+  },
+  "unexamined_family_relative_to_original_review": [
+    {
+      "feature_ordinal": 53,
+      "geometry_sha256": "832ec0890fd9f4ca12c527a9105be3b73434f07e08cab6691a053dae5585313d",
+      "negative_ordinal": 6,
+      "source_id": "gb:CAF:ADM3:52401652B67617163165287"
+    },
+    {
+      "feature_ordinal": 90,
+      "geometry_sha256": "b3bcd13aa80a173dde018806a20269c845a820494de29b06df9a57f8d77c699d",
+      "negative_ordinal": 7,
+      "source_id": "gb:CAF:ADM3:52401652B60998928048694"
+    },
+    {
+      "feature_ordinal": 107,
+      "geometry_sha256": "b9cf86b7dc2125f8cd2e78154d608e97fabdb9093497f27bc2b46c9e8231c7b2",
+      "negative_ordinal": 8,
+      "source_id": "gb:CAF:ADM3:52401652B70517020130267"
+    },
+    {
+      "feature_ordinal": 108,
+      "geometry_sha256": "8ed6c773fb47a7a919a57bcb2589337e3733df33f9ab3d815bcead8c7d5fab49",
+      "negative_ordinal": 9,
+      "source_id": "gb:CAF:ADM3:52401652B10274630546415"
+    },
+    {
+      "feature_ordinal": 110,
+      "geometry_sha256": "70fd812813c727d6e7d1f90d2d99988d3d00b896a77803fbdaac013f04a1be1d",
+      "negative_ordinal": 10,
+      "source_id": "gb:CAF:ADM3:52401652B18967628609342"
+    }
+  ],
+  "reason": "Single full3905 diagnostic now supplies exact native attribution for all14 original operands. Current proposal-v2.json supersedes withdrawn proposal.json readiness; source applicability remains proposed, all36 holds retained.",
+  "source_assessments": [
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/ango36-direct-caf-source-application.json",
+      "bytes": 399265,
+      "sha256": "7c94359c6a84239ed780b7adacf1c06aeabe11d61eaa0e3277dbd5617e8aaa83",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/caf-adm12-original-archive-inspection.json",
+      "bytes": 44345,
+      "sha256": "f880c18c1f6e45cf5e99ee7cbb65b15d3c6c5d5dc12e77598c54e7a2fbe86d34",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/ango36-three-ssd-original-source-assessment.json",
+      "bytes": 75934,
+      "sha256": "7e6bdd43caf14f6ec82b02d1bc38e08003b996bce8865e1ec61d52e8212c9311",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod254-reaudit-20261024/ango36/sources/cod2019-ango-bomongo-target-source-findings.json",
+      "bytes": 32717,
+      "sha256": "d3ff8c2b62ba1121b3f85efed349d74003bb43bb7acd75905df366e77313b9ef",
+      "hash_kind": "file-bytes"
+    }
+  ],
+  "diagnostic_status": {
+    "completed_new_observations": 1,
+    "code": "8d38ff36d0b37b98bfd00ff2d7fb81a5081c7f4f",
+    "unchanged_accepted_code": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239",
+    "report_sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c",
+    "original_data_and_adopted_rows_unchanged": true,
+    "rerun_requested": false
+  },
+  "accepted_cells": 0,
+  "hold_removals": 0,
+  "custody": {
+    "library_file_id": "libfile_56ec412107208191955ecf0b49897af2",
+    "version": 1,
+    "file_id": "file_00000000f82481f6bc6652270173ed43",
+    "filename": "cod254-custody-20261024-v1.zip",
+    "sha256": "612b3cb44155d1e082b578a104a2919d04568bd570e9201a7c3037cfa7125b2d",
+    "receipt": "https://github.com/ChengshuLi/WorldAtlas/issues/2453#issuecomment-6389012585"
+  }
+}

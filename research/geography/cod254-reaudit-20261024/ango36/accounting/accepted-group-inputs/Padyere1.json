@@ -1,0 +1,34 @@
+{
+  "title": "Mahagi Padyere/Ituri one-key derived evidence",
+  "key": [
+    14441,
+    129432,
+    153804
+  ],
+  "owner": 14441,
+  "status": "proposal only; pending root acceptance; zero credit; native hold preserved",
+  "scope_note": "Seven Northern keys from the earlier eight-key bundle are already accepted in COD18 and are supplemental only; they are excluded from this proposal.",
+  "contents": [
+    {
+      "path": "mahagi-padyere-one-key-proposal.local.md",
+      "bytes": 4640,
+      "sha256": "94419fa355e90fad29ec10fca3681974ba6f2a7f353c282f0a49971dbf658071"
+    },
+    {
+      "path": "padyere-reviewer-result.exact.txt",
+      "bytes": 686,
+      "sha256": "1f9ca74b802b7e6e9c3243bbe4dcd3c4ece2b8613c4d30a2cbbcbfe531432182"
+    },
+    {
+      "path": "padyere-one-key-diagnostic-binding.derived.json",
+      "bytes": 9964,
+      "sha256": "8fd4afce35dc73ced1e918c6d7005ebe237f106d0034e9b4dad28cea0eebe063"
+    }
+  ],
+  "excluded": [
+    "raw source polygons",
+    "map images",
+    "raw OSM node histories"
+  ],
+  "diagnostic_scope_correction": "Full run: 3905 requested / 2975 supported / 930 held. Mahagi target: 63 requested / 27 supported / 36 held. This packet concerns only one of the 36 residual held keys; seven Northern keys are already accepted COD18, and 28 Okoro keys remain pending."
+}

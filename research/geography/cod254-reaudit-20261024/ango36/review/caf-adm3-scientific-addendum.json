@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-24",
+  "reviewer": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "verdict": "Earlier ready/no factual blocker verdict withdrawn; source sufficiency withheld.",
+  "scope": {
+    "owner": 14459,
+    "pending_original_cells": 36,
+    "original_package_cells": 3905,
+    "CAF_ADM3_candidates": 5,
+    "potential_pairs_not_proven_contacts": 180
+  },
+  "features": [
+    {
+      "feature_ordinal": 53,
+      "geometry_sha256": "832ec0890fd9f4ca12c527a9105be3b73434f07e08cab6691a053dae5585313d",
+      "negative_ordinal": 6,
+      "source_id": "gb:CAF:ADM3:52401652B67617163165287",
+      "frozen_properties": {
+        "shapeName": "Lili",
+        "shapeISO": "",
+        "shapeID": "52401652B67617163165287",
+        "shapeGroup": "CAF",
+        "shapeType": "ADM3"
+      },
+      "source_archive_properties": {
+        "Name": "Lili",
+        "Level": "ADM3"
+      },
+      "geometry_identity_verified": true,
+      "hash_serialization": "Sorted compact JSON plus newline, integral floats serialized as integers; no spatial change"
+    },
+    {
+      "feature_ordinal": 90,
+      "geometry_sha256": "b3bcd13aa80a173dde018806a20269c845a820494de29b06df9a57f8d77c699d",
+      "negative_ordinal": 7,
+      "source_id": "gb:CAF:ADM3:52401652B60998928048694",
+      "frozen_properties": {
+        "shapeName": "Zemio",
+        "shapeISO": "",
+        "shapeID": "52401652B60998928048694",
+        "shapeGroup": "CAF",
+        "shapeType": "ADM3"
+      },
+      "source_archive_properties": {
+        "Name": "Zemio",
+        "Level": "ADM3"
+      },
+      "geometry_identity_verified": true,
+      "hash_serialization": "Sorted compact JSON plus newline, integral floats serialized as integers; no spatial change"
+    },
+    {
+      "feature_ordinal": 107,
+      "geometry_sha256": "b9cf86b7dc2125f8cd2e78154d608e97fabdb9093497f27bc2b46c9e8231c7b2",
+      "negative_ordinal": 8,
+      "source_id": "gb:CAF:ADM3:52401652B70517020130267",
+      "frozen_properties": {
+        "shapeName": "Obo",
+        "shapeISO": "",
+        "shapeID": "52401652B70517020130267",
+        "shapeGroup": "CAF",
+        "shapeType": "ADM3"
+      },
+      "source_archive_properties": {
+        "Name": "Obo",
+        "Level": "ADM3"
+      },
+      "geometry_identity_verified": true,
+      "hash_serialization": "Sorted compact JSON plus newline, integral floats serialized as integers; no spatial change"
+    },
+    {
+      "feature_ordinal": 108,
+      "geometry_sha256": "8ed6c773fb47a7a919a57bcb2589337e3733df33f9ab3d815bcead8c7d5fab49",
+      "negative_ordinal": 9,
+      "source_id": "gb:CAF:ADM3:52401652B10274630546415",
+      "frozen_properties": {
+        "shapeName": "Mboki",
+        "shapeISO": "",
+        "shapeID": "52401652B10274630546415",
+        "shapeGroup": "CAF",
+        "shapeType": "ADM3"
+      },
+      "source_archive_properties": {
+        "Name": "Mboki",
+        "Level": "ADM3"
+      },
+      "geometry_identity_verified": true,
+      "hash_serialization": "Sorted compact JSON plus newline, integral floats serialized as integers; no spatial change"
+    },
+    {
+      "feature_ordinal": 110,
+      "geometry_sha256": "70fd812813c727d6e7d1f90d2d99988d3d00b896a77803fbdaac013f04a1be1d",
+      "negative_ordinal": 10,
+      "source_id": "gb:CAF:ADM3:52401652B18967628609342",
+      "frozen_properties": {
+        "shapeName": "Rafai",
+        "shapeISO": "",
+        "shapeID": "52401652B18967628609342",
+        "shapeGroup": "CAF",
+        "shapeType": "ADM3"
+      },
+      "source_archive_properties": {
+        "Name": "Rafai",
+        "Level": "ADM3"
+      },
+      "geometry_identity_verified": true,
+      "hash_serialization": "Sorted compact JSON plus newline, integral floats serialized as integers; no spatial change"
+    }
+  ],
+  "source_provenance": {
+    "represented_year": 2018,
+    "source": [
+      "ACTED",
+      "OCHA Central African Republic"
+    ],
+    "archived_methodology": "SIGCAF1996 GIS effort corresponding to2003census; administrative cartography1:200000; ITOS QA/configuration/live services.",
+    "independent_image_read": true,
+    "original_archive_sha256": "05beb18f60583c3c0b41fc5b8148a5f8aa66317387eef846c08caaa138e650f4"
+  },
+  "completed_now": [
+    "Actual original archive metadata/DBF read",
+    "Actual archived HDX methodology screenshot visually read",
+    "Actual frozen family body and five native IDs/hashes authenticated"
+  ],
+  "not_completed": [
+    "Per-key/per-operand original-native applicability/contact attribution for five CAF ADM3 candidates",
+    "Feature-specific cartographic edge lineage sufficient to resolve applicability; no specific uninspected source presumed nonexistent"
+  ],
+  "obstacle": {
+    "url": "https://data.humdata.org/dataset/central-african-republic-administrative-boundaries",
+    "status": "Prior source403 denied; no retry or bypass"
+  },
+  "all36_holds_preserved": true,
+  "new_geometry_observations": 0,
+  "accepted_credit": 0,
+  "files": [
+    {
+      "file": "ango36-caf-adm3-five-input-inspection.json",
+      "bytes": 5238,
+      "sha256": "a1ff5b79f664125e11a3d2bbe2b525c7fac2f4af41668afc2d705f5e8874ee23"
+    },
+    {
+      "file": "ango36-caf-adm3-scientific-addendum.md",
+      "bytes": 5789,
+      "sha256": "6e7a38db5e8631f011db76cf1b014b16ee92e821f3b649846fe8beed9a129a67"
+    },
+    {
+      "file": "ango36-independent-factual-review-before-adm3-addendum.md",
+      "bytes": 7653,
+      "sha256": "659c768b918bd89230a9eff427afd8b0a7751144c53ea6911d7ccdf3354087b2"
+    },
+    {
+      "file": "ango36-independent-factual-review.md",
+      "bytes": 8129,
+      "sha256": "d103ea73a02498526f23f3de3b94c9baae2ec1c7a0a8db8f37f81c6a71cbda80"
+    }
+  ]
+}

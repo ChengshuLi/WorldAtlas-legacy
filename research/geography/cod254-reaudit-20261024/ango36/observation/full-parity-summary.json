@@ -1,0 +1,103 @@
+{
+  "code": "8d38ff36d0b37b98bfd00ff2d7fb81a5081c7f4f",
+  "accepted_code_base": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239",
+  "diagnostic": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+    "bytes": 10190632,
+    "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+  },
+  "original_diagnostic": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/native-diagnostic.json",
+    "bytes": 327626,
+    "sha256": "a06c68b928bb6ce4f8c450712150d3e95a3284e7dbf9bcb12729b8c316fbda51"
+  },
+  "preserved_fields": [
+    "requested_cells",
+    "supported_cells",
+    "held_cells",
+    "requested_rows",
+    "supported_rows",
+    "held_rows",
+    "decision_rows",
+    "physical_witness_kind_legend",
+    "physical_witness_kind_rows",
+    "territorial_contacts",
+    "native_contract"
+  ],
+  "counts": {
+    "original": 3905,
+    "positive": 2977,
+    "held": 928,
+    "accepted_unresolved": 674,
+    "pending": 254,
+    "new_acceptance": 0
+  },
+  "workstreams": {
+    "uige18_lineage": {
+      "keys": 18,
+      "keys_with_any_negative_kind": 18,
+      "operand_contact_key_counts": {
+        "gb:AGO:ADM1:26408823B906914650007": 18
+      }
+    },
+    "luozi19_primary": {
+      "keys": 19,
+      "keys_with_any_negative_kind": 19,
+      "operand_contact_key_counts": {
+        "gb:COG:ADM1:67827341B26824927831038": 4,
+        "gb:COG:ADM1:67827341B31154795269334": 15
+      }
+    },
+    "kalemie30_delimitation": {
+      "keys": 30,
+      "keys_with_any_negative_kind": 30,
+      "operand_contact_key_counts": {
+        "gb:TZA:ADM1:36957248B11692782910073": 30
+      }
+    },
+    "residual_land_west": {
+      "keys": 32,
+      "keys_with_any_negative_kind": 32,
+      "operand_contact_key_counts": {
+        "gb:AGO:ADM1:26408823B5362531623165": 4,
+        "gb:AGO:ADM1:26408823B68708736810578": 25,
+        "gb:COG:ADM1:67827341B58284401685335": 3
+      }
+    },
+    "residual_land_east": {
+      "keys": 42,
+      "keys_with_any_negative_kind": 42,
+      "operand_contact_key_counts": {
+        "gb:BDI:ADM1:87207978B36636371084075": 1,
+        "gb:BDI:ADM1:87207978B68487327478732": 5,
+        "gb:CAF:ADM1:63714938B95555008029378": 28,
+        "gb:CAF:ADM2:33826404B4042011562142": 36
+      }
+    },
+    "residual_water35": {
+      "keys": 35,
+      "keys_with_any_negative_kind": 35,
+      "operand_contact_key_counts": {
+        "gb:COG:ADM1:67827341B88704799146201": 5,
+        "gb:TZA:ADM1:36957248B11692782910073": 2,
+        "gb:TZA:ADM1:36957248B34051677343112": 27,
+        "gb:TZA:ADM1:36957248B68200678446738": 1
+      }
+    },
+    "coordinator_northern78": {
+      "keys": 78,
+      "keys_with_any_negative_kind": 78,
+      "operand_contact_key_counts": {
+        "gb:CAF:ADM1:63714938B18739157330103": 7,
+        "gb:CAF:ADM1:63714938B39161688438046": 1,
+        "gb:CAF:ADM1:63714938B4314817363012": 7,
+        "gb:CAF:ADM1:63714938B70915793391768": 4,
+        "gb:CAF:ADM1:63714938B78522502559544": 43,
+        "gb:CAF:ADM1:63714938B99123991024226": 2,
+        "gb:CAF:ADM2:33826404B37622790924059": 18,
+        "gb:CAF:ADM2:33826404B4042011562142": 11
+      }
+    }
+  },
+  "no_geometry_or_diagnostic_rerun": true
+}
