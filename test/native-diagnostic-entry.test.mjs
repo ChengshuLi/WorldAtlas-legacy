@@ -15,7 +15,7 @@ for(const [i,latitude] of nativeRowLatitudes(size).entries())latitudeBytes.write
 
 // Small real Git inputs exercise the public CLI and authenticated reader, not a
 // country producer, fabricated returned diagnostic or alternate coverage method.
-function fixture(t) {
+function fixture(t, negatives = []) {
   const cache=path.join(repository,'.cache');fs.mkdirSync(cache,{recursive:true});
   const root=fs.mkdtempSync(path.join(cache,'native-diagnostic-entry-'));
   t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
@@ -40,7 +40,7 @@ function fixture(t) {
     owner_roster:owners,physical_evidence:physical,physical_input:pin('physical-input.json'),physical_reproduction:pin('physical.py'),
     native_latitudes:latitudes,native_contract:{size,native_latitudes:latitudes,original_assets:{bounds:{sha256:owners.sha256}}},
     base_reference:{id:'fixture-base'},families:[{source_id:family,parts:[pin('source.json')]}],
-    targets:[{id:target,pixelIndex:1,source_family:family,base_geometry:rectangle(.03),coverage_classes:['mapped_land_support'],territorial_exclusions:[],source_receipt_sha256:physical.sha256}]};
+    targets:[{id:target,pixelIndex:1,source_family:family,base_geometry:rectangle(.03),coverage_classes:['mapped_land_support'],territorial_exclusions:negatives,source_receipt_sha256:physical.sha256}]};
   save('source-evidence.json',jsonBytes(evidence));git('add','.');git('commit','-qm','Bound diagnostic evidence');
   const head=git('rev-parse','HEAD');
   const config={version:1,preparation_allowance:{phaseBytes:512*1024*1024,rssBytes:512*1024*1024},
@@ -62,6 +62,8 @@ test('native-diagnostic CLI publishes an exact mixed partition and cannot substi
   assert.deepEqual(result.supported_rows,[{y,runs:[[x,x+1,1]]}]);
   assert.deepEqual(result.held_rows,[{y,runs:[[x+1,x+2,1]]}]);
   assert.deepEqual(result.requested_rows,[{y,runs:[[x,x+2,1]]}]);
+  assert.deepEqual(result.diagnostic_territorial_rows,[{y,runs:[[x,x+2,1,[]]]}],
+    'stock writer preserves complete requested interval even when there are no consumed negatives');
   assert.equal(result.first_failure?.predicate??null,'unique-source-target-coverage');
   const spans=result.decision_rows.flatMap(row=>row.runs);
   assert.equal(spans.reduce((n,[a,b])=>n+b-a,0),2);
@@ -118,4 +120,20 @@ test('native-diagnostic CLI publishes an exact mixed partition and cannot substi
   f.config.source_evidence={commit:f.git('rev-parse','HEAD'),path:output+'/native-diagnostic.json'};
   const destination='coordination/engineering/fixture/rejected-authority',rejected=f.run('native-authority',destination);
   assert.notEqual(rejected.status,0);assert.match(rejected.stderr,/Incomplete source-target evidence/);assert(!fs.existsSync(path.join(f.root,destination)));
+});
+
+
+test('native-diagnostic CLI emits all simultaneous negative contacts without adopted contextual keys',t=>{
+ const geometry=rectangle(.03),f=fixture(t,[geometry,structuredClone(geometry)]);
+ const run=f.run('native-diagnostic',output);assert.equal(run.status,0,run.stderr);
+ const result=read(f,'native-diagnostic.json');
+ assert.equal(result.supported_cells,0);assert.equal(result.held_cells,2);
+ assert.equal(Object.hasOwn(result,'territorial_contacts'),false,'no fabricated adopted context');
+ assert.deepEqual(result.diagnostic_territorial_rows,[{y,runs:[[x,x+2,1,[0,1].map(negative_ordinal=>({
+  target_id:target,negative_ordinal,geometry_sha256:digest(Buffer.from(JSON.stringify({coordinates:geometry.coordinates,type:geometry.type})+'\n')),
+  kinds:['interior'],source_id:target
+ }))]]}]);
+ assert.deepEqual(result.original_pins.source_evidence,f.reader.pin(f.head,'source-evidence.json'));
+ const raw=fs.readFileSync(path.join(f.root,output,'native-diagnostic.json'));
+ assert.equal(read(f,'preparation.json').outputs['native-diagnostic.json'].sha256,digest(raw));
 });

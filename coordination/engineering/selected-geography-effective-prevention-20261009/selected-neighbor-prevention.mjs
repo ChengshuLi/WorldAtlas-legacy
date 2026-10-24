@@ -1683,7 +1683,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   coverageRowsByOwner.set(target.pixelIndex,rows);
  }
  // Optional adopted source applicability retains every original negative.
- const completeOriginalSources=new Map();
+ const completeOriginalSources=new Map(),diagnosticNegativeSources=new Map();
  const readCompleteSource=function*(parts,record){
   demand(record&&Array.isArray(parts)&&parts.length===record.parts.length,
    'Missing complete original source family');
@@ -1739,6 +1739,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
     const original=loaded.get(operand.source_id);
     demand(original&&original.feature_ordinal===operand.feature_ordinal
      &&original.geometry_sha256===operand.geometry_sha256,'Territorial reference differs from complete original');
+    if(diagnostic)diagnosticNegativeSources.set(JSON.stringify([target.id,negative_ordinal]),{...operand});
     return original.geometry;
    });
   }
@@ -1746,7 +1747,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
 
  // Source semantics enter through the same executing-tree pin as dated land;
  // the native operator receives only exact member/operand/centre identities.
- const territorialApplicability=[],territorialContextHits=[],territorialOperands=new Map();
+ const territorialApplicability=[],territorialContextHits=[],territorialOperands=new Map(),diagnosticTerritorialRows=[];
  if(evidence.territorial_applicability!==undefined){
   const data=(yield* readAdopted(evidence.territorial_applicability,'Territorial applicability'));
   demand(keys(data,'version,kind,provenance,records')&&data.version===1
@@ -1940,7 +1941,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   const coverageFeatures=selected.filter(t=>t.coverage_geometry.coordinates.length).map(target=>({id:target.target_id??target.id,source_id:target.id,pixelIndex:target.pixelIndex,geometry:target.coverage_geometry}));
   let exclusions=selected.flatMap(target=>(target.territorial_exclusions??[]).map((geometry,ordinal)=>({
    id:target.target_id??target.id,pixelIndex:target.pixelIndex,geometry,
-   ...(evidence.territorial_applicability===undefined?{}:{source_id:target.id,negative_ordinal:ordinal,geometry_sha256:valueSha(geometry),
+   ...(evidence.territorial_applicability===undefined&&!diagnostic?{}:{source_id:target.id,negative_ordinal:ordinal,geometry_sha256:valueSha(geometry),
     operand_sha256:territorialOperands.get(JSON.stringify([target.id,ordinal]))})})));
   for(const member of splitVetoes){
    // Every original ring remains a veto. No child is used as a surrogate
@@ -2043,6 +2044,18 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
     original_source:territorialApplicability.find(record=>record.source_id===hit.source_id
      &&record.pixelIndex===hit.pixelIndex&&record.y===hit.y&&record.x===hit.x
      &&record.operand_sha256===hit.operand_sha256)?.original_source});
+   if(diagnostic)for(const row of allowed.diagnostic_territorial_rows)diagnosticTerritorialRows.push({y:row.y,
+    runs:row.runs.map(([start,end,owner,operands])=>[start,end,owner,operands.map(({exclusion_index,kinds})=>{
+     const negative=exclusions[exclusion_index];
+     const original=diagnosticNegativeSources.get(JSON.stringify([negative.source_id,negative.negative_ordinal]));
+     return {target_id:negative.id,negative_ordinal:negative.negative_ordinal,
+      geometry_sha256:negative.geometry_sha256,kinds,
+      ...(negative.source_id?{source_id:negative.source_id}:{}),
+      ...(original?{original_source:original}:{}),
+      ...(negative.split_source_id?{split_source_id:negative.split_source_id}:{}),
+      ...(negative.provider_source_id?{provider_source_id:negative.provider_source_id}:{}),
+      ...(negative.operand_sha256?{operand_sha256:negative.operand_sha256}:{})};
+    })])});
    const allowedRows=new Map(allowed.rows.map(row=>[row.y,row.runs]));
    // The native view reuses its existing complete source scan and decision;
    // owner equality alone never lets an active sibling lend its dated support.
@@ -2106,6 +2119,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   demand(supportedCells+heldCells===requested,'Incomplete native diagnostic partition');
   const result={version:1,kind:'source-target-native-diagnostic-v1',requested_rows:proposed.rows,
    supported_rows:supported,held_rows:held,decision_rows:decisions,first_failure:firstFailure,
+   diagnostic_territorial_rows:diagnosticTerritorialRows,
    physical_witness_kind_legend:witnessKinds,
    physical_witness_kind_rows:[...witnessKindRows].sort((a,b)=>a[0]-b[0])
     .map(([y,runs])=>({y,runs:runs.sort((a,b)=>a[0]-b[0])})),
