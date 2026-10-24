@@ -692,3 +692,47 @@ test('stock completed-custody CLI preserves private originals and genuine finali
  const report=await compareFinal(f,base,candidate);
  assert.equal(report.native_row_scope.added_cells,1);assert.equal(report.completed_geometry_custody.length,1);
 });
+
+
+test('accepted-map applicability projection subtracts same-owner keys without dropping a novel decision',async t=>{
+ const f=await acceptedFixture(t),geometry={type:'Polygon',coordinates:[[[0,0],[1,0],[1,1],[0,0]]]};
+ let full;
+ const {output,config}=await f.run({supported:[[2,4,1]],held:[[4,5,1]],mutateSource(source){
+  f.save('incremental/context-decision.json',{decision:'Retained exact-key fixture decision.'});
+  f.save('incremental/context-scope.json',{records:[{owner:1,y:1,x:2},{owner:1,y:1,x:3}]});
+  f.save('incremental/negative.json',geometry);const at=f.commit();
+  full={version:1,kind:'adopted-native-territorial-applicability-v1',provenance:[
+   {id:'decision',role:'adoption',pin:f.pin('incremental/context-decision.json',at)},
+   {id:'scope',role:'scope',pin:f.pin('incremental/context-scope.json',at)},
+   {id:'original',role:'original-source',pin:f.pin('incremental/negative.json',at)}],
+   records:[2,3].map((x,i)=>({role:'contextual',source_id:'member-a',target_id:'A',pixelIndex:1,y:1,x,
+    negative_ordinal:0,geometry_sha256:digest(jsonBytes(geometry)),
+    original_source:{id:'original',pointer:''},adoption:{id:'decision',pointer:'/decision'},
+    scope:{id:'scope',pointer:'/records/'+i,owner_pointer:'/owner'}}))};
+  f.save('incremental/full-applicability.json',full);
+  source.territorial_applicability=f.pin('incremental/full-applicability.json',f.commit());
+  source.targets[0].territorial_exclusions=[geometry];
+ }});
+ assert.deepEqual(output['native-patch.json'].rows,[{y:1,runs:[[3,4,1]]}]);
+ assert.deepEqual(output['already-present-original.json'].rows,[{y:1,runs:[[2,3,1]]}]);
+ assert(!output['source-evidence.json']);assert(output['unbound-source-evidence.json']);
+ assert.deepEqual(output['territorial-applicability.json'].records,[full.records[1]]);
+ f.save('incremental/projected-applicability.json',jsonBytes(output['territorial-applicability.json']));const at=f.commit();
+ const bound=await supportedInputs({...config,territorial_applicability:{commit:at,path:'incremental/projected-applicability.json'}},pinReader(f.root));
+ assert.equal(JSON.parse(bound['source-evidence.json']).territorial_applicability.commit,at);
+ const account=JSON.parse(bound['original-scope-partition.json']);
+ assert.equal(account.original_cells,3);assert.equal(account.already_present_cells,1);assert.equal(account.supported_cells,1);assert.equal(account.held_cells,1);
+ assert.deepEqual(account.territorial_applicability.selected_record_ordinals,[1]);
+ assert.deepEqual(JSON.parse(f.git('show',at+':incremental/full-applicability.json')),full);
+ const boundConfig={...config,territorial_applicability:{commit:at,path:'incremental/projected-applicability.json'}};
+ f.save('.cache/delivery-handoff/projected-config.json',boundConfig);
+ const command=fileURLToPath(new URL('../scripts/prepare-delivery-handoff.mjs',import.meta.url));
+ const destination='coordination/engineering/applicability-test/bound';
+ const args=[command,'supported-inputs','.cache/delivery-handoff/projected-config.json',destination];
+ const env={...process.env};delete env.NODE_OPTIONS;delete env.NODE_PATH;
+ for(const flags of [[],['--resume']]){
+  const result=spawnSync(process.execPath,[...args,...flags],{cwd:f.root,env,encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+ }
+ for(const [name,raw]of Object.entries(bound))assert.deepEqual(fs.readFileSync(path.join(f.root,destination,name)),raw,name);
+});

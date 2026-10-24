@@ -1414,7 +1414,7 @@ export function supportedInputs(config, reader) {
 
 async function supportedFinalInputs(config, reader) {
   need(config.version === 1 && Object.keys(config).every(key =>
-    ['version', 'diagnostic', 'original_patch', 'prior_holds', 'accepted_selector'].includes(key)),
+    ['version', 'diagnostic', 'original_patch', 'prior_holds', 'accepted_selector', 'territorial_applicability'].includes(key)),
   'Explicit incremental supported-input locators required');
   const {accepted_selector, ...original} = config;
   need(accepted_selector?.path === 'data/ownership-selection.json', 'Canonical accepted selector required');
@@ -1454,7 +1454,7 @@ async function supportedFinalInputs(config, reader) {
 
 function partitionSupportedInputs(config, reader, accepted) {
   need(config?.version === 1 && Object.keys(config).every(key =>
-    ['version', 'diagnostic', 'original_patch', 'prior_holds'].includes(key)), 'Explicit supported-input locators required');
+    ['version', 'diagnostic', 'original_patch', 'prior_holds', 'territorial_applicability'].includes(key)), 'Explicit supported-input locators required');
   const diagnosticPin = locate(reader, config.diagnostic), diagnostic = reader.json(diagnosticPin);
   need(diagnostic?.version === 1 && diagnostic.kind === 'source-target-native-diagnostic-v1'
     && same(Object.keys(diagnostic.original_pins ?? {}).sort(), ['native_patch', 'source_evidence']),
@@ -1634,7 +1634,96 @@ function partitionSupportedInputs(config, reader, accepted) {
       accepted ? 'Original source, physical and negative operands remain pinned; only positive coverage and owners with no novel keys are narrowed.'
         : 'Original source, physical and negative operands remain pinned; only positive coverage and wholly held owners are narrowed.',
       ...(accepted ? ['Same-owner current presence is not new scientific credit; novel, already-present and held keys retain the complete original denominator.'] : [])]};
-  return {'source-evidence.json': jsonBytes({...source, targets}), 'native-patch.json': jsonBytes({rows: narrowed}),
+  // A full adopted envelope cannot be carried into a narrower request unchanged:
+  // the native verifier intentionally rejects every unused contextual decision.
+  // Prepare exact metadata first; only a second, immutable binding can make the
+  // projected source runnable. No invented commit or relaxed consumer is needed.
+  let projectedSource = {...source, targets}, sourceName = 'source-evidence.json';
+  const applicabilityOutputs = {};
+  if (source.territorial_applicability !== undefined) {
+    const originalApplicability = source.territorial_applicability;
+    const adopted = reader.json(originalApplicability);
+    const currentHead = reader.git('rev-parse', 'HEAD').toString().trim();
+    const current = reader.pin(currentHead, originalApplicability.path);
+    need(['mode', 'git_blob_oid', 'bytes', 'sha256'].every(key => current[key] === originalApplicability[key]),
+      'Original territorial applicability differs from current committed adoption');
+    need(adopted?.version === 1 && adopted.kind === 'adopted-native-territorial-applicability-v1'
+      && same(Object.keys(adopted).sort(), ['kind', 'provenance', 'records', 'version'])
+      && Array.isArray(adopted.records) && adopted.records.length > 0
+      && Array.isArray(adopted.provenance) && adopted.provenance.length > 0,
+    'Complete original territorial applicability required');
+    const originalRows = new Map(requested.map(row => [row.y, row.runs]));
+    const novelRows = new Map(narrowed.map(row => [row.y, row.runs]));
+    const contains = (map, record) => (map.get(record.y) ?? []).some(run =>
+      run[2] === record.pixelIndex && run[0] <= record.x && record.x < run[1]);
+    const provenance = new Map(), used = new Set(), selectedIds = new Set(), seenRecords = new Set();
+    for (const item of adopted.provenance) {
+      need(item && typeof item.id === 'string' && item.id && !provenance.has(item.id)
+        && ['adoption', 'scope', 'original-source'].includes(item.role), 'Invalid territorial projection provenance');
+      const multipart = item.role === 'original-source' && Object.hasOwn(item, 'parts');
+      need(same(Object.keys(item).sort(), multipart ? ['id', 'parts', 'role'] : ['id', 'pin', 'role']),
+        'Malformed territorial projection provenance');
+      const inputs = multipart ? item.parts : [item.pin];
+      need(Array.isArray(inputs) && inputs.length > 0 && new Set(inputs.map(pin => digest(jsonBytes(pin)))).size === inputs.length
+        && inputs.every(pin => pin && hex(pin.commit, 40) && safe(pin.path) && ['100644', '100755'].includes(pin.mode)
+          && hex(pin.git_blob_oid, 40) && Number.isSafeInteger(pin.bytes) && pin.bytes >= 0 && hex(pin.sha256, 64)
+          && (pin.decoded_bytes === undefined && pin.decoded_sha256 === undefined
+            || Number.isSafeInteger(pin.decoded_bytes) && pin.decoded_bytes >= 0 && hex(pin.decoded_sha256, 64))),
+      'Incomplete territorial projection provenance pin');
+      provenance.set(item.id, item);
+    }
+    const selectedOrdinals = [], records = [];
+    for (const [ordinal, record] of adopted.records.entries()) {
+      need(record && same(Object.keys(record).sort(), ['adoption', 'geometry_sha256', 'negative_ordinal',
+        'original_source', 'pixelIndex', 'role', 'scope', 'source_id', 'target_id', 'x', 'y'])
+        && record.role === 'contextual' && typeof record.source_id === 'string' && typeof record.target_id === 'string'
+        && Number.isSafeInteger(record.y) && Number.isSafeInteger(record.x)
+        && Number.isSafeInteger(record.pixelIndex) && Number.isSafeInteger(record.negative_ordinal)
+        && record.negative_ordinal >= 0 && hex(record.geometry_sha256, 64) && contains(originalRows, record),
+      'Territorial projection record differs from complete original request');
+      const target = source.targets.find(target => target.id === record.source_id);
+      need(target && target.pixelIndex === record.pixelIndex && (target.target_id ?? target.id) === record.target_id
+        && target.territorial_exclusions?.[record.negative_ordinal] !== undefined,
+      'Territorial projection target or negative differs from original source');
+      const negative = target.territorial_exclusions[record.negative_ordinal];
+      need((['Polygon', 'MultiPolygon'].includes(negative?.type) ? digest(jsonBytes(negative)) : negative?.geometry_sha256)
+        === record.geometry_sha256, 'Territorial projection original negative identity differs');
+      const identity = JSON.stringify([record.source_id, record.target_id, record.pixelIndex,
+        record.y, record.x, record.negative_ordinal]);
+      need(!seenRecords.has(identity), 'Duplicate territorial projection record'); seenRecords.add(identity);
+      const selected = contains(novelRows, record);
+      for (const [field, role] of [['original_source', 'original-source'], ['adoption', 'adoption'], ['scope', 'scope']]) {
+        const ref = record[field], item = provenance.get(ref?.id);
+        need(item?.role === role && same(Object.keys(ref).sort(), role === 'scope'
+          ? ['id', 'owner_pointer', 'pointer'] : ['id', 'pointer']) && typeof ref.pointer === 'string'
+          && (role !== 'scope' || typeof ref.owner_pointer === 'string'), 'Missing territorial projection provenance role');
+        used.add(ref.id); if (selected) selectedIds.add(ref.id);
+      }
+      if (selected) {selectedOrdinals.push(ordinal); records.push(record);}
+    }
+    need(used.size === provenance.size, 'Unused original territorial projection provenance');
+    const projection = {...adopted, records, provenance: adopted.provenance.filter(item => selectedIds.has(item.id))};
+    const changed = records.length !== adopted.records.length;
+    const projectedBytes = jsonBytes(projection);
+    accounting.territorial_applicability = {original: originalApplicability, selected_record_ordinals: selectedOrdinals,
+      omitted_record_ordinals: adopted.records.map((_, ordinal) => ordinal).filter(ordinal => !selectedOrdinals.includes(ordinal)),
+      original_records: adopted.records.length, selected_records: records.length,
+      status: changed ? records.length ? 'requires-immutable-projection-binding' : 'no-applicable-records' : 'unchanged'};
+    if (changed && records.length) applicabilityOutputs['territorial-applicability.json'] = projectedBytes;
+    if (config.territorial_applicability !== undefined) {
+      need(changed && records.length, 'Unused territorial applicability projection binding');
+      const projectedPin = locate(reader, config.territorial_applicability);
+      need(reader.read(projectedPin).equals(projectedBytes), 'Territorial applicability projection differs from exact original subset');
+      const actual = reader.pin(currentHead, projectedPin.path);
+      need(['mode', 'git_blob_oid', 'bytes', 'sha256'].every(key => actual[key] === projectedPin[key]),
+        'Projected territorial applicability differs from current committed input');
+      projectedSource.territorial_applicability = projectedPin;
+      accounting.territorial_applicability.projected = projectedPin;
+      accounting.territorial_applicability.status = 'bound-exact-projection';
+    } else if (changed && records.length) sourceName = 'unbound-source-evidence.json';
+    else if (!records.length) delete projectedSource.territorial_applicability;
+  } else need(config.territorial_applicability === undefined, 'Projection binding requires original territorial applicability');
+  return {[sourceName]: jsonBytes(projectedSource), ...applicabilityOutputs, 'native-patch.json': jsonBytes({rows: narrowed}),
     'held-original.json': jsonBytes({rows: withheld}), 'original-scope-partition.json': jsonBytes(accounting),
     ...(accepted ? {'already-present-original.json': jsonBytes({rows: alreadyPresent})} : {})};
 }
