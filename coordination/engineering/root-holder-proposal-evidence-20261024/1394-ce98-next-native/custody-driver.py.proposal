@@ -1,0 +1,84 @@
+"""Proposed cold custody-only entry. MUST be committed and rostered before use.
+Existing ce98 numerical stages remain pinned to their original scientific head.
+Caller authority is exact independently derived full spec/input rosters, never
+an output inventory used as its own expectation. No science is executed here.
+"""
+import argparse,hashlib,json,re,subprocess,sys,types
+from pathlib import Path
+OWNED='coordination/engineering/complete-replay-operand-restoration-20261007/'
+NODE='/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node'
+OPERATIONS=('scientific-check','scientific-join','scientific-group','scientific-parent','proof-plan','proof-pack','proof-restore','proof-join')
+def need(ok,msg):
+ if not ok:raise ValueError(msg)
+def unique(pins,a):
+ out={}
+ for p in pins:
+  a.bounds(p);k=a.Phase.key(p);need(k not in out or out[k]==p,'Conflicting complete custody pin');out[k]=p
+ return list(out.values())
+def exact(actual,expected,a):
+ need(len(actual)==len(unique(actual,a)) and len(expected)==len(unique(expected,a)) and
+      {a.Phase.key(p):p for p in actual}=={a.Phase.key(p):p for p in expected},'Independent complete custody roster differs')
+def stage(spec):return [spec['publication'],spec['inventory'],*spec['outputs']]
+def dependencies(op,args,a,proof):
+ if op=='scientific-check':return unique([args['plan_pin'],*stage(args['spec']),*args['spec']['operand_pins'],*stage(args['native_spec'])],a)
+ if op=='scientific-join':
+  return unique([args['plan_pin'],*stage(args['native_spec']),*[p for s in args['source_specs'] for p in stage(s)],*[p for s in args['verification_specs'] for p in stage(s)]],a)
+ if op=='scientific-group':
+  return unique([args['plan_pin'],args['aggregation_plan_pin'],*stage(args['native_spec']),*[p for s in args['source_summaries'] for p in stage(s)],*[p for s in args['verification_summaries'] for p in stage(s)]],a)
+ if op=='scientific-parent':return unique([args['plan_pin'],args['aggregation_plan_pin'],*stage(args['native_spec']),*[p for s in args['group_specs'] for p in stage(s)]],a)
+ if op=='proof-plan':return unique([args['roster_pin'],args['codec_pin']],a)
+ if op=='proof-pack':return proof.pack_inputs(args['group'],args['roster_pin'],args['codec_pin'],args['plan_pin'],args['plan_pair'],a)
+ if op=='proof-restore':return proof.restore_inputs(args['roster_pin'],args['codec_pin'],args['index_pin'],args['pack_pair'],args['transport_pins'],a)
+ if op=='proof-join':return proof.join_inputs(args['roster_pin'],args['codec_pin'],args['plan_pin'],args['plan_pair'],args['pack_pairs'],args['index_pins'],a)
+ raise ValueError('Unknown custody operation')
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--freeze',type=Path,required=True);p.add_argument('--freeze-sha256',required=True);p.add_argument('--request',type=Path,required=True);p.add_argument('--request-sha256',required=True);cli=p.parse_args()
+ here=Path(__file__).resolve().parent;repo=here.parents[2]
+ def root(path,digest):
+  need(path.is_absolute() and path.resolve().is_relative_to(repo/'.cache') and not any(p.is_symlink() for p in (path,*path.parents)),'Safe root custody metadata')
+  with path.open('rb') as f:b=f.read(1048577)
+  need(len(b)<=1048576 and re.fullmatch('[a-f0-9]{64}',digest) and hashlib.sha256(b).hexdigest()==digest,'Whole root custody metadata differs')
+  return json.loads(b),dict(path=str(path),bytes=len(b),sha256=digest)
+ freeze,fp=root(cli.freeze,cli.freeze_sha256);request,rp=root(cli.request,cli.request_sha256);commit=freeze['execution_commit']
+ need(re.fullmatch('[a-f0-9]{40}',commit) and request.get('execution_commit')==commit and freeze.get('version')==request.get('version')==1 and freeze.get('issue')==request.get('issue')==1394 and freeze.get('resource_admission',{}).get('execution_allowed') is True and rp in freeze.get('admitted_custody_requests',[]),'Exact custody request not admitted')
+ need(subprocess.check_output(['git','-C',str(repo),'rev-parse','HEAD']).decode().strip()==commit,'Exact custody execution HEAD required')
+ run_raw=subprocess.check_output(['git','-C',str(repo),'show',commit+':'+OWNED+'run.py']);need((here/'run.py').read_bytes()==run_raw,'Frozen root entry differs')
+ entry=types.ModuleType('custody_frozen_entry');entry.__file__=str(here/'run.py');sys.modules[entry.__name__]=entry;exec(compile(run_raw,entry.__file__,'exec'),entry.__dict__)
+ pins,baseline,shared,guard,loaded,runtime,rtpin,rtindex=entry.frozen(commit)
+ own=baseline.pinned_bytes(OWNED+'custody-driver.py');need(Path(__file__).read_bytes()==own,'Custody entry absent/changed in complete frozen roster');guard.all_callables(sys.modules[__name__],own)
+ names={'acquisition':OWNED+'acquisition-phases.py','science':OWNED+'scientific-join.py','proof':OWNED+'proof-custody.py'};modules=baseline.load_modules(names);a=modules['acquisition'];proof=modules['proof'];science=modules['science']
+ custody={p['path'] for p in runtime['whole_runtime_aliases']};project=[p for p in pins if p['path'] not in custody]
+ resource_path='scripts/local-workspace.mjs';resource_raw=subprocess.check_output(['git','-C',str(repo),'show',commit+':'+resource_path]);need((repo/resource_path).read_bytes()==resource_raw and len(resource_raw)<=33554432,'Frozen whole resource script differs')
+ resource=dict(commit=commit,path=resource_path,bytes=len(resource_raw),sha256=hashlib.sha256(resource_raw).hexdigest(),hash_kind='file-bytes');project=unique([*project,resource],a)
+ subprocess.run([NODE,str(repo/resource_path),'check'],cwd=repo,check=True,stdout=subprocess.DEVNULL)
+ op=request['operation'];args=request['arguments'];need(op in OPERATIONS,'Unsupported custody operation')
+ deps=dependencies(op,args,a,proof);exact(deps,request['expected_dependency_inputs'],a)
+ runtime_bytes=runtime['logical_runtime_raw_bytes'];need(request['expected_runtime_bytes']==runtime_bytes,'Actual custody runtime size differs')
+ whole=unique([*deps,fp,rp,*project],a);reserve=request['output_reserve'];need(type(reserve) is int and reserve>=0 and sum(a.cost(p) for p in whole)+runtime_bytes+reserve+a.RECEIPT==request['expected_complete_phase_bytes'],'Exact custody whole-phase cost differs')
+ dest=Path(request['destination']);need(dest.is_absolute() and dest.resolve().is_relative_to(repo/'.cache') and dest.parent.is_dir() and not dest.exists(),'Fresh custody output required')
+ keys={a.Phase.key(p) for p in project};phase=a.Phase(repo,dest,[p for p in whole if a.Phase.key(p) not in keys],runtime_bytes=runtime_bytes,runtime_verified=True,project_pins=project,output_reserve=reserve)
+ phase.read(fp);phase.read(rp);expected_finish=[phase.finish]
+ def bound():
+  need(type(phase) is a.Phase and phase.read.__func__ is a.Phase.read and phase.output.__func__ is a.Phase.output and phase.rows.__func__ is a.Phase.rows and phase.finish==expected_finish[0],'Actual custody class/callback drift')
+  guard.all_callables(sys.modules[__name__],own)
+  for n,m in modules.items():guard.all_callables(m,baseline.pinned_bytes(names[n]))
+  for n,m in loaded.items():guard.all_callables(m,baseline.pinned_bytes(OWNED+n+'.py'))
+  loaded['runtime'].callables(rtpin,guard);loaded['runtime'].loaded(rtpin,rtindex,repo=repo,owned=OWNED,project_pins=pins)
+ bound();original_finish=phase.finish
+ def finish(facts):
+  bound();return original_finish(dict(facts,execution_commit=commit,execution_request_pin=rp,execution_freeze_pin=fp))
+ phase.finish=finish;expected_finish[0]=finish
+ if op=='scientific-check':result=science.verify_cohort(phase,plan_pin=args['plan_pin'],spec=args['spec'],native_spec=args['native_spec'],acquisition=a,project_guard=bound)
+ elif op=='scientific-join':
+  plan=json.loads(phase.read(args['plan_pin']));need(plan['native']==args['native_spec'] and plan['cohorts']==args['source_specs'],'Independent whole join source roster differs')
+  result=science.join(phase,plan_pin=args['plan_pin'],verification_specs=args['verification_specs'],acquisition=a,project_guard=bound,final_delivery_pins=args['final_delivery_pins'],final_metadata_reserve=args['final_metadata_reserve'],final_metadata_descriptor_reserve=args['final_metadata_descriptor_reserve'])
+ elif op=='scientific-group':result=science.join_group(phase,plan_pin=args['plan_pin'],aggregation_plan_pin=args['aggregation_plan_pin'],group_ordinal=args['group_ordinal'],acquisition=a,project_guard=bound)
+ elif op=='scientific-parent':result=science.join_parent(phase,plan_pin=args['plan_pin'],aggregation_plan_pin=args['aggregation_plan_pin'],group_specs=args['group_specs'],acquisition=a,project_guard=bound,final_delivery_pins=args['final_delivery_pins'],final_metadata_reserve=args['final_metadata_reserve'],final_metadata_descriptor_reserve=args['final_metadata_descriptor_reserve'])
+ elif op=='proof-plan':result=proof.plan_groups(phase,roster_pin=args['roster_pin'],codec_pin=args['codec_pin'],project_pins=project,runtime_bytes=runtime_bytes,acq=a,before_finish=bound,execution_context=dict(execution_commit=commit,execution_request_pin=rp,execution_freeze_pin=fp))
+ elif op=='proof-pack':
+  plan=json.loads(phase.read(args['plan_pin']));need(plan['groups'][args['group_ordinal']]==args['group'],'Independent proof group differs')
+  result=proof.pack_group(phase,roster_pin=args['roster_pin'],codec_pin=args['codec_pin'],plan_pin=args['plan_pin'],plan_pair=args['plan_pair'],group_ordinal=args['group_ordinal'],acq=a,before_finish=bound,execution_context=dict(execution_commit=commit,execution_request_pin=rp,execution_freeze_pin=fp))
+ elif op=='proof-restore':result=proof.restore_group(phase,roster_pin=args['roster_pin'],codec_pin=args['codec_pin'],index_pin=args['index_pin'],pack_pair=args['pack_pair'],transport_pins=args['transport_pins'],acq=a,before_finish=bound,execution_context=dict(execution_commit=commit,execution_request_pin=rp,execution_freeze_pin=fp))
+ else:result=proof.join_groups(phase,roster_pin=args['roster_pin'],codec_pin=args['codec_pin'],plan_pin=args['plan_pin'],plan_pair=args['plan_pair'],pack_pairs=args['pack_pairs'],index_pins=args['index_pins'],acq=a,before_finish=bound,execution_context=dict(execution_commit=commit,execution_request_pin=rp,execution_freeze_pin=fp))
+ bound();print(json.dumps(result,sort_keys=True),flush=True)
+if __name__=='__main__':main()

@@ -1,0 +1,332 @@
+--- coordination/engineering/complete-replay-operand-restoration-20261007/scientific-join.py
++++ coordination/engineering/complete-replay-operand-restoration-20261007/scientific-join.py
+@@ -305,12 +305,13 @@
+     project_guard()
+     return phase.finish(dict(operation='whole-original-scientific-cohort-inverse-check',
+                              source_spec=spec, plan_pin=plan_pin, component_ids=ids,
++                             ordered_query_scope_sha256=_query_scope(ids,scope,a),
+                              original_ordered_queries=query_count, statuses=dict(sorted(statuses.items())),
+                              limits=['Native numeric inverse was executed by exact frozen literal producer.',
+                                      'This stage checks full source provenance; it performs no native geometry calculation.']))
+ 
+ 
+-def restore_shard(recipe, *, components, geometry, native_records, acquisition):
++def restore_shard(recipe, *, components, geometry, native_records, acquisition, scientific_inverses=None):
+     """Complete inverse reader usable after intermediate scratch files are gone.
+ 
+     Inputs are full authenticated final objects, not hashes or fragments.
+@@ -324,6 +325,13 @@
+         rows = [components[i] for i in selectors]
+     elif kind == 'geometry-objects':
+         rows = [geometry[i] for i in selectors]
++    elif kind == 'scientific-stage-inverses':
++        a.require(type(scientific_inverses) is dict,'Full scientific inverse registry required')
++        rows=[]
++        for key in selectors:
++            a.require(type(key) is str and key in scientific_inverses and
++                      a.sha(a.canonical(scientific_inverses[key]))==key,'Complete original inverse row binding differs')
++            rows.append(scientific_inverses[key])
+     else:
+         a.require(kind == 'native-record-aliases', 'Unknown final whole object source')
+         rows = []
+@@ -355,12 +363,12 @@
+     return encoded
+ 
+ 
+-def _shard_inverse(phase, pin, selectors, kind, writer, components, geometry, native_records, acq):
++def _shard_inverse(phase, pin, selectors, kind, writer, components, geometry, native_records, acq, scientific_inverses=None):
+     recipe = dict(kind='complete-original-scientific-shard-inverse', original_whole_file=pin,
+                   original_writer=writer, final_object_kind=kind, ordered_complete_selectors=selectors,
+                   reconstruction='complete final rows in original order; native row restores nested alias; literal deterministic gzip')
+     encoded = restore_shard(recipe, components=components, geometry=geometry,
+-                            native_records=native_records, acquisition=acq)
++                            native_records=native_records, acquisition=acq,scientific_inverses=scientific_inverses)
+     # Real whole original source was consumed under this Phase admission, and
+     # actual byte equality is executed, beyond the retained descriptor hashes.
+     phase.read(pin)
+@@ -370,32 +378,23 @@
+     return recipe
+ 
+ 
+-def join(phase, *, plan_pin, verification_specs, acquisition, project_guard,
+-         final_delivery_pins, final_metadata_reserve, final_metadata_descriptor_reserve):
+-    """Join full actual rows under both real Phase and complete flat delivery caps.
+-
+-    final_delivery_pins is the independent complete original/code/runtime/history/
+-    evidence roster, excluding final files generated here. No hashes are used to
+-    collapse distinct paths. An over-budget attempt remains incomplete.
+-    """
+-    a = acquisition; project_guard(); plan, scope = _scope(phase, plan_pin, a)
+-    a.require(type(final_metadata_reserve) is int and final_metadata_reserve >= a.RECEIPT,
+-              'Explicit final report/history/receipt reserve required')
+-    a.require(type(final_metadata_descriptor_reserve) is int and final_metadata_descriptor_reserve >= 2,
+-              'Explicit complete final metadata descriptor reserve required')
+-    delivery = _roster(final_delivery_pins, a)
+-    a.require(sum(p['bytes'] for p in delivery.values()) + final_metadata_reserve <= a.PHASE and
+-              len(delivery) + final_metadata_descriptor_reserve <= 512, 'Final complete flat delivery already exceeds cap')
+-    native = _native(phase, plan['native'], plan, a)
+-    a.require(len(verification_specs) == len(plan['cohorts']), 'Omitted completed cohort inverse check')
++def _query_scope(ids,scope,a):
++    return a.sha(a.canonical([{'component_id':i,'ordered_query_bindings':scope[i]['ordered_query_bindings']}
++                             for i in ids]))
++
++
++def _collect_children(phase,plan_pin,plan,scope,ordinals,verification_specs,a):
+     components = {}; geometry = {}; statuses = Counter(); seen_specs = []; inverse_requests = []
+-    for check in verification_specs:
++    a.require(len(verification_specs)==len(ordinals), "Omitted exact subset verification")
++    for ordinal,check in zip(ordinals,verification_specs):
+         ci = _stage(phase, check, 'whole-original-scientific-cohort-inverse-check', a)
+         a.require(not check['outputs'] and ci['facts']['plan_pin'] == plan_pin,
+                   'Foreign scientific verification product/plan')
+         spec = ci['facts']['source_spec']
+-        a.require(spec in plan['cohorts'] and spec not in seen_specs, 'Duplicate/foreign inherited cohort')
++        a.require(spec == plan['cohorts'][ordinal] and spec not in seen_specs, 'Duplicate/foreign inherited cohort')
+         seen_specs.append(spec)
++        a.require(ci['facts'].get('ordered_query_scope_sha256')==_query_scope(spec['component_ids'],scope,a),
++                  'Changed complete ordered original query scope')
+         inv = _stage(phase, spec, 'complete-original-nine-map-numerical-cohort', a)
+         a.require(ci['facts']['component_ids'] == inv['facts']['component_ids'] == spec['component_ids'] and
+                   ci['facts']['statuses'] == inv['facts']['statuses'] and
+@@ -420,6 +419,33 @@
+             a.require(row['original_query_count'] == scope[identity]['query_count'], 'Changed joined query count')
+             actual_ids.append(identity); components[identity] = row; statuses[row['status']] += 1
+         a.require(actual_ids == spec['component_ids'], 'Omitted joined component including zero queries')
++    expected=sorted(i for n in ordinals for i in plan['cohorts'][n]['component_ids'])
++    a.require(sorted(components)==expected and len(seen_specs)==len(ordinals),
++              'Incomplete exact scientific subset including zero-query members')
++    return components,geometry,statuses,inverse_requests
++
++
++def join(phase, *, plan_pin, verification_specs, acquisition, project_guard,
++         final_delivery_pins, final_metadata_reserve, final_metadata_descriptor_reserve):
++    """Join full actual rows under both real Phase and complete flat delivery caps.
++
++    final_delivery_pins is the independent complete original/code/runtime/history/
++    evidence roster, excluding final files generated here. No hashes are used to
++    collapse distinct paths. An over-budget attempt remains incomplete.
++    """
++    a = acquisition; project_guard(); plan, scope = _scope(phase, plan_pin, a)
++    a.require(type(final_metadata_reserve) is int and final_metadata_reserve >= a.RECEIPT,
++              'Explicit final report/history/receipt reserve required')
++    a.require(type(final_metadata_descriptor_reserve) is int and final_metadata_descriptor_reserve >= 2,
++              'Explicit complete final metadata descriptor reserve required')
++    delivery = _roster(final_delivery_pins, a)
++    a.require(sum(p['bytes'] for p in delivery.values()) + final_metadata_reserve <= a.PHASE and
++              len(delivery) + final_metadata_descriptor_reserve <= 512, 'Final complete flat delivery already exceeds cap')
++    native = _native(phase, plan['native'], plan, a)
++    a.require(len(verification_specs) == len(plan['cohorts']), 'Omitted completed cohort inverse check')
++    components,geometry,statuses,inverse_requests = _collect_children(
++        phase,plan_pin,plan,scope,list(range(len(plan['cohorts']))),verification_specs,a)
++    seen_specs=plan['cohorts']
+     a.require(sorted(components) == sorted(scope) and len(seen_specs) == len(plan['cohorts']),
+               'Incomplete original global scientific join')
+     for pin in plan['native']['outputs']:
+@@ -461,3 +487,207 @@
+     a.require(len(inventory_encoded) + a.RECEIPT <= final_metadata_reserve,
+               'Actual final inventory/publication exceed complete metadata reserve')
+     return phase.finish(facts)
++
++
++
++def aggregation_plan(phase,plan_pin,aggregation_plan_pin,plan,scope,a):
++    """Whole independently frozen partition and prior actual verification rosters."""
++    value=json.loads(phase.read(aggregation_plan_pin))
++    a.require(set(value)=={'kind','version','source_plan_pin','counts','groups','verification_specs'},
++              'Unknown/omitted aggregation authority fields')
++    a.require(value.get('kind')=='complete-original-scientific-aggregation-plan' and
++              value.get('version')==1 and value.get('source_plan_pin')==plan_pin and
++              value.get('counts')==COUNTS and len(plan['cohorts'])==105,
++              'Wrong complete105 scientific aggregation authority')
++    checks=value['verification_specs'];groups=value['groups']
++    a.require(len(checks)==105 and groups and len(groups)<=105,
++              'Omitted original scientific verification or group partition')
++    all_ids=[]
++    for spec in plan['cohorts']:
++        ids=spec['component_ids']
++        a.require(ids and ids==sorted(set(ids)) and all(i in scope for i in ids),
++                  'Foreign/duplicate original scientific cohort scope')
++        all_ids.extend(ids)
++    a.require(len(all_ids)==1294 and len(set(all_ids))==1294 and set(all_ids)==set(scope),
++              'Original105 cohorts do not partition complete1294 scope')
++    seen=[]
++    for number,group in enumerate(groups):
++        ordinals=group['cohort_ordinals']
++        a.require(set(group)=={'ordinal','cohort_ordinals','component_ids','ordered_queries'},
++                  'Unknown/omitted typed group fields')
++        a.require(group['ordinal']==number and type(group['ordinal']) is int and ordinals and
++                  ordinals==sorted(set(ordinals)) and all(type(n) is int and 0<=n<105 for n in ordinals),
++                  'Foreign/duplicate/unordered typed aggregation ordinal')
++        ids=sorted(i for n in ordinals for i in plan['cohorts'][n]['component_ids'])
++        a.require(group['component_ids']==ids and group['ordered_queries']==sum(scope[i]['query_count'] for i in ids),
++                  'Changed complete group component/query scope')
++        seen.extend(ordinals)
++    a.require(len(seen)==105 and sorted(seen)==list(range(105)),
++              'Omitted/duplicated original cohort partition')
++    return value
++
++
++def group_dependencies(plan_pin,aggregation_plan_pin,plan,aggregation,ordinal,a):
++    """Exact original numerical/check/native files; code/root closure added by caller."""
++    a.require(type(ordinal) is int and 0<=ordinal<len(aggregation['groups']), 'Foreign group selection')
++    native=plan['native'];pins=[plan_pin,aggregation_plan_pin,native['publication'],native['inventory'],*native['outputs']]
++    for n in aggregation['groups'][ordinal]['cohort_ordinals']:
++        a.require(type(n) is int and 0<=n<len(plan['cohorts']) and n<len(aggregation['verification_specs']),
++                  'Foreign complete group cohort ordinal')
++        source=plan['cohorts'][n];check=aggregation['verification_specs'][n]
++        pins += [source['publication'],source['inventory'],*source['outputs'],check['publication'],check['inventory']]
++        a.require(not check['outputs'],'Foreign original verification product')
++    return list(_roster_unique(pins,a).values())
++
++
++def _roster_unique(pins,a):
++    result={}
++    for pin in pins:
++        a.bounds(pin);key=a.Phase.key(pin)
++        a.require(key not in result or result[key]==pin,'Conflicting scientific input alias')
++        result[key]=pin
++    return result
++
++
++def _inverse_outputs(phase,requests,components,geometry,native,a,scientific_inverses=None):
++    return [_shard_inverse(phase,pin,selectors,kind,writer,components,geometry,native,a,scientific_inverses=scientific_inverses)
++            for pin,selectors,kind,writer in requests]
++
++
++def join_group(phase, *, plan_pin, aggregation_plan_pin, group_ordinal, acquisition, project_guard):
++    """Genuine detached subset join, never global completion."""
++    a=acquisition;project_guard();plan,scope=_scope(phase,plan_pin,a)
++    aggregation=aggregation_plan(phase,plan_pin,aggregation_plan_pin,plan,scope,a)
++    required=group_dependencies(plan_pin,aggregation_plan_pin,plan,aggregation,group_ordinal,a)
++    a.require(all(phase.pins.get(a.Phase.key(p))==p for p in required),'Omitted whole group operand')
++    group=aggregation['groups'][group_ordinal];ordinals=group['cohort_ordinals']
++    native=_native(phase,plan['native'],plan,a)
++    components,geometry,statuses,requests=_collect_children(phase,plan_pin,plan,scope,ordinals,
++                         [aggregation['verification_specs'][n] for n in ordinals],a)
++    native_final={i:dict(native[i]['alias'],source_id=i,complete_original_metadata=native[i]['complete_original_metadata']) for i in native}
++    inverses=_inverse_outputs(phase,requests,components,geometry,native_final,a)
++    phase.rows('components',(components[i] for i in sorted(components)))
++    phase.rows('geometry-objects',(geometry[i] for i in sorted(geometry)))
++    phase.rows('scientific-stage-inverses',inverses)
++    project_guard()
++    return phase.finish(dict(operation='whole-original-scientific-aggregation-group',
++        source_plan_pin=plan_pin,aggregation_plan_pin=aggregation_plan_pin,group_ordinal=group_ordinal,
++        cohort_ordinals=ordinals,component_ids=group['component_ids'],ordered_queries=group['ordered_queries'],
++        ordered_query_scope_sha256=_query_scope(group['component_ids'],scope,a),statuses=dict(sorted(statuses.items())),
++        independent_child_roster_sha256=a.sha(a.canonical([{'source':plan['cohorts'][n],
++                    'verification':aggregation['verification_specs'][n]} for n in ordinals])),
++        original_source_shard_inverses=len(inverses),global_completion=False))
++
++
++def parent_dependencies(plan_pin,aggregation_plan_pin,native_spec,group_specs,a):
++    pins=[plan_pin,aggregation_plan_pin,native_spec['publication'],native_spec['inventory'],*native_spec['outputs']]
++    for group in group_specs:pins += [group['publication'],group['inventory'],*group['outputs']]
++    return list(_roster_unique(pins,a).values())
++
++
++def _group_products(spec,a):
++    kinds={'components':[],'geometry-objects':[],'scientific-stage-inverses':[]}
++    for pin in spec['outputs']:
++        matches=[k for k in kinds if Path(pin['path']).name.startswith(k+'-') and Path(pin['path']).name.endswith('.jsonl.gz')]
++        a.require(len(matches)==1,'Foreign aggregation group output');kinds[matches[0]].append(pin)
++    a.require(kinds['components'] and kinds['scientific-stage-inverses'] and
++              all(rows==sorted(rows,key=lambda p:p['path']) for rows in kinds.values()),
++              'Omitted/unordered complete aggregation group output')
++    return kinds
++
++
++def join_parent(phase, *, plan_pin, aggregation_plan_pin, group_specs, acquisition, project_guard,
++                final_delivery_pins, final_metadata_reserve, final_metadata_descriptor_reserve):
++    """Full parent consumes actual subset products; original stage files stay in custody."""
++    a=acquisition;project_guard();plan,scope=_scope(phase,plan_pin,a)
++    aggregation=aggregation_plan(phase,plan_pin,aggregation_plan_pin,plan,scope,a)
++    a.require(len(group_specs)==len(aggregation['groups']),'Omitted/extra whole aggregation stage')
++    required=parent_dependencies(plan_pin,aggregation_plan_pin,plan['native'],group_specs,a)
++    a.require(all(phase.pins.get(a.Phase.key(p))==p for p in required),'Omitted complete parent operand')
++    a.require(type(final_metadata_reserve) is int and final_metadata_reserve>=a.RECEIPT and
++              type(final_metadata_descriptor_reserve) is int and final_metadata_descriptor_reserve>=2,
++              'Explicit complete final metadata reserve required')
++    delivery=_roster(final_delivery_pins,a)
++    a.require(sum(p['bytes'] for p in delivery.values())+final_metadata_reserve<=a.PHASE and
++              len(delivery)+final_metadata_descriptor_reserve<=512,'Final complete flat delivery already exceeds cap')
++    native=_native(phase,plan['native'],plan,a)
++    native_final={i:dict(native[i]['alias'],source_id=i,complete_original_metadata=native[i]['complete_original_metadata']) for i in native}
++    components={};geometry={};statuses=Counter();inverses=[];seen_original={};group_requests=[]
++    expected_original=_roster([p for spec in plan['cohorts'] for p in spec['outputs']],a)
++    for ordinal,spec in enumerate(group_specs):
++        inv=_stage(phase,spec,'whole-original-scientific-aggregation-group',a);facts=inv['facts'];group=aggregation['groups'][ordinal]
++        expected_sources=[{'source':plan['cohorts'][n],'verification':aggregation['verification_specs'][n]} for n in group['cohort_ordinals']]
++        a.require(facts['source_plan_pin']==plan_pin and facts['aggregation_plan_pin']==aggregation_plan_pin and
++                  facts['group_ordinal']==ordinal and facts['cohort_ordinals']==group['cohort_ordinals'] and
++                  facts['component_ids']==group['component_ids'] and facts['ordered_queries']==group['ordered_queries'] and
++                  facts['ordered_query_scope_sha256']==_query_scope(group['component_ids'],scope,a) and
++                  facts['independent_child_roster_sha256']==a.sha(a.canonical(expected_sources)) and
++                  facts.get('global_completion') is False,'Foreign/duplicate/changed whole aggregation stage scope')
++        required_child=group_dependencies(plan_pin,aggregation_plan_pin,plan,aggregation,ordinal,a)
++        actual_child=_roster(spec['expected_inputs'],a)
++        a.require(all(actual_child.get(a.Phase.key(p))==p for p in required_child),
++                  'Group actual expected child input roster omitted original proof/science')
++        parts=_group_products(spec,a);actual_ids=[];group_statuses=Counter()
++        for pin in parts['geometry-objects']:
++            selectors=[r['whole_geometry_sha256'] for r in _rows(phase,[pin],a)]
++            group_requests.append((pin,selectors,'geometry-objects','acquisition-phase'))
++        for key,row in _geometry(phase,parts['geometry-objects'],a).items():
++            a.require(key not in geometry or a.canonical(geometry[key])==a.canonical(row),'Across-group whole geometry collision');geometry[key]=row
++        for pin in parts['components']:
++            selectors=[]
++            for row in _rows(phase,[pin],a):
++                i=row['component_id'];a.require(i in scope and i not in components and (not actual_ids or i>actual_ids[-1]),'Foreign/duplicate/unordered parent component')
++                a.require(row['original_query_count']==scope[i]['query_count'],'Changed original per-component query count')
++                actual_ids.append(i);selectors.append(i);components[i]=row;group_statuses[row['status']]+=1;statuses[row['status']]+=1
++            group_requests.append((pin,selectors,'components','acquisition-phase'))
++        a.require(actual_ids==group['component_ids'] and dict(sorted(group_statuses.items()))==facts['statuses'],
++                  'Dropped zero-query/unknown group component or changed status')
++        count=0
++        inverse_rows=[]
++        for pin in parts['scientific-stage-inverses']:
++            rows=list(_rows(phase,[pin],a));inverse_rows.extend(rows)
++            group_requests.append((pin,[a.sha(a.canonical(r)) for r in rows],
++                                   'scientific-stage-inverses','acquisition-phase'))
++        for recipe in inverse_rows:
++            pin=recipe['original_whole_file'];key=a.Phase.key(pin)
++            a.require(key in expected_original and expected_original[key]==pin and key not in seen_original,
++                      'Foreign/duplicate/drifted original source shard provenance')
++            owner=[n for n in group['cohort_ordinals'] if pin in plan['cohorts'][n]['outputs']]
++            a.require(len(owner)==1 and recipe['original_writer']=='literal-products' and
++                      recipe['final_object_kind'] in ('components','geometry-objects'),
++                      'Original shard escapes exact owning group/writer')
++            seen_original[key]=pin;inverses.append(recipe);count+=1
++        a.require(count==facts['original_source_shard_inverses'],'Dropped complete original shard inverse')
++    a.require(sorted(components)==sorted(scope) and seen_original==expected_original,
++              'Incomplete global1294/105 original scientific shard coverage')
++    # Every inherited original inverse is actually rebuilt from full final bodies.
++    for recipe in inverses:restore_shard(recipe,components=components,geometry=geometry,native_records=native_final,acquisition=a)
++    registry={a.sha(a.canonical(r)):r for r in inverses}
++    a.require(len(registry)==len(inverses),"Duplicate original scientific inverse row")
++    inverses += _inverse_outputs(phase,group_requests,components,geometry,native_final,a,scientific_inverses=registry)
++    native_requests=[(pin,[r['source_id'] for r in _rows(phase,[pin],a)],'native-record-aliases','acquisition-phase') for pin in plan['native']['outputs']]
++    inverses += _inverse_outputs(phase,native_requests,components,geometry,native_final,a)
++    phase.rows('components',(components[i] for i in sorted(components)))
++    phase.rows('geometry-objects',(geometry[i] for i in sorted(geometry)))
++    phase.rows('native-record-aliases',(native_final[i] for i in sorted(native_final)))
++    phase.rows('scientific-stage-inverses',inverses)
++    outputs=[p for p,_ in phase.payloads.values()];total=sum(p['bytes'] for p in delivery.values())+sum(p['bytes'] for p in outputs)+final_metadata_reserve
++    a.require(total<=a.PHASE and len(delivery)+len(outputs)+final_metadata_descriptor_reserve<=512,
++              'Final complete flat hierarchical delivery exceeds actual cap')
++    project_guard()
++    facts=dict(operation='complete-original-scientific-join',counts=COUNTS,statuses=dict(sorted(statuses.items())),
++        plan_pin=plan_pin,aggregation_plan_pin=aggregation_plan_pin,source_cohorts=105,aggregation_groups=len(group_specs),
++        complete_source_scientific_shard_inverses=len(inverses),complete_flat_encoded_with_reserved_metadata=total,
++        complete_flat_descriptor_count_with_metadata=len(delivery)+len(outputs)+final_metadata_descriptor_reserve,
++        final_delivery_descriptors=list(delivery.values()),final_metadata_reserve=final_metadata_reserve,
++        final_metadata_descriptor_reserve=final_metadata_descriptor_reserve,
++        limits=['One joined execution; two actual same-head full scientific successes and whole equality still required.',
++                'Original105 numerical/check/code/request files require complete reversible proof custody.',
++                'Unknowns retained. No physical approval, geography changes or campaign completion.'])
++    projected=dict(version=1,kind='bounded-original-acquisition-stage',facts=facts,input_descriptors=list(phase.pins.values()),
++                   outputs=outputs,input_encoded_decoded_bytes=phase.input_bytes,runtime_bytes=phase.runtime_bytes,
++                   output_encoded_decoded_bytes=sum(a.cost(p) for p in outputs),
++                   complete_phase_bytes=phase.input_bytes+phase.runtime_bytes+sum(a.cost(p) for p in outputs))
++    a.require(len(gzip.compress(a.canonical(projected),compresslevel=9,mtime=0))+a.RECEIPT<=final_metadata_reserve,
++              'Actual final hierarchical metadata exceeds reserved complete budget')
++    return phase.finish(facts)

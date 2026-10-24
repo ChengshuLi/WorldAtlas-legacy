@@ -1,0 +1,160 @@
+--- coordination/engineering/complete-replay-operand-restoration-20261007/proof-custody.py
++++ coordination/engineering/complete-replay-operand-restoration-20261007/proof-custody.py
+@@ -118,9 +118,12 @@
+     return raw, value
+ 
+ 
+-def budget(rows, fixed_pins, *, runtime_bytes, acq):
++def budget(rows, fixed_pins, *, runtime_bytes, acq, additional_input_bytes=0, additional_input_descriptors=0):
+     """Conservative transport + logical index + inventory reserve, before reads."""
+     need(type(runtime_bytes) is int and runtime_bytes>0 and rows, 'Actual positive proof runtime/group accounting required')
++    need(type(additional_input_bytes) is int and additional_input_bytes >= 0 and
++         type(additional_input_descriptors) is int and additional_input_descriptors >= 0,
++         'Explicit future fixed proof closure required')
+     originals = [r['file'] for r in rows]
+     inputs = unique([*fixed_pins, *originals], acq)
+     metadata = len(acq.canonical(rows))
+@@ -130,38 +133,44 @@
+     chunks = sum(max(1, (p['bytes']+CHUNK-1)//CHUNK) for p in originals)
+     transport = 4*((encoded+2*len(rows)+2)//3)+chunks*512
+     reserve = 2*transport+4*metadata+1048576
+-    total = sum(acq.cost(p) for p in inputs)+runtime_bytes+reserve+acq.RECEIPT
++    total = sum(acq.cost(p) for p in inputs)+runtime_bytes+reserve+acq.RECEIPT+additional_input_bytes
+     # Worst case one transport shard per chunk, plus index/inventory/publication.
+-    need(len(inputs)+chunks+3 <= 512 and total <= acq.PHASE,
++    need(len(inputs)+additional_input_descriptors+chunks+3 <= 512 and total <= acq.PHASE,
+          'Complete proof input/runtime/transport/index phase cannot fit')
+-    return {'input_descriptors':inputs, 'output_reserve':reserve, 'prospective_phase_bytes':total}
+-
+-
+-def plan_groups(phase, *, roster_pin, codec_pin, project_pins, runtime_bytes, acq, before_finish):
++    return {'input_descriptors':inputs, 'output_reserve':reserve, 'prospective_phase_bytes':total,
++            'future_fixed_input_bytes_reserve':additional_input_bytes,
++            'future_fixed_input_descriptor_reserve':additional_input_descriptors}
++
++
++def plan_groups(phase, *, roster_pin, codec_pin, project_pins, runtime_bytes, acq, before_finish, execution_context):
+     need(runtime_bytes==phase.runtime_bytes,'Proof planning runtime differs from actual admitted Phase')
+     _, value = binding(phase, roster_pin, codec_pin, acq)
++    execution_binding(phase,value,codec_pin,execution_context,acq)
++    # All plan products/inventory fit phase.reserve; root pack metadata <=2MiB.
++    future={'additional_input_bytes':phase.reserve+2*1048576+acq.RECEIPT,
++            'additional_input_descriptors':5}
+     fixed = unique([roster_pin,codec_pin,*project_pins], acq)
+     groups=[]; current=[]
+     for row in value['files']:
+         try:
+-            proposed=budget([*current,row],fixed,runtime_bytes=runtime_bytes,acq=acq)
++            proposed=budget([*current,row],fixed,runtime_bytes=runtime_bytes,acq=acq,**future)
+         except ValueError:
+             need(current, 'One whole original proof cannot fit custody Phase')
+-            admitted=budget(current,fixed,runtime_bytes=runtime_bytes,acq=acq)
++            admitted=budget(current,fixed,runtime_bytes=runtime_bytes,acq=acq,**future)
+             groups.append({'ordinal':len(groups),'file_ordinals':[r['ordinal'] for r in current],**admitted})
+-            current=[row]; budget(current,fixed,runtime_bytes=runtime_bytes,acq=acq)
++            current=[row]; budget(current,fixed,runtime_bytes=runtime_bytes,acq=acq,**future)
+         else:
+             current.append(row)
+     if current:
+         groups.append({'ordinal':len(groups),'file_ordinals':[r['ordinal'] for r in current],
+-                       **budget(current,fixed,runtime_bytes=runtime_bytes,acq=acq)})
++                       **budget(current,fixed,runtime_bytes=runtime_bytes,acq=acq,**future)})
+     plan={'kind':'complete1394-campaign-proof-custody-plan','version':1,'issue':1394,
+           'roster_pin':roster_pin,'codec_pin':codec_pin,'logical_files':len(value['files']),
+           'required_stage_ids':value['required_stage_ids'],'runtime_bytes':runtime_bytes,'groups':groups}
+     phase.output('proof-custody-plan.json.gz',acq.canonical(plan),compress=True)
+     before_finish()
+     return finish_modes(phase,{'operation':'complete1394-proof-custody-plan','logical_files':len(value['files']),
+-                              'groups':len(groups)}, {},acq)
++                              'groups':len(groups)}, {},acq,execution_context)
+ 
+ 
+ def original_encoded(phase, row, acq):
+@@ -202,8 +211,32 @@
+     return raw
+ 
+ 
+-def finish_modes(phase,facts,modes,acq):
++def execution_binding(phase,value,codec_pin,context,acq):
++    """Bind actual custody vintage; every original file keeps its own vintage."""
++    need(set(context)=={'execution_commit','execution_request_pin','execution_freeze_pin'},
++         'Exact actual proof execution context required')
++    commit=context['execution_commit'];rp=context['execution_request_pin'];fp=context['execution_freeze_pin']
++    need(re.fullmatch('[a-f0-9]{40}',commit) and value['execution_commit']==commit and
++         codec_pin.get('commit')==commit,'Wrong actual custody head/codec; original science head is distinct')
++    need(rp['bytes']<=1048576 and fp['bytes']<=1048576 and
++         'uncompressed_bytes' not in rp and 'uncompressed_bytes' not in fp,
++         'Bounded whole proof root context required')
++    request=json.loads(phase.read(rp));freeze=json.loads(phase.read(fp))
++    need(request.get('execution_commit')==freeze.get('execution_commit')==commit and
++         request.get('issue')==freeze.get('issue')==1394 and
++         request.get('version')==freeze.get('version')==1 and
++         request.get('operation') in ('proof-plan','proof-pack','proof-restore','proof-join') and
++         request.get('destination')==str(phase.destination) and
++         rp in freeze.get('admitted_custody_requests',[]) and
++         freeze.get('resource_admission',{}).get('execution_allowed') is True,
++         'Actual admitted proof root request/freeze differs')
++
++
++def finish_modes(phase,facts,modes,acq,execution_context):
+     """Phase's same complete boundary, with exact modes BEFORE publication."""
++    need(set(execution_context)=={'execution_commit','execution_request_pin','execution_freeze_pin'},
++         'Missing actual proof custody execution context')
++    facts=dict(facts,**execution_context)
+     need(phase.reads==set(phase.pins),'Declared whole proof input was not actually consumed')
+     for name,(pin,raw) in phase.payloads.items():pin['mode']=modes.get(name,0o644)
+     pins=[p for p,_ in phase.payloads.values()]
+@@ -237,8 +270,9 @@
+     return receipt
+ 
+ 
+-def pack_group(phase, *, roster_pin,codec_pin,plan_pin,plan_pair,group_ordinal,acq,before_finish):
++def pack_group(phase, *, roster_pin,codec_pin,plan_pin,plan_pair,group_ordinal,acq,before_finish, execution_context):
+     _,value=binding(phase,roster_pin,codec_pin,acq)
++    execution_binding(phase,value,codec_pin,execution_context,acq)
+     inv=completed(phase,plan_pair,acq)
+     need(inv['facts']['operation']=='complete1394-proof-custody-plan' and plan_pin in inv['outputs'],
+          'Unaccepted whole proof custody plan')
+@@ -279,11 +313,12 @@
+     before_finish()
+     return finish_modes(phase,{'operation':'complete1394-whole-proof-custody-group','group_ordinal':group_ordinal,
+                               'logical_files':len(entries),'original_encoded_bytes':sum(r['file']['bytes'] for r in selected),
+-                              'original_consumed_decoded_bytes':sum(r['file'].get('uncompressed_bytes',0) for r in selected)}, {},acq)
+-
+-
+-def restore_group(phase, *, roster_pin,codec_pin,index_pin,pack_pair,transport_pins,acq,before_finish):
++                              'original_consumed_decoded_bytes':sum(r['file'].get('uncompressed_bytes',0) for r in selected)}, {},acq,execution_context)
++
++
++def restore_group(phase, *, roster_pin,codec_pin,index_pin,pack_pair,transport_pins,acq,before_finish, execution_context):
+     _,value=binding(phase,roster_pin,codec_pin,acq)
++    execution_binding(phase,value,codec_pin,execution_context,acq)
+     inv=completed(phase,pack_pair,acq)
+     need(inv['facts']['operation']=='complete1394-whole-proof-custody-group' and index_pin in inv['outputs'],
+          'Unaccepted whole proof inverse containing index')
+@@ -336,7 +371,7 @@
+                  'original_pack_inventory':pack_pair[1],'mapping':mapping}),compress=True)
+     before_finish()
+     return finish_modes(phase,{'operation':'complete1394-whole-proof-byte-restoration','logical_files':len(mapping),
+-                              'original_paths_rewritten':False},modes,acq)
++                              'original_paths_rewritten':False},modes,acq,execution_context)
+ 
+ 
+ 
+@@ -375,8 +410,9 @@
+     return checked_read(phase,restored_pin,acq)
+ 
+ 
+-def join_groups(phase, *, roster_pin,codec_pin,plan_pin,plan_pair,pack_pairs,index_pins,acq,before_finish):
++def join_groups(phase, *, roster_pin,codec_pin,plan_pin,plan_pair,pack_pairs,index_pins,acq,before_finish, execution_context):
+     roster_raw,value=binding(phase,roster_pin,codec_pin,acq)
++    execution_binding(phase,value,codec_pin,execution_context,acq)
+     plan_inv=completed(phase,plan_pair,acq)
+     need(plan_inv['facts']['operation']=='complete1394-proof-custody-plan' and plan_pin in plan_inv['outputs'],
+          'Unaccepted complete proof group plan')
+@@ -410,4 +446,4 @@
+     before_finish()
+     return finish_modes(phase,{'operation':'complete1394-mandatory-whole-proof-custody-join',
+                               'logical_files':len(files),'mandatory_stage_proofs':len(value['required_stage_ids']),
+-                              'custody_groups':len(groups),'numerical_complete':False}, {},acq)
++                              'custody_groups':len(groups),'numerical_complete':False}, {},acq,execution_context)
