@@ -970,7 +970,7 @@ export function qualifySourceTargetNativeAuthority(reader, preimage, binding, {s
 
 // Owned async acquisition for the same evaluator. Views remain valid until
 // close(), including while callers serialize their required authority products.
-export async function qualifySourceTargetNativeAuthorityStored(reader,preimage,binding,{snapshot,directory=os.tmpdir()}={}) {
+export async function qualifySourceTargetNativeAuthorityStored(reader,preimage,binding,{snapshot,directory=fs.realpathSync(os.tmpdir())}={}) {
  demand(reader instanceof ImmutableReader,'Require actual immutable source reader');
  const {admitNativeMetadataStore,authenticatedDecodedNativeChunks}=await import('../../../scripts/native-patch-store.mjs');
  const stores=new Set();let closed=false;
