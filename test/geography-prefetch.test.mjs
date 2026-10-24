@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {execFileSync, spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {createAcquisition, prefetchSelectedGeography, githubTree} from '../scripts/geography-prefetch.mjs';
+import {createAcquisition, githubTree} from '../scripts/geography-prefetch.mjs';
 import {ImmutableReader} from '../scripts/check-effective-geographic-regression.mjs';
 import {createRoutingMetadataAcquisition} from '../scripts/geography-routing-metadata.mjs';
 
@@ -40,21 +40,12 @@ function fixture() {
     maps.set(sha, {sha: root, truncated: false, tree: rows});
     git(origin, ['update-ref', 'refs/heads/' + sha, sha]); return sha;
   }
-  function pin(name, value, extra = {}) { const body = bytes(value); return {path: name, bytes: body.length, sha256: digest(body), ...extra}; }
-  function bankFiles(extra = false) {
-    const source = {features: [{id: 'target', points: extra ? [1, 2, 3] : [1, 2]}]};
-    const sourcePin = pin('data/source.json', source, {mode: '100644', commit: 'f'.repeat(40)});
-    const sourceBody = bytes(source); sourcePin.git_blob_oid = createHash('sha1').update(`blob ${sourceBody.length}\0`).update(sourceBody).digest('hex');
-    const world = {parts: ['source.json']}, fragment = 'native whole fragment';
-    const index = {parts: [pin('fragment.bin', fragment)]};
-    const manifest = {parts: [{path: 'absent-run.bin', bytes: 1, sha256: '0'.repeat(64)}], native_asset_transport: {kind: 'ordered-exact-original-byte-fragments', index: pin('native/bank/index.json', index)}};
-    const bank = {unchanged_files: [sourcePin], overrides: [], world_index: pin('data/world-index.json', world)};
-    const selection = {version: 1, manifest_path: 'native/manifest.json', sha256: digest(bytes(manifest)),
-      selected_geography: {...pin('source-bank.json', bank), kind: 'complete-world-index-with-exact-encoded-overrides'}};
-    return {'data/ownership-selection.json': selection, 'native/manifest.json': manifest, 'native/bank/index.json': index,
-      'native/bank/fragment.bin': fragment, 'source-bank.json': bank, 'data/source.json': source, 'data/world-index.json': world};
+  function inputs(extra = false) {
+    return {'metadata.json': {revision: extra ? 2 : 1},
+      'data/source.json': {features: [{id: 'target', points: extra ? [1, 2, 3] : [1, 2]}]},
+      ...Object.fromEntries(Array.from({length: 4}, (_, i) => [`shared/input-${i}.json`, {i}]))};
   }
-  const baseline = commit(bankFiles()), candidate = commit(bankFiles(true));
+  const baseline = commit(inputs()), candidate = commit(inputs(true));
   // Commit/tree metadata is present; all file objects are genuinely missing.
   function importMetadata() {
     for (const {type, body} of objects.values()) git(destination, ['hash-object', '-w', '-t', type, '--stdin'], body);
@@ -73,8 +64,17 @@ function fixture() {
     return execFileSync(command, args, options);
   };
   const acquisition = options => createAcquisition({repo: destination, loadTree: async root => [...maps.values()].find(value => value.sha === root), execute, token: 'fixture-secret', ...options});
-  return {directory, origin, destination, baseline, candidate, maps, bodies, batches, git, acquisition, bankFiles, commit, importMetadata, execute,
+  return {directory, origin, destination, baseline, candidate, maps, bodies, batches, git, acquisition, commit, importMetadata, execute,
     close() { fs.rmSync(directory, {recursive: true, force: true}); }};
+}
+
+async function acquireFixture(a, f, versions = [f.baseline, f.candidate]) {
+  const rows = [];
+  for (const version of new Set(versions)) for (const row of f.maps.get(version).tree)
+    rows.push(await a.descriptor(version, row.path, {sha256: digest(f.bodies.get(row.sha))}));
+  a.acquire(rows);
+  for (const row of rows) assert.deepEqual(a.body(row), f.bodies.get(row.oid));
+  return a.stats;
 }
 
 // Exercise the default subprocess route, including real Git's helper launches.
@@ -134,8 +134,7 @@ test('default acquisition captures the relocated Git/helper pair while scrubbing
       // Selection is invocation-local and captured, not re-resolved from later PATH/env.
       fs.unlinkSync(path.join(launcher, 'git')); fs.symlinkSync(poison, path.join(launcher, 'git'));
       process.env.PATH = '/unrelated'; process.env.GIT_EXEC_PATH = '/unrelated';
-      const report = await prefetchSelectedGeography(a, f.baseline, f.candidate);
-      assert.equal(report.status, 'scoped-prefetch-completed');
+      const report = await acquireFixture(a, f);
       assert(report.fetched_objects > 0); assert(runtime.launches().some(args => args.includes('fetch')));
       for (const [oid, body] of f.bodies) assert.deepEqual(f.git(f.destination, ['cat-file', 'blob', oid]), body);
     });
@@ -170,29 +169,20 @@ test('explicit acquisition adapters retain their own runtime and do not inherit 
         assert.equal(command, 'git'); assert.equal(options.env.GIT_EXEC_PATH, undefined);
         return f.execute(command, args, options);
       }});
-      assert.equal((await prefetchSelectedGeography(a, f.baseline, f.candidate)).status, 'scoped-prefetch-completed');
+      assert((await acquireFixture(a, f)).fetched_objects > 0);
     });
   } finally { f.close(); }
 });
 
-test('direct prefetch CLI retains the selected helper path through exact cold acquisition', () => {
+test('retired standalone prefetch refuses before any acquisition', () => {
   const f = fixture(), runtime = relocatedGitFixture(f);
   try {
-    const preload = path.join(f.directory, 'metadata.mjs');
-    fs.writeFileSync(preload, `const maps = ${JSON.stringify([...f.maps.values()])};
-globalThis.fetch = async url => {
-  const row = maps.find(value => url === 'https://api.github.com/repos/ChengshuLi/WorldAtlas/git/trees/' + value.sha + '?recursive=1');
-  if (!row) throw Error('Undeclared fixture metadata route');
-  return {ok: true, json: async () => row};
-};\n`);
-    const output = spawnSync(process.execPath, ['--import', preload,
+    const output = spawnSync(process.execPath, [
       new URL('../scripts/geography-prefetch.mjs', import.meta.url).pathname, f.destination, f.baseline, f.candidate],
-    {env: {...process.env, PATH: runtime.bin + path.delimiter + process.env.PATH, GIT_EXEC_PATH: runtime.helpers,
-      GH_TOKEN: 'fixture-secret'}, stdio: ['ignore', 'pipe', 'pipe']});
-    assert.equal(output.status, 0, String(output.stdout) + String(output.stderr));
-    const report = JSON.parse(output.stdout);
-    assert.equal(report.status, 'scoped-prefetch-completed'); assert(report.fetched_objects > 0);
-    assert(runtime.launches().some(args => args.includes('fetch')));
+      {env: {...process.env, PATH: runtime.bin + path.delimiter + process.env.PATH, GIT_EXEC_PATH: runtime.helpers},
+        stdio: ['ignore', 'pipe', 'pipe']});
+    assert.equal(output.status, 1); assert.match(String(output.stderr), /Standalone legacy geography prefetch is retired/);
+    assert.equal(String(output.stdout), ''); assert.deepEqual(runtime.launches(), []);
   } finally { f.close(); }
 });
 
@@ -205,8 +195,8 @@ test('default packaged Git without a helper override retains normal local acquis
     await withEnvironment({PATH: '/usr/bin:/bin', GIT_EXEC_PATH: undefined}, async () => {
       const a = createAcquisition({repo: f.destination, token: '',
         loadTree: async root => [...f.maps.values()].find(value => value.sha === root)});
-      const report = await prefetchSelectedGeography(a, f.baseline, f.candidate);
-      assert.equal(report.status, 'scoped-prefetch-completed'); assert.equal(report.fetched_objects, 0);
+      const report = await acquireFixture(a, f);
+      assert.equal(report.fetched_objects, 0);
     });
   } finally { f.close(); }
 });
@@ -221,7 +211,7 @@ test('GitHub commit-valued envelopes require requesting the exact local root tre
       // Production API returns the requested commit or tree as envelope SHA.
       return {...metadata, sha: requestedOid};
     }});
-    await acquisition.descriptor(f.baseline, 'data/ownership-selection.json');
+    await acquisition.descriptor(f.baseline, 'metadata.json');
     assert.deepEqual(requested, [root]);
     await assert.rejects(f.acquisition({loadTree: async () => ({...metadata, sha: f.baseline})}).tree(f.baseline), /wrong immutable tree/);
   } finally { f.close(); }
@@ -231,8 +221,8 @@ test('real missing-object fetches are batched, shared OIDs deduplicate, and cand
   const f = fixture(); try {
     const before = f.git(f.destination, ['cat-file', '--batch-check'], [...f.bodies.keys()].join('\n') + '\n').toString();
     assert(before.split('\n').filter(Boolean).every(line => line.endsWith(' missing')));
-    const result = await prefetchSelectedGeography(f.acquisition(), f.baseline, f.candidate);
-    assert.equal(result.status, 'scoped-prefetch-completed'); assert.equal(result.complete_scientific_closure, false);
+    const result = await acquireFixture(f.acquisition(), f);
+    assert.equal(result.complete_scientific_closure, false);
     assert(f.batches.some(batch => batch.length >= 4));
     assert.equal(new Set(f.batches.flat()).size, f.batches.flat().length);
     assert.equal(result.fetched_objects, f.bodies.size);
@@ -242,14 +232,14 @@ test('real missing-object fetches are batched, shared OIDs deduplicate, and cand
     for (const commit of [f.baseline, f.candidate]) assert.deepEqual(consume(f.destination, commit), consume(f.origin, commit));
     assert.notDeepEqual(consume(f.destination, f.baseline), consume(f.destination, f.candidate));
     const count = f.batches.length;
-    const warm = await prefetchSelectedGeography(f.acquisition(), f.baseline, f.candidate);
+    const warm = await acquireFixture(f.acquisition(), f);
     assert.equal(warm.fetched_objects, 0); assert.equal(f.batches.length, count);
   } finally { f.close(); }
 });
 
 test('wrong tree, mode, size, OID and hash are not accepted as scoped completion', async () => {
   const f = fixture(); try {
-    const original = f.maps.get(f.baseline), name = 'data/ownership-selection.json';
+    const original = f.maps.get(f.baseline), name = 'metadata.json';
     await assert.rejects(f.acquisition({loadTree: async () => ({...original, truncated: true})}).tree(f.baseline), /Incomplete/);
     await assert.rejects(f.acquisition({loadTree: async () => ({...original, sha: '0'.repeat(40)})}).tree(f.baseline), /wrong/);
     const replacement = f.maps.get(f.candidate).tree.find(r => r.path === name);
@@ -261,51 +251,6 @@ test('wrong tree, mode, size, OID and hash are not accepted as scoped completion
     await assert.rejects(a.descriptor(f.baseline, name, {git_blob_oid: '0'.repeat(40)}), /identity/);
     await assert.rejects(a.descriptor(f.baseline, '../outside'), /Unsafe/);
     await assert.rejects(a.json(f.baseline, name, {sha256: '0'.repeat(64)}), /declared hash/);
-  } finally { f.close(); }
-});
-
-for (const transport of [false, true]) test(`complete ${transport ? 'fragment-transport' : 'direct-native'} and source rosters authenticate every declared path`, async () => {
-  const f = fixture(); try {
-    const files = f.bankFiles(), native = {rows: [[0, 2, 1]]}, nativePin = {bytes: bytes(native).length, sha256: digest(bytes(native))};
-    const source = {features: [{id: 'target', points: [1, 2]}]}, sourcePin = {bytes: bytes(source).length, sha256: digest(bytes(source))};
-    const parts = [], sources = [];
-    for (let i = 0; i < 2; i++) {
-      const nativePath = `native/${transport ? 'fragment' : 'run'}-${i}.json`, sourcePath = `data/source-${i}.json`;
-      files[nativePath] = native; files[sourcePath] = source;
-      parts.push({path: path.posix.basename(nativePath), ...nativePin});
-      sources.push({path: sourcePath, ...sourcePin});
-    }
-    if (transport) {
-      const index = {parts}; files['native/index.json'] = index;
-      files['native/manifest.json'] = {parts: [{path: 'absent-run.bin', bytes: 1, sha256: '0'.repeat(64)}],
-        native_asset_transport: {kind: 'ordered-exact-original-byte-fragments',
-          index: {path: 'native/index.json', bytes: bytes(index).length, sha256: digest(bytes(index))}}};
-    } else files['native/manifest.json'] = {parts};
-    files['source-bank.json'].unchanged_files = sources;
-    files['data/ownership-selection.json'].sha256 = digest(bytes(files['native/manifest.json']));
-    files['data/ownership-selection.json'].selected_geography = {
-      ...files['data/ownership-selection.json'].selected_geography,
-      bytes: bytes(files['source-bank.json']).length, sha256: digest(bytes(files['source-bank.json']))};
-    const head = f.commit(files); f.importMetadata();
-    const paths = [], bodyReads = [];
-    const a = f.acquisition({execute(command, args, options) {
-      if (args.includes('ls-tree')) paths.push(args.at(-1));
-      if (args.includes('blob')) bodyReads.push(args.at(-1));
-      return f.execute(command, args, options);
-    }});
-    const result = await prefetchSelectedGeography(a, head, head);
-    assert.equal(result.status, 'scoped-prefetch-completed');
-    const expectedPaths = ['data/ownership-selection.json', 'native/manifest.json', 'source-bank.json', 'data/world-index.json',
-      ...parts.map(p => 'native/' + p.path), ...sources.map(p => p.path), ...(transport ? ['native/index.json'] : [])];
-    assert.deepEqual(paths.sort(), expectedPaths.sort());
-    assert.equal(bodyReads.length, transport ? 4 : 3); // Only actual JSON consumers read bodies.
-    assert(bodyReads.length < result.unique_objects);
-    assert.equal(new Set(bodyReads).size, bodyReads.length);
-    assert.equal(new Set(f.batches.flat()).size, f.batches.flat().length);
-    for (const name of [`native/${transport ? 'fragment' : 'run'}-0.json`, `native/${transport ? 'fragment' : 'run'}-1.json`, 'data/source-0.json', 'data/source-1.json']) {
-      const expected = name.startsWith('native/') ? native : source;
-      assert.deepEqual(JSON.parse(f.git(f.destination, ['show', head + ':' + name])), expected);
-    }
   } finally { f.close(); }
 });
 
@@ -425,14 +370,14 @@ test('failed transport remains unavailable and redacts subprocess errors', async
       if (args.includes('fetch')) throw Error('fixture-secret transport interruption');
       return execFileSync(command, args, options);
     }});
-    await assert.rejects(prefetchSelectedGeography(a, f.baseline, f.candidate), error => /acquisition failed/.test(error.message) && !error.message.includes('fixture-secret'));
+    await assert.rejects(acquireFixture(a, f), error => /acquisition failed/.test(error.message) && !error.message.includes('fixture-secret'));
     assert.equal(a.stats.complete_scientific_closure, false);
   } finally { f.close(); }
 });
 
 test('wrong local object type and corrupted acquired bytes refuse completion', async () => {
   const f = fixture(); try {
-    const original = f.maps.get(f.baseline), row = original.tree.find(r => r.path === 'data/ownership-selection.json');
+    const original = f.maps.get(f.baseline), row = original.tree.find(r => r.path === 'metadata.json');
     const bad = f.acquisition({loadTree: async () => ({...original, tree: original.tree.map(r => r === row ? {...r, sha: original.sha} : r)})});
     await assert.rejects(bad.json(f.baseline, row.path), /actual immutable Git tree/);
     const damaged = f.acquisition({execute(command, args, options) {
@@ -445,91 +390,17 @@ test('wrong local object type and corrupted acquired bytes refuse completion', a
   } finally { f.close(); }
 });
 
-test('direct native and additive historical aliases are scoped acquisitions', async () => {
+test('complete historical pins retain exact same-path alias authentication', async () => {
   const f = fixture(); try {
-    const files = f.bankFiles(), native = {rows: [[0, 2, 1]]};
-    const pin = (name, body) => {
-      const raw = bytes(body);
-      return {path: name, bytes: raw.length, sha256: digest(raw), mode: '100644', commit: 'e'.repeat(40),
-        git_blob_oid: createHash('sha1').update(`blob ${raw.length}\0`).update(raw).digest('hex')};
-    };
-    files['native/run.json'] = native;
-    files['native/manifest.json'] = {parts: [{...pin('run.json', native), commit: undefined}]};
-    delete files['native/manifest.json'].parts[0].commit;
-    const roles = ['base_manifest', 'ledger', 'owner_roster', 'patch', 'runtime_envelope', 'authority_registry'];
-    const pins = {};
-    for (const role of roles) { const name = 'additive/' + role + '.json', body = {role}; files[name] = body; pins[role] = pin(name, body); }
-    const sidecar = {kind: 'retained-native-additive-selection-v2', runtime_envelope: pins.runtime_envelope,
-      authority_registry: pins.authority_registry, logical_asset_map: Object.fromEntries(roles.slice(0, 4).map(role => [role, pins[role]]))};
-    files['sidecar.json'] = sidecar;
-    files['data/ownership-selection.json'].sha256 = digest(bytes(files['native/manifest.json']));
-    files['data/ownership-selection.json'].additive_release = pin('sidecar.json', sidecar);
-    const head = f.commit(files);
-    // Copy only fresh metadata, exactly as a blob:none checkout would.
-    const tree = f.git(f.origin, ['rev-parse', head + '^{tree}']).toString().trim();
-    const queue = [tree];
-    while (queue.length) { const current = queue.pop(), raw = f.git(f.origin, ['cat-file', 'tree', current]); f.git(f.destination, ['hash-object', '-w', '-t', 'tree', '--stdin'], raw);
-      for (const line of f.git(f.origin, ['ls-tree', current]).toString().trim().split('\n')) if (line.includes(' tree ')) queue.push(line.split(' ')[2].split('\t')[0]); }
-    f.git(f.destination, ['hash-object', '-w', '-t', 'commit', '--stdin'], f.git(f.origin, ['cat-file', 'commit', head]));
-    const result = await prefetchSelectedGeography(f.acquisition(), head, head);
-    assert.equal(result.status, 'scoped-prefetch-completed');
-    for (const role of roles) assert.deepEqual(JSON.parse(f.git(f.destination, ['show', head + ':additive/' + role + '.json'])), {role});
-    assert.deepEqual(JSON.parse(f.git(f.destination, ['show', head + ':native/run.json'])), native);
-    assert.equal(new Set(f.batches.flat()).size, f.batches.flat().length);
+    const original = f.maps.get(f.baseline).tree.find(row => row.path === 'data/source.json');
+    const pin = {commit: 'e'.repeat(40), path: original.path, mode: original.mode,
+      git_blob_oid: original.sha, bytes: original.size, sha256: digest(f.bodies.get(original.sha))};
+    const a = f.acquisition(), row = await a.pin(f.baseline, pin);
+    a.acquire([row]); assert.deepEqual(a.body(row), f.bodies.get(original.sha));
+    await assert.rejects(a.pin(f.candidate, pin), /identity differs/);
+    await assert.rejects(a.pin(f.baseline, {...pin, mode: '120000'}), /identity differs/);
   } finally { f.close(); }
 });
-
-test('an unsupported source bank cannot return a completed acquisition', async () => {
-  const a = {stats: {complete_scientific_closure: false}, tree: async () => new Map([['data/ownership-selection.json', {}]]),
-    json: async (_version, name) => name === 'data/ownership-selection.json' ? {version: 1, manifest_path: 'manifest.json'} : {parts: []}};
-  await assert.rejects(prefetchSelectedGeography(a, 'a'.repeat(40), 'a'.repeat(40)), /Unrecognized source bank/);
-});
-
-test('real timeout and failed launcher stop descendants before fallback, with honest summaries', () => {
-  const code = `import importlib.util,pathlib,subprocess,contextlib,io,json,tempfile,sys,os,time
-spec=importlib.util.spec_from_file_location('checker','scripts/run-geographic-check.py')
-m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-os.environ['NODE']=sys.executable
-with tempfile.TemporaryDirectory() as directory:
-    root=pathlib.Path(directory);(root/'scripts').mkdir()
-    marker=root/'heartbeat'
-    descendant="import pathlib,time; p=pathlib.Path("+repr(str(marker))+");\\nwhile True: p.write_text(str(time.monotonic())); time.sleep(0.03)"
-    for fail in [False,True]:
-        launcher="import subprocess,sys,time,json\\nsubprocess.Popen([sys.executable,'-c',"+repr(descendant)+"],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)\\ntime.sleep(0.15)\\n"
-        if fail: launcher+="print(json.dumps({'status':'scoped-prefetch-completed','complete_scientific_closure':False}),flush=True)\\nsys.exit(1)\\n"
-        else: launcher+="time.sleep(60)\\n"
-        (root/'scripts/geography-prefetch.mjs').write_text(launcher)
-        output=io.StringIO()
-        with contextlib.redirect_stderr(output):
-            with m.stage_timing('fixture'):
-                m.prefetch_declared_inputs(root,'a'*40,'b'*40,timeout=0.5)
-        rows=[json.loads(s) for s in output.getvalue().splitlines()]
-        assert rows[0]['geography_prefetch']['status']=='scoped-prefetch-unavailable'
-        assert rows[0]['geography_prefetch']['complete_scientific_closure'] is False
-        assert rows[1]['geography_stage']=='fixture' and rows[1]['elapsed_ms']>=0
-        before=marker.read_text();time.sleep(0.15);assert marker.read_text()==before,'descendant still running after fallback'
-`;
-  execFileSync('python', ['-B', '-c', code], {stdio: ['ignore', 'pipe', 'pipe'], timeout: 10000});
-});
-
-test('unconfirmed process-group cleanup blocks checker continuation', () => {
-  const code = `import importlib.util,pathlib
-spec=importlib.util.spec_from_file_location('checker','scripts/run-geographic-check.py')
-m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-class Child:
-    pid=123
-    returncode=0
-    def communicate(self,timeout): return (b'{}',b'')
-m.subprocess.Popen=lambda *a,**k: Child()
-def denied(*a): raise PermissionError('fixture cleanup denial')
-m.os.killpg=denied
-try: m.prefetch_declared_inputs(pathlib.Path('.'),'a'*40,'b'*40)
-except RuntimeError as error: assert 'Cannot terminate owned' in str(error)
-else: raise AssertionError('checker resumed after unconfirmed cleanup')
-`;
-  execFileSync('python', ['-B', '-c', code], {stdio: ['ignore', 'pipe', 'pipe']});
-});
-
 
 test('cold routing acquisition supplies exact objects and authenticates tree metadata', async () => {
   const f = fixture(); try {

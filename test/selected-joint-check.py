@@ -108,7 +108,7 @@ class InspectRouting(unittest.TestCase):
 
 
 
-    def test_final_software_fetch_skips_legacy_prefetch_and_keeps_real_native_result_checks(self):
+    def test_final_software_keeps_real_native_result_checks(self):
         for invalid in [False, True]:
             result = native(candidate_code_executed=True, candidate_selection={'version': 2, 'kind': 'selected-final-native-bank-v2'})
             if invalid:
@@ -116,13 +116,12 @@ class InspectRouting(unittest.TestCase):
             with self.subTest(invalid=invalid), self.fixture(), no_polygons(), \
                  mock.patch.object(G, 'read', return_value=raw({'version': 2})), \
                  mock.patch.object(G, 'selected_joint', side_effect=AssertionError('software checkpoint reuse')), \
-                 mock.patch.object(G, 'prefetch_declared_inputs', side_effect=AssertionError('final-bank legacy prefetch')), \
                  mock.patch.object(G.subprocess, 'check_output', return_value=raw(result)) as child:
                 if invalid:
                     with self.assertRaisesRegex(ValueError, 'contradicts conservation'):
-                        G.inspect(ROOT, BASE, NEXT, code_commit=NEXT, prefetch=True)
+                        G.inspect(ROOT, BASE, NEXT, code_commit=NEXT)
                 else:
-                    report = G.inspect(ROOT, BASE, NEXT, code_commit=NEXT, prefetch=True)
+                    report = G.inspect(ROOT, BASE, NEXT, code_commit=NEXT)
                     self.assertTrue(report['candidate_code_executed'])
                     self.assertEqual(report['selected_native_report'], result)
                     self.assertNotIn('checkpoint', report)
