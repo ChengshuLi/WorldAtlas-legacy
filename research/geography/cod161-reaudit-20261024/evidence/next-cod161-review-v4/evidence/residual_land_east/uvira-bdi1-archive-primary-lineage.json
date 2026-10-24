@@ -1,0 +1,355 @@
+{
+  "kind": "uvira6-bdi-adm1-exact-archive-primary-lineage",
+  "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+  "date": "2026-10-24",
+  "status": "source identity recovered; six held; no acceptance",
+  "descriptor": {
+    "path": "sourceData/gbOpen/BDI_ADM1.zip",
+    "ref": "9469f09",
+    "bytes": 87780,
+    "sha256": "739821d1dae0cd4627f5761ac01c264137a568f37ca57b9f8a918c9494a4e92a",
+    "git_blob_sha1_of_downloaded_archive": "207f470552aaafc30718eab993b700fe6d8b0091",
+    "distinguished_from": "releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1-all.zip"
+  },
+  "download": {
+    "status": "completed with narrow per-command approval",
+    "prior_failure": "DNS Errno8; no bytes; no denial recorded",
+    "material_new_evidence": "Three other exactpublicmedia archive downloads succeeded under approvals; parent explicitly authorized this separate archive step."
+  },
+  "manifest": [
+    {
+      "path": "BDI_ADM1.cpg",
+      "bytes": 5,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+    },
+    {
+      "path": "BDI_ADM1.dbf",
+      "bytes": 2848,
+      "sha256": "b3e2f29995bed7b4a7da075033795409f681cb5226da28717452bfa27e3dfce2"
+    },
+    {
+      "path": "BDI_ADM1.prj",
+      "bytes": 145,
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+    },
+    {
+      "path": "BDI_ADM1.sbn",
+      "bytes": 300,
+      "sha256": "bcae66816c7224a1dae60340fe04a847ed16de9223e1030b42e77413bc7b9c6c"
+    },
+    {
+      "path": "BDI_ADM1.sbx",
+      "bytes": 132,
+      "sha256": "1efbae27b2bd1378b3aa474f952688c98a803b440de9980106f61c124f91f4fd"
+    },
+    {
+      "path": "BDI_ADM1.shp",
+      "bytes": 87796,
+      "sha256": "c57e151f6171f9fa4f5889eb0c73c4c90128b29cf9bfbfb669b1959a839a9b18"
+    },
+    {
+      "path": "BDI_ADM1.shp.xml",
+      "bytes": 9941,
+      "sha256": "a11716b19563727cff4af4e0970d324792caa0d64569271f3f46da397a4d0467"
+    },
+    {
+      "path": "BDI_ADM1.shx",
+      "bytes": 244,
+      "sha256": "55886fe69371ea4827bc5e95d92a2447d9bad0b4a9ae81f83a464244da447eff"
+    },
+    {
+      "path": "license.PNG",
+      "bytes": 33344,
+      "sha256": "bf2618ff59022c29b4b183539bf7f3f1f39a82af247fa90946a9c8825936832f"
+    },
+    {
+      "path": "meta.txt",
+      "bytes": 472,
+      "sha256": "f14ac78c63609c7764fd8adbae96308b568a98af4724e906517091c40f945a77"
+    }
+  ],
+  "meta_txt": "Boundary Representative of Year: 2014\nISO-3166-1 (Alpha-3): BDI\nBoundary Type: ADM1\nCanonical Boundary Type Name: Province\nSource 1: geoBoundaries\nSource 2: Wikimedia\nRelease Type: gbOpen\nLicense: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication\nLicense Notes: \nLicense Source: https://commons.wikimedia.org/wiki/File:Provinces_of_Burundi_2014_(named).png\nLink to Source Data: https://commons.wikimedia.org/wiki/File:Provinces_of_Burundi_2014_(named).png\nOther Notes: ",
+  "xml_processes": [
+    {
+      "date": "20221114",
+      "time": "081505",
+      "tool": "CreateFeatureclass",
+      "role": "upstream archived process only; not executed by this worker"
+    },
+    {
+      "date": "20221114",
+      "time": "082452",
+      "tool": "FeatureToPolygon",
+      "role": "upstream archived process only; not executed by this worker"
+    },
+    {
+      "date": "20221114",
+      "time": "090724",
+      "tool": "UpdateSchema",
+      "role": "upstream archived process only; not executed by this worker"
+    },
+    {
+      "date": "20221114",
+      "time": "091048",
+      "tool": "CalculateField",
+      "role": "upstream archived process only; not executed by this worker"
+    },
+    {
+      "date": "20221114",
+      "time": "091338",
+      "tool": "FeatureClassToFeatureClass",
+      "role": "upstream archived process only; not executed by this worker"
+    },
+    {
+      "date": "20221114",
+      "time": "091344",
+      "tool": "DeleteField",
+      "role": "upstream archived process only; not executed by this worker"
+    },
+    {
+      "date": "20221114",
+      "time": "091348",
+      "tool": "DeleteField",
+      "role": "upstream archived process only; not executed by this worker"
+    }
+  ],
+  "xml_assessment": "2022-11-14 archived CreateFeatureclass Polyline followed by FeatureToPolygon, field preparation and export. Does not expose raster registration/control points, positional error or river survey. Metadata feature counts0 are stale workspace metadata; actual SHP/DBF18 records verified. No constructor executed.",
+  "shp_header_type": 5,
+  "shp_record_count": 18,
+  "dbf": {
+    "count": 18,
+    "fields": [
+      {
+        "name": "Name",
+        "type": "C",
+        "size": 50
+      },
+      {
+        "name": "Level",
+        "type": "C",
+        "size": 50
+      },
+      {
+        "name": "ISO_Code",
+        "type": "C",
+        "size": 50
+      }
+    ],
+    "rows": [
+      {
+        "Name": "Gitega",
+        "Level": "ADM1",
+        "ISO_Code": "BI-GI"
+      },
+      {
+        "Name": "Kirundo",
+        "Level": "ADM1",
+        "ISO_Code": "BI-KI"
+      },
+      {
+        "Name": "Muyinga",
+        "Level": "ADM1",
+        "ISO_Code": "BI-MY"
+      },
+      {
+        "Name": "Ngozi",
+        "Level": "ADM1",
+        "ISO_Code": "BI-NG"
+      },
+      {
+        "Name": "Makamba",
+        "Level": "ADM1",
+        "ISO_Code": "BI-MA"
+      },
+      {
+        "Name": "Rutana",
+        "Level": "ADM1",
+        "ISO_Code": "BI-RT"
+      },
+      {
+        "Name": "Ruyigi",
+        "Level": "ADM1",
+        "ISO_Code": "BI-RY"
+      },
+      {
+        "Name": "Cankuzo",
+        "Level": "ADM1",
+        "ISO_Code": "BI-CA"
+      },
+      {
+        "Name": "Karuzi",
+        "Level": "ADM1",
+        "ISO_Code": "BI-KR"
+      },
+      {
+        "Name": "Cibitoke",
+        "Level": "ADM1",
+        "ISO_Code": "BI-CI"
+      },
+      {
+        "Name": "Kayanza",
+        "Level": "ADM1",
+        "ISO_Code": "BI-KY"
+      },
+      {
+        "Name": "Bubanza",
+        "Level": "ADM1",
+        "ISO_Code": "BI-BB"
+      },
+      {
+        "Name": "Muramvya",
+        "Level": "ADM1",
+        "ISO_Code": "BI-MU"
+      },
+      {
+        "Name": "Bujumbura Rural",
+        "Level": "ADM1",
+        "ISO_Code": "BI-BL"
+      },
+      {
+        "Name": "Bujumbura Mairie",
+        "Level": "ADM1",
+        "ISO_Code": "BI-BM"
+      },
+      {
+        "Name": "Bururi",
+        "Level": "ADM1",
+        "ISO_Code": "BI-BR"
+      },
+      {
+        "Name": "Mwaro",
+        "Level": "ADM1",
+        "ISO_Code": "BI-MW"
+      },
+      {
+        "Name": "Rumonge",
+        "Level": "ADM1",
+        "ISO_Code": "BI-RM"
+      }
+    ]
+  },
+  "native_feature_matches": [
+    {
+      "native_operand": {
+        "feature_ordinal": 9,
+        "geometry_sha256": "01da6af3037858540976ea36f912571a497771a49bc6cc86c03f17299febb67e",
+        "negative_ordinal": 0,
+        "source_id": "gb:BDI:ADM1:87207978B68487327478732"
+      },
+      "original_feature_properties": {
+        "shapeName": "Cibitoke",
+        "shapeISO": "BI-CI",
+        "shapeID": "87207978B68487327478732",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "archive_dbf_ordinal": 9,
+      "archive_dbf_row": {
+        "Name": "Cibitoke",
+        "Level": "ADM1",
+        "ISO_Code": "BI-CI"
+      },
+      "name_and_ISO_match": true,
+      "geometry_equivalence_claimed": false
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 11,
+        "geometry_sha256": "02983aa54aa9ea56a23c046c346589786a1c7ebe5822ce9f8061ac53db093b24",
+        "negative_ordinal": 1,
+        "source_id": "gb:BDI:ADM1:87207978B36636371084075"
+      },
+      "original_feature_properties": {
+        "shapeName": "Bubanza",
+        "shapeISO": "BI-BB",
+        "shapeID": "87207978B36636371084075",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "archive_dbf_ordinal": 11,
+      "archive_dbf_row": {
+        "Name": "Bubanza",
+        "Level": "ADM1",
+        "ISO_Code": "BI-BB"
+      },
+      "name_and_ISO_match": true,
+      "geometry_equivalence_claimed": false
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "640d04d5cb3500ddee15068e2c872e1e01f251dfb0aaec13dcebc345deccba0a",
+        "negative_ordinal": 2,
+        "source_id": "gb:BDI:ADM1:87207978B39611815861631"
+      },
+      "original_feature_properties": {
+        "shapeName": "Bujumbura Rural",
+        "shapeISO": "BI-BL",
+        "shapeID": "87207978B39611815861631",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "archive_dbf_ordinal": 13,
+      "archive_dbf_row": {
+        "Name": "Bujumbura Rural",
+        "Level": "ADM1",
+        "ISO_Code": "BI-BL"
+      },
+      "name_and_ISO_match": true,
+      "geometry_equivalence_claimed": false
+    }
+  ],
+  "license_visual_read": {
+    "file": "bdi-adm1-archived-license.png",
+    "sha256": "bf2618ff59022c29b4b183539bf7f3f1f39a82af247fa90946a9c8825936832f",
+    "finding": "Address bar identifies exact Provinces_of_Burundi_2014_(named).png; CC0 1.0 dedication visible. This proves archived license attribution, not source precision."
+  },
+  "named_raster": {
+    "url": "https://commons.wikimedia.org/wiki/File:Provinces_of_Burundi_2014_(named).png",
+    "page_revision": 1187955182,
+    "bytes": 28174,
+    "width": 614,
+    "height": 624,
+    "published_sha1": "db4da164e284bf443349d85a7d507b8c79c38900",
+    "download_sha1_verified": true,
+    "sha256": "d581539dc95440cf09f1fddb4cd7110bcff0aad549095908c599a15c019224fc",
+    "visual_read": "Province outlines and labels, including Cibitoke/Bubanza/Bujumbura Rural. No coordinate grid, scale bar or river/channel survey details. No georeference attempted.",
+    "file_history": "Created1April2015 at1025x624; resized3April2015 to614x624. Frozen source archive records URL, not raster revision/checksum; exact historic raster-byte identity not established.",
+    "source_chain": "Named raster -> Provinces_of_Burundi_2014.png -> Burundi_communes.png. First two page records read. Earlier retained research inspected commune parent and recorded2006 MapInfo creation using unspecified mapping resources; not repeated here.",
+    "source_year_limit": "2014 is archive represented-year/title claim, not verified survey date. Raster publication2015 and vector processing2022 kept distinct."
+  },
+  "repository_lineage": {
+    "pr": 2600,
+    "url": "https://github.com/wmgeolab/geoBoundaries/pull/2600",
+    "merged": true,
+    "merged_at": "2022-12-08T13:01:31Z",
+    "merge_commit": "acff008b3fa8c9d536cf7386bd1567fa79abe23f",
+    "head": "17f3fafe851e34da3cd2a9860d7602518e9a7cc0",
+    "changed_path": "sourceData/gbOpen/BDI_ADM1.zip",
+    "file_git_blob": "207f470552aaafc30718eab993b700fe6d8b0091",
+    "downloaded_frozen_archive_git_blob_matches": true,
+    "issue2579": "Requested replacement because former source was OSM; that former lineage is not substituted for this exact Wikimedia archive."
+  },
+  "conclusion": "Exact consumed source archive, named source and upstream polygonization are now evidenced. Low-detail locator raster and archive lineage do not establish native-cell territorial applicability. No open archive-fetch blocker remains for four native families; research qualification still independent.",
+  "remaining_known_steps": [
+    {
+      "item": "Exact raster georegistration/control record from original producer",
+      "state": "No such record identified in archive or source PR; do not invent a known available document or demand impossible universal proof."
+    },
+    {
+      "item": "BDI ADM2 originalMapMaker construction provenance",
+      "state": "Known publisher/PURL unavailable; not retried; this is distinct from now documentedBDIADM1process."
+    },
+    {
+      "item": "Mobutu–Buyoya correspondence exact citation/body",
+      "state": "Official assertion and namedbook remain; no exactletterdate/cote/text. Publisher405/librarytimeout retained; no contact/purchase/request made."
+    },
+    {
+      "item": "Current adopted Rusizi spatial control",
+      "state": "Not found in completed bounded primary search; no universal absence claim."
+    }
+  ],
+  "accepted_cells": 0,
+  "hold_removals": 0,
+  "geometry_runs": 0
+}

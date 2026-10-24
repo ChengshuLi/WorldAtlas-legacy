@@ -1,0 +1,285 @@
+{
+  "kind": "cod-tanganyika60-exact-original-tza-adm1-source-archive-inspection",
+  "date": "2026-10-24",
+  "worker_thread_id": "01a16f2d-e91b-7416-b0f6-1b7829ab00e5",
+  "status": "source_provenance_research_completed_all60_holds_preserved_no_acceptance",
+  "prior_scope": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/native-operands-exporter-history-synthesis.json",
+    "sha256": "e44cf263b148b0c29ce2f1e30a2c3e7476322b175644e9111bd54f9c7c0c8a1c"
+  },
+  "preflight": {
+    "log_read": [
+      "frozen-tza-source-lineage-qualification.json",
+      "native-operands-exporter-history-synthesis.json"
+    ],
+    "finding": "Exact sourceData/gbOpen/TZA_ADM1.zip target had only successful LFS-pointer retrieval and had never been denied. Prior release metadata URL restricted-fetch denial and TZAADM2HDX403 were separate and were not touched or retried. Exact destination did not exist before download."
+  },
+  "archive_download": {
+    "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/sourceData/gbOpen/TZA_ADM1.zip",
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/TZA_ADM1-9469f09-source.zip",
+    "method": "curl --fail --location --max-time60; supported per-command require_escalated approval",
+    "terminal_exit_code": 0,
+    "verified_bytes": 1065241,
+    "verified_sha256": "1141336441d9048ef5f689f613c81efdf570d27853375e5015168454c7a19f40",
+    "expected_bytes": 1065241,
+    "expected_sha256": "1141336441d9048ef5f689f613c81efdf570d27853375e5015168454c7a19f40"
+  },
+  "archive_members": [
+    {
+      "member": "license.png",
+      "bytes": 90760,
+      "zip_timestamp": [
+        2020,
+        11,
+        10,
+        21,
+        23,
+        22
+      ],
+      "sha256": "1b08a6e890fe47e8be2e2587e89e38c5a0018242f0c4f0d9b820511e146e2210"
+    },
+    {
+      "member": "meta.txt",
+      "bytes": 388,
+      "zip_timestamp": [
+        2021,
+        1,
+        12,
+        11,
+        10,
+        32
+      ],
+      "sha256": "272a628fa2c95ab3fbb16f8580e9d05a11f92177a161ab3069900d6a2152de9f"
+    },
+    {
+      "member": "TZA_ADM1.cpg",
+      "bytes": 5,
+      "zip_timestamp": [
+        2017,
+        10,
+        11,
+        15,
+        50,
+        44
+      ],
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+    },
+    {
+      "member": "TZA_ADM1.dbf",
+      "bytes": 8380,
+      "zip_timestamp": [
+        2021,
+        1,
+        12,
+        11,
+        13,
+        24
+      ],
+      "sha256": "3e0d74f347897d748bcb0c75a7fa5fd7c9e03d9132ac30e5b393dfe89d0959ab"
+    },
+    {
+      "member": "TZA_ADM1.prj",
+      "bytes": 145,
+      "zip_timestamp": [
+        2017,
+        10,
+        11,
+        15,
+        48,
+        26
+      ],
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+    },
+    {
+      "member": "TZA_ADM1.sbn",
+      "bytes": 428,
+      "zip_timestamp": [
+        2017,
+        10,
+        11,
+        15,
+        48,
+        26
+      ],
+      "sha256": "d5ba878ebe0cf7b88f9b141d66f90abd685206f26f903b1a87a589611ad7838b"
+    },
+    {
+      "member": "TZA_ADM1.sbx",
+      "bytes": 148,
+      "zip_timestamp": [
+        2017,
+        10,
+        11,
+        15,
+        48,
+        26
+      ],
+      "sha256": "57c0ebd8271b579af581890da1ea8be9bcc00c2fb20efa3df671830dd5afac96"
+    },
+    {
+      "member": "TZA_ADM1.shp",
+      "bytes": 1305836,
+      "zip_timestamp": [
+        2017,
+        10,
+        11,
+        15,
+        50,
+        44
+      ],
+      "sha256": "55c200dee5d8780adb8aac9c4a3d66ec041c3be140a794c315088c1499050b63"
+    },
+    {
+      "member": "TZA_ADM1.shp.xml",
+      "bytes": 888,
+      "zip_timestamp": [
+        2017,
+        10,
+        11,
+        15,
+        50,
+        44
+      ],
+      "sha256": "88496034e3d6896fbefd9f56262ab5e5d05592e11ccf5e821cbef658841e3394"
+    },
+    {
+      "member": "TZA_ADM1.shx",
+      "bytes": 340,
+      "zip_timestamp": [
+        2017,
+        10,
+        11,
+        15,
+        50,
+        44
+      ],
+      "sha256": "e4aada0e85bbde3b640f2892917f88d3af46a3a42ae7d40e0ed57c594e184912"
+    }
+  ],
+  "actual_documentary_findings": {
+    "meta_txt": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/archive-meta.txt",
+      "sha256": "272a628fa2c95ab3fbb16f8580e9d05a11f92177a161ab3069900d6a2152de9f",
+      "represented_year": "2015",
+      "sources": [
+        "OpenStreetMap",
+        "Wambacher"
+      ],
+      "source_url": "https://wambachers-osm.website/boundaries/",
+      "license": "Open Data Commons Open Database License1.0",
+      "other_notes": "empty",
+      "license_notes": "empty"
+    },
+    "dbf": {
+      "record_count": 30,
+      "field_schema": [
+        {
+          "name": "Name",
+          "type": "C",
+          "length": 254,
+          "decimals": 0
+        },
+        {
+          "name": "Level",
+          "type": "C",
+          "length": 10,
+          "decimals": 0
+        },
+        {
+          "name": "ISO_Code",
+          "type": "C",
+          "length": 10,
+          "decimals": 0
+        }
+      ],
+      "records_file": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/original-source-archive-dbf-records.json",
+      "records_sha256": "70bc5022ab7787f911b91929b9ee80eaf65c933c4af8d27ac75e2b76c522326d",
+      "selected_records": [
+        {
+          "record_index": 15,
+          "deleted": false,
+          "Name": "Rukwa",
+          "Level": "ADM1",
+          "ISO_Code": "TZ-20"
+        },
+        {
+          "record_index": 16,
+          "deleted": false,
+          "Name": "Kigoma",
+          "Level": "ADM1",
+          "ISO_Code": "TZ-08"
+        },
+        {
+          "record_index": 24,
+          "deleted": false,
+          "Name": "Katavi",
+          "Level": "ADM1",
+          "ISO_Code": "TZ-28"
+        }
+      ],
+      "identity_limit": "Ordinal/name/ISO match frozen released features; no new geometry equivalence computation was performed. DBF has exactly3fields: Name,Level,ISO_Code. No OSMrelationID,relationversion or exporter configuration fields."
+    },
+    "processing_xml": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/archive-TZA_ADM1.shp.xml",
+      "sha256": "88496034e3d6896fbefd9f56262ab5e5d05592e11ccf5e821cbef658841e3394",
+      "recorded_date": "2017-10-11",
+      "software": "ArcGISDesktop10.3 CalculateField",
+      "recorded_operations": [
+        "name assigned from name_en at14:50:04",
+        "Level assigned ADM1 at14:50:36",
+        "ISO_Code assigned from ISO3166_2 at14:50:43"
+      ],
+      "limit": "Records attribute processing, not original OSM extraction or territorial line definition. Does not record clipping, export-water parameter, OSMsnapshot, treaty, median construction or administrative-boundary relation."
+    },
+    "projection": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/archive-TZA_ADM1.prj",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "declaration": "Geographic WGS1984 coordinates, degrees",
+      "limit": "Coordinate-system declaration does not define or validate international boundary."
+    },
+    "license_image": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/archive-license.png",
+      "sha256": "1b08a6e890fe47e8be2e2587e89e38c5a0018242f0c4f0d9b820511e146e2210",
+      "visual_inspection": "Screenshot of OSMCopyright page inspected with view_image; ODbL and credit to OSMcontributors, share-alike for derived database, documentationCCBY-SA2.0. No treaty or exportsettings evidence."
+    }
+  },
+  "finite_provenance_followups": [
+    {
+      "action": "GitHub commits query exactsourceData path at9469f09,per_page10",
+      "url": "https://api.github.com/repos/wmgeolab/geoBoundaries/commits?path=sourceData%2FgbOpen%2FTZA_ADM1.zip&sha=9469f09&per_page=10",
+      "result": "One entry:b7dd6a55701c76a330500ad9d9240f2b9997c6a8,2023-01-19,messageCleared history. No original2017processing/exportreceipt revealed by this file history."
+    },
+    {
+      "action": "Inspect documented4.0archive exact source path",
+      "url": "https://github.com/wmgeolab/geoBoundariesArchive_4_0_0/blob/299e00623ece6c03bcb9a751eda6094b1eac85a6/sourceData/gbOpen/TZA_ADM1.zip",
+      "result": "LFS pointer returned1069161bytes SHA164f0fd0f42649655f3634dbc7f41533eecceaea1a9c7fb9f503259b289ce325. Subsequent precise per-command approved curl download completed exit0; hash/size verified. All10common data/license/metadata files byte-identical to frozen archive;10additional Mac resource sidecars not used as geography evidence. No earlier schema recovered.",
+      "local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/TZA_ADM1-archive4-299e006-source.zip",
+      "verified_sha256": "164f0fd0f42649655f3634dbc7f41533eecceaea1a9c7fb9f503259b289ce325",
+      "comparison_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/archive4-versus-frozen-source-byte-comparison.json",
+      "comparison_sha256": "111141bfac4387f68cdf90de6a8b8928e5c2ed7dbc248e519dd6cde5b49e9b6d",
+      "history": "Archive4file history has only root299e006,dated2023-01-11,messageArchival4.0. This snapshot-creation date is distinct from documented release4.0date."
+    },
+    {
+      "action": "Inspect documented3.0archive for pre2021original attributes",
+      "url": "https://api.github.com/repos/wmgeolab/geoBoundariesArchive_3_0_0/contents?ref=7c8dbc599e312d9204e450aecfa66c204b8cf9b8",
+      "result": "sourceData path returned404; then root listing succeeded and contained only.gitattributes,README.md,releaseData. README describes releaseJune5,2020archive. No sourceData in this exact root snapshot. No release geometry substituted or downloaded."
+    }
+  ],
+  "local_inspection_repair": {
+    "action": "Archive4comparison first pass",
+    "result": "Parser mistakenly treated Mac resource sidecar suffix as DBF and exited1 withIndexError. Corrected comparison excluded__MACOSXentries and completed exit0. All10common files equality verified. No geometry parsing or alteration."
+  },
+  "changed_obstacle_assessment": {
+    "resolved": "Original TZAADM1sourceZIP is now downloaded, authenticated and inspected; it is no longer an unread-payload blocker. Source license, exactoriginal names/ISO/ordinals, WGS1984declaration and2017attributeprocessing are known.",
+    "remaining": "Actual OSM administrative relation identities/versions and historical export water configuration are absent from this original archive and identical4.0sourcearchive. No source-specific treaty/median/stateboundary construction is documented in the inspected original metadata/XML/schema. This is demonstrated finite-source absence, not universal absence.",
+    "reasonable_failed_qualification": "Tried exact originalsource archive and earlier4.0source version, inspected metadata/XML/DBF/license, checked narrow path history and3.0archive root. These steps did not recover the missing linkage. No generic metadata join is credited as cell completion.",
+    "scope": "TZAADM1feature lineage for32Kigoma+27Katavi+1Rukwa original contributors. Other native target operands remain distinct source families; this archive does not qualify2021TZAADM2,BDIorZMBoperands.",
+    "modern_boundary": "UnreadAU2026meetingoutcome remains a separate unresolved current-boundary evidence question. Original2015represented metadata and2017processing cannot settle it.",
+    "acceptance": "All60 held. No accepted positive/unresolved disposition, no geometryoperation/nativeproducer/observer, no publication claim. Independent acceptance may assess substantive research sufficiency without requiring an impossible universal sovereignty certificate."
+  },
+  "next_finite_candidates": [
+    "A separately retained original2017Wambacherexportreceipt or fullOSMattribute file, if an identified authorized source exists; do not invent an endpoint or claim presence.",
+    "Source-specific2021NBS/OCHAADM2 and native per-operand applicability remain separate. Do not retry its deniedHDXURL without materially relevant authorization.",
+    "Water35 independently handles ZMBsource/treaty context; do not duplicate."
+  ]
+}

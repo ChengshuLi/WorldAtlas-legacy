@@ -1,0 +1,428 @@
+{
+  "kind": "cod-tanganyika60-original-publisher-water-semantics-followup",
+  "date": "2026-10-24",
+  "worker_thread_id": "01a16f2d-e91b-7416-b0f6-1b7829ab00e5",
+  "status": "all60held_no_credit",
+  "prior_evidence": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/frozen-tza-source-lineage-qualification.json",
+    "sha256": "f4627a6a4dbc6476a68153c94476691e72debe07bf3005356c643fb2eb0b68a4"
+  },
+  "scope_keys_owner_y_x": [
+    [
+      14453,
+      134450,
+      152467
+    ],
+    [
+      14453,
+      134686,
+      152467
+    ],
+    [
+      14461,
+      136087,
+      153004
+    ],
+    [
+      14461,
+      136088,
+      153005
+    ],
+    [
+      14461,
+      136097,
+      153013
+    ],
+    [
+      14461,
+      136098,
+      153014
+    ],
+    [
+      14461,
+      136099,
+      153015
+    ],
+    [
+      14461,
+      136100,
+      153016
+    ],
+    [
+      14461,
+      136101,
+      153017
+    ],
+    [
+      14461,
+      136102,
+      153018
+    ],
+    [
+      14461,
+      136103,
+      153019
+    ],
+    [
+      14461,
+      136104,
+      153020
+    ],
+    [
+      14461,
+      136108,
+      153023
+    ],
+    [
+      14461,
+      136109,
+      153024
+    ],
+    [
+      14461,
+      136110,
+      153025
+    ],
+    [
+      14461,
+      136111,
+      153026
+    ],
+    [
+      14461,
+      136112,
+      153027
+    ],
+    [
+      14461,
+      136113,
+      153028
+    ],
+    [
+      14461,
+      136114,
+      153029
+    ],
+    [
+      14461,
+      136115,
+      153030
+    ],
+    [
+      14461,
+      136116,
+      153031
+    ],
+    [
+      14461,
+      136119,
+      153033
+    ],
+    [
+      14461,
+      136120,
+      153034
+    ],
+    [
+      14461,
+      136121,
+      153035
+    ],
+    [
+      14461,
+      136122,
+      153036
+    ],
+    [
+      14461,
+      136123,
+      153037
+    ],
+    [
+      14461,
+      136129,
+      153042
+    ],
+    [
+      14461,
+      136130,
+      153043
+    ],
+    [
+      14461,
+      136136,
+      153048
+    ],
+    [
+      14461,
+      137123,
+      153506
+    ],
+    [
+      14552,
+      134743,
+      152474
+    ],
+    [
+      14552,
+      134751,
+      152477
+    ],
+    [
+      14552,
+      134756,
+      152479
+    ],
+    [
+      14552,
+      134759,
+      152480
+    ],
+    [
+      14552,
+      134764,
+      152482
+    ],
+    [
+      14552,
+      134767,
+      152483
+    ],
+    [
+      14552,
+      134769,
+      152484
+    ],
+    [
+      14552,
+      134770,
+      152484
+    ],
+    [
+      14552,
+      134772,
+      152485
+    ],
+    [
+      14552,
+      134775,
+      152486
+    ],
+    [
+      14552,
+      134778,
+      152487
+    ],
+    [
+      14552,
+      134783,
+      152489
+    ],
+    [
+      14552,
+      135687,
+      152649
+    ],
+    [
+      14552,
+      135689,
+      152650
+    ],
+    [
+      14552,
+      135690,
+      152650
+    ],
+    [
+      14552,
+      135691,
+      152651
+    ],
+    [
+      14552,
+      135692,
+      152651
+    ],
+    [
+      14552,
+      135693,
+      152651
+    ],
+    [
+      14552,
+      135694,
+      152652
+    ],
+    [
+      14552,
+      135695,
+      152652
+    ],
+    [
+      14552,
+      135696,
+      152652
+    ],
+    [
+      14552,
+      135696,
+      152653
+    ],
+    [
+      14552,
+      135697,
+      152653
+    ],
+    [
+      14552,
+      135698,
+      152653
+    ],
+    [
+      14552,
+      135699,
+      152653
+    ],
+    [
+      14552,
+      135699,
+      152654
+    ],
+    [
+      14552,
+      135700,
+      152654
+    ],
+    [
+      14552,
+      135701,
+      152654
+    ],
+    [
+      14552,
+      135702,
+      152654
+    ],
+    [
+      14552,
+      135704,
+      152655
+    ]
+  ],
+  "primary_findings": [
+    {
+      "source": "Original exporter Walter Nordmann (wambacher), public OSM forum",
+      "url": "https://community.openstreetmap.org/t/generating-shapefiles-from-osm-data/86086",
+      "source_date": "2019-02-13",
+      "inspected": "Full text posts6,9,11 and15; lines53-63,90-146,155-168,213-245",
+      "findings": "Exporter describes optional LAND selection or ExportArea=land. His clipping-input SQL list explicitly includes Tanganjikasee with OSM relation1374224. Thus a land-only derivative and water-inclusive administrative output are distinct source options by2019. His later comment explains shapefile attributes are selected/renamed while GeoJSON can carry more tags.",
+      "short_quote": "Yes, only seas with international boundaries are clipped. And some realy big ones too.",
+      "specific_identifier": {
+        "lake": "Lake Tanganyika",
+        "osm_relation_id": 1374224,
+        "role": "water clipping input in2019 discussion, NOT administrative boundary relation and NOT an adopted international median"
+      },
+      "limits": "This statement postdates represented2015 and does not identify original TZA export configuration, retrieval timestamp, relation versions or international line construction. No clipping or OSM request executed."
+    },
+    {
+      "source": "Tanzania National Bureau of Statistics, Region Shapefile Metadata2022Census",
+      "url": "https://microdata.nbs.go.tz/index.php/catalog/49",
+      "inspected": "Full relevant metadata lines64-168",
+      "reference_id": "TZA-NBS-PHC-2020-ShapeFilesv01",
+      "findings": "Census mapping collected January2020–May2022; PO-RALG assists boundary identification. Boundary conflicts are referred to responsible ministry. Version notes describe aggregation from enumeration areas through hamlets/villages/wards. No Tanganyika median or shoreline rule was provided in inspected metadata.",
+      "limits": "Different producer, period and purpose from frozen2015 OSM/Wambacher family. Its reported ward accuracy is not validation of the frozen international lake line. No shapefile downloaded or geometry operation performed."
+    },
+    {
+      "source": "NBS Kigoma Region Basic Demographic and Socio-Economic Profile",
+      "url": "https://sensa.nbs.go.tz/publication/Kigoma.pdf",
+      "source_date": "December2024",
+      "inspected": "PDF text cover and printedp.iii, physicalpage3",
+      "findings": "Map and land-area basis is2022PHC cartographic work; publication expressly restricts their purpose to statistical use.",
+      "short_quote": "for statistical use only",
+      "limits": "No specific2015OSM lineage or median-boundary statement identified in inspected front matter. Screenshot calls for physicalpage4 returned reference-only outputs without viewable pixels here; map not visually assessed."
+    },
+    {
+      "source": "United Republic of Tanzania Ministry of Water Profile",
+      "url": "https://www.maji.go.tz/uploads/publications/sw1695621239-Profile_Ministry_of_Water.pdf",
+      "source_date": "December2020",
+      "inspected": "PDF printedpp.1–5, physicalpages3–7; sections1.1,2.2,2.4",
+      "findings": "Ministry reports Tanzania inland-water area including Tanganyika and distinguishes total lake surface32900km2 from Tanzania share13489km2 in section2.2. Section1.1 separately rounds Tanganyika to13.4thousandkm2. It lists four riparian states and water-management instruments.",
+      "limits": "Country-level resource statistics document some Tanzanian lake-water area, not a regional polygon rule, exact median, geodetic datum, or OSM lineage. The management convention is not treated as a boundary adjudication."
+    },
+    {
+      "source": "OSM-Boundaries current documentation, substitute service after Wambacher",
+      "url": "https://osm-boundaries.com/about/documentation",
+      "inspected": "Full relevant lines29-61,93-105,145-149",
+      "findings": "Documents original polygons containing water and optional land-only clipping; download exposes Water and Tags choices. Its dates/import rules begin after frozen vintage.",
+      "limits": "Context only. Current successor documentation cannot establish historical2015 settings. Authentication and paid options observed; no login, purchase, API, download or account changes attempted."
+    }
+  ],
+  "government_index_only_leads": [
+    {
+      "url": "https://portal.sido.go.tz/en/kigoma-region",
+      "indexed_finding": "Kigoma total45066km2, water8029km2, land37037km2. Full source open timed out.",
+      "limit": "Not accepted as full-inspected regional boundary evidence; no median rule in snippet."
+    },
+    {
+      "url": "https://rukwa.go.tz/history",
+      "indexed_finding": "Regional area27765km2, water6605km2 (23.79%). Open yielded zero text lines.",
+      "limit": "Snippet supports reported water accounting only; no inspectable full explanation or split between Rukwa and Tanganyika waters."
+    },
+    {
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/2023-11/katavi-investment-guide-eng.pdf",
+      "indexed_finding": "Katavi investment guide includes Lake Tanganyika resources.",
+      "limit": "Full content transport refused as too large; no water-boundary method inspected."
+    }
+  ],
+  "failed_reads": [
+    {
+      "url": "https://www.nbs.go.tz/statistics/topic/gis",
+      "status": "failed_timeout_400"
+    },
+    {
+      "url": "https://www.nbs.go.tz/statistics/geographic-information-system-gis",
+      "status": "failed_timeout_400"
+    },
+    {
+      "url": "https://www.nbs.go.tz/uploads/statistics/documents/sw-1738323693-15.%20Rukwa%20Region%20Socio-Economic_Profile.pdf",
+      "status": "failed_timeout_400"
+    },
+    {
+      "url": "https://www.nbs.go.tz/uploads/statistics/documents/en-1738323014-23.%20Katavi%20Region%20Socio-Economic%20Profile.pdf",
+      "status": "failed_timeout_400"
+    },
+    {
+      "url": "https://www.nbs.go.tz/nbs/takwimu/Abstracts/Statistical_Abstract_2016.pdf",
+      "status": "failed_timeout_400"
+    },
+    {
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/2023-11/katavi-investment-guide-eng.pdf",
+      "status": "failed_content_length_11619677"
+    },
+    {
+      "url": "https://portal.sido.go.tz/en/kigoma-region",
+      "status": "failed_timeout_400"
+    },
+    {
+      "url": "https://rukwa.go.tz/history",
+      "status": "completed_zero_text_uninspectable"
+    },
+    {
+      "url": "https://katavi.go.tz/",
+      "status": "failed_timeout_400"
+    }
+  ],
+  "bounded_search_log": [
+    "NBS GIS/2012/2015/2022 source documentation and region-profile water-area questions for Kigoma/Katavi/Rukwa.",
+    "Official government Kigoma+Tanganyika+median search produced no relevant boundary-method statement; results on unrelated median statistics not used.",
+    "Wambacher boundaries export coastline/water searches located his own2019 statement above.",
+    "Exact Wambacher+ExportArea=land+2015, Wambacher+Tanganjikasee+2015 and Wambacher+Kigoma searches yielded no usable primary source that connects2015TZA export settings. This is bounded-search result, not universal absence."
+  ],
+  "assessment": {
+    "answer": "Neither an administrative shoreline-only rule nor exact median/state-boundary construction for the frozen Kigoma/Katavi/Rukwa polygons was established. Original exporter documentation proves optional water clipping and explicitly covers LakeTanganyika by2019. Official sources establish statistical mapping purpose and country-level water share, not the historical source-specific outer edges.",
+    "precise_source_relative_obstacle": "The frozen2015source lacks the exact original export timestamp/options (especially water versus LAND), OSM administrative relation/version lineage, and documentation identifying the original lake-boundary construction. Retained feature interiors show water inclusion but cannot supply those missing semantics. The known original TZA_ADM1 archive remains the finite direct provenance lead.",
+    "acceptance": "Preserve all60 holds. This is substantive source-method research, not completed-cell credit or metadata-only acceptance. No shoreline replacement, median construction, new overlay, clipping, CGAZ substitution or new observation made.",
+    "restrictions_observed": "No stopped browser restart; no restricted releaseURL retry; no network/security escalation; no Git mutations; no contact messages to source publishers. Existing AU2026 unread status unchanged.",
+    "completion_scope": "Bounded documentary pass completed. No claim that all governmental maps or historical exporter records are exhausted."
+  }
+}

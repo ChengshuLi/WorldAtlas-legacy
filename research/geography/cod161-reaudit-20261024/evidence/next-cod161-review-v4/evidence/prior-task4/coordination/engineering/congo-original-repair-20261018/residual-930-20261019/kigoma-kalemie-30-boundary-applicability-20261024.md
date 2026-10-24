@@ -1,0 +1,23 @@
+# COD owner 14552: Kigoma–Kalemie source applicability
+
+Status: research finding only; all 30 original cells remain pending and held. No repair, unresolved credit, owner change, or stock diagnostic was issued by this work.
+
+## Bound original scope and retained evidence
+
+- Original pending roster: 30 keys for pixel owner 14552, target `gb:COD:ADM2:63176286B6958016734749` (Kalemie). The original 3,905-key scope and 254-pending partition are unchanged.
+- `partition-b.json` SHA-256 `728335168e0003aacb1538b8c3d10799d984a2319d3ffe2a09c9cd274643f735` binds this owner to one target-level competitor: `gb:TZA:ADM1:36957248B11692782910073`, feature ordinal 16, negative ordinal 0, geometry SHA-256 `55766c30063cb193900fc7c4ea6617cea818d60e4fc556b4e3031795f79c774a`.
+- The retained 930-key full-family center overlay (`complete-family-center-overlay-20261023.local.json`, SHA-256 `00fc57c3290d4d0cf1ef7df68860ac6d2c3ee82e67509d0ae2f9d1c550cdf24d`) reports all 30 target-cell centers inside both the target Kalemie feature and the Tanzania Kigoma ADM1 feature. This is a center-in-polygon observation, not a territorial adjudication or full-cell test.
+- The frozen inland-water support runs contain all 30 cells; the frozen physical-land support contains none. The existing support is therefore specifically water-cell evidence, not evidence that the land boundary lies inside the cells.
+- Retained administrative-source inventory (`frozen-administrative-sources-20261023.json`, SHA-256 `ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633`) describes current geoBoundaries COD ADM2 metadata as RGC/OCHA 2019 (CC BY 3.0 IGO), and TZA ADM1 as represented 2015, OpenStreetMap/Wambacher (ODbL 1.0). These are administrative products, not the international median-line instrument.
+
+## Primary boundary sources checked
+
+1. The 1965 U.S. Department of State International Boundary Study No. 51 says the Congo–Tanzania boundary is the median line of Lake Tanganyika. It reports that the 11 August 1910 Belgium–Germany convention gave the median line international-boundary status, but that no known attempt had determined its exact position and maps used cartographic license. It also reproduces the convention's transition from the lake median line to the western thalweg of the Rusizi delta. Source: [IBS No. 51, Democratic Republic of the Congo–Tanzania Boundary](https://library.law.fsu.edu/Digital-Collections/LimitsinSeas/pdf/ibs051.pdf), pp. 2, 4–5.
+2. Belgium's 4 June 1911 approving law and appended 14 May 1910 arrangement are available in the published Pasinomie text. The convention says its arrangement fixes the boundary north of Tanganyika; the attached arrangement explicitly starts at the median line of the lake, then leaves it to follow the western main-branch thalweg of the Rusizi delta. Source: [Belgian law and convention text](https://unionisme.be/pasinomie/1911/19110604Z.pdf), pp. 477–478.
+3. The African Union Commission's 12 April 2017 statement says the four riparian states were then agreeing on a methodology and roadmap for reaffirmation/delimitation and committed to completing the process within 18 months. Its 21 November 2017 report says the states exchanged information and best methods for delimiting their shared lacustrine borders, and contemplated a future cross-border-cooperation meeting. These records document a process, not its eventual result. Sources: [AU 12 April 2017 statement](https://www.peaceau.org/en/article/press-statement-reaffirmation-of-the-lake-tanganyika-boundary) and [AU 21 November 2017 release](https://oau-aec-au-documents.uwazi.io/en/entity/rbly9wze79qcajy3dnp14i?page=1).
+4. A later African Union Commission annual-report result for 2018 records a training activity involving the Lake Tanganyika riparian states in September 2018. This is evidence the technical process continued, but the available excerpt does not state that a delimitation agreement or geospatial line was adopted. Source: [AU Commission annual report, 8 February 2019](https://archives.au.int/bitstream/handle/123456789/10101/EX%20CL%201134%20XXXIV%20_E.pdf?isAllowed=y&sequence=1).
+
+## Assessment and next step
+
+The simultaneous Kalemie/Kigoma administrative-feature hits do not establish that either administrative polygon represents the applicable international line: the treaty-derived boundary is the lake median, while the State Department study explicitly describes its exact location as undetermined in the materials it reviewed. The all-water classification makes that distinction material for these 30 keys. The 2017 AU records show the line remained the subject of a reaffirmation/delimitation process at that time, but do not establish whether a later agreed geospatial result exists.
+

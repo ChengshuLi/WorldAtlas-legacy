@@ -1,0 +1,87 @@
+{
+  "kind": "inert-author-packet-custody-receipt",
+  "deliverables": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/inertproposal.json",
+      "bytes": 241274,
+      "sha256": "0473ce8e2d2cf1261fe10af5e9e180fb827ff5e8cde3dfe53dfbae1cacf134b3"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/source-reasoning.md",
+      "bytes": 6114,
+      "sha256": "8c403fbce8ca71c56ef791fe6f9e378f51d50de010bc68f1021d403ce961cc13"
+    }
+  ],
+  "existing_read_receipts": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/existing-read-receipts/Cartotheque-Luozi-selected-records.json",
+      "bytes": 31097,
+      "sha256": "6e90ceccae0ea502bd89e10e39cccc60730c4d03863e337f8715e190f8ef9401"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-1954-scans-and-1903-reading.md",
+      "bytes": 7971,
+      "sha256": "3bb8552d849b3c7101180c1e93b114bb47979c934e16b62642a879ff35b17459"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-contact-verification-v2.json",
+      "bytes": 5836,
+      "sha256": "d7f213bdeedd71da31cd9df242309a21e9ecab74ba5f05ea26b22b09c558361c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-original-operand-body-check.json",
+      "bytes": 5392,
+      "sha256": "e70bafa9a9de9a494401ebf11b897f985a5105605abdb027d7b5e892141a6bb6"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-proposal-v2-receipt.json",
+      "bytes": 4739,
+      "sha256": "ff5170757a970c21828444bfc7440bd6197492500052593524060a661ab9f812"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-source-reading-manifest.json",
+      "bytes": 29566,
+      "sha256": "5f8b2e5425afdd41f7a7c65987bacec87e4151d6d0d086e6a653e49e40f7d192"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-source-sufficiency-v3.md",
+      "bytes": 11049,
+      "sha256": "3f567f88e663607dcea60b27de8816fdcaf2d3e8e5dac8117caf3edf36e25a22"
+    }
+  ],
+  "assembly_script": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/assemble-inert-delivery-proposal.py",
+    "bytes": 9493,
+    "sha256": "3964be7470bf0c96cb0bd6f8f5b349d538a404c200a5de48307ad82653d073d9"
+  },
+  "checks": {
+    "unique_exact_keys": 19,
+    "original_operands_per_key": 11,
+    "total_original_observations": 209,
+    "Bouenza": 15,
+    "Pool": 4,
+    "pending_partition_exact_match": true,
+    "current_preserved_full_native_intervals_operands_decisions_holds_match": true,
+    "target_equal_authenticated_original_source_evidence": true,
+    "all_land_physical_rows_preserved": true,
+    "native_supported_rows_contains_proposal_keys": false,
+    "unique_retained_binding_hashes_verified": 191,
+    "reading_manifest_files_verified": 159,
+    "new_observer_runs": 0,
+    "source_acquisitions": 0,
+    "acceptance": 0,
+    "credit": 0,
+    "hold_changes": 0,
+    "git_mutations": 0,
+    "fresh_independent_review": "not performed; parent next step"
+  },
+  "preserved_block": {
+    "source": "Taunt1887Senate42page report; Wisconsin record APOVYWVWKSSG5Y8B",
+    "action": "public catalog urllib read via require_escalated",
+    "status": "auto-review rejected before execution; no request/session ID returned",
+    "reason": "The bounded public-source fetch is otherwise low-impact, but it directly uses urllib after the supported web route failed, contrary to the explicit instruction to use the supported Library skill and not manually bypass failed transfers.",
+    "retried": false,
+    "report_text_read": false,
+    "exhaustion_claim": false
+  }
+}

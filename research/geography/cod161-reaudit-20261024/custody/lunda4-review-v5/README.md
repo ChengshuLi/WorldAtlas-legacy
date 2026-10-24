@@ -1,0 +1,9 @@
+# COD Lunda4 supplemental proposal, no acceptance
+
+This version retains every v4 member byte for byte and adds only the exact Lunda4 author proposal and its existing authored source-reading evidence. The v4 six-packet156 proposal and separate contextual1 are unchanged. Lunda4 was excluded from v4 and is now separately submitted for independent consideration. Nothing here adopts the contextual candidate or awards any of160 proposed unresolved cells.
+
+Current accepted accounting remains2977 positive+767 researched-unresolved+161 pending=3905. All native holds remain. The exact four keys equal v4's excluded_lunda4; they do not overlap its156 or separate1. No diagnostic, source producer, physical producer or geometric calculation was rerun.
+
+Read source-reasoning.md and inertproposal.json. The same Lunda Norte Census feature correspondence is affirmative evidence; the surviving question is source-edge applicability at the four Kasai-context keys. The public catalogue follow-through is complete but did not yield a readable full map. The signed1924 map and minutes remain unread, and custodian correspondence remains an unsent draft. Their importance is preserved; neither unperformed outreach nor the TLS failure is described as exhaustion. Whether this finite actual research suffices for a documented exception is an independent acceptance question.
+
+manifest.json maps all included existing authored evidence to exact members and lists the raw source/correspondence bodies kept local. Raw museum previews, PDFs and page images are not uploaded. Earlier contradictory or withdrawn assessments remain historical evidence. Source-reading assertions are author evidence, not a claim that the independent reviewer newly inspected any source PDF. The original one full3905 diagnostic, preparation, parity, seven extracts and candidate-tree proof remain in prior custody.

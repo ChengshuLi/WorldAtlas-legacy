@@ -1,0 +1,44 @@
+{
+  "request_id": "0342c48a-4358-4932-b3af-cc59726b9541",
+  "pr": 2786,
+  "expected_head": "4b90e3af439830b098193fd93a13fb8b2d556385",
+  "base": "dbb1a4e934318db44dac8b46373be4519b409db4",
+  "review": "https://github.com/ChengshuLi/WorldAtlas/pull/2786#pullrequestreview-5640215537",
+  "reviewed_tests": {
+    "base": "dbb1a4e934318db44dac8b46373be4519b409db4",
+    "head": "4b90e3af439830b098193fd93a13fb8b2d556385",
+    "files": [
+      "test/evidence-quality.test.mjs",
+      "test/premerge-evidence.test.mjs",
+      "test/engineering-owned-scope-routing.test.mjs"
+    ]
+  },
+  "status": "terminal-success-merge-verified",
+  "coordinator": "01a16f2d-2749-7641-a3d4-090e251490ec",
+  "exit_code": 0,
+  "run_id": 40137093414,
+  "run_attempt": 1,
+  "canonical_receipt": "https://github.com/ChengshuLi/WorldAtlas/pull/2786#issuecomment-6390133465",
+  "merge_commit": "a57ed94dab43e6c10ae502111ea67e0cc51e1be5",
+  "tested_candidate": "296252a55e6e2a1b6dd08051aa1ce434b1a75701",
+  "tree": "5d8e7b5ace232a7946d3c64732fa15b77337b382",
+  "geography_report_sha256": "dc43974a61fbed80223bb1e53f03f1d8c7a83994c5bdbdd89d281b0d07976a43",
+  "science_acceptance": {
+    "accepted_by": "root",
+    "receipt": "https://github.com/ChengshuLi/WorldAtlas/issues/2649#issuecomment-6390184939",
+    "positive": 2977,
+    "researched_unresolved": 767,
+    "pending": 161,
+    "original": 3905,
+    "remaining_land": 96,
+    "remaining_inland_water": 65,
+    "native_holds_preserved": true,
+    "package_completed": false
+  },
+  "owned_slot_release": {
+    "released": true,
+    "exit_code": 0,
+    "head": "4b90e3af439830b098193fd93a13fb8b2d556385",
+    "unique_scratch_preservation_required": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "candidate_code": "feffd18c5748c47e87cc42cd7f5c63a60622d6b3",
+  "accepted_unchanged_executable_map_base": "a57ed94dab43e6c10ae502111ea67e0cc51e1be5",
+  "full_original_cells": 3905,
+  "supported": 2978,
+  "held": 927,
+  "exact_decision_change": {
+    "key": [
+      14501,
+      135354,
+      143074
+    ],
+    "before": [
+      "territorial_exclusion_cells"
+    ],
+    "after": [
+      "assigned_cells"
+    ]
+  },
+  "unchanged_fields": [
+    "requested_rows",
+    "native_contract",
+    "diagnostic_territorial_rows",
+    "physical_witness_kind_legend",
+    "physical_witness_kind_rows"
+  ],
+  "prior_contextual_records_preserved": 2,
+  "additional_contextual_records": [
+    {
+      "decision_sha256": "41a037dede7e94e9bbcf8bcb25d2833669fef5d1b59b30b80f0cfd185703f58a",
+      "exclusion_geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+      "exclusion_index": 190,
+      "kind": "interior",
+      "negative_ordinal": 0,
+      "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+      "original_source": {
+        "id": "uige-original-source",
+        "pointer": "/features/16/geometry"
+      },
+      "pixelIndex": 14501,
+      "resolution": "contextual",
+      "source_id": "gb:COD:ADM2:63176286B47421332346835",
+      "target_id": "gb:COD:ADM2:63176286B47421332346835",
+      "x": 143074,
+      "y": 135354
+    }
+  ],
+  "original_report": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod2785-owned-slot-preserved-inputs/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+    "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+  },
+  "new_report": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work/.cache/delivery-handoff/cod3905-popokabaka1-20261024-01a16f2d/native-diagnostic.json",
+    "bytes": 10191058,
+    "sha256": "7694ed38d5b346f324da3f7edf4b7064213fe540bb6afc7bc6e3cbe5618b33d7"
+  },
+  "no_acceptance_or_final_map_change": true
+}
