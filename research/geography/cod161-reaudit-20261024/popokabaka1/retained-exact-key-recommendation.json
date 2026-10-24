@@ -1,0 +1,584 @@
+{
+  "id": "single-key-contextual-applicability-candidate",
+  "proposed_action": "independent-exact-key-contextual-applicability-decision",
+  "subject_count": 1,
+  "keys": [
+    [
+      14501,
+      135354,
+      143074
+    ]
+  ],
+  "accepted": false,
+  "all_holds_retained": true,
+  "reason": "Retained exact release sourceData/full Uige excludes this center while consumed simplified Uige and native predicate include it; same representation-sensitive pattern and actual four-operand signature as accepted-two controls. Kwango is real overlay context but not an original native negative. This supports a bounded proposal, not automatic adoption.",
+  "positive_controls": [
+    {
+      "key": [
+        14501,
+        135347,
+        143089
+      ],
+      "role": "accepted-comparator-no-change",
+      "retained_center_comparison": {
+        "key": [
+          14501,
+          135347,
+          143089
+        ],
+        "original_class": "land",
+        "original_candidate_source_indices": [
+          449,
+          18916
+        ],
+        "original_native_hold": "territorial_exclusion_cells",
+        "accepted": false,
+        "accepted_repair_credit": 0,
+        "prior_candidate_center_hits": [
+          {
+            "source_index": 449,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          {
+            "source_index": 18916,
+            "source_id": "gb:COD:ADM2:63176286B47421332346835"
+          }
+        ],
+        "original_2021_uige_center_hit": true,
+        "original_2019_popokabaka_center_hit": true,
+        "original_2017_kwango_center_hit": false,
+        "physical_support": true,
+        "inland_water_support": false,
+        "center_lon_lat": [
+          16.48703493206594,
+          -5.845739655264543
+        ],
+        "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+        "approx_nearest_boundary_m": 1.14,
+        "2024_uscb_drc_popokabaka_center_hit": true,
+        "2024_uscb_drc_any_adm2_center_hit": true,
+        "2019_uscb_ao_uig_center_hit": false
+      },
+      "native_decision_rows": [
+        [
+          143089,
+          143090,
+          14501,
+          "assigned_cells"
+        ]
+      ],
+      "native_supported_rows": [
+        [
+          143089,
+          143090,
+          14501
+        ]
+      ],
+      "native_held_rows": [],
+      "physical_witness_kind_rows": [],
+      "source_coverage_rows": [
+        [
+          143089,
+          143090,
+          "mapped_land_support"
+        ]
+      ],
+      "native_territorial_rows": [
+        [
+          143089,
+          143090,
+          14501,
+          [
+            {
+              "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+              "kinds": [
+                "interior"
+              ],
+              "negative_ordinal": 0,
+              "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+              "original_source": {
+                "feature_ordinal": 16,
+                "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+                "negative_ordinal": 0,
+                "source_id": "gb:AGO:ADM1:26408823B906914650007"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            },
+            {
+              "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+              "kinds": [],
+              "negative_ordinal": 1,
+              "original_source": {
+                "feature_ordinal": 145,
+                "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+                "negative_ordinal": 1,
+                "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            },
+            {
+              "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+              "kinds": [],
+              "negative_ordinal": 2,
+              "original_source": {
+                "feature_ordinal": 150,
+                "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+                "negative_ordinal": 2,
+                "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            },
+            {
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "kinds": [],
+              "negative_ordinal": 3,
+              "original_source": {
+                "feature_ordinal": 8,
+                "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+                "negative_ordinal": 3,
+                "source_id": "gb:COG:ADM1:67827341B26824927831038"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            }
+          ]
+        ]
+      ],
+      "adopted_contextual_contacts": [
+        {
+          "decision_sha256": "06a9fe564f0ccfcb522c6340354c8d191755dbd7edbb94592f88688a294462c5",
+          "exclusion_geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "exclusion_index": 190,
+          "kind": "interior",
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "id": "uige-original-source",
+            "pointer": "/features/16/geometry"
+          },
+          "pixelIndex": 14501,
+          "resolution": "contextual",
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835",
+          "x": 143089,
+          "y": 135347
+        }
+      ]
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143072
+      ],
+      "role": "accepted-comparator-no-change",
+      "retained_center_comparison": {
+        "key": [
+          14501,
+          135350,
+          143072
+        ],
+        "original_class": "land",
+        "original_candidate_source_indices": [
+          449,
+          18916
+        ],
+        "original_native_hold": "territorial_exclusion_cells",
+        "accepted": false,
+        "accepted_repair_credit": 0,
+        "prior_candidate_center_hits": [
+          {
+            "source_index": 449,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          {
+            "source_index": 18916,
+            "source_id": "gb:COD:ADM2:63176286B47421332346835"
+          }
+        ],
+        "original_2021_uige_center_hit": true,
+        "original_2019_popokabaka_center_hit": true,
+        "original_2017_kwango_center_hit": false,
+        "physical_support": true,
+        "inland_water_support": false,
+        "center_lon_lat": [
+          16.46369094390576,
+          -5.849837744873748
+        ],
+        "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+        "approx_nearest_boundary_m": 79.04,
+        "2024_uscb_drc_popokabaka_center_hit": true,
+        "2024_uscb_drc_any_adm2_center_hit": true,
+        "2019_uscb_ao_uig_center_hit": false
+      },
+      "native_decision_rows": [
+        [
+          143072,
+          143080,
+          14501,
+          "assigned_cells"
+        ]
+      ],
+      "native_supported_rows": [
+        [
+          143072,
+          143080,
+          14501
+        ]
+      ],
+      "native_held_rows": [],
+      "physical_witness_kind_rows": [],
+      "source_coverage_rows": [
+        [
+          143070,
+          143081,
+          "mapped_land_support"
+        ]
+      ],
+      "native_territorial_rows": [
+        [
+          143070,
+          143073,
+          14501,
+          [
+            {
+              "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+              "kinds": [
+                "interior"
+              ],
+              "negative_ordinal": 0,
+              "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+              "original_source": {
+                "feature_ordinal": 16,
+                "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+                "negative_ordinal": 0,
+                "source_id": "gb:AGO:ADM1:26408823B906914650007"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            },
+            {
+              "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+              "kinds": [],
+              "negative_ordinal": 1,
+              "original_source": {
+                "feature_ordinal": 145,
+                "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+                "negative_ordinal": 1,
+                "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            },
+            {
+              "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+              "kinds": [],
+              "negative_ordinal": 2,
+              "original_source": {
+                "feature_ordinal": 150,
+                "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+                "negative_ordinal": 2,
+                "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            },
+            {
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "kinds": [],
+              "negative_ordinal": 3,
+              "original_source": {
+                "feature_ordinal": 8,
+                "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+                "negative_ordinal": 3,
+                "source_id": "gb:COG:ADM1:67827341B26824927831038"
+              },
+              "source_id": "gb:COD:ADM2:63176286B47421332346835",
+              "target_id": "gb:COD:ADM2:63176286B47421332346835"
+            }
+          ]
+        ]
+      ],
+      "adopted_contextual_contacts": [
+        {
+          "decision_sha256": "06a9fe564f0ccfcb522c6340354c8d191755dbd7edbb94592f88688a294462c5",
+          "exclusion_geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "exclusion_index": 190,
+          "kind": "interior",
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "id": "uige-original-source",
+            "pointer": "/features/16/geometry"
+          },
+          "pixelIndex": 14501,
+          "resolution": "contextual",
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835",
+          "x": 143072,
+          "y": 135350
+        }
+      ]
+    }
+  ],
+  "exact_candidate_context": {
+    "key": [
+      14501,
+      135354,
+      143074
+    ],
+    "role": "pending-one-key-question",
+    "retained_center_comparison": {
+      "key": [
+        14501,
+        135354,
+        143074
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18738,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18738,
+          "source_id": "gb:COD:ADM1:28894549B46890622863620"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": true,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.46643729545403,
+        -5.855301817634082
+      ],
+      "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+      "approx_nearest_boundary_m": 40.58,
+      "2024_uscb_drc_popokabaka_center_hit": true,
+      "2024_uscb_drc_any_adm2_center_hit": true,
+      "2019_uscb_ao_uig_center_hit": false
+    },
+    "native_decision_rows": [
+      [
+        143074,
+        143075,
+        14501,
+        "territorial_exclusion_cells"
+      ]
+    ],
+    "native_supported_rows": [],
+    "native_held_rows": [
+      [
+        143074,
+        143075,
+        14501
+      ]
+    ],
+    "physical_witness_kind_rows": [],
+    "source_coverage_rows": [
+      [
+        143074,
+        143077,
+        "mapped_land_support"
+      ]
+    ],
+    "native_territorial_rows": [
+      [
+        143074,
+        143075,
+        14501,
+        [
+          {
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+            "original_source": {
+              "feature_ordinal": 16,
+              "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+              "negative_ordinal": 0,
+              "source_id": "gb:AGO:ADM1:26408823B906914650007"
+            },
+            "source_id": "gb:COD:ADM2:63176286B47421332346835",
+            "target_id": "gb:COD:ADM2:63176286B47421332346835"
+          },
+          {
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 145,
+              "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+              "negative_ordinal": 1,
+              "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+            },
+            "source_id": "gb:COD:ADM2:63176286B47421332346835",
+            "target_id": "gb:COD:ADM2:63176286B47421332346835"
+          },
+          {
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 150,
+              "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+              "negative_ordinal": 2,
+              "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+            },
+            "source_id": "gb:COD:ADM2:63176286B47421332346835",
+            "target_id": "gb:COD:ADM2:63176286B47421332346835"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B47421332346835",
+            "target_id": "gb:COD:ADM2:63176286B47421332346835"
+          }
+        ]
+      ]
+    ],
+    "adopted_contextual_contacts": []
+  },
+  "material_differences": [
+    "Different exact cell and border position; retained distances are not accuracy bounds, footprint proofs or thresholds.",
+    "Pending key has a Kwango overlay center hit; that observation is preserved although its supposed native-veto attribution was false.",
+    "Accepted adoption enumerates only two controls; candidate has no contextual record and is currently held."
+  ],
+  "complete_consumed_uige_operand": {
+    "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+    "kinds": [
+      "interior"
+    ],
+    "negative_ordinal": 0,
+    "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+    "original_source": {
+      "feature_ordinal": 16,
+      "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+      "negative_ordinal": 0,
+      "source_id": "gb:AGO:ADM1:26408823B906914650007"
+    },
+    "source_id": "gb:COD:ADM2:63176286B47421332346835",
+    "target_id": "gb:COD:ADM2:63176286B47421332346835"
+  },
+  "known_limits": [
+    "Source full/output comparisons are inherited and independently reviewed, not newly computed.",
+    "Full/source center exclusion is not a full-cell footprint certificate.",
+    "Existing two-key adoption is not extended by this recommendation.",
+    "Kwango overlay membership is preserved but is not a native negative.",
+    "Exact source-data/full-output archives were not refetched; restrictions preserved.",
+    "No fresh full-cell geometry comparison to sourceData/full comparator; no replacement of consumed simplified operand.",
+    "No inference that release sourceData and restricted PR1352 object are byte-identical."
+  ],
+  "decision_needed": "Root independent exact-key decision bound to complete consumed Uige feature, original owner/target, rule/data/report pins and this single key; existing two-key adoption must remain unchanged.",
+  "records": [
+    {
+      "key": [
+        14501,
+        135354,
+        143074
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143074,
+        143075,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": false,
+        "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+        "2024_uscb_drc_popokabaka_center_hit": true,
+        "original_2017_kwango_center_hit": true
+      },
+      "recommendation": "independent-exact-key-contextual-applicability-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    }
+  ]
+}
