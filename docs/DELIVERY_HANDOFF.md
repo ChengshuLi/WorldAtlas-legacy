@@ -529,6 +529,36 @@ and patch pins, checks its requested/supported/held decision partition, and emit
 `source-evidence.json`, `native-patch.json`, `held-original.json` and
 `original-scope-partition.json` through the existing exclusive publisher.
 
+If the source pins a full `territorial_applicability` envelope, the helper also
+checks its exact currently committed identity and selects **every** contextual
+record belonging to the emitted native patch (including simultaneous source
+members), preserving record order and only the referenced provenance entries.
+The full original envelope remains immutable and pinned in the partition receipt;
+selected and omitted original record ordinals remain explicit. This is metadata
+projection, not a new territorial decision or acceptance.
+
+An unchanged envelope keeps the original hook in the usual one-pass output. If
+no contextual record belongs to the emitted patch, the derived source omits the
+hook while retaining all original source/negative operands and full custody in
+the receipt. If a **nonempty strict subset** is required, the first pass emits
+`territorial-applicability.json` and **`unbound-source-evidence.json`**, not runnable
+`source-evidence.json`. Its receipt says `requires-immutable-projection-binding`.
+Do not feed that draft to native authority or invent a commit for it.
+
+Commit the exact emitted projection at an ordinary owned path, preserving the
+original envelope. Repeat the same `supported-inputs` command into a fresh
+output destination with the same original diagnostic/source/request and selector
+inputs, adding `territorial_applicability: {commit, path}` for that committed
+projection. The helper recomputes the entire subset, requires exact whole-byte
+equality and current committed-path identity, then emits runnable
+`source-evidence.json` with the real immutable pin and a `bound-exact-projection`
+receipt. An omitted/changed/extra record or provenance entry fails. The native
+consumer's current-tree adoption, original-source, scope, geometry and requested
+key checks are unchanged. Commit these final preparation outputs before normal
+native authority. Both preparation passes are metadata-only; they do not repeat
+the source/physical producer or diagnostic. Use `--resume` only with the same
+config/destination for an identical completed pass.
+
 When earlier source review held additional original cells, also supply
 `original_patch` and `prior_holds` commit/path locators. The original patch uses
 the existing `{rows: [{y, runs: [[start, end, owner]]}]}` representation. Prior

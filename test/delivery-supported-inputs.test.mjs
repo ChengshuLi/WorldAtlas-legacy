@@ -130,3 +130,75 @@ test('supported-inputs operates on full-width intervals without expanding native
   assert.equal(result['original-scope-partition.json'].original_cells,262166);
   assert.deepEqual(result['source-evidence.json'].targets[1].coverage_rows,[{y:262165,runs:[[0,262165,'mapped_land_support']]}]);
 });
+
+
+function applicabilityFixture() {
+ const f=fixture(),geometry={type:'Polygon',coordinates:[[[0,0],[1,0],[1,1],[0,0]]]};
+ for(const target of f.source.targets)target.territorial_exclusions=[geometry];
+ const decision=f.put('adoption.json',{decision:'explicit fixture'}),scope=f.put('scope.json',{original:'retained'}),negative=f.put('negative.json',geometry);
+ const data={version:1,kind:'adopted-native-territorial-applicability-v1',
+  provenance:[{id:'decision',role:'adoption',pin:decision},{id:'scope',role:'scope',pin:scope},
+   {id:'source',role:'original-source',pin:negative},{id:'held-scope',role:'scope',pin:scope}],
+  records:[['a',1,1],['b',1,1],['a',1,2],['c',2,6]].map(([id,pixelIndex,x],i)=>({
+   role:'contextual',source_id:id,target_id:id,pixelIndex,y:10,x,negative_ordinal:0,geometry_sha256:digest(jsonBytes(geometry)),
+   original_source:{id:'source',pointer:''},adoption:{id:'decision',pointer:'/decision'},
+   scope:{id:i===3?'held-scope':'scope',pointer:'/'+i,owner_pointer:'/owner'}}))};
+ const refresh=()=>{
+  f.source.territorial_applicability=f.put('territorial.json',data);
+  f.pins.source_evidence=f.put('source.json',f.source);
+  f.diagnostic.rule_sha256=digest(jsonBytes({version:1,kind:'source-target-native-rule-v1',...f.pins}));
+  f.put('diagnostic.json',f.diagnostic);
+ };
+ refresh();f.reader.git=()=>Buffer.from('a'.repeat(40));
+ return {...f,data,refresh};
+}
+
+test('applicability preparation preserves simultaneous member decisions and prunes only unreachable provenance',()=>{
+ const f=applicabilityFixture(),before=structuredClone(f.data),o=f.run();
+ assert(!o['source-evidence.json']);assert(o['unbound-source-evidence.json']);
+ assert.deepEqual(o['territorial-applicability.json'],{...before,records:before.records.slice(0,2),provenance:before.provenance.slice(0,3)});
+ assert.deepEqual(o['original-scope-partition.json'].territorial_applicability.selected_record_ordinals,[0,1]);
+ assert.deepEqual(o['original-scope-partition.json'].territorial_applicability.omitted_record_ordinals,[2,3]);
+ assert.deepEqual(f.data,before);
+});
+
+test('unchanged applicability remains one-pass and rejects an unused projection locator',()=>{
+ const f=applicabilityFixture();f.data.records=f.data.records.slice(0,2);f.data.provenance.pop();f.refresh();
+ const o=f.run();assert.deepEqual(o['source-evidence.json'].territorial_applicability,f.source.territorial_applicability);
+ assert(!o['territorial-applicability.json']);assert.equal(o['original-scope-partition.json'].territorial_applicability.status,'unchanged');
+ f.config.territorial_applicability={commit:'a'.repeat(40),path:'territorial.json'};
+ assert.throws(f.run,/Unused territorial applicability projection binding/);
+});
+
+for(const [name,change]of Object.entries({
+ 'duplicate omitted record':d=>d.records.push(d.records.at(-1)),
+ 'foreign omitted key':d=>d.records.at(-1).x=9,
+ 'foreign omitted owner':d=>d.records.at(-1).pixelIndex=99,
+ 'foreign omitted source':d=>d.records.at(-1).source_id='foreign',
+ 'foreign omitted target':d=>d.records.at(-1).target_id='foreign',
+ 'missing omitted negative':d=>d.records.at(-1).negative_ordinal=7,
+ 'wrong omitted negative identity':d=>d.records.at(-1).geometry_sha256='f'.repeat(64),
+ 'unknown omitted role':d=>d.records.at(-1).role='ignore',
+ 'extra omitted field':d=>d.records.at(-1).unverified=true,
+ 'missing original provenance':d=>d.provenance.pop(),
+ 'duplicate original provenance':d=>d.provenance.push(d.provenance[0]),
+ 'unused original provenance':d=>d.provenance.push({...d.provenance[0],id:'unused'}),
+ 'wrong provenance role':d=>d.provenance.at(-1).role='adoption',
+ 'nonordinary original provenance':d=>d.provenance.at(-1).pin={...d.provenance.at(-1).pin,mode:'120000'},
+ 'incomplete original provenance':d=>delete d.provenance.at(-1).pin.sha256,
+ 'extra provenance field':d=>d.provenance.at(-1).unchecked=true,
+ 'malformed omitted reference':d=>delete d.records.at(-1).scope.owner_pointer,
+ 'unknown omitted reference':d=>d.records.at(-1).adoption.id='missing'
+}))test('applicability preparation refuses '+name+' before filtering',()=>{
+ const f=applicabilityFixture();change(f.data);f.refresh();assert.throws(f.run,/territorial|Territorial/);
+});
+
+test('applicability projection rejects stale original and projected executing-tree custody',()=>{
+ const f=applicabilityFixture(),originalPin=f.reader.pin;
+ f.reader.pin=(commit,path)=>path==='territorial.json'?{...originalPin(commit,path),git_blob_oid:'c'.repeat(40)}:originalPin(commit,path);
+ assert.throws(f.run,/current committed adoption/);f.reader.pin=originalPin;
+ const output=supportedInputs(f.config,f.reader),pin=f.put('projected.json',JSON.parse(output['territorial-applicability.json']));
+ f.config.territorial_applicability={commit:pin.commit,path:pin.path};
+ let calls=0;f.reader.pin=(commit,path)=>path==='projected.json'&&++calls>1?{...originalPin(commit,path),sha256:'f'.repeat(64)}:originalPin(commit,path);
+ assert.throws(f.run,/current committed input/);
+});
