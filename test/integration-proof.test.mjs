@@ -1,8 +1,27 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {successfulGeographyJob} from '../scripts/integration-proof.mjs';
 import {integrationProfile, COORDINATION_PATHS, candidateGeographyCode} from '../scripts/integration-profile.mjs';
+
+test('agent entrypoint routes to the current canonical guides, not retired handoffs', () => {
+  const guides = ['DEVELOPMENT.md', 'GEOGRAPHY.md', 'HISTORY.md', 'DATA_ARCHITECTURE.md', 'VALIDATION.md', 'OPERATIONS.md'];
+  const entry = fs.readFileSync('AGENTS.md', 'utf8');
+  for (const name of guides) {
+    assert(fs.existsSync(`docs/${name}`), name);
+    assert(entry.includes(`docs/${name}`), name);
+  }
+  const retired = ['WORKFLOW.md', 'WORKSPACES.md', 'RECOVERY_SECURITY.md', 'HANDOFF_STATUS.md', 'THREE_THREAD_START.md'];
+  for (const name of retired) {
+    assert(!fs.existsSync(`docs/${name}`), name);
+    assert(!entry.includes(`docs/${name}`), name);
+  }
+  const current = [entry, ...guides.map(name => fs.readFileSync(`docs/${name}`, 'utf8'))].join('\n');
+  assert.doesNotMatch(current, /review-issue-readiness\.mjs/);
+  assert.match(current, /ordinary authoring does not require machine claim\/readiness/i);
+  assert.match(current, /resume.{0,120}does not reload instructions/is);
+});
 
 test('geography reuse requires one actual successful producer, independently of step projections', async () => {
   const geography = {id: 44, name: 'geography', status: 'completed', conclusion: 'success', steps: [
@@ -28,7 +47,7 @@ test('explicit coordination allowlist defaults full for unknown/application/data
     'scripts/import.mjs','scripts/build-cloudflare.mjs','docs/unknown.json',
     '.github/workflows/deploy.yml','test/application.test.mjs']) {
     assert.equal(integrationProfile('engineering/job',[{filename}]),'full',filename);
-    assert.equal(integrationProfile('engineering/job',[{filename:'docs/WORKFLOW.md',previous_filename:filename}]),'full',filename);
+    assert.equal(integrationProfile('engineering/job',[{filename:'docs/DEVELOPMENT.md',previous_filename:filename}]),'full',filename);
   }
   assert.equal(integrationProfile('engineering/job',[{filename:'docs/prompts/reviewer.md'}]),'evidence');
   assert.equal(integrationProfile('engineering/job',[]),'full');
@@ -62,7 +81,7 @@ test('geography software route is derived from changed checker inputs, retaining
   assert.equal(candidateGeographyCode('full', changed(name), 'selected-data'), false, name);
  }
  for (const name of ['data/geography/part-0.json', 'src/app.js', 'src/attributes.js',
-  'research/geography/example/source.py', 'docs/WORKFLOW.md',
+  'research/geography/example/source.py', 'docs/DEVELOPMENT.md',
   'coordination/engineering/example/evidence-quality.json', 'scripts/native-ownership/verified-candidates.json']) {
   assert.equal(candidateGeographyCode('full', changed(name)), false, name);
  }

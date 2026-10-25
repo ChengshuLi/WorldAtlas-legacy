@@ -15,4 +15,4 @@ Open `http://localhost:3000`. The local preview uses bundled geography and examp
 
 ## Project guides
 
-The sole agent entrypoint is [AGENTS.md](AGENTS.md). Its eight linked domain guides cover workflow, workspaces, geography, history, architecture, validation, operations and recovery/security. Current behavior is defined by code, tests, machine schemas and accepted release records. Research, merge, scientific acceptance, issue completion and live publication are separate steps.
+The sole agent entrypoint is [AGENTS.md](AGENTS.md). Its six domain guides cover development, geography, history, data architecture, validation and operations. Current behavior is defined by code, tests, machine schemas and accepted release records. Research, merge, scientific acceptance, issue completion and live publication are separate steps.

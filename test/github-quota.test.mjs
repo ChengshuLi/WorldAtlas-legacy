@@ -6,7 +6,7 @@ import {quotaDelay,requestAccounting} from '../scripts/github-quota.mjs';
 const response=(status,remaining='0',extra={})=>new Response(JSON.stringify({message:status===403?'rate limit exceeded':'ok'}),{status,headers:{'x-ratelimit-limit':'1000','x-ratelimit-remaining':remaining,'x-ratelimit-reset':'100','x-ratelimit-resource':'core',...extra}});
 async function mocked(run,fn){const old=globalThis.fetch;globalThis.fetch=run;try{await fn();}finally{globalThis.fetch=old;}}
 test('canonical native observation examples retain bounded requests and fresh merge authority',()=>{
- const guide=fs.readFileSync(new URL('../docs/WORKFLOW.md',import.meta.url),'utf8');
+ const guide=fs.readFileSync(new URL('../docs/DEVELOPMENT.md',import.meta.url),'utf8');
  assert.match(guide,/gh api --cache 60s repos\/ChengshuLi\/WorldAtlas\/actions\/runs\/RUN-ID/);
  assert.match(guide,/gh api repos\/ChengshuLi\/WorldAtlas\/pulls\/PR-NUMBER/);
  const watches=[...guide.matchAll(/gh run watch RUN-ID[^\n\x60]*/g)].map(row=>row[0]);

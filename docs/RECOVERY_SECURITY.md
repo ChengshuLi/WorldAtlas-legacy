@@ -1,7 +1,0 @@
-# Credentials, backups and recovery
-
-Use only credentials and provider access already authorized for the exact task. Never read, print, copy, post, rotate or broaden credentials to solve a workflow problem. Keep tokens, ownership capabilities, private keys and database secrets in their supported local/provider stores. An allocator ownership token is a scoped filesystem capability, not a repository login credential. Do not change security, network, account or access-control settings as a workaround.
-
-Backups and retained object copies prove only the bytes and scope they actually cover. A file/object receipt is not proof of a successful database restore, valid application state or production readiness. Verify exact source and target identities, object hashes, schema/version, row counts, restore result and current authorization for the intended operation. Keep failed/partial attempts and distinguish an actual access denial from a transport or format failure.
-
-PostgreSQL, Neon, Cloudflare R2 and local SQLite have separate data and recovery boundaries. Do not treat one as a replica or silently overwrite another. Recovery is a bounded, explicitly authorized operation: preserve existing data, use the supported immutable backup/migration/restore contracts in code, validate in an isolated target, and stop before any live destructive action not explicitly authorized. Current provider state must be checked from an accepted release or direct verified operation record; documentation cannot assert that a deployment, backup or recovery is currently complete.
