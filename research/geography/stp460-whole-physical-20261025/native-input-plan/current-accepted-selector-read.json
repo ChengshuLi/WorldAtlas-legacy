@@ -1,0 +1,27 @@
+{
+  "remote_main_read": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+  "method": "normal git ls-remote --heads origin refs/heads/main, then no-lazy-fetch immutable ls-tree; no fetch or branch mutation",
+  "actual_current_selector_blob": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+  "actual_current_startup_index_blob": "17b78a5998cbc6ab2d45b4c33722b2fbccfb0535",
+  "owned_HEAD_same_selector_and_index": true,
+  "bounded_diff_result": {
+    "unchanged": [
+      "AGENTS.md",
+      "docs/LOCAL_WORKSPACES.md",
+      "docs/PROCESSING_MEMORY_ADMISSION.md",
+      "scripts/prepare-delivery-handoff.mjs",
+      "scripts/delivery-handoff-advance.mjs",
+      "coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs",
+      "data/ownership-selection.json",
+      "data/canonical-grid/current-startup",
+      "data/hierarchy.json",
+      "data/world-index.json",
+      "data/semantic-report.json"
+    ],
+    "changed": [
+      "docs/DELIVERY_HANDOFF.md"
+    ]
+  },
+  "owner_state_limit": "This metadata equality is not current owner-zero. Stock accepted-selector supported-inputs stage must read actual complete current bank and exact requested keys.",
+  "remote_push_recovery": "Partition-plan commit2a13d09210673e093a3900b5fdbc77f34c8ecb83 succeeded on one normal retry after ls-remote proved initial generic rejection left prior98969d2f0e8e3507c2211fd139bd1c62fa7427ea unchanged."
+}

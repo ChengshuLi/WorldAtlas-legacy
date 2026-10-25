@@ -1,0 +1,246 @@
+{
+  "kind": "STP460-existing-source-notice-evidence-not-legal-clearance",
+  "local_origin_main_snapshot": "23c0842ae95eed5d6572447f1b935c5007670e28",
+  "remote_freshness_claim": false,
+  "repository_notices": [
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "README.md",
+      "blob_oid": "b79b79469629eadd6b99571d6ddb9c8e4f56e169",
+      "bytes": 15068,
+      "sha256": "71f68a5846c7b4ad5c6cb662de4e6cfdb85f0bc28d39832af8dd6d52915093e4",
+      "relevant_existing_notice_lines": [
+        {
+          "line": 76,
+          "text": "Natural Earth is [public domain](https://www.naturalearthdata.com/about/terms-of-use/); geoBoundaries licenses vary by original source; Cliopatria is CC BY 4.0. The global hierarchy audit is recorded in [data/hierarchy-report.json](data/hierarchy-report.json). See [data/sources.json](data/sources.json), [data/administrative-sources.json](data/administrative-sources.json), and [data/cliopatria/index.json](data/cliopatria/index.json) for attribution and provenance. The interface optionally loads Google Fonts and falls back to system fonts when unavailable."
+        }
+      ]
+    },
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "docs/GRANULARITY.md",
+      "blob_oid": "9b95a4939faff9a08cce91056ed01b3dfb5b0266",
+      "bytes": 8469,
+      "sha256": "88191c8fb904e8eea4828e9589af3f5ac290dd8c312f95047b4257e6ca54acab",
+      "relevant_existing_notice_lines": [
+        {
+          "line": 21,
+          "text": "| geoBoundaries gbOpen | Reviewed ADM1–ADM3 district polygons; per-country source year, original license and SHA in `administrative-sources.json` |"
+        },
+        {
+          "line": 32,
+          "text": "| [OpenStreetMap](https://www.openstreetmap.org/copyright) | © OpenStreetMap contributors, ODbL 1.0; named Turkmenistan district crosswalk for unnamed source fragments; adapted polygons and evidence are distributed with source |"
+        }
+      ]
+    },
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "docs/SOURCE_POLICY_RUNTIME_INTEGRATION.md",
+      "blob_oid": "31b3eaa24193b2c64c1585b09dea1e1d495d94e2",
+      "bytes": 4943,
+      "sha256": "48e05f335d30ef50c966efca7f3198e564442d96134a2cb1dcd9a37e5e840298",
+      "relevant_existing_notice_lines": [
+        {
+          "line": 41,
+          "text": "Retain `level` whenever code expects an original source administrative layer such as ADM3. Use `effective_level` only when presenting the installed geographic/functional source role. The corrected `role` describes actual installed units; it is never sufficient to assign an atlas tier or certify local granularity. Keep contradictory source metadata as source observation, not an effective classification."
+        },
+        {
+          "line": 43,
+          "text": "Before writing any regenerated review, explicitly add `source-policy-corrections/europe-v1.json.gz` and the effective-resolver code to that product's input fingerprints. Record the correction ID and evidence IDs for corrected profiles, retain original descriptions as context, and leave all unresolved semantic statuses unchanged. Per-location effective roles require the bundle's keyed annotations with matching ID/footprint evidence; a country label alone must not relabel a retained municipality as an agricultural district. Current active geography, registry and frozen history must remain unchanged. Refreshing a source-role annotation is not an identity or history migration."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "data/administrative-sources.json": {
+      "pin": {
+        "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+        "path": "data/administrative-sources.json",
+        "bytes": 661416,
+        "sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633",
+        "git_blob_oid": "2747b845f0c5654765da3b951c9074e52f220077"
+      },
+      "STP_records": [
+        {
+          "boundaryID": "STP-ADM1-19237168",
+          "boundaryName": "Sao Tome and Principe",
+          "boundaryISO": "STP",
+          "boundaryYearRepresented": "2017",
+          "boundaryType": "ADM1",
+          "boundaryCanonical": "Unknown",
+          "boundarySource": "OpenStreetMap, Wambacher",
+          "boundaryLicense": "Open Data Commons Open Database License 1.0",
+          "licenseDetail": "Open Data Commons Open Database License 1.0",
+          "licenseSource": "www.openstreetmap.org/copyright",
+          "boundarySourceURL": "wambachers-osm.website/boundaries/",
+          "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+          "buildDate": "Dec 12, 2023",
+          "Continent": "Africa",
+          "UNSDG-region": "Sub-Saharan Africa",
+          "UNSDG-subregion": "Middle Africa",
+          "worldBankIncomeGroup": "Lower-middle-income Countries",
+          "admUnitCount": "2",
+          "meanVertices": "1584.0",
+          "minVertices": "791",
+          "maxVertices": "2378",
+          "meanPerimeterLengthKM": "142.25927140156722",
+          "minPerimeterLengthKM": "92.35664390188114",
+          "maxPerimeterLengthKM": "192.16189890125327",
+          "meanAreaSqKM": "495.0837705238888",
+          "minAreaSqKM": "138.75404849962442",
+          "maxAreaSqKM": "851.413492548153",
+          "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/STP/ADM1/geoBoundaries-STP-ADM1-all.zip",
+          "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/STP/ADM1/geoBoundaries-STP-ADM1.geojson",
+          "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/STP/ADM1/geoBoundaries-STP-ADM1.topojson",
+          "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/STP/ADM1/geoBoundaries-STP-ADM1-PREVIEW.png",
+          "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/STP/ADM1/geoBoundaries-STP-ADM1_simplified.geojson",
+          "sha256": "08be7b52bcc1d3923590a046810bc24606f5e2eba4d86b6a241a27ab8507c7b8"
+        }
+      ]
+    }
+  },
+  "optional_policy_read_failure": {
+    "action": "git show23c0842ae95eed5d6572447f1b935c5007670e28:data/location-policy.json",
+    "exit": 128,
+    "message": "fatal: bad object",
+    "status": "terminal; no lazy fetch, no retry; not proof file absent remotely; optional read does not replace archive or derived-source attribution"
+  },
+  "original_archive": {
+    "upstream_commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
+    "path": "sourceData/gbOpen/STP_ADM1.zip",
+    "bytes": 45118,
+    "sha256": "bfbb1e5f9a3ec566d846cb3a5d478428b141a76e5e617455afa82f1115fdb130",
+    "member_names": [
+      "STP_ADM1.cpg",
+      "STP_ADM1.dbf",
+      "STP_ADM1.prj",
+      "STP_ADM1.sbn",
+      "STP_ADM1.sbx",
+      "STP_ADM1.shp",
+      "STP_ADM1.shp.xml",
+      "STP_ADM1.shx",
+      "meta.txt"
+    ],
+    "meta_txt_literal": "Boundary Representative of Year: 2017.0\nISO-3166-1 (Alpha-3): STP\nBoundary Type: ADM1\nCanonical Boundary Type Name: \nSource 1: OpenStreetMap\nSource 2: Wambacher\nRelease Type: gbOpen\nLicense: Open Data Commons Open Database License 1.0\nLicense Notes: Open Data Commons Open Database License 1.0\nLicense Source: https://www.openstreetmap.org/copyright\nLink to Source Data: https://wambachers-osm.website/boundaries/\nOther Notes: ",
+    "license_file_observation": "No separate license file/screenshot among nine actual archive members; meta.txt explicitly records ODbL1.0 and exact rights URL."
+  },
+  "published_derivation_bindings": [
+    {
+      "commit": "a9beea91a144de547dbc1a45a11895da9c4e5b60",
+      "path": "research/geography/stp460-whole-physical-20261025/native-authority-001/constructor-result.json",
+      "bytes": 10644,
+      "sha256": "5eeea6bc1fa861e677fb19c36c83d5af6ad7c3562c674e13038b04321d324f90",
+      "git_blob_oid": "22ad20a7aa6767ae5c908e6f91a85e0530fb94a8"
+    },
+    {
+      "commit": "4818be60cc22237cb7edce415868da8047e54734",
+      "path": "research/geography/stp460-whole-physical-20261025/source-evidence-001/source-evidence.json",
+      "bytes": 5741,
+      "sha256": "24e383ab8cda328991181c21acb7ea07d35ea668fe020166b3199a362c022e7d",
+      "git_blob_oid": "ad43e8b92c49cf9ac6c2e5282f299fc1130eb094"
+    },
+    {
+      "commit": "d0c64ee786f77aaabf3e701924a8773e8648c5e7",
+      "path": "research/geography/stp460-whole-physical-20261025/native-input-plan/original-native-request.json",
+      "bytes": 21482,
+      "sha256": "e00d90dc2ff03b90b3b214981896cbce562a24433e760f1bf26f02976f213da7",
+      "git_blob_oid": "9ff5922a2752720169a51bf75c0fbe1e887638bd"
+    },
+    {
+      "commit": "1a7a2e7aec060ea263a9f045714a8cd0b31af6e0",
+      "path": "research/geography/stp460-whole-physical-20261025/physical-001/whole-target-support.json",
+      "bytes": 132920,
+      "sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074",
+      "git_blob_oid": "38c66c9c0c41ac765203e6e15ff10f6d27d91de1"
+    }
+  ],
+  "source_family_pins": [
+    {
+      "parts": [
+        {
+          "bytes": 4839,
+          "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+          "decoded_bytes": 13794,
+          "decoded_sha256": "08be7b52bcc1d3923590a046810bc24606f5e2eba4d86b6a241a27ab8507c7b8",
+          "git_blob_oid": "ca1ad53692b297be675fa93cefde21e8d909138b",
+          "mode": "100644",
+          "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-STP-ADM1-000.bin.gz",
+          "sha256": "74320b349207eb21ce8ce62846231e567747f877e259aaa2299023b36b0303d1"
+        }
+      ],
+      "source_id": "gb:STP:ADM1"
+    }
+  ],
+  "target_source_identities": [
+    {
+      "id": "gb:STP:ADM1:19237168B40253326356618",
+      "pixelIndex": 40323,
+      "requested_cells": 342,
+      "source_subject": "São Tomé geographic island aggregate, including original Rolas88 subset",
+      "consumed_member_preserved_whole": true,
+      "selected_base_geometry_ref": "Published source-evidence locator above; unchanged whole selected base, not copied into this notice."
+    },
+    {
+      "id": "gb:STP:ADM1:19237168B82261817076051",
+      "pixelIndex": 40324,
+      "requested_cells": 118,
+      "source_subject": "Príncipe autonomous-island source subject",
+      "consumed_member_preserved_whole": true,
+      "selected_base_geometry_ref": "Published source-evidence locator above; unchanged whole selected base, not copied into this notice."
+    }
+  ],
+  "physical_notices": [
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "coordination/engineering/lca-original-repair-20261021/positive-qualification-20261021/gshhg-notice/LICENSE.TXT",
+      "bytes": 1375,
+      "sha256": "dc53a4833bf9121360a5286917683f041439327353ffe0231206c6b746005b81",
+      "git_blob_oid": "b10c0f3ba1e836eaeedbcb2f2e731ead69975582",
+      "copy": "gshhg/LICENSE.TXT"
+    },
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "coordination/engineering/lca-original-repair-20261021/positive-qualification-20261021/gshhg-notice/README.TXT",
+      "bytes": 15350,
+      "sha256": "8c83b0d9e861c3cf9390ccfcc28d57dd484b192e1767524e094c988ee9f84ac7",
+      "git_blob_oid": "4df1a4ac69f38f0c302b87732b1aa1ae6ddfecb4",
+      "copy": "gshhg/README.TXT"
+    }
+  ],
+  "final_selected_output": {
+    "commit": null,
+    "path": null,
+    "sha256": null,
+    "status": "Unbound until actual coordinator finalization; no output locator invented."
+  },
+  "raw_archive_copied": false,
+  "restricted_institutional_PDF_copied": false,
+  "clearance_claim": false,
+  "adoption_or_acceptance_changed": false,
+  "institutional_context": {
+    "source_relative_role": "Príncipe autonomous island; São Tomé geographic aggregate containing six districts, not equivalent Province institutions. Original DBF Province names and ADM1 layer remain observed source fields.",
+    "INE2012_publication": "Estado e Estrutura da População, RGPH2012, INE2014, PDF16/printed15",
+    "INE2012_rights": "Publication page permits reproduction with bibliographic credit except commercial purposes; no PDF, map image or extensive text copied into this notice.",
+    "INE2017_publication": "São Tomé e Príncipe em Números2017, mapPDF5; publisher INE",
+    "read_receipts": [
+      "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460/source-support.md",
+      "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460/source-sufficiency-followup-receipt.json"
+    ],
+    "no_OSM_relicensing_from_INE_context": true
+  },
+  "online_policy_reading": {
+    "date": "2026-10-25",
+    "sources": [
+      {
+        "url": "https://www.openstreetmap.org/copyright",
+        "sections": "data licensing, documentation distinction, attribution"
+      },
+      {
+        "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+        "sections": "4.2–4.6 notices, produced work, sharealike, access/alteration-method offer"
+      }
+    ],
+    "method": "supported web read; no new raw source acquisition",
+    "live_response_hash": null
+  }
+}

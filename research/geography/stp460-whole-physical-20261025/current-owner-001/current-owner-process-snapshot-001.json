@@ -1,0 +1,21 @@
+{
+  "inspected_at": "2026-10-25T01:33:42.777152+00:00",
+  "tracked_pid": 21259,
+  "scope": "one snapshot of tracked Node process and direct children only; operation unchanged",
+  "processes": [
+    {
+      "pid": 21259,
+      "status": "21259 21252 12:53   0:06.05   0.0 S    node",
+      "status_error": "",
+      "status_exit": 0,
+      "command": "node scripts/prepare-delivery-handoff.mjs supported-inputs research/geography/stp460-whole-physical-20261025/native-input-plan/supported-inputs-current-config.json .cache/delivery-handoff/stp460-current-owner-inputs-20261025-be76-001"
+    },
+    {
+      "pid": 44344,
+      "status": "44344 21259 00:03   0:02.03  56.4 R    /Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/bin/git",
+      "status_error": "",
+      "status_exit": 0,
+      "command": "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/bin/git -C /Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work cat-file --batch-check=%(objectname) %(objecttype) %(objectsize)"
+    }
+  ]
+}
