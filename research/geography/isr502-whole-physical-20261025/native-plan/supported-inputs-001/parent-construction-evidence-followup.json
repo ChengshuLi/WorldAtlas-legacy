@@ -1,0 +1,54 @@
+{
+  "kind": "retained-parent-construction-followup-not-applicability",
+  "retained_finding_source": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502/source-assessment.json",
+    "bytes": 23877,
+    "sha256": "e1f8f915a2c7bdc7f5407bba2e1c0c9ad004f21a34fa39c57ec9ad9324099bcd"
+  },
+  "inherited_archive_sha_field": "d5057a80dd84eb04912c124e00233839bb81727a4fa77287005e0",
+  "inherited_field_has_64_hex_characters": false,
+  "actual_local_archive_byte_receipt": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502/ISR_ADM1-9469f09-source.zip",
+    "bytes": 180851,
+    "sha256": "d5057a80dd84eb04912c124e00233839bb81727a4fa5175c4524fa77287005e0"
+  },
+  "consumed_original_geometry_bindings_unchanged": true,
+  "retained_findings": [
+    {
+      "id": "ISR-ADM1-original",
+      "archive": "ISR_ADM1-9469f09-source.zip",
+      "bytes": 180851,
+      "sha256": "d5057a80dd84eb04912c124e00233839bb81727a4fa77287005e0",
+      "upstream_commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
+      "actual_read": "meta,XML,PRJ,DBF,license screenshot; original named PNG visually inspected",
+      "represented_year": "2006",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Israel_districts.png",
+      "license": "PD author grant on actual Commons page; screenshot matches named map",
+      "construction": "Archive explicitly says digitized from map, georeferenced using10control points and spline/projective transformations. XML records May2022 feature creation and schema/export. Original DBF6districts matches consumed names/ordinals. No control-point pairs, residuals or choice between transforms identified in archive.",
+      "vintage": "Source map created2006; current named map revision20March2015 (60501bytes, SHA1aef0a65fcc5c2ed8eadc30c00ee1061b77a0006d); May2022 processing. These are distinct dates.",
+      "visual": "Raster350x969 shows blue inland waters and differently colored Golan/EastJerusalem; administrative labels include WestBank/JudeaSamariaArea. Visual depiction does not establish the digitized polygon water-edge rule.",
+      "discussion": "https://en.wikipedia.org/wiki/Wikipedia:Graphics_Lab/Map_workshop/Archive/March_2015#Can_you_please_help.",
+      "discussion_read": "20March2015 request and completion concern distinguishing Golan/EastJerusalem with color. This is original publisher cartographic context, not a boundary survey or territorial acceptance."
+    },
+    {
+      "id": "ISR-ADM2-original",
+      "archive": "ISR_ADM2-9469f09-source.zip",
+      "bytes": 216691,
+      "sha256": "fdeb01f6375c4d53ca5be2d86e2f39e5bb94bbc6ee3c27278612d5ad0318146e",
+      "upstream_commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
+      "actual_read": "meta,XML,PRJ,DBF,CC0 screenshot; actual named SVG XML structure and publisher PNG preview",
+      "represented_year": "2021",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Districts_and_Subdistricts_of_Israel.svg",
+      "license": "File-specific Commons page identifies MapFan2021 ownwork12November2021 CC0; archive generic CC0 screenshot alone was insufficient attribution.",
+      "construction": "Original DBF15 records Name/Level only; WGS84PRJ. XML March/April2022 featureclass/schema/export does not identify original survey or tracing control. All12targetIDs/names independently verified in consumed body properties. Golan exists in full15source but no Golan owner among502.",
+      "svg": "Districts_and_Subdistricts_of_Israel.svg;2444797bytes;SHA25621f06409d1b812f4cbfbee69a108a9b09a9cff4ade63e9f3a46d7a7f2cbc91d8;SHA11940f5b90bfccb65defb16c151678e52935443ba",
+      "numeric_framing": "viewBox29.12 -33.35 1.4 3.88; group scale0.85,1; polygon scale1,-1; district paths have numeric matrices. No explicit CRS/control records identified. Numeric framing exists and must not be described as absent.",
+      "visual": "Publisher preview shows gray administrative fills, white subdistrict lines and black district lines; no hydrographic legend or scale bar. Unlike raster, blue lakes are not portrayed. No vertex comparison, coordinate transform or coverage observation performed."
+    }
+  ],
+  "source_question": "Different raster/SVG source construction and intended district/subdistrict role must be reconciled for exact parent contacts; a parent is not automatically an adverse peer or automatically waived.",
+  "water_specific_limit": "Different hydrographic portrayal in district raster versus subdistrict SVG does not resolve physical/class applicability for the3 parent-only water keys.",
+  "actual_new_source_acquisition": false,
+  "no_geometry_or_predicate": true,
+  "no_science_credit": true
+}

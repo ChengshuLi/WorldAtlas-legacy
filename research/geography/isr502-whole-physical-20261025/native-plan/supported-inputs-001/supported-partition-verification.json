@@ -1,0 +1,240 @@
+{
+  "kind": "accepted-selector-partition-verification-not-authority",
+  "products": [
+    {
+      "name": "preparation.json",
+      "bytes": 732,
+      "sha256": "64139aacf086f7c4d472bcd0f164bcb61da98376f7874af542d58d9334c8bf78"
+    },
+    {
+      "name": "original-scope-partition.json",
+      "bytes": 23047,
+      "sha256": "c5cdade95bf120a3a3d0cbfd283ae5826c77c89bc5565a605612bc6abefb526a"
+    },
+    {
+      "name": "held-original.json",
+      "bytes": 17513,
+      "sha256": "46f82f614da33f15048bdf5cabef0666f8ec4b0c047193f30ed49fadca0e5868"
+    },
+    {
+      "name": "already-present-original.json",
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    {
+      "name": "native-patch.json",
+      "bytes": 7535,
+      "sha256": "f4ef53983307f40c39fc80513c7811f5fe0e99c0d72038571df241e4bb5943f0"
+    },
+    {
+      "name": "source-evidence.json",
+      "bytes": 61133,
+      "sha256": "e0d3319c3b11adec1c4a3ef9bc7842da2612a3ce5842f9fb2ac857d6f8d214ea"
+    }
+  ],
+  "original_cells": 502,
+  "novel_supported_cells": 200,
+  "already_present_same_owner_cells": 0,
+  "held_cells": 302,
+  "all_original_keys_conserved": true,
+  "all200_equal_native_supported_keys": true,
+  "new_target_count": 9,
+  "complete_positive_family_members": 15,
+  "negative_family_count": 11,
+  "surviving_target_negative_operands": 81,
+  "unchanged_original_source_and_physical_pins": true,
+  "unchanged_selected_base_geometries": true,
+  "only_target_removal_and_positive_coverage_narrowed": true,
+  "all200_actual_coverage_classes": "mapped_land_support",
+  "held_reasons": {
+    "territorial_exclusion_cells": 302
+  },
+  "accepted_selector": {
+    "bytes": 2286,
+    "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "accepted_input_inventory_count": 53,
+  "owners": [
+    {
+      "already_present_cells": 0,
+      "held_cells": 10,
+      "original_cells": 22,
+      "owner": 24169,
+      "supported_cells": 12
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 1,
+      "original_cells": 1,
+      "owner": 24170,
+      "supported_cells": 0
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 12,
+      "original_cells": 12,
+      "owner": 24171,
+      "supported_cells": 0
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 0,
+      "original_cells": 9,
+      "owner": 24173,
+      "supported_cells": 9
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 0,
+      "original_cells": 8,
+      "owner": 24174,
+      "supported_cells": 8
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 20,
+      "original_cells": 20,
+      "owner": 24175,
+      "supported_cells": 0
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 2,
+      "original_cells": 43,
+      "owner": 24177,
+      "supported_cells": 41
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 6,
+      "original_cells": 61,
+      "owner": 24178,
+      "supported_cells": 55
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 18,
+      "original_cells": 22,
+      "owner": 24180,
+      "supported_cells": 4
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 63,
+      "original_cells": 83,
+      "owner": 24181,
+      "supported_cells": 20
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 5,
+      "original_cells": 6,
+      "owner": 24182,
+      "supported_cells": 1
+    },
+    {
+      "already_present_cells": 0,
+      "held_cells": 165,
+      "original_cells": 215,
+      "owner": 24183,
+      "supported_cells": 50
+    }
+  ],
+  "target_details": [
+    {
+      "owner": 24183,
+      "target": "gb:ISR:ADM2:584046B9730835639199",
+      "novel_keys": 50,
+      "unchanged_negative_operands": 32,
+      "coverage_classes_retained": [
+        "mapped_inland_water_support",
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24182,
+      "target": "gb:ISR:ADM2:584046B86518607604876",
+      "novel_keys": 1,
+      "unchanged_negative_operands": 8,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24169,
+      "target": "gb:ISR:ADM2:584046B11408100439208",
+      "novel_keys": 12,
+      "unchanged_negative_operands": 9,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24173,
+      "target": "gb:ISR:ADM2:584046B34315111222202",
+      "novel_keys": 9,
+      "unchanged_negative_operands": 2,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24177,
+      "target": "gb:ISR:ADM2:584046B61571705909900",
+      "novel_keys": 41,
+      "unchanged_negative_operands": 7,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24174,
+      "target": "gb:ISR:ADM2:584046B37321511847561",
+      "novel_keys": 8,
+      "unchanged_negative_operands": 2,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24178,
+      "target": "gb:ISR:ADM2:584046B72217003232480",
+      "novel_keys": 55,
+      "unchanged_negative_operands": 6,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24181,
+      "target": "gb:ISR:ADM2:584046B83749751332199",
+      "novel_keys": 20,
+      "unchanged_negative_operands": 6,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    },
+    {
+      "owner": 24180,
+      "target": "gb:ISR:ADM2:584046B83064859640631",
+      "novel_keys": 4,
+      "unchanged_negative_operands": 9,
+      "coverage_classes_retained": [
+        "mapped_land_support"
+      ]
+    }
+  ],
+  "authority_executed": false,
+  "new_scientific_credit": 0,
+  "holds_changed": false,
+  "limits": [
+    "Novel means absent from the inspected accepted selector under the stock supported-inputs check; it does not itself constitute native authority or final selected acceptance.",
+    "Three wholly held targets were removed from positive requested targets only; the complete15 source members and all original source/physical pins remain unchanged.",
+    "The full502 denominator persists as200novel+0already-present+302held.",
+    "No parent or foreign source role was waived and no geometry was substituted."
+  ]
+}

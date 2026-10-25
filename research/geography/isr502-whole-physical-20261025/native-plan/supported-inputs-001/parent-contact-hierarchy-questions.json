@@ -1,0 +1,145 @@
+{
+  "kind": "exact-contact-versus-recorded-parent-question-no-exception",
+  "rows": [
+    {
+      "target_name": "Ashqelon",
+      "selected_parent_id": "framework:province:southern-district:62c94fde3204",
+      "contact_name": "Southern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 10
+    },
+    {
+      "target_name": "Kinneret",
+      "selected_parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "contact_name": "Northern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B91089536365577",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 2
+    },
+    {
+      "target_name": "Kinneret",
+      "selected_parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "contact_name": "Northern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B91089536365577",
+      "class": "land",
+      "sole_negative_contact": false,
+      "cells": 10
+    },
+    {
+      "target_name": "Petah Tiqwa",
+      "selected_parent_id": "framework:province:central-district:675230148428",
+      "contact_name": "Central District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B470428506180",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 20
+    },
+    {
+      "target_name": "HaSharon",
+      "selected_parent_id": "framework:province:central-district:675230148428",
+      "contact_name": "Central District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B470428506180",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 2
+    },
+    {
+      "target_name": "Hadera",
+      "selected_parent_id": "framework:province:haifa:36619d3af446",
+      "contact_name": "Haifa",
+      "contact_source_id": "gb:ISR:ADM1:19161824B12012272353046",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 6
+    },
+    {
+      "target_name": "Yizre'el",
+      "selected_parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "contact_name": "Northern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B91089536365577",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 18
+    },
+    {
+      "target_name": "Akko",
+      "selected_parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "contact_name": "Northern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B91089536365577",
+      "class": "land",
+      "sole_negative_contact": false,
+      "cells": 24
+    },
+    {
+      "target_name": "Akko",
+      "selected_parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "contact_name": "Northern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B91089536365577",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 21
+    },
+    {
+      "target_name": "Jerusalem",
+      "selected_parent_id": "framework:province:jerusalem-district:d8d1db739f9b",
+      "contact_name": "Jerusalem District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B79530266069959",
+      "class": "land",
+      "sole_negative_contact": false,
+      "cells": 4
+    },
+    {
+      "target_name": "Jerusalem",
+      "selected_parent_id": "framework:province:jerusalem-district:d8d1db739f9b",
+      "contact_name": "Jerusalem District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B79530266069959",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 1
+    },
+    {
+      "target_name": "Be'er Sheva",
+      "selected_parent_id": "framework:province:southern-district:62c94fde3204",
+      "contact_name": "Southern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+      "class": "inland-water",
+      "sole_negative_contact": true,
+      "cells": 3
+    },
+    {
+      "target_name": "Be'er Sheva",
+      "selected_parent_id": "framework:province:southern-district:62c94fde3204",
+      "contact_name": "Southern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+      "class": "inland-water",
+      "sole_negative_contact": false,
+      "cells": 11
+    },
+    {
+      "target_name": "Be'er Sheva",
+      "selected_parent_id": "framework:province:southern-district:62c94fde3204",
+      "contact_name": "Southern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+      "class": "land",
+      "sole_negative_contact": true,
+      "cells": 99
+    },
+    {
+      "target_name": "Be'er Sheva",
+      "selected_parent_id": "framework:province:southern-district:62c94fde3204",
+      "contact_name": "Southern District",
+      "contact_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+      "class": "land",
+      "sole_negative_contact": false,
+      "cells": 36
+    }
+  ],
+  "limits": [
+    "Selected parent IDs are retained literal metadata, not a new source-to-parent equivalence decision.",
+    "Both compatible-looking and contrary-looking names require exact source mapping; no family waiver is adopted.",
+    "Source geometry and exact keys unchanged."
+  ]
+}
