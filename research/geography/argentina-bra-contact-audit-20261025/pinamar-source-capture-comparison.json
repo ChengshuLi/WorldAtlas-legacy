@@ -98,10 +98,11 @@
           "response_bytes": 16982,
           "response_sha256": "d23c1fd9ee06639830ea88ed242059a84428588ce2589c19f59968c25a05f28f"
         },
-        "recorded_scope": "Describes the creation of the Pinamar unit from General Madariaga and boundary descriptions.",
-        "article_3_finding": "Describes north, east, south and west bounds; the southern line relies on a Dirección de Geodesia survey for Estancia Cariló.",
+        "page_consolidation_note": "The page states: Texto actualizado con las modificaciones introducidas por el Dec-Ley 9504/80.",
+        "recorded_scope": "The consolidated text describes the Pinamar unit created from General Madariaga and boundary descriptions.",
+        "article_3_finding": "In the consolidated text, Article 3 describes north, east, south and west bounds; the southern line relies on a Dirección de Geodesia survey for Estancia Cariló.",
         "attachment_check": "Retrieved HTML has no anchor, iframe, embed, object, script or link references to an attached plan/map.",
-        "limit": "No plan/map, survey identifier, implementing-decree identifier, or direct feature/cadastral crosswalk was exposed by the retrieved record."
+        "limit": "No plan/map, survey identifier, implementing-decree identifier, or direct feature/cadastral crosswalk was exposed by the retrieved record. The separate text of 9504/80 was not obtained, so its effect on Article 3 is unverified."
       },
       {
         "instrument": "Buenos Aires Decree-Law 9949/1983",
@@ -117,10 +118,19 @@
         "articles_1_2_finding": "Article 1 substitutes the names of parties created under 9024/9245, including Municipio Urbano de Pinamar with Partido de Pinamar; Article 2 is promulgation/publication.",
         "attachment_check": "Retrieved HTML has no anchor, iframe, embed, object, script or link references to an attached plan/map.",
         "limit": "A name change alone does not resolve the geometry discrepancy or current boundary lineage."
+      },
+      {
+        "instrument": "Buenos Aires Decree-Law 9504/1980",
+        "official_text_status": "not retrieved",
+        "discovery": "The 9024 consolidated page references 9504/80 but exposes no linked route, form, or resource URL for that act.",
+        "attempted_official_route": "https://normas.gba.gob.ar/",
+        "attempt_result": "CLI curl failed before HTTP with exit 6: Could not resolve host: normas.gba.gob.ar.",
+        "boundary_effect": "unknown; no conclusion about whether 9504/80 changes Article 3"
       }
     ],
     "next_primary_checks": [
-      "Locate the Dirección de Geodesia survey/plan for Estancia Cariló referenced by Article 3 of Decree-Law 9024/1978 and any implementing instrument, then bind them explicitly to the IGN feature in1=06644; check for later boundary amendments.",
+      "Obtain the exact official text of Decree-Law 9504/1980 and establish whether it changes Article 3 of the consolidated 9024 text.",
+      "Locate the Dirección de Geodesia survey/plan for Estancia Cariló referenced by Article 3 of the consolidated Decree-Law 9024 text and any implementing instrument, then bind them explicitly to the IGN feature in1=06644; check for later boundary amendments.",
       "Establish the effective date and source lineage of the live ign:departamento feature, whose capture identifies ARBA as source and IGN as authority but carries no effective date.",
       "Compare the complete applicable legal/current polygon and the consumed simplified polygon with a pinned, scale-aware method; the point-center disagreement does not establish whole-cell coverage or legal applicability.",
       "Evaluate the remaining required source-fitness components before any disposition change; the IVSD 2024 layer and a single center test do not substitute for them."
