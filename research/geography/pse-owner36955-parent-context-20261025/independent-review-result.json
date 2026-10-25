@@ -1,0 +1,52 @@
+{
+  "findings": {
+    "constructor_rows": {
+      "36950": 26,
+      "36952": 3,
+      "36953": 117,
+      "36955": 34
+    },
+    "contacts_deleted": false,
+    "contextual_records": 174,
+    "held": 247,
+    "jerusalem_contact": "negative ordinal 2 remains recorded as an interior hit; West Bank parent ordinal 3 remains recorded as contextual",
+    "partition_matches_original": true,
+    "requested": 427,
+    "set_relation": "180 is exactly prior 146 plus 34 owner36955; prior 146 intersect new set in all 146",
+    "supported": 180,
+    "three_jerusalem_keys_remain_held": [
+      [
+        106602,
+        156559
+      ],
+      [
+        106602,
+        156560
+      ],
+      [
+        106603,
+        156559
+      ]
+    ]
+  },
+  "kind": "independent-stock-qualification-audit-v1",
+  "review_conclusion": "Internally consistent stock qualification and constructor proposal; not selected-bank acceptance or credit. All original 427 keys remain in the denominator.",
+  "review_source": "completed existing reviewer response in this task; no public review URL or separate file was created",
+  "reviewed_commit": "a1486da78e3ed8a7766403e9a83e91094a66a16b",
+  "reviewed_outputs": {
+    "constructor_sha256": "bbf45e6c58ac674085fc115f530c0d88fbb5c6cc39db332ac83ec2d8fcb28cb3",
+    "held_complement_sha256": "081a46e5ad0032553fa3800b24423c25f0fe5e515d7d9bf194299f6419456848",
+    "native_diagnostic_sha256": "e038fc85d0bdf150ed94b10847c87ea8406d1b31a386002f386d38015435fcf6",
+    "native_patch_sha256": "a65791d544a81248ca0b44eb2a1d02b53c567a408ebf5a12f8c047677ded391a",
+    "scope_partition_sha256": "b5456e212c2a609c2d821ed4adc8e0b6cf3e7db69a023e02872859cb30fcadca",
+    "source_evidence_sha256": "b8f19e3a15325309157432577f56f4278bd66975b82d8b924969f3e986f4a389"
+  },
+  "reviewer": "/root/bra_review",
+  "scope_hash_correction": {
+    "cause": "canonical JSON included a trailing newline",
+    "correct_hash": "074d541bd582bb4e6052f204dbdcc6faeeea43acbba2aa0a38ed8467e55a3e11",
+    "earlier_hash": "76693a050d6012623c9f931433908bc38514c0faff9b03d4ca5ba64a0c30bebd",
+    "tuple_set_same": true
+  },
+  "version": 1
+}
