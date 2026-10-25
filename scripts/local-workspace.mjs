@@ -202,6 +202,7 @@ export function workspaceManager(repo, {freeBytes} = {}) {
     if (slot === 'work' && (typeof branch !== 'string' || !branch || branch.startsWith('-') || branch === 'main' || commit)) throw Error('Work needs a fresh branch; main is fetched by the allocator');
     if (slot === 'work') git('check-ref-format', `refs/heads/${branch}`);
     if (slot === 'review' && (branch || !/^[a-f0-9]{40}$/.test(commit ?? ''))) throw Error('Review needs an exact detached 40-character commit');
+    let fetchedWorkHead;
     if (slot === 'work') {
       if (git('for-each-ref', '--format=%(refname)', `refs/heads/${branch}`).split('\n').includes(`refs/heads/${branch}`)) {
         throw Error('Fresh branch already exists; choose a new branch without changing its history');
@@ -210,9 +211,18 @@ export function workspaceManager(repo, {freeBytes} = {}) {
       // fetched commit before reserving; later ref movement cannot change it.
       // Request metadata only even from conventional clones; selected missing
       // blobs still need explicit acquisition before the inventory can pass.
-      git('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none', 'origin', 'main');
+      git('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none',
+        'origin', '+refs/heads/main:refs/remotes/origin/main');
+      const fetchedMain = git('rev-parse', '--verify', 'FETCH_HEAD^{commit}').trim();
+      const trackingMain = git('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').trim();
+      if (!/^[a-f0-9]{40}$/.test(fetchedMain) || fetchedMain !== trackingMain) {
+        throw Error('Fetched origin/main did not match its remote-tracking ref; refusing a stale startup base');
+      }
+      // Pin the exact commit just obtained, rather than trusting a possibly stale
+      // local branch or an origin/main ref left unchanged by unusual fetch config.
+      fetchedWorkHead = fetchedMain;
     }
-    const head = slot === 'work' ? git('rev-parse', '--verify', 'origin/main').trim() : commit;
+    const head = slot === 'work' ? fetchedWorkHead : commit;
     return locked(() => {
       const value = state();
       if (value.entries.some(entry => entry.worker === worker && entry.slot === slot)) throw Error('Slot occupied; finish and release it before allocating another checkout');
