@@ -342,3 +342,9 @@ files. After a job is finished, inspect and preserve unique work before removing
 its completed legacy checkout with Git. `report` lists legacy usage; it never
 automatically deletes it. Actual disk exhaustion may therefore require safe legacy cleanup. Managed paths and the registry are
 local execution state, not another issue/status ledger.
+
+## Recover an empty interrupted preparation
+
+If allocation stopped after registering a linked worktree but before materializing any files, the recorded owner may use `resume --worker <current-worker> --slot work --token <exact-token>`. Inspect the failed invocation first. Resume accepts only the unchanged preparing reservation, original branch and HEAD, and an ordinary linked worktree containing only its Git link with an empty index. It refuses any materialized, untracked, ignored, changed, or unknown state; preserve such work for operator inspection. Selected inputs must already be available. No files or refs are deleted, and a failed resume remains recorded for inspection. Normal release guards are unchanged.
+
+The helper roots Git operations explicitly and removes inherited repository, worktree, index, common-directory and object-directory routing variables only from its child-process environment; it does not edit global configuration or the caller environment.
