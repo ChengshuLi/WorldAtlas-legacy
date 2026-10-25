@@ -3,11 +3,11 @@
   "kind": "pse-source-evidence-context-binding-v1",
   "new_applicability": {
     "bytes": 161007,
-    "commit": "b80f4ff0ecb0751489e36e77089c51bb2f915f49",
-    "git_blob_oid": "3aad1d9f2677ee04a4a9b1beb77ea6afce4c909c",
+    "commit": "e475652911b8ec5b2a292d7d8d134f68526bfef3",
+    "git_blob_oid": "6f43b3e0d1f981d86b110f3c67a5e992bf36f1d3",
     "mode": "100644",
     "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/adopted-territorial-applicability.json",
-    "sha256": "b69fa75375ca1cd1824b41a198f26014e6395c9624e184f6999dd92cd4d1526d"
+    "sha256": "f943bad97f18ec52d1d52971daa1c80e74940173ac6b715ef31432a69a320312"
   },
   "only_changed_field": "/territorial_applicability",
   "original": {
@@ -126,5 +126,11 @@
     }
   ],
   "previous_locator_values_retained": true,
-  "payload_change": false
+  "payload_change": false,
+  "source_evidence_context_projection": {
+    "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/source-evidence-with-context.json",
+    "status": "exact original full-source evidence with source-relative applicability projection and locator-only rebinding of two unavailable commit pins",
+    "payload_change": false,
+    "sha256": "4975692928a5c2a024132da5c9e246f040c937154ab09f3e53da6d8b646dcbf6"
+  }
 }
