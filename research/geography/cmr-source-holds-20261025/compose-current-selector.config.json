@@ -1,26 +1,46 @@
 {
   "version": 2,
   "selector": {
-    "commit": "47bcece521c7d85ca2b9899d69637308702ca24",
-    "path": "data/ownership-selection.json"
+    "path": "data/ownership-selection.json",
+    "commit": "47bcece521c7d85ca2b9899d69637308702ca24c",
+    "mode": "100644",
+    "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+    "bytes": 2256,
+    "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1"
   },
   "authorities": [
     {
       "rule_preimage": {
+        "path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector-001/original-rule-preimage.json",
         "commit": "cd533430d6f7eefd2c46b746bc8561eb340fe25f",
-        "path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector-001/original-rule-preimage.json"
+        "mode": "100644",
+        "git_blob_oid": "1836de895b270fb12eb070f6a354fa9dd9f076e7",
+        "bytes": 737,
+        "sha256": "1eb1240960de6b26c7df7e69b48a58e2433dc251e48ae973cbeb83c4a8fac487"
       },
       "source_authority": {
+        "path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector-001/authority-binding.json",
         "commit": "cd533430d6f7eefd2c46b746bc8561eb340fe25f",
-        "path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector-001/authority-binding.json"
+        "mode": "100644",
+        "git_blob_oid": "921a58c296ce033eb431e78a4443dc555c2dc48a",
+        "bytes": 740,
+        "sha256": "e75b3cf07286233fc7725dc146f99b5ecf3a33a43ff02864625a38cc57823f9f"
       },
       "ledger": {
+        "path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector-001/constructor-result.json",
         "commit": "cd533430d6f7eefd2c46b746bc8561eb340fe25f",
-        "path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector-001/constructor-result.json"
+        "mode": "100644",
+        "git_blob_oid": "ffbfd5d23a51d502ea5437b56d26b175f532952a",
+        "bytes": 4100617,
+        "sha256": "0eb97c69f70115433950a9a32138db7242687d72c6e0fc7d81b043dc0ba2bf73"
       },
       "native_patch": {
+        "path": "research/geography/cmr-source-holds-20261025/supported-inputs-current-main-001/native-patch.json",
         "commit": "8fcae218aaaef5292250e1e1b837ed9a3a78ede0",
-        "path": "research/geography/cmr-source-holds-20261025/supported-inputs-current-main-001/native-patch.json"
+        "mode": "100644",
+        "git_blob_oid": "6e0ec4009c9b8536ffde79630f3cf7f1d129f365",
+        "bytes": 91883,
+        "sha256": "6b5166396493d7e214886e0a09a0c97fe80dfa110716b2e5fa168e6c59124ee6"
       }
     }
   ]
