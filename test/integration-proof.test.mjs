@@ -40,6 +40,7 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(development, /for key in \('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',[\s\S]*?'GIT_ALTERNATE_OBJECT_DIRECTORIES'\):\n\s+env\.pop\(key, None\)/);
   assert.match(development, /subprocess\.call\(\['node',[\s\S]*?\], env=env\)/);
   const validation = fs.readFileSync('docs/VALIDATION.md', 'utf8');
+  const mergeIntegration = fs.readFileSync('scripts/merge-integration.mjs', 'utf8');
   const architecture = fs.readFileSync('docs/DATA_ARCHITECTURE.md', 'utf8');
   assert.match(architecture, /field-specific evidence priorities and then a stable record-ID tie-break/i);
   assert.doesNotMatch(architecture, /equal-precedence contradictions are rejected/);
@@ -61,7 +62,9 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(operations, /ciphertext is not `DATABASE_URL`/i);
   assert.match(operations, /explicit authorization for that exact live destination/i);
   assert.match(development, /account identity alone neither proves nor disproves independence/i);
-  assert.match(validation, /selectedDataSelection[\s\S]*reviewedTestPlan/);
+  assert.match(validation, /selectedDataSelection[\s\S]*inertEvidenceAdditions[\s\S]*reviewedTestPlan/);
+  assert.match(mergeIntegration, /inertEvidenceAdditions\(files, integrated\.entries, packageInputs\)/);
+  assert.match(mergeIntegration, /need\(!automatic \|\| reviewed \|\| selection/);
   assert.match(validation, /do not automatically require `complete`/i);
   const readme = fs.readFileSync('README.md', 'utf8');
   assert.match(readme, /does not connect to the hosted content API/i);
