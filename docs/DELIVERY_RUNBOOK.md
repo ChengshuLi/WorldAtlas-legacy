@@ -150,82 +150,9 @@ pre-retirement source at `e0a3e2a447394175fd23c7097e0e4498fa7a4175`; it is not a
 alternative latest-main delivery route. No old artifact or cumulative ledger is
 needed to reconstruct the accepted map.
 
-## Retained current13 metadata example
+## Phase boundary
 
-`coordination/engineering/delivery-handoff-20261011/current13-requests.json`,
-`current13-native-requests.json` and `current13-package.json` pin the real accepted
-whole GRC/COD handoffs, five original method/resource groups and current003 rebind.
-They are historical construction examples, not execution instructions for today's
-runtime or resource policy. The preparation checks need only their bounded exact
-metadata bodies, not physical/GIS replay inputs. The package example leaves final
-selection/assembly/reader checks pending. Do not call the prospective totals a
-completed delivery. The separate `current13-finalize.json` example is pinned to
-the corrected 79157664 selector, genuine release metadata, and accepted
-9473d184 package baseline. The result preserves its exact 744-entry prefix and
-appends 117 roles, reproducing the corrected d37abcd5 package. The old 79157664
-sorted package remains historical build evidence, not an append-policy oracle.
-
-```
-node scripts/prepare-delivery-handoff.mjs requests coordination/engineering/delivery-handoff-20261011/current13-requests.json .cache/delivery-handoff/source-example-001
-node scripts/prepare-delivery-handoff.mjs native-requests coordination/engineering/delivery-handoff-20261011/current13-native-requests.json .cache/delivery-handoff/native-example-001
-node scripts/prepare-delivery-handoff.mjs package coordination/engineering/delivery-handoff-20261011/current13-package.json .cache/delivery-handoff/package-example-001
-node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/delivery-handoff-20261011/current13-finalize.json .cache/delivery-handoff/final-example-001
-node --test test/delivery-handoff.test.mjs
-```
-
-The metadata adapter uses the existing preparation byte/descriptor budget and
-existing composition/ledger validators. Its JS fresh-directory writer provides the
-same applicable ordinary-ancestor, exclusive-file and completion-last guarantees
-as the Python `NewVintage` helper, with explicit byte-verified resume. Focused
-controls cover that adapter; they do not establish geographic truth or operating
-safety of a new scientific run. Unchanged original source/native/rebind validators
-must still admit the final requests and results.
-
-## Observed full-tree classifier limit
-
-The current13 delivery merged separately as PR #1753 at
-`ef834e2d90a9ca5d4cbd961a84a08dd156ae7944`. Its real 425-path tree passed
-the path prefilter and runtime-role checks, but the complete selected-data
-classifier reached its 16 MiB aggregate metadata admission bound while reading
-added supporting JSON: 166 blobs and 16,638,841 bytes had been accounted. It
-therefore used truthful full CI. The small finalizer/classifier controls here
-prove their tested boundaries, not selected-data adoption by that complete tree.
-
-Future handoffs should avoid copying unconsumed resource-control, preparation or
-refusal JSON solely as bookkeeping; reference applicable retained immutable
-evidence instead. Preserve every actually consumed role and required evidence.
-Reducing unnecessary reads and making the trusted classifier allowance
-configurable is a separately coordinated follow-on. This command does not
-change that bound, its per-input security/identity checks, or the current delivery.
-
-## What this automates and what still needs a decision
-
-The accepted current13 metadata was replayed on the #1753 accepted ancestry:
-ordered requests, native requests, composition, package projection, rebind
-operating/certificate and finalization, plus genuine SOURCE/native/rebind
-retention. Each phase completed and passed exact resume without executing an
-operator. The earlier byte-equality checks remain applicable because these
-command/test bodies and their immutable example inputs are unchanged.
-
-- Request, retention and composition preparation: automated from explicit accepted
-  whole pins and genuine terminal products. The caller supplies admitted method
-  groups; no source acceptance is inferred.
-- Package and selector finalization: automated, including exact current-bank preimages, selector-last adoption, collisions and exact resume.
-- Review and integration use the actual PR/head, ordinary review comments and
-  standard workflow dispatch. Delivery preparation creates no review packet or
-  submission state and never approves itself.
-- Grouping and parallel work: configs accept actual independent method
-  groups. Scheduling, source readiness and selecting which groups can run in
-  parallel remain outside this command; it introduces no old-batch barrier.
-- End-to-end speed: retained command timings show metadata preparation cost, and
-  the delivery author used this CLI for two genuine v2 SOURCE request/retention
-  handoffs. This is not a measured improvement in global gap closures per hour.
-
-Actual immutable commit pins between phases, external scientific execution,
-independent source/review authority and the existing serialized queue are manual
-or existing-tool boundaries. No scheduler or automatic approval is hidden in the
-preparation command. Its completed result establishes prepared outputs only, not
-source acceptance, review, integration or publication.
+Preparation authenticates the exact immutable inputs and writes only the phase outputs it documents. It does not establish source acceptance, geographic authority, independent review, integration or publication. Use the current accepted input pins and the schemas implemented by the selected phase; old task-specific configurations are not defaults or a current-run recipe.
 
 ## Recipe admission and exact-body materialization
 
@@ -275,23 +202,15 @@ acquisition milliseconds separately. The durable completion report is determinis
 and repeats byte-for-byte; it does not rewrite the first observation's counters.
 Tests invoke actual local Git fetches with repeated immutable identities and
 interrupted import/placement, as well as the plain-Node CLI. These small local
-fixtures prove acquisition reuse, not a new fetch of the current13 GIS products.
-Every scientific phase still authenticates and accounts for its complete inputs.
+fixtures prove acquisition reuse, not a scientific source execution. Every
+scientific phase still authenticates and accounts for its complete inputs.
 Physical-product paths come from the accepted handoff's original comparison or
 its exact consumed locator metadata. Missing joins refuse, rather than guessing
 from country names, old batches, or incomplete source records.
 
 Run ordinary controls with `node --test test/delivery-handoff.test.mjs
-test/delivery-handoff-advance.test.mjs`. The opt-in
-`WORLDATLAS_DELIVERY_FIXTURE=1` explicitly registers the additional retained-fixture
-suite rather than creating skipped tests in the default zero-skip regression. It
-uses the already-retained immutable
-current13 bodies for exact authority reproduction and the new 10+3 metadata
-partition control. This requires only the named metadata commits/bodies, not a
-scientific cache or GIS operands. Acceptance or revalidation relying on the
-retained current13 proof must run `WORLDATLAS_DELIVERY_FIXTURE=1` and establish
-zero skips; ordinary CI alone does not establish that proof. Absence of those
-bodies is a fixture availability limit, never a successful replay.
+test/delivery-handoff-advance.test.mjs`. Optional retained-fixture controls test the
+helper contract only; they do not rerun or requalify scientific work.
 
 ## Explicit v2 subsets and immutable receipt qualification
 
@@ -327,55 +246,6 @@ phases above, `source` performs the existing source qualification and
 changes the selected release, publishes a source approval, establishes current
 owner-zero, or replaces independent scientific review and the final queue.
 Archived original programs and receipts are preserved unchanged.
-
-### Source cohorts using the retained Indonesia method
-
-`node scripts/prepare-delivery-handoff.mjs source CONFIG DESTINATION [--resume]`
-uses `scripts/qualify-source-cohort.py`; it does not generate a new Python
-program. This is the retained Indonesia nine-family source method, **not** a
-universal country classifier. Its complete IDN/MYS/PNG/TLS competitor-family
-roster and native grid remain fixed. A different scientific method requires
-separate review, rather than an arbitrary smaller family list in configuration.
-
-The version-1 config contains `source` and `runtime_inventory`; memory follows
-[Execution and memory](#execution-and-memory).
-`source` supplies exact scientific/current Git commits, complete whole-file
-input pins and fixed-role paths; all target owner/ID/name/source-index/parent
-and original metadata expectations; exact candidate-selector counts and its
-whole pin; a retained physical-reproducer pin; and expected runtime versions.
-The helper validates the complete source reconstruction, lineage, native-centre
-membership and competing source/country witnesses.
-Original topology/identity/geometry refusals and physical holds remain.
-
-`runtime_inventory` names `python` and `files`, using absolute installed paths,
-whole byte counts and SHA-256 hashes. The interpreter must be in that inventory.
-Its configured virtual-environment path is retained while resolved file identity
-is verified. Loaded file-backed Python modules and bundled scientific libraries
-must be covered by the admitted inventory. This is not a hermetic OS-loader or
-system-library closure. Keep this environment-specific input private and reuse
-it only while the environment is unchanged; it is not a new per-cohort program.
-
-`source` invokes the shared probe in fresh private staging, validates its complete
-five-product inventory, then uses the existing immutable publication. Recorded
-product links name the final destination, never the temporary staging directory.
-Failure publishes no final output. The outputs are original-stage inputs,
-cohort intervals/configuration, source qualification and execution receipt.
-They retain source-only limits: successful source support is not physical or
-native qualification. Checks are cooperative input/feature/time/output bounds;
-no hard deadline or process-tree containment is claimed.
-
-Explicit `--resume` verifies the complete output inventory, each whole product,
-its execution/configuration binding, original immutable inputs and unchanged
-scientific probe bytes. Historical entrypoint metadata stays literal; unrelated
-entrypoint edits do not invalidate those products. It reuses observations without
-rerunning the source operator; changed or partial output is refused. Resume is custody
-verification, not another scientific qualification or approval.
-
-A replay can use a pinned `cohort-intervals-v1` retained cell set when the original
-private `candidate-rows-v1` selector bytes are unavailable. The input records must
-say which format was consumed. Equivalent cells/results do not establish the
-original selector's byte identity, and new runtime/timing/path observations must
-not replace the historical ones.
 
 ### Derive the canonical source-evidence baseline
 
@@ -623,49 +493,12 @@ actual positive change to match complete qualified new evidence.
 Omitting `accepted_selector` preserves the original command and output contract;
 no accepted map is then read and the complete supported partition is emitted.
 
-### Subsequent batch preparation
-
-For an unchanged accepted command, change the scientific input pins/configuration,
-not its executable implementation. Do not create and pre-review another constructor
-wrapper, rebuild input descriptors by hand, split the returned receipt from its
-ledger rows, or create a later join checkpoint. The complete constructor result is
-already the `compose` input. Review the actual scientific inputs/results and final
-delivery at their existing boundaries; changed code or method still needs relevant
-independent review. The selected scientific execution contract remains mandatory. Lightweight metadata follows shared Git/storage safeguards,
-without acquiring a separate all-team GIS compute permission round.
-
-For unchanged `compose` and `finalize`, reuse the original rule-preimage,
-authority-binding, complete constructor-result and native-patch pins from the
-qualified handoff. Run the stock phases without separate descriptor/config
-attestation reviews, repeated whole-pin receipts or handoff acknowledgment gates.
-The stock reader authenticates each ordinary commit/path, Git object, size and
-whole-file hash; composition checks the original joins and conservation, and
-finalization derives package read roles and checks canonical original identities.
-Preserve the real commit boundaries between phases and every original scientific limit.
-
-Keep one substantive independent actual-output scientific review for the delivery,
-reusing original qualification reviews and applicable unchanged intermediate
-evidence. Check the actual original-to-final scope, inherited and added rows/cells,
-excluded holds and final metadata joins. Current-owner-zero, selected-consumer,
-package/output checks, exact-head review and ordinary author/queue gates remain
-required. A changed code path, scientific method or consequential input/result
-claim still needs its relevant review; stock authentication alone is not that review.
-
-
-The Tanjung191 input checkpoint at 2026-10-14T20:28:32Z and qualified checkpoint
-at 20:40:59Z bracket 12m27s, while its preserved external execution lasted
-1.581 seconds (20:35:53.305Z–20:35:54.886Z). That interval includes preparation,
-coordination, review and preservation, not solely idle time; it is not a measured
-saving from these commands. The original records and exact removable stages are
-linked in issue #1920. A subsequent adopted package must establish actual delivery
-elapsed and whether those intermediate stages were eliminated.
-
 ### Original physical source support
 
 `node scripts/prepare-delivery-handoff.mjs physical CONFIG DESTINATION [--resume]`
 uses the same admitted runtime, private staging, exclusive publication and resume
 path as `source`, with a distinct physical phase in the shared Python helper.
-It does not extend the Indonesia source classifier or create native authority.
+It does not create native authority or qualify a map change.
 
 The outer version-1 configuration has `physical`, `runtime_inventory` and
 the version. `physical` contains exact
@@ -688,12 +521,10 @@ member buffer. No geometry is decoded until the whole member size/hash passes.
 The native member remains whole; no source clipping, repaired polygon, altered
 coordinates or sampled-byte substitute is introduced. Original comparison,
 validity cache, query order and all unknown/support witnesses remain unchanged.
-The old archived producers/helpers and previously qualified outputs stay intact.
 
-The input inventory still binds all authenticated inputs. Lower live residency
-does not reduce logical bytes: the historical representative source/native
-inventory exceeded 305 MB before target/code pins. These byte counts and measured
-peaks are historical observations, not current memory prerequisites.
+The input inventory binds all authenticated inputs. Lower live residency does not
+reduce logical bytes; actual memory depends on the complete inputs and runtime. No
+fixed process-memory prerequisite follows from a small selected cohort.
 
 Outputs are `whole-target-support.json` with the original scientific schema and
 `execution-receipt.json` binding actual inputs, program, runtime identities and
@@ -728,23 +559,6 @@ Unknown or changed producers still cannot qualify nonzero conflict frames.
 Every query identity, predicate, witness, complete residual and native contact
 check remains mandatory. This method admission is separate from canonical seam
 views below and does not admit out-of-range coordinates or shift a witness again.
-
-## Reuse actual delivery evidence
-
-Ordinary delivery stops at the finalized candidate and its actual consumer checks.
-Do not generate another whole-change evidence manifest, copy producer metrics into
-a reporting wrapper, or make a third evidence-only commit. Cite the existing
-original source, native constructor, complete original-scope accounting and
-selected/emitted result records directly in the PR and independent review. Preserve
-their immutable pins, counts, units, uncertainties, source limits and held remainders.
-Source validity and acceptance still come from the actual consumers and substantive
-review, not from a generic inventory of every changed file.
-
-The old `evidence` preparation command is retired. Historical wrappers remain
-immutable evidence; no source record or previous result is removed. Specialized
-source-adjudication dossiers and explicit partition-review contracts retain their
-existing validators and authorization. The application’s prepared evidence bundle
-is a distinct consumed product and is unchanged.
 
 ## Continue locally through the finalized candidate
 
@@ -805,15 +619,6 @@ and use exact `--resume` with the unchanged configuration where applicable.
 Changed or partial output still refuses; do not reset, overwrite or blindly
 repeat the sequence. Existing commits and receipts provide recovery without a
 new controller or journal.
-
-In retained [MBD PR #1952](https://github.com/ChengshuLi/WorldAtlas/pull/1952),
-the three stage publishers completed remote branch readback before exiting:
-2026-10-15 04:39:18.907867Z, 04:46:46.809726Z and 04:50:26.217678Z.
-The next finalizer admission was at 04:41:47.362Z. Local committed objects could
-have fed the next steps without the intermediate remote readbacks. Separate
-evidence-helper start and final-GET durations were not retained, so these records
-do not establish minutes saved. Record subsequent adoption with the existing
-delivery receipts; this sequence adds no reporting gate.
 
 ### Explicit retained antimeridian views
 
@@ -901,7 +706,7 @@ The independent native-grid chunk, metadata and source-custody contracts are not
 changed by this additive transport correction. Final whole-output consumer proof
 remains required at the actual selected ledger and patch size.
 
-The same-asset consumer chain is explicit:
+The current same-asset consumer chain is:
 
 - `additive-gap-repair.mjs` and `prepare-delivery-handoff.mjs` produce and retain
   complete asset length/hash pins. The metadata qualification/preparation paths
@@ -926,23 +731,13 @@ fixtures for package, browser-facing loader and emitted-smoke entry points.
 Literal selected-ledger probes are reported separately with their actual hashes;
 fixture success does not imply actual emitted-map or GPU/Canvas acceptance.
 
-### Remaining bounds outside this additive-asset correction
+### Adjacent reader constraints
 
-This is not a claim that the application is free of arbitrary limits.
-
-The source-metadata reader, browser reference-metadata descriptor, already-loaded
-original native parts, inert current-rebind pin and encoded latitude input now
-use exact whole lengths/hashes rather than the former 32 MiB ceilings. Native
-word coverage, the fixed normative latitude table and real runtime failures
-remain mandatory. Package-image reads forward a supplied exact byte descriptor;
-readers without one retain their existing fallback. The new boundary controls
-are synthetic and do not claim a production-size outage or scientific gain.
-
-The following remaining fixed guards need their own concrete justification or
-exact-descriptor replacement; merely belonging to another format is insufficient:
+These adjacent readers retain separate contracts; do not infer that the additive
+asset descriptors remove their independent limits:
 
 - `effective-footprint.js`: prepared-context chunks retain their separate 32 MiB
-  decoded-size guard; this correction does not remove that context contract.
+  decoded-size guard; asset descriptors do not change this separate contract.
 - `selected-delivery-smoke.mjs`: 32 MiB decoded catalogue chunks, plus legacy
   `repositoryReader` fallback for unpinned top-level files and native startup
   parts without encoded byte declarations. These are policy defaults, not
@@ -957,19 +752,6 @@ By contrast, safe-integer byte precision, exact decoded word counts, native
 coordinate packing dimensions and actual runtime allocation failures are
 concrete correctness/platform constraints. Any remaining limit cleanup must
 preserve their checks and exercise its own adjacent producer/consumer paths.
-
-### Packed native replacement rows
-
-`applyAdditiveNativePatch` retains each affected row as native `Uint32` words
-between row processing and final output assembly. Its temporary decoded intervals
-and coalescing remain row-local, rather than retaining one JavaScript triple-array
-for every old run across the entire affected world bank. The same ordering,
-occupied-cell, owner, complete-coverage and repeated-patch checks remain in place;
-the final native row/run words are unchanged. This reduces avoidable object
-expansion without increasing a file ceiling or Node heap setting. Actual process
-memory still depends on the complete selected assets, native bank and consumers;
-measure that workload and keep failed runs as failures.
-
 
 ### Lossless additive delivery transport
 
@@ -1025,15 +807,7 @@ currently covers only the already retained Natural Earth ADM1 registry product,
 not a generic provider adapter or permission to omit another original family.
 
 
-## Historical cumulative package cleanup
-
-The dated initial accepted-282d inventory remains at
-`coordination/engineering/selected-package-root-pruning-20261017/obsolete-cumulative-roles.json`.
-It documents a completed historical cleanup, not a list to replay on later final
-banks. Current finalization retires only authenticated superseded current-bank
-members and preserves unrelated declarations and immutable evidence.
-
-### Completed-proof geometry custody (no science rerun)
+## Completed-proof geometry custody
 
 When an already completed native authority duplicates original-N polygons in its
 source-evidence targets and constructor ledger, keep its exact full artifacts

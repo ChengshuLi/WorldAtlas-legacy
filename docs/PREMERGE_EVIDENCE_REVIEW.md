@@ -94,15 +94,6 @@ be described as certified source extraction or regional approval. Do not use it 
 replace an original-source geometry claim. Oversized originals remain lawful restoration
 or independently reviewed partitioning work; no size limit is widened here.
 
-For PR #678 / issue #667, the pre-existing record is
-`data/regional-review/bc-administrative-remainders-followup-2026/cd-assessments.json`
-at `24629e5918a144a1979db80ba7012baea42036e7`, with native IDs under `/exact_subjects`.
-The GEO owner must retain all original evidence, move newly created copies/extracts/registry
-out of `baseline.files` into candidate source/output descriptors, bind baseline pins only
-to real files at the ancestor, and refresh affected metric vintages/bindings honestly.
-If the actual reviewed metric inputs differ from the chosen ancestor, retain those results
-as archived with their true evaluation commit; do not merely relabel them current. Then run
-the relevant scientific validator and obtain a fresh exact-head review including its new limits.
 
 Local self-check:
 
@@ -117,7 +108,7 @@ Retained validator outputs state checked scope and unavailable evidence. Their s
 
 Request one coherent PR review from a distinct worker. A reviewer must inspect actual changes, sources, methods, applicable tests, linked acceptance criteria and preservation/release implications; green CI or an author's claims are insufficient. Do not claim the author's issue or edit its scope. If no reviewer is available, the merge waits. Implementation review and source/factual review are separate domains. Limited primary-source access must appear in both the reviewer limits and accepted-with-limits source outcome.
 
-Read [LOCAL_WORKSPACES.md](LOCAL_WORKSPACES.md). Allocate isolated checkouts through `scripts/local-workspace.mjs`; keep bounded work/review slots, include exact required sparse inputs, and release finished slots after preserving unique work. Do not retain a full checkout per task or review revision. Existing chats must refresh their saved instructions.
+Read [LOCAL_WORKSPACES.md](LOCAL_WORKSPACES.md). Allocate isolated checkouts through `scripts/local-workspace.mjs`; keep bounded work/review slots, include exact required sparse inputs, and release finished slots after preserving unique work. Do not retain a full checkout per task or review revision.
 
 Before accepting a consequential claim, follow it to the final evidence using
 [AUDIT_FAILURE_PREVENTION.md](AUDIT_FAILURE_PREVENTION.md#follow-a-claim-through-the-final-evidence).

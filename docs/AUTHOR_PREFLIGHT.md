@@ -212,29 +212,6 @@ current identities, scientific evidence and actual integration results.
 After merge, reconcile the issue and direct dependents, preserve the checkpoint,
 and release the owned checkout before taking the next fresh job.
 
-## Existing-chat refresh text
-
-Read current-main docs/AUTHOR_PREFLIGHT.md, docs/AUDIT_FAILURE_PREVENTION.md and
-docs/PREMERGE_EVIDENCE_REVIEW.md before your next job. Preserve your current work,
-checkpoint and completed evidence. Select the checks needed by your actual
-acceptance claims before implementation; use authenticated consumed inputs/code,
-independent reference records, safe fresh outputs and meaningful adverse controls
-where applicable. Run the documented focused preflight before the first review
-request and resolve quick ownership/evidence failures. Apply fresh-output admission
-to control fixtures and result writers too. Before queue submission, reconcile all
-reviewers' outstanding findings and obtain renewed relevant exact-head review;
-one acceptance does not override another objection. Record limits honestly.
-Source-only research keeps its focused CI. Obtain a distinct review of the exact
-final head, use the normal queue, reconcile the issue/dependents and release the
-owned checkout afterward. This refresh changes neither scope nor scientific or
-publication authority.
-
-For existing chats, also refresh the final-evidence boundary guidance: prepare
-applicable report/control, combined-budget and inherited-citation checks before
-review. Preserve ownership/checkpoints; select faithful bounded probes rather than
-rerunning every geography computation. Reviewers record observed checks and limits
-in their existing domain scopes.
-
 ## Avoid repeated proof and paperwork
 
 Apply WORKER_COORDINATION.md's delivery policy. Use the smallest evidence manifest

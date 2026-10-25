@@ -15,63 +15,30 @@ archive is deleted by this procedure.
 
 ## Retained resource identities and verification receipts
 
-Neon remains project weathered-lab-37571695, branch
-br-summer-butterfly-ar8qikk5, database neondb, with the existing compact schema and
-worldatlas_app runtime role. No migration, factual rewrite, credential rotation or
-provider deletion accompanies retirement. The public Worker blocks mutations.
-R2 bucket worldatlas-archives contains the actual registered archive/evidence bodies.
-Website HTML, JavaScript, CSS and prepared map drawings are Cloudflare Worker ASSETS;
-they are a separate part of the deployment, not this archive bucket.
+The current project, database, bucket, Worker and Site identities must be read from
+authorized current deployment records, not inferred from this guide. Archive objects
+and deployed Worker assets are different storage products. This procedure alone
+authorizes no migration, factual rewrite, credential rotation or provider deletion.
 
-Archive preservation is complete under #845: the complete original bucket and
-all three missing README originals were compared and preserved. The old bucket
-and every pre-existing destination object remain. Full original/destination
-inventories, metadata, individual byte checks and cleanup are retained at
-https://github.com/ChengshuLi/WorldAtlas/issues/845#issuecomment-6050922276 .
-Independent acceptance:
-https://github.com/ChengshuLi/WorldAtlas/issues/845#issuecomment-6050954579 .
-
-The actual bounded Cloudflare publication under #846 retained application commit
-4a1fc6777fe766dca2c0698362a06f06a44f9344 and Worker version
-f46f5cdd-58f5-41cd-abee-cb5b41c2106d. Provider deployment
-1c783313-6d1b-46d0-9086-6b0660ed37f2 is tracked by GitHub deployment 6926837015.
-Matching release, database marker, assets, anonymous browser behavior and blocked
-writes passed. Complete actual proof:
-https://github.com/ChengshuLi/WorldAtlas/issues/846#issuecomment-6051902257 .
-Independent acceptance:
-https://github.com/ChengshuLi/WorldAtlas/issues/846#issuecomment-6051986479 .
-This recorded a re-publication of the existing immutable version, not a new main build; verify present state through current accepted records before acting.
+Historical archive preservation and publication receipts remain on their originating
+issues (#845 and #846); their exact inventories, pins and acceptance can support
+reconstruction but do not establish present provider state. Before new work, verify
+the current destination, release, asset inventory and served behavior through the
+accepted operation records.
 
 ## Tested database recovery and current coverage
 
-The actual native PostgreSQL backup/isolated restore is preserved at
-https://github.com/ChengshuLi/WorldAtlas/issues/51#issuecomment-5988399376
-(workflow 37265153024). It includes logical facts, releases and metadata, the
-compact physical tables, migration registry, schema, sequence state and the stated
-owner/ACL scope at capture. Restore ran in an isolated network-none PostgreSQL18
-target and matched original ordered row digests; source writes were zero.
-Retained SQL restoration uses the documented target-only session-header and
-constraint revalidation in [CURRENT_POSTGRES_RECOVERY.md](CURRENT_POSTGRES_RECOVERY.md).
-Do not load a raw dump directly into production or change the frozen source catalog.
+Use [CURRENT_POSTGRES_RECOVERY.md](CURRENT_POSTGRES_RECOVERY.md) for the recovery
+procedure and its immutable source/target pins. Historical backup receipts establish
+only their recorded capture and restore scope. Never load a raw dump directly into
+production or change the frozen source catalog.
 
-The retirement packet at
-../coordination/engineering/cloudflare-retirement-847-20261007/ retains the original
-native receipt and fresh read-only comparisons. Every current logical collection's
-count and ordered digest equals that tested backup, and the complete marker was
-unchanged before/after and equal to its captured marker. Both current catalog
-bodies reproduce their public/private definition hashes and match the backup.
-Every registered media entry was joined to the complete migrated inventory, and
-its full current download was checked for exact length and SHA256. The recipient's
-existing private key successfully authenticated/decrypted the retained encrypted
-backup in memory; its plaintext digest matched the previously restored archive.
-
-These are current logical facts/releases/metadata and archive-byte checks. Private
-unused dictionary rows, current private sequence values and private registry rows
-were previously restored and verified at capture; they were not freshly compared
-with the runtime role, which cannot read them. Catalog equality proves definitions,
-not those private values. This is not a server-global/provider physical backup,
-password or role-membership recovery, permanent offsite-retention guarantee or new
-SQL restore. Preserve the existing provider/credential setup separately.
+The retained directory `../coordination/engineering/cloudflare-retirement-847-20261007/`
+contains immutable recovery comparisons and their original pins. Treat it as
+historical evidence, not a live-state assertion; establish current records and
+served behavior independently before acting. Its stated access limits remain: a
+comparison that cannot read private registry/sequence rows does not prove those
+values or server-global/provider physical backup.
 
 ## Recovery procedure and custody
 
@@ -107,26 +74,11 @@ presence alone is not a backup of R2 bytes.
 
 ## Safe retirement and rollback
 
-The old Site is appgprj_6abdf87277c08191bce4a22b8dfb25db at
-https://worldatlas-explorer.chengshu-li-2013.chatgpt.site . Its retained live version24,
-original repository, versions, bucket, owner-only access, database binding and
-read-only setting remain. Native automations were empty; the two inspected local
-jobs were paused and contained no old Site publishing destination. No new schedule
-or saved-chat goal is created or silently rewritten. Omitted connector settings
-are not proof that an unobservable external integration does not exist.
-
-Issue #847 records the actual post-merge metadata operation/readback: label the
-private Site as retired from normal publishing, preserving its URL/access/version,
-all environment bindings and storage. No unpublish, redirect, bucket deletion or
-application deployment is needed for this retirement. Its prior display title is
-WorldAtlas; title rollback uses update_site_metadata with the same project ID and
-that exact title, under a newly serialized recovery operation. The metadata change
-is complete only when the native result on #847 proves it; merging this document
-alone is not production acceptance.
-
-For serving rollback use an explicitly verified retained Cloudflare immutable
-version whose code/assets and data pins match the current Neon release. Preserve
-current/previous provider deployments and register/settle the real operation.
-The old Site is retained historical recovery, not an automatically compatible
-current-release serving fallback. Keep original source/history and all recovery
-credentials/receipts; retirement grants no deletion authority.
+Before using a retained Site or provider copy for recovery, verify the exact current
+code, assets, release and backend pins against accepted deployment records. A past
+retirement or metadata operation does not make the retained copy an automatically
+compatible serving fallback. Preserve original access and storage unless an explicit
+current operation authorizes a change. For a rollback, register and settle the real
+provider operation under [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md), retaining
+its current/previous deployment identities and actual checks. This guide does not
+assert that a retirement, title change or current serving state is complete.

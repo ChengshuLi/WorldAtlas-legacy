@@ -74,10 +74,10 @@ The fully accounted merge/scheduler subset contains 15,144 GET attempts and
 cannot establish an installation-wide secondary-rate margin. Fewer primary
 charges alone do not prove that mutation or concurrency limits are safe.
 
-PR #1556 addresses the largest file-read class. Its approximately 93% reduction
-was measured in two local evidence-checker comparisons, not whole-system hosted
-traffic. Older PR bases still execute the older trusted checker. Merge metadata,
-independent selector reads and observer traffic remain separate obligations.
+Actual HTTP quota observations describe one credential and time window, not reserved
+capacity or whole-system traffic. The implementation's attempt bounds and failure
+receipts are the contract; do not infer a reset or savings from historical samples.
+
 
 The following is the global implementation target, not a claim that it is
 already deployed:
