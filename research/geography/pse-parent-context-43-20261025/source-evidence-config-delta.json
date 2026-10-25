@@ -1,0 +1,19 @@
+{
+  "base_config": {
+    "path": "coordination/engineering/pse-original-disposition-20261020/source-evidence-config-parent-context.json",
+    "sha256": "4ef8b908f5a0c5991df1e209201da725a494fc962333ab03d38546e0aa074c2b"
+  },
+  "changed_fields": {
+    "source_evidence.territorial_applicability": {
+      "bytes": 152804,
+      "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+      "git_blob_oid": "28dfb8cda5b27c7f3f3c158f8efec70bc3c4c513",
+      "mode": "100644",
+      "path": "research/geography/pse-parent-context-43-20261025/adopted-territorial-applicability.json",
+      "sha256": "d4f1c854cebb9e7d945965c3d14da1f8d0c8700f7d4220124a8bba31a140d4cc"
+    }
+  },
+  "exact_config_sha256": "557ff0005a242eef2fa7609b88f755dc1914cfba341f0967172cc90b5813fcee",
+  "kind": "source-evidence-config-delta-v1",
+  "scope": "Only the contextual applicability pin differs from the base source-evidence config."
+}
