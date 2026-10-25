@@ -1,0 +1,374 @@
+{
+  "version": 1,
+  "kind": "pse-owner36953-land-27-key-contact-physical-crosswalk",
+  "as_of": "2026-10-25",
+  "scope": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "issue": 2606,
+    "suspension_issue": 2649,
+    "original_cells": 427,
+    "original_intervals": 277,
+    "owner": 36953,
+    "owner_name": "Bethlehem",
+    "owner_total_cells": 144,
+    "owner_land_cells": 27,
+    "owner_land_intervals": 26,
+    "owner_water_cells": 117,
+    "owner_water_intervals": 68,
+    "water_subset": "PSE-09; excluded from this crosswalk",
+    "status": "all outcomes pending; holds and credit unchanged"
+  },
+  "exact_retained_inputs": {
+    "disposition": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/pse-disposition.json",
+      "bytes": 102352,
+      "sha256": "0b8b48671315dd4d20f23c28a034859964689c7747375e41e840d07f73bb7cb9"
+    },
+    "source_evidence": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/source-evidence-20261025/source-evidence.json",
+      "bytes": 55006,
+      "sha256": "cae1128a4a42449d7c6bbf125c0d7087af9b195325e540c9102d29346676b293"
+    },
+    "native_diagnostic": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-diagnostic-20261025/native-diagnostic.json",
+      "bytes": 479385,
+      "sha256": "ddc890d5b16175c177303f78eae045135f9c4d8e54b93ffdea8b5c08104513a9"
+    },
+    "whole_target_support": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/physical-20261025/whole-target-support.json",
+      "bytes": 227866,
+      "sha256": "a6972a88f57bb363ad91283a9ed23104d56429e6222628047833c207271bffb4"
+    },
+    "constructor_result": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-authority-20261025/constructor-result.json",
+      "bytes": 9636,
+      "sha256": "a2ec5b3f25ec826abc4ecbdd2029ab9ede077dfa173268ae824edac901559f3e"
+    },
+    "water_crosscut": {
+      "path": "inventory/pse-inland-water-held-interval-contact-crosscut-20261025.json",
+      "bytes": 81096,
+      "sha256": "5850b3a98ef6d63ffc9472036f16ad62fde25ad84710cab2911641fe7b855a67"
+    },
+    "group_assessment": {
+      "path": "inventory/pse-owners-36951-36953-contract-assessment-20261025.json",
+      "bytes": 13776,
+      "sha256": "365dbe2d9d6562eb914bd636b50bda6945a52076c7242ec7f066dbbdb7e55dae"
+    }
+  },
+  "method": {
+    "selection": "Expand exact rows in retained pse-disposition.json with owner=36953 and class=land; exclude class=inland-water.",
+    "contact": "Join exact (y,x) against retained native-diagnostic diagnostic_territorial_rows; resolve each negative_ordinal through owner36953 source-evidence target territorial_exclusions.",
+    "physical": "Join exact keys against source-evidence target coverage_rows; record whole-target physical issues separately without projecting them onto individual centers."
+  },
+  "source_contact_result": {
+    "candidate_feature_index": 52593,
+    "candidate_source_id": "gb:PSE:ADM2:87354302B24436251599031",
+    "same_family_parent_feature_index": 52576,
+    "parent_source_id": "gb:PSE:ADM1:83478781B28849486138516",
+    "contact_patterns": [
+      {
+        "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+        "contact_kind": "interior",
+        "cells": 27,
+        "intervals": 26
+      }
+    ],
+    "separate_ISR_contact_cells": 0,
+    "separate_JOR_contact_cells": 0,
+    "other_negative_family_contact_cells": 0,
+    "result": "All 27 exact land keys carry candidate+same-family parent in the retained source vector. The native diagnostic records an interior PSE ADM1 parent negative contact on each; no ISR/JOR contact operand hits these keys."
+  },
+  "physical_source_support": {
+    "source_evidence_mapped_land_support_rows": 27,
+    "coverage_class_counts": {
+      "mapped_land_support": 27
+    },
+    "mask_class": "all 27 are retained land",
+    "whole_target_physical_issues": [
+      "L2-outside-L1",
+      "contradictory_land_water_support",
+      "extra_reconstruction"
+    ],
+    "whole_target_limit": "The owner target has extra-reconstruction, contradictory-land-water-support and L2-outside-L1 findings. The physical receipt does not test each issue geometry against these 27 centers; they are neither proven per-key vetoes nor cleared as irrelevant."
+  },
+  "native_result": {
+    "requested_cells": 27,
+    "supported_cells": 0,
+    "held_cells": 27,
+    "held_reason": "territorial_exclusion_cells",
+    "constructor_assignment_for_these_keys": 0,
+    "interpretation": "The retained stock diagnostic keeps the same-family parent interior contact as a veto; it does not establish source-applicability exception."
+  },
+  "candidate_readout": {
+    "clean_candidate_subset": [],
+    "why": "Every key has an interior parent-family exclusion and is held by the retained stock diagnostic. All 27 have mapped-land coverage rows, but the unresolved whole-target physical findings have not been interpreted pointwise. No cell is currently source-and-physical-clean for positive qualification without further supported applicability/physical interpretation."
+  },
+  "limits": [
+    "Read-only exact join of retained evidence; no geometry rerun.",
+    "Same-family parent hierarchy context does not authorize deleting the contact or count as qualification.",
+    "No source applicability, physical exception, territorial or legal conclusion.",
+    "Preserve all 27 as pending/held; preserve the separate 117-water-key subset and full 427-cell denominator."
+  ],
+  "exact_land_intervals": [
+    {
+      "ordinal": 176,
+      "y": 106723,
+      "x_start": 156899,
+      "x_end_exclusive": 156900,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 177,
+      "y": 106724,
+      "x_start": 156899,
+      "x_end_exclusive": 156900,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 178,
+      "y": 106726,
+      "x_start": 156898,
+      "x_end_exclusive": 156899,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 179,
+      "y": 106727,
+      "x_start": 156898,
+      "x_end_exclusive": 156899,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 180,
+      "y": 106729,
+      "x_start": 156897,
+      "x_end_exclusive": 156898,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 181,
+      "y": 106746,
+      "x_start": 156897,
+      "x_end_exclusive": 156898,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 209,
+      "y": 106826,
+      "x_start": 156872,
+      "x_end_exclusive": 156873,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 218,
+      "y": 106837,
+      "x_start": 156873,
+      "x_end_exclusive": 156874,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 224,
+      "y": 106842,
+      "x_start": 156869,
+      "x_end_exclusive": 156870,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 226,
+      "y": 106843,
+      "x_start": 156868,
+      "x_end_exclusive": 156869,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 228,
+      "y": 106844,
+      "x_start": 156867,
+      "x_end_exclusive": 156869,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 229,
+      "y": 106845,
+      "x_start": 156866,
+      "x_end_exclusive": 156867,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 244,
+      "y": 106903,
+      "x_start": 156855,
+      "x_end_exclusive": 156856,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 245,
+      "y": 106904,
+      "x_start": 156854,
+      "x_end_exclusive": 156855,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 246,
+      "y": 106905,
+      "x_start": 156853,
+      "x_end_exclusive": 156854,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 247,
+      "y": 106906,
+      "x_start": 156852,
+      "x_end_exclusive": 156853,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 248,
+      "y": 106908,
+      "x_start": 156849,
+      "x_end_exclusive": 156850,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 249,
+      "y": 106909,
+      "x_start": 156848,
+      "x_end_exclusive": 156849,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 250,
+      "y": 106910,
+      "x_start": 156847,
+      "x_end_exclusive": 156848,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 251,
+      "y": 106912,
+      "x_start": 156844,
+      "x_end_exclusive": 156845,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 252,
+      "y": 106913,
+      "x_start": 156843,
+      "x_end_exclusive": 156844,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 253,
+      "y": 106914,
+      "x_start": 156842,
+      "x_end_exclusive": 156843,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 254,
+      "y": 106915,
+      "x_start": 156841,
+      "x_end_exclusive": 156842,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 255,
+      "y": 106917,
+      "x_start": 156838,
+      "x_end_exclusive": 156839,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 256,
+      "y": 106918,
+      "x_start": 156837,
+      "x_end_exclusive": 156838,
+      "source_features": [
+        52576,
+        52593
+      ]
+    },
+    {
+      "ordinal": 257,
+      "y": 106921,
+      "x_start": 156833,
+      "x_end_exclusive": 156834,
+      "source_features": [
+        52576,
+        52593
+      ]
+    }
+  ]
+}
