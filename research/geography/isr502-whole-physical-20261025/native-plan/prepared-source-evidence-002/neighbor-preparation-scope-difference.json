@@ -1,0 +1,948 @@
+{
+  "kind": "metadata-scope-difference-no-native-observation",
+  "original_request_keys": 502,
+  "original_physical_classes": {
+    "land": 485,
+    "inland-water": 17
+  },
+  "prior_negative_families": [
+    "gb:EGY:ADM1",
+    "gb:ISR:ADM1",
+    "gb:JOR:ADM1",
+    "gb:LBN:ADM1",
+    "gb:PSE:ADM1"
+  ],
+  "revised_negative_families": [
+    "gb:EGY:ADM1",
+    "gb:EGY:ADM2",
+    "gb:ISR:ADM1",
+    "gb:JOR:ADM1",
+    "gb:JOR:ADM2",
+    "gb:LBN:ADM1",
+    "gb:LBN:ADM2",
+    "gb:PSE:ADM1",
+    "gb:PSE:ADM2",
+    "gb:SYR:ADM1",
+    "gb:SYR:ADM2"
+  ],
+  "target_records": [
+    {
+      "target": "gb:ISR:ADM2:584046B9730835639199",
+      "owner": 24183,
+      "prior_negative_pairs": 10,
+      "complete_scope_negative_pairs": 32,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 268,
+          "geometry_sha256": "3521d383d6422f977d5e42b2692999338f1ebf12f39e6c0a00b3bdf19867ee7b",
+          "negative_ordinal": 4,
+          "source_family": "gb:EGY:ADM2",
+          "source_id": "gb:EGY:ADM2:37247803B24800496222401",
+          "original_properties": {
+            "shapeName": "Qasima",
+            "shapeISO": "",
+            "shapeID": "37247803B24800496222401",
+            "shapeGroup": "EGY",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 253,
+          "geometry_sha256": "d0018ad2b87aaafa09d3de20481ff369fe21dfc998130a645f432f85e59d532c",
+          "negative_ordinal": 3,
+          "source_family": "gb:EGY:ADM2",
+          "source_id": "gb:EGY:ADM2:37247803B27009685632556",
+          "original_properties": {
+            "shapeName": "Nuweiba",
+            "shapeISO": "",
+            "shapeID": "37247803B27009685632556",
+            "shapeGroup": "EGY",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 280,
+          "geometry_sha256": "10aa652143b62b045ce350b09ad3018dadb3ef5c50d6ecab07869ee489282550",
+          "negative_ordinal": 5,
+          "source_family": "gb:EGY:ADM2",
+          "source_id": "gb:EGY:ADM2:37247803B35204215208430",
+          "original_properties": {
+            "shapeName": "Rafah",
+            "shapeISO": "",
+            "shapeID": "37247803B35204215208430",
+            "shapeGroup": "EGY",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 240,
+          "geometry_sha256": "88b68085d9ddd4b35614329175e83e77a9f3a9416fa27dec1af895b2ee2d25e8",
+          "negative_ordinal": 2,
+          "source_family": "gb:EGY:ADM2",
+          "source_id": "gb:EGY:ADM2:37247803B50825531526089",
+          "original_properties": {
+            "shapeName": "Nakhl",
+            "shapeISO": "",
+            "shapeID": "37247803B50825531526089",
+            "shapeGroup": "EGY",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 325,
+          "geometry_sha256": "2bc22e49d4303ec991440ed778cd241527c67ebf283035cbff3f50361041c7e5",
+          "negative_ordinal": 6,
+          "source_family": "gb:EGY:ADM2",
+          "source_id": "gb:EGY:ADM2:37247803B8228928204650",
+          "original_properties": {
+            "shapeName": "Taba",
+            "shapeISO": "",
+            "shapeID": "37247803B8228928204650",
+            "shapeGroup": "EGY",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 46,
+          "geometry_sha256": "66fd7d69202069c4bbe562ec4571999c9ce0f0fbd8c26fd66f15393290b812b5",
+          "negative_ordinal": 22,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B15546982005952",
+          "original_properties": {
+            "shapeName": "Al-Tafila",
+            "shapeISO": "",
+            "shapeID": "86222999B15546982005952",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 45,
+          "geometry_sha256": "85614d33a37cb848f6bf1f9075de6ddb4dff50d8034d74eb235e3eed402bd5aa",
+          "negative_ordinal": 21,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B15878731234050",
+          "original_properties": {
+            "shapeName": "Al-Aqaba",
+            "shapeISO": "",
+            "shapeID": "86222999B15878731234050",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 37,
+          "geometry_sha256": "063502cf0dcd11a052c8e24bb37de55d4637cb15a148f44ea15a7b79ec5206cf",
+          "negative_ordinal": 17,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B32399668533563",
+          "original_properties": {
+            "shapeName": "Ayy",
+            "shapeISO": "",
+            "shapeID": "86222999B32399668533563",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 41,
+          "geometry_sha256": "d7a3a83c402d74c1cff094d07d237ceacff44c91fdeacfbd396de7feb4931601",
+          "negative_ordinal": 18,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B39141668555739",
+          "original_properties": {
+            "shapeName": "Ayi",
+            "shapeISO": "",
+            "shapeID": "86222999B39141668555739",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 32,
+          "geometry_sha256": "4179603f7dda7f9d9f3f2a2e7dade2977ba65b820a0d64b7932dfe8897d6bcad",
+          "negative_ordinal": 15,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B4308266651580",
+          "original_properties": {
+            "shapeName": "Al-Quwayra",
+            "shapeISO": "",
+            "shapeID": "86222999B4308266651580",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 31,
+          "geometry_sha256": "0124ce52b91d7954d2ecda61a7a24ec84daa95941a3a05b413b2aec52954d49c",
+          "negative_ordinal": 14,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B52255495566406",
+          "original_properties": {
+            "shapeName": "Wadi Araba",
+            "shapeISO": "",
+            "shapeID": "86222999B52255495566406",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 36,
+          "geometry_sha256": "2535b6559b149dda11f116c61adb0729506d319c766405fb210139a36d0d652d",
+          "negative_ordinal": 16,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B56224922120093",
+          "original_properties": {
+            "shapeName": "Al-Mazra'a",
+            "shapeISO": "",
+            "shapeID": "86222999B56224922120093",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 42,
+          "geometry_sha256": "e895726bda79a404c71c619487ada868c510978a07c483ada7f92a106beaa270",
+          "negative_ordinal": 19,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B60982713729185",
+          "original_properties": {
+            "shapeName": "Wadi Musa",
+            "shapeISO": "",
+            "shapeID": "86222999B60982713729185",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "321341385c9b33a8160c8ff02f5411e75d1ec45818f46890dcc4c883a4c8b5d8",
+          "negative_ordinal": 13,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B63092752330130",
+          "original_properties": {
+            "shapeName": "Madaba",
+            "shapeISO": "",
+            "shapeID": "86222999B63092752330130",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 44,
+          "geometry_sha256": "84496ef227b72d59aefd5fbef3632f6d9d91430a9a26bd62dbffad26ce21beee",
+          "negative_ordinal": 20,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B65876825797942",
+          "original_properties": {
+            "shapeName": "Ash-Shibek",
+            "shapeISO": "",
+            "shapeID": "86222999B65876825797942",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 1,
+          "geometry_sha256": "496e11c99f9bd4ec82550b0ce577243554b139742852bf04427e070ee8ec7d46",
+          "negative_ordinal": 25,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B11532502248212",
+          "original_properties": {
+            "shapeISO": "PS-RFH",
+            "shapeName": "Rafah",
+            "shapeID": "87354302B11532502248212",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 6,
+          "geometry_sha256": "f2f89bf007ef9a02f710aea8889972d1a0ac779c4cc433327cf606a743f313f2",
+          "negative_ordinal": 28,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+          "original_properties": {
+            "shapeISO": "PS-KYS",
+            "shapeName": "Khan Yunis",
+            "shapeID": "87354302B21422506618890",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 9,
+          "geometry_sha256": "095a3a35d1c0c49278807496715b4cf8cb7a3cc92deb649c7ce45faf251f559f",
+          "negative_ordinal": 29,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B22339434669936",
+          "original_properties": {
+            "shapeISO": "PS-DEB",
+            "shapeName": "Deir Al Balah",
+            "shapeID": "87354302B22339434669936",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 15,
+          "geometry_sha256": "74f2ca4e5c985f6c12245c6e440f883c2d177ba69bac2483745367a6c194822d",
+          "negative_ordinal": 31,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+          "original_properties": {
+            "shapeISO": "PS-BTH",
+            "shapeName": "Bethlehem",
+            "shapeID": "87354302B24436251599031",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 2,
+          "geometry_sha256": "ccc48f39f1edb383c118c1f66aa4dff143016e1fa5fd72d351f110b56b92a72d",
+          "negative_ordinal": 26,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B69236118899353",
+          "original_properties": {
+            "shapeISO": "PS-NGZ",
+            "shapeName": "North Gaza",
+            "shapeID": "87354302B69236118899353",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 11,
+          "geometry_sha256": "7ea835c9d2691b7414beb90e0ad53a40bab41acbaaf9b71ab08676663ab51989",
+          "negative_ordinal": 30,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+          "original_properties": {
+            "shapeISO": "PS-HBN",
+            "shapeName": "Hebron",
+            "shapeID": "87354302B80979559279056",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "17277a7d54a72d9df7532f0a3fa0e8fbdf5f0c63d30e77744b75738d654b9b20",
+          "negative_ordinal": 27,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B92317438543703",
+          "original_properties": {
+            "shapeISO": "PS-GZA*",
+            "shapeName": "Gaza",
+            "shapeID": "87354302B92317438543703",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B86518607604876",
+      "owner": 24182,
+      "prior_negative_pairs": 4,
+      "complete_scope_negative_pairs": 8,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 4,
+          "geometry_sha256": "ce5cf19fe12050a3ad025e8324cd8f4e41642167a32fe060ec36699f0b02976d",
+          "negative_ordinal": 4,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B18092601143781",
+          "original_properties": {
+            "shapeISO": "PS-JEM",
+            "shapeName": "Jerusalem",
+            "shapeID": "87354302B18092601143781",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 15,
+          "geometry_sha256": "74f2ca4e5c985f6c12245c6e440f883c2d177ba69bac2483745367a6c194822d",
+          "negative_ordinal": 7,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+          "original_properties": {
+            "shapeISO": "PS-BTH",
+            "shapeName": "Bethlehem",
+            "shapeID": "87354302B24436251599031",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 12,
+          "geometry_sha256": "1563129ecf7f575d048a9ec97a5116b6dfed382ff8fb9b27dc06e3c9f4b4d763",
+          "negative_ordinal": 6,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+          "original_properties": {
+            "shapeISO": "PS-RBH*",
+            "shapeName": "Ramallah & Al Bireh",
+            "shapeID": "87354302B37341560226836",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 11,
+          "geometry_sha256": "7ea835c9d2691b7414beb90e0ad53a40bab41acbaaf9b71ab08676663ab51989",
+          "negative_ordinal": 5,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+          "original_properties": {
+            "shapeISO": "PS-HBN",
+            "shapeName": "Hebron",
+            "shapeID": "87354302B80979559279056",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B11408100439208",
+      "owner": 24169,
+      "prior_negative_pairs": 5,
+      "complete_scope_negative_pairs": 9,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 12,
+          "geometry_sha256": "1563129ecf7f575d048a9ec97a5116b6dfed382ff8fb9b27dc06e3c9f4b4d763",
+          "negative_ordinal": 8,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+          "original_properties": {
+            "shapeISO": "PS-RBH*",
+            "shapeName": "Ramallah & Al Bireh",
+            "shapeID": "87354302B37341560226836",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 2,
+          "geometry_sha256": "ccc48f39f1edb383c118c1f66aa4dff143016e1fa5fd72d351f110b56b92a72d",
+          "negative_ordinal": 5,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B69236118899353",
+          "original_properties": {
+            "shapeISO": "PS-NGZ",
+            "shapeName": "North Gaza",
+            "shapeID": "87354302B69236118899353",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 11,
+          "geometry_sha256": "7ea835c9d2691b7414beb90e0ad53a40bab41acbaaf9b71ab08676663ab51989",
+          "negative_ordinal": 7,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+          "original_properties": {
+            "shapeISO": "PS-HBN",
+            "shapeName": "Hebron",
+            "shapeID": "87354302B80979559279056",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "17277a7d54a72d9df7532f0a3fa0e8fbdf5f0c63d30e77744b75738d654b9b20",
+          "negative_ordinal": 6,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B92317438543703",
+          "original_properties": {
+            "shapeISO": "PS-GZA*",
+            "shapeName": "Gaza",
+            "shapeID": "87354302B92317438543703",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B34315111222202",
+      "owner": 24173,
+      "prior_negative_pairs": 2,
+      "complete_scope_negative_pairs": 2,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B13386645158990",
+      "owner": 24170,
+      "prior_negative_pairs": 3,
+      "complete_scope_negative_pairs": 10,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 2,
+          "geometry_sha256": "dfe1fe7d5b153ba3e1f5bb1a6c7b65f3572f3dc85740b767cba013f1958888c7",
+          "negative_ordinal": 5,
+          "source_family": "gb:LBN:ADM2",
+          "source_id": "gb:LBN:ADM2:6925839B57733890920365",
+          "original_properties": {
+            "shapeName": "Marjaayoun",
+            "shapeISO": "",
+            "shapeID": "6925839B57733890920365",
+            "shapeGroup": "LBN",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 0,
+          "geometry_sha256": "463f98a5c86d349bd95df6d44b03d4b7026a2b7e643c248b76db26a6296c060d",
+          "negative_ordinal": 3,
+          "source_family": "gb:LBN:ADM2",
+          "source_id": "gb:LBN:ADM2:6925839B74640193916916",
+          "original_properties": {
+            "shapeName": "Bent Jbail",
+            "shapeISO": "",
+            "shapeID": "6925839B74640193916916",
+            "shapeGroup": "LBN",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 1,
+          "geometry_sha256": "103e7cd6c0eb43c97d14dcab0f507d7f075f3c873dab1ee4d785b1a9d24deb44",
+          "negative_ordinal": 4,
+          "source_family": "gb:LBN:ADM2",
+          "source_id": "gb:LBN:ADM2:6925839B77249045158285",
+          "original_properties": {
+            "shapeName": "Sour",
+            "shapeISO": "",
+            "shapeID": "6925839B77249045158285",
+            "shapeGroup": "LBN",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "c3f7d81cce8e4c272b3885992c82e27a0c1c5b29829916b3eca5509e12f98231",
+          "negative_ordinal": 6,
+          "source_family": "gb:LBN:ADM2",
+          "source_id": "gb:LBN:ADM2:6925839B87816606095601",
+          "original_properties": {
+            "shapeName": "Hasbaya",
+            "shapeISO": "",
+            "shapeID": "6925839B87816606095601",
+            "shapeGroup": "LBN",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 13,
+          "geometry_sha256": "c9619c59590e775f01532636c060be58d8736ce66c2aafa3f9c40b097b79a0c9",
+          "negative_ordinal": 7,
+          "source_family": "gb:SYR:ADM1",
+          "source_id": "gb:SYR:ADM1:8384693B30882548325909",
+          "original_properties": {
+            "shapeName": "Quneitra",
+            "shapeISO": "SYR-QU",
+            "shapeID": "8384693B30882548325909",
+            "shapeGroup": "SYR",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 59,
+          "geometry_sha256": "3171b5386e712e3a7b8c7cae69a4d86e33c399b5823d3c8c9da9aa9b992e3090",
+          "negative_ordinal": 8,
+          "source_family": "gb:SYR:ADM2",
+          "source_id": "gb:SYR:ADM2:27442178B38649296158741",
+          "original_properties": {
+            "shapeName": "Quneitra",
+            "shapeISO": "",
+            "shapeID": "27442178B38649296158741",
+            "shapeGroup": "SYR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 60,
+          "geometry_sha256": "59f8f237c6e3bd07324eb08ea0bea10a0ffedc8752c2d4d393466a7e8ef68feb",
+          "negative_ordinal": 9,
+          "source_family": "gb:SYR:ADM2",
+          "source_id": "gb:SYR:ADM2:27442178B98358455064560",
+          "original_properties": {
+            "shapeName": "Al Fiq",
+            "shapeISO": "",
+            "shapeID": "27442178B98358455064560",
+            "shapeGroup": "SYR",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B54386898087809",
+      "owner": 24175,
+      "prior_negative_pairs": 3,
+      "complete_scope_negative_pairs": 7,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "8395d09e6e2f5dfe1452a477cb98c668a37400026de76d3a0bfb33318a7143fe",
+          "negative_ordinal": 3,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B17069565895340",
+          "original_properties": {
+            "shapeISO": "PS-TKM",
+            "shapeName": "Tulkarm",
+            "shapeID": "87354302B17069565895340",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 10,
+          "geometry_sha256": "18ff0efeabfb05ee736d89ee4f988595e0ae5c5275869cf3d8107f8967167a6f",
+          "negative_ordinal": 5,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B3498749981476",
+          "original_properties": {
+            "shapeISO": "PS-SLT",
+            "shapeName": "Salfit",
+            "shapeID": "87354302B3498749981476",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 12,
+          "geometry_sha256": "1563129ecf7f575d048a9ec97a5116b6dfed382ff8fb9b27dc06e3c9f4b4d763",
+          "negative_ordinal": 6,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+          "original_properties": {
+            "shapeISO": "PS-RBH*",
+            "shapeName": "Ramallah & Al Bireh",
+            "shapeID": "87354302B37341560226836",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 7,
+          "geometry_sha256": "b0b09613bc9ac63b8bbde35f8be21ef87295622679af97eda6c49dfde4f8a6a8",
+          "negative_ordinal": 4,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B40414204592822",
+          "original_properties": {
+            "shapeISO": "PS-QQA",
+            "shapeName": "Qalqiliya",
+            "shapeID": "87354302B40414204592822",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B61571705909900",
+      "owner": 24177,
+      "prior_negative_pairs": 5,
+      "complete_scope_negative_pairs": 7,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "8395d09e6e2f5dfe1452a477cb98c668a37400026de76d3a0bfb33318a7143fe",
+          "negative_ordinal": 5,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B17069565895340",
+          "original_properties": {
+            "shapeISO": "PS-TKM",
+            "shapeName": "Tulkarm",
+            "shapeID": "87354302B17069565895340",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 7,
+          "geometry_sha256": "b0b09613bc9ac63b8bbde35f8be21ef87295622679af97eda6c49dfde4f8a6a8",
+          "negative_ordinal": 6,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B40414204592822",
+          "original_properties": {
+            "shapeISO": "PS-QQA",
+            "shapeName": "Qalqiliya",
+            "shapeID": "87354302B40414204592822",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B37321511847561",
+      "owner": 24174,
+      "prior_negative_pairs": 2,
+      "complete_scope_negative_pairs": 2,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B72217003232480",
+      "owner": 24178,
+      "prior_negative_pairs": 4,
+      "complete_scope_negative_pairs": 6,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "8395d09e6e2f5dfe1452a477cb98c668a37400026de76d3a0bfb33318a7143fe",
+          "negative_ordinal": 4,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B17069565895340",
+          "original_properties": {
+            "shapeISO": "PS-TKM",
+            "shapeName": "Tulkarm",
+            "shapeID": "87354302B17069565895340",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 8,
+          "geometry_sha256": "07652a289d4c025d4967657fe658420ea6f5ba332dba8d1352a6df28533fdac2",
+          "negative_ordinal": 5,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+          "original_properties": {
+            "shapeISO": "PS_JEN",
+            "shapeName": "Jenin",
+            "shapeID": "87354302B37411468451868",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83749751332199",
+      "owner": 24181,
+      "prior_negative_pairs": 4,
+      "complete_scope_negative_pairs": 6,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 0,
+          "geometry_sha256": "463f98a5c86d349bd95df6d44b03d4b7026a2b7e643c248b76db26a6296c060d",
+          "negative_ordinal": 4,
+          "source_family": "gb:LBN:ADM2",
+          "source_id": "gb:LBN:ADM2:6925839B74640193916916",
+          "original_properties": {
+            "shapeName": "Bent Jbail",
+            "shapeISO": "",
+            "shapeID": "6925839B74640193916916",
+            "shapeGroup": "LBN",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 1,
+          "geometry_sha256": "103e7cd6c0eb43c97d14dcab0f507d7f075f3c873dab1ee4d785b1a9d24deb44",
+          "negative_ordinal": 5,
+          "source_family": "gb:LBN:ADM2",
+          "source_id": "gb:LBN:ADM2:6925839B77249045158285",
+          "original_properties": {
+            "shapeName": "Sour",
+            "shapeISO": "",
+            "shapeID": "6925839B77249045158285",
+            "shapeGroup": "LBN",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83064859640631",
+      "owner": 24180,
+      "prior_negative_pairs": 5,
+      "complete_scope_negative_pairs": 9,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 21,
+          "geometry_sha256": "314dc27fef7edc6b35ad6e3ef93a892f7dad0081be55cc9c48f03d3330c803d0",
+          "negative_ordinal": 4,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B7432817006575",
+          "original_properties": {
+            "shapeName": "Tayybeh",
+            "shapeISO": "",
+            "shapeID": "86222999B7432817006575",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "8395d09e6e2f5dfe1452a477cb98c668a37400026de76d3a0bfb33318a7143fe",
+          "negative_ordinal": 6,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B17069565895340",
+          "original_properties": {
+            "shapeISO": "PS-TKM",
+            "shapeName": "Tulkarm",
+            "shapeID": "87354302B17069565895340",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 8,
+          "geometry_sha256": "07652a289d4c025d4967657fe658420ea6f5ba332dba8d1352a6df28533fdac2",
+          "negative_ordinal": 7,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+          "original_properties": {
+            "shapeISO": "PS_JEN",
+            "shapeName": "Jenin",
+            "shapeID": "87354302B37411468451868",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 13,
+          "geometry_sha256": "5f66bf13ea0375a4f406cfa81d9478e8770a356ce2ef047d7242ac97707701db",
+          "negative_ordinal": 8,
+          "source_family": "gb:PSE:ADM2",
+          "source_id": "gb:PSE:ADM2:87354302B78640432651808",
+          "original_properties": {
+            "shapeISO": "PS-TBS",
+            "shapeName": "Tubas",
+            "shapeID": "87354302B78640432651808",
+            "shapeGroup": "PSE",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B15624900320210",
+      "owner": 24171,
+      "prior_negative_pairs": 2,
+      "complete_scope_negative_pairs": 7,
+      "all_prior_negative_identities_preserved": true,
+      "newly_included_original_operands": [
+        {
+          "feature_ordinal": 51,
+          "geometry_sha256": "03cb14426ceab749b86a41aad4d50c1e08f4d1263ff30f11cfacb7fa8e94518d",
+          "negative_ordinal": 3,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B45500739099206",
+          "original_properties": {
+            "shapeName": "Irbid",
+            "shapeISO": "",
+            "shapeID": "86222999B45500739099206",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 21,
+          "geometry_sha256": "314dc27fef7edc6b35ad6e3ef93a892f7dad0081be55cc9c48f03d3330c803d0",
+          "negative_ordinal": 2,
+          "source_family": "gb:JOR:ADM2",
+          "source_id": "gb:JOR:ADM2:86222999B7432817006575",
+          "original_properties": {
+            "shapeName": "Tayybeh",
+            "shapeISO": "",
+            "shapeID": "86222999B7432817006575",
+            "shapeGroup": "JOR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 13,
+          "geometry_sha256": "c9619c59590e775f01532636c060be58d8736ce66c2aafa3f9c40b097b79a0c9",
+          "negative_ordinal": 4,
+          "source_family": "gb:SYR:ADM1",
+          "source_id": "gb:SYR:ADM1:8384693B30882548325909",
+          "original_properties": {
+            "shapeName": "Quneitra",
+            "shapeISO": "SYR-QU",
+            "shapeID": "8384693B30882548325909",
+            "shapeGroup": "SYR",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 59,
+          "geometry_sha256": "3171b5386e712e3a7b8c7cae69a4d86e33c399b5823d3c8c9da9aa9b992e3090",
+          "negative_ordinal": 5,
+          "source_family": "gb:SYR:ADM2",
+          "source_id": "gb:SYR:ADM2:27442178B38649296158741",
+          "original_properties": {
+            "shapeName": "Quneitra",
+            "shapeISO": "",
+            "shapeID": "27442178B38649296158741",
+            "shapeGroup": "SYR",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 60,
+          "geometry_sha256": "59f8f237c6e3bd07324eb08ea0bea10a0ffedc8752c2d4d393466a7e8ef68feb",
+          "negative_ordinal": 6,
+          "source_family": "gb:SYR:ADM2",
+          "source_id": "gb:SYR:ADM2:27442178B98358455064560",
+          "original_properties": {
+            "shapeName": "Al Fiq",
+            "shapeISO": "",
+            "shapeID": "27442178B98358455064560",
+            "shapeGroup": "SYR",
+            "shapeType": "ADM2"
+          }
+        }
+      ],
+      "negative_ordinals_rebound_by_stock_emission": true
+    }
+  ],
+  "total_previous_pairs": 49,
+  "total_revised_pairs": 105,
+  "total_new_pairs": 56,
+  "new_pairs_by_family": {
+    "gb:EGY:ADM2": 5,
+    "gb:JOR:ADM2": 13,
+    "gb:PSE:ADM2": 26,
+    "gb:LBN:ADM2": 6,
+    "gb:SYR:ADM1": 2,
+    "gb:SYR:ADM2": 4
+  },
+  "limits": [
+    "These are exact original-feature source metadata operands selected by supported whole-bounds overlap, not measured native contacts.",
+    "New source provenance and preserved old geometry do not grant positive or unresolved acceptance.",
+    "Any native diagnostic must use the revised emitted negative ordinals and immutable inputs; old negative ordinals are not transferred."
+  ]
+}

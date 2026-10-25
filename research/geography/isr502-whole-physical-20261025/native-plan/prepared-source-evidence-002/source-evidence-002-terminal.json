@@ -1,0 +1,25 @@
+{
+  "code_commit": "d7219b458f25a4a582d245bf6654d0564cd17777",
+  "configuration": {
+    "commit": "d7219b458f25a4a582d245bf6654d0564cd17777",
+    "path": "research/geography/isr502-whole-physical-20261025/native-plan/neighbor-complete-source-evidence-preparation.json",
+    "git_blob_oid": "8bd043b7135c4af5c73e0aedf443e1d56d2e2bdb",
+    "mode": "100644",
+    "bytes": 207325,
+    "sha256": "6445a37a4a990ce3bc5a1f57c916be0717ae700c5a5f3deff20c5ed543f19de6"
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "source-evidence",
+    "research/geography/isr502-whole-physical-20261025/native-plan/neighbor-complete-source-evidence-preparation.json",
+    ".cache/delivery-handoff/isr502-source-evidence-002"
+  ],
+  "destination": ".cache/delivery-handoff/isr502-source-evidence-002",
+  "started_utc": "2026-10-25T01:14:16.011748+00:00",
+  "phase": "source-evidence metadata preparation",
+  "native_diagnostic_requested": false,
+  "exit_code": 0,
+  "ended_utc": "2026-10-25T01:16:50.989417+00:00",
+  "destination_exists": true
+}
