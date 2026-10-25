@@ -1,0 +1,410 @@
+{
+  "kind": "bounded-original-ETH-license-provenance-reading",
+  "worker_thread_id": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+  "date": "2026-10-25",
+  "families": [
+    {
+      "source_id": "gb:ETH:ADM1",
+      "archive": {
+        "local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn-eth-license-provenance/ETH_ADM1-9469f09-source.zip",
+        "bytes": 349880,
+        "sha256": "2c6f3e29af991644ca2cb23e11cd4153780eeaa50f4f0553998c56e383b178e6",
+        "descriptor_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/ETH_ADM1.zip?ref=9469f09",
+        "source_revision": "9469f09",
+        "path": "sourceData/gbOpen/ETH_ADM1.zip",
+        "descriptor_match": true
+      },
+      "members": [
+        {
+          "name": "ETH_ADM1.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "name": "ETH_ADM1.dbf",
+          "bytes": 691,
+          "sha256": "cef3db6b374b7459dddbd9f7b02a27ab4d00bbacf6624ac42a382f42b216cc17"
+        },
+        {
+          "name": "ETH_ADM1.prj",
+          "bytes": 145,
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "ETH_ADM1.sbn",
+          "bytes": 244,
+          "sha256": "e73465f6be43a066a6a42df2f0a3be2bbad37f9f75cbb89319c48e39bdeb2554"
+        },
+        {
+          "name": "ETH_ADM1.sbx",
+          "bytes": 132,
+          "sha256": "319a5abdec3a8ac84389339933b5566ccc958c809b4122abda6e2ccd40e2f2ca"
+        },
+        {
+          "name": "ETH_ADM1.shp",
+          "bytes": 203472,
+          "sha256": "f1e1e195ab0e97045ca8ba71a210c9422e9e273e2d90de218ee1433adf969ddb"
+        },
+        {
+          "name": "ETH_ADM1.shp.xml",
+          "bytes": 40585,
+          "sha256": "1d1729f3a3b0179e54d49d00c6b0ca0e4231934136fb8dc8d3b5ce7182714161"
+        },
+        {
+          "name": "ETH_ADM1.shx",
+          "bytes": 188,
+          "sha256": "c536b3dcc55e5289c58d2bcb7a1c9ef7d16136f4a3a227ae9124e0dd1d350f76"
+        },
+        {
+          "name": "license.PNG",
+          "bytes": 210226,
+          "sha256": "005bbda00023d327d3026cd635e2c89d18641c1f74686b3fe639525c9a47b275"
+        },
+        {
+          "name": "meta.txt",
+          "bytes": 478,
+          "sha256": "1a83c7b56b6bd12ee0093bfd57bd46658451cc84b2e597631435934f4d4e1a4e"
+        }
+      ],
+      "meta_txt_literal": "Boundary Representative of Year: 2016.0\nISO-3166-1 (Alpha-3): ETH\nBoundary Type: ADM1\nCanonical Boundary Type Name: kilil and astedader\nSource 1: Open Africa\nSource 2: Code for Ethiopia\nRelease Type: gbOpen\nLicense: Creative Commons Attribution 4.0 (CC BY 4.0)\nLicense Notes: http://opendefinition.org/licenses/cc-by/\nLicense Source: https://africaopendata.org/dataset/ethiopia-shapefiles\nLink to Source Data: https://africaopendata.org/dataset/ethiopia-shapefiles\nOther Notes: ",
+      "license_member_names": [
+        "license.PNG"
+      ],
+      "actual_dbf_record_count": 11,
+      "xml_rights_keyword_matches": [],
+      "xml_search_limit": "Leaf text inspected for license/copyright/attribution/ODbL/redistribution/OpenAfrica/sourceURL; no matching rights clause. This is not proof of all possible external rights.",
+      "xml_process_summary": {
+        "retained_process_count": 127,
+        "shared_early_lineage": "Eth_Woreda_2013 and prior OCHA administrative editing history",
+        "name_level_assignment_date": "20171004",
+        "name_field_basis": "REGIONNAME",
+        "additional_ADM1_project_date": "20180124",
+        "license_reassignment_documented_in_inspected_XML": false
+      },
+      "consumed_metadata_literal": {
+        "boundaryID": "ETH-ADM1-75662566",
+        "boundaryName": "Ethiopia",
+        "boundaryISO": "ETH",
+        "boundaryYearRepresented": "2016",
+        "boundaryType": "ADM1",
+        "boundaryCanonical": "kilil and astedader",
+        "boundarySource": "Open Africa, Code for Ethiopia",
+        "boundaryLicense": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+        "licenseDetail": "opendefinition.org/licenses/cc-by/",
+        "licenseSource": "africaopendata.org/dataset/ethiopia-shapefiles",
+        "boundarySourceURL": "africaopendata.org/dataset/ethiopia-shapefiles",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Eastern Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "11",
+        "meanVertices": "1100.0",
+        "minVertices": "52",
+        "maxVertices": "2969",
+        "meanPerimeterLengthKM": "2088.402779738975",
+        "minPerimeterLengthKM": "85.00808749170731",
+        "maxPerimeterLengthKM": "6197.341872110938",
+        "meanAreaSqKM": "102396.30657123732",
+        "minAreaSqKM": "370.7497569415977",
+        "maxAreaSqKM": "322993.6282924947",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1_simplified.geojson",
+        "sha256": "43adf22c2dfbb8b7b6f61b340588718cc1037c9e5810f2e1995babd12ff81094"
+      },
+      "archive_to_consumed_limit": "Exact same repository revision sourceData archive; does not assert shapefile is unchanged simplified consumed geometry."
+    },
+    {
+      "source_id": "gb:ETH:ADM2",
+      "archive": {
+        "local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn-eth-license-provenance/ETH_ADM2-9469f09-source.zip",
+        "bytes": 402912,
+        "sha256": "068dbf1674006bc43000f7078c08bba7e2ec0e9e5aa4e9efd69dc556c04c93b9",
+        "descriptor_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/ETH_ADM2.zip?ref=9469f09",
+        "source_revision": "9469f09",
+        "path": "sourceData/gbOpen/ETH_ADM2.zip",
+        "descriptor_match": true
+      },
+      "members": [
+        {
+          "name": "ETH_ADM2.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "name": "ETH_ADM2.dbf",
+          "bytes": 3132,
+          "sha256": "c3d59d4a0c23d365368c11b763fa50e8ba86729d96ec95fbe26248acac2c5d13"
+        },
+        {
+          "name": "ETH_ADM2.prj",
+          "bytes": 145,
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "ETH_ADM2.sbn",
+          "bytes": 908,
+          "sha256": "48b5027f1ea14d75be2a8edd5712ec93aa5b3386be3139ddf816e32470fbfa31"
+        },
+        {
+          "name": "ETH_ADM2.sbx",
+          "bytes": 196,
+          "sha256": "f9dbe45f5f4ce36142898fe373e2f2e453ab2a853f8dc49cfb03dc2803354e95"
+        },
+        {
+          "name": "ETH_ADM2.shp",
+          "bytes": 463612,
+          "sha256": "491689d594cab49a641e972bb67031b12b3ac0b1d1b9e5a2b648c596248e043f"
+        },
+        {
+          "name": "ETH_ADM2.shp.xml",
+          "bytes": 39423,
+          "sha256": "1958280681c286cf7113ac877ec00549a0dde868279b14c59d06746709a4fb28"
+        },
+        {
+          "name": "ETH_ADM2.shx",
+          "bytes": 692,
+          "sha256": "dc73baaf1b587e7ca495ce47e55ab9baaa2d58db07fd6e108a01e100e2eaa1db"
+        },
+        {
+          "name": "meta.txt",
+          "bytes": 458,
+          "sha256": "f61d71eb0c618ae08525145eeb4619df072860954204fbeee58b69c29c1e111f"
+        }
+      ],
+      "meta_txt_literal": "Boundary Representative of Year: 2016.0\nISO-3166-1 (Alpha-3): ETH\nBoundary Type: ADM2\nCanonical Boundary Type Name: \nSource 1: Open Africa\nSource 2: Code for Ethiopia\nRelease Type: gbOpen\nLicense: Open Data Commons Open Database License 1.0\nLicense Notes: http://opendefinition.org/licenses/cc-by/\nLicense Source: https://africaopendata.org/dataset/ethiopia-shapefiles\nLink to Source Data: https://africaopendata.org/dataset/ethiopia-shapefiles\nOther Notes: ",
+      "license_member_names": [],
+      "actual_dbf_record_count": 74,
+      "xml_rights_keyword_matches": [],
+      "xml_search_limit": "Leaf text inspected for license/copyright/attribution/ODbL/redistribution/OpenAfrica/sourceURL; no matching rights clause. This is not proof of all possible external rights.",
+      "xml_process_summary": {
+        "retained_process_count": 126,
+        "shared_early_lineage": "Eth_Woreda_2013 and prior OCHA administrative editing history",
+        "name_level_assignment_date": "20171004",
+        "name_field_basis": "ZONENAME",
+        "additional_ADM1_project_date": null,
+        "license_reassignment_documented_in_inspected_XML": false
+      },
+      "consumed_metadata_literal": {
+        "boundaryID": "ETH-ADM2-57463737",
+        "boundaryName": "Ethiopia",
+        "boundaryISO": "ETH",
+        "boundaryYearRepresented": "2016",
+        "boundaryType": "ADM2",
+        "boundaryCanonical": "Unknown",
+        "boundarySource": "Open Africa, Code for Ethiopia",
+        "boundaryLicense": "Open Data Commons Open Database License 1.0",
+        "licenseDetail": "opendefinition.org/licenses/cc-by/",
+        "licenseSource": "africaopendata.org/dataset/ethiopia-shapefiles",
+        "boundarySourceURL": "africaopendata.org/dataset/ethiopia-shapefiles",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Eastern Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "74",
+        "meanVertices": "387.0",
+        "minVertices": "52",
+        "maxVertices": "1622",
+        "meanPerimeterLengthKM": "649.3280922129256",
+        "minPerimeterLengthKM": "85.00808749170731",
+        "maxPerimeterLengthKM": "1546.8099944985966",
+        "meanAreaSqKM": "15221.072598427156",
+        "minAreaSqKM": "309.5338481495317",
+        "maxAreaSqKM": "62044.02712980186",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM2/geoBoundaries-ETH-ADM2-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM2/geoBoundaries-ETH-ADM2.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM2/geoBoundaries-ETH-ADM2.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM2/geoBoundaries-ETH-ADM2-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM2/geoBoundaries-ETH-ADM2_simplified.geojson",
+        "sha256": "ff3ba99f2f83e6e9891f5694720b4d12f8b051e27e977d553f18408b596c72ef"
+      },
+      "archive_to_consumed_limit": "Exact same repository revision sourceData archive; does not assert shapefile is unchanged simplified consumed geometry."
+    },
+    {
+      "source_id": "gb:ETH:ADM3",
+      "archive": {
+        "local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn-eth-license-provenance/ETH_ADM3-9469f09-source.zip",
+        "bytes": 1028628,
+        "sha256": "cbfea4415a67ea34c7df0bf437f28a1d435d80d449642460fd947ae2b15950e3",
+        "descriptor_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/ETH_ADM3.zip?ref=9469f09",
+        "source_revision": "9469f09",
+        "path": "sourceData/gbOpen/ETH_ADM3.zip",
+        "descriptor_match": true
+      },
+      "members": [
+        {
+          "name": "ETH_ADM3.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "name": "ETH_ADM3.dbf",
+          "bytes": 28388,
+          "sha256": "8ec6ca02be7dde292ac334aef4deebf2ae594f30e2d06405e1d812446589bef1"
+        },
+        {
+          "name": "ETH_ADM3.prj",
+          "bytes": 145,
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "ETH_ADM3.sbn",
+          "bytes": 7100,
+          "sha256": "188e1c2476b42dd9c96832a26f3ab9462959dacafce4fad0dbe4188f918fb3eb"
+        },
+        {
+          "name": "ETH_ADM3.sbx",
+          "bytes": 604,
+          "sha256": "5ba08d37b4e2fe1fa97e5fecb52ed5f2a3a5005a2d94d81276bc5692780c5db6"
+        },
+        {
+          "name": "ETH_ADM3.shp",
+          "bytes": 1340392,
+          "sha256": "ce2dacb944c0f08ffc95eb8d7f1eabade9ff36f6880a2c8540251c07ba707119"
+        },
+        {
+          "name": "ETH_ADM3.shp.xml",
+          "bytes": 42434,
+          "sha256": "726974424cbff9c3f5a8232b8f9e68d220c18a4b56f59dc0d24936d986716118"
+        },
+        {
+          "name": "ETH_ADM3.shx",
+          "bytes": 5620,
+          "sha256": "f9fa7e340933f06126480de3e0545fb57aebeea17ba3daea2f99bc4888c20ba9"
+        },
+        {
+          "name": "meta.txt",
+          "bytes": 458,
+          "sha256": "1387ea0b74745d7d81ded7627f87445d24129349520372867bbc3033e761be18"
+        }
+      ],
+      "meta_txt_literal": "Boundary Representative of Year: 2016.0\nISO-3166-1 (Alpha-3): ETH\nBoundary Type: ADM3\nCanonical Boundary Type Name: \nSource 1: Open Africa\nSource 2: Code for Ethiopia\nRelease Type: gbOpen\nLicense: Open Data Commons Open Database License 1.0\nLicense Notes: http://opendefinition.org/licenses/cc-by/\nLicense Source: https://africaopendata.org/dataset/ethiopia-shapefiles\nLink to Source Data: https://africaopendata.org/dataset/ethiopia-shapefiles\nOther Notes: ",
+      "license_member_names": [],
+      "actual_dbf_record_count": 690,
+      "xml_rights_keyword_matches": [],
+      "xml_search_limit": "Leaf text inspected for license/copyright/attribution/ODbL/redistribution/OpenAfrica/sourceURL; no matching rights clause. This is not proof of all possible external rights.",
+      "xml_process_summary": {
+        "retained_process_count": 126,
+        "shared_early_lineage": "Eth_Woreda_2013 and prior OCHA administrative editing history",
+        "name_level_assignment_date": "20171004",
+        "name_field_basis": "WOREDANAME",
+        "additional_ADM1_project_date": null,
+        "license_reassignment_documented_in_inspected_XML": false
+      },
+      "consumed_metadata_literal": {
+        "boundaryID": "ETH-ADM3-50319843",
+        "boundaryName": "Ethiopia",
+        "boundaryISO": "ETH",
+        "boundaryYearRepresented": "2016",
+        "boundaryType": "ADM3",
+        "boundaryCanonical": "Unknown",
+        "boundarySource": "Open Africa, Code for Ethiopia",
+        "boundaryLicense": "Open Data Commons Open Database License 1.0",
+        "licenseDetail": "opendefinition.org/licenses/cc-by/",
+        "licenseSource": "africaopendata.org/dataset/ethiopia-shapefiles",
+        "boundarySourceURL": "africaopendata.org/dataset/ethiopia-shapefiles",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Eastern Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "690",
+        "meanVertices": "118.0",
+        "minVertices": "7",
+        "maxVertices": "537",
+        "meanPerimeterLengthKM": "183.4571368231288",
+        "minPerimeterLengthKM": "11.62429170045627",
+        "maxPerimeterLengthKM": "711.9154724151635",
+        "meanAreaSqKM": "1632.4048873675497",
+        "minAreaSqKM": "7.338459082903495",
+        "maxAreaSqKM": "22248.030078522515",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM3/geoBoundaries-ETH-ADM3-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM3/geoBoundaries-ETH-ADM3.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM3/geoBoundaries-ETH-ADM3.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM3/geoBoundaries-ETH-ADM3-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM3/geoBoundaries-ETH-ADM3_simplified.geojson",
+        "sha256": "36b77745033777c0f195f7b8ac30cd4ad71606865944e1d4d730c53b41e4064d"
+      },
+      "archive_to_consumed_limit": "Exact same repository revision sourceData archive; does not assert shapefile is unchanged simplified consumed geometry."
+    }
+  ],
+  "archived_publisher_screenshot": {
+    "archive_family": "gb:ETH:ADM1",
+    "member": "license.PNG",
+    "sha256": "005bbda00023d327d3026cd635e2c89d18641c1f74686b3fe639525c9a47b275",
+    "visually_read": true,
+    "dataset_url": "https://africaopendata.org/dataset/ethiopia-shapefiles",
+    "dataset_title": "Ethiopia shapefiles",
+    "organization": "Code for Ethiopia",
+    "listed_resources": [
+      "Ethiopia Administrative Regions",
+      "Ethiopia Administrative Zones",
+      "Ethiopia Administrative Woredas",
+      "Ethiopia Administrative Boundaries-all"
+    ],
+    "visible_license_label": "Creative Commons Attribution",
+    "catalogue_created": "2016-01-29 04:21 UTC-05:00",
+    "catalogue_last_updated": "2016-01-29 04:26 UTC-05:00",
+    "capture_date": null,
+    "visible_license_version": null,
+    "limit": "Dataset-level archived label; no visible resource-specific election, per-resource license exception, snapshot checksum or documentation-only qualifier."
+  },
+  "primary_notes_link_read": {
+    "url": "https://opendefinition.org/licenses/cc-by/",
+    "method": "successful web reader",
+    "actual_meaning": "CC BY license overview; lists versions1.0 through4.0 and marks domain content/data(4.0). Does not identify the ETH license edition or separate documentation from geometry.",
+    "live_body_hash": null
+  },
+  "access_results": [
+    {
+      "target": "Three exact GitHub sourceData archives",
+      "initial": "Default curl DNS resolution failures exit6; inspected terminal outcomes and no archive files",
+      "completion_sessions": [
+        37611,
+        40227,
+        3002
+      ],
+      "completion_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "method": "One individually approved ordinary download per exact public archive; no access-denial bypass."
+    },
+    {
+      "target": "https://africaopendata.org/dataset/ethiopia-shapefiles",
+      "first_action": "web.open",
+      "first_result": "not accessible via this tool; no HTTP denial returned",
+      "followup_action": "ordinary authorized curl GET to exact cited URL, following server redirect",
+      "effective_url": "https://open.africa/dataset/ethiopia-shapefiles",
+      "session": 51754,
+      "exit_code": 22,
+      "HTTP_status": 403,
+      "state": "denied and stopped; no retry, API route, mirror or alternate retrieval"
+    }
+  ],
+  "conclusion": {
+    "status": "unresolved original-source provenance contradiction, now directly evidenced",
+    "documented_data_vs_documentation_distinction": false,
+    "documented_original_vs_adaptation_license_split": false,
+    "documented_provider_edition_change_explaining_ODbL": false,
+    "stronger_evidence": "Original archive conflict matches consumed metadata; archived publisher dataset declaration is CC Attribution for the same listed administrative resources.",
+    "not_claimed": [
+      "Automatic CC BY4.0 correction for ADM2/3",
+      "ODbL proven erroneous",
+      "dual license election authorized",
+      "all rights cleared",
+      "geography changed",
+      "current publisher body read after403"
+    ]
+  },
+  "raw_archive_or_screenshot_redistribution": false,
+  "scientific_inputs_or_results_changed": false
+}
