@@ -15,6 +15,6 @@ this retired top-level selector.
 Existing authenticated geography artifacts, report decoding, merge receipts,
 accepted-code lineage and dated evidence remain readable. They prove prior
 completed deliveries; they do not reconstruct today's map or authorize a new one.
-See [DELIVERY_HANDOFF.md](DELIVERY_HANDOFF.md) and
+See [DELIVERY_RUNBOOK.md](DELIVERY_RUNBOOK.md) and
 [PREPARED_CURRENT_ASSETS.md](PREPARED_CURRENT_ASSETS.md) for current authoring,
 canonical selector-last adoption, sparse preimages and exact resume.

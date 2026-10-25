@@ -1,19 +1,19 @@
 # Cloudflare serving and retained recovery
 
-Cloudflare is the normal public serving and publishing destination:
-https://worldatlas-explorer.chengshu-worldatlas.workers.dev/ . Follow
-[PUBLICATION_HANDOFF.md](PUBLICATION_HANDOFF.md) for subsequent publications.
-The original ChatGPT Site is an owner-private, read-only recovery copy; do not
-send ordinary publishers or visitors there. Historical deployments remain readable
-in the complete cross-provider registry. The #907 application delivery hold still
-applies: this handoff does not make latest main eligible for a new application build.
+This runbook describes recovery of the retained provider copy, not authorization to
+serve or publish. Before any live action, use [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md)
+and the current accepted deployment/operation records to verify destination, served
+version, issue holds and exact authorization. Do not infer current eligibility from
+this runbook, a hostname, or historical receipts. The original ChatGPT Site is
+retained as a recovery copy; ordinary visitors and publishers use only the currently
+authorized destination.
 
-The latest-main Site builder, migration transport compiler and Site-only budget
-commands are retired. Recovery uses the frozen provider copy and its original
-Git revision, not a parallel supported latest-main build. The integration queue
-builds Cloudflare; no provider resources or retained archives are deleted.
+The former latest-main Site builder, migration transport compiler and Site-only
+budget commands are retired. Recovery uses the frozen provider copy and its original
+Git revision, not a parallel latest-main build. No provider resource or retained
+archive is deleted by this procedure.
 
-## Current destinations and proof
+## Retained resource identities and verification receipts
 
 Neon remains project weathered-lab-37571695, branch
 br-summer-butterfly-ar8qikk5, database neondb, with the existing compact schema and
@@ -40,7 +40,7 @@ writes passed. Complete actual proof:
 https://github.com/ChengshuLi/WorldAtlas/issues/846#issuecomment-6051902257 .
 Independent acceptance:
 https://github.com/ChengshuLi/WorldAtlas/issues/846#issuecomment-6051986479 .
-This was a real re-publication of the existing immutable version, not a new main build.
+This recorded a re-publication of the existing immutable version, not a new main build; verify present state through current accepted records before acting.
 
 ## Tested database recovery and current coverage
 

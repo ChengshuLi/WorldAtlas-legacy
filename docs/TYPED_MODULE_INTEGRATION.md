@@ -1,4 +1,4 @@
-# Typed module integration and compatibility handover
+# Typed module integration and compatibility contract
 
 This finishes the structural contract integration for #529. Empty typed datasets work without factual research, changing the canonical grid, or implementing domain map modes. Production installation and publication are separate owner operations. A green local test is not a historical approval, geographic certificate, native D1 certificate or physical-device result.
 

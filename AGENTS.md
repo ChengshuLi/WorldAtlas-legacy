@@ -1,60 +1,28 @@
 # Agent guidance
 
-## Current instructions on start or resume
+## Start or resume
 
-At the start of a new task or when resuming, verify the latest accepted `main` for this repository through a supported GitHub read or fetch. Read that version's `AGENTS.md` and the relevant worker/lane, workspace and merge guidance before treating an older prompt, local checkout, task note or issue handoff as current procedure, or before declaring a procedural blocker. For repository procedure, current accepted instructions and code govern, subject to higher-priority user and safety constraints. Earlier chats and dated handoffs remain historical context and evidence; preserve their scientific sources, results, immutable pins and restrictions without carrying obsolete process rules forward.
+Verify the repository's latest accepted `main` through a supported read/fetch. Read that commit's `AGENTS.md` and the current guides/contracts relevant to the assigned lane before treating an older prompt, checkout, task note or issue comment as procedure, and before declaring a procedural blocker. Accepted code and current documentation govern, subject to higher-priority user and safety constraints. Never reset, clean or overwrite a dirty primary checkout to refresh it. Preserve useful historical evidence and scientific pins without inheriting obsolete process rules.
 
-Never reset, clean, force-refresh or overwrite a dirty primary checkout to make it current. Use supported read/fetch operations or a separate managed checkout. Do not invent readiness or claim prerequisites, disk floors, credentials, rebuilds or ceremonies from stale text, a missing file or an inferred tool behavior: identify the current accepted code/document and the actual observed failure that requires a procedure. Honor real current access denials and security restrictions; never route around them.
+Do not invent readiness/claim prerequisites, disk floors, credentials, rebuilds, ceremonies or unsupported tool behavior. Identify the current code/document and actual failure. Honor real source-access denials and security restrictions; do not route around them.
 
-## Project context
+## Project and evidence
 
-`docs/THREE_THREAD_START.md` links the role handovers/prompts, including geography research. M geography, N engineering and P history workers use `docs/WORKER_COORDINATION.md`: choose one bounded work item and comment with the worker ID, branch and scope before implementation; umbrellas cannot be claimed. Use the serialized worker merge queue and one designated Cloudflare publisher. The original private Site is retained for recovery; see `docs/CLOUDFLARE_RECOVERY_HANDOFF.md`. New location-attribute imports require globally approved continent/subcontinent/region boundaries and the target region's complete published branch certificate, exact subjects and release pins. Before deciding whether a campaign or import is eligible, check the accepted-main `data/research-geography-gate.json`, the exact regional certificate/release pins and the current operation authorization; do not treat this instruction file, an old receipt or a dry run as live state or permission. Without those approvals, limit work to lawful evidence research and staging. Use `docs/MACRO_FOUNDATION_APPROVAL.md` and the exhaustive `data/macro-foundation/regional-handoffs.json.gz` inventory for fixed region scopes. Follow `docs/TOP_DOWN_GEOGRAPHY_WORKFLOW.md`. Issue creation updates GitHub Issues only; engineering, geography and history-research workers use their isolated lane branches and continue through their queues.
+WorldAtlas is a world-history atlas with stable territorial locations, a six-tier hierarchy, whole-location map modes and sparse dated evidence. Preserve original sources, licenses, hashes, methods, identities, predecessor geometry and explicit uncertainty. Use supported half-open intervals with no year zero; do not materialize annual records, infer unsupported facts or silently transfer evidence after a geography change. Application code and factual content are independent.
 
-WorldAtlas is a world-history atlas with stable territorial locations, a six-tier hierarchy, whole-location map modes, sparse dated evidence, and a persistent hosted content API. Read `README.md`, `docs/IMPLEMENTATION_PROGRESS.md`, and `docs/LUNA_DATA_HANDOFF.md` before changing its geography or historical content.
+Geographic reference structure is in `data/world-index.json` and `data/hierarchy.json`; `src/attributes.js` and `src/temporal.js` are shared resolvers; `hosted/` implements the content service; deployed schema migrations in `drizzle/` are immutable. Never regenerate `data/hosted-catalog` from current names/parents. Antarctica is excluded; EU5 counts are scale references, not quotas.
 
-Application code and database content are independent. A factual content import must not require rewriting the UI, rebuilding the canonical grid, or extending an unsupported interval. Preserve completed evidence, original source bytes/hashes, predecessor identities, geometry and immutable records. Do not materialize one record per location per year; represent supported half-open intervals, with no year zero.
+## Authoritative project procedures
 
-GitHub Issues is the single source of truth for TODOs, status and dated work history. Labels are optional navigation aids; ordinary work requires no machine issue contract or readiness metadata. Keep closed issues, original raised/recorded/completed dates and evidence; human dates use America/Los_Angeles. Unknown earlier dates remain unknown. `docs/ENGINEERING_HANDOFF.md`, `docs/GEOGRAPHY_HANDOFF.md` and `docs/HISTORY_HANDOFF.md` remain instruction entry points, with copy-ready prompts under `docs/prompts/`. The `_TODO.md` files retain acceptance guidance, not live task lists. Original trackers are immutable archives.
+- [Worker entry points](docs/WORKER_ENTRYPOINTS.md) indexes the role guides and prompts. It is not a status report.
+- [Worker coordination](docs/WORKER_COORDINATION.md) is the sole general workflow for scope, identity, coordination, proportionate verification, review and merge queue.
+- [Local workspaces](docs/LOCAL_WORKSPACES.md) defines supported allocation, storage, and guarded release.
+- [Merge queue client](docs/MERGE_QUEUE_CLIENT.md) defines supported integration and terminal readback.
+- [Pre-merge evidence review](docs/PREMERGE_EVIDENCE_REVIEW.md) and `.github/evidence-policy.json` define applicable review and scientific-evidence contracts.
+- Geography proposals do not authorize shared-boundary changes or imports. Check the accepted-main gate, exact certificates/pins and explicit operation authorization; current production/recovery actions use their specific runbook.
 
-Concurrent work uses isolated checkouts and fresh unique Git branches (lane prefixes are optional) from fresh `origin/main` for each PR. History research owns only its campaign directory. Geography owns only coordinated `data/regional-review/<packet-id>/` or `research/geography/<campaign-id>/` evidence/proposal/reproduction directories; it cannot change core geography or perform live imports. Engineering preserves both research lanes and other jobs' artifacts, and owns executable migrations/integration/publication. Models are user-selected; geography can run on Luna. Independent engineering UI/performance/infrastructure work and source-only historical collection proceed in parallel. Geography proposes evidence; engineering migrates and publishes complete regional branches before history imports. Inter-region inconsistencies require a coordinated task covering affected neighbors, current release pins and certificate/content revalidation, never a unilateral boundary edit. Read `docs/PARALLEL_WORK_PROTOCOL.md`. Keep PRs coherent; related issues may share one delivery and no issue is required solely for queue syntax. Use ordinary GitHub links/closure keywords as useful, closing only proven acceptance. Update progress/blockers/evidence on the issue, not shared TODO documents. Integrate verified PRs serially with squash merges, explicitly using the PR title as squash commit title. After every merge, branch afresh from updated main. Keep the already merged initial foundation PR's original history. Normal merges do not deploy or invoke provider-management migrations. Follow `docs/PUBLICATION_HANDOFF.md`: publisher discovers pinned latest-main changes since verified primary delivery, plus original-issue `publisher-needed`/residual checks; no duplicate #714 requests. Delivery is separate from issue completion; Auditor #726 owns quality follow-ups.
-Geographic structure lives in `data/world-index.json`, its parts and `data/hierarchy.json`; completed sparse products have independent manifests. `src/attributes.js` and `src/temporal.js` are shared resolvers; `hosted/` implements the content service; `drizzle/` contains immutable deployed schema migrations. Never regenerate `data/hosted-catalog` from current names/parents: it is the original identity registry. Geographic revisions use explicit release/crosswalk evidence. Antarctica is excluded and EU5 counts are scale references, not quotas.
+GitHub Issues hold current scope, ownership coordination, progress and acceptance history. They do not require a machine claim/readiness workflow for ordinary authoring. Labels and branch prefixes are navigation aids, not authority. Preserve closed issues and original dates; record facts actually verified, and distinguish scientific acceptance, merge, publication and issue completion.
 
-The primary handoff branch is `main` in `ChengshuLi/WorldAtlas`; `work` retains the initial development history. The original Site source repository is a retained historical deployment mirror, not the normal publication target. Do not assume a new thread can access `.cache`, SQLite databases or another thread's workspace. Durable research/checkpoints and resume instructions must reach the primary repository through their issue PRs; credentials and local dependency/cache directories must not be committed.
+## Validation
 
-## Worker identity
-
-Use the current chat’s exact `CODEX_THREAD_ID` for new author work, stable across jobs. Never inherit/copy a worker ID from another chat, claim or checkout. Finish and release existing legacy claims under their recorded identity before migrating; do not touch another chat’s work. Review sub-agents use their own distinct stable agent identity even if their environment inherits the parent chat ID. See `docs/WORKER_COORDINATION.md` for enforcement and non-Codex limits.
-
-## Local storage
-
-Read [LOCAL_WORKSPACES.md](docs/LOCAL_WORKSPACES.md) before allocating local author/reviewer checkouts. Use the shared `scripts/local-workspace.mjs` allocator, sparse scopes and storage checks; release completed slots after preserving work. Fresh branches must not accumulate full dataset copies. Final author/reviewer handoffs must state the actual local cleanup outcome under that guide, including the reason and next action for any retained or blocked cleanup.
-
-## Delivery priority
-
-Follow the delivery and proportionate-verification policy in docs/WORKER_COORDINATION.md. Finish supported batches through integration, reuse valid unchanged evidence and correct an ineffective approach early. PR count is a planning estimate; supporting artifacts and issue counts are not delivered results. The complete Git diff, exact-head review, applicable tests and scientific input/result bindings remain authoritative.
-
-## Working in this repository
-
-- Keep changes focused on the requested work.
-- Keep PRs focused on a coherent outcome, without numerical size targets or extra justification based on line count. Keep code and documentation readable. Report generated-data changes separately. Retain dated progress, evidence and closed issues.
-- Follow conventions established by the code and documentation as they appear.
-- Update relevant documentation when a change affects how the project is used or developed.
-- Avoid introducing dependencies or tooling unless the task calls for them.
-
-## Verification
-
-- Use the validation commands defined by the project when they exist.
-- If no relevant validation command exists, say what you checked and what remains unverified.
-- Do not report checks as passing unless you ran them.
-- `npm ci` and `npm run dev` preview the canonical prepared atlas on Node 24, reusing matching package data or invoking the existing package builder once when needed. Install the declared Python preparation dependencies in `requirements.txt`; missing inputs fail before serving rather than falling back to raw polygons.
-- `docs/STRUCTURAL_VALIDATION.md` and `scripts/validate-structure.mjs` define contract, scientific, publication, browser and content-only verification phases. Match prepared products, grid, release and build before publication tests; source checks do not establish semantic or historical completion.
-
-## Evidence and independent review
-
-Follow `docs/PREMERGE_EVIDENCE_REVIEW.md`. Ordinary engineering uses the actual Git diff, applicable tests and a distinct worker's substantive exact-head review comment; no synthetic evidence manifest, duplicate inventory, body hashes or frozen review packet is required. Scientific claims retain their actual subjects/pins, immutable input/result evidence and honest source/publication limits under `.github/evidence-policy.json`; explicitly declared manifests remain checked. Never self-review under a second worker ID. The submitting operator verifies current review before integration; green CI alone does not approve geography or authorize imports.
-
-## Issue lifecycle accuracy
-
-Read `docs/ISSUE_LIFECYCLE.md`. Authors reconcile original acceptance and next actions before moving on; reviewers check closure/continuation independently of merging. Dependency owners maintain direct dependents. Coordinate encountered overlap and remaining work on the original issue; preserve scientific/publication gates. No readiness script or routine queue-triage pass is required. Existing chats refresh before their next job; Main handles exceptional decisions.
-
-Read docs/AUDIT_FAILURE_PREVENTION.md on current main before the next job or review. Identify the consequential acceptance claims and independently test applicable consumed-input/code, identity/join, source/method, safe-reproduction, nonvacuous-control and operating-limit invariants. Use shared evidence helpers or an explicitly reviewed equivalent; reviewers derive expectations from original acceptance and independent records before relying on author tests. Exercise real entry points and adjacent paths for corrective PRs; record unexecuted proof as a limit. Keep exact-head review, original evidence, scientific/publication gates and focused research CI. Adoption requires actual subsequent handoffs, not just this prompt edit.
+Use project-defined validation commands for the changed behavior. `docs/STRUCTURAL_VALIDATION.md` maps validation phases and `scripts/validate-structure.mjs` validates the structural contract. Match prepared products, grid, release and build before publication checks. A source check or green CI is not geographic or historical acceptance. Report unrun checks and limits honestly; do not claim checks that were not performed.

@@ -91,7 +91,7 @@ native/source-base changes refuse rather than silently using historical replay.
 The first migration must follow delivery of its support code and receive its own
 ordinary accepted-code joint result; a software-only report cannot issue that
 checkpoint. Run version-2 `finalize` through the existing delivery command (see
-[DELIVERY_HANDOFF.md](DELIVERY_HANDOFF.md)). The older standalone startup producer
+[DELIVERY_RUNBOOK.md](DELIVERY_RUNBOOK.md)). The older standalone startup producer
 is for historical/native setup and explicitly refuses a current final selector.
 Only the initial migration inspects the accepted historical package-role graph
 to retire exact old website declarations. Verification custody and historical

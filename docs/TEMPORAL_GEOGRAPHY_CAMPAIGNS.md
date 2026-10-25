@@ -47,10 +47,10 @@ The browser [bridge](../src/hosted-temporal-geography.js) validates bounded pack
 
 An explicit sourced unknown parent keeps the complete **reference** parent chain for display while retaining unknown historical membership and its evidence. It does not claim that reference membership was historically verified. Names preserve their existing language/alias behavior. Parent/existence resolution follows direct, derived, reference, then opt-in example precedence. Scalar attributes and independently dated names are retained during an authoritative temporal merge.
 
-Historical footprint selection is deliberately unavailable in this phase (`datedFootprints: 0`). Membership changes affect hierarchy and boundaries built from the existing reference location footprints. A future geometry phase requires separately reviewed immutable geometry/grid assets; this campaign interface must not pretend to accept them.
+This campaign interface does not accept historical footprint selection. Membership changes affect hierarchy and boundaries built from the selected reference location footprints. A future geometry phase requires separately reviewed immutable geometry/grid assets; this campaign interface must not pretend to accept them.
 
 ## Executable checks and publication scope
 
 Run `node --test test/research-bundle.test.mjs test/hosted-temporal-geography.test.mjs test/temporal.test.mjs test/temporal-geography.test.mjs test/temporal-geography-worker.test.mjs` for compiler, bridge, actual SQLite/PostgreSQL service and Worker-route checks. The route tests cover revision changes, idempotent imports, retained source evidence, page cursors, examples, invalid pins, body/origin checks, read-only maintenance, scalar snapshots and media routes. PostgreSQL fixtures run actual PostgreSQL through PGlite; they do not establish live multi-session concurrency or production deployment.
 
-Passing local tests does not prove that the forward migration or Worker routes have been published. Production receipts and remaining footprint work are tracked by the main implementation handoff.
+Passing local tests does not prove that the forward migration or Worker routes have been published. Read actual publication state from the accepted release and linked issue records; these tests do not prove production delivery or scientific approval.

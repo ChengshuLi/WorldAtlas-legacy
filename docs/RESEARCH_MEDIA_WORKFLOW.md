@@ -6,7 +6,7 @@ The service must support provenance-preserving uploads and `GET /api/media/{id}?
 
 ## Prepare dependencies and original files
 
-First import the needed source identities using the generic [research content workflow](RESEARCH_IMPORT_WORKFLOW.md). Existing sources can be reused after inspecting `GET /api/catalog/sources`. Keep exact source IDs, names, URLs, licenses, vintage and status; the uploader compares these six fields against the hosted source before uploading anything. Preserve `url: null` when an existing source has no URL; do not invent one. The media provenance still needs a lawful reference URL. Source records are evidence dependencies, not substitutes for the media object's own license and attribution.
+Use an existing verified source identity and preserve its exact ID, name, URL, license, vintage and status. The uploader compares these fields against the authorized hosted source before upload; source records are evidence dependencies, not substitutes for the media object's own license and attribution. Any hosted write still requires the current operation contract and authorization.
 
 Preserve each original file and establish its exact size and SHA-256 with standard shell commands:
 
@@ -98,7 +98,7 @@ The order is **source-only research campaign → media upload campaign → media
 
 ## Preserve the handoff
 
-Commit the manifest, original licensed files that fit repository limits or a lawful restoration manifest, license/attribution research, source campaign receipts, upload receipts, media-link bundles and read-back results. Larger media should stay in approved licensed object storage with restorable source URLs and byte proofs, rather than exceeding the repository's per-file limits. Record completed scope and open source/rights/date questions in `docs/HANDOFF_STATUS.md`, then push branch `work` so a fresh Luna chat can resume from Git. These receipts establish accepted immutable bytes and metadata, not exhaustive historical truth or unlimited storage capacity.
+Commit the manifest, original licensed files that fit repository limits or a lawful restoration manifest, license/attribution research, source campaign receipts, upload receipts, media-link bundles and read-back results. Larger media should stay in approved licensed object storage with restorable source URLs and byte proofs, rather than exceeding the repository's per-file limits. Record completed scope and open source/rights/date questions in ``, then push branch `work` so a fresh Luna chat can resume from Git. These receipts establish accepted immutable bytes and metadata, not exhaustive historical truth or unlimited storage capacity.
 
 Engineering verification:
 

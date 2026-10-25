@@ -3,18 +3,12 @@
 Whenever an author, premerge reviewer, Auditor or publisher needs a new local checkout, use `scripts/local-workspace.mjs`
 for new local checkouts. Fresh branches do not require accumulating fresh directories. Lane prefixes are optional;
 Git ref validity, unique fresh branches and exact worker/slot ownership remain enforced.
-Use Node 24 and the helper bound to the task's repository, not an ambient checkout. Keep one stable worker ID for each chat across successive issues; a new job is not a new worker. Distinct reviewer agents keep their own worker IDs. One shared Git object
+Use Node 24 and the helper bound to the task's repository, not an ambient checkout. Follow [WORKER_COORDINATION.md](WORKER_COORDINATION.md#chat-identity) for worker identity; this guide defines only how that identity binds to local allocations. One shared Git object
 store and registry serve all its worktrees. Each unique worker ID has at most one
 `work` slot and one `review` slot. Release a finished slot before allocating its
 replacement. A reviewer remains isolated from the author's files and reasoning. Review slots are optional: inspect exact diffs and immutable evidence through GitHub APIs or Git blobs without allocating a checkout when no filesystem reproduction/test is needed.
 
-## Chat identity
-
-Worker identity belongs to the chat, not the issue, branch, goal, checkout or GitHub account. In Codex, use the exact current CODEX_THREAD_ID as the author worker ID and keep it across successive jobs. Never copy an ID from another chat, a reservation, a checkout registry, a handoff or inherited/forked context. A fork/new chat has its own identity. Before starting work or allocating, compare the chosen ID with this chat’s actual ID; if another chat owns the work/slot, leave it untouched and do not treat it as your work or blocker. New author work-allocation commands reject mismatches when CODEX_THREAD_ID is available. Outside Codex, establish one unique persistent ID for that chat; the tools cannot verify chat identity when the environment does not supply it. Do not unset or override CODEX_THREAD_ID to bypass the check.
-
-Active legacy work keeps its recorded worker ID only for finishing, renewing and releasing that exact claim/checkout. Do not rename an active claim, take over another chat’s slot or start new work under the legacy ID. After verified merge/handoff and safe release, use this chat’s ID for the next job and allocation. Independent reviewer agents keep their own stable distinct reviewer IDs (actual agent identity when available); an inherited parent CODEX_THREAD_ID does not identify a sub-agent. Never invent a second ID for self-review. Review allocation is exempt from the author-ID check because review sub-agents may inherit their parent’s environment; review identity remains cooperative and must be checked by the reviewer.
-
-New author allocation requires the current chat’s worker ID; the release command instead uses the recorded worker, slot and saved token to select its target, without changing the operator’s identity.
+New author allocation uses the current chat's worker ID. Release instead uses the recorded worker, slot and saved ownership token to select the exact target; it does not change the operator's identity.
 
 ## Task environment
 
@@ -83,9 +77,10 @@ node "$TASK_REPO/scripts/local-workspace.mjs" allocate --worker YOUR-REVIEWER-ID
 ```
 
 Replace placeholders and retain the returned path and ownership token locally.
-Work allocation rejects an existing branch, then fetches `origin/main` and pins
-its commit before acquiring the registry lock and creating a fresh branch. Review allocation detaches the exact locally available reviewed
-commit; fetch the PR head first if necessary. Do not allocate one review directory
+Work-allocation base selection is defined by the accepted allocator implementation;
+read that code rather than assuming a status note or stale checkout proves its
+fetch updated the remote-tracking ref. Review allocation detaches the exact locally
+available reviewed commit; fetch the PR head first if necessary. Do not allocate one review directory
 per revision: finish/release the previous review slot and allocate its replacement.
 Publisher/Auditor inspection that needs local execution also uses the detached review slot; API/blob-only inspection needs no checkout. Any
 publisher work branch remains subject to its normal claim/operation protocol.
@@ -136,8 +131,11 @@ route below rather than falling back to an old executable. Use Node 24.
 : "${TASK_REPO:?Use the repository path supplied by this task}"
 case "$TASK_REPO" in /*) ;; *) echo 'Absolute task repository required' >&2; exit 1;; esac
 git -C "$TASK_REPO" -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules \
-  --no-auto-maintenance --filter=blob:none origin main || exit
-base=$(GIT_NO_LAZY_FETCH=1 git -C "$TASK_REPO" rev-parse --verify 'origin/main^{commit}') || exit
+  --no-auto-maintenance --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main || exit
+fetched=$(GIT_NO_LAZY_FETCH=1 git -C "$TASK_REPO" rev-parse --verify 'FETCH_HEAD^{commit}') || exit
+tracked=$(GIT_NO_LAZY_FETCH=1 git -C "$TASK_REPO" rev-parse --verify 'origin/main^{commit}') || exit
+[ "$fetched" = "$tracked" ] || { echo 'Fetched main does not match origin/main' >&2; exit 1; }
+base=$tracked
 GIT_NO_LAZY_FETCH=1 python3 - "$TASK_REPO" "$base" inspect --commit "$base" \
   --include data/YOUR-REQUIRED-PATH <<'PYTHON'
 import os, re, subprocess, sys, tempfile
