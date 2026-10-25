@@ -1,0 +1,69 @@
+{
+  "actual_CODE": "1830ef637ce6324f4ddad289d52679017a7643ac",
+  "phase": "supported-inputs",
+  "exit_code": 0,
+  "counts": {
+    "original_cells": 4925,
+    "native_requested_cells": 4925,
+    "native_supported_cells": 4555,
+    "supported_cells": 4555,
+    "already_present_cells": 0,
+    "held_cells": 370,
+    "prior_held_cells": 0
+  },
+  "accepted_selector": {
+    "bytes": 2263,
+    "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "git_blob_oid": "c75a6ffecb61af02ce4d64ae89dcea6df197bd43",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "42c997644d05449c934f85daf235ff45ed185294f8767eb04e9efe555460f4c5"
+  },
+  "projected_records": 6870,
+  "omitted_held_records": 428,
+  "projection_exact_original_subset": true,
+  "projection_status": "requires-immutable-projection-binding",
+  "projected_target_count": 73,
+  "complete_source_physical_lattice_fields_unchanged": true,
+  "whole_target_geometries_and_negative_operands_unchanged": true,
+  "prior_authority363_overlap": 363,
+  "genuinely_new_supported": 4192,
+  "new_authority_executed": false,
+  "files": [
+    {
+      "name": "already-present-original.json",
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    {
+      "name": "held-original.json",
+      "bytes": 14829,
+      "sha256": "06c7c4510a241d1f29950db29bd2614bc4389ef909b99d72e9bff16c016818b3"
+    },
+    {
+      "name": "native-patch.json",
+      "bytes": 94347,
+      "sha256": "46982415d7d5db7e901240beb531ef22a94fa848022b6557bb4a3120c8eabb2a"
+    },
+    {
+      "name": "original-scope-partition.json",
+      "bytes": 64994,
+      "sha256": "c6e79ebdce3a56c922d8c85f0e9867fc1a7e5d2718f6d32a860b7a3c4d4aa9b3"
+    },
+    {
+      "name": "preparation.json",
+      "bytes": 869,
+      "sha256": "2014e3a48348d76fe83045ec4712e6b9dbb43d51bd2365fd73abe97dbf71236f"
+    },
+    {
+      "name": "territorial-applicability.json",
+      "bytes": 3505581,
+      "sha256": "86dfecb411b10be9dd0acfd98bbe7b3fdb1e011064ad487d0add21f690f82f9f"
+    },
+    {
+      "name": "unbound-source-evidence.json",
+      "bytes": 390491,
+      "sha256": "ed87b26e5463c126e0d7c0d146100aa50fdf02a0efce390a9dc6dfae92d64d40"
+    }
+  ]
+}
