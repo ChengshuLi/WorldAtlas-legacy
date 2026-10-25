@@ -43,6 +43,9 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(history, /direct sourced literal population zero/i);
   assert.match(history, /equal-precedence inhabitance contradictions become disputed/i);
   assert.match(history, /test\/unsettled-rank\.test\.mjs/);
+  assert.match(history, /stable location ID alone does not make a value-bearing record eligible across changed footprints/i);
+  assert.match(history, /footprint-versions\.js::footprintAttributeEligibility/);
+  assert.match(history, /test\/footprint-versions\.test\.mjs/);
   const operations = fs.readFileSync('docs/OPERATIONS.md', 'utf8');
   assert.match(operations, /Encryption provides confidentiality, not sender authentication/i);
   assert.match(operations, /sender-supplied hash alone does not establish origin/i);
