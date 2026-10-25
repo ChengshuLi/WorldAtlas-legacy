@@ -1,0 +1,212 @@
+{
+  "kind": "prepared-source-evidence-full502-verification",
+  "actual_preparation_code": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+  "accepted_unchanged_executable_baseline": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "products": [
+    {
+      "name": "preparation.json",
+      "bytes": 394,
+      "sha256": "826367781f149fa4e7eb1c8cc94f1567f38ee72e2087111f09e4570582d98a79"
+    },
+    {
+      "name": "territorial-exclusion-provenance.json",
+      "bytes": 40674,
+      "sha256": "4304c5f5b1567c8c68a339d2c89861e2ca1ee7221c63eb8e2345683475d41eb7"
+    },
+    {
+      "name": "source-evidence.json",
+      "bytes": 73067,
+      "sha256": "5dd6c077289912033cd9f5b0530261f658ef1bce1106bf96265bf13a5ef01bd5"
+    }
+  ],
+  "targets": [
+    {
+      "target": "gb:ISR:ADM2:584046B9730835639199",
+      "owner": 24183,
+      "included_original_exclusions": 10,
+      "whole_bounds_disjoint_originals": 46,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B86518607604876",
+      "owner": 24182,
+      "included_original_exclusions": 4,
+      "whole_bounds_disjoint_originals": 52,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B11408100439208",
+      "owner": 24169,
+      "included_original_exclusions": 5,
+      "whole_bounds_disjoint_originals": 51,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B34315111222202",
+      "owner": 24173,
+      "included_original_exclusions": 2,
+      "whole_bounds_disjoint_originals": 54,
+      "actual_negative_ordinals": [
+        0,
+        1
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B13386645158990",
+      "owner": 24170,
+      "included_original_exclusions": 3,
+      "whole_bounds_disjoint_originals": 53,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B54386898087809",
+      "owner": 24175,
+      "included_original_exclusions": 3,
+      "whole_bounds_disjoint_originals": 53,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B61571705909900",
+      "owner": 24177,
+      "included_original_exclusions": 5,
+      "whole_bounds_disjoint_originals": 51,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B37321511847561",
+      "owner": 24174,
+      "included_original_exclusions": 2,
+      "whole_bounds_disjoint_originals": 54,
+      "actual_negative_ordinals": [
+        0,
+        1
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B72217003232480",
+      "owner": 24178,
+      "included_original_exclusions": 4,
+      "whole_bounds_disjoint_originals": 52,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83749751332199",
+      "owner": 24181,
+      "included_original_exclusions": 4,
+      "whole_bounds_disjoint_originals": 52,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83064859640631",
+      "owner": 24180,
+      "included_original_exclusions": 5,
+      "whole_bounds_disjoint_originals": 51,
+      "actual_negative_ordinals": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B15624900320210",
+      "owner": 24171,
+      "included_original_exclusions": 2,
+      "whole_bounds_disjoint_originals": 54,
+      "actual_negative_ordinals": [
+        0,
+        1
+      ]
+    }
+  ],
+  "exact_original_keys": 502,
+  "physical_classes": {
+    "inland-water": 17,
+    "land": 485
+  },
+  "positive_complete_features": 15,
+  "negative_complete_features": 56,
+  "complete_all_families_features": 71,
+  "original_contacted_features": 25,
+  "original_negative_contacted_feature_hashes_reused_and_matched": 13,
+  "emitted_unique_negative_features": 18,
+  "emitted_target_negative_pairs": 49,
+  "bounds_disjoint_pairs": 623,
+  "whole_stage_target_values_and_selected_base_geometries_unchanged": true,
+  "water_contexts": {
+    "water-no-foreign3": 3,
+    "water-northern-Madaba5": 5,
+    "water-southern-list9": 9
+  },
+  "original_owner_locator_retained": {
+    "bytes": 2663523,
+    "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+    "decoded_bytes": 11096191,
+    "decoded_sha256": "a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428",
+    "git_blob_oid": "9c44513df64995d417dd3832ae604c703e84a506",
+    "mode": "100644",
+    "path": "data/canonical-grid/bounds.json.gz",
+    "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f"
+  },
+  "stock_base_reference": {
+    "footprints_sha256": "2deeff1457ff9238cb3dbe599e9a858dcce29d8ba88e2a66abe2785ddec0aed9",
+    "hierarchy_sha256": "568301690ef231a85856666b57876a5efe8d8c7c6e671a56d81307b2dc28b80b",
+    "id": "geography:review:dbb133d7b123bacd1d38253c467891bff656d011000a9f11d369ac9262302bfb"
+  },
+  "no_native_diagnostic_executed": true,
+  "no_applicability_exception_adopted": true,
+  "holds_changed": false,
+  "limits": [
+    "Stock metadata inclusion and bounds-disjoint omission are not native cell-contact results.",
+    "All five negative families remain conservative; parent-context proposals are not adopted.",
+    "The original research379/63/60 partition and water3/5/9 contexts are not acceptance outcomes.",
+    "Original13 negative contact identities match emitted canonical hashes without recomputation."
+  ]
+}
