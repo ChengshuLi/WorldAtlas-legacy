@@ -1,0 +1,155 @@
+{
+  "kind": "PER727-source-relative-positive-preparation-receipt-v1",
+  "status": "proposed candidate only; not native-authority diagnostic, not owner qualification, no status/credit change",
+  "execution_commit": "e20f40c615542d66afe510a409eb49c54cce075a",
+  "original_scope": {
+    "accepted_commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
+    "issue": 2440,
+    "target_id": "gb:PER:ADM2:86281439B43857057528938",
+    "owner_index": 33741,
+    "denominator": 10371,
+    "prior_accepted": 8922,
+    "residual": 1449,
+    "equation": "10371=8922+1449",
+    "target_keys": 727,
+    "target_key_set_sha256": "ffff89883c2274a88c627b7e0df2dc3167cf689aa8803d599ab2d278a9aa7b51",
+    "other_residual_keys_untouched": 722
+  },
+  "application": {
+    "path": "source-relative-center-application.json.gz",
+    "bytes": 5905,
+    "sha256": "6498ff7a08db7d0f9834f709ff805b76203b5c35a29657a9ff151bc2b22a059e",
+    "uncompressed_bytes": 230729,
+    "uncompressed_sha256": "5879d62796d94fbe30a2c7fc5b2d81c0c3e7f6b2330c58c4b090f18b9961052d",
+    "kind": "PER727-INEI-Loreto-department16-per-key-reproduction-v1",
+    "membership": {
+      "inside": 677,
+      "outside": 50,
+      "ties": 0,
+      "loreto_adm1_inside": 35,
+      "loreto_adm1_outside": 6,
+      "all_land": 727,
+      "brazil_adverse_contacts": 727
+    }
+  },
+  "candidate_patch": {
+    "path": "native-patch.json",
+    "bytes": 10755,
+    "sha256": "9e23570c9116340f634b1dbc66c874f4ae611d336129424380466a70b5d8c764",
+    "rows": 222,
+    "native_cells": 677,
+    "key_rule": "only the exact 677 rows classified inside the retained 2023 INEI Loreto department feature; owner index 33741"
+  },
+  "source_operands": {
+    "target_mrc_index": 49039,
+    "brazil_amazonas_adverse_index": 3523,
+    "loreto_adm1_context_index": 48917,
+    "all_727_brazil_contacts_preserved": true
+  },
+  "negative_or_unresolved": {
+    "outside_parent_keys": 50,
+    "loreto_adm1_discordant": 6,
+    "whole_target_flags": [
+      "contradictory_land_water_support",
+      "L2-outside-L1"
+    ],
+    "whole_target_flags_per_key": false,
+    "no_legal_or_feature_crosswalk_claim": true
+  },
+  "baseline_limitations": [
+    "candidate is parent-department center membership only, not MRC feature-level or legal-boundary proof",
+    "center membership is not whole-cell containment",
+    "2023 INEI parent overlay is a new reproduced application; the prior retained result contained counts only",
+    "Brazil 2006 community-map/raster-conversion lineage remains an adverse operand for all 727",
+    "the original physical bundle is now located in accepted e20f40c615542d66afe510a409eb49c54cce075a; source-evidence adapter pins are mapped below, but the native diagnostic/current-owner check has not been run",
+    "whole-target physical flags remain contextual and are not projected onto individual keys",
+    "no current-owner or additive native diagnostic performed"
+  ],
+  "physical_bundle": {
+    "adapter_roles": {
+      "physical_evidence": {
+        "commit": "e20f40c615542d66afe510a409eb49c54cce075a",
+        "path": "coordination/engineering/americas-original-repair-20261017/five-country-physical-001/physical-result-001/whole-target-support.json",
+        "mode": "100644",
+        "git_blob_oid": "114a89ea669bafbdcc67295d8470302111336d8b",
+        "bytes": 27539267,
+        "sha256": "48a9748e5ca358808c6b7125b8ccbe156b4613d8c8a2f41074f047dc09a6dc9b"
+      },
+      "physical_input": {
+        "commit": "29e570dee104b096535f2388e240c119c8517012",
+        "path": "coordination/engineering/americas-original-repair-20261017/five-country-physical-001/source-stage-001/original-stage-inputs.json",
+        "mode": "100644",
+        "git_blob_oid": "e8a3c7ae7384190a9a3c3524da1ef98f62c391c7",
+        "bytes": 8357836,
+        "sha256": "20703286b02761499790a8e219edc570862a47355d123ccb685acc8ae92d4091"
+      },
+      "physical_reproduction": {
+        "commit": "a285e89d0e2a7dd47a56abcbaaef15cd299a0bf8",
+        "path": "coordination/engineering/global-physical-comparison-20261006/comparison.py",
+        "mode": "100644",
+        "git_blob_oid": "86654c37ec854d862073aaf63c8d8d144956b283",
+        "bytes": 9834,
+        "sha256": "f9c226add23a37a39bf7fd34f5d8bdcb34a8d276b331fabf59bf9867b6f84bfe"
+      },
+      "physical_input_contract": {
+        "commit": "e20f40c615542d66afe510a409eb49c54cce075a",
+        "path": "coordination/engineering/americas-original-repair-20261017/five-country-physical-001/physical-result-001/physical-input-contract.json",
+        "mode": "100644",
+        "git_blob_oid": "eaca5f2d45816d458ef8be2bc4705ab67e063e03",
+        "bytes": 10643,
+        "sha256": "0c6cc11e2b6e8f6e158e52eebd8c57f8e1049fa80a0a21e10c079316504c8d11"
+      }
+    },
+    "independent_review_context": [
+      {
+        "commit": "e20f40c615542d66afe510a409eb49c54cce075a",
+        "path": "coordination/engineering/americas-original-repair-20261017/five-country-physical-001/physical-result-001/independent-review/target-water-issue-context.json",
+        "git_blob_oid": "e57ddcde817087a063385e3f9f687f85e9ab8d11",
+        "bytes": 46009,
+        "sha256": "ea73a0f165de4585dcd4492cfe5cdabc40e99329368b6fde66db87eaab164cb2"
+      },
+      {
+        "commit": "e20f40c615542d66afe510a409eb49c54cce075a",
+        "path": "coordination/engineering/americas-original-repair-20261017/five-country-physical-001/physical-result-001/independent-review/actual-result-interpretation.json",
+        "git_blob_oid": "caab3bdaab94f868e94972849283574390e691df",
+        "bytes": 193648,
+        "sha256": "7fcf4fa728f74e73b4eaaa1c48fb5cab479484cb5164d5cac9585aaeecb4f1e4"
+      }
+    ],
+    "original_physical_support_blocks": [
+      {"block": 32, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-032.json.gz", "git_blob_oid": "5f8f1e8aa032abc85e931930eb4eb9b0dbc0ebdb", "bytes": 516947, "sha256": "2b3d882155a28df8782b346bd7382b2faa1ccfa0ebf1c2f0f2c6d779c055905a"},
+      {"block": 33, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-033.json.gz", "git_blob_oid": "f489fb1c9f462c1bda2c1e0b2818114e51bcc061", "bytes": 431020, "sha256": "440955ea8d0654a1bc5367c4da0b9eb73df1e79c152ebc7c8576d9a2af9bb7a1"},
+      {"block": 34, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-034.json.gz", "git_blob_oid": "7128c4c4c2709f327e42584448fb14797801fbbf", "bytes": 306738, "sha256": "05e067f8e532302cf5f94a8565fd5dfc231ac0214ff5710d51745315fe568840"},
+      {"block": 35, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-035.json.gz", "git_blob_oid": "a97e15cd1af0e4a58f334cfe13a9a963b39067ba", "bytes": 217105, "sha256": "981e5d1bf9cb91f3eff7e811a322732c3dce87808923e2dbcb54c7d956b48ea7"}
+    ],
+    "target_binding": {
+      "id": "gb:PER:ADM2:86281439B43857057528938",
+      "stage_matches": 1,
+      "whole_target_support_matches": 1,
+      "selected_name": "Mariscal Ramon Castilla",
+      "selected_parent_id": "framework:province:loreto:ea065f632516",
+      "whole_target_issues": ["contradictory_land_water_support", "L2-outside-L1"],
+      "source_query_count": 10,
+      "original_727_key_physical_class": "mapped_land_support",
+      "original_727_key_land_count": 727,
+      "original_727_key_water_count": 0,
+      "whole_target_issues_per_key": false,
+      "adapter_mapping": {
+        "physical_evidence": "whole-target-support.json; preserve target-level issue/support geometry as context only",
+        "physical_input": "original-stage-inputs.json exact MRC consumed/selected stage row",
+        "physical_reproduction": "comparison.py pinned by the accepted physical input contract",
+        "target.coverage_classes": ["mapped_land_support"],
+        "target.coverage_rows": "exact 677-cell positive candidate rows, each class mapped_land_support; do not copy whole-target issues into per-cell rows"
+      }
+    },
+    "custody_note": "Four original blocks exist in original input commit b7ca15f8d88241b088699396d3df0ca58a9e0803 and are byte-identical at accepted e20f40c615542d66afe510a409eb49c54cce075a. The exact per-target stage-input and comparison pins are authenticated by physical-input-contract; the five-country physical result bundle itself is absent from b7 and is present in e20."
+  },
+  "pins": {
+    "sidecar_sha256": "5098898d03bead6493a8af6193c3339b19b4f2ddf0cfe93261956f3bca11ab73",
+    "gpkg_sha256": "6666b1d5b2c4a5512a3f6f26f4b6260dcf969436df3de92cde6cb034d7c83931",
+    "geometry_blob_sha256": "0c13da316ffc71e111f18d65f0710a651abe9a93378fcc5e27bfccf70515b34d",
+    "native_method_sha256": "66b453bbb2e001b9ff56bd754d55087f5919845dceeefd886016494cefa1d3e0",
+    "latitude_compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+    "latitude_decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"
+  }
+}
