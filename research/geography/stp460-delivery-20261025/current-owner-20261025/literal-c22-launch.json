@@ -1,0 +1,34 @@
+{
+  "worker": "01a16f2d-be76-72d7-bc46-8b89a6efb0f2",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/observe-selected-owners.mjs",
+    "--repo",
+    "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work",
+    "--commit",
+    "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+    "--package",
+    "gb-STP-ADM1--repair-evaluation",
+    "--out",
+    "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-current-owner65ef/current-STP-owners-c22.json"
+  ],
+  "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work",
+  "CODE": "57077a57a2e3953e7f6cb3e572037bff30afc1bb",
+  "DATA": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+  "current_accepted_head": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "unchanged_bank_bridge": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/accepted65ef-unchanged-bank-bridge.json",
+    "bytes": 3737,
+    "sha256": "e120662e84e87dd36ab2d07859e46bdbd54dfbaec49f4c6c9e5740ef2b93cb31"
+  },
+  "local_selector_equals_bridge": true,
+  "start": "2026-10-25T04:07:22.177849+00:00",
+  "out": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-current-owner65ef/current-STP-owners-c22.json",
+  "historical_53002_unchanged": true,
+  "prior_failed_65ef_fetch": "preflight-and-fetch-receipt.json",
+  "phase": "sole literal owner read full original STP460; not scientific qualification",
+  "pid": 70520,
+  "exit_code": 0,
+  "end": "2026-10-25T04:13:24.955775+00:00",
+  "head_after": "57077a57a2e3953e7f6cb3e572037bff30afc1bb"
+}
