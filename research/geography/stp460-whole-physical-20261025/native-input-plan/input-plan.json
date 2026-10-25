@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "worker": "01a16f2d-be76-72d7-bc46-8b89a6efb0f2",
+  "status": "inert full-scope plan; no source-evidence or native invocation",
+  "original_scope": {
+    "keys": 460,
+    "intervals": 181,
+    "native_rows": 150,
+    "owners": {
+      "40324": 118,
+      "40323": 342
+    },
+    "contexts": {
+      "principe-main-island118": {
+        "count": 118,
+        "interval_count": 48
+      },
+      "sao-tome-main-island254": {
+        "count": 254,
+        "interval_count": 121
+      },
+      "sao-tome-southern-equatorial-rolas-context88": {
+        "count": 88,
+        "interval_count": 12
+      }
+    }
+  },
+  "request": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-native-input-plan/original-native-request.json",
+    "bytes": 21482,
+    "sha256": "e00d90dc2ff03b90b3b214981896cbce562a24433e760f1bf26f02976f213da7"
+  },
+  "source_evidence_preparation_config": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-native-input-plan/source-evidence-config.draft.json",
+    "bytes": 9479,
+    "sha256": "b15d0c25374253ca28d694170b3e25c1dae941c35c8d3a6d55f1c2560f24bf8a"
+  },
+  "target_bindings": [
+    {
+      "id": "gb:STP:ADM1:19237168B40253326356618",
+      "pixelIndex": 40323,
+      "requested_cells": 342,
+      "original_feature_ordinal": 1,
+      "physical_result_ordinal": 0,
+      "physical_issue_reasons": [],
+      "whole_consumed_matches_original": true,
+      "whole_selected_retained": true,
+      "original_owner_roster_record": {
+        "id": "gb:STP:ADM1:19237168B40253326356618",
+        "index": 40323,
+        "bounds": [
+          135788.36993277777,
+          130781.94343120552,
+          136003.71017222223,
+          131066.83309626214
+        ],
+        "province_id": "framework:province:sao-tome-province:4b696869dc61",
+        "province_index": 4128
+      }
+    },
+    {
+      "id": "gb:STP:ADM1:19237168B82261817076051",
+      "pixelIndex": 40324,
+      "requested_cells": 118,
+      "original_feature_ordinal": 0,
+      "physical_result_ordinal": 1,
+      "physical_issue_reasons": [
+        "missing_reconstruction",
+        "extra_reconstruction"
+      ],
+      "whole_consumed_matches_original": true,
+      "whole_selected_retained": true,
+      "original_owner_roster_record": {
+        "id": "gb:STP:ADM1:19237168B82261817076051",
+        "index": 40324,
+        "bounds": [
+          136419.97152111112,
+          129849.03784271168,
+          136516.9729411111,
+          129964.0725089759
+        ],
+        "province_id": "framework:province:principe-province:c09206cf27ff",
+        "province_index": 3733
+      }
+    }
+  ],
+  "selector_pin": {
+    "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "bytes": 2286,
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "manifest_pin": {
+    "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+    "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json",
+    "mode": "100644",
+    "git_blob_oid": "31d970d0fe2bf8c899f020aad09a3826ea451790",
+    "bytes": 252447,
+    "sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba"
+  },
+  "owner_roster_pin": {
+    "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+    "path": "data/canonical-grid/bounds.json.gz",
+    "mode": "100644",
+    "git_blob_oid": "9c44513df64995d417dd3832ae604c703e84a506",
+    "bytes": 2663523,
+    "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f",
+    "decoded_bytes": 11096191,
+    "decoded_sha256": "a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428"
+  },
+  "physical_execution_receipt": {
+    "commit": "1a7a2e7aec060ea263a9f045714a8cd0b31af6e0",
+    "path": "research/geography/stp460-whole-physical-20261025/physical-001/execution-receipt.json",
+    "mode": "100644",
+    "git_blob_oid": "2262e801b4560ad5c53fd06a6494ad2fe7c10503",
+    "bytes": 59044,
+    "sha256": "17c8923c2d4de54b297e45b707aed1c76eef360bdae76bf88469bf48fd62e446"
+  },
+  "sole_physical_result": {
+    "commit": "1a7a2e7aec060ea263a9f045714a8cd0b31af6e0",
+    "path": "research/geography/stp460-whole-physical-20261025/physical-001/whole-target-support.json",
+    "mode": "100644",
+    "git_blob_oid": "38c66c9c0c41ac765203e6e15ff10f6d27d91de1",
+    "bytes": 132920,
+    "sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+  },
+  "source_membership": "Direct exact original source IDs equal genuine native owner IDs; no aggregation crosswalk needed.",
+  "territorial_roles": "Retained original census patterns show only each matching STP member. Whole two-member family is retained; no invented empty foreign-exclusion certificate. Any additional original adverse operand established in review must be bound before execution.",
+  "residual_semantics": "Preserve complete missing/extra reconstruction pointsets for Principe and outside_mapped_L1_context for both members; native cell effects not evaluated. No tolerance, reconstructed polygon, or automatic issue-free clearance.",
+  "required_next_steps": [
+    "Original460 claim/181interval/150row proof completed in adjacent original-claim-and-request-proof.json; independent review still required.",
+    "Commit exact request/config in own namespace, then stock source-evidence preparation derives genuine native contract/latitudes/reference from pinned accepted selector.",
+    "Commit resulting source-evidence before constructing immutable native-diagnostic inputs; confirm no equivalent completed diagnostic or active invocation.",
+    "Only after full plan is concrete and coordinator boundary is satisfied, run one supported full460 diagnostic; preserve all physical residual semantics.",
+    "Independent actual-head review and current-owner/conservation/publication work remain coordinator-owned."
+  ],
+  "adoption": false,
+  "native_invocations": 0,
+  "new_geometry_operations": 0,
+  "accepted_credit": 0,
+  "original_claim_proof": "original-claim-and-request-proof.json"
+}

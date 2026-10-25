@@ -1,0 +1,76 @@
+{
+  "kind": "read-only-public-commit-and-selector-bridge",
+  "current_public_head": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "sole_parent": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+  "changed_files": [
+    {
+      "path": "scripts/integration-profile.mjs",
+      "status": "modified",
+      "sha": "cd666c48676f643335cfc52fd5b2b1d3a62eed0e"
+    },
+    {
+      "path": "test/final-bank-finalizer.test.mjs",
+      "status": "modified",
+      "sha": "07e9ba518b90cc71b1e880b054ec4714b458e373"
+    }
+  ],
+  "selector_read_at_current_head": {
+    "change_evidence": {
+      "bytes": 1319,
+      "commit": "a028e38d69dedf8ed1445a74e40a506e546112fd",
+      "git_blob_oid": "e357e3e4dac9e5c4b6d77bb1e290458f887fcba0",
+      "mode": "100644",
+      "path": "research/geography/brb-grd851-delivery-20261025/composition/authority-registry.json",
+      "sha256": "8af77d08fc29a5e1e89414a1a66235912dd9ec37a20db04a8ec4161ad1e35132"
+    },
+    "kind": "selected-final-native-bank-v2",
+    "native_selection": {
+      "artifact_consumption": {
+        "certificate": {
+          "bytes": 68158,
+          "mode": "100644",
+          "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/qualified-artifacts/consumption-certificate.json",
+          "sha256": "26b505e3131a2513badc45d1552bcf603c24c565bdfb21b0f623fe4e6c7d4070"
+        },
+        "review": {
+          "bytes": 7379,
+          "mode": "100644",
+          "path": "coordination/engineering/additive-native-activation-20261009/independent-native-consumption-wrapper-self-pin-review.json",
+          "sha256": "87ab56e1354dd8a8fda532bfa008436abd35c6c506f0e0685eaa2f2f07f59a8a"
+        }
+      },
+      "manifest_path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json",
+      "method": "native-linear-evenodd-first-owner-v1",
+      "release_id": "geography:review:dbb133d7b123bacd1d38253c467891bff656d011000a9f11d369ac9262302bfb",
+      "selected_geography": {
+        "bytes": 14656,
+        "kind": "complete-world-index-with-exact-encoded-overrides",
+        "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/selected-geography-bank.json",
+        "sha256": "3750f72a48bb9fd498ca129e20e299904239bfe1b4191919fbc89b636234c776",
+        "version": 1
+      },
+      "sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba",
+      "version": 1
+    },
+    "prepared_bank": {
+      "bytes": 49610,
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "b8fd11b5d3789385b961a4c0e298e53278448d963142a2cce429a4418b1d5e28"
+    },
+    "reference": {
+      "footprints_sha256": "b3f5673659d8ec3f168fdce62bbc17d4704ae353f29642d2edbe7eb7f7fba52f",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:e9b7d4b2a3133b0afaf3b532fc0d1743aef873453a30e64ec73837e1bdc11d60"
+    },
+    "reference_projection": {
+      "bytes": 321535,
+      "path": "coordination/engineering/reference-owner-alias-correction-20261022/reference-002/reference-metadata.json",
+      "sha256": "45a75988cb6dbaa3f0bdb960e0ad0dbdc22b2c565cd03a1c2bbfb11a3049788d"
+    },
+    "version": 2
+  },
+  "existing_local_selector_commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+  "existing_local_selector_blob": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+  "existing_local_selector_sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1",
+  "limitation": "No remote commit body imported into local Git. Historical operation CODE/DATA remain unchanged. The sole-parent complete two-file diff leaves all selected data and observation/preparation code paths unchanged."
+}

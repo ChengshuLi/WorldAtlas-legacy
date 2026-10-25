@@ -1,0 +1,37 @@
+{
+  "accepted_base": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+  "actual_finalizer_code": "4c7808b1f92734b1dffeaad930dbb22346d51362",
+  "change_evidence_commit": "9191e9eb28f300df1b28d0e269cf41ba44ec6536",
+  "original_authority_code": "31ec2d8ff335540f5c8c1a47a1969095c5275acc",
+  "worktree": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "finalize",
+    "research/geography/stp460-delivery-20261025/finalize-config.json",
+    ".cache/delivery-handoff/stp460-final-bank-20261025-01a16f2d-001"
+  ],
+  "config": {
+    "version": 2,
+    "selector": {
+      "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+      "path": "data/ownership-selection.json"
+    },
+    "package_inputs": {
+      "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+      "path": ".github/package-inputs.json"
+    },
+    "change_evidence": {
+      "path": "research/geography/stp460-delivery-20261025/composition/authority-registry.json",
+      "commit": "9191e9eb28f300df1b28d0e269cf41ba44ec6536",
+      "mode": "100644",
+      "git_blob_oid": "f4ec8ee5465564730a1d9f5a86e32c9817813ad1",
+      "bytes": 1331,
+      "sha256": "c4ca6ff26e16fe44bbbc68cf976431f9466f87f142522267ec9380913f530d30"
+    }
+  },
+  "started": "2026-10-25T03:56:55.738811+00:00",
+  "status": "completed",
+  "returncode": 0,
+  "finished": "2026-10-25T04:14:20.138361+00:00"
+}

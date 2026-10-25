@@ -1,0 +1,17 @@
+# Completed STP whole-member physical continuation
+
+One scientific execution completed with exit0 using the stock physical phase at CODE4624e09ad69293979ef7dca6db34a6ce859e9202 (accepted-code ancestor5ea3f8e75089905690bfb7a8c8589d84f0d45ca9), immutable whole2 INPUT989c1b601b23960e687567741db41e24a2f4ab26 and the24 original common physical pins. The program remains SHAabc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18. No source phase, native observer or additional geometry operation was invoked.
+
+São Tomé queried8 original GSHHG source IDs and reports no issues. It retains nonempty mapped land and outside-mapped-L1 context, empty mapped inland water and empty reconstruction/hierarchy/conflict residuals. This covers the whole source member, including the southern component; Rolas88 is not a separately produced polygon or owner.
+
+Príncipe queried5 original source IDs and reports missing_reconstruction and extra_reconstruction. Both complete residual pointsets are retained unchanged. It also retains nonempty land and outside-L1 context; inland water, hierarchy disagreements and contradictory land/water support are empty. No residual has been discarded, called negligible, repaired or converted into a numerical tolerance. The actual supported downstream qualification must assess these facts; no outcome is assigned to118 keys from this report alone.
+
+Both results preserve all query relations and support geometries. Outside-L1 context is not inferred dry land. An empty issues list is not whole-area physical authority, a current shoreline survey or native-cell clearance. GSHHG vintage/heterogeneous-observation and physical-authority limits remain. The original460 request and all holds persist; no repaired or unresolved acceptance credit is awarded.
+
+The stock wrapper produced execution-receipt.json and preparation.json with genuine pre/post runtime validation. Its202 installed runtime files and25 input bodies remain bound. Physical science elapsed226.39536612499978seconds; the complete outer invocation ran from2026-10-25T00:52:46.045441Z to00:56:32.795914Z. Current PROCESSING_MEMORY_ADMISSION applies ordinary runtime/OS behavior; no resource-only forecasts, reservations or custom ceilings were imposed.
+
+The first attempted launch failed before configuration/producer execution because a research/geography destination is not admitted by the stock preparation guard. It took75ms, emitted only “Use a fresh owned preparation destination”, and created no science result. The corrected invocation used its documented fresh owned.cache/delivery-handoff destination and completed once. The immutable INPUT and configuration were unchanged. Both launch logs are retained in local continuation scratch; no access denial or uncertain operation is hidden.
+
+The three files in physical-001 are exact byte copies of the completed owned-cache products, not regenerated output. physical-result-readback.json maps original execution paths to repository retention paths and records their identities. Original receipt paths are deliberately preserved. The input stage itself is the stock list, not the prior inert draft envelope.
+
+Next: independent geographic/source interpretation and exact-result review, then coordinator-supported native source/physical/competitor qualification and selected-output conservation. Príncipe residual handling remains explicit and unresolved; no claimed tolerance or new predicate is introduced here. Coordinator retains final delivery. Prepared commits are published only by normal owned Git push.

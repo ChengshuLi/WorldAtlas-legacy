@@ -1,0 +1,58 @@
+{
+  "kind": "literal-completed-authority-readback",
+  "qualified_native_cells": 460,
+  "original_keys": 460,
+  "original_intervals": 181,
+  "components": [
+    {
+      "component_id": "source-target:0eed2f39610277305c943075105babcd1e9f8900807219c6f63c48b490d2a581",
+      "target_id": "gb:STP:ADM1:19237168B40253326356618",
+      "pixelIndex": 40323,
+      "disposition": "assigned",
+      "native_cells": 342,
+      "base_geometry_sha256": "afbd3046d4dcffb0d32dc2dcb2541266f2d56a69a1c58a5c1a46d3a70d836b2d",
+      "source_receipt_sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+    },
+    {
+      "component_id": "source-target:6e35a21d1de2774278815ba5646e19b8083715e48180e7cdcb35e75521155564",
+      "target_id": "gb:STP:ADM1:19237168B82261817076051",
+      "pixelIndex": 40324,
+      "disposition": "assigned",
+      "native_cells": 118,
+      "base_geometry_sha256": "3893bc12bbe59a4a54b831ba3c2ef60fc42bd618f7e0d620a6f10ed8ff370212",
+      "source_receipt_sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+    }
+  ],
+  "rule_sha256": "e46458bf60217a63a73310cc5dc5e51897d6c660319c9caefec16e251bf09955",
+  "same_original_input_pins_as_diagnostic": true,
+  "exact_original_key_equality": true,
+  "products": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/authority-binding.json",
+      "bytes": 729,
+      "sha256": "4c7671ec23ff0c73e6310134f07de8edda969429972f2af41fc9068aa2ceeb41"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/constructor-result.json",
+      "bytes": 10644,
+      "sha256": "5eeea6bc1fa861e677fb19c36c83d5af6ad7c3562c674e13038b04321d324f90"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/original-rule-preimage.json",
+      "bytes": 726,
+      "sha256": "e46458bf60217a63a73310cc5dc5e51897d6c660319c9caefec16e251bf09955"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/preparation.json",
+      "bytes": 501,
+      "sha256": "c5cac234a68c052ffee0db77f03d6f53195198a7940f6dde49c87f08dd0840a2"
+    }
+  ],
+  "limitations": [
+    "Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.",
+    "Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred."
+  ],
+  "method": "Literal ledger row expansion, output byte hashes and immutable-input equality only; no new geographic predicate or producer.",
+  "accepted_credit": 0,
+  "selected_map_changed": false
+}
