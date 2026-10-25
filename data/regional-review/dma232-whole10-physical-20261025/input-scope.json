@@ -1,0 +1,59 @@
+{
+  "author_worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "branch": "geography/dma232-whole10-physical-20261025-01a16f2d8ad8",
+  "accepted_code_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "source_scope": "ten whole original consumed DMA ADM1 parish features, each paired with unchanged selected atlas:territory:DMA",
+  "owner": 7115,
+  "original_pending_keys": 232,
+  "original_intervals": 109,
+  "excluded_original_nonland": 174,
+  "source_body": {
+    "advertised_feature_count": 10,
+    "cohort": "administrative-registry",
+    "feature_count": 10,
+    "key": "gb:DMA:ADM1",
+    "metadata_sha256": "96b718f8e0214599f01e979c5ce841a1aea10337b84d0f21949591987b8f94a6",
+    "original_bytes": 24013,
+    "original_metadata_file": "data/administrative-sources.json",
+    "original_sha256": "0303b91c05bb5085708181ceb1a3d01d606d282c32fa1afb6c58e36e116678f9",
+    "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+    "parts": [
+      {
+        "bytes": 6922,
+        "hash_kind": "file-bytes",
+        "offset": 0,
+        "ordinal": 0,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-DMA-ADM1-000.bin.gz",
+        "sha256": "d3f9c7e4c2803cd217b513d1d6d1ff8a187e3837d5abff9466fcac16fa0b6ecc",
+        "uncompressed_bytes": 24013,
+        "uncompressed_sha256": "0303b91c05bb5085708181ceb1a3d01d606d282c32fa1afb6c58e36e116678f9"
+      }
+    ],
+    "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DMA/ADM1/geoBoundaries-DMA-ADM1_simplified.geojson",
+    "recorded_license": "Creative Commons Attribution 2.5 Generic",
+    "source_represented_year_claim": "2005",
+    "local": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/original-DMA-ADM1-simplified.geojson"
+  },
+  "input_only": true,
+  "physical_result": null,
+  "native_result": null,
+  "accepted_delta": 0,
+  "method": "accepted generic physical phase; no Indonesia source-phase substitution",
+  "source_sufficiency": "76 positive-context plus156 mixed-context; no blanket unresolved or shore veto",
+  "actual_shared_body_check_reused": {
+    "receipt": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-physical-continuation/common24-actual-body-check.json",
+      "bytes": 13262,
+      "sha256": "21b052b4d2602523e61deda39c871a1416e53fec81215c1db6abca3a224b6f85"
+    },
+    "all24_pins_exact_equal_DMA": true,
+    "all24_actual_encoded_verified": true,
+    "all21_decoded_verified": true,
+    "new_manual_body_read_by_DMA_worker": false,
+    "stock_authentication_required": true
+  },
+  "exact_stage_byte_identity": {
+    "bytes": 126293,
+    "sha256": "0b10de86b71700f2494324207f62702cd4ef7f0c8e7bd44ba626451e1d47e033"
+  }
+}

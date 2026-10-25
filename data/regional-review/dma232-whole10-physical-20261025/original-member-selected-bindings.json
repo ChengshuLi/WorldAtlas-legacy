@@ -1,0 +1,1724 @@
+{
+  "kind": "inert-DMA232-source-member-selected-base-groundwork",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "original_scope": 232,
+  "intervals": 109,
+  "excluded_nonland_not_in_scope": 174,
+  "source_family_complete_members": 10,
+  "selected_owner_count": 1,
+  "selected_target": {
+    "id": "atlas:territory:DMA",
+    "pixelIndex": 7115,
+    "part": "data/geography/part-28.json",
+    "original_part_ordinal": 1259,
+    "geometry_type": "Polygon",
+    "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+    "canonical_geometry_bytes": 1039,
+    "properties": {
+      "id": "atlas:territory:DMA",
+      "name": "Dominica",
+      "parent_id": "framework:province:dominica:2e5b9f128187",
+      "reference_owner": "Dominica",
+      "metadata": {
+        "source_name": "Atlas source aggregation",
+        "source_id": "atlas:territory:DMA",
+        "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "license": "Underlying source licenses retained in semantic-report.json",
+        "reference_year": "Undated modern reference",
+        "administrative_level": "Compact source country/territory",
+        "location_basis": "Compact source country/territory",
+        "representative_point": [
+          -61.33891854452969,
+          15.41405
+        ],
+        "search_aliases": [
+          "Dominica",
+          "Roseau",
+          "Saint Andrew",
+          "Saint David",
+          "Saint George",
+          "Saint John",
+          "Saint Joseph",
+          "Saint Luke",
+          "Saint Mark",
+          "Saint Patrick",
+          "Saint Paul",
+          "Saint Peter"
+        ],
+        "reference_version": 3,
+        "hierarchy_version": 4,
+        "topology_version": 1,
+        "semantic_version": 1,
+        "source_member_ids": [
+          "gb:DMA:ADM1:96108325B47785236493574",
+          "gb:DMA:ADM1:96108325B74916276227315",
+          "gb:DMA:ADM1:96108325B67235694688325",
+          "gb:DMA:ADM1:96108325B69930325682932",
+          "gb:DMA:ADM1:96108325B32463735273618",
+          "gb:DMA:ADM1:96108325B86083732773811",
+          "gb:DMA:ADM1:96108325B98972581904621",
+          "gb:DMA:ADM1:96108325B20095781885743",
+          "gb:DMA:ADM1:96108325B18979939092740",
+          "gb:DMA:ADM1:96108325B93131520053722"
+        ],
+        "coverage_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "DMA-1432",
+          "overlap": 0.262618
+        },
+        "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+        "regional_match": {
+          "reference_iso": "DMA",
+          "source_id": null,
+          "overlap": 0.262618,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q784",
+        "reference_polity": "Dominica",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Dominica",
+          "classification": "Sovereign country",
+          "note": null,
+          "uncertainty": false
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "North America",
+          "decision_index": 481,
+          "evidence_file": "geographic-decisions"
+        }
+      }
+    }
+  },
+  "consumed_body": {
+    "advertised_feature_count": 10,
+    "cohort": "administrative-registry",
+    "feature_count": 10,
+    "key": "gb:DMA:ADM1",
+    "metadata_sha256": "96b718f8e0214599f01e979c5ce841a1aea10337b84d0f21949591987b8f94a6",
+    "original_bytes": 24013,
+    "original_metadata_file": "data/administrative-sources.json",
+    "original_sha256": "0303b91c05bb5085708181ceb1a3d01d606d282c32fa1afb6c58e36e116678f9",
+    "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+    "parts": [
+      {
+        "bytes": 6922,
+        "hash_kind": "file-bytes",
+        "offset": 0,
+        "ordinal": 0,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-DMA-ADM1-000.bin.gz",
+        "sha256": "d3f9c7e4c2803cd217b513d1d6d1ff8a187e3837d5abff9466fcac16fa0b6ecc",
+        "uncompressed_bytes": 24013,
+        "uncompressed_sha256": "0303b91c05bb5085708181ceb1a3d01d606d282c32fa1afb6c58e36e116678f9"
+      }
+    ],
+    "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DMA/ADM1/geoBoundaries-DMA-ADM1_simplified.geojson",
+    "recorded_license": "Creative Commons Attribution 2.5 Generic",
+    "source_represented_year_claim": "2005",
+    "local": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/original-DMA-ADM1-simplified.geojson"
+  },
+  "membership_pins": [
+    {
+      "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+      "path": "data/world-index.json",
+      "blob": "d4ca1f07f7f504484461007919f90af5c5732b61",
+      "bytes": 944,
+      "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03",
+      "local": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-qualification-groundwork/original-world-index.json"
+    },
+    {
+      "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+      "path": "data/semantic-report.json",
+      "blob": "db3e1ec83d764bc8183caa4779a94b3ad1db0456",
+      "bytes": 6091596,
+      "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831",
+      "local": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-qualification-groundwork/original-semantic-report.json"
+    },
+    {
+      "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+      "path": "data/geography/part-28.json",
+      "blob": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+      "bytes": 6613963,
+      "sha256": "2aab2f36aeeb651ee8e6cc656e9541ad14e2ced2ea8160e8700ad4dc950c379d",
+      "local": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-qualification-groundwork/selected-whole-part28.json"
+    }
+  ],
+  "semantic_change": {
+    "id": "atlas:territory:DMA",
+    "name": "Dominica",
+    "basis": "Compact source country/territory",
+    "source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+    "replaces": [
+      "gb:DMA:ADM1:96108325B47785236493574",
+      "gb:DMA:ADM1:96108325B74916276227315",
+      "gb:DMA:ADM1:96108325B67235694688325",
+      "gb:DMA:ADM1:96108325B69930325682932",
+      "gb:DMA:ADM1:96108325B32463735273618",
+      "gb:DMA:ADM1:96108325B86083732773811",
+      "gb:DMA:ADM1:96108325B98972581904621",
+      "gb:DMA:ADM1:96108325B20095781885743",
+      "gb:DMA:ADM1:96108325B18979939092740",
+      "gb:DMA:ADM1:96108325B93131520053722"
+    ],
+    "source_names": [
+      "Saint Andrew",
+      "Saint David",
+      "Saint George",
+      "Saint John",
+      "Saint Joseph",
+      "Saint Luke",
+      "Saint Mark",
+      "Saint Patrick",
+      "Saint Paul",
+      "Saint Peter"
+    ],
+    "area_km2": 755.61,
+    "coverage_error_degrees2": 0
+  },
+  "roster": [
+    {
+      "source_id": "gb:DMA:ADM1:96108325B47785236493574",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 0,
+      "source_index": 21050,
+      "source_properties": {
+        "shapeName": "Saint Andrew",
+        "shapeISO": "DM-02",
+        "shapeID": "96108325B47785236493574",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/0/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "949d1812365da23aba045818af3d563886666364f37258162a95f5cf62217ed9",
+      "canonical_geometry_bytes": 4355,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 15,
+      "exact_pending_keys": [
+        [
+          7115,
+          119583,
+          86382
+        ],
+        [
+          7115,
+          119583,
+          86383
+        ],
+        [
+          7115,
+          119591,
+          86428
+        ],
+        [
+          7115,
+          119591,
+          86429
+        ],
+        [
+          7115,
+          119591,
+          86430
+        ],
+        [
+          7115,
+          119592,
+          86429
+        ],
+        [
+          7115,
+          119592,
+          86430
+        ],
+        [
+          7115,
+          119592,
+          86431
+        ],
+        [
+          7115,
+          119592,
+          86432
+        ],
+        [
+          7115,
+          119592,
+          86433
+        ],
+        [
+          7115,
+          119593,
+          86431
+        ],
+        [
+          7115,
+          119593,
+          86432
+        ],
+        [
+          7115,
+          119593,
+          86433
+        ],
+        [
+          7115,
+          119594,
+          86432
+        ],
+        [
+          7115,
+          119594,
+          86433
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B47785236493574",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B74916276227315",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 1,
+      "source_index": 21051,
+      "source_properties": {
+        "shapeName": "Saint Joseph",
+        "shapeISO": "DM-06",
+        "shapeID": "96108325B74916276227315",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/1/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "d6e449b2b70e06abe17f8a8ee5bf69e40aec7733bc30927ccdeec4dbc889639b",
+      "canonical_geometry_bytes": 1794,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 28,
+      "exact_pending_keys": [
+        [
+          7115,
+          119708,
+          86343
+        ],
+        [
+          7115,
+          119709,
+          86343
+        ],
+        [
+          7115,
+          119711,
+          86344
+        ],
+        [
+          7115,
+          119725,
+          86349
+        ],
+        [
+          7115,
+          119726,
+          86349
+        ],
+        [
+          7115,
+          119727,
+          86349
+        ],
+        [
+          7115,
+          119728,
+          86349
+        ],
+        [
+          7115,
+          119728,
+          86350
+        ],
+        [
+          7115,
+          119729,
+          86349
+        ],
+        [
+          7115,
+          119729,
+          86350
+        ],
+        [
+          7115,
+          119730,
+          86349
+        ],
+        [
+          7115,
+          119730,
+          86350
+        ],
+        [
+          7115,
+          119730,
+          86351
+        ],
+        [
+          7115,
+          119731,
+          86349
+        ],
+        [
+          7115,
+          119731,
+          86350
+        ],
+        [
+          7115,
+          119731,
+          86351
+        ],
+        [
+          7115,
+          119732,
+          86350
+        ],
+        [
+          7115,
+          119732,
+          86351
+        ],
+        [
+          7115,
+          119733,
+          86350
+        ],
+        [
+          7115,
+          119733,
+          86351
+        ],
+        [
+          7115,
+          119733,
+          86352
+        ],
+        [
+          7115,
+          119734,
+          86351
+        ],
+        [
+          7115,
+          119734,
+          86352
+        ],
+        [
+          7115,
+          119735,
+          86351
+        ],
+        [
+          7115,
+          119735,
+          86352
+        ],
+        [
+          7115,
+          119736,
+          86352
+        ],
+        [
+          7115,
+          119736,
+          86353
+        ],
+        [
+          7115,
+          119737,
+          86353
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B74916276227315",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B67235694688325",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 2,
+      "source_index": 21052,
+      "source_properties": {
+        "shapeName": "Saint Patrick",
+        "shapeISO": "DM-09",
+        "shapeID": "96108325B67235694688325",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/2/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "6f7ebefdae3a5c33c401951e379ad401491864e5b9b6a6f5262560afe6aff669",
+      "canonical_geometry_bytes": 2152,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 17,
+      "exact_pending_keys": [
+        [
+          7115,
+          119848,
+          86447
+        ],
+        [
+          7115,
+          119848,
+          86448
+        ],
+        [
+          7115,
+          119848,
+          86449
+        ],
+        [
+          7115,
+          119848,
+          86450
+        ],
+        [
+          7115,
+          119848,
+          86451
+        ],
+        [
+          7115,
+          119848,
+          86452
+        ],
+        [
+          7115,
+          119848,
+          86453
+        ],
+        [
+          7115,
+          119848,
+          86455
+        ],
+        [
+          7115,
+          119848,
+          86456
+        ],
+        [
+          7115,
+          119848,
+          86457
+        ],
+        [
+          7115,
+          119848,
+          86458
+        ],
+        [
+          7115,
+          119848,
+          86459
+        ],
+        [
+          7115,
+          119849,
+          86448
+        ],
+        [
+          7115,
+          119849,
+          86449
+        ],
+        [
+          7115,
+          119849,
+          86450
+        ],
+        [
+          7115,
+          119849,
+          86451
+        ],
+        [
+          7115,
+          119850,
+          86449
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B67235694688325",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B69930325682932",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 3,
+      "source_index": 21053,
+      "source_properties": {
+        "shapeName": "Saint David",
+        "shapeISO": "DM-03",
+        "shapeID": "96108325B69930325682932",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/3/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "a96b79c64c6cf85f0ebc7b3bcc473de9fc3051c13b23fa5d56d8c5219198708c",
+      "canonical_geometry_bytes": 3753,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 1,
+      "exact_pending_keys": [
+        [
+          7115,
+          119706,
+          86474
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B69930325682932",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B32463735273618",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 4,
+      "source_index": 21054,
+      "source_properties": {
+        "shapeName": "Saint Mark",
+        "shapeISO": "DM-08",
+        "shapeID": "96108325B32463735273618",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/4/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "160a791305e7549f5745eb4d86489b44da7cdc67868dadeee65722d96d7ee865",
+      "canonical_geometry_bytes": 841,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 22,
+      "exact_pending_keys": [
+        [
+          7115,
+          119871,
+          86389
+        ],
+        [
+          7115,
+          119871,
+          86390
+        ],
+        [
+          7115,
+          119871,
+          86391
+        ],
+        [
+          7115,
+          119871,
+          86392
+        ],
+        [
+          7115,
+          119871,
+          86393
+        ],
+        [
+          7115,
+          119871,
+          86394
+        ],
+        [
+          7115,
+          119872,
+          86392
+        ],
+        [
+          7115,
+          119872,
+          86393
+        ],
+        [
+          7115,
+          119872,
+          86394
+        ],
+        [
+          7115,
+          119872,
+          86395
+        ],
+        [
+          7115,
+          119873,
+          86394
+        ],
+        [
+          7115,
+          119873,
+          86395
+        ],
+        [
+          7115,
+          119873,
+          86396
+        ],
+        [
+          7115,
+          119873,
+          86397
+        ],
+        [
+          7115,
+          119874,
+          86396
+        ],
+        [
+          7115,
+          119874,
+          86397
+        ],
+        [
+          7115,
+          119874,
+          86398
+        ],
+        [
+          7115,
+          119874,
+          86399
+        ],
+        [
+          7115,
+          119874,
+          86409
+        ],
+        [
+          7115,
+          119874,
+          86410
+        ],
+        [
+          7115,
+          119875,
+          86400
+        ],
+        [
+          7115,
+          119875,
+          86401
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B32463735273618",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B86083732773811",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 5,
+      "source_index": 21055,
+      "source_properties": {
+        "shapeName": "Saint Luke",
+        "shapeISO": "DM-07",
+        "shapeID": "96108325B86083732773811",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/5/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "4f2b2ede58350e8d1baf6d6de27ff1789a8701794217d75d7672cd0a991e7c2a",
+      "canonical_geometry_bytes": 437,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 24,
+      "exact_pending_keys": [
+        [
+          7115,
+          119830,
+          86386
+        ],
+        [
+          7115,
+          119831,
+          86386
+        ],
+        [
+          7115,
+          119832,
+          86386
+        ],
+        [
+          7115,
+          119833,
+          86386
+        ],
+        [
+          7115,
+          119834,
+          86386
+        ],
+        [
+          7115,
+          119835,
+          86386
+        ],
+        [
+          7115,
+          119836,
+          86385
+        ],
+        [
+          7115,
+          119836,
+          86386
+        ],
+        [
+          7115,
+          119836,
+          86387
+        ],
+        [
+          7115,
+          119837,
+          86386
+        ],
+        [
+          7115,
+          119837,
+          86387
+        ],
+        [
+          7115,
+          119838,
+          86386
+        ],
+        [
+          7115,
+          119838,
+          86387
+        ],
+        [
+          7115,
+          119839,
+          86386
+        ],
+        [
+          7115,
+          119839,
+          86387
+        ],
+        [
+          7115,
+          119840,
+          86386
+        ],
+        [
+          7115,
+          119840,
+          86387
+        ],
+        [
+          7115,
+          119841,
+          86387
+        ],
+        [
+          7115,
+          119842,
+          86387
+        ],
+        [
+          7115,
+          119843,
+          86387
+        ],
+        [
+          7115,
+          119844,
+          86387
+        ],
+        [
+          7115,
+          119846,
+          86388
+        ],
+        [
+          7115,
+          119847,
+          86388
+        ],
+        [
+          7115,
+          119848,
+          86388
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B86083732773811",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B98972581904621",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 6,
+      "source_index": 21056,
+      "source_properties": {
+        "shapeName": "Saint George",
+        "shapeISO": "DM-04",
+        "shapeID": "96108325B98972581904621",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/6/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "1d499a36f1789b92dd77909855e5ff2ec15143ccf9184a1da6894b2e0181a0f1",
+      "canonical_geometry_bytes": 1391,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 4,
+      "exact_pending_keys": [
+        [
+          7115,
+          119808,
+          86378
+        ],
+        [
+          7115,
+          119809,
+          86379
+        ],
+        [
+          7115,
+          119810,
+          86380
+        ],
+        [
+          7115,
+          119812,
+          86383
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B98972581904621",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B20095781885743",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 7,
+      "source_index": 21057,
+      "source_properties": {
+        "shapeName": "Saint Paul",
+        "shapeISO": "DM-10",
+        "shapeID": "96108325B20095781885743",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/7/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "2580dcfb9e60b129d2592d8fb28eb94b477ef0931d52c741fc65262f4c4fb559",
+      "canonical_geometry_bytes": 1554,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 30,
+      "exact_pending_keys": [
+        [
+          7115,
+          119755,
+          86366
+        ],
+        [
+          7115,
+          119756,
+          86367
+        ],
+        [
+          7115,
+          119780,
+          86373
+        ],
+        [
+          7115,
+          119780,
+          86374
+        ],
+        [
+          7115,
+          119781,
+          86373
+        ],
+        [
+          7115,
+          119781,
+          86374
+        ],
+        [
+          7115,
+          119782,
+          86372
+        ],
+        [
+          7115,
+          119782,
+          86373
+        ],
+        [
+          7115,
+          119782,
+          86374
+        ],
+        [
+          7115,
+          119783,
+          86372
+        ],
+        [
+          7115,
+          119783,
+          86373
+        ],
+        [
+          7115,
+          119783,
+          86374
+        ],
+        [
+          7115,
+          119784,
+          86372
+        ],
+        [
+          7115,
+          119784,
+          86373
+        ],
+        [
+          7115,
+          119784,
+          86374
+        ],
+        [
+          7115,
+          119785,
+          86372
+        ],
+        [
+          7115,
+          119785,
+          86373
+        ],
+        [
+          7115,
+          119785,
+          86374
+        ],
+        [
+          7115,
+          119786,
+          86373
+        ],
+        [
+          7115,
+          119786,
+          86374
+        ],
+        [
+          7115,
+          119787,
+          86373
+        ],
+        [
+          7115,
+          119787,
+          86374
+        ],
+        [
+          7115,
+          119788,
+          86373
+        ],
+        [
+          7115,
+          119788,
+          86374
+        ],
+        [
+          7115,
+          119789,
+          86373
+        ],
+        [
+          7115,
+          119789,
+          86374
+        ],
+        [
+          7115,
+          119790,
+          86373
+        ],
+        [
+          7115,
+          119790,
+          86374
+        ],
+        [
+          7115,
+          119791,
+          86374
+        ],
+        [
+          7115,
+          119792,
+          86375
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B20095781885743",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B18979939092740",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 8,
+      "source_index": 21058,
+      "source_properties": {
+        "shapeName": "Saint John",
+        "shapeISO": "DM-05",
+        "shapeID": "96108325B18979939092740",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/8/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "92413984347fa75d4fb9fbc205a35dd75f5e5a4e6c8630ea9a995810b91da2d2",
+      "canonical_geometry_bytes": 2237,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 84,
+      "exact_pending_keys": [
+        [
+          7115,
+          119552,
+          86325
+        ],
+        [
+          7115,
+          119553,
+          86324
+        ],
+        [
+          7115,
+          119554,
+          86324
+        ],
+        [
+          7115,
+          119556,
+          86323
+        ],
+        [
+          7115,
+          119559,
+          86322
+        ],
+        [
+          7115,
+          119561,
+          86321
+        ],
+        [
+          7115,
+          119566,
+          86321
+        ],
+        [
+          7115,
+          119567,
+          86321
+        ],
+        [
+          7115,
+          119568,
+          86321
+        ],
+        [
+          7115,
+          119569,
+          86321
+        ],
+        [
+          7115,
+          119571,
+          86322
+        ],
+        [
+          7115,
+          119572,
+          86322
+        ],
+        [
+          7115,
+          119573,
+          86321
+        ],
+        [
+          7115,
+          119573,
+          86322
+        ],
+        [
+          7115,
+          119574,
+          86321
+        ],
+        [
+          7115,
+          119574,
+          86322
+        ],
+        [
+          7115,
+          119575,
+          86322
+        ],
+        [
+          7115,
+          119576,
+          86322
+        ],
+        [
+          7115,
+          119576,
+          86323
+        ],
+        [
+          7115,
+          119577,
+          86323
+        ],
+        [
+          7115,
+          119578,
+          86323
+        ],
+        [
+          7115,
+          119587,
+          86314
+        ],
+        [
+          7115,
+          119587,
+          86315
+        ],
+        [
+          7115,
+          119587,
+          86316
+        ],
+        [
+          7115,
+          119587,
+          86317
+        ],
+        [
+          7115,
+          119587,
+          86318
+        ],
+        [
+          7115,
+          119587,
+          86319
+        ],
+        [
+          7115,
+          119588,
+          86312
+        ],
+        [
+          7115,
+          119588,
+          86313
+        ],
+        [
+          7115,
+          119588,
+          86314
+        ],
+        [
+          7115,
+          119588,
+          86315
+        ],
+        [
+          7115,
+          119588,
+          86316
+        ],
+        [
+          7115,
+          119588,
+          86317
+        ],
+        [
+          7115,
+          119588,
+          86318
+        ],
+        [
+          7115,
+          119588,
+          86319
+        ],
+        [
+          7115,
+          119588,
+          86320
+        ],
+        [
+          7115,
+          119589,
+          86312
+        ],
+        [
+          7115,
+          119589,
+          86313
+        ],
+        [
+          7115,
+          119589,
+          86314
+        ],
+        [
+          7115,
+          119589,
+          86315
+        ],
+        [
+          7115,
+          119589,
+          86316
+        ],
+        [
+          7115,
+          119589,
+          86317
+        ],
+        [
+          7115,
+          119589,
+          86318
+        ],
+        [
+          7115,
+          119589,
+          86319
+        ],
+        [
+          7115,
+          119589,
+          86320
+        ],
+        [
+          7115,
+          119589,
+          86321
+        ],
+        [
+          7115,
+          119590,
+          86312
+        ],
+        [
+          7115,
+          119590,
+          86313
+        ],
+        [
+          7115,
+          119590,
+          86314
+        ],
+        [
+          7115,
+          119590,
+          86315
+        ],
+        [
+          7115,
+          119590,
+          86316
+        ],
+        [
+          7115,
+          119590,
+          86317
+        ],
+        [
+          7115,
+          119590,
+          86318
+        ],
+        [
+          7115,
+          119590,
+          86319
+        ],
+        [
+          7115,
+          119590,
+          86320
+        ],
+        [
+          7115,
+          119590,
+          86321
+        ],
+        [
+          7115,
+          119591,
+          86312
+        ],
+        [
+          7115,
+          119591,
+          86313
+        ],
+        [
+          7115,
+          119591,
+          86314
+        ],
+        [
+          7115,
+          119591,
+          86315
+        ],
+        [
+          7115,
+          119591,
+          86316
+        ],
+        [
+          7115,
+          119591,
+          86317
+        ],
+        [
+          7115,
+          119591,
+          86318
+        ],
+        [
+          7115,
+          119591,
+          86322
+        ],
+        [
+          7115,
+          119592,
+          86313
+        ],
+        [
+          7115,
+          119592,
+          86314
+        ],
+        [
+          7115,
+          119622,
+          86313
+        ],
+        [
+          7115,
+          119623,
+          86312
+        ],
+        [
+          7115,
+          119623,
+          86313
+        ],
+        [
+          7115,
+          119624,
+          86311
+        ],
+        [
+          7115,
+          119624,
+          86312
+        ],
+        [
+          7115,
+          119624,
+          86313
+        ],
+        [
+          7115,
+          119625,
+          86311
+        ],
+        [
+          7115,
+          119625,
+          86312
+        ],
+        [
+          7115,
+          119625,
+          86313
+        ],
+        [
+          7115,
+          119626,
+          86311
+        ],
+        [
+          7115,
+          119626,
+          86312
+        ],
+        [
+          7115,
+          119626,
+          86313
+        ],
+        [
+          7115,
+          119627,
+          86311
+        ],
+        [
+          7115,
+          119627,
+          86312
+        ],
+        [
+          7115,
+          119627,
+          86313
+        ],
+        [
+          7115,
+          119628,
+          86312
+        ],
+        [
+          7115,
+          119628,
+          86313
+        ],
+        [
+          7115,
+          119629,
+          86313
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B18979939092740",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    },
+    {
+      "source_id": "gb:DMA:ADM1:96108325B93131520053722",
+      "source_family": "gb:DMA:ADM1",
+      "consumed_original_feature_ordinal": 9,
+      "source_index": 21059,
+      "source_properties": {
+        "shapeName": "Saint Peter",
+        "shapeISO": "DM-11",
+        "shapeID": "96108325B93131520053722",
+        "shapeGroup": "DMA",
+        "shapeType": "ADM1"
+      },
+      "consumed_geometry_pointer": "/features/9/geometry",
+      "consumed_geometry_type": "Polygon",
+      "geometry_sha256": "4c4ee2a32173ddba6c58c8ab296566dd6dd0a398446bf08d8c2a0e8003a24847",
+      "canonical_geometry_bytes": 1157,
+      "target_id": "atlas:territory:DMA",
+      "pixelIndex": 7115,
+      "base_geometry": {
+        "geometry_sha256": "1f17ca9f26edfe6901a6e52583bef566b0c3939a164b63bf61da2ec2746f545e",
+        "canonical_geometry_bytes": 1039
+      },
+      "exact_pending_count": 7,
+      "exact_pending_keys": [
+        [
+          7115,
+          119630,
+          86313
+        ],
+        [
+          7115,
+          119652,
+          86319
+        ],
+        [
+          7115,
+          119653,
+          86319
+        ],
+        [
+          7115,
+          119655,
+          86318
+        ],
+        [
+          7115,
+          119656,
+          86318
+        ],
+        [
+          7115,
+          119657,
+          86318
+        ],
+        [
+          7115,
+          119676,
+          86326
+        ]
+      ],
+      "accepted_semantic_change_ids": [
+        "atlas:territory:DMA"
+      ],
+      "runtime_negative_ordinal": null,
+      "stage_requirement": {
+        "target": "gb:DMA:ADM1:96108325B93131520053722",
+        "consumed": "whole unchanged original source feature at pointer",
+        "selected": "whole accepted atlas:territory:DMA feature; same Polygon base for all ten"
+      },
+      "holds_preserved": true
+    }
+  ],
+  "identity_method": {
+    "node": "v24.19.0",
+    "helper": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-southern243-source-lineage/canonical-geometry-identity.mjs",
+    "helper_sha256": "9eabf2d1c6b7ba4139caa00ac80699cabd2364c7154c98a9fa5757794465208b",
+    "method": "Supported sorted-object-key JSON.stringify plus LF; identity-only bytes, no geometry operation"
+  },
+  "not_run": [
+    "native observer",
+    "physical/source producer",
+    "predicate",
+    "raster",
+    "geometry transformation",
+    "source union construction",
+    "qualification",
+    "Git mutation"
+  ],
+  "accepted": false
+}
