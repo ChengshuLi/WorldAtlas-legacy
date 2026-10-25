@@ -1,0 +1,674 @@
+{
+  "kind": "full-original-SDN2654-measured-diagnostic-readback",
+  "operation": {
+    "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+    "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work",
+    "actual_code_checkout_commit": "f2c5bff19579012c9d7d539cccfae0f77990fea5",
+    "source_input_commit": "c16f2b6b38009e009eca0e337cc06a4264023054",
+    "command": [
+      "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/prepare-delivery-handoff.mjs",
+      "native-diagnostic",
+      ".cache/sdn2654-native-diagnostic/native-diagnostic-config.json",
+      ".cache/delivery-handoff/sdn2654-native-diagnostic-20261025-01a16f2e-001"
+    ],
+    "config_sha256": "66fcb1169cc0acd36b3a0e397d067dba5256cf78f1676ac3787c2a091ef7b019",
+    "destination": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-native-diagnostic-20261025-01a16f2e-001",
+    "state": "completed",
+    "started_utc": "2026-10-25T01:29:22.213893+00:00",
+    "original_requested_keys": 2654,
+    "positive_originals": 189,
+    "territorial_families": 15,
+    "SDN1": "Full19 hierarchy/context retained separately outside diagnostic. No parent-consistency clearance or waiver. Missing [39473,121315,147277] remains.",
+    "native_authority_requested": false,
+    "physical_rerun_requested": false,
+    "exit_code": 0,
+    "finished_utc": "2026-10-25T01:40:14.630712+00:00"
+  },
+  "output_receipts": [
+    {
+      "original_path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-native-diagnostic-20261025-01a16f2e-001/native-diagnostic.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-native-diagnostic/completed-original/native-diagnostic.json",
+      "bytes": 2817571,
+      "sha256": "db1e97b00e1c3bce60c4bc26f687834d792414f5a9754b85beaa0ff1dbbaae8e"
+    },
+    {
+      "original_path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-native-diagnostic-20261025-01a16f2e-001/preparation.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-native-diagnostic/completed-original/preparation.json",
+      "bytes": 268,
+      "sha256": "ea9501ce4c12b40b8d9d55bf761f5d6577c95124b3b45003270ac442f84f43e0"
+    }
+  ],
+  "requested": 2654,
+  "diagnostic_supported": 2431,
+  "diagnostic_held": 223,
+  "reasons": {
+    "assigned_cells": 2431,
+    "territorial_exclusion_cells": 223
+  },
+  "original_scope_reasons": {
+    "special896": {
+      "assigned_cells": 896
+    },
+    "foreign223": {
+      "territorial_exclusion_cells": 223
+    },
+    "domestic1535": {
+      "assigned_cells": 1535
+    }
+  },
+  "owner_reasons": [
+    {
+      "owner": 39469,
+      "name": "Al Kurmuk",
+      "keys": 9,
+      "reasons": {
+        "assigned_cells": 9
+      }
+    },
+    {
+      "owner": 39473,
+      "name": "Ag Geneina",
+      "keys": 117,
+      "reasons": {
+        "territorial_exclusion_cells": 82,
+        "assigned_cells": 35
+      }
+    },
+    {
+      "owner": 39476,
+      "name": "Jebel Moon",
+      "keys": 1,
+      "reasons": {
+        "assigned_cells": 1
+      }
+    },
+    {
+      "owner": 39481,
+      "name": "Sirba",
+      "keys": 8,
+      "reasons": {
+        "assigned_cells": 6,
+        "territorial_exclusion_cells": 2
+      }
+    },
+    {
+      "owner": 39489,
+      "name": "Ad Dinder",
+      "keys": 12,
+      "reasons": {
+        "assigned_cells": 12
+      }
+    },
+    {
+      "owner": 39496,
+      "name": "Um Baru",
+      "keys": 4,
+      "reasons": {
+        "assigned_cells": 4
+      }
+    },
+    {
+      "owner": 39503,
+      "name": "As Salam / Ar Rawat",
+      "keys": 1,
+      "reasons": {
+        "assigned_cells": 1
+      }
+    },
+    {
+      "owner": 39510,
+      "name": "Kernoi",
+      "keys": 1,
+      "reasons": {
+        "assigned_cells": 1
+      }
+    },
+    {
+      "owner": 39512,
+      "name": "Rehaid Albirdi",
+      "keys": 1,
+      "reasons": {
+        "territorial_exclusion_cells": 1
+      }
+    },
+    {
+      "owner": 39522,
+      "name": "Basundah",
+      "keys": 36,
+      "reasons": {
+        "assigned_cells": 36
+      }
+    },
+    {
+      "owner": 39524,
+      "name": "Reifi Kassla",
+      "keys": 4,
+      "reasons": {
+        "territorial_exclusion_cells": 2,
+        "assigned_cells": 2
+      }
+    },
+    {
+      "owner": 39537,
+      "name": "Port Sudan",
+      "keys": 42,
+      "reasons": {
+        "assigned_cells": 42
+      }
+    },
+    {
+      "owner": 39542,
+      "name": "Um Dafoug",
+      "keys": 4,
+      "reasons": {
+        "assigned_cells": 4
+      }
+    },
+    {
+      "owner": 39543,
+      "name": "Tawkar",
+      "keys": 120,
+      "reasons": {
+        "assigned_cells": 120
+      }
+    },
+    {
+      "owner": 39549,
+      "name": "Reifi Hamashkureib",
+      "keys": 39,
+      "reasons": {
+        "assigned_cells": 4,
+        "territorial_exclusion_cells": 35
+      }
+    },
+    {
+      "owner": 39559,
+      "name": "Delgo",
+      "keys": 2,
+      "reasons": {
+        "assigned_cells": 2
+      }
+    },
+    {
+      "owner": 39564,
+      "name": "Bendasi",
+      "keys": 3,
+      "reasons": {
+        "assigned_cells": 3
+      }
+    },
+    {
+      "owner": 39572,
+      "name": "Sawakin",
+      "keys": 378,
+      "reasons": {
+        "assigned_cells": 378
+      }
+    },
+    {
+      "owner": 39577,
+      "name": "Reifi Telkok",
+      "keys": 1,
+      "reasons": {
+        "assigned_cells": 1
+      }
+    },
+    {
+      "owner": 39579,
+      "name": "As Sunta",
+      "keys": 82,
+      "reasons": {
+        "assigned_cells": 82
+      }
+    },
+    {
+      "owner": 39587,
+      "name": "Hala'ib",
+      "keys": 915,
+      "reasons": {
+        "assigned_cells": 893,
+        "territorial_exclusion_cells": 22
+      }
+    },
+    {
+      "owner": 39591,
+      "name": "At Tadamon - BN",
+      "keys": 1,
+      "reasons": {
+        "assigned_cells": 1
+      }
+    },
+    {
+      "owner": 39592,
+      "name": "Reifi Wad Elhilaiw",
+      "keys": 4,
+      "reasons": {
+        "assigned_cells": 4
+      }
+    },
+    {
+      "owner": 39596,
+      "name": "Abyei PCA area",
+      "keys": 1,
+      "reasons": {
+        "assigned_cells": 1
+      }
+    },
+    {
+      "owner": 39599,
+      "name": "Al Meiram",
+      "keys": 22,
+      "reasons": {
+        "assigned_cells": 22
+      }
+    },
+    {
+      "owner": 39600,
+      "name": "Al Radoum",
+      "keys": 300,
+      "reasons": {
+        "assigned_cells": 282,
+        "territorial_exclusion_cells": 18
+      }
+    },
+    {
+      "owner": 39604,
+      "name": "Abu Jubayhah",
+      "keys": 35,
+      "reasons": {
+        "assigned_cells": 35
+      }
+    },
+    {
+      "owner": 39608,
+      "name": "Agig",
+      "keys": 323,
+      "reasons": {
+        "assigned_cells": 321,
+        "territorial_exclusion_cells": 2
+      }
+    },
+    {
+      "owner": 39615,
+      "name": "Bahr Al Arab",
+      "keys": 26,
+      "reasons": {
+        "assigned_cells": 26
+      }
+    },
+    {
+      "owner": 39616,
+      "name": "Habila - WD",
+      "keys": 16,
+      "reasons": {
+        "territorial_exclusion_cells": 16
+      }
+    },
+    {
+      "owner": 39619,
+      "name": "Al Fashaga",
+      "keys": 2,
+      "reasons": {
+        "assigned_cells": 2
+      }
+    },
+    {
+      "owner": 39633,
+      "name": "Kulbus",
+      "keys": 80,
+      "reasons": {
+        "assigned_cells": 61,
+        "territorial_exclusion_cells": 19
+      }
+    },
+    {
+      "owner": 39635,
+      "name": "Geisan",
+      "keys": 16,
+      "reasons": {
+        "assigned_cells": 16
+      }
+    },
+    {
+      "owner": 39644,
+      "name": "Um Dukhun",
+      "keys": 5,
+      "reasons": {
+        "assigned_cells": 4,
+        "territorial_exclusion_cells": 1
+      }
+    },
+    {
+      "owner": 39652,
+      "name": "Beida",
+      "keys": 43,
+      "reasons": {
+        "assigned_cells": 20,
+        "territorial_exclusion_cells": 23
+      }
+    }
+  ],
+  "physical_issue_owner22": {
+    "rows": [
+      {
+        "key": [
+          39592,
+          120228,
+          157652
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B67194501280165",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39592,
+          120347,
+          157663
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B67194501280165",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39592,
+          120425,
+          157670
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B67194501280165",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39592,
+          120503,
+          157677
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B67194501280165",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39619,
+          120731,
+          157659
+        ],
+        "original_scope": "special896",
+        "target_source_id": "gb:SDN:ADM2:16777658B79230518314977",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39619,
+          120783,
+          157642
+        ],
+        "original_scope": "special896",
+        "target_source_id": "gb:SDN:ADM2:16777658B79230518314977",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          122849,
+          156539
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          122862,
+          156558
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123215,
+          156419
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123216,
+          156419
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123217,
+          156418
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123217,
+          156419
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123218,
+          156418
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123219,
+          156418
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123220,
+          156417
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123220,
+          156418
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123221,
+          156417
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123222,
+          156417
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123223,
+          156417
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123224,
+          156417
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123226,
+          156416
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      },
+      {
+        "key": [
+          39635,
+          123227,
+          156416
+        ],
+        "original_scope": "domestic1535",
+        "target_source_id": "gb:SDN:ADM2:16777658B89515248440242",
+        "reason": "assigned_cells",
+        "diagnostic_supported": true,
+        "accepted": false,
+        "original_hold_unchanged": true
+      }
+    ],
+    "reasons": {
+      "assigned_cells": 22
+    }
+  },
+  "missing_parent_key": {
+    "key": [
+      39473,
+      121315,
+      147277
+    ],
+    "original_scope": "foreign223",
+    "target_source_id": "gb:SDN:ADM2:16777658B14333470072302",
+    "reason": "territorial_exclusion_cells",
+    "diagnostic_supported": false,
+    "accepted": false,
+    "original_hold_unchanged": true
+  },
+  "split_original_competitor_count": 3,
+  "physical_witness_kind_legend": [
+    "missing_reconstruction",
+    "extra_reconstruction",
+    "contradictory_land_water_support",
+    "L2-outside-L1",
+    "L3-outside-L2",
+    "L4-outside-L3",
+    "outside_mapped_L1_context",
+    "mapped_inland_water_support"
+  ],
+  "territorial_row_count": 1141,
+  "original_scope_not_changed": true,
+  "SDN1_limit": "Full19 hierarchy/context outside this diagnostic; no parent-consistency clearance. Missing Geneina row remains explicit.",
+  "diagnostic_is_not_authority_or_acceptance": true,
+  "all2654_original_holds_remain": true
+}
