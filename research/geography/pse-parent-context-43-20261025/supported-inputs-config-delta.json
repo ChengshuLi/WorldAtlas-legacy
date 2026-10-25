@@ -1,0 +1,21 @@
+{
+  "base_config": {
+    "path": "coordination/engineering/pse-original-disposition-20261020/supported-inputs-config-parent-context-bound.json",
+    "sha256": "01751a93384200297cfd6f410e35a7aeffeb71d88d09a5a76e39871237cd8012"
+  },
+  "diagnostic": {
+    "commit": "3e28e6bdf83bf3b751be03c46414d802faee13ef",
+    "path": "research/geography/pse-parent-context-43-20261025/native-diagnostic.json"
+  },
+  "exact_config_sha256": "5a188811534626c3a5384e19deda6a8746f42e6c79de2948ba9f56d0396c179c",
+  "kind": "supported-inputs-config-delta-v1",
+  "limits": [
+    "Same original native patch as base config.",
+    "Diagnostic is full 427-key stock run.",
+    "Applicability is exact projection bound from the stock unbound preparation; all unused parent-context records are omitted."
+  ],
+  "territorial_applicability_projection": {
+    "commit": "b235cd8bd5c379d0a7b0fdbd203e5163062d03c6",
+    "path": "research/geography/pse-parent-context-43-20261025/projected-territorial-applicability.json"
+  }
+}
