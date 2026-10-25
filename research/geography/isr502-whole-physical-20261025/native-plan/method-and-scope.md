@@ -1,0 +1,31 @@
+# ISR502: full original diagnostic input plan
+
+This plan retains all 502 original keys: 485 land and 17 inland water across twelve direct source owners. The original 415 source/context intervals independently match every key, class and candidate list in the retained research records. Packing adjacent equal-owner cells yields 403 requested native runs on 389 rows; this is an interval encoding of the same keys, not a new spatial measurement or a reduction to the earlier 379 positive candidates. The original 379/63/60 research classification is unchanged.
+
+The original selected-owner observation explicitly has `scientific_qualification:false`. It measured selected ownership for all 502 keys and is preserved as that evidence. Its `patch_pin` is the previously accepted cumulative Brunei composition used for ownership comparison, not an ISR native qualification request. The two original ISR handoff bodies and the bounded current-tree ISR path inventory do not provide an equivalent full source-target diagnostic. This check does not establish universal historical absence. No native diagnostic has been run in this continuation.
+
+## Source and owner joins
+
+All fifteen frozen ISR ADM2 members have distinct original direct owner entries, authenticated against the original native manifest's bounds asset. The twelve target IDs match their twelve recorded owner indices and exact selected-stage features. The three other members stay in the complete fifteen-member source family and remain available as competitors; no omitted member is borrowed as coverage. No aggregation or manually invented source-membership relation is necessary for these direct owners.
+
+The sole physical phase consumed the twelve whole original source features with their distinct selected features. It executed at `ce32528b8b3289681dc3b238549bd6b0f69de66d`, whose executable code is unchanged from accepted baseline `5ea3f8e75089905690bfb7a8c8589d84f0d45ca9`. The exact result is retained in published commit `e600c0759f4ec6ec2d8d01e499f91d74e5e537ed`; result SHA256 is `302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af`. The physical input and physical reproduction pointers retain their actual distinct roles and commits. A retention copy does not reissue the physical calculation or change its embedded original output paths.
+
+The consumed source families retain all 71 original features: ISR ADM2 (15), ISR ADM1 (6), JOR ADM1 (12), LBN ADM1 (9), EGY ADM1 (27) and PSE ADM1 (2). All six current payload blobs match the prior authenticated bodies. The 25 previously contacted features remain an observation index, not a replacement for the complete family inventories.
+
+## Conservative initial roles
+
+ISR ADM2 supplies the proposed positive source-to-map-location relationship. This is a diagnostic source-relative claim, not an assertion of sovereignty, present control or factual approval. Its complete source family remains intact, including same-level competitors.
+
+The five other families initially remain conservative territorial negatives. ISR ADM1 has a substantive proposed parent-context rationale in the prior research, but no blanket parent waiver is inserted here. The Jordanian, Lebanese, Egyptian and Palestinian administrative portrayals retain their actual competing footprints and completed source-method limitations; missing native owners and source disclaimers do not exempt them. Only the supported `source-evidence` preparation should select operands from unchanged whole-family bounds, emit actual negative ordinals and preserve its complete provenance. This draft does not hand-author a negative array or adopt an applicability exception.
+
+The three water keys with no recorded foreign candidate remain distinct from the fourteen foreign-water contexts: five northern Madaba and nine southern-list readings. `water17-context-preservation.json` retains their literal keys, candidate lists and documentary-index labels. Those labels are neither newly measured contacts nor adopted boundary placements. Existing river/inland-water ownership is not rejected simply for being water.
+
+## Physical implications and remaining steps
+
+The completed whole-target support reports Be'er Sheva's contradictory land/water and L2-outside-L1 conditions, Kinneret's contradictory land/water condition, and Haifa's extra reconstruction. The current consumer distinguishes general physical issues from specific reconstruction residual pointsets. It requires explicit class rows for mixed coverage with general issues; the draft therefore binds every original class to its exact requested key. No whole-member issue is silently converted to a newly measured per-cell failure, and zero issues on the other nine members is not per-cell clearance.
+
+`source-evidence-preparation.draft.json` has exact immutable physical, source-catalogue, positive-family and original owner pins; literal selected base geometry comes only from the authenticated whole-stage input. The accepted selector is pinned to `5ea3f8e...`, whose NRU update changes the prepared bank but retains the original native manifest. The final-bank preparation guard requires the owner pin's original `913db062...:data/canonical-grid/bounds.json.gz` path, even though the shared historical owners alias has identical bytes. Original native latitude/base fields should be derived by the stock preparation, not transplanted from a later reference metadata projection.
+
+The next steps are committing these exact inputs, performing the supported source-evidence preparation, inspecting the emitted full-source/negative provenance, and binding immutable locators for that output and the 502-key patch. A single full diagnostic can follow only after the full scope and no-equivalent check are settled. Source applicability questions in the prior 63-cell group, the Lebanese cases and the water contexts remain scientific review questions; a conservative diagnostic does not waive or exhaust them.
+
+No native diagnostic, observer, authority constructor, new physical producer, adoption or hold change is claimed by this plan. Ordinary public evidence may be downloaded in any arbitrary format through existing authorized access, subject to actual restrictions. Repository publication remains normal owned-worktree Git push only. Coordinator retains end-to-end delivery and independent review.

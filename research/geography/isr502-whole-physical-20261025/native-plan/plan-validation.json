@@ -1,0 +1,181 @@
+{
+  "kind": "full-original-scope-input-plan-no-execution",
+  "original_cells": 502,
+  "unique_literal_keys": 502,
+  "target_count": 12,
+  "full_original_source_members": 15,
+  "all_direct_original_owners_verified": 15,
+  "selected_targets": 12,
+  "complete_families": 6,
+  "complete_features": 71,
+  "contacted_features": 25,
+  "negative_families": [
+    "gb:EGY:ADM1",
+    "gb:ISR:ADM1",
+    "gb:JOR:ADM1",
+    "gb:LBN:ADM1",
+    "gb:PSE:ADM1"
+  ],
+  "complete_negative_family_features": 56,
+  "runtime_negative_ordinals": "unassigned until supported source-evidence emission",
+  "patch_y_rows": 389,
+  "patch_runs": 403,
+  "classes": {
+    "land": 485,
+    "inland-water": 17
+  },
+  "water_contexts": {
+    "water-no-foreign3": 3,
+    "water-northern-Madaba5": 5,
+    "water-southern-list9": 9
+  },
+  "original_research_partition": {
+    "finite_source_unresolved_rationale_for_independent_consideration": 60,
+    "positive_source_qualification_candidate": 379,
+    "material_source_application_step_unperformed": 63
+  },
+  "targets": [
+    {
+      "target": "gb:ISR:ADM2:584046B9730835639199",
+      "name": "Be'er Sheva",
+      "owner": 24183,
+      "cells": 215,
+      "physical_classes": {
+        "inland-water": 17,
+        "land": 198
+      },
+      "whole_result_issues": {
+        "contradictory_land_water_support": 1,
+        "L2-outside-L1": 1
+      }
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B86518607604876",
+      "name": "Jerusalem",
+      "owner": 24182,
+      "cells": 6,
+      "physical_classes": {
+        "land": 6
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B11408100439208",
+      "name": "Ashqelon",
+      "owner": 24169,
+      "cells": 22,
+      "physical_classes": {
+        "land": 22
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B34315111222202",
+      "name": "Tel Aviv",
+      "owner": 24173,
+      "cells": 9,
+      "physical_classes": {
+        "land": 9
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B13386645158990",
+      "name": "Zefat",
+      "owner": 24170,
+      "cells": 1,
+      "physical_classes": {
+        "land": 1
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B54386898087809",
+      "name": "Petah Tiqwa",
+      "owner": 24175,
+      "cells": 20,
+      "physical_classes": {
+        "land": 20
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B61571705909900",
+      "name": "HaSharon",
+      "owner": 24177,
+      "cells": 43,
+      "physical_classes": {
+        "land": 43
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B37321511847561",
+      "name": "Haifa",
+      "owner": 24174,
+      "cells": 8,
+      "physical_classes": {
+        "land": 8
+      },
+      "whole_result_issues": {
+        "extra_reconstruction": 1
+      }
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B72217003232480",
+      "name": "Hadera",
+      "owner": 24178,
+      "cells": 61,
+      "physical_classes": {
+        "land": 61
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83749751332199",
+      "name": "Akko",
+      "owner": 24181,
+      "cells": 83,
+      "physical_classes": {
+        "land": 83
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83064859640631",
+      "name": "Yizre'el",
+      "owner": 24180,
+      "cells": 22,
+      "physical_classes": {
+        "land": 22
+      },
+      "whole_result_issues": {}
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B15624900320210",
+      "name": "Kinneret",
+      "owner": 24171,
+      "cells": 12,
+      "physical_classes": {
+        "land": 12
+      },
+      "whole_result_issues": {
+        "contradictory_land_water_support": 1
+      }
+    }
+  ],
+  "derived_patch_expands_exactly_to_original_keys": true,
+  "class_rows_expand_exactly_to_original_classes": true,
+  "source_and_selected_geometry": "literal stage copies; no predicates, tracing or transformations",
+  "native_observer_or_diagnostic_executed": false,
+  "source_evidence_preparation_executed": false,
+  "adopted_applicability_exceptions": 0,
+  "holds_changed": false,
+  "next_steps": [
+    "Review complete plan and bounded no-equivalent diagnostic evidence.",
+    "Commit exact patch/config within owned scope.",
+    "Use supported source-evidence phase to derive accepted native baseline and exact complete-family negative operands.",
+    "Inspect emitted full-source provenance and bind immutable source-evidence/native-patch locators.",
+    "Only then authorize the single full502 native-diagnostic; never substitute selected-owner observation or a subset."
+  ]
+}
