@@ -11,6 +11,14 @@
     "decoded_rows": 73567,
     "index_semantics": "source_index is one-based global row index; ordinal is zero-based within source_id"
   },
+  "index_semantics_pin": {
+    "commit": "b3914bbdd2b6fdcb5e4ae7c860494425fa2c27ea",
+    "path": "coordination/engineering/global-current-cell-work-queue-20261014/README.md",
+    "bytes": 9380,
+    "sha256": "55fe9c5b4aa97511967a3b5cd00d9196a4970c38084c6a046b61d2007d2e1c98",
+    "git_blob_oid": "14a2ff4202269a2a78fe4b46492955ad57841017",
+    "relevant_statement": "Rows store source_feature_indices; source indices are one-based entries in source-feature-roster.json.gz."
+  },
   "held_keys": [
     {
       "y": 159121,
