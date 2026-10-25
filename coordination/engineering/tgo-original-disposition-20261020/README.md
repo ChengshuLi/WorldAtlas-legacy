@@ -24,6 +24,7 @@ This continuation read those public reviews and independently joined their 58 ca
 
 ## Contents and continuation
 
+- `foreign-contact-60-researched-unresolved-proposal.md`: source-free proposal for the exact 60-key foreign-contact subset of the pending post-Akébou residual; it preserves all seven contacts and proposes no status or credit change.
 - `tgo-disposition.json.gz`: all original intervals and their exact question groups.
 - `tgo-selected-owner-observation.json.gz`: lossless stock observation output.
 - `tgo-retained-witness-join.json.gz`: exact retained source/physical joins and input bindings.
