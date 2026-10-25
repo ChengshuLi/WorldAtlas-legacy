@@ -1,0 +1,48 @@
+{
+  "code_and_data_candidate": "e4a8414b25d88c592f1770fc67196a0a746fb0d9",
+  "checks": [
+    {
+      "package": "BRB",
+      "requested_keys": 289,
+      "selected_id": "atlas:territory:BRB",
+      "owner_index": 7113,
+      "members": 11,
+      "complete_lineage_forward_reverse_match": true,
+      "complete_selected_feature_equals_stage_selected": true,
+      "original_exact_witness_keys_equal_scope": true,
+      "retained_class": "land",
+      "original_single_owner_membership": true,
+      "witness_file": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb289-positive-evidence/exact289-witness-application.jsonl",
+        "bytes": 468163,
+        "sha256": "d6d5277367394c1885c5a224f9ee769a7d305967d68bf73c8f891d6337e209f8"
+      },
+      "excluded_physical_context_cells": 20
+    },
+    {
+      "package": "GRD",
+      "requested_keys": 562,
+      "selected_id": "atlas:territory:GRD",
+      "owner_index": 7116,
+      "members": 7,
+      "complete_lineage_forward_reverse_match": true,
+      "complete_selected_feature_equals_stage_selected": true,
+      "original_exact_witness_keys_equal_scope": true,
+      "retained_class": "land",
+      "original_single_owner_membership": true,
+      "witness_file": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/grd562-positive-evidence/exact562-witness-application.jsonl",
+        "bytes": 1104615,
+        "sha256": "7c5d7344a42596aaea7d933d1c309aab85a074fc6a5c34efcad6fcdb667cf88e"
+      },
+      "excluded_physical_context_cells": 273
+    }
+  ],
+  "all18_source_members_preserved": true,
+  "patch_is_lossless_original_key_compression": true,
+  "coverage_rows_repeat_full_owner_scope_per_member": true,
+  "new_geometry_predicates": 0,
+  "native_diagnostic_runs": 0,
+  "unresolved_gate": "None in source/metadata custody; original negative roster and bounded duplicate check completed in separate records. Native diagnostic remains deliberately unexecuted for coordinator exact-scope handoff.",
+  "stock_source_evidence_preparation_exit_code": 0
+}

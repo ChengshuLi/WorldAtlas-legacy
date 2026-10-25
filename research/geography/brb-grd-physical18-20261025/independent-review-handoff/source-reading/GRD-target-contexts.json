@@ -1,0 +1,53 @@
+{
+  "original": 562,
+  "held": 562,
+  "accepted": 0,
+  "credit": 0,
+  "context_counts": {
+    "carriacou_vicinity": 107,
+    "petite_martinique_vicinity": 62,
+    "ronde_and_northern_islet_vicinity": 78,
+    "grenada_main_island_and_coastal_vicinity": 305,
+    "south_of_12N_coast_or_islet_uncertain": 10
+  },
+  "feature_counts": {
+    "Southern Grenadine Islands": 169,
+    "Saint Patrick": 99,
+    "Saint Mark": 34,
+    "Saint John": 31,
+    "Saint Andrew": 30,
+    "Saint George": 159,
+    "Saint David": 40
+  },
+  "target_lineage": {
+    "id": "atlas:territory:GRD",
+    "index": 7116,
+    "bounds": [
+      86088.17765888889,
+      121888.20739620508,
+      86354.64026833333,
+      122287.57593072126
+    ],
+    "province_id": "framework:province:grenada:2a95c43503c6",
+    "province_index": 1891,
+    "name": "Grenada",
+    "reference_owner": "Grenada",
+    "source_id": "atlas:territory:GRD",
+    "location_basis": "Compact source country/territory",
+    "source_atoms": [
+      "gb:GRD:ADM1:93511190B20758743929628",
+      "gb:GRD:ADM1:93511190B21658762393869",
+      "gb:GRD:ADM1:93511190B28979172348328",
+      "gb:GRD:ADM1:93511190B48408833278115",
+      "gb:GRD:ADM1:93511190B55681603978518",
+      "gb:GRD:ADM1:93511190B76376744251170",
+      "gb:GRD:ADM1:93511190B82420517640996"
+    ]
+  },
+  "all_complete_source_vectors_only_original_GRD": true,
+  "all_land_interval_matches": 562,
+  "all_water_interval_matches": 0,
+  "method": "existing interval/roster/lineage lookup; no geometry, observer or coordinate calculation",
+  "source_body_sha256": "77fd71e1e8a9552c8807aed586dcb30399627e7dd462707cdc2b9af64a5a2b5b",
+  "note": "Source body hash is payload hash; older original_metadata_sha256 field misnames this byte domain."
+}

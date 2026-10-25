@@ -1,0 +1,115 @@
+{
+  "kind": "BRB-CRMP-shoreline-study-source-lineage-followup",
+  "date_utc": "2026-10-24T21:13:50.060645+00:00",
+  "scope": {
+    "original_pending": 289,
+    "contextual_center_samples": 3,
+    "unsampled": 286,
+    "new_coordinate_operations": 0,
+    "accepted": 0,
+    "holds_preserved": true
+  },
+  "actual_primary_readings": [
+    {
+      "url": "https://www.baird.com/case-studies/barbados-coastal-risk-assessment-and-management-program/",
+      "publisher": "Baird & Associates",
+      "read": "Full case-study page",
+      "finding": "Publisher distinguishes Coastal LiDAR Study, Sediment Transport Study and Shoreline Change Study among CRMP technical components. The page has no linked final SCS report or exact source-image epochs."
+    },
+    {
+      "url": "https://coastal.gov.bb/czmu-coastal-conservation-programmes-timeline/coastal-risk-assessment-and-management-programme/",
+      "publisher": "Government of Barbados CZMU",
+      "read_sections": [
+        "Coastal Zone LiDAR Surveys",
+        "Sediment Transport Study",
+        "Geotechnical Surveys and Investigations",
+        "Shoreline Change Study",
+        "Comprehensive Risk Evaluation"
+      ],
+      "finding": "SCS mapped historical shoreline positions and classified segments by geomorphic behavior. LiDAR supplied topography, bathymetry and aerial photography for subsequent analyses. Cliff investigations and probabilistic hazards were separate activities. The SCS link46 and LiDAR link41 are same-page section anchors, not downloadable study bodies. Programme2012\u20132020 is not imagery acquisition range."
+    },
+    {
+      "url": "https://coastal.gov.bb/iczm-policy-and-legislation/integrated-coastal-zone-management-plan/",
+      "publisher": "Government of Barbados CZMU",
+      "read": "Actual publication catalogue",
+      "finding": "Bibliography is grouped with Annexes, rather than the PartA/PartD files already read. Stopped annex target was not retried."
+    },
+    {
+      "url": "https://coastal.gov.bb/wp-content/uploads/2023/04/ICZM-Plan_Vol2_Seg1_Final.pdf",
+      "publisher": "Government of Barbados CZMU",
+      "read": "Previously read printed35,37,55,56,59 cross-references",
+      "finding": "Printed35 attributes coastal stability discussion to CRMP Shoreline Change Study (Baird2015c); FigureA21 cites Baird2015. Printed59 also uses Baird2015c for2015LiDAR. This unresolved short-citation ambiguity does not license treating the two studies as one or assigning2015 to every shoreline position. Historical shoreline extrema for erosion hazards and cliff aerial-comparison methods belong to different analytical contexts."
+    }
+  ],
+  "publication_identity": {
+    "confirmed_general_title": "Shoreline Change Study within Barbados Coastal Risk Assessment and Management Programme",
+    "exact_final_report_title_version": "Not authenticated from original report titlepage or bibliography. A secondary citation is indexed as Coastal Risk Assessment and Management Program Shoreline Change Study,7.7\u2013Final Report(2015); retained only as a lead, not primary publication identity.",
+    "primary_related_article": {
+      "title": "BARBADOS COASTAL RISK ASSESSMENT AND MANAGEMENT PROGRAMME",
+      "authors": [
+        "Kevin MacIntosh",
+        "Derek Williamson",
+        "Matthew Armstrong",
+        "Leo Brewster",
+        "Ricardo Arthur"
+      ],
+      "doi": "10.9753/icce.v36.risk.52",
+      "indexed_year": 2018,
+      "journal": "Coastal Engineering Proceedings",
+      "status": "Primary publisher search index inspected; article/PDF body not acquired. Not equivalent to original2015SCS report.",
+      "indexed_method_lead": "Historical beach profiles, aerial photography, sediment constituents and MIKE21SW/FM/ST modelling. This is search-index text, not a completed full-paper reading."
+    }
+  },
+  "access_receipts": [
+    {
+      "action": "open primary article viewer",
+      "target": "https://icce-ojs-tamu.tdl.org/icce/article/view/8547/7351",
+      "result": "404 Not Found",
+      "state": "known failed; no body"
+    },
+    {
+      "action": "open separately indexed article record",
+      "target": "https://icce-ojs-tamu.tdl.org/icce/index.php/icce/article/view/8547/0",
+      "result": "404 Not Found",
+      "state": "known failed; no body"
+    },
+    {
+      "action": "open exact download URL exposed by indexed publisher viewer",
+      "target": "https://icce-ojs-tamu.tdl.org/icce/article/download/8547/7351/33600",
+      "result": "404 Not Found",
+      "state": "known failed; no body"
+    },
+    {
+      "action": "open indexed canonical article record",
+      "target": "https://icce-ojs-tamu.tdl.org/icce/article/view/8547",
+      "result": "404 Not Found",
+      "state": "known failed; no body"
+    },
+    {
+      "action": "resolve documented DOI",
+      "target": "https://doi.org/10.9753/icce.v36.risk.52",
+      "result": "not accessible via web tool",
+      "state": "failed retrieval, not denial"
+    },
+    {
+      "action": "read indexed secondary bibliography",
+      "target": "https://www.sciencedirect.com/science/article/am/pii/S0301479722002912",
+      "result": "403 Forbidden",
+      "state": "denied; not retried or routed around"
+    }
+  ],
+  "layer_applicability": {
+    "supported": "Official SCS purpose and PartA cross-reference substantiate a lineage for geomorphic shoreline classification used in the ICZM physical-coast discussion. This is more specific than generic agency metadata.",
+    "not_demonstrated": [
+      "Exact source-image dates and beach-profile observation dates used in the2015report.",
+      "Tidal datum or visible shoreline proxy for each historical position.",
+      "Georeferencing controls, planimetric residuals and source-specific numerical uncertainty.",
+      "Exact final report publication date, revision, page count or file hash.",
+      "Feature-by-feature derivation of every PartD coast line from a particular SCS output.",
+      "Any legal parish boundary equivalence or source replacement."
+    ],
+    "case_relevance": "A26 northern cliff/coast lines, A36 artificial/urban coast and A1/A2 southern beach/lagoon context require distinct physical interpretations. Three contextual centers remain reading aids only; no classification assigned to their full cells or to286unsampled keys."
+  },
+  "finite_result": "The identified public publisher and government pages now establish study purpose and separation of source layers. Original SCS body and bibliography remain unread; do not describe their source questions as exhausted. The concrete unresolved dependency is an authorized accessible original SCS7.7 report/catalogue or study-specific method record with epochs and shoreline proxy, rather than a missing longitude column or universal legal coastline certificate. No new verified public report download locator was exposed by the inspected primary pages.",
+  "no_mutations_or_retries": "No Git, native/geometry operations, new coordinate operations, browser/CUA, contact, purchase, annex retry or ArcGIS retry."
+}
