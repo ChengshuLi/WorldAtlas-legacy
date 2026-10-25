@@ -1,0 +1,106 @@
+{
+  "schema": "usa64-canada-mexico-fairfax-residual-source-context-proposal-v1",
+  "status": "proposal-only; root acceptance pending; no credit, owner assignment, repair, or hold release",
+  "scope": {
+    "original_package": "USA repair package #2371; original denominator 107131",
+    "current_accepted_before_proposal": 107067,
+    "current_residual_before_proposal": 64,
+    "proposed_exact_records": 64,
+    "canada_contact_records": 50,
+    "mexico_contact_records": 13,
+    "physical_class_counts": {
+      "land": 61,
+      "inland-water": 3
+    },
+    "retained_status": "held_unresolved",
+    "repair_qualified": false,
+    "documented_exception_candidate": true,
+    "accepted_disposition": false,
+    "new_credit": 0,
+    "owner_changed": false,
+    "physical_or_native_hold_changed": false,
+    "denominator_changed": false,
+    "USA_count_reference_status": "prior USA acceptance ledger after 604 decision; USA counts unchanged, not the current global ledger",
+    "prior_USA_acceptance_ledger_sha256": "b344079d85908f28fd86816251afc90b6bcc3e22e2bbc7255b904707d1212851",
+    "current_global_ledger_sha256": "3be336d75545323178654d8924157918b809ed5d26b722534c15c2cc7dba6ab3",
+    "fairfax_identity_records": 1,
+    "fairfax_hold_reason": "Fairfax-distinct-city-county-identity-976",
+    "fairfax_positive_request_eligible": false,
+    "fairfax_acceptance": "unresolved; no assignment or owner rewrite proposed",
+    "canada_mexico_hold_reason": "complete-foreign-original-contact",
+    "fairfax_included_as_separate_subcohort": true
+  },
+  "keyset_bindings": {
+    "original_held_roster_sha256": "55c522bc2ae7d455492a6f6467ff54f0b2af31376627690e356ed538b1347821",
+    "original_held_roster_private_path": "/tmp/held.json",
+    "canada_private_locator_sha256": "ff9408ab719966e97c16dbfa493c3d40feb884bd7b6859fc07ff2df1ba424400",
+    "canada_private_locator_path": "/workspace/scratch/127991fc8b8e/usa-canada-ibc-section-locator-private-20261025.json",
+    "mexico_private_locator_sha256": "8d1f9af554807327ec6b31750899bdb9352c8548a826cc66f1573bc1112c4b34",
+    "mexico_private_locator_path": "/workspace/scratch/127991fc8b8e/.usa-mexico-private/mex13-map-locator.private.json",
+    "canada_tuple_sha256": "ff5ee829c1beef5a6635075cfea70cf57651ec77e25911be00a84b2a95c00307",
+    "mexico_tuple_sha256": "fdd9b9441a0f3ffc01a9925f4f2cecd0e19fb54e16bc24d9cfd0c8b0f5680b64",
+    "tuple_encoding": "SHA-256 of compact UTF-8 JSON for the sorted [y,x,owner_index] tuple array; no key rows serialized",
+    "private_roster_intersection": "Canada50 and Mexico13 exactly match the foreign-contact held cohort and are disjoint; Fairfax identity key is a separate one-key held subcohort included in exact union64.",
+    "canada_mexico_union_tuple_sha256": "14ff3ef71b33132feeb8ed98559c3588a205eac8e509ae9bf75053996992a819",
+    "fairfax_tuple_sha256": "9cc45a60ace47bd558b8f4093a82b512dfdc49c2355d8b12a66c86c5cbdb2f90",
+    "exact_union64_tuple_sha256": "4bfc9fc8fb0b46e00ed7e4e9ce928f75eaf0e36d7e68e78f4eb5afed25cff78b",
+    "full_original_residual_match": "Canada50 + Mexico13 source-contact + Fairfax1 identity = original 64 held records; exact intersection and state preserved"
+  },
+  "source_application": {
+    "canada": {
+      "original_foreign_source_ids": 10,
+      "applied_map_groups": 50,
+      "summary": "All 50 have bounded signed-map application; precision varies by group. Administrative contact does not prove treaty-line contact."
+    },
+    "mexico": {
+      "original_foreign_source_ids": 3,
+      "applied_map_groups": 13,
+      "summary": "All 13 have local center-to-depicted-line photomap comparison with printed graticule/frame checks; visual, map-scale context only.",
+      "preserved_separate_exception": "Presidio–Ojinaga exception retained unchanged; not extended/revisited by this proposal",
+      "preserved_original_source_limits": [
+        "Minute 253",
+        "Minute 315"
+      ]
+    },
+    "raw_source_bodies_or_geometry_in_packet": false,
+    "exact_coordinates_or_key_rows_in_packet": false,
+    "rights_clearance_claimed": false,
+    "source_search_exhaustion_claimed": false,
+    "original_lineage_binding": "Original private held rows retain original source_feature_indices, foreign_source_ids, physical class, and hold operands; locator sidecars preserve source-ID-to-map-application links; Fairfax source and identity artifacts retain both IDs/parents and positive_request_eligible=false.",
+    "fairfax": {
+      "count": 1,
+      "held_reason": "Fairfax-distinct-city-county-identity-976",
+      "source_ids": [
+        "gb:USA:ADM2:52423323B75618764282830",
+        "gb:USA:ADM2:52423323B7849589815213"
+      ],
+      "source_stage_positive_request_eligible": false,
+      "identity_status": "both source IDs map to same existing aggregate owner; keep #976 distinction and do not rewrite County-only",
+      "physical_result": "historical whole-target evidence has land support, no inland-water support and no physical issue for both members",
+      "current_native": "selected bank read at pinned commit is ownerless 0; no assignment proposed"
+    }
+  },
+  "evidence": {
+    "canada_application_memo_sha256": "113a817de8e2cc28a7d981145b2efa1d317e30874e0c9fbfc82c38fb962cf8d8",
+    "canada_current_rollup_sha256": "e8ebfa9060acffa8124e7cc792bcf8f532685c165310109f17cdeabdfdf0b5fc",
+    "mexico_application_memo_sha256": "1998c83ad39b74ee4adfda40b25a66b8525d4e13d15a7e12b40089c29d653dc6",
+    "accepted_ledger_predecessor_sha256": "b344079d85908f28fd86816251afc90b6bcc3e22e2bbc7255b904707d1212851",
+    "mexico_predecessor_sheet_context_sha256": "362fd875796f17a823585492c30b5b05c70cc8238fa04459d2fa1e3e605cc29e",
+    "original_canada_coverage_rollup_sha256": "455c747c4ceaee398135033ccb902a25fdc71b2e201da68e58522e905272a8cf",
+    "current_global_ledger_sha256": "3be336d75545323178654d8924157918b809ed5d26b722534c15c2cc7dba6ab3",
+    "fairfax_assessment_sha256": "22c590b127e0a64f00ec29a5d128047837bd9f21db3de7a0f6c18f5ac2713c0c",
+    "fairfax_source_physical_currentnative_sha256": "5ddf1767a23a05f4b67c1b803f77b5c503183c20399551a9a055ec2a2f1abe48",
+    "current_bank_check_commit": "e7aa5c46baa083697b662de51e177c7bf89f9014",
+    "current_bank_index_sha256": "d88695ab34ae31729838b66c19a3559db8ba5dc3062b931094b60531e441bdda",
+    "current_bank_selector": "geography:final:c31c3da810efd6fa7e621ef98710219d94517c2aaabfa8d8825c851b667f9078",
+    "current_bank_owner_value": 0
+  },
+  "prohibitions": [
+    "Do not expose private key rows, coordinates, raw source imagery, PDFs, geometry, or per-key map measurements.",
+    "Do not infer legal side, whole-cell contact, current boundary, source-feature identity, physical class, or ownership from map proximity.",
+    "Do not release source, physical, native, owner, repair, or contrary-evidence holds.",
+    "Do not conflate the Fairfax identity predicate with the Canada/Mexico source-contact predicate; keep the three disposition strata separately qualified even though they are bound as one exact union64 proposal.",
+    "Do not change prior acceptance or original denominator; root alone decides accounting.",
+    "Do not override Fairfax positive_request_eligible=false, resolve #976, rewrite its aggregate owner, or treat historical owner5777 patch as current output."
+  ]
+}
