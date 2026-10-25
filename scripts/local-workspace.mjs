@@ -13,7 +13,14 @@ const safeInclude = value => typeof value === 'string' && /^(data|research|coord
 
 // No shell, background mutations, timeout retries, or automatic lock breaking.
 export function workspaceManager(repo, {freeBytes} = {}) {
-  const noLazyFetch = {...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLACE_OBJECTS: '1'};
+  // Every Git command is explicitly rooted with `-C`; inherited repository/index
+  // selectors would override that path and mutate an unrelated checkout. Keep the
+  // sanitized environment invocation-local; never rewrite the parent process.
+  const noLazyFetch = {...process.env};
+  for (const key of ['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
+    'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES']) delete noLazyFetch[key];
+  noLazyFetch.GIT_NO_LAZY_FETCH = '1';
+  noLazyFetch.GIT_NO_REPLACE_OBJECTS = '1';
   const git = (...args) => execFileSync('git', ['-C', repo, ...args], {encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, env: noLazyFetch});
   const objectGit = (args, input, maxBuffer = 128 * 1024) => {
     const result = spawnSync('git', ['-C', repo, ...args], {input, encoding: 'utf8', maxBuffer, env: noLazyFetch});
@@ -182,6 +189,13 @@ export function workspaceManager(repo, {freeBytes} = {}) {
       selectedBytes: missing.length ? null : estimated,
       inputs: inputs.map(({name, oid, bytes}) => ({path: name, oid, bytes})), missing};
   };
+  const materialize = (entry, sparsePatterns) => {
+    if (entry.profile === 'sparse') {
+      execFileSync('git', ['-C', entry.path, 'sparse-checkout', 'set', '--no-cone', '--stdin'], {
+        input: ['/*', '!/*/', ...sparsePatterns].join('\n') + '\n', encoding: 'utf8', env: noLazyFetch});
+    }
+    execFileSync('git', ['-C', entry.path, 'read-tree', '-mu', 'HEAD'], {env: noLazyFetch});
+  };
   const allocate = ({worker, slot = 'work', branch, commit, profile = 'sparse', include = []}) => {
     if (!id(worker) || !['work', 'review'].includes(slot)) throw Error('Supply a safe unique worker ID and work/review slot');
     if (!['sparse', 'full'].includes(profile) || !Array.isArray(include) || !include.every(safeInclude)) throw Error('Use sparse/full profile and literal data/research/coordination paths without traversal or globs');
@@ -228,16 +242,64 @@ export function workspaceManager(repo, {freeBytes} = {}) {
         }
         throw error;
       }
-      if (profile === 'sparse') {
-        execFileSync('git', ['-C', destination, 'sparse-checkout', 'set', '--no-cone', '--stdin'], {
-          input: ['/*', '!/*/', ...sparsePatterns].join('\n') + '\n', encoding: 'utf8', env: noLazyFetch});
-      }
-      execFileSync('git', ['-C', destination, 'read-tree', '-mu', 'HEAD'], {env: noLazyFetch});
+      materialize(entry, sparsePatterns);
       entry.status = 'ready';
       save(value);
       return entry;
     });
   };
+
+  // Resume only an exact interrupted reservation. This deliberately refuses any
+  // materialized/unknown state; a failed materialization is preserved for review.
+  const resume = ({worker, slot = 'work', token}) => locked(() => {
+    if (!id(worker) || slot !== 'work' || !id(token)) throw Error('Resume requires an exact work-slot owner and token');
+    const value = state();
+    const entry = value.entries.find(item => item.worker === worker && item.slot === slot);
+    if (!entry || entry.token !== token) throw Error('Exact current slot ownership token required');
+    if (entry.status !== 'preparing') throw Error('Only an interrupted preparing workspace can be resumed');
+    if (entry.path !== slotPath(worker, slot) || !entry.branch || entry.branch === 'main' || entry.branch.startsWith('-')
+      || !/^[a-f0-9]{40}$/.test(entry.head) || !['sparse', 'full'].includes(entry.profile)
+      || !Array.isArray(entry.include) || !entry.include.every(safeInclude)) {
+      throw Error('Preparing reservation identity is incomplete or changed; inspect manually');
+    }
+    git('check-ref-format', `refs/heads/${entry.branch}`);
+    ordinaryDirectory(entry.path);
+    const directory = fs.lstatSync(entry.path, {throwIfNoEntry: false});
+    if (!directory || !directory.isDirectory() || directory.isSymbolicLink()) throw Error('Preparing checkout path is missing or not an ordinary directory');
+    const names = fs.readdirSync(entry.path).sort();
+    if (names.length !== 1 || names[0] !== '.git') throw Error('Preparing checkout is not empty; preserve it for operator inspection');
+    const dotGit = fs.lstatSync(path.join(entry.path, '.git'));
+    if (!dotGit.isFile() || dotGit.isSymbolicLink()) throw Error('Preparing checkout Git link is not an ordinary file');
+    const localGit = (...args) => execFileSync('git', ['-C', entry.path, ...args],
+      {encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, env: noLazyFetch});
+    if (fs.realpathSync(localGit('rev-parse', '--show-toplevel').trim()) !== fs.realpathSync(entry.path)
+      || fs.realpathSync(localGit('rev-parse', '--path-format=absolute', '--git-common-dir').trim()) !== common) {
+      throw Error('Preparing directory is not linked to the expected common Git repository');
+    }
+    if (localGit('rev-parse', 'HEAD').trim() !== entry.head
+      || localGit('symbolic-ref', '--quiet', 'HEAD').trim() !== `refs/heads/${entry.branch}`
+      || git('rev-parse', '--verify', `refs/heads/${entry.branch}`).trim() !== entry.head) {
+      throw Error('Preparing checkout branch or HEAD changed; preserve it for operator inspection');
+    }
+    if (!worktrees(false).some(item => item.path === entry.path)) throw Error('Preparing directory is not a registered linked worktree');
+    if (localGit('ls-files', '--stage', '-z')) throw Error('Preparing checkout index is not empty; preserve it for operator inspection');
+    if (localGit('ls-files', '--others', '--exclude-standard', '-z')
+      || localGit('ls-files', '--others', '--ignored', '--exclude-standard', '-z')) {
+      throw Error('Preparing checkout contains untracked or ignored files; preserve it for operator inspection');
+    }
+    const {sparsePatterns, missing} = inputInventory(entry.head, entry.profile, entry.include);
+    if (missing.length) throw Error('Preparing checkout selected inputs are unavailable; inspect without resuming');
+    materialize(entry, sparsePatterns);
+    if (localGit('rev-parse', 'HEAD').trim() !== entry.head
+      || localGit('symbolic-ref', '--quiet', 'HEAD').trim() !== `refs/heads/${entry.branch}`
+      || localGit('status', '--porcelain', '--untracked-files=all', '--ignored')) {
+      throw Error('Resume materialization did not produce a clean checkout; preserve it for operator inspection');
+    }
+    entry.status = 'ready';
+    save(value);
+    return entry;
+  });
+
   const release = ({worker, slot = 'work', token}) => locked(() => {
     const value = state();
     const entry = value.entries.find(entry => entry.worker === worker && entry.slot === slot);
@@ -286,7 +348,7 @@ export function workspaceManager(repo, {freeBytes} = {}) {
     return {released: true, path: entry.path, preservedRef, head, ...(generatedDatabase ? {removed_generated_database: generatedDatabase} : {})};
   });
   const check = () => ({freeBytes: availableBytes()});
-  return {report, check, inspect, allocate, release};
+  return {report, check, inspect, allocate, resume, release};
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -295,14 +357,14 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     const options = {include: []};
     for (let index = 0; index < args.length; index += 2) {
       const key = args[index]?.replace(/^--/, '');
-      if (!['worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate or release with documented --key value arguments');
+      if (!['worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume or release with documented --key value arguments');
       if (key === 'include') options.include.push(args[index + 1]);
       else if (Object.hasOwn(options, key)) throw Error(`Duplicate ${key}`);
       else options[key] = args[index + 1];
     }
-    if (action === 'allocate' && (options.slot ?? 'work') === 'work') assertAuthorWorkerIdentity(options.worker);
+    if (['allocate', 'resume'].includes(action) && (options.slot ?? 'work') === 'work') assertAuthorWorkerIdentity(options.worker);
     const manager = workspaceManager(path.dirname(fileURLToPath(import.meta.url)));
-    if (!['report', 'check', 'inspect', 'allocate', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate or release');
+    if (!['report', 'check', 'inspect', 'allocate', 'resume', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume or release with documented --key value arguments');
     console.log(JSON.stringify(manager[action](options), null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
