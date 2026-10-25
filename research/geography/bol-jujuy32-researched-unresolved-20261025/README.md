@@ -1,0 +1,34 @@
+# Argentina–Bolivia Jujuy 32-cell cohort: source-specific researched-unresolved proposal
+
+**Status:** finite candidate for root's independent scientific decision. No key is assigned, accepted, credited, removed from hold, or changed in a bank/native disposition. The exact 34-key contact group and per-key application remain in private custody: `bol-jujuy34-ign-hydro-private-join-20261025.json`, SHA-256 `e2154beea24cdd23f64ea7136609883c042a92a6ee563693450ea5b13d29fa51`; request manifest `bol-jujuy34-ign-query-manifest-20261025.json`, SHA-256 `3efd5122a7ff769ea72bef4572482fc67253f1c65f01d1b4efc866245e561351`. The underlying retained LSIB/native comparator is the 907-row diagnostic SHA-256 `d97ed778b132d8a5b9044d06d80f88e15a7cc93141bf2d307ff65b02000ed6ae`. No raw coordinates/per-key output is published here.
+
+## Candidate scope and findings
+
+Consider only the **32** keys among the original 34 Jujuy contacts whose normative native centers are nearest to the official current IGN mapped line feature named `Río Grande de San Juan` as a finite **researched-unresolved** cohort, not as positive assignments. The full original Jujuy comparator context was 28 LSIB-inside / 6 outside. All six outside contacts occur in the 32 named-river-near group; 26 of those 32 are LSIB-inside. The exact current line comparison puts all 32 within 407 m; 16 are within 100 m and all 6 LSIB-outside centers within 57.6 m. These are nearest-center-to-current-line distances, not cell-polygon or legal-boundary distances.
+
+Keep the other **two of the original 34** separate and pending: their nearest returned IGN feature was one unnamed intermittent line (rather than the treaty-named river), with materially different distances. Do not silently absorb those cases into the 32-key candidate. The source-specific geometry is one finite local application only; no countrywide query, new source data, or repeated overlay was run.
+
+## Why unresolved, not assigned
+
+The official 1925 treaty describes the boundary from the San Antonio/San Juan confluence along the San Juan to Mojinete. Argentina IGN identifies the Grande de San Juan/Mojinete confluence as its northern continental endpoint. The official MFA's 1977 annual report records mixed-commission marker inspection between that confluence and Abra de Rota for possible densification/repair/replacement. The exact-key modern IGN hydrography application therefore has a meaningful named-reach correspondence, and LSIB produces a divergent inside/outside context screen. But the 1925 treaty's two integral signed maps remain absent from the public treaty PDF body; no exact line-to-key comparison to the historic demarcation map or the selected 2006 GeoBoundaries construction has been established. The selected feature lineage remains generic Wikimedia provenance. Do not infer the conditional 1954/1959 variable-watercourse rule for this reach; no exact-reach evidence demonstrates that it is a variable channel.
+
+
+## Bounded official map / marker-record locator
+
+A targeted locator pass found an Argentine foreign-ministry 1951–1952 annual report recording contemporaneous inspection of a 250 km², 1:50,000 border-strip survey between Cerro Grande and the Mojinete–Grande de San Juan confluence. Its publicly retrieved 240-page PDF (44,358,664 bytes; SHA-256 `a374d862ab25a01e93377823c854b66618a827aa0791fc78381502cb66b98331`; printed pp. 82–83) identifies the reach and scale but contains no scanned sheet, sheet number, marker inventory, or coordinates. The public report is a specific official cartographic-work locator, not the missing survey map itself.
+
+Argentina's official 1925 treaty record links only the treaty OCR PDF; the statutory transcription confirms two integral frontier maps, but those maps are not attached to the public text. IGN's public 1:50,000 map service exposes antecedent-cartography mosaic metadata, whose available coverage does not extend to the northern confluence; a broader 1:250,000 mosaic is not identified as this commission survey. IGN's historical-cartography atlas landing page references a catalog JSON that returned HTTP 404 on ordinary retrieval. No catalog/map body, marker list, or historic line-to-key join was acquired. These bounded results do not prove the maps do not exist and do not convert the current hydrography comparison into historical/legal evidence. The exact locator checkpoint is retained privately; public source links are listed below.
+
+No whole-cell physical support, sovereignty certificate, positive boundary assignment, or claim that LSIB is erroneous is made. Root can independently decide whether the 32-key bounded research plus retained limits supports a finite exception; evidence that fills the map/lineage gap could reopen it.
+
+## Evidence pins and official sources
+
+- Private exact-center join SHA-256: `e2154beea24cdd23f64ea7136609883c042a92a6ee563693450ea5b13d29fa51`.
+- Complete split IGN query result bodies are retained privately: A perennial `6eedd09bf4903fb31c0d435746936f14c75530b34a7d9a463cd0038040d60491`; A intermittent `6673b05cfc2a54c3bdff738c5c1c5faffaf7368fbeb87a03e81aa60e3700e60d`; B perennial `b06e66e2aab30bda485964818ff496f8cc750cbafe43d840a68fe6fad912fd2b`; B intermittent `52cbc2b4eebc4c073626a362c13bcc9c2e475c96bf1d2f7caed6d51d6550b12c0`; C perennial `ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c`; C intermittent `f19c2303980854bb34406304a25d7d6f865dca1724667a036e183fb9c63c3205`.
+- Argentina 1925 treaty record/text: https://tratados.cancilleria.gob.ar/tratado_ficha.php?id=l6U%3D and https://tratados.cancilleria.gob.ar/tratado_archivo.php?caso=pdf&id=l6U%3D&tipo=kg%3D%3D&tratados_id=kqSimZk%3D . The public two-page text file SHA-256 is `8e5fa79733ed8499b622b3e0fbcfcec8275c90c7f37b41a9c769e775bca9841c`; its treaty text references but does not attach two integral maps.
+- Argentina IGN northern endpoint: https://www.ign.gob.ar/node/46 .
+- Argentina MFA, 1951–1952 annual report on the contemporaneous border survey: https://www.cancilleria.gob.ar/userfiles/ut/memoriamrec_1951-1952.pdf .
+- IGN antecedent 1:50,000 cartography notice and WMTS capabilities: https://www.ign.gob.ar/content/la-cartograf%C3%ADa-antecedente-escala-150000-disponible-para-toda-la-comunidad and https://imagenes.ign.gob.ar/geoserver/gwc/service/wmts?REQUEST=GetCapabilities .
+- IGN historical-cartography atlas locator (the referenced public catalog JSON returned 404): https://www.ign.gob.ar/cartografia-historica/ .
+- Argentina MFA 1977 annual report: https://www.cancilleria.gob.ar/userfiles/ut/memoriamrec_1977.pdf (private retrieved PDF SHA-256 `eae33bdb774e401f85fb9c4d86a5ee1597e2093c72a62fd048eed58a8f85b661`).
+- Official Argentina IGN hydrography service: https://ide.ign.gob.ar/geoservicios/rest/services/ANIDA/Hidrografia/MapServer (exact local query/results remain private).
