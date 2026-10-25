@@ -247,7 +247,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance} = {}) {
       fetchedWorkHead = fetchedMain;
       // Read guidance by exact immutable object before reserving or materializing
       // a checkout. Never consult the dirty primary working tree or lazy-fetch.
-      startupGuidance = readStartupGuidance(fetchedWorkHead);
+      if (onStartupGuidance) startupGuidance = readStartupGuidance(fetchedWorkHead);
     }
     const head = slot === 'work' ? fetchedWorkHead : commit;
     const entry = locked(() => {

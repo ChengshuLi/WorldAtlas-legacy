@@ -25,7 +25,6 @@ async function fixture(t,{profile='full',include=[],inheritRouting=false}={}){
   const origin=path.join(root,'origin.git'),repo=path.join(root,'repo'); fs.mkdirSync(repo);
   run(root,['init','--bare',origin]); run(repo,['init','-b','main']);
   run(repo,['config','user.name','Resume Test']); run(repo,['config','user.email','resume-test@example.invalid']);
-  fs.writeFileSync(path.join(repo,'AGENTS.md'),'# Resume fixture guidance\n');
   fs.writeFileSync(path.join(repo,'README.md'),'fixture\n');
   const outside=path.join(repo,'research','geography','unselected','outside.txt');fs.mkdirSync(path.dirname(outside),{recursive:true});fs.writeFileSync(outside,'must stay sparse\n');
   for(const prefix of include){const file=path.join(repo,prefix,'selected.json');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,'selected evidence\n');}

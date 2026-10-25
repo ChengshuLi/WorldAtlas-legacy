@@ -528,7 +528,8 @@ test('CLI keeps stdout as one allocation JSON object and presents exact pinned A
 });
 
 test('missing fetched-main AGENTS fails before reservation, branch or worktree creation', t => {
-  const {manager, git, repo, head} = fixture(t);
+  const {git, repo, head} = fixture(t);
+  const manager = workspaceManager(repo, {onStartupGuidance: () => {}});
   git('rm', 'AGENTS.md'); git('commit', '-m', 'missing startup instructions');
   const missingMain = git('rev-parse', 'HEAD');
   const beforeWorktrees = git('worktree', 'list', '--porcelain');
@@ -805,7 +806,7 @@ function partialFixture(t, missing, {packSource = false, configureSource} = {}) 
   const run = (options, action = 'allocate') => {
     const moduleURL = new URL('../scripts/local-workspace.mjs', import.meta.url).href;
     const code = `import {workspaceManager} from ${JSON.stringify(moduleURL)};
-      try { console.log(JSON.stringify(workspaceManager(${JSON.stringify(repo)})[${JSON.stringify(action)}](${JSON.stringify({worker: 'partial', slot: 'review', commit: source.head, ...options})}))); }
+      try { console.log(JSON.stringify(workspaceManager(${JSON.stringify(repo)}, {onStartupGuidance: () => {}})[${JSON.stringify(action)}](${JSON.stringify({worker: 'partial', slot: 'review', commit: source.head, ...options})}))); }
       catch(error) { console.error(error.message); process.exitCode=1; }`;
     // Deliberately permit lazy fetch in the caller: allocator sizing must disable
     // it itself. Any accidental fetch is observable, even if Git recovers.

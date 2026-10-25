@@ -19,8 +19,7 @@ async function fixture(t, {program, promoted = false} = {}) {
   const definition = {version: 1, inputs: ['.github/package-inputs.json', 'scripts/build-static-inner.mjs', 'src/'],
     optional_inputs: [], verification_paths: [], generated_outputs: ['dist/']};
   if (promoted) definition.inputs.push('research/paper.json');
-  const files = {'AGENTS.md': '# Package fixture guidance\n',
-    '.github/package-inputs.json': JSON.stringify(definition), 'src/value.json': '42',
+  const files = {'.github/package-inputs.json': JSON.stringify(definition), 'src/value.json': '42',
     'scripts/build-static-inner.mjs': program ?? "import fs from 'node:fs'; fs.mkdirSync('dist'); fs.writeFileSync('dist/value.json', fs.readFileSync('src/value.json'));",
     'research/paper.json': '99', 'research/secret.mjs': 'export default 99;'};
   for (const [name, value] of Object.entries(files)) {
