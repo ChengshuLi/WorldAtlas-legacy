@@ -1,0 +1,80 @@
+{
+  "schema": "usa63-canada-mexico-foreign-contact-source-context-proposal-v1",
+  "status": "proposal-only; root acceptance pending; no credit, owner assignment, repair, or hold release",
+  "scope": {
+    "original_package": "USA repair package #2371; original denominator 107131",
+    "current_accepted_before_proposal": 107067,
+    "current_residual_before_proposal": 64,
+    "proposed_exact_records": 63,
+    "separate_fairfax_record_untouched": 1,
+    "canada_contact_records": 50,
+    "mexico_contact_records": 13,
+    "physical_class_counts": {
+      "land": 60,
+      "inland-water": 3
+    },
+    "original_hold_reason": "complete-foreign-original-contact",
+    "retained_status": "held_unresolved",
+    "repair_qualified": false,
+    "documented_exception_candidate": true,
+    "accepted_disposition": false,
+    "new_credit": 0,
+    "owner_changed": false,
+    "physical_or_native_hold_changed": false,
+    "denominator_changed": false,
+    "USA_count_reference_status": "prior USA acceptance ledger after 604 decision; USA counts unchanged, not the current global ledger",
+    "prior_USA_acceptance_ledger_sha256": "b344079d85908f28fd86816251afc90b6bcc3e22e2bbc7255b904707d1212851",
+    "current_global_ledger_sha256": "3be336d75545323178654d8924157918b809ed5d26b722534c15c2cc7dba6ab3"
+  },
+  "keyset_bindings": {
+    "original_held_roster_sha256": "55c522bc2ae7d455492a6f6467ff54f0b2af31376627690e356ed538b1347821",
+    "original_held_roster_private_path": "/tmp/held.json",
+    "canada_private_locator_sha256": "ff9408ab719966e97c16dbfa493c3d40feb884bd7b6859fc07ff2df1ba424400",
+    "canada_private_locator_path": "/workspace/scratch/127991fc8b8e/usa-canada-ibc-section-locator-private-20261025.json",
+    "mexico_private_locator_sha256": "8d1f9af554807327ec6b31750899bdb9352c8548a826cc66f1573bc1112c4b34",
+    "mexico_private_locator_path": "/workspace/scratch/127991fc8b8e/.usa-mexico-private/mex13-map-locator.private.json",
+    "canada_tuple_sha256": "ff5ee829c1beef5a6635075cfea70cf57651ec77e25911be00a84b2a95c00307",
+    "mexico_tuple_sha256": "fdd9b9441a0f3ffc01a9925f4f2cecd0e19fb54e16bc24d9cfd0c8b0f5680b64",
+    "union_tuple_sha256": "14ff3ef71b33132feeb8ed98559c3588a205eac8e509ae9bf75053996992a819",
+    "tuple_encoding": "SHA-256 of compact UTF-8 JSON for the sorted [y,x,owner_index] tuple array; no key rows serialized",
+    "private_roster_intersection": "Canada 50/50 and Mexico 13/13 exactly match original foreign-contact held cohort; groups disjoint; Fairfax excluded"
+  },
+  "source_application": {
+    "canada": {
+      "original_foreign_source_ids": 10,
+      "applied_map_groups": 50,
+      "summary": "All 50 have bounded signed-map application; precision varies by group. Administrative contact does not prove treaty-line contact."
+    },
+    "mexico": {
+      "original_foreign_source_ids": 3,
+      "applied_map_groups": 13,
+      "summary": "All 13 have local center-to-depicted-line photomap comparison with printed graticule/frame checks; visual, map-scale context only.",
+      "preserved_separate_exception": "Presidio–Ojinaga exception retained unchanged; not extended/revisited by this proposal",
+      "preserved_original_source_limits": [
+        "Minute 253",
+        "Minute 315"
+      ]
+    },
+    "raw_source_bodies_or_geometry_in_packet": false,
+    "exact_coordinates_or_key_rows_in_packet": false,
+    "rights_clearance_claimed": false,
+    "source_search_exhaustion_claimed": false,
+    "original_lineage_binding": "Original private held rows retain original source_feature_indices, foreign_source_ids, physical class, and hold operands; locator sidecars preserve source-ID-to-map-application links."
+  },
+  "evidence": {
+    "canada_application_memo_sha256": "113a817de8e2cc28a7d981145b2efa1d317e30874e0c9fbfc82c38fb962cf8d8",
+    "canada_current_rollup_sha256": "e8ebfa9060acffa8124e7cc792bcf8f532685c165310109f17cdeabdfdf0b5fc",
+    "mexico_application_memo_sha256": "1998c83ad39b74ee4adfda40b25a66b8525d4e13d15a7e12b40089c29d653dc6",
+    "accepted_ledger_predecessor_sha256": "b344079d85908f28fd86816251afc90b6bcc3e22e2bbc7255b904707d1212851",
+    "mexico_predecessor_sheet_context_sha256": "362fd875796f17a823585492c30b5b05c70cc8238fa04459d2fa1e3e605cc29e",
+    "original_canada_coverage_rollup_sha256": "455c747c4ceaee398135033ccb902a25fdc71b2e201da68e58522e905272a8cf",
+    "current_global_ledger_sha256": "3be336d75545323178654d8924157918b809ed5d26b722534c15c2cc7dba6ab3"
+  },
+  "prohibitions": [
+    "Do not expose private key rows, coordinates, raw source imagery, PDFs, geometry, or per-key map measurements.",
+    "Do not infer legal side, whole-cell contact, current boundary, source-feature identity, physical class, or ownership from map proximity.",
+    "Do not release source, physical, native, owner, repair, or contrary-evidence holds.",
+    "Do not combine Fairfax identity case with this source-contact cohort.",
+    "Do not change prior acceptance or original denominator; root alone decides accounting."
+  ]
+}
