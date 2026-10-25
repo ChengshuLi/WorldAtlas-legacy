@@ -4,13 +4,13 @@ Date: 2026-10-25. Read-only reconciliation of existing issue/PR artifacts and th
 
 ## Result
 
-The records support an exact **key-to-contact-vector mapping for the 11 ADM1 contacts whose direct-owner arrays are empty**, but they do not establish legal/ancestral parentage for those contacts. The 11 named source contact IDs occur on **1,803 distinct frozen keys across 21 owner groups** in the retained original roster. All 1,803 are mapped one-to-one to one of these 11 empty-owner ADM1 contact IDs in the roster's original vector; 444 of the 2,247 keys have none of these 11 contacts. The 1,803 contact relationships match the aggregate in the original #2577 re-audit comment (one ownerless ADM1 contact in the original vector); this reconciliation only exposes the exact retained key IDs and contact IDs behind that aggregate.
+The records support an exact **key-to-contact-vector mapping for the 11 ADM1 contacts whose direct-owner arrays are empty**, but they do not establish legal/ancestral parentage for those contacts. The 11 named source contact IDs occur on **1,803 distinct frozen keys across 33 distinct original owner IDs** in the retained original roster. All 1,803 are mapped one-to-one to one of these 11 empty-owner ADM1 contact IDs in the roster's original vector; 444 of the 2,247 keys have none of these 11 contacts. The 1,803 contact relationships match the aggregate in the original #2577 re-audit comment (one ownerless ADM1 contact in the original vector); this reconciliation only exposes the exact retained key IDs and contact IDs behind that aggregate.
 
 The **nine historical raw competitor refusals remain unmapped**. Public issue/PR records report nine but do not enumerate refusal IDs, exact keys, or their partition. No retained evidence proves these nine are any subset of the 11 ADM1 contacts. Thus all 20 historical events remain pending for causality/ancestry: 11 now have exact contact-to-key-vector indexing but no direct parent owner; nine have neither event IDs nor exact keys.
 
 ## Exact 11 empty-direct-owner ADM1 contacts
 
-Source: `evidence-context.json` in the published SOM packet (ref `0831f7e5fbfcca228dda175f73b6d8449b35982f`), Git blob `844aa3c370d202cec4cf7ce1b51135fa151fa7a4`. Every row below has an empty `owners` array in that retained original contact roster. The accompanying contact-to-key rows are in [`som-11-ownerless-adm1-contact-key-map-20261025.csv`](som-11-ownerless-adm1-contact-key-map-20261025.csv), SHA-256 `67cd8bcc228dd7436ef9e17209d60e14e24d514d4625586618f9868b42e7a02e`.
+Source: `evidence-context.json` in the published SOM packet (ref `0831f7e5fbfcca228dda175f73b6d8449b35982f`), Git blob `844aa3c370d202cec4cf7ce1b51135fa151fa7a4`. Every row below has an empty `owners` array in that retained original contact roster. The accompanying contact-to-key rows are in [`som-11-ownerless-adm1-contact-key-map.csv`](som-11-ownerless-adm1-contact-key-map.csv), SHA-256 `67cd8bcc228dd7436ef9e17209d60e14e24d514d4625586618f9868b42e7a02e`.
 
 | Source index | Exact ADM1 source ID / name | Frozen key count | Original owner groups with key counts |
 |---:|---|---:|---|
@@ -25,7 +25,7 @@ Source: `evidence-context.json` in the published SOM packet (ref `0831f7e5fbfcca
 | 55858 | `gb:SOM:ADM1:83879307B20044253365087` — Galgaduud | 52 | EL DHERE (40035): 52 |
 | 55860 | `gb:SOM:ADM1:83879307B19000204873860` — Bari | 745 | HAFUN (39997): 248; BOSSASO (39998): 94; DANGOROYO (40040): 40; BARGAAL (40054): 65; EYL (40068): 7; BENDER BAYLA (40080): 173; QANDALA (40085): 9; ALULA (40087): 109 |
 | 55861 | `gb:SOM:ADM1:83879307B11376444747055` — Awdal | 15 | ZEILA (40049): 15 |
-| **Total** | **11 distinct ADM1 contact records, all direct owners empty** | **1,803** | **21 frozen owner groups touched** |
+| **Total** | **11 distinct ADM1 contact records, all direct owners empty** | **1,803** | **33 distinct original owner IDs touched** |
 
 These are contact-vector memberships in the proposal's retained source data. They do not mean the ADM1 feature directly owns an ADM2 owner/key, prove legal hierarchy/ancestry, or identify why any competitor was refused. In particular, province labels do not resolve FMS authority.
 
