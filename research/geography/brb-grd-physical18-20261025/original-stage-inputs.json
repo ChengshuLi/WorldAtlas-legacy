@@ -1,0 +1,7453 @@
+[
+  {
+    "target": "gb:BRB:ADM1:18249212B61473051882148",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint George",
+        "shapeISO": "BB-03",
+        "shapeID": "18249212B61473051882148",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.50639896833769,
+              13.13629198918403
+            ],
+            [
+              -59.52812399262814,
+              13.165175773443252
+            ],
+            [
+              -59.53511663792244,
+              13.17416679775954
+            ],
+            [
+              -59.54004185694612,
+              13.180883771169135
+            ],
+            [
+              -59.54372976351772,
+              13.177263837156431
+            ],
+            [
+              -59.55290564707792,
+              13.16853168988564
+            ],
+            [
+              -59.5529708254432,
+              13.168507757127315
+            ],
+            [
+              -59.56318956194866,
+              13.164755529244303
+            ],
+            [
+              -59.581091192304655,
+              13.15797852339017
+            ],
+            [
+              -59.581958855516746,
+              13.157640565359827
+            ],
+            [
+              -59.58058497201881,
+              13.152613974755184
+            ],
+            [
+              -59.5776319248734,
+              13.139901372350494
+            ],
+            [
+              -59.574388412894905,
+              13.126575219171059
+            ],
+            [
+              -59.572758588637896,
+              13.11955041142238
+            ],
+            [
+              -59.57103194247014,
+              13.11247825346868
+            ],
+            [
+              -59.56948280268915,
+              13.105971689042292
+            ],
+            [
+              -59.56741690168628,
+              13.097225086143576
+            ],
+            [
+              -59.5674011455464,
+              13.097233133202565
+            ],
+            [
+              -59.511325506666765,
+              13.124485085018705
+            ],
+            [
+              -59.50639896833769,
+              13.13629198918403
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B83355432632114",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Lucy",
+        "shapeISO": "BB-07",
+        "shapeID": "18249212B83355432632114",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.57756687241317,
+              13.298185317898174
+            ],
+            [
+              -59.57387297815535,
+              13.300517902978868
+            ],
+            [
+              -59.575518182618,
+              13.303512998825909
+            ],
+            [
+              -59.57791507552025,
+              13.303747636444314
+            ],
+            [
+              -59.57644006505694,
+              13.30652185969609
+            ],
+            [
+              -59.579248259299675,
+              13.310013748235917
+            ],
+            [
+              -59.584354067586105,
+              13.311587151725746
+            ],
+            [
+              -59.59520390963269,
+              13.321220575269365
+            ],
+            [
+              -59.59494861908348,
+              13.322669696049672
+            ],
+            [
+              -59.59985586785399,
+              13.32738962952783
+            ],
+            [
+              -59.60594028871333,
+              13.330094579801084
+            ],
+            [
+              -59.607401116868004,
+              13.332302678925544
+            ],
+            [
+              -59.613017506252845,
+              13.33464876283017
+            ],
+            [
+              -59.61850624946379,
+              13.333241115185388
+            ],
+            [
+              -59.62003799185982,
+              13.334303752316373
+            ],
+            [
+              -59.63652461092204,
+              13.326542602159407
+            ],
+            [
+              -59.640580004763365,
+              13.319232333405523
+            ],
+            [
+              -59.64973234317307,
+              13.30879487098656
+            ],
+            [
+              -59.65070741061845,
+              13.30577568679854
+            ],
+            [
+              -59.64913400622936,
+              13.29201635537055
+            ],
+            [
+              -59.649976109809586,
+              13.283885474135388
+            ],
+            [
+              -59.64675336857306,
+              13.273785436448804
+            ],
+            [
+              -59.57756687241317,
+              13.298185317898174
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B32162439805208",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Andrew",
+        "shapeISO": "BB-02",
+        "shapeID": "18249212B32162439805208",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.54204664363766,
+              13.23447799256536
+            ],
+            [
+              -59.54597541023696,
+              13.24135372689301
+            ],
+            [
+              -59.55483966072171,
+              13.251845859099149
+            ],
+            [
+              -59.566427008,
+              13.274153939053122
+            ],
+            [
+              -59.568043846945955,
+              13.284465213099168
+            ],
+            [
+              -59.57330842514364,
+              13.293716472437325
+            ],
+            [
+              -59.59383355147719,
+              13.264905169038343
+            ],
+            [
+              -59.600100853071865,
+              13.237436373589844
+            ],
+            [
+              -59.600098702185036,
+              13.237419013897053
+            ],
+            [
+              -59.59754407060234,
+              13.216800718778188
+            ],
+            [
+              -59.57461432888812,
+              13.204777446721835
+            ],
+            [
+              -59.57455569758736,
+              13.204745573849209
+            ],
+            [
+              -59.57015550906942,
+              13.210825803867806
+            ],
+            [
+              -59.56665078090879,
+              13.215661436026494
+            ],
+            [
+              -59.56307041167014,
+              13.220447881564553
+            ],
+            [
+              -59.54204664363766,
+              13.23447799256536
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B80874946619424",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Peter",
+        "shapeISO": "BB-09",
+        "shapeID": "18249212B80874946619424",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.64675336857306,
+              13.273785436448804
+            ],
+            [
+              -59.64343872561665,
+              13.264862030358472
+            ],
+            [
+              -59.644989969811206,
+              13.240422701046839
+            ],
+            [
+              -59.64264094332481,
+              13.234533599446081
+            ],
+            [
+              -59.64300471279722,
+              13.225240296802326
+            ],
+            [
+              -59.61949904524471,
+              13.232057689410908
+            ],
+            [
+              -59.60464807804635,
+              13.23618112505892
+            ],
+            [
+              -59.600098702185036,
+              13.237419013897053
+            ],
+            [
+              -59.600100853071865,
+              13.237436373589844
+            ],
+            [
+              -59.59383355147719,
+              13.264905169038343
+            ],
+            [
+              -59.57330842514364,
+              13.293716472437325
+            ],
+            [
+              -59.57756687241317,
+              13.298185317898174
+            ],
+            [
+              -59.64675336857306,
+              13.273785436448804
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B3001356606985",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint James",
+        "shapeISO": "BB-04",
+        "shapeID": "18249212B3001356606985",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.600098702185036,
+              13.237419013897053
+            ],
+            [
+              -59.60464807804635,
+              13.23618112505892
+            ],
+            [
+              -59.61949904524471,
+              13.232057689410908
+            ],
+            [
+              -59.64300471279722,
+              13.225240296802326
+            ],
+            [
+              -59.639893026142204,
+              13.208602600629547
+            ],
+            [
+              -59.642330694306054,
+              13.196477510928446
+            ],
+            [
+              -59.638142336599515,
+              13.188278710194368
+            ],
+            [
+              -59.63947197345277,
+              13.17930286643417
+            ],
+            [
+              -59.63752183856195,
+              13.174469583304699
+            ],
+            [
+              -59.63710078677184,
+              13.156926553117955
+            ],
+            [
+              -59.638829316119995,
+              13.144345722976766
+            ],
+            [
+              -59.63605923784348,
+              13.136147013074265
+            ],
+            [
+              -59.61900663674686,
+              13.143075196762993
+            ],
+            [
+              -59.613486220341,
+              13.145268827961644
+            ],
+            [
+              -59.61485151978178,
+              13.163036008405129
+            ],
+            [
+              -59.61657199749965,
+              13.188568387221324
+            ],
+            [
+              -59.60151525462527,
+              13.20382685432594
+            ],
+            [
+              -59.59754407060234,
+              13.216800718778188
+            ],
+            [
+              -59.600098702185036,
+              13.237419013897053
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B6474479975640",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Thomas",
+        "shapeISO": "BB-11",
+        "shapeID": "18249212B6474479975640",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.5529708254432,
+              13.168507757127315
+            ],
+            [
+              -59.557347872606215,
+              13.188501124227571
+            ],
+            [
+              -59.571435364850174,
+              13.203049316672661
+            ],
+            [
+              -59.57455569758736,
+              13.204745573849209
+            ],
+            [
+              -59.57461432888812,
+              13.204777446721835
+            ],
+            [
+              -59.59754407060234,
+              13.216800718778188
+            ],
+            [
+              -59.60151525462527,
+              13.20382685432594
+            ],
+            [
+              -59.61657199749965,
+              13.188568387221324
+            ],
+            [
+              -59.61485151978178,
+              13.163036008405129
+            ],
+            [
+              -59.613486220341,
+              13.145268827961644
+            ],
+            [
+              -59.60526012425527,
+              13.14853760692506
+            ],
+            [
+              -59.59667288204781,
+              13.151909404495484
+            ],
+            [
+              -59.581958855516746,
+              13.157640565359827
+            ],
+            [
+              -59.581091192304655,
+              13.15797852339017
+            ],
+            [
+              -59.56318956194866,
+              13.164755529244303
+            ],
+            [
+              -59.5529708254432,
+              13.168507757127315
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B83249722744294",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Joseph",
+        "shapeISO": "BB-06",
+        "shapeID": "18249212B83249722744294",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.54004185694612,
+              13.180883771169135
+            ],
+            [
+              -59.53521177270511,
+              13.185624829722144
+            ],
+            [
+              -59.50972205143148,
+              13.210008469415357
+            ],
+            [
+              -59.51573768044955,
+              13.212677530443727
+            ],
+            [
+              -59.51928338082331,
+              13.212608493986863
+            ],
+            [
+              -59.52641732939617,
+              13.216433102905398
+            ],
+            [
+              -59.54204664363766,
+              13.23447799256536
+            ],
+            [
+              -59.56307041167014,
+              13.220447881564553
+            ],
+            [
+              -59.56665078090879,
+              13.215661436026494
+            ],
+            [
+              -59.57015550906942,
+              13.210825803867806
+            ],
+            [
+              -59.57455569758736,
+              13.204745573849209
+            ],
+            [
+              -59.571435364850174,
+              13.203049316672661
+            ],
+            [
+              -59.557347872606215,
+              13.188501124227571
+            ],
+            [
+              -59.5529708254432,
+              13.168507757127315
+            ],
+            [
+              -59.55290564707792,
+              13.16853168988564
+            ],
+            [
+              -59.54372976351772,
+              13.177263837156431
+            ],
+            [
+              -59.54004185694612,
+              13.180883771169135
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B50725355749374",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Christ Church",
+        "shapeISO": "BB-01",
+        "shapeID": "18249212B50725355749374",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.56741690168628,
+              13.097225086143576
+            ],
+            [
+              -59.57435613892466,
+              13.093681042246374
+            ],
+            [
+              -59.60708557174172,
+              13.076746238847875
+            ],
+            [
+              -59.59894816862305,
+              13.073970966087245
+            ],
+            [
+              -59.58896347708276,
+              13.073473619412027
+            ],
+            [
+              -59.56539166349444,
+              13.06409292514843
+            ],
+            [
+              -59.55269805746934,
+              13.065819884280302
+            ],
+            [
+              -59.543124667269524,
+              13.063070559658627
+            ],
+            [
+              -59.53865027748827,
+              13.05952982803916
+            ],
+            [
+              -59.53520102041074,
+              13.053614309752618
+            ],
+            [
+              -59.5351647129811,
+              13.05011268065573
+            ],
+            [
+              -59.53243253843084,
+              13.046779013440755
+            ],
+            [
+              -59.52742785351256,
+              13.045057586038808
+            ],
+            [
+              -59.517537194186104,
+              13.046823226810545
+            ],
+            [
+              -59.50596573163318,
+              13.052791409396093
+            ],
+            [
+              -59.50398013917203,
+              13.052197305561265
+            ],
+            [
+              -59.49459112528018,
+              13.066648819987108
+            ],
+            [
+              -59.48656366068434,
+              13.06793366520651
+            ],
+            [
+              -59.474020048086686,
+              13.077300785103205
+            ],
+            [
+              -59.511325506666765,
+              13.124485085018705
+            ],
+            [
+              -59.5674011455464,
+              13.097233133202565
+            ],
+            [
+              -59.56741690168628,
+              13.097225086143576
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B34902747010981",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Michael",
+        "shapeISO": "BB-08",
+        "shapeID": "18249212B34902747010981",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.581958855516746,
+              13.157640565359827
+            ],
+            [
+              -59.59667288204781,
+              13.151909404495484
+            ],
+            [
+              -59.60526012425527,
+              13.14853760692506
+            ],
+            [
+              -59.613486220341,
+              13.145268827961644
+            ],
+            [
+              -59.61900663674686,
+              13.143075196762993
+            ],
+            [
+              -59.63605923784348,
+              13.136147013074265
+            ],
+            [
+              -59.634507993648924,
+              13.127512728229874
+            ],
+            [
+              -59.6279262881676,
+              13.117239719437578
+            ],
+            [
+              -59.62582102921709,
+              13.107721695100224
+            ],
+            [
+              -59.62965481661644,
+              13.104484187895025
+            ],
+            [
+              -59.62901570441119,
+              13.100328892864184
+            ],
+            [
+              -59.61108864482503,
+              13.09129457518452
+            ],
+            [
+              -59.60961363436172,
+              13.083392728791466
+            ],
+            [
+              -59.612450194121095,
+              13.078226000429652
+            ],
+            [
+              -59.60708557174172,
+              13.076746238847875
+            ],
+            [
+              -59.57435613892466,
+              13.093681042246374
+            ],
+            [
+              -59.56741690168628,
+              13.097225086143576
+            ],
+            [
+              -59.56948280268915,
+              13.105971689042292
+            ],
+            [
+              -59.57103194247014,
+              13.11247825346868
+            ],
+            [
+              -59.572758588637896,
+              13.11955041142238
+            ],
+            [
+              -59.574388412894905,
+              13.126575219171059
+            ],
+            [
+              -59.5776319248734,
+              13.139901372350494
+            ],
+            [
+              -59.58058497201881,
+              13.152613974755184
+            ],
+            [
+              -59.581958855516746,
+              13.157640565359827
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B1074587975674",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Philip",
+        "shapeISO": "BB-10",
+        "shapeID": "18249212B1074587975674",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.474020048086686,
+              13.077300785103205
+            ],
+            [
+              -59.45906321179774,
+              13.087219353990065
+            ],
+            [
+              -59.45407086557793,
+              13.09188858459055
+            ],
+            [
+              -59.44939054183999,
+              13.101143898971827
+            ],
+            [
+              -59.44720639076229,
+              13.101088644625293
+            ],
+            [
+              -59.4449513254433,
+              13.103865171040866
+            ],
+            [
+              -59.43963277533226,
+              13.113534423574833
+            ],
+            [
+              -59.42998847179052,
+              13.123838665821836
+            ],
+            [
+              -59.42912332038486,
+              13.129308302935897
+            ],
+            [
+              -59.422797792184326,
+              13.138879873807184
+            ],
+            [
+              -59.42034416734941,
+              13.148437261470463
+            ],
+            [
+              -59.422159565811285,
+              13.152262874032488
+            ],
+            [
+              -59.42174826447081,
+              13.155094064839261
+            ],
+            [
+              -59.42520886829459,
+              13.15612985900583
+            ],
+            [
+              -59.42800287932937,
+              13.161861170057023
+            ],
+            [
+              -59.43093871884673,
+              13.162178805207759
+            ],
+            [
+              -59.43334979495705,
+              13.164637010289823
+            ],
+            [
+              -59.438469785552115,
+              13.163573632117505
+            ],
+            [
+              -59.442965733881465,
+              13.164733680215193
+            ],
+            [
+              -59.45022732682963,
+              13.17234290879827
+            ],
+            [
+              -59.449149434498736,
+              13.174842440426346
+            ],
+            [
+              -59.451305220059794,
+              13.174801011357658
+            ],
+            [
+              -59.45707647809695,
+              13.181718587542832
+            ],
+            [
+              -59.50638018419812,
+              13.136337006547649
+            ],
+            [
+              -59.50639896833769,
+              13.13629198918403
+            ],
+            [
+              -59.511325506666765,
+              13.124485085018705
+            ],
+            [
+              -59.474020048086686,
+              13.077300785103205
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:BRB:ADM1:18249212B15509533795694",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint John",
+        "shapeISO": "BB-05",
+        "shapeID": "18249212B15509533795694",
+        "shapeGroup": "BRB",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.50639896833769,
+              13.13629198918403
+            ],
+            [
+              -59.50638018419812,
+              13.136337006547649
+            ],
+            [
+              -59.45707647809695,
+              13.181718587542832
+            ],
+            [
+              -59.45965888944613,
+              13.183514649681399
+            ],
+            [
+              -59.46388536401827,
+              13.180200465379244
+            ],
+            [
+              -59.46787073034989,
+              13.180200465379244
+            ],
+            [
+              -59.477827056373485,
+              13.189576728683107
+            ],
+            [
+              -59.485868703278015,
+              13.19152374202713
+            ],
+            [
+              -59.48759900518991,
+              13.197240416611976
+            ],
+            [
+              -59.49588176033495,
+              13.198345072766926
+            ],
+            [
+              -59.50972205143148,
+              13.210008469415357
+            ],
+            [
+              -59.53521177270511,
+              13.185624829722144
+            ],
+            [
+              -59.54004185694612,
+              13.180883771169135
+            ],
+            [
+              -59.53511663792244,
+              13.17416679775954
+            ],
+            [
+              -59.52812399262814,
+              13.165175773443252
+            ],
+            [
+              -59.50639896833769,
+              13.13629198918403
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:BRB",
+      "properties": {
+        "id": "atlas:territory:BRB",
+        "name": "Barbados",
+        "parent_id": "framework:province:barbados:0db4db6bb9a2",
+        "reference_owner": "Barbados",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:BRB",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -59.56056707835167,
+            13.19275
+          ],
+          "search_aliases": [
+            "Barbados",
+            "Bridgetown",
+            "Christ Church",
+            "Saint Andrew",
+            "Saint George",
+            "Saint James",
+            "Saint John",
+            "Saint Joseph",
+            "Saint Lucy",
+            "Saint Michael",
+            "Saint Peter",
+            "Saint Philip",
+            "Saint Thomas"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:BRB:ADM1:18249212B61473051882148",
+            "gb:BRB:ADM1:18249212B83355432632114",
+            "gb:BRB:ADM1:18249212B32162439805208",
+            "gb:BRB:ADM1:18249212B80874946619424",
+            "gb:BRB:ADM1:18249212B3001356606985",
+            "gb:BRB:ADM1:18249212B6474479975640",
+            "gb:BRB:ADM1:18249212B83249722744294",
+            "gb:BRB:ADM1:18249212B50725355749374",
+            "gb:BRB:ADM1:18249212B34902747010981",
+            "gb:BRB:ADM1:18249212B1074587975674",
+            "gb:BRB:ADM1:18249212B15509533795694"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "BRB-1998",
+            "overlap": 0.142777
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "BRB",
+            "source_id": null,
+            "overlap": 0.142777,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q244",
+          "reference_polity": "Barbados",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Barbados",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 479,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.6111,
+              13.0913
+            ],
+            [
+              -59.6258,
+              13.1077
+            ],
+            [
+              -59.6361,
+              13.1361
+            ],
+            [
+              -59.6381,
+              13.1883
+            ],
+            [
+              -59.643,
+              13.2252
+            ],
+            [
+              -59.6434,
+              13.2649
+            ],
+            [
+              -59.6468,
+              13.2738
+            ],
+            [
+              -59.6507,
+              13.3058
+            ],
+            [
+              -59.6365,
+              13.3265
+            ],
+            [
+              -59.613,
+              13.3346
+            ],
+            [
+              -59.5844,
+              13.3116
+            ],
+            [
+              -59.5776,
+              13.2982
+            ],
+            [
+              -59.5733,
+              13.2937
+            ],
+            [
+              -59.5548,
+              13.2518
+            ],
+            [
+              -59.542,
+              13.2345
+            ],
+            [
+              -59.5264,
+              13.2164
+            ],
+            [
+              -59.5097,
+              13.21
+            ],
+            [
+              -59.4876,
+              13.1972
+            ],
+            [
+              -59.4679,
+              13.1802
+            ],
+            [
+              -59.4571,
+              13.1817
+            ],
+            [
+              -59.443,
+              13.1647
+            ],
+            [
+              -59.4217,
+              13.1551
+            ],
+            [
+              -59.43,
+              13.1238
+            ],
+            [
+              -59.4541,
+              13.0919
+            ],
+            [
+              -59.474,
+              13.0773
+            ],
+            [
+              -59.4946,
+              13.0666
+            ],
+            [
+              -59.504,
+              13.0522
+            ],
+            [
+              -59.5324,
+              13.0468
+            ],
+            [
+              -59.5387,
+              13.0595
+            ],
+            [
+              -59.5654,
+              13.0641
+            ],
+            [
+              -59.6071,
+              13.0767
+            ],
+            [
+              -59.6111,
+              13.0913
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:GRD:ADM1:93511190B48408833278115",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Andrew",
+        "shapeISO": "GD-01",
+        "shapeID": "93511190B48408833278115",
+        "shapeGroup": "GRD",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.67338302908081,
+              12.167241795343102
+            ],
+            [
+              -61.6778373800837,
+              12.156848309669556
+            ],
+            [
+              -61.68172066044531,
+              12.152051316281813
+            ],
+            [
+              -61.690286720066354,
+              12.13497630410393
+            ],
+            [
+              -61.70005202803429,
+              12.124982567879385
+            ],
+            [
+              -61.70085152693218,
+              12.110077624138853
+            ],
+            [
+              -61.70081913888032,
+              12.109235534791765
+            ],
+            [
+              -61.700794419867975,
+              12.10859284047126
+            ],
+            [
+              -61.70159391876598,
+              12.101568671582072
+            ],
+            [
+              -61.69851013730249,
+              12.087520333803639
+            ],
+            [
+              -61.69851013730249,
+              12.080039308401297
+            ],
+            [
+              -61.69514082051825,
+              12.073471996025262
+            ],
+            [
+              -61.69070620571671,
+              12.075160269121511
+            ],
+            [
+              -61.67475191967253,
+              12.075552880187502
+            ],
+            [
+              -61.651837710186385,
+              12.06263240692573
+            ],
+            [
+              -61.636262199999976,
+              12.049908200000061
+            ],
+            [
+              -61.632592799999884,
+              12.04967780000004
+            ],
+            [
+              -61.637032799999986,
+              12.052147900000136
+            ],
+            [
+              -61.63685319999996,
+              12.054561299999989
+            ],
+            [
+              -61.6337365,
+              12.054461900000092
+            ],
+            [
+              -61.633114399999954,
+              12.056142700000066
+            ],
+            [
+              -61.63062329999991,
+              12.0550771
+            ],
+            [
+              -61.633089,
+              12.05851760000013
+            ],
+            [
+              -61.6328165,
+              12.060912500000029
+            ],
+            [
+              -61.63063889999995,
+              12.061575100000141
+            ],
+            [
+              -61.62882560000003,
+              12.058905700000082
+            ],
+            [
+              -61.62724880000002,
+              12.060044000000119
+            ],
+            [
+              -61.62794639999993,
+              12.062221000000136
+            ],
+            [
+              -61.625358,
+              12.061650399999962
+            ],
+            [
+              -61.62603829999995,
+              12.063153
+            ],
+            [
+              -61.624382,
+              12.063544199999967
+            ],
+            [
+              -61.627429,
+              12.065499899999963
+            ],
+            [
+              -61.626244499999984,
+              12.068261300000017
+            ],
+            [
+              -61.6266857,
+              12.075056800000084
+            ],
+            [
+              -61.623638700000015,
+              12.076718700000072
+            ],
+            [
+              -61.61976770000001,
+              12.074553200000139
+            ],
+            [
+              -61.61945009999994,
+              12.07642490000012
+            ],
+            [
+              -61.616858099999945,
+              12.077264200000116
+            ],
+            [
+              -61.6219135,
+              12.082912700000122
+            ],
+            [
+              -61.621759,
+              12.089467500000126
+            ],
+            [
+              -61.62326559999997,
+              12.0899579
+            ],
+            [
+              -61.6259677,
+              12.095306400000084
+            ],
+            [
+              -61.624399400000016,
+              12.1004797
+            ],
+            [
+              -61.62217959999998,
+              12.102039500000103
+            ],
+            [
+              -61.627338,
+              12.105539100000101
+            ],
+            [
+              -61.626815599999986,
+              12.111747900000125
+            ],
+            [
+              -61.62364939999992,
+              12.119520599999987
+            ],
+            [
+              -61.61853169999989,
+              12.124563499999965
+            ],
+            [
+              -61.612909799999954,
+              12.123355100000026
+            ],
+            [
+              -61.60780569999997,
+              12.125036
+            ],
+            [
+              -61.6047501,
+              12.122065400000054
+            ],
+            [
+              -61.60360579999991,
+              12.122507600000063
+            ],
+            [
+              -61.60291909999995,
+              12.125956499999972
+            ],
+            [
+              -61.607279300000016,
+              12.125956499999972
+            ],
+            [
+              -61.60973639999992,
+              12.133379300000058
+            ],
+            [
+              -61.6086967,
+              12.149348500000087
+            ],
+            [
+              -61.60523660000001,
+              12.1666022
+            ],
+            [
+              -61.602000799999985,
+              12.1688004
+            ],
+            [
+              -61.6029479911511,
+              12.17365807768914
+            ],
+            [
+              -61.60974656784845,
+              12.172459570538479
+            ],
+            [
+              -61.61452452554818,
+              12.173354247876716
+            ],
+            [
+              -61.61736084306705,
+              12.171679107328487
+            ],
+            [
+              -61.627069043970835,
+              12.171488750448134
+            ],
+            [
+              -61.6333127496502,
+              12.169490003203123
+            ],
+            [
+              -61.65194868824773,
+              12.170327573477266
+            ],
+            [
+              -61.6567647173236,
+              12.168424004672431
+            ],
+            [
+              -61.66753891675802,
+              12.16910928944219
+            ],
+            [
+              -61.67338302908081,
+              12.167241795343102
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:GRD",
+      "properties": {
+        "id": "atlas:territory:GRD",
+        "name": "Grenada",
+        "parent_id": "framework:province:grenada:2a95c43503c6",
+        "reference_owner": "Grenada",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:GRD",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -61.68711681890012,
+            12.11435
+          ],
+          "search_aliases": [
+            "Grenada",
+            "Saint Andrew",
+            "Saint David",
+            "Saint George",
+            "Saint George's",
+            "Saint John",
+            "Saint Mark",
+            "Saint Patrick",
+            "Southern Grenadine Islands",
+            "St. George's"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:GRD:ADM1:93511190B48408833278115",
+            "gb:GRD:ADM1:93511190B20758743929628",
+            "gb:GRD:ADM1:93511190B55681603978518",
+            "gb:GRD:ADM1:93511190B21658762393869",
+            "gb:GRD:ADM1:93511190B82420517640996",
+            "gb:GRD:ADM1:93511190B28979172348328",
+            "gb:GRD:ADM1:93511190B76376744251170"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "GRD-5072",
+            "overlap": 0.232897
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "GRD",
+            "source_id": null,
+            "overlap": 0.232897,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q769",
+          "reference_polity": "Grenada",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Grenada",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 482,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6789,
+                12.0229
+              ],
+              [
+                -61.6861,
+                12.0152
+              ],
+              [
+                -61.7109,
+                12.0175
+              ],
+              [
+                -61.712,
+                12.0035
+              ],
+              [
+                -61.738,
+                12.0084
+              ],
+              [
+                -61.7534,
+                11.9892
+              ],
+              [
+                -61.7657,
+                11.9969
+              ],
+              [
+                -61.7849,
+                11.999
+              ],
+              [
+                -61.7858,
+                12.0107
+              ],
+              [
+                -61.7583,
+                12.0264
+              ],
+              [
+                -61.7505,
+                12.0495
+              ],
+              [
+                -61.7526,
+                12.0707
+              ],
+              [
+                -61.7616,
+                12.0888
+              ],
+              [
+                -61.7459,
+                12.1092
+              ],
+              [
+                -61.7533,
+                12.1205
+              ],
+              [
+                -61.7351,
+                12.1509
+              ],
+              [
+                -61.7243,
+                12.1771
+              ],
+              [
+                -61.7176,
+                12.1906
+              ],
+              [
+                -61.7039,
+                12.1971
+              ],
+              [
+                -61.683,
+                12.2197
+              ],
+              [
+                -61.6545,
+                12.2346
+              ],
+              [
+                -61.643,
+                12.2249
+              ],
+              [
+                -61.6251,
+                12.2298
+              ],
+              [
+                -61.6086,
+                12.2269
+              ],
+              [
+                -61.6029,
+                12.1737
+              ],
+              [
+                -61.6097,
+                12.1334
+              ],
+              [
+                -61.6236,
+                12.1195
+              ],
+              [
+                -61.6273,
+                12.1055
+              ],
+              [
+                -61.6219,
+                12.0829
+              ],
+              [
+                -61.6244,
+                12.0635
+              ],
+              [
+                -61.6363,
+                12.0499
+              ],
+              [
+                -61.653,
+                12.0261
+              ],
+              [
+                -61.6789,
+                12.0229
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.4301,
+                12.458
+              ],
+              [
+                -61.4552,
+                12.458
+              ],
+              [
+                -61.4701,
+                12.4455
+              ],
+              [
+                -61.4875,
+                12.4484
+              ],
+              [
+                -61.4864,
+                12.4663
+              ],
+              [
+                -61.4781,
+                12.4786
+              ],
+              [
+                -61.454,
+                12.4882
+              ],
+              [
+                -61.4502,
+                12.5169
+              ],
+              [
+                -61.4341,
+                12.5251
+              ],
+              [
+                -61.4199,
+                12.5007
+              ],
+              [
+                -61.4305,
+                12.4836
+              ],
+              [
+                -61.4301,
+                12.458
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:GRD:ADM1:93511190B20758743929628",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint David",
+        "shapeISO": "GD-02",
+        "shapeID": "93511190B20758743929628",
+        "shapeGroup": "GRD",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.69514082051825,
+              12.073471996025262
+            ],
+            [
+              -61.70113706225294,
+              12.07067374988236
+            ],
+            [
+              -61.70553430619168,
+              12.066390720071922
+            ],
+            [
+              -61.70821833820628,
+              12.04771671009803
+            ],
+            [
+              -61.714956971774825,
+              12.029214021316704
+            ],
+            [
+              -61.71507118590296,
+              12.023617529031128
+            ],
+            [
+              -61.710877,
+              12.0174568
+            ],
+            [
+              -61.7091261,
+              12.01369580000005
+            ],
+            [
+              -61.7093213,
+              12.01239389999995
+            ],
+            [
+              -61.7108427,
+              12.012646400000051
+            ],
+            [
+              -61.70668849999993,
+              12.00962410000011
+            ],
+            [
+              -61.702371200000016,
+              12.00948980000004
+            ],
+            [
+              -61.70044,
+              12.006585100000052
+            ],
+            [
+              -61.697538899999984,
+              12.009279900000081
+            ],
+            [
+              -61.70056019999993,
+              12.011941199999967
+            ],
+            [
+              -61.70659289999992,
+              12.01176780000003
+            ],
+            [
+              -61.70823119999994,
+              12.014492700000062
+            ],
+            [
+              -61.7073901,
+              12.01699439999993
+            ],
+            [
+              -61.7031007,
+              12.015534300000127
+            ],
+            [
+              -61.699822,
+              12.016071599999975
+            ],
+            [
+              -61.69588239999996,
+              12.014073600000017
+            ],
+            [
+              -61.69229389999998,
+              12.0172546
+            ],
+            [
+              -61.68614789999992,
+              12.015184
+            ],
+            [
+              -61.68271070000003,
+              12.010731500000077
+            ],
+            [
+              -61.68478159999995,
+              12.018390099999976
+            ],
+            [
+              -61.68265589999993,
+              12.019354000000135
+            ],
+            [
+              -61.68098859999998,
+              12.01829559999993
+            ],
+            [
+              -61.680632799999955,
+              12.02207780000009
+            ],
+            [
+              -61.67893079999999,
+              12.022888200000011
+            ],
+            [
+              -61.675524,
+              12.0132724
+            ],
+            [
+              -61.67612,
+              12.01593859999997
+            ],
+            [
+              -61.67456559999994,
+              12.01834759999997
+            ],
+            [
+              -61.671846,
+              12.018134100000111
+            ],
+            [
+              -61.67387180000003,
+              12.021073
+            ],
+            [
+              -61.672595799999954,
+              12.023679400000105
+            ],
+            [
+              -61.67006569999995,
+              12.02375230000007
+            ],
+            [
+              -61.66755939999996,
+              12.019185500000049
+            ],
+            [
+              -61.66564539999996,
+              12.021561299999973
+            ],
+            [
+              -61.663207799999896,
+              12.020671400000083
+            ],
+            [
+              -61.66192899999987,
+              12.022577
+            ],
+            [
+              -61.66389449999997,
+              12.0275383
+            ],
+            [
+              -61.66123369999997,
+              12.027429200000029
+            ],
+            [
+              -61.65946219999995,
+              12.024608500000056
+            ],
+            [
+              -61.65843560000002,
+              12.026648500000078
+            ],
+            [
+              -61.65299909999999,
+              12.026086
+            ],
+            [
+              -61.65542679999993,
+              12.03139
+            ],
+            [
+              -61.64926539999993,
+              12.031274500000052
+            ],
+            [
+              -61.64857469999998,
+              12.033348100000012
+            ],
+            [
+              -61.647342899999956,
+              12.03161810000006
+            ],
+            [
+              -61.64603829999993,
+              12.034060899999986
+            ],
+            [
+              -61.646747,
+              12.036797899999954
+            ],
+            [
+              -61.65163940000002,
+              12.03715040000003
+            ],
+            [
+              -61.6520514,
+              12.038325700000087
+            ],
+            [
+              -61.64877260000003,
+              12.0384767
+            ],
+            [
+              -61.648257599999965,
+              12.041414700000075
+            ],
+            [
+              -61.643305199999986,
+              12.038040200000069
+            ],
+            [
+              -61.64401989999999,
+              12.040808499999969
+            ],
+            [
+              -61.6409964,
+              12.041565800000114
+            ],
+            [
+              -61.63843859999997,
+              12.040138800000022
+            ],
+            [
+              -61.638610299999925,
+              12.043605599999978
+            ],
+            [
+              -61.63471069999997,
+              12.04422750000009
+            ],
+            [
+              -61.63728550000002,
+              12.0465216
+            ],
+            [
+              -61.636262199999976,
+              12.049908200000061
+            ],
+            [
+              -61.651837710186385,
+              12.06263240692573
+            ],
+            [
+              -61.67475191967253,
+              12.075552880187502
+            ],
+            [
+              -61.69070620571671,
+              12.075160269121511
+            ],
+            [
+              -61.69514082051825,
+              12.073471996025262
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:GRD",
+      "properties": {
+        "id": "atlas:territory:GRD",
+        "name": "Grenada",
+        "parent_id": "framework:province:grenada:2a95c43503c6",
+        "reference_owner": "Grenada",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:GRD",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -61.68711681890012,
+            12.11435
+          ],
+          "search_aliases": [
+            "Grenada",
+            "Saint Andrew",
+            "Saint David",
+            "Saint George",
+            "Saint George's",
+            "Saint John",
+            "Saint Mark",
+            "Saint Patrick",
+            "Southern Grenadine Islands",
+            "St. George's"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:GRD:ADM1:93511190B48408833278115",
+            "gb:GRD:ADM1:93511190B20758743929628",
+            "gb:GRD:ADM1:93511190B55681603978518",
+            "gb:GRD:ADM1:93511190B21658762393869",
+            "gb:GRD:ADM1:93511190B82420517640996",
+            "gb:GRD:ADM1:93511190B28979172348328",
+            "gb:GRD:ADM1:93511190B76376744251170"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "GRD-5072",
+            "overlap": 0.232897
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "GRD",
+            "source_id": null,
+            "overlap": 0.232897,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q769",
+          "reference_polity": "Grenada",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Grenada",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 482,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6789,
+                12.0229
+              ],
+              [
+                -61.6861,
+                12.0152
+              ],
+              [
+                -61.7109,
+                12.0175
+              ],
+              [
+                -61.712,
+                12.0035
+              ],
+              [
+                -61.738,
+                12.0084
+              ],
+              [
+                -61.7534,
+                11.9892
+              ],
+              [
+                -61.7657,
+                11.9969
+              ],
+              [
+                -61.7849,
+                11.999
+              ],
+              [
+                -61.7858,
+                12.0107
+              ],
+              [
+                -61.7583,
+                12.0264
+              ],
+              [
+                -61.7505,
+                12.0495
+              ],
+              [
+                -61.7526,
+                12.0707
+              ],
+              [
+                -61.7616,
+                12.0888
+              ],
+              [
+                -61.7459,
+                12.1092
+              ],
+              [
+                -61.7533,
+                12.1205
+              ],
+              [
+                -61.7351,
+                12.1509
+              ],
+              [
+                -61.7243,
+                12.1771
+              ],
+              [
+                -61.7176,
+                12.1906
+              ],
+              [
+                -61.7039,
+                12.1971
+              ],
+              [
+                -61.683,
+                12.2197
+              ],
+              [
+                -61.6545,
+                12.2346
+              ],
+              [
+                -61.643,
+                12.2249
+              ],
+              [
+                -61.6251,
+                12.2298
+              ],
+              [
+                -61.6086,
+                12.2269
+              ],
+              [
+                -61.6029,
+                12.1737
+              ],
+              [
+                -61.6097,
+                12.1334
+              ],
+              [
+                -61.6236,
+                12.1195
+              ],
+              [
+                -61.6273,
+                12.1055
+              ],
+              [
+                -61.6219,
+                12.0829
+              ],
+              [
+                -61.6244,
+                12.0635
+              ],
+              [
+                -61.6363,
+                12.0499
+              ],
+              [
+                -61.653,
+                12.0261
+              ],
+              [
+                -61.6789,
+                12.0229
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.4301,
+                12.458
+              ],
+              [
+                -61.4552,
+                12.458
+              ],
+              [
+                -61.4701,
+                12.4455
+              ],
+              [
+                -61.4875,
+                12.4484
+              ],
+              [
+                -61.4864,
+                12.4663
+              ],
+              [
+                -61.4781,
+                12.4786
+              ],
+              [
+                -61.454,
+                12.4882
+              ],
+              [
+                -61.4502,
+                12.5169
+              ],
+              [
+                -61.4341,
+                12.5251
+              ],
+              [
+                -61.4199,
+                12.5007
+              ],
+              [
+                -61.4305,
+                12.4836
+              ],
+              [
+                -61.4301,
+                12.458
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:GRD:ADM1:93511190B55681603978518",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Mark",
+        "shapeISO": "GD-05",
+        "shapeID": "93511190B55681603978518",
+        "shapeGroup": "GRD",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.67338302908081,
+              12.167241795343102
+            ],
+            [
+              -61.67395409972232,
+              12.188257194946573
+            ],
+            [
+              -61.67201245954152,
+              12.192597331821162
+            ],
+            [
+              -61.67121296064357,
+              12.20219131859659
+            ],
+            [
+              -61.673040386696016,
+              12.20401874464909
+            ],
+            [
+              -61.67366856440162,
+              12.210129200512199
+            ],
+            [
+              -61.67869398604586,
+              12.213612731424632
+            ],
+            [
+              -61.68297039999999,
+              12.219704600000057
+            ],
+            [
+              -61.68863169999992,
+              12.217391000000134
+            ],
+            [
+              -61.69128019999994,
+              12.211433699999986
+            ],
+            [
+              -61.697178399999984,
+              12.209087099999977
+            ],
+            [
+              -61.703873199999975,
+              12.197124200000133
+            ],
+            [
+              -61.7176288,
+              12.190611400000023
+            ],
+            [
+              -61.719945699999926,
+              12.186397800000123
+            ],
+            [
+              -61.72434379999987,
+              12.183491300000128
+            ],
+            [
+              -61.72434379999987,
+              12.17708140000002
+            ],
+            [
+              -61.70416358055974,
+              12.170336153957749
+            ],
+            [
+              -61.6987622040765,
+              12.165172723575154
+            ],
+            [
+              -61.69312288149274,
+              12.162626700298858
+            ],
+            [
+              -61.68172066044531,
+              12.152051316281813
+            ],
+            [
+              -61.6778373800837,
+              12.156848309669556
+            ],
+            [
+              -61.67338302908081,
+              12.167241795343102
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:GRD",
+      "properties": {
+        "id": "atlas:territory:GRD",
+        "name": "Grenada",
+        "parent_id": "framework:province:grenada:2a95c43503c6",
+        "reference_owner": "Grenada",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:GRD",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -61.68711681890012,
+            12.11435
+          ],
+          "search_aliases": [
+            "Grenada",
+            "Saint Andrew",
+            "Saint David",
+            "Saint George",
+            "Saint George's",
+            "Saint John",
+            "Saint Mark",
+            "Saint Patrick",
+            "Southern Grenadine Islands",
+            "St. George's"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:GRD:ADM1:93511190B48408833278115",
+            "gb:GRD:ADM1:93511190B20758743929628",
+            "gb:GRD:ADM1:93511190B55681603978518",
+            "gb:GRD:ADM1:93511190B21658762393869",
+            "gb:GRD:ADM1:93511190B82420517640996",
+            "gb:GRD:ADM1:93511190B28979172348328",
+            "gb:GRD:ADM1:93511190B76376744251170"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "GRD-5072",
+            "overlap": 0.232897
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "GRD",
+            "source_id": null,
+            "overlap": 0.232897,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q769",
+          "reference_polity": "Grenada",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Grenada",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 482,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6789,
+                12.0229
+              ],
+              [
+                -61.6861,
+                12.0152
+              ],
+              [
+                -61.7109,
+                12.0175
+              ],
+              [
+                -61.712,
+                12.0035
+              ],
+              [
+                -61.738,
+                12.0084
+              ],
+              [
+                -61.7534,
+                11.9892
+              ],
+              [
+                -61.7657,
+                11.9969
+              ],
+              [
+                -61.7849,
+                11.999
+              ],
+              [
+                -61.7858,
+                12.0107
+              ],
+              [
+                -61.7583,
+                12.0264
+              ],
+              [
+                -61.7505,
+                12.0495
+              ],
+              [
+                -61.7526,
+                12.0707
+              ],
+              [
+                -61.7616,
+                12.0888
+              ],
+              [
+                -61.7459,
+                12.1092
+              ],
+              [
+                -61.7533,
+                12.1205
+              ],
+              [
+                -61.7351,
+                12.1509
+              ],
+              [
+                -61.7243,
+                12.1771
+              ],
+              [
+                -61.7176,
+                12.1906
+              ],
+              [
+                -61.7039,
+                12.1971
+              ],
+              [
+                -61.683,
+                12.2197
+              ],
+              [
+                -61.6545,
+                12.2346
+              ],
+              [
+                -61.643,
+                12.2249
+              ],
+              [
+                -61.6251,
+                12.2298
+              ],
+              [
+                -61.6086,
+                12.2269
+              ],
+              [
+                -61.6029,
+                12.1737
+              ],
+              [
+                -61.6097,
+                12.1334
+              ],
+              [
+                -61.6236,
+                12.1195
+              ],
+              [
+                -61.6273,
+                12.1055
+              ],
+              [
+                -61.6219,
+                12.0829
+              ],
+              [
+                -61.6244,
+                12.0635
+              ],
+              [
+                -61.6363,
+                12.0499
+              ],
+              [
+                -61.653,
+                12.0261
+              ],
+              [
+                -61.6789,
+                12.0229
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.4301,
+                12.458
+              ],
+              [
+                -61.4552,
+                12.458
+              ],
+              [
+                -61.4701,
+                12.4455
+              ],
+              [
+                -61.4875,
+                12.4484
+              ],
+              [
+                -61.4864,
+                12.4663
+              ],
+              [
+                -61.4781,
+                12.4786
+              ],
+              [
+                -61.454,
+                12.4882
+              ],
+              [
+                -61.4502,
+                12.5169
+              ],
+              [
+                -61.4341,
+                12.5251
+              ],
+              [
+                -61.4199,
+                12.5007
+              ],
+              [
+                -61.4305,
+                12.4836
+              ],
+              [
+                -61.4301,
+                12.458
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:GRD:ADM1:93511190B21658762393869",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint John",
+        "shapeISO": "GD-04",
+        "shapeID": "93511190B21658762393869",
+        "shapeGroup": "GRD",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.68172066044531,
+              12.152051316281813
+            ],
+            [
+              -61.69312288149274,
+              12.162626700298858
+            ],
+            [
+              -61.6987622040765,
+              12.165172723575154
+            ],
+            [
+              -61.70416358055974,
+              12.170336153957749
+            ],
+            [
+              -61.72434379999987,
+              12.17708140000002
+            ],
+            [
+              -61.72746810000001,
+              12.16943809999998
+            ],
+            [
+              -61.7318626,
+              12.166031600000053
+            ],
+            [
+              -61.731759599999975,
+              12.16069529999993
+            ],
+            [
+              -61.735124199999916,
+              12.150911899999926
+            ],
+            [
+              -61.73831259999997,
+              12.146505
+            ],
+            [
+              -61.74289199999987,
+              12.144185500000106
+            ],
+            [
+              -61.74418259999999,
+              12.141428900000108
+            ],
+            [
+              -61.743642499999964,
+              12.137985100000094
+            ],
+            [
+              -61.74923409999997,
+              12.130809100000022
+            ],
+            [
+              -61.74877229999993,
+              12.128495400000077
+            ],
+            [
+              -61.752977,
+              12.121569200000067
+            ],
+            [
+              -61.75326739999991,
+              12.120457
+            ],
+            [
+              -61.749494200000015,
+              12.11757660000012
+            ],
+            [
+              -61.7486707,
+              12.112417100000073
+            ],
+            [
+              -61.74654949999996,
+              12.111923300000058
+            ],
+            [
+              -61.74591269999996,
+              12.1092499
+            ],
+            [
+              -61.71491279565362,
+              12.110659271931524
+            ],
+            [
+              -61.70081913888032,
+              12.109235534791765
+            ],
+            [
+              -61.70085152693218,
+              12.110077624138853
+            ],
+            [
+              -61.70005202803429,
+              12.124982567879385
+            ],
+            [
+              -61.690286720066354,
+              12.13497630410393
+            ],
+            [
+              -61.68172066044531,
+              12.152051316281813
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:GRD",
+      "properties": {
+        "id": "atlas:territory:GRD",
+        "name": "Grenada",
+        "parent_id": "framework:province:grenada:2a95c43503c6",
+        "reference_owner": "Grenada",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:GRD",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -61.68711681890012,
+            12.11435
+          ],
+          "search_aliases": [
+            "Grenada",
+            "Saint Andrew",
+            "Saint David",
+            "Saint George",
+            "Saint George's",
+            "Saint John",
+            "Saint Mark",
+            "Saint Patrick",
+            "Southern Grenadine Islands",
+            "St. George's"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:GRD:ADM1:93511190B48408833278115",
+            "gb:GRD:ADM1:93511190B20758743929628",
+            "gb:GRD:ADM1:93511190B55681603978518",
+            "gb:GRD:ADM1:93511190B21658762393869",
+            "gb:GRD:ADM1:93511190B82420517640996",
+            "gb:GRD:ADM1:93511190B28979172348328",
+            "gb:GRD:ADM1:93511190B76376744251170"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "GRD-5072",
+            "overlap": 0.232897
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "GRD",
+            "source_id": null,
+            "overlap": 0.232897,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q769",
+          "reference_polity": "Grenada",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Grenada",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 482,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6789,
+                12.0229
+              ],
+              [
+                -61.6861,
+                12.0152
+              ],
+              [
+                -61.7109,
+                12.0175
+              ],
+              [
+                -61.712,
+                12.0035
+              ],
+              [
+                -61.738,
+                12.0084
+              ],
+              [
+                -61.7534,
+                11.9892
+              ],
+              [
+                -61.7657,
+                11.9969
+              ],
+              [
+                -61.7849,
+                11.999
+              ],
+              [
+                -61.7858,
+                12.0107
+              ],
+              [
+                -61.7583,
+                12.0264
+              ],
+              [
+                -61.7505,
+                12.0495
+              ],
+              [
+                -61.7526,
+                12.0707
+              ],
+              [
+                -61.7616,
+                12.0888
+              ],
+              [
+                -61.7459,
+                12.1092
+              ],
+              [
+                -61.7533,
+                12.1205
+              ],
+              [
+                -61.7351,
+                12.1509
+              ],
+              [
+                -61.7243,
+                12.1771
+              ],
+              [
+                -61.7176,
+                12.1906
+              ],
+              [
+                -61.7039,
+                12.1971
+              ],
+              [
+                -61.683,
+                12.2197
+              ],
+              [
+                -61.6545,
+                12.2346
+              ],
+              [
+                -61.643,
+                12.2249
+              ],
+              [
+                -61.6251,
+                12.2298
+              ],
+              [
+                -61.6086,
+                12.2269
+              ],
+              [
+                -61.6029,
+                12.1737
+              ],
+              [
+                -61.6097,
+                12.1334
+              ],
+              [
+                -61.6236,
+                12.1195
+              ],
+              [
+                -61.6273,
+                12.1055
+              ],
+              [
+                -61.6219,
+                12.0829
+              ],
+              [
+                -61.6244,
+                12.0635
+              ],
+              [
+                -61.6363,
+                12.0499
+              ],
+              [
+                -61.653,
+                12.0261
+              ],
+              [
+                -61.6789,
+                12.0229
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.4301,
+                12.458
+              ],
+              [
+                -61.4552,
+                12.458
+              ],
+              [
+                -61.4701,
+                12.4455
+              ],
+              [
+                -61.4875,
+                12.4484
+              ],
+              [
+                -61.4864,
+                12.4663
+              ],
+              [
+                -61.4781,
+                12.4786
+              ],
+              [
+                -61.454,
+                12.4882
+              ],
+              [
+                -61.4502,
+                12.5169
+              ],
+              [
+                -61.4341,
+                12.5251
+              ],
+              [
+                -61.4199,
+                12.5007
+              ],
+              [
+                -61.4305,
+                12.4836
+              ],
+              [
+                -61.4301,
+                12.458
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:GRD:ADM1:93511190B82420517640996",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint George",
+        "shapeISO": "GD-03",
+        "shapeID": "93511190B82420517640996",
+        "shapeGroup": "GRD",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.70081913888032,
+              12.109235534791765
+            ],
+            [
+              -61.71491279565362,
+              12.110659271931524
+            ],
+            [
+              -61.74591269999996,
+              12.1092499
+            ],
+            [
+              -61.7463219,
+              12.108325300000047
+            ],
+            [
+              -61.7495745999999,
+              12.10934050000003
+            ],
+            [
+              -61.753639,
+              12.101720600000021
+            ],
+            [
+              -61.75233089999995,
+              12.098854600000038
+            ],
+            [
+              -61.753105800000014,
+              12.096627899999987
+            ],
+            [
+              -61.75634349999996,
+              12.095624500000099
+            ],
+            [
+              -61.75571359999998,
+              12.091951399999914
+            ],
+            [
+              -61.7616041,
+              12.088796900000034
+            ],
+            [
+              -61.7621934,
+              12.087405900000078
+            ],
+            [
+              -61.7607534,
+              12.08550190000011
+            ],
+            [
+              -61.763534400000026,
+              12.084481
+            ],
+            [
+              -61.76304389999996,
+              12.082228100000123
+            ],
+            [
+              -61.76060460000002,
+              12.082489300000077
+            ],
+            [
+              -61.757930499999986,
+              12.078553
+            ],
+            [
+              -61.754695200000015,
+              12.07769920000004
+            ],
+            [
+              -61.75234219999999,
+              12.073837600000104
+            ],
+            [
+              -61.75263,
+              12.070704500000033
+            ],
+            [
+              -61.75734590000002,
+              12.063227900000129
+            ],
+            [
+              -61.7544696,
+              12.058124100000043
+            ],
+            [
+              -61.755511,
+              12.04793740000008
+            ],
+            [
+              -61.75350409999993,
+              12.048051200000089
+            ],
+            [
+              -61.74943739999992,
+              12.05234320000011
+            ],
+            [
+              -61.750541399999975,
+              12.049485100000084
+            ],
+            [
+              -61.74951649999997,
+              12.0466118
+            ],
+            [
+              -61.7462994,
+              12.046371099999988
+            ],
+            [
+              -61.74586679999999,
+              12.043840400000022
+            ],
+            [
+              -61.749638399999924,
+              12.042755900000031
+            ],
+            [
+              -61.7492643,
+              12.04505039999998
+            ],
+            [
+              -61.750618,
+              12.046047800000053
+            ],
+            [
+              -61.75234660000001,
+              12.044865699999946
+            ],
+            [
+              -61.75537989999998,
+              12.03467130000007
+            ],
+            [
+              -61.75404089999995,
+              12.032312500000103
+            ],
+            [
+              -61.75828949999993,
+              12.0263943
+            ],
+            [
+              -61.7683624,
+              12.021703600000023
+            ],
+            [
+              -61.775658,
+              12.02445710000012
+            ],
+            [
+              -61.77458509999991,
+              12.022392000000139
+            ],
+            [
+              -61.7720056,
+              12.02147789999998
+            ],
+            [
+              -61.773228299999914,
+              12.018636300000082
+            ],
+            [
+              -61.77566879999995,
+              12.019153
+            ],
+            [
+              -61.785802399999966,
+              12.010694
+            ],
+            [
+              -61.796487399999876,
+              12.006712100000072
+            ],
+            [
+              -61.797724599999924,
+              12.007540800000072
+            ],
+            [
+              -61.80241539999997,
+              12.002656
+            ],
+            [
+              -61.79892209999997,
+              12.00313460000001
+            ],
+            [
+              -61.798965,
+              12.001262399999973
+            ],
+            [
+              -61.79209860000003,
+              12.001992800000039
+            ],
+            [
+              -61.78838209999998,
+              12.000574
+            ],
+            [
+              -61.78772120000002,
+              11.998676600000067
+            ],
+            [
+              -61.784871599999974,
+              11.998962
+            ],
+            [
+              -61.784717099999966,
+              12.003151399999979
+            ],
+            [
+              -61.78066560000002,
+              12.003182
+            ],
+            [
+              -61.7787004,
+              12.00141350000007
+            ],
+            [
+              -61.77688079999996,
+              12.002504900000133
+            ],
+            [
+              -61.7758766,
+              12.002076700000032
+            ],
+            [
+              -61.776486,
+              11.999457300000017
+            ],
+            [
+              -61.7744659,
+              11.998680300000046
+            ],
+            [
+              -61.77358579999992,
+              11.996273299999984
+            ],
+            [
+              -61.772915399999874,
+              11.998651399999972
+            ],
+            [
+              -61.77086409999998,
+              11.998315600000069
+            ],
+            [
+              -61.77094989999995,
+              12.001212
+            ],
+            [
+              -61.769421799999975,
+              12.001511299999947
+            ],
+            [
+              -61.76838320000002,
+              11.997750099999962
+            ],
+            [
+              -61.76689950000002,
+              11.997187399999973
+            ],
+            [
+              -61.76767970000003,
+              11.99373989999998
+            ],
+            [
+              -61.76574,
+              11.996938699999987
+            ],
+            [
+              -61.7662206,
+              12.003184900000065
+            ],
+            [
+              -61.76488269999993,
+              12.0073127
+            ],
+            [
+              -61.763474,
+              12.006165300000134
+            ],
+            [
+              -61.762967600000025,
+              12.00179970000005
+            ],
+            [
+              -61.76087339999998,
+              12.002395799999988
+            ],
+            [
+              -61.75804179999989,
+              12.000654699999984
+            ],
+            [
+              -61.76156159999988,
+              11.987247099999934
+            ],
+            [
+              -61.7576287,
+              11.989421500000105
+            ],
+            [
+              -61.75749129999997,
+              11.992242500000089
+            ],
+            [
+              -61.756075099999975,
+              11.991008299999919
+            ],
+            [
+              -61.75508810000002,
+              11.991772400000116
+            ],
+            [
+              -61.75480479999993,
+              11.989497099999937
+            ],
+            [
+              -61.7533886,
+              11.9891864
+            ],
+            [
+              -61.752744899999925,
+              11.995197800000028
+            ],
+            [
+              -61.753920799999946,
+              11.998438500000077
+            ],
+            [
+              -61.752341799999954,
+              12.000851
+            ],
+            [
+              -61.752556099999936,
+              12.005843299999924
+            ],
+            [
+              -61.74976659999999,
+              12.0045
+            ],
+            [
+              -61.74721740000001,
+              12.005121300000042
+            ],
+            [
+              -61.74854809999988,
+              12.000221300000021
+            ],
+            [
+              -61.747424499999966,
+              11.996960700000045
+            ],
+            [
+              -61.74290039999994,
+              12.003705499999967
+            ],
+            [
+              -61.74043709999995,
+              12.004276300000129
+            ],
+            [
+              -61.738617499999975,
+              12.00669419999997
+            ],
+            [
+              -61.7379823,
+              12.008415200000115
+            ],
+            [
+              -61.740273999999886,
+              12.011378699999966
+            ],
+            [
+              -61.740007899999966,
+              12.015937300000076
+            ],
+            [
+              -61.7382629,
+              12.012557900000047
+            ],
+            [
+              -61.73354489999991,
+              12.010413300000039
+            ],
+            [
+              -61.73231969999995,
+              12.007810900000038
+            ],
+            [
+              -61.7302775,
+              12.009208400000034
+            ],
+            [
+              -61.72797449999996,
+              12.00771
+            ],
+            [
+              -61.728704,
+              12.004813599999977
+            ],
+            [
+              -61.72600119999987,
+              12.0019056000001
+            ],
+            [
+              -61.72388119999994,
+              12.004347199999984
+            ],
+            [
+              -61.7188678,
+              11.999616900000092
+            ],
+            [
+              -61.7193914,
+              12.003201700000034
+            ],
+            [
+              -61.71748679999996,
+              12.0038366
+            ],
+            [
+              -61.718919299999925,
+              12.009061700000132
+            ],
+            [
+              -61.720747500000016,
+              12.010413300000039
+            ],
+            [
+              -61.72383739999998,
+              12.009238
+            ],
+            [
+              -61.72640379999996,
+              12.015928900000063
+            ],
+            [
+              -61.72202639999995,
+              12.013292800000102
+            ],
+            [
+              -61.7216831,
+              12.011303199999986
+            ],
+            [
+              -61.7185768,
+              12.012945399999921
+            ],
+            [
+              -61.7167392,
+              12.012302200000022
+            ],
+            [
+              -61.71199279999996,
+              12.003512399999977
+            ],
+            [
+              -61.710593799999856,
+              11.994361200000071
+            ],
+            [
+              -61.70886,
+              11.993698000000109
+            ],
+            [
+              -61.708405099999936,
+              11.998097299999927
+            ],
+            [
+              -61.706559700000014,
+              11.9993902
+            ],
+            [
+              -61.7053838,
+              11.9986346
+            ],
+            [
+              -61.706946,
+              12.0017241
+            ],
+            [
+              -61.70548679999996,
+              12.003923700000087
+            ],
+            [
+              -61.708362199999954,
+              12.0051914
+            ],
+            [
+              -61.713426200000015,
+              12.014401000000134
+            ],
+            [
+              -61.716644799999926,
+              12.013838500000134
+            ],
+            [
+              -61.7175203,
+              12.01532439999994
+            ],
+            [
+              -61.712224499999934,
+              12.01532439999994
+            ],
+            [
+              -61.710877,
+              12.0174568
+            ],
+            [
+              -61.71507118590296,
+              12.023617529031128
+            ],
+            [
+              -61.714956971774825,
+              12.029214021316704
+            ],
+            [
+              -61.70821833820628,
+              12.04771671009803
+            ],
+            [
+              -61.70553430619168,
+              12.066390720071922
+            ],
+            [
+              -61.70113706225294,
+              12.07067374988236
+            ],
+            [
+              -61.69514082051825,
+              12.073471996025262
+            ],
+            [
+              -61.69851013730249,
+              12.080039308401297
+            ],
+            [
+              -61.69851013730249,
+              12.087520333803639
+            ],
+            [
+              -61.70159391876598,
+              12.101568671582072
+            ],
+            [
+              -61.700794419867975,
+              12.10859284047126
+            ],
+            [
+              -61.70081913888032,
+              12.109235534791765
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:GRD",
+      "properties": {
+        "id": "atlas:territory:GRD",
+        "name": "Grenada",
+        "parent_id": "framework:province:grenada:2a95c43503c6",
+        "reference_owner": "Grenada",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:GRD",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -61.68711681890012,
+            12.11435
+          ],
+          "search_aliases": [
+            "Grenada",
+            "Saint Andrew",
+            "Saint David",
+            "Saint George",
+            "Saint George's",
+            "Saint John",
+            "Saint Mark",
+            "Saint Patrick",
+            "Southern Grenadine Islands",
+            "St. George's"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:GRD:ADM1:93511190B48408833278115",
+            "gb:GRD:ADM1:93511190B20758743929628",
+            "gb:GRD:ADM1:93511190B55681603978518",
+            "gb:GRD:ADM1:93511190B21658762393869",
+            "gb:GRD:ADM1:93511190B82420517640996",
+            "gb:GRD:ADM1:93511190B28979172348328",
+            "gb:GRD:ADM1:93511190B76376744251170"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "GRD-5072",
+            "overlap": 0.232897
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "GRD",
+            "source_id": null,
+            "overlap": 0.232897,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q769",
+          "reference_polity": "Grenada",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Grenada",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 482,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6789,
+                12.0229
+              ],
+              [
+                -61.6861,
+                12.0152
+              ],
+              [
+                -61.7109,
+                12.0175
+              ],
+              [
+                -61.712,
+                12.0035
+              ],
+              [
+                -61.738,
+                12.0084
+              ],
+              [
+                -61.7534,
+                11.9892
+              ],
+              [
+                -61.7657,
+                11.9969
+              ],
+              [
+                -61.7849,
+                11.999
+              ],
+              [
+                -61.7858,
+                12.0107
+              ],
+              [
+                -61.7583,
+                12.0264
+              ],
+              [
+                -61.7505,
+                12.0495
+              ],
+              [
+                -61.7526,
+                12.0707
+              ],
+              [
+                -61.7616,
+                12.0888
+              ],
+              [
+                -61.7459,
+                12.1092
+              ],
+              [
+                -61.7533,
+                12.1205
+              ],
+              [
+                -61.7351,
+                12.1509
+              ],
+              [
+                -61.7243,
+                12.1771
+              ],
+              [
+                -61.7176,
+                12.1906
+              ],
+              [
+                -61.7039,
+                12.1971
+              ],
+              [
+                -61.683,
+                12.2197
+              ],
+              [
+                -61.6545,
+                12.2346
+              ],
+              [
+                -61.643,
+                12.2249
+              ],
+              [
+                -61.6251,
+                12.2298
+              ],
+              [
+                -61.6086,
+                12.2269
+              ],
+              [
+                -61.6029,
+                12.1737
+              ],
+              [
+                -61.6097,
+                12.1334
+              ],
+              [
+                -61.6236,
+                12.1195
+              ],
+              [
+                -61.6273,
+                12.1055
+              ],
+              [
+                -61.6219,
+                12.0829
+              ],
+              [
+                -61.6244,
+                12.0635
+              ],
+              [
+                -61.6363,
+                12.0499
+              ],
+              [
+                -61.653,
+                12.0261
+              ],
+              [
+                -61.6789,
+                12.0229
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.4301,
+                12.458
+              ],
+              [
+                -61.4552,
+                12.458
+              ],
+              [
+                -61.4701,
+                12.4455
+              ],
+              [
+                -61.4875,
+                12.4484
+              ],
+              [
+                -61.4864,
+                12.4663
+              ],
+              [
+                -61.4781,
+                12.4786
+              ],
+              [
+                -61.454,
+                12.4882
+              ],
+              [
+                -61.4502,
+                12.5169
+              ],
+              [
+                -61.4341,
+                12.5251
+              ],
+              [
+                -61.4199,
+                12.5007
+              ],
+              [
+                -61.4305,
+                12.4836
+              ],
+              [
+                -61.4301,
+                12.458
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:GRD:ADM1:93511190B28979172348328",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Saint Patrick",
+        "shapeISO": "GD-06",
+        "shapeID": "93511190B28979172348328",
+        "shapeGroup": "GRD",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6029479911511,
+                12.17365807768914
+              ],
+              [
+                -61.60442759999995,
+                12.186401900000192
+              ],
+              [
+                -61.60206939999995,
+                12.191318799999863
+              ],
+              [
+                -61.605637799999954,
+                12.194413900000143
+              ],
+              [
+                -61.60616989999994,
+                12.202224300000182
+              ],
+              [
+                -61.60992289999996,
+                12.20670470000016
+              ],
+              [
+                -61.61032629999994,
+                12.212014900000042
+              ],
+              [
+                -61.60764839999996,
+                12.220395200000098
+              ],
+              [
+                -61.606026199999974,
+                12.22070559999986
+              ],
+              [
+                -61.60504739999999,
+                12.223571500000219
+              ],
+              [
+                -61.607917099999895,
+                12.224731900000108
+              ],
+              [
+                -61.608631999999886,
+                12.226869100000215
+              ],
+              [
+                -61.617953299999954,
+                12.230217400000129
+              ],
+              [
+                -61.625097499999924,
+                12.229829200000154
+              ],
+              [
+                -61.63443619999998,
+                12.22497680000015
+              ],
+              [
+                -61.64039279999997,
+                12.226569100000063
+              ],
+              [
+                -61.64300209999993,
+                12.224925
+              ],
+              [
+                -61.654472799999894,
+                12.234628500000042
+              ],
+              [
+                -61.6597711,
+                12.234476099999881
+              ],
+              [
+                -61.663863499999934,
+                12.233935099999883
+              ],
+              [
+                -61.66444559999985,
+                12.231434100000058
+              ],
+              [
+                -61.6758663,
+                12.225115000000187
+              ],
+              [
+                -61.68120659999994,
+                12.219545600000174
+              ],
+              [
+                -61.68297039999999,
+                12.219704600000057
+              ],
+              [
+                -61.67869398604586,
+                12.213612731424632
+              ],
+              [
+                -61.67366856440162,
+                12.210129200512199
+              ],
+              [
+                -61.673040386696016,
+                12.20401874464909
+              ],
+              [
+                -61.67121296064357,
+                12.20219131859659
+              ],
+              [
+                -61.67201245954152,
+                12.192597331821162
+              ],
+              [
+                -61.67395409972232,
+                12.188257194946573
+              ],
+              [
+                -61.67338302908081,
+                12.167241795343102
+              ],
+              [
+                -61.66753891675802,
+                12.16910928944219
+              ],
+              [
+                -61.6567647173236,
+                12.168424004672431
+              ],
+              [
+                -61.65194868824773,
+                12.170327573477266
+              ],
+              [
+                -61.6333127496502,
+                12.169490003203123
+              ],
+              [
+                -61.627069043970835,
+                12.171488750448134
+              ],
+              [
+                -61.61736084306705,
+                12.171679107328487
+              ],
+              [
+                -61.61452452554818,
+                12.173354247876716
+              ],
+              [
+                -61.60974656784845,
+                12.172459570538479
+              ],
+              [
+                -61.6029479911511,
+                12.17365807768914
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.58532960000002,
+                12.318241800000237
+              ],
+              [
+                -61.588522499999954,
+                12.316958900000145
+              ],
+              [
+                -61.58617069999997,
+                12.313311100000135
+              ],
+              [
+                -61.58702049999994,
+                12.309906599999977
+              ],
+              [
+                -61.596118499999875,
+                12.299382200000139
+              ],
+              [
+                -61.5899387,
+                12.296757400000217
+              ],
+              [
+                -61.584591399999965,
+                12.292262400000084
+              ],
+              [
+                -61.58270319999997,
+                12.298124300000154
+              ],
+              [
+                -61.57861749999995,
+                12.303729400000122
+              ],
+              [
+                -61.58023979999996,
+                12.30490020000019
+              ],
+              [
+                -61.58008939999985,
+                12.306991800000219
+              ],
+              [
+                -61.582171,
+                12.308036500000128
+              ],
+              [
+                -61.582325499999854,
+                12.310200100000088
+              ],
+              [
+                -61.58045949999996,
+                12.312267599999927
+              ],
+              [
+                -61.57934720000003,
+                12.31123150000019
+              ],
+              [
+                -61.577218599999924,
+                12.312724100000253
+              ],
+              [
+                -61.57698679999993,
+                12.31557520000024
+              ],
+              [
+                -61.57811119999997,
+                12.316539600000112
+              ],
+              [
+                -61.5799738,
+                12.314032300000122
+              ],
+              [
+                -61.58422239999999,
+                12.315013400000112
+              ],
+              [
+                -61.58532960000002,
+                12.318241800000237
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:GRD",
+      "properties": {
+        "id": "atlas:territory:GRD",
+        "name": "Grenada",
+        "parent_id": "framework:province:grenada:2a95c43503c6",
+        "reference_owner": "Grenada",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:GRD",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -61.68711681890012,
+            12.11435
+          ],
+          "search_aliases": [
+            "Grenada",
+            "Saint Andrew",
+            "Saint David",
+            "Saint George",
+            "Saint George's",
+            "Saint John",
+            "Saint Mark",
+            "Saint Patrick",
+            "Southern Grenadine Islands",
+            "St. George's"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:GRD:ADM1:93511190B48408833278115",
+            "gb:GRD:ADM1:93511190B20758743929628",
+            "gb:GRD:ADM1:93511190B55681603978518",
+            "gb:GRD:ADM1:93511190B21658762393869",
+            "gb:GRD:ADM1:93511190B82420517640996",
+            "gb:GRD:ADM1:93511190B28979172348328",
+            "gb:GRD:ADM1:93511190B76376744251170"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "GRD-5072",
+            "overlap": 0.232897
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "GRD",
+            "source_id": null,
+            "overlap": 0.232897,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q769",
+          "reference_polity": "Grenada",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Grenada",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 482,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6789,
+                12.0229
+              ],
+              [
+                -61.6861,
+                12.0152
+              ],
+              [
+                -61.7109,
+                12.0175
+              ],
+              [
+                -61.712,
+                12.0035
+              ],
+              [
+                -61.738,
+                12.0084
+              ],
+              [
+                -61.7534,
+                11.9892
+              ],
+              [
+                -61.7657,
+                11.9969
+              ],
+              [
+                -61.7849,
+                11.999
+              ],
+              [
+                -61.7858,
+                12.0107
+              ],
+              [
+                -61.7583,
+                12.0264
+              ],
+              [
+                -61.7505,
+                12.0495
+              ],
+              [
+                -61.7526,
+                12.0707
+              ],
+              [
+                -61.7616,
+                12.0888
+              ],
+              [
+                -61.7459,
+                12.1092
+              ],
+              [
+                -61.7533,
+                12.1205
+              ],
+              [
+                -61.7351,
+                12.1509
+              ],
+              [
+                -61.7243,
+                12.1771
+              ],
+              [
+                -61.7176,
+                12.1906
+              ],
+              [
+                -61.7039,
+                12.1971
+              ],
+              [
+                -61.683,
+                12.2197
+              ],
+              [
+                -61.6545,
+                12.2346
+              ],
+              [
+                -61.643,
+                12.2249
+              ],
+              [
+                -61.6251,
+                12.2298
+              ],
+              [
+                -61.6086,
+                12.2269
+              ],
+              [
+                -61.6029,
+                12.1737
+              ],
+              [
+                -61.6097,
+                12.1334
+              ],
+              [
+                -61.6236,
+                12.1195
+              ],
+              [
+                -61.6273,
+                12.1055
+              ],
+              [
+                -61.6219,
+                12.0829
+              ],
+              [
+                -61.6244,
+                12.0635
+              ],
+              [
+                -61.6363,
+                12.0499
+              ],
+              [
+                -61.653,
+                12.0261
+              ],
+              [
+                -61.6789,
+                12.0229
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.4301,
+                12.458
+              ],
+              [
+                -61.4552,
+                12.458
+              ],
+              [
+                -61.4701,
+                12.4455
+              ],
+              [
+                -61.4875,
+                12.4484
+              ],
+              [
+                -61.4864,
+                12.4663
+              ],
+              [
+                -61.4781,
+                12.4786
+              ],
+              [
+                -61.454,
+                12.4882
+              ],
+              [
+                -61.4502,
+                12.5169
+              ],
+              [
+                -61.4341,
+                12.5251
+              ],
+              [
+                -61.4199,
+                12.5007
+              ],
+              [
+                -61.4305,
+                12.4836
+              ],
+              [
+                -61.4301,
+                12.458
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "target": "gb:GRD:ADM1:93511190B76376744251170",
+    "consumed": {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Southern Grenadine Islands",
+        "shapeISO": "GD-10",
+        "shapeID": "93511190B76376744251170",
+        "shapeGroup": "GRD",
+        "shapeType": "ADM1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.38379,
+                12.526735100000167
+              ],
+              [
+                -61.3907337,
+                12.522696500000109
+              ],
+              [
+                -61.392828,
+                12.519520900000089
+              ],
+              [
+                -61.3947763,
+                12.519629800000246
+              ],
+              [
+                -61.38856219999997,
+                12.511862400000041
+              ],
+              [
+                -61.38381579999992,
+                12.510588800000164
+              ],
+              [
+                -61.38109489999994,
+                12.512063500000181
+              ],
+              [
+                -61.37940409999993,
+                12.511409900000103
+              ],
+              [
+                -61.378065100000015,
+                12.517149600000153
+              ],
+              [
+                -61.380949,
+                12.525796700000114
+              ],
+              [
+                -61.38379,
+                12.526735100000167
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.434117199999946,
+                12.525067100000172
+              ],
+              [
+                -61.437704899999915,
+                12.527429900000072
+              ],
+              [
+                -61.437919499999964,
+                12.529968699999984
+              ],
+              [
+                -61.44074329999995,
+                12.52428790000016
+              ],
+              [
+                -61.44812,
+                12.520459900000162
+              ],
+              [
+                -61.447386600000016,
+                12.518498100000215
+              ],
+              [
+                -61.45024,
+                12.51687010000012
+              ],
+              [
+                -61.44894869999996,
+                12.512976200000196
+              ],
+              [
+                -61.450562299999945,
+                12.509172000000206
+              ],
+              [
+                -61.44885429999994,
+                12.504094099999975
+              ],
+              [
+                -61.45481999999987,
+                12.496539900000244
+              ],
+              [
+                -61.45404709999997,
+                12.488181000000168
+              ],
+              [
+                -61.4598320999998,
+                12.481979700000238
+              ],
+              [
+                -61.46687089999995,
+                12.478999000000158
+              ],
+              [
+                -61.478114,
+                12.47860250000025
+              ],
+              [
+                -61.477770699999894,
+                12.475501700000166
+              ],
+              [
+                -61.48196779999989,
+                12.471948400000144
+              ],
+              [
+                -61.493512,
+                12.47263560000016
+              ],
+              [
+                -61.49688989999993,
+                12.475910000000226
+              ],
+              [
+                -61.49634999999989,
+                12.478740100000039
+              ],
+              [
+                -61.49792999999988,
+                12.477720100000226
+              ],
+              [
+                -61.497923699999944,
+                12.467389400000059
+              ],
+              [
+                -61.49163229999982,
+                12.462654300000167
+              ],
+              [
+                -61.48710909999994,
+                12.462863800000093
+              ],
+              [
+                -61.48622499999988,
+                12.463618100000133
+              ],
+              [
+                -61.4881133,
+                12.464322
+              ],
+              [
+                -61.48645669999996,
+                12.465621100000135
+              ],
+              [
+                -61.489692599999955,
+                12.465839000000187
+              ],
+              [
+                -61.4903706,
+                12.464330400000108
+              ],
+              [
+                -61.492585,
+                12.463626400000123
+              ],
+              [
+                -61.494589999999846,
+                12.465070100000162
+              ],
+              [
+                -61.48986419999994,
+                12.466291500000182
+              ],
+              [
+                -61.4863967,
+                12.46630830000015
+              ],
+              [
+                -61.48292049999998,
+                12.459058900000173
+              ],
+              [
+                -61.48503189999997,
+                12.453544100000045
+              ],
+              [
+                -61.49105729999985,
+                12.453527400000098
+              ],
+              [
+                -61.49732729999994,
+                12.447763000000123
+              ],
+              [
+                -61.49677359999998,
+                12.44272390000009
+              ],
+              [
+                -61.49970359999992,
+                12.435786700000222
+              ],
+              [
+                -61.49555049999992,
+                12.436427900000183
+              ],
+              [
+                -61.49661909999986,
+                12.439262300000223
+              ],
+              [
+                -61.49461919999999,
+                12.443427900000245
+              ],
+              [
+                -61.48745239999994,
+                12.448440000000176
+              ],
+              [
+                -61.480287199999964,
+                12.448562800000218
+              ],
+              [
+                -61.474912499999846,
+                12.445582
+              ],
+              [
+                -61.4700772999999,
+                12.4455430000001
+              ],
+              [
+                -61.4642695,
+                12.453091600000107
+              ],
+              [
+                -61.45516289999995,
+                12.458011200000215
+              ],
+              [
+                -61.447737299999915,
+                12.455593000000135
+              ],
+              [
+                -61.44216879999993,
+                12.457951300000218
+              ],
+              [
+                -61.43887889999985,
+                12.455117600000051
+              ],
+              [
+                -61.43701829999992,
+                12.457466500000066
+              ],
+              [
+                -61.43014,
+                12.45802
+              ],
+              [
+                -61.43001449999986,
+                12.463366599999915
+              ],
+              [
+                -61.43212589999996,
+                12.46491710000015
+              ],
+              [
+                -61.432383399999935,
+                12.467163100000164
+              ],
+              [
+                -61.43198,
+                12.479138800000214
+              ],
+              [
+                -61.43050989999995,
+                12.483630100000198
+              ],
+              [
+                -61.42814,
+                12.485950100000139
+              ],
+              [
+                -61.422619899999916,
+                12.486560000000111
+              ],
+              [
+                -61.42445,
+                12.48838
+              ],
+              [
+                -61.42480459999996,
+                12.493577700000117
+              ],
+              [
+                -61.422684499999946,
+                12.498555200000169
+              ],
+              [
+                -61.41988649999996,
+                12.500708800000211
+              ],
+              [
+                -61.42860689999992,
+                12.507621900000174
+              ],
+              [
+                -61.430581,
+                12.51549000000017
+              ],
+              [
+                -61.42909609999981,
+                12.523835400000223
+              ],
+              [
+                -61.431156,
+                12.525796100000093
+              ],
+              [
+                -61.434117199999946,
+                12.525067100000172
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    "selected": {
+      "type": "Feature",
+      "id": "atlas:territory:GRD",
+      "properties": {
+        "id": "atlas:territory:GRD",
+        "name": "Grenada",
+        "parent_id": "framework:province:grenada:2a95c43503c6",
+        "reference_owner": "Grenada",
+        "metadata": {
+          "source_name": "Atlas source aggregation",
+          "source_id": "atlas:territory:GRD",
+          "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "license": "Underlying source licenses retained in semantic-report.json",
+          "reference_year": "Undated modern reference",
+          "administrative_level": "Compact source country/territory",
+          "location_basis": "Compact source country/territory",
+          "representative_point": [
+            -61.68711681890012,
+            12.11435
+          ],
+          "search_aliases": [
+            "Grenada",
+            "Saint Andrew",
+            "Saint David",
+            "Saint George",
+            "Saint George's",
+            "Saint John",
+            "Saint Mark",
+            "Saint Patrick",
+            "Southern Grenadine Islands",
+            "St. George's"
+          ],
+          "reference_version": 3,
+          "hierarchy_version": 4,
+          "topology_version": 1,
+          "semantic_version": 1,
+          "source_member_ids": [
+            "gb:GRD:ADM1:93511190B48408833278115",
+            "gb:GRD:ADM1:93511190B20758743929628",
+            "gb:GRD:ADM1:93511190B55681603978518",
+            "gb:GRD:ADM1:93511190B21658762393869",
+            "gb:GRD:ADM1:93511190B82420517640996",
+            "gb:GRD:ADM1:93511190B28979172348328",
+            "gb:GRD:ADM1:93511190B76376744251170"
+          ],
+          "coverage_version": 1,
+          "remote_version": 1,
+          "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+          "framework_match": {
+            "source": "Natural Earth",
+            "id": "GRD-5072",
+            "overlap": 0.232897
+          },
+          "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+          "regional_match": {
+            "reference_iso": "GRD",
+            "source_id": null,
+            "overlap": 0.232897,
+            "method": "reference-territory-constrained overlap"
+          },
+          "reference_owner_id": "owner:Q769",
+          "reference_polity": "Grenada",
+          "reference_polity_status": "reference",
+          "reference_polity_evidence": {
+            "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+            "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+            "reference_territory": "Grenada",
+            "classification": "Sovereign country",
+            "note": null,
+            "uncertainty": false
+          },
+          "semantic_review": {
+            "status": "open",
+            "continent": "North America",
+            "decision_index": 482,
+            "evidence_file": "geographic-decisions"
+          }
+        }
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.6789,
+                12.0229
+              ],
+              [
+                -61.6861,
+                12.0152
+              ],
+              [
+                -61.7109,
+                12.0175
+              ],
+              [
+                -61.712,
+                12.0035
+              ],
+              [
+                -61.738,
+                12.0084
+              ],
+              [
+                -61.7534,
+                11.9892
+              ],
+              [
+                -61.7657,
+                11.9969
+              ],
+              [
+                -61.7849,
+                11.999
+              ],
+              [
+                -61.7858,
+                12.0107
+              ],
+              [
+                -61.7583,
+                12.0264
+              ],
+              [
+                -61.7505,
+                12.0495
+              ],
+              [
+                -61.7526,
+                12.0707
+              ],
+              [
+                -61.7616,
+                12.0888
+              ],
+              [
+                -61.7459,
+                12.1092
+              ],
+              [
+                -61.7533,
+                12.1205
+              ],
+              [
+                -61.7351,
+                12.1509
+              ],
+              [
+                -61.7243,
+                12.1771
+              ],
+              [
+                -61.7176,
+                12.1906
+              ],
+              [
+                -61.7039,
+                12.1971
+              ],
+              [
+                -61.683,
+                12.2197
+              ],
+              [
+                -61.6545,
+                12.2346
+              ],
+              [
+                -61.643,
+                12.2249
+              ],
+              [
+                -61.6251,
+                12.2298
+              ],
+              [
+                -61.6086,
+                12.2269
+              ],
+              [
+                -61.6029,
+                12.1737
+              ],
+              [
+                -61.6097,
+                12.1334
+              ],
+              [
+                -61.6236,
+                12.1195
+              ],
+              [
+                -61.6273,
+                12.1055
+              ],
+              [
+                -61.6219,
+                12.0829
+              ],
+              [
+                -61.6244,
+                12.0635
+              ],
+              [
+                -61.6363,
+                12.0499
+              ],
+              [
+                -61.653,
+                12.0261
+              ],
+              [
+                -61.6789,
+                12.0229
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.4301,
+                12.458
+              ],
+              [
+                -61.4552,
+                12.458
+              ],
+              [
+                -61.4701,
+                12.4455
+              ],
+              [
+                -61.4875,
+                12.4484
+              ],
+              [
+                -61.4864,
+                12.4663
+              ],
+              [
+                -61.4781,
+                12.4786
+              ],
+              [
+                -61.454,
+                12.4882
+              ],
+              [
+                -61.4502,
+                12.5169
+              ],
+              [
+                -61.4341,
+                12.5251
+              ],
+              [
+                -61.4199,
+                12.5007
+              ],
+              [
+                -61.4305,
+                12.4836
+              ],
+              [
+                -61.4301,
+                12.458
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  }
+]
