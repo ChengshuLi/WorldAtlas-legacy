@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import childProcess, {execFileSync, spawn, spawnSync} from 'node:child_process';
 import {syncBuiltinESMExports} from 'node:module';
@@ -17,7 +18,8 @@ function fixture(t, overrides = {}) {
   git('init', '-b', 'main');
   git('config', 'user.email', 'fixture@example.org');
   git('config', 'user.name', 'Fixture');
-  for (const [file, bytes] of Object.entries({'README.md': 'root', 'scripts/tool.mjs': 'tool', 'docs/guide.md': 'guide',
+  for (const [file, bytes] of Object.entries({'AGENTS.md': '# Fixture startup instructions\n- [DEVELOPMENT](docs/DEVELOPMENT.md): fixture guide\n',
+    'README.md': 'root', 'scripts/tool.mjs': 'tool', 'docs/guide.md': 'guide',
     'data/needed/input.json': 'input', 'data/other/large.json': 'unrelated', 'data/one.json': 'individual',
     'research/campaigns/old/source.txt': 'old', '.gitignore': '.scratch/\n'})) {
     fs.mkdirSync(path.dirname(path.join(repo, file)), {recursive: true});
@@ -467,8 +469,114 @@ test('author allocation pins fetched origin/main even without a configured fetch
   manager.release({worker: 'no-fetch-refspec', token: entry.token});
 });
 
+test('author startup guidance is bound to freshly fetched main and never reads a dirty primary file', t => {
+  const source = fixture(t);
+  source.git('config', 'uploadpack.allowFilter', 'true');
+  const remote = path.join(source.temporary, 'remote.git');
+  const repo = path.join(source.temporary, 'client');
+  execFileSync('git', ['clone', '--bare', source.repo, remote], {stdio: 'pipe'});
+  execFileSync('git', ['clone', '--no-checkout', remote, repo], {stdio: 'pipe'});
+  const git = (...args) => execFileSync('git', ['-C', repo, ...args], {encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH: '1'}}).trim();
+  const staleMain = git('rev-parse', 'main');
+  const staleTracking = git('rev-parse', 'refs/remotes/origin/main');
+  const updated = '# Fresh accepted startup instructions\n- [DEVELOPMENT](docs/DEVELOPMENT.md): exact current guide\n';
+  fs.writeFileSync(path.join(source.repo, 'AGENTS.md'), updated);
+  source.git('add', 'AGENTS.md'); source.git('commit', '-m', 'advance startup guidance');
+  const latestMain = source.git('rev-parse', 'HEAD').trim();
+  source.git('push', remote, 'main');
+  const dirtyPrimary = '# Uncommitted primary contents; never show this as accepted guidance\n';
+  fs.writeFileSync(path.join(repo, 'AGENTS.md'), dirtyPrimary);
+  const beforeStatus = git('status', '--porcelain');
+  assert.equal(git('rev-parse', 'main'), staleMain);
+  assert.equal(git('rev-parse', 'refs/remotes/origin/main'), staleTracking);
+
+  let guidance;
+  const manager = workspaceManager(repo, {onStartupGuidance: value => { guidance = value; }});
+  const entry = manager.allocate({worker: 'fresh-guidance', branch: 'engineering/fresh-guidance'});
+  assert.equal(entry.head, latestMain);
+  assert.equal(git('rev-parse', 'main'), staleMain, 'allocation must not move the caller primary branch');
+  assert.equal(git('rev-parse', 'refs/remotes/origin/main'), latestMain);
+  assert.deepEqual(git('status', '--porcelain'), beforeStatus, 'the dirty primary checkout remains unchanged');
+  assert.equal(fs.readFileSync(path.join(repo, 'AGENTS.md'), 'utf8'), dirtyPrimary);
+  assert.equal(fs.readFileSync(path.join(entry.path, 'AGENTS.md'), 'utf8'), updated);
+  assert.equal(guidance.commit, latestMain);
+  assert.equal(guidance.path, 'AGENTS.md');
+  assert.equal(guidance.gitBlobOid, git('rev-parse', `${latestMain}:AGENTS.md`));
+  assert.equal(guidance.sha256, createHash('sha256').update(updated).digest('hex'));
+  assert.equal(guidance.text, updated);
+  assert.deepEqual(guidance.guides, ['docs/DEVELOPMENT.md']);
+  manager.release({worker: 'fresh-guidance', token: entry.token});
+});
+
+test('CLI keeps stdout as one allocation JSON object and presents exact pinned AGENTS on stderr', t => {
+  const {repo, git, manager} = fixture(t);
+  const helper = cliHelper(repo);
+  const result = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'cli-guidance',
+    '--branch', 'engineering/cli-guidance'], {
+    cwd: repo, encoding: 'utf8', env: {...process.env, CODEX_THREAD_ID: 'cli-guidance'}
+  });
+  assert.equal(result.status, 0, result.stderr);
+  const entry = JSON.parse(result.stdout);
+  assert.equal(Object.keys(entry).sort().join(','), 'branch,createdAt,head,include,path,profile,reservation,slot,status,token,worker');
+  const agents = git('show', `${entry.head}:AGENTS.md`);
+  assert.match(result.stderr, new RegExp(`Verified current-main startup instructions \\(${entry.head}\\)`));
+  assert.match(result.stderr, /AGENTS\.md Git blob [a-f0-9]{40}; SHA-256 [a-f0-9]{64}/);
+  assert.match(result.stderr, /Domain guides: docs\/DEVELOPMENT\.md/);
+  assert.ok(result.stderr.includes(agents), 'stderr presents the exact immutable instruction body');
+  assert.doesNotMatch(result.stdout, /Verified current-main startup instructions/);
+  manager.release({worker: entry.worker, token: entry.token});
+});
+
+test('missing fetched-main AGENTS fails before reservation, branch or worktree creation', t => {
+  const {git, repo, head} = fixture(t);
+  const manager = workspaceManager(repo, {onStartupGuidance: () => {}});
+  git('rm', 'AGENTS.md'); git('commit', '-m', 'missing startup instructions');
+  const missingMain = git('rev-parse', 'HEAD');
+  const beforeWorktrees = git('worktree', 'list', '--porcelain');
+  assert.notEqual(missingMain, head);
+  assert.throws(() => manager.allocate({worker: 'missing-guidance', branch: 'engineering/missing-guidance'}),
+    /Verified origin\/main .* has no root AGENTS\.md/);
+  assert.equal(git('worktree', 'list', '--porcelain'), beforeWorktrees);
+  assert.equal(git('for-each-ref', '--format=%(refname)', 'refs/heads/engineering/missing-guidance'), '');
+  assert.deepEqual(manager.report().entries, []);
+  assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
+});
+
+test('missing exact fetched-main AGENTS blob fails closed without lazy retrieval or reservation', t => {
+  const {repo, manager, git, run, checkUnfetched} = partialFixture(t, 'AGENTS.md');
+  const inspected = JSON.parse(run({}, 'inspect'));
+  assert.deepEqual(inspected.missing.flatMap(row => row.paths), ['AGENTS.md']);
+  const beforeWorktrees = git('worktree', 'list', '--porcelain');
+  assert.throws(() => run({slot: 'work', branch: 'engineering/missing-guidance-blob', commit: undefined}), error => {
+    assert.match(error.stderr, /Pinned AGENTS\.md blob [a-f0-9]{40} unavailable for verified origin\/main/);
+    return true;
+  });
+  assert.equal(git('worktree', 'list', '--porcelain'), beforeWorktrees);
+  assert.equal(git('for-each-ref', '--format=%(refname)', 'refs/heads/engineering/missing-guidance-blob'), '');
+  assert.deepEqual(manager.report().entries, []);
+  assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
+  checkUnfetched(true);
+});
+
+test('exact detached review allocation keeps its requested commit and does not become a main-based checkout', t => {
+  const {git, repo, head} = fixture(t);
+  fs.writeFileSync(path.join(repo, 'AGENTS.md'), '# Dirty primary only\n');
+  const status = git('status', '--porcelain');
+  git('remote', 'set-url', 'origin', path.join(repo, 'unavailable-origin'));
+  let guidance;
+  const manager = workspaceManager(repo, {onStartupGuidance: value => { guidance = value; }});
+  const review = manager.allocate({worker: 'pinned-review', slot: 'review', commit: head});
+  assert.equal(review.head, head);
+  assert.equal(fs.readFileSync(path.join(review.path, 'AGENTS.md'), 'utf8'), '# Fixture startup instructions\n- [DEVELOPMENT](docs/DEVELOPMENT.md): fixture guide\n');
+  assert.equal(guidance, undefined, 'exact review allocation does not fetch or substitute current-main guidance');
+  assert.equal(git('status', '--porcelain'), status);
+  manager.release({worker: 'pinned-review', slot: 'review', token: review.token});
+});
+
 test('failed fetch never acquires a registry lock and keeps other workers intact', t => {
-  const {manager, head} = fixture(t);
+  const {repo, head} = fixture(t);
+  let guidance;
+  const manager = workspaceManager(repo, {onStartupGuidance: value => { guidance = value; }});
   const existing = manager.allocate({worker: 'existing', slot: 'review', commit: head});
   const {registry} = manager.report(), before = fs.readFileSync(path.join(registry, 'state.json'));
   const execute = childProcess.execFileSync;
@@ -482,6 +590,7 @@ test('failed fetch never acquires a registry lock and keeps other workers intact
   syncBuiltinESMExports();
   t.after(() => { t.mock.restoreAll(); syncBuiltinESMExports(); });
   assert.throws(() => manager.allocate({worker: 'one', branch: 'engineering/fetch-failure'}), /interrupted fetch/);
+  assert.equal(guidance, undefined, 'failed fetch must not present stale or unverified instructions');
   assert.ok(fs.readFileSync(path.join(registry, 'state.json')).equals(before));
   assert.deepEqual(manager.report().entries, [existing]);
   assert.ok(!fs.existsSync(path.join(registry, 'lock')));
@@ -697,7 +806,7 @@ function partialFixture(t, missing, {packSource = false, configureSource} = {}) 
   const run = (options, action = 'allocate') => {
     const moduleURL = new URL('../scripts/local-workspace.mjs', import.meta.url).href;
     const code = `import {workspaceManager} from ${JSON.stringify(moduleURL)};
-      try { console.log(JSON.stringify(workspaceManager(${JSON.stringify(repo)})[${JSON.stringify(action)}](${JSON.stringify({worker: 'partial', slot: 'review', commit: source.head, ...options})}))); }
+      try { console.log(JSON.stringify(workspaceManager(${JSON.stringify(repo)}, {onStartupGuidance: () => {}})[${JSON.stringify(action)}](${JSON.stringify({worker: 'partial', slot: 'review', commit: source.head, ...options})}))); }
       catch(error) { console.error(error.message); process.exitCode=1; }`;
     // Deliberately permit lazy fetch in the caller: allocator sizing must disable
     // it itself. Any accidental fetch is observable, even if Git recovers.
@@ -856,9 +965,9 @@ test('read-only inspection retains required scopes and creates no registry, lock
   assert.equal(result.head, head);
   assert.deepEqual(result.include, scope.include);
   assert.deepEqual(result.inputs.map(row => row.path).sort(), [
-    '.gitignore', 'README.md', 'data/needed/input.json', 'data/one.json', 'docs/guide.md', 'scripts/tool.mjs'
+    '.gitignore', 'AGENTS.md', 'README.md', 'data/needed/input.json', 'data/one.json', 'docs/guide.md', 'scripts/tool.mjs'
   ]);
-  assert.equal(result.inputCount, 6);
+  assert.equal(result.inputCount, 7);
   assert.deepEqual(result.missing, []);
   assert.equal(result.selectedBytes, result.inputs.reduce((sum, row) => sum + row.bytes, 0));
   const {registry, root} = manager.report();
@@ -938,7 +1047,7 @@ test('missing selected OIDs stay complete across batches without invoking cat-fi
 
 test('old-Git promisor fatal is avoided even when every selected blob is absent', t => {
   const {repo, git, run, trace, checkUnfetched} = partialFixture(t, [
-    '.gitignore', 'README.md', 'docs/guide.md', 'scripts/tool.mjs', 'data/one.json'
+    '.gitignore', 'AGENTS.md', 'README.md', 'docs/guide.md', 'scripts/tool.mjs', 'data/one.json'
   ]);
   const absent = git('rev-parse', 'HEAD:README.md').trim();
   const legacy = spawnSync('git', ['-C', repo, 'cat-file', '--batch-check'], {
@@ -951,8 +1060,8 @@ test('old-Git promisor fatal is avoided even when every selected blob is absent'
   }
   fs.writeFileSync(trace, '');
   const result = JSON.parse(run({include: ['data/one.json']}, 'inspect'));
-  assert.equal(result.inputCount, 5);
-  assert.equal(result.missing.length, 5);
+  assert.equal(result.inputCount, 6);
+  assert.equal(result.missing.length, 6);
   assert.equal(result.availableBytes, 0);
   assert.equal(result.selectedBytes, null);
   assert.ok(result.inputs.every(row => row.bytes === null));
