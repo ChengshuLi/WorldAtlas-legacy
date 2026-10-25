@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "kind": "official-pcbs-2017-governorates-context-crosscheck",
+  "scope": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "original_cells": 427,
+    "original_intervals": 277,
+    "status_changed": false,
+    "native_holds_removed": 0,
+    "repair_credit": 0
+  },
+  "source": {
+    "url": "https://services8.arcgis.com/x3OYmfTujNHGdoex/arcgis/rest/services/Dissmenation_layer/FeatureServer/1/query",
+    "layer": "Governorates_LIST2017",
+    "provider": "PCBS",
+    "recorded_layer_data_last_edit": "2017-11-16",
+    "query": {
+      "where": "1=1",
+      "outFields": "OBJECTID,GOV_CODE,NAME_EN,REGION_ID,DISTRICT",
+      "returnGeometry": true,
+      "outSR": "4326",
+      "f": "geojson"
+    },
+    "features": 16,
+    "crs": "EPSG:4326",
+    "http_status": 200,
+    "response_bytes": 2279481,
+    "response_sha256": "65c1efcee5223d3ae6a0d7823d8e5a01b1cc9a03908a3237de5be71ecfb280b9",
+    "raw_source_geometry_included": false
+  },
+  "reference_inputs": {
+    "original_native_patch": {
+      "commit": "e0e2c3cc03e2a5e4c0c9d6354c94b80ac9350e2f",
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-requested-patch.json",
+      "bytes": 11869,
+      "sha256": "c5cdb04e5ad181593cfaeb0bb6270f6013ba8c3c20f7119b7b7ef36d9765dbcb"
+    },
+    "native_latitudes": {
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "rows": 262166
+    }
+  },
+  "method": {
+    "point": "((x+0.5)/262166*360-180, native_latitude[y])",
+    "geometry_predicate": "Shapely contains; covers checked for boundary",
+    "runtime": {
+      "python": "3.12.14",
+      "shapely": "2.1.2"
+    },
+    "limitations": [
+      "This unversioned current service response is contextual evidence, not a source-lineage bridge to the ODW/geoBoundaries 2017 ADM2 payload.",
+      "Recorded layer metadata reports a 2017 data edit; this does not reconstruct a historical response.",
+      "Outside the PCBS layer does not by itself invalidate the retained ODW/geoBoundaries candidate or establish a legal/sovereignty conclusion.",
+      "No classification, hold, or acceptance status was changed."
+    ]
+  },
+  "results": {
+    "total": 427,
+    "by_owner": {
+      "36948": {
+        "Tulkarm": 15,
+        "outside": 1
+      },
+      "36950": {
+        "Jericho & Al Aghwar": 115,
+        "outside": 17
+      },
+      "36951": {
+        "Khan Yunis": 11
+      },
+      "36952": {
+        "Deir Al Balah": 2,
+        "outside": 1
+      },
+      "36953": {
+        "Bethlehem": 126,
+        "outside": 18
+      },
+      "36954": {
+        "Salfit": 23
+      },
+      "36955": {
+        "Ramallah & Al Bireh": 35,
+        "outside": 2
+      },
+      "36956": {
+        "Jenin": 14,
+        "outside": 2
+      },
+      "36957": {
+        "Qalqiliya": 6
+      },
+      "36960": {
+        "Tubas": 31,
+        "outside": 2
+      },
+      "36961": {
+        "Hebron": 5,
+        "outside": 1
+      }
+    },
+    "inside": 383,
+    "outside": 44,
+    "boundary_or_multiple": 0,
+    "six_native_supported_candidates": {
+      "total": 6,
+      "by_owner": {
+        "36950": {
+          "outside": 1,
+          "Jericho & Al Aghwar": 2
+        },
+        "36952": {
+          "Deir Al Balah": 2,
+          "outside": 1
+        }
+      }
+    }
+  }
+}
