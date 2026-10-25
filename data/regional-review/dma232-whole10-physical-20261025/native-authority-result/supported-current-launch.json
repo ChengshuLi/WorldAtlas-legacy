@@ -1,0 +1,28 @@
+{
+  "code_head": "84a147fdf0731604e90dff3e86f4c2190a8eb0dd",
+  "config": {
+    "version": 1,
+    "diagnostic": {
+      "commit": "94924d1ca2ea26783d23710ca3cf1cfce27ad2b5",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-result/native-diagnostic.json"
+    },
+    "original_patch": {
+      "commit": "bfeb47e1890911d27533004ce0779459ea299a0d",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-input-plan/native-patch232.NONEXECUTED.json"
+    },
+    "accepted_selector": {
+      "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+      "path": "data/ownership-selection.json"
+    }
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "supported-inputs",
+    "data/regional-review/dma232-whole10-physical-20261025/current-supported-input/config.json",
+    ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001"
+  ],
+  "destination": ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001",
+  "started": 1792891249.3335412,
+  "source_physical_diagnostic_replayed": false
+}

@@ -1,0 +1,37 @@
+{
+  "code_head": "a80b425ab05ec236d3cb6610ede62cdb9a9533f0",
+  "accepted_code_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "current_accepted_selector": {
+    "bytes": 2286,
+    "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "config": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "4a351b620cce708584be63ff1c73fbece5007b1d",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/prepared-source-evidence/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "a80b425ab05ec236d3cb6610ede62cdb9a9533f0",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/current-supported-result/native-patch.json"
+    }
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-authority",
+    ".cache/delivery-handoff/dma232-authority-config.json",
+    ".cache/delivery-handoff/dma232-native-authority-20261025-01a16f2d8ad8-001"
+  ],
+  "destination": ".cache/delivery-handoff/dma232-native-authority-20261025-01a16f2d8ad8-001",
+  "requested_novel_supported": 232,
+  "original_claim": 232,
+  "separate174_unchanged": true,
+  "all10_sources_preserved": true,
+  "started": 1792892265.9322581,
+  "worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7"
+}
