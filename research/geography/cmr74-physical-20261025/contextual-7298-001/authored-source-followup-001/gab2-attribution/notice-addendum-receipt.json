@@ -1,0 +1,87 @@
+{
+  "kind": "actual-GAB2-creator-and-notice-addendum",
+  "archive": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/GAB_ADM2-9469f09.zip",
+    "bytes": 133943,
+    "sha256": "b18a73f7567d5f9541b6b5c812b3ca9a287fe0435232dacfe367e85dc589f8c2"
+  },
+  "members_read": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/meta.txt",
+      "bytes": 468,
+      "sha256": "9315c5059f09ccfdaa584a8b150cc2139ccd2263a1f947818deb45148c0e9c7e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/license.PNG",
+      "bytes": 39597,
+      "sha256": "891e04e62029ad734a13a6a17f051ea26547ee90e030f0198be82683f276ecbf"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/GAB_ADM2.shp.xml",
+      "bytes": 9904,
+      "sha256": "f33cb35308b4397f1bade682090c43f191c40e55db7653204154e5f68ba528fe"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/GAB_ADM2.prj",
+      "bytes": 145,
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+    }
+  ],
+  "process_tools_and_dates": [
+    {
+      "tool": "CreateFeatureclass",
+      "date": "20221005",
+      "time": "083512"
+    },
+    {
+      "tool": "FeatureToPolygon",
+      "date": "20221005",
+      "time": "085936"
+    },
+    {
+      "tool": "UpdateSchema",
+      "date": "20221005",
+      "time": "145732"
+    },
+    {
+      "tool": "CalculateField",
+      "date": "20221005",
+      "time": "150958"
+    },
+    {
+      "tool": "FeatureClassToFeatureClass",
+      "date": "20221005",
+      "time": "151123"
+    },
+    {
+      "tool": "UpdateSchema",
+      "date": "20221005",
+      "time": "151144"
+    }
+  ],
+  "successful_acquisition": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/successful-acquisition-and-manifest.json",
+    "bytes": 1992,
+    "sha256": "c4a9212a5483cce7a87a98376ffa299b2be8ad3d8a2a7a0661e04bf90fbd828b"
+  },
+  "prior_failure_preserved": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/recovery-action.json",
+    "bytes": 952,
+    "sha256": "c0c143b513011426aacc404047b395725fed8f3c931c2b7d3514c691296c7ef8"
+  },
+  "primary_readings": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/actual-primary-attribution-readings.json",
+    "bytes": 1614,
+    "sha256": "41354c5b3f19e9e0eed2264228ccc81c6dc99589749436de80187f70f2a93f40"
+  },
+  "addendum": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-gab2-exact-attribution-recovery/GAB2-NOTICE-ADDENDUM.md",
+    "bytes": 2825,
+    "sha256": "a0fcfcc504fdc3369184100521a24e1e0467f9b61a7f5042d4aab699298eb35c"
+  },
+  "future_final_output": null,
+  "no_requalification_or_credit": true,
+  "no_Library_Git_mutation": true,
+  "pending": false,
+  "uncertain": false
+}

@@ -1,0 +1,271 @@
+{
+  "kind": "existing-artifact-source-notice-reconciliation",
+  "read_sources": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/SOURCE-METHOD-AND-PUBLICATION.md",
+      "bytes": 13536,
+      "sha256": "e7d9cbe202fdb351b5afcd93734268785668204f0bf21b2605a7b039225d8dca"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/NOTICE-DRAFT.md",
+      "bytes": 6959,
+      "sha256": "8dca6d6f49b2dea82ed239826098962e42cfcfad4b1b662b394cfae27d322d2d"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/family16-notice-bindings.json",
+      "bytes": 61475,
+      "sha256": "55a666f902f473e84ec510f365bc8361568556f4683844274e6612aedf13d075"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/actual-authority-input-binding.json",
+      "bytes": 2288,
+      "sha256": "128c26dbcab6abb256df1567f0d884a35f746710119a53f9c53280fb9d419b57"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/auxiliary-notice-bindings.json",
+      "bytes": 4548,
+      "sha256": "5834a21bec183827acb881ec4b5968c4033e223954b3c99629375c317bd8c2e8"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/license-body-web-readings.json",
+      "bytes": 3543,
+      "sha256": "ddad407861660e61597dabc5cc8a7ace31d62510fc54a6232c60fc6999be4fe5"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/GAB2-bounded-attribution-lead.json",
+      "bytes": 859,
+      "sha256": "1e07425112eb09f5758b0ef03ddc7285d053e42550050e84dce5477e9667bf1c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-source-notice-handoff/COG2-actual-rights-and-purpose.json",
+      "bytes": 965,
+      "sha256": "0d33aa03b6720ceca9c25c3d8d863b29dd551f24556426bf1bfbc95f72284b7d"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr16-source-policy-attribution/gshhg-LICENSE.TXT",
+      "bytes": 1375,
+      "sha256": "dc53a4833bf9121360a5286917683f041439327353ffe0231206c6b746005b81"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr16-source-policy-attribution/gshhg-README.TXT",
+      "bytes": 15350,
+      "sha256": "8c83b0d9e861c3cf9390ccfcc28d57dd484b192e1767524e094c988ee9f84ac7"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr16-source-policy-attribution/gshhg-COPYING.LESSERv3",
+      "bytes": 7816,
+      "sha256": "ea7d049c7705dc13afc202dd18e1827f3484f8212fd3fa7b82fc4a0c363432c9"
+    }
+  ],
+  "actual_immutable_artifacts": [
+    {
+      "artifact": "physical_stage",
+      "commit": "e63c8d82f98b3e0c804aab48bd0cef73a7eab53b",
+      "path": "research/geography/cmr74-physical-20261025/original-stage-inputs.json",
+      "bytes": 1924004,
+      "sha256": "f595fa7561dd0fa52b0044b4b2f79ef6f8110297dda18a275dfa81d92d643f84",
+      "git_blob_oid": "fc30d07e734abbcd520c7ceec3014e70fc81e21f",
+      "embedded_geojson_objects": 148,
+      "nonempty_coordinate_or_geometry_arrays": 148,
+      "geometry_types": {
+        "Polygon": 133,
+        "MultiPolygon": 15
+      },
+      "example_geometry_pointers": [
+        "/0/consumed/geometry",
+        "/0/selected/geometry",
+        "/1/consumed/geometry",
+        "/1/selected/geometry",
+        "/2/consumed/geometry",
+        "/2/selected/geometry",
+        "/3/consumed/geometry",
+        "/3/selected/geometry"
+      ]
+    },
+    {
+      "artifact": "physical_result",
+      "commit": "34aff0f68caf1f1932e87e712170e72d0c03daaf",
+      "path": "research/geography/cmr74-physical-20261025/physical-001/whole-target-support.json",
+      "bytes": 1188170,
+      "sha256": "08de1ec0fc0e08151b37df29bd51ea06214af0af4e0ee297880224499c326470",
+      "git_blob_oid": "1fa57a8fdd7c8555edb1b51644dc53cd9e044db9",
+      "embedded_geojson_objects": 1135,
+      "nonempty_coordinate_or_geometry_arrays": 585,
+      "geometry_types": {
+        "Polygon": 295,
+        "GeometryCollection": 357,
+        "MultiPolygon": 77,
+        "MultiLineString": 6,
+        "LineString": 398,
+        "Point": 2
+      },
+      "example_geometry_pointers": [
+        "/results/0/support/mapped_land_support",
+        "/results/0/support/mapped_inland_water_support",
+        "/results/0/support/outside_mapped_L1_context",
+        "/results/0/support/hierarchy_disagreements/L2-outside-L1",
+        "/results/0/support/hierarchy_disagreements/L3-outside-L2",
+        "/results/0/support/hierarchy_disagreements/L4-outside-L3",
+        "/results/0/support/missing_reconstruction",
+        "/results/0/support/extra_reconstruction"
+      ]
+    },
+    {
+      "artifact": "bound_source_evidence",
+      "commit": "0909f474efce8dc40daaef99e9404f8f02bfcee8",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-supported-bound-003/source-evidence.json",
+      "bytes": 390497,
+      "sha256": "f3d63fee8728e857960d42bd6b9aceb1d09bb776dc17316653f77b65fbeee1ac",
+      "git_blob_oid": "95fd980458a8cf252372303a7efdc50c695b9b2b",
+      "embedded_geojson_objects": 73,
+      "nonempty_coordinate_or_geometry_arrays": 73,
+      "geometry_types": {
+        "Polygon": 63,
+        "MultiPolygon": 10
+      },
+      "example_geometry_pointers": [
+        "/targets/0/base_geometry",
+        "/targets/1/base_geometry",
+        "/targets/2/base_geometry",
+        "/targets/3/base_geometry",
+        "/targets/4/base_geometry",
+        "/targets/5/base_geometry",
+        "/targets/6/base_geometry",
+        "/targets/7/base_geometry"
+      ]
+    },
+    {
+      "artifact": "authority4555",
+      "commit": "adb42dc3331e05135b3621c79daa867eacf630c4",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-authority4555-001/constructor-result.json",
+      "bytes": 4201097,
+      "sha256": "c7d2090bae08ec3ed5d541b54a47d4edafa1ca9b38ff011a07e5380b10d15b09",
+      "git_blob_oid": "18af502665fdf8cd11bdbff2eb85b069a57642a2",
+      "embedded_geojson_objects": 73,
+      "nonempty_coordinate_or_geometry_arrays": 73,
+      "geometry_types": {
+        "Polygon": 63,
+        "MultiPolygon": 10
+      },
+      "example_geometry_pointers": [
+        "/ledger_rows/0/base_geometry",
+        "/ledger_rows/1/base_geometry",
+        "/ledger_rows/2/base_geometry",
+        "/ledger_rows/3/base_geometry",
+        "/ledger_rows/4/base_geometry",
+        "/ledger_rows/5/base_geometry",
+        "/ledger_rows/6/base_geometry",
+        "/ledger_rows/7/base_geometry"
+      ]
+    },
+    {
+      "artifact": "native_patch",
+      "commit": "0909f474efce8dc40daaef99e9404f8f02bfcee8",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-supported-bound-003/native-patch.json",
+      "bytes": 94347,
+      "sha256": "46982415d7d5db7e901240beb531ef22a94fa848022b6557bb4a3120c8eabb2a",
+      "git_blob_oid": "4abf710d48e5635a8c9b480ea2b5000925ace263",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    },
+    {
+      "artifact": "projected_applicability",
+      "commit": "6979a97264299b52c5b232740f53fd2aa36c09f6",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/supported-inputs-002/territorial-applicability.json",
+      "bytes": 3505581,
+      "sha256": "86dfecb411b10be9dd0acfd98bbe7b3fdb1e011064ad487d0add21f690f82f9f",
+      "git_blob_oid": "49af64a8ac9059bd9585456b78695268b22c4b3a",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    },
+    {
+      "artifact": "full4925_source_evidence",
+      "commit": "403791c13c936e7894e86a891951ab6078074845",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/source-evidence.json",
+      "bytes": 1108399,
+      "sha256": "5b9caf2a519e4bd86c0bcf680bbb3b084fe84cf44c1a13c365da7e144459b0a2",
+      "git_blob_oid": "2c08837e9446fcc7d2489a45aeb634e05b22abea",
+      "embedded_geojson_objects": 74,
+      "nonempty_coordinate_or_geometry_arrays": 74,
+      "geometry_types": {
+        "Polygon": 64,
+        "MultiPolygon": 10
+      },
+      "example_geometry_pointers": [
+        "/targets/0/base_geometry",
+        "/targets/1/base_geometry",
+        "/targets/2/base_geometry",
+        "/targets/3/base_geometry",
+        "/targets/4/base_geometry",
+        "/targets/5/base_geometry",
+        "/targets/6/base_geometry",
+        "/targets/7/base_geometry"
+      ]
+    },
+    {
+      "artifact": "full4925_report",
+      "commit": "7471c8c1510caf7ba2b9ba6d9f81b8678968f050",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-diagnostic-001/native-diagnostic.json",
+      "bytes": 14136819,
+      "sha256": "f06a4f8a64f316977048ea1d597681f433c94b8f9dc903c59a3195aafec6c16a",
+      "git_blob_oid": "81168b417c3a4f5cfcded83d6ce6c2aedd46d16f",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    },
+    {
+      "artifact": "full7298_applicability",
+      "commit": "403791c13c936e7894e86a891951ab6078074845",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/adopted-native-territorial-applicability.json",
+      "bytes": 5103810,
+      "sha256": "842caab6f8fa67d1643126ce4955b993687426b01c01ad3e965883a8e3c0d9ad",
+      "git_blob_oid": "86532112436995e27e2b47732a1b622ce90fa741",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    }
+  ],
+  "consolidated_v1_archive_unchanged": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-final-existing-evidence-handoff-20261025.zip",
+    "bytes": 219505,
+    "sha256": "7f3b8c54d35b03f5629c90d9198b22c5360aa1ee8a9348ee9f6bab2f94d6266c"
+  },
+  "v1_documentary_image_members": [
+    "galim45/exact45-source-pixel-neighborhoods.png",
+    "galim45/western-frame-inspection-10x.png"
+  ],
+  "outputs": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-current-artifact-notice-reconciliation/ASSESSMENT.md",
+      "bytes": 9644,
+      "sha256": "fb2a25c0287bc6f691db2e33680066f82b46307f6cac1b25f72fe573c3448338"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-current-artifact-notice-reconciliation/FINAL-DELIVERY-NOTICE-DRAFT.md",
+      "bytes": 6435,
+      "sha256": "d4c0c0d57adc610c2b19beb41e34e70f811194abe5f44afa3f8ca1e1eb5d011d"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-current-artifact-notice-reconciliation/actual-artifact-content-inventory.json",
+      "bytes": 8636,
+      "sha256": "166391577627ace1be93f42269243af4ff102e837605a3c0540367953bf469ff"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr-current-artifact-notice-reconciliation/family16-publication-binding-draft.json",
+      "bytes": 28792,
+      "sha256": "e0ea081b781c2f73fcb75a5495ceba35bd0baf50a0a6bed26eaf51789e627be9"
+    }
+  ],
+  "future_final_output": null,
+  "no_geometry_execution": true,
+  "no_acquisition": true,
+  "no_Library_or_Git_mutation": true,
+  "no_pending_or_uncertain_operation": true,
+  "earlier_inspection_note": "Initial field-shape print treated list as dict and stopped; corrected structural reader inspected all bodies. No source/geometry or artifact modification resulted."
+}

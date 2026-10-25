@@ -1,0 +1,215 @@
+{
+  "kind": "read-only-existing-byte-inventory",
+  "artifacts": [
+    {
+      "artifact": "physical_stage",
+      "commit": "e63c8d82f98b3e0c804aab48bd0cef73a7eab53b",
+      "path": "research/geography/cmr74-physical-20261025/original-stage-inputs.json",
+      "bytes": 1924004,
+      "sha256": "f595fa7561dd0fa52b0044b4b2f79ef6f8110297dda18a275dfa81d92d643f84",
+      "git_blob_oid": "fc30d07e734abbcd520c7ceec3014e70fc81e21f",
+      "embedded_geojson_objects": 148,
+      "nonempty_coordinate_or_geometry_arrays": 148,
+      "geometry_types": {
+        "Polygon": 133,
+        "MultiPolygon": 15
+      },
+      "example_geometry_pointers": [
+        "/0/consumed/geometry",
+        "/0/selected/geometry",
+        "/1/consumed/geometry",
+        "/1/selected/geometry",
+        "/2/consumed/geometry",
+        "/2/selected/geometry",
+        "/3/consumed/geometry",
+        "/3/selected/geometry"
+      ]
+    },
+    {
+      "artifact": "physical_result",
+      "commit": "34aff0f68caf1f1932e87e712170e72d0c03daaf",
+      "path": "research/geography/cmr74-physical-20261025/physical-001/whole-target-support.json",
+      "bytes": 1188170,
+      "sha256": "08de1ec0fc0e08151b37df29bd51ea06214af0af4e0ee297880224499c326470",
+      "git_blob_oid": "1fa57a8fdd7c8555edb1b51644dc53cd9e044db9",
+      "embedded_geojson_objects": 1135,
+      "nonempty_coordinate_or_geometry_arrays": 585,
+      "geometry_types": {
+        "Polygon": 295,
+        "GeometryCollection": 357,
+        "MultiPolygon": 77,
+        "MultiLineString": 6,
+        "LineString": 398,
+        "Point": 2
+      },
+      "example_geometry_pointers": [
+        "/results/0/support/mapped_land_support",
+        "/results/0/support/mapped_inland_water_support",
+        "/results/0/support/outside_mapped_L1_context",
+        "/results/0/support/hierarchy_disagreements/L2-outside-L1",
+        "/results/0/support/hierarchy_disagreements/L3-outside-L2",
+        "/results/0/support/hierarchy_disagreements/L4-outside-L3",
+        "/results/0/support/missing_reconstruction",
+        "/results/0/support/extra_reconstruction"
+      ]
+    },
+    {
+      "artifact": "bound_source_evidence",
+      "commit": "0909f474efce8dc40daaef99e9404f8f02bfcee8",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-supported-bound-003/source-evidence.json",
+      "bytes": 390497,
+      "sha256": "f3d63fee8728e857960d42bd6b9aceb1d09bb776dc17316653f77b65fbeee1ac",
+      "git_blob_oid": "95fd980458a8cf252372303a7efdc50c695b9b2b",
+      "embedded_geojson_objects": 73,
+      "nonempty_coordinate_or_geometry_arrays": 73,
+      "geometry_types": {
+        "Polygon": 63,
+        "MultiPolygon": 10
+      },
+      "example_geometry_pointers": [
+        "/targets/0/base_geometry",
+        "/targets/1/base_geometry",
+        "/targets/2/base_geometry",
+        "/targets/3/base_geometry",
+        "/targets/4/base_geometry",
+        "/targets/5/base_geometry",
+        "/targets/6/base_geometry",
+        "/targets/7/base_geometry"
+      ]
+    },
+    {
+      "artifact": "authority4555",
+      "commit": "adb42dc3331e05135b3621c79daa867eacf630c4",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-authority4555-001/constructor-result.json",
+      "bytes": 4201097,
+      "sha256": "c7d2090bae08ec3ed5d541b54a47d4edafa1ca9b38ff011a07e5380b10d15b09",
+      "git_blob_oid": "18af502665fdf8cd11bdbff2eb85b069a57642a2",
+      "embedded_geojson_objects": 73,
+      "nonempty_coordinate_or_geometry_arrays": 73,
+      "geometry_types": {
+        "Polygon": 63,
+        "MultiPolygon": 10
+      },
+      "example_geometry_pointers": [
+        "/ledger_rows/0/base_geometry",
+        "/ledger_rows/1/base_geometry",
+        "/ledger_rows/2/base_geometry",
+        "/ledger_rows/3/base_geometry",
+        "/ledger_rows/4/base_geometry",
+        "/ledger_rows/5/base_geometry",
+        "/ledger_rows/6/base_geometry",
+        "/ledger_rows/7/base_geometry"
+      ]
+    },
+    {
+      "artifact": "native_patch",
+      "commit": "0909f474efce8dc40daaef99e9404f8f02bfcee8",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-supported-bound-003/native-patch.json",
+      "bytes": 94347,
+      "sha256": "46982415d7d5db7e901240beb531ef22a94fa848022b6557bb4a3120c8eabb2a",
+      "git_blob_oid": "4abf710d48e5635a8c9b480ea2b5000925ace263",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    },
+    {
+      "artifact": "projected_applicability",
+      "commit": "6979a97264299b52c5b232740f53fd2aa36c09f6",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/supported-inputs-002/territorial-applicability.json",
+      "bytes": 3505581,
+      "sha256": "86dfecb411b10be9dd0acfd98bbe7b3fdb1e011064ad487d0add21f690f82f9f",
+      "git_blob_oid": "49af64a8ac9059bd9585456b78695268b22c4b3a",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    },
+    {
+      "artifact": "full4925_source_evidence",
+      "commit": "403791c13c936e7894e86a891951ab6078074845",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/source-evidence.json",
+      "bytes": 1108399,
+      "sha256": "5b9caf2a519e4bd86c0bcf680bbb3b084fe84cf44c1a13c365da7e144459b0a2",
+      "git_blob_oid": "2c08837e9446fcc7d2489a45aeb634e05b22abea",
+      "embedded_geojson_objects": 74,
+      "nonempty_coordinate_or_geometry_arrays": 74,
+      "geometry_types": {
+        "Polygon": 64,
+        "MultiPolygon": 10
+      },
+      "example_geometry_pointers": [
+        "/targets/0/base_geometry",
+        "/targets/1/base_geometry",
+        "/targets/2/base_geometry",
+        "/targets/3/base_geometry",
+        "/targets/4/base_geometry",
+        "/targets/5/base_geometry",
+        "/targets/6/base_geometry",
+        "/targets/7/base_geometry"
+      ]
+    },
+    {
+      "artifact": "full4925_report",
+      "commit": "7471c8c1510caf7ba2b9ba6d9f81b8678968f050",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-diagnostic-001/native-diagnostic.json",
+      "bytes": 14136819,
+      "sha256": "f06a4f8a64f316977048ea1d597681f433c94b8f9dc903c59a3195aafec6c16a",
+      "git_blob_oid": "81168b417c3a4f5cfcded83d6ce6c2aedd46d16f",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    },
+    {
+      "artifact": "full7298_applicability",
+      "commit": "403791c13c936e7894e86a891951ab6078074845",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/adopted-native-territorial-applicability.json",
+      "bytes": 5103810,
+      "sha256": "842caab6f8fa67d1643126ce4955b993687426b01c01ad3e965883a8e3c0d9ad",
+      "git_blob_oid": "86532112436995e27e2b47732a1b622ce90fa741",
+      "embedded_geojson_objects": 0,
+      "nonempty_coordinate_or_geometry_arrays": 0,
+      "geometry_types": {},
+      "example_geometry_pointers": []
+    }
+  ],
+  "base_and_physical_content": {
+    "complete_physical_targets": 74,
+    "stage_embedded_consumed_and_selected": 148,
+    "stage_consumed_equals_selected_count": 0,
+    "authority73_base_exact_matches_stage_selected": 73,
+    "bound_source73_exact_matches_authority": 73,
+    "selected_metadata_Natural_Earth_reference_count": 74,
+    "selected_metadata_topology_note_count": 55,
+    "Natural_Earth_recorded_revision": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "physical_support_geojson_by_field": {
+      "mapped_land_support": 74,
+      "mapped_inland_water_support": 74,
+      "outside_mapped_L1_context": 74,
+      "hierarchy_disagreements": 222,
+      "missing_reconstruction": 74,
+      "extra_reconstruction": 74,
+      "contradictory_land_water_support": 276
+    },
+    "interpretation": "JSON content/equality inspection only. Derived support geometry is not unchanged full GSHHG data; selected bases differ from consumed originals. No spatial predicate or modification executed."
+  },
+  "applicability": {
+    "full_records": 7298,
+    "projected_records": 6870,
+    "full_adoption_id_counts": {
+      "caf1-exact217-adoption": 217,
+      "cmr-expected-parent-adoption": 7081
+    },
+    "projected_adoption_id_counts": {
+      "caf1-exact217-adoption": 184,
+      "cmr-expected-parent-adoption": 6686
+    },
+    "all_roles": [
+      "contextual"
+    ],
+    "complete_family_inputs_retained": 16,
+    "future_final_output": null
+  },
+  "future_final_output": null
+}
