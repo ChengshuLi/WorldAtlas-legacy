@@ -122,7 +122,7 @@
     "Source-role evidence only; no source or physical producer was rerun.",
     "No geometry or lon/lat values are included in the authored files.",
     "Original BRA competitor family remains unchanged; no legal attribution, owner, physical support, native eligibility, acceptance, or credit is claimed.",
-    "Native diagnostic was attempted with the exact pinned 343 inputs; no output was published because the complete-owner coverage guard refused the narrower 343-key patch. No stock operation, public status or credit change occurred."
+    "A full-request native diagnostic and supported-inputs reconciliation completed; see their exact pins and source-free receipt. No stock operation, public status or credit action occurred."
   ],
   "accepted_main_source_evidence": {
     "commit": "d5ed8c1126782dfd3fa0ea00525f38b5c89f3289",
@@ -141,6 +141,38 @@
     "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
   },
   "native_diagnostic_attempt": {
+    "phase": "native-diagnostic",
+    "status": "completed",
+    "commit": "0e13ff1f0f5aa135d03b43c262b6c5b817d102be",
+    "config_sha256": "e68b7b1b92bed2eaa5aa634712944876237e3d372a9605ae40470453874a3c65",
+    "input_request": {
+      "commit": "f0574b0258144d107edcc6e4a3974f6ca22fd349",
+      "path": "coordination/engineering/argentina-repair-delivery-20261017/native-config-001/native-requested-patch.json",
+      "git_blob_oid": "7e5fd1b1b5fc18dfa05abde17f5171006efbf44f",
+      "bytes": 321641,
+      "sha256": "4f5196e8a3de00777a3fbaad04f53c66bd9ec893f21742c9d0d6909670af204a"
+    },
+    "input_source_evidence": {
+      "commit": "e9faa8e1f3790026d3bd17852903a409375cedb9",
+      "path": "coordination/engineering/argentina-repair-delivery-20261017/adopted-applicability-343-20261025/source-evidence-001/source-evidence.json",
+      "git_blob_oid": "cd1cbf6f90706ba86521fe9b79c684dfbb1c79ad",
+      "bytes": 1016318,
+      "sha256": "51a87da1ba0380182ad9c53b4c15abc2e576d1f5003ef8a637e829aa5537d672"
+    },
+    "output": {
+      "path": "coordination/engineering/argentina-repair-delivery-20261017/adopted-applicability-343-20261025/native-diagnostic-002/native-diagnostic.json",
+      "bytes": 7717886,
+      "sha256": "1551e7d1101a94fa051e135dd2edcdc6bc026ca6720c4640c5b42096d9754cda",
+      "requested_cells": 23721,
+      "supported_cells": 23040,
+      "held_cells": 681,
+      "adopted_records_supported": 343
+    },
+    "limits": [
+      "Native diagnostic is a technical source/native partition only; it does not establish legal authority, source fitness, science acceptance, or credit."
+    ]
+  },
+  "previous_narrow_diagnostic_attempt": {
     "phase": "native-diagnostic",
     "node": "24.19.0",
     "git": "2.53.0",
@@ -215,6 +247,68 @@
       "The exact 343 patch equals the adopted scope, but the unchanged complete-owner coverage guard requires all 465 source-evidence owner cells; no narrowing/guard relaxation was attempted.",
       "The pinned physical-input commit is absent locally; it was not fetched in this diagnostic attempt.",
       "No source or physical producer, stock compose/finalize/dispatch, status or credit change occurred."
+    ],
+    "status": "superseded by full-request diagnostic",
+    "historical_result": "The 343-only request did not publish output; it was replaced by the authorized full 23,721-key request."
+  },
+  "supported_inputs": {
+    "phase": "supported-inputs",
+    "status": "completed locally; source-free outputs prepared",
+    "input_receipt": {
+      "path": "research/geography/argentina-adopted-native-territorial-applicability-343-20261025/supported-inputs-receipt-v1.json",
+      "bytes": 8143,
+      "sha256": "dd7dfcb7e114b8e628094acc56bd1835741ea76d91c83fe31839ec9ccce16976"
+    },
+    "partition": {
+      "original_cells": 28846,
+      "novel_supported_cells": 343,
+      "already_present_same_owner_cells": 22697,
+      "held_cells": 5806,
+      "prior_held_cells": 5125,
+      "native_diagnostic_held_cells": 681,
+      "conservation": "28,846 = 343 + 22,697 + 5,806"
+    },
+    "candidate_identity": {
+      "keys_sha256": "cfdaeb80532adaf6269dc7edf28b8b11edf51c4c45bc5d0ff2e48dcfb3b9879f",
+      "owner_set_sha256": "2dbf5f9bef583063b9b32deb289e482c976a5243f92060690c8778966a9b9070",
+      "owners": 7,
+      "adopted_records": 343,
+      "exact_set_match": true
+    },
+    "published_source_free_outputs": [
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/adopted-applicability-343-20261025/supported-inputs-002/native-patch.json",
+        "bytes": 7426,
+        "sha256": "b16044089fd3c3a1328f736c5766b09fe6965f73b8f8c4e7267cdcbf18f12abc"
+      },
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/adopted-applicability-343-20261025/supported-inputs-002/original-scope-partition.json",
+        "bytes": 35357,
+        "sha256": "7b5ca238a40f997d2a0b65b57bddcc546979318ad4fc08ae62acd04b6355aa38"
+      }
+    ],
+    "local_only_outputs": [
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/adopted-applicability-343-20261025/supported-inputs-002/source-evidence.json",
+        "bytes": 83126,
+        "sha256": "e8753d0383b24f6ddf11cc20009651abd245ad0c807b2b95aa114f1e209f3b69",
+        "contains_target_geometry": true
+      },
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/adopted-applicability-343-20261025/supported-inputs-002/held-original.json",
+        "bytes": 134646,
+        "sha256": "6b3d2eabc3f21afb1e993465da1491075a425c3f8206d3222cae7ea8f1fe171e"
+      },
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/adopted-applicability-343-20261025/supported-inputs-002/already-present-original.json",
+        "bytes": 302798,
+        "sha256": "e9a9db71a85f7da569007a006257846413b37af513a2529aafb1830dc9c1c20a"
+      }
+    ],
+    "limits": [
+      "The geometry-bearing helper source-evidence output remains local-only and is excluded from publication.",
+      "Technical preparation only; no stock composition/finalization/dispatch, acceptance, status or credit.",
+      "Same-owner existing keys are not new science credit."
     ]
   }
 }
