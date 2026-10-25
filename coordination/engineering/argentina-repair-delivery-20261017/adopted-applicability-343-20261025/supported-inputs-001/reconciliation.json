@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "source-free-original-and-prior-hold-reconciliation-v1",
+  "source_pins": {
+    "original_intervals": {
+      "commit": "f0574b0258144d107edcc6e4a3974f6ca22fd349",
+      "path": "coordination/engineering/argentina-repair-delivery-20261017/original-scope/original-intervals.json.gz",
+      "git_blob_oid": "ba0556c2d70d9f57cfa14f76384772630a5200e8",
+      "bytes": 60456,
+      "sha256": "138a1491d050ced863ade71a76a9bc1a972abc2bd3fbb6ce8de59f501495e44e"
+    },
+    "held_keys": {
+      "commit": "f0574b0258144d107edcc6e4a3974f6ca22fd349",
+      "path": "coordination/engineering/argentina-repair-delivery-20261017/source-review/complete-scope-002/held-original-keys.json",
+      "git_blob_oid": "d54be66ce49fa5f25b43efe04b0c5c47465d1f67",
+      "bytes": 762814,
+      "sha256": "95b0b947a853f167f60bffaa44578a87f5301f661850a863d210c19f4dd5a604"
+    },
+    "native_request": {
+      "commit": "f0574b0258144d107edcc6e4a3974f6ca22fd349",
+      "path": "coordination/engineering/argentina-repair-delivery-20261017/native-config-001/native-requested-patch.json"
+    }
+  },
+  "counts": {
+    "original_unique": 28846,
+    "original_owners": 115,
+    "request_unique": 23721,
+    "prior_hold_unique": 5125,
+    "prior_hold_runs": 1263,
+    "request_plus_prior_unique": 28846
+  },
+  "result": "Exact original scope equals full native request plus prior holds outside request; key-set equality verified, no duplicates/omissions."
+}
