@@ -1,0 +1,55 @@
+{
+  "source_preparation_exit": 0,
+  "CODE": "34aff0f68caf1f1932e87e712170e72d0c03daaf",
+  "native_diagnostic_executed": false,
+  "targets": 74,
+  "exact_target_fields_preserved": true,
+  "whole_positive_family_members": 360,
+  "whole_context_families": 15,
+  "whole_context_family_members": 1389,
+  "per_target_complete_context_inventory": 1389,
+  "bbox_selected_operand_occurrences": 565,
+  "compact_references": 565,
+  "literal_ambiguous_originals": 0,
+  "exclusion_family_occurrences": {
+    "gb:CMR:ADM1": 109,
+    "gb:CMR:ADM2": 181,
+    "gb:NGA:ADM1": 43,
+    "gb:NGA:ADM2": 69,
+    "gb:COG:ADM1": 4,
+    "gb:COG:ADM2": 7,
+    "gb:GAB:ADM1": 5,
+    "gb:GAB:ADM2": 5,
+    "gb:CAF:ADM1": 18,
+    "gb:CAF:ADM2": 26,
+    "gb:CAF:ADM3": 31,
+    "gb:TCD:ADM1": 32,
+    "gb:TCD:ADM2": 27,
+    "gb:GNQ:ADM1": 3,
+    "gb:GNQ:ADM2": 5
+  },
+  "products": [
+    {
+      "path": "source-evidence.json",
+      "bytes": 404552,
+      "sha256": "5ad45bd8da553acb4f53ead464ad93166082e1435ba0e5c65adefe5e5cb18cad"
+    },
+    {
+      "path": "territorial-exclusion-provenance.json",
+      "bytes": 4012138,
+      "sha256": "3d7d7ca71394215374f2061f9df3446e005230036a9324018878b6f30c710a61"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 397,
+      "sha256": "a53fa9a46919f2a822a8803fca3c4acb5c479e9cd61e6df2c330c889d69c08d7"
+    }
+  ],
+  "source_roles_adopted": false,
+  "accepted_delta": 0,
+  "limits": [
+    "Bounding-box-selected whole operands are not measured native contacts.",
+    "Every requested original key/class is preserved. Accepted Nd\u00e9l\u00e9l\u00e9 remains observation-only.",
+    "The 217 CAF contextual proposals and compatible-parent rationale remain unadopted; no operator or owner absence creates clearance."
+  ]
+}
