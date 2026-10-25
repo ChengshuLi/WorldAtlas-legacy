@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "path": "data/ownership-selection.json"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "015a3b8925c468d08237c8344084029d4fdffa8e",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "b4965ea83dde81fd5c14c67f026b7573629b15ad",
+        "bytes": 729,
+        "sha256": "3d15f2a4fe5f4a84686e89e4c7ddf96445c902b131438518ddcb2bb19461de7a"
+      },
+      "source_authority": {
+        "commit": "015a3b8925c468d08237c8344084029d4fdffa8e",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "3ea3fcfc91639a899e1dcf6658176b3e1dfa7eb6",
+        "bytes": 732,
+        "sha256": "e98a6bc9306d9121b98f59d9adebc0aa0cb0f3fcd93988aeebb0da10709e4941"
+      },
+      "ledger": {
+        "commit": "015a3b8925c468d08237c8344084029d4fdffa8e",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "304e472ee6b08719eb88068c5cfe1f9503acc443",
+        "bytes": 131259,
+        "sha256": "6a1361e8b49a87dc8ee6928dbeddbcc243be0b99dd7de4d110b36ac3ec80d471"
+      },
+      "native_patch": {
+        "bytes": 48367,
+        "commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+        "git_blob_oid": "aefa9729213ba303353b92a8d64832092cb428e2",
+        "mode": "100644",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/native-patch.json",
+        "sha256": "a6a98a4f2e359d8de3fcf117a5b4c0f37f3cf4f9602095477a0fdf9362a6100f"
+      }
+    }
+  ]
+}

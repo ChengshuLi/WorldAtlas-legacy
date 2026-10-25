@@ -1,0 +1,103 @@
+{
+  "observation": {
+    "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "reported_at_utc": "2026-10-25T03:15:54Z",
+    "source": "parent fresh GitHub main read",
+    "not_future_guarantee": true
+  },
+  "selector": {
+    "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "c75a6ffecb61af02ce4d64ae89dcea6df197bd43",
+    "bytes": 2263,
+    "sha256": "42c997644d05449c934f85daf235ff45ed185294f8767eb04e9efe555460f4c5"
+  },
+  "package_inputs": {
+    "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "path": ".github/package-inputs.json",
+    "mode": "100644",
+    "git_blob_oid": "7c8189367948d0f8107b6eee0693742f96ae6019",
+    "bytes": 38460,
+    "sha256": "b247c4b8aaec93893e71705ab123dbbdadd44f77fa9e5980a1ee07744fccb099"
+  },
+  "bank_index": {
+    "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "path": "data/canonical-grid/current-startup/index.json",
+    "mode": "100644",
+    "git_blob_oid": "9f549ba7d9ac3bede27406ef683663e17b8753e7",
+    "bytes": 49610,
+    "sha256": "627395467740d24fad233c6a01c6560891eb92021d6f56ef8d958a44b36eddbc"
+  },
+  "selection": {
+    "change_evidence": {
+      "bytes": 1333,
+      "commit": "e0d046491675a02565f9205c7ac800cbd037ed7b",
+      "git_blob_oid": "a02a470d22c7e703668dd709f3e0c73bcdb38798",
+      "mode": "100644",
+      "path": "research/geography/cod161-reaudit-20261024/popokabaka1/composition/authority-registry.json",
+      "sha256": "1a6000fd44b85b1d589b51ce60545d108f75814c146a5964e946757101f24163"
+    },
+    "kind": "selected-final-native-bank-v2",
+    "native_selection": {
+      "artifact_consumption": {
+        "certificate": {
+          "bytes": 68158,
+          "mode": "100644",
+          "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/qualified-artifacts/consumption-certificate.json",
+          "sha256": "26b505e3131a2513badc45d1552bcf603c24c565bdfb21b0f623fe4e6c7d4070"
+        },
+        "review": {
+          "bytes": 7379,
+          "mode": "100644",
+          "path": "coordination/engineering/additive-native-activation-20261009/independent-native-consumption-wrapper-self-pin-review.json",
+          "sha256": "87ab56e1354dd8a8fda532bfa008436abd35c6c506f0e0685eaa2f2f07f59a8a"
+        }
+      },
+      "manifest_path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json",
+      "method": "native-linear-evenodd-first-owner-v1",
+      "release_id": "geography:review:dbb133d7b123bacd1d38253c467891bff656d011000a9f11d369ac9262302bfb",
+      "selected_geography": {
+        "bytes": 14656,
+        "kind": "complete-world-index-with-exact-encoded-overrides",
+        "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/selected-geography-bank.json",
+        "sha256": "3750f72a48bb9fd498ca129e20e299904239bfe1b4191919fbc89b636234c776",
+        "version": 1
+      },
+      "sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba",
+      "version": 1
+    },
+    "prepared_bank": {
+      "bytes": 49610,
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "627395467740d24fad233c6a01c6560891eb92021d6f56ef8d958a44b36eddbc"
+    },
+    "reference": {
+      "footprints_sha256": "5e8b8ee104ce649de822d07012853d2cb60e0e5df0cb0e1f9e8e2e1ecd7547a0",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:1d6575e25aa7bdba63df9f07f728edb3ab681db3aeb9a2a36a739be87fd57ae0"
+    },
+    "reference_projection": {
+      "bytes": 321535,
+      "path": "coordination/engineering/reference-owner-alias-correction-20261022/reference-002/reference-metadata.json",
+      "sha256": "45a75988cb6dbaa3f0bdb960e0ad0dbdc22b2c565cd03a1c2bbfb11a3049788d"
+    },
+    "version": 2
+  },
+  "full_current_bank_payloads_read": false,
+  "future_refresh_required_after_BRB": true,
+  "code_matches_owned_checkout": true,
+  "current_docs_change": "Accepted delivery instructions require v2 composition/finalization and unchanged emitted selected-delivery-expectations at an owned committed coordination path.",
+  "selection_not_mutated": true,
+  "owned_HEAD_metadata_comparison": {
+    "owned_commit": "aa160238d13a24097c08adb60c38e9119655e0b0",
+    "owned_selector_blob": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "accepted_selector_blob": "c75a6ffecb61af02ce4d64ae89dcea6df197bd43",
+    "owned_bank_index_blob": "17b78a5998cbc6ab2d45b4c33722b2fbccfb0535",
+    "accepted_bank_index_blob": "9f549ba7d9ac3bede27406ef683663e17b8753e7",
+    "package_input_blob_both": "7c8189367948d0f8107b6eee0693742f96ae6019",
+    "actual_bank_preimages_differ": true,
+    "no_merge_or_adoption_performed": true,
+    "meaning": "Coordinate actual accepted bank preimages after BRB before finalization; code and package-input identities already agree. Not an argument for a science rerun."
+  }
+}

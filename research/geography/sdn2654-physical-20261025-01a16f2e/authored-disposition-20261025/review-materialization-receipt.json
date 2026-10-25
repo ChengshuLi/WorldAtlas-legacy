@@ -1,0 +1,77 @@
+{
+  "library_file_id": "libfile_03e21fb3c8e4819193fe71742f844720",
+  "version": 0,
+  "file_id": "file_000000000dc08230b32f8d2349b19172",
+  "archive_bytes": 27852,
+  "archive_sha256": "957690f53198e89614221f016b76d02a90a97ad1d673a5e20779178d14b21094",
+  "manifest_sha256": "43ba823bf55f4a85703fb9b9d43fdd5953ab6e27cdbe0a5ddd4b137f0e471ed5",
+  "all_nine_members_verified": true,
+  "actual_action": "current Library skill prepare_materialize and current library_file_transfer.py materialize",
+  "outcomes": [
+    {
+      "chunk": "8e2ea3",
+      "exit": 1,
+      "result": "restricted-network helper download failed; no file delivered"
+    },
+    {
+      "chunk": "238987",
+      "exit": 0,
+      "result": "same supported helper completed under approved per-command network access"
+    }
+  ],
+  "separate_optional_os_listxattr_probe": "Bundled Python lacks os.listxattr; content extraction/hash verification completed before that optional probe failed. Supported helper itself completed metadata application successfully.",
+  "read_here": [
+    "SDN/ASSESSMENT.md",
+    "SDN/independent-checks.json",
+    "SDN/raw-readback-checks.json",
+    "SDN/public-verified.json"
+  ],
+  "stp_dma_shared_without_redownload": true,
+  "files": [
+    {
+      "path": "SDN/ASSESSMENT.md",
+      "bytes": 17995,
+      "sha256": "080e799e06441d911838a560ee1ba724a81ff312a9890d28a76d832dc3d14a73"
+    },
+    {
+      "path": "SDN/independent-checks.json",
+      "bytes": 5543,
+      "sha256": "55f895a95c63652f4fe76542cb8ef60f67270f2f4e4567096d5b53e8c8395bea"
+    },
+    {
+      "path": "SDN/raw-readback-checks.json",
+      "bytes": 697,
+      "sha256": "b6dfb5cc439de16e74a2f987652b755234b72dade6d7802a6435e115376f3bcf"
+    },
+    {
+      "path": "SDN/public-verified.json",
+      "bytes": 2277,
+      "sha256": "ddc91714d78b08040f946947b42ded0dcf36440d246b4a1a70d99c959e1f472d"
+    },
+    {
+      "path": "STP/ASSESSMENT.md",
+      "bytes": 12430,
+      "sha256": "697a95bc01a26fb1445943c8342c515b17e767dc7ef45e0e06a72ed04d01051a"
+    },
+    {
+      "path": "STP/independent-checks.json",
+      "bytes": 917,
+      "sha256": "690a10cce9d8814340c6439f5b69757895527796b51a45313794972e89188cae"
+    },
+    {
+      "path": "STP/original-custody-check.json",
+      "bytes": 347,
+      "sha256": "30d43dc93f64f051633b6cd55a837486303df8fcaf4ca76ce996ba3a1770807c"
+    },
+    {
+      "path": "DMA/ASSESSMENT.md",
+      "bytes": 13028,
+      "sha256": "085e2241719fcc6f39adffe5ff0e2b18cbf3581ded7ae22ca90617a84e200496"
+    },
+    {
+      "path": "DMA/independent-checks.json",
+      "bytes": 30891,
+      "sha256": "fb85ad9bd16461fb97979159c38d6fa776616cb8013b473dae3c6370525e1e24"
+    }
+  ]
+}

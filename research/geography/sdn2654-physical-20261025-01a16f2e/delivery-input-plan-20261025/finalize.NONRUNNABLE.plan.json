@@ -1,0 +1,32 @@
+{
+  "kind": "inert-finalization-plan-not-cli-config",
+  "execution_authorized": false,
+  "reason": "Independent source disposition/current-base coordination outstanding. Composition has not been executed; actual change_evidence pin unavailable.",
+  "intended_version2_fields": {
+    "version": 2,
+    "selector": {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "data/ownership-selection.json"
+    },
+    "package_inputs": {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": ".github/package-inputs.json"
+    },
+    "change_evidence": null
+  },
+  "required_future_actual_pin": {
+    "output_filename": "authority-registry.json",
+    "intended_owned_directory": "research/geography/sdn2654-physical-20261025-01a16f2e/compose-001",
+    "commit": null,
+    "mode": null,
+    "git_blob_oid": null,
+    "bytes": null,
+    "sha256": null
+  },
+  "finalizer_destination": ".cache/delivery-handoff/sdn2431-final-after-reviewed-source-disposition-001",
+  "published_expectations_path": "coordination/engineering/sdn2431-delivery-20261025-01a16f2e/selected-delivery-expectations.json",
+  "expectations_copy_rule": "Copy actual emitted v2 file unchanged; bank/reference must equal final selector. No invented selector field.",
+  "future_output_selector": null,
+  "future_selected_consumer_result": null,
+  "current_bank_payloads_not_read_in_this_plan": true
+}

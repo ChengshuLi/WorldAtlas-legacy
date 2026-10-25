@@ -1,0 +1,68 @@
+{
+  "kind": "existing-record-join-not-scientific-rerun",
+  "original_count": 2654,
+  "original_scope_counts": {
+    "domestic1535": 1535,
+    "foreign223": 223,
+    "special896": 896
+  },
+  "qualified_existing_count": 2431,
+  "qualified_scopes": {
+    "domestic1535": 1535,
+    "special896": 896
+  },
+  "held_count": 223,
+  "held_groups": {
+    "EGY": 22,
+    "ERI": 39,
+    "TCD": 144,
+    "CAF": 18
+  },
+  "qualified_target_count": 33,
+  "original_target_count": 35,
+  "missing_geneina_key": [
+    39473,
+    121315,
+    147277
+  ],
+  "missing_geneina_is_held": true,
+  "qualified_and_held_disjoint": true,
+  "qualification_source_file": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2431-native-authority/exact2431-qualified-keys.jsonl",
+  "qualification_source_sha256": "042c4223970db8eb93872691859a4a4b10ad3b266d742e36cc5d74d1b2486fc7",
+  "no_new_native_decisions": true,
+  "immutable_existing_scope_bodies": [
+    {
+      "commit": "aa160238d13a24097c08adb60c38e9119655e0b0",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/exact2654-union.jsonl",
+      "mode": "100644",
+      "git_blob_oid": "f1a72fb5442ae808556a985f28eef334bd55edc7",
+      "bytes": 370535,
+      "sha256": "03c8e4394310b0e14a008d6672b6714351ae8315214b16033a36496aac8791d8"
+    },
+    {
+      "commit": "aa160238d13a24097c08adb60c38e9119655e0b0",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/exact2431-qualified-keys.jsonl",
+      "mode": "100644",
+      "git_blob_oid": "94e1a39e17d2e828d642a77ee995c798b2a7c0c4",
+      "bytes": 498134,
+      "sha256": "042c4223970db8eb93872691859a4a4b10ad3b266d742e36cc5d74d1b2486fc7"
+    },
+    {
+      "commit": "aa160238d13a24097c08adb60c38e9119655e0b0",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/original58-source-input-roster.json",
+      "mode": "100644",
+      "git_blob_oid": "2cabca0e06d89b37d87cb5b1fb3df38fce790875",
+      "bytes": 50081,
+      "sha256": "32ec1f70f1adc0a721578f348dddc568dee5d3e34fe1e99e980cd897a13aaf5d"
+    },
+    {
+      "commit": "aa160238d13a24097c08adb60c38e9119655e0b0",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/exact2654-partition.jsonl",
+      "mode": "100644",
+      "git_blob_oid": "ebbdd115d3d86fa2c7ef3353b9f24074656d0cb3",
+      "bytes": 423392,
+      "sha256": "2e2360c3089b876ec4ec07d14a8b0bc210f95991ed65a6a8d8404422cedba68a"
+    }
+  ],
+  "full_rows_not_duplicated_in_plan": true
+}

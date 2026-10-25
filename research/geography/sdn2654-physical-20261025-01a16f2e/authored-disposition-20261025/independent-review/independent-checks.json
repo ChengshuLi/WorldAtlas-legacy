@@ -1,0 +1,149 @@
+{
+  "archive_sha256": "4f1dea532391a1d9f61518359f9058b452f0b2d7f63c4cf8c12ee1835a2b9663",
+  "retained_manifest_bodies_verified": 145,
+  "public_pins": [
+    {
+      "path": "native-authority-001/completed-readback.json",
+      "bytes": 14473,
+      "sha256": "2cad4ed39b888610d3f253ea236246aae308eb41be32d2132d36e54750185e0b",
+      "oid": "d190df327437b962a8711e223faf1d3e3f2c1956"
+    },
+    {
+      "path": "native-authority-001/constructor-result.json",
+      "bytes": 131259,
+      "sha256": "6a1361e8b49a87dc8ee6928dbeddbcc243be0b99dd7de4d110b36ac3ec80d471",
+      "oid": "304e472ee6b08719eb88068c5cfe1f9503acc443"
+    },
+    {
+      "path": "native-authority-001/source-qualification-handoff.md",
+      "bytes": 6613,
+      "sha256": "41037c691b9c0365e26a54e8902844dea4eb717364de1816a8b87ce6a0c9a6f7",
+      "oid": "e70ab040ac33f9dadbe3a09c37f12d3aa7d5a006"
+    },
+    {
+      "path": "native-diagnostic-001/completed-readback.json",
+      "bytes": 17059,
+      "sha256": "1eb2710119dffd26a8b57e4dc95283035810a996a1087402594e9fde926867e0",
+      "oid": "5c381e3000a2e457ffc282c1341997dc743eff82"
+    },
+    {
+      "path": "native-diagnostic-001/exact2654-measured-decisions.jsonl",
+      "bytes": 587369,
+      "sha256": "5280a92d6488693654e8d4d6ff05098c6871e845c8a1a2994eed97a4da0754d4",
+      "oid": "f4e05a67df16fa6f939302d5fe9c27b4ecd7f160"
+    },
+    {
+      "path": "physical-001/completed-physical-readback.json",
+      "bytes": 17945,
+      "sha256": "51ec54b5ebd2af80fe4a4338e410210a179bef2476e2d4dfe5b8482a276f30ff",
+      "oid": "a73a402331dc025c64653969d5c593736321cb2c"
+    },
+    {
+      "path": "physical-001/whole-target-support.json",
+      "bytes": 830041,
+      "sha256": "64640a028aaffec53f4e15823de8113e68bbd82e143ac1640c2b4dc2aa759920",
+      "oid": "e5ab6128bef1f40a4ffb4abd0f597e7beec11956"
+    },
+    {
+      "path": "source-evidence-001/source-evidence.json",
+      "bytes": 189805,
+      "sha256": "922d5e7ba12070d1335aed1ad30a7583cdc0bb1d9d1750d0a058770a72512c37",
+      "oid": "0c945db7c2855cf2f9272c7625519b477ed870ff"
+    },
+    {
+      "path": "supported-inputs-001/exact2654-partition.jsonl",
+      "bytes": 423392,
+      "sha256": "2e2360c3089b876ec4ec07d14a8b0bc210f95991ed65a6a8d8404422cedba68a",
+      "oid": "ebbdd115d3d86fa2c7ef3353b9f24074656d0cb3"
+    },
+    {
+      "path": "supported-inputs-001/original-scope-partition.json",
+      "bytes": 25266,
+      "sha256": "d904b47056095261b13add7a8d46da507e0327107b98bee72e1073236e330427",
+      "oid": "c097b5664feb1bc57c584c95732179a327812b36"
+    }
+  ],
+  "original": 2654,
+  "qualified": 2431,
+  "held": 223,
+  "components": 33,
+  "special": 896,
+  "domestic": 1535,
+  "scope_counts": {
+    "domestic1535": 1535,
+    "foreign223": 223,
+    "special896": 896
+  },
+  "all_target_geometry_and_physical_receipt_bindings_match": true,
+  "authority_exact_equals_novel": true,
+  "review223_exact_equals_held": true,
+  "license_families": 17,
+  "contexts": [
+    {
+      "context_id": "39587:gb:EGY:ADM1:46179711B94144647788557",
+      "count": 22,
+      "geometry_sha256": "eb1c3ba919a321468dcc3325b0ee8603a8c52edd864111c89016259d229eaa88"
+    },
+    {
+      "context_id": "39608:gb:ERI:ADM1:12472421B94455277260743",
+      "count": 2,
+      "geometry_sha256": "870035e1dd214c545ddd4e1a7bf80443ded7766835b4cbe259ec8e66de7ab929"
+    },
+    {
+      "context_id": "39549:gb:ERI:ADM1:12472421B94455277260743",
+      "count": 35,
+      "geometry_sha256": "870035e1dd214c545ddd4e1a7bf80443ded7766835b4cbe259ec8e66de7ab929"
+    },
+    {
+      "context_id": "39524:gb:ERI:ADM1:12472421B57032757115732",
+      "count": 2,
+      "geometry_sha256": "d67ef13f7e75bd35260faf958427ef3d5a44a1769711b0f0019683eb25716dd5"
+    },
+    {
+      "context_id": "39633:gb:TCD:ADM1:23847190B87163061266246",
+      "count": 19,
+      "geometry_sha256": "ad2d34beaaaf76e701abd1d35441ee9edd66f1b5519db07c632f532e08d824f0"
+    },
+    {
+      "context_id": "39481:gb:TCD:ADM1:23847190B50657270888212",
+      "count": 2,
+      "geometry_sha256": "a14ca36e8b56d49efd368ff2127de76d15040f0c1b3d447d10e8bab7aba4259e"
+    },
+    {
+      "context_id": "39473:gb:TCD:ADM1:23847190B50657270888212",
+      "count": 82,
+      "geometry_sha256": "a14ca36e8b56d49efd368ff2127de76d15040f0c1b3d447d10e8bab7aba4259e"
+    },
+    {
+      "context_id": "39652:gb:TCD:ADM1:23847190B50657270888212",
+      "count": 23,
+      "geometry_sha256": "a14ca36e8b56d49efd368ff2127de76d15040f0c1b3d447d10e8bab7aba4259e"
+    },
+    {
+      "context_id": "39616:gb:TCD:ADM1:23847190B78936858597948",
+      "count": 16,
+      "geometry_sha256": "40de82dfbf24cf028214ce90b16b5fac267661e147a8f4744c18d701504b01e3"
+    },
+    {
+      "context_id": "39644:gb:TCD:ADM1:23847190B78936858597948",
+      "count": 1,
+      "geometry_sha256": "40de82dfbf24cf028214ce90b16b5fac267661e147a8f4744c18d701504b01e3"
+    },
+    {
+      "context_id": "39512:gb:TCD:ADM1:23847190B78936858597948",
+      "count": 1,
+      "geometry_sha256": "40de82dfbf24cf028214ce90b16b5fac267661e147a8f4744c18d701504b01e3"
+    },
+    {
+      "context_id": "39600:gb:CAF:ADM2:33826404B56670707739048",
+      "count": 2,
+      "geometry_sha256": "c9b15211d8b7495e094cf1b58bad73ecbc21cc395b2cca0fd78c194f2223eee4"
+    },
+    {
+      "context_id": "39600:gb:CAF:ADM1:63714938B17486447780615",
+      "count": 16,
+      "geometry_sha256": "b4e6c15c4d89519eb36111496ece4226e4c75b9f66fa2b99f851cf35ea0d4921"
+    }
+  ],
+  "raw_diagnostic_readback": "Pending exact existing body, connector size failure; author projection verified, not substituted for raw."
+}
