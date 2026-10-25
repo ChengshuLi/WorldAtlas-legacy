@@ -8,7 +8,7 @@ These are sourced, fixed geographic reporting conventions, including explicit ad
 
 All named absent or partially represented island families have a fixed regional destination and an explicit coverage limitation. Missing shoreline/islet source coverage remains regional work; represented-land envelope approval does not assert complete world shoreline coverage. Adding missing land follows its sourced routing and a coordinated envelope/certificate publication, never an arbitrary cell reassignment.
 
-`regional-handoffs.json.gz` covers every one of the 81 regions. Each future regional worker must audit its complete area/province/location branch, source suitability, granularity, coverage and grid representation. Approval here does not approve any regional interior, permit new location-attribute imports, or close worldwide semantic issue #7. Source-only research may continue.
+`regional-handoffs.json.gz` covers every one of the 81 regions. Each future regional worker must audit its complete area/province/location branch, source suitability, granularity, coverage and grid representation. Approval here does not approve any regional interior, permit new location-attribute imports, or satisfy the separate worldwide semantic-completion objective. Source-only research may continue.
 
 ## Literal current member-edge validation prerequisite
 

@@ -1,6 +1,6 @@
 # Shared typed observation contract, version 1
 
-Current integration is documented in [TYPED_MODULE_INTEGRATION.md](TYPED_MODULE_INTEGRATION.md). The part-specific descriptions below retain their implementation checkpoint and verification limits.
+Integration behavior is defined in [TYPED_MODULE_INTEGRATION.md](TYPED_MODULE_INTEGRATION.md); this document defines the pure contract and module-registration boundary.
 
 This document defines the additive typed-observation contract and module-registration seam. It does not enable hosted imports, add tables or advertise a production capability. Existing attributes, identities, source archives, immutable migrations and storage exports retain their contracts.
 
@@ -24,14 +24,22 @@ Typed relationships use existing source/entity endpoints and dated evidence with
 
 Domain workers add one owned declarative module and tests. Its module ID is unique lowercase text; extension IDs begin with `module-id.`. Supply version 1 and optional `types`, `metrics`, `fields`, `relationships` arrays, then pass an explicit module list to `createObservationRegistry`. Each entry has a stable `id` and `definition`. Fields declare registered `subject_kinds`, one of `number`, `boolean`, `identity`, `identity-list`, and either `metric_id` or `value_kind` as applicable. Numeric metrics declare `unit` and optional numeric bounds; links declare registered `source_kinds`/`target_kinds`. Duplicate IDs, invalid references, executable functions and replacement of the core namespace are rejected. The resulting registry is deeply frozen.
 
-There is no global mutation, filesystem/plugin discovery or dependency on registration order for resolution. The coordinator later assembles one reviewed module list; workers do not each rewrite shared registrars. Existing core definitions are reused. New definition versions or changed semantics require explicit compatibility review; this version-one loader does not silently accept version two. Domain children wait for #529 completion and the issue coordinator's explicit readiness, even after a partial contract PR merges.
+There is no global mutation, filesystem/plugin discovery or dependency on registration order for resolution. Use one reviewed module list; coordinate edits to shared registrars. Existing core definitions are reused. New definition versions or changed semantics require explicit compatibility review; this version-one loader does not silently accept version two.
 
 JSON validation inspects data descriptors before reading or serializing them. Hooks, accessors, hidden/symbol properties, custom prototypes, sparse/decorated arrays, cycles and depth beyond 64 are rejected without running hooks/getters. Ordinary parsed JSON retains its values and metadata; a serialization callback cannot substitute a different module identity or evidence object.
 
-## Remaining compatibility and integration work
+## Production boundary
 
-Before #529 can close, subsequent fresh PRs must provide reviewed forward storage/import/read support on supported adapters, compatible optional API capabilities, old consumer/export preservation, actual server/static/prepared/snapshot parity fixtures and the final module handover. Existing deployed migrations are immutable. A new table cannot silently disappear from full raw backup: inventory checks must remain strict, and a reviewed versioned export/restore extension is necessary if tables are added. No provider DDL, baseline transfer or factual import occurs on a normal merge.
+The pure contract does not provide database writes, hosted import, a geographic
+approval or a physical-device certificate. Any adapter must preserve old payloads
+and hashes, validate complete source/identity/interval/retirement/release inputs,
+and enforce current regional approval before territorial facts are imported. Full
+raw backups must inventory all known tables; a new table requires a reviewed
+versioned export/restore contract. Normal merges perform no provider DDL, baseline
+transfer, factual import or publication. Use the current owner/publication contract
+for any production operation.
 
-Contract tests exercise JSON transport through the pure shared seam and unchanged legacy resolution; they do not establish production adapter parity or a browser/mobile certificate. Subsequent adapters must preserve old payloads and hashes byte-for-byte, gate territory-dependent factual imports by current regional approval (the reviewed identity-only settlement field is specified in [the integration contract](TYPED_MODULE_INTEGRATION.md#retained-settlement-population-transfer-2696)), and explicitly check source catalog, lifetimes, immutable conflicts, supported intervals, retirement and release pins. Structural empty datasets are valid. Publication, rollback and owner maintenance require the designated publisher protocol on issue #39; source checks are not historical or geographic approval.
+Contract tests exercise only the pure shared seam and do not establish production
+adapter parity.
 
-Run `node --test test/typed-observations.test.mjs test/attributes.test.mjs test/unresolved-attributes.test.mjs test/environment-classifications.test.mjs` after `npm ci`. Retained first-part receipts are under `data/engineering/observation-contracts-20261003-7e91/`.
+Run `node --test test/typed-observations.test.mjs test/attributes.test.mjs test/unresolved-attributes.test.mjs test/environment-classifications.test.mjs` after `npm ci`.
