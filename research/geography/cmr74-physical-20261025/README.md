@@ -1,0 +1,15 @@
+# CMR original whole-target physical input
+
+This input preserves all 74 original consumed CMR ADM3 members and their 74 selected whole base features. It covers the original 4,925-cell package: one accepted Ndélélé key `[14118,128086,142095]` remains accepted and 4,924 remain pending. No result, exception, source-role waiver, native authority or acceptance is supplied by this input commit.
+
+`original-stage-inputs.json` is the unchanged 1,924,004-byte assembled input (SHA-256 `f595fa7561dd0fa52b0044b4b2f79ef6f8110297dda18a275dfa81d92d643f84`). Each row contains `target`, full `consumed` Feature and full `selected` Feature, following the existing stock physical contract. Geometry was neither clipped nor reconstructed from physical masks or map rows. `input-scope.json` binds original owners, member ordinals, exact geometry/feature hashes and original/accepted/pending counts.
+
+The source is the complete original 360-feature CMR ADM3 family from geoBoundaries commit `9469f09`, represented year 2017, OSM/Wambacher lineage, ODbL. The retained complete simplified family body is 1,491,916 bytes, SHA-256 `a1b0654593efcb2b00ef9053b1a9fbe6b829f3fec6b8d2a85a48066ae1f3abdf`. This packet's 74 consumed members are the exact full original target union, not the complete competitor-family inventory.
+
+The original selected bank is bound to commit `ffa32416fd946ac89da621d02b554ca27733e688`. Actual selected bodies reside in `data/geography/part-4.json` (blob `ccdefbb55c62b317f11e6078cd9291dae5339693`, 53 targets) and `part-5.json` (blob `cf59e69b02ab2c9ad7344ddbf309a221a8be587b`, 21 targets). These whole part blobs are unchanged at accepted preparation base `5ea3f8e75089905690bfb7a8c8589d84f0d45ca9`. Every consumed geometry differs from its selected base geometry; these are distinct documented consumer roles, not an equality failure.
+
+The original cell record body is 9,644,592 bytes, SHA-256 `692f2a5417bfbf816c472c660d3e9c21cacac5214c1bea92331bf7843ef9b096`. Its original physical classes are 4,892 land and 33 inland-water. Whole-source physical support does not replace these original native observations, decide territorial ownership, or turn physical water into an administrative veto.
+
+The supported next operation is the stock `prepare-delivery-handoff.mjs physical` phase with this immutable stage pin, all 24 original source-method inputs at `a285e89d0e2a7dd47a56abcbaaef15cd299a0bf8`, and the actual verified installed scientific runtime. It preserves the original GSHHG member and comparison method, including L1–L4 hierarchy, missing/extra reconstruction and contradictions. No physical output is claimed until the actual stock execution and receipt complete. This is one full-target operation, not 74 or per-child duplicate operations.
+
+Worker: `01a16f2d-e91b-7416-b0f6-1b7829ab00e5`. Scope: issue #2649, Team 2 continuation. Coordinator retains independent acceptance and end-to-end integration. Ordinary publication uses owned-worktree Git push only.
