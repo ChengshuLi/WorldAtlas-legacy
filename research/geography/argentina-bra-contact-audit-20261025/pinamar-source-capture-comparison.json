@@ -86,6 +86,28 @@
     "distance_note": "Independent local distance estimates are approximately 56.0–56.1 m outside the IGN line. The earlier 53.5 m estimate was invalid because it incorrectly cosine-scaled both longitude and latitude; do not use it.",
     "raw_capture_policy": "Official response bodies remain local at /tmp/arg-ign-two-departments.geojson and /tmp/arg-ign-ivsd2024-two.geojson and are not copied into this source-free evidence file. Their byte lengths and SHA-256 digests above identify the captures."
   },
+  "legal_context_and_remaining_qualification": {
+    "official_records": [
+      {
+        "instrument": "Buenos Aires Decree-Law 9024/1978",
+        "url": "https://normas.gba.gob.ar/documentos/p0XDETa0.html",
+        "recorded_scope": "Describes the creation of the Pinamar unit from General Madariaga and boundary descriptions.",
+        "limit": "The retained review did not establish a direct plan/decree-to-IGN feature or geoBoundaries shape crosswalk."
+      },
+      {
+        "instrument": "Buenos Aires Decree-Law 9949/1983",
+        "url": "https://normas.gba.gob.ar/documentos/70QMvs40.html",
+        "recorded_scope": "Changes the unit designation to Partido de Pinamar.",
+        "limit": "A name change alone does not resolve the geometry discrepancy or current boundary lineage."
+      }
+    ],
+    "next_primary_checks": [
+      "Locate the official plan and implementing instrument referenced by Decree-Law 9024/1978, then bind them explicitly to the IGN feature in1=06644; check for later boundary amendments.",
+      "Establish the effective date and source lineage of the live ign:departamento feature, whose capture identifies ARBA as source and IGN as authority but carries no effective date.",
+      "Compare the complete applicable legal/current polygon and the consumed simplified polygon with a pinned, scale-aware method; the point-center disagreement does not establish whole-cell coverage or legal applicability.",
+      "Evaluate the remaining required source-fitness components before any disposition change; the IVSD 2024 layer and a single center test do not substitute for them."
+    ]
+  },
   "result": "The held center is inside the consumed simplified GeoBoundaries feature and outside both retained official IGN polygons. This is a material source-geometry disagreement at this cell, but it does not select the legally applicable source or satisfy the full seven-component fitness criterion.",
   "limitations": [
     "The current department WFS capture has no established effective date or legal boundary vintage.",
