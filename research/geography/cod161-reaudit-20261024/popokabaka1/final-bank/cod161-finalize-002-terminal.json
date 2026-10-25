@@ -1,0 +1,42 @@
+{
+  "accepted_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "accepted_executable_code": "6bfc0a494252690030f1d4b656cc53696fb0fac5",
+  "actual_finalizer_code": "8208f95fc895d38cc7e5f45deb1a4fa924f741ee",
+  "change_evidence_commit": "e0d046491675a02565f9205c7ac800cbd037ed7b",
+  "actual_authority_code": "0139d50aed87deaf243afa45c44bbaba2ac74cbf",
+  "config": {
+    "version": 2,
+    "selector": {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "data/ownership-selection.json"
+    },
+    "package_inputs": {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": ".github/package-inputs.json"
+    },
+    "change_evidence": {
+      "path": "research/geography/cod161-reaudit-20261024/popokabaka1/composition/authority-registry.json",
+      "commit": "e0d046491675a02565f9205c7ac800cbd037ed7b",
+      "mode": "100644",
+      "git_blob_oid": "a02a470d22c7e703668dd709f3e0c73bcdb38798",
+      "bytes": 1333,
+      "sha256": "1a6000fd44b85b1d589b51ce60545d108f75814c146a5964e946757101f24163"
+    }
+  },
+  "command": [
+    "node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "finalize",
+    "research/geography/cod161-reaudit-20261024/popokabaka1/finalize-config.json",
+    ".cache/delivery-handoff/cod-popokabaka1-final-bank-20261025-01a16f2d-002"
+  ],
+  "started": "2026-10-25T00:43:50.535836+00:00",
+  "status": "completed",
+  "retry_reason": "Prior unfinished finalizer failed before output/adoption because declared runtime dependency was absent; locked npm ci now completed and import verified.",
+  "prior_failure_receipt": "cod161-finalize-terminal.json",
+  "dependency_receipt": "cod161-locked-dependency-install-terminal.json",
+  "qualified_source_reused": true,
+  "diagnostic_reused": true,
+  "returncode": 0,
+  "finished": "2026-10-25T01:03:13.830399+00:00"
+}

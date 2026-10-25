@@ -1,0 +1,88 @@
+# Libenge3, Bosobolo7, Zongo2 and Mobayi9: geographic assessment after original-operand readback
+
+24 October 2026. Source author/research worker `01a16f2e-5016-7790-8a41-4e2d149750f2`. This is a proposal basis for independent scientific assessment, not independent acceptance, a software review or package completion. All21 original cells remain pending and held. Coordinator retains accounting; Bondo57, accepted Gbadolite2 and all other scopes are excluded.
+
+## Result
+
+The existing substantive source research, together with the completed original-negative observations, supports independent consideration of each of these four bounded groups as researched-unresolved. No positive source qualification or repair is supported. This conclusion does not depend on demanding every historical manuscript or an impossible universal ownership certificate. It rests on actual source identity, construction and map readings; applicable historical boundary interpretation; target-specific archival investigation; and the failure of those reasonable steps to establish a dependable local source-line placement.
+
+The previously omitted CAF ADM3 and COG ADM2 observations are now present. This closes an important evidentiary omission, but the act of reading/joining them earns no science credit. Source limitations are inherited when shared; they are not claimed as21 new independent source discoveries.
+
+## Exact inputs and results
+
+Read `cod254-native-contact-view-2784/coordinator_northern78.json`, SHA `b74a687739ed833bca4ec92b7eb422df6268ac49f2d8e181b92dc5ea47d7b424`. Its full3905 diagnostic pin is `b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c`. Selected only owners14443,14509,14519,14575. Each of390 measured key/operand entries was matched to the original negative ID, ordinal and geometry hash in `cod254-custody-20261024/immutable-custody/source-evidence.json`, SHA `db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e`. No geometric predicate was recomputed.
+
+| Target | Keys | Original operands per key | Interior results | Empty results |
+|---|---:|---:|---|---:|
+| Libenge,14443 |3|25|3 Ombella-M'Poko ADM1|72|
+| Bosobolo,14509 |7|12|7 Kémo ADM1|77|
+| Zongo,14519 |2|12|1 Bangui ADM1;1 Ombella-M'Poko ADM1|22|
+| Mobayi-Mbongo,14575 |9|23|7 Ouaka ADM1;2 Basse-Kotto ADM1|198|
+
+Total21 distinct keys,390 key/operand entries,21 interior and369 empty kinds,52 distinct negative source features across72 target/operand uses. No boundary or other kind occurs. The native decision remains `territorial_exclusion_cells` for every row. Interior is the reported native center predicate; empty kinds are predicate absence, not evidence of feature invalidity or full-footprint clearance. All measured negatives, physical/source rows and exact keys are preserved in `northern21-actual-native-source-bindings.json`.
+
+The direct original COD source check is now target-specific: authenticated native COD ADM2 body `dc4f2926dc0945eef1f35fa34c506a270b6239b2`, decoded SHA `922427143fcff23010af3931fb3f5e4ffea8b05c5d2b797ca02fc04c6c8b1baa`, matches actual source-archive DBF names/ordinals: Bosobolo26, Libenge107, Mobayi-Mbongo144, Zongo188. `target-original-source-bindings.json` retains the exact shapeIDs and original rows. Only properties/DBF records were compared; no coordinate or geometry equality is claimed.
+
+## Common source facts that actually apply
+
+All active adverse operands are in the same CAF ADM1 source family, but they are five distinct features with individually verified original DBF rows: Ombella-M'Poko5/CF-MP, Kémo9/CF-KG, Ouaka12/CF-UK, Basse-Kotto13/CF-BK, Bangui16/CF-BGF. The canonical level is prefecture and commune; Bangui is not silently treated as another ordinary prefecture. Their exact IDs/hashes and measured counts remain in the accompanying artifact.
+
+The original CAF ADM1 ZIP was actually obtained and inspected earlier: SHA `8447fc91b0a2d42182781060f9dec6f57a98e3427d684c80c29026ea355f957a`. Meta and archived licence screenshot identify the precise Commons file `Central_African_Republic_prefectures_blank.png`. The actual authenticated2006 image has unlabelled black national/prefectural outlines, without a coordinate grid, scale, channel depiction, legend or control table. It was designed as a blank labeling map. Its absence of names prevents a fresh map-pixel-to-named-feature link merely by viewing it; the archive DBF supplies named-record lineage, not a local surveyed river control. November2022 polyline/polygon conversion is documented separately from represented2006 geography. No registration/control file occurs in the inspected archive manifest. These are concrete source-purpose and construction limitations, not an inference of inaccuracy from age or national scale alone.
+
+The consumed CAF geometries are simplified release products. Shared `uige18_lineage/caf123-frozen-product-method.md` establishes the exact consumed CAF1/2/3 bytes and distinguishes them from original shapefiles. Its contemporaneous builder code assigns IDs before cleaning/simplifying. That is documented method, not an exact per-family execution receipt or local numeric error bound. Matching names/IDs therefore does not prove unchanged edges. The actual frozen geometry's predicates remain authoritative descriptions of that representation.
+
+The actual COD ADM2 archive, SHA `2cf73c7be7403b742c8e9682f7d51609485fa0e6eab01644a695a83f81a7bb5e`, identifies RGC/OCHA Saint Moulin atlas digitization, splitting where territory limits follow watercourses, UNDP topology/INS name/IMWG validation and projection assignment. These positive construction facts do not identify a sheet/edition or bank/thalweg rule for any of the four targets. They do not decide an overlap merely because2019 is later than2006. The frozen COD product is itself a simplified release; the original archive is provenance, not demonstrated unchanged geometry.
+
+Official1887/1894 texts and IBS109 establish the relevant historical Ubangi river-boundary framework. A river rule can apply to an administrative polygon perimeter even if the polygon's own source omits the convention; missing convention does not prove violation. Actual observed center contacts do not identify a current thalweg, island, bank or territorial owner. IBS109's island/channel caution concerns the study's reviewed record, not a finding that any of these21 cells is an island. The Junker Mbomú/Uélle nomenclature work is primarily eastern historical context; it must not be used as local Zongo/Libenge or Mobayi control merely because it belongs to the same broad boundary study.
+
+## Libenge3: direct source qualification and finite limit
+
+All three keys have only Ombella-M'Poko ADM1 interior. The full25-operand inventory includes Lobaye/Ouaka/Bangui ADM1; six CAF ADM2;13 CAF ADM3; COG ADM1 Likouala and COG ADM2 Ngabe. Those24 other operands are measured empty at each key. This supersedes the earlier incomplete537 overlay's inability to test CAF ADM3/COG ADM2, without removing them from evidence.
+
+The original Ombella-M'Poko record, actual blank-map source, derivative construction and consumed-product method have been checked. They do not provide local alignment against the international line for these three cells. The COD Libenge identity is now bound to the original atlas-derived target at ordinal107, but no applicable original sheet/control has been read. The shared thalweg interpretation cannot choose between the two representations.
+
+Distinct prior Libenge primary catalogue research identified Centre Æquatoria item198 (Service cartographique, June1943,1:1000000,CG14pc722) and item290 (1955,1:1000000,CG19pc1068). Those are named administrative context maps, not presumed precise border controls. AE(251)268n10 describes a1903–1904 Libenge incident without promising a map. Actual public catalogue/custody descriptions were read; no linked digital body was found. These are uninspected physical/archive opportunities, not readily available downloads or denied requests.
+
+A material preservation correction: the old northern12 note says COG ADM2 original archive was unread. Later `uige18_lineage/cog-adm2-archive-inspection.json` supersedes that status. Exact archive SHA `a4dbf1f2a7bd9da0ff9afaebd958fd37bc9342368af90db00dd545028aaba834` was acquired and inspected; Ngabe ordinal41 is matched. Its Congo-specific XML describes January2007 districts/communes polygons, amalgamated source datasets, most-detailed available linework and edge matching. Generic embedded TYPE/COUNTRY/BOT line metadata does not establish a Congo line-to-polygon conversion. NYU's original403 remains stopped. Since Ngabe is measured empty, unresolved provenance is not manufactured into an active Ngabe contradiction or mandatory search loop. Likouala's distinct2017 OSM/Wambacher source is likewise measured empty; existing exact COG ADM1 archive work records processing dates but no relation/snapshot receipt.
+
+Author conclusion: Libenge3 is suitable for independent researched-unresolved consideration on this source-specific packet; no positive clearance or claim that all international evidence is exhausted.
+
+## Bosobolo7: direct source qualification and finite limit
+
+All seven keys have Kémo ADM1 interior, not Ouaka. The other11 operands (two CAF ADM1, three CAF ADM2 and six CAF ADM3) have explicit empty kinds. Kémo ordinal9/CF-KG is authenticated in the original archive. The actual source/body/construction reading fails to supply dependable local river-edge placement; it does not establish Kémo's polygon is false. COD Bosobolo ordinal26 is bound to its distinct original record, with the same unbound atlas sheet/edition limitation.
+
+The specific named historical lead is IGC N4/19–N5/19 Bosobolo–Pandu from the actually read IBS109. Centre Æquatoria CG22,item389 catalogs “Bodsobolo-Pandu”,1966,topographic/planimetric. That is stronger than a generic missing-map assertion, but the catalogue does not establish exact sheet edition, scale/datum or native-cell control. The body was not exposed digitally by retained searches. The public obtain page describes microfiche purchase/viewer and consultation holdings, not verified current fulfillment or a supported digital scan. No purchase/contact was performed or denied.
+
+Author conclusion: Bosobolo7 is suitable for independent researched-unresolved consideration. A real sheet body could reopen a bounded placement question; catalogue existence is not an automatic obligation to purchase or arrange physical consultation before every unresolved disposition.
+
+## Zongo2: preserve the two different conflicts
+
+`[14519,127934,144593]` has Bangui ADM1 interior; `[14519,127935,144592]` has Ombella-M'Poko ADM1 interior. No cell has both. Neither should be relabelled as a pair of Bangui contacts. Each key has one interior and11 empty results among its twelve original negatives. Bangui/Bimbo ADM2 and seven CAF ADM3 operands, including Bangui arrondissements, remain included and measured empty. A coarser ADM1 hit plus an empty more-detailed family is a difference between source representations, not automatic authority or false-positive evidence.
+
+Actual Bangui16/CF-BGF and Ombella5/CF-MP records share the documented blank-map lineage but have distinct source IDs/geometries. Their original map and processed geometry cannot reliably tie these two centers to the river's local line. COD Zongo ordinal188 is separately matched; city/territory level does not itself establish a more authoritative boundary.
+
+The retained primary leads are specifically IGC N4/18 Zongo; Centre Æquatoria CG22,item390 “Zongo et environs”,1972 (not automatically the sheet cited by a1971 study); AE(253)270's island material with two maps/sketches; and AE(255)279n19–20's Zongo sandbank/fishing/incidents. Public inventories were read, not the underlying maps. Nothing in these descriptions identifies either current key as an island or sandbank. Source dates and map bodies remain unbound; no public digital body was located in the bounded prior work.
+
+Author conclusion: each Zongo key independently has a source-relative unresolved basis. Submit the two together only with their distinct active operand preserved; no shared “Bangui ownership” inference.
+
+## Mobayi-Mbongo9: broader inventory and actual Ouaka/Basse-Kotto implications
+
+Mobayi has23 original negatives:3 CAF ADM1 (Mbomou,Ouaka,Basse-Kotto),8 ADM2 (Gambo,Satéma,Kembé,Mobaye,Zangba,Mingala,Alindao,Kouango),12 ADM3 (Mbeima,Mobaye,Kotto-Oubangui,Gambo,Siriki,Kembe,Bakou,Mboui,Yabongo,Cochio-Toulou,Kouango,Ouambe). All are now measured for each of nine keys. The seven keys ending in the127702–127708 row sequence have Ouaka interior. The two keys `[14575,127930,146557]` and `[14575,127932,146556]` have Basse-Kotto interior. No other kind is nonempty. In particular, the12×9 CAF ADM3 results are actual108 empty records, not an omitted-family inference.
+
+The distinct active original records Ouaka12/CF-UK and Basse-Kotto13/CF-BK are now checked in the actual CAF ADM1 archive. Their shared source still supplies no per-feature river convention, registration residual or source-pixel-to-consumed-edge control. COD Mobayi-Mbongo144 is bound to the original target. The seven/two conflict groups must remain distinct; Basse-Kotto's accepted Gbadolite2 work does not transfer acceptance, close-margin distances, island claims or extra observations to these two different keys. The earlier2011 Basse-Kotto SVG candidate is not the now-authenticated2006 source and must not substitute for it.
+
+The ADM3 source is substantively researched, not merely named: archived SIGCAF1996/2003census/1:200000/ITOS description; government census technical note with1999 cartographic preparation; ICASEES metadata; IPIS account of village GPS and multiple map inputs. These do not prove surveyed administrative edges. Explicit empty results now close the omission behind the withdrawn tentative Mobayi proposal; they do not constitute positive geography proof. CAF ADM2's actual2015 UNHCR map/georeferencing lineage is separately documented. All eight are empty here, so their namesake Mobaye/Zangba content is context rather than a newly adverse result.
+
+Specific Mobayi primary archive work identified AE(253)271's1900 Mobaye–Banzyville sketch and AfricaMuseum HA.01.0002.3's photocopied22January1897 incident letter. The latter's public record/inventory was actually read; it offers a request form rather than a body and restricts reproduction to private purposes under museum rules. No request was sent. A military incident letter is not automatically a spatial-control document. The sketch remains the stronger uninspected potential lead, without an exposed public body. Peer confirmed no later accessible deciding body/legend beyond its saved findings had emerged. The failed/limited current routes are not used to claim the map never existed.
+
+Author conclusion: Mobayi9 is suitable for renewed independent researched-unresolved consideration after this all23-operand/source-family qualification. The earlier omission correction and withdrawn readiness remain preserved; this is a new source-author assessment, not automatic reinstatement of the old verdict.
+
+## Source opportunities, access history and sufficiency boundary
+
+Accessible source work already performed includes the exact original CAF1/2/3 archives and map bodies, consumed-product method, COD atlas-source documentation, original treaty texts, government/producer SIGCAF method sources, and named northern map/archive catalogues. This turn adds direct four-target source-archive correspondence and applies that research to390 measured results. No already-read primary passage is claimed as a new discovery.
+
+Concrete uninspected bodies remain the target-specific Saint Moulin atlas sheets in OCHA's actual edition, CG22 Bosobolo/Zongo and Libenge catalogue maps, AE Zongo/Mobaye sketches. Retained catalogues give holdings/access possibilities, not authenticated available digital bodies. No purchase, appointment or outreach was made or denied. No accessible unread deciding lead emerged from the retained corpus/peer follow-through; no duplicate broad searches were run simply to manufacture further effort. A newly available authentic body is a reasonable finite reopening condition.
+
+Stopped records remain distinct: actual CAF HDX and NYU403 denials; OCHA atlas403; CNRS GéoProdig403; OpenEdition/Chambéry verification challenges; standing RGC server error; and the GEF source-inventory403. None was retried. COG2 archive acquisition through its separate authorized exact sourceData route is already completed and must not be described as still unavailable. Source notices on RMCA/BSB materials remain preserved. The earlier Gbadolite1971 map note points to `/tmp/cod-gbadolite-ibs109-map.jpg`; that file is absent now, and no other retained copy was found in the bounded filename search. Its earlier reading remains attributed to that author; I did not claim a fresh visual read or repeat the stopped LOC route. It is not needed as an independent confirming observation.
+
+The actual remaining uncertainty is which local source representation reliably implements the applicable river boundary for these exact centers. No assumption is made that a coarse map is necessarily wrong, a recent target necessarily right, a center predicate establishes sovereignty, or every current river island requires a newly issued legal certificate. The extensive actual research and reasonable failed qualification support a finite unresolved proposal while preserving all holds. Independent acceptance and ordinary exact delivery remain outside this author's decision.

@@ -1,0 +1,77 @@
+{
+  "kind": "fizi2-2015-implementation-finite-followup",
+  "date": "2026-10-24",
+  "worker_thread": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "scope": "ExactFizi2 Burundi historical province/commune water-extent question; no current-boundary substitution",
+  "prior_source": "Law1/10of26March2015 already read; not redownloaded",
+  "new_primary_records": [
+    {
+      "url": "https://assemblee.bi/wp-content/uploads/2024/01/16-du-25-mai-2015.pdf",
+      "title": "Loi no1/16 du25mai2015 portant modalites de transfert de competences de l Etat aux communes",
+      "local": {
+        "file": "burundi-law-2015-1-16-transfer.pdf",
+        "bytes": 586130,
+        "sha256": "f3f31ef332479226a3f27af393cd3f9a2918a9d330d40d1dd320fc0e7991d512"
+      },
+      "read": "All12scannedpages visually inspected",
+      "articles": {
+        "1": "Defines nature and modalities of state-to-commune competence transfer.",
+        "9": "Rural drinking-water works/services and associated fees.",
+        "11-13": "Environmental protection and resource/project duties within commune territory, including surface-water bodies/courses.",
+        "19": "Commune has public/private land domain under LandCode; state may transfer management/use of state domain located within commune territory, with inventory.",
+        "22": "Communal routes and ports, including commercial/fishing ports that have been transferred.",
+        "31": "Management of communal-use equipment/infrastructure within transferred agriculture/livestock/fishing competences.",
+        "33": "Communal competence exercised in conformity with national sectoral policies, regulations and standards.",
+        "39-40": "Transfers of corresponding services/assets and devolution decrees; assets within existing territory.",
+        "42": "Specific provisions for domains of transferred competence fixed by decree.",
+        "45": "Effective on promulgation25May2015."
+      },
+      "limit": "No coordinates, lake-boundary map, international line, or new provincial water extent appears in the twelve pages. Functional jurisdiction and asset transfer cannot be promoted into lake geometry."
+    },
+    {
+      "url": "https://www.presidence.gov.bi/wp-content/uploads/2015/11/decret-0109-2015.pdf",
+      "title": "Decret no100/109 du20novembre2015 portant nomination de l administrateur elu de la commune Mutimbuzi",
+      "local": {
+        "file": "burundi-decret-0109-2015.pdf",
+        "bytes": 603007,
+        "sha256": "bc2dc2ef009429512a95f6f875f90940b5f3da0ac1af1cc887aa64926993f99a"
+      },
+      "read": "Bothscannedpages visually inspected",
+      "articles": {
+        "1": "Appoints elected commune administrator;",
+        "2-3": "Contrary provisions repealed; Interior Minister implements, effective on signature."
+      },
+      "limit": "Recites Rumonge law but contains no boundary implementation. Exact handwritten109verified; search-index409 is OCRerror, not used."
+    },
+    {
+      "url": "https://www.presidence.gov.bi/wp-content/uploads/2018/08/PND-Burundi-2018-2027-Version-Finale.pdf",
+      "title": "PND Burundi2018-2027,June2018",
+      "actual_read_scope": "Paragraph71,printedpage33/PDFpage43,viaextractedprimarytext",
+      "finding": "Describes creation of Rumonge and regrouping Bujumbura Mairie communes as achieved administrative restructuring, alongside decentralisation capacity and financing.",
+      "limit": "No lake allocation in this passage; no claim entire149pages visuallyread."
+    }
+  ],
+  "failed_steps": [
+    {
+      "url": "https://assemblee.bi/?p=24213",
+      "state": "Web-reader timeout",
+      "limit": "Search snippet only; its inconsistent23March2015date not substituted for signed26Marchlaw. No unsupported lake claim."
+    }
+  ],
+  "source_limit": "Completed named2015law and bounded implementation records support administrative grouping and functions within existing communes. They do not establish original2007MapMaker polygon equality or a defined province share of Tanganyika. No further exact accessible implementation map/coordinate annex identified in this bounded sequence; no universal absence/exhaustion claim. Article42mentions generic future decrees, not an identified lake-boundary document.",
+  "remaining_dependency": "Coordinator-owned native per-key/per-operand observation and source applicability. Child performed no geometry run; sourceArchive contains no documentedBDIADM2water-edge convention.",
+  "holds_preserved": [
+    [
+      14453,
+      134450,
+      152467
+    ],
+    [
+      14453,
+      134686,
+      152467
+    ]
+  ],
+  "acceptance": false,
+  "credit": 0
+}

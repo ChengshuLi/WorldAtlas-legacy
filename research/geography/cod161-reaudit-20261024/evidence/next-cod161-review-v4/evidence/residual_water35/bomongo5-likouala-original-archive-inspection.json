@@ -1,0 +1,162 @@
+{
+  "kind": "bomongo5-actual-likouala-original-archive-inspection",
+  "archive": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/COG_ADM1-9469f095-source.zip",
+    "bytes": 440062,
+    "sha256": "731e08ee7fa47ea55f6393d1d8a4364851ca8c6bc65f3bbc875d57feeca7cc8d"
+  },
+  "download": "Reused residual_land_west exact archive; no duplicate archive download. Own publicAPI descriptor read only.",
+  "members": [
+    {
+      "name": "COG_ADM1.cpg",
+      "bytes": 5,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+    },
+    {
+      "name": "COG_ADM1.dbf",
+      "bytes": 982,
+      "sha256": "35973d828c2bafbd93f836d694130bb950261f2b44f8a8257305f6f11110ee73"
+    },
+    {
+      "name": "COG_ADM1.prj",
+      "bytes": 145,
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+    },
+    {
+      "name": "COG_ADM1.sbn",
+      "bytes": 252,
+      "sha256": "06d7fc3b7349ca664fb2efcacac9d6470335850c0457b0575fa12ae1dcbbc941"
+    },
+    {
+      "name": "COG_ADM1.sbx",
+      "bytes": 132,
+      "sha256": "0f11cc7a013fcfc83c89cb546473a71f11c409ef502c7f3897d618a0be411517"
+    },
+    {
+      "name": "COG_ADM1.shp",
+      "bytes": 272164,
+      "sha256": "eab6640263024da27ba884d68314d3848db8fcff5e043ac51aad660c2e7dc21c"
+    },
+    {
+      "name": "COG_ADM1.shp.xml",
+      "bytes": 17084,
+      "sha256": "29f82f52202bb0750b321b36d87472ca18b7c303b7492656c630482e4161405b"
+    },
+    {
+      "name": "COG_ADM1.shx",
+      "bytes": 196,
+      "sha256": "2048f32291b29806be7dca0b2402bb872e296af9b1c8777b0e14d1cc1fa58d0a"
+    },
+    {
+      "name": "license.PNG",
+      "bytes": 252777,
+      "sha256": "2356cbfd98f4f4b61d2d7d5ee0c193f7e86539fd73cd903bfe34edd8d0ee5e54"
+    },
+    {
+      "name": "meta.txt",
+      "bytes": 439,
+      "sha256": "c6024d6a12c7d3a194e7f00bb1863135b53f85abfa5544045a0a253c2c1dc994"
+    }
+  ],
+  "meta_txt": "Boundary Representative of Year: 2017\nISO-3166-1 (Alpha-3): COG\nBoundary Type: ADM1\nCanonical Boundary Type Name: Départements \nSource 1: OpenStreetMap\nSource 2: Wambacher\nRelease Type: gbOpen\nLicense: Open Data Commons Open Database License 1.0\nLicense Notes: Open Data Commons Open Database License 1.0\nLicense Source: https://www.openstreetmap.org/copyright\nLink to Source Data: https://wambachers-osm.website/boundaries/\nOther Notes: ",
+  "record_count": 12,
+  "dbf_fields": [
+    "Level",
+    "ISO_Code",
+    "Name"
+  ],
+  "zero_based_record4": {
+    "Level": "ADM1",
+    "ISO_Code": "CG-2",
+    "Name": "Likouala"
+  },
+  "XML_processes": [
+    {
+      "attributes": {
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.3\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20171017",
+        "Time": "180953"
+      },
+      "text": "CalculateField COG_ADM1 Level \"ADM1\" VB #"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.3\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20171017",
+        "Time": "181009"
+      },
+      "text": "CalculateField COG_ADM1 ISO_Code [ISO2] VB #"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\kp911\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+        "Date": "20210114",
+        "Time": "132420"
+      },
+      "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/2.6.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\kp911\\Documents\\GEOLAB Raw Downloads\\COG_ADM1</WorkspaceConnectionString><WorkspaceFactory>Shapefile</WorkspaceFactory><Dataset>COG_ADM1.shp</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><AddField><field_name>Name1</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>False</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow></operationSequence>"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\kp911\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20210114",
+        "Time": "132432"
+      },
+      "text": "CalculateField COG_ADM1 Name1 !NAME! \"Python 3\" # Text"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\kp911\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+        "Date": "20210114",
+        "Time": "132442"
+      },
+      "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/2.6.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\kp911\\Documents\\GEOLAB Raw Downloads\\COG_ADM1</WorkspaceConnectionString><WorkspaceFactory>Shapefile</WorkspaceFactory><Dataset>COG_ADM1.shp</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><DeleteField><field_name>NAME</field_name></DeleteField></workflow></operationSequence>"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\kp911\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+        "Date": "20210114",
+        "Time": "132451"
+      },
+      "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/2.6.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\kp911\\Documents\\GEOLAB Raw Downloads\\COG_ADM1</WorkspaceConnectionString><WorkspaceFactory>Shapefile</WorkspaceFactory><Dataset>COG_ADM1.shp</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><AddField><field_name>Name</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>False</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow></operationSequence>"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\kp911\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20210114",
+        "Time": "132459"
+      },
+      "text": "CalculateField COG_ADM1 Name !Name1! \"Python 3\" # Text"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\kp911\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+        "Date": "20210114",
+        "Time": "132506"
+      },
+      "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/2.6.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\kp911\\Documents\\GEOLAB Raw Downloads\\COG_ADM1</WorkspaceConnectionString><WorkspaceFactory>Shapefile</WorkspaceFactory><Dataset>COG_ADM1.shp</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><DeleteField><field_name>Name1</field_name></DeleteField></workflow></operationSequence>"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\kp911\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Conversion Tools.tbx\\FeatureClassToFeatureClass",
+        "Date": "20210114",
+        "Time": "132626"
+      },
+      "text": "FeatureClassToFeatureClass COG_ADM1 \"C:\\Users\\kp911\\Documents\\GEOLAB Cleaned Uploads\\COG_ADM1\" COG_ADM1.shp # \"Level \"Level\" true true false 10 Text 0 0,First,#,COG_ADM1,Level,0,10;ISO_Code \"ISO_Code\" true true false 10 Text 0 0,First,#,COG_ADM1,ISO_Code,0,10;Name \"Name\" true true false 50 Text 0 0,First,#,COG_ADM1,Name,0,50\" #"
+    }
+  ],
+  "native_binding": {
+    "feature_ordinal": 4,
+    "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+    "negative_ordinal": 0,
+    "source_id": "gb:COG:ADM1:67827341B88704799146201"
+  },
+  "retained_source_body": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/bomongo-likouala-original-source-body.json",
+    "bytes": 170812,
+    "sha256": "2aea50c78d9c86139a73dfb72e20e59ae151d1c7d5c0e03bd0482f06e18d340b"
+  },
+  "body_check": "Compressed and decoded hashes matched original source-evidence; original feature4 properties matched Likouala/CG-2/sourceID; canonical normalized geometry SHA87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760 matches native operand. Serialization identity only, no geometry test.",
+  "license_visual": "Actual shared original license screenshot viewed: OSM copyright/ODbL attribution/share-alike terms. No spatial construction proof.",
+  "source_result": "2017represented OSM/Wambacher;2017-10-17 Level/ISO processing and2021-01-14 name/schema/export history documented. No OSMrelationID/version, extract snapshot, waterexportsetting or river-bank/thalweg construction record in inspected metadata/XML/DBF. WGS84 CRS declaration is not a hydrographic survey.",
+  "applicability": "Five exact keys now have original Likouala interior scan membership; three COGADM2 operands empty under same native predicates. COGADM2 construction uncertainty is not automatically imposed on these five keys. No geographic nonoverlap or sovereignty clearance inferred."
+}

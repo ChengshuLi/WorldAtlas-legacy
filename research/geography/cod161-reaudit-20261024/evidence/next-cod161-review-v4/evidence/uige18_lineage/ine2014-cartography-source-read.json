@@ -1,0 +1,49 @@
+{
+  "kind": "ine-census2014-bounded-cartography-source-read-v1",
+  "worker_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "date": "2026-10-24",
+  "source_url": "https://www.ine.gov.ao/Arquivos/arquivosCarregados/Carregados/Publicacao_637981512172633350.pdf",
+  "approval_status": "require_escalated executed successfully; parent explicitly authorized exact source read",
+  "download_session": 37927,
+  "download_exit_code": 0,
+  "pdf_pages": 204,
+  "visually_inspected_printed_and_pdf_pages": [
+    20,
+    27
+  ],
+  "text_term_counts": {
+    "Maquela": 0,
+    "Quimbele": 0,
+    "AO17148": 0,
+    "AO17153": 0,
+    "GADM": 0
+  },
+  "exact_2018_feature_relation_established": false,
+  "source_relative_remaining_gap": "Named INE image/map input and feature construction relation to the actual Maquela AO17148 and Quimbele AO17153 2018 source features",
+  "all18_held": true,
+  "new_geometry_observations": 0,
+  "accepted_cells": 0,
+  "completion_credit": 0,
+  "artifacts": {
+    "ine-census2014-national.pdf": {
+      "bytes": 13072701,
+      "sha256": "6e1b96bec02071841fead38ba4832637d40a323e8021bfa7d303373bdc671899"
+    },
+    "ine-census2014-national.txt": {
+      "bytes": 631317,
+      "sha256": "7eecc6e0fc5eab0488ebe55a693667f6ce63026c947b8e9d33c22b0871839e5f"
+    },
+    "ine-census2014-p20.png": {
+      "bytes": 178853,
+      "sha256": "8b9d02123cbface39ae1fbfc4fb8eb9496debad46c2c349dca88aedc363eec15"
+    },
+    "ine-census2014-p27.png": {
+      "bytes": 693720,
+      "sha256": "4d568dda9e46b430bbb4091fd56fae5540aadebb2b0e1bef0e33a51ec2287d5b"
+    },
+    "ine2014-cartography-source-findings.md": {
+      "bytes": 7034,
+      "sha256": "6c0c54c8a32a70e297d668651866fdcc2126693d8add16e2c6d595eb5a0905c3"
+    }
+  }
+}

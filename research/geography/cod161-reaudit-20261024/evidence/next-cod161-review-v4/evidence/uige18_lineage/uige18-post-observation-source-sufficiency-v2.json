@@ -1,0 +1,1564 @@
+{
+  "kind": "cod-uige18-post-observation-source-sufficiency-v2",
+  "worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "scope": 18,
+  "proposed_unresolved_review": 17,
+  "separate_contextual_review": 1,
+  "accepted_delta": 0,
+  "native_run": false,
+  "geometry_run": false,
+  "checks": {
+    "18_unique": true,
+    "two_accepted_excluded": true,
+    "exact20_minus2": true,
+    "72_original_reference_joins": true,
+    "18_full_report_row_matches": true,
+    "18_uige_interior": true,
+    "54_explicit_empty": true
+  },
+  "current_full_report": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod2785-owned-slot-preserved-inputs/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+    "bytes": 10190632,
+    "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+  },
+  "view": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-native-contact-view-2784/uige18_lineage.json",
+    "bytes": 50970,
+    "sha256": "c608c17c7507e1e0c0c7c50298d35bfdb46273cdf8c8df97e6130868e62966e3"
+  },
+  "source_evidence": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/source-evidence.json",
+    "bytes": 486052,
+    "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+  },
+  "roster": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/exact-roster-and-crosscheck.json",
+    "bytes": 35532,
+    "sha256": "d3f074d36aca8c1cf60345e23cad88b8741201ec6d12832e139246fb8e3574f9"
+  },
+  "retained_adoption_pins": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/uige18_lineage/adopted-two-key-record-retained.json",
+      "blob": "737c531ad0b41cd5fc2aa89b8ce38af35bfa3538",
+      "bytes": 3126,
+      "sha256": "cd107bd26b165c9684e18b428a40f479491056979077e6c60d64f7345d874d1c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/uige18_lineage/adopted-two-key-decision-retained.json",
+      "blob": "7026a9a54daa148ee52b3db6f3fde2c1fc767e00",
+      "bytes": 2329,
+      "sha256": "953eb7f9fb257a18918ef8c6b92b4a587641e736693d2be18419b546380a2fe8"
+    }
+  ],
+  "records": [
+    {
+      "key": [
+        14501,
+        135348,
+        143084
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143084,
+        143087,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": true
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135348,
+        143085
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143084,
+        143087,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": true
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135348,
+        143086
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143084,
+        143087,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135349,
+        143081
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143081,
+        143084,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": true
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135349,
+        143082
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143081,
+        143084,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135349,
+        143083
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143081,
+        143084,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143070
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143070,
+        143073,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143071
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143070,
+        143073,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143080
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143080,
+        143081,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143078
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143078,
+        143079,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": true
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143099
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143099,
+        143103,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143100
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143099,
+        143103,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143101
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143099,
+        143103,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143102
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143099,
+        143103,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135353,
+        143102
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143102,
+        143105,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135353,
+        143103
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143102,
+        143105,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135353,
+        143104
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143102,
+        143105,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": true,
+        "2024_uscb_ao_uig_center_side": "inside",
+        "2024_uscb_drc_popokabaka_center_hit": false,
+        "original_2017_kwango_center_hit": false
+      },
+      "recommendation": "proposed-extensively-researched-unresolved-for-independent-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    },
+    {
+      "key": [
+        14501,
+        135354,
+        143074
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "native_interval": [
+        143074,
+        143075,
+        14501
+      ],
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "operand_sha256": "f0f028f05f37279fdd4ee0e9c22ec2b635fb9df4ba8f9e1e4a5e083b4eaf9c83",
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 145,
+            "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 150,
+            "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        },
+        {
+          "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 8,
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "negative_ordinal": 3,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47421332346835",
+          "target_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "retained_comparison": {
+        "original_class": "land",
+        "physical_support": true,
+        "inland_water_support": false,
+        "2019_uscb_ao_uig_center_hit": false,
+        "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+        "2024_uscb_drc_popokabaka_center_hit": true,
+        "original_2017_kwango_center_hit": true
+      },
+      "recommendation": "independent-exact-key-contextual-applicability-review",
+      "accepted": false,
+      "hold_retained": true,
+      "credit": 0
+    }
+  ],
+  "custody_note": "Old worktree-cache path is absent after normal release. Preserved full report freshly verified at current_full_report path; no missing data or rerun inferred.",
+  "restrictions": [
+    "Exact AGOADM1 PR1352 archive restriction preserved; no retry or alternate route.",
+    "HDX403 preserved.",
+    "Historical release/sourceData comparison attributed to retained independently reviewed report, not fresh binary/geometry reproduction."
+  ],
+  "source_label_updates": {
+    "native_contacts": "complete; old pending attribution superseded",
+    "2021_source_question": "retained archive review identifies 2019 USCB sourceData relationship; 2021 represented-year label does not require another unknown archive",
+    "ago_adm2_archive": "actually acquired/read",
+    "pool_archive": "actually acquired/read",
+    "cod_target_archive": "actually acquired/read",
+    "ago_adm1_pr1352_object": "restricted current access; not proven absent; retained release-sourceData comparison remains evidence",
+    "kwango": "overlay context only; not native negative"
+  }
+}

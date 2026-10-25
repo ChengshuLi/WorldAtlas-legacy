@@ -1,0 +1,510 @@
+{
+  "kind": "cog-adm2-exact-source-archive-inspection-v1",
+  "worker_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/sourceData/gbOpen/COG_ADM2.zip",
+  "archive": {
+    "bytes": 109588,
+    "sha256": "a4dbf1f2a7bd9da0ff9afaebd958fd37bc9342368af90db00dd545028aaba834"
+  },
+  "members": [
+    {
+      "bytes": 5,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "path": "COG_ADM2.cpg"
+    },
+    {
+      "bytes": 1984,
+      "sha256": "6fdfa896209236cb615fff89a8f171351b31048c2e42d7553cec6bc6cc8f6e94",
+      "path": "COG_ADM2.dbf"
+    },
+    {
+      "bytes": 145,
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "path": "COG_ADM2.prj"
+    },
+    {
+      "bytes": 588,
+      "sha256": "e1ea754eab3c8749c2627eb6e4bb66088513e506dba456e190a211b3040d5311",
+      "path": "COG_ADM2.sbn"
+    },
+    {
+      "bytes": 164,
+      "sha256": "7c0cdc1782aac1fce7d4c713fa944c54032b677a49a2361122a3acccae30e092",
+      "path": "COG_ADM2.sbx"
+    },
+    {
+      "bytes": 202852,
+      "sha256": "7b6cf8d35ded3fc3f4a190f3a92515a0e8dbb8723c1fcc158b69848ca36ac601",
+      "path": "COG_ADM2.shp"
+    },
+    {
+      "bytes": 45811,
+      "sha256": "0813ed0f0e234baf88845198068f3b963f3cb942799f15fc50754902de3a2753",
+      "path": "COG_ADM2.shp.xml"
+    },
+    {
+      "bytes": 468,
+      "sha256": "a7f78979fd633400d17d2a28909ba7ef2d1fa65c59c5cb68116035205c8754bb",
+      "path": "COG_ADM2.shx"
+    },
+    {
+      "bytes": 469,
+      "sha256": "963436e10352b8dcdd68a694e44b3761feae0b62b541c7622f3931f6d3381597",
+      "path": "meta.txt"
+    }
+  ],
+  "meta_text": "Boundary Representative of Year: 2007.0\nISO-3166-1 (Alpha-3): COG\nBoundary Type: ADM2\nCanonical Boundary Type Name: \nSource 1: New York University Spatial Data Repository, Stanford University\nSource 2: Map Maker Limited\nRelease Type: gbOpen\nLicense: Public Domain\nLicense Notes: License on metadata pop-up on source page\nLicense Source: https://geo.nyu.edu/catalog/stanford-hz799nq4536\nLink to Source Data: https://geo.nyu.edu/catalog/stanford-hz799nq4536\nOther Notes: ",
+  "outer_metadata": {
+    "idAbs": [
+      "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This polygon shapefile contains district and commune boundaries for the Republic of the Congo as of January 2007. This layer is part of the Map Library dataset containing line and polygon boundaries for individual countries on the African continent.</SPAN></P></DIV></DIV></DIV>"
+    ],
+    "idPurp": [
+      "The Map Library is a project of the UK charity “The Map Maker Trust.\" It aims to make public domain mapping data more readily available for development in all kinds of fields, from health care to urban management, from de-mining to environmental protection."
+    ],
+    "idCredit": [
+      "Map Maker Ltd. (2007). Districts and Communes, Republic of the Congo, 2007 Map Maker, Ltd. Available at: http://purl.stanford.edu/hz799nq4536."
+    ],
+    "statement": [
+      "The boundary status and administrative names have been verified against various sources of information.\n\nThe information given by: www.wikipedia.org and www.statoids.com and 'SALB' proved to be most reliable. All often had links to governmental web-sites or other reliable references to verify it against.\n\nThe actual polygon set has become an amalgamation of other datasets available in the public domain.\n\nGreat care has been taken in 'edge matching' each polygon and we believe therefore the 'topology' is as good as one can get it.\n\nWhere two different sources for the polygon set were available, or where a different polygon set of two neighbouring nations were used, in this amalgamation process the most detailed line work was used.\n\nThe following web sites were used to amalgamate and update the polygon set:\n\nhttp://igskmncnwb015.cr.usgs.gov/adds/geolist.php (FEW-NET, Africa Data Dissemination Service)\n\nhttp://www.fao.org/geonetwork/srv/en/main.home\n\nhttp://www.diva-gis.org\n\nhttp://www3.who.int/whosis/gis/salb/salb_MDATA.htm\n\nhttp://www.depha.org/\n\nhttp://www.sahims.net/\n\nAll countries have been updated to at least ADM2 level or to a next level where reliable information was found.\n\nWhere in the old dataset more divisions were present, the polygon boundaries and names were left in place.\n\nAll updated names in the database are in Upper &amp; Lower case.\n\nIn general, one can assume that any names in the database solely in capitals reflect old unverified or possibly obsolete administrative division information (i.e. boundary and names)."
+    ],
+    "resTitle": [
+      "Districts and Communes, Republic of the Congo, 2007",
+      "lcsh",
+      "geonames",
+      "The Map Library",
+      "Feature catalog for Districts and Communes, Republic of the Congo, 2007"
+    ],
+    "othConsts": [
+      "This item is in the public domain. There are no restrictions on access or use."
+    ]
+  },
+  "process_history": [
+    {
+      "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.3\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\DefineProjection",
+      "Date": "20151112",
+      "Time": "115908",
+      "text": "DefineProjection Q:\\Africa_Boundaries_2007\\Congo-Brazzaville\\CNG.shp GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]]"
+    },
+    {
+      "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.3\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CalculateField",
+      "Date": "20171017",
+      "Time": "181717",
+      "text": "CalculateField COG_ADM2 Name [ADM2] VB #"
+    },
+    {
+      "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.3\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CalculateField",
+      "Date": "20171017",
+      "Time": "181729",
+      "text": "CalculateField COG_ADM2 Level \"ADM2\" VB #"
+    }
+  ],
+  "embedded_original_metadata": {
+    "bytes": 17177,
+    "sha256": "377199b7b86337102ea0a78457627732e071220172a5d86b39cf9196177f3782",
+    "content": {
+      "idAbs": [
+        "This line shapefile contains TYPE boundary lines for COUNTRY as of January 2007. These are the level # administrative units for COUNTRY."
+      ],
+      "idPurp": [
+        "The Map Library is a project of the UK charity “The Map Maker Trust.\" It aims to make public domain mapping data more readily available for development in all kinds of fields, from health care to urban management, from de-mining to environmental protection."
+      ],
+      "idCredit": [
+        "CREDIT"
+      ],
+      "statement": [
+        "The boundary status and administrative names have been verified against various sources of information. The information given by: www.wikipedia.org and www.statoids.com and 'SALB' proved to be most reliable. All often had links to governmental web-sites or other reliable references to verify it against. The actual polygon set has become an amalgamation of other datasets available in the public domain. Great care has been taken in 'edge matching' each polygon and we believe therefore the 'topology' is as good as one can get it. Where two different sources for the polygon set were available, or where a different polygon set of two neighbouring nations were used, in this amalgamation process the most detailed line work was used. The following web sites were used to amalgamate and update the polygon set: http://igskmncnwb015.cr.usgs.gov/adds/geolist.php (FEW-NET, Africa Data Dissemination Service) http://www.fao.org/geonetwork/srv/en/main.home http://www.diva-gis.org http://www3.who.int/whosis/gis/salb/salb_MDATA.htm http://www.depha.org/ http://www.sahims.net/ All countries have been updated to at least ADM2 level or to a next level where reliable information was found. Where in the old dataset more divisions were present, the polygon boundaries and names were left in place. All updated names in the database are in Upper & Lower case. In general, one can assume that any names in the database solely in capitals reflect old unverified or possibly obsolete administrative division information (i.e. boundary & names)."
+      ],
+      "resTitle": [
+        "BOT",
+        "lcnaf",
+        "lcsh",
+        "The Map Library"
+      ],
+      "othConsts": [
+        "This item is in the public domain. There are no restrictions on access or use."
+      ]
+    }
+  },
+  "dbf_fields": [
+    [
+      "Name",
+      "C",
+      30
+    ],
+    [
+      "Level",
+      "C",
+      10
+    ]
+  ],
+  "dbf_record_count": 46,
+  "native_source_evidence": {
+    "bytes": 486052,
+    "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+  },
+  "native_cog_adm2": {
+    "parts": [
+      {
+        "bytes": 95986,
+        "commit": "923e9c210b59836e069c182d68daf85439096381",
+        "decoded_bytes": 336602,
+        "decoded_sha256": "b44d1fdcc6f61f0d0b2a4b3402f49dfd317ea9cdddd0a854bd20cae0996291ae",
+        "git_blob_oid": "2c0b2d12d91391c90b7b13fd3bc6eeafcef9a151",
+        "mode": "100644",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM2-000.bin.gz",
+        "sha256": "d16ed36ca657850044d6abe618958e16a36601ed687246761e44c5d964c8ac51"
+      }
+    ],
+    "source_id": "gb:COG:ADM2"
+  },
+  "native_feature_count": 46,
+  "exact_pending_keys": [
+    [
+      14443,
+      128217,
+      144649
+    ],
+    [
+      14443,
+      128218,
+      144648
+    ],
+    [
+      14443,
+      128232,
+      144635
+    ],
+    [
+      14484,
+      129679,
+      144249
+    ],
+    [
+      14484,
+      129682,
+      144248
+    ],
+    [
+      14484,
+      129683,
+      144248
+    ],
+    [
+      14484,
+      130793,
+      144162
+    ],
+    [
+      14484,
+      130794,
+      144162
+    ]
+  ],
+  "target_bindings": [
+    {
+      "owner": 14443,
+      "target_source_id": "gb:COD:ADM2:63176286B16720510237815",
+      "complete_native_negative_inventory": [
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "7e409d40db329493e90bc9f47c8a4e8225d19d200b29e8ee67ad1f813cb1452b",
+          "negative_ordinal": 0,
+          "source_id": "gb:CAF:ADM1:63714938B21760912511834"
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "8c9aa0f344ba0aa0e75a21a7a96b24c690e546cdc6bafe536e024176bf5dae6d",
+          "negative_ordinal": 1,
+          "source_id": "gb:CAF:ADM1:63714938B70915793391768"
+        },
+        {
+          "feature_ordinal": 12,
+          "geometry_sha256": "62a2d2d8efacccc7ea80ab3ad4333e69e8fa8e9d22a83ffb6510eca339c1f383",
+          "negative_ordinal": 2,
+          "source_id": "gb:CAF:ADM1:63714938B18739157330103"
+        },
+        {
+          "feature_ordinal": 16,
+          "geometry_sha256": "5297682fc0fa6c969e9afece3b8a5b5396a4017b79a4e4ddf968d61a9f883f4b",
+          "negative_ordinal": 3,
+          "source_id": "gb:CAF:ADM1:63714938B39161688438046"
+        },
+        {
+          "feature_ordinal": 31,
+          "geometry_sha256": "7313b5ede959494e8c4a6c534c49b3d04a4660cd007f7ad7c99201c164ff53c5",
+          "negative_ordinal": 4,
+          "source_id": "gb:CAF:ADM2:33826404B9315728863093"
+        },
+        {
+          "feature_ordinal": 32,
+          "geometry_sha256": "b4bc900a9ef5781575ddb691ef6724a02d3860f4d5d6c3cb9b9254a68eddb327",
+          "negative_ordinal": 5,
+          "source_id": "gb:CAF:ADM2:33826404B21321520993489"
+        },
+        {
+          "feature_ordinal": 33,
+          "geometry_sha256": "d2316bb78761dd932446292dc51b6b02ed49a5697230226f24ab47579e621853",
+          "negative_ordinal": 6,
+          "source_id": "gb:CAF:ADM2:33826404B24481683700723"
+        },
+        {
+          "feature_ordinal": 64,
+          "geometry_sha256": "ba2916b64a7ec34fc88564a234dc99769ed35c2f5213082690ed52215ce51a0f",
+          "negative_ordinal": 7,
+          "source_id": "gb:CAF:ADM2:33826404B11454155454969"
+        },
+        {
+          "feature_ordinal": 70,
+          "geometry_sha256": "1e6df0beb5359c128360c445a63afa8e17d5f79673058b6cc687975766b4a696",
+          "negative_ordinal": 8,
+          "source_id": "gb:CAF:ADM2:33826404B58165985423079"
+        },
+        {
+          "feature_ordinal": 71,
+          "geometry_sha256": "48fc48d798002f927bf2ffbb8be11b7c4e9dd65535c10af2b4af3637c23f54e2",
+          "negative_ordinal": 9,
+          "source_id": "gb:CAF:ADM2:33826404B89402945162763"
+        },
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "b17b650999d4543cf9375ff70ce4d9309bf2dc50b400e3a460a86a2499a88611",
+          "negative_ordinal": 10,
+          "source_id": "gb:CAF:ADM3:52401652B31277239674635"
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "6175b1618d8b6d1f252b27828a849e08df74588855b181545d3efe773545dff9",
+          "negative_ordinal": 11,
+          "source_id": "gb:CAF:ADM3:52401652B86682569461435"
+        },
+        {
+          "feature_ordinal": 60,
+          "geometry_sha256": "6fe3611f11e4e268669af1833f4755bba8621995851c9a1f76f8ba0cba2c743e",
+          "negative_ordinal": 12,
+          "source_id": "gb:CAF:ADM3:52401652B14361696899500"
+        },
+        {
+          "feature_ordinal": 65,
+          "geometry_sha256": "b82b136b69ee5aa6d03024e9b5aa3c1b48f4ef4357f55769ff0f561ac81314b1",
+          "negative_ordinal": 13,
+          "source_id": "gb:CAF:ADM3:52401652B71644411344496"
+        },
+        {
+          "feature_ordinal": 70,
+          "geometry_sha256": "3df200d94281e10aefebb67279fd7268569735a05b4606b5b03c02b6f55af52e",
+          "negative_ordinal": 14,
+          "source_id": "gb:CAF:ADM3:52401652B49227657461354"
+        },
+        {
+          "feature_ordinal": 167,
+          "geometry_sha256": "f18909ce96fe046156d4c7aa2f26c6204114cd33422a6eb1102b180e579fb6b5",
+          "negative_ordinal": 15,
+          "source_id": "gb:CAF:ADM3:52401652B74484085536451"
+        },
+        {
+          "feature_ordinal": 168,
+          "geometry_sha256": "4d61bdd019ec30ab49dc2113bde08ba7962c9e0ccccb65a189880405bc6d0f74",
+          "negative_ordinal": 16,
+          "source_id": "gb:CAF:ADM3:52401652B86986631052173"
+        },
+        {
+          "feature_ordinal": 169,
+          "geometry_sha256": "160447edc0873d17102e2e50eeddf3c26297398839a107177342e4f80aa91443",
+          "negative_ordinal": 17,
+          "source_id": "gb:CAF:ADM3:52401652B84652622914513"
+        },
+        {
+          "feature_ordinal": 170,
+          "geometry_sha256": "d9a9658a3d954c8e4e08946ef1226f1111f74285dbe9155067262e59d45851a0",
+          "negative_ordinal": 18,
+          "source_id": "gb:CAF:ADM3:52401652B97805646674619"
+        },
+        {
+          "feature_ordinal": 171,
+          "geometry_sha256": "d66f1bc717d414657baabda06b82ae4042cbc3847efc78d518587db308ca6998",
+          "negative_ordinal": 19,
+          "source_id": "gb:CAF:ADM3:52401652B62391094293120"
+        },
+        {
+          "feature_ordinal": 172,
+          "geometry_sha256": "a776258eb763bb6c60066493341c25c31a413394c281e9ca7b162a7a133d9089",
+          "negative_ordinal": 20,
+          "source_id": "gb:CAF:ADM3:52401652B9057863164098"
+        },
+        {
+          "feature_ordinal": 173,
+          "geometry_sha256": "fde06c28b8eb1d615ed5962f41bf43c959dbd603ad5c424166191d2cef34fbe5",
+          "negative_ordinal": 21,
+          "source_id": "gb:CAF:ADM3:52401652B61514878619891"
+        },
+        {
+          "feature_ordinal": 174,
+          "geometry_sha256": "db11f1eb158c29e580b46aa64c324121cbecce7703145f8ff83c40104b11b3ea",
+          "negative_ordinal": 22,
+          "source_id": "gb:CAF:ADM3:52401652B98074041041370"
+        },
+        {
+          "feature_ordinal": 4,
+          "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+          "negative_ordinal": 23,
+          "source_id": "gb:COG:ADM1:67827341B88704799146201"
+        },
+        {
+          "feature_ordinal": 41,
+          "geometry_sha256": "ff020d893f2e108769df9dc0cf52e4474c8f109c09210c8a3d27edacd11bf456",
+          "negative_ordinal": 24,
+          "source_id": "gb:COG:ADM2:1427508B65710782923529"
+        }
+      ],
+      "cog_adm2_bindings": [
+        {
+          "feature_ordinal": 41,
+          "geometry_sha256": "ff020d893f2e108769df9dc0cf52e4474c8f109c09210c8a3d27edacd11bf456",
+          "negative_ordinal": 24,
+          "source_id": "gb:COG:ADM2:1427508B65710782923529",
+          "native_properties": {
+            "shapeName": "Ngabe",
+            "shapeISO": "",
+            "shapeID": "1427508B65710782923529",
+            "shapeGroup": "COG",
+            "shapeType": "ADM2"
+          },
+          "source_archive_dbf_record": {
+            "ordinal": 41,
+            "properties": {
+              "Name": "Ngabe",
+              "Level": "ADM2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "owner": 14484,
+      "target_source_id": "gb:COD:ADM2:63176286B36806520086654",
+      "complete_native_negative_inventory": [
+        {
+          "feature_ordinal": 4,
+          "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+          "negative_ordinal": 0,
+          "source_id": "gb:COG:ADM1:67827341B88704799146201"
+        },
+        {
+          "feature_ordinal": 7,
+          "geometry_sha256": "703948e3aaf9f0a3581998c6dfc206e3f3d9bfb32ddf1c665f71aa2e5ba6ca69",
+          "negative_ordinal": 1,
+          "source_id": "gb:COG:ADM2:1427508B73097317113528"
+        },
+        {
+          "feature_ordinal": 10,
+          "geometry_sha256": "16a065a5cbeebbc24d83b1381dfece08a3700836de1fbee9045673dfe1575522",
+          "negative_ordinal": 2,
+          "source_id": "gb:COG:ADM2:1427508B2711916711363"
+        },
+        {
+          "feature_ordinal": 41,
+          "geometry_sha256": "ff020d893f2e108769df9dc0cf52e4474c8f109c09210c8a3d27edacd11bf456",
+          "negative_ordinal": 3,
+          "source_id": "gb:COG:ADM2:1427508B65710782923529"
+        }
+      ],
+      "cog_adm2_bindings": [
+        {
+          "feature_ordinal": 7,
+          "geometry_sha256": "703948e3aaf9f0a3581998c6dfc206e3f3d9bfb32ddf1c665f71aa2e5ba6ca69",
+          "negative_ordinal": 1,
+          "source_id": "gb:COG:ADM2:1427508B73097317113528",
+          "native_properties": {
+            "shapeName": "Loukela",
+            "shapeISO": "",
+            "shapeID": "1427508B73097317113528",
+            "shapeGroup": "COG",
+            "shapeType": "ADM2"
+          },
+          "source_archive_dbf_record": {
+            "ordinal": 7,
+            "properties": {
+              "Name": "Loukela",
+              "Level": "ADM2"
+            }
+          }
+        },
+        {
+          "feature_ordinal": 10,
+          "geometry_sha256": "16a065a5cbeebbc24d83b1381dfece08a3700836de1fbee9045673dfe1575522",
+          "negative_ordinal": 2,
+          "source_id": "gb:COG:ADM2:1427508B2711916711363",
+          "native_properties": {
+            "shapeName": "Owando",
+            "shapeISO": "",
+            "shapeID": "1427508B2711916711363",
+            "shapeGroup": "COG",
+            "shapeType": "ADM2"
+          },
+          "source_archive_dbf_record": {
+            "ordinal": 10,
+            "properties": {
+              "Name": "Owando",
+              "Level": "ADM2"
+            }
+          }
+        },
+        {
+          "feature_ordinal": 41,
+          "geometry_sha256": "ff020d893f2e108769df9dc0cf52e4474c8f109c09210c8a3d27edacd11bf456",
+          "negative_ordinal": 3,
+          "source_id": "gb:COG:ADM2:1427508B65710782923529",
+          "native_properties": {
+            "shapeName": "Ngabe",
+            "shapeISO": "",
+            "shapeID": "1427508B65710782923529",
+            "shapeGroup": "COG",
+            "shapeType": "ADM2"
+          },
+          "source_archive_dbf_record": {
+            "ordinal": 41,
+            "properties": {
+              "Name": "Ngabe",
+              "Level": "ADM2"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "findings": {
+    "actual_cog_description": "Districts and communes polygon boundaries, January2007",
+    "line_to_polygon_claim": "Not established. Embedded original metadata describes BOT/Botswana and containsTYPE/COUNTRY placeholders; generic line description is not Congo-specific evidence.",
+    "construction": "Amalgamation of public polygon datasets, using most detailed available linework and edge matching; cited generic validation sources Wikipedia/Statoids/SALB.",
+    "native_relation": "Exact release source ZIP acquired and allthree relevant originalordinal names match native properties. No coordinate/geometry identity orcell test performed.",
+    "source_field_loss": "Downloaded DBF exposes onlyName andLevel; processing copiesName fromADM2 and setsLevel. No originalsource IDs or perfeature evidence mapping retained in DBF.",
+    "license": "meta.txt saysPublicDomain, actualouterXML explicitly states unrestrictedaccess/use; no licenseimage exists inarchive.",
+    "negative_scope": "49Libenge/northernuses earlier preserved; hereLibengeNgabe andBomongo3ADM2operands bind to8pendingkeys. Actual perkeycontact attribution remains unperformed."
+  },
+  "acquisition_receipts": [
+    {
+      "route": "raw.githubusercontent.com",
+      "result": "allowed;131byteLFS pointer returned;archive hash check failed beforewrite",
+      "session": 57657,
+      "exit_code": 1
+    },
+    {
+      "route": "github.com/raw/fullcommit",
+      "result": "approved download;exactsizehash verified;archive saved",
+      "session": 43072,
+      "exit_code": 0
+    }
+  ],
+  "obstacles": [
+    {
+      "target": "https://geo.nyu.edu/catalog/stanford-hz799nq4536",
+      "result": "prior403 preserved;not retried"
+    }
+  ],
+  "accounting": {
+    "holds_preserved": true,
+    "new_geometry_observations": 0,
+    "new_acceptance": 0,
+    "new_credit": 0
+  }
+}

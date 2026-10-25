@@ -1,0 +1,807 @@
+{
+  "kind": "COD-Lunda4-finite-source-sufficiency-author-followup",
+  "author_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "status": "INERT_RECOMMENDATION_FOR_INDEPENDENT_RESEARCHED_UNRESOLVED_CONSIDERATION",
+  "exact_keys": [
+    [
+      14492,
+      136869,
+      146925
+    ],
+    [
+      14586,
+      136402,
+      146945
+    ],
+    [
+      14586,
+      136429,
+      146966
+    ],
+    [
+      14586,
+      136638,
+      146992
+    ]
+  ],
+  "key_order": [
+    "owner",
+    "y",
+    "x"
+  ],
+  "scope": {
+    "original_package_cells": 3905,
+    "kapanga": 1,
+    "luiza": 3,
+    "land": 4,
+    "target_bound_operand_count": 7,
+    "distinct_operand_source_ids": 5,
+    "key_operand_rows": 11,
+    "nonempty_interior_rows": 4,
+    "empty_kind_rows": 7,
+    "all_original_holds_preserved": true
+  },
+  "accepted_cells": 0,
+  "credit": 0,
+  "hold_removals": 0,
+  "pins": {
+    "code": "8d38ff36d0b37b98bfd00ff2d7fb81a5081c7f4f",
+    "unchanged_accepted_code_base": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239",
+    "original_diagnostic_receipt": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+      "bytes": 10190632,
+      "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+    },
+    "current_preserved_diagnostic": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod2785-owned-slot-preserved-inputs/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+      "bytes": 10190632,
+      "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+    },
+    "source_evidence": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/source-evidence.json",
+      "bytes": 486052,
+      "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+    },
+    "partition": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-verified-partition.json",
+      "bytes": 22858,
+      "sha256": "656ba6320dc96c390c91250ec4b0599e1fec8e19c5f3a924bc0c5653fc443f2f"
+    },
+    "contact_view": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-native-contact-view-2784/residual_land_west.json",
+      "bytes": 107875,
+      "sha256": "2cd1a426dae0003653dfc5a24c087db524cf5c57fa76ef1668f40f560e20a42a"
+    }
+  },
+  "original_native_contact_records": [
+    {
+      "key": [
+        14492,
+        136869,
+        146925
+      ],
+      "target_id": "gb:COD:ADM2:63176286B41140464701712",
+      "native_interval": [
+        146925,
+        146926,
+        14492
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "01bb7224806c1c81d9e98231cbb273c73247f8668fe34b62deb1f8fff5f203ed",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 12,
+            "geometry_sha256": "01bb7224806c1c81d9e98231cbb273c73247f8668fe34b62deb1f8fff5f203ed",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B58820355179323"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "526e3c6b1a7901ca337d5686f70f1bc9217a8d840fb5fb6d77ba19cc9f79e0ae",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 109,
+            "geometry_sha256": "526e3c6b1a7901ca337d5686f70f1bc9217a8d840fb5fb6d77ba19cc9f79e0ae",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B62164044722881"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "91a441d7c980e4af6049356ce419bc47d33e9d73b41fb447f471ff48a6c743fa",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 110,
+            "geometry_sha256": "91a441d7c980e4af6049356ce419bc47d33e9d73b41fb447f471ff48a6c743fa",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B59057839791077"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        }
+      ]
+    },
+    {
+      "key": [
+        14586,
+        136402,
+        146945
+      ],
+      "target_id": "gb:COD:ADM2:63176286B81146580347594",
+      "native_interval": [
+        146945,
+        146946,
+        14586
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        }
+      ]
+    },
+    {
+      "key": [
+        14586,
+        136429,
+        146966
+      ],
+      "target_id": "gb:COD:ADM2:63176286B81146580347594",
+      "native_interval": [
+        146966,
+        146967,
+        14586
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        }
+      ]
+    },
+    {
+      "key": [
+        14586,
+        136638,
+        146992
+      ],
+      "target_id": "gb:COD:ADM2:63176286B81146580347594",
+      "native_interval": [
+        146992,
+        146993,
+        14586
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        }
+      ]
+    }
+  ],
+  "original_source_and_physical_rows": [
+    {
+      "key": [
+        14492,
+        136869,
+        146925
+      ],
+      "current_status": "held_pending",
+      "proposed_status": "researched_unresolved_for_independent_review_only",
+      "retained_native_decision": "territorial_exclusion_cells",
+      "retained_frozen_physical_source_row": {
+        "owner_id": 14492,
+        "y": 136869,
+        "x": 146925,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 2,
+            "source_index": 444,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          {
+            "family_index": 70,
+            "source_index": 18836,
+            "source_id": "gb:COD:ADM2:63176286B41140464701712"
+          }
+        ]
+      },
+      "retained_complete_family_center_overlay_row": {
+        "key": [
+          14492,
+          136869,
+          146925
+        ],
+        "center": [
+          21.754537201620337,
+          -7.920533353463056
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 2,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "source_index": 444,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B41140464701712",
+            "source_index": 18836,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 2,
+            "family_key": "gb:AGO:ADM1",
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "name": "Lunda Norte",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B41140464701712",
+            "name": "Kapanga",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      }
+    },
+    {
+      "key": [
+        14586,
+        136402,
+        146945
+      ],
+      "current_status": "held_pending",
+      "proposed_status": "researched_unresolved_for_independent_review_only",
+      "retained_native_decision": "territorial_exclusion_cells",
+      "retained_frozen_physical_source_row": {
+        "owner_id": 14586,
+        "y": 136402,
+        "x": 146945,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 2,
+            "source_index": 444,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          {
+            "family_index": 70,
+            "source_index": 18873,
+            "source_id": "gb:COD:ADM2:63176286B81146580347594"
+          }
+        ]
+      },
+      "retained_complete_family_center_overlay_row": {
+        "key": [
+          14586,
+          136402,
+          146945
+        ],
+        "center": [
+          21.782000717102903,
+          -7.284900903077335
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 2,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "source_index": 444,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B81146580347594",
+            "source_index": 18873,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 2,
+            "family_key": "gb:AGO:ADM1",
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "name": "Lunda Norte",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B81146580347594",
+            "name": "Luiza",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      }
+    },
+    {
+      "key": [
+        14586,
+        136429,
+        146966
+      ],
+      "current_status": "held_pending",
+      "proposed_status": "researched_unresolved_for_independent_review_only",
+      "retained_native_decision": "territorial_exclusion_cells",
+      "retained_frozen_physical_source_row": {
+        "owner_id": 14586,
+        "y": 136429,
+        "x": 146966,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 2,
+            "source_index": 444,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          {
+            "family_index": 70,
+            "source_index": 18873,
+            "source_id": "gb:COD:ADM2:63176286B81146580347594"
+          }
+        ]
+      },
+      "retained_complete_family_center_overlay_row": {
+        "key": [
+          14586,
+          136429,
+          146966
+        ],
+        "center": [
+          21.81083740835959,
+          -7.321675858299673
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 2,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "source_index": 444,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B81146580347594",
+            "source_index": 18873,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 2,
+            "family_key": "gb:AGO:ADM1",
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "name": "Lunda Norte",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B81146580347594",
+            "name": "Luiza",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      }
+    },
+    {
+      "key": [
+        14586,
+        136638,
+        146992
+      ],
+      "current_status": "held_pending",
+      "proposed_status": "researched_unresolved_for_independent_review_only",
+      "retained_native_decision": "territorial_exclusion_cells",
+      "retained_frozen_physical_source_row": {
+        "owner_id": 14586,
+        "y": 136638,
+        "x": 146992,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 2,
+            "source_index": 444,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          {
+            "family_index": 70,
+            "source_index": 18873,
+            "source_id": "gb:COD:ADM2:63176286B81146580347594"
+          }
+        ]
+      },
+      "retained_complete_family_center_overlay_row": {
+        "key": [
+          14586,
+          136638,
+          146992
+        ],
+        "center": [
+          21.846539978486902,
+          -7.606237530333344
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 2,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "source_index": 444,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B81146580347594",
+            "source_index": 18873,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 2,
+            "family_key": "gb:AGO:ADM1",
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165",
+            "name": "Lunda Norte",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B81146580347594",
+            "name": "Luiza",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      }
+    }
+  ],
+  "same_feature_representation_evidence": {
+    "source_receipt": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/kahemba47-researched-unresolved-proposal-20261023.local.json",
+      "bytes": 25576,
+      "sha256": "9c048476716cb8dd90b7f423337442b829dad7aaa713f44ad29cf207b89acce7"
+    },
+    "primary_source_research": [
+      {
+        "source": "U.S. Census Bureau, Angola ADM1-ADM2 USCB October 2019 archive",
+        "url": "https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/angola-adm1-adm2-uscb-oct19.zip",
+        "directory_listing": "https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/",
+        "archive_bytes": 6042844,
+        "archive_sha256": "c700d2f72d3c32dda77a89308930443eadd79005d5cb32d674ee681dadabe4af",
+        "relevant_feature": "Angola_adm1_uscb_2019.shp; Lunda Norte (GENC AO-LNO; FIPS AO17)",
+        "metadata": "Shapefile created 2019-09-12; XML metadata 2019-10-02. Census XML says 161 source ADM2 polygons corresponded to 2016 census ADM2 except L\u00f3vua split from Chitato, and were aligned to State Department 2018 LSIB before dissolution to 18 ADM1 provinces.",
+        "limits": "The source is an official representation of its mapped boundary product. Its LSIB alignment is not a finding about de facto control or a legal adjudication.",
+        "local_archive_path": "source-lineage-evidence-20261023/angola-adm1-adm2-uscb-oct19.zip"
+      },
+      {
+        "source": "geoBoundaries pinned 2021 AGO ADM1 simplified feature body",
+        "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AGO/ADM1/geoBoundaries-AGO-ADM1_simplified.geojson",
+        "revision": "9469f09",
+        "bytes": 574816,
+        "sha256": "71796d87bc112f7969b92ca4c8beb2fa60a4e0a37c3a5e7801ee51a3e7e58c76",
+        "metadata_claim": "Represented 2021; source U.S. Census Bureau; recorded license Public Domain; feature identity gb:AGO:ADM1:26408823B5362531623165 (Lunda Norte)."
+      }
+    ],
+    "crosswalk": {
+      "method": "Compare the pinned Lunda Norte polygon ring to the official 2019 Census Lunda Norte ring by ordered vertex sequence and bounds.",
+      "result": "All 1380 unique vertices of the pinned simplified ring match the 28897-unique-vertex Census ring in one reverse cyclic subsequence; closed endpoint and bounds match.",
+      "assessment": "Strong representation-level correspondence. Not proof that geoBoundaries inherited the 2019 feature attribution, and not a territorial-applicability or full-cell test."
+    },
+    "limit": "Same exact Lunda Norte feature evidence reused; no crosswalk rerun and no 47-cell disposition/acceptance transfer. Intermediate simplified edges and local river applicability remain distinct from retained vertex correspondence."
+  },
+  "source_reasoning": "source-reasoning.md",
+  "author_judgment": {
+    "recommendation": "The cumulative completed source, construction, historical-rule and archival-access work supports a finite source-relative researched-unresolved author proposal for these exact four keys. Root alone decides acceptance.",
+    "why_not_metadata_only": "Actual sole Lunda Norte native contact, same-feature Census vertex correspondence, concrete HDX/2018 LSIB alignment and province dissolution, distinct COD atlas/watercourse construction, specific Kasai legal/survey readings, official catalogue and actual preview inspection are jointly considered.",
+    "why_no_positive_fix": "Neither representation correspondence nor a thalweg rule locates the relevant historical/current river edge relative to the simplified source segments and original keys; no segment-specific displacement or safe replacement is established.",
+    "difference_from_west_v16": "West v16 correctly identified the then-pending004579 follow-through. That bounded public-link follow-through has now been attempted and documented. The original survey map/minutes remain unread; this assessment recommends independent sufficiency consideration without pretending they were read or making physical custodian access universally mandatory.",
+    "readily_feasible_deciding_body": "No full-resolution digital map URL or readable signed-minutes body is identified in the inspected catalogue, named searches or completed follow-through. The failed XML action was a metadata-link request, not a failed full-map download. No known readily readable body is being skipped in this assessment.",
+    "remaining_meaningful_opportunity": "Custodian-mediated access to004579 and related State Archives portfolio111/card2 old287, plus Tshitatu4October1922 minutes, could materially clarify controls/line convention. Relevance is demonstrated; availability and decisiveness are not. Contact, appointment or purchase was not performed, failed or exhausted.",
+    "reopening_condition": "Reassess if a lawful readable full map/minutes or exact historical control/source-version link becomes available. No universal certificate or endless search required."
+  },
+  "new_route_status_preserved": {
+    "url": "https://geocatalogue.africamuseum.be/geonetwork/srv/api/records/BE-RMCA-EARTHS-004579/formatters/xml",
+    "web": "not accessible via this tool",
+    "normal_curl_exit": 6,
+    "verified_no_partial_before_approval": true,
+    "approved_curl_session": 76092,
+    "approved_curl_exit": 60,
+    "error": "SSL certificate problem: unable to get local issuer certificate",
+    "status": "completed failed; stopped no retry",
+    "xml_destination_exists": false
+  },
+  "custodian_outreach": {
+    "status": "UNSENT_NOT_PERFORMED",
+    "draft_receipt": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/lunda4-004579/custodian-request-unsent.txt",
+      "bytes": 1121,
+      "sha256": "fec22d17857a899bd43f3777538fa8947ab8805ee7cff275bf3fb31e67a950cd"
+    },
+    "not_a_denial_or_exhausted_step": true
+  },
+  "unread_source_limits": [
+    "Full004579 legend, datum, station labels and fine controls unread; actual497\u00d7682preview is inadequate for their transcription.",
+    "Original Tshitatu1922 minutes and separate1923 pillar table unread. Thirty-four-marker sequences in different sections are not interchangeable.",
+    "Named1905 Angola chorographic sheet15 and older legal citations are contextual references in the read study, not newly inspected sources or automatically controlling these four keys.",
+    "Restricted AGO PR1352 ZIP and stopped004579XML/TLS route remain untouched. No source absence is inferred."
+  ],
+  "completed_visual_read_this_followup": "Retained Jentgen1952 pp75\u201376 directly viewed: separate southern watershed34-marker sequence and Kasai\u2013Kwango section, four dated minutes, and ad referendum corrections. No control-line construction or georeference.",
+  "read_receipts": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/lunda4-004579/source-access-assessment.md",
+      "bytes": 7200,
+      "sha256": "b30bf7dabbb96ec4e771e1cdb414f425653c51d5860a5e269011b7c5f7d5c4a2"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/lunda4-004579/custodian-request-unsent.txt",
+      "bytes": 1121,
+      "sha256": "fec22d17857a899bd43f3777538fa8947ab8805ee7cff275bf3fb31e67a950cd"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/RMCA-004579-source.html",
+      "bytes": 42594,
+      "sha256": "bba6a865cce09539d71345e23e6d07ac3891ca6232842193a1e00d3ac4b5c890"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/RMCA-I04579-preview.jpg",
+      "bytes": 37683,
+      "sha256": "ac269cb359c98ada2eba943635b2bde80609c83aaa6df6bc01bc695e81b2e3e0"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/kasai4-lunda-norte-researched-unresolved-proposal-v15.json",
+      "bytes": 125692,
+      "sha256": "bbb7f057d365f9facec8faf4d6c664482ec9f6a8c2de482ce8ec9f53df791b6c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/lunda-norte4-researched-unresolved-proposal.json",
+      "bytes": 79029,
+      "sha256": "8f585d3a94e0bbcb315bcb69729dfc03dd228ea5d31a95842a292f002dae3874"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/west32-post-observation-assessment-v16.md",
+      "bytes": 12487,
+      "sha256": "0d8cadfb9a7e0a5b04414dc6b1ccaaa540bf302be1c19e6ba257172834f5acfa"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/lunda4-1922-1923-custody-v11.md",
+      "bytes": 8856,
+      "sha256": "9638f1fd67af9b17a99acd20086245204e7438a80cd8dbd78d242fb9b77de29b"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/kahemba47-census-lineage-20261023.local.md",
+      "bytes": 9309,
+      "sha256": "a95fb7a9c72b5df52fb6b77b2bd32f2c0e1499254f624c2ba03719dd18065f34"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/Jentgen1952-Angola-reading-v9.md",
+      "bytes": 4656,
+      "sha256": "b9bc97b7a8d362c834359454d30917cb5f76a5ae05351c8ef9ffa206d89a4e94"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/lunda4-custody-receipt-v11.json",
+      "bytes": 2051,
+      "sha256": "00ef9536c62598e8a8600c5fc63d608457d5786d71c5dcd0641ab9728ce3d775"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/ago-adm1-bounded-local-result-v14.json",
+      "bytes": 4571,
+      "sha256": "85e20a2024c84fd006819d726b1fb07d7b820e12a6d9a1ffd51918966fe70858"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/west32-native-verification-v15.json",
+      "bytes": 8128,
+      "sha256": "ddef162c67e36af1d0cee842ca24aef74f60dfbf9db438b10918a05c8344f4c9"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/west32-per-source-assessment-v15.json",
+      "bytes": 113548,
+      "sha256": "429efed4736b4b4e9542e0b5a932a30e997ee1a5d5214859e9fd405eeff77809"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/west32-source-qualification-v13.md",
+      "bytes": 10419,
+      "sha256": "d4a3f31181e683c19af6358012f9dc525eef263e847f1dd7470bb956ef5c7607"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/Cartotheque-source.pdf",
+      "bytes": 3483300,
+      "sha256": "273df3de6ab069f73ebb38cb12bde43d8a11dae25ac21a719ea023811b619073"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/Jentgen1952-source.pdf",
+      "bytes": 23262635,
+      "sha256": "7f356325e9d84a542b9b14d045943fbc1f2931ab76e09474b26e4775e745a593"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/lunda4-004579/receipt.json",
+      "bytes": 13194,
+      "sha256": "34c4bf8de40a2eef7692670b23a269ba2e5d39eea5623bbc50565746cece6c3b"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-native-contact-view-2784/residual_land_west.json",
+      "bytes": 107875,
+      "sha256": "2cd1a426dae0003653dfc5a24c087db524cf5c57fa76ef1668f40f560e20a42a"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/Jentgen1952-Angola-p75.png",
+      "bytes": 681038,
+      "sha256": "9a0d012976dc0089fcd11e8b8e1b5a5bffcf4b1c1e9aa9dea3b86a5c7706ce81"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/Jentgen1952-Angola-p76.png",
+      "bytes": 621216,
+      "sha256": "e7dddd6ec48e1686e8799413be3ac1cc76403949e95611dc083860ba676c6e67"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/west32-post-observation-verification-v16.json",
+      "bytes": 4177,
+      "sha256": "d9c42419a209ac7d1a8f9ce6d29c9dca18b0044d1ca308c9cfbd6adee6ba1653"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/west32-post-observation-receipt-v16.json",
+      "bytes": 2832,
+      "sha256": "18cc25621395dd4559cf8d03f8a329d3f9cf9a9b3aaf08c7ec1e0c96fd12d321"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/cod-adm2-original-target-documentation.json",
+      "bytes": 6589,
+      "sha256": "ba49f21a15d3669a22a36ce6d0e2e990e25b4f35bb8584e6cbe5ab2d869d5348"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/kahemba47-researched-unresolved-proposal-20261023.local.json",
+      "bytes": 25576,
+      "sha256": "9c048476716cb8dd90b7f423337442b829dad7aaa713f44ad29cf207b89acce7"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod2785-owned-slot-preserved-inputs/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+      "bytes": 10190632,
+      "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/source-evidence.json",
+      "bytes": 486052,
+      "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-verified-partition.json",
+      "bytes": 22858,
+      "sha256": "656ba6320dc96c390c91250ec4b0599e1fec8e19c5f3a924bc0c5653fc443f2f"
+    }
+  ],
+  "operations": {
+    "new_source_acquisitions": 0,
+    "geometry_or_native_runs": 0,
+    "source_producer_runs": 0,
+    "messages_to_custodians": 0,
+    "git_mutations": 0
+  }
+}

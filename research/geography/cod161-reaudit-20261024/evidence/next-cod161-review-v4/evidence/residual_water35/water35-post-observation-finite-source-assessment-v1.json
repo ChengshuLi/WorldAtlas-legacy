@@ -1,0 +1,488 @@
+{
+  "kind": "COD-water35-post-observation-finite-source-assessment-v1",
+  "date_utc": "2026-10-24",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "status": "Research-author assessment for independent consideration; all 35 holds preserved. No acceptance, credit, owner change or package-completion reinstatement.",
+  "task_method": "Read existing cross-source interpretation, the sole retained contact view and existing four proposals/primary-reading receipts. No new search, download, coordinate calculation, geometry, native predicate, producer or observation. Operand identifiers are read from original_source.source_id; the outer source_id denotes the COD target.",
+  "original_baseline_only": {
+    "original_cells": 3905,
+    "original_owners": 50,
+    "accepted_positive_at_original_reconciliation": 2977,
+    "accepted_extensively_researched_unresolved_at_original_reconciliation": 674,
+    "pending_at_original_reconciliation": 254,
+    "native_held_at_original_reconciliation": 928,
+    "limit": "Historical input baseline, not a new claim about current package acceptance. The 674 already accepted unresolved cells are not new work."
+  },
+  "scope_explanation": "Exactly 35 original pending inland-water keys: 30 Tanganyika = Fizi2/Kigoma + Moba27/Katavi + Moba1/Rukwa, and Bomongo5/Likouala. 29 is only the explicitly defined Kigoma2+Katavi27 subset excluding Rukwa1. The sibling Kalemie30 is outside this assessment; lake-wide contextual evidence does not merge its accounting.",
+  "inputs": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/water35-cross-source-applicability-interpretation.json",
+      "bytes": 5078,
+      "sha256": "23c27e407128eb68a45eb55a0c1ee6fe2010b1c9225288fa2878c4a73e12b40b"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-native-contact-view-2784/residual_water35.json",
+      "bytes": 228066,
+      "sha256": "6a6cc265909ed0d41117b9ac5fe58ca7386907f9800b0f82ab1da5ad8e8f7923"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/water35-four-group-proposal-manifest.json",
+      "bytes": 1617,
+      "sha256": "4cc293f6cef59fe26ebd2744758cf3c41c7df145138564491c98a4fa5d5fd719"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/water35-native-contact-independent-check.json",
+      "bytes": 4035,
+      "sha256": "ebf5eeaafa9261dd48efcf7f9cd296011c813ae905507fc2e3af1ad3f953b2e7"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/au-2026-newsletter-lusaka-passage-inspected.json",
+      "bytes": 5922,
+      "sha256": "dea0b24e04b11c6ad3a547727021a946ca1118a8b84c3e6a5a42ebf56fd0bf89"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba-rukwa1-official-catalogue-followup.json",
+      "bytes": 5812,
+      "sha256": "8d31e298fef0b7a1250f56b1c316fbe6eb4c0b6a627ac4d7b38f8cbc9f94cbd5"
+    }
+  ],
+  "native_receipt": {
+    "code": "8d38ff36d0b37b98bfd00ff2d7fb81a5081c7f4f",
+    "unchanged_accepted_code_base": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239",
+    "diagnostic": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+      "bytes": 10190632,
+      "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+    },
+    "source_evidence": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/source-evidence.json",
+      "bytes": 486052,
+      "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+    },
+    "partition": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-verified-partition.json",
+      "bytes": 22858,
+      "sha256": "656ba6320dc96c390c91250ec4b0599e1fec8e19c5f3a924bc0c5653fc443f2f"
+    }
+  },
+  "native_interpretation": "All 35 retain territorial_exclusion_cells. Interior denotes the stock center-sampled scan-span predicate. Empty kinds denotes no recorded contact under that predicate, not no polygon area overlap or territorial inapplicability. The receipt identifies which original source questions matter; it does not answer those source questions or itself earn science credit.",
+  "groups": [
+    {
+      "context": "Fizi2 / Kigoma",
+      "scope": {
+        "owner": 14453,
+        "count": 2,
+        "key_order": [
+          "owner",
+          "y",
+          "x"
+        ],
+        "keys": [
+          [
+            14453,
+            134450,
+            152467
+          ],
+          [
+            14453,
+            134686,
+            152467
+          ]
+        ],
+        "target_id": "gb:COD:ADM2:63176286B21708239892428",
+        "active_original_source_id": "gb:TZA:ADM1:36957248B11692782910073",
+        "original_class": "inland-water"
+      },
+      "existing_proposal": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/fizi2-kigoma-researched-unresolved-proposal-v2.json",
+        "bytes": 28787,
+        "sha256": "32ddafd080e3b625bd3e61f37a3df7899fea24f1979f0f28d99eb6a60a32ff69"
+      },
+      "actual_active_operand": {
+        "feature_ordinal": 16,
+        "geometry_sha256": "55766c30063cb193900fc7c4ea6617cea818d60e4fc556b4e3031795f79c774a",
+        "negative_ordinal": 8,
+        "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+      },
+      "native_kinds": [
+        "interior"
+      ],
+      "effect_on_previous_interpretation": "The former eight-operand BDI uncertainty is now explicitly narrowed: each BDI operand has empty native kinds for both keys. Burundi 2015 commune-retention laws remain valid contextual research, but neither qualify nor invalidate the sole active Kigoma edge. The old statement that TZA center labels could not exclude BDI was appropriate before the native receipt and is superseded only for this predicate.",
+      "completed_substantive_basis": [
+        "Prior primary1910arrangement/1911Belgian law and1965StateDepartment IBS51 establish historical median-line context. The1965position uncertainty is dated to materials reviewed then; it is not a current legal-status finding. These retained reads are reused with their scope limits, not rerun or claimed newly performed.",
+        "AU2017/2018records establish technical process. ActualAU2022page records four-state shoreline digitization for eventual median determination. Actual2026newsletterpage17 records25–27March2026Lusaka review of a draftMoU and reaffirmation agenda; no adopted coordinate product confirmed in the passage. LakeKariba buoy pilot on samepage is notTanganyika.",
+        "Exact TZAADM1original archive, DBF/XML/license and earlier4.0version inspected.2015represented source is OSM/Wambacher;2017attributeprocessing is not survey date. Original threefieldDBF has no OSMrelation/version/exportsettings. Exporter2019documented optional land clipping but historical selected setting remains unknown; lake relation1374224is a clipping input, not an administrative median relation.",
+        "COD2019original target archive explicitly documents OCHAatlas digitization, watercourse splitting, topology/naming/IMWG checks and later field changes. It supplies no exact lake median, target-specific atlas sheet/control points or rule proving that a lake edge was reconstructed. Watercourse splitting is not assumed to construct lake medians.",
+        "Fizi original two keys are water-classified and both now have only Kigoma negative8 / feature16 interior scan membership. Burundi eight original operands are each explicitly empty under the native predicate.",
+        "ActualBurundi2015laws establish commune regrouping while retaining delimitations and administrative functions. That completed research is retained as context; it is not required to resolve an absentBDInative contact and cannot supply the activeKigoma lake line."
+      ],
+      "remaining_source_question": "Whether the original2015Kigoma administrative lake edge is spatially applicable against CODFizi at these two native centres. Administrative water jurisdiction is possible, but neither water classification nor a source polygon by itself adjudicates it.",
+      "recommendation": "Recommend independent researched-unresolved consideration for these exact two. Completed source archives, exporter water semantics, COD construction, historical primary boundary material and current AU process support a finite source-relative assessment. No positive jurisdictional interpretation is justified.",
+      "existing_reasonable_failed_steps_and_limits": [
+        "HistoricalTZAexportsettings/OSMrelationversion not recoverable from exact original and earlier archive inspected.",
+        "No adopted spatial line exposed by the actualAU2022/2026records inspected; not a claim that no agreement exists."
+      ]
+    },
+    {
+      "context": "Moba27 / Katavi",
+      "scope": {
+        "owner": 14461,
+        "count": 27,
+        "key_order": [
+          "owner",
+          "y",
+          "x"
+        ],
+        "keys": [
+          [
+            14461,
+            136087,
+            153004
+          ],
+          [
+            14461,
+            136088,
+            153005
+          ],
+          [
+            14461,
+            136097,
+            153013
+          ],
+          [
+            14461,
+            136098,
+            153014
+          ],
+          [
+            14461,
+            136099,
+            153015
+          ],
+          [
+            14461,
+            136100,
+            153016
+          ],
+          [
+            14461,
+            136101,
+            153017
+          ],
+          [
+            14461,
+            136102,
+            153018
+          ],
+          [
+            14461,
+            136103,
+            153019
+          ],
+          [
+            14461,
+            136104,
+            153020
+          ],
+          [
+            14461,
+            136108,
+            153023
+          ],
+          [
+            14461,
+            136109,
+            153024
+          ],
+          [
+            14461,
+            136110,
+            153025
+          ],
+          [
+            14461,
+            136111,
+            153026
+          ],
+          [
+            14461,
+            136112,
+            153027
+          ],
+          [
+            14461,
+            136113,
+            153028
+          ],
+          [
+            14461,
+            136114,
+            153029
+          ],
+          [
+            14461,
+            136115,
+            153030
+          ],
+          [
+            14461,
+            136116,
+            153031
+          ],
+          [
+            14461,
+            136119,
+            153033
+          ],
+          [
+            14461,
+            136120,
+            153034
+          ],
+          [
+            14461,
+            136121,
+            153035
+          ],
+          [
+            14461,
+            136122,
+            153036
+          ],
+          [
+            14461,
+            136123,
+            153037
+          ],
+          [
+            14461,
+            136129,
+            153042
+          ],
+          [
+            14461,
+            136130,
+            153043
+          ],
+          [
+            14461,
+            136136,
+            153048
+          ]
+        ],
+        "target_id": "gb:COD:ADM2:63176286B25314267977171",
+        "active_original_source_id": "gb:TZA:ADM1:36957248B34051677343112",
+        "original_class": "inland-water"
+      },
+      "existing_proposal": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba27-katavi-researched-unresolved-proposal-v2.json",
+        "bytes": 332603,
+        "sha256": "4e5820e6d95634e37fa9c554c3b082bcf7d29c594dea5320dbbb77700fdd834d"
+      },
+      "actual_active_operand": {
+        "feature_ordinal": 24,
+        "geometry_sha256": "badfc46061bc4bddb1cef48a3c86530794ed614affcbcc033fd6bb755c7c7354",
+        "negative_ordinal": 2,
+        "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+      },
+      "native_kinds": [
+        "interior"
+      ],
+      "effect_on_previous_interpretation": "Actual Katavi interior membership replaces provisional center-name attribution. Rukwa, Kigoma, TZA ADM2 and all six ZMB operands are empty for these 27. GRID3, Zambian district statutes and TZA ward-dissolve histories cannot explain the active Katavi source edge; their unresolved documentary details are not operative blockers for these rows.",
+      "completed_substantive_basis": [
+        "Prior primary1910arrangement/1911Belgian law and1965StateDepartment IBS51 establish historical median-line context. The1965position uncertainty is dated to materials reviewed then; it is not a current legal-status finding. These retained reads are reused with their scope limits, not rerun or claimed newly performed.",
+        "AU2017/2018records establish technical process. ActualAU2022page records four-state shoreline digitization for eventual median determination. Actual2026newsletterpage17 records25–27March2026Lusaka review of a draftMoU and reaffirmation agenda; no adopted coordinate product confirmed in the passage. LakeKariba buoy pilot on samepage is notTanganyika.",
+        "Exact TZAADM1original archive, DBF/XML/license and earlier4.0version inspected.2015represented source is OSM/Wambacher;2017attributeprocessing is not survey date. Original threefieldDBF has no OSMrelation/version/exportsettings. Exporter2019documented optional land clipping but historical selected setting remains unknown; lake relation1374224is a clipping input, not an administrative median relation.",
+        "COD2019original target archive explicitly documents OCHAatlas digitization, watercourse splitting, topology/naming/IMWG checks and later field changes. It supplies no exact lake median, target-specific atlas sheet/control points or rule proving that a lake edge was reconstructed. Watercourse splitting is not assumed to construct lake medians.",
+        "Each of27exact Moba keys has Katavi negative2 / feature24 interior membership. Other11original operands are explicitly empty at each of these keys, includingRukwa,Kigoma,TZAADM2andallZMB. This replaces an inferred centre-label attribution with the original native operand record.",
+        "Separate Zambia original archives, GRID3production and district legal narratives were actually investigated. Their methods do not define the activeKatavi polygon; the southern1989treaty/map inquiry is not spread across these27 northern keys."
+      ],
+      "remaining_source_question": "The exact applicability of Katavi original administrative lake-edge geometry against CODMoba across these27 original water keys, given documented source construction but no authenticated historical edge-to-median linkage.",
+      "recommendation": "Recommend independent researched-unresolved consideration for these exact 27. The substantive obstacle is the historically selected OSM administrative lake-edge construction against COD Moba, after actual archive/version and boundary-process research. Do not extend the southern treaty-map question to this group.",
+      "existing_reasonable_failed_steps_and_limits": [
+        "Exact original source metadata, DBF/XML and earlier archive did not recover historical OSMrelation/version or waterexportsettings.",
+        "Inspected modernAUprocess records contain no adopted coordinates applicable to these keys; bounded source result only."
+      ]
+    },
+    {
+      "context": "Moba1 / Rukwa",
+      "scope": {
+        "owner": 14461,
+        "count": 1,
+        "key_order": [
+          "owner",
+          "y",
+          "x"
+        ],
+        "keys": [
+          [
+            14461,
+            137123,
+            153506
+          ]
+        ],
+        "target_id": "gb:COD:ADM2:63176286B25314267977171",
+        "active_original_source_id": "gb:TZA:ADM1:36957248B68200678446738",
+        "original_class": "inland-water"
+      },
+      "existing_proposal": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba1-rukwa-researched-unresolved-proposal-v2.json",
+        "bytes": 23883,
+        "sha256": "640d5032b2370d5996a9a4eaf8c19275bf3c6812ddfb35b5e811a2d339ae16fc"
+      },
+      "actual_active_operand": {
+        "feature_ordinal": 15,
+        "geometry_sha256": "525abdcf3097e2062be398537aa86049928f8640ad62869198cf1f1446b61b4b",
+        "negative_ordinal": 0,
+        "source_id": "gb:TZA:ADM1:36957248B68200678446738"
+      },
+      "native_kinds": [
+        "interior"
+      ],
+      "effect_on_previous_interpretation": "The exact key [14461,137123,153506] is an active Rukwa contact, not a Zambia contact. All six original ZMB operands and the other TZA operands are empty. The 1989 treaty and Nsama statutory route remain relevant southern context but do not provide a native exclusion or an authenticated position for the Rukwa edge.",
+      "completed_substantive_basis": [
+        "Prior primary1910arrangement/1911Belgian law and1965StateDepartment IBS51 establish historical median-line context. The1965position uncertainty is dated to materials reviewed then; it is not a current legal-status finding. These retained reads are reused with their scope limits, not rerun or claimed newly performed.",
+        "AU2017/2018records establish technical process. ActualAU2022page records four-state shoreline digitization for eventual median determination. Actual2026newsletterpage17 records25–27March2026Lusaka review of a draftMoU and reaffirmation agenda; no adopted coordinate product confirmed in the passage. LakeKariba buoy pilot on samepage is notTanganyika.",
+        "Exact TZAADM1original archive, DBF/XML/license and earlier4.0version inspected.2015represented source is OSM/Wambacher;2017attributeprocessing is not survey date. Original threefieldDBF has no OSMrelation/version/exportsettings. Exporter2019documented optional land clipping but historical selected setting remains unknown; lake relation1374224is a clipping input, not an administrative median relation.",
+        "COD2019original target archive explicitly documents OCHAatlas digitization, watercourse splitting, topology/naming/IMWG checks and later field changes. It supplies no exact lake median, target-specific atlas sheet/control points or rule proving that a lake edge was reconstructed. Watercourse splitting is not assumed to construct lake medians.",
+        "Exactkey[14461,137123,153506] has onlyRukwa negative0 / feature15 interior membership; all11others, including allZMBoperands andKatavi, are explicitly empty. Rukwa is now native attribution, not only a centre-label inference.",
+        "Southern tripoint context was separately investigated: actualSI53/2012Nsama route follows theDRCboundary to tri-statepoint then approximately39km towardCapeNundo. It supplies relative route but not adopted coordinate/datum. It does not makeZMBan active native exclusion here.",
+        "Official2009ZambiaParliamentanswer384 actually read:1989treaty treated as agreed boundary while physical demarcation remained pending; minister said noDRCvalidityquery received as of2009. ACP2021confirms18September1989treaty context. Prior academictranscription has signedmapsI/II provision but is not a certifiedoriginal.",
+        "OfficialHansard/ministerialcatalogues actually inspected: relevant chronological list jumps2006to2002, with no accessible2004statement link. BoundedofficialUN/gazette inquiries did not locate a treaty/annex identifier; unsupportedUNTSform paused, not falsely counted as queried."
+      ],
+      "remaining_source_question": "Applicability of originalRukwa lake geometry at this single southern key in relation to CODMoba and the lake/tripoint context. No signed-map position can be inferred from the1989treaty title, relative2012route, or modern demarcation reports.",
+      "recommendation": "Recommend separate independent consideration of the one-cell researched-unresolved proposal, explicitly conditional on reviewer assessment of the still-unexecuted UNTS catalogue lead. Completed original-source, statutory and official treaty-history research is substantive; it does not establish that every reasonable step is exhausted. Do not represent this proposal as unconditional readiness or completion while the specific pending lead is unresolved.",
+      "existing_reasonable_failed_steps_and_limits": [
+        "ExactTZAarchive lacks historicalOSMrelation/version/exportconfiguration.",
+        "OriginalsignedmapsI/II custody not obtained through the actual officialParliamentroute and earlier boundedcatalogue inquiries; the2004reference is a demonstratedcataloguegap, not proof of nonexistence.",
+        "Durhamrestrictedroute remains stopped; UNTSinteractiveform remains unexecuted. These are explicit limits, not completed searches."
+      ]
+    },
+    {
+      "context": "Bomongo5 / Likouala",
+      "scope": {
+        "owner": 14484,
+        "count": 5,
+        "key_order": [
+          "owner",
+          "y",
+          "x"
+        ],
+        "keys": [
+          [
+            14484,
+            129679,
+            144249
+          ],
+          [
+            14484,
+            129682,
+            144248
+          ],
+          [
+            14484,
+            129683,
+            144248
+          ],
+          [
+            14484,
+            130793,
+            144162
+          ],
+          [
+            14484,
+            130794,
+            144162
+          ]
+        ],
+        "target_id": "gb:COD:ADM2:63176286B36806520086654",
+        "active_original_source_id": "gb:COG:ADM1:67827341B88704799146201",
+        "original_class": "inland-water"
+      },
+      "existing_proposal": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/bomongo5-likouala-researched-unresolved-proposal-v2.json",
+        "bytes": 35397,
+        "sha256": "37a0a4488d6683dc0222cb3ab571415be597138522a7454ac5891f4a76572edc"
+      },
+      "actual_active_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+        "negative_ordinal": 0,
+        "source_id": "gb:COG:ADM1:67827341B88704799146201"
+      },
+      "native_kinds": [
+        "interior"
+      ],
+      "effect_on_previous_interpretation": "All five active contacts are Likouala ADM1. The three COG ADM2 operands now have empty native kinds, resolving the earlier 537-overlay omission as an attribution dependency. Their 2007 amalgamation/edge-matching limitations remain true but no longer explain these native vetoes. Exact Likouala OSM construction and COD atlas/watercourse methods are the operative comparison.",
+      "completed_substantive_basis": [
+        "Allfive originalwaterkeys have Likouala negative0 / feature4 interior scan membership. The originalLoukela/Owando/NgabeCOGADM2operands each have emptykinds. This resolves the earlier missing native attribution that caused withdrawal of the oldBomongoproposal.",
+        "Shared exactCOGADM1archive440062bytes/SHA731e08ee…a7cc8d now directly read forLikouala. Record4 isLikouala,CG-2,ADM1. Originalbody/hash match retainedoperand.2017OSM/Wambacher metadata,2017attributeprocessing and2021schema/export history are documented; no riverbank/thalweg rule, OSMrelation/version or exactsnapshot supplied in inspected archive.",
+        "OriginalCODBomongo source actually inspected: atlasdigitization and watercourse splitting with topology/naming/IMWGvalidation. No target-specific channel rule or atlas sheet binding makes that equal to Likouala wateredge construction.",
+        "Actual1887protocol reproduction inHertsletpp217–218 identifiesUbangi thalweg fromCongo confluence to4N. IBS127(1972) distinguishesUbangi rule fromCongo sector unspecified exactline in reviewedtreaties. Neither is a present-day coordinate survey or native-key georeference.",
+        "ActualACP2024/2025commission accounts read: Manyanga150km namedlandsector is notBomongowater; Oyo cooperation/demarcation roadmaps do not contain an adoptedBomongo spatialannex. Unread ministry social attachments remain blocked, not declaredabsent.",
+        "ActualWFPBomongo2020map fully visually read: geographic context and operational river-border depiction at1:861774,WGS84,mixedsources andnonendorsement. It supplies no source-specific historicalOSM edge rule or surveyedthalweg control."
+      ],
+      "remaining_source_question": "OriginalCODBomongo versusCOGLikouala river-edge applicability at the five native centres, retaining three northern and two southern clusters separately. No cluster is assigned to a particular historical river rule solely from coordinates/OCR.",
+      "recommendation": "Recommend independent researched-unresolved consideration for these exact five, preserving their three-key and two-key clusters. Completed treaty, official boundary-study, commission, operational map and original-source research supplies substantive grounds. No modern channel position or treaty-sector assignment to a cluster is inferred.",
+      "existing_reasonable_failed_steps_and_limits": [
+        "ExactoriginalCOGADM1archive/DBF/XML and originalCODtarget archive do not recover a common riveredge rule or positionalcontrol.",
+        "MinistryX originalpost403 andFacebookthrottle stopped; actualACPcommunique remains inspected evidence. Archival manuscript/maps are catalogue-only without an identified readable digital item.",
+        "WFPmap obstacle is resolved by actualvisualread, andCOGADM2sourceidentity is known; neither is falsely retained as unread blocker."
+      ]
+    }
+  ],
+  "resolved_obsolete_blockers": [
+    "The AU 2026 newsletter was actually acquired through a separately approved nonbrowser route and read, including page17 and its context. July cover / June filename / August technical PDF metadata are distinguished. The Lusaka passage describes review of a draft MoU and reaffirmation purpose, not completed adoption or coordinates. The Lake Kariba buoy pilot cannot be transferred to Tanganyika. The stopped browser remains stopped; unread newsletter is no longer a blocker.",
+    "The WFP Bomongo 2020 map was visually read. Its scale, WGS84 label, mixed sources and nonendorsement support contextual interpretation, not a surveyed channel or original OSM edge rule. It is no longer an unread blocker.",
+    "The one completed diagnostic resolves original operand attribution, including previously omitted COG ADM2/TZA ADM2/ZMB families. No second diagnostic is needed to replace those former attribution gaps."
+  ],
+  "actual_unread_leads_and_route_limits": [
+    {
+      "context": "Moba1 / Rukwa",
+      "target": "https://treaties.un.org/pages/AdvanceSearch.aspx?clang=_en&tab=UNTS",
+      "action": "Interactive catalogue query for Zambia and Zaire/DRC, 18 September 1989, boundary/delimitation title and signed Maps I/II",
+      "state": "UNEXECUTED / PAUSED",
+      "reason": "The actual page and form were read, but no supported form submission was performed. Parent stopped browser/unsupported interactive work. No catalogue result or exhaustion is claimed.",
+      "scientific_relevance": "A matching original treaty/annex could supply map provenance or endpoint conventions. It is a concrete outstanding lead, not a requirement for a universal sovereignty certificate. Independent review must explicitly decide whether this pending route prevents final researched-unresolved acceptance."
+    },
+    {
+      "context": "Moba1 / Rukwa",
+      "target": "Official 2004 Lands statement and signed 1989 Maps I/II; official gazette issue catalogues",
+      "state": "ITEM NOT LOCATED / CATALOGUE READ INCOMPLETE",
+      "reason": "Actual Parliament chronology inspected but no 2004 link; official DRC portal and Zambia Government Printing timed out, Cabinet Gazette page returned 502. No exact gazette issue/accession identified. Recoverable failures are not denials or proof of absence.",
+      "scientific_relevance": "A lawful accessible specific catalogue or identified item would be a reasonable finite next step. No guessed issue, repeated search, contact or purchase performed."
+    },
+    {
+      "context": "Moba1 / Rukwa",
+      "target": "Previously restricted Durham route and https://gazettes.africa/",
+      "state": "STOPPED / RESTRICTED; gazettes.africa 403",
+      "reason": "No retry or alternate route used to bypass the restriction. Academic transcription remains a discovery lead, not authenticated signed-map custody."
+    },
+    {
+      "context": "Tanganyika30",
+      "target": "AU social X403; stopped browser session; earlier denied HDX/TanzLII routes",
+      "state": "STOPPED / DENIED routes retained",
+      "reason": "No retry. Completed lawful newsletter and original-archive evidence is used without reopening these routes. No specific unread accessible adopted-coordinate annex is authenticated in the retained record."
+    },
+    {
+      "context": "Bomongo5",
+      "target": "Ministry X post403; Facebook attachment throttle; historical manuscript/map catalogue entries",
+      "state": "BLOCKED SOCIAL READS; CATALOGUE-ONLY ARCHIVAL ITEMS",
+      "reason": "Actual ACP accounts were read. No readable digital archival item or adopted Bomongo spatial annex was identified. Cannot assert attachments or unpublished records contain no result.",
+      "scientific_relevance": "An authentic specific digital river-sector map/commission annex or original source edge-construction receipt would merit reopening. Catalogue-only existence is not a completed read."
+    },
+    {
+      "context": "All groups",
+      "target": "Historical OSM relation/version/export setting and COD atlas sheet/edge convention",
+      "state": "NOT RECOVERED FROM ACTUAL ORIGINAL ARCHIVES",
+      "reason": "Actual archives, original feature identities, processing history and relevant publisher documentation inspected. Missing fields do not invalidate the sources. No new exact version-specific public item is identified in this reassessment.",
+      "scientific_relevance": "Source-relative uncertainty remains after substantive lawful research; no endless general search, replacement geometry or impossible universal certificate is proposed."
+    }
+  ],
+  "nonoperative_documentary_limits": "BDI publisher stops, denied ZMB ArcGIS source record, and COG ADM2 per-feature construction uncertainties remain recorded history. Their native kinds are empty at the relevant rows, so they are not automatically pending exclusion-qualification requirements. Empty kinds is not a territorial clearance.",
+  "overall_recommendation": "Submit the four existing exact-scope proposals and this delta assessment to independent factual acceptance. Fizi2, Katavi27 and Likouala5 have a finite substantive basis for researched-unresolved consideration. Rukwa1 has a separate substantive basis but an explicit unexecuted treaty-catalogue lead; do not convert that lead into a failed search or silently aggregate this one cell into the other 29 lake cells. No cell is accepted by this document.",
+  "new_accepted_cells": 0,
+  "hold_removals": 0,
+  "new_observations": 0,
+  "new_searches": 0
+}

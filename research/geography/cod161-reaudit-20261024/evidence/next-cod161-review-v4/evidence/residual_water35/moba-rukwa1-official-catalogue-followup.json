@@ -1,0 +1,87 @@
+{
+  "kind": "bounded-official-treaty-annex-catalogue-followup",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "date_utc": "2026-10-24",
+  "exact_key": [
+    14461,
+    137123,
+    153506
+  ],
+  "parent_request": "Official 18 September 1989 treaty signed-annex catalogue / UN registration / DRC or Zambia gazette record; no purchase or contact; do not repeat failed Parliament or restricted Durham route.",
+  "preceding_evidence": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba-rukwa1-1989-treaty-lineage.json",
+    "sha256": "6a3d7f3ca5116b445d9675437f03245aaf7ba78b829e2923334a33dd1046b1a7"
+  },
+  "queries": [
+    "site:treaties.un.org \"Zambia\" \"Zaire\" \"1989\" boundary",
+    "site:leganet.cd \"18 septembre 1989\" traité",
+    "site:zambialii.org \"1989\" \"Zaire\" treaty",
+    "site:un.org \"18 September 1989\" \"Zaire\"",
+    "\"Zaire\" \"Zambia\" delimitation [treaties.un.org]",
+    "\"1989\" \"Zambie\" [journalofficiel.cd]",
+    "\"1989\" \"Zaire\" treaty gazette [gov.zm]",
+    "\"18 septembre 1989\" frontière traité appendice [leganet.cd,journalofficiel.cd,droitcongolais.info]",
+    "\"Zaire\" \"1989\" \"treaty\" \"gazette\" [gov.zm]",
+    "\"Zaïre\" \"Zambie\" \"18 septembre\" \"Journal officiel\"",
+    "\"Treaty\" \"Zaire\" \"Zambia\" \"18 September 1989\"",
+    "Zambia government gazette official government printer archive 1989",
+    "\"1989\" \"Zaire\" \"Delimitation\" \"Treaty\" \"Appendix\"",
+    "\"1989\" \"Zambie\" \"traité\" \"annexes\" [au.int,peaceau.org,sadc.int,treaties.un.org]",
+    "United Nations Treaty Collection Advanced Search bilateral treaties title participant",
+    "Zambia 1989 government gazette archive gazettes africa",
+    "site:journalofficiel.cd \"1989\"",
+    "site:treaties.un.org \"Tanganyika\" \"1989\""
+  ],
+  "search_result": "No matching official bilateral treaty registration, gazette issue citation or signed-appendix item identified. UN results were unrelated multilateral records/cumulative indexes; no treaty absence or nonregistration conclusion follows. No unrelated large volume was downloaded merely because both country names occurred.",
+  "actual_repository_checks": [
+    {
+      "url": "https://www.journalofficiel.cd",
+      "action": "Open official gazette portal discovered from legal-source directory",
+      "outcome": "400 Timeout fetching",
+      "classification": "Incomplete read, not denial or absence."
+    },
+    {
+      "url": "https://www.cabinet.gov.zm/?page_id=1190",
+      "action": "Open official Government Gazette page",
+      "outcome": "502 Bad Gateway",
+      "classification": "Incomplete read. Search index only states purchase at Government Printing Department; no purchase/contact attempted and no title-specific holding verified."
+    },
+    {
+      "url": "https://www.motl.gov.zm/gp/",
+      "action": "Open official Government Printing Department",
+      "outcome": "400 Timeout fetching",
+      "classification": "Incomplete read. No online issue catalogue or 1989 item read."
+    },
+    {
+      "url": "https://treaties.un.org/Pages/UNTSOnline.aspx?id=1",
+      "action": "Initial UNTS route",
+      "outcome": "Redirected to PageNotFound.aspx",
+      "classification": "Recoverable wrong/stale path, not repository absence. Recovered via homepage and search-discovered active advanced-search URL."
+    },
+    {
+      "url": "https://treaties.un.org/Pages/Home.aspx?clang=_en",
+      "action": "Follow homepage and UNTS link",
+      "outcome": "Homepage read; parsed UNTS link resolved to image URL with Unicode decoding error",
+      "classification": "Web rendering/navigation limitation, not treaty result."
+    },
+    {
+      "url": "https://treaties.un.org/pages/AdvanceSearch.aspx?clang=_en&tab=UNTS",
+      "action": "Read current official advanced-search page",
+      "outcome": "Success; page exposes document type, filter, search text and criteria form, plus title/participant/full-text modes. No actual form query submitted: text-only web tool exposes no form interaction and no result link to a matching treaty.",
+      "classification": "Specific feasible catalogue lead remains pending; must not mark UNTS database searched to exhaustion. Interactive form search is a distinct outstanding action."
+    },
+    {
+      "url": "https://gazettes.africa/",
+      "action": "Read public archive catalogue for original Zambia government gazettes",
+      "outcome": "403 Forbidden",
+      "classification": "Denied by source/tool fetch; no retry, mirror workaround or bypass. Actual Zambia issue catalogue remains unread."
+    }
+  ],
+  "consequence": "No authenticated official treaty or signed map annex acquired in this continuation. Existing official ACP reporting remains the established legal-history context. The academic reproduction remains a discovery lead only.",
+  "remaining_concrete_steps": [
+    "UNTS current advanced-search form: treaty, participants Zambia plus Zaire/DRC, conclusion date 18 September 1989, with title variants delimitation/boundary/frontière. No result is claimed until form is actually queried.",
+    "Accessible official gazette issue catalogue or authenticated signed Appendix I/II item, if a lawful supported route becomes available. No gazette number or accession has been discovered to justify guessed issue retrieval.",
+    "If the signed treaty or approved demarcation protocol is acquired, inspect map scale, datum, endpoint/median provenance and applicability to the exact cell before qualification. No latitude-only clearance."
+  ],
+  "status": "All current holds preserved. Pending concrete catalogue access and spatial inputs; no forced researched-unresolved proposal, acceptance, science credit, absence claim or exhaustion claim. No Git mutation, document contact or purchase."
+}

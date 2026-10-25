@@ -1,0 +1,1230 @@
+{
+  "kind": "uvira6-three-frozen-source-archives-primary-inspection",
+  "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+  "date": "2026-10-24",
+  "status": "research only; six pending; all holds retained",
+  "accepted_cells": 0,
+  "geometry_runs": 0,
+  "source_archive_downloads": "Three distinct exact public GitHub media archives downloaded under separate approved narrow commands; no failed publisher URL retried. Prior BDI ADM1 archive not retried.",
+  "exact_six_keys": [
+    [
+      14494,
+      133179,
+      152269
+    ],
+    [
+      14494,
+      133330,
+      152388
+    ],
+    [
+      14494,
+      133331,
+      152388
+    ],
+    [
+      14494,
+      133331,
+      152389
+    ],
+    [
+      14494,
+      133332,
+      152388
+    ],
+    [
+      14494,
+      133391,
+      152370
+    ]
+  ],
+  "archives": [
+    {
+      "name": "BDI_ADM2",
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/BDI_ADM2-9469f09.zip",
+      "bytes": 448304,
+      "sha256": "522c15fd275ab02381d545e77c291a2a5b6bdc948d20597064e9c84e911d2eae",
+      "git_blob_sha1": "e204e3ed48d568f58f1a4821e4c5bd9c37c0c8d4",
+      "authenticated_frozen_pointer": {
+        "file": "BDI_ADM2.zip",
+        "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:522c15fd275ab02381d545e77c291a2a5b6bdc948d20597064e9c84e911d2eae\nsize 448304\n",
+        "api_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/BDI_ADM2.zip?ref=9469f09"
+      },
+      "manifest": [
+        {
+          "path": "BDI_ADM2.shp",
+          "bytes": 721100,
+          "sha256": "a2f5f6748b1fe5ac496c6828c4fa2bae11233327a57ec05a64803963bf22398b"
+        },
+        {
+          "path": "BDI_ADM2.qpj",
+          "bytes": 257,
+          "sha256": "1de411dcdeedce3219242306fc29bfa1d7fa08883e4ff6779baf798ec50d1657"
+        },
+        {
+          "path": "BDI_ADM2.prj",
+          "bytes": 143,
+          "sha256": "98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb"
+        },
+        {
+          "path": "BDI_ADM2.dbf",
+          "bytes": 2597,
+          "sha256": "602564940073e5573db2008960021084811528e0369378eec21667ec7969c41e"
+        },
+        {
+          "path": "BDI_ADM2.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "path": "BDI_ADM2.shx",
+          "bytes": 1052,
+          "sha256": "c9564ecec8de2174a6049ef6c0594f94fd5b7b3ecf762f67d68846580f05e6b6"
+        },
+        {
+          "path": "meta.txt",
+          "bytes": 497,
+          "sha256": "ddcc0db064b62a2509abc9e2420d4ae96dbbab6727700dca1da61c705a13b5b7"
+        }
+      ],
+      "texts": {
+        "BDI_ADM2.qpj": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]\n",
+        "BDI_ADM2.prj": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]]",
+        "meta.txt": "Boundary Representative of Year: 2007.0\nISO-3166-1 (Alpha-3): BDI\nBoundary Type: ADM2\nCanonical Boundary Type Name: \nSource 1: New York University Spatial Data Repository, Stanford University\nSource 2: Map Maker Limited\nRelease Type: gbOpen\nLicense: Public Domain\nLicense Notes: License on metadata pop-up on source page\nLicense Source: https://geo.nyu.edu/catalog/stanford-th822mn7301#iso-metadata-reference-info\nLink to Source Data: https://geo.nyu.edu/catalog/stanford-th822mn7301\nOther Notes: "
+      },
+      "shp_header_type": 5,
+      "shp_record_types": {
+        "5": 119
+      },
+      "dbf": {
+        "count": 119,
+        "fields": [
+          {
+            "name": "Name",
+            "type": "C",
+            "size": 10
+          },
+          {
+            "name": "Level",
+            "type": "C",
+            "size": 10
+          }
+        ],
+        "rows": [
+          {
+            "Name": "Ryansoro",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ndava",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Buyengero",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bugarama",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rumonge",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Burambi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kanyosha1",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kabezi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Muhuta",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mukike",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mutambu",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyabiraba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bururi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Vugizo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Vyanda",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rusaka",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mugamba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Songa",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mugongoman",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gisozi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bisoro",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Matana",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kayokwe",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mpanda",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Murwi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bubanza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rango",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bukeye",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Muramvya",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Isale",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rugazi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mubimbi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rutegama",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kiganda",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mbuye",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gahombo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gatara",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Butaganzwa",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kayanza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bugendana",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Musongati",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rutana",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gitanga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Makamba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rutovu",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Buraza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyanrusang",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gishubi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyabihanga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Giheta",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Itaba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bukirasazi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gitega",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Makebuko",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Butaganzwa",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mpinga-Kay",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyabitsind",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ruyigi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Shombo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Butezi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyabikere",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bweru",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gitaramuka",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gashikanwa",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mutaho",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Muhanga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ngozi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bugenyuzi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gihogazi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ruhororo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Tangara",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Vumbi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kiremba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kirundo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Cankuzo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mutumba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Buhiga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mwakiro",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gasorwe",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gashoho",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gitobe",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bwambarang",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ntega",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Marangara",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyamurenza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mwumba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Busiga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kabarore",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bukinanyan",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mabayi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mugina",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rugombo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Buganda",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gihanga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mutimbuzi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyanza-Lac",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mabanda",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Giharo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kinyinya",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gisuru",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Cendajuru",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gisagara",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mishiha",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kigamba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Buhinyuza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Muyinga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Butihinda",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Giteranyi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Busoni",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bugabira",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kayogoro",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bukemba",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Matongo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Muruta",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Musigati",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Muha",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Mukaza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ntahangwa",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kibago",
+            "Level": "ADM2"
+          }
+        ]
+      },
+      "native_feature_matches": [
+        {
+          "native_operand": {
+            "feature_ordinal": 24,
+            "geometry_sha256": "67e462c7b8ab6c5de3acd244fbfc318729c96433be5979eb0ffdd70ff1e12a56",
+            "negative_ordinal": 3,
+            "source_id": "gb:BDI:ADM2:21766830B66237815735217"
+          },
+          "source_feature": {
+            "shapeName": "Murwi",
+            "shapeISO": "",
+            "shapeID": "21766830B66237815735217",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 24,
+          "archive_dbf_row": {
+            "Name": "Murwi",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        },
+        {
+          "native_operand": {
+            "feature_ordinal": 88,
+            "geometry_sha256": "a266914dfc8c2feb441b79d9b7c0d19b2376b40fda130c14694132088fc4b730",
+            "negative_ordinal": 4,
+            "source_id": "gb:BDI:ADM2:21766830B75549003528399"
+          },
+          "source_feature": {
+            "shapeName": "Bukinanyan",
+            "shapeISO": "",
+            "shapeID": "21766830B75549003528399",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 88,
+          "archive_dbf_row": {
+            "Name": "Bukinanyan",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        },
+        {
+          "native_operand": {
+            "feature_ordinal": 89,
+            "geometry_sha256": "e5034c1dec74ec052384b027929994ca7fd540578e3e2ab8ba5ad83e74b20b40",
+            "negative_ordinal": 5,
+            "source_id": "gb:BDI:ADM2:21766830B12025098844752"
+          },
+          "source_feature": {
+            "shapeName": "Mabayi",
+            "shapeISO": "",
+            "shapeID": "21766830B12025098844752",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 89,
+          "archive_dbf_row": {
+            "Name": "Mabayi",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        },
+        {
+          "native_operand": {
+            "feature_ordinal": 90,
+            "geometry_sha256": "ed53d6bd4768c9f7586aa8d0272bab53b9c11701c69bc0bf9c0b81ff043a2a13",
+            "negative_ordinal": 6,
+            "source_id": "gb:BDI:ADM2:21766830B421358417112"
+          },
+          "source_feature": {
+            "shapeName": "Mugina",
+            "shapeISO": "",
+            "shapeID": "21766830B421358417112",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 90,
+          "archive_dbf_row": {
+            "Name": "Mugina",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        },
+        {
+          "native_operand": {
+            "feature_ordinal": 91,
+            "geometry_sha256": "b6bf7baf1c1a0193ae6bb9b357febe7f2b342ff6546f9e0d37d5cfd81ccf4f11",
+            "negative_ordinal": 7,
+            "source_id": "gb:BDI:ADM2:21766830B51540876931984"
+          },
+          "source_feature": {
+            "shapeName": "Rugombo",
+            "shapeISO": "",
+            "shapeID": "21766830B51540876931984",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 91,
+          "archive_dbf_row": {
+            "Name": "Rugombo",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        },
+        {
+          "native_operand": {
+            "feature_ordinal": 92,
+            "geometry_sha256": "9979334dec870b9082c91059d57fb2463682a8e0792a79c8d8c9fd0166ca55f4",
+            "negative_ordinal": 8,
+            "source_id": "gb:BDI:ADM2:21766830B2147150443328"
+          },
+          "source_feature": {
+            "shapeName": "Buganda",
+            "shapeISO": "",
+            "shapeID": "21766830B2147150443328",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 92,
+          "archive_dbf_row": {
+            "Name": "Buganda",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        },
+        {
+          "native_operand": {
+            "feature_ordinal": 93,
+            "geometry_sha256": "97f4f22afd50bc07c6c908c1645ed62aca03ed81ca2fbf871a86495cc85111dc",
+            "negative_ordinal": 9,
+            "source_id": "gb:BDI:ADM2:21766830B78591112120307"
+          },
+          "source_feature": {
+            "shapeName": "Gihanga",
+            "shapeISO": "",
+            "shapeID": "21766830B78591112120307",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 93,
+          "archive_dbf_row": {
+            "Name": "Gihanga",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        },
+        {
+          "native_operand": {
+            "feature_ordinal": 94,
+            "geometry_sha256": "246eb27d7c2cda628da711d03c2137d13783faad30c5e0e83337171ca7378c9d",
+            "negative_ordinal": 10,
+            "source_id": "gb:BDI:ADM2:21766830B6345718789328"
+          },
+          "source_feature": {
+            "shapeName": "Mutimbuzi",
+            "shapeISO": "",
+            "shapeID": "21766830B6345718789328",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 94,
+          "archive_dbf_row": {
+            "Name": "Mutimbuzi",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        }
+      ]
+    },
+    {
+      "name": "RWA_ADM1",
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/RWA_ADM1-9469f09.zip",
+      "bytes": 943610,
+      "sha256": "9c9152e74d8f87f39fe1d9df0496eae6638303f2153d74b8edfe0758b1b21c61",
+      "git_blob_sha1": "da8455a283b03eebe88f0e8c6a7085aa0311ab9a",
+      "authenticated_frozen_pointer": {
+        "file": "RWA_ADM1.zip",
+        "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:9c9152e74d8f87f39fe1d9df0496eae6638303f2153d74b8edfe0758b1b21c61\nsize 943610\n",
+        "api_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/RWA_ADM1.zip?ref=9469f09"
+      },
+      "manifest": [
+        {
+          "path": "License.png",
+          "bytes": 214581,
+          "sha256": "324ba6dfd52b6a852879adde6c89be21dffd604d1fd3ec948dc2bf754d989a10"
+        },
+        {
+          "path": "meta.txt",
+          "bytes": 482,
+          "sha256": "0a8042991874eee5f402595f3b83358a102548bb512de8741842b8d23bd09dc7"
+        },
+        {
+          "path": "RWA_ADM1.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "path": "RWA_ADM1.dbf",
+          "bytes": 2205,
+          "sha256": "a96a246a7e795793b234694e8b1ffaed9e6d96781eff7d6dc2bc41d86f408096"
+        },
+        {
+          "path": "RWA_ADM1.prj",
+          "bytes": 145,
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "path": "RWA_ADM1.shp",
+          "bytes": 955164,
+          "sha256": "bf98b2dc93be66caab4db5b74261896ec2b9461bd0e721fc4c2c86385962cd1b"
+        },
+        {
+          "path": "RWA_ADM1.shx",
+          "bytes": 140,
+          "sha256": "8cb40dad6a5e3470dd744967ea20e3b64fab29db5cf7b3d34c38514a9eeb7ac1"
+        }
+      ],
+      "texts": {
+        "meta.txt": "Boundary Representative of Year: 2020\r\nISO-3166-1 (Alpha-3): RWA\r\nBoundary Type: ADM1\r\nCanonical Boundary Type Name: Province\r\nSource 1: The Rwanda Geo Portal\r\nSource 2: nan\r\nRelease Type: gbOpen\r\nLicense: Creative Commons Attribution 4.0 (CC BY 4.0)\r\nLicense Notes: nan\r\nLicense Source: https://rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0\r\nLink to Source Data: https://rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0\r\nOther Notes: ",
+        "RWA_ADM1.prj": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]"
+      },
+      "shp_header_type": 5,
+      "shp_record_types": {
+        "5": 5
+      },
+      "dbf": {
+        "count": 5,
+        "fields": [
+          {
+            "name": "Level",
+            "type": "C",
+            "size": 80
+          },
+          {
+            "name": "Name",
+            "type": "C",
+            "size": 80
+          },
+          {
+            "name": "ISO_Code",
+            "type": "C",
+            "size": 254
+          }
+        ],
+        "rows": [
+          {
+            "Level": "ADM1",
+            "Name": "City of Kigali",
+            "ISO_Code": "RW-01"
+          },
+          {
+            "Level": "ADM1",
+            "Name": "Southern Province",
+            "ISO_Code": "RW-05"
+          },
+          {
+            "Level": "ADM1",
+            "Name": "Northern Province",
+            "ISO_Code": "RW-03"
+          },
+          {
+            "Level": "ADM1",
+            "Name": "Eastern Province",
+            "ISO_Code": "RW-02"
+          },
+          {
+            "Level": "ADM1",
+            "Name": "Western Province",
+            "ISO_Code": "RW-04"
+          }
+        ]
+      },
+      "native_feature_matches": [
+        {
+          "native_operand": {
+            "feature_ordinal": 4,
+            "geometry_sha256": "3212815f98f9ad5b09c6ee726a2534506c45d292e6eebbf5115a5a4e70c9b6ae",
+            "negative_ordinal": 11,
+            "source_id": "gb:RWA:ADM1:91480417B44016762519517"
+          },
+          "source_feature": {
+            "shapeName": "Western Province",
+            "shapeISO": "RW-04",
+            "shapeID": "91480417B44016762519517",
+            "shapeGroup": "RWA",
+            "shapeType": "ADM1"
+          },
+          "archive_dbf_ordinal": 4,
+          "archive_dbf_row": {
+            "Level": "ADM1",
+            "Name": "Western Province",
+            "ISO_Code": "RW-04"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        }
+      ]
+    },
+    {
+      "name": "RWA_ADM2",
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/RWA_ADM2-9469f09.zip",
+      "bytes": 1914434,
+      "sha256": "74e24b59e5497a1ae2245d688f2019f808887dfaeefcc35882af977b2262704e",
+      "git_blob_sha1": "ba4265f1adc1df0e70eb2535735f66309f889f3c",
+      "authenticated_frozen_pointer": {
+        "file": "RWA_ADM2.zip",
+        "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:74e24b59e5497a1ae2245d688f2019f808887dfaeefcc35882af977b2262704e\nsize 1914434\n",
+        "api_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/RWA_ADM2.zip?ref=9469f09"
+      },
+      "manifest": [
+        {
+          "path": "RWA_ADM2.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "path": "RWA_ADM2.dbf",
+          "bytes": 1328,
+          "sha256": "2e6f4584099e67521f19c94a94eaef5b4a92624333c7446184c4e11e0e805411"
+        },
+        {
+          "path": "RWA_ADM2.prj",
+          "bytes": 145,
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "path": "RWA_ADM2.sbn",
+          "bytes": 460,
+          "sha256": "41becc0b10b59967ec0ab9c527e91b213c426fc83f3a181469f8bd7d2c238461"
+        },
+        {
+          "path": "RWA_ADM2.sbx",
+          "bytes": 164,
+          "sha256": "2639d3ce9eb3feb3922e751aef9c23af9b2946e6961bd620dc697cc5799e4118"
+        },
+        {
+          "path": "RWA_ADM2.shp",
+          "bytes": 2466916,
+          "sha256": "21c64383b02376b5c18d971b3d153d1dd961564c4ef9975c6eb9eb641e1b08f4"
+        },
+        {
+          "path": "RWA_ADM2.shp.xml",
+          "bytes": 674,
+          "sha256": "ff9b8bb74aa2eb9d52361b88009844b86cac298804d2e2d848e09aeff369b9c5"
+        },
+        {
+          "path": "RWA_ADM2.shx",
+          "bytes": 340,
+          "sha256": "2756e7ad32dac926288ba2db1297b7f411d1ec669b50bf242efe87bfa37e31e6"
+        },
+        {
+          "path": "meta.txt",
+          "bytes": 439,
+          "sha256": "acd4175d97db58b9d666ae831256f5ba1d5c70a4dd6ad52a1154b492813a32d5"
+        }
+      ],
+      "texts": {
+        "RWA_ADM2.prj": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+        "RWA_ADM2.shp.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20171017</CreaDate><CreaTime>17412300</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource=\"c:\\program files (x86)\\arcgis\\desktop10.3\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CalculateField\" Date=\"20171017\" Time=\"174123\">CalculateField RWA_ADM2 Name [District] VB #</Process><Process ToolSource=\"c:\\program files (x86)\\arcgis\\desktop10.3\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CalculateField\" Date=\"20171017\" Time=\"174131\">CalculateField RWA_ADM2 Level \"ADM2\" VB #</Process></lineage></DataProperties></Esri></metadata>\r\n",
+        "meta.txt": "Boundary Representative of Year: 2012.0\nISO-3166-1 (Alpha-3): RWA\nBoundary Type: ADM2\nCanonical Boundary Type Name: \nSource 1: Open Data Rwanda\nSource 2: nan\nRelease Type: gbOpen\nLicense: Creative Commons Attribution 4.0 International (CC BY 4.0)\nLicense Notes: nan\nLicense Source: http://www.statistics.gov.rw/terms-use\nLink to Source Data: http://geodata-nisr.opendata.arcgis.com/datasets/c0a3d1deab694f7998bc4b966be12cbb_0\nOther Notes: "
+      },
+      "shp_header_type": 5,
+      "shp_record_types": {
+        "5": 30
+      },
+      "dbf": {
+        "count": 30,
+        "fields": [
+          {
+            "name": "Name",
+            "type": "C",
+            "size": 30
+          },
+          {
+            "name": "Level",
+            "type": "C",
+            "size": 10
+          }
+        ],
+        "rows": [
+          {
+            "Name": "Nyarugenge",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gasabo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kicukiro",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyanza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gisagara",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyaruguru",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Huye",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyamagabe",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ruhango",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Muhanga",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kamonyi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Karongi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rutsiro",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rubavu",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyabihu",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ngororero",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rusizi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rulindo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gakenke",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Musanze",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Burera",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gicumbi",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Rwamagana",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyagatare",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Gatsibo",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kayonza",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Kirehe",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Ngoma",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Bugesera",
+            "Level": "ADM2"
+          },
+          {
+            "Name": "Nyamasheke",
+            "Level": "ADM2"
+          }
+        ]
+      },
+      "native_feature_matches": [
+        {
+          "native_operand": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "ed9e11e1efb6195c08f19f7325fa34dd3a5f7756c3fce3b97521c94e447144cc",
+            "negative_ordinal": 12,
+            "source_id": "gb:RWA:ADM2:39286606B89224673348511"
+          },
+          "source_feature": {
+            "shapeName": "Rusizi",
+            "shapeISO": "",
+            "shapeID": "39286606B89224673348511",
+            "shapeGroup": "RWA",
+            "shapeType": "ADM2"
+          },
+          "archive_dbf_ordinal": 16,
+          "archive_dbf_row": {
+            "Name": "Rusizi",
+            "Level": "ADM2"
+          },
+          "name_ordinal_match": true,
+          "geometry_equivalence_claimed": false
+        }
+      ]
+    }
+  ],
+  "repository_evidence": {
+    "descriptors": [
+      {
+        "file": "BDI_ADM2.zip",
+        "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:522c15fd275ab02381d545e77c291a2a5b6bdc948d20597064e9c84e911d2eae\nsize 448304\n",
+        "api_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/BDI_ADM2.zip?ref=9469f09"
+      },
+      {
+        "file": "RWA_ADM1.zip",
+        "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:9c9152e74d8f87f39fe1d9df0496eae6638303f2153d74b8edfe0758b1b21c61\nsize 943610\n",
+        "api_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/RWA_ADM1.zip?ref=9469f09"
+      },
+      {
+        "file": "RWA_ADM2.zip",
+        "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:74e24b59e5497a1ae2245d688f2019f808887dfaeefcc35882af977b2262704e\nsize 1914434\n",
+        "api_url": "https://api.github.com/repos/wmgeolab/geoBoundaries/contents/sourceData/gbOpen/RWA_ADM2.zip?ref=9469f09"
+      }
+    ],
+    "histories": [
+      {
+        "file": "BDI_ADM2.zip",
+        "records": [
+          {
+            "sha": "b7dd6a55701c76a330500ad9d9240f2b9997c6a8",
+            "date": "2023-01-19T12:31:04Z",
+            "message": "Cleared history",
+            "parents": [
+              "930dac8eb68870fadcdea2718139389615c9ddfd"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "RWA_ADM1.zip",
+        "records": [
+          {
+            "sha": "b7dd6a55701c76a330500ad9d9240f2b9997c6a8",
+            "date": "2023-01-19T12:31:04Z",
+            "message": "Cleared history",
+            "parents": [
+              "930dac8eb68870fadcdea2718139389615c9ddfd"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "RWA_ADM2.zip",
+        "records": [
+          {
+            "sha": "b7dd6a55701c76a330500ad9d9240f2b9997c6a8",
+            "date": "2023-01-19T12:31:04Z",
+            "message": "Cleared history",
+            "parents": [
+              "930dac8eb68870fadcdea2718139389615c9ddfd"
+            ]
+          }
+        ]
+      }
+    ],
+    "pr845": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/pull/845",
+      "merged_at": "2021-02-17T15:23:13Z",
+      "merge_commit": "14562b650c899f5103f900f963c67fda26b48e53",
+      "head": "de2370c7bfba9958411395cf61650e6f59b60c05",
+      "file": "sourceData/gbOpen/RWA_ADM1.zip",
+      "git_blob_sha": "da8455a283b03eebe88f0e8c6a7085aa0311ab9a",
+      "local_archive_git_blob_sha_matches": true
+    },
+    "pr2151": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/pull/2151",
+      "merged": true,
+      "path": "sourceData/gbAuthoritative/BDI_ADM2.zip",
+      "excluded": "Different product family; not lineage evidence for consumed gbOpen Map Maker product."
+    },
+    "bounded_history_limits": [
+      "All three frozen-path commit queries return only b7dd6a55701c76a330500ad9d9240f2b9997c6a8, Cleared history,2023-01-19.",
+      "BDI frozen-path query before that commit at parent930dac8eb68870fadcdea2718139389615c9ddfd returned empty.",
+      "Exact BDI+MapMaker PR and issue searches returned0; exact RWA_ADM2 pre2023 PR search0. This is bounded search, not global absence.",
+      "Historical RWA845 binary contents endpoint rejected nonUTF8; no retry needed: downloaded exactfrozenarchive local Gitblob hash matches PRfile blob directly."
+    ]
+  },
+  "rwa_adm1_license_visual_read": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/rwa-adm1-archived-license.png",
+    "sha256": "324ba6dfd52b6a852879adde6c89be21dffd604d1fd3ec948dc2bf754d989a10",
+    "finding": "Archived screenshot item dac12729b2cd4f0db92fddaa6a80460d, owner Rwanda.GeoPortal. Province boundaries created 2006, updated by 2012 census; field mapping 2011–2012 and adjustment with 2008–2009 orthophoto; credits Rwanda Natural Resources Authority and National Institute of Statistics of Rwanda. Polygon Layer and CC BY visible. Screenshot does not visibly specify CC version; meta.txt claims CC BY4.0. No international line adoption or six-cell control."
+  },
+  "bdi_line_polygon_assessment": "Frozen submitted archive has119 polygon records(type5) and119 Name/Level DBF rows; eight native operand names match same ordinals. Source already polygon before frozen-release derivative. No operation log, XML or license screenshot in archive. Indexed upstream catalogue line-description does not prove an actual conversion: could be catalogue wording or upstream/presubmission transformation. Exact origin unresolved; cannot infer specific constructor.",
+  "rwa_adm2_xml_assessment": "Archived XML records2017-10-17 CalculateField Name from District and Level ADM2. It does not document boundary construction or validation; represented2012 remains source claim distinct from processing date.",
+  "bounded_qualification_assessment": "Source vintage, archived license and presubmission format now substantiated. Primary source inspection is not territorial qualification or metadata credit. No source supplies adopted Rusizi line linked to exact six; pending status unchanged.",
+  "remaining_obstacles": [
+    "BDI original NYU/Stanford source metadata/body unavailable under prior web results and not retried; exact upstream construction unresolved.",
+    "RWA original publisher pages unavailable and not retried; exact archived source inspected successfully.",
+    "Mobutu–Buyoya correspondence exact text/date/cote still unlocated; previous publisher405/library timeout stand.",
+    "BDI ADM1 exact archive remains prior DNS pending under no-retry instruction."
+  ],
+  "scope_exclusions": [
+    "No source geometry transformation, new cell observation, georeference, stock build or diagnostic run.",
+    "No cross-product substitution: BDI gbAuthoritative PR2151 not used for gbOpen lineage.",
+    "No change to13 original negative operands, accepted positives or accepted unresolved cells."
+  ]
+}

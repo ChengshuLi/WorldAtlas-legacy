@@ -1,0 +1,805 @@
+{
+  "worker": "01a16f2d-be76-72d7-bc46-8b89a6efb0f2",
+  "status": "pending-all19-held-no-acceptance",
+  "completedOCRPages": {
+    "21": 62,
+    "23": 76
+  },
+  "files": [
+    {
+      "path": "gazette1954-local/aef-jo-1954-21.pdf",
+      "bytes": 3392026,
+      "sha256": "05ff39efc25fbede6192062100fc51ebc9d99b56a02d61c76eb3f02727677fe2"
+    },
+    {
+      "path": "gazette1954-local/aef-jo-1954-21.txt",
+      "bytes": 62,
+      "sha256": "177755455a1cdfce42fdb3d0277f170c2b9fe00880d02f3a7ddad00daaccbcb7"
+    },
+    {
+      "path": "gazette1954-local/aef-jo-1954-23.pdf",
+      "bytes": 3517969,
+      "sha256": "daca0b9983fd4876b6b13016d816090b247c120f6ff31b2543beb948ee551f9d"
+    },
+    {
+      "path": "gazette1954-local/aef-jo-1954-23.txt",
+      "bytes": 76,
+      "sha256": "bc0effc480ff91eaa4346f07b968a15b71fb0ff8048ac213431f2a821b52aaa5"
+    },
+    {
+      "path": "gazette1954-local/cabra-sketch-24057.html",
+      "bytes": 21859,
+      "sha256": "5adf5bb8a85ef9395d031de4baa54634232fa19c4d784f65069cc2dc2fd1dcbd"
+    },
+    {
+      "path": "gazette1954-local/cabra-sketch-24057.txt",
+      "bytes": 2440,
+      "sha256": "dcbc67444606e94bbaf1a0e8cbedf756f39a54dc745870940d0c0d2a2d9b60e1"
+    },
+    {
+      "path": "gazette1954-local/cabra-technical-minutes-24052.html",
+      "bytes": 24160,
+      "sha256": "7b92d4753b0eb6964b750b180d19f21a7dcef5925462f9ea06daec83e6fb7877"
+    },
+    {
+      "path": "gazette1954-local/cabra-technical-minutes-24052.txt",
+      "bytes": 3606,
+      "sha256": "e530d8972fd489613667899a985baefdcead28bebeed55913c2ec9fa14289aac"
+    },
+    {
+      "path": "gazette1954-local/download-attempts.json",
+      "bytes": 357,
+      "sha256": "6204c3e20643d7ae7322bf7d6e1e3e6c61cd0bf3ae62ab96b077ab7cc4db14f0"
+    },
+    {
+      "path": "gazette1954-local/issue21-bornage-45.png",
+      "bytes": 273533,
+      "sha256": "2542bad280717568e6dc8735a2f84f34b5e533343f59575f9b2150c432991b64"
+    },
+    {
+      "path": "gazette1954-local/issue21-contents-01.png",
+      "bytes": 241756,
+      "sha256": "46b0e3ee6973ec504d81a2a58c979304719542028da06660a25d5bc0d631b1e3"
+    },
+    {
+      "path": "gazette1954-local/issue21-contents-02.png",
+      "bytes": 255242,
+      "sha256": "d9b504714d423a0cb6cad554d74e12e161a67ce49b694f101b7b4d3ccc80f93a"
+    },
+    {
+      "path": "gazette1954-local/issue21-date-match-07.png",
+      "bytes": 271496,
+      "sha256": "394a6dc56f194fc4f94e5fe0d512c6db4ff2eddfab149a9d9fc0a9fe97139f45"
+    },
+    {
+      "path": "gazette1954-local/issue21-date-match-08.png",
+      "bytes": 267347,
+      "sha256": "39f1112c3bc4475719eb31bffbaef583443de19ceec9c1c342b0d36ea57c3ad1"
+    },
+    {
+      "path": "gazette1954-local/issue21-date-match-09.png",
+      "bytes": 283113,
+      "sha256": "4e5de71787e077aaa6048fa0c3e6657439983a6400441abf27edec8e70e23f57"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-001.txt",
+      "bytes": 3813,
+      "sha256": "eac5ea553d479daf8db68906b7fe8e613cb6f415f16f01f2f64ce1f09a2055d7"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-002.txt",
+      "bytes": 4898,
+      "sha256": "17379aaef90daf4124340f22e1bdefa7b3d6c621c913c2a55ea9011b5cd14cc0"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-003.txt",
+      "bytes": 6434,
+      "sha256": "0a399009c186fc91de4b21db82bc8653b3b44b317f8332c7897e201b4537ab03"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-004.txt",
+      "bytes": 6669,
+      "sha256": "fdb4f614d4d6b35cd26376cba68e63508c966becb59cfa584f1c01918fd90ca4"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-005.txt",
+      "bytes": 5890,
+      "sha256": "8b1903eba7c99adbbe5748cdca378087cfef9c093c75c7b0b2c04127fbe61c06"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-006.txt",
+      "bytes": 6608,
+      "sha256": "4c524659d66998aa01c5477c634ae1dffecedd65b92038972de503697901c4ac"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-007.txt",
+      "bytes": 6200,
+      "sha256": "c966f9f3406d5ebf29cf51bbfd32e3c85acbeb45d14bb2df9e525f44eb88f3ca"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-008.txt",
+      "bytes": 6328,
+      "sha256": "f4fbb37390b011172d987b6abf3239b433f767ecae6644acdf068f93550596cb"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-009.txt",
+      "bytes": 6685,
+      "sha256": "97470c2b0c17b2b04bb8086f84f1c044f90996e464b79f66608cf58e0578ce96"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-010.txt",
+      "bytes": 7270,
+      "sha256": "670550c0ee36c1cb87799027c2688ebabef85db880edacee0c5fd88e2c6148e9"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-011.txt",
+      "bytes": 6605,
+      "sha256": "702b1437ff13b75b43235e26b8eb0ad3bf6c97345a9896489286bb07a335fa5a"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-012.txt",
+      "bytes": 5679,
+      "sha256": "61580808a0fb5d6dd2240f537092dab7e854e7086bed6a28be3fd7c241499b1b"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-013.txt",
+      "bytes": 7596,
+      "sha256": "5703c9aa28d375301b2ba5cfc7f08399c5f5d7c3577de6e9c919cb8aa08d4032"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-014.txt",
+      "bytes": 7666,
+      "sha256": "cfdecbbb259fa7dd274bf918d0275a25bdeb7b01c33296cbca0de4a9cf88b9c8"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-015.txt",
+      "bytes": 554,
+      "sha256": "e2735c0ff7e355785102c4373411c859a62596b8b07d13f4a4448ae0682929d3"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-016.txt",
+      "bytes": 6897,
+      "sha256": "ffd5a89a6986ac3926ecdc0a6eae0b2c71567ecc1c63b3fc8bc4f37f1ca6a8c2"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-017.txt",
+      "bytes": 6910,
+      "sha256": "716aaf50521242118162437b363146c0caae2d406f6b8c98127067117a39ce73"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-018.txt",
+      "bytes": 6259,
+      "sha256": "262eddca99febb71990f776182e6f9aa0589f8a7803c5ef6b7ee6aadc0eeba72"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-019.txt",
+      "bytes": 7066,
+      "sha256": "8ac41de956cfdd5c5601508af40387ef8ed6d0cc8f728439414e43f70f3537b7"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-020.txt",
+      "bytes": 2602,
+      "sha256": "7af28fc968194ab363ddc60bd8ef425986509b9a9c305dd97c32492d75c00d89"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-021.txt",
+      "bytes": 4818,
+      "sha256": "2813e5c4a7c243be67d8e0d546d3ee16bb7ad6dfa17b263f02da2fb9f8f625a6"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-022.txt",
+      "bytes": 5482,
+      "sha256": "d6be9ba5f6ba517d13402d9802e7ef705f5e21a46422803cc7f95a5606710334"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-023.txt",
+      "bytes": 2548,
+      "sha256": "d78edd413a85630d21499d0fa3bef412f77e3f6ee038b9484a31c91fd75e03a1"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-024.txt",
+      "bytes": 4446,
+      "sha256": "14a43c3ac1bf679755583df4121299d0a517719a8b63bdd3fd96378c23e2baf5"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-025.txt",
+      "bytes": 4910,
+      "sha256": "6e1748be4b6cba80add2710294d119a23e0dac591d0b15f5a5e9c24128f68047"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-026.txt",
+      "bytes": 2286,
+      "sha256": "de5cb4acdecf7dcafb6aab08edce91aeb3e522bb6eeb40a06dddf3490a900a01"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-027.txt",
+      "bytes": 1850,
+      "sha256": "e9fb809372aa075f83d85ace13389cdf2c3fb825f46bf0e9339094abcfc8a5fa"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-028.txt",
+      "bytes": 1912,
+      "sha256": "31c06d8f3034e23b0af4a9f51cc76d42bd07e85800ae25acf5362aee22c95f62"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-029.txt",
+      "bytes": 1912,
+      "sha256": "38767b7ec22489a1abae0fc9504fc10d77a04b1f5dbe766c02f4509feff0e317"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-030.txt",
+      "bytes": 1799,
+      "sha256": "21611e957a16e1a8f54e2f0e31b08a93181884084090297e123a904f5ff5bbc0"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-031.txt",
+      "bytes": 7244,
+      "sha256": "db6ac0be027cf682b025dfeb616926fc4d545fa86bc580684f63c287b3930a52"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-032.txt",
+      "bytes": 5259,
+      "sha256": "37c6ef6ff37829286686bef1551254a83f41d32e76eb0308030d8ca9b2a11629"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-033.txt",
+      "bytes": 4532,
+      "sha256": "2fded1fc2be3be7c406b1dab4eb525ac5567a7a6d6766d8ed4e5963fff6cfbed"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-034.txt",
+      "bytes": 4121,
+      "sha256": "80c79ae2122741c66f3002e0ffc9b053e05311dcd23451d1475013cad2da2c7b"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-035.txt",
+      "bytes": 6137,
+      "sha256": "fb551b5c411e7ad165318770a497de4d0c1ca398488b6bb76e179fabedeccf72"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-036.txt",
+      "bytes": 5396,
+      "sha256": "b0f310cb39a4738eca6eb48bc40237b9bc8f569029eedfd5a4a6db1952d882ff"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-037.txt",
+      "bytes": 5597,
+      "sha256": "97ffcdd0cecb9211affeab30e6f0a236d6624dfba8bd1bc6d63104e8b159ae82"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-038.txt",
+      "bytes": 5016,
+      "sha256": "ae2c9b90a172b877b4b7c9664063e3ecc644b704ef9e63b72aa41074c64c2056"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-039.txt",
+      "bytes": 5339,
+      "sha256": "4e051fb365c89aaf1ae8b4775230773e9b121e937b62ea7d341639f849780dc4"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-040.txt",
+      "bytes": 5959,
+      "sha256": "5e24d17b7d3360547be39fb23d4a8936d17eaf7bb4c05d4071185e1783a2f6c5"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-041.txt",
+      "bytes": 6954,
+      "sha256": "8055cab41c6a0570b1e4408b50c14efa14b979369a98a4fee30c8becdf2878ec"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-042.txt",
+      "bytes": 6708,
+      "sha256": "0edef219898d89cc22a74cac7b75d068748f53d26b0d8c5f48ab46ec5bd945df"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-043.txt",
+      "bytes": 5754,
+      "sha256": "518fb4ad7b6fba8e83120a474878c4e77f7934f3d465f1aacc366d9daa548dc5"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-044.txt",
+      "bytes": 5694,
+      "sha256": "6682d5ce1fcc1974e7fcf4b6023491b2f1f9a02f3f60dc1a0832ea022c2478b4"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-045.txt",
+      "bytes": 5962,
+      "sha256": "d10fe61d22dac06b1f9d3d0e60c6ee99fa33634c7391fc5dd6abe2b840215799"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-046.txt",
+      "bytes": 6181,
+      "sha256": "a155081c9ef4432c06493ed547258d8d9da44a5eacccf892104048fc5bcfbdf8"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-047.txt",
+      "bytes": 6645,
+      "sha256": "f1b024e919df1bbe044e0168b9364f216781e88dd8da4450373e089ae44c8273"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-048.txt",
+      "bytes": 6871,
+      "sha256": "a8ba5a3cd778650a0ebbcb58957c3cf699a50e528a4f99b471f8993fa8e22a11"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-049.txt",
+      "bytes": 6101,
+      "sha256": "a88bafdc1c039a7c21144e1bb9d141c75802124151092ec1ee1f66a14054b31c"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-050.txt",
+      "bytes": 5191,
+      "sha256": "dee0d3dfa6ddafb6b91e640e32a7c44bf5b4b70b4127f7a3777f2d2d6827b50a"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-051.txt",
+      "bytes": 5936,
+      "sha256": "7e8e0a5bfd33ded3a63f324319db390e8384f44a34f4debd721c8ea2ec5753b4"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-052.txt",
+      "bytes": 3921,
+      "sha256": "348e2efea36e1a9c4e9f188ac59282077cc160c9bfcfb7dd6ca80cc224ad28f4"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-053.txt",
+      "bytes": 4797,
+      "sha256": "7a5d19ce89b60fc82d86cecc8b3c785809db3c13350101126eb502fe84c2a7c2"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-054.txt",
+      "bytes": 4890,
+      "sha256": "3869b224f14953dcdc475f1a500b63fb4e304a8573dd7fabf13b289afda7ffe8"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-055.txt",
+      "bytes": 4999,
+      "sha256": "5aed7a3764820e4af57f2c830b31100ef217f6e4c0f99fb762a022571fdbe4f7"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-056.txt",
+      "bytes": 4649,
+      "sha256": "b85712487a33c7cc3c402ea5e609eb6cdfc9e434f5836845eb3daec446ae5248"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-057.txt",
+      "bytes": 3791,
+      "sha256": "8ae5c2c5fac0bc545a5aaa61216c6127ac59e60b253229f72d89bda1124efae4"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-058.txt",
+      "bytes": 3198,
+      "sha256": "af757b9eedbfc22357d15b700fefe7d970e924292ebdbb55037369c56be09d8a"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-059.txt",
+      "bytes": 3662,
+      "sha256": "6494c43cc99686dbad7f9c56dd2bbb53acf4a6a88cdabbd9348c67afc4f356d6"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-060.txt",
+      "bytes": 1408,
+      "sha256": "41da0fd47e045dc5b270c9691ecbc0e7883eb672bf22cf93a2e08cbe2aef5d5b"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-061.txt",
+      "bytes": 2320,
+      "sha256": "3cf5a7e394773cd7c40c6167abbbc362f7dea6bbb34cae245f33fa7549c3c6e0"
+    },
+    {
+      "path": "gazette1954-local/issue21-ocr-approved/page-062.txt",
+      "bytes": 51,
+      "sha256": "f5cc1fa298a424f9074eb869199f310a44263846bea299844720ed3b29ca854d"
+    },
+    {
+      "path": "gazette1954-local/issue23-cabinda-page37.png",
+      "bytes": 285023,
+      "sha256": "d469877fe00ef71bafca9504b934e49ab1fc295dad30aeebb9ed275dfaea0227"
+    },
+    {
+      "path": "gazette1954-local/issue23-contents-01.png",
+      "bytes": 223918,
+      "sha256": "ce2723147f2c426dd0901f1fd04c19a228aac1f675e2dd8e95d8095147500a1b"
+    },
+    {
+      "path": "gazette1954-local/issue23-contents-02.png",
+      "bytes": 248575,
+      "sha256": "063b2e53e5b64b5be2b86af58f512561c81ccff92b687a6bd88d915b4fc32a10"
+    },
+    {
+      "path": "gazette1954-local/issue23-date-match-04.png",
+      "bytes": 248849,
+      "sha256": "8a3d33093d768900406bb8a244a6c0cdfbd071a9fbe75ea0da5a25b59c11cf51"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-001.txt",
+      "bytes": 4088,
+      "sha256": "7f5aa894e380930779e6abc1e417fa407f1541beb96643af5f8249906d144d28"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-002.txt",
+      "bytes": 4906,
+      "sha256": "d1ab465b4ca12af29a9e5eb8090f077ac5f586d699b8da774a548055b0aa3a85"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-003.txt",
+      "bytes": 7240,
+      "sha256": "865194dc51b0d39a41b3cc5c8bdbbe69ec54116e0efd996bed0f5c5083718e56"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-004.txt",
+      "bytes": 5996,
+      "sha256": "f6d05edf6c482c62c03fa68a929037ebc010f27cd343c60377609a508117672d"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-005.txt",
+      "bytes": 6552,
+      "sha256": "8cc572527512d9e8ebc6dfbf24e0c16564b94d8cba397e2309e5df010b0108a9"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-006.txt",
+      "bytes": 1823,
+      "sha256": "8d8fc4c44962311220b05331950f54eeeaf0b5b0afd9250b491b8f8bb72125ab"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-007.txt",
+      "bytes": 5223,
+      "sha256": "82b29fa130a9f36f155057745d633d65705c1dcbcf9b963959ae222b62f4ac0e"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-008.txt",
+      "bytes": 4559,
+      "sha256": "24c5c8563e9508f697baf4f21797a37b375d6e6c3968a838ae2e66ed645a890f"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-009.txt",
+      "bytes": 3264,
+      "sha256": "263d13e8ec81f8a8cae7f6bde8236e0935b84d1850e803ae669ddb550a3cfd63"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-010.txt",
+      "bytes": 4152,
+      "sha256": "e25d78c1857499646c0a9a3d874d1dfe09e404115596950748a3476a182beb69"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-011.txt",
+      "bytes": 5868,
+      "sha256": "cd03e6fe88d57843794e3616f5459e0b0abf1b9a8d9eba00c01bdd6e21e6a380"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-012.txt",
+      "bytes": 5122,
+      "sha256": "f82d2b91c9d6ba11d009c47f91b9c7d1ffecd9fc96c4610f4eded71fa5350a2d"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-013.txt",
+      "bytes": 4123,
+      "sha256": "2152eb68c48f2e4bb9989929cc0dc3b2f834b5eae09982fe3671df9d69421c87"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-014.txt",
+      "bytes": 4489,
+      "sha256": "6f56cb06e77e03c773a934b257643ab2a6b485c75567b01f52284945bdfa1399"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-015.txt",
+      "bytes": 5888,
+      "sha256": "21cb6b7624ccde5214feea16623fafb31caa40f64c48dbbed521593ea9e56694"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-016.txt",
+      "bytes": 6342,
+      "sha256": "823d066b97f13be2cafa5dbdc2ca8e7a481ab01a56f2b1b7960545990bbfef89"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-017.txt",
+      "bytes": 5231,
+      "sha256": "ddcb5c67ceb0e6a6f53fb9b2d6afde9ecac3dd44908b40aea7c50ca05eba4e9f"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-018.txt",
+      "bytes": 3659,
+      "sha256": "96989b4af411449cbac1a9b332ef9098d8e40499cfb259bfd1b1ca5d0ebc13c9"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-019.txt",
+      "bytes": 5622,
+      "sha256": "a7c6b9010744c3bcf710cf552051a7502dfe10cccf34969f71ab61832c33aa7d"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-020.txt",
+      "bytes": 5633,
+      "sha256": "db98ee2154c48e1f3df1de3fdc64faee00e3748429a028162667d38d2f6a3522"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-021.txt",
+      "bytes": 3656,
+      "sha256": "a2e6f74d5f7baecf00601f2ee95d60841b487f86e3826b2e78a70e954a7fb14b"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-022.txt",
+      "bytes": 4656,
+      "sha256": "ebd46952614d05d871fde1b4578faa9346bea69c546330a0c91d99b0338ee138"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-023.txt",
+      "bytes": 5627,
+      "sha256": "27bd4399a2962c547f54fe04a767cf6a08e5ff7ff151a7d610f66e265b13ca6c"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-024.txt",
+      "bytes": 5595,
+      "sha256": "06608b7f6499d1523de5f950aae4164e87401334159e07b60a1ce6b9ff6d1761"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-025.txt",
+      "bytes": 6406,
+      "sha256": "84c37a0fbbf500d2eda2cffb6496648b5f98b62105a83718f80aa06f3824c643"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-026.txt",
+      "bytes": 5437,
+      "sha256": "2002fdbbb8307c83d8bee7739bef409f08a58d850963f051ba5c68d876e1f2f7"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-027.txt",
+      "bytes": 6355,
+      "sha256": "6994c1db6e83a359b549e4632f30f642081dbb757064d53ba53aa7c039b7fe99"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-028.txt",
+      "bytes": 6504,
+      "sha256": "5430d0313861f28e949836a464737e823d6ba200e39076a6b2f833181e82a94b"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-029.txt",
+      "bytes": 5573,
+      "sha256": "da88f00eaade8bf2c4e823231a9748ccfb75416ba31f6fd2ea608be34f680cf0"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-030.txt",
+      "bytes": 5426,
+      "sha256": "09f2df22fd9055c9692b0570eb55b54d2bb081fe35a838c70c778819f34e929d"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-031.txt",
+      "bytes": 4231,
+      "sha256": "69381a018531a4fc1a7b2fa1bc77aa1cda9db105428f5f81b76b67bdd6f21792"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-032.txt",
+      "bytes": 6364,
+      "sha256": "4e7a5b868c7597fe221f8322a9ccac21c98f94de4de2e208d08f6b71ab76f81e"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-033.txt",
+      "bytes": 4807,
+      "sha256": "1d9f1432d3fbdb8d2e69289dbadbabf2d801cfffbd5c43f4eed09a338fbe88a3"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-034.txt",
+      "bytes": 6229,
+      "sha256": "b85afec59975194ba0310f37921cf574b9e75202a30a8bebadd36e86494b2ca3"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-035.txt",
+      "bytes": 5566,
+      "sha256": "bea6c4ddb2ce43925ccbe4ff84be90d9d2ea11eebec952d3a100714adf49d2d1"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-036.txt",
+      "bytes": 5628,
+      "sha256": "4d50900758806a288077abc8fa59c62a53640ee9a3040ffe0013481086886433"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-037.txt",
+      "bytes": 7395,
+      "sha256": "99dadd3339674d54df3964937bc29ac240d717d284055cd8af36899a77a180f4"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-038.txt",
+      "bytes": 6725,
+      "sha256": "8a954fcc17738958878000c95486249e80f70ec84b20e8271ed0c04fd5c5c97f"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-039.txt",
+      "bytes": 5842,
+      "sha256": "f7f5a93e0f4b5ad2d9a7589e653a9cbaf2fb457eeb88b9d6d8b6885377fb8df4"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-040.txt",
+      "bytes": 5906,
+      "sha256": "1bf6a689f2dd78179291f03cbd1be9c41240ac5a6fc1c949ddd10b68c9d92556"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-041.txt",
+      "bytes": 5533,
+      "sha256": "a8b6ec0a59376e6c29c10c4e408e52fc07f3a38b398a80ffe4a98f14571bba81"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-042.txt",
+      "bytes": 7551,
+      "sha256": "2f78922f2429f6e861dafb7d6df63d3c71b633640ca4029b6bcbb3e2202451b0"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-043.txt",
+      "bytes": 7507,
+      "sha256": "1cdfe9dfbe29c64f8f054ae964c6804db3ce3e19da4ef31430824a430706bb0d"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-044.txt",
+      "bytes": 6385,
+      "sha256": "4c8d4dfee58788ad4e8f67a80337e551555cf761a44475c42b9e8062485e5519"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-045.txt",
+      "bytes": 7381,
+      "sha256": "027f07ac8db01ab93eb68090c6c56d7d3836c68cdce294dc910755697dbe4d50"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-046.txt",
+      "bytes": 6164,
+      "sha256": "e5f7bdead76cfcf484c3e37768f2c22cf005f67d87d9bbe8a7e277bc3a5e3fe4"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-047.txt",
+      "bytes": 6164,
+      "sha256": "0531316ad4e1f76ab1ce73ef43d32930f584a7e0fa6fa6b18c9f9c54a7d16629"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-048.txt",
+      "bytes": 7542,
+      "sha256": "3f4bf6e2473b0a710a49bf7ad32d532f131796c3632cabfd07921b27316a2160"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-049.txt",
+      "bytes": 5857,
+      "sha256": "e1aa980bc35644887986e84ea3a72603437864bee0af9048730eea6c4b2c07f8"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-050.txt",
+      "bytes": 4722,
+      "sha256": "79d3cb867ad2d0316f7730ae78272d512bbfc12c972df03b0e56bb7ea999d99c"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-051.txt",
+      "bytes": 3347,
+      "sha256": "0abc27f47bf17a07c4cd5f816d5e05ed7a0faa0046f0c9cb3d3bc929bc936b17"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-052.txt",
+      "bytes": 4810,
+      "sha256": "b8f1c439d8ba8fc471eb72b6d22bec52d4bd27828de5228036b5ed2476b020dd"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-053.txt",
+      "bytes": 5097,
+      "sha256": "9be600ff0653b04906f7794b5c33b70b309d0e819c6d59445b81dc39f14a2311"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-054.txt",
+      "bytes": 5952,
+      "sha256": "bf808d90cbdcc54c1fbbc21b6763314b7ab4ece8c18e767811ab3f7c7c94955d"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-055.txt",
+      "bytes": 5100,
+      "sha256": "f32b0b3f3e24812e7f03576d54d77083ce36975f68349d647811973bf724ee26"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-056.txt",
+      "bytes": 4813,
+      "sha256": "bc11927bec2aa765cbcedc1f17adcb82a9853f49283671e763f9ab409d001fa9"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-057.txt",
+      "bytes": 4168,
+      "sha256": "23575d8d68a2888c2ac1f03a1174708ae834c24c42f62382994ec8781bdc464e"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-058.txt",
+      "bytes": 3877,
+      "sha256": "09be0340fea768efe7931170a8882b77b9ca2bd6194fbd0febec00a173d75592"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-059.txt",
+      "bytes": 3665,
+      "sha256": "2e3ceea01de11a028438853f37f315b9d136a9f689dfde6c732e70b6c77fdfa0"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-060.txt",
+      "bytes": 6966,
+      "sha256": "d9837c014ba141fc4b38a5bd5bf901342a7c75d56f970425b0e641dbf27ed759"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-061.txt",
+      "bytes": 6615,
+      "sha256": "dcd3c4af5e86e4ccdd5b2511563d3328594ab84d796d913772eede11e66e7f22"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-062.txt",
+      "bytes": 6125,
+      "sha256": "7591b41fd814f0206f9cf50e59dcba9bcbfa584393e31571531e3eaa0591f3e5"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-063.txt",
+      "bytes": 6681,
+      "sha256": "7712f3dd8cb0fcb0cf40d1184a2a1558eca8ddc16a6bd611ac404e8152600a81"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-064.txt",
+      "bytes": 6540,
+      "sha256": "8062e3817a605084a4bfe09c516b902a71886133a55f0429e1a916e79321a26f"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-065.txt",
+      "bytes": 6576,
+      "sha256": "d314c9ee2c0c14e7376f2bc67e8403de7373986544fd1097fca1f27d3f1bbf40"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-066.txt",
+      "bytes": 6665,
+      "sha256": "51e5609ca642a40c71ec16c01960c12f5b3bf25f2a582d73ca146750dfbdbc06"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-067.txt",
+      "bytes": 6108,
+      "sha256": "9f9be3c0f4a78cbb50beafb8dc8b22e35b41fd17578256905b799baf455f3bb0"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-068.txt",
+      "bytes": 6764,
+      "sha256": "ad23ac938bf1ef47eaa0d1916d94971ea43999ca631a5723ecb820fe13c2c6f3"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-069.txt",
+      "bytes": 6501,
+      "sha256": "90db76ff93d7a02c0254372c3f5bbd4ab4aff586131c76cbf35bdb7b64760347"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-070.txt",
+      "bytes": 6468,
+      "sha256": "3c068715e00422be204644299129c2502ef40521cfa33d6a76f2b9cee62259e2"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-071.txt",
+      "bytes": 6859,
+      "sha256": "52078c0c14852be3a62d83f5b692de66ae0681f86aaab050dacbb0b750c37870"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-072.txt",
+      "bytes": 6743,
+      "sha256": "7a9244571dddddc1d96e1f896f4b46ce68ca781d26fb7004e5446e6bd49ac7ad"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-073.txt",
+      "bytes": 6680,
+      "sha256": "e161a934af4cef0251d43e02059bebc696a8598ae5cd49abd3525be46a601c3e"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-074.txt",
+      "bytes": 5861,
+      "sha256": "ae58a71c97388a84505e6222df276b4baf0e83825a4e33d404c7db4e487b03b5"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-075.txt",
+      "bytes": 4198,
+      "sha256": "161ceaf9c89828200d4c99dcb6ce6ba3d6e79799be4d5b21f9b802743cf7091b"
+    },
+    {
+      "path": "gazette1954-local/issue23-ocr-approved/page-076.txt",
+      "bytes": 3323,
+      "sha256": "1ea0339b3e4471c7a4c581e9223e61628ca2e7e2e285acbaf81767901a73874b"
+    },
+    {
+      "path": "gazette1954-local/ocr-screening-hits.json",
+      "bytes": 18812,
+      "sha256": "2022163fb5d2ae0167d46785fe56ac269d2ce37be7a11e2ca0af66fc99f5cc73"
+    },
+    {
+      "path": "gazette1954-local/read_pdf_ocr.swift",
+      "bytes": 2367,
+      "sha256": "75c39535d6b0a1bf9151fc8ae6509d08f301db8c9eb6a573cc7f2ba913628b68"
+    }
+  ]
+}

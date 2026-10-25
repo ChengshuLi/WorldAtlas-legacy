@@ -1,0 +1,628 @@
+{
+  "archive_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/COD_ADM2-9469f09-source.zip",
+  "bytes": 2215535,
+  "sha256": "2cf73c7be7403b742c8e9682f7d51609485fa0e6eab01644a695a83f81a7bb5e",
+  "records": 189,
+  "fields": [
+    [
+      "Name",
+      "C",
+      50
+    ],
+    [
+      "Level",
+      "C",
+      50
+    ]
+  ],
+  "targets": [
+    {
+      "zero_based_ordinal": 172,
+      "deleted": false,
+      "Name": "Songololo",
+      "Level": "ADM2"
+    },
+    {
+      "zero_based_ordinal": 173,
+      "deleted": false,
+      "Name": "Tshela",
+      "Level": "ADM2"
+    }
+  ],
+  "meta": "Boundary Representative of Year: 2019\nISO-3166-1 (Alpha-3): COD\nBoundary Type: ADM2\nCanonical Boundary Type Name: territory, city\nSource 1: Referenciel Géographique Commun\nSource 2: OCHA DR Congo\nRelease Type: gbOpen\nLicense: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)\t\nLicense Notes: \nLicense Source: https://data.humdata.org/dataset/drc-administrative-boundaries-levels-0-2\nLink to Source Data: https://data.humdata.org/dataset/drc-administrative-boundaries-levels-0-2\nOther Notes: \n",
+  "prj": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+  "passages": [
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Create Feature Class (3)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CreateFeatureclass",
+        "Date": "20180822",
+        "Time": "113250",
+        "export": ""
+      },
+      "text": "CreateFeatureclass \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers XXX_admbnda_adm2_scale_source POLYGON # DISABLED DISABLED # # 0 0 0"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113252",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2_EN TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113254",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2_FR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113256",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2_AR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113257",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2_ES TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113259",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2_PCODE TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113300",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2_REF TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113302",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT1EN TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113303",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT2EN TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113305",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT1FR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113306",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT2FR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113308",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT1AR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113309",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT2AR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113311",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT1ES TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113312",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM2ALT2ES TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113314",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM1_EN TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113315",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM1_FR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113316",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM1_AR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113318",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM1_ES TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113319",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM1_PCODE TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113321",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM0_EN TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113322",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM0_FR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113324",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM0_AR TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113325",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM0_ES TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (7)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113327",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source ADM0_PCODE TEXT # # 50 # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (9)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113329",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source date DATE # # # # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (9)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113330",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source validOn DATE # # # # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "Name": "Add Field (9)",
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.1\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\AddField",
+        "Date": "20180822",
+        "Time": "113332",
+        "export": ""
+      },
+      "text": "AddField \\\\os.uga.edu\\onu-ocha\\working\\Process_Files\\CODServices\\Documentation\\Templates\\COD_XXX\\Shapefiles\\XXX_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source validTo DATE # # # # NULLABLE NON_REQUIRED #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.5\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\DeleteField",
+        "Date": "20190911",
+        "Time": "094242",
+        "Name": "",
+        "export": ""
+      },
+      "text": "DeleteField XXX_admbnda_adm2_scale_source ADM2_EN;ADM2_AR;ADM2_ES;ADM2ALT1EN;ADM2ALT2EN;ADM2ALT1AR;ADM2ALT2AR;ADM2ALT1ES;ADM2ALT2ES;ADM1_EN;ADM1_AR;ADM1_ES;ADM0_EN;ADM0_AR;ADM0_ES"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\program files (x86)\\arcgis\\desktop10.5\\ArcToolbox\\Toolboxes\\Conversion Tools.tbx\\FeatureClassToFeatureClass",
+        "Date": "20190911",
+        "Time": "143843"
+      },
+      "text": "FeatureClassToFeatureClass K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles cod_admbnda_adm2_rgc_20190911.shp # \"Shape_Leng \"Shape_Leng\" false true true 8 Double 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,Shape_Length,-1,-1;Shape_Area \"Shape_Area\" false true true 8 Double 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,Shape_Area,-1,-1;ADM2_FR \"ADM2_FR\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM2_FR,-1,-1;ADM2_PCODE \"ADM2_PCODE\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM2_PCODE,-1,-1;ADM2_REF \"ADM2_REF\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM2_REF,-1,-1;ADM2ALT1FR \"ADM2ALT1FR\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM2ALT1FR,-1,-1;ADM2ALT2FR \"ADM2ALT2FR\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM2ALT2FR,-1,-1;ADM1_FR \"ADM1_FR\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM1_FR,-1,-1;ADM1_PCODE \"ADM1_PCODE\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM1_PCODE,-1,-1;ADM0_FR \"ADM0_FR\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM0_FR,-1,-1;ADM0_PCODE \"ADM0_PCODE\" true true false 50 Text 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,ADM0_PCODE,-1,-1;date \"date\" true true false 8 Date 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,date,-1,-1;validOn \"validOn\" true true false 8 Date 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,validOn,-1,-1;validTo \"validTo\" true true false 8 Date 0 0 ,First,#,K:\\working\\Process_Files\\CODServices\\COD_COD\\Shapefiles\\cod_AdminBoundaries_ExportToShape.gdb\\Data_Layers\\XXX_admbnda_adm2_scale_source,validTo,-1,-1\" #"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\DeleteField",
+        "Date": "20210623",
+        "Time": "111916"
+      },
+      "text": "DeleteField cod_admbnda_adm2_rgc_20190911 Shape_Leng;Shape_Area;ADM2_PCODE;ADM2_REF;ADM2ALT1FR;ADM2ALT2FR;ADM1_FR;ADM1_PCODE;ADM0_FR;ADM0_PCODE;date;validOn;validTo"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+        "Date": "20210623",
+        "Time": "111942"
+      },
+      "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/2.8.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\Dominic\\Downloads\\cod_admbnda_rgc_itos_20190911_shp</WorkspaceConnectionString><WorkspaceFactory>Shapefile</WorkspaceFactory><Dataset>cod_admbnda_adm2_rgc_20190911.shp</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><AddField><field_name>Name</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>False</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow><workflow><AddField><field_name>Level</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>False</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow></operationSequence>"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20210623",
+        "Time": "112003"
+      },
+      "text": "CalculateField cod_admbnda_adm2_rgc_20190911 Name !ADM2_FR! \"Python 3\" # Text NO_ENFORCE_DOMAINS"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\DeleteField",
+        "Date": "20210623",
+        "Time": "112008"
+      },
+      "text": "DeleteField cod_admbnda_adm2_rgc_20190911 ADM2_FR"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20210623",
+        "Time": "112016"
+      },
+      "text": "CalculateField cod_admbnda_adm2_rgc_20190911 Level \"ADM2\" \"Python 3\" # Text NO_ENFORCE_DOMAINS"
+    },
+    {
+      "tag": "Process",
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Conversion Tools.tbx\\FeatureClassToFeatureClass",
+        "Date": "20210623",
+        "Time": "112144"
+      },
+      "text": "FeatureClassToFeatureClass cod_admbnda_adm2_rgc_20190911 C:\\Users\\Dominic\\Documents\\COD COD_ADM2.shp # \"Name \"Name\" true true false 50 Text 0 0,First,#,cod_admbnda_adm2_rgc_20190911,Name,0,50;Level \"Level\" true true false 50 Text 0 0,First,#,cod_admbnda_adm2_rgc_20190911,Level,0,50\" #"
+    },
+    {
+      "tag": "resTitle",
+      "attributes": {
+        "Sync": "FALSE"
+      },
+      "text": "DEMOCRATIC REPUBLIC OF THE CONGO: Admin Level 2 Boundaries"
+    },
+    {
+      "tag": "createDate",
+      "attributes": {},
+      "text": "2019-09-06T00:00:00"
+    },
+    {
+      "tag": "pubDate",
+      "attributes": {},
+      "text": "2019-09-11T00:00:00"
+    },
+    {
+      "tag": "idAbs",
+      "attributes": {},
+      "text": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>The dataset represents the territories of DR Congo. The file originates from OCHA's digitization of the DR Congo atlas of administrative boundaries carried out by Father Léon de Saint Moulin. The geometry has been split where territory boundaries are defined by a watercourse. A topological validation has been done by UNDP and the Kinshasa municipal boundaries have been added. Toponymy has been validated by INS.</SPAN></P></DIV></DIV></DIV>"
+    },
+    {
+      "tag": "idPurp",
+      "attributes": {},
+      "text": "Administrative Level 2 Boundaries of DR Congo. Validated by the IMWG. Sourced from Référentiel Géographique Commun http://www.rgc.cd"
+    },
+    {
+      "tag": "statement",
+      "attributes": {},
+      "text": "Layer was downloaded as a shapefile by ITOS from an email from the IMO. It was then analyzed by ITOS for errors. Those errors were corrected and then the layer was sent back to UNOCHA as a feature class within a file geodatabase.\n\nThe following errors were found and fixed by ITOS: \n1. Created and populated a reference name field.\n2. Projection changed from undefined to \"GCS_WGS_1984\".\n3. Admin0 name now uses French UN Short Name \"République démocratique du Congo (la)\"."
+    }
+  ],
+  "status": "source documentary inspection only; no shapes read",
+  "groups": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/songololo25-source-assessment.json",
+      "sha256": "277833cdd068af19e85b1786becf950e260168c7dc0f327e41eba01cdad874a0",
+      "exact_keys": [
+        [
+          14467,
+          135342,
+          141355
+        ],
+        [
+          14467,
+          135343,
+          141352
+        ],
+        [
+          14467,
+          135343,
+          141353
+        ],
+        [
+          14467,
+          135343,
+          141354
+        ],
+        [
+          14467,
+          135344,
+          141342
+        ],
+        [
+          14467,
+          135344,
+          141415
+        ],
+        [
+          14467,
+          135345,
+          141415
+        ],
+        [
+          14467,
+          135348,
+          141320
+        ],
+        [
+          14467,
+          135348,
+          141325
+        ],
+        [
+          14467,
+          135348,
+          141326
+        ],
+        [
+          14467,
+          135349,
+          141304
+        ],
+        [
+          14467,
+          135349,
+          141318
+        ],
+        [
+          14467,
+          135349,
+          141319
+        ],
+        [
+          14467,
+          135349,
+          141320
+        ],
+        [
+          14467,
+          135349,
+          141326
+        ],
+        [
+          14467,
+          135350,
+          141316
+        ],
+        [
+          14467,
+          135350,
+          141317
+        ],
+        [
+          14467,
+          135350,
+          141318
+        ],
+        [
+          14467,
+          135350,
+          141319
+        ],
+        [
+          14467,
+          135351,
+          141314
+        ],
+        [
+          14467,
+          135351,
+          141315
+        ],
+        [
+          14467,
+          135351,
+          141316
+        ],
+        [
+          14467,
+          135351,
+          141317
+        ],
+        [
+          14467,
+          135351,
+          141318
+        ],
+        [
+          14467,
+          135352,
+          141312
+        ]
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "source_receipt_sha256": "8a926e4fa97f70f814c9cfd5d2c92792798669254de0d072761518bf91105a75",
+      "all_negative_source_ids": [
+        "gb:AGO:ADM1:26408823B906914650007",
+        "gb:AGO:ADM1:26408823B68708736810578",
+        "gb:AGO:ADM2:16411231B28575978802945",
+        "gb:AGO:ADM2:16411231B4285388649129",
+        "gb:AGO:ADM2:16411231B81083944254276"
+      ]
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/tshela3-source-assessment.json",
+      "sha256": "8b221102b3a04f92a3220f3d1415dc5e663e84f8f07d4fade9433f3046f95d8a",
+      "exact_keys": [
+        [
+          14500,
+          134608,
+          140827
+        ],
+        [
+          14500,
+          134609,
+          140827
+        ],
+        [
+          14500,
+          134609,
+          140828
+        ]
+      ],
+      "target_id": "gb:COD:ADM2:63176286B47015384768636",
+      "source_receipt_sha256": "8a926e4fa97f70f814c9cfd5d2c92792798669254de0d072761518bf91105a75",
+      "all_negative_source_ids": [
+        "gb:AGO:ADM1:26408823B25821416016710",
+        "gb:AGO:ADM2:16411231B22766430211667",
+        "gb:AGO:ADM2:16411231B679187258105",
+        "gb:AGO:ADM2:16411231B42954517222252",
+        "gb:COG:ADM1:67827341B31154795269334",
+        "gb:COG:ADM1:67827341B19376310286278",
+        "gb:COG:ADM1:67827341B58284401685335",
+        "gb:COG:ADM2:1427508B96831343191841",
+        "gb:COG:ADM2:1427508B96128266527522",
+        "gb:COG:ADM2:1427508B53261587685070"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "kind": "uige18-lineage-reconciliation-provisional-v1",
+  "researcher_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "scope": "18-key residual conditional on coordinator exact accepted-ledger confirmation",
+  "accepted_credit": 0,
+  "status": "all 18 held; no disposition change",
+  "excluded_previously_proposed_two_positive_keys": [
+    [
+      14501,
+      135347,
+      143089
+    ],
+    [
+      14501,
+      135350,
+      143072
+    ]
+  ],
+  "exclusion_basis": "retained addendum names these two; coordinator must authenticate current accepted ledger",
+  "roster_source_sha256": "d3f074d36aca8c1cf60345e23cad88b8741201ec6d12832e139246fb8e3574f9",
+  "keys": [
+    [
+      14501,
+      135348,
+      143084
+    ],
+    [
+      14501,
+      135348,
+      143085
+    ],
+    [
+      14501,
+      135348,
+      143086
+    ],
+    [
+      14501,
+      135349,
+      143081
+    ],
+    [
+      14501,
+      135349,
+      143082
+    ],
+    [
+      14501,
+      135349,
+      143083
+    ],
+    [
+      14501,
+      135350,
+      143070
+    ],
+    [
+      14501,
+      135350,
+      143071
+    ],
+    [
+      14501,
+      135350,
+      143080
+    ],
+    [
+      14501,
+      135352,
+      143078
+    ],
+    [
+      14501,
+      135352,
+      143099
+    ],
+    [
+      14501,
+      135352,
+      143100
+    ],
+    [
+      14501,
+      135352,
+      143101
+    ],
+    [
+      14501,
+      135352,
+      143102
+    ],
+    [
+      14501,
+      135353,
+      143102
+    ],
+    [
+      14501,
+      135353,
+      143103
+    ],
+    [
+      14501,
+      135353,
+      143104
+    ],
+    [
+      14501,
+      135354,
+      143074
+    ]
+  ],
+  "inherited_comparison_summary": {
+    "source_full_contacts": 17,
+    "source_full_outside_with_separate_kwango_contact": 1,
+    "separate_kwango_key": [
+      14501,
+      135354,
+      143074
+    ],
+    "not_new_computation": true
+  },
+  "source_steps": [
+    {
+      "url": "https://github.com/wmgeolab/geoBoundaries/pull/1352",
+      "action": "GitHub fetch_pr + list_pr_changed_filenames + fetch_pr_file_patch",
+      "result": "Merged 2021-06-02; head 73b25f08642329bddaf77467db2766be13741adc; merge e46dd8ab9495be1b47f7c19bcfd21445da70b853; sole changed file sourceData/gbOpen/AGO_ADM1.zip; binary patch null."
+    },
+    {
+      "url": "https://github.com/wmgeolab/geoBoundaries/issues/1166",
+      "action": "GitHub fetch_issue",
+      "result": "Requests resubmission of #593 from gbHumanitarian to gbOpen; this is narrative lineage, not binary identity."
+    },
+    {
+      "url": "https://github.com/wmgeolab/geoBoundaries/pull/593",
+      "action": "GitHub fetch_pr + list_pr_changed_filenames",
+      "result": "Merged 2020-11-02; head fc650ca1c171de132f3bd0190e0b300666ea7492; merge 7a92f254b0f832e86c4a1cf0c2bf24da9d30275d; changed file sourceData/gbOpen/AGO_ADM1.zip, despite later issue narrative."
+    },
+    {
+      "url": "https://github.com/wmgeolab/geoBoundaries/issues/493",
+      "action": "GitHub fetch_issue",
+      "result": "Failed metadata record: OpenStreetMap/Wambacher, year2017, ODbL1.0; source URL/license source missing. This predates and does not authenticate the later USCB/Public Domain source."
+    },
+    {
+      "url": "https://github.com/wmgeolab/geoBoundaries/blob/73b25f08642329bddaf77467db2766be13741adc/sourceData/gbOpen/AGO_ADM1.zip",
+      "action": "web open blob metadata page only",
+      "result": "1.21MB file displayed; no raw download retried."
+    },
+    {
+      "url": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/sourceData/gbOpen/AGO_ADM1.zip",
+      "action": "web open blob metadata page only",
+      "result": "1.21MB Stored with Git LFS; release full commit9469f09592ced973a3448cf66b6100b741b64c0d. Size label does not prove identity to PR1352."
+    }
+  ],
+  "limits": [
+    "No raw archive fetch retry or alternate download endpoint used after inherited restricted-URL error.",
+    "Local retained addendum and matching manifest preserve release archive comparison; exact sourceData archive itself was not located in inspected local research directories.",
+    "No stock diagnostic, observation, geometry overlay, owner update, patch, acceptance, or Git mutation performed."
+  ]
+}

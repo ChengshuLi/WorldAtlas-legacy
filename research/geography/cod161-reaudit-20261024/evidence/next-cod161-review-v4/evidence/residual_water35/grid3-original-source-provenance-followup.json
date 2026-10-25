@@ -1,0 +1,208 @@
+{
+  "date": "2026-10-24",
+  "researcher_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "scope": "Moba28 original Zambia candidate-source provenance; no geometry or acceptance",
+  "source_archive_bindings": {
+    "ADM2": {
+      "file": "ZMB_ADM2-original.zip",
+      "sha256": "4bcde79f113e249a0863cb95da0a39052fee4dd347f16c83efe8285fcdeffdbe",
+      "represented_year": 2020,
+      "source_url": "https://data.grid3.org/datasets/GRID3::grid3-zambia-administrative-boundaries-districts-2020/about",
+      "archived_processing_date": "2021-07-14"
+    },
+    "ADM1": {
+      "file": "ZMB_ADM1-original.zip",
+      "sha256": "cecc58aaf9c9ada42d79d9fc6e57846dd0470726ec941f8a325de7d0fa60a2c2",
+      "represented_year": 2020,
+      "source_url": "https://zambia-nsdi-mlnr.hub.arcgis.com/datasets/6fe71ff483ab491782c8524ec3d1a3b8_0/about",
+      "archived_processing_date": "2022-04-22"
+    }
+  },
+  "exact_original_about_result": {
+    "status": "Downloaded successfully, but generic GRID3 Hub application HTML rather than dataset metadata",
+    "read_scope": "Decoded static HTML; no browser or script execution",
+    "limit": "No claim that the dataset is absent. Application shell cannot establish historical item identity or lake treatment."
+  },
+  "public_catalogue_queries": [
+    {
+      "q": "\"GRID3 Zambia\" AND \"2020\"",
+      "results": 19,
+      "nextStart": -1
+    },
+    {
+      "q": "orgid:BU6Aadhn6tbBEdyk AND (Zambia OR ZMB) AND (districts OR boundaries)",
+      "results": 60,
+      "nextStart": -1
+    }
+  ],
+  "live_related_item": {
+    "id": "d27357c640394f11943316e36cebaba3",
+    "owner": "mlukang_GRID3",
+    "created": 1598039074000,
+    "modified": 1756986507000,
+    "name": "Zambia_Administrative_Boundaries_Districts_2020",
+    "title": "ZMB - Operational Districts",
+    "type": "Feature Service",
+    "description": "<DIV STYLE=\"text-align:Left;\"><DIV><P><SPAN>The administrative district boundaries were generated at a scale of 1:10,000 and validated against official district narratives provided by the Government of the Republic of Zambia, using high resolution imagery and 1:50,000 topographic maps. The shapefile covers the National, 10 Provincial and 116 District Boundaries.</SPAN></P></DIV></DIV>",
+    "snippet": "The administrative district boundaries were generated through a collaborative effort of the Office of the Surveyor General, Local Government and Housing, Electoral Commission of Zambia, Central Statistical Office and the University of Zambia - Geography and Environmental Studies Department. The shapefile is one of the fundamental datasets on the National Spatial Data Infrastructure (NSDI) portal. Updated district and provincial boundaries will support accurate analysis of geospatial data across different administrative units.",
+    "categories": [
+      "/Categories/Boundaries/Administrative (non-authoritative)/Adm 2"
+    ],
+    "accessInformation": "The Government of the Republic of Zambia through the following institutions i.e Survey Department, Electoral Commission of Zambia, Central Statistical Office, Local Government and Housing and the University of Zambia. Geo-Referenced Infrastructure and Demographic Data for Development (GRID3) for supporting the harmonization workshops and for the methodological approach. \nThe GRID3 programme is funded by the Bill & Melinda Gates Foundation and the United Kingdom’s Department for International Development (DFID).",
+    "licenseInfo": "<DIV STYLE=\"text-align:Left;\"><DIV><P><SPAN>This dataset has been officially endorsed by the Office of the Surveyor General. The district narratives used to update the district shapefiles are dated up to 2017. This data set is released under a Creative Commons Attribution 4.0 International (CC By 4.0) available at http://creativecommons.org/licenses/by/4.0and specified in legal code at http://creativecommons.org/licenses/by/4.0/legalcode</SPAN></P></DIV></DIV>",
+    "url": "https://services3.arcgis.com/BU6Aadhn6tbBEdyk/arcgis/rest/services/Zambia_Administrative_Boundaries_Districts_2020/FeatureServer",
+    "source": "Office of the Surveyor General of Zambia",
+    "access": "public",
+    "created_utc": "2020-08-21T19:44:34+00:00",
+    "modified_utc": "2025-09-04T11:48:27+00:00"
+  },
+  "live_related_item_metadata_url": "https://www.arcgis.com/sharing/rest/content/items/d27357c640394f11943316e36cebaba3/info/metadata/metadata.xml",
+  "live_related_item_xml_fields": {
+    "CreaDate": [
+      "20220124"
+    ],
+    "ModDate": [
+      "20230410"
+    ],
+    "SyncDate": [
+      "2022-10-26"
+    ],
+    "itemName": [
+      "Zambia_Districts_GRID3_adjusted_20221026"
+    ],
+    "resTitle": [
+      "Zambia_Districts_GRID3_adjusted_20221026"
+    ],
+    "idAbs": [
+      "<DIV STYLE=\"text-align:Left;\"><DIV><P><SPAN>The administrative district boundaries were generated at a scale of 1:10,000 and validated against official district narratives provided by the Government of the Republic of Zambia, using high resolution imagery and 1:50,000 topographic maps. The shapefile covers the National, 10 Provincial and 116 District Boundaries.</SPAN></P></DIV></DIV>"
+    ],
+    "idPurp": [
+      "The administrative district boundaries were generated through a collaborative effort of the Office of the Surveyor General, Local Government and Housing, Electoral Commission of Zambia, Central Statistical Office and the University of Zambia - Geography and Environmental Studies Department. The shapefile is one of the fundamental datasets on the National Spatial Data Infrastructure (NSDI) portal. Updated district and provincial boundaries will support accurate analysis of geospatial data across different administrative units."
+    ],
+    "idCredit": [
+      "The Government of the Republic of Zambia through the following institutions i.e Survey Department, Electoral Commission of Zambia, Central Statistical Office, Local Government and Housing and the University of Zambia. Geo-Referenced Infrastructure and Demographic Data for Development (GRID3) for supporting the harmonization workshops and for the methodological approach. \nThe GRID3 programme is funded by the Bill & Melinda Gates Foundation and the United Kingdom’s Department for International Development (DFID)."
+    ],
+    "useLimit": [
+      "<DIV STYLE=\"text-align:Left;\"><DIV><P><SPAN>This dataset has been officially endorsed by the Office of the Surveyor General. The district narratives used to update the district shapefiles are dated up to 2017. This data set is released under a Creative Commons Attribution 4.0 International (CC By 4.0) available at http://creativecommons.org/licenses/by/4.0and specified in legal code at http://creativecommons.org/licenses/by/4.0/legalcode</SPAN></P></DIV></DIV>"
+    ],
+    "mdDateSt": [
+      "20230410"
+    ],
+    "envirDesc": [
+      "Esri ArcGIS 13.0.0.36056"
+    ]
+  },
+  "live_item_findings": [
+    "Current public item retains internal name Zambia_Administrative_Boundaries_Districts_2020 but title is ZMB - Operational Districts.",
+    "Description states 1:10,000 production, official district narratives, high-resolution imagery and 1:50,000 topographic maps. License metadata says narratives dated through2017 and endorsement by the Office of the Surveyor General.",
+    "Current category Administrative (non-authoritative) is a catalogue label; its relation to the endorsement statement is not explained. Neither is a cell-specific disposition.",
+    "Actual XML itemName/resTitle identifies Zambia_Districts_GRID3_adjusted_20221026. XML creation20220124, sync2022-10-26 and modification20230410 are metadata/processing dates, not the frozen source represented year.",
+    "No explicit international boundary, treaty, lake-edge or median-line construction statement was found in the inspected description, purpose, credit, use-limit and XML text. This is a bounded observation about those records, not universal absence.",
+    "Current metadata does not authenticate the historical 2020 geometry or identify when particular boundary vertices changed. No current geometry downloaded or substituted."
+  ],
+  "derivative_corroboration": [
+    {
+      "url": "https://tiles.arcgis.com/tiles/BU6Aadhn6tbBEdyk/arcgis/rest/services/GRID3_Zambia_District_Names/MapServer",
+      "read_result": "Names-layer service cites original GRID3 Zambia Administrative Boundaries Districts2020 and the government collaboration."
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/BU6Aadhn6tbBEdyk/arcgis/rest/services/GRID3_Zambia_Province_Mask/MapServer",
+      "read_result": "This mask service says province boundaries were generated by dissolving GRID3 district data. This method applies to this derivative only, not to inaccessible frozen ADM1 source item."
+    }
+  ],
+  "ADM1_item_obstacle": {
+    "url": "https://www.arcgis.com/sharing/rest/content/items/6fe71ff483ab491782c8524ec3d1a3b8?f=pjson",
+    "result": {
+      "error": {
+        "code": 403,
+        "messageCode": "SB_0005",
+        "message": "Subscription is disabled, the item is not accessible",
+        "details": []
+      }
+    },
+    "state": "Actual source denial. Stopped this item route; no token, login, alternate-actor or alternate-route bypass.",
+    "limit": "Cannot inspect live item provenance or edit history; no deletion/absence claim."
+  },
+  "approval_receipts": {
+    "grid3_about": {
+      "exec_session": 83709,
+      "exit_code": 0
+    },
+    "adm1_item": {
+      "exec_session": 68640,
+      "exit_code": 0
+    },
+    "catalogue_and_xml": "Per-command approved transfers completed exit0. No server approval identifier exposed by tool output."
+  },
+  "native_observable_dependency": {
+    "owner": 14461,
+    "target_id": "gb:COD:ADM2:63176286B25314267977171",
+    "pending_cell_count": 28,
+    "candidate_operand_count": 12,
+    "potential_pairs": 336,
+    "potential_pairs_are_not_proven_contacts": true,
+    "candidate_ordinals": {
+      "TZA_ADM1": [
+        15,
+        16,
+        24
+      ],
+      "TZA_ADM2": [
+        40,
+        49,
+        123
+      ],
+      "ZMB_ADM1": [
+        3,
+        8
+      ],
+      "ZMB_ADM2": [
+        6,
+        36,
+        76,
+        94
+      ]
+    },
+    "existing_diagnostic": "All28 territorial_exclusion_cells; only2 unrelated Uige contextual contacts, no lake per-operand attribution",
+    "needed_existing_machinery_evidence": "Per native key and original operand, applicability/contact disposition with pinned input identities and whole-cell semantics. Reuse existing receipts and authoritative native extraction. No duplicate whole-country observation requested.",
+    "center_overlay_limit": "Retained537center overlay omits TZA_ADM2 and ZMB_ADM1/ADM2; it cannot identify responsible native exclusions or clear whole cells."
+  },
+  "outcome": "Source-specific provenance strengthened; no source or native-observable evidence here clears a Moba cell. All28 and combined60 lake holds unchanged. No acceptance, science credit, new geometry or Git mutation.",
+  "evidence_files": [
+    {
+      "file": "grid3-original-about.html",
+      "bytes": 99689,
+      "sha256": "efc76b7630de5296b036c5b4d4140ea050fdf0ba73b8e205f65484ae25a38736"
+    },
+    {
+      "file": "grid3-original-about.headers",
+      "bytes": 363,
+      "sha256": "d33ba04efbd1a2815b2947a9d0a8facdec3c7e5e89d6395957202b31e87d441f"
+    },
+    {
+      "file": "zmb-adm1-arcgis-item.json",
+      "bytes": 138,
+      "sha256": "ff7c9544b3c4d516b09bc91b60dc8f7206b39df6b7ea8656c6ba81f408bb3ae8"
+    },
+    {
+      "file": "zmb-adm1-arcgis-item.headers",
+      "bytes": 481,
+      "sha256": "ea8a3e4849fd39907875f5ca8ffd297acb1ca8cac654b6df11651ffa37f27930"
+    },
+    {
+      "file": "grid3-zambia-2020-public-catalogue.json",
+      "bytes": 82135,
+      "sha256": "2e3ffc887cafb991d94117d1c622843dcfc2f5b6f30e514a17a72aab76e8e137"
+    },
+    {
+      "file": "grid3-zambia-boundary-catalogue.json",
+      "bytes": 193189,
+      "sha256": "136daeb79aac38e6ba3d0701aa620fca1dccc5f9f7fb897fa5d20c2dce7600ea"
+    },
+    {
+      "file": "grid3-district-item-metadata.xml",
+      "bytes": 29938,
+      "sha256": "5ffb1b1a737b87104dc3e1d1fa9ca2033b2913b062dc89d6202201b28042f735"
+    }
+  ]
+}
