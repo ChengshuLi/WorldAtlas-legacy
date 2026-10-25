@@ -1,0 +1,1894 @@
+{
+  "schema": "usa131-noaa-footprint-application-project-key-roster-v1",
+  "status": "source-free generated project metadata; proposal only; no credit or assignment",
+  "source_lineage": "Exact join from retained USA31 original key roster and two private NOAA applications; no raw source geometry, lon/lat, or derived distances included.",
+  "original_usa31_keyset_sha256": "8dd932327e9d919b7dc3b0c2945c69b1b92300a413970f8c7753ffd6f3152784",
+  "original_key_roster_source_pr_head": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+  "source_application_pins": {
+    "EC6G10_zip_sha256": "b04fefab355cefdb90889e748fb4b20d18bedc64c781ddc613b5883c9daf769b",
+    "PH6603_zip_sha256": "424364210dfa21d6a279e798dff642bc4b1c51fdd397b5866b941bcc15d2f24f"
+  },
+  "counts": {
+    "unique_original_keys": 131,
+    "EC6G10_footprint_keys": 24,
+    "PH6603_footprint_keys": 111,
+    "both_footprints": 4,
+    "unique_physical_components": 7,
+    "Nassau": 20,
+    "Suffolk": 111,
+    "component_scope": {
+      "physical-component:0d5cd8f440225c82d59ce25614502e964386ee39735fb6b2e79d2fd87589f967": {
+        "PH6603": 1
+      },
+      "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48": {
+        "EC6G10": 20
+      },
+      "physical-component:4efaa659090038e509efd7ee5c874207eb602cfa1148f1ff1329a00a2e3e4789": {
+        "EC6G10": 4,
+        "PH6603": 4
+      },
+      "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419": {
+        "PH6603": 31
+      },
+      "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc": {
+        "PH6603": 15
+      },
+      "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812": {
+        "PH6603": 44
+      },
+      "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089": {
+        "PH6603": 16
+      }
+    }
+  },
+  "scope_key_triplets_sha256": "8e15f687abe441367c45ab6ef6cdbbb9d756e4bf96b09ec880f72e79a8920389",
+  "keys": [
+    {
+      "y": 98312,
+      "x": 78146,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78147,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78148,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78149,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78150,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78151,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78152,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78153,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78154,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78155,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98312,
+      "x": 78156,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98313,
+      "x": 78139,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98313,
+      "x": 78140,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98313,
+      "x": 78141,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98313,
+      "x": 78142,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:61aab0fb0e7577153074a3f9c451a610234fa0becc1fe8fffffb9dff02c14dfc"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98320,
+      "x": 77841,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98320,
+      "x": 77842,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98320,
+      "x": 77843,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98320,
+      "x": 77844,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98321,
+      "x": 77835,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98321,
+      "x": 77836,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98321,
+      "x": 77837,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98321,
+      "x": 77840,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98321,
+      "x": 77841,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98321,
+      "x": 77843,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98321,
+      "x": 77844,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98322,
+      "x": 77831,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98322,
+      "x": 77832,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98322,
+      "x": 77833,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98322,
+      "x": 77834,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98322,
+      "x": 77835,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98322,
+      "x": 77836,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98322,
+      "x": 77837,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98323,
+      "x": 77827,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98323,
+      "x": 77828,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98323,
+      "x": 77829,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98323,
+      "x": 77830,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98323,
+      "x": 77831,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98324,
+      "x": 77823,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98324,
+      "x": 77824,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98325,
+      "x": 77919,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98325,
+      "x": 77920,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98325,
+      "x": 77921,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98325,
+      "x": 77932,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98325,
+      "x": 77933,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77902,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77903,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77904,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77905,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77906,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77907,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77908,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77909,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77910,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77911,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98326,
+      "x": 77912,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:af3dbd85007c6a292e9fb5b1b5b4fa4d18f8dac246d2cbd341e53375d37cd089"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98327,
+      "x": 77818,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98328,
+      "x": 77818,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98331,
+      "x": 77817,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98332,
+      "x": 77817,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98333,
+      "x": 77817,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98334,
+      "x": 77817,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:5ad1b17e738967f93f5853e612848035f5e327ca827a42754f14f9fc3cde8419"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98337,
+      "x": 77630,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98337,
+      "x": 77631,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98337,
+      "x": 77632,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98337,
+      "x": 77633,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98337,
+      "x": 77634,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98338,
+      "x": 77631,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98338,
+      "x": 77632,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98338,
+      "x": 77633,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98338,
+      "x": 77634,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98338,
+      "x": 77635,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98339,
+      "x": 77633,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98339,
+      "x": 77634,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98339,
+      "x": 77635,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98339,
+      "x": 77636,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98339,
+      "x": 77637,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98340,
+      "x": 77634,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98340,
+      "x": 77635,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98340,
+      "x": 77636,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98340,
+      "x": 77637,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98340,
+      "x": 77638,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98341,
+      "x": 77635,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98341,
+      "x": 77636,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98341,
+      "x": 77637,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98341,
+      "x": 77638,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98341,
+      "x": 77639,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98342,
+      "x": 77637,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98342,
+      "x": 77638,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98342,
+      "x": 77639,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98342,
+      "x": 77640,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98343,
+      "x": 77638,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98343,
+      "x": 77639,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98343,
+      "x": 77640,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98344,
+      "x": 77628,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98344,
+      "x": 77639,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98344,
+      "x": 77640,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98344,
+      "x": 77641,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98345,
+      "x": 77628,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98345,
+      "x": 77641,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98345,
+      "x": 77642,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98346,
+      "x": 77628,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98346,
+      "x": 77642,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98346,
+      "x": 77643,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98347,
+      "x": 77643,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98347,
+      "x": 77644,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:865e780b790bfa12cdfb38c6fa88eec111dc2c2913469853e28d9f94382ea812"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98357,
+      "x": 77604,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:4efaa659090038e509efd7ee5c874207eb602cfa1148f1ff1329a00a2e3e4789"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10",
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98358,
+      "x": 77605,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:4efaa659090038e509efd7ee5c874207eb602cfa1148f1ff1329a00a2e3e4789"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10",
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98359,
+      "x": 77605,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:4efaa659090038e509efd7ee5c874207eb602cfa1148f1ff1329a00a2e3e4789"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10",
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98359,
+      "x": 77606,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:4efaa659090038e509efd7ee5c874207eb602cfa1148f1ff1329a00a2e3e4789"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10",
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98378,
+      "x": 77499,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98378,
+      "x": 77769,
+      "owner_index": 46271,
+      "owner_id": "gb:USA:ADM2:52423323B61185146991898",
+      "owner_name": "Suffolk",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:0d5cd8f440225c82d59ce25614502e964386ee39735fb6b2e79d2fd87589f967"
+      ],
+      "noaa_footprint_applications": [
+        "PH6603"
+      ]
+    },
+    {
+      "y": 98379,
+      "x": 77496,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98380,
+      "x": 77492,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98380,
+      "x": 77493,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98380,
+      "x": 77494,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98381,
+      "x": 77490,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98381,
+      "x": 77491,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98381,
+      "x": 77492,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98382,
+      "x": 77488,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98382,
+      "x": 77489,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98382,
+      "x": 77490,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98383,
+      "x": 77487,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98383,
+      "x": 77488,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98384,
+      "x": 77486,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98390,
+      "x": 77462,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98390,
+      "x": 77463,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98390,
+      "x": 77464,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98390,
+      "x": 77465,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98390,
+      "x": 77466,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    },
+    {
+      "y": 98390,
+      "x": 77467,
+      "owner_index": 45581,
+      "owner_id": "gb:USA:ADM2:52423323B42354579566723",
+      "owner_name": "Nassau",
+      "physical_class": "land",
+      "component_ids": [
+        "physical-component:3addcf1688f537a931f845dc07a36d10065a3ef4124154b4a4c3ca7f8a872b48"
+      ],
+      "noaa_footprint_applications": [
+        "EC6G10"
+      ]
+    }
+  ],
+  "keyset_bindings": {
+    "original_usa31_component_key_witness_sha256": "8dd932327e9d919b7dc3b0c2945c69b1b92300a413970f8c7753ffd6f3152784",
+    "original_1204_held_key_roster_sha256": "f61e4726234e5eae78c5d802c2f892549d8f87a1314748e03f20f781b96fee76",
+    "original_witness_baseline_commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+    "noaa_private_exact_key_application_hashes": {
+      "EC6G10": "d4de2172277bf9632ed82fe902aa0e1dbccfe6df1f0224bdd8cdf8996e08b525",
+      "PH6603": "ca96f6e960aaa8f432485d2290d96b36bb508738bfe85d845b818ade3b947229"
+    }
+  }
+}
