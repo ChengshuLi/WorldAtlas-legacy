@@ -29,7 +29,7 @@ Sites archive/per-file limits belong to publication issue 39 and deployment-budg
 
 1. Read `/api/storage/capacity` through documented private access and retain timestamp/revision. Use actual `database.bytes`, `measurement`, `configured_budget_bytes` and `budget_status`; never multiply record counts by invented average bytes.
 2. At `approaching-budget` or `at-or-above-budget`, pause planned bulk expansion for coordinator review of measured database/index/query growth, logical-branch usage and actual billing/compute allowances. Preserve current facts and archives. Do not delete evidence, rerun baseline transfer or upgrade a plan automatically.
-3. Review guard changes explicitly after provider verification. A higher guard does not increase quota. Geographic approval/import gates remain separate; capacity checks certify no complete regional branch.
+3. Review guard changes explicitly after provider verification. A higher guard does not increase quota. Geographic approval/import gates remain separate; use accepted-main gate/certificate records—not capacity checks—to determine current regional eligibility.
 4. Treat unavailable measurement as unknown. Keep manifests, actual sizes, whole-object integrity and account-wide billable storage separate. Ranged reads do not verify SHA256; prior immutable whole-object preservation receipts remain intact.
 5. Complete separately authorized isolated recovery before relying on backups. Never restore over production to test recovery.
 

@@ -8,9 +8,9 @@ M engineering and N history workers must read [WORKER_COORDINATION.md](WORKER_CO
 
 Repository: https://github.com/ChengshuLi/WorldAtlas, integration branch **main**. Verify latest accepted main on start/resume and follow current `AGENTS.md` and [worker coordination](WORKER_COORDINATION.md) before applying any saved handoff. The former owner-private Site is retained for recovery, not the normal serving/import target. Read [scope guidance](HISTORICAL_RESEARCH_TODO.md), [LUNA_DATA_HANDOFF.md](LUNA_DATA_HANDOFF.md), [RESEARCH_IMPORT_WORKFLOW.md](RESEARCH_IMPORT_WORKFLOW.md), [ATTRIBUTE_CONTRACT.md](ATTRIBUTE_CONTRACT.md) and [PARALLEL_WORK_PROTOCOL.md](PARALLEL_WORK_PROTOCOL.md) for preserved research contracts and history; dated platform notes do not authorize current operations.
 
-## Current gate: source-only work
+## Current gate and operation authorization
 
-The global macro partition is approved and published. Engineering audits and publishes completely reviewed regional branches inside the fixed scopes in `data/macro-foundation/regional-handoffs.json.gz`. The v2 `data/research-geography-gate.json` opens only approved subjects in those branches; no branches are currently approved. Current work is source-only: lawful research and owned evidence staging may proceed, but do not run live imports, use private service credentials or treat a dry run as approval. Content imports require explicit region IDs and closed macro/regional approval dependencies. Do not design geography or bypass the gate. Read [GEOGRAPHY_RESEARCH_READINESS.md](GEOGRAPHY_RESEARCH_READINESS.md) from current main.
+Engineering audits and publishes completely reviewed regional branches inside the fixed scopes in `data/macro-foundation/regional-handoffs.json.gz`. The accepted-main `data/research-geography-gate.json`, exact regional certificates/release pins and current operation authorization determine eligibility; read them for the assigned subjects before deciding whether any import is authorized. Until all applicable approvals and operation authorization are verified, do lawful research and owned evidence staging only—do not run live imports, use private service credentials or treat a dry run as approval. Content imports require explicit region IDs and closed macro/regional approval dependencies. Do not design geography or bypass the gate. Read [GEOGRAPHY_RESEARCH_READINESS.md](GEOGRAPHY_RESEARCH_READINESS.md) from current main.
 
 ## Preserved starting point and content contract
 
@@ -23,7 +23,7 @@ Store supported sparse half-open intervals, not annual snapshots. Keep stable en
 1. Inspect labeled GitHub Issues, comments, active PRs and campaign directories before choosing a disjoint geography/time/attribute/source scope. Post your worker ID, branch, bounded scope and sources in the existing issue discussion; the parent coordinates overlap, and ordinary authoring needs no machine claim workflow. Worldwide objectives remain open until their complete coverage is evidenced; use linked child issues when useful.
 2. Create a unique **`research/<campaign-id>`** branch from fresh `origin/main` in an isolated checkout/worktree. You own **only `research/campaigns/<campaign-id>/`**. Do not edit shared handovers, code, schema, infrastructure, category registries, grid assets or geographic releases. Research factual JSON and notes using existing tools; refer engineering blockers to a linked engineering issue.
 3. Keep original inputs, lawful source bytes/restoration manifests, bundles, release pins, partial/final receipts and read-back in the campaign directory. Record progress in the existing issue/PR discussion; no duplicate progress JSON is required.
-4. Current assignments are source-only; do not obtain private API access or credentials. Preserve exact source vintage, IDs, scope and limitations in the owned evidence directory.
+4. Unless the accepted-main gate, exact certificate/pins and operation authorization permit the exact action, assignments are evidence research/staging only; do not obtain private API access or credentials based on this handoff. Preserve exact source vintage, IDs, scope and limitations in the owned evidence directory.
 5. Stage supported factual proposals and any offline validation output without importing. Keep unsupported territory/interval conclusions pending, preserve partial work and report uncovered scope honestly.
 
 Offline staging example after saving factual input and any already-retained release file required by that assigned task:
@@ -32,13 +32,13 @@ Offline staging example after saving factual input and any already-retained rele
 node scripts/prepare-research-bundle.mjs research/campaigns/CAMPAIGN/input.json research/campaigns/CAMPAIGN/geographic-release.json research/campaigns/CAMPAIGN/bundle
 ```
 
-Replace `CAMPAIGN` with your unique ID only when offline staging is part of the assigned scope. The compile step does not establish a current release, regional approval, import permission or truth. No live import command is provided for the current source-only gate. Dated endpoint/import commands in the legacy platform handoff are not current instructions.
+Replace `CAMPAIGN` with your unique ID only when offline staging is part of the assigned scope. The compile step does not establish a current release, regional approval, import permission or truth. No live import command is provided here; a live operation must use a separately accepted, current operation contract. Dated endpoint/import commands in the legacy platform handoff are not current instructions.
 
 ## Incremental PRs and preserved import history
 
 Push evidence frequently and open a focused PR to **main** addressing a coherent outcome. Related issues may share a PR. Link related issues as useful; close only acceptance actually completed. Include source/import/read-back evidence and unresolved questions. Follow applicable Codex PR attachment instructions. Maintainers integrate validated PRs serially with **squash merges using the PR title as commit title**. After each merge, branch afresh from current main; preserve earlier campaign directories and link them rather than modifying another campaign's files.
 
-Historical import receipts and Git merges are separate records; do not infer a current write or repeat a historical operation. Current work is source-only. Preserve old receipts and exact pins; any future operation needs an explicitly approved region/campaign and a current accepted operational contract. Do not silently repin or weaken constraints.
+Historical import receipts and Git merges are separate records; do not infer a current write or repeat a historical operation. Preserve old receipts and exact pins. Any operation needs an explicitly approved region/campaign and a current accepted operational contract naming its authorized route. Do not silently repin or weaken constraints.
 
 ## Work history and handover
 

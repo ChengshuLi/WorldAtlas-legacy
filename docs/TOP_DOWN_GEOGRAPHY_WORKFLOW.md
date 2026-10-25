@@ -1,6 +1,6 @@
 # Top-down geography and regional research handover
 
-This is the workflow for future workers. The initial meta thread completed and published global macro own-boundary approval under #33, with verified final handoff under #36. [MACRO_FOUNDATION_APPROVAL.md](MACRO_FOUNDATION_APPROVAL.md) links the exact certificate, release and frozen envelopes. All 81 regions have entries in `data/macro-foundation/regional-handoffs.json.gz`. GitHub Issues is the status authority. No complete regional branch has been certified under this contract. Antarctica stays excluded; EU5 counts remain scale references.
+This is the workflow for future workers. The initial meta thread completed and published global macro own-boundary approval under #33, with verified final handoff under #36. [MACRO_FOUNDATION_APPROVAL.md](MACRO_FOUNDATION_APPROVAL.md) links the exact certificate, release and frozen envelopes. All 81 regions have entries in `data/macro-foundation/regional-handoffs.json.gz`. GitHub Issues records work; accepted-main `data/research-geography-gate.json` and the exact current certificates/pins determine current campaign eligibility. Do not infer a current branch status from this workflow or historical handoffs. Antarctica stays excluded; EU5 counts remain scale references.
 
 ## Dependency order
 
@@ -21,7 +21,7 @@ Complete-branch approval additionally accounts for every area, province and loca
 
 ## Small issues, many workers
 
-Keep #7 as the worldwide semantic umbrella; do not reserve it to one worker. Create a macro-approval umbrella and region umbrellas beneath it. Umbrellas track completeness and are unclaimable. Their actionable children have reviewed scope, dependencies and a PR planning estimate. A large region is split into source/area/province batches plus a final integration/approval item; a single thread does not hold the entire region indefinitely.
+Keep #7 as the worldwide semantic umbrella; do not reserve it to one worker. Create a macro-approval umbrella and region umbrellas beneath it. Umbrellas track completeness and are not assigned as a single worker's bounded task. Actionable children need a reviewed scope and real dependencies; a PR count may be a planning estimate, never a readiness prerequisite or completion gate. A large region is split into source/area/province batches plus a final integration/approval item; a single thread does not hold the entire region indefinitely.
 
 Suggested macro work-item boundaries are: global convention/coverage contract, each unresolved shared-boundary segment or island crosswalk, small subcontinent partition batches, small region partition batches, and final global integration. These are scope patterns, not new approvals or claims that those issues already exist. Boundaries shared by two regions have one joint authoritative item. Do not create hundreds of ready issues before the approved partition establishes their IDs and dependencies.
 

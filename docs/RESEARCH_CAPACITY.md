@@ -8,7 +8,7 @@ Production uses Neon PostgreSQL for indexed facts, R2 for retained source/media 
 
 [Provider capacity](PROVIDER_CAPACITY.md) links the 3 October account/project readbacks and measured use. Configured settings, application guards, physical database bytes, logical branch limits and public pricing have different meanings. Account-plan/monthly allowances and R2 billing/storage-class facts remain unverified where access is unavailable. Sites package limits constrain website assets separately.
 
-The published transport supports immutable, bounded imports and 23-table factual export. Transport availability does not approve historical location-attribute imports: the global macro partition is approved/published, but no complete regional branch certificate currently permits them. Follow [the top-down workflow](TOP_DOWN_GEOGRAPHY_WORKFLOW.md), [research readiness](GEOGRAPHY_RESEARCH_READINESS.md) and the current GitHub dependencies. Source-only staging and dry runs may continue.
+At the dated checkpoint, the published transport supported immutable, bounded imports and 23-table factual export. Transport availability does not approve historical location-attribute imports. For current eligibility, inspect accepted-main `data/research-geography-gate.json`, the exact regional certificate/release pins, current GitHub dependencies and explicit live-operation authorization. Unless these authorize the exact action, limit work to lawful source research/staging; a dry run is not permission.
 
 ## Discover existing identities
 
