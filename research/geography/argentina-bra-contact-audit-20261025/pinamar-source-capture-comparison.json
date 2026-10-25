@@ -12,6 +12,14 @@
     "physical_class": "land",
     "reason": "unresolved-seven-component-source-fitness"
   },
+  "original_key_lineage": {
+    "physical_class": "land",
+    "source_feature_indices": [675, 701],
+    "source_index_675": "Buenos Aires ADM1 parent; gb:ARG:ADM1:19177384B97722443848736; local ordinal 0",
+    "source_index_701": "Pinamar ADM2; gb:ARG:ADM2:61730980B99310691740446; local ordinal 3; owner 8259",
+    "roster_semantics": "global source_index is one-based; local ordinal is zero-based within source_id",
+    "mapping_artifact": "source-index-mapping.json"
+  },
   "grid_center": {
     "grid_width": 262166,
     "latitude_table_commit": "5b32388df0501b013ac9a3ba97864932db493d59",
@@ -43,6 +51,10 @@
     "feature_count": 525,
     "catalogue_advertised_feature_count": 526,
     "geometry_crs": "OGC:CRS84",
+    "geometry_type": "Polygon",
+    "geometry_rings": 1,
+    "geometry_positions": 17,
+    "geometry_generalization": "simplified consumed product",
     "point_result": "inside",
     "nearest_boundary_distance_approx_m": 2.1
   },
@@ -60,6 +72,10 @@
       "crs": "EPSG:4326; GeoJSON positions interpreted [longitude, latitude]",
       "fdc": "ARBA - Gerencia de Servicios Catastrales",
       "sag": "IGN",
+      "geometry_type": "MultiPolygon",
+      "geometry_components": 1,
+      "exterior_ring_positions": 5263,
+      "interior_rings": 0,
       "boundary_basis_or_effective_date": "not established by this live capture",
       "point_result": "outside"
     },
@@ -74,6 +90,10 @@
       "response_bytes": 274696,
       "response_sha256": "52baf15cd0320f3eb94ddbcfda8d52c0b87402ce87902d8c64ba0c49496a2039",
       "crs": "EPSG:4326; GeoJSON positions interpreted [longitude, latitude]",
+      "geometry_type": "MultiPolygon",
+      "geometry_components": 1,
+      "exterior_ring_positions": 5263,
+      "interior_rings": 0,
       "ivsd": 35.4,
       "documented_boundary_basis": "IGN metadata says departmental boundaries correspond to CNPHyV 2010",
       "point_result": "outside"
@@ -150,6 +170,15 @@
       "Compare the complete applicable legal/current polygon and the consumed simplified polygon with a pinned, scale-aware method; the point-center disagreement does not establish whole-cell coverage or legal applicability.",
       "Evaluate the remaining required source-fitness components before any disposition change; the IVSD 2024 layer and a single center test do not substitute for them."
     ]
+  },
+  "finite_single_key_assessment": {
+    "scope": "Only the held key (x=89665, y=160253, owner_pixel_index=8259). The three other retained Castelli/Pinamar keys were inside all compared polygons.",
+    "source_relative_conflict": "The 17-position consumed simplified 2020 GeoBoundaries feature contains the center; both retained 5,263-position official IGN representations exclude it by approximately 56.0–56.1 m. The IGN products are not treated as independent legal boundary determinations: the current department layer has no effective date, and IVSD 2024 is an indicator layer with 2010 boundary basis.",
+    "9504_materiality": "No. The exact 9504/80 text repeals Article 13 of 9024, not Article 3 or its boundary description; the consolidated Article 3 text is interpretable without 9504/80 as a blocker.",
+    "remaining_material_gap": "Yes. Article 3 defines the southern boundary by the southern limit of Estancia Cariló lands according to a Dirección de Geodesia survey. The captured act, its original five-page PDF, and bounded official searches did not surface that survey/plan or bind it to the IGN feature and held cell, so exact legal cell membership at the southern boundary cannot be resolved from these records.",
+    "candidate_assessment": "A narrowly scoped source-relative-unresolved candidate is reasonable after this key-specific qualification. This supports neither positive credit nor a legal-ownership finding; it is not a disposition change.",
+    "next_primary_step": "Obtain the cited Geodesia mensura/plan, crosswalk it to IGN in1=06644 and the held cell, and check later boundary amendments if the plan is located.",
+    "package_scope": "This single-key assessment does not complete the package-wide seven-component source-fitness review."
   },
   "result": "The held center is inside the consumed simplified GeoBoundaries feature and outside both retained official IGN polygons. Decree-Law 9504/80 does not change Article 3's consolidated boundary description; however, that description makes the south limit depend on a Dirección de Geodesia survey that is not present or crosswalked here. The discrepancy is a substantiated source-relative unresolved candidate for review, not a positive or legal-boundary conclusion.",
   "limitations": [
