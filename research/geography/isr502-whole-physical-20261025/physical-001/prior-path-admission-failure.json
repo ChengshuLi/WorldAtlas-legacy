@@ -1,0 +1,20 @@
+{
+  "worker": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "code_commit": "ce32528b8b3289681dc3b238549bd6b0f69de66d",
+  "unchanged_code_baseline": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "data_stage_commit": "ce32528b8b3289681dc3b238549bd6b0f69de66d",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "physical",
+    ".cache/delivery-handoff/isr12-physical-config.json",
+    "research/geography/isr502-whole-physical-20261025/physical-001"
+  ],
+  "destination": "research/geography/isr502-whole-physical-20261025/physical-001",
+  "config_sha256": "4c5a1f51fa2720ae2d51dba01fc208eeee55768b045d18f7d5ba0e317b1de25e",
+  "started_utc": "2026-10-25T00:52:10.295125+00:00",
+  "status": "failed",
+  "exit_code": 1,
+  "ended_utc": "2026-10-25T00:52:10.349444+00:00",
+  "destination_exists": false
+}

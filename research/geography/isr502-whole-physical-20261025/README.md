@@ -11,3 +11,11 @@ The stock route is `node scripts/prepare-delivery-handoff.mjs physical CONFIG DE
 The prior ISR selected-owner/proposed-disposition handoff bodies were inspected for target-bound physical carriers without finding one. Current-tree scoped path inspection likewise identifies those two ISR handoff records and original source bodies, without an ISR-named whole-target carrier. This is a bounded duplicate check, not a claim of universal historical absence. No previously completed ISR whole-target output is being replaced.
 
 All existing holds remain. Independent source-role/native qualification, review and coordinator delivery remain separate. Ordinary public evidence may use any arbitrary format subject to actual source/access restrictions. Repository publication uses normal owned-worktree Git push only; no blob/tree/commit API fallback.
+
+## Completed physical continuation
+
+The single physical execution completed through the stock route after one rejected research-prefix path admission that ran no producer. Actual CODE and input DATA commit were `ce32528b8b3289681dc3b238549bd6b0f69de66d`; executable files were unchanged from accepted baseline `5ea3f8e75089905690bfb7a8c8589d84f0d45ca9`. All 25 inputs (whole twelve-stage input plus 24 original physical sources) and actual installed runtime were authenticated. The result has exactly twelve targets. `physical-001/verification-summary.json` binds the exact products and each target's reported issues; successful execution is not proof of issue-free support or geographic acceptance.
+
+The original output destination was `.cache/delivery-handoff/isr12-physical-001`. The three stock product bodies are retained byte-for-byte under `physical-001/`; original embedded output paths remain unchanged, with `retention-receipt.json` documenting the copy. No result was regenerated for transport. The phase input configuration is retained; the environment-specific outer runnable configuration and allocator token stay private. The actual run used Python 3.12.14, NumPy 2.3.5, Shapely 2.1.2 and GEOS 3.13.1 under isolation.
+
+No native observer, source predicate qualification, adopted negative-role exception, repaired credit or hold change occurred. Coordinator retains end-to-end review and publication.

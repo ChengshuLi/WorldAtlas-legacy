@@ -1,0 +1,289 @@
+{
+  "kind": "verified-stock-physical-result-not-geography-acceptance",
+  "actual_code_commit": "ce32528b8b3289681dc3b238549bd6b0f69de66d",
+  "data_stage_commit": "ce32528b8b3289681dc3b238549bd6b0f69de66d",
+  "unchanged_code_baseline": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "target_count": 12,
+  "input_count": 25,
+  "original_keys": 502,
+  "research_partition": [
+    379,
+    63,
+    60
+  ],
+  "complete_original_source_families": 6,
+  "complete_original_features": 71,
+  "original_contact_features": 25,
+  "products": [
+    {
+      "name": "whole-target-support.json",
+      "bytes": 317455,
+      "sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "name": "execution-receipt.json",
+      "bytes": 59034,
+      "sha256": "8a32d9115c36f0870bc1f67a541d8119ca17a15630def7272cf8c6f0c5e68f62"
+    },
+    {
+      "name": "preparation.json",
+      "bytes": 544,
+      "sha256": "ed48241fc85e744a5a71c25be724e6d3c2e91b89b000917e66191a4b00e3f85e"
+    }
+  ],
+  "targets": [
+    {
+      "target": "gb:ISR:ADM2:584046B9730835639199",
+      "name": "Be'er Sheva",
+      "source_id_query_count": 3,
+      "query_relation_count": 3,
+      "query_relation_statuses": {
+        "checked": 3
+      },
+      "issue_count": 2,
+      "issue_reasons": {
+        "contradictory_land_water_support": 1,
+        "L2-outside-L1": 1
+      },
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B86518607604876",
+      "name": "Jerusalem",
+      "source_id_query_count": 2,
+      "query_relation_count": 2,
+      "query_relation_statuses": {
+        "checked": 2
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B11408100439208",
+      "name": "Ashqelon",
+      "source_id_query_count": 2,
+      "query_relation_count": 2,
+      "query_relation_statuses": {
+        "checked": 2
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B34315111222202",
+      "name": "Tel Aviv",
+      "source_id_query_count": 2,
+      "query_relation_count": 2,
+      "query_relation_statuses": {
+        "checked": 2
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B13386645158990",
+      "name": "Zefat",
+      "source_id_query_count": 3,
+      "query_relation_count": 3,
+      "query_relation_statuses": {
+        "checked": 3
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B54386898087809",
+      "name": "Petah Tiqwa",
+      "source_id_query_count": 2,
+      "query_relation_count": 2,
+      "query_relation_statuses": {
+        "checked": 2
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B61571705909900",
+      "name": "HaSharon",
+      "source_id_query_count": 2,
+      "query_relation_count": 2,
+      "query_relation_statuses": {
+        "checked": 2
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B37321511847561",
+      "name": "Haifa",
+      "source_id_query_count": 2,
+      "query_relation_count": 2,
+      "query_relation_statuses": {
+        "checked": 2
+      },
+      "issue_count": 1,
+      "issue_reasons": {
+        "extra_reconstruction": 1
+      },
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B72217003232480",
+      "name": "Hadera",
+      "source_id_query_count": 2,
+      "query_relation_count": 2,
+      "query_relation_statuses": {
+        "checked": 2
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83749751332199",
+      "name": "Akko",
+      "source_id_query_count": 8,
+      "query_relation_count": 8,
+      "query_relation_statuses": {
+        "checked": 8
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B83064859640631",
+      "name": "Yizre'el",
+      "source_id_query_count": 3,
+      "query_relation_count": 3,
+      "query_relation_statuses": {
+        "checked": 3
+      },
+      "issue_count": 0,
+      "issue_reasons": {},
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    },
+    {
+      "target": "gb:ISR:ADM2:584046B15624900320210",
+      "name": "Kinneret",
+      "source_id_query_count": 3,
+      "query_relation_count": 3,
+      "query_relation_statuses": {
+        "checked": 3
+      },
+      "issue_count": 1,
+      "issue_reasons": {
+        "contradictory_land_water_support": 1
+      },
+      "support_fields": [
+        "mapped_land_support",
+        "mapped_inland_water_support",
+        "outside_mapped_L1_context",
+        "hierarchy_disagreements",
+        "missing_reconstruction",
+        "extra_reconstruction",
+        "contradictory_land_water_support"
+      ]
+    }
+  ],
+  "physical_elapsed_seconds": 226.76050945799943,
+  "limits": [
+    "Actual whole consumed target GSHHG source-relative support only.",
+    "No native cell qualification, source role adoption, repaired credit or change to holds.",
+    "Source and selected base remain distinct; original502 scope conserved."
+  ]
+}
