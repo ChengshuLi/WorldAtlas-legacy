@@ -661,7 +661,13 @@ export function authorityRegistry(registry) {
  demand(registry?.version===1&&registry.kind==='retained-rule-authority-registry-v1'&&Array.isArray(registry.entries)&&registry.entries.length>0,'Missing explicit retained authority registry');
  const byId=new Map();let previous='';
  for(const entry of registry.entries){
-  demand(entry&&['authority_sha256,policy_id,policy_version,rule_preimage,rule_sha256,source_authority','authority_sha256,completed_constructor,policy_id,policy_version,rule_preimage,rule_sha256,source_authority'].includes(Object.keys(entry).sort().join(','))&&hash(entry.authority_sha256)&&entry.authority_sha256>previous&&hash(entry.rule_sha256)&&typeof entry.policy_id==='string'&&entry.policy_id&&Number.isSafeInteger(entry.policy_version)&&entry.policy_version>0,'Foreign/duplicate/unordered authority entry');
+  const locatorKeys=['authority_sha256,original_source_paths,policy_id,policy_version,rule_preimage,rule_sha256,source_authority',
+   'authority_sha256,completed_constructor,original_source_paths,policy_id,policy_version,rule_preimage,rule_sha256,source_authority'];
+  const locator=entry?.original_source_paths;
+  demand(entry&&['authority_sha256,policy_id,policy_version,rule_preimage,rule_sha256,source_authority',
+   'authority_sha256,completed_constructor,policy_id,policy_version,rule_preimage,rule_sha256,source_authority',...locatorKeys].includes(Object.keys(entry).sort().join(','))
+   &&(locator===undefined||Array.isArray(locator)&&locator.length>0&&locator.every((p,i)=>typeof p==='string'&&p.length>0&&!p.includes('\\')&&!p.includes('\0')&&!p.startsWith('/')&&!p.split('/').some(s=>!s||s==='.'||s==='..')&&(!i||locator[i-1]<p)))
+   &&hash(entry.authority_sha256)&&entry.authority_sha256>previous&&hash(entry.rule_sha256)&&typeof entry.policy_id==='string'&&entry.policy_id&&Number.isSafeInteger(entry.policy_version)&&entry.policy_version>0,'Foreign/duplicate/unordered authority entry');
   pinCheck(entry.rule_preimage);pinCheck(entry.source_authority);
   if(entry.completed_constructor!==undefined)pinCheck(entry.completed_constructor);
   demand(entry.rule_preimage.sha256===entry.rule_sha256,'Original full rule preimage differs');

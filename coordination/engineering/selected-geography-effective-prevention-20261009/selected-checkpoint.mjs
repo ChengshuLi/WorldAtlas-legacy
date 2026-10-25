@@ -360,9 +360,16 @@ async function appendAuthority(session, reader, entry, domain, custody) {
     throw Error('Final-bank positive changes require completed native source-target authority');
   }
 
+  const declaredSources=evidence?.source_membership?.parts?.map(p=>p.path)??[];
+  const locatorSources=entry.original_source_paths??[];
+  // Optional untrusted locators are bounded by the authenticated target roster.
+  // They identify accepted bodies to inspect; they never supply original bytes.
+  demand(locatorSources.length<=proof.source_scope_ids.length,'Too many original source path locators for authority targets');
+  demand(!declaredSources.length||!locatorSources.length||same([...declaredSources].sort(),[...locatorSources].sort()),
+    'Original source locator conflicts with declared accepted source membership');
   return {entry,nativeOnly:proof.original_pins.source_evidence!==undefined,patches:proof.native_proof.native_patches,ledger:proof.original_ledger,
     contract:proof.native_proof.native_contract,source_scope_ids:proof.source_scope_ids,
-    referenceSources:evidence?.source_membership?.parts?.map(p=>p.path)??[]};
+    referenceSources:declaredSources.length?declaredSources:locatorSources};
 }
 
 async function qualifyFinalPositiveEvidence(session,reader,state,selected,priorIdentities,ownerCount=state.certificate?.entries.length) {
@@ -569,15 +576,17 @@ export async function compareAcceptedFinalBank({beforeReader,afterReader,acquire
       demand(ownerIndex.get(component.target_id)===component.pixelIndex,'Positive source target differs from the accepted owner identity');
     const lazy=new Set(before.bank.features.filter((f,i)=>f.geometry===null&&after.bank.features[i].geometry!==null).map(f=>f.id)),originals=new Map();
     if(lazy.size){
-      // Proposed containing paths locate accepted N, never redefine its bytes.
       const sources=await originalSources();
-      for(const name of added.referenceSources){
-        const pin=sources.get(name);demand(pin,'New target source is outside the accepted original source roster');
-        await acquireInputs(session,beforeReader,[pin]);
-        const collection=readBody(session,beforeReader,pin);
-        demand(collection.type==='FeatureCollection'&&Array.isArray(collection.features),'Incomplete original target containing source');
-        for(const feature of collection.features)if(lazy.has(feature.id)){
-          demand(!originals.has(feature.id),'Duplicate original target identity');originals.set(feature.id,feature.geometry);
+      if(added.referenceSources.length){
+        // Proposed containing paths locate accepted N, never redefine its bytes.
+        for(const name of added.referenceSources){
+          const pin=sources.get(name);demand(pin,'New target source is outside the accepted original source roster');
+          await acquireInputs(session,beforeReader,[pin]);
+          const collection=readBody(session,beforeReader,pin);
+          demand(collection.type==='FeatureCollection'&&Array.isArray(collection.features),'Incomplete original target containing source');
+          for(const feature of collection.features)if(lazy.has(feature.id)){
+            demand(!originals.has(feature.id),'Duplicate original target identity');originals.set(feature.id,feature.geometry);
+          }
         }
       }
       demand(originals.size===lazy.size,'New lazy target lacks its accepted original containing source');

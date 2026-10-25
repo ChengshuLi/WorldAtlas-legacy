@@ -92,7 +92,7 @@ function buildTrustedSeed(root,{latitudePinChanges,omitLatitudeFields,latitudeSy
   save('data/geographic-releases/current-manifest.json',{path:'fixture.json',sha256:valueSha(release)});
  }
 
- const primitive=addition('old','A',1,certificate.entries[0][7],.3);
+ const primitive=addition('old',features[0].id,1,certificate.entries[0][7],.3);
  const literal={...primitive,base_geometry:features[0].geometry,disposition:'assigned',native_cells:1,source_receipt_sha256:'c'.repeat(64)};
  const originalPatch={version:1,kind:'unassigned-native-cells-v1',rows:originalPatchRows??[{y:1,runs:[[2,3,1]]}]};
  save('original/patch-one.json',originalPatch);save('original/rule.json',{version:1});const one=commit();
@@ -106,7 +106,7 @@ function buildTrustedSeed(root,{latitudePinChanges,omitLatitudeFields,latitudeSy
  const entry={policy_id:'retained-source-literal-additions',policy_version:1,rule_preimage:pin('original/rule.json',one),rule_sha256:pin('original/rule.json',one).sha256,source_authority:pin('original/binding.json',three)};entry.authority_sha256=valueSha(entry);
  const registry={version:1,kind:'retained-rule-authority-registry-v1',entries:[entry]};save('data/registry.json',registry);
  const baseSelection={version:1,...(finalBank?{artifact_consumption:{fixture:'accepted immutable source inventory'}}:{}),method:manifest.method,manifest_path:'data/manifest.json',sha256:pin('data/manifest.json',one).sha256,release_id:reference.id,selected_geography:{version:1,kind:'complete-world-index-with-exact-encoded-overrides',path:'data/bank.json',bytes:1,sha256:'d'.repeat(64)}};
- const target={target_id:'A',pixelIndex:1,geometry:features[0].geometry,geometry_sha256:valueSha(features[0].geometry)};
+ const target={target_id:features[0].id,pixelIndex:1,geometry:features[0].geometry,geometry_sha256:valueSha(features[0].geometry)};
  const currentRows=[{y:1,runs:[[0,1,2]]}];
  const request={base_selection:baseSelection,authority_registry_sha256:valueSha(registry),current_targets:[target],current_rows:currentRows,original_patch_sha256s:[valueSha(originalPatch)],acquisition:{predecessor_rows:[],predecessor_proof:null,native_inputs:[]}};
  const rebind={request,result:{native:{rows:originalPatch.rows}},facts:{acquisition_phases:[]},publication:{},operating:packageRoles?{execution_custody:{}}:{}};
@@ -149,15 +149,16 @@ async function trustedFixture(t,{latitudePinChanges={},omitLatitudeFields=[],lat
 // Genuine pinned source/native qualification, followed by the public private-state
 // admission and transition. The full lattice is a two-MiB normative input, while
 // the proposed and projected repair is one cell; no research result is invented.
-async function appendNativeAuthority(f,{owner=0,targetOwners,name='appended',completedConstructor=false,mutateConstructor=()=>{},nativePatchRows,mutateEvidence=()=>{},mutateLedger=()=>{},mutatePatch=()=>{},duplicateAuthority=false,membershipPath='data/geography/part-0.json'}={}) {
+async function appendNativeAuthority(f,{owner=0,targetOwners,name='appended',completedConstructor=false,mutateConstructor=()=>{},nativePatchRows,mutateEvidence=()=>{},mutateLedger=()=>{},mutatePatch=()=>{},duplicateAuthority=false,membershipPath='data/geography/part-0.json',originalSourcePaths}={}) {
  const family='gb:TST:ADM2',latitudes=nativeRowLatitudes(f.manifest.size);
  const requested=(targetOwners??[owner]).map(owner=>{
-  const feature=f.features[owner],bounds=coordinateBounds(feature.geometry)[0],target=family+':'+feature.id;
+  const feature=f.features[owner],sourceId=feature.id.startsWith(family+':')?feature.id.slice(family.length+1):feature.id;
+  const bounds=coordinateBounds(feature.geometry)[0],target=family+':'+sourceId;
   const y=latitudes.findIndex(v=>v<(bounds[1]+bounds[3])/2),x=Math.floor(((bounds[0]+bounds[2])/2+180)/360*f.manifest.size);
-  return {owner,feature,target,y,x};
+  return {owner,feature,sourceId,target,y,x};
  });
  const {y,x}=requested[0];
- const raw={type:'FeatureCollection',features:f.features.map(p=>({type:'Feature',properties:{shapeID:p.id},geometry:p.geometry}))};
+ const raw={type:'FeatureCollection',features:f.features.map(p=>({type:'Feature',properties:{shapeID:p.id.startsWith(family+':')?p.id.slice(family.length+1):p.id},geometry:p.geometry}))};
  f.save(name+'/source.json',raw);
  f.save('coordination/engineering/original-geography-source-corpus-20261006/catalogue.json',{
   products:[{key:family,parts:[{path:name+'/source.json',bytes:valueBytes(raw).length,sha256:valueSha(raw)}],
@@ -166,9 +167,9 @@ async function appendNativeAuthority(f,{owner=0,targetOwners,name='appended',com
  f.save(name+'/measured.json',requested.map(({target,feature})=>({target,consumed:{geometry:feature.geometry},selected:{id:feature.id,geometry:feature.geometry}})));
  f.save(name+'/physical.py',Buffer.from('# immutable bounded fixture\n'));
  f.save('data/world-index.json',{parts:[membershipPath.slice('data/'.length)]});
- f.save('data/semantic-report.json',{changes:f.features.map(p=>({id:p.id,replaces:[family+':'+p.id]}))});
+ f.save('data/semantic-report.json',{changes:f.features.map(p=>({id:p.id,replaces:[family+':'+(p.id.startsWith(family+':')?p.id.slice(family.length+1):p.id)]}))});
  f.save(membershipPath,{type:'FeatureCollection',features:f.features.map(p=>({...p,
-  properties:{...p.properties,metadata:{source_member_ids:[family+':'+p.id]}}}))});
+  properties:{...p.properties,metadata:{source_member_ids:[family+':'+(p.id.startsWith(family+':')?p.id.slice(family.length+1):p.id)]}}}))});
  f.save(name+'/native-patch.json',{rows:nativePatchRows===undefined?mergeCompletedNativePatches(requested.map(({owner,x,y})=>({rows:[{y,runs:[[x,x+1,owner+1]]}]})),f.manifest.size):structuredClone(nativePatchRows)});const originals=f.commit();
  const physicalEvidence=f.pin(name+'/physical.json',originals);
  const evidence={version:1,kind:'source-target-native-evidence-v1',
@@ -187,6 +188,7 @@ async function appendNativeAuthority(f,{owner=0,targetOwners,name='appended',com
  f.save(name+'/binding.json',{version:1,kind:'source-target-native-custody-v1',...operands});const authority=f.commit();
  const entry={policy_id:'retained-source-literal-additions',policy_version:1,rule_preimage:f.pin(name+'/rule.json',authority),
   rule_sha256:f.pin(name+'/rule.json',authority).sha256,source_authority:f.pin(name+'/binding.json',authority)};entry.authority_sha256=valueSha(entry);
+ if(originalSourcePaths!==undefined){delete entry.authority_sha256;entry.original_source_paths=structuredClone(originalSourcePaths);entry.authority_sha256=valueSha(entry);}
  const reader=new f.native.ImmutableReader(f.root,authority);
  const {readRetainedRegistryAuthority}=await import(pathToFileURL(path.join(f.root,CODE[1])));
  const proof=readRetainedRegistryAuthority(reader,entry);

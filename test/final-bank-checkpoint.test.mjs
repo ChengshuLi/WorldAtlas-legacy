@@ -421,6 +421,98 @@ console.log(JSON.stringify({report,metadata_requests:calls}));`);
  f.git('reset','--hard',code);
 });
 
+test('inline target geometry hydrates from an accepted-roster path locator, without scanning unrelated bodies',async t=>{
+ const family='gb:TST:ADM2',sourceFeature=(id,x)=>({type:'Feature',id:family+':'+id,
+  properties:{id:family+':'+id,parent_id:'parent'},geometry:{type:'Polygon',coordinates:[[[x,0],[x+.2,0],[x+.2,.2],[x,.2],[x,0]]]}}),
+  sourceFeatures=[sourceFeature('A',0),sourceFeature('B',1),sourceFeature('C',5)];
+ const f=await trustedFixture(t,{nativeAppend:true,finalBank:true,sourceFeatures});
+ const old=await oldBank(f),sourceWorld=f.selected;
+ f.save('data/bank.json',{version:1,kind:'complete-world-index-with-exact-encoded-overrides',locations:old.features.length,
+  world_index:f.pin('data/world-index.json',sourceWorld),release_id:f.envelope.base_reference.id,
+  native_manifest_sha256:f.selection.sha256,footprints_sha256:f.manifest.footprints_sha256,
+  unchanged_files:[f.pin('data/source.json',sourceWorld)],overrides:[]});
+ const sourcePin=f.pin('data/bank.json',f.commit());f.sidecar.base_selection={...f.sidecar.base_selection,selected_geography:{version:1,
+  kind:'complete-world-index-with-exact-encoded-overrides',path:sourcePin.path,bytes:sourcePin.bytes,sha256:sourcePin.sha256}};
+ const features=old.features.map(p=>finishEffectiveFootprint(p,valueSha));let ownership=old.ownership;
+ const initial=await writeFinal(f,old.index,features,ownership);
+ const added=await appendNativeAuthority(f,{owner:1,name:'inline-only',completedConstructor:true,membershipPath:'data/source.json',
+  originalSourcePaths:['data/source.json'],mutateEvidence:evidence=>{delete evidence.source_membership;}});
+ f.save('inline-only/registry.json',{version:1,kind:'retained-rule-authority-registry-v1',entries:[added.entry]});
+ const registryAt=f.commit(),hook=f.pin('inline-only/registry.json',registryAt);
+ const components=added.proof.original_ledger.rows.filter(p=>p.disposition==='assigned')
+  .map(p=>({...nativeLiteral(p),authority_sha256:added.entry.authority_sha256,rule_sha256:added.entry.rule_sha256}));
+ const candidateFeatures=features.map(p=>p.id!==f.features[1].id?p:
+  extendFinishedNativeFootprint({...p,geometry:p.geometry??components[0].base_geometry},components,valueSha));
+ const rows=mergeUnassignedNativeIntervals(ownership,added.proof.native_proof.native_patches[0].rows,
+  {owners:new Set([1,2,3]),allowed:new Set([1,2,3])});ownership={...ownership,...rows,runWords:rows.runs.length};
+ const candidate=await writeFinal(f,old.index,candidateFeatures,ownership,hook);
+ const beforeReader=new f.native.ImmutableReader(f.root,initial.commit),afterReader=new f.native.ImmutableReader(f.root,candidate.commit,
+  {invocation:beforeReader.invocation});
+ const report=await f.api.compareAcceptedFinalBank({beforeReader,afterReader});
+ assert.equal(report.native_row_scope.added_cells,1);
+});
+
+test('inline targets fail closed without an accepted source path locator',async t=>{
+ const family='gb:TST:ADM2',sourceFeature=(id,x)=>({type:'Feature',id:family+':'+id,
+  properties:{id:family+':'+id,parent_id:'parent'},geometry:{type:'Polygon',coordinates:[[[x,0],[x+.2,0],[x+.2,.2],[x,.2],[x,0]]]}}),
+  f=await trustedFixture(t,{nativeAppend:true,finalBank:true,sourceFeatures:[sourceFeature('A',0),sourceFeature('B',1),sourceFeature('C',5)]});
+ const old=await oldBank(f),sourceWorld=f.selected;
+ f.save('data/bank.json',{version:1,kind:'complete-world-index-with-exact-encoded-overrides',locations:old.features.length,
+  world_index:f.pin('data/world-index.json',sourceWorld),release_id:f.envelope.base_reference.id,native_manifest_sha256:f.selection.sha256,
+  footprints_sha256:f.manifest.footprints_sha256,unchanged_files:[f.pin('data/source.json',sourceWorld)],overrides:[]});
+ const sourcePin=f.pin('data/bank.json',f.commit());f.sidecar.base_selection={...f.sidecar.base_selection,selected_geography:{version:1,
+  kind:'complete-world-index-with-exact-encoded-overrides',path:sourcePin.path,bytes:sourcePin.bytes,sha256:sourcePin.sha256}};
+ const features=old.features.map(p=>finishEffectiveFootprint(p,valueSha)),initial=await writeFinal(f,old.index,features,old.ownership);
+ const added=await appendNativeAuthority(f,{owner:1,name:'no-source-path',completedConstructor:true,membershipPath:'data/source.json',mutateEvidence:e=>{delete e.source_membership;}});
+ f.save('no-source-path/registry.json',{version:1,kind:'retained-rule-authority-registry-v1',entries:[added.entry]});
+ const hook=f.pin('no-source-path/registry.json',f.commit()),components=added.proof.original_ledger.rows.filter(p=>p.disposition==='assigned')
+  .map(p=>({...nativeLiteral(p),authority_sha256:added.entry.authority_sha256,rule_sha256:added.entry.rule_sha256}));
+ const candidateFeatures=features.map(p=>p.id!==f.features[1].id?p:extendFinishedNativeFootprint({...p,geometry:p.geometry??components[0].base_geometry},components,valueSha));
+ const rows=mergeUnassignedNativeIntervals(old.ownership,added.proof.native_proof.native_patches[0].rows,{owners:new Set([1,2,3]),allowed:new Set([1,2,3])});
+ const candidate=await writeFinal(f,old.index,candidateFeatures,{...old.ownership,...rows,runWords:rows.runs.length},hook);
+ const beforeReader=new f.native.ImmutableReader(f.root,initial.commit),afterReader=new f.native.ImmutableReader(f.root,candidate.commit,{invocation:beforeReader.invocation});
+ await assert.rejects(f.api.compareAcceptedFinalBank({beforeReader,afterReader}),/New lazy target lacks its accepted original containing source/);
+});
+
+test('inline locator must resolve through the accepted original source roster',async t=>{
+ const family='gb:TST:ADM2',sourceFeature=(id,x)=>({type:'Feature',id:family+':'+id,
+  properties:{id:family+':'+id,parent_id:'parent'},geometry:{type:'Polygon',coordinates:[[[x,0],[x+.2,0],[x+.2,.2],[x,.2],[x,0]]]}}),
+  f=await trustedFixture(t,{nativeAppend:true,finalBank:true,sourceFeatures:[sourceFeature('A',0),sourceFeature('B',1),sourceFeature('C',5)]});
+ const old=await oldBank(f),sourceWorld=f.selected;
+ f.save('data/bank.json',{version:1,kind:'complete-world-index-with-exact-encoded-overrides',locations:old.features.length,
+  world_index:f.pin('data/world-index.json',sourceWorld),release_id:f.envelope.base_reference.id,native_manifest_sha256:f.selection.sha256,
+  footprints_sha256:f.manifest.footprints_sha256,unchanged_files:[f.pin('data/source.json',sourceWorld)],overrides:[]});
+ const sourcePin=f.pin('data/bank.json',f.commit());f.sidecar.base_selection={...f.sidecar.base_selection,selected_geography:{version:1,
+  kind:'complete-world-index-with-exact-encoded-overrides',path:sourcePin.path,bytes:sourcePin.bytes,sha256:sourcePin.sha256}};
+ const features=old.features.map(p=>finishEffectiveFootprint(p,valueSha)),initial=await writeFinal(f,old.index,features,old.ownership);
+ const added=await appendNativeAuthority(f,{owner:1,name:'foreign-locator',completedConstructor:true,membershipPath:'data/source.json',originalSourcePaths:['data/foreign.json'],
+  mutateEvidence:e=>{delete e.source_membership;}});
+ f.save('foreign-locator/registry.json',{version:1,kind:'retained-rule-authority-registry-v1',entries:[added.entry]});
+ const hook=f.pin('foreign-locator/registry.json',f.commit()),components=added.proof.original_ledger.rows.filter(p=>p.disposition==='assigned')
+  .map(p=>({...nativeLiteral(p),authority_sha256:added.entry.authority_sha256,rule_sha256:added.entry.rule_sha256}));
+ const candidateFeatures=features.map(p=>p.id!==f.features[1].id?p:extendFinishedNativeFootprint({...p,geometry:p.geometry??components[0].base_geometry},components,valueSha));
+ const rows=mergeUnassignedNativeIntervals(old.ownership,added.proof.native_proof.native_patches[0].rows,{owners:new Set([1,2,3]),allowed:new Set([1,2,3])});
+ const candidate=await writeFinal(f,old.index,candidateFeatures,{...old.ownership,...rows,runWords:rows.runs.length},hook);
+ const beforeReader=new f.native.ImmutableReader(f.root,initial.commit),afterReader=new f.native.ImmutableReader(f.root,candidate.commit,{invocation:beforeReader.invocation});
+ await assert.rejects(f.api.compareAcceptedFinalBank({beforeReader,afterReader}),/outside the accepted original source roster/);
+});
+
+test('inline locator cannot authorize forged target geometry, identity, or owner',async t=>{
+ const family='gb:TST:ADM2',sourceFeature=(id,x)=>({type:'Feature',id:family+':'+id,
+  properties:{id:family+':'+id,parent_id:'parent'},geometry:{type:'Polygon',coordinates:[[[x,0],[x+.2,0],[x+.2,.2],[x,.2],[x,0]]]}}),
+  sourceFeatures=[sourceFeature('A',0),sourceFeature('B',1),sourceFeature('C',5)];
+ const invalid=[
+  ['forged inline geometry',e=>{e.targets[0].base_geometry.coordinates[0][0][0]+=.01;}],
+  ['forged inline identity',e=>{e.targets[0].id=family+':FORGED';}],
+  ['forged inline owner',e=>{e.targets[0].pixelIndex++;}]
+ ];
+ for(const [name,mutateEvidence] of invalid)await t.test(name,async t=>{
+  const f=await trustedFixture(t,{nativeAppend:true,finalBank:true,sourceFeatures});
+  await assert.rejects(appendNativeAuthority(f,{owner:1,name:'forged-inline',completedConstructor:true,
+   membershipPath:'data/source.json',originalSourcePaths:['data/source.json'],mutateEvidence:e=>{delete e.source_membership;mutateEvidence(e);}}));
+ });
+});
+
 async function historicalDescriptorFixture(t,options={}) {
  const f=await trustedFixture(t,{nativeAppend:true,finalBank:true,
   omitLatitudeFields:['mode','git_blob_oid'],...options});
