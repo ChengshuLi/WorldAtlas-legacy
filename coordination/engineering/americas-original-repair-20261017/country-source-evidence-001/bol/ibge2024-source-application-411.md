@@ -12,9 +12,15 @@ The exact 411-key join is privately pinned by sorted state/owner/native-cell tup
 
 ## Source and method
 
-The source is IBGE's 2024 `Malha Municipal Digital` current administrative-state depiction. The official product metadata says the international frontier representation in IBGE meshes is supplied by Brazil's MRE boundary-demarcation commissions. The official 2024 state ZIPs were acquired from published IBGE directory links (RO, MT, MS) and checked privately. The source directory labels its files public; no separate license instrument was acquired, so raw ZIPs are not redistributed here.
+The source is IBGE's 2024 `Malha Municipal Digital` current administrative-state depiction. Official product-page indexed metadata (the direct product-page fetch returned 403, so no page body was acquired) says the international frontier representation in IBGE meshes is supplied by Brazil's MRE boundary-demarcation commissions. The three state ZIPs were new ordinary GETs from links actually published in IBGE's public directory; the directory labels its files public. No separate license instrument was acquired, so raw ZIPs are retained privately and not redistributed here. All archives passed integrity checks; selected state shapefiles are one-feature EPSG:4674/SIRGAS 2000 polygons, with DBF update date 2025-03-06.
 
 The private bounded overlay uses the original normative native centers against the matching IBGE state polygons, EPSG:4674/SIRGAS 2000, with direct `Contains`/`Intersects`; no transformation, buffer, snapping, nearest-distance, or coordinate query was used. Exact private 456-row overlay SHA-256: `4d9e11938d235e19ea933368864363b9440c4f9b2babe7b99e52ba8053102bd8`. Aggregate result: RO 9 inside/181 outside; MT 18/218; MS 4/26. No boundary-only relation occurred.
+
+| Published input | Bytes | Retained private ZIP SHA-256 |
+|---|---:|---|
+| [RO 2024 mesh](https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/UFs/RO/RO_UF_2024.zip) | 113,745 | `37d11882bb1f94d1e5ef14178e3bc261aa062cfdeefdc9b22959fa28d282d8f9` |
+| [MT 2024 mesh](https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/UFs/MT/MT_UF_2024.zip) | 304,944 | `032802e4b8180fbaab1a6aeef8059b418bf9b63ef7ccb361c4b29ea5ad6c96de` |
+| [MS 2024 mesh](https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/UFs/MS/MS_UF_2024.zip) | 231,229 | `03538e45b35bfe0b3adf425b323b2172426b93dd201c7227bb3e93bf1dd58a35` |
 
 The selected Brazil ADM1 metadata represents 2006 and has 2023 source-update/build dates, but names only GeoBoundaries/Wikimedia Commons and gives a generic Commons URL. IBGE's 2024 administrative depiction is relevant current context, not proof of the old feature's construction lineage, historical effective date, statutory basis, or a per-feature treaty-boundary source. The retained treaty/reach and source-specific caveats remain in force; this package does not replace them.
 
