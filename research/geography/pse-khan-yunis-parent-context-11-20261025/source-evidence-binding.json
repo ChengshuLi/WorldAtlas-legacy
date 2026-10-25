@@ -1,0 +1,171 @@
+{
+  "attribution_notice": "coordination/engineering/pse-original-disposition-20261020/native-authority-223-current-65ef/THIRD-PARTY-ATTRIBUTION.md",
+  "kind": "pse-source-evidence-context-binding-v1",
+  "new_applicability": {
+    "bytes": 161023,
+    "commit": "fa9d54c0c247a4eaf4e9ac64bf6b6d803e91e04e",
+    "git_blob_oid": "6d0e22853b4b28ccd66bdb9ce5a7e972c73d69fe",
+    "mode": "100644",
+    "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/adopted-territorial-applicability.json",
+    "sha256": "6ab58191a34e46c57f6281d6fdeb3748bccc5d403468ef31c6f763f8eb8cf48a"
+  },
+  "only_changed_field": "/territorial_applicability",
+  "original": {
+    "bytes": 55351,
+    "commit": "4440154b9b4169df4582b3aa1048c95ab80089a6",
+    "git_blob_oid": "f9a8d4959c1091503bb4a0393617bafe5df39691",
+    "path": "research/geography/pse-parent-context-43-20261025/source-evidence.json",
+    "sha256": "8f2eee7d4a9903cecd09f3b0e46cff586f0f212c834939eba0f3642cc12b29ae"
+  },
+  "other_json_fields_semantically_identical": true,
+  "previous_applicability": {
+    "bytes": 152804,
+    "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+    "git_blob_oid": "28dfb8cda5b27c7f3f3c158f8efec70bc3c4c513",
+    "mode": "100644",
+    "path": "research/geography/pse-parent-context-43-20261025/adopted-territorial-applicability.json",
+    "sha256": "d4f1c854cebb9e7d945965c3d14da1f8d0c8700f7d4220124a8bba31a140d4cc"
+  },
+  "status": "binding-only projection: source/context, source evidence, physical support, native predicates and 237 applicability records unchanged; exact immutable locators substituted only where old commit objects are unavailable.",
+  "third_party_geometry_reproduced_or_redrawn": false,
+  "version": 1,
+  "locator_rebindings": [
+    {
+      "id": "source-evidence.physical_input",
+      "old": {
+        "commit": "2163690fe07ba2417a37c82657c951f500004b94",
+        "path": "coordination/engineering/pse-original-disposition-20261020/original-stage-inputs.json",
+        "git_blob_oid": "006277db9c8ac970d4d43f5d032baad951d4639a",
+        "bytes": 158732,
+        "sha256": "7eba6afac3cc857f499346cef4a4b68b6a298fafe045b2dc720a5f16cf06b9bd"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "coordination/engineering/pse-original-disposition-20261020/original-stage-inputs.json",
+        "git_blob_oid": "006277db9c8ac970d4d43f5d032baad951d4639a",
+        "bytes": 158732,
+        "sha256": "7eba6afac3cc857f499346cef4a4b68b6a298fafe045b2dc720a5f16cf06b9bd"
+      }
+    },
+    {
+      "id": "source-evidence.physical_evidence",
+      "old": {
+        "commit": "bd9a51014a7d0b3495cc4841600eb64d75adf325",
+        "path": "coordination/engineering/pse-original-disposition-20261020/physical-20261025/whole-target-support.json",
+        "git_blob_oid": "2fecbf9a55fc8b33e95c67813685b5d32fbea3ab",
+        "bytes": 227866,
+        "sha256": "a6972a88f57bb363ad91283a9ed23104d56429e6222628047833c207271bffb4"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "coordination/engineering/pse-original-disposition-20261020/physical-20261025/whole-target-support.json",
+        "git_blob_oid": "2fecbf9a55fc8b33e95c67813685b5d32fbea3ab",
+        "bytes": 227866,
+        "sha256": "a6972a88f57bb363ad91283a9ed23104d56429e6222628047833c207271bffb4"
+      }
+    },
+    {
+      "id": "adopted-app.provenance.adoption",
+      "old": {
+        "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+        "path": "inventory/pse-adm1-parent-context-decision-20261025.json",
+        "git_blob_oid": "17d30e5155c375d3c376a1eec58923010b4d6ff8",
+        "bytes": 5587,
+        "sha256": "28dc4b654e120b2d76b9515893abb0cf5ef34d4cf1f84949e795d5d1cc5d8774"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "inventory/pse-adm1-parent-context-decision-20261025.json",
+        "git_blob_oid": "17d30e5155c375d3c376a1eec58923010b4d6ff8",
+        "bytes": 5587,
+        "sha256": "28dc4b654e120b2d76b9515893abb0cf5ef34d4cf1f84949e795d5d1cc5d8774"
+      }
+    },
+    {
+      "id": "adopted-app.provenance.scope",
+      "old": {
+        "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+        "path": "inventory/pse-adm1-parent-context-scope-20261025.json",
+        "git_blob_oid": "aaeea7ea82a67eb02eacfa02150d9d14b13b7fbd",
+        "bytes": 53532,
+        "sha256": "503aadf5dc9547af6c374ab97d0069934988fb8e76030b29a21a94922482ca34"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "inventory/pse-adm1-parent-context-scope-20261025.json",
+        "git_blob_oid": "aaeea7ea82a67eb02eacfa02150d9d14b13b7fbd",
+        "bytes": 53532,
+        "sha256": "503aadf5dc9547af6c374ab97d0069934988fb8e76030b29a21a94922482ca34"
+      }
+    }
+  ],
+  "unavailable_old_commit_observations": [
+    {
+      "commit": "2163690fe07ba2417a37c82657c951f500004b94",
+      "attempts": [
+        "exact Git fetch returned not our ref",
+        "GitHub exact commit lookup returned 422 No commit found"
+      ],
+      "interpretation": "object availability only; no cause inferred"
+    },
+    {
+      "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+      "attempts": [
+        "exact Git fetch returned not our ref",
+        "GitHub exact commit lookup returned 422 No commit found"
+      ],
+      "interpretation": "object availability only; no cause inferred"
+    },
+    {
+      "commit": "bd9a51014a7d0b3495cc4841600eb64d75adf325",
+      "attempts": [
+        "exact Git fetch returned not our ref",
+        "GitHub exact commit lookup returned 422 No commit found"
+      ],
+      "interpretation": "object availability only; no cause inferred"
+    }
+  ],
+  "previous_locator_values_retained": true,
+  "payload_change": false,
+  "source_evidence_context_projection": {
+    "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/source-evidence-with-context.json",
+    "status": "exact original full-source evidence with source-relative applicability projection and locator-only rebinding of two unavailable commit pins",
+    "payload_change": false,
+    "sha256": "6d8d7041be3f1480c7d151e29afa3241232de2813e465c307aaf68960597555e"
+  },
+  "native_patch_locator_rebinding": {
+    "role": "original native patch input to the read-only changed-semantics diagnostic",
+    "old": {
+      "commit": "e0e2c3cc03e2a5e4c0c9d6354c94b80ac9350e2f",
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-requested-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "07d1f93ab8841b87ef1d6ff00186f5e5cc4031d7",
+      "bytes": 11869,
+      "sha256": "c5cdb04e5ad181593cfaeb0bb6270f6013ba8c3c20f7119b7b7ef36d9765dbcb"
+    },
+    "new": {
+      "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-requested-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "07d1f93ab8841b87ef1d6ff00186f5e5cc4031d7",
+      "bytes": 11869,
+      "sha256": "c5cdb04e5ad181593cfaeb0bb6270f6013ba8c3c20f7119b7b7ef36d9765dbcb"
+    },
+    "proof": "Existing exact tree entry at new commit/path has the same ordinary blob OID, size and SHA; raw body independently verified.",
+    "old_locator_attempts_private_receipt": "/workspace/scratch/127991fc8b8e/pse07-source-review-20261025/native-patch-input-route-blocker.private.json",
+    "old_lookup_outcomes": [
+      "exact Git fetch: not our ref",
+      "GitHub exact commit lookup: HTTP 422 No commit found",
+      "GitHub exact path/ref lookup: HTTP 404 No commit found",
+      "earlier exact-blob response had no containing path/tree binding; it was not then consumed"
+    ],
+    "interpretation": "object availability; no cause inferred; prior outcome preserved; current locator uses already authenticated exact body binding, not a fabricated historical commit or new producer"
+  },
+  "consumer_schema_correction": {
+    "prior_attempt": "The strict existing native diagnostic reader stopped before source/native screening with `Incomplete adopted territorial applicability`; no predicates or outputs ran.",
+    "requirement": "version 1, kind adopted-native-territorial-applicability-v1, provenance, records",
+    "change": "Added only the schema-required top-level version: 1; all 237 records and all provenance entries remain unchanged from the reviewed interpretation except the already reviewed exact locator bindings.",
+    "source_rows_changed": false,
+    "physical_or_geometry_payload_changed": false
+  }
+}

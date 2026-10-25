@@ -1,0 +1,354 @@
+{
+  "group_id": "PSE-07",
+  "inputs": {
+    "native_diagnostic": {
+      "bytes": 624553,
+      "commit": "3e28e6bdf83bf3b751be03c46414d802faee13ef",
+      "git_blob_oid": "326c5a6cb029867d5d6f5d8060b4c6b9cf74c248",
+      "mode": "100644",
+      "path": "research/geography/pse-parent-context-43-20261025/native-diagnostic.json",
+      "sha256": "4a64a5bacb0eae87f02d78832ff2be66dd9c8207d08e50bdcabcf21cf443d68d"
+    },
+    "original_intervals": {
+      "bytes": 102352,
+      "commit": "de9e9663f9bf3ef6d39a3618734d1539e810a49a",
+      "git_blob_oid": "82c1a0cee0e25aead8e4b2814fb62fea07128d21",
+      "mode": "100644",
+      "path": "coordination/engineering/pse-original-disposition-20261020/pse-disposition.json",
+      "sha256": "0b8b48671315dd4d20f23c28a034859964689c7747375e41e840d07f73bb7cb9"
+    },
+    "prior_226_adoption": {
+      "bytes": 152804,
+      "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+      "git_blob_oid": "28dfb8cda5b27c7f3f3c158f8efec70bc3c4c513",
+      "mode": "100644",
+      "path": "research/geography/pse-parent-context-43-20261025/adopted-territorial-applicability.json",
+      "sha256": "d4f1c854cebb9e7d945965c3d14da1f8d0c8700f7d4220124a8bba31a140d4cc"
+    },
+    "source_evidence": {
+      "bytes": 55351,
+      "commit": "4440154b9b4169df4582b3aa1048c95ab80089a6",
+      "git_blob_oid": "f9a8d4959c1091503bb4a0393617bafe5df39691",
+      "mode": "100644",
+      "path": "research/geography/pse-parent-context-43-20261025/source-evidence.json",
+      "sha256": "8f2eee7d4a9903cecd09f3b0e46cff586f0f212c834939eba0f3642cc12b29ae"
+    }
+  },
+  "interval_count": 11,
+  "interval_ordinals": [
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+  ],
+  "key_count": 11,
+  "key_set_sha256_y_x_owner": "feef40bc45fcbc8694fedea663111c880588f2e6a61c18c0545857aab04fbbf2",
+  "kind": "pse-parent-context-scope-v1",
+  "limitations": [
+    "Only exact original PSE-07 eleven mapped-land keys; no status, ownership or score change.",
+    "Every original PSE parent, Southern District and other competitor operand remains retained.",
+    "Southern District kinds:[] is a nonmatching native witness, not contact absence or a legal/territorial ruling.",
+    "The nine PSE-03 Jordan/Balqa interior-water veto keys and all other held residual keys are excluded and remain held."
+  ],
+  "original_denominator": {
+    "cells": 427,
+    "intervals": 277,
+    "requested_owners": 11
+  },
+  "package_id": "gb-PSE-ADM2--repair-evaluation",
+  "question_id": "PSE-07",
+  "recorded_owner": 36951,
+  "records": [
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 262,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156063,
+      "y": 106980
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 263,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156062,
+      "y": 106981
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 264,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156061,
+      "y": 106982
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 265,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156060,
+      "y": 106983
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 266,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156059,
+      "y": 106984
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 267,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156058,
+      "y": 106985
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 268,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156054,
+      "y": 106990
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 269,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156053,
+      "y": 106991
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 270,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156052,
+      "y": 106992
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 271,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156051,
+      "y": 106993
+    },
+    {
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "interval_ordinal": 272,
+      "negative_ordinal": 1,
+      "parent_contact_kinds": [
+        "interior"
+      ],
+      "physical_class": "land",
+      "pixelIndex": 36951,
+      "retained_foreign_contact": {
+        "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+        "kinds": [],
+        "negative_ordinal": 0,
+        "source_id": "gb:ISR:ADM1:19161824B24193204184747"
+      },
+      "role": "contextual",
+      "source_features": [
+        52577,
+        52584
+      ],
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156050,
+      "y": 106994
+    }
+  ],
+  "source_owner_role": {
+    "candidate_feature": 52584,
+    "candidate_owner": 36951,
+    "candidate_source_id": "gb:PSE:ADM2:87354302B21422506618890",
+    "parent_feature": 52577,
+    "parent_source_id": "gb:PSE:ADM1:83478781B7121896376882"
+  },
+  "status": "exact original PSE-07 key scope for source-relative contextual qualification; no native status change",
+  "version": 1
+}
