@@ -1,0 +1,15 @@
+# ISR502 coherent author checkpoint
+
+This directory assembles authored disposition and output-notice evidence for the existing reviewer and coordinator. It performs no new source, physical, native, authority, composition or finalizer operation and grants no adoption or acceptance.
+
+The exact original502 are partitioned in `exact502-author-disposition-index.jsonl`:379 genuinely authority-qualified land,110 root-reported independently supported researched-unresolved foreign subjects,3 separate parent-only water recommendations,10 Irbid pending. The latter123 remain held in the actual379 qualification. Historical200 is a subset of379, not additive credit. Mixed85 retain every original foreign operand. No supplemental decision is synthesized from this index.
+
+`source-authority-disposition-binding.json` binds the original502 request, existing full-source/parent decision chain, actual379 patch and authority, and published120 source interpretation. Exact authority keys equal the already-emitted stock379 patch; all four disposition strata are disjoint and exhaust original502. Source rows, geometry and prior scientific results are unchanged. The new JSONL is an authored index of saved evidence, not a producer result or a new exact-key observation.
+
+`AUTHOR-DISPOSITION.md` and `OUTPUT-NOTICE-DRAFT.md` are unchanged authored bodies received from the distinct source worker. `inherited-author-manifest.json` preserves that worker's original receipt, including its local references and statements about its own completed reads and absence of Git mutation. This subsequent checkpoint does publish those authored bodies; it does not rewrite the historical receipt to imply the source worker performed this publication or that this operator reread every archived source. Raw source archives, CBS maps and restricted excerpts are not copied here.
+
+Root's110 independent assessment/check hashes are retained as reported outcome references. Their complete bodies have not been supplied locally or read by this operator. This gap is explicit and cannot be closed by this author's own source summaries. The three water recommendations remain separate from that110 review. Irbid10 remains pending the actual reach/source question, with retained DNS/uncertain acquisition limits; no new retry was made.
+
+The output notice is expressly unbound: final selected-bank base, output commit/path/hash, actual delivered subject selection and output-specific inherited notice inclusion require later coordinator binding. It does not grant unrestricted source redistribution, sovereignty clearance or package completion. The optional target_id helper fix reported on accepted main does not cause any scientific rerun or change the historical executing CODE/DATA recorded here.
+
+The previous public scientific checkpoint is358fa63f932043f911a51286348b70154f495946. Publication of this authored directory leaves all existing source/physical/diagnostic/authority bodies unchanged. Next steps are the existing independent source/disposition review and coordinated current-bank/output binding. No PR, merge, dispatch, final bank or acceptance is requested by this checkpoint.

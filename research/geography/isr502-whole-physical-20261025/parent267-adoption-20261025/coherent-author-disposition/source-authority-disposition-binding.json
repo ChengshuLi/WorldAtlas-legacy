@@ -1,0 +1,78 @@
+{
+  "kind": "authored-cumulative-disposition-binding-not-new-science",
+  "existing_public_checkpoint": "358fa63f932043f911a51286348b70154f495946",
+  "original_scope": 502,
+  "counts": {
+    "positive_qualified_land_for_delivery_review": 379,
+    "root_reported_independently_supported_unresolved": 110,
+    "Irbid_pending": 10,
+    "separate_parent_only_water_unresolved_recommendation": 3
+  },
+  "current_qualification": {
+    "positive": 379,
+    "held": 123
+  },
+  "source_pins": {
+    "complete_source": {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "sha256": "4d8d1ed001998ea65bc29110974d7dee687c3029f4708f452f54ecc1b105be07"
+    },
+    "adopted_parent_bound_source": {
+      "bytes": 223561,
+      "sha256": "34948f1ea15170de6ba7fd83b62574864de9a7bb53dd0910c2657f82428f0543",
+      "commit": "d1be96c92e23170ae5b8ad9893855d5b7a759211",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/source-evidence.json"
+    },
+    "bound379_source": {
+      "bytes": 77149,
+      "sha256": "c500f30243e63520e6aa97ed8415c438306c047a336e4e0c64bde7d6ed985b18",
+      "commit": "5bdd34338397f51e16c8a74877a236cd9b16723c",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/source-evidence.json"
+    }
+  },
+  "original502_request": {
+    "bytes": 50833,
+    "sha256": "b7e58372c954d73b01a65ca20a78c1571e2ef181f669ebcc4c293d1980e6f655",
+    "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+    "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json"
+  },
+  "bound379_patch": {
+    "bytes": 13629,
+    "sha256": "69471c80df8906042d674629cdcf3e9ec241ec8492a3a95aa83abcda09a0bb2f",
+    "commit": "5bdd34338397f51e16c8a74877a236cd9b16723c",
+    "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/native-patch.json"
+  },
+  "authority379": {
+    "bytes": 152484,
+    "sha256": "1aaa061cf85b9a621a54b69e61959a36d24240d89b972ec8e03fcdee2503684d",
+    "commit": "59daeb287ed69085e4718e0f0c1af31929f946d7",
+    "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-authority-379-001/constructor-result.json",
+    "executing_CODE": "f82259ffd052e61ccb666765f991ce56e401b6b0",
+    "input_DATA": "5bdd34338397f51e16c8a74877a236cd9b16723c",
+    "components": 11
+  },
+  "foreign120_existing": {
+    "bytes": 135064,
+    "sha256": "4afe7fff44a9994edb2464d34462f68f2b188f433c6475bce79f6e1a7653b39c",
+    "commit": "358fa63f932043f911a51286348b70154f495946",
+    "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/foreign120-followup/exact120-current-source-dispositions.json"
+  },
+  "independent110": {
+    "reported_by_root": true,
+    "assessment_sha256": "f9a7d117713f9fd8b317fa1493473240a001b89d8e99fa88967543f18d66e862",
+    "checks_sha256": "66ba0e96571c99c96019827444fe6f47f2b2f2ab20c6b04a3511df63e0279817",
+    "full_bodies_supplied_locally": false,
+    "full_text_read_by_this_author": false
+  },
+  "equality_checks": {
+    "authority379_equals_stock_patch": true,
+    "union502_disjoint_complete": true,
+    "historical200_not_additive": true,
+    "foreign_operands_unmodified": true
+  },
+  "final_output": null,
+  "current_delivery_base": null,
+  "new_scientific_execution": false,
+  "new_adoption_or_acceptance": false,
+  "raw_source_bodies_copied": false
+}
