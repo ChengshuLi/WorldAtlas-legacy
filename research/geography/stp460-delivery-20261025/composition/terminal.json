@@ -1,0 +1,65 @@
+{
+  "accepted_base": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+  "actual_composition_code": "1cccd933ee017f68f25e1024a452129886acea46",
+  "original_authority_code": "31ec2d8ff335540f5c8c1a47a1969095c5275acc",
+  "authority_output_commit": "a9beea91a144de547dbc1a45a11895da9c4e5b60",
+  "worktree": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "compose",
+    "research/geography/stp460-delivery-20261025/compose-config.json",
+    ".cache/delivery-handoff/stp460-compose-20261025-01a16f2d-001"
+  ],
+  "config": {
+    "version": 2,
+    "selector": {
+      "path": "data/ownership-selection.json",
+      "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+      "mode": "100644",
+      "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+      "bytes": 2256,
+      "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1"
+    },
+    "authorities": [
+      {
+        "rule_preimage": {
+          "commit": "a9beea91a144de547dbc1a45a11895da9c4e5b60",
+          "path": "research/geography/stp460-whole-physical-20261025/native-authority-001/original-rule-preimage.json",
+          "git_blob_oid": "cdafb606cb0b675e79aa5d27e5adc571f728e665",
+          "bytes": 726,
+          "sha256": "e46458bf60217a63a73310cc5dc5e51897d6c660319c9caefec16e251bf09955",
+          "mode": "100644"
+        },
+        "source_authority": {
+          "commit": "a9beea91a144de547dbc1a45a11895da9c4e5b60",
+          "path": "research/geography/stp460-whole-physical-20261025/native-authority-001/authority-binding.json",
+          "git_blob_oid": "93f2a10879282b30492a657317941fb0587a8669",
+          "bytes": 729,
+          "sha256": "4c7671ec23ff0c73e6310134f07de8edda969429972f2af41fc9068aa2ceeb41",
+          "mode": "100644"
+        },
+        "ledger": {
+          "commit": "a9beea91a144de547dbc1a45a11895da9c4e5b60",
+          "path": "research/geography/stp460-whole-physical-20261025/native-authority-001/constructor-result.json",
+          "git_blob_oid": "22ad20a7aa6767ae5c908e6f91a85e0530fb94a8",
+          "bytes": 10644,
+          "sha256": "5eeea6bc1fa861e677fb19c36c83d5af6ad7c3562c674e13038b04321d324f90",
+          "mode": "100644"
+        },
+        "native_patch": {
+          "bytes": 21482,
+          "commit": "d0c64ee786f77aaabf3e701924a8773e8648c5e7",
+          "git_blob_oid": "9ff5922a2752720169a51bf75c0fbe1e887638bd",
+          "mode": "100644",
+          "path": "research/geography/stp460-whole-physical-20261025/native-input-plan/original-native-request.json",
+          "sha256": "e00d90dc2ff03b90b3b214981896cbce562a24433e760f1bf26f02976f213da7"
+        }
+      }
+    ]
+  },
+  "started": "2026-10-25T03:53:37.032215+00:00",
+  "status": "completed",
+  "returncode": 0,
+  "finished": "2026-10-25T03:55:54.609367+00:00"
+}

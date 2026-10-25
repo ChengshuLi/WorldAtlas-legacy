@@ -1,0 +1,384 @@
+{
+  "version": 1,
+  "selector": {
+    "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "bytes": 2286,
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "source_evidence": {
+    "version": 1,
+    "kind": "source-target-native-evidence-v1",
+    "catalogue": {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "mode": "100644",
+      "git_blob_oid": "09afab19371f0814da61e79e5f310c5fb2405b6d",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    "families": [
+      {
+        "source_id": "gb:STP:ADM1",
+        "parts": [
+          {
+            "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-STP-ADM1-000.bin.gz",
+            "mode": "100644",
+            "git_blob_oid": "ca1ad53692b297be675fa93cefde21e8d909138b",
+            "bytes": 4839,
+            "sha256": "74320b349207eb21ce8ce62846231e567747f877e259aaa2299023b36b0303d1",
+            "decoded_bytes": 13794,
+            "decoded_sha256": "08be7b52bcc1d3923590a046810bc24606f5e2eba4d86b6a241a27ab8507c7b8"
+          }
+        ]
+      }
+    ],
+    "physical_input": {
+      "commit": "989c1b601b23960e687567741db41e24a2f4ab26",
+      "path": "research/geography/stp460-whole-physical-20261025/original-stage-inputs.json",
+      "mode": "100644",
+      "git_blob_oid": "9ff668d5694fd72b2a3f938bdc3369592f84e204",
+      "bytes": 17505,
+      "sha256": "f60eb90a4b35d7afdb9d1c4ae9cb4de82a9b95436e2e21125007c9823182e903"
+    },
+    "physical_evidence": {
+      "commit": "1a7a2e7aec060ea263a9f045714a8cd0b31af6e0",
+      "path": "research/geography/stp460-whole-physical-20261025/physical-001/whole-target-support.json",
+      "mode": "100644",
+      "git_blob_oid": "38c66c9c0c41ac765203e6e15ff10f6d27d91de1",
+      "bytes": 132920,
+      "sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+    },
+    "physical_reproduction": {
+      "commit": "4624e09ad69293979ef7dca6db34a6ce859e9202",
+      "path": "scripts/qualify-source-cohort.py",
+      "mode": "100644",
+      "git_blob_oid": "f69180b425d665a022dd18290688864674dd20a5",
+      "bytes": 43642,
+      "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+    },
+    "owner_roster": {
+      "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+      "path": "data/canonical-grid/bounds.json.gz",
+      "mode": "100644",
+      "git_blob_oid": "9c44513df64995d417dd3832ae604c703e84a506",
+      "bytes": 2663523,
+      "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f",
+      "decoded_bytes": 11096191,
+      "decoded_sha256": "a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428"
+    },
+    "targets": [
+      {
+        "id": "gb:STP:ADM1:19237168B40253326356618",
+        "pixelIndex": 40323,
+        "source_family": "gb:STP:ADM1",
+        "base_geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                6.4637,
+                0.2163
+              ],
+              [
+                6.4678,
+                0.1869
+              ],
+              [
+                6.4788,
+                0.1735
+              ],
+              [
+                6.4802,
+                0.1503
+              ],
+              [
+                6.5007,
+                0.1065
+              ],
+              [
+                6.5163,
+                0.0957
+              ],
+              [
+                6.516,
+                0.0614
+              ],
+              [
+                6.5077,
+                0.0495
+              ],
+              [
+                6.5125,
+                0.0222
+              ],
+              [
+                6.5339,
+                0.0291
+              ],
+              [
+                6.5342,
+                0.0447
+              ],
+              [
+                6.5575,
+                0.0355
+              ],
+              [
+                6.5667,
+                0.0568
+              ],
+              [
+                6.5637,
+                0.0716
+              ],
+              [
+                6.5785,
+                0.0866
+              ],
+              [
+                6.5961,
+                0.0769
+              ],
+              [
+                6.6138,
+                0.0822
+              ],
+              [
+                6.6212,
+                0.0976
+              ],
+              [
+                6.6533,
+                0.1096
+              ],
+              [
+                6.6556,
+                0.1314
+              ],
+              [
+                6.6826,
+                0.1633
+              ],
+              [
+                6.7015,
+                0.1955
+              ],
+              [
+                6.7206,
+                0.2045
+              ],
+              [
+                6.7228,
+                0.2131
+              ],
+              [
+                6.749,
+                0.2423
+              ],
+              [
+                6.7438,
+                0.2491
+              ],
+              [
+                6.7498,
+                0.2678
+              ],
+              [
+                6.7453,
+                0.2763
+              ],
+              [
+                6.757,
+                0.2959
+              ],
+              [
+                6.7416,
+                0.3183
+              ],
+              [
+                6.7423,
+                0.3329
+              ],
+              [
+                6.7261,
+                0.342
+              ],
+              [
+                6.7132,
+                0.3718
+              ],
+              [
+                6.6908,
+                0.4036
+              ],
+              [
+                6.6608,
+                0.4134
+              ],
+              [
+                6.6386,
+                0.4067
+              ],
+              [
+                6.6089,
+                0.4069
+              ],
+              [
+                6.6045,
+                0.3954
+              ],
+              [
+                6.588,
+                0.3838
+              ],
+              [
+                6.574,
+                0.3665
+              ],
+              [
+                6.5608,
+                0.3589
+              ],
+              [
+                6.5462,
+                0.3608
+              ],
+              [
+                6.4925,
+                0.3185
+              ],
+              [
+                6.4809,
+                0.2758
+              ],
+              [
+                6.4668,
+                0.2634
+              ],
+              [
+                6.4613,
+                0.2399
+              ],
+              [
+                6.4637,
+                0.2163
+              ]
+            ]
+          ]
+        },
+        "coverage_classes": [
+          "mapped_land_support"
+        ],
+        "source_receipt_sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+      },
+      {
+        "id": "gb:STP:ADM1:19237168B82261817076051",
+        "pixelIndex": 40324,
+        "source_family": "gb:STP:ADM1",
+        "base_geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                7.4021,
+                1.5469
+              ],
+              [
+                7.4222,
+                1.5636
+              ],
+              [
+                7.4297,
+                1.5807
+              ],
+              [
+                7.4236,
+                1.5933
+              ],
+              [
+                7.4394,
+                1.6166
+              ],
+              [
+                7.4618,
+                1.625
+              ],
+              [
+                7.4353,
+                1.646
+              ],
+              [
+                7.4491,
+                1.6736
+              ],
+              [
+                7.4371,
+                1.6848
+              ],
+              [
+                7.4253,
+                1.6836
+              ],
+              [
+                7.4024,
+                1.6942
+              ],
+              [
+                7.3882,
+                1.6802
+              ],
+              [
+                7.3713,
+                1.6829
+              ],
+              [
+                7.3661,
+                1.6706
+              ],
+              [
+                7.369,
+                1.6167
+              ],
+              [
+                7.3639,
+                1.6051
+              ],
+              [
+                7.3286,
+                1.5989
+              ],
+              [
+                7.3413,
+                1.5663
+              ],
+              [
+                7.3647,
+                1.5479
+              ],
+              [
+                7.3755,
+                1.5498
+              ],
+              [
+                7.3826,
+                1.5363
+              ],
+              [
+                7.4021,
+                1.5469
+              ]
+            ]
+          ]
+        },
+        "coverage_classes": [
+          "mapped_land_support"
+        ],
+        "source_receipt_sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+      }
+    ]
+  }
+}
