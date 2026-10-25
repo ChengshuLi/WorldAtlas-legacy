@@ -1,0 +1,240 @@
+{
+  "method": "native-linear-evenodd-first-owner-v1",
+  "grid_size": 262166,
+  "application": "exact native center membership of retained candidate source polygons for the 93 selected held cells; source-candidate interval-index rows joined by exact [y,x,owner_index]",
+  "rows": 93,
+  "unique_keys": 93,
+  "key_sha256": "637b49965b44b06930ceb44a77004aab9e2eaaa8523b82e1954c8d71319d9507",
+  "owners": {
+    "Kapoeta East": 5,
+    "Maridi": 1,
+    "Yambio": 39,
+    "Ibba": 8,
+    "Yei": 13,
+    "Budi": 4,
+    "Ikotos": 3,
+    "Kajo-keji": 8,
+    "Magwi": 12
+  },
+  "country_combo_counts": {
+    "COD": 61,
+    "KEN": 5,
+    "UGA": 27
+  },
+  "multi_feature_keys": 6,
+  "cross_country_overlap_keys": 0,
+  "uga_adm1_adm2_overlap_keys": 6,
+  "sources": [
+    {
+      "source_index": 18727,
+      "family": "COD ADM1",
+      "shape_id": "28894549B55881681467015",
+      "actual_key_centers": 61,
+      "recorded_candidate_keys": 61
+    },
+    {
+      "source_index": 40425,
+      "family": "KEN ADM1",
+      "shape_id": "32016919B72266624462344",
+      "actual_key_centers": 5,
+      "recorded_candidate_keys": 5
+    },
+    {
+      "source_index": 60391,
+      "family": "UGA ADM1",
+      "shape_id": "17295835B80141219017784",
+      "actual_key_centers": 19,
+      "recorded_candidate_keys": 19
+    },
+    {
+      "source_index": 60395,
+      "family": "UGA ADM2",
+      "shape_id": "47994165B4837390146164",
+      "actual_key_centers": 3,
+      "recorded_candidate_keys": 3
+    },
+    {
+      "source_index": 60446,
+      "family": "UGA ADM2",
+      "shape_id": "47994165B70719248408693",
+      "actual_key_centers": 8,
+      "recorded_candidate_keys": 8
+    },
+    {
+      "source_index": 60449,
+      "family": "UGA ADM2",
+      "shape_id": "47994165B18082180372450",
+      "actual_key_centers": 1,
+      "recorded_candidate_keys": 1
+    },
+    {
+      "source_index": 60451,
+      "family": "UGA ADM2",
+      "shape_id": "47994165B72229648359475",
+      "actual_key_centers": 2,
+      "recorded_candidate_keys": 2
+    }
+  ],
+  "recorded_candidate_memberships": 99,
+  "unique_keys_with_any_actual_candidate": 93,
+  "keys_inside_original_target_centers": 0,
+  "keys_outside_original_target_centers": 93,
+  "keys_with_no_actual_candidate_center": 0,
+  "recorded_candidate_memberships_missing_center": 0,
+  "unrecorded_actual_candidate_memberships": 0,
+  "foreign_exact_boundary_ties_on_selected_keys": 0,
+  "target_exact_boundary_ties_on_selected_keys": 0,
+  "complete_scan_rows": 1379,
+  "scientific_approval": false,
+  "native_topology_verified": false,
+  "whole_cell_containment": false,
+  "source_families": [
+    {
+      "source_index": 18727,
+      "name": "Upper Uele",
+      "source_id": "gb:COD:ADM1:28894549B55881681467015",
+      "family": "gb:COD:ADM1",
+      "represented_year": "2017",
+      "license_as_recorded": "Open Data Commons Open Database License 1.0",
+      "git_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+      "compressed_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+      "decoded_sha256": "bf6096f1c16f2632be9c4d4c0305276024fd5b3f3b9b3e635b2e2018d02f0331",
+      "decoded_bytes": 1153436,
+      "shape_id": "28894549B55881681467015",
+      "positions": 1779
+    },
+    {
+      "source_index": 60391,
+      "name": "Northern Region",
+      "source_id": "gb:UGA:ADM1:17295835B80141219017784",
+      "family": "gb:UGA:ADM1",
+      "represented_year": "2017",
+      "license_as_recorded": "Open Data Commons Open Database License 1.0",
+      "git_blob_oid": "213c2301f14c296a40310030256a7b9d496c3afb",
+      "compressed_sha256": "3e0dc23da310870739bc742483875a3e9a9b1614d46d9a67c77aac6ccb427425",
+      "decoded_sha256": "75e5442c33f7023bcd2d7d72928835723b557c1a9523f3b4c9afe36d0e73af93",
+      "decoded_bytes": 258114,
+      "shape_id": "17295835B80141219017784",
+      "positions": 1623
+    },
+    {
+      "source_index": 60395,
+      "name": "Dodoth",
+      "source_id": "gb:UGA:ADM2:47994165B4837390146164",
+      "family": "gb:UGA:ADM2",
+      "represented_year": "2006",
+      "license_as_recorded": "Public Domain",
+      "git_blob_oid": "1f8672d7303051dd6425dc822598dd935bc3c61f",
+      "compressed_sha256": "c16dc4723d4a48cbe5622bfe3f555cf46e0490a1a08324a22503696a5fc9389c",
+      "decoded_sha256": "0a13e10b3bc6beeb02db4502c7f29a2ebbbb681a932307ccba4cd53e994feac7",
+      "decoded_bytes": 1021800,
+      "shape_id": "47994165B4837390146164",
+      "positions": 198
+    },
+    {
+      "source_index": 60446,
+      "name": "Kilak",
+      "source_id": "gb:UGA:ADM2:47994165B70719248408693",
+      "family": "gb:UGA:ADM2",
+      "represented_year": "2006",
+      "license_as_recorded": "Public Domain",
+      "git_blob_oid": "1f8672d7303051dd6425dc822598dd935bc3c61f",
+      "compressed_sha256": "c16dc4723d4a48cbe5622bfe3f555cf46e0490a1a08324a22503696a5fc9389c",
+      "decoded_sha256": "0a13e10b3bc6beeb02db4502c7f29a2ebbbb681a932307ccba4cd53e994feac7",
+      "decoded_bytes": 1021800,
+      "shape_id": "47994165B70719248408693",
+      "positions": 423
+    },
+    {
+      "source_index": 60449,
+      "name": "West Moyo",
+      "source_id": "gb:UGA:ADM2:47994165B18082180372450",
+      "family": "gb:UGA:ADM2",
+      "represented_year": "2006",
+      "license_as_recorded": "Public Domain",
+      "git_blob_oid": "1f8672d7303051dd6425dc822598dd935bc3c61f",
+      "compressed_sha256": "c16dc4723d4a48cbe5622bfe3f555cf46e0490a1a08324a22503696a5fc9389c",
+      "decoded_sha256": "0a13e10b3bc6beeb02db4502c7f29a2ebbbb681a932307ccba4cd53e994feac7",
+      "decoded_bytes": 1021800,
+      "shape_id": "47994165B18082180372450",
+      "positions": 73
+    },
+    {
+      "source_index": 60451,
+      "name": "Aringa",
+      "source_id": "gb:UGA:ADM2:47994165B72229648359475",
+      "family": "gb:UGA:ADM2",
+      "represented_year": "2006",
+      "license_as_recorded": "Public Domain",
+      "git_blob_oid": "1f8672d7303051dd6425dc822598dd935bc3c61f",
+      "compressed_sha256": "c16dc4723d4a48cbe5622bfe3f555cf46e0490a1a08324a22503696a5fc9389c",
+      "decoded_sha256": "0a13e10b3bc6beeb02db4502c7f29a2ebbbb681a932307ccba4cd53e994feac7",
+      "decoded_bytes": 1021800,
+      "shape_id": "47994165B72229648359475",
+      "positions": 76
+    },
+    {
+      "source_index": 40425,
+      "name": "Turkana",
+      "source_id": "gb:KEN:ADM1:32016919B72266624462344",
+      "family": "gb:KEN:ADM1",
+      "represented_year": "2020",
+      "license_as_recorded": "Public Domain",
+      "git_blob_oid": "9d55d677acfd305ab94dc04e4d337e33db8da970",
+      "compressed_sha256": "93b225d61cf4b2b49d0bfea43841f2f79b7ed18426f2e73b125f4585debb4c86",
+      "decoded_sha256": "4d9e1b8a6d305ee2b2bbeeeb4dd6ec3cc52e44884f0f6065d14d255810f9eae4",
+      "decoded_bytes": 861584,
+      "shape_id": "32016919B72266624462344",
+      "positions": 995
+    }
+  ],
+  "lineage": {
+    "disposition_artifact": {
+      "path": "/tmp/ssd-502-disposition.json",
+      "bytes": 2365898,
+      "sha256": "7b530ca393c773ff90fc94298d2b27342adbcedb28b56d920a4698cd88912b64",
+      "pinned_original_source_evidence_commit": "d7658a69b156a361bb19a74cbcd7e8ff6ea4b413",
+      "source_evidence_blob": "825447acce47c9c75fca08b57ea6cabcd90a6cca"
+    },
+    "source_evidence_artifact": {
+      "path": "/tmp/ssd-source-evidence.json",
+      "bytes": 178108,
+      "sha256": "82fbf48353e389f782fa534d950e3e091b09e7130c63bb9c92728d37b270d05e"
+    },
+    "native_latitudes": {
+      "corpus_commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "blob_oid": "de6905e162dc031b1b93248fae91190c39c4ad53",
+      "compressed_bytes": 1851757,
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"
+    },
+    "foreign_source_corpus_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+    "native_method": {
+      "path": "coordination/engineering/original-held-cell-exceptions-20261018/native-grid-pinned.mjs",
+      "function": "nativePolygonIntervals",
+      "method": "native-linear-evenodd-first-owner-v1",
+      "source_head": "78c18c3629c64b911c82b31ad2d1ee6e4db40e5e",
+      "sha256": "66b453bbb2e001b9ff56bd754d55087f5919845dceeefd886016494cefa1d3e0"
+    },
+    "original_denominator": {
+      "held_total": 502,
+      "previously_supported": 1621,
+      "original_total": 2123,
+      "selected_subset": 93,
+      "physical_class": "land for all selected rows",
+      "selected_key_sha256": "637b49965b44b06930ceb44a77004aab9e2eaaa8523b82e1954c8d71319d9507"
+    }
+  },
+  "interpretation": {
+    "source_relative_finding": "All 93 selected held key centers are outside their exact original SSD target polygons and inside at least one of the exact foreign source geometries listed above; every recorded foreign candidate index membership matches native-center membership, with no unrecorded candidate contact.",
+    "bounded_outcome": "Source-relative researched-unresolved candidate for these 93 keys only; exact center-level geometry relation is established, but its causal/legal force remains unresolved.",
+    "limits": [
+      "This is native cell-center membership only, not full-cell containment or edge-overlap analysis.",
+      "Foreign source products are geoBoundaries family source geometries with the represented vintages/licenses listed above; this does not establish current legal or sovereignty authority.",
+      "No package status, acceptance, ownership, documented-exception credit, or repair credit is implied.",
+      "All other 409 held keys in the 502-key disposition remain outside this selected 93-key analysis."
+    ]
+  }
+}
