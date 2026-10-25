@@ -1,0 +1,55 @@
+{
+  "actual_execution": {
+    "worker": "01a16f2e-19a2-7470-acfd-59b39f3e90d1",
+    "code_commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+    "data_input_locators": {
+      "version": 1,
+      "source_evidence": {
+        "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+        "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/source-evidence.json"
+      },
+      "native_patch": {
+        "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+        "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/native-patch.exact851.json"
+      }
+    },
+    "config_sha256": "6b7e8b14bd1b1ca6dcc080774d165bd8f093e9d0ab5596887ac854dcbfda9307",
+    "destination": ".cache/delivery-handoff/brb-grd-native851-20261025-01a16f2e",
+    "worktree": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/7d2a1e5734ce55e4f8759779e6581a5e55b9c04f55d31159ad32a58446b4474d/work",
+    "command": [
+      "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/prepare-delivery-handoff.mjs",
+      "native-diagnostic",
+      ".cache/brb-grd-physical18/native-diagnostic851.json",
+      ".cache/delivery-handoff/brb-grd-native851-20261025-01a16f2e"
+    ],
+    "started_unix": 1792890690.547576,
+    "phase": "native-diagnostic",
+    "authority_requested": false,
+    "physical_rerun": false,
+    "exit_code": 0,
+    "elapsed_seconds": 163.07780694961548
+  },
+  "files": [
+    {
+      "path": "native-diagnostic.json",
+      "bytes": 61865,
+      "sha256": "6c999b492c2ad30f8ccecd948ba65731894777b20b61bee9917b84d77f2c2034"
+    },
+    {
+      "path": "per-original-key-results851.jsonl",
+      "bytes": 411517,
+      "sha256": "667371b9dca16ff16c2b9dc3df8769e951fb4eb971cdfb42bd22a2b955512b1b"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 266,
+      "sha256": "7c8f4b0961e64b4a3f3e3a03f8691eb373c7fb3f5c4724a14c97ea6f8a55dc9a"
+    },
+    {
+      "path": "readback-summary.json",
+      "bytes": 1813,
+      "sha256": "79bc55b815d4a0813c8d07d9fde738a47edeb4574d7d301f6620bbd0e2696125"
+    }
+  ]
+}

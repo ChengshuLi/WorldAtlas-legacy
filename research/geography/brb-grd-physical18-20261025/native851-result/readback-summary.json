@@ -1,0 +1,59 @@
+{
+  "actual_code_commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+  "source_and_patch_locators": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+      "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+      "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/native-patch.exact851.json"
+    }
+  },
+  "diagnostic_session": 22340,
+  "exit_code": 0,
+  "report": {
+    "bytes": 61865,
+    "sha256": "6c999b492c2ad30f8ccecd948ba65731894777b20b61bee9917b84d77f2c2034"
+  },
+  "complete_exact_partition": true,
+  "counts": {
+    "BRB": {
+      "original_repair_claim": 289,
+      "diagnostic_supported": 289,
+      "diagnostic_held": 0,
+      "reasons": {
+        "assigned_cells": 289
+      },
+      "separate_physical_interpretation_preserved": 20
+    },
+    "GRD": {
+      "original_repair_claim": 562,
+      "diagnostic_supported": 562,
+      "diagnostic_held": 0,
+      "reasons": {
+        "assigned_cells": 562
+      },
+      "separate_physical_interpretation_preserved": 273
+    }
+  },
+  "physical_witness_kind_legend": [
+    "missing_reconstruction",
+    "extra_reconstruction",
+    "contradictory_land_water_support",
+    "L2-outside-L1",
+    "L3-outside-L2",
+    "L4-outside-L3",
+    "outside_mapped_L1_context",
+    "mapped_inland_water_support"
+  ],
+  "first_failure": null,
+  "accepted_delta": 0,
+  "authority_run": false,
+  "native_hold_changes": false,
+  "limits": [
+    "Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.",
+    "All original source, physical, query, witness and territorial limits remain retained."
+  ]
+}
