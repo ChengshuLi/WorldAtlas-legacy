@@ -1,0 +1,38 @@
+{
+  "CODE": "24f25ef5395acf27cc2ad301d5a0fe77d577ec65",
+  "config_path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-config-001.json",
+  "configuration": {
+    "version": 1,
+    "diagnostic": {
+      "commit": "e2afc77d49bd2529b0878f4b36138028acdceaed",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-diagnostic-001/native-diagnostic.json"
+    },
+    "original_patch": {
+      "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json"
+    },
+    "prior_holds": {
+      "commit": "e2afc77d49bd2529b0878f4b36138028acdceaed",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/three-water-prior-holds.json"
+    },
+    "accepted_selector": {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "data/ownership-selection.json"
+    }
+  },
+  "destination": ".cache/delivery-handoff/isr502-parent267-supported-inputs-001",
+  "authority_requested": false,
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "supported-inputs",
+    "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-config-001.json",
+    ".cache/delivery-handoff/isr502-parent267-supported-inputs-001"
+  ],
+  "started_utc": "2026-10-25T03:15:33.527324+00:00",
+  "scientific_producer": false,
+  "exit_code": 0,
+  "ended_utc": "2026-10-25T03:26:42.791417+00:00",
+  "stdout": "{\"destination\":\".cache/delivery-handoff/isr502-parent267-supported-inputs-001\",\"resumed\":false,\"binding\":{\"phase\":\"supported-inputs\",\"config_sha256\":\"50b7b24fcb0c56fee230a7a11e481162ece1b00ef8b8a1659a8549b402389571\"}}\n",
+  "stderr": ""
+}
