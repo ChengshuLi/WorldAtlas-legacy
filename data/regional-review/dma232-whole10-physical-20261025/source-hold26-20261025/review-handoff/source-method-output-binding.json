@@ -1,0 +1,70 @@
+{
+  "kind": "actual-authority-association-for-prospective-source-notice",
+  "notice_sha256": "22f8f5670991b569f5888b4470419bd6c15e2e8422f9650d7ad403a8ba62dffd",
+  "complete_original_source_members": 10,
+  "owner": 7115,
+  "target_id": "atlas:territory:DMA",
+  "narrowed206_authority_binding": {
+    "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+    "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/constructor-result.json",
+    "mode": "100644",
+    "git_blob_oid": "06f0e1b825d7c8550833793d87f9c0bcebf0eba9",
+    "bytes": 6452,
+    "sha256": "727c608ec3f6190aab365495bce623388696b1c4285904eaa6a06775143f927a"
+  },
+  "narrowed_source_and_patch_pins": {
+    "source_evidence": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "cbba4429573550f05beab7180a4482aec18017ed",
+      "bytes": 23822,
+      "sha256": "27cea363eb639bf1118a08ac1c9528151be0b602ff2321dbcc8d6a95053024df"
+    },
+    "native_patch": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "97f6cc19ee802fa200d4206947c3ef16fb321880",
+      "bytes": 3837,
+      "sha256": "e95f730581662e15a828d47348d14ee2b1abe712c6f0f8d050d116d6ca849d9f"
+    }
+  },
+  "physical_publication_pins": [
+    {
+      "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/execution-receipt.json",
+      "git_blob_oid": "27ed7595448465f25b573851113066eae05d2531",
+      "mode": "100644",
+      "bytes": 59057,
+      "sha256": "13ce0ccc61a6bdd1435df5f9e794b3e7bf0eedae7fcaf6bd1a906e58b410886e"
+    },
+    {
+      "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/preparation.json",
+      "git_blob_oid": "c006dabeed672682746484a96ab2da24bfb4f83d",
+      "mode": "100644",
+      "bytes": 544,
+      "sha256": "a3d68367e2a9a44a09f66f2fd040b582da65e0a79811921fcc9e3f34e6b0ddc3"
+    },
+    {
+      "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/retention.json",
+      "git_blob_oid": "b8d54262030f389103fde3d443079eddea722fed",
+      "mode": "100644",
+      "bytes": 1760,
+      "sha256": "f29b37d41bcfde5a17f28fca2f0d01ab4130b0529b45eeb9952cfdad40fa87bf"
+    },
+    {
+      "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/whole-target-support.json",
+      "git_blob_oid": "5c9b46b310be182815d1cee94186c19de2977ef3",
+      "mode": "100644",
+      "bytes": 105390,
+      "sha256": "3aff5cef5ddad040a34fd7817dcd2d5b04cc334c62be8de8b74fea7e9893e591"
+    }
+  ],
+  "final_selected_output_binding": null,
+  "notice_status": "Unchanged source/method draft reused; its prospective authority field is now supplied here. Final distribution/selected-output association remains pending coordinator delivery.",
+  "no_rights_or_scientific_scope_expansion": true
+}

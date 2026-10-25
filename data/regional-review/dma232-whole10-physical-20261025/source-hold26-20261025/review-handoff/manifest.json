@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "kind": "DMA206-genuine-authority-review-handoff",
+  "author_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "root_adoption_url": "https://github.com/ChengshuLi/WorldAtlas/issues/2649#issuecomment-6393201733",
+  "adopted_hold": {
+    "commit": "575ab65c098c8769c20c8d4c116638f12acf9693",
+    "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/prior-holds26.json",
+    "mode": "100644",
+    "git_blob_oid": "ca8b2b9e1730a5ea1a213d46bdf1a77223e8b616",
+    "bytes": 111887,
+    "sha256": "9b0471b1dbc1dac7fee6881e94671360a656983f68ca3219c913682bc8fe334d"
+  },
+  "original_denominator": 232,
+  "novel_qualified": 206,
+  "already_present": 0,
+  "adopted_source_held": 26,
+  "separate174_disposition": null,
+  "accepted_delta": 0,
+  "historical_partition": {
+    "favorable": 76,
+    "mixed": 156,
+    "positive75_plus131": 206,
+    "held1_plus25": 26
+  },
+  "supported_input_code": "c6dbf0eca8821a78bbef7048c4eaaeaa80adb06c",
+  "authority_code": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+  "authority_data": {
+    "source_evidence": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "cbba4429573550f05beab7180a4482aec18017ed",
+      "bytes": 23822,
+      "sha256": "27cea363eb639bf1118a08ac1c9528151be0b602ff2321dbcc8d6a95053024df"
+    },
+    "native_patch": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "97f6cc19ee802fa200d4206947c3ef16fb321880",
+      "bytes": 3837,
+      "sha256": "e95f730581662e15a828d47348d14ee2b1abe712c6f0f8d050d116d6ca849d9f"
+    }
+  },
+  "authority_products": [
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/authority-binding.json",
+      "mode": "100644",
+      "git_blob_oid": "17f97d181d957342dda7ebc9317c584b1574b7fa",
+      "bytes": 768,
+      "sha256": "b386c545f9519ecbdcd4f997ec0629b52a173046bcc169d0feb7676766de5654"
+    },
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/constructor-result.json",
+      "mode": "100644",
+      "git_blob_oid": "06f0e1b825d7c8550833793d87f9c0bcebf0eba9",
+      "bytes": 6452,
+      "sha256": "727c608ec3f6190aab365495bce623388696b1c4285904eaa6a06775143f927a"
+    },
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/independent-review-set-confirmation.json",
+      "mode": "100644",
+      "git_blob_oid": "caa0435f5985c6e2a8dd7193f413f9e21eea7535",
+      "bytes": 944,
+      "sha256": "0fa01d1943484d48057bd6ecc71236b4c641f12ebac187a6e0d0414a16027e1f"
+    },
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/native-authority-launch.json",
+      "mode": "100644",
+      "git_blob_oid": "88801b055aa905a9bf15aef62a81fb93426b861a",
+      "bytes": 2515,
+      "sha256": "913ebb6267fbe9263c8dbecad50270d1a0e3a965a86b7a6af8c20473063c3e27"
+    },
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/native-authority-terminal.json",
+      "mode": "100644",
+      "git_blob_oid": "5c1f35cae5ffc38d703d63e45dade94df2c60867",
+      "bytes": 138,
+      "sha256": "ccbb59395cac5df75e5d305a4cc98c8bb59b4de9a916c6297717e41f8d34d491"
+    },
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/original-rule-preimage.json",
+      "mode": "100644",
+      "git_blob_oid": "be1d79058ed5f747375845b49c727e3b17bddb09",
+      "bytes": 765,
+      "sha256": "077dc5ffa919ba599e4a025a870c1314db58a189f2ca56b86d8c92820991fbab"
+    },
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/preparation.json",
+      "mode": "100644",
+      "git_blob_oid": "ee6212a4c0ffc145b8b72c06fb6b324eb29488b5",
+      "bytes": 500,
+      "sha256": "012759014782c91696ffb907963b12135b8b42e703e38b425526ca66f1e855cf"
+    },
+    {
+      "commit": "ca7e4b411cc1ff27ecb461ccc0971d4254012a06",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/readback.json",
+      "mode": "100644",
+      "git_blob_oid": "961f4d6528ec167a20da05c5a46a5705419c3ea8",
+      "bytes": 3972,
+      "sha256": "8c5b0a650e023e0c533de59230e6645fbf0539b989385087afe40088d47d2f4a"
+    }
+  ],
+  "accepted_selector": {
+    "bytes": 2256,
+    "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+    "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1"
+  },
+  "public_main_same_bank_bridge": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "reviewed_source_custody": {
+    "library_file_id": "libfile_0b129a6f1df88191a2169ad28d28385b",
+    "version": 2,
+    "zip_sha256": "97fd7b08cc77a3c4c2f7a0bfb1d053b5030f31878166f78c3b0b0646ec03795e",
+    "manifest_sha256": "a6d6f3c4b9dd9e9b35064c6ce14dbda184a29f38ebe5af94376fa08aa1af94c9"
+  },
+  "independent_review_custody": {
+    "library_file_id": "libfile_03e21fb3c8e4819193fe71742f844720",
+    "version": 0,
+    "checks_sha256": "fb85ad9bd16461fb97979159c38d6fa776616cb8013b473dae3c6370525e1e24",
+    "assessment_sha256": "085e2241719fcc6f39adffe5ff0e2b18cbf3581ded7ae22ca90617a84e200496",
+    "actual_key_sets_subsequently_verified": true
+  },
+  "historical232_public_handoff": {
+    "commit": "d33a5690dc5db1b7e3d2c1258da9c07680731481",
+    "path": "data/regional-review/dma232-whole10-physical-20261025/independent-review-handoff/manifest.json"
+  },
+  "no_physical_source_diagnostic_replay": true,
+  "stock_phases_this_continuation": [
+    {
+      "phase": "supported-inputs",
+      "exit_code": 0,
+      "original_cells": 232,
+      "novel": 206,
+      "held": 26,
+      "already_present": 0
+    },
+    {
+      "phase": "native-authority",
+      "exit_code": 0,
+      "qualified_cells": 206
+    }
+  ],
+  "composition_finalizer_dispatch_not_performed": true,
+  "final_selected_output": null,
+  "remaining": "Coordinator current-bank composition, exact candidate independent review, source-notice/output association, normal delivery and root acceptance/accounting. No extra scientific rerun requested by this handoff."
+}
