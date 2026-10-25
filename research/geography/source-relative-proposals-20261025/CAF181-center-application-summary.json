@@ -1,0 +1,43 @@
+{
+  "any_boundary_count": 0,
+  "any_boundary_key_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "both_candidate_hit_count": 0,
+  "both_candidate_hit_key_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidate_results": {
+    "18730": {
+      "boundary_count": 0,
+      "feature_name": "Lower Uele",
+      "hit_count": 127,
+      "hit_key_sha256": "685a1d82f988badb0ce08bc51f4cfd1e1376ba7ec733ad612807ad9058a4da8a",
+      "inside_count": 127,
+      "outside_count": 54,
+      "source_id": "gb:COD:ADM1:28894549B47695765788779"
+    },
+    "18732": {
+      "boundary_count": 0,
+      "feature_name": "Nord-Ubangi",
+      "hit_count": 54,
+      "hit_key_sha256": "46f59f498066869c9962334f6cdd1a92ba35af9e6fe3f9e956356dffff6b1375",
+      "inside_count": 54,
+      "outside_count": 127,
+      "source_id": "gb:COD:ADM1:28894549B30663222433478"
+    }
+  },
+  "inputs": {
+    "held_sha256": "faf14fbaf6457b07e9a731575bcf9aa0d5b32b5260cdf28bc351c3f72831c39a",
+    "latitudes_decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+    "latitudes_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+    "payload_compressed_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+    "payload_git_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52"
+  },
+  "key_conservation": "all 181 unique source-index candidate keys classified once against both features",
+  "method": "native-linear-evenodd-first-owner-v1; lon=-180+360*(x+0.5)/262166; lat from pinned Float64 row table; exact binary64 Fraction crossing; no epsilon; polygon holes respected; boundary only exact segment hit",
+  "scope_count": 181,
+  "scope_key_sha256": "29a17396d1556a41ff71cb86d723fac8828109badaf46ab361aacaf0de2d97f4",
+  "two_candidate_partition": {
+    "lower_inside": 127,
+    "north_inside": 54
+  },
+  "uncovered_count": 0,
+  "uncovered_key_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
