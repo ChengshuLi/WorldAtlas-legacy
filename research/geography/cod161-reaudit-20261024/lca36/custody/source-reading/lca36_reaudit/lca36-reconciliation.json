@@ -1,0 +1,77 @@
+{
+  "package": "gb-LCA-ADM1--repair-evaluation",
+  "original": 360,
+  "accepted_positive_preserved": 324,
+  "pending": 36,
+  "pending_land": 36,
+  "pending_inland_water": 0,
+  "precision_sensitive": 2,
+  "adverse_comparison": 34,
+  "excluded_physical_interpretation_candidates": 134,
+  "all_candidate_cells": 494,
+  "missing_extra_duplicate_keys": 0,
+  "by_source": {
+    "Gros Islet": 5,
+    "Castries": 1,
+    "Dennery": 7,
+    "Canaries": 2,
+    "Micoud": 8,
+    "Soufrière": 6,
+    "Choiseul": 4,
+    "Vieux Fort": 3
+  },
+  "pins": {
+    "observation": {
+      "git_blob": "7fa4bdf7626284bb763e68ed51ec35d779651b4b",
+      "bytes": 90084,
+      "sha256": "2bf402009764716723c633066f277f18ad3d6c403b2db2698674336b6e2ee454"
+    },
+    "screen": {
+      "git_blob": "12570716a3904f84a1fbf96a92a37930ed3a7906",
+      "bytes": 46767,
+      "sha256": "99a85d83f6fcfa5ef25947edde18133633b061730aea34d158af60d54a8dcc50"
+    },
+    "stable_candidate": {
+      "git_blob": "228bf5c452fa5801bbe10aa881f3678a224ec1fa",
+      "bytes": 131753,
+      "sha256": "2895349ce4007a1543e4331b63375cf04e10ca0c1ff517e407a78afa1f4aed88"
+    },
+    "stable_patch": {
+      "git_blob": "57b01b1943ecb2397ab362bea3d9a38db9f28aa3",
+      "bytes": 5702,
+      "sha256": "0fad013dddaefb13fabb50a226ecc82ebfed74c3abcfc1ad77937646bb732e90"
+    },
+    "roster": {
+      "git_blob": "e6e380ec13cd4bcc1d24399a76bfa85ca5805b26",
+      "bytes": 1844315,
+      "sha256": "87f2d47e104b3af640351e747d8300d0068a1be23caab9e80558c3f8914eb4aa"
+    },
+    "candidates": {
+      "git_blob": "3fc846f1a3a57841d82c695b97ad31b93af681e6",
+      "bytes": 613896,
+      "sha256": "7775f315311056808bfead2394034459a83a3590a201fe0deedb66fea1866528"
+    },
+    "physical": {
+      "git_blob": "2e1d884705c104bd3dbc61ac5444761875210ba5",
+      "bytes": 508848,
+      "sha256": "7af023db048ed84fe910c0ce966508b5b4127c95c6215f0d36213ed20d94b5d2"
+    },
+    "water": {
+      "git_blob": "01851c2ff5b06938769c6662bea70c19c69148ba",
+      "bytes": 19710,
+      "sha256": "c3a2e3b0c84e34e19aa39c7afbb02f62a434f29fad6e64aa7429522b9ebfe30f"
+    },
+    "catalogue": {
+      "git_blob": "09afab19371f0814da61e79e5f310c5fb2405b6d",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    "metadata": {
+      "git_blob": "2747b845f0c5654765da3b951c9074e52f220077",
+      "bytes": 661416,
+      "sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633"
+    }
+  },
+  "accepted_receipt": "https://github.com/ChengshuLi/WorldAtlas/pull/2659#issuecomment-6317859071",
+  "limitations": "Retained-table subtraction only. No new geometry, native diagnostic, present-owner observation, qualification or acceptance."
+}
