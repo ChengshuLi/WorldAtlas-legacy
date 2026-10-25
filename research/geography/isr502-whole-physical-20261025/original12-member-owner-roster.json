@@ -1,0 +1,4504 @@
+[
+  {
+    "id": "gb:ISR:ADM2:584046B9730835639199",
+    "pixelIndex": 24183,
+    "name": "Be'er Sheva",
+    "original_source_ordinal": 0,
+    "selected_part_ordinal": 930,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "source_index": 38221,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 0,
+      "geometry_pointer": "/features/0/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Be'er Sheva",
+        "shapeISO": "",
+        "shapeID": "584046B9730835639199",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 215,
+      "contexts": {
+        "water-no-foreign3": 3,
+        "water-northern-Madaba5": 5,
+        "water-southern-list9": 9,
+        "domestic-land379": 149,
+        "foreign-land-West Bank": 1,
+        "foreign-land-Karak": 27,
+        "foreign-land-Aqaba": 19,
+        "foreign-land-North Sinai Governorate": 2
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "5a7ed35e4a9fb781bd470201fc93462b52a1d8a260b4a215373efb855ac620c4",
+      "canonical_geometry_bytes": 15855,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24183,
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "name": "Be'er Sheva",
+      "source_members": [
+        "gb:ISR:ADM2:584046B9730835639199"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B9730835639199",
+        "source_index": 38221,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 0,
+        "geometry_pointer": "/features/0/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Be'er Sheva",
+          "shapeISO": "",
+          "shapeID": "584046B9730835639199",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 215,
+        "contexts": {
+          "water-no-foreign3": 3,
+          "water-northern-Madaba5": 5,
+          "water-southern-list9": 9,
+          "domestic-land379": 149,
+          "foreign-land-West Bank": 1,
+          "foreign-land-Karak": 27,
+          "foreign-land-Aqaba": 19,
+          "foreign-land-North Sinai Governorate": 2
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "5a7ed35e4a9fb781bd470201fc93462b52a1d8a260b4a215373efb855ac620c4",
+        "canonical_geometry_bytes": 15855,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 930,
+      "selected_feature_pointer": "/features/930",
+      "selected_geometry_pointer": "/features/930/geometry",
+      "selected_whole_feature_sha256": "cec6350e14b974b270bd0898c28092bb786b6687800319f3f403dadb96830fd3",
+      "selected_properties_sha256": "260c71a6f2d1ccb234e4c2e1a016620af08d2c8c0a1b15dde3ae5eab20eacb89",
+      "selected_base_geometry": {
+        "geometry_sha256": "4cdb21784e39964312fe82f99e4c11aa7039b3ac50ba23e84eb6ef1505639aee",
+        "canonical_geometry_bytes": 7920
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:southern-district:62c94fde3204",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17430,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B9730835639199",
+        "representative_point": [
+          34.873045360893705,
+          30.4955
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.995397,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 14,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "ebe974c63c866860bc1f3469ed306e8b598cafad2276312149b1dc79fe258aa2",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 0.99879,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "search_aliases": [
+          "Beer Sheva",
+          "Beersheba"
+        ],
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3053",
+          "overlap": 0.96805
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3053",
+          "overlap": 0.96805,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 2121,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 0,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 215,
+    "original_keys": [
+      {
+        "owner_id": 24183,
+        "y": 106895,
+        "x": 156910
+      },
+      {
+        "owner_id": 24183,
+        "y": 106896,
+        "x": 156870
+      },
+      {
+        "owner_id": 24183,
+        "y": 106896,
+        "x": 156912
+      },
+      {
+        "owner_id": 24183,
+        "y": 106896,
+        "x": 156913
+      },
+      {
+        "owner_id": 24183,
+        "y": 106896,
+        "x": 156914
+      },
+      {
+        "owner_id": 24183,
+        "y": 106897,
+        "x": 156914
+      },
+      {
+        "owner_id": 24183,
+        "y": 106897,
+        "x": 156915
+      },
+      {
+        "owner_id": 24183,
+        "y": 106897,
+        "x": 156916
+      },
+      {
+        "owner_id": 24183,
+        "y": 106898,
+        "x": 156916
+      },
+      {
+        "owner_id": 24183,
+        "y": 106899,
+        "x": 156917
+      },
+      {
+        "owner_id": 24183,
+        "y": 106922,
+        "x": 156183
+      },
+      {
+        "owner_id": 24183,
+        "y": 106928,
+        "x": 156178
+      },
+      {
+        "owner_id": 24183,
+        "y": 106929,
+        "x": 156177
+      },
+      {
+        "owner_id": 24183,
+        "y": 106935,
+        "x": 156172
+      },
+      {
+        "owner_id": 24183,
+        "y": 107005,
+        "x": 156494
+      },
+      {
+        "owner_id": 24183,
+        "y": 107017,
+        "x": 156901
+      },
+      {
+        "owner_id": 24183,
+        "y": 107019,
+        "x": 156554
+      },
+      {
+        "owner_id": 24183,
+        "y": 107019,
+        "x": 156555
+      },
+      {
+        "owner_id": 24183,
+        "y": 107019,
+        "x": 156556
+      },
+      {
+        "owner_id": 24183,
+        "y": 107020,
+        "x": 156550
+      },
+      {
+        "owner_id": 24183,
+        "y": 107020,
+        "x": 156551
+      },
+      {
+        "owner_id": 24183,
+        "y": 107021,
+        "x": 156546
+      },
+      {
+        "owner_id": 24183,
+        "y": 107232,
+        "x": 156902
+      },
+      {
+        "owner_id": 24183,
+        "y": 107234,
+        "x": 156901
+      },
+      {
+        "owner_id": 24183,
+        "y": 107235,
+        "x": 156901
+      },
+      {
+        "owner_id": 24183,
+        "y": 107236,
+        "x": 156901
+      },
+      {
+        "owner_id": 24183,
+        "y": 107237,
+        "x": 156900
+      },
+      {
+        "owner_id": 24183,
+        "y": 107238,
+        "x": 156900
+      },
+      {
+        "owner_id": 24183,
+        "y": 107239,
+        "x": 156900
+      },
+      {
+        "owner_id": 24183,
+        "y": 107240,
+        "x": 156899
+      },
+      {
+        "owner_id": 24183,
+        "y": 107240,
+        "x": 156900
+      },
+      {
+        "owner_id": 24183,
+        "y": 107241,
+        "x": 156899
+      },
+      {
+        "owner_id": 24183,
+        "y": 107242,
+        "x": 156899
+      },
+      {
+        "owner_id": 24183,
+        "y": 107243,
+        "x": 156898
+      },
+      {
+        "owner_id": 24183,
+        "y": 107244,
+        "x": 156898
+      },
+      {
+        "owner_id": 24183,
+        "y": 107245,
+        "x": 156898
+      },
+      {
+        "owner_id": 24183,
+        "y": 107246,
+        "x": 156897
+      },
+      {
+        "owner_id": 24183,
+        "y": 107247,
+        "x": 156897
+      },
+      {
+        "owner_id": 24183,
+        "y": 107248,
+        "x": 156896
+      },
+      {
+        "owner_id": 24183,
+        "y": 107249,
+        "x": 156896
+      },
+      {
+        "owner_id": 24183,
+        "y": 107251,
+        "x": 156895
+      },
+      {
+        "owner_id": 24183,
+        "y": 107254,
+        "x": 156894
+      },
+      {
+        "owner_id": 24183,
+        "y": 107294,
+        "x": 156878
+      },
+      {
+        "owner_id": 24183,
+        "y": 107295,
+        "x": 156878
+      },
+      {
+        "owner_id": 24183,
+        "y": 107296,
+        "x": 156878
+      },
+      {
+        "owner_id": 24183,
+        "y": 107297,
+        "x": 156878
+      },
+      {
+        "owner_id": 24183,
+        "y": 107298,
+        "x": 156878
+      },
+      {
+        "owner_id": 24183,
+        "y": 107299,
+        "x": 156878
+      },
+      {
+        "owner_id": 24183,
+        "y": 107301,
+        "x": 156877
+      },
+      {
+        "owner_id": 24183,
+        "y": 107302,
+        "x": 156877
+      },
+      {
+        "owner_id": 24183,
+        "y": 107303,
+        "x": 156877
+      },
+      {
+        "owner_id": 24183,
+        "y": 107304,
+        "x": 156877
+      },
+      {
+        "owner_id": 24183,
+        "y": 107308,
+        "x": 156876
+      },
+      {
+        "owner_id": 24183,
+        "y": 107309,
+        "x": 156876
+      },
+      {
+        "owner_id": 24183,
+        "y": 107314,
+        "x": 156875
+      },
+      {
+        "owner_id": 24183,
+        "y": 107409,
+        "x": 156822
+      },
+      {
+        "owner_id": 24183,
+        "y": 107751,
+        "x": 156708
+      },
+      {
+        "owner_id": 24183,
+        "y": 107753,
+        "x": 156707
+      },
+      {
+        "owner_id": 24183,
+        "y": 107755,
+        "x": 156706
+      },
+      {
+        "owner_id": 24183,
+        "y": 107756,
+        "x": 156706
+      },
+      {
+        "owner_id": 24183,
+        "y": 107758,
+        "x": 156705
+      },
+      {
+        "owner_id": 24183,
+        "y": 107759,
+        "x": 156705
+      },
+      {
+        "owner_id": 24183,
+        "y": 107760,
+        "x": 156704
+      },
+      {
+        "owner_id": 24183,
+        "y": 107761,
+        "x": 156704
+      },
+      {
+        "owner_id": 24183,
+        "y": 107762,
+        "x": 156703
+      },
+      {
+        "owner_id": 24183,
+        "y": 107763,
+        "x": 156703
+      },
+      {
+        "owner_id": 24183,
+        "y": 107764,
+        "x": 156702
+      },
+      {
+        "owner_id": 24183,
+        "y": 107765,
+        "x": 156702
+      },
+      {
+        "owner_id": 24183,
+        "y": 107766,
+        "x": 156701
+      },
+      {
+        "owner_id": 24183,
+        "y": 107767,
+        "x": 156701
+      },
+      {
+        "owner_id": 24183,
+        "y": 107768,
+        "x": 156700
+      },
+      {
+        "owner_id": 24183,
+        "y": 107769,
+        "x": 156700
+      },
+      {
+        "owner_id": 24183,
+        "y": 107770,
+        "x": 156699
+      },
+      {
+        "owner_id": 24183,
+        "y": 107770,
+        "x": 156700
+      },
+      {
+        "owner_id": 24183,
+        "y": 107771,
+        "x": 156699
+      },
+      {
+        "owner_id": 24183,
+        "y": 107772,
+        "x": 156698
+      },
+      {
+        "owner_id": 24183,
+        "y": 107772,
+        "x": 156699
+      },
+      {
+        "owner_id": 24183,
+        "y": 107773,
+        "x": 156698
+      },
+      {
+        "owner_id": 24183,
+        "y": 107774,
+        "x": 156698
+      },
+      {
+        "owner_id": 24183,
+        "y": 107775,
+        "x": 156697
+      },
+      {
+        "owner_id": 24183,
+        "y": 107776,
+        "x": 156697
+      },
+      {
+        "owner_id": 24183,
+        "y": 107777,
+        "x": 156696
+      },
+      {
+        "owner_id": 24183,
+        "y": 107778,
+        "x": 156696
+      },
+      {
+        "owner_id": 24183,
+        "y": 107779,
+        "x": 156695
+      },
+      {
+        "owner_id": 24183,
+        "y": 107781,
+        "x": 156694
+      },
+      {
+        "owner_id": 24183,
+        "y": 107782,
+        "x": 156694
+      },
+      {
+        "owner_id": 24183,
+        "y": 107783,
+        "x": 156693
+      },
+      {
+        "owner_id": 24183,
+        "y": 107784,
+        "x": 156693
+      },
+      {
+        "owner_id": 24183,
+        "y": 107785,
+        "x": 156692
+      },
+      {
+        "owner_id": 24183,
+        "y": 107785,
+        "x": 156693
+      },
+      {
+        "owner_id": 24183,
+        "y": 107786,
+        "x": 156692
+      },
+      {
+        "owner_id": 24183,
+        "y": 107787,
+        "x": 156691
+      },
+      {
+        "owner_id": 24183,
+        "y": 107787,
+        "x": 156692
+      },
+      {
+        "owner_id": 24183,
+        "y": 107788,
+        "x": 156691
+      },
+      {
+        "owner_id": 24183,
+        "y": 107789,
+        "x": 156691
+      },
+      {
+        "owner_id": 24183,
+        "y": 107790,
+        "x": 156690
+      },
+      {
+        "owner_id": 24183,
+        "y": 107792,
+        "x": 156689
+      },
+      {
+        "owner_id": 24183,
+        "y": 107810,
+        "x": 156688
+      },
+      {
+        "owner_id": 24183,
+        "y": 107812,
+        "x": 156689
+      },
+      {
+        "owner_id": 24183,
+        "y": 107813,
+        "x": 156689
+      },
+      {
+        "owner_id": 24183,
+        "y": 107814,
+        "x": 156689
+      },
+      {
+        "owner_id": 24183,
+        "y": 107815,
+        "x": 156689
+      },
+      {
+        "owner_id": 24183,
+        "y": 107816,
+        "x": 156690
+      },
+      {
+        "owner_id": 24183,
+        "y": 107817,
+        "x": 156690
+      },
+      {
+        "owner_id": 24183,
+        "y": 107818,
+        "x": 156690
+      },
+      {
+        "owner_id": 24183,
+        "y": 107819,
+        "x": 156690
+      },
+      {
+        "owner_id": 24183,
+        "y": 107918,
+        "x": 156679
+      },
+      {
+        "owner_id": 24183,
+        "y": 107919,
+        "x": 156679
+      },
+      {
+        "owner_id": 24183,
+        "y": 107920,
+        "x": 156679
+      },
+      {
+        "owner_id": 24183,
+        "y": 107922,
+        "x": 156678
+      },
+      {
+        "owner_id": 24183,
+        "y": 108118,
+        "x": 156661
+      },
+      {
+        "owner_id": 24183,
+        "y": 108121,
+        "x": 156659
+      },
+      {
+        "owner_id": 24183,
+        "y": 108122,
+        "x": 156658
+      },
+      {
+        "owner_id": 24183,
+        "y": 108124,
+        "x": 156657
+      },
+      {
+        "owner_id": 24183,
+        "y": 108125,
+        "x": 156656
+      },
+      {
+        "owner_id": 24183,
+        "y": 108126,
+        "x": 156655
+      },
+      {
+        "owner_id": 24183,
+        "y": 108272,
+        "x": 156626
+      },
+      {
+        "owner_id": 24183,
+        "y": 108278,
+        "x": 156621
+      },
+      {
+        "owner_id": 24183,
+        "y": 108282,
+        "x": 156619
+      },
+      {
+        "owner_id": 24183,
+        "y": 108284,
+        "x": 156618
+      },
+      {
+        "owner_id": 24183,
+        "y": 108285,
+        "x": 156618
+      },
+      {
+        "owner_id": 24183,
+        "y": 108286,
+        "x": 156618
+      },
+      {
+        "owner_id": 24183,
+        "y": 108287,
+        "x": 156617
+      },
+      {
+        "owner_id": 24183,
+        "y": 108288,
+        "x": 156617
+      },
+      {
+        "owner_id": 24183,
+        "y": 108290,
+        "x": 156616
+      },
+      {
+        "owner_id": 24183,
+        "y": 108301,
+        "x": 156612
+      },
+      {
+        "owner_id": 24183,
+        "y": 108302,
+        "x": 156612
+      },
+      {
+        "owner_id": 24183,
+        "y": 108303,
+        "x": 156612
+      },
+      {
+        "owner_id": 24183,
+        "y": 108304,
+        "x": 156611
+      },
+      {
+        "owner_id": 24183,
+        "y": 108316,
+        "x": 156607
+      },
+      {
+        "owner_id": 24183,
+        "y": 108319,
+        "x": 156606
+      },
+      {
+        "owner_id": 24183,
+        "y": 108320,
+        "x": 156606
+      },
+      {
+        "owner_id": 24183,
+        "y": 108321,
+        "x": 156606
+      },
+      {
+        "owner_id": 24183,
+        "y": 108324,
+        "x": 156605
+      },
+      {
+        "owner_id": 24183,
+        "y": 108325,
+        "x": 156605
+      },
+      {
+        "owner_id": 24183,
+        "y": 108326,
+        "x": 156605
+      },
+      {
+        "owner_id": 24183,
+        "y": 108329,
+        "x": 156604
+      },
+      {
+        "owner_id": 24183,
+        "y": 108330,
+        "x": 156604
+      },
+      {
+        "owner_id": 24183,
+        "y": 108331,
+        "x": 156604
+      },
+      {
+        "owner_id": 24183,
+        "y": 108334,
+        "x": 156603
+      },
+      {
+        "owner_id": 24183,
+        "y": 108335,
+        "x": 156603
+      },
+      {
+        "owner_id": 24183,
+        "y": 108336,
+        "x": 156603
+      },
+      {
+        "owner_id": 24183,
+        "y": 108337,
+        "x": 156603
+      },
+      {
+        "owner_id": 24183,
+        "y": 108338,
+        "x": 156603
+      },
+      {
+        "owner_id": 24183,
+        "y": 108339,
+        "x": 156602
+      },
+      {
+        "owner_id": 24183,
+        "y": 108340,
+        "x": 156602
+      },
+      {
+        "owner_id": 24183,
+        "y": 108351,
+        "x": 156594
+      },
+      {
+        "owner_id": 24183,
+        "y": 108353,
+        "x": 156593
+      },
+      {
+        "owner_id": 24183,
+        "y": 108354,
+        "x": 156593
+      },
+      {
+        "owner_id": 24183,
+        "y": 108355,
+        "x": 156593
+      },
+      {
+        "owner_id": 24183,
+        "y": 108356,
+        "x": 156592
+      },
+      {
+        "owner_id": 24183,
+        "y": 108357,
+        "x": 156592
+      },
+      {
+        "owner_id": 24183,
+        "y": 108365,
+        "x": 156461
+      },
+      {
+        "owner_id": 24183,
+        "y": 108373,
+        "x": 156462
+      },
+      {
+        "owner_id": 24183,
+        "y": 108435,
+        "x": 156585
+      },
+      {
+        "owner_id": 24183,
+        "y": 108475,
+        "x": 156574
+      },
+      {
+        "owner_id": 24183,
+        "y": 108477,
+        "x": 156573
+      },
+      {
+        "owner_id": 24183,
+        "y": 108479,
+        "x": 156572
+      },
+      {
+        "owner_id": 24183,
+        "y": 108480,
+        "x": 156571
+      },
+      {
+        "owner_id": 24183,
+        "y": 108482,
+        "x": 156570
+      },
+      {
+        "owner_id": 24183,
+        "y": 108484,
+        "x": 156569
+      },
+      {
+        "owner_id": 24183,
+        "y": 108517,
+        "x": 156479
+      },
+      {
+        "owner_id": 24183,
+        "y": 108518,
+        "x": 156479
+      },
+      {
+        "owner_id": 24183,
+        "y": 108519,
+        "x": 156479
+      },
+      {
+        "owner_id": 24183,
+        "y": 108520,
+        "x": 156479
+      },
+      {
+        "owner_id": 24183,
+        "y": 108524,
+        "x": 156480
+      },
+      {
+        "owner_id": 24183,
+        "y": 108525,
+        "x": 156480
+      },
+      {
+        "owner_id": 24183,
+        "y": 108526,
+        "x": 156480
+      },
+      {
+        "owner_id": 24183,
+        "y": 108527,
+        "x": 156480
+      },
+      {
+        "owner_id": 24183,
+        "y": 108528,
+        "x": 156480
+      },
+      {
+        "owner_id": 24183,
+        "y": 108529,
+        "x": 156480
+      },
+      {
+        "owner_id": 24183,
+        "y": 108530,
+        "x": 156480
+      },
+      {
+        "owner_id": 24183,
+        "y": 108531,
+        "x": 156481
+      },
+      {
+        "owner_id": 24183,
+        "y": 108532,
+        "x": 156481
+      },
+      {
+        "owner_id": 24183,
+        "y": 108533,
+        "x": 156481
+      },
+      {
+        "owner_id": 24183,
+        "y": 108534,
+        "x": 156481
+      },
+      {
+        "owner_id": 24183,
+        "y": 108535,
+        "x": 156481
+      },
+      {
+        "owner_id": 24183,
+        "y": 108537,
+        "x": 156482
+      },
+      {
+        "owner_id": 24183,
+        "y": 108538,
+        "x": 156482
+      },
+      {
+        "owner_id": 24183,
+        "y": 108539,
+        "x": 156482
+      },
+      {
+        "owner_id": 24183,
+        "y": 108540,
+        "x": 156482
+      },
+      {
+        "owner_id": 24183,
+        "y": 108544,
+        "x": 156483
+      },
+      {
+        "owner_id": 24183,
+        "y": 108545,
+        "x": 156483
+      },
+      {
+        "owner_id": 24183,
+        "y": 108551,
+        "x": 156531
+      },
+      {
+        "owner_id": 24183,
+        "y": 108552,
+        "x": 156530
+      },
+      {
+        "owner_id": 24183,
+        "y": 108553,
+        "x": 156529
+      },
+      {
+        "owner_id": 24183,
+        "y": 108555,
+        "x": 156528
+      },
+      {
+        "owner_id": 24183,
+        "y": 108556,
+        "x": 156527
+      },
+      {
+        "owner_id": 24183,
+        "y": 108557,
+        "x": 156526
+      },
+      {
+        "owner_id": 24183,
+        "y": 108560,
+        "x": 156524
+      },
+      {
+        "owner_id": 24183,
+        "y": 108561,
+        "x": 156523
+      },
+      {
+        "owner_id": 24183,
+        "y": 108566,
+        "x": 156520
+      },
+      {
+        "owner_id": 24183,
+        "y": 108567,
+        "x": 156520
+      },
+      {
+        "owner_id": 24183,
+        "y": 108568,
+        "x": 156519
+      },
+      {
+        "owner_id": 24183,
+        "y": 108569,
+        "x": 156519
+      },
+      {
+        "owner_id": 24183,
+        "y": 108570,
+        "x": 156518
+      },
+      {
+        "owner_id": 24183,
+        "y": 108570,
+        "x": 156519
+      },
+      {
+        "owner_id": 24183,
+        "y": 108571,
+        "x": 156518
+      },
+      {
+        "owner_id": 24183,
+        "y": 108571,
+        "x": 156519
+      },
+      {
+        "owner_id": 24183,
+        "y": 108572,
+        "x": 156517
+      },
+      {
+        "owner_id": 24183,
+        "y": 108572,
+        "x": 156518
+      },
+      {
+        "owner_id": 24183,
+        "y": 108573,
+        "x": 156516
+      },
+      {
+        "owner_id": 24183,
+        "y": 108573,
+        "x": 156517
+      },
+      {
+        "owner_id": 24183,
+        "y": 108574,
+        "x": 156516
+      },
+      {
+        "owner_id": 24183,
+        "y": 108574,
+        "x": 156517
+      },
+      {
+        "owner_id": 24183,
+        "y": 108575,
+        "x": 156515
+      },
+      {
+        "owner_id": 24183,
+        "y": 108575,
+        "x": 156516
+      },
+      {
+        "owner_id": 24183,
+        "y": 108576,
+        "x": 156515
+      },
+      {
+        "owner_id": 24183,
+        "y": 108577,
+        "x": 156514
+      },
+      {
+        "owner_id": 24183,
+        "y": 108577,
+        "x": 156515
+      },
+      {
+        "owner_id": 24183,
+        "y": 108578,
+        "x": 156514
+      },
+      {
+        "owner_id": 24183,
+        "y": 108579,
+        "x": 156513
+      },
+      {
+        "owner_id": 24183,
+        "y": 108580,
+        "x": 156513
+      },
+      {
+        "owner_id": 24183,
+        "y": 108581,
+        "x": 156512
+      },
+      {
+        "owner_id": 24183,
+        "y": 108583,
+        "x": 156511
+      }
+    ],
+    "research_partition": {
+      "finite_source_unresolved_rationale_for_independent_consideration": 17,
+      "positive_source_qualification_candidate": 149,
+      "material_source_application_step_unperformed": 49
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B86518607604876",
+    "pixelIndex": 24182,
+    "name": "Jerusalem",
+    "original_source_ordinal": 1,
+    "selected_part_ordinal": 931,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B86518607604876",
+      "source_index": 38222,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 1,
+      "geometry_pointer": "/features/1/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Jerusalem",
+        "shapeISO": "",
+        "shapeID": "584046B86518607604876",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 6,
+      "contexts": {
+        "domestic-land379": 2,
+        "foreign-land-West Bank": 4
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "4db778298d1c63342e1d7a124040746ead2c1481b6dae8741265c9849c545c08",
+      "canonical_geometry_bytes": 6720,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24182,
+      "target_id": "gb:ISR:ADM2:584046B86518607604876",
+      "name": "Jerusalem",
+      "source_members": [
+        "gb:ISR:ADM2:584046B86518607604876"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B86518607604876",
+        "source_index": 38222,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 1,
+        "geometry_pointer": "/features/1/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Jerusalem",
+          "shapeISO": "",
+          "shapeID": "584046B86518607604876",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 6,
+        "contexts": {
+          "domestic-land379": 2,
+          "foreign-land-West Bank": 4
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "4db778298d1c63342e1d7a124040746ead2c1481b6dae8741265c9849c545c08",
+        "canonical_geometry_bytes": 6720,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 931,
+      "selected_feature_pointer": "/features/931",
+      "selected_geometry_pointer": "/features/931/geometry",
+      "selected_whole_feature_sha256": "718003cae2503b6efcb26d276fa7c120057a7cbf8f04f3daba866071dfe77c16",
+      "selected_properties_sha256": "709e8561d3d2c8eb8414a02c716efc99bb301061f46fc7159c1de3d8379ee1de",
+      "selected_base_geometry": {
+        "geometry_sha256": "f366acfd7d460f16adc7e1f589e369dad1aa9b294b19b890ed04346721f4bf53",
+        "canonical_geometry_bytes": 4780
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:jerusalem-district:d8d1db739f9b",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17431,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B86518607604876",
+        "representative_point": [
+          35.06375592121432,
+          31.7393255
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.865458,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 4,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "78413d08a8a878e95386d9fe585f4276e64f242f2e909bb0c96ebcdb68c3957d",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 1,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "search_aliases": [
+          "Jerusalem"
+        ],
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3058",
+          "overlap": 0.971203
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3058",
+          "overlap": 0.971203,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 1189,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 1,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 6,
+    "original_keys": [
+      {
+        "owner_id": 24182,
+        "y": 106628,
+        "x": 156693
+      },
+      {
+        "owner_id": 24182,
+        "y": 106746,
+        "x": 156605
+      },
+      {
+        "owner_id": 24182,
+        "y": 106747,
+        "x": 156604
+      },
+      {
+        "owner_id": 24182,
+        "y": 106748,
+        "x": 156602
+      },
+      {
+        "owner_id": 24182,
+        "y": 106749,
+        "x": 156601
+      },
+      {
+        "owner_id": 24182,
+        "y": 106750,
+        "x": 156599
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 2,
+      "material_source_application_step_unperformed": 4
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B11408100439208",
+    "pixelIndex": 24169,
+    "name": "Ashqelon",
+    "original_source_ordinal": 2,
+    "selected_part_ordinal": 932,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "source_index": 38223,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 2,
+      "geometry_pointer": "/features/2/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Ashqelon",
+        "shapeISO": "",
+        "shapeID": "584046B11408100439208",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 22,
+      "contexts": {
+        "domestic-land379": 22
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "5d11b11cbf962e7c4036e4240f13a7128cdb1cd7a8b064d05e3fa839b2304a4f",
+      "canonical_geometry_bytes": 9001,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24169,
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "name": "Ashqelon",
+      "source_members": [
+        "gb:ISR:ADM2:584046B11408100439208"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B11408100439208",
+        "source_index": 38223,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 2,
+        "geometry_pointer": "/features/2/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Ashqelon",
+          "shapeISO": "",
+          "shapeID": "584046B11408100439208",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 22,
+        "contexts": {
+          "domestic-land379": 22
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "5d11b11cbf962e7c4036e4240f13a7128cdb1cd7a8b064d05e3fa839b2304a4f",
+        "canonical_geometry_bytes": 9001,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 932,
+      "selected_feature_pointer": "/features/932",
+      "selected_geometry_pointer": "/features/932/geometry",
+      "selected_whole_feature_sha256": "f8e4a80210272df4fb4b78f72b8cfb7587d7487ffd35b22d6a1b6684bdaf4730",
+      "selected_properties_sha256": "3f8ab73cdb820b0187f951447d927e08db3d28e0ec035c8b63d6a28313d87651",
+      "selected_base_geometry": {
+        "geometry_sha256": "c659d630b6bff08c3babeb21bba3c99d81ebdf0a27893e2d8115b8447fb537fa",
+        "canonical_geometry_bytes": 1906
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:southern-district:62c94fde3204",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17432,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B11408100439208",
+        "representative_point": [
+          34.71084257099584,
+          31.6383
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.970611,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 3,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "613e62b194981b88ca825fa0b062668931c8207b56a279b6ba6aaa647fac3361",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 1,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3053",
+          "overlap": 0.977221
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3053",
+          "overlap": 0.977221,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 2121,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 2,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 22,
+    "original_keys": [
+      {
+        "owner_id": 24169,
+        "y": 106790,
+        "x": 156213
+      },
+      {
+        "owner_id": 24169,
+        "y": 106793,
+        "x": 156211
+      },
+      {
+        "owner_id": 24169,
+        "y": 106795,
+        "x": 156210
+      },
+      {
+        "owner_id": 24169,
+        "y": 106796,
+        "x": 156209
+      },
+      {
+        "owner_id": 24169,
+        "y": 106797,
+        "x": 156209
+      },
+      {
+        "owner_id": 24169,
+        "y": 106798,
+        "x": 156208
+      },
+      {
+        "owner_id": 24169,
+        "y": 106799,
+        "x": 156207
+      },
+      {
+        "owner_id": 24169,
+        "y": 106800,
+        "x": 156207
+      },
+      {
+        "owner_id": 24169,
+        "y": 106801,
+        "x": 156206
+      },
+      {
+        "owner_id": 24169,
+        "y": 106802,
+        "x": 156206
+      },
+      {
+        "owner_id": 24169,
+        "y": 106803,
+        "x": 156205
+      },
+      {
+        "owner_id": 24169,
+        "y": 106804,
+        "x": 156204
+      },
+      {
+        "owner_id": 24169,
+        "y": 106805,
+        "x": 156204
+      },
+      {
+        "owner_id": 24169,
+        "y": 106806,
+        "x": 156203
+      },
+      {
+        "owner_id": 24169,
+        "y": 106807,
+        "x": 156203
+      },
+      {
+        "owner_id": 24169,
+        "y": 106809,
+        "x": 156202
+      },
+      {
+        "owner_id": 24169,
+        "y": 106813,
+        "x": 156535
+      },
+      {
+        "owner_id": 24169,
+        "y": 106814,
+        "x": 156535
+      },
+      {
+        "owner_id": 24169,
+        "y": 106817,
+        "x": 156534
+      },
+      {
+        "owner_id": 24169,
+        "y": 106820,
+        "x": 156533
+      },
+      {
+        "owner_id": 24169,
+        "y": 106823,
+        "x": 156532
+      },
+      {
+        "owner_id": 24169,
+        "y": 106824,
+        "x": 156532
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 22
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B34315111222202",
+    "pixelIndex": 24173,
+    "name": "Tel Aviv",
+    "original_source_ordinal": 3,
+    "selected_part_ordinal": 933,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B34315111222202",
+      "source_index": 38224,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 3,
+      "geometry_pointer": "/features/3/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Tel Aviv",
+        "shapeISO": "",
+        "shapeID": "584046B34315111222202",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 9,
+      "contexts": {
+        "domestic-land379": 9
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "c934e11f8bf2ec97bfbdfcf9cff96b9013655d440b079c9a8e7a31a87783debc",
+      "canonical_geometry_bytes": 2987,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24173,
+      "target_id": "gb:ISR:ADM2:584046B34315111222202",
+      "name": "Tel Aviv",
+      "source_members": [
+        "gb:ISR:ADM2:584046B34315111222202"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B34315111222202",
+        "source_index": 38224,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 3,
+        "geometry_pointer": "/features/3/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Tel Aviv",
+          "shapeISO": "",
+          "shapeID": "584046B34315111222202",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 9,
+        "contexts": {
+          "domestic-land379": 9
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "c934e11f8bf2ec97bfbdfcf9cff96b9013655d440b079c9a8e7a31a87783debc",
+        "canonical_geometry_bytes": 2987,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 933,
+      "selected_feature_pointer": "/features/933",
+      "selected_geometry_pointer": "/features/933/geometry",
+      "selected_whole_feature_sha256": "df6538189f3ecaac508ee2cb27c3994eb8240a5dfca6889e345f65b1973c2294",
+      "selected_properties_sha256": "a63cf8aad713dd9f8b8d1da327fb79deb2cd419528f7af3f0db09a8ed739090c",
+      "selected_base_geometry": {
+        "geometry_sha256": "3907cb0cee3e8f49ba1203f1151017f65ae2cd37b8263be7ab47afe363711727",
+        "canonical_geometry_bytes": 413
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:tel-aviv:a16015a1e885",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17433,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B34315111222202",
+        "representative_point": [
+          34.806663486824874,
+          32.087
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.939378,
+        "topology_version": 1,
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 1,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "search_aliases": [
+          "Tel Aviv",
+          "Tel Aviv-Yafo"
+        ],
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3057",
+          "overlap": 0.945573
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3057",
+          "overlap": 0.945573,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 2218,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 3,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 9,
+    "original_keys": [
+      {
+        "owner_id": 24173,
+        "y": 106297,
+        "x": 156430
+      },
+      {
+        "owner_id": 24173,
+        "y": 106412,
+        "x": 156394
+      },
+      {
+        "owner_id": 24173,
+        "y": 106418,
+        "x": 156388
+      },
+      {
+        "owner_id": 24173,
+        "y": 106418,
+        "x": 156389
+      },
+      {
+        "owner_id": 24173,
+        "y": 106419,
+        "x": 156388
+      },
+      {
+        "owner_id": 24173,
+        "y": 106420,
+        "x": 156387
+      },
+      {
+        "owner_id": 24173,
+        "y": 106420,
+        "x": 156388
+      },
+      {
+        "owner_id": 24173,
+        "y": 106421,
+        "x": 156387
+      },
+      {
+        "owner_id": 24173,
+        "y": 106422,
+        "x": 156386
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 9
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B13386645158990",
+    "pixelIndex": 24170,
+    "name": "Zefat",
+    "original_source_ordinal": 4,
+    "selected_part_ordinal": 934,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B13386645158990",
+      "source_index": 38225,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 4,
+      "geometry_pointer": "/features/4/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Zefat",
+        "shapeISO": "",
+        "shapeID": "584046B13386645158990",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 1,
+      "contexts": {
+        "foreign-land-Nabat\u00eey\u00e9": 1
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "c0659e19d9e67ed7200b0f37b3dd801f02ad1a5632b8bd8f8f0943173ae1d874",
+      "canonical_geometry_bytes": 7668,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24170,
+      "target_id": "gb:ISR:ADM2:584046B13386645158990",
+      "name": "Zefat",
+      "source_members": [
+        "gb:ISR:ADM2:584046B13386645158990"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B13386645158990",
+        "source_index": 38225,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 4,
+        "geometry_pointer": "/features/4/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Zefat",
+          "shapeISO": "",
+          "shapeID": "584046B13386645158990",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 1,
+        "contexts": {
+          "foreign-land-Nabat\u00eey\u00e9": 1
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "c0659e19d9e67ed7200b0f37b3dd801f02ad1a5632b8bd8f8f0943173ae1d874",
+        "canonical_geometry_bytes": 7668,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 934,
+      "selected_feature_pointer": "/features/934",
+      "selected_geometry_pointer": "/features/934/geometry",
+      "selected_whole_feature_sha256": "f7cbb99d91379c5e28598e6df3d6c5108eaa7860fee3906dded4ad23095900f2",
+      "selected_properties_sha256": "3c2d28def6b4e1bc16d0b4609ecb0dd25da93c2fb59c4fdbc6b2b1ad66ce9876",
+      "selected_base_geometry": {
+        "geometry_sha256": "af0cea626eb9cde428e5decb54ba0ca8079ac5e57ff13d1f95c2ed5071e441d0",
+        "canonical_geometry_bytes": 1627
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17434,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B13386645158990",
+        "representative_point": [
+          35.560924897540986,
+          33.07235
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.994575,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 4,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "7d86054c6e7870b1dc8b1ec3c1bed2990faa105197a338f194221accb408d4c7",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 0.86583,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3056",
+          "overlap": 0.98613
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3056",
+          "overlap": 0.98613,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 1734,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 4,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 1,
+    "original_keys": [
+      {
+        "owner_id": 24170,
+        "y": 105359,
+        "x": 156998
+      }
+    ],
+    "research_partition": {
+      "finite_source_unresolved_rationale_for_independent_consideration": 1
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B54386898087809",
+    "pixelIndex": 24175,
+    "name": "Petah Tiqwa",
+    "original_source_ordinal": 7,
+    "selected_part_ordinal": 937,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "source_index": 38228,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 7,
+      "geometry_pointer": "/features/7/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Petah Tiqwa",
+        "shapeISO": "",
+        "shapeID": "584046B54386898087809",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 20,
+      "contexts": {
+        "domestic-land379": 20
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "6f0c0354c06df95040b9a053e49e2b9b70deac042c0d3dcb1ee1fb1399662704",
+      "canonical_geometry_bytes": 4778,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24175,
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "name": "Petah Tiqwa",
+      "source_members": [
+        "gb:ISR:ADM2:584046B54386898087809"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B54386898087809",
+        "source_index": 38228,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 7,
+        "geometry_pointer": "/features/7/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Petah Tiqwa",
+          "shapeISO": "",
+          "shapeID": "584046B54386898087809",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 20,
+        "contexts": {
+          "domestic-land379": 20
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "6f0c0354c06df95040b9a053e49e2b9b70deac042c0d3dcb1ee1fb1399662704",
+        "canonical_geometry_bytes": 4778,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 937,
+      "selected_feature_pointer": "/features/937",
+      "selected_geometry_pointer": "/features/937/geometry",
+      "selected_whole_feature_sha256": "a1cb62af5ba6498f93ea77d9fcbdd345b43b221a79811e22633563f0a36aeed7",
+      "selected_properties_sha256": "8105b5e573be41a6bed219c47730bb9b8ea9b5ba728c19d4f66053c176fdf00e",
+      "selected_base_geometry": {
+        "geometry_sha256": "3789df7af3141a66fe52f38ed549a8d70d54c14587aa861def163ee7e51a8d79",
+        "canonical_geometry_bytes": 2149
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:central-district:675230148428",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17437,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B54386898087809",
+        "representative_point": [
+          34.92481204013378,
+          32.132999999999996
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.978605,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 4,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "3e24aa02bdf8ce5e8d9d1a1c2ab0d1c67c2070149a3a7870ef8898d9759a790b",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 1,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3055",
+          "overlap": 0.944761
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3055",
+          "overlap": 0.944761,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 734,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 7,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 20,
+    "original_keys": [
+      {
+        "owner_id": 24175,
+        "y": 106358,
+        "x": 156561
+      },
+      {
+        "owner_id": 24175,
+        "y": 106359,
+        "x": 156561
+      },
+      {
+        "owner_id": 24175,
+        "y": 106360,
+        "x": 156562
+      },
+      {
+        "owner_id": 24175,
+        "y": 106361,
+        "x": 156562
+      },
+      {
+        "owner_id": 24175,
+        "y": 106362,
+        "x": 156562
+      },
+      {
+        "owner_id": 24175,
+        "y": 106363,
+        "x": 156562
+      },
+      {
+        "owner_id": 24175,
+        "y": 106365,
+        "x": 156563
+      },
+      {
+        "owner_id": 24175,
+        "y": 106366,
+        "x": 156563
+      },
+      {
+        "owner_id": 24175,
+        "y": 106366,
+        "x": 156564
+      },
+      {
+        "owner_id": 24175,
+        "y": 106367,
+        "x": 156563
+      },
+      {
+        "owner_id": 24175,
+        "y": 106367,
+        "x": 156564
+      },
+      {
+        "owner_id": 24175,
+        "y": 106368,
+        "x": 156564
+      },
+      {
+        "owner_id": 24175,
+        "y": 106368,
+        "x": 156565
+      },
+      {
+        "owner_id": 24175,
+        "y": 106369,
+        "x": 156564
+      },
+      {
+        "owner_id": 24175,
+        "y": 106369,
+        "x": 156565
+      },
+      {
+        "owner_id": 24175,
+        "y": 106370,
+        "x": 156564
+      },
+      {
+        "owner_id": 24175,
+        "y": 106370,
+        "x": 156565
+      },
+      {
+        "owner_id": 24175,
+        "y": 106371,
+        "x": 156564
+      },
+      {
+        "owner_id": 24175,
+        "y": 106371,
+        "x": 156565
+      },
+      {
+        "owner_id": 24175,
+        "y": 106372,
+        "x": 156565
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 20
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B61571705909900",
+    "pixelIndex": 24177,
+    "name": "HaSharon",
+    "original_source_ordinal": 8,
+    "selected_part_ordinal": 938,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B61571705909900",
+      "source_index": 38229,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 8,
+      "geometry_pointer": "/features/8/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "HaSharon",
+        "shapeISO": "",
+        "shapeID": "584046B61571705909900",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 43,
+      "contexts": {
+        "domestic-land379": 43
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "1f8fb26ed26f6b9b74a66b700a2f28bf34b67c3395d56527dad60227cb3de3ec",
+      "canonical_geometry_bytes": 3415,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24177,
+      "target_id": "gb:ISR:ADM2:584046B61571705909900",
+      "name": "HaSharon",
+      "source_members": [
+        "gb:ISR:ADM2:584046B61571705909900"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B61571705909900",
+        "source_index": 38229,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 8,
+        "geometry_pointer": "/features/8/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "HaSharon",
+          "shapeISO": "",
+          "shapeID": "584046B61571705909900",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 43,
+        "contexts": {
+          "domestic-land379": 43
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "1f8fb26ed26f6b9b74a66b700a2f28bf34b67c3395d56527dad60227cb3de3ec",
+        "canonical_geometry_bytes": 3415,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 938,
+      "selected_feature_pointer": "/features/938",
+      "selected_geometry_pointer": "/features/938/geometry",
+      "selected_whole_feature_sha256": "5c0881717bc1e6bf2ac4b4b84ab7fcebc631e0e5ac47eefdc1e691bdd42a123f",
+      "selected_properties_sha256": "cf0637bd230a86142e989ab208ec122961e6d6b58237765ed36113ef8ff3126e",
+      "selected_base_geometry": {
+        "geometry_sha256": "993672cca0e812468b637e8191080c3b81a38210d0af661157c11f8ad2ce56fd",
+        "canonical_geometry_bytes": 974
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:central-district:675230148428",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17438,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B61571705909900",
+        "representative_point": [
+          34.92581398854962,
+          32.29365
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.964997,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 1,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "336aa7851ae020147a006fd054f5dd2940f97e2646b5a25f890735991c1590d3",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 1,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3055",
+          "overlap": 0.922331
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3055",
+          "overlap": 0.922331,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 734,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 8,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 43,
+    "original_keys": [
+      {
+        "owner_id": 24177,
+        "y": 106111,
+        "x": 156478
+      },
+      {
+        "owner_id": 24177,
+        "y": 106115,
+        "x": 156477
+      },
+      {
+        "owner_id": 24177,
+        "y": 106118,
+        "x": 156476
+      },
+      {
+        "owner_id": 24177,
+        "y": 106119,
+        "x": 156476
+      },
+      {
+        "owner_id": 24177,
+        "y": 106122,
+        "x": 156475
+      },
+      {
+        "owner_id": 24177,
+        "y": 106123,
+        "x": 156475
+      },
+      {
+        "owner_id": 24177,
+        "y": 106124,
+        "x": 156475
+      },
+      {
+        "owner_id": 24177,
+        "y": 106125,
+        "x": 156474
+      },
+      {
+        "owner_id": 24177,
+        "y": 106126,
+        "x": 156474
+      },
+      {
+        "owner_id": 24177,
+        "y": 106127,
+        "x": 156474
+      },
+      {
+        "owner_id": 24177,
+        "y": 106128,
+        "x": 156474
+      },
+      {
+        "owner_id": 24177,
+        "y": 106129,
+        "x": 156473
+      },
+      {
+        "owner_id": 24177,
+        "y": 106130,
+        "x": 156473
+      },
+      {
+        "owner_id": 24177,
+        "y": 106131,
+        "x": 156473
+      },
+      {
+        "owner_id": 24177,
+        "y": 106132,
+        "x": 156473
+      },
+      {
+        "owner_id": 24177,
+        "y": 106133,
+        "x": 156472
+      },
+      {
+        "owner_id": 24177,
+        "y": 106133,
+        "x": 156473
+      },
+      {
+        "owner_id": 24177,
+        "y": 106134,
+        "x": 156472
+      },
+      {
+        "owner_id": 24177,
+        "y": 106135,
+        "x": 156472
+      },
+      {
+        "owner_id": 24177,
+        "y": 106136,
+        "x": 156472
+      },
+      {
+        "owner_id": 24177,
+        "y": 106137,
+        "x": 156472
+      },
+      {
+        "owner_id": 24177,
+        "y": 106138,
+        "x": 156471
+      },
+      {
+        "owner_id": 24177,
+        "y": 106139,
+        "x": 156471
+      },
+      {
+        "owner_id": 24177,
+        "y": 106140,
+        "x": 156471
+      },
+      {
+        "owner_id": 24177,
+        "y": 106141,
+        "x": 156471
+      },
+      {
+        "owner_id": 24177,
+        "y": 106143,
+        "x": 156470
+      },
+      {
+        "owner_id": 24177,
+        "y": 106144,
+        "x": 156470
+      },
+      {
+        "owner_id": 24177,
+        "y": 106145,
+        "x": 156470
+      },
+      {
+        "owner_id": 24177,
+        "y": 106146,
+        "x": 156470
+      },
+      {
+        "owner_id": 24177,
+        "y": 106148,
+        "x": 156469
+      },
+      {
+        "owner_id": 24177,
+        "y": 106149,
+        "x": 156469
+      },
+      {
+        "owner_id": 24177,
+        "y": 106150,
+        "x": 156469
+      },
+      {
+        "owner_id": 24177,
+        "y": 106153,
+        "x": 156468
+      },
+      {
+        "owner_id": 24177,
+        "y": 106154,
+        "x": 156468
+      },
+      {
+        "owner_id": 24177,
+        "y": 106155,
+        "x": 156468
+      },
+      {
+        "owner_id": 24177,
+        "y": 106158,
+        "x": 156467
+      },
+      {
+        "owner_id": 24177,
+        "y": 106159,
+        "x": 156467
+      },
+      {
+        "owner_id": 24177,
+        "y": 106162,
+        "x": 156466
+      },
+      {
+        "owner_id": 24177,
+        "y": 106163,
+        "x": 156466
+      },
+      {
+        "owner_id": 24177,
+        "y": 106167,
+        "x": 156465
+      },
+      {
+        "owner_id": 24177,
+        "y": 106168,
+        "x": 156465
+      },
+      {
+        "owner_id": 24177,
+        "y": 106172,
+        "x": 156464
+      },
+      {
+        "owner_id": 24177,
+        "y": 106177,
+        "x": 156463
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 43
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B37321511847561",
+    "pixelIndex": 24174,
+    "name": "Haifa",
+    "original_source_ordinal": 9,
+    "selected_part_ordinal": 939,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B37321511847561",
+      "source_index": 38230,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 9,
+      "geometry_pointer": "/features/9/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Haifa",
+        "shapeISO": "",
+        "shapeID": "584046B37321511847561",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 8,
+      "contexts": {
+        "domestic-land379": 8
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "9bab51a2f4f782e72dc9338e8bf8d790286c22c8eaec21d37b80906e8c563b99",
+      "canonical_geometry_bytes": 4830,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24174,
+      "target_id": "gb:ISR:ADM2:584046B37321511847561",
+      "name": "Haifa",
+      "source_members": [
+        "gb:ISR:ADM2:584046B37321511847561"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B37321511847561",
+        "source_index": 38230,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 9,
+        "geometry_pointer": "/features/9/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Haifa",
+          "shapeISO": "",
+          "shapeID": "584046B37321511847561",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 8,
+        "contexts": {
+          "domestic-land379": 8
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "9bab51a2f4f782e72dc9338e8bf8d790286c22c8eaec21d37b80906e8c563b99",
+        "canonical_geometry_bytes": 4830,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 939,
+      "selected_feature_pointer": "/features/939",
+      "selected_geometry_pointer": "/features/939/geometry",
+      "selected_whole_feature_sha256": "72efd0a96e54dfd3e9eadbd98859e7e421d9d97b215abba9e938722dff7946d0",
+      "selected_properties_sha256": "6213c51b5cacdd99336df2bfe18f5a7ce811697e5ae577707d04928c366da1d1",
+      "selected_base_geometry": {
+        "geometry_sha256": "005eabf418d9b62ab5f8ddc10a904d7d565caa15d13ad1fd1adad74e2c5e6a23",
+        "canonical_geometry_bytes": 607
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:haifa:36619d3af446",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17439,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B37321511847561",
+        "representative_point": [
+          35.06022906054244,
+          32.761849999999995
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.932703,
+        "topology_version": 1,
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 0.87929,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "search_aliases": [
+          "Haifa"
+        ],
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3054",
+          "overlap": 0.961899
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3054",
+          "overlap": 0.961899,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 1031,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 9,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 8,
+    "original_keys": [
+      {
+        "owner_id": 24174,
+        "y": 105700,
+        "x": 156627
+      },
+      {
+        "owner_id": 24174,
+        "y": 105703,
+        "x": 156626
+      },
+      {
+        "owner_id": 24174,
+        "y": 105713,
+        "x": 156623
+      },
+      {
+        "owner_id": 24174,
+        "y": 105715,
+        "x": 156622
+      },
+      {
+        "owner_id": 24174,
+        "y": 105716,
+        "x": 156622
+      },
+      {
+        "owner_id": 24174,
+        "y": 105725,
+        "x": 156619
+      },
+      {
+        "owner_id": 24174,
+        "y": 105726,
+        "x": 156619
+      },
+      {
+        "owner_id": 24174,
+        "y": 105753,
+        "x": 156536
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 8
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B72217003232480",
+    "pixelIndex": 24178,
+    "name": "Hadera",
+    "original_source_ordinal": 10,
+    "selected_part_ordinal": 940,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B72217003232480",
+      "source_index": 38231,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 10,
+      "geometry_pointer": "/features/10/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Hadera",
+        "shapeISO": "",
+        "shapeID": "584046B72217003232480",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 61,
+      "contexts": {
+        "domestic-land379": 61
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "ab1c73a0a535e985106ca7a42843af498180259fb793818d12405317d19f4f70",
+      "canonical_geometry_bytes": 5845,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24178,
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "name": "Hadera",
+      "source_members": [
+        "gb:ISR:ADM2:584046B72217003232480"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B72217003232480",
+        "source_index": 38231,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 10,
+        "geometry_pointer": "/features/10/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Hadera",
+          "shapeISO": "",
+          "shapeID": "584046B72217003232480",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 61,
+        "contexts": {
+          "domestic-land379": 61
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "ab1c73a0a535e985106ca7a42843af498180259fb793818d12405317d19f4f70",
+        "canonical_geometry_bytes": 5845,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 940,
+      "selected_feature_pointer": "/features/940",
+      "selected_geometry_pointer": "/features/940/geometry",
+      "selected_whole_feature_sha256": "f6efeb2a49536a29b5e6f59b4a338ed3ea5509226d4ed5def747c098332c788a",
+      "selected_properties_sha256": "4f16f293f96fbb68858ed3ed69e3fe1404b6f6feb2227afcdb9f8c0d08f873b9",
+      "selected_base_geometry": {
+        "geometry_sha256": "00abc42f10d4927b2962d08f6ecdce09452c337f27a131f49036749ac1928bb7",
+        "canonical_geometry_bytes": 1864
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:haifa:36619d3af446",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17440,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B72217003232480",
+        "representative_point": [
+          34.977275605926074,
+          32.584500000000006
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.941932,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 2,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "400b263f0e578b7d42c52698aab0c7e0bcf54ce5009cceaf05bc1e697b1dbb59",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 0.90933,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3054",
+          "overlap": 0.922111
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3054",
+          "overlap": 0.922111,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 1031,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 10,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 61,
+    "original_keys": [
+      {
+        "owner_id": 24178,
+        "y": 105805,
+        "x": 156537
+      },
+      {
+        "owner_id": 24178,
+        "y": 105811,
+        "x": 156536
+      },
+      {
+        "owner_id": 24178,
+        "y": 105812,
+        "x": 156536
+      },
+      {
+        "owner_id": 24178,
+        "y": 105813,
+        "x": 156536
+      },
+      {
+        "owner_id": 24178,
+        "y": 105818,
+        "x": 156535
+      },
+      {
+        "owner_id": 24178,
+        "y": 105819,
+        "x": 156535
+      },
+      {
+        "owner_id": 24178,
+        "y": 105836,
+        "x": 156533
+      },
+      {
+        "owner_id": 24178,
+        "y": 105844,
+        "x": 156532
+      },
+      {
+        "owner_id": 24178,
+        "y": 105875,
+        "x": 156519
+      },
+      {
+        "owner_id": 24178,
+        "y": 105875,
+        "x": 156520
+      },
+      {
+        "owner_id": 24178,
+        "y": 105876,
+        "x": 156519
+      },
+      {
+        "owner_id": 24178,
+        "y": 105876,
+        "x": 156520
+      },
+      {
+        "owner_id": 24178,
+        "y": 105877,
+        "x": 156520
+      },
+      {
+        "owner_id": 24178,
+        "y": 105888,
+        "x": 156519
+      },
+      {
+        "owner_id": 24178,
+        "y": 105895,
+        "x": 156518
+      },
+      {
+        "owner_id": 24178,
+        "y": 105903,
+        "x": 156517
+      },
+      {
+        "owner_id": 24178,
+        "y": 105910,
+        "x": 156516
+      },
+      {
+        "owner_id": 24178,
+        "y": 105917,
+        "x": 156515
+      },
+      {
+        "owner_id": 24178,
+        "y": 105918,
+        "x": 156515
+      },
+      {
+        "owner_id": 24178,
+        "y": 105924,
+        "x": 156514
+      },
+      {
+        "owner_id": 24178,
+        "y": 105925,
+        "x": 156514
+      },
+      {
+        "owner_id": 24178,
+        "y": 105930,
+        "x": 156513
+      },
+      {
+        "owner_id": 24178,
+        "y": 105931,
+        "x": 156513
+      },
+      {
+        "owner_id": 24178,
+        "y": 105932,
+        "x": 156513
+      },
+      {
+        "owner_id": 24178,
+        "y": 105933,
+        "x": 156513
+      },
+      {
+        "owner_id": 24178,
+        "y": 105934,
+        "x": 156512
+      },
+      {
+        "owner_id": 24178,
+        "y": 105935,
+        "x": 156512
+      },
+      {
+        "owner_id": 24178,
+        "y": 105936,
+        "x": 156512
+      },
+      {
+        "owner_id": 24178,
+        "y": 105937,
+        "x": 156512
+      },
+      {
+        "owner_id": 24178,
+        "y": 105938,
+        "x": 156512
+      },
+      {
+        "owner_id": 24178,
+        "y": 105939,
+        "x": 156511
+      },
+      {
+        "owner_id": 24178,
+        "y": 105939,
+        "x": 156512
+      },
+      {
+        "owner_id": 24178,
+        "y": 105940,
+        "x": 156511
+      },
+      {
+        "owner_id": 24178,
+        "y": 105940,
+        "x": 156512
+      },
+      {
+        "owner_id": 24178,
+        "y": 105941,
+        "x": 156511
+      },
+      {
+        "owner_id": 24178,
+        "y": 105942,
+        "x": 156511
+      },
+      {
+        "owner_id": 24178,
+        "y": 105943,
+        "x": 156511
+      },
+      {
+        "owner_id": 24178,
+        "y": 106013,
+        "x": 156498
+      },
+      {
+        "owner_id": 24178,
+        "y": 106016,
+        "x": 156497
+      },
+      {
+        "owner_id": 24178,
+        "y": 106017,
+        "x": 156497
+      },
+      {
+        "owner_id": 24178,
+        "y": 106020,
+        "x": 156496
+      },
+      {
+        "owner_id": 24178,
+        "y": 106021,
+        "x": 156496
+      },
+      {
+        "owner_id": 24178,
+        "y": 106023,
+        "x": 156495
+      },
+      {
+        "owner_id": 24178,
+        "y": 106024,
+        "x": 156495
+      },
+      {
+        "owner_id": 24178,
+        "y": 106025,
+        "x": 156495
+      },
+      {
+        "owner_id": 24178,
+        "y": 106027,
+        "x": 156494
+      },
+      {
+        "owner_id": 24178,
+        "y": 106028,
+        "x": 156494
+      },
+      {
+        "owner_id": 24178,
+        "y": 106029,
+        "x": 156494
+      },
+      {
+        "owner_id": 24178,
+        "y": 106030,
+        "x": 156493
+      },
+      {
+        "owner_id": 24178,
+        "y": 106031,
+        "x": 156493
+      },
+      {
+        "owner_id": 24178,
+        "y": 106032,
+        "x": 156493
+      },
+      {
+        "owner_id": 24178,
+        "y": 106033,
+        "x": 156493
+      },
+      {
+        "owner_id": 24178,
+        "y": 106035,
+        "x": 156492
+      },
+      {
+        "owner_id": 24178,
+        "y": 106036,
+        "x": 156492
+      },
+      {
+        "owner_id": 24178,
+        "y": 106037,
+        "x": 156492
+      },
+      {
+        "owner_id": 24178,
+        "y": 106053,
+        "x": 156650
+      },
+      {
+        "owner_id": 24178,
+        "y": 106080,
+        "x": 156618
+      },
+      {
+        "owner_id": 24178,
+        "y": 106081,
+        "x": 156618
+      },
+      {
+        "owner_id": 24178,
+        "y": 106082,
+        "x": 156618
+      },
+      {
+        "owner_id": 24178,
+        "y": 106083,
+        "x": 156617
+      },
+      {
+        "owner_id": 24178,
+        "y": 106084,
+        "x": 156617
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 61
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B83749751332199",
+    "pixelIndex": 24181,
+    "name": "Akko",
+    "original_source_ordinal": 11,
+    "selected_part_ordinal": 941,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "source_index": 38232,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 11,
+      "geometry_pointer": "/features/11/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Akko",
+        "shapeISO": "",
+        "shapeID": "584046B83749751332199",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 83,
+      "contexts": {
+        "foreign-land-Nabat\u00eey\u00e9": 24,
+        "foreign-land-Liban-Sud": 18,
+        "domestic-land379": 41
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "05df4fe3be9ff4059b8b081a2f2c4be2b92eea4c52f7aefab27127e99c40bb1b",
+      "canonical_geometry_bytes": 6763,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24181,
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "name": "Akko",
+      "source_members": [
+        "gb:ISR:ADM2:584046B83749751332199"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B83749751332199",
+        "source_index": 38232,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 11,
+        "geometry_pointer": "/features/11/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Akko",
+          "shapeISO": "",
+          "shapeID": "584046B83749751332199",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 83,
+        "contexts": {
+          "foreign-land-Nabat\u00eey\u00e9": 24,
+          "foreign-land-Liban-Sud": 18,
+          "domestic-land379": 41
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "05df4fe3be9ff4059b8b081a2f2c4be2b92eea4c52f7aefab27127e99c40bb1b",
+        "canonical_geometry_bytes": 6763,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 941,
+      "selected_feature_pointer": "/features/941",
+      "selected_geometry_pointer": "/features/941/geometry",
+      "selected_whole_feature_sha256": "6bdc9a3fa54b8e239b249bec1ae94c25dca7379ef13e5f8d9144bbc5dbbec4c5",
+      "selected_properties_sha256": "4ec4301b535234a90d5fc0e3dafa7a20a9194b91d1452295177e00d34db48884",
+      "selected_base_geometry": {
+        "geometry_sha256": "81b46e33838ca3b0c603da5f007d4327be469103fee1bdf9d0cc712f41dbae0a",
+        "canonical_geometry_bytes": 1267
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17441,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B83749751332199",
+        "representative_point": [
+          35.24444647493612,
+          32.93915
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.989114,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 2,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "85bc82df7820c1f46eaec8ebcc533f52fff2ec7ef6cf6e5911b912740e8b2909",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 0.97565,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3056",
+          "overlap": 0.980937
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3056",
+          "overlap": 0.980937,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 1734,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 11,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 83,
+    "original_keys": [
+      {
+        "owner_id": 24181,
+        "y": 105511,
+        "x": 156801
+      },
+      {
+        "owner_id": 24181,
+        "y": 105511,
+        "x": 156802
+      },
+      {
+        "owner_id": 24181,
+        "y": 105511,
+        "x": 156803
+      },
+      {
+        "owner_id": 24181,
+        "y": 105512,
+        "x": 156775
+      },
+      {
+        "owner_id": 24181,
+        "y": 105512,
+        "x": 156803
+      },
+      {
+        "owner_id": 24181,
+        "y": 105512,
+        "x": 156804
+      },
+      {
+        "owner_id": 24181,
+        "y": 105513,
+        "x": 156771
+      },
+      {
+        "owner_id": 24181,
+        "y": 105514,
+        "x": 156767
+      },
+      {
+        "owner_id": 24181,
+        "y": 105519,
+        "x": 156700
+      },
+      {
+        "owner_id": 24181,
+        "y": 105519,
+        "x": 156701
+      },
+      {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156698
+      },
+      {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156699
+      },
+      {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156700
+      },
+      {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156701
+      },
+      {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156745
+      },
+      {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156681
+      },
+      {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156682
+      },
+      {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156697
+      },
+      {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156698
+      },
+      {
+        "owner_id": 24181,
+        "y": 105522,
+        "x": 156692
+      },
+      {
+        "owner_id": 24181,
+        "y": 105522,
+        "x": 156693
+      },
+      {
+        "owner_id": 24181,
+        "y": 105522,
+        "x": 156694
+      },
+      {
+        "owner_id": 24181,
+        "y": 105523,
+        "x": 156690
+      },
+      {
+        "owner_id": 24181,
+        "y": 105531,
+        "x": 156810
+      },
+      {
+        "owner_id": 24181,
+        "y": 105531,
+        "x": 156811
+      },
+      {
+        "owner_id": 24181,
+        "y": 105532,
+        "x": 156811
+      },
+      {
+        "owner_id": 24181,
+        "y": 105532,
+        "x": 156812
+      },
+      {
+        "owner_id": 24181,
+        "y": 105533,
+        "x": 156812
+      },
+      {
+        "owner_id": 24181,
+        "y": 105533,
+        "x": 156813
+      },
+      {
+        "owner_id": 24181,
+        "y": 105534,
+        "x": 156813
+      },
+      {
+        "owner_id": 24181,
+        "y": 105534,
+        "x": 156814
+      },
+      {
+        "owner_id": 24181,
+        "y": 105535,
+        "x": 156814
+      },
+      {
+        "owner_id": 24181,
+        "y": 105536,
+        "x": 156815
+      },
+      {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156830
+      },
+      {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156831
+      },
+      {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156832
+      },
+      {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156833
+      },
+      {
+        "owner_id": 24181,
+        "y": 105551,
+        "x": 156835
+      },
+      {
+        "owner_id": 24181,
+        "y": 105551,
+        "x": 156836
+      },
+      {
+        "owner_id": 24181,
+        "y": 105552,
+        "x": 156839
+      },
+      {
+        "owner_id": 24181,
+        "y": 105552,
+        "x": 156840
+      },
+      {
+        "owner_id": 24181,
+        "y": 105552,
+        "x": 156841
+      },
+      {
+        "owner_id": 24181,
+        "y": 105582,
+        "x": 156638
+      },
+      {
+        "owner_id": 24181,
+        "y": 105586,
+        "x": 156637
+      },
+      {
+        "owner_id": 24181,
+        "y": 105661,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105662,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105663,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105663,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105663,
+        "x": 156624
+      },
+      {
+        "owner_id": 24181,
+        "y": 105664,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105664,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105664,
+        "x": 156624
+      },
+      {
+        "owner_id": 24181,
+        "y": 105665,
+        "x": 156621
+      },
+      {
+        "owner_id": 24181,
+        "y": 105665,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105665,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105665,
+        "x": 156624
+      },
+      {
+        "owner_id": 24181,
+        "y": 105665,
+        "x": 156625
+      },
+      {
+        "owner_id": 24181,
+        "y": 105666,
+        "x": 156621
+      },
+      {
+        "owner_id": 24181,
+        "y": 105666,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105666,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105666,
+        "x": 156624
+      },
+      {
+        "owner_id": 24181,
+        "y": 105666,
+        "x": 156625
+      },
+      {
+        "owner_id": 24181,
+        "y": 105667,
+        "x": 156621
+      },
+      {
+        "owner_id": 24181,
+        "y": 105667,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105667,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105667,
+        "x": 156624
+      },
+      {
+        "owner_id": 24181,
+        "y": 105667,
+        "x": 156625
+      },
+      {
+        "owner_id": 24181,
+        "y": 105667,
+        "x": 156626
+      },
+      {
+        "owner_id": 24181,
+        "y": 105668,
+        "x": 156621
+      },
+      {
+        "owner_id": 24181,
+        "y": 105668,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105668,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105668,
+        "x": 156624
+      },
+      {
+        "owner_id": 24181,
+        "y": 105668,
+        "x": 156625
+      },
+      {
+        "owner_id": 24181,
+        "y": 105668,
+        "x": 156626
+      },
+      {
+        "owner_id": 24181,
+        "y": 105669,
+        "x": 156620
+      },
+      {
+        "owner_id": 24181,
+        "y": 105669,
+        "x": 156621
+      },
+      {
+        "owner_id": 24181,
+        "y": 105669,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105669,
+        "x": 156623
+      },
+      {
+        "owner_id": 24181,
+        "y": 105669,
+        "x": 156624
+      },
+      {
+        "owner_id": 24181,
+        "y": 105670,
+        "x": 156620
+      },
+      {
+        "owner_id": 24181,
+        "y": 105670,
+        "x": 156621
+      },
+      {
+        "owner_id": 24181,
+        "y": 105670,
+        "x": 156622
+      },
+      {
+        "owner_id": 24181,
+        "y": 105671,
+        "x": 156621
+      }
+    ],
+    "research_partition": {
+      "finite_source_unresolved_rationale_for_independent_consideration": 42,
+      "positive_source_qualification_candidate": 41
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B83064859640631",
+    "pixelIndex": 24180,
+    "name": "Yizre'el",
+    "original_source_ordinal": 12,
+    "selected_part_ordinal": 942,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "source_index": 38233,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 12,
+      "geometry_pointer": "/features/12/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Yizre'el",
+        "shapeISO": "",
+        "shapeID": "584046B83064859640631",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 22,
+      "contexts": {
+        "domestic-land379": 22
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "59700664d20dd56a8c36e595e2c4bec799865782a6ccf081ca4d95c275e32f45",
+      "canonical_geometry_bytes": 12310,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24180,
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "name": "Yizre'el",
+      "source_members": [
+        "gb:ISR:ADM2:584046B83064859640631"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B83064859640631",
+        "source_index": 38233,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 12,
+        "geometry_pointer": "/features/12/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Yizre'el",
+          "shapeISO": "",
+          "shapeID": "584046B83064859640631",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 22,
+        "contexts": {
+          "domestic-land379": 22
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "59700664d20dd56a8c36e595e2c4bec799865782a6ccf081ca4d95c275e32f45",
+        "canonical_geometry_bytes": 12310,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 942,
+      "selected_feature_pointer": "/features/942",
+      "selected_geometry_pointer": "/features/942/geometry",
+      "selected_whole_feature_sha256": "4f87a6df064628ec2dd5be9ad110fe7c03f87ac7280bb9e8bf976c534aef7e13",
+      "selected_properties_sha256": "4cd390d3f44ac9803efb127f9e7268fb44461ab5a8b261739952cb9a1eef2bb3",
+      "selected_base_geometry": {
+        "geometry_sha256": "57e2ad599ed86a496e7069a956b045676f9721cb0082932c958cf7100d2ad76e",
+        "canonical_geometry_bytes": 4284
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17442,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B83064859640631",
+        "representative_point": [
+          35.3038697866007,
+          32.605000000000004
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.979031,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 3,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "6677f18bed8d331a631f0df0d0c711a9f2a5700da4109352c075193044b63725",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 1,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "search_aliases": [
+          "Nazareth"
+        ],
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3056",
+          "overlap": 0.988153
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3056",
+          "overlap": 0.988153,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 1734,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 12,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 22,
+    "original_keys": [
+      {
+        "owner_id": 24180,
+        "y": 106030,
+        "x": 156860
+      },
+      {
+        "owner_id": 24180,
+        "y": 106110,
+        "x": 156922
+      },
+      {
+        "owner_id": 24180,
+        "y": 106111,
+        "x": 156923
+      },
+      {
+        "owner_id": 24180,
+        "y": 106112,
+        "x": 156924
+      },
+      {
+        "owner_id": 24180,
+        "y": 106113,
+        "x": 156925
+      },
+      {
+        "owner_id": 24180,
+        "y": 106118,
+        "x": 156933
+      },
+      {
+        "owner_id": 24180,
+        "y": 106119,
+        "x": 156935
+      },
+      {
+        "owner_id": 24180,
+        "y": 106119,
+        "x": 156936
+      },
+      {
+        "owner_id": 24180,
+        "y": 106119,
+        "x": 156937
+      },
+      {
+        "owner_id": 24180,
+        "y": 106120,
+        "x": 156938
+      },
+      {
+        "owner_id": 24180,
+        "y": 106120,
+        "x": 156939
+      },
+      {
+        "owner_id": 24180,
+        "y": 106120,
+        "x": 156940
+      },
+      {
+        "owner_id": 24180,
+        "y": 106120,
+        "x": 156941
+      },
+      {
+        "owner_id": 24180,
+        "y": 106122,
+        "x": 156948
+      },
+      {
+        "owner_id": 24180,
+        "y": 106122,
+        "x": 156949
+      },
+      {
+        "owner_id": 24180,
+        "y": 106123,
+        "x": 156950
+      },
+      {
+        "owner_id": 24180,
+        "y": 106123,
+        "x": 156951
+      },
+      {
+        "owner_id": 24180,
+        "y": 106123,
+        "x": 156952
+      },
+      {
+        "owner_id": 24180,
+        "y": 106123,
+        "x": 156953
+      },
+      {
+        "owner_id": 24180,
+        "y": 106124,
+        "x": 156954
+      },
+      {
+        "owner_id": 24180,
+        "y": 106124,
+        "x": 156955
+      },
+      {
+        "owner_id": 24180,
+        "y": 106124,
+        "x": 156956
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 22
+    },
+    "runtime_negative_ordinal": null
+  },
+  {
+    "id": "gb:ISR:ADM2:584046B15624900320210",
+    "pixelIndex": 24171,
+    "name": "Kinneret",
+    "original_source_ordinal": 14,
+    "selected_part_ordinal": 944,
+    "consumed_binding": {
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "source_index": 38235,
+      "original_family": "gb:ISR:ADM2",
+      "feature_ordinal": 14,
+      "geometry_pointer": "/features/14/geometry",
+      "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+      "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+      "properties": {
+        "shapeName": "Kinneret",
+        "shapeISO": "",
+        "shapeID": "584046B15624900320210",
+        "shapeGroup": "ISR",
+        "shapeType": "ADM2"
+      },
+      "original_contact_count": 12,
+      "contexts": {
+        "domestic-land379": 2,
+        "foreign-land-Irbid": 10
+      },
+      "runtime_negative_ordinal": null,
+      "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+      "geometry_sha256": "60b1e8e6c1ccbd1c9de3daa2914ab5ba545c94907308939a6ee47e5c1da073c4",
+      "canonical_geometry_bytes": 8508,
+      "supported_canonical_checks_agree": true,
+      "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+    },
+    "selected_geometry_binding": {
+      "owner_id": 24171,
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "name": "Kinneret",
+      "source_members": [
+        "gb:ISR:ADM2:584046B15624900320210"
+      ],
+      "original_source_binding": {
+        "source_id": "gb:ISR:ADM2:584046B15624900320210",
+        "source_index": 38235,
+        "original_family": "gb:ISR:ADM2",
+        "feature_ordinal": 14,
+        "geometry_pointer": "/features/14/geometry",
+        "body_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/gb-ISR-ADM2-complete-original.json",
+        "complete_family_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "properties": {
+          "shapeName": "Kinneret",
+          "shapeISO": "",
+          "shapeID": "584046B15624900320210",
+          "shapeGroup": "ISR",
+          "shapeType": "ADM2"
+        },
+        "original_contact_count": 12,
+        "contexts": {
+          "domestic-land379": 2,
+          "foreign-land-Irbid": 10
+        },
+        "runtime_negative_ordinal": null,
+        "role_proposal": "proposed affirmative source-to-map-location membership; no sovereignty or current-control claim",
+        "geometry_sha256": "60b1e8e6c1ccbd1c9de3daa2914ab5ba545c94907308939a6ee47e5c1da073c4",
+        "canonical_geometry_bytes": 8508,
+        "supported_canonical_checks_agree": true,
+        "method": "Whole original feature.geometry canonical JSON plus final newline; identity only"
+      },
+      "selected_part": {
+        "commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+        "path": "data/geography/part-11.json",
+        "mode": "100644",
+        "git_blob_oid": "fd7d6f9f564a4b9b0ae7a56a2d7eb27e920017d8",
+        "bytes": 5133018,
+        "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02",
+        "role": "current-v8-unchanged-source-body"
+      },
+      "selected_feature_ordinal": 944,
+      "selected_feature_pointer": "/features/944",
+      "selected_geometry_pointer": "/features/944/geometry",
+      "selected_whole_feature_sha256": "f3b33c33ffe29e4b9dcdd211eac067c6771df7e1397b70e9cd33fd069b249c3e",
+      "selected_properties_sha256": "74235e11c0553dca6533b2c8a01aff1e76e11c2439289459cbed092f0545e283",
+      "selected_base_geometry": {
+        "geometry_sha256": "e179e1cb0e60e43de5e8d936ef42754f1f59fa8363ba5f02911775efef0a36dd",
+        "canonical_geometry_bytes": 1850
+      },
+      "consumed_geometry_equals_selected": false,
+      "parent_id": "framework:province:northern-district:eb38c9cb2247",
+      "parent_matches_original_lineage_and_audit": true,
+      "original_audit_position": 17444,
+      "selected_source_metadata": {
+        "source_id": "gb:ISR:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+        "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "reference_year": "2021",
+        "administrative_level": "ADM2",
+        "parent_source_level": "ADM1",
+        "granularity_version": 3,
+        "source_role": "Subdistrict",
+        "selection_reason": "Named Subdistrict territories at the reviewed country-specific district tier; subordinate wards, villages and electoral divisions are not substituted based on area.",
+        "parent_match": "Named source administrative unit grouped within this geographic area",
+        "original_id": "584046B15624900320210",
+        "representative_point": [
+          35.52929813366513,
+          32.777150000000006
+        ],
+        "hierarchy_version": 4,
+        "hierarchy_source": "gb:ISR:ADM1",
+        "hierarchy_overlap": 0.998498,
+        "topology_version": 1,
+        "topology_reconciled": true,
+        "topology_conflicts": 2,
+        "topology_note": "Shared display coverage reconciled against Natural Earth reference borders, then finer source geometry. Original source boundaries may differ.",
+        "original_geometry_sha256": "2e43382da1442b0f29b1e755735ded6e9733bb8c622b143c6917992e1ac71dfc",
+        "reference_version": 3,
+        "geographic_area_code": "PAL",
+        "geographic_region_code": 34,
+        "geographic_match": "largest source overlap",
+        "geographic_overlap": 0.99463,
+        "coverage_version": 1,
+        "semantic_version": 1,
+        "remote_version": 1,
+        "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+        "framework_match": {
+          "source": "Natural Earth",
+          "id": "ISR-3056",
+          "overlap": 0.991436
+        },
+        "regional_match": {
+          "reference_iso": "ISR",
+          "source_id": "ISR-3056",
+          "overlap": 0.991436,
+          "method": "reference-territory-constrained overlap"
+        },
+        "reference_owner_id": "owner:Q801",
+        "reference_polity": "Israel",
+        "reference_polity_status": "reference",
+        "reference_polity_evidence": {
+          "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+          "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+          "reference_territory": "Israel",
+          "classification": "Disputed",
+          "note": null,
+          "uncertainty": true
+        },
+        "semantic_review": {
+          "status": "open",
+          "continent": "Asia",
+          "decision_index": 1734,
+          "evidence_file": "geographic-decisions"
+        }
+      },
+      "original_selected_body_extract": "original-part11-ISR12-features.json",
+      "original_family_feature_ordinal": 14,
+      "selected_ordinal_is_not_source_family_ordinal": true
+    },
+    "source_equals_selected": false,
+    "original_key_count": 12,
+    "original_keys": [
+      {
+        "owner_id": 24171,
+        "y": 105873,
+        "x": 157031
+      },
+      {
+        "owner_id": 24171,
+        "y": 105874,
+        "x": 157027
+      },
+      {
+        "owner_id": 24171,
+        "y": 105874,
+        "x": 157028
+      },
+      {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157023
+      },
+      {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157024
+      },
+      {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157025
+      },
+      {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157026
+      },
+      {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157020
+      },
+      {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157021
+      },
+      {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157022
+      },
+      {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157023
+      },
+      {
+        "owner_id": 24171,
+        "y": 105877,
+        "x": 157021
+      }
+    ],
+    "research_partition": {
+      "positive_source_qualification_candidate": 2,
+      "material_source_application_step_unperformed": 10
+    },
+    "runtime_negative_ordinal": null
+  }
+]
