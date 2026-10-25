@@ -1,0 +1,19 @@
+{
+  "diagnostic_executed": false,
+  "failure": "exact outer locator schema before diagnose function invocation",
+  "guard": "scripts/delivery-handoff-advance.mjs:17-20",
+  "caller_before_import_and_diagnose": "scripts/prepare-delivery-handoff.mjs:1757-1767",
+  "destination_absent": true,
+  "unchanged_input_commit_path_pairs": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json"
+    }
+  },
+  "changed": "Only outer config locator keys; derived descriptors retained as evidence, not accepted config input."
+}

@@ -1,0 +1,57 @@
+{
+  "code_commit": "aaa71fcccb9b1f3f8accf6e8d7d8dd511d4b573c",
+  "unchanged_executable_baseline": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "configuration": {
+    "commit": "aaa71fcccb9b1f3f8accf6e8d7d8dd511d4b573c",
+    "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-config.json",
+    "mode": "100644",
+    "git_blob_oid": "0a64f814b82a5bb4ff76ee229e19e20f57eb9450",
+    "bytes": 797,
+    "sha256": "b6f659b1091509af9485077937e4c049e70111835381df1fc1204342f7bd324b"
+  },
+  "inputs": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "f34b31f32c43b584d8c9e99b60dc18d47c5439b2",
+      "bytes": 85912,
+      "sha256": "4d8d1ed001998ea65bc29110974d7dee687c3029f4708f452f54ecc1b105be07"
+    },
+    "native_patch": {
+      "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json",
+      "mode": "100644",
+      "git_blob_oid": "98df42ce398d39936969872a11c53bf2c8d59dc4",
+      "bytes": 50833,
+      "sha256": "b7e58372c954d73b01a65ca20a78c1571e2ef181f669ebcc4c293d1980e6f655"
+    }
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-diagnostic",
+    "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-config.json",
+    ".cache/delivery-handoff/isr502-native-diagnostic-001"
+  ],
+  "destination": ".cache/delivery-handoff/isr502-native-diagnostic-001",
+  "started_utc": "2026-10-25T01:18:58.130935+00:00",
+  "scope": {
+    "original_keys": 502,
+    "physical_classes": {
+      "land": 485,
+      "inland-water": 17
+    },
+    "targets": 12,
+    "complete_source_families": 12,
+    "complete_source_features": 605,
+    "emitted_negative_pairs": 105
+  },
+  "limited_five_family_config_not_used": true,
+  "source_or_physical_producers_requested": false,
+  "authority_requested": false,
+  "exit_code": 1,
+  "ended_utc": "2026-10-25T01:18:58.202204+00:00",
+  "destination_exists": false
+}
