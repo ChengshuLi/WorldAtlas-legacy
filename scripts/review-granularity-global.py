@@ -3,8 +3,7 @@
 
 Candidate source research is retained from granularity-review-evidence.json.
 This command does not fetch new sources, import boundaries, or close semantic
-reviews. It can run from any working directory and refreshes the evidence and
-the two complete documentation matrices against the current atlas snapshot.
+reviews. It refreshes only the machine-readable evidence against the snapshot.
 """
 import json,gzip,collections as C,statistics,re,hashlib,pathlib,os,datetime
 
@@ -88,30 +87,4 @@ temporary=path.with_suffix(path.suffix+'.tmp')
 temporary.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 temporary.replace(path)
 
-doc=pathlib.Path('docs/GLOBAL_GRANULARITY_REVIEW.md')
-text=doc.read_text()
-clean=lambda x:str(x).replace('|','\\|').replace('\n',' ')
-header='| Reference territory | Source policy | Locations / provinces | Actual source roles | Median km² | Flags |\n|---|---|---:|---|---:|---|'
-rows=[]
-for t in territories:
- roles='; '.join(f'{k} ({v})' for k,v in t['actual_source_roles'].items())
- notes='; '.join(f'{k}: {v}' for k,v in t['flag_counts'].items()) or 'No automated flags; semantics open'
- rows.append('| '+' | '.join(map(clean,[t['territory'],', '.join(t['policy_profiles']) or 'Unmatched',f"{t['locations']:,} / {t['provinces']:,}",roles,f"{t['area_km2']['median']:,.1f}",notes]))+' |')
-a=text.index(header);b=text.index('\n## All source-policy profiles',a)
-text=text[:a]+header+'\n'+'\n'.join(rows)+'\n'+text[b:]
-a=text.index('| Screen |');b=text.index('\nFlags overlap.',a)
-rubric='| Screen | Observed locations | Interpretation |\n|---|---:|---|\n'+'\n'.join(f"| {k} | {out['summary']['flag_counts'].get(k,0):,} | {v} |" for k,v in out['rubric'].items())
-text=text[:a]+rubric+'\n'+text[b:]
-header='| Policy ISO | Reference territories | Policy role | Canonical source role / date | License |\n|---|---|---|---|---|'
-rows=[]
-for p in profiles:
- rows.append('| '+' | '.join(map(clean,[p['iso'],', '.join(p['territories']),p['policy_role'],f"{p['canonical_source_role'] or 'Separate source/fallback'} / {p['canonical_source_vintage'] or 'Not established by selected-layer metadata'}",p['license'] or 'See actual territory-source provenance']))+' |')
-a=text.index(header);b=text.index('\n## Completion gate',a)
-text=text[:a]+header+'\n'+'\n'.join(rows)+'\n'+text[b:]
-text=re.sub(r'all \*\*[\d,]+ active locations, \d+ reference territories and \d+ source-policy profiles\*\*',f"all **{len(locs):,} active locations, {len(territories)} reference territories and {len(profiles)} source-policy profiles**",text,count=1)
-text=re.sub(r'The inspected footprint snapshot is `[^`]+`',f"The inspected footprint snapshot is `{out['footprints_sha256']}`",text,count=1)
-temporary=doc.with_suffix(doc.suffix+'.tmp')
-temporary.write_text(text)
-temporary.replace(doc)
 print(json.dumps(out['summary']))
-print('Source-policy and territory matrices reconciled; retained research unchanged')
