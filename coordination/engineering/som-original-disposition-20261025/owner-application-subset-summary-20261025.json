@@ -1,0 +1,667 @@
+{
+  "scope": {
+    "issue": 2577,
+    "full_keys": 2247,
+    "full_intervals": 1645,
+    "full_owner_groups": 36,
+    "selected_groups": 15,
+    "selected_keys": 1102,
+    "selected_intervals": 842,
+    "remaining_groups": 21,
+    "remaining_keys": 1145,
+    "remaining_intervals": 803
+  },
+  "method": "Exact key rows joined by original_owner_index to retained owner matrix; interval identity retained as native_block + original_interval_ordinal_in_block and expanded interval sequence. The source roster is task-local research/SOM/som-2247-owner-interval-roster.csv. Counts derive from roster and matrix; existing native-center result was read only, not recomputed.",
+  "source_identity": "2022 GeoBoundaries/GPEI/Frank Salet source feature IDs as recorded in owner matrix; represented year 2022, CC BY 4.0 recorded. Provider methodology/context is not proof of exact 118-feature lineage or statutory boundaries.",
+  "physical_application": "Existing corrected native-table application reports all 2,247 own-feature inside, zero boundary/outside/cross-feature contacts. This is source-relative contact only, not legal qualification.",
+  "selected_owner_groups": [
+    {
+      "owner_index": "39993",
+      "owner_source_id": "gb:SOM:ADM2:84685775B1037428019952",
+      "owner_name": "RUNINGOD",
+      "province_id": "framework:province:middle-shebelle:b3dba15eef31",
+      "keys": 18,
+      "intervals": 14,
+      "application_code": "FED-RUNINGOD-HAMAR",
+      "source_feature_id": "gb:SOM:ADM2:84685775B1037428019952",
+      "center_result": {
+        "inside": 18,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Bounded official-source check: Parliament laws-folder request redirected/looped before contents; OSAG exact-name search found no owner-specific act. No owner boundary schedule, map or effective-date record retained. Does not establish absence.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "39997",
+      "owner_source_id": "gb:SOM:ADM2:84685775B125480767078",
+      "owner_name": "HAFUN",
+      "province_id": "framework:province:bari:d4a6902b9ae9",
+      "keys": 289,
+      "intervals": 203,
+      "application_code": "PUN-BARI-LAW03",
+      "source_feature_id": "gb:SOM:ADM2:84685775B125480767078",
+      "center_result": {
+        "inside": 289,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Applied official Puntland Gazette Law 03/2023 (15 Aug 2023), Arts. 5, 17–21. Boosaaso appears as Bari regional seat; the enactment provides process/authority provisions but no named owner boundary schedule, map, source-feature crosswalk or effective date for these polygons.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "39998",
+      "owner_source_id": "gb:SOM:ADM2:84685775B12579203226949",
+      "owner_name": "BOSSASO",
+      "province_id": "framework:province:bari:d4a6902b9ae9",
+      "keys": 109,
+      "intervals": 43,
+      "application_code": "PUN-BARI-LAW03",
+      "source_feature_id": "gb:SOM:ADM2:84685775B12579203226949",
+      "center_result": {
+        "inside": 109,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Applied official Puntland Gazette Law 03/2023 (15 Aug 2023), Arts. 5, 17–21. Boosaaso appears as Bari regional seat; the enactment provides process/authority provisions but no named owner boundary schedule, map, source-feature crosswalk or effective date for these polygons.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40011",
+      "owner_source_id": "gb:SOM:ADM2:84685775B25921172233623",
+      "owner_name": "HOBYO",
+      "province_id": "framework:province:mudug:f12ee375a8a3",
+      "keys": 100,
+      "intervals": 87,
+      "application_code": "PUN-MUDUG-INDEX",
+      "source_feature_id": "gb:SOM:ADM2:84685775B25921172233623",
+      "center_result": {
+        "inside": 100,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Exact names/variants checked in official Puntland Parliament/government indexes. No target owner instrument retained; Saaxo/2007 decrees concern other districts. Province label Mudug does not resolve Federal Member State jurisdiction.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40020",
+      "owner_source_id": "gb:SOM:ADM2:84685775B34990175799989",
+      "owner_name": "ERIGAVO",
+      "province_id": "framework:province:sanaag:411db947fbef",
+      "keys": 11,
+      "intervals": 11,
+      "application_code": "SL-GAZETTE",
+      "source_feature_id": "gb:SOM:ADM2:84685775B34990175799989",
+      "center_result": {
+        "inside": 11,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Official Somaliland Attorney General Gazette URL returned HTTP 200 but redirected to unrelated sanca99.io; stopped. Secondary Law 23/2002 lead only, no primary text. No Federal applicability inferred.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40029",
+      "owner_source_id": "gb:SOM:ADM2:84685775B45563576505649",
+      "owner_name": "HARADHERE",
+      "province_id": "framework:province:mudug:f12ee375a8a3",
+      "keys": 54,
+      "intervals": 52,
+      "application_code": "PUN-MUDUG-INDEX",
+      "source_feature_id": "gb:SOM:ADM2:84685775B45563576505649",
+      "center_result": {
+        "inside": 54,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Exact names/variants checked in official Puntland Parliament/government indexes. No target owner instrument retained; Saaxo/2007 decrees concern other districts. Province label Mudug does not resolve Federal Member State jurisdiction.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40040",
+      "owner_source_id": "gb:SOM:ADM2:84685775B50873713439527",
+      "owner_name": "DANGOROYO",
+      "province_id": "framework:province:bari:d4a6902b9ae9",
+      "keys": 45,
+      "intervals": 42,
+      "application_code": "PUN-BARI-LAW03",
+      "source_feature_id": "gb:SOM:ADM2:84685775B50873713439527",
+      "center_result": {
+        "inside": 45,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Applied official Puntland Gazette Law 03/2023 (15 Aug 2023), Arts. 5, 17–21. Boosaaso appears as Bari regional seat; the enactment provides process/authority provisions but no named owner boundary schedule, map, source-feature crosswalk or effective date for these polygons.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40047",
+      "owner_source_id": "gb:SOM:ADM2:84685775B5791986723142",
+      "owner_name": "HAMAR JABJAB",
+      "province_id": "framework:province:banadir:98621d32e244",
+      "keys": 8,
+      "intervals": 4,
+      "application_code": "FED-RUNINGOD-HAMAR",
+      "source_feature_id": "gb:SOM:ADM2:84685775B5791986723142",
+      "center_result": {
+        "inside": 8,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Bounded official-source check: Parliament laws-folder request redirected/looped before contents; OSAG exact-name search found no owner-specific act. No owner boundary schedule, map or effective-date record retained. Does not establish absence.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40049",
+      "owner_source_id": "gb:SOM:ADM2:84685775B58560427797094",
+      "owner_name": "ZEILA",
+      "province_id": "framework:province:awdal:f31a9649712e",
+      "keys": 19,
+      "intervals": 12,
+      "application_code": "SL-GAZETTE",
+      "source_feature_id": "gb:SOM:ADM2:84685775B58560427797094",
+      "center_result": {
+        "inside": 19,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Official Somaliland Attorney General Gazette URL returned HTTP 200 but redirected to unrelated sanca99.io; stopped. Secondary Law 23/2002 lead only, no primary text. No Federal applicability inferred.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40050",
+      "owner_source_id": "gb:SOM:ADM2:84685775B5876262576033",
+      "owner_name": "BADHAN",
+      "province_id": "framework:province:sanaag:411db947fbef",
+      "keys": 1,
+      "intervals": 1,
+      "application_code": "SL-GAZETTE",
+      "source_feature_id": "gb:SOM:ADM2:84685775B5876262576033",
+      "center_result": {
+        "inside": 1,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Official Somaliland Attorney General Gazette URL returned HTTP 200 but redirected to unrelated sanca99.io; stopped. Secondary Law 23/2002 lead only, no primary text. No Federal applicability inferred.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40080",
+      "owner_source_id": "gb:SOM:ADM2:84685775B8041620717241",
+      "owner_name": "BENDER BAYLA",
+      "province_id": "framework:province:bari:d4a6902b9ae9",
+      "keys": 186,
+      "intervals": 164,
+      "application_code": "PUN-BARI-INDEX",
+      "source_feature_id": "gb:SOM:ADM2:84685775B8041620717241",
+      "center_result": {
+        "inside": 186,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Exact names/variants checked in official Puntland indexes. No owner-specific act retained; Caluula regional seat and Qandala coastal agreement do not delimit the source features.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40082",
+      "owner_source_id": "gb:SOM:ADM2:84685775B82555432245075",
+      "owner_name": "BUHODLE",
+      "province_id": "framework:province:togdheer:467c841cc3b0",
+      "keys": 1,
+      "intervals": 1,
+      "application_code": "SL-GAZETTE",
+      "source_feature_id": "gb:SOM:ADM2:84685775B82555432245075",
+      "center_result": {
+        "inside": 1,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Official Somaliland Attorney General Gazette URL returned HTTP 200 but redirected to unrelated sanca99.io; stopped. Secondary Law 23/2002 lead only, no primary text. No Federal applicability inferred.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40085",
+      "owner_source_id": "gb:SOM:ADM2:84685775B84835917944928",
+      "owner_name": "QANDALA",
+      "province_id": "framework:province:bari:d4a6902b9ae9",
+      "keys": 9,
+      "intervals": 6,
+      "application_code": "PUN-BARI-INDEX",
+      "source_feature_id": "gb:SOM:ADM2:84685775B84835917944928",
+      "center_result": {
+        "inside": 9,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Exact names/variants checked in official Puntland indexes. No owner-specific act retained; Caluula regional seat and Qandala coastal agreement do not delimit the source features.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40086",
+      "owner_source_id": "gb:SOM:ADM2:84685775B85139403123259",
+      "owner_name": "JARIBAN",
+      "province_id": "framework:province:mudug:f12ee375a8a3",
+      "keys": 129,
+      "intervals": 126,
+      "application_code": "PUN-MUDUG-INDEX",
+      "source_feature_id": "gb:SOM:ADM2:84685775B85139403123259",
+      "center_result": {
+        "inside": 129,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Exact names/variants checked in official Puntland Parliament/government indexes. No target owner instrument retained; Saaxo/2007 decrees concern other districts. Province label Mudug does not resolve Federal Member State jurisdiction.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    },
+    {
+      "owner_index": "40087",
+      "owner_source_id": "gb:SOM:ADM2:84685775B85704075811392",
+      "owner_name": "ALULA",
+      "province_id": "framework:province:bari:d4a6902b9ae9",
+      "keys": 123,
+      "intervals": 76,
+      "application_code": "PUN-BARI-INDEX",
+      "source_feature_id": "gb:SOM:ADM2:84685775B85704075811392",
+      "center_result": {
+        "inside": 123,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": "Exact names/variants checked in official Puntland indexes. No owner-specific act retained; Caluula regional seat and Qandala coastal agreement do not delimit the source features.",
+      "proposal_recommendation": "researched-unresolved (recommendation only; no recorded status/credit change)"
+    }
+  ],
+  "remaining_owner_groups": [
+    {
+      "owner_index": "39999",
+      "owner_source_id": "gb:SOM:ADM2:84685775B13317235490488",
+      "owner_name": "ADALE",
+      "province_id": "framework:province:middle-shebelle:b3dba15eef31",
+      "keys": 42,
+      "intervals": 42,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B13317235490488",
+      "center_result": {
+        "inside": 42,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40007",
+      "owner_source_id": "gb:SOM:ADM2:84685775B19685876664607",
+      "owner_name": "WARSHEIKH",
+      "province_id": "framework:province:middle-shebelle:b3dba15eef31",
+      "keys": 24,
+      "intervals": 20,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B19685876664607",
+      "center_result": {
+        "inside": 24,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40009",
+      "owner_source_id": "gb:SOM:ADM2:84685775B22359262366449",
+      "owner_name": "JAMAAME EAST",
+      "province_id": "framework:province:lower-juba:9343dba5e57a",
+      "keys": 2,
+      "intervals": 2,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B22359262366449",
+      "center_result": {
+        "inside": 2,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40010",
+      "owner_source_id": "gb:SOM:ADM2:84685775B24635972964099",
+      "owner_name": "ABDUL AZIZ",
+      "province_id": "framework:province:banadir:98621d32e244",
+      "keys": 11,
+      "intervals": 7,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B24635972964099",
+      "center_result": {
+        "inside": 11,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40026",
+      "owner_source_id": "gb:SOM:ADM2:84685775B37468249397520",
+      "owner_name": "HELIWA",
+      "province_id": "framework:province:banadir:98621d32e244",
+      "keys": 5,
+      "intervals": 5,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B37468249397520",
+      "center_result": {
+        "inside": 5,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40031",
+      "owner_source_id": "gb:SOM:ADM2:84685775B45912091310280",
+      "owner_name": "JILIB EAST",
+      "province_id": "framework:province:middle-juba:317ee0e2161c",
+      "keys": 1,
+      "intervals": 1,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B45912091310280",
+      "center_result": {
+        "inside": 1,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40033",
+      "owner_source_id": "gb:SOM:ADM2:84685775B46619978923687",
+      "owner_name": "RABDURE",
+      "province_id": "framework:province:bakool:0063981f7642",
+      "keys": 2,
+      "intervals": 2,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B46619978923687",
+      "center_result": {
+        "inside": 2,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40035",
+      "owner_source_id": "gb:SOM:ADM2:84685775B48124794142204",
+      "owner_name": "EL DHERE",
+      "province_id": "framework:province:galgaduud:43bd4ff15e30",
+      "keys": 75,
+      "intervals": 70,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B48124794142204",
+      "center_result": {
+        "inside": 75,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40036",
+      "owner_source_id": "gb:SOM:ADM2:84685775B48165620113230",
+      "owner_name": "KARAN",
+      "province_id": "framework:province:banadir:98621d32e244",
+      "keys": 9,
+      "intervals": 6,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B48165620113230",
+      "center_result": {
+        "inside": 9,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40048",
+      "owner_source_id": "gb:SOM:ADM2:84685775B57970277493095",
+      "owner_name": "BRAVA",
+      "province_id": "framework:province:lower-shebelle:d68318da3834",
+      "keys": 108,
+      "intervals": 73,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B57970277493095",
+      "center_result": {
+        "inside": 108,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40054",
+      "owner_source_id": "gb:SOM:ADM2:84685775B61236699531309",
+      "owner_name": "BARGAAL",
+      "province_id": "framework:province:bari:d4a6902b9ae9",
+      "keys": 75,
+      "intervals": 74,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B61236699531309",
+      "center_result": {
+        "inside": 75,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40055",
+      "owner_source_id": "gb:SOM:ADM2:84685775B61400607894578",
+      "owner_name": "WABERI",
+      "province_id": "framework:province:banadir:98621d32e244",
+      "keys": 8,
+      "intervals": 7,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B61400607894578",
+      "center_result": {
+        "inside": 8,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40063",
+      "owner_source_id": "gb:SOM:ADM2:84685775B67470388371162",
+      "owner_name": "BALAD",
+      "province_id": "framework:province:middle-shebelle:b3dba15eef31",
+      "keys": 2,
+      "intervals": 2,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B67470388371162",
+      "center_result": {
+        "inside": 2,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40064",
+      "owner_source_id": "gb:SOM:ADM2:84685775B6942068492284",
+      "owner_name": "MADINA",
+      "province_id": "framework:province:lower-shebelle:d68318da3834",
+      "keys": 29,
+      "intervals": 19,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B6942068492284",
+      "center_result": {
+        "inside": 29,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40065",
+      "owner_source_id": "gb:SOM:ADM2:84685775B70562611750423",
+      "owner_name": "KURTUNWAAREY",
+      "province_id": "framework:province:lower-shebelle:d68318da3834",
+      "keys": 37,
+      "intervals": 31,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B70562611750423",
+      "center_result": {
+        "inside": 37,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40067",
+      "owner_source_id": "gb:SOM:ADM2:84685775B71342338947416",
+      "owner_name": "BADHADHE",
+      "province_id": "framework:province:lower-juba:9343dba5e57a",
+      "keys": 119,
+      "intervals": 82,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B71342338947416",
+      "center_result": {
+        "inside": 119,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40068",
+      "owner_source_id": "gb:SOM:ADM2:84685775B71976909807732",
+      "owner_name": "EYL",
+      "province_id": "framework:province:nugaal:23ef6972e323",
+      "keys": 133,
+      "intervals": 92,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B71976909807732",
+      "center_result": {
+        "inside": 133,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40075",
+      "owner_source_id": "gb:SOM:ADM2:84685775B78307821916269",
+      "owner_name": "MARKA",
+      "province_id": "framework:province:lower-shebelle:d68318da3834",
+      "keys": 126,
+      "intervals": 79,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B78307821916269",
+      "center_result": {
+        "inside": 126,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40083",
+      "owner_source_id": "gb:SOM:ADM2:84685775B82872988311402",
+      "owner_name": "AFGOI",
+      "province_id": "framework:province:lower-shebelle:d68318da3834",
+      "keys": 13,
+      "intervals": 9,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B82872988311402",
+      "center_result": {
+        "inside": 13,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40084",
+      "owner_source_id": "gb:SOM:ADM2:84685775B83703395559495",
+      "owner_name": "RAGA ELLE",
+      "province_id": "framework:province:middle-shebelle:b3dba15eef31",
+      "keys": 72,
+      "intervals": 46,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B83703395559495",
+      "center_result": {
+        "inside": 72,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    },
+    {
+      "owner_index": "40089",
+      "owner_source_id": "gb:SOM:ADM2:84685775B88570008116698",
+      "owner_name": "KISMAYO",
+      "province_id": "framework:province:lower-juba:9343dba5e57a",
+      "keys": 252,
+      "intervals": 134,
+      "application_code": null,
+      "source_feature_id": "gb:SOM:ADM2:84685775B88570008116698",
+      "center_result": {
+        "inside": 252,
+        "boundary": 0,
+        "outside": 0,
+        "cross_feature_keys": 0
+      },
+      "application_note": null
+    }
+  ],
+  "cross_cutting_limits": [
+    "No claim that the 15 applications qualify legal administrative boundaries; source-relative candidate only, full original holds preserved.",
+    "Nine historical competitor refusal identities remain unknown; not joined to these keys.",
+    "Eleven ownerless ADM1 contacts are separate from the nine unknown refusals and this exact owner subset.",
+    "COD-AB v03 remains aggregate only: 1,379 hits / 868 outside, not key-attributed; no per-key disposition inferred.",
+    "No owner, disposition, acceptance, credit, claim, import, or release changes."
+  ],
+  "proposal": {
+    "classification": "researched-unresolved",
+    "state": "recommendation only; pending root adjudication; no status/acceptance/accounting/credit change",
+    "keys": 1102,
+    "intervals": 842,
+    "owner_groups": 15,
+    "csv": "researched-unresolved-subset-1102-key-proposal-20261025.csv",
+    "remaining_scope": "1,145 keys / 803 intervals / 21 owner groups remain separate and unclassified",
+    "full_original_scope_preserved": "2,247 keys / 1,645 intervals / 36 owner groups; all holds remain intact",
+    "basis": "named owner/source applications plus retained GPEI/Frank Salet provider-role context; source-relative center contact does not resolve exact statutory/current owner-to-source link",
+    "refusal_and_contact_limits": "nine refusal IDs unknown and not mapped; eleven ownerless ADM1 contacts distinct; COD-AB aggregate-only"
+  }
+}
