@@ -1,0 +1,42 @@
+{
+  "CODE": "0c6501da0f11e84eceeb00912a2e97382804f93b",
+  "config_path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-config-002.json",
+  "configuration": {
+    "version": 1,
+    "diagnostic": {
+      "commit": "e2afc77d49bd2529b0878f4b36138028acdceaed",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-diagnostic-001/native-diagnostic.json"
+    },
+    "original_patch": {
+      "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json"
+    },
+    "prior_holds": {
+      "commit": "e2afc77d49bd2529b0878f4b36138028acdceaed",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/three-water-prior-holds.json"
+    },
+    "accepted_selector": {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "data/ownership-selection.json"
+    },
+    "territorial_applicability": {
+      "commit": "aeed4be5858b36f97c1aeb71c50b9fb8ca1a6db0",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-unbound-001/territorial-applicability.json"
+    }
+  },
+  "destination": ".cache/delivery-handoff/isr502-parent267-supported-inputs-002",
+  "authority_requested": false,
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "supported-inputs",
+    "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-config-002.json",
+    ".cache/delivery-handoff/isr502-parent267-supported-inputs-002"
+  ],
+  "started_utc": "2026-10-25T03:27:59.760111+00:00",
+  "scientific_producer": false,
+  "exit_code": 0,
+  "ended_utc": "2026-10-25T03:37:23.145474+00:00",
+  "stdout": "{\"destination\":\".cache/delivery-handoff/isr502-parent267-supported-inputs-002\",\"resumed\":false,\"binding\":{\"phase\":\"supported-inputs\",\"config_sha256\":\"f0ddc22f988c9526553f756733c31916f5dc326341d71ec6194b68cebdcb37e6\"}}\n",
+  "stderr": ""
+}
