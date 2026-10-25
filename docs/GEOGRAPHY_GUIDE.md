@@ -1,0 +1,9 @@
+# Geography research guide
+
+This lane researches territorial boundaries, hierarchy purpose, source suitability and granularity, then publishes scoped evidence or proposals. It does not change shared hierarchy, core geometry/grid/application code, original source archives, history campaigns, geographic releases or research gates. Engineering owns executable integration and publication; history research consumes only the approved scope.
+
+Use accepted `AGENTS.md` and [WORKER_COORDINATION.md](WORKER_COORDINATION.md) for current scope, identity and delivery. Write only in the coordinated `data/regional-review/<packet-id>/` or `research/geography/<campaign-id>/` directory. Preserve other workers' evidence and exact declared subjects/pins.
+
+For regional work, apply [MACRO_FOUNDATION_APPROVAL.md](MACRO_FOUNDATION_APPROVAL.md), [TOP_DOWN_GEOGRAPHY_WORKFLOW.md](TOP_DOWN_GEOGRAPHY_WORKFLOW.md), the assigned issue subjects/release pins and `data/macro-foundation/regional-handoffs.json.gz`. Assess each location/parent purpose using inspected evidence about administration, settlement or physical geography. Source metadata, administrative counts and structural checks alone do not establish territorial semantics. Record source vintage, role, reuse terms, original bytes or lawful extract, retrieval date/hash, method, facts, uncertainty, adverse contacts and unresolved findings.
+
+Work packets are samples of shared geographic units, not new units. A partial review cannot certify a whole parent/region or authorize historical imports. For inter-region inconsistencies, coordinate one proposal covering all affected neighbors; never move an outer boundary unilaterally. Preserve stable IDs, macro envelopes, crosswalks and predecessor history. Before any import, engineering integration or release action, the appropriate current gate and explicit operation authorization must be verified.

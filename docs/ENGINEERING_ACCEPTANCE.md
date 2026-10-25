@@ -2,13 +2,13 @@
 
 GitHub Issues is the single source of truth for TODOs, status and dated work history: [open issues](https://github.com/ChengshuLi/WorldAtlas/issues?q=is%3Aissue+is%3Aopen+label%3Atype%3Aengineering). This file retains detailed scope/acceptance references; its legacy ENG/RES IDs identify migrated issues, not a live checklist.
 
-This is detailed engineering acceptance guidance for future maintainer threads. Historical-content campaigns have a separate queue in [HISTORICAL_RESEARCH_TODO.md](HISTORICAL_RESEARCH_TODO.md). Start from accepted branch **main**, read `AGENTS.md` and current lane guidance, and inspect the live release only when the assigned operation requires it. [HANDOFF_STATUS.md](HANDOFF_STATUS.md) and Site 18 receipts preserve historical evidence, not current write authorization or a prerequisite to ordinary source research. Any import/write needs the current accepted gate and an explicitly authorized operation contract; do not assume a new baseline migration or rehearsal is required without a demonstrated current failure.
+This document defines engineering acceptance scope, not current tasks or system state. Historical-content research has separate criteria in [HISTORY_RESEARCH_ACCEPTANCE.md](HISTORY_RESEARCH_ACCEPTANCE.md). Use accepted `AGENTS.md` and current role/technical contracts; read live release state only when required for an authorized operation. No receipt or task note grants write permission or creates a baseline migration/rehearsal requirement.
 
 Use GitHub Issues for current status. A source checkpoint, candidate, structural pass or inventory does not establish deployment or semantic completion. Completion requires retained evidence, validation and actual publication receipts when applicable.
 
 ## ENG-01 — dated footprint rendering and caches
 
-- Connect reviewed immutable footprint versions and dated selection to the Worker/browser snapshot, resolver eligibility, grid loading, picking, fills, borders and cache keys. Current browser capability is `datedFootprints:0`; the SQL/catalog scaffold alone is not rendering support.
+- Connect reviewed immutable footprint versions and dated selection to the Worker/browser snapshot, resolver eligibility, grid loading, picking, fills, borders and cache keys. Verify the complete browser path and consumers against this acceptance before any release claim.
 - Reuse the loaded canonical ownership assets during zoom, pan and resize. Change cached grid versions only when a sourced footprint/inventory change requires it. Prevent stale evidence or withdrawn records from returning across version changes.
 - Verify dated transitions, missing/unavailable versions, withdrawal authority, whole-location values, and preservation of reference/predecessor geometry before publishing the capability.
 
@@ -22,7 +22,7 @@ Use GitHub Issues for current status. A source checkpoint, candidate, structural
 - Update every dependent hierarchy/catalog/grid-parent lookup and manifest; preserve all original IDs, predecessor relationships, geometry and historical evidence. Revalidate dependent prepared evidence explicitly rather than silently repinning it.
 - Publish and verify matching map, inspector, parent boundaries, complete chains, migration accounting and before/after hashes.
 
-**Why:** the candidates are validated proposals, but the live atlas still uses the previous parent assignments. Partial installation would make its datasets disagree.
+**Why:** partial hierarchy/catalog/grid integration can make reference assets and parent lookups disagree.
 
 **References:** [REFERENCE_HIERARCHY_CORRECTIONS.md](REFERENCE_HIERARCHY_CORRECTIONS.md), `data/reference-hierarchy-corrections/migration-receipt.json.gz`, `scripts/prepare-reference-hierarchy-corrections.py`.
 
@@ -33,7 +33,7 @@ Use GitHub Issues for current status. A source checkpoint, candidate, structural
 - Resolve the blocked Namibia replacement's neighboring-source conflicts and unexplained land before installing it. Keep unresolved cases visibly open; no arbitrary clipping, nearest-territory assignment or count quotas.
 - For each accepted repair, preserve identities/history, crosswalk every changed unit, rebuild affected derived products, validate coverage/overlap and publish matching receipts. Close semantic reviews only with a sourced decision or justified exception.
 
-**Why:** complete database chains and exhaustive screening do not prove globally sensible granularity or source completeness. Current full branch approvals remain open.
+**Why:** complete database chains and exhaustive screening do not prove globally sensible granularity or source completeness.
 
 **References:** [GLOBAL_SEMANTIC_CLOSURE.md](GLOBAL_SEMANTIC_CLOSURE.md), [REGION_SEMANTIC_REVIEW.md](REGION_SEMANTIC_REVIEW.md), [NAMIBIA_REPAIR_MIGRATION.md](NAMIBIA_REPAIR_MIGRATION.md), `data/geographic-semantic-followup`, `data/global-semantic-closure.json.gz`.
 
@@ -50,12 +50,8 @@ Use GitHub Issues for current status. A source checkpoint, candidate, structural
 
 - Confirm the actual Neon project plan, storage/compute allowances and backup/restore retention, and separately document object-storage limits. The configured 512 MiB guard is not the provider quota.
 - Verify useful capacity warnings and recovery instructions. Measure representative import/query latency, row/index growth and backup performance before sustained expansion.
-- Introduce partitioning, caching or larger-media multipart transport only when measured requirements warrant it, behind the existing stable IDs and content API. Keep all 23 factual tables, owner-only migration state and object bytes covered by appropriate backups.
+- Introduce partitioning, caching or larger-media multipart transport only when measured requirements warrant it, behind the existing stable IDs and content API. Keep all declared factual tables, owner-only migration state and object bytes covered by appropriate backups.
 
 **Why:** research can exhaust finite storage or compute even though the provider scales. Content threads must not need infrastructure changes or UI rewrites to continue ordinary imports.
 
-**References:** [NEON_SETUP.md](NEON_SETUP.md), [LONG_TERM_STORAGE_PLAN.md](LONG_TERM_STORAGE_PLAN.md), [RESEARCH_CAPACITY.md](RESEARCH_CAPACITY.md), [STORAGE_EXPORT_V2.md](STORAGE_EXPORT_V2.md).
-
-## End-of-thread record
-
-Update the GitHub issue with dated scope, receipts, blockers, PR links and next action; keep owned execution artifacts for reproducibility. Push an `engineering/<job-id>` branch and PR to **main**; integrate validated PRs serially and update central operational summaries. Preserve the original evidence and fixed migrations. Keep credentials out of Git. Leave research tasks in the research queue; do not transfer these engineering items to Luna.
+**References:** [CURRENT_POSTGRES_RECOVERY.md](CURRENT_POSTGRES_RECOVERY.md), [HOSTED_STORAGE_ARCHITECTURE.md](HOSTED_STORAGE_ARCHITECTURE.md), [STORAGE_EXPORT_V2.md](STORAGE_EXPORT_V2.md).

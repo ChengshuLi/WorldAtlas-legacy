@@ -1,19 +1,19 @@
 # Historical research acceptance reference — detailed scope guidance
 
-The location-content approval policy requires engineering's global macro approval and complete published regional branch before imports. Current eligibility is not specified by this historical scope guide: verify accepted-main `data/research-geography-gate.json`, the exact subject/certificate/release pins and explicit operation authorization. Unless those authorize the exact action, limit work to source research and staging. See [TOP_DOWN_GEOGRAPHY_WORKFLOW.md](TOP_DOWN_GEOGRAPHY_WORKFLOW.md), [WORKER_COORDINATION.md](WORKER_COORDINATION.md) and [GEOGRAPHY_RESEARCH_READINESS.md](GEOGRAPHY_RESEARCH_READINESS.md). Older descriptions of enabled transport describe capabilities, not geographic approval.
+The location-content approval policy requires engineering's global macro approval and complete published regional branch before imports. Current eligibility is not specified by this historical scope guide: verify accepted-main `data/research-geography-gate.json`, the exact subject/certificate/release pins and explicit operation authorization. Unless those authorize the exact action, limit work to source research and staging. See [TOP_DOWN_GEOGRAPHY_WORKFLOW.md](TOP_DOWN_GEOGRAPHY_WORKFLOW.md), [WORKER_COORDINATION.md](WORKER_COORDINATION.md) and [GEOGRAPHY_RESEARCH_ELIGIBILITY.md](GEOGRAPHY_RESEARCH_ELIGIBILITY.md). Older descriptions of enabled transport describe capabilities, not geographic approval.
 
 GitHub Issues is the single source of truth for TODOs, status and dated work history: [open issues](https://github.com/ChengshuLi/WorldAtlas/issues?q=is%3Aissue+is%3Aopen+label%3Atype%3Ahistory-research). This file retains detailed scope/acceptance references; its legacy ENG/RES IDs identify migrated issues, not a live checklist.
 
-This is detailed source-research and dataset-content scope guidance. Follow [LUNA_START_HERE.md](LUNA_START_HERE.md), [LUNA_DATA_HANDOFF.md](LUNA_DATA_HANDOFF.md) and [RESEARCH_IMPORT_WORKFLOW.md](RESEARCH_IMPORT_WORKFLOW.md). Engineering has a separate owner and queue in [ENGINEERING_TODO.md](ENGINEERING_TODO.md). Do not edit code, schema, UI, infrastructure, reference geography or grid assets to complete a research campaign.
+This file defines source-research and dataset-content acceptance scope, not current task status. Follow [HISTORY_RESEARCH_GUIDE.md](HISTORY_RESEARCH_GUIDE.md) and its linked scientific/data contracts. Engineering has separate acceptance guidance in [ENGINEERING_ACCEPTANCE.md](ENGINEERING_ACCEPTANCE.md). Do not edit code, schema, UI, infrastructure, reference geography or grid assets to complete a research campaign.
 
-The platform is writable. Existing ownership/environmental products, 3,588 dated names, 396 religion records, 9,301 separate-settlement estimates and original archives are retained. Preserve and extend them. Interrupted GHSL output is unvalidated; it is not a completed import. Existing dated evidence covers particular supported intervals, not every year.
+Prior receipts and prepared products are potential research inputs, not evidence of current write capability or permission. Inspect their retained provenance and declared coverage before reuse. Source research may propose bounded additions; unsupported years and unvalidated outputs remain unknown until separately qualified.
 
 Choose bounded source/geography/time/attribute campaigns. Research all six inhabited continents systematically; maintain explicit coverage and open questions rather than repeatedly selecting only earlier regression examples. Store sparse supported intervals with stable IDs, per-attribute provenance, original hashes, license and uncertainty. Do not generate annual rows, invent missing facts or widen modern observations to ancient dates.
 
 ## RES-01 — source inventory and campaign coverage
 
 - Discover reusable public sources by geography, attribute and supported interval; assess license, vintage, precision, spatial unit and uncertainty before importing.
-- Inspect current sources/entities, release pins, capabilities and capacity. Reuse identities; verify fresh-thread private API access through documented hidden authentication.
+- Inspect current public sources and assigned identity/scope evidence. Reuse stable IDs. Do not seek private API access or credentials from this historical scope guide; any write requires current accepted gates and explicit operation authorization.
 - Select and document the next bounded campaign, including its uncovered territory/time/attributes and justified limitations. Continue incomplete campaigns using their retained inputs and receipts.
 
 ## RES-02 — historical names and aliases
@@ -46,8 +46,8 @@ Choose bounded source/geography/time/attribute campaigns. Research all six inhab
 ## RES-07 — environmental timeline coverage
 
 - Research documented terrain, river and coastal changes for topography; historical land use/cover for vegetation; and dated observations/reconstructions for climate.
-- Use the existing fixed classifications; preserve original source wording and uncertainty in metadata. Report an unsupported category to a maintainer instead of changing the registry.
-- Investigate evidence gaps such as 2025 without widening original records just to remove Unknown. The UI already separates labeled physical reference context from historical assertions; potential natural vegetation is not historical land cover.
+- Use the fixed classifications; preserve original source wording and uncertainty in metadata. Report an unsupported category to a maintainer instead of changing the registry.
+- Investigate evidence gaps without widening original records just to remove Unknown. Keep labeled physical reference context separate from historical assertions; potential natural vegetation is not historical land cover.
 
 ## RES-08 — sourced memberships and existence
 
@@ -57,10 +57,8 @@ Choose bounded source/geography/time/attribute campaigns. Research all six inhab
 ## RES-09 — interconnected historical subjects and media
 
 - As later campaigns require, research people, events, places, armies, routes, artifacts and sourced relationships using existing generic identities and import collections.
-- Retain lawful images/audio/source archives with hashes, licenses, attribution and supported links/intervals through the existing media workflow (currently 20 MiB per object). New domain interfaces, geometry infrastructure or larger-file transport belong to engineering.
+- Retain lawful images/audio/source archives with hashes, licenses, attribution and supported links/intervals through the existing media workflow. Check the current API contract for object limits. New domain interfaces, geometry infrastructure or larger-file transport belong to engineering.
 
-## Completion and continuity for every campaign
+## Completion criteria for a campaign
 
-A campaign is complete only for its explicitly documented scope: validated source input, accepted bounded imports, preserved receipts, claim/source/interval read-back, selected-year checks and recorded remaining uncertainty. A successful import is not proof of historical truth or global coverage.
-
-Commit and push your `research/<campaign-id>` branch with notes, lawful source bytes/restoration manifests, input/bundles, import/read-back receipts, owned execution artifacts. Post dated coverage, progress, blockers and evidence on the GitHub issue. Open a PR targeting **main**; maintainers integrate serially and update global summaries. Never close a worldwide objective after one bounded batch. On capacity, identity, release-pin or unsupported-contract errors, retain progress and report the blocker to the maintainer. Do not redesign the platform.
+A campaign is complete only for its explicitly documented scope: validated source input, accepted bounded imports, preserved receipts, claim/source/interval read-back, selected-year checks and recorded remaining uncertainty. A successful import is not proof of historical truth or global coverage. For task coordination, publication and issue lifecycle, use the current canonical workflow documents linked above; this acceptance reference does not duplicate their operating steps.

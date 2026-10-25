@@ -1,8 +1,9 @@
 # Many engineering, geography and history workers
 
-M geography, N engineering and P history-research chats may work in isolated checkouts. GitHub Issues remains the work record. Before implementation, comment with the worker ID, branch, bounded scope and planned checks. The parent coordinates overlapping work. Threads sharing a GitHub account still use distinct worker IDs; a comment is coordination, not security isolation.
-
-Read [LOCAL_WORKSPACES.md](LOCAL_WORKSPACES.md). Allocate isolated checkouts through `scripts/local-workspace.mjs`; keep bounded work/review slots, include exact required sparse inputs, and release finished slots after preserving unique work. Do not retain a full checkout per task or review revision. Existing chats must refresh their saved instructions.
+This guide defines shared authoring, evidence, review and merge coordination for
+engineering, geography and history work. GitHub Issues retain scope and acceptance
+history. Use [LOCAL_WORKSPACES.md](LOCAL_WORKSPACES.md) only for allocator and
+checkout mechanics; role guides own lane-specific boundaries.
 
 ## Chat identity
 
@@ -85,20 +86,14 @@ No current acceptance, scientific authority or explicit human constraint is weak
 by this policy. A demonstrated wrong result or unsafe operation still blocks the
 corresponding delivery. An optional improvement is not a new acceptance criterion.
 
-## Coherent PR scope
-
-Keep PRs focused on a coherent outcome, without numerical size targets or extra justification based on line count. Keep code and documentation readable. Report generated-data changes separately. Retain lane ownership, required checks and serialized squash merges. Split issue scopes only when their acceptance or independent work requires it; keep coherent changes together.
-
 ## Ordinary ownership and live-operation reservations
 
-Read fresh main and the relevant issue/PR discussion. Record this chat's worker ID,
-fresh branch, bounded scope and planned checks in that existing conversation. The
-parent coordinates overlap and handoffs. No parsed ownership receipt, timed lease,
-renewal heartbeat, readiness audit or claim workflow is required for code or
-source authoring. Preserve other workers' open branches, evidence and checkpoints.
+Ordinary authorship uses human coordination, not a machine work block, timed lease,
+readiness audit or claim workflow. Preserve other workers' open branches, evidence
+and checkpoints. The remaining `issue-claims.yml` workflow is only for explicitly
+coordinated engineering live operations and settling historical reservations.
 
-The existing `issue-claims.yml` workflow remains only for explicitly coordinated
-engineering live operations and settling historical reservations. Cloudflare
+Cloudflare
 republish, current PostgreSQL recovery and compact production retain their active
 live reservation, independently expiring operation window, exact provider/tool/
 source pins, operation registry and actual database locks. Read the applicable
@@ -197,11 +192,11 @@ After a confirmed merge, the trusted queue also attempts remote head cleanup, in
 
 After each merge, reconcile acceptance and remaining work on the issue, then use a fresh branch. Split work only for a distinct deliverable or real ownership boundary. Existing closed Issues, source evidence and dates are retained.
 
-One explicitly designated engineering publisher coordinates Cloudflare deployments, geographic releases and owner maintenance. Workers do not publish competing versions independently. The GitHub merge queue does not serialize manual provider operations or a different repository; use the existing deployment/maintenance protocol and complete cross-provider registry. The old owner-private read-only Site is a retained recovery copy, retired from ordinary serving/publishing instructions; explicit recovery operations still require serialization. See `CLOUDFLARE_RECOVERY_HANDOFF.md`. Branch protection is not configured, so workers must honor the queue and checks; direct merge permissions are not revoked by this setup.
+One explicitly designated engineering publisher coordinates Cloudflare deployments, geographic releases and owner maintenance. Workers do not publish competing versions independently. The GitHub merge queue does not serialize manual provider operations or a different repository; use the existing deployment/maintenance protocol and complete cross-provider registry. The old owner-private read-only Site is a retained recovery copy, retired from ordinary serving/publishing instructions; explicit recovery operations still require serialization. See `CLOUDFLARE_RECOVERY_RUNBOOK.md`. Branch protection is not configured, so workers must honor the queue and checks; direct merge permissions are not revoked by this setup.
 
 Implementation acceptance and production publication are separate. Workers verify ordinary changes in isolated local/preview environments and record what that proves; authorized bounded production read-only access is permitted without a deployment appointment, while writes/imports/migrations use independent test data/database and heavy load tests require coordination; they do not wait for a production deployment to merge. A complete durable publication handoff allows the implementation holder to release its claim once all PRs are merged/closed and no holder-run live operation is active. The publisher does not require that source claim to remain active or have `live_work=true` solely for delegated publication. Do not close an issue whose existing acceptance includes unverified live delivery: record its publication-only remainder on the original issue with `publisher-needed`, prevent duplicate implementation claims, and continue other ready work. Do not silently relax existing acceptance or geographic approval/import gates.
 
-The designated publisher pins latest primary main at run start and discovers merged changes since its verified primary delivery commit, plus original issues labeled `publisher-needed` and unresolved production checks. No duplicate publication request on #714 is required. Original issues retain criteria/blockers/evidence; closed linked issues are still considered for delivery. GitHub deployment metadata indexes one bounded publisher-owned operation and its exact result, separately from per-issue acceptance. Expiry does not prove cleanup; all active/unsettled records block overlap. This remains cooperative serialization. Existing #714 operations settle under their original rules and remain preserved until backlog reconciliation/archival. See [PUBLICATION_HANDOFF.md](PUBLICATION_HANDOFF.md) for discovery, records, safe release and SQL exceptions. Existing chats must refresh saved instructions; repository edits do not modify them automatically. Auditor #726 owns separate post-merge quality review/follow-up creation.
+The designated publisher pins latest primary main at run start and discovers merged changes since its verified primary delivery commit, plus original issues labeled `publisher-needed` and unresolved production checks. No duplicate publication request on #714 is required. Original issues retain criteria/blockers/evidence; closed linked issues are still considered for delivery. GitHub deployment metadata indexes one bounded publisher-owned operation and its exact result, separately from per-issue acceptance. Expiry does not prove cleanup; all active/unsettled records block overlap. This remains cooperative serialization. Existing #714 operations settle under their original rules and remain preserved until backlog reconciliation/archival. See [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md) for discovery, records, safe release and SQL exceptions. Existing chats must refresh saved instructions; repository edits do not modify them automatically. Auditor #726 owns separate post-merge quality review/follow-up creation.
 
 ## Current research policy
 
@@ -211,7 +206,9 @@ Only engineering may approve and publish the partition/branches with retained so
 
 ## Evidence and independent review
 
-Follow `docs/PREMERGE_EVIDENCE_REVIEW.md`. Ordinary engineering uses the actual Git diff, applicable tests and a distinct worker's substantive exact-head review comment; no synthetic evidence manifest, duplicate inventory, body hashes or frozen review packet is required. Scientific claims retain their actual subjects/pins, immutable input/result evidence and honest source/publication limits under `.github/evidence-policy.json`; explicitly declared manifests remain checked. Never self-review under a second worker ID. The submitting operator verifies current review before integration; green CI alone does not approve geography or authorize imports.
+Follow [PREMERGE_EVIDENCE_REVIEW.md](PREMERGE_EVIDENCE_REVIEW.md) for review
+evidence and reviewer responsibilities. This guide defines how the queue applies
+those requirements; a green CI run is not scientific acceptance or import authority.
 
 ## Applicable regression and exact-tree reuse
 
@@ -329,69 +326,30 @@ step does not establish application coverage.
 
 ## Native queued integration
 
-Issue #1174 identified an actual starvation path: a long engineering request tested
-main `72029…` while unrelated source merges advanced it to `1f971…` and `9a824…`.
-The final base guard correctly rejected that candidate. Independent testing plus
-final-only serialization allowed this to repeat indefinitely. The observed HTTP
-403 failures have no established cause and are separate from that scheduling bug.
-The retired scheduler addressed this with durable registrations. Native Actions
-now owns queueing, while the existing top-level concurrency group still holds the
-complete candidate/test/final lifecycle to prevent cooperating merges from
-invalidating one another's tested base.
+The native Actions workflow owns queueing; its top-level concurrency group holds
+the complete candidate/test/final lifecycle so cooperating merges cannot invalidate
+one another's tested base.
 
 Use [MERGE_QUEUE_CLIENT.md](MERGE_QUEUE_CLIENT.md) for submission, run discovery,
 observation and recovery. Provider ordering, queue limits and runner availability
 remain external controls, not an application-level availability guarantee.
 
-### Migrate existing requests safely
-
-The coordinating integrator enumerates old scheduler and worker executions and
-lets live work settle before new direct submissions. Include queued, requested,
-waiting, pending and in-progress runs: a workflow already running keeps its old
-definition after this change merges. Preserve old request IDs, exact heads,
-workflow links and receipts on the original issues. Do not cancel #1810's
-in-flight work as part of the transition. Research and PR checks remain enabled.
-
-Any reversible admission hold is owned by the coordinating integrator, with its
-prior state recorded and restored. Disabling a workflow is not cancellation and
-does not settle existing runs; enumerate racing admissions as well. Reconcile
-ambiguous old submissions and terminal registrations before deciding whether a
-remaining unchanged-head PR needs a new native dispatch. Do not bulk-replay old
-registrations or dispatch both paths. Workers do not independently toggle shared
-workflow availability. No direct merge, provider operation or publication is part
-of this procedure.
-
 ### Immutable blob reuse during repeated authority checks
 
-The root #1150/head `405f75ce2280dc44172ba596b9ee08513abe437c` workload
-contains 400 descriptors and 92 original changed-file loads. Its remote reader
-makes 493 blob requests per evidence pass, and an isolated fallback can perform
-three full authority/evidence passes (1,479 blob requests). Read-only Git object
-inventory finds 474 distinct OIDs totaling 235,417,555 raw bytes, with a largest
-blob of 14,322,993 bytes. These are request-workload measurements, not geographic
-approval. GitHub documents a default GITHUB_TOKEN limit of
-[1,000 requests per hour per repository](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api).
-That limit is compatible with the observed fanout and denials; it does not prove
-the cause of the earlier HTTP403 results without their actual message/headers.
-
-Each prepare/final execution now memoizes only successful immutable Git blob
-GETs keyed by repository and requested OID. Before admission the helper requires
+Each prepare/final execution may reuse only successful immutable Git blob GETs
+keyed by repository and requested OID. Before admission the helper requires
 base64 encoding, complete canonical encoding, exact response/full-byte size, and
 the Git blob SHA1 computed from its header and full content to match the requested
 OID. Unsupported, incomplete, mismatched and failed responses never enter the
-cache. The cache holds at most 512 entries and 272 MiB of raw payload accounting;
-base64 storage is at most four-thirds of that bound plus response metadata.
-Overflow stays uncached without evicting the useful first scan. Existing evidence
-file/total/descriptor budgets remain mandatory and unchanged. This size retains
-the known 474-blob workload across repeated checks without cache thrashing.
+cache. Any cache remains bounded; overflow is uncached without evicting the useful
+first scan. Evidence file/total/descriptor budgets remain separately mandatory.
 
 Every commit/tree/path/vintage binding and every PR, issue, reservation, review,
 check, status and ancestry comparison is freshly read. Changed OIDs fetch new
 bytes; cached blob bytes do not cache a validation result or extend authority.
-Separate jobs/requests do not share this in-memory cache. Controls model the actual
-workload count/aggregate/largest payload size and prove 1,479 requested reads use
-474 verified fetches while changed OIDs/tree modes/head/claim/check/review still
-reject. The cache neither skips a byte check nor accepts an untested candidate.
+Separate jobs/requests do not share this in-memory cache. Tests exercise reuse and
+stale-authority rejection. The cache neither skips a byte check nor accepts an
+untested candidate.
 
 Actual API denials remain failures. Merge receipts retain only HTTP status,
 sanitized API message and allowlisted numeric rate remaining/reset/retry-after
@@ -459,21 +417,14 @@ rerun, but rerunning only the final job cannot bypass missing or failed checks. 
 mocked HTTP controls establish rejection and cleanup behavior, not hosted quota
 recovery or a system-wide capacity guarantee.
 
-## Issue lifecycle accuracy
+## Related role and evidence contracts
 
-Read [ISSUE_LIFECYCLE.md](ISSUE_LIFECYCLE.md). Authors reconcile original acceptance and next actions before moving on; reviewers check closure/continuation independently of merging. Dependency owners maintain direct dependents. Coordinate encountered overlap and remaining work on the original issue; preserve scientific/publication gates. No readiness script or routine queue-triage pass is required. Existing chats refresh before their next job; Main handles exceptional decisions.
-
-Read docs/AUDIT_FAILURE_PREVENTION.md on current main before the next job or review. Identify the consequential acceptance claims and independently test applicable consumed-input/code, identity/join, source/method, safe-reproduction, nonvacuous-control and operating-limit invariants. Use shared evidence helpers or an explicitly reviewed equivalent; reviewers derive expectations from original acceptance and independent records before relying on author tests. Exercise real entry points and adjacent paths for corrective PRs; record unexecuted proof as a limit. Keep exact-head review, original evidence, scientific/publication gates and focused research CI. Adoption requires actual subsequent handoffs, not just this prompt edit.
-
-## Prepare for the first review
-
-Follow [AUTHOR_PREFLIGHT.md](AUTHOR_PREFLIGHT.md) before the next job and before
-requesting its first review. Select the checks implicated by the original acceptance
-and changed behavior from the start; preserve source-only focused CI. Resolve quick
-ownership/evidence errors before review, while substantive
-independent review proceeds independently of the later final queue computation. The guide supplies practical helper and
-command details, meaningful adverse cases and existing-chat refresh text; author
-preflight does not replace independently derived reviewer expectations.
+This file is the general author workflow. For issue completion and continuation use
+[ISSUE_LIFECYCLE.md](ISSUE_LIFECYCLE.md); for consequential acceptance claims use
+[AUDIT_FAILURE_PREVENTION.md](AUDIT_FAILURE_PREVENTION.md); authors prepare applicable
+checks with [AUTHOR_PREFLIGHT.md](AUTHOR_PREFLIGHT.md). These specialized contracts
+complement this guide and do not create a new queue, readiness gate or repeated-work
+requirement.
 
 ### Shared Actions quota: reduce work and recover from actual evidence
 

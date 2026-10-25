@@ -163,25 +163,11 @@ Activation must follow a merged reporting implementation, actual hosted report r
 
 Regression controls reflect concrete moderator findings: #579's malformed hierarchy pin, #580's swapped longitude/latitude transform, #600's conflicting narrative/generated figures, #614's overwritten timestamp-dependent extracts, and #619's inferred containing-file inventory. The manifest and shared-helper tests cover their failure patterns without special country rules. #591's restoration-pin mismatch additionally motivates independent provenance review: a hash alone cannot establish which upstream release exists. These safeguards do not close the individual source/correction issues.
 
-## Acceptance and disposition
+## Workflow boundary
 
-Read [ISSUE_LIFECYCLE.md](ISSUE_LIFECYCLE.md#author-and-premerge-reviewer). Review the original acceptance and PR completion/continuation/wait independently of implementation acceptance. Before a final allowed partial PR, check where actual unfinished obligations go; an explicit original-issue wait is valid and no duplicate follow-up is forced.
-
-Review substantive acceptance, scope and completion/continuation changes directly;
-request renewed relevant review when they change. Ordinary progress comments do
-not invalidate a review. No duplicate issue/PR-body hashes or file-inventory
-commitments are required. The exact commit already identifies the reviewed code;
-scientific manifests bind the actual inputs and results. Preserve historical
-comments and records without copying their obsolete bookkeeping into new work.
-
-Read docs/AUDIT_FAILURE_PREVENTION.md on current main before the next job or review. Identify the consequential acceptance claims and independently test applicable consumed-input/code, identity/join, source/method, safe-reproduction, nonvacuous-control and operating-limit invariants. Use shared evidence helpers or an explicitly reviewed equivalent; reviewers derive expectations from original acceptance and independent records before relying on author tests. Exercise real entry points and adjacent paths for corrective PRs; record unexecuted proof as a limit. Keep exact-head review, original evidence, scientific/publication gates and focused research CI. Adoption requires actual subsequent handoffs, not just this prompt edit.
-
-## Author preparation
-
-Read [AUTHOR_PREFLIGHT.md](AUTHOR_PREFLIGHT.md) for the author's preparation and
-actual local-versus-hosted check boundaries. Reviewers still derive expectations
-from original acceptance and independent reference records; author controls and
-byte-only local success do not replace substantive exact-head review. Select only
-applicable failure families and preserve focused source-only CI.
-
-Ordinary code and source authoring do not require an expiring GitHub lease. Scientific manifests retain their actual author identity, and their exact-head reviewer must be a distinct worker. Shared-account worker IDs provide cooperative attribution, not authenticated personal identities; the operator verifies the independent review. Issue linkage, declared paths, source/result bytes and domain review remain required.
+Use [WORKER_COORDINATION.md](WORKER_COORDINATION.md) for general work and merge
+procedure, [ISSUE_LIFECYCLE.md](ISSUE_LIFECYCLE.md) for issue completion and
+continuation, and [AUTHOR_PREFLIGHT.md](AUTHOR_PREFLIGHT.md) for applicable author
+checks. This document governs evidence declarations and substantive independent
+review only. Preserve historical comments, manifests and receipts; do not duplicate
+code inventories or require obsolete bookkeeping.

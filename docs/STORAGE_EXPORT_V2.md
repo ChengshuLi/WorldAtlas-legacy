@@ -1,6 +1,10 @@
 # Forward raw-storage export v2
 
-The frozen v1 snapshot, its fourteen-table source schema, resume ledger and PostgreSQL restoration tool remain unchanged. The completed Site 17 baseline transfer used v1 (2 October 2026 UTC); its [production receipt](../data/validation/neon-production-storage-migration.json) remains immutable. Production now uses Neon PostgreSQL with the separate v2 factual export capability verified in [the Site 18 publication checkpoint](../data/validation/neon-final-publication.json). Do not convert that snapshot or resume it using a v2 tool.
+This guide defines the separate v2 factual export/restore contract. The v1 snapshot,
+its fourteen-table source schema, resume ledger and PostgreSQL restoration tool
+remain a separate incompatible format; do not convert a v1 snapshot or resume it
+with a v2 tool. Live capture/restore remains subject to its accepted operation
+contract and current deployment target.
 
 V2 is the separate complete contract for D1 migrations **0000–0009** and PostgreSQL `schema.sql` plus forward migrations **0001–0002**. It covers every one of the 23 `atlas_*` factual tables, including archived identities, example records, withdrawals, original ingestion rowids, staged footprint catalog entries and sealed validation receipts. It does not resolve, reclassify or reinterpret imported evidence.
 
@@ -18,7 +22,7 @@ V2 is the separate complete contract for D1 migrations **0000–0009** and Postg
 
 ## Capture and proof
 
-The private service exposes `/api/storage/v2/export-marker` and `/api/storage/v2/export/{collection}`. Private access is enforced by the hosting layer. Read-only GET diagnostics are available on the writable service, but a complete exporter capture requires `read_only:true` throughout its matching markers. The designated publisher must coordinate owner maintenance under [PARALLEL_WORK_PROTOCOL.md](PARALLEL_WORK_PROTOCOL.md), enable/deploy `ATLAS_READ_ONLY=1`, drain mutations and verify preservation, then restore/deploy writes and prove they resume. Do not toggle maintenance or deploy independently of that protocol. The export module does not authorize a caller by itself. Ordinary profile and map responses are not raw backups.
+The private service exposes `/api/storage/v2/export-marker` and `/api/storage/v2/export/{collection}`. Private access is enforced by the hosting layer. Read-only GET diagnostics are available on the writable service, but a complete exporter capture requires `read_only:true` throughout its matching markers. The designated publisher must coordinate owner maintenance under [WORKER_COORDINATION.md](WORKER_COORDINATION.md), enable/deploy `ATLAS_READ_ONLY=1`, drain mutations and verify preservation, then restore/deploy writes and prove they resume. Do not toggle maintenance or deploy independently of that protocol. The export module does not authorize a caller by itself. Ordinary profile and map responses are not raw backups.
 
 The reviewed contract is in `hosted/storage-export-v2-contract.js`. It pins every source/target SQL file by its original byte hash and pins the effective D1 and PostgreSQL catalogs. D1 catalog proof covers table, index and trigger definitions. PostgreSQL proof covers column order/types/domains/defaults/collations, user triggers, constraints, domain definitions, enabled deferred foreign-key triggers, and the atlas/JSON compatibility function definitions. An unexpected factual table, missing guard, changed definition or disabled guard prevents capture or restoration. The supported PostgreSQL schema is `public`; a PostgreSQL-version change that alters catalog serialization requires an explicit contract review.
 

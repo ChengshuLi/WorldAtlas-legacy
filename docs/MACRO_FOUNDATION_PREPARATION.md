@@ -1,6 +1,6 @@
 # Global macro foundation preparation
 
-GitHub #33 completed this milestone beneath #32; #36 retains final publication/handoff proof. The corrected macro reference is installed and published in Site 19 / geographic version 3. See [MACRO_FOUNDATION_APPROVAL.md](MACRO_FOUNDATION_APPROVAL.md) and `data/validation/global-macro-publication.json`. Regional interiors and new location-attribute imports remain unapproved. Antarctica remains excluded.
+This guide describes the retained macro-source review and preparation method. For the accepted geographic partition and region boundaries, see [MACRO_FOUNDATION_APPROVAL.md](MACRO_FOUNDATION_APPROVAL.md); current operation eligibility comes only from the accepted-main gate and exact approved pins.
 
 The original source inspections and preparation sequence below are retained history. Reproduction starts from the exact archived release-2 baseline, not by rerunning candidate preparation against the already installed release-3 data. Final approved decisions cover 116 macro groups; the original ledgers retain their 101-group input inventory.
 

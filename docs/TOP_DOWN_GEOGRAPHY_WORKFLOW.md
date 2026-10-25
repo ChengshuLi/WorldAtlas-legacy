@@ -9,7 +9,7 @@ This is the workflow for future workers. The initial meta thread completed and p
 3. **Publish each complete regional branch:** validate its sourced decisions, every descendant, migrations and grid representation, and retain a certificate against the actual published release.
 4. **Start bounded Luna campaigns for that branch:** targeted population/culture/religion/etc research follows approved territorial meaning. Other regions can remain under engineering review. A campaign covers explicit subjects, attributes, sources and intervals; sparse supported records replace an annual Cartesian expansion.
 
-Source-only collection may occur before step 3, with provisional territorial context. Location-attribute imports require all approval layers in [GEOGRAPHY_RESEARCH_READINESS.md](GEOGRAPHY_RESEARCH_READINESS.md).
+Source-only collection may occur before step 3, with provisional territorial context. Location-attribute imports require all approval layers in [GEOGRAPHY_RESEARCH_ELIGIBILITY.md](GEOGRAPHY_RESEARCH_ELIGIBILITY.md).
 
 ## Own-boundary approval versus complete-branch approval
 

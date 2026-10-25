@@ -183,36 +183,7 @@ fresh main. Settle any retained live-operation reservation through its workflow.
 merge. Observing or retrying grants no new review, science, publication or provider
 permission.
 
-In the final delivery handoff, state the actual local cleanup outcome described in
+In the final delivery record, state the actual local cleanup outcome described in
 [Finish and release](LOCAL_WORKSPACES.md#finish-and-release), including any retained
 or blocked cleanup and its responsible next action. The queue's remote head and
 candidate cleanup results do not establish local workspace cleanup.
-
-## Transition from the retired scheduler
-
-Before native direct submissions, the coordinating integrator must enumerate and
-settle old scheduler and worker runs, including queued, requested, waiting,
-pending and in-progress states. Already-running workflows retain their original
-definition. Preserve old request IDs, exact heads, run links and terminal receipts
-on their original issues. Do not cancel the in-flight #1810 work to accelerate this
-migration. Reconcile old ambiguous writes or registrations before deciding whether
-an unchanged-head request needs a new native dispatch; do not replay all old
-registrations automatically. Worker authors do not independently toggle shared
-workflow availability. See [WORKER_COORDINATION.md](WORKER_COORDINATION.md).
-
-## Retained historical observation evidence
-
-The retired custom observer's controlled fake-clock tests reproduced a 210-second
-terminal delay with nine reads, then detected the same synthetic completion after
-30 seconds using 22 reads (four changed 200 responses and 18 authenticated 304s).
-An unchanged 65-minute observation used 66 reads (two 200s and 64 304s). These were
-deterministic controls, not measured hosted speedups or the native CLI's behavior.
-
-For the #1789 incident, GitHub merged at 10:33:27 UTC and posted its accepted receipt
-at 10:33:30. The retained local file's final mtime was 10:36:56.207344 UTC. The
-209.207-second merge-to-file difference (206.207 seconds from receipt creation)
-is cross-clock and can include buffering, final verification and cleanup. The old
-log has no per-poll timestamps. Its nine reads and 1,339,924 ms wall-clock runtime
-support the deterministic capped-polling mechanism but do not isolate historical
-sleep time or establish saved delivery time. Subsequent adoption of that retired
-observer was tracked in [issue #1791](https://github.com/ChengshuLi/WorldAtlas/issues/1791).

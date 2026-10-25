@@ -1,6 +1,6 @@
 # Current native PostgreSQL recovery
 
-This is issue #51's current-source recovery protocol. The earlier retained-object receipt proves object bytes, not SQL recovery. Local synthetic fixtures are never a current-production certificate. ENG main owns production windows on the original issue and registers operations per PUBLICATION_HANDOFF.md; #714 is legacy evidence.
+This is issue #51's current-source recovery protocol. The earlier retained-object receipt proves object bytes, not SQL recovery. Local synthetic fixtures are never a current-production certificate. ENG main owns production windows on the original issue and registers operations per PUBLICATION_RUNBOOK.md; #714 is legacy evidence.
 
 The one-time compact database migration and original-heap retirement completed on October 5, 2026 ([original result](https://github.com/ChengshuLi/WorldAtlas/issues/783#issuecomment-5986414627)). Its old Site-window executor and dispatch workflow are retired. Current compact verification, native backup/restore and offline storage/rollback helpers remain available. Issue #783 stays open for its distinct hosting, served-API and write residuals; historical reproduction uses the original executed commit and receipts.
 
@@ -46,7 +46,7 @@ Recovery itself remains source-read-only and finishes the existing native backup
 
 ## Delegated handoff: the implementer does not wait
 
-Use the general [PUBLICATION_HANDOFF.md](PUBLICATION_HANDOFF.md) workflow. The implementer posts one durable reviewed/merged handoff on #51 (preserve legacy #714 links) and safely releases its canonical #51 claim with `live_work=false`; keep actual production recovery acceptance open. The publisher performs the remaining operation, while the implementer may claim its next eligible issue. Never release an unsettled holder-run operation or infer release from lease expiry.
+Use the general [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md) workflow. The implementer posts one durable reviewed/merged handoff on #51 (preserve legacy #714 links) and safely releases its canonical #51 claim with `live_work=false`; keep actual production recovery acceptance open. The publisher performs the remaining operation, while the implementer may claim its next eligible issue. Never release an unsettled holder-run operation or infer release from lease expiry.
 
 The publisher uses a bounded `type:engineering`, `kind:work-item`, `status:ready` production-only child, with this additional field in its ordinary `worldatlas-work:v1` contract:
 
