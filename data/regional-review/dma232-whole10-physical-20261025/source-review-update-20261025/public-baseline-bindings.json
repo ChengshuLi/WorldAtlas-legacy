@@ -1,0 +1,131 @@
+{
+  "verified_public_handoff": [
+    {
+      "commit": "d33a5690dc5db1b7e3d2c1258da9c07680731481",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/independent-review-handoff/manifest.json",
+      "blob": "5b7bb384d1833dcb3e47a266253259bffa93af6d",
+      "bytes": 14041,
+      "sha256": "fb8485ecf02fb751b20fa315bc388786b8af882a788c62225e8e21f6ea598fdd",
+      "local_copy_equal": true
+    },
+    {
+      "commit": "d33a5690dc5db1b7e3d2c1258da9c07680731481",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/independent-review-handoff/source-applicability-recommendation.md",
+      "blob": "cc90fcd291ff7209ad9da57c1873fffaadb326da",
+      "bytes": 9418,
+      "sha256": "f7f46356a2529678af90ef7a6e3922855a8199d10ecffe0342131bbe5ed961be",
+      "local_copy_equal": true
+    }
+  ],
+  "unchanged_immutable_core_evidence": {
+    "physical": [
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/execution-receipt.json",
+        "git_blob_oid": "27ed7595448465f25b573851113066eae05d2531",
+        "mode": "100644",
+        "bytes": 59057,
+        "sha256": "13ce0ccc61a6bdd1435df5f9e794b3e7bf0eedae7fcaf6bd1a906e58b410886e"
+      },
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/preparation.json",
+        "git_blob_oid": "c006dabeed672682746484a96ab2da24bfb4f83d",
+        "mode": "100644",
+        "bytes": 544,
+        "sha256": "a3d68367e2a9a44a09f66f2fd040b582da65e0a79811921fcc9e3f34e6b0ddc3"
+      },
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/retention.json",
+        "git_blob_oid": "b8d54262030f389103fde3d443079eddea722fed",
+        "mode": "100644",
+        "bytes": 1760,
+        "sha256": "f29b37d41bcfde5a17f28fca2f0d01ab4130b0529b45eeb9952cfdad40fa87bf"
+      },
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/whole-target-support.json",
+        "git_blob_oid": "5c9b46b310be182815d1cee94186c19de2977ef3",
+        "mode": "100644",
+        "bytes": 105390,
+        "sha256": "3aff5cef5ddad040a34fd7817dcd2d5b04cc334c62be8de8b74fea7e9893e591"
+      }
+    ],
+    "source_evidence": {
+      "bytes": 24554,
+      "commit": "4a351b620cce708584be63ff1c73fbece5007b1d",
+      "git_blob_oid": "2cb9f29118f6b986244178135361af05f2d3d1c2",
+      "mode": "100644",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/prepared-source-evidence/source-evidence.json",
+      "sha256": "34a152fb5af9657ffc89b84d7426095426f5ea1e1acf8d71ce7957d579a1c120"
+    },
+    "native_diagnostic": {
+      "commit": "94924d1ca2ea26783d23710ca3cf1cfce27ad2b5",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-result/native-diagnostic.json",
+      "mode": "100644",
+      "git_blob_oid": "8b8653f3c4d5b9c8bf6cb707369f4365a301f20f",
+      "bytes": 22171,
+      "sha256": "58a81b1ce6d33967776d372d604c45f97154e8bcfb202770e76cf11c2c4fa5fd"
+    },
+    "authority_products": {
+      "authority-binding.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "1d2eb5d46a118b248ad4dd7f3c39f7abcce4d6fa",
+        "bytes": 738,
+        "sha256": "8119f305ce8e07de6bc31976964e1a5c86f52cd9e11d813afa7fcaa299126d08"
+      },
+      "constructor-result.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "9b69f7b21b3614d5d2a2fea0564c9fa88898f8a1",
+        "bytes": 6933,
+        "sha256": "aae436b661f58be55d5cfb0c6da9f73fd70ca2e5562e5a763fadf827ebbdff90"
+      },
+      "original-rule-preimage.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "bf69788ff6bee75b5e410cd7c4db3252262e02c5",
+        "bytes": 735,
+        "sha256": "b11af07430242a32ecf2d3bc36f3ee238b578966880a7900298775d1e12e4f08"
+      },
+      "preparation.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "7ae24014189d1d6ceb7a75c5d124b7248e374ffb",
+        "bytes": 500,
+        "sha256": "0cba5045736e697f3725b7e58ef8e411d4b44bb3312915473f3246d2d9649216"
+      }
+    },
+    "claim_scope": {
+      "commit": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/claim-scope/claim-scope-proof.json",
+      "bytes": 3862,
+      "sha256": "08b3bcd57338cdf85f14d4ba1fca9919e9e8d2e48d682d167a445a20497dd196"
+    },
+    "separate174": {
+      "commit": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/claim-scope/excluded174-original-records.json",
+      "bytes": 432932,
+      "sha256": "1bbfd452a9a5245db544857d81cf960f567bb8cb8a4d5b19d62a4cf2e19b68f3"
+    },
+    "original_queue": {
+      "commit": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/claim-scope/original-two-DMA-queue-records.json",
+      "bytes": 4617,
+      "sha256": "14a7c1fa7174197a97d4716468383c09108dda6f7fa5abd34ecb2d472d3e354f"
+    },
+    "current_partition": {
+      "commit": "a80b425ab05ec236d3cb6610ede62cdb9a9533f0",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/current-supported-result/original-scope-partition.json",
+      "bytes": 21963,
+      "sha256": "d6404270519cc941b10294133e44cbe9c2fdd71ff169d0b6f5c294aa01fa1559"
+    }
+  },
+  "role": "Reuse public core bodies; not duplicate stock outputs in this source supplement"
+}

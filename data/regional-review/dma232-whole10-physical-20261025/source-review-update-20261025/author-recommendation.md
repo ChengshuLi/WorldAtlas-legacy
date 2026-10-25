@@ -1,0 +1,40 @@
+# Cumulative author recommendation for original DMA232
+
+I recommend a differentiated independent review of the existing source-relative positive candidate, not signature of the old undifferentiated narrative and not an automatic26-cell researched-unresolved award. The actual source/physical/native evidence remains affirmative and intact, while the completed USCB reading adds a concrete exterior-representation issue that must be weighed explicitly. This supplement changes the evidence available to review, not ownership or qualification status.
+
+## Positive rationale that survives the new evidence
+
+The original suspended claim is232 land cells in109 intervals, owner7115 / atlas:territory:DMA. The separate174 source-relative/nonland-context records are outside that claim; they remain preserved and unadjudicated. The authentic ten-parish source family, official CSO ten-parish subject and selected aggregate give a coherent administrative subject. Internal parish-divider adjustments alone do not imply a different aggregate country owner. Those semantic facts do not establish every exterior coordinate.
+
+Original complete-corpus records affirm one recorded parish/owner and retained land for each of232, without a retained inland-water hit. These are positive source and physical-support witnesses within their measured scope, not a new assertion that every center lies inside the frozen vector source. The sole complete ten-member physical result retains two extra-reconstruction members (Saint David/Saint John) and nonempty outside-L1 support for five members; neither their existence nor their absence at a requested witness may be generalized to the whole island.
+
+The sole exact232 diagnostic supported232; the accepted-bank partition found232 novel/0already/0held; the sole authority qualified232 in one aggregate component. Those emitted predicates and whole-source carriers remain at the public pins. They constitute a real source-relative positive candidate, not metadata agreement, owner-zero clearance, or this author's acceptance. Their stated center-based scope is not a full-footprint, full-parish or surveyed-shoreline certificate.
+
+The April2016 CHARIM1:50,000 map was actually read with its declared WGS84/UTM20N controls. Its original76 favorable mainland/headland contexts and156 mixed contexts remain unchanged historical evidence. Display registration residuals, symbol size and map scale are not a quantitative coastline error model. Mixed is not an adverse classification.
+
+## New source evidence and its weight
+
+The original USCB FileGDB now has an authenticated active catalogue, attributes and attached metadata. Its national layer is one MultiPolygon, EPSG:4326, linked to HDX input accessed11May2021. The source is designed for census-attribute linkage; the2011 label is not a shoreline capture date. Active creation/modification dates do not establish survey epoch, tidal convention, accuracy or superiority over the frozen Commons-derived source. Only parish adjustment to fit digitized settlements is explicit.
+
+The original national geometry is invalid: a ring self-intersection, with repeated source vertices preserved. It was not repaired or simplified. A first guarded comparison stopped before key queries. A separate non-qualifying source diagnostic retained invalidity on every row and returned206 conditional-inside/26 conditional-outside centers. These are not reliable polygon-membership certificates. The plotted original line positions nevertheless expose real differences at the coastal settings; invalidity cannot be used to erase that visible adverse/reference evidence, and publisher authority or detail cannot make it decisive by itself.
+
+| Review group | Keys | Cumulative reason and finite author recommendation |
+| --- | ---: | --- |
+| A: prior favorable CHARIM, conditional USCB inside |75|Strongest converging mainland/headland evidence, plus original land/source witnesses and completed stock qualification. Recommend substantive positive review under the actual center/source-relative contract. Do not upgrade to full-cell certainty or count the invalid-source query as independent certification. |
+| B: prior mixed CHARIM, conditional USCB inside |131|Original positive witnesses and native qualification remain; mixed visual context is not contrary by itself, and the added outline offers conditional corroboration. Recommend positive review on that cumulative rationale, with the actual physical carrier and scale limits retained. The count alone is not the reason. |
+| C: prior favorable CHARIM, conditional USCB outside |1|[7115,119591,86322], southern/landward edge of Saint John headland west of Stowe/Grange. Preserve its historical inclusion among76, but do not repeat an assertion of precise edge agreement. The source lines differ locally. Recommend an explicit exact-key reviewer judgment about whether the original source-relative evidence suffices at this edge; do not inherit clearance merely from the other44 headland keys. |
+| D: prior mixed CHARIM, conditional USCB outside |25|Actual local exterior differences supplement the already mixed contexts. Original land/source/authority evidence remains contrary to an automatic rejection. Recommend explicit source-relative balancing for these exact keys before carrying an undifferentiated232 positive recommendation into final integration. Do not label them sea, failed stock predicates or extensively-researched-unresolved solely from this invalid-reference query. |
+
+A and B comprise206 keys. C and D comprise26 exact review flags, not a proposed native partition, award, exception constructor or hold mutation. The original76/156 grouping is preserved as75+1 and131+25 solely to expose how the new evidence applies. All232 stay in the review subject, and no adverse evidence is removed.
+
+## Concrete26 reasoning and finite decision
+
+The26 flags are SaintJohn3 (including the singleton above), SaintAndrew1, SaintPeter2, SaintJoseph4, SaintPaul2, SaintGeorge1, SaintLuke8, SaintPatrick2 and SaintMark3. The original-source plots show articulated USCB coastal line versus some straighter frozen segments at PointeMichel/Layou, and a different northern-facing edge/connection at ScottsHead. These are local representation differences, not evidence that entire parishes are inapplicable. The26 angular nearest-outline distances, source coordinates and original witnesses are supplied without an invented tolerance; no conversion to ground error or whole-cell classification occurred.
+
+The reviewer can now decide the actual claim: whether original complete source/physical evidence and the supported center predicates justify the source-relative representation despite the local alternative-outline differences. If yes, the review should say why the auxiliary USCB evidence is not a controlling veto for those exact contexts. If no, it should identify the bounded source-applicability objection and affected keys. A researched-unresolved disposition would require its own supported finding that reasonable qualification failed; this packet does not manufacture it. No universal sovereignty certificate, new whole-island survey or endless metadata search is proposed.
+
+A quantitative USCB-based clearance or rejection would additionally need a justified treatment of its invalid original topology and appropriate comparison scale. This author has not created one, and it is not automatically a prerequisite for evaluating the original claim. The known CDEMA TLS and other actual stops remain explicit rather than transformed into absence claims. No extra unchanged predicates or stock reruns are requested.
+
+## What changes in the old handoff
+
+The old statement that the active USCB layer is unread is superseded. Its unqualified all232 positive-review wording must be read with the four reasoned groups above. The old stock result pins, original76/156 reading, complete-source issues,232 qualified candidate and separate174 scope remain unchanged. Parent integration, independent exact-public-head review, conservation and any final stock delivery remain separate actions; this author does not claim them.

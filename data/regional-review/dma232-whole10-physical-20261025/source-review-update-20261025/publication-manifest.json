@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-25",
+  "author_worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "historical_base": "d33a5690dc5db1b7e3d2c1258da9c07680731481",
+  "kind": "authored source-review supplement; no status change",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4103,
+      "sha256": "6a12be9435e2c07011ab58245325a652a3e44775810fa6a229227958073dfc4c"
+    },
+    {
+      "path": "author-recommendation.md",
+      "bytes": 8137,
+      "sha256": "701a8e78d57abd78290aaadc4754fe85ce053c7ac2630527248afff3ee555c34"
+    },
+    {
+      "path": "comparison/assessment.md",
+      "bytes": 10035,
+      "sha256": "1e98608114e9850b1e496fd25d897f503a506f791a20c23d7c000e9f73f8668f"
+    },
+    {
+      "path": "comparison/compare_centers.py",
+      "bytes": 3594,
+      "sha256": "26ba43d9365e8932755bc84ac09011d9c5cadaa075767c1fd99526844565efad"
+    },
+    {
+      "path": "comparison/compare_centers_conditional.py",
+      "bytes": 4116,
+      "sha256": "b4dfb053da344579d08d59e9760d1a675eb53a6b13e4d4a05d2acd2a9a922e37"
+    },
+    {
+      "path": "comparison/comparison-summary.json",
+      "bytes": 4529,
+      "sha256": "bae9fe746946aaf65df71f8c030d4eefac900f3f5eb1f3fdbb774faea424295f"
+    },
+    {
+      "path": "comparison/comparison-with-retained-witnesses232.json",
+      "bytes": 310160,
+      "sha256": "8b34133b4040e55f9032727467e2edb8f55fa082e9df937bf878a259a9ff3f25"
+    },
+    {
+      "path": "comparison/geometry-reading.json",
+      "bytes": 659,
+      "sha256": "930e7de977ceb092cc89a4d3c406925c9e72e6de8e5320d5eb36462fd48c8d2a"
+    },
+    {
+      "path": "comparison/original-geometry-validity.json",
+      "bytes": 620,
+      "sha256": "f0f80d3a77e1dc47e959121e00e433c0e86e794b92d2b5103117ecbe2feb8597"
+    },
+    {
+      "path": "comparison/representation-sensitive26.json",
+      "bytes": 35427,
+      "sha256": "dbf984c39930613043bb708684f17b38915735c4fc62dc54058cd8480c8e4381"
+    },
+    {
+      "path": "library/checksums.json",
+      "bytes": 8257,
+      "sha256": "1d8c73b9eba888f75bd47657bb50f6449a72a8ee293c6b24e0709ef732894bdb"
+    },
+    {
+      "path": "library/identity.json",
+      "bytes": 583,
+      "sha256": "990d5d042c61c19960c73deb66fc33fa22aa09801f23e2e729492a2bb5b7c83e"
+    },
+    {
+      "path": "library/member-manifest.json",
+      "bytes": 20400,
+      "sha256": "a8d30f3f0b0bee896880f3a2e288f1e9c41669adda68cd68797494f0cb47c3ba"
+    },
+    {
+      "path": "public-baseline-bindings.json",
+      "bytes": 6335,
+      "sha256": "c29e67312822023ae78d9486c90ff482c71f09c670dfa84766097238dab78bae"
+    },
+    {
+      "path": "review-strata232.json",
+      "bytes": 17377,
+      "sha256": "bf58112edcba4bce902c421424e254125a71a4d45a94f3260b7635bf57fbca12"
+    },
+    {
+      "path": "uscb-method/active-catalogue-schema.json",
+      "bytes": 10446,
+      "sha256": "46c57ef39cdc9969cb3d7d16c80eb078da50c3d9aae36275affd27c896ad6d72"
+    },
+    {
+      "path": "uscb-method/assessment.md",
+      "bytes": 7872,
+      "sha256": "f4e7e64278b348722f40c56d556550e7c6ecf1bdc6c76b2ad9cf95a4574b4b4d"
+    },
+    {
+      "path": "uscb-method/operation-receipt.json",
+      "bytes": 1247,
+      "sha256": "227d04885d2d7669b12f31dae3ce41d36849f5aab23556bb2b59fa3a148a0bbe"
+    }
+  ],
+  "checks": {
+    "unique_original_claim_keys": 232,
+    "review_groups": [
+      75,
+      131,
+      1,
+      25
+    ],
+    "original_CHARIM_groups_preserved": [
+      76,
+      156
+    ],
+    "separate_context_records_preserved": 174,
+    "new_stock_runs": 0,
+    "acceptance_changes": 0
+  }
+}

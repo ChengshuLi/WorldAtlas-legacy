@@ -1,0 +1,45 @@
+{
+  "venv_creation": {
+    "session_id": 67815,
+    "exit_code": 0
+  },
+  "ordinary_pip": {
+    "exit_code": 1,
+    "reason": "pypi.org DNS Errno 8; no package download",
+    "log": "pip-install.log"
+  },
+  "supported_network_install": {
+    "tool": "functions.exec -> tools.exec_command",
+    "sandbox_permissions": "require_escalated",
+    "session_id": 5329,
+    "exit_code": 0,
+    "server_approval_id_exposed": false,
+    "denied": false,
+    "log": "pip-install-approved.log",
+    "report": "pip-install-report.json"
+  },
+  "reading": {
+    "driver": "OpenFileGDB",
+    "pyogrio": "0.13.0",
+    "gdal": "3.12.4",
+    "calls": [
+      "pyogrio.list_layers",
+      "pyogrio.read_info default options",
+      "pyogrio.raw.read(read_geometry=False, return_fids=True) attributes",
+      "pyogrio.raw.read(read_geometry=False, sql=GetLayerDefinition/GetLayerMetadata)"
+    ],
+    "all_geometry_arrays_none": true,
+    "source_zip_reacquired": false,
+    "predicates": 0,
+    "native_or_physical_runs": 0,
+    "authority_runs": 0,
+    "source_mutations": 0,
+    "shared_environment_mutations": 0,
+    "pending_operations": 0
+  },
+  "scope_preserved": {
+    "qualified_candidates": 232,
+    "separate_context": 174,
+    "acceptance_change": 0
+  }
+}

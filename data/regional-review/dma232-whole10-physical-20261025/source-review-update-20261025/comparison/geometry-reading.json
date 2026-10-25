@@ -1,0 +1,19 @@
+{
+  "source_archive": "dma232_reaudit/USCB-dominica-2011-census-data.zip",
+  "source_sha256": "b54490a499964114609f0ab668446c446c4c53505794ff48edb4337e11f894b4",
+  "layer": "DM_GEOG_ADM0_2011_uscb_202106",
+  "OBJECTID": 1,
+  "crs": "EPSG:4326",
+  "geometry_type": "MultiPolygon",
+  "attributes": {
+    "AREA_NAME": "DOMINICA",
+    "GEO_MATCH": "DMA_00"
+  },
+  "wkb": {
+    "bytes": 93482,
+    "sha256": "b0d5db3093454926a0244657e2b157a09c8b4ab81795d85db91323a132fc1170"
+  },
+  "reader": "Pyogrio0.13.0 GDAL3.12.4 OpenFileGDB",
+  "transformation": null,
+  "operation": "read original national geometry only, no simplification, repair, union or reprojection"
+}

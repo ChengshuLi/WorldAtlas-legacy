@@ -1,0 +1,142 @@
+{
+  "scope": 232,
+  "separate174_included": false,
+  "runtime": {
+    "executable": "/Users/chengshuli/Documents/Codex/2026-10-20/task/native-scratch/worldatlas-physical-venv/bin/python",
+    "shapely": "2.1.2",
+    "GEOS": "3.13.1"
+  },
+  "geometry": {
+    "valid": false,
+    "validity_reason": "Ring Self-intersection[-61.2475446619999 15.4837471930001]",
+    "components": 1,
+    "interior_rings": 1,
+    "bounds": [
+      -61.479759919999935,
+      15.207310967000069,
+      -61.240328268999974,
+      15.640851596000061
+    ]
+  },
+  "all": {
+    "conditional-inside": 206,
+    "conditional-outside": 26
+  },
+  "by_CHARIM_context": {
+    "favorable": {
+      "conditional-inside": 75,
+      "conditional-outside": 1
+    },
+    "mixed": {
+      "conditional-inside": 131,
+      "conditional-outside": 25
+    }
+  },
+  "by_parish": {
+    "Saint Andrew": {
+      "conditional-outside": 1,
+      "conditional-inside": 14
+    },
+    "Saint David": {
+      "conditional-inside": 1
+    },
+    "Saint George": {
+      "conditional-inside": 3,
+      "conditional-outside": 1
+    },
+    "Saint John": {
+      "conditional-inside": 81,
+      "conditional-outside": 3
+    },
+    "Saint Joseph": {
+      "conditional-inside": 24,
+      "conditional-outside": 4
+    },
+    "Saint Luke": {
+      "conditional-outside": 8,
+      "conditional-inside": 16
+    },
+    "Saint Mark": {
+      "conditional-inside": 19,
+      "conditional-outside": 3
+    },
+    "Saint Patrick": {
+      "conditional-inside": 15,
+      "conditional-outside": 2
+    },
+    "Saint Paul": {
+      "conditional-inside": 28,
+      "conditional-outside": 2
+    },
+    "Saint Peter": {
+      "conditional-inside": 5,
+      "conditional-outside": 2
+    }
+  },
+  "by_named_context": {
+    "Bagatelle/FondStJean southern shore": {
+      "conditional-inside": 15,
+      "conditional-outside": 2
+    },
+    "Batibou/Anse-de-Mai coastal context;13 Woodford Hill/Rough Bay positive-context keys excluded from this156": {
+      "conditional-outside": 1,
+      "conditional-inside": 1
+    },
+    "Dublanc/Bioche/Colihaut coast and small projections": {
+      "conditional-inside": 5,
+      "conditional-outside": 2
+    },
+    "Jimmit/Belfast River and Canefield/River Estate coastal strip": {
+      "conditional-inside": 28,
+      "conditional-outside": 2
+    },
+    "Mero strip and StJoseph\u2013Layou river-mouth/bank toward Tarou": {
+      "conditional-inside": 24,
+      "conditional-outside": 4
+    },
+    "Northern Capuchin\u2013Clifton\u2013Cottage\u2013Toucari coastal strip;63 clear headland/promontory keys excluded from this156": {
+      "conditional-inside": 19,
+      "conditional-outside": 2
+    },
+    "PointeMichel coastal strip/slopes and drawn exterior": {
+      "conditional-outside": 8,
+      "conditional-inside": 16
+    },
+    "Roseau/Newtown waterfront": {
+      "conditional-inside": 3,
+      "conditional-outside": 1
+    },
+    "ScottsHead connected promontory/mainland connection and adjoining coast": {
+      "conditional-inside": 19,
+      "conditional-outside": 3
+    },
+    "Tranto coastal/river-mouth context near StDavid Bay": {
+      "conditional-inside": 1
+    },
+    "Woodford Hill/Rough Bay land context": {
+      "conditional-inside": 13
+    },
+    "headland west of Stowe/Grange": {
+      "conditional-inside": 44,
+      "conditional-outside": 1
+    },
+    "promontory north of Dublanc": {
+      "conditional-inside": 18
+    }
+  },
+  "method": "Unchanged WGS84 source WKB and retained literal longitude/latitude; Shapely point contains and boundary intersects, plus planar angular nearest-boundary diagnostic. No repair, simplify, union, reproject, raster or whole-cell test. Distances are degrees and are not accuracy tolerances.",
+  "coordinate_input": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/display-context232.json",
+    "bytes": 107842,
+    "sha256": "4303e1a9fc6eb91330bb9be3ac3215b335089624b8454e384c543fbe19472d19",
+    "original_observer_blob": "fd83cff0af9371e560925b934e7e3c0f14632235",
+    "original_observer_sha256": "147a32095ad66e7ba76f6ceacff3cddd92aef1581b9a2ccbfd648f6e5eede921",
+    "grid_blob": "008aaf69e65105029e64e09317b8f9aa4df1f352",
+    "longitude_rule": "360*(x+0.5)/262166-180"
+  },
+  "original_key_set_equality": true,
+  "stock_runs": 0,
+  "adoption": false,
+  "all_relations_conditional_on_invalid_original": true,
+  "first_guarded_run": "exit1 at validity assertion before per-key queries; this is a distinct exploratory source diagnostic, not a stock rerun"
+}

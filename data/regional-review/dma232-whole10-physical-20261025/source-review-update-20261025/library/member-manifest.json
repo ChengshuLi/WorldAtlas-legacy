@@ -1,0 +1,334 @@
+{
+  "kind": "One necessary dated source-review supplement",
+  "public_baseline": [
+    {
+      "commit": "d33a5690dc5db1b7e3d2c1258da9c07680731481",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/independent-review-handoff/manifest.json",
+      "blob": "5b7bb384d1833dcb3e47a266253259bffa93af6d",
+      "bytes": 14041,
+      "sha256": "fb8485ecf02fb751b20fa315bc388786b8af882a788c62225e8e21f6ea598fdd",
+      "local_copy_equal": true
+    },
+    {
+      "commit": "d33a5690dc5db1b7e3d2c1258da9c07680731481",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/independent-review-handoff/source-applicability-recommendation.md",
+      "blob": "cc90fcd291ff7209ad9da57c1873fffaadb326da",
+      "bytes": 9418,
+      "sha256": "f7f46356a2529678af90ef7a6e3922855a8199d10ecffe0342131bbe5ed961be",
+      "local_copy_equal": true
+    }
+  ],
+  "copied_members": {
+    "uscb-method/assessment.md": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/assessment.md",
+      "bytes": 7872,
+      "sha256": "f4e7e64278b348722f40c56d556550e7c6ecf1bdc6c76b2ad9cf95a4574b4b4d",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/active-catalogue-schema.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/active-catalogue-schema.json",
+      "bytes": 10446,
+      "sha256": "46c57ef39cdc9969cb3d7d16c80eb078da50c3d9aae36275affd27c896ad6d72",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/active-nongeometry-attributes.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/active-nongeometry-attributes.json",
+      "bytes": 38925,
+      "sha256": "48fc657c8cca7a3ad7d8a38cc1658e82ba0e49e55580ae267e930ef54fc3f25d",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/active-metadata-passages.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/active-metadata-passages.json",
+      "bytes": 14623,
+      "sha256": "aef3dd9a503cde4912e3d178a06859a5927ffee3f50a1b03ab918b2f15085241",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/source-purpose-and-comments.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/source-purpose-and-comments.json",
+      "bytes": 7197,
+      "sha256": "15a29a801bbb15344cd92c68c57ccaa1595270e981f769cce7ccf72c4d07f188",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/operation-receipt.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/operation-receipt.json",
+      "bytes": 1247,
+      "sha256": "227d04885d2d7669b12f31dae3ce41d36849f5aab23556bb2b59fa3a148a0bbe",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/wheel-provenance.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/wheel-provenance.json",
+      "bytes": 1202,
+      "sha256": "4c195e3182c315b6dadc01d54f4192495c87be913f1b41788568ab67cce8b676",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/reader-requirements.lock": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/reader-requirements.lock",
+      "bytes": 381,
+      "sha256": "2274b98eafb99f9f634bc8d66aa01dbf8c7da9b7dae516c1d77d92de303a5f58",
+      "purpose": "New actual active FileGDB source reading and reader provenance; no environment binaries",
+      "unchanged_copy": true
+    },
+    "uscb-method/DM_GEOG_ADM0_2011_uscb_202106-GetLayerDefinition.xml": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/DM_GEOG_ADM0_2011_uscb_202106-GetLayerDefinition.xml",
+      "bytes": 6370,
+      "sha256": "fa4eb90209439e8c791573428af95ff9c8c761f1b8b716f291bcef8497badb09",
+      "purpose": "Actual attached source definition/metadata returned through supported reader",
+      "unchanged_copy": true
+    },
+    "uscb-method/DM_GEOG_ADM0_2011_uscb_202106-GetLayerMetadata.xml": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/DM_GEOG_ADM0_2011_uscb_202106-GetLayerMetadata.xml",
+      "bytes": 16141,
+      "sha256": "218b6015eb8d5796acb5aee68e192a56a9a7ffe33d25d836174640b737e6ffc3",
+      "purpose": "Actual attached source definition/metadata returned through supported reader",
+      "unchanged_copy": true
+    },
+    "uscb-method/DM_GEOG_ADM1_2011_uscb_202106-GetLayerDefinition.xml": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/DM_GEOG_ADM1_2011_uscb_202106-GetLayerDefinition.xml",
+      "bytes": 6621,
+      "sha256": "a3841f83769c93b6949e9b33dc3a0defe7d25a4365a7f4a82ee8544de52e98bd",
+      "purpose": "Actual attached source definition/metadata returned through supported reader",
+      "unchanged_copy": true
+    },
+    "uscb-method/DM_GEOG_ADM1_2011_uscb_202106-GetLayerMetadata.xml": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/DM_GEOG_ADM1_2011_uscb_202106-GetLayerMetadata.xml",
+      "bytes": 17584,
+      "sha256": "37efa30d8fe7308b6af0f9d2463c97baa4249c6f976d70f6cb1c74d8af6a4d81",
+      "purpose": "Actual attached source definition/metadata returned through supported reader",
+      "unchanged_copy": true
+    },
+    "uscb-method/DM_GEOG_ADM2_2011_uscb_202106-GetLayerDefinition.xml": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/DM_GEOG_ADM2_2011_uscb_202106-GetLayerDefinition.xml",
+      "bytes": 6406,
+      "sha256": "0bb5bc6e61e0d7d68cbf201cd190e7546dba8272c906f194696ff3af3e1c02d4",
+      "purpose": "Actual attached source definition/metadata returned through supported reader",
+      "unchanged_copy": true
+    },
+    "uscb-method/DM_GEOG_ADM2_2011_uscb_202106-GetLayerMetadata.xml": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-reader/DM_GEOG_ADM2_2011_uscb_202106-GetLayerMetadata.xml",
+      "bytes": 19036,
+      "sha256": "4014e8c8bc4b6dfed665e4096fe39fcd4308748c01591866ad564978b36e659f",
+      "purpose": "Actual attached source definition/metadata returned through supported reader",
+      "unchanged_copy": true
+    },
+    "comparison/assessment.md": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/assessment.md",
+      "bytes": 10035,
+      "sha256": "1e98608114e9850b1e496fd25d897f503a506f791a20c23d7c000e9f73f8668f",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/USCB-national-original.wkb": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/USCB-national-original.wkb",
+      "bytes": 93482,
+      "sha256": "b0d5db3093454926a0244657e2b157a09c8b4ab81795d85db91323a132fc1170",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/geometry-reading.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/geometry-reading.json",
+      "bytes": 659,
+      "sha256": "930e7de977ceb092cc89a4d3c406925c9e72e6de8e5320d5eb36462fd48c8d2a",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/original-geometry-validity.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/original-geometry-validity.json",
+      "bytes": 620,
+      "sha256": "f0f80d3a77e1dc47e959121e00e433c0e86e794b92d2b5103117ecbe2feb8597",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/original-ring-detail.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/original-ring-detail.json",
+      "bytes": 1900,
+      "sha256": "aec6d1072bb12fec983e268feeecff3c79de25ce47868c9c740c95455932f61f",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/comparison-summary.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/comparison-summary.json",
+      "bytes": 4529,
+      "sha256": "bae9fe746946aaf65df71f8c030d4eefac900f3f5eb1f3fdbb774faea424295f",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/comparison-with-retained-witnesses232.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/comparison-with-retained-witnesses232.json",
+      "bytes": 310160,
+      "sha256": "8b34133b4040e55f9032727467e2edb8f55fa082e9df937bf878a259a9ff3f25",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/representation-sensitive26.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/representation-sensitive26.json",
+      "bytes": 35427,
+      "sha256": "dbf984c39930613043bb708684f17b38915735c4fc62dc54058cd8480c8e4381",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/scope-and-sensitivity-summary.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/scope-and-sensitivity-summary.json",
+      "bytes": 801,
+      "sha256": "b267e7c9ce75007b9283001b75dfcefef83b03cb584c924d42e2dfe2f35b8dbc",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/compare_centers.py": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/compare_centers.py",
+      "bytes": 3594,
+      "sha256": "26ba43d9365e8932755bc84ac09011d9c5cadaa075767c1fd99526844565efad",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/compare_centers_conditional.py": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/compare_centers_conditional.py",
+      "bytes": 4116,
+      "sha256": "b4dfb053da344579d08d59e9760d1a675eb53a6b13e4d4a05d2acd2a9a922e37",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/plot_original_outline.py": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/plot_original_outline.py",
+      "bytes": 2533,
+      "sha256": "0633b6d921f411ce353b5c93c155e85eb1e75b1371da05a31b394b62a0f65ca6",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/plot_retained_sources.py": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/plot_retained_sources.py",
+      "bytes": 2951,
+      "sha256": "cbf48da0c2e5728c733ba605e25c60d214da25940068d378a71c0a00e9477659",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "comparison/original-sources-comparison.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-uscb-outline-comparison/original-sources-comparison.png",
+      "bytes": 92168,
+      "sha256": "67c02f9a7d3b900919f19de5a838976df49113a8897290371e590312dd177326",
+      "purpose": "Exact auxiliary source result, source geometry extract or method; no repaired/adopted geometry",
+      "unchanged_copy": true
+    },
+    "controls/display-context232.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/display-context232.json",
+      "bytes": 107842,
+      "sha256": "4303e1a9fc6eb91330bb9be3ac3215b335089624b8454e384c543fbe19472d19",
+      "purpose": "Existing literal coordinate and original observer/grid/control binding, necessary to inspect exact comparison",
+      "unchanged_copy": true
+    },
+    "controls/original-CHARIM76-156.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/reading-subsets.json",
+      "bytes": 16304,
+      "sha256": "409ce9e956517001ff0bdd84d14db6655fd4b4a5a63a3d21af5cf7dddd9565c3",
+      "purpose": "Original source-context grouping preserved unchanged",
+      "unchanged_copy": true
+    },
+    "controls/CHARIM-coordinate-metadata.json": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/CHARIM-PDF-coordinate-system-metadata.json",
+      "bytes": 879,
+      "sha256": "553f9296099363e3f59215345e61a54e780d280cfbd5e22f3d2f6f0de777b5e0",
+      "purpose": "Original declared CRS metadata",
+      "unchanged_copy": true
+    },
+    "source-excerpts/USCB-BoundariesNote.txt": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/USCB-BoundariesNote.txt",
+      "bytes": 3289,
+      "sha256": "da705a679af006f8b8cddf1028b92bc4286091182ee9b247ac4907fc3a02fda2",
+      "purpose": "Actual producer note; complete short methodological source text",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-legend-credit.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/CHARIM-topographic-legend-credit.png",
+      "bytes": 69831,
+      "sha256": "a482ec4916621afb652660fc57896aabf210a26de2ad213e194d238fdafacf11",
+      "purpose": "Actual legend/date/credits needed to assess selected map excerpts",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-john-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-john-reading-aid.png",
+      "bytes": 520179,
+      "sha256": "767928803610b710a7b8ab5417bb3282ea1f1cca14d6ae0586ba811134980dd6",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-andrew-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-andrew-reading-aid.png",
+      "bytes": 506587,
+      "sha256": "10e81622715241b51093dab6ff1d06d74fda62a93fe8702f3db2dfac168f0eb5",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-peter-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-peter-reading-aid.png",
+      "bytes": 389249,
+      "sha256": "8412389f15639ad119b8affda12d9bd72e9b660fb3151c45f189d363ef735fb9",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-joseph-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-joseph-reading-aid.png",
+      "bytes": 277465,
+      "sha256": "159e3c9ab9f3257f86e878e9ae840e33dd1bf4af13f817aeebc572d03e6bc8d1",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-paul-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-paul-reading-aid.png",
+      "bytes": 332102,
+      "sha256": "f00f0d8eca08d992d93d02e809a5c9308ce35d993165e7788cba9c1ea3ded5f3",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-george-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-george-reading-aid.png",
+      "bytes": 134194,
+      "sha256": "840fab10aef0b2bfff58f7160fb6b14fd9a4dbae4380ccd56aef6ed7e197d500",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-luke-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-luke-reading-aid.png",
+      "bytes": 154202,
+      "sha256": "6b5e75a3c419e62dcf55f9455832622b77d95bbcbb2e3477caff9114875db41d",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-patrick-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-patrick-reading-aid.png",
+      "bytes": 154942,
+      "sha256": "57c31ca4b3d685d86d123a04908b2d518476cc481137181a72597f27074fd0dd",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/CHARIM-saint-mark-retained-reading-aid.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/saint-mark-reading-aid.png",
+      "bytes": 135157,
+      "sha256": "6687d0cf442466311011a656af51808d2973cd62053aba9891812e563aa46d84",
+      "purpose": "Previously rendered source excerpt with original reading markers for the nine contexts containing the26; no new alteration or predicate",
+      "unchanged_copy": true
+    },
+    "source-excerpts/Dominica_parishes_blank.png": {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/Dominica_parishes_blank.png",
+      "bytes": 33122,
+      "sha256": "597b8d8d854a440f37b45d3be0dbccb112e2b855a2c3d81596da72c7301a8b0f",
+      "purpose": "Actual Golbez source image; CC BY2.5 attribution in source-rights note",
+      "unchanged_copy": true
+    }
+  },
+  "excluded": [
+    "all raw source ZIP archives",
+    "reader venv and binaries",
+    "full CHARIM PDF/full map raster",
+    "shared scientific environment",
+    "credentials and allocator tokens",
+    "duplicate stock execution products"
+  ],
+  "new_library_item_reason": "No prior resolved DMA Library identity; coordinator confirmed one dated supplement authorization",
+  "no_new_scientific_execution_during_assembly": true
+}
