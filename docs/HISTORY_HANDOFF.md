@@ -2,51 +2,49 @@
 
 This lane researches dated attributes for approved territories. Boundary/hierarchy/source suitability research uses [GEOGRAPHY_HANDOFF.md](GEOGRAPHY_HANDOFF.md) and `type:geography`; it can also run on Luna if the user chooses. Engineering owns executable geographic migrations and publication. Neither research lane bypasses complete published regional approval for location-attribute imports.
 
-Give a Luna thread this document and [its prompt](prompts/LUNA_HISTORY.txt). They explain research contracts, import commands and safe concurrency. **GitHub Issues is the single source of truth for TODOs, status and work history**: [open historical-research issues](https://github.com/ChengshuLi/WorldAtlas/issues?q=is%3Aissue+is%3Aopen+label%3Atype%3Ahistory-research). This document contains no live task checklist.
+Give a Luna thread this document and [its prompt](prompts/LUNA_HISTORY.txt). They explain current source-research scope, preserved content contracts and historical import context. **GitHub Issues is the single source of truth for TODOs, status and work history**: [open historical-research issues](https://github.com/ChengshuLi/WorldAtlas/issues?q=is%3Aissue+is%3Aopen+label%3Atype%3Ahistory-research). This document contains no live task checklist.
 
 M engineering and N history workers must read [WORKER_COORDINATION.md](WORKER_COORDINATION.md), choose one bounded work item and record worker ID, branch and scope in an ordinary issue comment, and use the merge queue. Umbrellas are split into bounded children and never reserved by one worker.
 
-Repository: https://github.com/ChengshuLi/WorldAtlas, integration branch **main**. Site: https://worldatlas-explorer.chengshu-li-2013.chatgpt.site/, owner-private. Read `AGENTS.md`, [scope guidance](HISTORICAL_RESEARCH_TODO.md), [LUNA_DATA_HANDOFF.md](LUNA_DATA_HANDOFF.md), [RESEARCH_IMPORT_WORKFLOW.md](RESEARCH_IMPORT_WORKFLOW.md), [ATTRIBUTE_CONTRACT.md](ATTRIBUTE_CONTRACT.md) and [PARALLEL_WORK_PROTOCOL.md](PARALLEL_WORK_PROTOCOL.md).
+Repository: https://github.com/ChengshuLi/WorldAtlas, integration branch **main**. Verify latest accepted main on start/resume and follow current `AGENTS.md` and [worker coordination](WORKER_COORDINATION.md) before applying any saved handoff. The former owner-private Site is retained for recovery, not the normal serving/import target. Read [scope guidance](HISTORICAL_RESEARCH_TODO.md), [LUNA_DATA_HANDOFF.md](LUNA_DATA_HANDOFF.md), [RESEARCH_IMPORT_WORKFLOW.md](RESEARCH_IMPORT_WORKFLOW.md), [ATTRIBUTE_CONTRACT.md](ATTRIBUTE_CONTRACT.md) and [PARALLEL_WORK_PROTOCOL.md](PARALLEL_WORK_PROTOCOL.md) for preserved research contracts and history; dated platform notes do not authorize current operations.
 
 ## Current gate: source-only work
 
-The global macro partition is approved and published. Engineering now audits and publishes completely reviewed regional branches inside the fixed scopes in `data/macro-foundation/regional-handoffs.json.gz`. The v2 `data/research-geography-gate.json` opens only approved subjects in those branches; no branches are currently approved. Source research, lawful archives, staging and dry runs may proceed. Content claims require explicit region IDs and closed macro/regional approval dependencies. Do not design geography or bypass the gate. Read [GEOGRAPHY_RESEARCH_READINESS.md](GEOGRAPHY_RESEARCH_READINESS.md).
+The global macro partition is approved and published. Engineering audits and publishes completely reviewed regional branches inside the fixed scopes in `data/macro-foundation/regional-handoffs.json.gz`. The v2 `data/research-geography-gate.json` opens only approved subjects in those branches; no branches are currently approved. Current work is source-only: lawful research and owned evidence staging may proceed, but do not run live imports, use private service credentials or treat a dry run as approval. Content imports require explicit region IDs and closed macro/regional approval dependencies. Do not design geography or bypass the gate. Read [GEOGRAPHY_RESEARCH_READINESS.md](GEOGRAPHY_RESEARCH_READINESS.md) from current main.
 
 ## Preserved starting point and content contract
 
-The Site uses production Neon PostgreSQL and R2, with bounded validation, immutable claims and idempotent imports. The checkpoint retains ownership/environmental products, 3,588 dated names, 396 religion records, 9,301 separate-settlement estimates and original archives. Preserve completed research. Interrupted GHSL preparation is not validated import content. Recheck current live state before continuing.
+The dated Site 18 checkpoint recorded production Neon PostgreSQL/R2 capabilities, bounded validation, immutable claims and idempotent imports; it is historical, not a current connection or import instruction. It retains ownership/environmental products, 3,588 dated names, 396 religion records, 9,301 separate-settlement estimates and original archives. Preserve completed research. Interrupted GHSL preparation is not validated import content. Never infer current service, target or write permission from that checkpoint.
 
 Store supported sparse half-open intervals, not annual snapshots. Keep stable entity IDs, original source bytes/hashes, licenses, methods, uncertainty and fixed classifications. Missing evidence remains unknown. Present-day physical reference context is separately labeled; it is not historical evidence and cannot justify widening observation intervals. Research gaps such as 2025 using actual sources.
 
 ## Select a campaign and preserve evidence
 
-1. Inspect labeled GitHub Issues, comments, active PRs and campaign directories before choosing disjoint geography/time/attribute/source scope. Post your bounded scope and sources on the issue and claim it when possible. Worldwide objectives remain open until their complete coverage is evidenced; use linked child issues when useful.
+1. Inspect labeled GitHub Issues, comments, active PRs and campaign directories before choosing a disjoint geography/time/attribute/source scope. Post your worker ID, branch, bounded scope and sources in the existing issue discussion; the parent coordinates overlap, and ordinary authoring needs no machine claim workflow. Worldwide objectives remain open until their complete coverage is evidenced; use linked child issues when useful.
 2. Create a unique **`research/<campaign-id>`** branch from fresh `origin/main` in an isolated checkout/worktree. You own **only `research/campaigns/<campaign-id>/`**. Do not edit shared handovers, code, schema, infrastructure, category registries, grid assets or geographic releases. Research factual JSON and notes using existing tools; refer engineering blockers to a linked engineering issue.
 3. Keep original inputs, lawful source bytes/restoration manifests, bundles, release pins, partial/final receipts and read-back in the campaign directory. Record progress in the existing issue/PR discussion; no duplicate progress JSON is required.
-4. Obtain the current `/api/geography/release`, capabilities and capacity through documented private access. Save the exact release and pin every bundle. Credentials must never enter chat/Git/arguments; the GitHub Neon management key is not an import token.
-5. Compile and validate supported factual JSON and retain staged inputs. After the global gate opens, import bounded idempotent batches and retain receipts after every commit. Verify claim/source/interval read-back and selected-year results. Preserve partial progress and report uncovered scope honestly.
+4. Current assignments are source-only; do not obtain private API access or credentials. Preserve exact source vintage, IDs, scope and limitations in the owned evidence directory.
+5. Stage supported factual proposals and any offline validation output without importing. Keep unsupported territory/interval conclusions pending, preserve partial work and report uncovered scope honestly.
 
-Example commands after saving factual input and current release:
+Offline staging example after saving factual input and any already-retained release file required by that assigned task:
 
 ```sh
 node scripts/prepare-research-bundle.mjs research/campaigns/CAMPAIGN/input.json research/campaigns/CAMPAIGN/geographic-release.json research/campaigns/CAMPAIGN/bundle
-node scripts/import-research-bundle.mjs https://worldatlas-explorer.chengshu-li-2013.chatgpt.site/ research/campaigns/CAMPAIGN/bundle --dry-run
-node --use-env-proxy scripts/import-research-bundle.mjs https://worldatlas-explorer.chengshu-li-2013.chatgpt.site/ research/campaigns/CAMPAIGN/bundle
 ```
 
-Replace `CAMPAIGN` with your unique ID. Use documented atomic phases for sourced dated membership/existence. Generic subjects/relationships and licensed media may use supported imports; new domain UI and geographic identity/footprint migrations belong to engineering.
+Replace `CAMPAIGN` with your unique ID only when offline staging is part of the assigned scope. The compile step does not establish a current release, regional approval, import permission or truth. No live import command is provided for the current source-only gate. Dated endpoint/import commands in the legacy platform handoff are not current instructions.
 
-## Incremental PRs and concurrent imports
+## Incremental PRs and preserved import history
 
 Push evidence frequently and open a focused PR to **main** addressing a coherent outcome. Related issues may share a PR. Link related issues as useful; close only acceptance actually completed. Include source/import/read-back evidence and unresolved questions. Follow applicable Codex PR attachment instructions. Maintainers integrate validated PRs serially with **squash merges using the PR title as commit title**. After each merge, branch afresh from current main; preserve earlier campaign directories and link them rather than modifying another campaign's files.
 
-Import success and Git merge are separate events: a fact may already be live before its PR merges. Check existing receipts/API before retrying. Publication and imports are transactionally serialized. On changed release, maintenance or capacity errors, retain pins/receipts, stop after bounded retries and continue independent research; never silently repin or weaken constraints. Resume the same active campaign serially if another thread already owns it.
+Historical import receipts and Git merges are separate records; do not infer a current write or repeat a historical operation. Current work is source-only. Preserve old receipts and exact pins; any future operation needs an explicitly approved region/campaign and a current accepted operational contract. Do not silently repin or weaken constraints.
 
 ## Work history and handover
 
 Update the issue at milestones with dates, actual coverage, evidence, blockers and next action. Retain closed issues and original raised/recorded/completed dates. Human work dates use America/Los_Angeles; receipts retain exact UTC timestamps. Unknown earlier dates remain unknown; completing one batch does not close a worldwide objective.
 
-Before ending, push every source note, input, bundle and receipt needed by a fresh thread. Report issue, branch/commit/PR, imports/read-back and remaining questions. Keep this document as instructions, not a parallel TODO tracker. Original records are preserved in [the pre-Issues archive](archive/pre-github-issues-20261002/README.md).
+Before ending, push every source note, input and staging artifact needed by a fresh thread. Report issue, branch/commit/PR, research evidence and remaining questions; cite historical import/read-back only where relevant, without implying a new operation. Keep this document as instructions, not a parallel TODO tracker. Original records are preserved in [the pre-Issues archive](archive/pre-github-issues-20261002/README.md).
 
 <div hidden aria-hidden="true">
 
