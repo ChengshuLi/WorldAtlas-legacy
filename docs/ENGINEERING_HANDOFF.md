@@ -18,7 +18,7 @@ Application code and factual content are independent. Keep stable IDs, sparse su
 
 ## Start, implement and integrate
 
-1. Inspect labeled GitHub Issues, open PRs and lane branches. Choose an unclaimed engineering issue, post scope and planned validation in its comments, and assign yourself when possible. Link dependencies explicitly. Large issues may use several focused PRs or linked child issues; completing one part must not close the larger objective.
+1. Inspect labeled GitHub Issues, open PRs and lane branches. Choose an engineering scope not already owned or overlapping in the existing issue/PR discussion; post your worker ID, branch, scope and planned validation there, and use ordinary issue assignment only when helpful. Link dependencies explicitly. Large issues may use several focused PRs or linked child issues; completing one part must not close the larger objective.
 2. Use an isolated checkout/worktree. Fetch current `origin/main` and create a unique **`engineering/<job-id>`** branch (a naming convention, not an admission rule). A coherent PR may address related issues without a one-issue rule. After each merge, create a fresh branch from updated main for the next PR.
 3. Retain actual implementation inputs/results and useful resume notes. Record progress in the existing issue/PR discussion; no duplicate progress JSON is required. Preserve research campaign files and other workers' evidence.
 4. Preserve compatibility and existing live facts. Test the actual change and retain evidence. Update the GitHub issue at milestones with date, completed scope, blockers, evidence, PR and next action. Do not rewrite archived tracker snapshots or completed receipts.
