@@ -24,6 +24,8 @@ PATCH_COMMIT = "e0e2c3cc03e2a5e4c0c9d6354c94b80ac9350e2f"
 PATCH_PATH = "coordination/engineering/pse-original-disposition-20261020/native-requested-patch.json"
 LAT_COMMIT = "5b32388df0501b013ac9a3ba97864932db493d59"
 LAT_PATH = "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz"
+DISPOSITION_COMMIT = "0140b1366e9bc14fdbd2c549d80f3894e35a23f5"
+DISPOSITION_PATH = "coordination/engineering/pse-original-disposition-20261020/pse-disposition.json"
 PCBS_SHA256 = "65c1efcee5223d3ae6a0d7823d8e5a01b1cc9a03908a3237de5be71ecfb280b9"
 
 
@@ -50,6 +52,15 @@ def main() -> None:
         raise SystemExit(f"unexpected original patch hash: {patch_hash}")
     patch = json.loads(patch_bytes)
 
+    disposition_bytes = git_blob(DISPOSITION_COMMIT, DISPOSITION_PATH)
+    disposition_hash = hashlib.sha256(disposition_bytes).hexdigest()
+    disposition = json.loads(disposition_bytes)
+    physical_class: dict[tuple[int, int, int], str] = {}
+    for y, start, end, owners, _source_features, kind in disposition["rows"]:
+        for owner in owners:
+            for x in range(start, end):
+                physical_class[(y, x, owner)] = kind
+
     compressed_latitudes = git_blob(LAT_COMMIT, LAT_PATH)
     if hashlib.sha256(compressed_latitudes).hexdigest() != "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147":
         raise SystemExit("unexpected native-latitude input hash")
@@ -61,7 +72,8 @@ def main() -> None:
     latitudes = struct.unpack(f"<{GRID}d", raw_latitudes)
 
     by_owner: dict[str, Counter[str]] = defaultdict(Counter)
-    rows: list[dict] = []
+    rows: dict[tuple[int, int, int], dict] = {}
+    outside_by_class: Counter[str] = Counter()
     total = 0
     for row in patch["rows"]:
         y = row["y"]
@@ -77,8 +89,13 @@ def main() -> None:
                 if len(inside) > 1 or len(covered) != len(inside):
                     label = "boundary_or_multiple"
                 by_owner[str(owner)][label] += 1
-                rows.append({"owner": owner, "x": x, "y": y,
-                             "inside": inside, "covered": covered})
+                key = (y, x, owner)
+                if label == "outside":
+                    outside_by_class[physical_class[key]] += 1
+                rows[key] = {"owner": owner, "x": x, "y": y,
+                             "original_physical_class": physical_class[key],
+                             "result": label,
+                             "matched_pcbs_governorates": inside}
 
     native = json.loads(git_blob(
         "93a184c3872096d328c10d0b947aee23de170d9a",
@@ -88,7 +105,7 @@ def main() -> None:
                       for row in ledger["native_rows"]
                       for run in row["runs"]
                       for x in range(run[0], run[1])}
-    candidate_results = [r for r in rows if (r["y"], r["x"], r["owner"]) in candidate_keys]
+    candidate_results = [rows[key] for key in sorted(candidate_keys)]
     result = {
         "version": 1,
         "kind": "official-pcbs-2017-governorates-context-crosscheck",
@@ -106,6 +123,10 @@ def main() -> None:
                    "raw_source_geometry_included": False},
         "reference_inputs": {"original_native_patch": {"commit": PATCH_COMMIT, "path": PATCH_PATH,
                                                           "bytes": len(patch_bytes), "sha256": patch_hash},
+                             "original_disposition": {"commit": DISPOSITION_COMMIT,
+                                                      "path": DISPOSITION_PATH,
+                                                      "bytes": len(disposition_bytes),
+                                                      "sha256": disposition_hash},
                              "native_latitudes": {"commit": LAT_COMMIT, "path": LAT_PATH,
                                                  "compressed_sha256": hashlib.sha256(compressed_latitudes).hexdigest(),
                                                  "decoded_sha256": hashlib.sha256(raw_latitudes).hexdigest(),
@@ -120,9 +141,12 @@ def main() -> None:
         "results": {"total": total, "by_owner": {owner: dict(counts) for owner, counts in sorted(by_owner.items(), key=lambda x: int(x[0]))},
                     "inside": sum(counts.get("Tulkarm", 0) + counts.get("Jericho & Al Aghwar", 0) + counts.get("Khan Yunis", 0) + counts.get("Deir Al Balah", 0) + counts.get("Bethlehem", 0) + counts.get("Salfit", 0) + counts.get("Ramallah & Al Bireh", 0) + counts.get("Jenin", 0) + counts.get("Qalqiliya", 0) + counts.get("Tubas", 0) + counts.get("Hebron", 0) for counts in by_owner.values()),
                     "outside": sum(counts.get("outside", 0) for counts in by_owner.values()),
+                    "outside_by_original_class": dict(outside_by_class),
                     "boundary_or_multiple": sum(counts.get("boundary_or_multiple", 0) for counts in by_owner.values()),
                     "six_native_supported_candidates": {"total": len(candidate_results),
-                        "by_owner": {owner: dict(Counter(r["inside"][0] if len(r["inside"]) == 1 else "outside"
+                        "per_key": candidate_results,
+                        "by_owner": {owner: dict(Counter(r["matched_pcbs_governorates"][0]
+                                                          if len(r["matched_pcbs_governorates"]) == 1 else "outside"
                                                           for r in candidate_results if str(r["owner"]) == owner))
                                      for owner in sorted({str(r["owner"]) for r in candidate_results})}}}
     }
