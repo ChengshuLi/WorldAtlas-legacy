@@ -1,6 +1,6 @@
 {
   "kind": "PER727-source-relative-positive-preparation-receipt-v1",
-  "status": "proposal only; source diagnostic and native constructor produced a 677-cell candidate, but current-owner/accepted-selected-bank validation is blocked by unavailable GitHub OAuth; no acceptance, status or credit change",
+  "status": "proposal only; source diagnostic, native constructor and accepted current-selector conservation checks completed for the exact 677-cell candidate; no accepted science, status or credit change",
   "execution_commit": "e20f40c615542d66afe510a409eb49c54cce075a",
   "original_scope": {
     "accepted_commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
@@ -323,22 +323,63 @@
   "current_selector_validation": {
     "phase": "supported-inputs",
     "config_path": "supported-inputs-config.json",
+    "config_sha256": "53638e8cd0b1e206d00061146625709df9c4a5bf87edab76b630cebba945cdd4",
     "accepted_selector": {
       "commit": "b20e0da65ed2fd909a1ed1fb79caa2b8e3198a83",
-      "path": "data/ownership-selection.json"
+      "path": "data/ownership-selection.json",
+      "git_blob_oid": "9dce7089f8138014fdf257fcf081e03978091b6c",
+      "bytes": 2310,
+      "sha256": "1f2ba152430affa49b3900c80695b872c9334284791d636e8872b439e83f6ee5"
     },
-    "selector_ancestry_verified": true,
-    "result": "blocked",
-    "exact_error": "no oauth token found for github.com; Geography object acquisition failed",
-    "selected_bank_locator": {
-      "path": "data/canonical-grid/current-startup/index.json",
-      "bytes": 49610,
-      "sha256": "d88695ab34ae31729838b66c19a3559db8ba5dc3062b931094b60531e441bdda"
+    "result": "passed",
+    "accepted_input_count": 53,
+    "accepted_input_bytes": 64896863,
+    "conservation": {
+      "owner": 33741,
+      "original_cells": 677,
+      "supported_cells": 677,
+      "already_present_cells": 0,
+      "held_cells": 0,
+      "native_requested_cells": 677,
+      "native_supported_cells": 677,
+      "native_held_cells": 0
+    },
+    "territorial_applicability": {
+      "original_records": 677,
+      "selected_records": 677,
+      "status": "unchanged"
+    },
+    "partition": {
+      "path": "supported-inputs-selected-b20-001/original-scope-partition.json",
+      "sha256": "b7640d12effad4635845f5f996eb6e50e72fe2b487eb07bc68510da3c923fb70"
+    },
+    "recovery": {
+      "initial_failure": "no oauth token found for github.com; Geography object acquisition failed",
+      "existing_auth": "configured osxkeychain helper on origin https://github.com/ChengshuLi/WorldAtlas.git; task-local credential lookup returned username ChengshuLi and a credential; value kept in memory only",
+      "gh_cli_status": "stored default gh token was reported invalid",
+      "authorized_use": "existing same-account credential was passed ephemerally as GH_TOKEN to the identical pinned b20e0da supported-inputs stage; no value output or stored; no new credential/login/account change"
     },
     "limits": [
-      "No OAuth/login flow initiated; no GitHub or bank reconstruction attempted.",
-      "Current-owner and selected-output conservation remain unverified.",
+      "Current selector says all 677 candidate keys are novel; no selected-bank overlap.",
+      "50 parent-outside keys and 722 other residual keys remain untouched.",
       "No status/credit change or dispatch."
     ]
+  },
+  "native_authority_constructor_current_selector": {
+    "config_path": "native-authority-selected-b20-config.json",
+    "config_sha256": "dd4409bce265169adb982a5259619319a75066a8fb2b2afb901a66ef5b56edba",
+    "input_commit": "243bb56a0b707dc22daf79b00d4eed1dd1039bb9",
+    "source_evidence_path": "supported-inputs-selected-b20-001/source-evidence.json",
+    "source_evidence_sha256": "8fde277bd8b0c586b39f8e8e8f21af02d36f5c89bf08c24851109ec558688558",
+    "native_patch_path": "supported-inputs-selected-b20-001/native-patch.json",
+    "native_patch_sha256": "922aa3ace8a9e8a18bfa1c8fa5af31acd06068ff14a15c0f43f2794eec1f4269",
+    "candidate_path": "native-authority-selected-b20-001/constructor-result.json",
+    "candidate_bytes": 415144,
+    "candidate_sha256": "f5f19965c23100c09ec19e2e80f0c91616831c7772437246eb3a06f2a356f1b7",
+    "rule_sha256": "db0cbd397fd6e65b6f14056489fb36523f3143d7ea6c68787fcc24e848dfcbf8",
+    "qualified_cells": 677,
+    "owner": 33741,
+    "target_id": "gb:PER:ADM2:86281439B43857057528938",
+    "review": "distinct-worker follow-up requested from caf_nola; pending"
   }
 }
