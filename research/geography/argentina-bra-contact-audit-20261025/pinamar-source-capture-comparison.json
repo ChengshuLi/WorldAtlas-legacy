@@ -91,18 +91,36 @@
       {
         "instrument": "Buenos Aires Decree-Law 9024/1978",
         "url": "https://normas.gba.gob.ar/documentos/p0XDETa0.html",
+        "capture": {
+          "local_path": "/tmp/arg-9024.html",
+          "http_status": 200,
+          "content_type": "text/html",
+          "response_bytes": 16982,
+          "response_sha256": "d23c1fd9ee06639830ea88ed242059a84428588ce2589c19f59968c25a05f28f"
+        },
         "recorded_scope": "Describes the creation of the Pinamar unit from General Madariaga and boundary descriptions.",
-        "limit": "The retained review did not establish a direct plan/decree-to-IGN feature or geoBoundaries shape crosswalk."
+        "article_3_finding": "Describes north, east, south and west bounds; the southern line relies on a Dirección de Geodesia survey for Estancia Cariló.",
+        "attachment_check": "Retrieved HTML has no anchor, iframe, embed, object, script or link references to an attached plan/map.",
+        "limit": "No plan/map, survey identifier, implementing-decree identifier, or direct feature/cadastral crosswalk was exposed by the retrieved record."
       },
       {
         "instrument": "Buenos Aires Decree-Law 9949/1983",
         "url": "https://normas.gba.gob.ar/documentos/70QMvs40.html",
+        "capture": {
+          "local_path": "/tmp/arg-9949.html",
+          "http_status": 200,
+          "content_type": "text/html",
+          "response_bytes": 4301,
+          "response_sha256": "36d1aafccdd7de0fc5fb4da9ddbbe7bb73993587e04713aa7afa0ccdbf7db275"
+        },
         "recorded_scope": "Changes the unit designation to Partido de Pinamar.",
+        "articles_1_2_finding": "Article 1 substitutes the names of parties created under 9024/9245, including Municipio Urbano de Pinamar with Partido de Pinamar; Article 2 is promulgation/publication.",
+        "attachment_check": "Retrieved HTML has no anchor, iframe, embed, object, script or link references to an attached plan/map.",
         "limit": "A name change alone does not resolve the geometry discrepancy or current boundary lineage."
       }
     ],
     "next_primary_checks": [
-      "Locate the official plan and implementing instrument referenced by Decree-Law 9024/1978, then bind them explicitly to the IGN feature in1=06644; check for later boundary amendments.",
+      "Locate the Dirección de Geodesia survey/plan for Estancia Cariló referenced by Article 3 of Decree-Law 9024/1978 and any implementing instrument, then bind them explicitly to the IGN feature in1=06644; check for later boundary amendments.",
       "Establish the effective date and source lineage of the live ign:departamento feature, whose capture identifies ARBA as source and IGN as authority but carries no effective date.",
       "Compare the complete applicable legal/current polygon and the consumed simplified polygon with a pinned, scale-aware method; the point-center disagreement does not establish whole-cell coverage or legal applicability.",
       "Evaluate the remaining required source-fitness components before any disposition change; the IVSD 2024 layer and a single center test do not substitute for them."
