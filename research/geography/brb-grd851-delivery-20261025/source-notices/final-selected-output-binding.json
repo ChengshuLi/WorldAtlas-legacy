@@ -1,0 +1,43 @@
+{
+  "kind": "source-notice-final-output-association",
+  "status": "candidate-awaiting-exact-public-head-review-and-delivery",
+  "selected_outputs": [
+    {
+      "commit": "60b40073f5b40789fd9689a3069362eea68dbbf2",
+      "path": "data/ownership-selection.json",
+      "mode": "100644",
+      "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+      "bytes": 2256,
+      "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1",
+      "url": "https://github.com/ChengshuLi/WorldAtlas/blob/60b40073f5b40789fd9689a3069362eea68dbbf2/data/ownership-selection.json"
+    },
+    {
+      "commit": "60b40073f5b40789fd9689a3069362eea68dbbf2",
+      "path": "data/canonical-grid/current-startup/index.json",
+      "mode": "100644",
+      "git_blob_oid": "6fb7a1daad5882bdfefb5d50967428888713bef5",
+      "bytes": 49610,
+      "sha256": "b8fd11b5d3789385b961a4c0e298e53278448d963142a2cce429a4418b1d5e28",
+      "url": "https://github.com/ChengshuLi/WorldAtlas/blob/60b40073f5b40789fd9689a3069362eea68dbbf2/data/canonical-grid/current-startup/index.json"
+    }
+  ],
+  "source_notice": "SOURCE-NOTICE.md",
+  "original_notice_bindings_sha256": "107ce979a113ade79dfc95108a079709470fe6d3df90af51fd59ba746d4956fc",
+  "contributions": [
+    {
+      "owner": 7113,
+      "package": "BRB",
+      "original_repair_cells": 289
+    },
+    {
+      "owner": 7116,
+      "package": "GRD",
+      "original_repair_cells": 562
+    }
+  ],
+  "native_authority_output_commit": "7c1101b1ee311e0563430065d787c3aea7ed97df",
+  "native_source_and_patch_commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+  "original_notice_preserved": true,
+  "no_whole_atlas_relicensing": true,
+  "no_raw_source_archive_upload": true
+}
