@@ -1,6 +1,6 @@
 {
   "kind": "PER727-source-relative-positive-preparation-receipt-v1",
-  "status": "proposed candidate only; not native-authority diagnostic, not owner qualification, no status/credit change",
+  "status": "proposal only; adopted parent-department territorial applicability diagnostic screening completed (677/677 supported, 0 held); not owner qualification or accepted credit; no status/credit change",
   "execution_commit": "e20f40c615542d66afe510a409eb49c54cce075a",
   "original_scope": {
     "accepted_commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
@@ -61,9 +61,9 @@
     "center membership is not whole-cell containment",
     "2023 INEI parent overlay is a new reproduced application; the prior retained result contained counts only",
     "Brazil 2006 community-map/raster-conversion lineage remains an adverse operand for all 727",
-    "the original physical bundle is now located in accepted e20f40c615542d66afe510a409eb49c54cce075a; source-evidence adapter pins are mapped below, but the native diagnostic/current-owner check has not been run",
+    "Historical membership-only diagnostic: all 677 requested cells are held (0 supported), with first failure unique-source-target-coverage; no current-owner-zero or final selected-output acceptance.",
     "whole-target physical flags remain contextual and are not projected onto individual keys",
-    "no current-owner or additive native diagnostic performed"
+    "No selected-bank conservation or final selected-output acceptance performed."
   ],
   "physical_bundle": {
     "adapter_roles": {
@@ -117,10 +117,38 @@
       }
     ],
     "original_physical_support_blocks": [
-      {"block": 32, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-032.json.gz", "git_blob_oid": "5f8f1e8aa032abc85e931930eb4eb9b0dbc0ebdb", "bytes": 516947, "sha256": "2b3d882155a28df8782b346bd7382b2faa1ccfa0ebf1c2f0f2c6d779c055905a"},
-      {"block": 33, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-033.json.gz", "git_blob_oid": "f489fb1c9f462c1bda2c1e0b2818114e51bcc061", "bytes": 431020, "sha256": "440955ea8d0654a1bc5367c4da0b9eb73df1e79c152ebc7c8576d9a2af9bb7a1"},
-      {"block": 34, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-034.json.gz", "git_blob_oid": "7128c4c4c2709f327e42584448fb14797801fbbf", "bytes": 306738, "sha256": "05e067f8e532302cf5f94a8565fd5dfc231ac0214ff5710d51745315fe568840"},
-      {"block": 35, "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803", "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-035.json.gz", "git_blob_oid": "a97e15cd1af0e4a58f334cfe13a9a963b39067ba", "bytes": 217105, "sha256": "981e5d1bf9cb91f3eff7e811a322732c3dce87808923e2dbcb54c7d956b48ea7"}
+      {
+        "block": 32,
+        "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-032.json.gz",
+        "git_blob_oid": "5f8f1e8aa032abc85e931930eb4eb9b0dbc0ebdb",
+        "bytes": 516947,
+        "sha256": "2b3d882155a28df8782b346bd7382b2faa1ccfa0ebf1c2f0f2c6d779c055905a"
+      },
+      {
+        "block": 33,
+        "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-033.json.gz",
+        "git_blob_oid": "f489fb1c9f462c1bda2c1e0b2818114e51bcc061",
+        "bytes": 431020,
+        "sha256": "440955ea8d0654a1bc5367c4da0b9eb73df1e79c152ebc7c8576d9a2af9bb7a1"
+      },
+      {
+        "block": 34,
+        "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-034.json.gz",
+        "git_blob_oid": "7128c4c4c2709f327e42584448fb14797801fbbf",
+        "bytes": 306738,
+        "sha256": "05e067f8e532302cf5f94a8565fd5dfc231ac0214ff5710d51745315fe568840"
+      },
+      {
+        "block": 35,
+        "commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-035.json.gz",
+        "git_blob_oid": "a97e15cd1af0e4a58f334cfe13a9a963b39067ba",
+        "bytes": 217105,
+        "sha256": "981e5d1bf9cb91f3eff7e811a322732c3dce87808923e2dbcb54c7d956b48ea7"
+      }
     ],
     "target_binding": {
       "id": "gb:PER:ADM2:86281439B43857057528938",
@@ -128,7 +156,10 @@
       "whole_target_support_matches": 1,
       "selected_name": "Mariscal Ramon Castilla",
       "selected_parent_id": "framework:province:loreto:ea065f632516",
-      "whole_target_issues": ["contradictory_land_water_support", "L2-outside-L1"],
+      "whole_target_issues": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ],
       "source_query_count": 10,
       "original_727_key_physical_class": "mapped_land_support",
       "original_727_key_land_count": 727,
@@ -138,7 +169,9 @@
         "physical_evidence": "whole-target-support.json; preserve target-level issue/support geometry as context only",
         "physical_input": "original-stage-inputs.json exact MRC consumed/selected stage row",
         "physical_reproduction": "comparison.py pinned by the accepted physical input contract",
-        "target.coverage_classes": ["mapped_land_support"],
+        "target.coverage_classes": [
+          "mapped_land_support"
+        ],
         "target.coverage_rows": "exact 677-cell positive candidate rows, each class mapped_land_support; do not copy whole-target issues into per-cell rows"
       }
     },
@@ -151,5 +184,115 @@
     "native_method_sha256": "66b453bbb2e001b9ff56bd754d55087f5919845dceeefd886016494cefa1d3e0",
     "latitude_compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
     "latitude_decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"
+  },
+  "source_membership": {
+    "path": "source-membership.json",
+    "bytes": 16152,
+    "sha256": "3b4f44ff0433b6e0df0b279ff40dae9a80612e269df9b57ffac11db02ffb6296",
+    "descriptors": 45,
+    "verified_descriptors": 45,
+    "verified_blob_bytes": 57644422,
+    "original_pin_commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7"
+  },
+  "native_diagnostic": {
+    "path": "native-diagnostic-membership-001/native-diagnostic.json",
+    "bytes": 314105,
+    "sha256": "72c00e381cdb68d9e6535acd37e27941ccfdc1be3ce5d1a858c129e864ac2ab4",
+    "config_sha256": "6d0aba76fa2b1e0226d8da80d6c352c5d679f96e7e4f8c27e2c931d56a076b8e",
+    "requested_cells": 677,
+    "supported_cells": 0,
+    "held_cells": 677,
+    "requested_rows": 222,
+    "held_rows": 222,
+    "first_failure": "unique-source-target-coverage",
+    "exact_patch_conservation": true,
+    "canonical_assignment_sha256": "44cc79f6ff895687ed1054b26100767f767d34150fcc2731926b0a8b8f6c3e61",
+    "limits": [
+      "Diagnostic only; no authority output or current-owner-zero acceptance.",
+      "No selected-bank conservation or final selected-output acceptance was performed."
+    ]
+  },
+  "diagnostic_history": {
+    "membership_only": {
+      "path": "native-diagnostic-membership-001/native-diagnostic.json",
+      "bytes": 314105,
+      "sha256": "72c00e381cdb68d9e6535acd37e27941ccfdc1be3ce5d1a858c129e864ac2ab4",
+      "config_sha256": "6d0aba76fa2b1e0226d8da80d6c352c5d679f96e7e4f8c27e2c931d56a076b8e",
+      "requested_cells": 677,
+      "supported_cells": 0,
+      "held_cells": 677,
+      "first_failure": "unique-source-target-coverage",
+      "exact_patch_conservation": true,
+      "canonical_assignment_sha256": "44cc79f6ff895687ed1054b26100767f767d34150fcc2731926b0a8b8f6c3e61",
+      "limits": [
+        "Diagnostic only; no authority output or current-owner-zero acceptance.",
+        "No selected-bank conservation or final selected-output acceptance was performed."
+      ]
+    }
+  },
+  "adopted_applicability": {
+    "kind": "adopted-native-territorial-applicability-v1",
+    "file": {
+      "path": "per727-677-territorial-applicability.json",
+      "bytes": 315993,
+      "sha256": "3a60c7ef64bd6fb98223464392be14894f9e5b1f5d8c3ed3a195bc418be92235",
+      "git_blob_oid": "2078d511be39d2807d9f415d6713e23d452db4a0",
+      "commit": "6fa6489464559086af72dda833130a76155891b8"
+    },
+    "adoption_record": {
+      "path": "per727-677-adoption.json",
+      "bytes": 2578,
+      "sha256": "6a7d26b7c4757d88e519e91d00082be9d2977a7e2f9fbfe6a73de153f1758baa",
+      "git_blob_oid": "86c31604a398e58300f908f30a97594ea8c5fdb0",
+      "commit": "03cdac36ad312642700e385d06f7d9f6cb66bb0b"
+    },
+    "scope_record": {
+      "path": "per727-677-scope.json",
+      "bytes": 25117,
+      "sha256": "0009050dd3f0ea027d0a98ab6070292c7e076e7f9e026fc8787e68942c6a4da7",
+      "git_blob_oid": "124b4561fefeb4fba05346bce1865a3198b87927",
+      "commit": "03cdac36ad312642700e385d06f7d9f6cb66bb0b"
+    },
+    "exact_scope": {
+      "source_application_inside": 677,
+      "native_patch_cells": 677,
+      "unique_applicability_records": 677,
+      "intersection": 677,
+      "outside_held": 50,
+      "all_727_brazil_context_contacts_preserved": true
+    },
+    "decision_limits": [
+      "Parent-level source-role only from MRC 2020 IGN/OCHA feature identity, official INEI 2017 roster and official INEI 2023 Loreto department center membership.",
+      "BRA 2006 community-map/raster-conversion contact remains retained context for all 727; no legal boundary ruling, newer-year rule, MRC feature-level overlay or whole-cell containment is claimed.",
+      "The 50 outside-parent keys and 722 other residual keys remain untouched. Loreto ADM1 35/6 split and whole-target physical flags remain contextual."
+    ]
+  },
+  "current_diagnostic": {
+    "path": "native-diagnostic-adopted-677-001/native-diagnostic.json",
+    "bytes": 716684,
+    "sha256": "d3f8a5cc8fcb93c218a0ae17fce1d75d253bff10531d0e48fecfd8cc8c23eaee",
+    "config_path": "native-diagnostic-config.json",
+    "config_sha256": "e1cb008acb9b8707519c11317f11658eb1bceb20a1aae76a9e2d2a4e76592360",
+    "source_evidence": {
+      "commit": "05830a72fef2e5d38952093bf61e24566237cf98",
+      "path": "native-inputs-adopted-677-001/source-evidence.json",
+      "sha256": "8fde277bd8b0c586b39f8e8e8f21af02d36f5c89bf08c24851109ec558688558"
+    },
+    "result": {
+      "requested_cells": 677,
+      "supported_cells": 677,
+      "held_cells": 0,
+      "first_failure": null,
+      "requested_rows": 222,
+      "held_rows": 0
+    },
+    "accepted_selector_commit": "b20e0da65ed2fd909a1ed1fb79caa2b8e3198a83",
+    "validated_branch_head": "df555a539b29fa59254c3f0b5162a713f2839d2f",
+    "git": "2.53.0",
+    "limits": [
+      "Read-only diagnostic after source applicability preparation; no source or physical producer replay.",
+      "Diagnostic screening is not owner qualification, accepted science, status or credit.",
+      "Distinct-worker review pending."
+    ]
   }
 }
