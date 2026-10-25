@@ -1,0 +1,28 @@
+{
+  "state": "completed",
+  "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+  "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work",
+  "actual_code_checkout_commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+  "input_commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-authority",
+    ".cache/sdn2431-native-authority/native-authority-config.json",
+    ".cache/delivery-handoff/sdn2431-native-authority-20261025-01a16f2e-001"
+  ],
+  "config_sha256": "0413f11d68126c73d3741830316815475d35d861c48411a8cdaef9c30a8bbc27",
+  "destination": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2431-native-authority-20261025-01a16f2e-001",
+  "started_utc": "2026-10-25T01:56:23.889401+00:00",
+  "requested_novel_keys": 2431,
+  "targets": 33,
+  "held223_untouched": true,
+  "accepted_selector_partition_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+  "accepted_selector_is_current_main_claim": false,
+  "SDN1_context": "Full19 separate from native scope; no parent-consistency clearance; missingGeneina remains held.",
+  "physical_rerun": false,
+  "diagnostic_rerun": false,
+  "authorization": "Parent explicitly authorized ONE ordinary native-authority after actual2431/223 partition.",
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T01:59:58.108031+00:00"
+}

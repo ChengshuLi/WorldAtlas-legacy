@@ -1,0 +1,361 @@
+{
+  "kind": "SDN2431-completed-literal-native-authority-readback",
+  "operation": {
+    "state": "completed",
+    "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+    "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work",
+    "actual_code_checkout_commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+    "input_commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+    "command": [
+      "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/prepare-delivery-handoff.mjs",
+      "native-authority",
+      ".cache/sdn2431-native-authority/native-authority-config.json",
+      ".cache/delivery-handoff/sdn2431-native-authority-20261025-01a16f2e-001"
+    ],
+    "config_sha256": "0413f11d68126c73d3741830316815475d35d861c48411a8cdaef9c30a8bbc27",
+    "destination": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2431-native-authority-20261025-01a16f2e-001",
+    "started_utc": "2026-10-25T01:56:23.889401+00:00",
+    "requested_novel_keys": 2431,
+    "targets": 33,
+    "held223_untouched": true,
+    "accepted_selector_partition_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "accepted_selector_is_current_main_claim": false,
+    "SDN1_context": "Full19 separate from native scope; no parent-consistency clearance; missingGeneina remains held.",
+    "physical_rerun": false,
+    "diagnostic_rerun": false,
+    "authorization": "Parent explicitly authorized ONE ordinary native-authority after actual2431/223 partition.",
+    "exit_code": 0,
+    "finished_utc": "2026-10-25T01:59:58.108031+00:00"
+  },
+  "products": [
+    {
+      "name": "authority-binding.json",
+      "bytes": 732,
+      "sha256": "e98a6bc9306d9121b98f59d9adebc0aa0cb0f3fcd93988aeebb0da10709e4941"
+    },
+    {
+      "name": "constructor-result.json",
+      "bytes": 131259,
+      "sha256": "6a1361e8b49a87dc8ee6928dbeddbcc243be0b99dd7de4d110b36ac3ec80d471"
+    },
+    {
+      "name": "original-rule-preimage.json",
+      "bytes": 729,
+      "sha256": "3d15f2a4fe5f4a84686e89e4c7ddf96445c902b131438518ddcb2bb19461de7a"
+    },
+    {
+      "name": "preparation.json",
+      "bytes": 502,
+      "sha256": "e2a7398c8dba4ec2f13fe610e58629b3eb808351814ecbfe65c67eae910f1c1d"
+    }
+  ],
+  "original_cells": 2654,
+  "qualified_literal_keys": 2431,
+  "components": 33,
+  "owners": [
+    {
+      "owner": 39496,
+      "target_id": "gb:SDN:ADM2:16777658B26622342825559",
+      "component_id": "source-target:02655de64d6dea7720e32330708413f4158bd4bfdd725a4c7350e9fdd06c0bb7",
+      "literal_qualified_keys": 4
+    },
+    {
+      "owner": 39619,
+      "target_id": "gb:SDN:ADM2:16777658B79230518314977",
+      "component_id": "source-target:0ddf54989d7f6aed5b26e896b53c0e1a8c7a651392e46bde3680e3254a215a2a",
+      "literal_qualified_keys": 2
+    },
+    {
+      "owner": 39543,
+      "target_id": "gb:SDN:ADM2:16777658B45805430370558",
+      "component_id": "source-target:1331667e25932e608c08fdf9fb247d2fdecd84ccbb3b89d438b343e2420c7aa4",
+      "literal_qualified_keys": 120
+    },
+    {
+      "owner": 39572,
+      "target_id": "gb:SDN:ADM2:16777658B58699373531896",
+      "component_id": "source-target:1f3a6b0fadc0957540de53e45e5c101bbcf88f063c8faca9fd0c6db3dd1f1f2c",
+      "literal_qualified_keys": 378
+    },
+    {
+      "owner": 39635,
+      "target_id": "gb:SDN:ADM2:16777658B89515248440242",
+      "component_id": "source-target:281d9eefa0959d070ae8e94d1d73c8b20784334b337a4ed2a413161fee0015c2",
+      "literal_qualified_keys": 16
+    },
+    {
+      "owner": 39604,
+      "target_id": "gb:SDN:ADM2:16777658B72808091845483",
+      "component_id": "source-target:2f39553f978dec14f47a8e361f6441150354d736d60f16216ecd4dec3715f028",
+      "literal_qualified_keys": 35
+    },
+    {
+      "owner": 39476,
+      "target_id": "gb:SDN:ADM2:16777658B1532389349494",
+      "component_id": "source-target:39a098117327ea9e9c2535069ab906e32920c1840eab6a1adc738b5724378933",
+      "literal_qualified_keys": 1
+    },
+    {
+      "owner": 39591,
+      "target_id": "gb:SDN:ADM2:16777658B66976297159843",
+      "component_id": "source-target:4189ed007400bb4bd900b7d1fdd986c7ebc8938ed970410ef8a54ff2525d7101",
+      "literal_qualified_keys": 1
+    },
+    {
+      "owner": 39577,
+      "target_id": "gb:SDN:ADM2:16777658B60092664698782",
+      "component_id": "source-target:4ccd511752dc5dcca6245c809473e2bb371d81e28e17fb8809a5204ac22ea878",
+      "literal_qualified_keys": 1
+    },
+    {
+      "owner": 39524,
+      "target_id": "gb:SDN:ADM2:16777658B3769079063022",
+      "component_id": "source-target:5350e98415d8bc73a1b82980d5582260cb19d06211d704cea81c1e94da0edd68",
+      "literal_qualified_keys": 2
+    },
+    {
+      "owner": 39510,
+      "target_id": "gb:SDN:ADM2:16777658B31925406348154",
+      "component_id": "source-target:546d893798990a4715d5eabf1d4753b349060dda2d44878ee9d65df2abd079ae",
+      "literal_qualified_keys": 1
+    },
+    {
+      "owner": 39503,
+      "target_id": "gb:SDN:ADM2:16777658B2941917788931",
+      "component_id": "source-target:6331e63c34a8a38eecda5422877f5ec553e0989f58f5d7f7c6e48e581614f655",
+      "literal_qualified_keys": 1
+    },
+    {
+      "owner": 39559,
+      "target_id": "gb:SDN:ADM2:16777658B54397395103229",
+      "component_id": "source-target:64f12b1b859fcff3e6333fecff225f557bc64a692564e5182c7ae7b35785f66f",
+      "literal_qualified_keys": 2
+    },
+    {
+      "owner": 39633,
+      "target_id": "gb:SDN:ADM2:16777658B88334295817955",
+      "component_id": "source-target:70670d70d0ea63dac53884d1569a80bec66fa47725c6cb46cb9d88e1d07b1ae1",
+      "literal_qualified_keys": 61
+    },
+    {
+      "owner": 39537,
+      "target_id": "gb:SDN:ADM2:16777658B42019308608710",
+      "component_id": "source-target:887063c1852a36923c2a30a47af1eabeac1c1da683bd3d3cb5d1f770908f3bdf",
+      "literal_qualified_keys": 42
+    },
+    {
+      "owner": 39469,
+      "target_id": "gb:SDN:ADM2:16777658B11118605799379",
+      "component_id": "source-target:8d422c1857478873499e527f9bd92003c423e47ac339ed2fd28bec9863fe9754",
+      "literal_qualified_keys": 9
+    },
+    {
+      "owner": 39599,
+      "target_id": "gb:SDN:ADM2:16777658B70397884779871",
+      "component_id": "source-target:8deb403cf123625b471efaf8b9a5c9ba10a2083f25c896bc3f2ff49fd215d00b",
+      "literal_qualified_keys": 22
+    },
+    {
+      "owner": 39592,
+      "target_id": "gb:SDN:ADM2:16777658B67194501280165",
+      "component_id": "source-target:9148fbbb48db11b3bfbdea254ca99bb6c37d5aad0c342a85d17a9e0e8c777716",
+      "literal_qualified_keys": 4
+    },
+    {
+      "owner": 39608,
+      "target_id": "gb:SDN:ADM2:16777658B73946128996237",
+      "component_id": "source-target:942897464d3c978f9110775535d390311e571d350437376fe28cb2fc47f7dd5d",
+      "literal_qualified_keys": 321
+    },
+    {
+      "owner": 39549,
+      "target_id": "gb:SDN:ADM2:16777658B48283750984727",
+      "component_id": "source-target:953a070ca1bb57c96f674f5934e257152532b1a7c8d526b3a7d414e7dbb6d9b2",
+      "literal_qualified_keys": 4
+    },
+    {
+      "owner": 39522,
+      "target_id": "gb:SDN:ADM2:16777658B35788536409023",
+      "component_id": "source-target:99e40883e1b919bf0db39924fce35ab638799b74f09d61d0d407876b618d8f45",
+      "literal_qualified_keys": 36
+    },
+    {
+      "owner": 39579,
+      "target_id": "gb:SDN:ADM2:16777658B61826891911039",
+      "component_id": "source-target:a321afe25626f9e384117328aed8f16e840baf9c2306af833fe2966378803702",
+      "literal_qualified_keys": 82
+    },
+    {
+      "owner": 39596,
+      "target_id": "gb:SDN:ADM2:16777658B69119058579524",
+      "component_id": "source-target:a6deb099b4e5c364aeec0cd6c352650aba08eba5e8253ba86a4831d5ebc3fd07",
+      "literal_qualified_keys": 1
+    },
+    {
+      "owner": 39615,
+      "target_id": "gb:SDN:ADM2:16777658B76242579856769",
+      "component_id": "source-target:a863311ce78d96769cfd445cf856020cda64be948059a908588b172666fa8ad8",
+      "literal_qualified_keys": 26
+    },
+    {
+      "owner": 39489,
+      "target_id": "gb:SDN:ADM2:16777658B21408858343438",
+      "component_id": "source-target:aa0d9a15fb04067c17cfdd9e26fa13ead8c79135a97f5e0b11823398f38d0dd0",
+      "literal_qualified_keys": 12
+    },
+    {
+      "owner": 39600,
+      "target_id": "gb:SDN:ADM2:16777658B70477888733853",
+      "component_id": "source-target:b432d15d86792997c243fc502c8497f49d584c1629f7b0ab9ceccb811e24683e",
+      "literal_qualified_keys": 282
+    },
+    {
+      "owner": 39473,
+      "target_id": "gb:SDN:ADM2:16777658B14333470072302",
+      "component_id": "source-target:c1d656cd051bd2549e54d48f55115422267ab5970a0b6128b278ed83456eeca4",
+      "literal_qualified_keys": 35
+    },
+    {
+      "owner": 39564,
+      "target_id": "gb:SDN:ADM2:16777658B55033891828638",
+      "component_id": "source-target:c7b2fbc0ee43dd6a6a062b387a9d75a129738ff8778a7e40fd99a94262586227",
+      "literal_qualified_keys": 3
+    },
+    {
+      "owner": 39652,
+      "target_id": "gb:SDN:ADM2:16777658B9931993566109",
+      "component_id": "source-target:cb6c5d00e9eed077b2ad363fc0b009be5d92062858e9df7c23ba873c580e5904",
+      "literal_qualified_keys": 20
+    },
+    {
+      "owner": 39644,
+      "target_id": "gb:SDN:ADM2:16777658B96624341658613",
+      "component_id": "source-target:d281493cf971149b203300401f8cbc429306497b36b7e633f3690dce92094bcb",
+      "literal_qualified_keys": 4
+    },
+    {
+      "owner": 39587,
+      "target_id": "gb:SDN:ADM2:16777658B65142556264342",
+      "component_id": "source-target:d40991e370f76be92b6d5ec669153bfef6f94040f3bb1fc91e30a38ae56fc571",
+      "literal_qualified_keys": 893
+    },
+    {
+      "owner": 39542,
+      "target_id": "gb:SDN:ADM2:16777658B44845642747034",
+      "component_id": "source-target:e40d057a2e07bcd55577b1922c27b29e6c076fc5d35347d0a7af06eb6bdb3735",
+      "literal_qualified_keys": 4
+    },
+    {
+      "owner": 39481,
+      "target_id": "gb:SDN:ADM2:16777658B17269795285399",
+      "component_id": "source-target:f3f225cdc8e0093fb51bad33d400955ec821ee17bb87ae4f4401a457855ab85a",
+      "literal_qualified_keys": 6
+    }
+  ],
+  "original_scope_qualified": {
+    "domestic1535": 1535,
+    "special896": 896
+  },
+  "held223_untouched": true,
+  "novel_partition_key_equality": true,
+  "whole_target_geometry_and_physical_receipt_equality": true,
+  "source_binding": {
+    "kind": "source-target-native-custody-v1",
+    "native_patch": {
+      "bytes": 48367,
+      "commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+      "git_blob_oid": "aefa9729213ba303353b92a8d64832092cb428e2",
+      "mode": "100644",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/native-patch.json",
+      "sha256": "a6a98a4f2e359d8de3fcf117a5b4c0f37f3cf4f9602095477a0fdf9362a6100f"
+    },
+    "source_evidence": {
+      "bytes": 176450,
+      "commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+      "git_blob_oid": "a1266b9d68ee3e6718eb82d7dbe6adc015d308c4",
+      "mode": "100644",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/source-evidence.json",
+      "sha256": "4d19241ce5280d80db197ac3eab2635321430515449de4cf5c9b8ae2e896a5a8"
+    },
+    "version": 1
+  },
+  "constructor_limits": [
+    "Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.",
+    "Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred."
+  ],
+  "physical_context_hits": null,
+  "split_source_competitors": [
+    {
+      "descendants": [
+        {
+          "parent_id": "framework:province:red-sea:05d03bd50644",
+          "pixelIndex": 5976,
+          "target_id": "atlas:physical:2df25947ca3c5ad8a760"
+        },
+        {
+          "parent_id": "framework:province:red-sea:05d03bd50644",
+          "pixelIndex": 6237,
+          "target_id": "atlas:physical:6d9c5e86650265b4b237"
+        },
+        {
+          "parent_id": "framework:province:red-sea:05d03bd50644",
+          "pixelIndex": 6442,
+          "target_id": "atlas:physical:a0141f1f29dc48875694"
+        }
+      ],
+      "geometry_sha256": "a443909ba3d576b7c0b3342d4b944cdb6b539159fd2d3864f225e0824c73e676",
+      "source_id": "gb:SDN:ADM2:16777658B97228063474151"
+    },
+    {
+      "descendants": [
+        {
+          "parent_id": "framework:province:north-darfur:59568b050d32",
+          "pixelIndex": 6089,
+          "target_id": "atlas:physical:49984fc0139a00c431c1"
+        },
+        {
+          "parent_id": "framework:province:north-darfur:59568b050d32",
+          "pixelIndex": 6215,
+          "target_id": "atlas:physical:65c5cbaf692407457ff4"
+        },
+        {
+          "parent_id": "framework:province:north-darfur:59568b050d32",
+          "pixelIndex": 7009,
+          "target_id": "atlas:physical:e880e0e708c119daa65b"
+        }
+      ],
+      "geometry_sha256": "8a34a2cf44b9ead431271f97ffc1a8b80f1b9876adb28e944625f4df1d6cb21f",
+      "source_id": "gb:SDN:ADM2:16777658B62126851922243"
+    },
+    {
+      "descendants": [
+        {
+          "parent_id": "framework:province:northern:e0ed03bfa436",
+          "pixelIndex": 6470,
+          "target_id": "atlas:physical:a596e2ab140e51b1a10e"
+        },
+        {
+          "parent_id": "framework:province:northern:e0ed03bfa436",
+          "pixelIndex": 6529,
+          "target_id": "atlas:physical:b53e4df27a5d6f58fd6d"
+        },
+        {
+          "parent_id": "framework:province:northern:e0ed03bfa436",
+          "pixelIndex": 6542,
+          "target_id": "atlas:physical:b7f49947647abfab575f"
+        }
+      ],
+      "geometry_sha256": "9d3028de02c962931d530e76c3c8bcad7cfd71217d027d988bc8724cecb004d1",
+      "source_id": "gb:SDN:ADM2:16777658B39778167930026"
+    }
+  ],
+  "territorial_contacts": null,
+  "limits": [
+    "Readback only; no geometry predicates, scientific replay or independent acceptance.",
+    "Full19 SDN ADM1 remains separate hierarchy/context; no parent-consistency clearance.",
+    "The missing Geneina parent key stays among223 holds.",
+    "Frozen source representation is not legal sovereignty, current control or verified award geometry.",
+    "Qualified ledger is not final selected-output acceptance or delivery."
+  ]
+}
