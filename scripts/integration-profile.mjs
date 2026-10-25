@@ -13,7 +13,7 @@ export const COORDINATION_PATHS = new Set([
   'scripts/native-word-store.mjs','scripts/native-patch-store.mjs', 'scripts/check-effective-geographic-regression.mjs', 'scripts/run-geographic-check.py',
   'coordination/engineering/selected-geography-effective-prevention-20261009/selected-checkpoint.mjs',
   'coordination/engineering/selected-geography-effective-prevention-20261009/selected-joint-entry.mjs',
-  'docs/WORKER_COORDINATION.md', 'docs/PREMERGE_EVIDENCE_REVIEW.md',
+  'docs/DEVELOPMENT.md', 'docs/VALIDATION.md',
   'scripts/issue-claim-contract.mjs', 'scripts/run-issue-claim.mjs',
   'scripts/worker-result.mjs', 'scripts/check-handoff-scope.mjs',
   'scripts/evidence-quality.mjs', 'scripts/evidence-policy.mjs', 'scripts/premerge-evidence.mjs',

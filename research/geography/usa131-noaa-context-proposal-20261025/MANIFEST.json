@@ -1,0 +1,43 @@
+{
+  "schema": "worldatlas-source-free-evidence-packet-v1",
+  "status": "proposal-only; no credit; no owner/physical/native hold release; root acceptance pending",
+  "scope": {
+    "original_package": "#2358; USA original repair package #2371",
+    "original_denominator": 107131,
+    "prior_accepted": 105927,
+    "residual_total": 1204,
+    "this_packet_keys": 131,
+    "other_original_USA31_keys_retained": 405,
+    "other_residual_keys_retained": 668,
+    "prior_acceptance_and_denominator_unchanged": true
+  },
+  "files": {
+    "README.md": {
+      "bytes": 6168,
+      "sha256": "9b69201948a958ba0660a9161579bd6e15cc2bdc066e293176f066b678c74044"
+    },
+    "scope.json": {
+      "bytes": 53585,
+      "sha256": "08c393e57855f63cfd59f2800027e5186a4b41e05642f6ce7b4f29f15e89ec3f"
+    }
+  },
+  "source_pins": {
+    "EC6G10_NOAA_InPort_63654_ZIP_SHA256": "b04fefab355cefdb90889e748fb4b20d18bedc64c781ddc613b5883c9daf769b",
+    "PH6603_NOAA_InPort_62602_ZIP_SHA256": "424364210dfa21d6a279e798dff642bc4b1c51fdd397b5866b941bcc15d2f24f",
+    "prior_exact_key_source_application_note_SHA256": "f3e854eb115726333b5ec3e01f9156f0186300e26b50cecee022cbcb56da93db",
+    "prior_536_key_recommendation_SHA256": "65c4497612f34d3b1b19ef5d7319d2d9c6735cfe3a2e317b4bdec303cb49d925"
+  },
+  "custody": "This packet includes only source-free summary and generated project-key roster. Raw NOAA bodies, raw geometry, coordinates, per-key distances, private source reports and private application outputs are not included.",
+  "limitations": [
+    "No whole-cell land/water status",
+    "No legal boundary or ownership conclusion",
+    "No GSHHG per-component source crosswalk or observation-date finding",
+    "131-key footprint does not apply to the other 405 USA31 keys or 668 other residuals",
+    "No repair eligibility or geometry change"
+  ],
+  "keyset": {
+    "count": 131,
+    "sorted_triplet_set_sha256": "8e15f687abe441367c45ab6ef6cdbbb9d756e4bf96b09ec880f72e79a8920389",
+    "scope_json_sha256": "08c393e57855f63cfd59f2800027e5186a4b41e05642f6ce7b4f29f15e89ec3f"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "source-free-research-packet-v1",
+  "status": "proposal-only; no acceptance, credit, owner assignment, repair, source-rights clearance, or key-level publication",
+  "scope_file": "scope.json",
+  "scope_sha256": "2283a0698062c98ebb62664489680fb038b9f71031437ea56a60c8aa6eb7eac0",
+  "readme_file": "README.md",
+  "source_access": {
+    "wvs_index_url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO5/BOUNDARY/WVS/",
+    "official_noaa_decoder_source_url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO5/BOUNDARY/WVS/PCSOFT/WDBPLTC.C",
+    "gshhg_readme_in_existing_project": "research/geography/usa31-gap-family-source-fitness-20261007/sources/GSHHG-README.TXT",
+    "datagov_accession_url": "https://catalog.data.gov/dataset/a-global-self-consistent-hierarchical-high-resolution-geography-database-from-2010-02-19-t",
+    "access_method": "ordinary unauthenticated HTTPS for public index/code/body; no access controls or warnings bypassed",
+    "raw_body_distribution": "not included; retained private local research custody only",
+    "rights_status": "not cleared; preserve Data.gov non-public access-level metadata conflict despite public-linked source pages"
+  },
+  "cited_existing_project_evidence": [
+    {
+      "path": "research/geography/usa31-gap-family-source-fitness-20261007/README.md",
+      "sha256": "224b72c9cab106d314b2380640208ea0c18afb0635347db3437065442d1bf071"
+    },
+    {
+      "path": "research/geography/usa31-gap-family-source-fitness-20261007/per-component-source-screen.json",
+      "sha256": "5fc3a8ecec37fee7a8cd8bd640b643b8c082a7594aee52fdf99240664074aab3"
+    },
+    {
+      "path": "research/geography/usa31-gap-family-source-fitness-20261007/gshhg-native-query-records.jsonl",
+      "sha256": "33b5a2d185a901dbd9dbec7601450a9ee22589c1c1fac1c47657d908b4f67a85"
+    },
+    {
+      "path": "research/geography/usa31-gap-family-source-fitness-20261007/source-pins.json",
+      "sha256": "a9ab1074e2bc28478c16776ff1c44015dd10ba26ae5ae1d5d17001b32ea11579"
+    },
+    {
+      "path": "research/geography/usa31-gap-family-source-fitness-20261007/accepted-routing-family-record.json",
+      "sha256": "5b36a657c5e6d22de047d5d79deaf74bab32c7126f2039844ea97b0b5b6adcda"
+    },
+    {
+      "path": "research/geography/usa31-gap-family-source-fitness-20261007/sources/GSHHG-README.TXT",
+      "sha256": "8c83b0d9e861c3cf9390ccfcc28d57dd484b192e1767524e094c988ee9f84ac7"
+    },
+    {
+      "path": "research/geography/usa131-noaa-context-proposal-20261025/scope.json",
+      "sha256": "08c393e57855f63cfd59f2800027e5186a4b41e05642f6ce7b4f29f15e89ec3f"
+    }
+  ],
+  "private_reviewer_custody": {
+    "exact_405_key_link_sha256": "38781888608fd7b2ff2935264c81fe083c29cc062c2c9c429032fd8501ac1a00",
+    "wvs_body_sha256": "d49312b91c3f9020072f3a77381ebbc2d2c4b2c36c971e1ac4d1c50336994ec5",
+    "target_decoder_sha256": "d3799b7587093adeccf1c7fff9bbc13dc89c973398a9a2d6d06916e0fa563127",
+    "target_result_sha256": "4999b62c4183bebe11e9fa12352688422df86363d5d99f400628fbbe276376d5",
+    "reader_memos": {
+      "archive_lead_assessment_sha256": "7a696fdc2fd88152838937dabe8c384d9944fc4a23ea16dff491fe3e230782e1",
+      "actual_wvs_source_read_sha256": "f2b9769b9419815c1f4f6ce1498880a6b7623f9799141fa1d41eb719face696a",
+      "target_application_note_sha256": "970367584fd9465c2f10bf91e1df5b1be3cdc532fee1f495f33e6c58e949a34b"
+    }
+  },
+  "prohibitions_and_scope": [
+    "No raw WVS, GSHHG geometry, key rows, longitude/latitude, or derived key coordinates in this public packet.",
+    "No new source or geometry producer; prior Census/geoBoundaries comparisons are reused without replay.",
+    "No source absence/exhaustion claim; optional local source-segment comparison was not run and is not treated as required lineage proof.",
+    "No changes to the original USA31 geometry, owner, native/physical holds, 107131 denominator, prior 105927 acceptance, separate USA131 accepted cohort, or remaining 668 strata."
+  ]
+}
