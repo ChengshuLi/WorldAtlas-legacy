@@ -1,0 +1,83 @@
+{
+  "kind": "readback of completed stock accepted-selector supported preparation",
+  "session": 20842,
+  "exit_code": 0,
+  "actual_code_commit": "79832a3e8a20dd33cd2903afb95e600700c5653c",
+  "accepted_selector": {
+    "bytes": 2286,
+    "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "original": 4925,
+  "diagnostic_supported": 363,
+  "novel_supported": 363,
+  "already_present_supported": 0,
+  "diagnostic_held": 4562,
+  "surviving_targets": 29,
+  "original_targets": 74,
+  "source_family_fields_and_whole_physical_custody_unchanged": true,
+  "surviving_whole_base_geometries_and_negative_operands_unchanged": true,
+  "all_original_source_members_retained": true,
+  "coverage_rows_exact_land_subset": true,
+  "accepted_key_separate_accounting": {
+    "key": [
+      14118,
+      128086,
+      142095
+    ],
+    "previously_accepted": true,
+    "diagnostic_state": "held",
+    "new_credit": 0,
+    "revoked": false
+  },
+  "project_accepted_preserved": 1,
+  "project_pending_unchanged": 4924,
+  "source_semantics_changed": false,
+  "native_authority_executed": false,
+  "outputs": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/ca910f7b9f4d9b7889d681b0d74ee1d2a4e0cc255fca4a567f534fc9119a4c86/work/.cache/delivery-handoff/cmr363-supported-current-20261025-01a16f2de91b-01/already-present-original.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr74-native-input-plan/completed-supported-inputs/already-present-original.json",
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/ca910f7b9f4d9b7889d681b0d74ee1d2a4e0cc255fca4a567f534fc9119a4c86/work/.cache/delivery-handoff/cmr363-supported-current-20261025-01a16f2de91b-01/held-original.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr74-native-input-plan/completed-supported-inputs/held-original.json",
+      "bytes": 166179,
+      "sha256": "4ff36a14fcce7fca03dae8d7ae638885aba6f7a4f611a98edd0590800e53e3b1"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/ca910f7b9f4d9b7889d681b0d74ee1d2a4e0cc255fca4a567f534fc9119a4c86/work/.cache/delivery-handoff/cmr363-supported-current-20261025-01a16f2de91b-01/native-patch.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr74-native-input-plan/completed-supported-inputs/native-patch.json",
+      "bytes": 11561,
+      "sha256": "c3568a2c82ff0db50e61b0a7e6ac150ef19f9c08bcdd075c3a6c944b8f6fe522"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/ca910f7b9f4d9b7889d681b0d74ee1d2a4e0cc255fca4a567f534fc9119a4c86/work/.cache/delivery-handoff/cmr363-supported-current-20261025-01a16f2de91b-01/original-scope-partition.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr74-native-input-plan/completed-supported-inputs/original-scope-partition.json",
+      "bytes": 29061,
+      "sha256": "193dc319b418b3f50397f5b5c0f93f32b2075613330de6440a9268a7917a34d6"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/ca910f7b9f4d9b7889d681b0d74ee1d2a4e0cc255fca4a567f534fc9119a4c86/work/.cache/delivery-handoff/cmr363-supported-current-20261025-01a16f2de91b-01/preparation.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr74-native-input-plan/completed-supported-inputs/preparation.json",
+      "bytes": 735,
+      "sha256": "f4b49d2eb9be8c8b642b14a4521d0dbae1f3dc16105fcecca7f715b4cd41fcce"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/ca910f7b9f4d9b7889d681b0d74ee1d2a4e0cc255fca4a567f534fc9119a4c86/work/.cache/delivery-handoff/cmr363-supported-current-20261025-01a16f2de91b-01/source-evidence.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cmr74-native-input-plan/completed-supported-inputs/source-evidence.json",
+      "bytes": 103852,
+      "sha256": "b26069247327133b3ea139a04fd140cd4b76f926e8f5f098eb8027758ffde1f7"
+    }
+  ],
+  "limits": [
+    "already_present_supported does not enumerate previously accepted diagnostic-held keys.",
+    "No authority or scientific acceptance follows from this preparation.",
+    "Prior source-map disagreements remain subject to exact substantive review."
+  ]
+}
