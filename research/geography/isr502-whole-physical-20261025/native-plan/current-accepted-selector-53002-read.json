@@ -1,0 +1,19 @@
+{
+  "accepted_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+  "freshness_basis": "Parent verified accepted main; shared original objects already available; no new refresh",
+  "selector": {
+    "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "bytes": 2286,
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "owned_HEAD_selector_bytes_equal": true,
+  "supported_phase_code_files_equal_to_latest_accepted": {
+    "scripts/prepare-delivery-handoff.mjs": true,
+    "scripts/delivery-handoff-advance.mjs": true,
+    "coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs": true,
+    "scripts/package-startup-ownership.mjs": true
+  }
+}
