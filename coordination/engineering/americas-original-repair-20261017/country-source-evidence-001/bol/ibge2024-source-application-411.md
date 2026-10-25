@@ -1,6 +1,6 @@
 # BOL 411 — IBGE 2024 contextual source application
 
-This bounded package prepares 411 Brazil-contact cells for **positive source-applicability evaluation only**. It changes no owner, bank, credit, assignment, import status, or native hold; it does not claim legal boundary truth or final acceptance. The remaining 45 Brazil-contact cases are not included in this positive-evaluation scope and retain their separate adverse/uncertain treatment.
+This bounded package prepares 411 Brazil-contact cells for **positive source-applicability evaluation only**; it does not claim legal boundary truth, scientific acceptance, or credit. The source assessment alone changes no legal owner, assignment, import status, or native hold. A separately pinned candidate selected bank has now been prepared for review; it remains unaccepted and undeployed. The remaining 45 Brazil-contact cases are not included in this positive-evaluation scope and retain their separate adverse/uncertain treatment.
 
 ## Why this subset is distinct
 
@@ -42,7 +42,23 @@ The native diagnostic retains the full original 11,311-cell request. Relative to
 | Current-selector prior-present rows | commit `52b06eaf400eef93610e0e82877048c64d7bfb3b` | 124,455 B | `c0e4e9bb6e907992f428057e20272e269aba7ec1a9fe0cb74c344d1916a47c2b` |
 | Current-selector held rows | commit `52b06eaf400eef93610e0e82877048c64d7bfb3b` | 18,127 B | `8f62d436f82cdb6bb8affab8b0ab4f946492c2df501150cdacf1c7f5d6056278` |
 
-The original source, physical result, land/water frame, full denominator, competing sources and source rights remain preserved. The physical/source producers were not rerun. No constructor, finalizer, bank change, public raw-source upload, or import ran. Independent exact-byte review and root scientific accounting remain necessary before any credit or acceptance.
+The original source, physical result, land/water frame, full denominator, competing sources and source rights remain preserved. The physical/source producers were not rerun. The existing native-authority constructor, authority composition and finalizer ran once from the pinned outputs below; they do not establish scientific acceptance or credit. The candidate bank is not yet delivered or imported. Independent exact-head review, stock delivery and root scientific accounting remain necessary before any credit or acceptance.
+
+## Native authority and candidate final-bank outputs
+
+The following existing stages consumed the adopted 411-cell records and previously retained source/physical products; no source or physical producer was replayed. These are candidate delivery artifacts, not acceptance, assignment credit, or production import.
+
+| Stage/artifact | Commit or binding | Size | SHA-256 |
+|---|---|---:|---|
+| Native-authority constructor result | commit `35751329a993643b950cd67d926318a0283da228` | 306,051 B | `3a20e327464bfe74bfbd8d66b7f5860120ea9da123dd5a76db125e53cf5a6df7` |
+| Native-authority binding | same commit | — | `6615f31ec0ee3d2cf9b4b62a787aeaaf2ed31f1b316b3ea7596bee3a8f6a0ae8` |
+| Composed authority registry | commit `09dc348b2b9b1437d30b4db9cae290f436a05ad1` | 1,488 B | `e7229601a08ebc7bedec4fbbf116a94b03500eaadb40abd3ca10da292a52d3b8` |
+| Final selected-bank index / finalizer `startup-ownership.json` | selector and package inputs pinned at commit `d5ed8c1126782dfd3fa0ea00525f38b5c89f3289` | 49,610 B | `d88695ab34ae31729838b66c19a3559db8ba5dc3062b931094b60531e441bdda` |
+| Finalizer selection | `finalize-411-output-001/ownership-selection.json` | 2,310 B | `1f2ba152430affa49b3900c80695b872c9334284791d636e8872b439e83f6ee5` |
+| Finalizer expectation sidecar | `finalize-411-output-001/selected-delivery-expectations.json` | 485 B | `83f2cc91e74e9520030ef09995c3a6cc73fc46aa9c1459c657a216d27fd44d1d` |
+| Full selected-bank conservation receipt | `selected-bank-conservation-411.json` | 1,966 B | `bdfc3cfd735d76cfbed532c6a9be27c6ee3822eca9fda02330d5fcdbfc12a71d` |
+
+On the current accepted base `cb42e0875c31b9f0169cf91f6870c5ed3fd2121f`, both selected-bank indexes declare 79 members. Exact pinned-body comparison verified 75 unchanged members, four new bodies against the final index, and four retired members. A full decoded interval sweep found exactly 411 newly assigned cells (203 intervals), zero losses and zero owner reassignments; the additions equal the emitted 411-cell native patch exactly. The 49,625-owner roster and owner-mapping digest remain unchanged. This is a technical bank-conservation result; the source-supported candidate cells remain subject to independent review, stock delivery, and root accounting. The 45 other Brazil contacts and the 496 currently held diagnostic cells were not included in the 411 patch.
 
 ## Public source references
 

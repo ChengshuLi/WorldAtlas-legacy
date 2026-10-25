@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "kind": "selected-native-bank-conservation-comparison",
+  "scope": "BOL411 additive ownership candidate; source and physical producers not rerun; no scientific acceptance or credit asserted.",
+  "base": {
+    "commit": "cb42e0875c31b9f0169cf91f6870c5ed3fd2121f",
+    "index_sha256": "f1c1a8fc1ae8795660f76efc5f3d4a977df16030ebc8078d59bd3de30bcc5237"
+  },
+  "candidate": {
+    "selector": "geography:final:c31c3da810efd6fa7e621ef98710219d94517c2aaabfa8d8825c851b667f9078",
+    "index_sha256": "d88695ab34ae31729838b66c19a3559db8ba5dc3062b931094b60531e441bdda",
+    "index_files": 79,
+    "owners": 49625,
+    "owner_mapping_sha256": "90facdfa2c74a935e7e64fe2b2467de3b09f3b816eb96ba350f4f5bacb2227c2",
+    "run_words": 58334658
+  },
+  "change": {
+    "added_cells": 411,
+    "added_intervals": 203,
+    "added_intervals_canonical_sha256": "78741a43cce737be3791dc467995ecb4b7dc556d5ddeddb1ddc4a96278465c89",
+    "emitted_patch_cells": 411,
+    "emitted_patch_intervals": 203,
+    "emitted_patch_canonical_sha256": "78741a43cce737be3791dc467995ecb4b7dc556d5ddeddb1ddc4a96278465c89",
+    "added_set_equals_emitted_patch": true,
+    "removed_cells": 0,
+    "removed_intervals": 0,
+    "reassigned_cells": 0,
+    "reassigned_intervals": 0,
+    "owners_preserved": true,
+    "owner_mapping_sha256_before": "90facdfa2c74a935e7e64fe2b2467de3b09f3b816eb96ba350f4f5bacb2227c2"
+  },
+  "storage": {
+    "old_files": 79,
+    "new_files": 79,
+    "unchanged_pinned_members": 75,
+    "added_members": 4,
+    "retired_members": 4,
+    "all_unmodified_bodies_verified_from_base": true,
+    "all_added_bodies_verified_against_new_index": true,
+    "finalizer_startup_ownership_equals_index": true
+  },
+  "patch": {
+    "path": "coordination/engineering/americas-original-repair-20261017/country-source-evidence-001/bol/supported-inputs-current-411-output-001/native-patch.json",
+    "sha256": "641de05eaeead15593e871de31013f897143acc4b779772d7aec2d8b9e9719e7"
+  }
+}
