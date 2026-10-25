@@ -1,0 +1,16 @@
+125: async function constructOriginalAuthorityStored(reader,inputs,{directory}={}) {
+126:  need(reader instanceof ImmutableReader,'Require the existing ImmutableReader');
+127:  need(inputs&&Object.keys(inputs).sort().join(',')==='native_patch,source_evidence','Source-target authority requires two immutable inputs');
+128:  const pin=async locator=>{
+129:   exactLocator(locator);const {commit,path:name}=locator,d=reader.descriptor(name,commit),hash=createHash('sha256');
+130:   for await(const bytes of reader.stream(name,{version:commit}))hash.update(bytes);
+131:   return identity({...d,sha256:hash.digest('hex')});
+132:  };
+133:  const source_evidence=await pin(inputs.source_evidence),native_patch=await pin(inputs.native_patch);
+134:  const binding={version:1,kind:'source-target-native-custody-v1',source_evidence,native_patch};
+135:  const preimage={...binding,kind:'source-target-native-rule-v1'};
+136:  const owned=await qualifySourceTargetNativeAuthorityStored(reader,preimage,binding,{directory});
+137:  try{return Object.freeze({result:sourceAuthorityResult(owned.proof,preimage,binding),close:owned.close,[Symbol.dispose]:owned.close});}
+138:  catch(error){try{owned.close();}catch{}throw error;}
+139: }
+140: 

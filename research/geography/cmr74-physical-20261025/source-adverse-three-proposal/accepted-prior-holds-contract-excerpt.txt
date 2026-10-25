@@ -1,0 +1,281 @@
+1457:     ['version', 'diagnostic', 'original_patch', 'prior_holds', 'territorial_applicability'].includes(key)), 'Explicit supported-input locators required');
+1458:   const diagnosticPin = locate(reader, config.diagnostic), diagnostic = reader.json(diagnosticPin);
+1459:   need(diagnostic?.version === 1 && diagnostic.kind === 'source-target-native-diagnostic-v1'
+1460:     && same(Object.keys(diagnostic.original_pins ?? {}).sort(), ['native_patch', 'source_evidence']),
+1461:   'Retained native diagnostic required');
+1462:   const pins = diagnostic.original_pins, source = reader.json(pins.source_evidence), patch = reader.json(pins.native_patch);
+1463:   need([1, 2, 3].includes(source.version) && source.kind === `source-target-native-evidence-v${source.version}`
+1464:     && same(source.native_contract, diagnostic.native_contract)
+1465:     && diagnostic.rule_sha256 === digest(jsonBytes({version: 1, kind: 'source-target-native-rule-v1', ...pins})),
+1466:   'Diagnostic source/patch binding differs');
+1467:   const size = source.native_contract?.size;
+1468:   need(size === 262166, 'Normative native grid extent required');
+1469:   const append = (runs, run) => {
+1470:     const previous = runs.at(-1);
+1471:     if (previous?.[1] === run[0] && same(previous.slice(2), run.slice(2))) previous[1] = run[1];
+1472:     else runs.push([...run]);
+1473:   };
+1474:   const rows = (value, reasons = false) => {
+1475:     need(Array.isArray(value), 'Complete native rows required');
+1476:     let previousY = -1;
+1477:     return value.map(row => {
+1478:       need(row && same(Object.keys(row).sort(), ['runs', 'y']) && Number.isSafeInteger(row.y)
+1479:         && row.y > previousY && row.y < size && Array.isArray(row.runs) && row.runs.length,
+1480:       'Invalid or duplicate native row');
+1481:       previousY = row.y; let end = 0; const runs = [];
+1482:       for (const run of row.runs) {
+1483:         need(Array.isArray(run) && run.length === (reasons ? 4 : 3)
+1484:           && run.slice(0, 3).every(Number.isSafeInteger) && run[0] >= end && run[1] > run[0]
+1485:           && run[1] <= size && run[2] > 0 && (!reasons || typeof run[3] === 'string' && run[3].length),
+1486:         'Invalid, overlapping or foreign native interval');
+1487:         end = run[1]; append(runs, run);
+1488:       }
+1489:       return {y: row.y, runs};
+1490:     });
+1491:   };
+1492:   const partition = (decisions, accepted) => decisions.map(({y, runs}) => {
+1493:     const selected = [];
+1494:     for (const run of runs) if ((run[3] === 'assigned_cells') === accepted) append(selected, run.slice(0, 3));
+1495:     return {y, runs: selected};
+1496:   }).filter(row => row.runs.length);
+1497:   const count = value => value.reduce((sum, row) => sum + row.runs.reduce((n, run) => n + run[1] - run[0], 0), 0);
+1498:   const requested = rows(diagnostic.requested_rows), decisions = rows(diagnostic.decision_rows, true);
+1499:   const supported = rows(diagnostic.supported_rows), held = rows(diagnostic.held_rows);
+1500:   need(same(requested, rows(patch.rows)) && same(supported, partition(decisions, true))
+1501:     && same(held, partition(decisions, false)) && same(requested, rows(decisions.map(({y, runs}) =>
+1502:       ({y, runs: runs.map(run => run.slice(0, 3))})))), 'Diagnostic requested/supported/held partition differs');
+1503:   need(requested.length && count(requested) === diagnostic.requested_cells && count(supported) === diagnostic.supported_cells
+1504:     && count(held) === diagnostic.held_cells, 'Diagnostic counts differ from its complete rows');
+1505:   const originalPin = config.original_patch ? locate(reader, config.original_patch) : pins.native_patch;
+1506:   const original = config.original_patch ? rows(reader.json(originalPin).rows) : requested;
+1507:   const priorPin = config.prior_holds ? locate(reader, config.prior_holds) : null;
+1508:   const prior = priorPin ? rows(reader.json(priorPin).rows, true) : [];
+1509:   need(prior.every(row => row.runs.every(run => run[3] !== 'assigned_cells')), 'Prior hold cannot claim assignment');
+1510:   const maps = [original, decisions, prior].map(value => new Map(value.map(row => [row.y, row.runs])));
+1511:   const ys = [...new Set(maps.flatMap(map => [...map.keys()]))].sort((a, b) => a - b);
+1512:   const narrowed = [], withheld = [], owners = new Map(); let priorNativeHeld = 0;
+1513:   for (const y of ys) {
+1514:     const lists = maps.map(map => map.get(y) ?? []), offsets = [0, 0, 0];
+1515:     const cuts = [...new Set(lists.flatMap(runs => runs.flatMap(run => run.slice(0, 2))))].sort((a, b) => a - b);
+1516:     const keep = [], holds = [];
+1517:     for (let i = 0; i + 1 < cuts.length; i++) {
+1518:       const start = cuts[i], end = cuts[i + 1];
+1519:       const spans = lists.map((runs, j) => {
+1520:         while (offsets[j] < runs.length && runs[offsets[j]][1] <= start) offsets[j]++;
+1521:         const run = runs[offsets[j]]; return run?.[0] <= start ? run : null;
+1522:       });
+1523:       const [full, native, previous] = spans;
+1524:       if (!spans.some(Boolean)) continue;
+1525:       need(full && (native || previous) && spans.every(run => !run || run[2] === full[2]),
+1526:         'Original scope is not exactly diagnostic plus prior holds');
+1527:       const owner = full[2], cells = end - start;
+1528:       const record = owners.get(owner) ?? {owner, original_cells: 0, supported_cells: 0, held_cells: 0};
+1529:       record.original_cells += cells;
+1530:       if (native?.[3] === 'assigned_cells' && !previous) {
+1531:         append(keep, [start, end, owner]); record.supported_cells += cells;
+1532:       } else {
+1533:         const nativeHeld = native && native[3] !== 'assigned_cells';
+1534:         append(holds, [start, end, owner, nativeHeld ? native[3] : previous[3]]); record.held_cells += cells;
+1535:         if (nativeHeld && previous) priorNativeHeld += cells;
+1536:       }
+1537:       owners.set(owner, record);
+1538:     }
+1539:     if (keep.length) narrowed.push({y, runs: keep});
+1540:     if (holds.length) withheld.push({y, runs: holds});
+1541:   }
+1542:   const alreadyPresent = [];
+1543:   if (accepted) {
+1544:     const contract = Object.fromEntries(['size', 'coordinateBits', 'method', 'native_latitudes', 'hierarchy_sha256', 'original_assets']
+1545:       .map(key => [key, accepted.manifest[key]]));
+1546:     need(same(source.native_contract, contract) && same(source.base_reference, originalNativeReference(accepted.manifest)),
+1547:       'Supported source differs from accepted original native contract');
+1548:     const identities = new Map(accepted.features.map(feature => [feature.pixelIndex, feature.id]));
+1549:     need(Array.isArray(source.targets) && source.targets.every(target => identities.get(target.pixelIndex) === target.target_id),
+1550:       'Supported source owner identity differs from accepted final bank');
+1551:     // Intersect ordered intervals, never materialize one record per native cell.
+1552:     // Presence under the same owner is a technical non-addition, not new credit.
+1553:     const {rows: wordRows, runs: words} = accepted.ownership, bits = 19, mask = 2 ** bits - 1;
+1554:     const novel = [];
+1555:     for (const {y, runs} of narrowed) {
+1556:       const start = wordRows[y * 2], count = wordRows[y * 2 + 1], keep = [], present = [];
+1557:       let offset = 0;
+1558:       for (const [a, b, owner] of runs) {
+1559:         let x = a;
+1560:         while (x < b) {
+1561:           while (offset < count && (words[(start + offset) * 2 + 1] & mask) + 1 <= x) offset++;
+1562:           if (offset === count || (words[(start + offset) * 2] & mask) >= b) {append(keep, [x, b, owner]); break;}
+1563:           const first = words[(start + offset) * 2], last = words[(start + offset) * 2 + 1];
+1564:           const from = first & mask, end = Math.min(b, (last & mask) + 1);
+1565:           if (x < from) {append(keep, [x, Math.min(b, from), owner]); x = from; continue;}
+1566:           const occupiedOwner = (first >>> bits) + (last >>> bits) * 2 ** (32 - bits);
+1567:           need(occupiedOwner === owner, 'Supported input conflicts with accepted owner');
+1568:           append(present, [x, end, owner]);
+1569:           const record = owners.get(owner); record.supported_cells -= end - x;
+1570:           record.already_present_cells = (record.already_present_cells ?? 0) + end - x;
+1571:           x = end;
+1572:         }
+1573:       }
+1574:       if (keep.length) novel.push({y, runs: keep});
+1575:       if (present.length) alreadyPresent.push({y, runs: present});
+1576:     }
+1577:     narrowed.splice(0, narrowed.length, ...novel);
+1578:     for (const record of owners.values()) record.already_present_cells ??= 0;
+1579:   }
+1580:   const byOwner = value => {
+1581:     const result = new Map();
+1582:     for (const {y, runs} of value) for (const run of runs) {
+1583:       const ownerRows = result.get(run[2]) ?? []; result.set(run[2], ownerRows);
+1584:       if (ownerRows.at(-1)?.y !== y) ownerRows.push({y, runs: []});
+1585:       append(ownerRows.at(-1).runs, run);
+1586:     }
+1587:     return result;
+1588:   };
+1589:   const requestedOwners = byOwner(requested), supportedOwners = byOwner(narrowed), seen = new Set(), classes = new Map();
+1590:   need(Array.isArray(source.targets) && source.targets.length, 'Complete original source targets required');
+1591:   const targets = [];
+1592:   for (const target of source.targets) {
+1593:     need(typeof target.id === 'string' && target.id && !seen.has(target.id)
+1594:       && Number.isSafeInteger(target.pixelIndex) && target.pixelIndex > 0,
+1595:       'Duplicate or foreign source target'); seen.add(target.id);
+1596:     let coverage;
+1597:     if (target.coverage_rows !== undefined) {
+1598:       const ownerRows = rows(target.coverage_rows.map(({y, runs}) => ({y, runs: runs.map(run => {
+1599:         need(Array.isArray(run) && run.length === 3
+1600:           && ['mapped_land_support', 'mapped_inland_water_support'].includes(run[2]), 'Invalid original coverage class');
+1601:         return [run[0], run[1], target.pixelIndex, run[2]];
+1602:       })})), true);
+1603:       need(same(rows(ownerRows.map(({y, runs}) => ({y, runs: runs.map(run => run.slice(0, 3))}))), requestedOwners.get(target.pixelIndex))
+1604:         && (!classes.has(target.pixelIndex) || same(classes.get(target.pixelIndex), ownerRows)),
+1605:       'Original coverage rows differ from complete requested owner');
+1606:       classes.set(target.pixelIndex, ownerRows);
+1607:       const classRows = new Map(ownerRows.map(row => [row.y, row.runs]));
+1608:       coverage = (supportedOwners.get(target.pixelIndex) ?? []).map(({y, runs}) => {
+1609:         const result = [], originalClasses = classRows.get(y); let offset = 0;
+1610:         for (const [start, end] of runs) {
+1611:           while (originalClasses[offset][1] <= start) offset++;
+1612:           for (let j = offset; j < originalClasses.length && originalClasses[j][0] < end; j++) {
+1613:             const [a, b, , kind] = originalClasses[j]; append(result, [Math.max(a, start), Math.min(b, end), kind]);
+1614:           }
+1615:         }
+1616:         return {y, runs: result};
+1617:       });
+1618:     }
+1619:     if (supportedOwners.has(target.pixelIndex)) targets.push(coverage ? {...target, coverage_rows: coverage} : target);
+1620:   }
+1621:   need([...requestedOwners.keys()].every(owner => source.targets.some(target => target.pixelIndex === owner)),
+1622:     'Missing requested source owner');
+1623:   if (accepted) need(count(original) === count(narrowed) + count(alreadyPresent) + count(withheld),
+1624:     'Original incremental scope is not conserved');
+1625:   const accounting = {version: 1, diagnostic: diagnosticPin, original_patch: originalPin,
+1626:     ...(priorPin ? {prior_holds: priorPin} : {}), original_inputs: pins,
+1627:     original_cells: count(original), supported_cells: count(narrowed), held_cells: count(withheld),
+1628:     ...(accepted ? {accepted_selector: accepted.selector, accepted_input_inventory: accepted.inventory,
+1629:       already_present_cells: count(alreadyPresent)} : {}),
+1630:     native_requested_cells: diagnostic.requested_cells, native_supported_cells: diagnostic.supported_cells,
+1631:     native_held_cells: diagnostic.held_cells, prior_held_cells: count(prior), prior_already_native_held_cells: priorNativeHeld,
+1632:     owners: [...owners.values()].sort((a, b) => a.owner - b.owner),
+1633:     limits: ['Preparation only. Exact emitted source and patch still require genuine native authority.',
+1634:       accepted ? 'Original source, physical and negative operands remain pinned; only positive coverage and owners with no novel keys are narrowed.'
+1635:         : 'Original source, physical and negative operands remain pinned; only positive coverage and wholly held owners are narrowed.',
+1636:       ...(accepted ? ['Same-owner current presence is not new scientific credit; novel, already-present and held keys retain the complete original denominator.'] : [])]};
+1637:   // A full adopted envelope cannot be carried into a narrower request unchanged:
+1638:   // the native verifier intentionally rejects every unused contextual decision.
+1639:   // Prepare exact metadata first; only a second, immutable binding can make the
+1640:   // projected source runnable. No invented commit or relaxed consumer is needed.
+1641:   let projectedSource = {...source, targets}, sourceName = 'source-evidence.json';
+1642:   const applicabilityOutputs = {};
+1643:   if (source.territorial_applicability !== undefined) {
+1644:     const originalApplicability = source.territorial_applicability;
+1645:     const adopted = reader.json(originalApplicability);
+1646:     const currentHead = reader.git('rev-parse', 'HEAD').toString().trim();
+1647:     const current = reader.pin(currentHead, originalApplicability.path);
+1648:     need(['mode', 'git_blob_oid', 'bytes', 'sha256'].every(key => current[key] === originalApplicability[key]),
+1649:       'Original territorial applicability differs from current committed adoption');
+1650:     need(adopted?.version === 1 && adopted.kind === 'adopted-native-territorial-applicability-v1'
+1651:       && same(Object.keys(adopted).sort(), ['kind', 'provenance', 'records', 'version'])
+1652:       && Array.isArray(adopted.records) && adopted.records.length > 0
+1653:       && Array.isArray(adopted.provenance) && adopted.provenance.length > 0,
+1654:     'Complete original territorial applicability required');
+1655:     const originalRows = new Map(requested.map(row => [row.y, row.runs]));
+1656:     const novelRows = new Map(narrowed.map(row => [row.y, row.runs]));
+1657:     const contains = (map, record) => (map.get(record.y) ?? []).some(run =>
+1658:       run[2] === record.pixelIndex && run[0] <= record.x && record.x < run[1]);
+1659:     const provenance = new Map(), used = new Set(), selectedIds = new Set(), seenRecords = new Set();
+1660:     for (const item of adopted.provenance) {
+1661:       need(item && typeof item.id === 'string' && item.id && !provenance.has(item.id)
+1662:         && ['adoption', 'scope', 'original-source'].includes(item.role), 'Invalid territorial projection provenance');
+1663:       const multipart = item.role === 'original-source' && Object.hasOwn(item, 'parts');
+1664:       need(same(Object.keys(item).sort(), multipart ? ['id', 'parts', 'role'] : ['id', 'pin', 'role']),
+1665:         'Malformed territorial projection provenance');
+1666:       const inputs = multipart ? item.parts : [item.pin];
+1667:       need(Array.isArray(inputs) && inputs.length > 0 && new Set(inputs.map(pin => digest(jsonBytes(pin)))).size === inputs.length
+1668:         && inputs.every(pin => pin && hex(pin.commit, 40) && safe(pin.path) && ['100644', '100755'].includes(pin.mode)
+1669:           && hex(pin.git_blob_oid, 40) && Number.isSafeInteger(pin.bytes) && pin.bytes >= 0 && hex(pin.sha256, 64)
+1670:           && (pin.decoded_bytes === undefined && pin.decoded_sha256 === undefined
+1671:             || Number.isSafeInteger(pin.decoded_bytes) && pin.decoded_bytes >= 0 && hex(pin.decoded_sha256, 64))),
+1672:       'Incomplete territorial projection provenance pin');
+1673:       provenance.set(item.id, item);
+1674:     }
+1675:     const selectedOrdinals = [], records = [];
+1676:     for (const [ordinal, record] of adopted.records.entries()) {
+1677:       need(record && same(Object.keys(record).sort(), ['adoption', 'geometry_sha256', 'negative_ordinal',
+1678:         'original_source', 'pixelIndex', 'role', 'scope', 'source_id', 'target_id', 'x', 'y'])
+1679:         && record.role === 'contextual' && typeof record.source_id === 'string' && typeof record.target_id === 'string'
+1680:         && Number.isSafeInteger(record.y) && Number.isSafeInteger(record.x)
+1681:         && Number.isSafeInteger(record.pixelIndex) && Number.isSafeInteger(record.negative_ordinal)
+1682:         && record.negative_ordinal >= 0 && hex(record.geometry_sha256, 64) && contains(originalRows, record),
+1683:       'Territorial projection record differs from complete original request');
+1684:       const target = source.targets.find(target => target.id === record.source_id);
+1685:       need(target && target.pixelIndex === record.pixelIndex && (target.target_id ?? target.id) === record.target_id
+1686:         && target.territorial_exclusions?.[record.negative_ordinal] !== undefined,
+1687:       'Territorial projection target or negative differs from original source');
+1688:       const negative = target.territorial_exclusions[record.negative_ordinal];
+1689:       need((['Polygon', 'MultiPolygon'].includes(negative?.type) ? digest(jsonBytes(negative)) : negative?.geometry_sha256)
+1690:         === record.geometry_sha256, 'Territorial projection original negative identity differs');
+1691:       const identity = JSON.stringify([record.source_id, record.target_id, record.pixelIndex,
+1692:         record.y, record.x, record.negative_ordinal]);
+1693:       need(!seenRecords.has(identity), 'Duplicate territorial projection record'); seenRecords.add(identity);
+1694:       const selected = contains(novelRows, record);
+1695:       for (const [field, role] of [['original_source', 'original-source'], ['adoption', 'adoption'], ['scope', 'scope']]) {
+1696:         const ref = record[field], item = provenance.get(ref?.id);
+1697:         need(item?.role === role && same(Object.keys(ref).sort(), role === 'scope'
+1698:           ? ['id', 'owner_pointer', 'pointer'] : ['id', 'pointer']) && typeof ref.pointer === 'string'
+1699:           && (role !== 'scope' || typeof ref.owner_pointer === 'string'), 'Missing territorial projection provenance role');
+1700:         used.add(ref.id); if (selected) selectedIds.add(ref.id);
+1701:       }
+1702:       if (selected) {selectedOrdinals.push(ordinal); records.push(record);}
+1703:     }
+1704:     need(used.size === provenance.size, 'Unused original territorial projection provenance');
+1705:     const projection = {...adopted, records, provenance: adopted.provenance.filter(item => selectedIds.has(item.id))};
+1706:     const changed = records.length !== adopted.records.length;
+1707:     const projectedBytes = jsonBytes(projection);
+1708:     accounting.territorial_applicability = {original: originalApplicability, selected_record_ordinals: selectedOrdinals,
+1709:       omitted_record_ordinals: adopted.records.map((_, ordinal) => ordinal).filter(ordinal => !selectedOrdinals.includes(ordinal)),
+1710:       original_records: adopted.records.length, selected_records: records.length,
+1711:       status: changed ? records.length ? 'requires-immutable-projection-binding' : 'no-applicable-records' : 'unchanged'};
+1712:     if (changed && records.length) applicabilityOutputs['territorial-applicability.json'] = projectedBytes;
+1713:     if (config.territorial_applicability !== undefined) {
+1714:       need(changed && records.length, 'Unused territorial applicability projection binding');
+1715:       const projectedPin = locate(reader, config.territorial_applicability);
+1716:       need(reader.read(projectedPin).equals(projectedBytes), 'Territorial applicability projection differs from exact original subset');
+1717:       const actual = reader.pin(currentHead, projectedPin.path);
+1718:       need(['mode', 'git_blob_oid', 'bytes', 'sha256'].every(key => actual[key] === projectedPin[key]),
+1719:         'Projected territorial applicability differs from current committed input');
+1720:       projectedSource.territorial_applicability = projectedPin;
+1721:       accounting.territorial_applicability.projected = projectedPin;
+1722:       accounting.territorial_applicability.status = 'bound-exact-projection';
+1723:     } else if (changed && records.length) sourceName = 'unbound-source-evidence.json';
+1724:     else if (!records.length) delete projectedSource.territorial_applicability;
+1725:   } else need(config.territorial_applicability === undefined, 'Projection binding requires original territorial applicability');
+1726:   return {[sourceName]: jsonBytes(projectedSource), ...applicabilityOutputs, 'native-patch.json': jsonBytes({rows: narrowed}),
+1727:     'held-original.json': jsonBytes({rows: withheld}), 'original-scope-partition.json': jsonBytes(accounting),
+1728:     ...(accepted ? {'already-present-original.json': jsonBytes({rows: alreadyPresent})} : {})};
+1729: }
+1730: 
+1731: // Lossless deletion of duplicated original-N polygons from publication
+1732: // transport only. The full private artifacts remain unchanged and are still
+1733: // used by compose/finalize. This command cannot qualify or adopt any cells.
+1734: export async function prepareCompletedGeometryCustody(config,reader,root) {
+1735:   need(config?.version===1&&same(Object.keys(config).sort(),['accepted_selector','authority_registry','version']),
+1736:     'Explicit completed geometry custody configuration required');
+1737:   const selector=locate(reader,config.accepted_selector),registryPin=locate(reader,config.authority_registry);

@@ -1,0 +1,86 @@
+{
+  "kind": "inert arithmetic from existing authority and exact proposed exclusions; not producer output",
+  "current_technical_authority": 4555,
+  "proposed_source_holds": 3,
+  "conditional_positive_scope_before_current_bank_partition": 4552,
+  "current_authority_target_count": 73,
+  "conditional_target_count": 72,
+  "entirely_removed_positive_owners": [
+    14243
+  ],
+  "current_land": 4523,
+  "current_water": 32,
+  "conditional_land": 4521,
+  "conditional_water": 31,
+  "current_contextual_records": 6870,
+  "conditional_contextual_records": 6868,
+  "withheld_contextual_records": [
+    {
+      "adoption": {
+        "id": "cmr-expected-parent-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "cca6978f227b1a7a56db7a38797fc7d7a67169394bf0be9b454d98a56e9eff54",
+      "negative_ordinal": 0,
+      "original_source": {
+        "id": "gb-CMR-ADM1-original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 14276,
+      "role": "contextual",
+      "scope": {
+        "id": "cmr-expected-parent-scope",
+        "owner_pointer": "/owner",
+        "pointer": "/keys/20"
+      },
+      "source_id": "gb:CMR:ADM3:9386221B63686862212730",
+      "target_id": "gb:CMR:ADM3:9386221B63686862212730",
+      "x": 141684,
+      "y": 121623
+    },
+    {
+      "adoption": {
+        "id": "cmr-expected-parent-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "3794b6571ebd74f67d7c1e859ac4eac52fcca5938271e19b8f887bd2e37c90ee",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "gb-CMR-ADM2-original",
+        "pointer": "/features/20/geometry"
+      },
+      "pixelIndex": 14276,
+      "role": "contextual",
+      "scope": {
+        "id": "cmr-expected-parent-scope",
+        "owner_pointer": "/owner",
+        "pointer": "/keys/20"
+      },
+      "source_id": "gb:CMR:ADM3:9386221B63686862212730",
+      "target_id": "gb:CMR:ADM3:9386221B63686862212730",
+      "x": 141684,
+      "y": 121623
+    }
+  ],
+  "changed_owner_counts": [
+    {
+      "owner": 14243,
+      "current": 2,
+      "conditional": 0
+    },
+    {
+      "owner": 14276,
+      "current": 9,
+      "conditional": 8
+    }
+  ],
+  "original": 4925,
+  "project_accepted_unchanged": 1,
+  "pending_unchanged": 4924,
+  "current_native_held": 370,
+  "current_pending_native_held": 369,
+  "conditional_total_withheld": 373,
+  "conditional_pending_withheld": 372,
+  "same_owner_current_bank_repartition_required": true,
+  "acceptance_forecast": false
+}
