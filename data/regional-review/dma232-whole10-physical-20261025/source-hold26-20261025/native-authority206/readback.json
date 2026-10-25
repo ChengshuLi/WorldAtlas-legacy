@@ -1,0 +1,80 @@
+{
+  "kind": "actual-single-DMA206-native-authority-readback",
+  "code_head": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+  "source_and_patch_pins": {
+    "source_evidence": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "cbba4429573550f05beab7180a4482aec18017ed",
+      "bytes": 23822,
+      "sha256": "27cea363eb639bf1118a08ac1c9528151be0b602ff2321dbcc8d6a95053024df"
+    },
+    "native_patch": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "97f6cc19ee802fa200d4206947c3ef16fb321880",
+      "bytes": 3837,
+      "sha256": "e95f730581662e15a828d47348d14ee2b1abe712c6f0f8d050d116d6ca849d9f"
+    }
+  },
+  "accepted_selector_from_supported_preparation": {
+    "bytes": 2256,
+    "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+    "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1"
+  },
+  "current_public_unchanged_bank_bridge": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "qualified_cells": 206,
+  "component_count": 1,
+  "component_ids": [
+    "source-target:26756b36111997dd5b9e6a3aae846db76a170e496719f2dbd5a84256a47a0a7d"
+  ],
+  "rule_sha256": "077dc5ffa919ba599e4a025a870c1314db58a189f2ca56b86d8c92820991fbab",
+  "exact_native_rows_equal_emitted206_patch": true,
+  "original_claim": 232,
+  "source_held": 26,
+  "already_present_same_owner": 0,
+  "old232_success_rule_sha256": "b11af07430242a32ecf2d3bc36f3ee238b578966880a7900298775d1e12e4f08",
+  "old232_authority_unchanged": true,
+  "selected_aggregate_base_geometry_unchanged": true,
+  "whole10_physical_receipt_unchanged": true,
+  "complete10_source_members_preserved": true,
+  "separate174_unchanged": true,
+  "files": [
+    {
+      "name": "authority-binding.json",
+      "bytes": 768,
+      "sha256": "b386c545f9519ecbdcd4f997ec0629b52a173046bcc169d0feb7676766de5654",
+      "original_path": ".cache/delivery-handoff/dma206-native-authority-20261025-01a16f2d8ad8-001/authority-binding.json"
+    },
+    {
+      "name": "constructor-result.json",
+      "bytes": 6452,
+      "sha256": "727c608ec3f6190aab365495bce623388696b1c4285904eaa6a06775143f927a",
+      "original_path": ".cache/delivery-handoff/dma206-native-authority-20261025-01a16f2d8ad8-001/constructor-result.json"
+    },
+    {
+      "name": "original-rule-preimage.json",
+      "bytes": 765,
+      "sha256": "077dc5ffa919ba599e4a025a870c1314db58a189f2ca56b86d8c92820991fbab",
+      "original_path": ".cache/delivery-handoff/dma206-native-authority-20261025-01a16f2d8ad8-001/original-rule-preimage.json"
+    },
+    {
+      "name": "preparation.json",
+      "bytes": 500,
+      "sha256": "012759014782c91696ffb907963b12135b8b42e703e38b425526ca66f1e855cf",
+      "original_path": ".cache/delivery-handoff/dma206-native-authority-20261025-01a16f2d8ad8-001/preparation.json"
+    }
+  ],
+  "elapsed_wrapper_seconds": 114.17331790924072,
+  "limits": [
+    "Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.",
+    "Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred."
+  ],
+  "accepted_delta": 0,
+  "interpretation": "New stock constructor on actual narrowed inputs, not a slice of old232 authority. Current-owner novelty is established separately by supported-inputs. No bank composition, finalizer, final selected-output acceptance or credit."
+}

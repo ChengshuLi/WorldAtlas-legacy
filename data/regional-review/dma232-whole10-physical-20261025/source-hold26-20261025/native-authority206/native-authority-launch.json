@@ -1,0 +1,58 @@
+{
+  "phase": "native-authority",
+  "code_head": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+  "config": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json"
+    }
+  },
+  "input_pins": {
+    "source_evidence": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "cbba4429573550f05beab7180a4482aec18017ed",
+      "bytes": 23822,
+      "sha256": "27cea363eb639bf1118a08ac1c9528151be0b602ff2321dbcc8d6a95053024df"
+    },
+    "native_patch": {
+      "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "97f6cc19ee802fa200d4206947c3ef16fb321880",
+      "bytes": 3837,
+      "sha256": "e95f730581662e15a828d47348d14ee2b1abe712c6f0f8d050d116d6ca849d9f"
+    }
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-authority",
+    ".cache/delivery-handoff/dma206-native-authority-config.json",
+    ".cache/delivery-handoff/dma206-native-authority-20261025-01a16f2d8ad8-001"
+  ],
+  "output": ".cache/delivery-handoff/dma206-native-authority-20261025-01a16f2d8ad8-001",
+  "started": 1792901959.826117,
+  "worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "requested_novel": 206,
+  "source_held": 26,
+  "original_claim": 232,
+  "accepted_selector": {
+    "bytes": 2256,
+    "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+    "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1"
+  },
+  "current_public_unchanged_bank_bridge": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "old232_authority_preserved": true,
+  "all10_source_members_retained": true,
+  "separate174_unchanged": true
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "subsequent-actual-independent-review-body-set-confirmation",
+  "review_library_id": "libfile_03e21fb3c8e4819193fe71742f844720",
+  "review_library_version": 0,
+  "checks": {
+    "bytes": 30891,
+    "sha256": "fb85ad9bd16461fb97979159c38d6fa776616cb8013b473dae3c6370525e1e24"
+  },
+  "assessment": {
+    "bytes": 13028,
+    "sha256": "085e2241719fcc6f39adffe5ff0e2b18cbf3581ded7ae22ca90617a84e200496",
+    "full_body_read": true
+  },
+  "adopted26_equals_actual_independent_recommendation": true,
+  "emitted206_equals_actual_independent_recommendation": true,
+  "sets_disjoint": true,
+  "counts": {
+    "held": 26,
+    "positive": 206,
+    "original": 232
+  },
+  "timing": "Read after supported preparation and authority completed. This supplements the earlier truthful no-body-yet adoption binding; immutable adopted rows and all input/results remain unchanged.",
+  "not_another_independent_review": true,
+  "no_phase_replay": true
+}
