@@ -1,0 +1,133 @@
+{
+  "kind": "worldatlas.source-free-proposal-manifest.v1",
+  "proposal_id": "dma-sdn-isr362-researched-unresolved-20261025",
+  "status": "proposal-only; no acceptance or credit",
+  "scope_total": 362,
+  "record_key_count": 362,
+  "distinct_record_key_count": 362,
+  "scope_keysets": {
+    "DMA26": {
+      "record_count": 26,
+      "keyset_sha256": "0394d96970da3d8c9324120a4588e6c55bb72b643bc027860328d5b6b8d7001b"
+    },
+    "SDN223": {
+      "record_count": 223,
+      "keyset_sha256": "da64baa6f57a4befd62cb5b848f68c8d2b9da5b111faee0189b38e7211e9d84a"
+    },
+    "ISR113": {
+      "record_count": 113,
+      "keyset_sha256": "adb246ced773644c118259101d7b5d84bea87ba581ca1674b21234b75a6e33d1"
+    }
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6761,
+      "sha256": "25223df694daa389e334889940129193e1badbaf74795f66e305519958bc8e26"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 94996,
+      "sha256": "a5e977766889e1e8185826386c1118a1f5202b07b750bd5312f88d650fb89fcb"
+    },
+    {
+      "path": "source-notices/prior-2431-SOURCE-NOTICE.md",
+      "bytes": 7558,
+      "sha256": "59588b32fbefd445990ada475450bd5a06832ce9dd475c6f32d1ba659a75fb81"
+    },
+    {
+      "path": "source-notices/prior-2431-notice-bindings.json",
+      "bytes": 10445,
+      "sha256": "baea1b1b3d645259a802c7696bdf41be8ec0b73f1b703af71e997253fbbf00b0"
+    },
+    {
+      "path": "source-notices/sdn17-source-declarations.json",
+      "bytes": 56212,
+      "sha256": "7e0b9da57a78d4b65499c3b387a5d125e3da5b8df960733c130880e625d76d58"
+    }
+  ],
+  "repository_evidence_refs": [
+    {
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json",
+      "sha256": "e95f730581662e15a828d47348d14ee2b1abe712c6f0f8d050d116d6ca849d9f"
+    },
+    {
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/source-evidence.json",
+      "sha256": "27cea363eb639bf1118a08ac1c9528151be0b602ff2321dbcc8d6a95053024df"
+    },
+    {
+      "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/whole-target-support.json",
+      "sha256": "3aff5cef5ddad040a34fd7817dcd2d5b04cc334c62be8de8b74fea7e9893e591"
+    },
+    {
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/native-patch.json",
+      "sha256": "a6a98a4f2e359d8de3fcf117a5b4c0f37f3cf4f9602095477a0fdf9362a6100f"
+    },
+    {
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/source-evidence.json",
+      "sha256": "4d19241ce5280d80db197ac3eab2635321430515449de4cf5c9b8ae2e896a5a8"
+    },
+    {
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/physical-001/whole-target-support.json",
+      "sha256": "64640a028aaffec53f4e15823de8113e68bbd82e143ac1640c2b4dc2aa759920"
+    },
+    {
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/native-patch.json",
+      "sha256": "69471c80df8906042d674629cdcf3e9ec241ec8492a3a95aa83abcda09a0bb2f"
+    },
+    {
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/source-evidence.json",
+      "sha256": "c500f30243e63520e6aa97ed8415c438306c047a336e4e0c64bde7d6ed985b18"
+    },
+    {
+      "path": "research/geography/isr502-whole-physical-20261025/physical-001/whole-target-support.json",
+      "sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    }
+  ],
+  "retained_assessment_hashes": [
+    {
+      "label": "independent substantive assessment",
+      "sha256": "085e2241719fcc6f39adffe5ff0e2b18cbf3581ded7ae22ca90617a84e200496"
+    },
+    {
+      "label": "independent exact-key checks",
+      "sha256": "fb85ad9bd16461fb97979159c38d6fa776616cb8013b473dae3c6370525e1e24"
+    },
+    {
+      "label": "independent substantive assessment incl. raw-readback closure",
+      "sha256": "080e799e06441d911838a560ee1ba724a81ff312a9890d28a76d832dc3d14a73"
+    },
+    {
+      "label": "raw-readback closure receipt",
+      "sha256": "b6dfb5cc439de16e74a2f987652b755234b72dade6d7802a6435e115376f3bcf"
+    },
+    {
+      "label": "exact 223 source application report",
+      "sha256": "0ab08f4507e06555f6716792d7e17e43efa9cec62a804daaf6953654f73adb46"
+    },
+    {
+      "label": "exact 223 context/key groups",
+      "sha256": "421aebdce86979cae7852f7374feea190fa224bf9179167d78bf068732d51353"
+    },
+    {
+      "label": "foreign 110 substantive assessment",
+      "sha256": "f9a7d117713f9fd8b317fa1493473240a001b89d8e99fa88967543f18d66e862"
+    },
+    {
+      "label": "exact 120 status/key checks (proposed110 and pending10 disjoint)",
+      "sha256": "66ba0e96571c99c96019827444fe6f47f2b2f2ab20c6b04a3511df63e0279817"
+    },
+    {
+      "label": "original parent-role assessment incl. separate water3",
+      "sha256": "8dbb2bbade03f3d56a30b551119b6f6775dae8e2d7d5e052f813bce47e919b1f"
+    },
+    {
+      "label": "three-water controlled CBS-map application",
+      "sha256": "1ef9f38f3e0c3b797e2325d125f252e6661359865db0b8a36ad781acf1db012c"
+    }
+  ],
+  "contains_raw_source_bodies": false,
+  "contains_geometry": false,
+  "contains_geographic_coordinates": false,
+  "source_notice_copies_are_historical_not_current_output_bindings": true
+}

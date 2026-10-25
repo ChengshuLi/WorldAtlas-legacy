@@ -1,0 +1,4064 @@
+{
+  "kind": "worldatlas.source-free-researched-unresolved-proposal.v1",
+  "proposal_id": "dma-sdn-isr362-researched-unresolved-20261025",
+  "tested_or_delivery_status": "proposal-only; independent exact-head review, stock delivery, terminal/custody readback, and root acceptance pending",
+  "baseline_main": "d8a4afbb4f7bb09043c05ea89488614a23b7e961",
+  "key_schema": [
+    "owner",
+    "y",
+    "x"
+  ],
+  "key_semantics": "Grid index tuple only, not geographic coordinates. Each exact proposal key appears once in records.",
+  "summary": {
+    "original_scope_cells": 3388,
+    "already_accepted_positive_cells": 3016,
+    "proposed_researched_unresolved_cells": 362,
+    "DMA": 26,
+    "SDN": 223,
+    "ISR_foreign": 110,
+    "ISR_parent_only_water": 3,
+    "excluded_pending_Irbid_cells": 10,
+    "excluded_DMA_physical_interpretation_contexts": 174,
+    "positive_claims_added": 0,
+    "package_completions": 0,
+    "denominator_removals": 0
+  },
+  "prior_positive_acceptance_binding": {
+    "receipt_comment_id": 6398593445,
+    "url": "https://github.com/ChengshuLi/WorldAtlas/issues/2649#issuecomment-6398593445",
+    "scope": "Root accepted exactly DMA206, SDN2431, ISR379 positives; these accepted counts are referenced only as separate context; no new credit is asserted."
+  },
+  "scopes": [
+    {
+      "package_id": "gb-DMA-ADM1--repair-evaluation",
+      "scope_id": "DMA26",
+      "original_denominator": 232,
+      "already_accepted_positive_cells": 206,
+      "proposed_researched_unresolved_cells": 26,
+      "separate_unadjudicated_physical_interpretation_contexts": 174,
+      "record_count": 26,
+      "keyset_sha256": "0394d96970da3d8c9324120a4588e6c55bb72b643bc027860328d5b6b8d7001b",
+      "context_groups": [
+        {
+          "id": "DMA-john-north2",
+          "count": 2,
+          "keyset_sha256": "b7244a8b8ab554495f0abb2c3a1fb5aeee99ca56daf606e26764196ca62600fc"
+        },
+        {
+          "id": "DMA-john-headland1",
+          "count": 1,
+          "keyset_sha256": "a9409cc8470cc304d18976754cf6dc25b5c28c941489289e0565f15cb43255d0"
+        },
+        {
+          "id": "DMA-andrew-bay1",
+          "count": 1,
+          "keyset_sha256": "5b12e7ee031af74e014151b1155d873962d947461697bb38e355438a82ec0d97"
+        },
+        {
+          "id": "DMA-peter-coast2",
+          "count": 2,
+          "keyset_sha256": "a8b1fbdb250d2e94332718dcc55905f3159f415d81d694914147d841308575f8"
+        },
+        {
+          "id": "DMA-joseph-town3",
+          "count": 3,
+          "keyset_sha256": "6d8e899faaee457c6427c17cf74d5b630ded44246f6fa8633cd6efc4edd997c0"
+        },
+        {
+          "id": "DMA-joseph-layou1",
+          "count": 1,
+          "keyset_sha256": "1ffc238ecf5984522f839a589f10589577e5f759662d8e0c62a9a23312825389"
+        },
+        {
+          "id": "DMA-paul-road2",
+          "count": 2,
+          "keyset_sha256": "a9fe6a0bc8e70bbc945453847e67821e5dd10a4f304f6783eef0e0da9071594f"
+        },
+        {
+          "id": "DMA-george-waterfront1",
+          "count": 1,
+          "keyset_sha256": "82b55401bad5e8930ca5f5cc59d0381db17d6eda348c719ce8f2ea13b7b35a20"
+        },
+        {
+          "id": "DMA-luke-coast8",
+          "count": 8,
+          "keyset_sha256": "517c6b08f2fc918ebc005e3a94d4b87891d4cd6ade70dc9538eb73bb15a0ad1f"
+        },
+        {
+          "id": "DMA-patrick-coast2",
+          "count": 2,
+          "keyset_sha256": "09f02cdd89acc8c0937a27631138e9062709e2e1a9af784cb6082fee07b4e8bd"
+        },
+        {
+          "id": "DMA-mark-connection3",
+          "count": 3,
+          "keyset_sha256": "74e47d7e370bdc2ca5fca9722fe297d5dd5a0bdb66b8f3abd9d825b7220b4c30"
+        }
+      ],
+      "repository_evidence_refs": [
+        {
+          "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json",
+          "sha256": "e95f730581662e15a828d47348d14ee2b1abe712c6f0f8d050d116d6ca849d9f"
+        },
+        {
+          "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/source-evidence.json",
+          "sha256": "27cea363eb639bf1118a08ac1c9528151be0b602ff2321dbcc8d6a95053024df"
+        },
+        {
+          "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/whole-target-support.json",
+          "sha256": "3aff5cef5ddad040a34fd7817dcd2d5b04cc334c62be8de8b74fea7e9893e591"
+        }
+      ],
+      "assessment_provenance_hashes": [
+        {
+          "label": "independent substantive assessment",
+          "sha256": "085e2241719fcc6f39adffe5ff0e2b18cbf3581ded7ae22ca90617a84e200496"
+        },
+        {
+          "label": "independent exact-key checks",
+          "sha256": "fb85ad9bd16461fb97979159c38d6fa776616cb8013b473dae3c6370525e1e24"
+        }
+      ],
+      "limits": "Preserve two whole-member extra_reconstruction issues (Saint David/Saint John), original rights/access limits and all positive witnesses; do not infer cell-specific failures from whole-member issues. 174 contexts are out-of-scope."
+    },
+    {
+      "package_id": "gb-SDN-ADM2--repair-evaluation",
+      "scope_id": "SDN223",
+      "original_denominator": 2654,
+      "already_accepted_positive_cells": 2431,
+      "proposed_researched_unresolved_cells": 223,
+      "record_count": 223,
+      "keyset_sha256": "da64baa6f57a4befd62cb5b848f68c8d2b9da5b111faee0189b38e7211e9d84a",
+      "context_groups": [
+        {
+          "context_group_id": "SDN-39587-5cb0e1255a",
+          "owner_index": 39587,
+          "key_count": 22,
+          "candidate_source_ids": [
+            "gb:EGY:ADM1:46179711B94144647788557",
+            "gb:SDN:ADM1:86620642B7664605185235",
+            "gb:SDN:ADM2:16777658B65142556264342"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39608-a274ee66de",
+          "owner_index": 39608,
+          "key_count": 2,
+          "candidate_source_ids": [
+            "gb:ERI:ADM1:12472421B94455277260743",
+            "gb:SDN:ADM1:86620642B7664605185235",
+            "gb:SDN:ADM2:16777658B73946128996237"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39549-3ee3b05879",
+          "owner_index": 39549,
+          "key_count": 35,
+          "candidate_source_ids": [
+            "gb:ERI:ADM1:12472421B94455277260743",
+            "gb:SDN:ADM1:86620642B34113093603931",
+            "gb:SDN:ADM2:16777658B48283750984727"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39524-e17820034e",
+          "owner_index": 39524,
+          "key_count": 2,
+          "candidate_source_ids": [
+            "gb:ERI:ADM1:12472421B57032757115732",
+            "gb:SDN:ADM1:86620642B34113093603931",
+            "gb:SDN:ADM2:16777658B3769079063022"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39633-742503cdfd",
+          "owner_index": 39633,
+          "key_count": 19,
+          "candidate_source_ids": [
+            "gb:SDN:ADM1:86620642B73786067507541",
+            "gb:SDN:ADM2:16777658B88334295817955",
+            "gb:TCD:ADM1:23847190B87163061266246"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39481-c66301452d",
+          "owner_index": 39481,
+          "key_count": 2,
+          "candidate_source_ids": [
+            "gb:SDN:ADM1:86620642B73786067507541",
+            "gb:SDN:ADM2:16777658B17269795285399",
+            "gb:TCD:ADM1:23847190B50657270888212"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39473-475b4f440b",
+          "owner_index": 39473,
+          "key_count": 81,
+          "candidate_source_ids": [
+            "gb:SDN:ADM1:86620642B73786067507541",
+            "gb:SDN:ADM2:16777658B14333470072302",
+            "gb:TCD:ADM1:23847190B50657270888212"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39473-87650f6d43",
+          "owner_index": 39473,
+          "key_count": 1,
+          "candidate_source_ids": [
+            "gb:SDN:ADM2:16777658B14333470072302",
+            "gb:TCD:ADM1:23847190B50657270888212"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39652-2f85fe16fe",
+          "owner_index": 39652,
+          "key_count": 23,
+          "candidate_source_ids": [
+            "gb:SDN:ADM1:86620642B73786067507541",
+            "gb:SDN:ADM2:16777658B9931993566109",
+            "gb:TCD:ADM1:23847190B50657270888212"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39616-36b4589734",
+          "owner_index": 39616,
+          "key_count": 16,
+          "candidate_source_ids": [
+            "gb:SDN:ADM1:86620642B73786067507541",
+            "gb:SDN:ADM2:16777658B76489940696560",
+            "gb:TCD:ADM1:23847190B78936858597948"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39644-2b94aef523",
+          "owner_index": 39644,
+          "key_count": 1,
+          "candidate_source_ids": [
+            "gb:SDN:ADM1:86620642B67241023181859",
+            "gb:SDN:ADM2:16777658B96624341658613",
+            "gb:TCD:ADM1:23847190B78936858597948"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39512-43e71e259a",
+          "owner_index": 39512,
+          "key_count": 1,
+          "candidate_source_ids": [
+            "gb:SDN:ADM1:86620642B33888251991816",
+            "gb:SDN:ADM2:16777658B32181362177213",
+            "gb:TCD:ADM1:23847190B78936858597948"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39600-4fb3c9cc30",
+          "owner_index": 39600,
+          "key_count": 2,
+          "candidate_source_ids": [
+            "gb:CAF:ADM2:33826404B56670707739048",
+            "gb:SDN:ADM1:86620642B33888251991816",
+            "gb:SDN:ADM2:16777658B70477888733853"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        },
+        {
+          "context_group_id": "SDN-39600-b178713806",
+          "owner_index": 39600,
+          "key_count": 16,
+          "candidate_source_ids": [
+            "gb:CAF:ADM1:63714938B17486447780615",
+            "gb:SDN:ADM1:86620642B33888251991816",
+            "gb:SDN:ADM2:16777658B70477888733853"
+          ],
+          "retained_class": "land",
+          "all_physical_support": true,
+          "no_inland_water_support": true
+        }
+      ],
+      "repository_evidence_refs": [
+        {
+          "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/native-patch.json",
+          "sha256": "a6a98a4f2e359d8de3fcf117a5b4c0f37f3cf4f9602095477a0fdf9362a6100f"
+        },
+        {
+          "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/source-evidence.json",
+          "sha256": "4d19241ce5280d80db197ac3eab2635321430515449de4cf5c9b8ae2e896a5a8"
+        },
+        {
+          "path": "research/geography/sdn2654-physical-20261025-01a16f2e/physical-001/whole-target-support.json",
+          "sha256": "64640a028aaffec53f4e15823de8113e68bbd82e143ac1640c2b4dc2aa759920"
+        }
+      ],
+      "assessment_provenance_hashes": [
+        {
+          "label": "independent substantive assessment incl. raw-readback closure",
+          "sha256": "080e799e06441d911838a560ee1ba724a81ff312a9890d28a76d832dc3d14a73"
+        },
+        {
+          "label": "raw-readback closure receipt",
+          "sha256": "b6dfb5cc439de16e74a2f987652b755234b72dade6d7802a6435e115376f3bcf"
+        },
+        {
+          "label": "exact 223 source application report",
+          "sha256": "0ab08f4507e06555f6716792d7e17e43efa9cec62a804daaf6953654f73adb46"
+        },
+        {
+          "label": "exact 223 context/key groups",
+          "sha256": "421aebdce86979cae7852f7374feea190fa224bf9179167d78bf068732d51353"
+        }
+      ],
+      "source_notice_preservation": {
+        "declaration_count": 17,
+        "notice_bindings_sha256": "baea1b1b3d645259a802c7696bdf41be8ec0b73f1b703af71e997253fbbf00b0",
+        "source_declarations_sha256": "7e0b9da57a78d4b65499c3b387a5d125e3da5b8df960733c130880e625d76d58",
+        "source_notice_sha256": "59588b32fbefd445990ada475450bd5a06832ce9dd475c6f32d1ba659a75fb81",
+        "custody_receipt_url": "https://github.com/ChengshuLi/WorldAtlas/issues/2649#issuecomment-6393336521",
+        "prior_source_notice_path": "source-notices/prior-2431-SOURCE-NOTICE.md",
+        "prior_source_notice_sha256": "59588b32fbefd445990ada475450bd5a06832ce9dd475c6f32d1ba659a75fb81",
+        "prior_notice_binding_path": "source-notices/prior-2431-notice-bindings.json",
+        "prior_notice_binding_sha256": "baea1b1b3d645259a802c7696bdf41be8ec0b73f1b703af71e997253fbbf00b0",
+        "declaration_file_path": "source-notices/sdn17-source-declarations.json",
+        "declaration_file_sha256": "7e0b9da57a78d4b65499c3b387a5d125e3da5b8df960733c130880e625d76d58",
+        "binding_scope": "unchanged copy of prior 2,431-positive/223-held notice history; not a new binding to this 362 proposal or any final selected output"
+      },
+      "limits": "All 17 source declarations/notices remain operative; the ETH ADM2/ADM3 ODbL boundaryLicense vs CC BY licenseDetail conflict remains unresolved. No source sovereignty/current-boundary/rights conclusion; 19 ADM1 features are context, not measured native negatives."
+    },
+    {
+      "package_id": "gb-ISR-ADM2--repair-evaluation",
+      "scope_id": "ISR113",
+      "original_denominator": 502,
+      "already_accepted_positive_cells": 379,
+      "proposed_researched_unresolved_cells": 113,
+      "record_count": 113,
+      "subscope_counts": {
+        "foreign_conflicts": 110,
+        "parent_only_water": 3,
+        "pending_Irbid_excluded": 10
+      },
+      "subscope_keysets": [
+        {
+          "id": "ISR_FOREIGN_110",
+          "count": 110,
+          "keyset_sha256": "ceb5e5a1523649fe71b07f67d9ad2e784e78f5202f8ebdad1a62970d2035a15c"
+        },
+        {
+          "id": "ISR_PARENT_ONLY_WATER_3",
+          "count": 3,
+          "keyset_sha256": "e0331e929cb732472361fcbcd1225855a10b8273deeb62f773ca6c78d6ee17c9"
+        }
+      ],
+      "foreign_context_counts": {
+        "LBN-Nabatiye25": 25,
+        "LBN-LibanSud18": 18,
+        "PSE-WestBank5": 5,
+        "JOR-Madaba-north5": 5,
+        "JOR-southern-water9": 9,
+        "JOR-Karak-land27": 27,
+        "JOR-Aqaba19": 19,
+        "EGY-NorthSinai2": 2
+      },
+      "repository_evidence_refs": [
+        {
+          "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/native-patch.json",
+          "sha256": "69471c80df8906042d674629cdcf3e9ec241ec8492a3a95aa83abcda09a0bb2f"
+        },
+        {
+          "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/source-evidence.json",
+          "sha256": "c500f30243e63520e6aa97ed8415c438306c047a336e4e0c64bde7d6ed985b18"
+        },
+        {
+          "path": "research/geography/isr502-whole-physical-20261025/physical-001/whole-target-support.json",
+          "sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+        }
+      ],
+      "assessment_provenance_hashes": [
+        {
+          "label": "foreign 110 substantive assessment",
+          "sha256": "f9a7d117713f9fd8b317fa1493473240a001b89d8e99fa88967543f18d66e862"
+        },
+        {
+          "label": "exact 120 status/key checks (proposed110 and pending10 disjoint)",
+          "sha256": "66ba0e96571c99c96019827444fe6f47f2b2f2ab20c6b04a3511df63e0279817"
+        },
+        {
+          "label": "original parent-role assessment incl. separate water3",
+          "sha256": "8dbb2bbade03f3d56a30b551119b6f6775dae8e2d7d5e052f813bce47e919b1f"
+        },
+        {
+          "label": "three-water controlled CBS-map application",
+          "sha256": "1ef9f38f3e0c3b797e2325d125f252e6661359865db0b8a36ad781acf1db012c"
+        }
+      ],
+      "excluded_pending_Irbid_key_count": 10,
+      "limits": "Preserve all original foreign conflicts/native holds. Parent-only water3 is a separate recommendation after actual map application, not a consequence of parent role. Irbid10 remains pending; source-specific image/reach relation is unperformed. No sovereignty, current-control or legal-boundary conclusion.",
+      "keyset_sha256": "adb246ced773644c118259101d7b5d84bea87ba581ca1674b21234b75a6e33d1"
+    }
+  ],
+  "records": [
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-john-north2",
+      "key": [
+        7115,
+        119561,
+        86321
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-john-north2",
+      "key": [
+        7115,
+        119576,
+        86322
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-andrew-bay1",
+      "key": [
+        7115,
+        119583,
+        86382
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-john-headland1",
+      "key": [
+        7115,
+        119591,
+        86322
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-peter-coast2",
+      "key": [
+        7115,
+        119652,
+        86319
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-peter-coast2",
+      "key": [
+        7115,
+        119676,
+        86326
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-joseph-town3",
+      "key": [
+        7115,
+        119725,
+        86349
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-joseph-town3",
+      "key": [
+        7115,
+        119726,
+        86349
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-joseph-town3",
+      "key": [
+        7115,
+        119727,
+        86349
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-joseph-layou1",
+      "key": [
+        7115,
+        119733,
+        86350
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-paul-road2",
+      "key": [
+        7115,
+        119784,
+        86372
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-paul-road2",
+      "key": [
+        7115,
+        119785,
+        86372
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-george-waterfront1",
+      "key": [
+        7115,
+        119812,
+        86383
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119830,
+        86386
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119831,
+        86386
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119839,
+        86386
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119840,
+        86386
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119844,
+        86387
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119846,
+        86388
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119847,
+        86388
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-luke-coast8",
+      "key": [
+        7115,
+        119848,
+        86388
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-patrick-coast2",
+      "key": [
+        7115,
+        119848,
+        86455
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-patrick-coast2",
+      "key": [
+        7115,
+        119849,
+        86451
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-mark-connection3",
+      "key": [
+        7115,
+        119871,
+        86390
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-mark-connection3",
+      "key": [
+        7115,
+        119871,
+        86391
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "DMA26",
+      "context_group_id": "DMA-mark-connection3",
+      "key": [
+        7115,
+        119871,
+        86392
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        120959,
+        147171
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        120962,
+        147175
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        120963,
+        147176
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        120964,
+        147177
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        120965,
+        147178
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        120966,
+        147180
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121021,
+        147189
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121023,
+        147190
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121108,
+        147257
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121109,
+        147258
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121110,
+        147259
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121111,
+        147259
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121111,
+        147260
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121112,
+        147260
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121113,
+        147261
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121114,
+        147262
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121115,
+        147263
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121116,
+        147264
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121117,
+        147265
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121122,
+        147269
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121123,
+        147270
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121146,
+        147270
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121147,
+        147270
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121148,
+        147270
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121149,
+        147270
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121150,
+        147270
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121166,
+        147270
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121289,
+        147303
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121290,
+        147301
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121290,
+        147302
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121291,
+        147300
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121291,
+        147301
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121292,
+        147297
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121292,
+        147298
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121292,
+        147299
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121292,
+        147300
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121293,
+        147294
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121293,
+        147295
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121293,
+        147296
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121293,
+        147297
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121293,
+        147298
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121293,
+        147299
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121294,
+        147293
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121294,
+        147294
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121294,
+        147295
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121294,
+        147296
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121294,
+        147297
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121294,
+        147298
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121295,
+        147292
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121295,
+        147293
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121295,
+        147294
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121295,
+        147295
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121295,
+        147296
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121295,
+        147297
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121296,
+        147292
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121296,
+        147293
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121296,
+        147294
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121296,
+        147295
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121296,
+        147296
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121297,
+        147292
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121297,
+        147293
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121297,
+        147294
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121297,
+        147295
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121298,
+        147291
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121298,
+        147292
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121298,
+        147293
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121298,
+        147294
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121298,
+        147295
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121299,
+        147291
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121299,
+        147292
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121299,
+        147293
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121299,
+        147294
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121300,
+        147291
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121300,
+        147292
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121300,
+        147293
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121301,
+        147291
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121301,
+        147292
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121302,
+        147290
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121302,
+        147291
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121303,
+        147290
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-87650f6d43",
+      "key": [
+        39473,
+        121315,
+        147277
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39473-475b4f440b",
+      "key": [
+        39473,
+        121326,
+        147267
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39481-c66301452d",
+      "key": [
+        39481,
+        120884,
+        147216
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39481-c66301452d",
+      "key": [
+        39481,
+        120892,
+        147209
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39512-43e71e259a",
+      "key": [
+        39512,
+        123043,
+        147752
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39524-e17820034e",
+      "key": [
+        39524,
+        119720,
+        157743
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39524-e17820034e",
+      "key": [
+        39524,
+        119743,
+        157734
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118560,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118560,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118560,
+        158030
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118561,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118561,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118561,
+        158030
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118561,
+        158031
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118562,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118562,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118562,
+        158030
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118562,
+        158031
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118563,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118563,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118563,
+        158030
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118563,
+        158031
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118564,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118564,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118564,
+        158030
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118564,
+        158031
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118565,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118565,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118565,
+        158030
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118566,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118566,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118566,
+        158030
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118567,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118567,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118568,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118568,
+        158029
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118569,
+        158027
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118569,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118570,
+        158027
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118570,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118571,
+        158027
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39549-3ee3b05879",
+      "key": [
+        39549,
+        118571,
+        158028
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113973,
+        157140
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113973,
+        157141
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113974,
+        157137
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113974,
+        157138
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113974,
+        157139
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113974,
+        157140
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113974,
+        157141
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113974,
+        157142
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113975,
+        157136
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113975,
+        157137
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113975,
+        157138
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113975,
+        157139
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113975,
+        157140
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113975,
+        157141
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113975,
+        157142
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113976,
+        157133
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113976,
+        157140
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113976,
+        157141
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113976,
+        157142
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113976,
+        157143
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113977,
+        157142
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39587-5cb0e1255a",
+      "key": [
+        39587,
+        113977,
+        157143
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-4fb3c9cc30",
+      "key": [
+        39600,
+        124362,
+        148240
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-4fb3c9cc30",
+      "key": [
+        39600,
+        124363,
+        148239
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124718,
+        148721
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124718,
+        148722
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124719,
+        148720
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124719,
+        148721
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124719,
+        148722
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124720,
+        148719
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124720,
+        148720
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124720,
+        148721
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124721,
+        148718
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124721,
+        148719
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124721,
+        148720
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124722,
+        148718
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124722,
+        148719
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124723,
+        148717
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124724,
+        148716
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39600-b178713806",
+      "key": [
+        39600,
+        124727,
+        148709
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39608-a274ee66de",
+      "key": [
+        39608,
+        118137,
+        158737
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39608-a274ee66de",
+      "key": [
+        39608,
+        118151,
+        158727
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121819,
+        147437
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121870,
+        147418
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121910,
+        147402
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121911,
+        147401
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121913,
+        147400
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121914,
+        147399
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121915,
+        147398
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121916,
+        147397
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121916,
+        147398
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121917,
+        147396
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121917,
+        147397
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121918,
+        147396
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121919,
+        147395
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121919,
+        147396
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121920,
+        147395
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39616-36b4589734",
+      "key": [
+        39616,
+        121922,
+        147394
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120419,
+        147426
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120558,
+        147416
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120564,
+        147416
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120565,
+        147417
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120566,
+        147417
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120566,
+        147418
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120567,
+        147418
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120567,
+        147419
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120568,
+        147419
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120569,
+        147420
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120570,
+        147421
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120571,
+        147422
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120573,
+        147423
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120574,
+        147424
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120575,
+        147424
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120575,
+        147425
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120576,
+        147425
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120577,
+        147426
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39633-742503cdfd",
+      "key": [
+        39633,
+        120578,
+        147426
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39644-2b94aef523",
+      "key": [
+        39644,
+        122786,
+        147789
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121412,
+        147170
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121430,
+        147115
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121431,
+        147113
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121481,
+        147070
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121483,
+        147067
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121500,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121501,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121502,
+        147052
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121502,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121503,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121504,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121507,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121508,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121509,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121510,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121511,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121512,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121513,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121516,
+        147053
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121523,
+        147049
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121526,
+        147047
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121537,
+        147037
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "SDN223",
+      "context_group_id": "SDN-39652-2f85fe16fe",
+      "key": [
+        39652,
+        121538,
+        147036
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24170,
+        105359,
+        156998
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105511,
+        156801
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105511,
+        156802
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105511,
+        156803
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105512,
+        156775
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105512,
+        156803
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105512,
+        156804
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105513,
+        156771
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105514,
+        156767
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105519,
+        156700
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105519,
+        156701
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105520,
+        156698
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105520,
+        156699
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105520,
+        156700
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105520,
+        156701
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105520,
+        156745
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105521,
+        156681
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105521,
+        156682
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105521,
+        156697
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105521,
+        156698
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105522,
+        156692
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105522,
+        156693
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105522,
+        156694
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-LibanSud18",
+      "key": [
+        24181,
+        105523,
+        156690
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105531,
+        156810
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105531,
+        156811
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105532,
+        156811
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105532,
+        156812
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105533,
+        156812
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105533,
+        156813
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105534,
+        156813
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105534,
+        156814
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105535,
+        156814
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105536,
+        156815
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105550,
+        156830
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105550,
+        156831
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105550,
+        156832
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105550,
+        156833
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105551,
+        156835
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105551,
+        156836
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105552,
+        156839
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105552,
+        156840
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "LBN-Nabatiye25",
+      "key": [
+        24181,
+        105552,
+        156841
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "PSE-WestBank5",
+      "key": [
+        24182,
+        106746,
+        156605
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "PSE-WestBank5",
+      "key": [
+        24182,
+        106747,
+        156604
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "PSE-WestBank5",
+      "key": [
+        24182,
+        106748,
+        156602
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "PSE-WestBank5",
+      "key": [
+        24182,
+        106749,
+        156601
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Madaba-north5",
+      "key": [
+        24183,
+        106896,
+        156913
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Madaba-north5",
+      "key": [
+        24183,
+        106896,
+        156914
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Madaba-north5",
+      "key": [
+        24183,
+        106897,
+        156914
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Madaba-north5",
+      "key": [
+        24183,
+        106897,
+        156915
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Madaba-north5",
+      "key": [
+        24183,
+        106897,
+        156916
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        106898,
+        156916
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        106899,
+        156917
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "PSE-WestBank5",
+      "key": [
+        24183,
+        107005,
+        156494
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        107017,
+        156901
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        107232,
+        156902
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        107234,
+        156901
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        107235,
+        156901
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        107236,
+        156901
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        107237,
+        156900
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-southern-water9",
+      "key": [
+        24183,
+        107238,
+        156900
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107239,
+        156900
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107240,
+        156899
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107240,
+        156900
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107241,
+        156899
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107242,
+        156899
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107243,
+        156898
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107244,
+        156898
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107245,
+        156898
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107246,
+        156897
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107247,
+        156897
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107248,
+        156896
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107249,
+        156896
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107251,
+        156895
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107254,
+        156894
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107294,
+        156878
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107295,
+        156878
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107296,
+        156878
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107297,
+        156878
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107298,
+        156878
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107299,
+        156878
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107301,
+        156877
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107302,
+        156877
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107303,
+        156877
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107304,
+        156877
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107308,
+        156876
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107309,
+        156876
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Karak-land27",
+      "key": [
+        24183,
+        107314,
+        156875
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        107751,
+        156708
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        107753,
+        156707
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        107755,
+        156706
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        107756,
+        156706
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        107758,
+        156705
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        107759,
+        156705
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108118,
+        156661
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108121,
+        156659
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108122,
+        156658
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108124,
+        156657
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108125,
+        156656
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108126,
+        156655
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108435,
+        156585
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108475,
+        156574
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108477,
+        156573
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108479,
+        156572
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108480,
+        156571
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108482,
+        156570
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "JOR-Aqaba19",
+      "key": [
+        24183,
+        108484,
+        156569
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "EGY-NorthSinai2",
+      "key": [
+        24183,
+        108529,
+        156480
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_FOREIGN_110",
+      "context_group_id": "EGY-NorthSinai2",
+      "key": [
+        24183,
+        108530,
+        156480
+      ],
+      "status": "proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_PARENT_ONLY_WATER_3",
+      "context_group_id": "ISR-parent-only-water-three-application",
+      "key": [
+        24183,
+        106895,
+        156910
+      ],
+      "status": "separate_proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_PARENT_ONLY_WATER_3",
+      "context_group_id": "ISR-parent-only-water-three-application",
+      "key": [
+        24183,
+        106896,
+        156870
+      ],
+      "status": "separate_proposed_researched_unresolved"
+    },
+    {
+      "scope_id": "ISR_PARENT_ONLY_WATER_3",
+      "context_group_id": "ISR-parent-only-water-three-application",
+      "key": [
+        24183,
+        106896,
+        156912
+      ],
+      "status": "separate_proposed_researched_unresolved"
+    }
+  ],
+  "global_limits": [
+    "All 362 records remain proposals, not accepted outcomes, until independent exact-head review, stock terminal/custody, and root acceptance.",
+    "No sovereignty, current control, modern legal boundary, or source-boundary-equality inference.",
+    "No native, source, physical, territorial, water, rights, or access hold is removed or weakened.",
+    "Conditional future evidence can reopen specific findings; no worldwide/exhaustive absence claim is made.",
+    "This is source-free: no raw source body, geometric object, map image, lat/lon or transformed coordinate is copied. Original grid-key indices are retained only for exact identity.",
+    "DMA preserves rights/access limits and whole-member Saint David/Saint John issues; SDN preserves 17 notices and ETH license metadata conflict; ISR preserves foreign conflicts, water distinction and Irbid pending status."
+  ]
+}
