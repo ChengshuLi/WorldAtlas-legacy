@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "kind": "cmr-four-source-free-researched-unresolved-proposal-v1",
+  "status": "proposal_not_adopted",
+  "scope": {
+    "country": "CMR",
+    "original_scope": 4925,
+    "currently_pending": 4,
+    "proposed_researched_unresolved": 4,
+    "subgroups": {
+      "Edea_I": 1,
+      "Figuil": 3
+    },
+    "exact_key_binding": {
+      "path": "cmr-authority-review-20261025/consolidated-v1/independent-partition.json",
+      "sha256": "3ca330fcfa8ba348073d83aca175243dd9e8424e6e2855e4d531f86e04bbf850",
+      "pointer": "pending4",
+      "raw_tuples_repeated": false
+    },
+    "exact_dispositions": {
+      "path": "cmr-authority-review-20261025/consolidated-v1/independent-exact4924-dispositions.jsonl",
+      "sha256": "8359b706a7cbc10fe85ef745e064dfcd66c0995b38f009e341cdaa3e59e9c6cd",
+      "raw_tuples_repeated": false
+    }
+  },
+  "research": {
+    "evidence_replay": false,
+    "geometry_or_native_replay": false,
+    "accepted_assessment": {
+      "path": "cmr-authority-review-20261025/consolidated-v1/ASSESSMENT.md",
+      "sha256": "d9733bd4849343a32010fffe17208b30bc6905848ab39d1f87dc5dbb6da26559"
+    },
+    "bounded_memo": {
+      "path": "/workspace/shared/worldatlas-cmr-pending-source-opportunities-20261025.md",
+      "sha256": "5d14b6be0b4827e35f16a2c50750e5fd7c7edd1b702f906cc4afb100844ef1b5"
+    },
+    "figuil_source_body": {
+      "url": "https://www.pndp.org/documents/PCD_FIGUIL.pdf",
+      "bytes": 4397236,
+      "sha256": "52119e87294cf0b00dafd6a5e8a6ff29230d6d8f6aba53ffd36cdb4e0e018f4b",
+      "read_pages": [
+        19,
+        20,
+        29
+      ],
+      "local_research_custody": true,
+      "included_in_proposal": false,
+      "raw_source_or_geometry_in_current_head": false,
+      "historical_add_commit": "d8d350c76088584cf3ed3aa47a416984f348fd0d",
+      "historical_delete_commit": "def8fa999e0cf333c75b4065fd402f5030558bf5",
+      "history_note": "The source blob was temporarily committed and is still reachable from earlier public history; the current proposal tree/diff excludes it. History is retained unchanged."
+    },
+    "edea_ministry_pos": {
+      "official_locator": "https://www.minhdu.gov.cm/minhduetude/public/downloaddoc?pathdoc=%2Fvar%2Fwww%2Fdocuments%2F93%2FDocs%2FRAPPORT-JUSTIFICATIF-DU-POS-DE-LA-COMMUNE-D%27ARRONDISSEMENT-D%27EDEA-I.pdf",
+      "attempts": 2,
+      "last_http_status": 503,
+      "full_body_read": false,
+      "author_conservative_recommendation": "pending",
+      "independent_reviewer_recommendation": "researched_unresolved_proposal",
+      "root_status": "authorized_proposal_preparation_only_not_adoption"
+    },
+    "adverse_evidence_preserved": {
+      "figuil_original_operands": 11,
+      "figuil_contrary_incidences": 5,
+      "figuil_current_keys_unchanged": true,
+      "prior_accepted_history_unchanged": true
+    }
+  },
+  "accounting": {
+    "credit": 0,
+    "denominator_change": 0,
+    "requires_root_acceptance_after_terminal_delivery": true
+  },
+  "delivery": {
+    "base_at_allocation": "7eee5f9b144d2b8fd8282a9c38044fb3108dc941",
+    "tests_replayed": false,
+    "technical_delivery_not_scientific_acceptance": true
+  }
+}
