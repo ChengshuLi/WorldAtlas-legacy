@@ -30,7 +30,7 @@ async function finalize(f,commit,extra={},destination='coordination/engineering/
 test('existing finalizer prepares only a new native append and preserves its next unchanged transition',async t=>{
  const {f,reader,before}=await prepare(t),migration=await finalize(f,f.bankCommit),at=f.commit();
  await compareFinal(f,f.bankCommit,at);
- const added=await appendNativeAuthority(f,{membershipPath:'data/source.json',owner:1,name:'coordination/engineering/next-only',completedConstructor:true});
+ const added=await appendNativeAuthority(f,{membershipPath:'data/source.json',owner:1,name:'research/geography/next-only',completedConstructor:true});
  f.save('data/ownership-selection.json',migration.selection);
  const source=pinReader(f.root),binding=source.json(added.entry.source_authority);
  const composed=await composeAuthorities({version:2,selector:f.pin('data/ownership-selection.json',at),authorities:[{rule_preimage:added.entry.rule_preimage,source_authority:added.entry.source_authority,ledger:added.entry.completed_constructor,native_patch:binding.native_patch}]},source);
@@ -62,6 +62,55 @@ test('existing finalizer prepares only a new native append and preserves its nex
  const diagnostics={},planning={api,repo:'fixture/repo',branch:'codex/final-bank',files,baseline,authored,metadataDiagnostics:diagnostics};
  const planned=await selectedDataSelection(planning);assert.equal(planned?.test_selection,'selected-data',JSON.stringify(diagnostics));assert.equal(planned.expectations_path,expectedPath);
  assert(!requested.includes(f.sidecar.authority_registry.git_blob_oid),'No old registry traversal');
+ // Research-rooted consumed roles and inert companion readings share the stock
+ // final-bank route, but only the fixed role walk can admit selected operands.
+ const addPacket=(name,body='retained source notice\r\n')=>{
+  const raw=Buffer.from(body),sha=execFileSync('git',['-C',f.root,'hash-object','-w','--stdin'],{input:raw,encoding:'utf8'}).trim();
+  const entries=new Map(authored.entries),parts=name.split('/');
+  for(let i=1;i<parts.length;i++){const parent=parts.slice(0,i).join('/');entries.set(parent,{path:parent,type:'tree',mode:'040000',sha:'a'.repeat(40)});}
+  entries.set(name,{path:name,type:'blob',mode:'100644',sha,size:raw.length});
+  return {...planning,authored:{entries},files:[...files,{filename:name,status:'added'}],metadataDiagnostics:{}};
+ };
+ const notice='research/geography/reading/README.TXT';
+ for(const name of [notice,'research/geography/reading/LICENSE.TXT','research/geography/reading/findings.json',
+   'data/regional-review/reading/notes.md','research/campaigns/reading/notes.md']){
+  const plan=addPacket(name);assert.equal((await selectedDataSelection(plan))?.test_selection,'selected-data',name+JSON.stringify(plan.metadataDiagnostics));
+ }
+ const duplicatePath='research/geography/reading/selected-delivery-expectations.json';
+ const duplicate=addPacket(duplicatePath,f.git('cat-file','blob',authored.entries.get(expectedPath).sha).toString());
+ duplicate.files.unshift(duplicate.files.pop());
+ assert.equal((await selectedDataSelection(duplicate))?.expectations_path,expectedPath,'Research copy never displaces the smoke CLI path');
+ const researchOnly={...duplicate,files:duplicate.files.filter(file=>file.filename!==expectedPath),authored:{entries:new Map(duplicate.authored.entries)}};
+ researchOnly.authored.entries.delete(expectedPath);
+ assert.equal(await selectedDataSelection(researchOnly),null,'Research-only sidecar cannot select an unsupported smoke invocation');
+ const refused=[
+  ['executable suffix',()=>addPacket('research/geography/reading/reproduce.py')],
+  ['dependency manifest',()=>addPacket('research/geography/reading/PACKAGE.JSON')],
+  ['requirements manifest',()=>addPacket('research/geography/reading/REQUIREMENTS.TXT')],
+  ['malformed reserved expectations',()=>addPacket('research/geography/reading/selected-delivery-expectations.json','{}')],
+  ['uppercase reserved expectations',()=>addPacket('research/geography/reading/SELECTED-DELIVERY-EXPECTATIONS.JSON','{}')],
+  ['wrong reserved expectations',()=>addPacket('research/geography/reading/selected-delivery-expectations.json',JSON.stringify({version:2,kind:'selected-final-bank-consumer-v2',bank:{},reference:{}}))],
+  ['unrecognized payload',()=>addPacket('research/geography/reading/payload.bin')],
+  ['unbound coordination packet',()=>addPacket('coordination/engineering/reading/notes.json')],
+  ['modified existing research',()=>{const p=addPacket(notice);p.files.at(-1).status='modified';p.baseline={entries:new Map(baseline.entries).set(notice,p.authored.entries.get(notice))};return p;}],
+  ['rename origin',()=>{const p=addPacket(notice);p.files.at(-1).previous_filename='research/geography/old/README.TXT';return p;}],
+  ...['100755','120000','160000'].map(mode=>[mode+' adjunct',()=>{const p=addPacket(notice);p.authored.entries.set(notice,{...p.authored.entries.get(notice),mode});return p;}]),
+  ['missing ordinary parent',()=>{const p=addPacket(notice);p.authored.entries.delete('research/geography/reading');return p;}],
+  ['nonordinary parent',()=>{const p=addPacket(notice);p.authored.entries.set('research/geography/reading',{type:'blob',mode:'120000',sha:'a'.repeat(40)});return p;}],
+  ['consumed source role remains guarded',()=>{const p=addPacket(notice);p.authored.entries.set(binding.source_evidence.path,{...p.authored.entries.get(binding.source_evidence.path),sha:'a'.repeat(40)});return p;}]
+ ];
+ for(const [label,make]of refused){const plan=make();assert.equal(await selectedDataSelection(plan),null,label);}
+ // Neither the old nor new package declaration may consume a companion packet,
+ // including directory-prefix inputs. These isolated metadata fixtures retain
+ // the actual final-bank and selected-role bodies above.
+ for(const side of ['baseline','authored'])for(const input of [notice,'research/geography/reading/']){
+  const plan=addPacket(notice),tree=plan[side],row=tree.entries.get('.github/package-inputs.json');
+  const definition=JSON.parse(f.git('cat-file','blob',row.sha));definition.inputs.push(input);
+  const raw=Buffer.from(JSON.stringify(definition)),sha=execFileSync('git',['-C',f.root,'hash-object','-w','--stdin'],{input:raw,encoding:'utf8'}).trim();
+  plan[side]={entries:new Map(tree.entries).set('.github/package-inputs.json',{...row,sha,size:raw.length})};
+  assert.equal(await selectedDataSelection(plan),null,side+' consumed '+input);
+ }
+
  // A withdrawal restores the prior complete bank without making the previous
  // authority registry a current metadata operand. Use the actual emitted bank
  // descriptors on both sides, and derive the complete changed-file vector.
