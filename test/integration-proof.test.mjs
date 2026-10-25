@@ -38,6 +38,11 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   const architecture = fs.readFileSync('docs/DATA_ARCHITECTURE.md', 'utf8');
   assert.match(architecture, /field-specific evidence priorities and then a stable record-ID tie-break/i);
   assert.doesNotMatch(architecture, /equal-precedence contradictions are rejected/);
+  const history = fs.readFileSync('docs/HISTORY.md', 'utf8');
+  assert.match(history, /`Unsettled` is a sourced no-inhabitants conclusion/i);
+  assert.match(history, /direct sourced literal population zero/i);
+  assert.match(history, /equal-precedence inhabitance contradictions become disputed/i);
+  assert.match(history, /test\/unsettled-rank\.test\.mjs/);
   const operations = fs.readFileSync('docs/OPERATIONS.md', 'utf8');
   assert.match(operations, /Encryption provides confidentiality, not sender authentication/i);
   assert.match(operations, /sender-supplied hash alone does not establish origin/i);
