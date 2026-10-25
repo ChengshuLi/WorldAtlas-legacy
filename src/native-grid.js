@@ -378,7 +378,7 @@ export function nativeOnlyComponent(row, hashValue) {
 }
 export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverageFeatures,
   territorialExclusions = [], territorialApplicability, ownerRows, size, latitudes, rowStart, rowEnd, diagnosticRows, coverageFeatureGroups,
-  coverageCentres, coverageCentreGroups}) {
+  coverageCentres, coverageCentreGroups, sourceMemberApplicability}) {
   require(Array.isArray(targets) && targets.length > 0, 'Missing source targets');
   const targetByOwner = new Map(), targetById = new Map();
   for (const target of targets) {
@@ -402,6 +402,37 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
   }
   for (const target of targets) require(sourceOwners.get(target.pixelIndex) === target.id,
     'Source target differs from complete source owner roster');
+  // Adopted provider members may cover complementary subsets of one existing
+  // owner. Keep the scope attached to the exact source member; never expand one
+  // member's scope to the owner's union. When supplied, this gate limits that
+  // member's source/coverage contribution at each native centre.
+  const memberScopes = new Map(), memberScopeXsByRow = new Map();
+  if (sourceMemberApplicability !== undefined) {
+    require(Array.isArray(sourceMemberApplicability) && sourceMemberApplicability.length > 0,
+      'Invalid adopted source-member applicability');
+    for (const record of sourceMemberApplicability) {
+      exactKeys(record, ['source_id', 'pixelIndex', 'scope'], 'Adopted source-member applicability');
+      const source = sourceIds.get(record.source_id);
+      require(source && source.owner === record.pixelIndex && targetByOwner.get(record.pixelIndex)?.id === source.id
+        && Array.isArray(record.scope) && record.scope.length > 0 && !memberScopes.has(record.source_id),
+      'Adopted source-member scope differs from the complete source roster');
+      const keys = new Set();
+      for (const point of record.scope) {
+        exactKeys(point, ['y', 'x'], 'Adopted source-member scope key');
+        require(Number.isSafeInteger(point.y) && point.y >= 0 && point.y < size
+          && Number.isSafeInteger(point.x) && point.x >= 0 && point.x < size,
+        'Invalid adopted source-member scope key');
+        const key = `${point.y}:${point.x}`;
+        require(!keys.has(key), 'Duplicate adopted source-member scope key');
+        keys.add(key);
+        const xs = memberScopeXsByRow.get(point.y) ?? new Set();
+        xs.add(point.x); xs.add(point.x + 1); memberScopeXsByRow.set(point.y, xs);
+      }
+      memberScopes.set(record.source_id, keys);
+    }
+    require(sourceFeatures.every(feature => memberScopes.has(feature.id)),
+      'Missing adopted source-member scope for a bound provider feature');
+  }
   const validateCentres = centres => {
     require(Array.isArray(centres), 'Invalid reviewed centre coverage');const seen=new Set();
     for(const point of centres){
@@ -562,6 +593,7 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
       const cuts = new Set();
       for (const run of requested.get(y) ?? []) { cuts.add(run[0]); cuts.add(run[1]); }
       for(const record of contextual.values())if(record.y===y){cuts.add(record.x);cuts.add(record.x+1);}
+      for(const x of memberScopeXsByRow.get(y)??[])cuts.add(x);
       for (const run of [...source, ...support, ...holes]) { cuts.add(run.start); cuts.add(run.end); }
       for (const run of [...owned, ...boundary]) { cuts.add(run[0]); cuts.add(run[1]); }
       const points = [...cuts].sort((a, b) => a - b), runs = [], trace = [], contacts = [];
@@ -582,7 +614,8 @@ export function deriveSourceTargetNativeDelta({targets, sourceFeatures, coverage
           else for(const record of matches)contextualContacts.set(JSON.stringify(record),{...record,kind:'interior'});
         }
         if(territorial)return {reason:'territorial_exclusion_cells'};
-        if (!support.some(run => run.owner === owner && activeMembers.has(run.source_id) && run.start <= start && start < run.end))
+        if (!support.some(run => run.owner === owner && activeMembers.has(run.source_id) && run.start <= start && start < run.end
+          && (sourceMemberApplicability === undefined || memberScopes.get(run.source_id)?.has(`${y}:${start}`))))
           return {reason: 'unsupported_coverage_cells'};
         return {reason: 'assigned_cells', owner};
       };
