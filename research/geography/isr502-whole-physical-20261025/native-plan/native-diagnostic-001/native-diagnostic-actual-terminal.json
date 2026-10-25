@@ -1,0 +1,49 @@
+{
+  "code_commit": "8431e5417f5fa84d434625261241488c348664af",
+  "unchanged_executable_baseline": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "configuration": {
+    "commit": "8431e5417f5fa84d434625261241488c348664af",
+    "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-config.json",
+    "mode": "100644",
+    "git_blob_oid": "cc777aabb20fef95382f1628d4a915c442a507d9",
+    "bytes": 421,
+    "sha256": "ebd3fe9d8f946cb4536c07fd41fd2ba870d5c817db21ca279223fb01b1e670b4"
+  },
+  "inputs": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json"
+    }
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-diagnostic",
+    "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-config.json",
+    ".cache/delivery-handoff/isr502-native-diagnostic-001"
+  ],
+  "destination": ".cache/delivery-handoff/isr502-native-diagnostic-001",
+  "started_utc": "2026-10-25T01:20:04.393217+00:00",
+  "scope": {
+    "original_keys": 502,
+    "physical_classes": {
+      "land": 485,
+      "inland-water": 17
+    },
+    "targets": 12,
+    "complete_source_families": 12,
+    "complete_source_features": 605,
+    "emitted_negative_pairs": 105
+  },
+  "limited_five_family_config_not_used": true,
+  "source_or_physical_producers_requested": false,
+  "authority_requested": false,
+  "exit_code": 0,
+  "ended_utc": "2026-10-25T01:24:51.518824+00:00",
+  "destination_exists": true
+}

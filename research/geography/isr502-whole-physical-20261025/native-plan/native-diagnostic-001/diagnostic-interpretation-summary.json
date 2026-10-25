@@ -1,0 +1,157 @@
+{
+  "kind": "full502-native-diagnostic-interpretation-not-acceptance",
+  "diagnostic": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/29b0f7066f0a7fb80c75435a2a0c20d6f568d3b41b2837f5c3a5eef24868d7c6/work/.cache/delivery-handoff/isr502-native-diagnostic-001/native-diagnostic.json",
+    "bytes": 3265632,
+    "sha256": "c79e84b054034b57f7f277f6a1c816749cbe1131331e52f2f237edb23b201e71"
+  },
+  "original_keys": 502,
+  "requested": 502,
+  "diagnostic_supported": 200,
+  "diagnostic_held": 302,
+  "decision_reasons": {
+    "assigned_cells": 200,
+    "territorial_exclusion_cells": 302
+  },
+  "by_original_research_context": {
+    "domestic-land379": {
+      "assigned_cells": 200,
+      "territorial_exclusion_cells": 179
+    },
+    "foreign-land-Nabat\u00eey\u00e9": {
+      "territorial_exclusion_cells": 25
+    },
+    "foreign-land-Irbid": {
+      "territorial_exclusion_cells": 10
+    },
+    "foreign-land-Liban-Sud": {
+      "territorial_exclusion_cells": 18
+    },
+    "foreign-land-West Bank": {
+      "territorial_exclusion_cells": 5
+    },
+    "water-no-foreign3": {
+      "territorial_exclusion_cells": 3
+    },
+    "water-northern-Madaba5": {
+      "territorial_exclusion_cells": 5
+    },
+    "water-southern-list9": {
+      "territorial_exclusion_cells": 9
+    },
+    "foreign-land-Karak": {
+      "territorial_exclusion_cells": 27
+    },
+    "foreign-land-Aqaba": {
+      "territorial_exclusion_cells": 19
+    },
+    "foreign-land-North Sinai Governorate": {
+      "territorial_exclusion_cells": 2
+    }
+  },
+  "by_original_owner": {
+    "24169": {
+      "assigned_cells": 12,
+      "territorial_exclusion_cells": 10
+    },
+    "24170": {
+      "territorial_exclusion_cells": 1
+    },
+    "24171": {
+      "territorial_exclusion_cells": 12
+    },
+    "24173": {
+      "assigned_cells": 9
+    },
+    "24174": {
+      "assigned_cells": 8
+    },
+    "24175": {
+      "territorial_exclusion_cells": 20
+    },
+    "24177": {
+      "territorial_exclusion_cells": 2,
+      "assigned_cells": 41
+    },
+    "24178": {
+      "assigned_cells": 55,
+      "territorial_exclusion_cells": 6
+    },
+    "24180": {
+      "territorial_exclusion_cells": 18,
+      "assigned_cells": 4
+    },
+    "24181": {
+      "territorial_exclusion_cells": 63,
+      "assigned_cells": 20
+    },
+    "24182": {
+      "assigned_cells": 1,
+      "territorial_exclusion_cells": 5
+    },
+    "24183": {
+      "territorial_exclusion_cells": 165,
+      "assigned_cells": 50
+    }
+  },
+  "original_partition": {
+    "finite_source_unresolved_rationale_for_independent_consideration": 60,
+    "positive_source_qualification_candidate": 379,
+    "material_source_application_step_unperformed": 63
+  },
+  "original_physical_classes": {
+    "land": 485,
+    "inland-water": 17
+  },
+  "water17_context_and_reason": [
+    {
+      "context": "water-no-foreign3",
+      "reason": "territorial_exclusion_cells",
+      "cells": 3
+    },
+    {
+      "context": "water-northern-Madaba5",
+      "reason": "territorial_exclusion_cells",
+      "cells": 5
+    },
+    {
+      "context": "water-southern-list9",
+      "reason": "territorial_exclusion_cells",
+      "cells": 9
+    }
+  ],
+  "physical_witness_kind_counts": {},
+  "territorial_operand_key_pairs": {
+    "all": 8757,
+    "empty": 8370,
+    "nonempty": 387
+  },
+  "nonempty_contact_pairs_by_family": {
+    "gb:ISR:ADM1": 267,
+    "gb:LBN:ADM1": 43,
+    "gb:JOR:ADM1": 70,
+    "gb:PSE:ADM1": 5,
+    "gb:EGY:ADM1": 2
+  },
+  "keys_with_any_new_six_family_native_contact": 0,
+  "actual_rule_sha256": "e65d135d2ed1932a28c1cae1280fa84bb1cbc0a5245ad5c097b99925db691435",
+  "first_failure": {
+    "predicate": "unique-source-target-coverage",
+    "run": [
+      156998,
+      156999,
+      24170
+    ],
+    "y": 105359
+  },
+  "limitations": [
+    "Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.",
+    "All original source, physical, query, witness and territorial limits remain retained.",
+    "All502 original literal keys and full requested/supported/held partitions were compared exactly; no observer rerun.",
+    "Empty native-predicate kinds do not establish absence of arbitrary geometric overlap or sovereignty.",
+    "Diagnostic support is not authority, zero-current-owner evidence, selected-output acceptance or completion credit.",
+    "No blanket family waiver or applicability exception is adopted."
+  ],
+  "holds_changed": false,
+  "authority_produced": false
+}
