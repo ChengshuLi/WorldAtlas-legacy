@@ -3,7 +3,7 @@
 Whenever an author, premerge reviewer, Auditor or publisher needs a new local checkout, use `scripts/local-workspace.mjs`
 for new local checkouts. Fresh branches do not require accumulating fresh directories. Lane prefixes are optional;
 Git ref validity, unique fresh branches and exact worker/slot ownership remain enforced.
-Use Node 24 and the helper bound to the task's repository, not an ambient checkout. Follow [WORKER_COORDINATION.md](WORKER_COORDINATION.md#chat-identity) for worker identity; this guide defines only how that identity binds to local allocations. One shared Git object
+Use Node 24 and the helper bound to the task's repository, not an ambient checkout. Follow [WORKER_COORDINATION.md](WORKER_COORDINATION.md#ownership-and-scope) for worker identity; this guide defines only how that identity binds to local allocations. One shared Git object
 store and registry serve all its worktrees. Each unique worker ID has at most one
 `work` slot and one `review` slot. Release a finished slot before allocating its
 replacement. A reviewer remains isolated from the author's files and reasoning. Review slots are optional: inspect exact diffs and immutable evidence through GitHub APIs or Git blobs without allocating a checkout when no filesystem reproduction/test is needed.
