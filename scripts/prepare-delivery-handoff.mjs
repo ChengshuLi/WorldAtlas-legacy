@@ -1546,7 +1546,7 @@ function partitionSupportedInputs(config, reader, accepted) {
     need(same(source.native_contract, contract) && same(source.base_reference, originalNativeReference(accepted.manifest)),
       'Supported source differs from accepted original native contract');
     const identities = new Map(accepted.features.map(feature => [feature.pixelIndex, feature.id]));
-    need(Array.isArray(source.targets) && source.targets.every(target => identities.get(target.pixelIndex) === target.target_id),
+    need(Array.isArray(source.targets) && source.targets.every(target => identities.has(target.pixelIndex) && identities.get(target.pixelIndex) === (target.target_id ?? target.id)),
       'Supported source owner identity differs from accepted final bank');
     // Intersect ordered intervals, never materialize one record per native cell.
     // Presence under the same owner is a technical non-addition, not new credit.

@@ -683,13 +683,36 @@ test('accepted final map partitions full support into exact novel/already-presen
  });
 });
 
+test('accepted support uses the optional target identity without rewriting original source',async t=>{
+ const f=await acceptedFixture(t);
+ for(const [name,mutateSource]of [
+  ['omitted target_id',s=>{s.targets[0].id='A';delete s.targets[0].target_id;}],
+  ['null target_id',s=>{s.targets[0].id='A';s.targets[0].target_id=null;}]
+ ])await t.test(name,async()=>{
+  const {output:o,source}=await f.run({mutateSource});
+  assert.deepEqual(o['native-patch.json'].rows,[{y:1,runs:[[3,4,1]]}]);
+  assert.deepEqual(o['already-present-original.json'].rows,[{y:1,runs:[[2,3,1]]}]);
+  assert.deepEqual(o['held-original.json'].rows,[{y:1,runs:[[4,5,1,'territorial_exclusion_cells']]}]);
+  assert.deepEqual(o['source-evidence.json'],{...source,targets:source.targets.map(target=>({...target,
+   coverage_rows:[{y:1,runs:[[3,4,'mapped_land_support']]}]}))});
+  const account=o['original-scope-partition.json'];
+  assert.equal(account.original_cells,3);assert.equal(account.supported_cells,1);
+  assert.equal(account.already_present_cells,1);assert.equal(account.held_cells,1);
+ });
+});
+
 test('incremental support refuses conflicts, identity substitutions and incomplete accepted state',async t=>{
  const f=await acceptedFixture(t);
  const cases=[
   ['unexpected replacement operand',{mutateSelector:c=>c.source_evidence={}},/Explicit incremental supported-input locators/],
   ['different occupied owner',{supported:[[0,1,1]],held:[]},/conflicts with accepted owner/],
   ['foreign target identity',{mutateSource:s=>s.targets[0].target_id='B'},/owner identity differs/],
-  ['missing target identity',{mutateSource:s=>delete s.targets[0].target_id},/owner identity differs/],
+  ['unmapped source identity without optional target',{mutateSource:s=>delete s.targets[0].target_id},/owner identity differs/],
+  ['explicit wrong target takes precedence',{mutateSource:s=>{s.targets[0].id='A';s.targets[0].target_id='B';}},/owner identity differs/],
+  ['explicit empty target takes precedence',{mutateSource:s=>{s.targets[0].id='A';s.targets[0].target_id='';}},/owner identity differs/],
+  ['missing both target identities',{mutateSource:s=>{delete s.targets[0].id;delete s.targets[0].target_id;}},/owner identity differs/],
+  ['unknown owner and missing identities',{mutateSource:s=>{delete s.targets[0].id;delete s.targets[0].target_id;s.targets[0].pixelIndex=999;}},/owner identity differs/],
+  ['unknown owner with valid identity',{mutateSource:s=>{s.targets[0].id='A';delete s.targets[0].target_id;s.targets[0].pixelIndex=999;}},/owner identity differs/],
   ['native contract substitution',{mutateSource:s=>s.base_reference={...s.base_reference,id:'geography:foreign'}},/original native contract/],
   ['noncanonical selector path',{mutateSelector:c=>c.accepted_selector.path='incremental/source.json'},/Canonical accepted selector/],
   ['missing immutable selector',{mutateSelector:c=>c.accepted_selector.commit='0'.repeat(40)},/Missing ordinary|not a tree|bad object|Not a valid object/],
