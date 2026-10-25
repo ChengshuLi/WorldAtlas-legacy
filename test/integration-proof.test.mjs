@@ -35,6 +35,17 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(development, /for key in \('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',[\s\S]*?'GIT_ALTERNATE_OBJECT_DIRECTORIES'\):\n\s+env\.pop\(key, None\)/);
   assert.match(development, /subprocess\.call\(\['node',[\s\S]*?\], env=env\)/);
   const validation = fs.readFileSync('docs/VALIDATION.md', 'utf8');
+  const architecture = fs.readFileSync('docs/DATA_ARCHITECTURE.md', 'utf8');
+  assert.match(architecture, /field-specific evidence priorities and then a stable record-ID tie-break/i);
+  assert.doesNotMatch(architecture, /equal-precedence contradictions are rejected/);
+  const operations = fs.readFileSync('docs/OPERATIONS.md', 'utf8');
+  assert.match(operations, /Encryption provides confidentiality, not sender authentication/i);
+  assert.match(operations, /sender-supplied hash alone does not establish origin/i);
+  assert.match(operations, /authorized workflow and event, head commit, successful run and attempt, and the artifact/i);
+  assert.match(operations, /restricted application database URL/i);
+  assert.match(operations, /private recipient key outside Git in an owner-only `0600` file/i);
+  assert.match(operations, /ciphertext is not `DATABASE_URL`/i);
+  assert.match(operations, /explicit authorization for that exact live destination/i);
   assert.match(development, /account identity alone neither proves nor disproves independence/i);
   assert.match(validation, /selectedDataSelection[\s\S]*reviewedTestPlan/);
   assert.match(validation, /do not automatically require `complete`/i);
