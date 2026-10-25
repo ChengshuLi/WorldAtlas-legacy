@@ -1,0 +1,540 @@
+{
+  "groups": {
+    "matrix_group_05_bethlehem": 27,
+    "matrix_group_10_jenin": 10,
+    "matrix_group_12_hebron": 6
+  },
+  "inputs": {
+    "group_crosswalk": {
+      "bytes": 68710,
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-20/task/inventory/pse-adm2-427-group-source-qualification-crosswalk-20261024.json",
+      "sha256": "0b968fb407f2deff8d0f912b5a626dd2aae4dd76643873ea4fb2c02b88eb577a"
+    },
+    "group_matrix": {
+      "bytes": 55269,
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-20/task/inventory/pse-adm2-427-group-evidence-matrix-20261024.json",
+      "sha256": "d50363ab3b1e4a826ab65c8ac03429db36fa178f23801a4fa86db36aa77c2223"
+    },
+    "original_intervals": {
+      "bytes": 102352,
+      "path": "coordination/engineering/pse-original-disposition-20261020/pse-disposition.json",
+      "sha256": "0b8b48671315dd4d20f23c28a034859964689c7747375e41e840d07f73bb7cb9"
+    },
+    "source_evidence": {
+      "bytes": 55359,
+      "path": "research/geography/pse-owner36955-parent-context-20261025/source-evidence.json",
+      "sha256": "316960c42278ee9288967eaffc94acc5589a9fbcd98546c1282b8ee5f9fd551c"
+    },
+    "stock_native_diagnostic": {
+      "bytes": 580048,
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-diagnostic-20261025-parent-context/native-diagnostic.json",
+      "sha256": "bcd7d3f2ee4975bc89db084dbdf56bfb95e2f24ca72ab5567d8be84c24aa9208"
+    }
+  },
+  "key_count": 43,
+  "key_set_sha256_y_x_owner": "abab00e28f56a1132492dc45109f5b02f842f0f7f098fe944fde3fbdd4f29daa",
+  "kind": "pse-parent-context-scope-v1",
+  "limits": [
+    "Only original land keys with the exact candidate and PSE ADM1 parent source-feature vector are included.",
+    "All other foreign competitor contacts remain present and continue to hold their keys.",
+    "The separate three Jerusalem-contact keys owned by 36955 are excluded.",
+    "This scope adds no source geometry and changes no native hold, selection, acceptance, legal or sovereignty status."
+  ],
+  "original_denominator": {
+    "cells": 427,
+    "intervals": 277,
+    "requested_owners": 11
+  },
+  "owner_source_vectors": {
+    "36953": [
+      52576,
+      52593
+    ],
+    "36956": [
+      52576,
+      52586
+    ],
+    "36961": [
+      52576,
+      52589
+    ]
+  },
+  "package_id": "gb-PSE-ADM2--repair-evaluation",
+  "records": [
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156899,
+      "y": 106723
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156899,
+      "y": 106724
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156898,
+      "y": 106726
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156898,
+      "y": 106727
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156897,
+      "y": 106729
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156897,
+      "y": 106746
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106826
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106837
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156869,
+      "y": 106842
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156868,
+      "y": 106843
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156867,
+      "y": 106844
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156868,
+      "y": 106844
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156866,
+      "y": 106845
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156855,
+      "y": 106903
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156854,
+      "y": 106904
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156853,
+      "y": 106905
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156852,
+      "y": 106906
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156849,
+      "y": 106908
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156848,
+      "y": 106909
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156847,
+      "y": 106910
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156844,
+      "y": 106912
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156843,
+      "y": 106913
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156842,
+      "y": 106914
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156841,
+      "y": 106915
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156838,
+      "y": 106917
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156837,
+      "y": 106918
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 5,
+      "negative_ordinal": 3,
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156833,
+      "y": 106921
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156764,
+      "y": 106017
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156766,
+      "y": 106018
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156768,
+      "y": 106019
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156770,
+      "y": 106020
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156840,
+      "y": 106020
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156843,
+      "y": 106022
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156844,
+      "y": 106023
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156845,
+      "y": 106023
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156846,
+      "y": 106024
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 10,
+      "negative_ordinal": 2,
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156847,
+      "y": 106025
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 12,
+      "negative_ordinal": 2,
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156798,
+      "y": 106948
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 12,
+      "negative_ordinal": 2,
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156560,
+      "y": 107017
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 12,
+      "negative_ordinal": 2,
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156561,
+      "y": 107017
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 12,
+      "negative_ordinal": 2,
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156557,
+      "y": 107018
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 12,
+      "negative_ordinal": 2,
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156560,
+      "y": 107018
+    },
+    {
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "matrix_group_id": 12,
+      "negative_ordinal": 2,
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156553,
+      "y": 107019
+    }
+  ],
+  "status": "exact original parent-only key scope for a source-relative stock diagnostic; no status change",
+  "version": 1
+}
