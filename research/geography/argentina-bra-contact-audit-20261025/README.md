@@ -15,3 +15,9 @@ This is exact key and source-ID accounting. It does not establish the legal appl
 Run `python3 research/geography/argentina-bra-contact-audit-20261025/reproduce.py` from the repository root. It verifies the pinned Git blobs and byte hashes, reconstructs the source and positive sets from the retained packet, checks conservation and overlap, and prints the result JSON. Inputs and immutable pins are in `pins.json`.
 
 The accepted baseline is grounded in the merged [PR #2399](https://github.com/ChengshuLi/WorldAtlas/pull/2399) delivery and [PR #2566](https://github.com/ChengshuLi/WorldAtlas/pull/2566) readback. PR #2382 is closed and unmerged; its target-coverage candidate difference is used only to explain the 383-versus-380 discrepancy, not as evidence that its proposed patch was accepted.
+
+## Separate source-index resolution for four retained fitness holds
+
+The original source-feature roster uses a one-based global `source_index` and explicitly records each source family, source ID, zero-based local `ordinal`, name, and owners. The four retained fitness-held keys map as follows: owner 7771's `(159121, 89292)` uses source indices 675 and 1030; owner 8259's `(160221, 89685)`, `(160237, 89674)`, and `(160253, 89665)` use indices 675 and 701. Index 675 resolves to the Buenos Aires ADM1 parent; 701 resolves to Pinamar ADM2; 1030 resolves to Castelli ADM2. The exact roster rows and file hashes are in `source-index-mapping.json`.
+
+The mapped local ADM2 ordinals (Pinamar 3 and Castelli 332) match the corresponding features in the pinned 525-feature consumed source payload. This resolves source-feature identity only. It does not establish the seven-component source-fitness criterion, boundary applicability, or any disposition change for the four held keys.
