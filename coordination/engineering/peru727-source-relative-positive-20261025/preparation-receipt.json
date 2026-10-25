@@ -1,6 +1,6 @@
 {
   "kind": "PER727-source-relative-positive-preparation-receipt-v1",
-  "status": "proposal only; adopted parent-department territorial applicability diagnostic screening completed (677/677 supported, 0 held); not owner qualification or accepted credit; no status/credit change",
+  "status": "proposal only; source diagnostic and native constructor produced a 677-cell candidate, but current-owner/accepted-selected-bank validation is blocked by unavailable GitHub OAuth; no acceptance, status or credit change",
   "execution_commit": "e20f40c615542d66afe510a409eb49c54cce075a",
   "original_scope": {
     "accepted_commit": "b7ca15f8d88241b088699396d3df0ca58a9e0803",
@@ -293,6 +293,52 @@
       "Read-only diagnostic after source applicability preparation; no source or physical producer replay.",
       "Diagnostic screening is not owner qualification, accepted science, status or credit.",
       "Distinct-worker review pending."
+    ]
+  },
+  "native_authority_constructor": {
+    "path": "native-authority-adopted-677-001/constructor-result.json",
+    "bytes": 415106,
+    "sha256": "d6003062fd1440453e7b782c21ae9f29b1d88cdf57f8e5ca73684bd731a1a671",
+    "rule_sha256": "3c7f0e435b4725c15978801fa36343ea77461cbe816879e8a77455750e85b4ac",
+    "native_rows": 222,
+    "qualified_cells": 677,
+    "owner": 33741,
+    "target_id": "gb:PER:ADM2:86281439B43857057528938",
+    "source_evidence": {
+      "commit": "05830a72fef2e5d38952093bf61e24566237cf98",
+      "path": "native-inputs-adopted-677-001/source-evidence.json",
+      "sha256": "8fde277bd8b0c586b39f8e8e8f21af02d36f5c89bf08c24851109ec558688558"
+    },
+    "native_patch": {
+      "commit": "c110a9c75c1bbc39a2be07de0c9a3bb87b635c08",
+      "path": "native-patch.json",
+      "sha256": "9e23570c9116340f634b1dbc66c874f4ae611d336129424380466a70b5d8c764"
+    },
+    "distinct_review": {
+      "reviewer": "caf_nola",
+      "result": "pass",
+      "finding": "222 constructor rows equal pinned patch; 677 unique cells all owner33741; contextual contacts concern requested centres only; no acceptance/whole-parent certification"
+    }
+  },
+  "current_selector_validation": {
+    "phase": "supported-inputs",
+    "config_path": "supported-inputs-config.json",
+    "accepted_selector": {
+      "commit": "b20e0da65ed2fd909a1ed1fb79caa2b8e3198a83",
+      "path": "data/ownership-selection.json"
+    },
+    "selector_ancestry_verified": true,
+    "result": "blocked",
+    "exact_error": "no oauth token found for github.com; Geography object acquisition failed",
+    "selected_bank_locator": {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "bytes": 49610,
+      "sha256": "d88695ab34ae31729838b66c19a3559db8ba5dc3062b931094b60531e441bdda"
+    },
+    "limits": [
+      "No OAuth/login flow initiated; no GitHub or bank reconstruction attempted.",
+      "Current-owner and selected-output conservation remain unverified.",
+      "No status/credit change or dispatch."
     ]
   }
 }
