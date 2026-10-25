@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "kind": "actual-reviewed-library-to-adopted-hold-binding",
+  "author_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "root_adoption": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma206-adopted-continuation/source-hold26/root-adoption.json",
+    "bytes": 2719,
+    "sha256": "3b233d4158b56c1eb2d25fae3650eedd8d5a053fc683888a96d88fd3074b0326"
+  },
+  "library": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/DMA232-source-review-supplement-20261025-v2.zip",
+    "bytes": 3216742,
+    "sha256": "97fd7b08cc77a3c4c2f7a0bfb1d053b5030f31878166f78c3b0b0646ec03795e"
+  },
+  "reviewed_members": [
+    {
+      "member": "update26/author-disposition26/exact26-author-recommendations.json",
+      "sha256": "16133c2da12ed58787a45394a4f6f397fb5ab60e4fa7b582252fa8966c37ad3a",
+      "bytes": 76706
+    },
+    {
+      "member": "update206/exact206-source-rationale.json",
+      "sha256": "39842fb01ee73ef97f83452bdfe81f613fda438cb4000c6408321f1b2110bc26",
+      "bytes": 343872
+    },
+    {
+      "member": "update26/continuation-plan/prior-holds26.PROPOSED.json",
+      "sha256": "87685b2408853191aa4d65232626c59045315b71da1f8be6653fa505d9760b79",
+      "bytes": 108481
+    }
+  ],
+  "sets": {
+    "original": 232,
+    "adopted_source_held": 26,
+    "positive_continuation": 206,
+    "disjoint": true,
+    "complete": true,
+    "hold_rows_unchanged_from_reviewed_v2": true
+  },
+  "independent_body_limit": "Root exact readback binds independent checks SHA and the cumulative Libraryv2 sets. Independent-checks body itself is not in child custody; no claim of rereading it.",
+  "historical76_156": true,
+  "separate174_unchanged": true,
+  "old232_authority_unchanged": true,
+  "no_phase_executed": true,
+  "adopted_hold_document": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma206-adopted-continuation/source-hold26/prior-holds26.json",
+    "bytes": 111887,
+    "sha256": "9b0471b1dbc1dac7fee6881e94671360a656983f68ca3219c913682bc8fe334d"
+  }
+}
