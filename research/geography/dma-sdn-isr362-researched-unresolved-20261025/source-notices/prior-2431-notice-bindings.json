@@ -1,0 +1,200 @@
+{
+  "kind": "SDN2431-authority-and-held223-source-notice-binding-not-final-output",
+  "worker_thread_id": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+  "local_origin_main_snapshot": "23c0842ae95eed5d6572447f1b935c5007670e28",
+  "remote_freshness_claim": false,
+  "repository_notices": [
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "README.md",
+      "blob_oid": "b79b79469629eadd6b99571d6ddb9c8e4f56e169",
+      "bytes": 15068,
+      "sha256": "71f68a5846c7b4ad5c6cb662de4e6cfdb85f0bc28d39832af8dd6d52915093e4",
+      "same_bytes_as_prior_notice_readback": true,
+      "relevant_lines": [
+        {
+          "line": 76,
+          "text": "Natural Earth is [public domain](https://www.naturalearthdata.com/about/terms-of-use/); geoBoundaries licenses vary by original source; Cliopatria is CC BY 4.0. The global hierarchy audit is recorded in [data/hierarchy-report.json](data/hierarchy-report.json). See [data/sources.json](data/sources.json), [data/administrative-sources.json](data/administrative-sources.json), and [data/cliopatria/index.json](data/cliopatria/index.json) for attribution and provenance. The interface optionally loads Google Fonts and falls back to system fonts when unavailable."
+        }
+      ]
+    },
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "docs/GRANULARITY.md",
+      "blob_oid": "9b95a4939faff9a08cce91056ed01b3dfb5b0266",
+      "bytes": 8469,
+      "sha256": "88191c8fb904e8eea4828e9589af3f5ac290dd8c312f95047b4257e6ca54acab",
+      "same_bytes_as_prior_notice_readback": true,
+      "relevant_lines": [
+        {
+          "line": 21,
+          "text": "| geoBoundaries gbOpen | Reviewed ADM1–ADM3 district polygons; per-country source year, original license and SHA in `administrative-sources.json` |"
+        },
+        {
+          "line": 32,
+          "text": "| [OpenStreetMap](https://www.openstreetmap.org/copyright) | © OpenStreetMap contributors, ODbL 1.0; named Turkmenistan district crosswalk for unnamed source fragments; adapted polygons and evidence are distributed with source |"
+        }
+      ]
+    },
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "docs/SOURCE_POLICY_RUNTIME_INTEGRATION.md",
+      "blob_oid": "31b3eaa24193b2c64c1585b09dea1e1d495d94e2",
+      "bytes": 4943,
+      "sha256": "48e05f335d30ef50c966efca7f3198e564442d96134a2cb1dcd9a37e5e840298",
+      "same_bytes_as_prior_notice_readback": true,
+      "relevant_lines": [
+        {
+          "line": 7,
+          "text": "Corrected descriptions show the installed role and its selected counts. Original descriptions and corroborating source facts are in a collapsed evidence section; contradictory source metadata is separately retained. The UI explicitly says that boundaries and location scale remain under review. If the projection cannot load or its policy assumptions fail validation, coverage remains available with a visible earlier-review notice; reopening retries failed transport. No silent substitution occurs."
+        },
+        {
+          "line": 41,
+          "text": "Retain `level` whenever code expects an original source administrative layer such as ADM3. Use `effective_level` only when presenting the installed geographic/functional source role. The corrected `role` describes actual installed units; it is never sufficient to assign an atlas tier or certify local granularity. Keep contradictory source metadata as source observation, not an effective classification."
+        },
+        {
+          "line": 43,
+          "text": "Before writing any regenerated review, explicitly add `source-policy-corrections/europe-v1.json.gz` and the effective-resolver code to that product's input fingerprints. Record the correction ID and evidence IDs for corrected profiles, retain original descriptions as context, and leave all unresolved semantic statuses unchanged. Per-location effective roles require the bundle's keyed annotations with matching ID/footprint evidence; a country label alone must not relabel a retained municipality as an agricultural district. Current active geography, registry and frozen history must remain unchanged. Refreshing a source-role annotation is not an identity or history migration."
+        }
+      ]
+    }
+  ],
+  "source_declarations": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2431-delivery-source-notice/source-declarations.json",
+    "bytes": 56212,
+    "sha256": "7e0b9da57a78d4b65499c3b387a5d125e3da5b8df960733c130880e625d76d58"
+  },
+  "archive_declarations": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2431-delivery-source-notice/original-archive-declarations.json",
+    "bytes": 4278,
+    "sha256": "703319280b4abf05c983579f1a3bf1a9cc0b30d10dbdca012a70a9a0c1831cbe"
+  },
+  "published_derivation_bindings": [
+    {
+      "commit": "015a3b8925c468d08237c8344084029d4fdffa8e",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/constructor-result.json",
+      "blob_oid": "304e472ee6b08719eb88068c5cfe1f9503acc443",
+      "bytes": 131259,
+      "sha256": "6a1361e8b49a87dc8ee6928dbeddbcc243be0b99dd7de4d110b36ac3ec80d471"
+    },
+    {
+      "commit": "015a3b8925c468d08237c8344084029d4fdffa8e",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/authority-binding.json",
+      "blob_oid": "3ea3fcfc91639a899e1dcf6658176b3e1dfa7eb6",
+      "bytes": 732,
+      "sha256": "e98a6bc9306d9121b98f59d9adebc0aa0cb0f3fcd93988aeebb0da10709e4941"
+    },
+    {
+      "commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/source-evidence.json",
+      "blob_oid": "a1266b9d68ee3e6718eb82d7dbe6adc015d308c4",
+      "bytes": 176450,
+      "sha256": "4d19241ce5280d80db197ac3eab2635321430515449de4cf5c9b8ae2e896a5a8"
+    },
+    {
+      "commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/native-patch.json",
+      "blob_oid": "aefa9729213ba303353b92a8d64832092cb428e2",
+      "bytes": 48367,
+      "sha256": "a6a98a4f2e359d8de3fcf117a5b4c0f37f3cf4f9602095477a0fdf9362a6100f"
+    },
+    {
+      "commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/held-original.json",
+      "blob_oid": "dc2eb8b545bbb41e7ce1d3e09f9b385368f1a116",
+      "bytes": 9609,
+      "sha256": "34e20c853679bfcadbf3b6c603b44a456b532fd7814a0810d97a4608c309ae21"
+    },
+    {
+      "commit": "d6bc654b38ea4cbb9cc0c25b32ec231f0beee1dd",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-diagnostic-001/native-diagnostic.json",
+      "blob_oid": "3acbf87d018d1af703e1ec3b47317df47553ad14",
+      "bytes": 2817571,
+      "sha256": "db1e97b00e1c3bce60c4bc26f687834d792414f5a9754b85beaa0ff1dbbaae8e"
+    },
+    {
+      "commit": "c16f2b6b38009e009eca0e337cc06a4264023054",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/source-evidence.json",
+      "blob_oid": "0c945db7c2855cf2f9272c7625519b477ed870ff",
+      "bytes": 189805,
+      "sha256": "922d5e7ba12070d1335aed1ad30a7583cdc0bb1d9d1750d0a058770a72512c37"
+    },
+    {
+      "commit": "ba4f1e8faf41467fc09797e0d7941cd8c2373ed4",
+      "path": "research/geography/sdn2654-physical-20261025-01a16f2e/physical-001/whole-target-support.json",
+      "blob_oid": "e5ab6128bef1f40a4ffb4abd0f597e7beec11956",
+      "bytes": 830041,
+      "sha256": "64640a028aaffec53f4e15823de8113e68bbd82e143ac1640c2b4dc2aa759920"
+    }
+  ],
+  "physical_notices": [
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "coordination/engineering/lca-original-repair-20261021/positive-qualification-20261021/gshhg-notice/LICENSE.TXT",
+      "bytes": 1375,
+      "sha256": "dc53a4833bf9121360a5286917683f041439327353ffe0231206c6b746005b81",
+      "git_blob_oid": "b10c0f3ba1e836eaeedbcb2f2e731ead69975582",
+      "copy": "gshhg/LICENSE.TXT"
+    },
+    {
+      "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+      "path": "coordination/engineering/lca-original-repair-20261021/positive-qualification-20261021/gshhg-notice/README.TXT",
+      "bytes": 15350,
+      "sha256": "8c83b0d9e861c3cf9390ccfcc28d57dd484b192e1767524e094c988ee9f84ac7",
+      "git_blob_oid": "4df1a4ac69f38f0c302b87732b1aa1ae6ddfecb4",
+      "copy": "gshhg/README.TXT"
+    }
+  ],
+  "scope": {
+    "original": 2654,
+    "qualified": 2431,
+    "held": 223,
+    "held_groups": {
+      "EGY": 22,
+      "ERI": 39,
+      "TCD": 144,
+      "CAF": 18
+    },
+    "separate_parent_context_members": 19
+  },
+  "geographic_context_receipts": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn19-parent-source-assessment/assessment.md",
+      "bytes": 12075,
+      "sha256": "f89cbee60cdff19d5e399c1cd2c623ee0be449ee184492a5d7c70628f3baedeb"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn223-review-handoff/review-handoff.md",
+      "bytes": 16660,
+      "sha256": "01439f11965049ae38e23be10a8f7a5199ca486aac9b3bdb83222947ee9e88be"
+    }
+  ],
+  "final_selected_output": {
+    "commit": null,
+    "path": null,
+    "sha256": null,
+    "status": "Unbound until actual coordinator finalization; no output locator invented."
+  },
+  "outstanding_notice_questions": [
+    {
+      "families": [
+        "gb:ETH:ADM2",
+        "gb:ETH:ADM3"
+      ],
+      "observed_conflict": "boundaryLicense ODbL1.0; licenseDetail points to CC BY. Preserve both; no license election or correction made.",
+      "not_a_geographic_exclusion": true
+    },
+    {
+      "family": "gb:CAF:ADM1",
+      "supplement": "Exact original archive identifies Central_African_Republic_prefectures_blank.png; consumed metadata only has commons.wikimedia.org/wiki/File. Supplement precise reference without overwriting original."
+    }
+  ],
+  "raw_archives_or_documentary_maps_copied": false,
+  "scientific_or_acceptance_status_changed": false,
+  "supplemental_attribution": {
+    "family": "gb:CAF:ADM1",
+    "creator": "Golbez (credited in Commons description/upload; machine-readable author qualified as assumed)",
+    "source": "https://commons.wikimedia.org/w/index.php?title=File:Central_African_Republic_prefectures_blank.png&oldid=852528122",
+    "does_not_replace_frozen_metadata": true
+  }
+}
