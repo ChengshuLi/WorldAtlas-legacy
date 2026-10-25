@@ -1,0 +1,105 @@
+{
+  "kind": "SDN2654-existing-supported-inputs-readback",
+  "operation": {
+    "state": "completed",
+    "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+    "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work",
+    "actual_code_checkout_commit": "d6bc654b38ea4cbb9cc0c25b32ec231f0beee1dd",
+    "accepted_selector_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "accepted_and_own_selector_blob": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "merge_needed_or_performed": false,
+    "command": [
+      "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/prepare-delivery-handoff.mjs",
+      "supported-inputs",
+      ".cache/sdn2654-supported-inputs/supported-inputs-config.json",
+      ".cache/delivery-handoff/sdn2654-supported-inputs-20261025-01a16f2e-001"
+    ],
+    "config_sha256": "8ef3012989e1dc8b46da147ae111933e3693c514e95413da4e11f6af325bdb16",
+    "destination": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-supported-inputs-20261025-01a16f2e-001",
+    "started_utc": "2026-10-25T01:46:19.571314+00:00",
+    "original2654_and_held223_preserved": true,
+    "native_rerun": false,
+    "physical_rerun": false,
+    "authority_run": false,
+    "exit_code": 0,
+    "finished_utc": "2026-10-25T01:54:45.570950+00:00"
+  },
+  "products": [
+    {
+      "name": "already-present-original.json",
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    {
+      "name": "held-original.json",
+      "bytes": 9609,
+      "sha256": "34e20c853679bfcadbf3b6c603b44a456b532fd7814a0810d97a4608c309ae21"
+    },
+    {
+      "name": "native-patch.json",
+      "bytes": 48367,
+      "sha256": "a6a98a4f2e359d8de3fcf117a5b4c0f37f3cf4f9602095477a0fdf9362a6100f"
+    },
+    {
+      "name": "original-scope-partition.json",
+      "bytes": 25266,
+      "sha256": "d904b47056095261b13add7a8d46da507e0327107b98bee72e1073236e330427"
+    },
+    {
+      "name": "preparation.json",
+      "bytes": 733,
+      "sha256": "9c4a2274eea29c971e07724487fcad27db611f14f429f806f0f5f423d2ac2c7e"
+    },
+    {
+      "name": "source-evidence.json",
+      "bytes": 176450,
+      "sha256": "4d19241ce5280d80db197ac3eab2635321430515449de4cf5c9b8ae2e896a5a8"
+    }
+  ],
+  "original_cells": 2654,
+  "partition": {
+    "novel": 2431,
+    "already_present": 0,
+    "held": 223
+  },
+  "original_scope_partition": {
+    "domestic1535": {
+      "novel": 1535,
+      "already_present": 0,
+      "held": 0
+    },
+    "foreign223": {
+      "novel": 0,
+      "already_present": 0,
+      "held": 223
+    },
+    "special896": {
+      "novel": 896,
+      "already_present": 0,
+      "held": 0
+    }
+  },
+  "surviving_targets": 33,
+  "original_targets": 35,
+  "whole_source_physical_and_negative_fields_unchanged": true,
+  "original_held223_exact": true,
+  "physical_issue_owner22": {
+    "novel": 22,
+    "already_present": 0,
+    "held": 0
+  },
+  "missing_Geneina_key": {
+    "key": [
+      39473,
+      121315,
+      147277
+    ],
+    "partition": "held"
+  },
+  "limits": [
+    "Full19 SDN ADM1 hierarchy/context remains outside diagnostic and qualification; no parent-consistency clearance.",
+    "Preparation is not authority, delivery, acceptance, or new scientific credit.",
+    "No source/physical producer, observer, or geometry predicate was run by this readback."
+  ]
+}
