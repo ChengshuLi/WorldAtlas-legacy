@@ -47,26 +47,63 @@ test('documented bootstrap ignores hostile inherited Git routing variables', () 
   const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
   const match = development.match(/for key in (GIT_DIR[^\n]+); do\n  unset "\$key"\ndone/);
   assert(match, 'bootstrap sanitizer is required');
+  const block = [...development.matchAll(/```sh\n([\s\S]*?)\n```/g)].find(candidate => candidate[1].includes(match[0]));
+  assert(block, 'documented bootstrap shell must be testable');
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'worldatlas-bootstrap-routing-'));
   try {
+    const remote = path.join(dir, 'origin.git');
     const repo = path.join(dir, 'task');
     const decoy = path.join(dir, 'decoy');
     fs.mkdirSync(repo); fs.mkdirSync(decoy);
     const clean = Object.fromEntries(Object.entries(process.env).filter(([key]) =>
       !['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
         'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'].includes(key)));
+    clean.GIT_NO_LAZY_FETCH = '1'; clean.GIT_NO_REPLACE_OBJECTS = '1';
+    execFileSync('git', ['init', '--quiet', '--bare', remote], {env: clean});
     execFileSync('git', ['init', '--quiet', repo], {env: clean});
     execFileSync('git', ['init', '--quiet', decoy], {env: clean});
+    fs.mkdirSync(path.join(repo, 'scripts'), {recursive: true});
+    fs.mkdirSync(path.join(repo, 'coordination', 'example'), {recursive: true});
+    fs.mkdirSync(path.join(decoy, 'tracked'), {recursive: true});
+    for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+      fs.copyFileSync(`scripts/${name}`, path.join(repo, 'scripts', name));
+    fs.writeFileSync(path.join(repo, 'coordination', 'example', 'input.json'), '{}\n');
+    fs.writeFileSync(path.join(decoy, 'tracked', 'sentinel.txt'), 'leave this decoy untouched\n');
+    for (const cwd of [repo, decoy]) {
+      execFileSync('git', ['-C', cwd, 'config', 'user.name', 'Bootstrap Test'], {env: clean});
+      execFileSync('git', ['-C', cwd, 'config', 'user.email', 'bootstrap@example.invalid'], {env: clean});
+      execFileSync('git', ['-C', cwd, 'add', '.'], {env: clean});
+      execFileSync('git', ['-C', cwd, 'commit', '--quiet', '-m', 'fixture'], {env: clean});
+    }
+    execFileSync('git', ['-C', repo, 'remote', 'add', 'origin', remote], {env: clean});
+    execFileSync('git', ['-C', repo, 'push', '--quiet', 'origin', 'HEAD:main'], {env: clean});
+    const refsBefore = execFileSync('git', ['-C', decoy, 'for-each-ref', '--format=%(refname) %(objectname)'],
+      {env: clean, encoding: 'utf8'});
+    const indexPath = path.join(decoy, '.git', 'index');
+    const indexBefore = createHash('sha256').update(fs.readFileSync(indexPath)).digest('hex');
+    const filesBefore = execFileSync('git', ['-C', decoy, 'ls-files', '-z'], {env: clean})
+      .toString().split('\0').filter(Boolean).map(name => [name, createHash('sha256')
+        .update(fs.readFileSync(path.join(decoy, name))).digest('hex')]);
     const poisoned = {...clean, TASK_REPO: repo,
       GIT_DIR: path.join(decoy, '.git'), GIT_WORK_TREE: decoy,
-      GIT_INDEX_FILE: path.join(decoy, '.git', 'index'), GIT_COMMON_DIR: path.join(decoy, '.git'),
+      GIT_INDEX_FILE: indexPath, GIT_COMMON_DIR: path.join(decoy, '.git'),
       GIT_OBJECT_DIRECTORY: path.join(decoy, '.git', 'objects'),
       GIT_ALTERNATE_OBJECT_DIRECTORIES: path.join(decoy, 'alternate-objects')};
-    const top = execFileSync('bash', ['-c', `${match[0]}\ngit -C "$TASK_REPO" rev-parse --show-toplevel`],
-      {env: poisoned, encoding: 'utf8'}).trim();
-    assert.equal(top, fs.realpathSync(repo));
-    assert.equal(fs.existsSync(path.join(decoy, '.git', 'index')), false,
-      'the hostile index must not be created or modified');
+    const script = block[1].replace('--include data/YOUR-REQUIRED-PATH',
+      '--include coordination/example/input.json');
+    execFileSync('bash', ['-c', script], {env: poisoned, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe']});
+    const refsAfter = execFileSync('git', ['-C', decoy, 'for-each-ref', '--format=%(refname) %(objectname)'],
+      {env: clean, encoding: 'utf8'});
+    const filesAfter = execFileSync('git', ['-C', decoy, 'ls-files', '-z'], {env: clean})
+      .toString().split('\0').filter(Boolean).map(name => [name, createHash('sha256')
+        .update(fs.readFileSync(path.join(decoy, name))).digest('hex')]);
+    assert.equal(refsAfter, refsBefore, 'no decoy refs may be changed');
+    assert.equal(createHash('sha256').update(fs.readFileSync(indexPath)).digest('hex'), indexBefore,
+      'the inherited decoy index must remain unchanged');
+    assert.deepEqual(filesAfter, filesBefore, 'no decoy worktree files may be changed');
+    assert.equal(execFileSync('git', ['-C', repo, 'rev-parse', 'FETCH_HEAD^{commit}'],
+      {env: clean, encoding: 'utf8'}).trim(), execFileSync('git', ['-C', repo, 'rev-parse', 'origin/main^{commit}'],
+      {env: clean, encoding: 'utf8'}).trim(), 'fetch must target the task repository');
   } finally {
     fs.rmSync(dir, {recursive: true, force: true});
   }
