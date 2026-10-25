@@ -1,0 +1,75 @@
+{
+  "author_identity": "01a16f2d-be76-72d7-bc46-8b89a6efb0f2",
+  "adoption_comment_id": 6392686464,
+  "proposal_sha256": "b59e3044673562e3340e9714d4c1c18e6623e688716ef7f85a3fa2b6de5bdaa2",
+  "original_package": 502,
+  "exact_parent_incidences": 267,
+  "distinct_pairs": 9,
+  "original_targets": 12,
+  "positive_families": 1,
+  "negative_families": 11,
+  "scope_counts": {
+    "parent_only_land_candidates": 179,
+    "parent_only_water_unresolved_recommendation": 3,
+    "mixed_foreign_operands_operative": 85,
+    "foreign_without_matching_parent_operative": 35
+  },
+  "physical_classes": {
+    "land": 253,
+    "inland-water": 14
+  },
+  "all_records_match_original_target_specific_negative_and_measured_interior": true,
+  "all267_within_unchanged_original502_request": true,
+  "all120_foreign_contacts_preserved": true,
+  "physical_witnesses_preserved": true,
+  "original_source_inputs_byte_authenticated": [
+    {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/source-evidence.json",
+      "bytes": 85912,
+      "sha256": "4d8d1ed001998ea65bc29110974d7dee687c3029f4708f452f54ecc1b105be07",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/territorial-exclusion-provenance.json",
+      "bytes": 296314,
+      "sha256": "872c9bf3c4312bdef872e1ea90732c55949038fa10c61adb1d9d2263eaaf2b3e",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "b89158a7857cb7b1a2f393becc19a89a79d3eea8",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-001/native-diagnostic.json",
+      "bytes": 3265632,
+      "sha256": "c79e84b054034b57f7f277f6a1c816749cbe1131331e52f2f237edb23b201e71",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "b89158a7857cb7b1a2f393becc19a89a79d3eea8",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-001/exact502-diagnostic-interpretation.jsonl",
+      "bytes": 705332,
+      "sha256": "05d09af10548641abd2bc63792f9e2ab4aea2c851d3739149d3145bb3867fc50",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json",
+      "bytes": 50833,
+      "sha256": "b7e58372c954d73b01a65ca20a78c1571e2ef181f669ebcc4c293d1980e6f655",
+      "local_bytes_identical": true
+    }
+  ],
+  "independent_raw_full_diagnostic_readback": "Still pending per root6392686464. These author-local matching checks do not close reviewer custody; existing-owner transfer only, no replay.",
+  "supported_schema": {
+    "local_origin_main": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "owner_worktree_head_reported": "ea93d74443dcd6ac7789b6f6643c713dc26211b4",
+    "consumer_blob": "6d44476563e492e40e09c09d8f81cb4a889156f4",
+    "prepare_blob": "b952abb5ad15ccfc7b58a56edf6733150ec127cb",
+    "consumer_lines": "1751–1810",
+    "accepted_route": "Original-source multipart provenance plus exact adopted decision/scope pins; no removal of originals."
+  },
+  "Git_mutation": false,
+  "science_invocation": false,
+  "adoption_scope_extended": false,
+  "accepted_cells": 0
+}
