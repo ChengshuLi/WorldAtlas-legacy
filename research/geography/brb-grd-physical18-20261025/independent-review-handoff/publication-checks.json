@@ -1,0 +1,12 @@
+{
+  "first_publication_session": 69362,
+  "first_exit": 1,
+  "commit_or_push_executed": false,
+  "cause": "diff --check exit2 solely for an existing final blank line in byte-preserved GRD v2 source note",
+  "complete_diff_check": {
+    "exit": 2,
+    "output": "research/geography/brb-grd-physical18-20261025/independent-review-handoff/source-reading/GRD-island-applicability-v2.md:68: new blank line at EOF.\n"
+  },
+  "newly_authored_files_diff_check_exit": 0,
+  "decision": "Preserve original source-note bytes and source hash; accept this documented formatting-only exception. No scientific test or protection was changed."
+}

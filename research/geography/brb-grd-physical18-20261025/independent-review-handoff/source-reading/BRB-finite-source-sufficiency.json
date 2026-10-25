@@ -1,0 +1,215 @@
+{
+  "kind": "BRB289-finite-primary-source-sufficiency-assessment",
+  "date": "2026-10-24",
+  "worker": "/root/residual_water35",
+  "scope": {
+    "original": 289,
+    "land": 289,
+    "accepted_from_suspended_increment": 0,
+    "contextual_samples": 3,
+    "unsampled": 286,
+    "all_holds_preserved": true
+  },
+  "authenticated_inputs": [
+    {
+      "file": "brb289-exact-pending-keys.json",
+      "bytes": 227668,
+      "sha256": "bf2a02b8f4c31f344df61be0005874d9480fc71f67aba2f7c1c8598ff5de234c"
+    },
+    {
+      "file": "selected-owner-observation.json",
+      "bytes": 76890,
+      "sha256": "5055127249a53f4cf7d97ccc8146a4f1cf9d4aea33e3005cbc32ea00a27a192b"
+    },
+    {
+      "file": "brb-original-source-inspection.json",
+      "bytes": 8478,
+      "sha256": "e918aa251778c63a671b225993fbe37b9407c5d3ea64bb933a0bbeb5137469ae"
+    },
+    {
+      "file": "brb-iczm-local-interpretation.json",
+      "bytes": 6908,
+      "sha256": "f5c53ae72e69beef33ba9382126ab12d9da83ff855f11da2f6c60cf012c6ab36"
+    },
+    {
+      "file": "brb-three-source-sheet-reading.json",
+      "bytes": 7844,
+      "sha256": "8c0fbbbb1ea16af96074a43fd1c87c72aa9803bfc63ed367386b56fe6fb61d23"
+    },
+    {
+      "file": "brb-crmp-shoreline-study-lineage-followup.json",
+      "bytes": 7036,
+      "sha256": "6ea5614d97742768590e5db2d4cd1ddb40727a837ff9adb56fdb26e5e9ea0ea3"
+    }
+  ],
+  "new_actual_source_reading": [
+    {
+      "url": "https://coastal.gov.bb/wp-content/uploads/2023/04/ICZM-Plan_Vol2_Seg1_Final.pdf",
+      "method": "Actual web-extracted text, not new PDF visual inspection",
+      "printed_pages": [
+        53,
+        55,
+        56,
+        77,
+        88
+      ],
+      "findings": "The hazard model uses MHHW+0.6m datum. Erosion zones include historical extrema plus setbacks, interpolate between profiles, and assume defenses maintained/rebuilt without structural assessment. Cliff rates derive from aerial-photo comparisons; episodic failures resist average-rate prediction. Structure-risk lengths came from imagery without site inspections. CZMA/setbacks include modelled inundation. These methods describe hazards and management, not a uniform measured present shoreline or parish edge. No historical image acquisition dates were recovered in these passages.",
+      "visual_attempt": "Web screenshots for PDF67/68 returned reference strings only; no additional pixels claimed."
+    },
+    {
+      "url": "https://landsandsurveys.gov.bb/pages/SurveyingServices.html",
+      "method": "Actual public service-page text",
+      "findings": "Department attends high-water-mark determinations by surveyors; this is a separate service. It maintains Barbados National Grid and Lamont Datum using control stations/benchmarks. The page supplies no definition tying an ICZM coloured line to such a determination, or metadata establishing all shoreline proxies as one datum."
+    },
+    {
+      "url": "https://landsandsurveys.gov.bb/pages/MapProducts.html",
+      "method": "Actual catalogue text; earlier product identities reused",
+      "findings": "Orthomap products are2006orthophotos or2015LiDAR imagery; coastline/parishes/place names accompany digital datasets. Separate delivery together does not establish coastline acquisition epoch or derivation from either imagery product. Catalogue dates/prices are not survey dates."
+    },
+    {
+      "url": "https://landsandsurveys.gov.bb/pages/FAQs.html",
+      "method": "Actual publicFAQ text",
+      "findings": "Department states maps are sold, not freely supplied; special requests go to ChiefSurveyor. No contact/purchase/request made. This is a concrete product-access route outside the present no-outreach/no-purchase scope, not proof that mapping is unavailable."
+    }
+  ],
+  "line_meaning_assessment": {
+    "frozen_source": "The actual original archive and named2005raster are read and authenticated. They identify parish representation and2022polyline-to-polygon processing, without original raster registration/control/shoreline proxy. These are specific shared source limitations, not invalidity inferred from generic metadata absence.",
+    "physical_coast": "Existing PartD map legends separate coast-condition and cliff/artificial-coast portrayals. Such positive physical context is useful while its epoch/proxy remains source-specific.",
+    "planning_lines": "Hazard/setback/CZMA outlines cannot be substituted for original land-water or administrative ownership.",
+    "administrative_layer": "Parish names/outline context in ICZM does not authenticate equality to the frozen source. A legal shoreline certificate is not required merely to read the evidence; equally, parish identity alone does not establish precise applicability."
+  },
+  "sample_results_reused": [
+    {
+      "group": "Saint Lucy",
+      "key": [
+        7113,
+        121284,
+        87663
+      ],
+      "source_sheets": [
+        "A26"
+      ],
+      "result": "Cliff, cliff-failure marks and physical-coast/management layers distinguished. Existing contextual center reading only; no cell clearance."
+    },
+    {
+      "group": "Saint Michael",
+      "key": [
+        7113,
+        121459,
+        87663
+      ],
+      "source_sheets": [
+        "A36"
+      ],
+      "result": "Artificial/urban coast and flood shading distinguished. Existing contextual center reading only; no cell clearance."
+    },
+    {
+      "group": "Christ Church",
+      "key": [
+        7113,
+        121496,
+        87741
+      ],
+      "source_sheets": [
+        "A1",
+        "A2"
+      ],
+      "result": "Beach/lagoon/reef context, with rounded-grid sheet-join uncertainty. Existing contextual center reading only; no unique-footprint or ownership conclusion."
+    }
+  ],
+  "whole_scope_context": [
+    {
+      "source_index": 9119,
+      "source_parish": "Saint Lucy",
+      "original_keys": 75,
+      "contextual_samples": 1,
+      "unsampled_keys": 74,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    },
+    {
+      "source_index": 9120,
+      "source_parish": "Saint Andrew",
+      "original_keys": 7,
+      "contextual_samples": 0,
+      "unsampled_keys": 7,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    },
+    {
+      "source_index": 9121,
+      "source_parish": "Saint Peter",
+      "original_keys": 13,
+      "contextual_samples": 0,
+      "unsampled_keys": 13,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    },
+    {
+      "source_index": 9122,
+      "source_parish": "Saint James",
+      "original_keys": 32,
+      "contextual_samples": 0,
+      "unsampled_keys": 32,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    },
+    {
+      "source_index": 9125,
+      "source_parish": "Christ Church",
+      "original_keys": 43,
+      "contextual_samples": 1,
+      "unsampled_keys": 42,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    },
+    {
+      "source_index": 9126,
+      "source_parish": "Saint Michael",
+      "original_keys": 66,
+      "contextual_samples": 1,
+      "unsampled_keys": 65,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    },
+    {
+      "source_index": 9127,
+      "source_parish": "Saint Philip",
+      "original_keys": 46,
+      "contextual_samples": 0,
+      "unsampled_keys": 46,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    },
+    {
+      "source_index": 9128,
+      "source_parish": "Saint John",
+      "original_keys": 7,
+      "contextual_samples": 0,
+      "unsampled_keys": 7,
+      "meaning": "Shared original-source lineage and line-semantics assessment applies as research context. No new coastal class, sheet assignment, per-key physical test or inferred clearance."
+    }
+  ],
+  "finite_scientific_assessment": {
+    "ready_to_propose": [
+      "Acceptance reviewers may consider the authenticated source-lineage account and explicit physical/hazard/administrative distinctions as substantive shared scientific evidence for the exact289 original keys.",
+      "The three contextual examples are complete source readings within their recorded limits and demonstrate a functioning source-reading bridge.",
+      "Retain unresolved status pending disposition review, with specific source/application uncertainty recorded instead of generic absence."
+    ],
+    "not_supported": [
+      "No positive map-cell repair, owner change or replacement source is proposed.",
+      "This packet does not by itself grant researched-unresolved completion for all289 or treat286unsampled keys as inspected.",
+      "Three examples cannot establish a quantified error bound, a common temporal shoreline, or exact applicability for allsourcegroups."
+    ],
+    "genuinely_pending": [
+      "Original shoreline-study publication/body and source-specific historical image epochs/proxies remain unread under preserved route outcomes. Existing report discussion is substantive but does not fill these facts.",
+      "The exact original raster-to-coordinate construction is not supplied by inspected archive, raster or author statements. No arbitrary error estimate is invented.",
+      "Independent review must decide whether the documented source-level limitations and completed primary work meet the original researched-unresolved contract; any additional requested work should identify a concrete decision-relevant source or applicability test."
+    ],
+    "not_required": [
+      "No universal sovereignty certificate or proof that every modern line equals a2005line.",
+      "No blanket286newplots, arbitrary manualgeoreference, newnativeproducer, or numericalproximity clearance to manufacture additional work.",
+      "No rediscovery of exhausted blocked links or transfer of a differentcountry CHARIM map."
+    ]
+  },
+  "preserved_obstacles": {
+    "SCS": "Reuse prior exact2015report lead and2018article outcomes; no new search/fetch of stoppedtargets.",
+    "annex_ArcGIS": "Not retried.",
+    "LandsSurveys": "Public metadata read successfully; product delivery requires contact/purchase route, neither authorized here.",
+    "CHARIM": "No Barbados-specific CHARIM body authenticated in this scoped scratch. Dominica/Grenada materials elsewhere were not imported as BRB evidence.",
+    "current_operations": "All new reads completed; no uncertain mutation/download. No newcoordinates,geometry,nativeobservations,producer,Gitactions,outreach or credit."
+  }
+}
