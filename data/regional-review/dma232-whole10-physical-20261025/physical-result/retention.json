@@ -1,0 +1,38 @@
+{
+  "kind": "unchanged-one-run-physical-custody",
+  "executing_code_input_head": "63463be766a1abaac034646cb123d9cbfa6b7dcb",
+  "worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "original_destination": ".cache/delivery-handoff/dma10-physical-20261025-01a16f2d8ad8-001",
+  "terminal_exit": 0,
+  "runtime_and_25_inputs_verified_by_stock": true,
+  "all25_input_descriptors_equal_committed_config": true,
+  "files": [
+    {
+      "original_path": ".cache/delivery-handoff/dma10-physical-20261025-01a16f2d8ad8-001/execution-receipt.json",
+      "retained_path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/execution-receipt.json",
+      "bytes": 59057,
+      "sha256": "13ce0ccc61a6bdd1435df5f9e794b3e7bf0eedae7fcaf6bd1a906e58b410886e"
+    },
+    {
+      "original_path": ".cache/delivery-handoff/dma10-physical-20261025-01a16f2d8ad8-001/preparation.json",
+      "retained_path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/preparation.json",
+      "bytes": 544,
+      "sha256": "a3d68367e2a9a44a09f66f2fd040b582da65e0a79811921fcc9e3f34e6b0ddc3"
+    },
+    {
+      "original_path": ".cache/delivery-handoff/dma10-physical-20261025-01a16f2d8ad8-001/whole-target-support.json",
+      "retained_path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/whole-target-support.json",
+      "bytes": 105390,
+      "sha256": "3aff5cef5ddad040a34fd7817dcd2d5b04cc334c62be8de8b74fea7e9893e591"
+    }
+  ],
+  "scope": {
+    "sources": 10,
+    "pending": 232,
+    "excluded_nonland": 174,
+    "owner": 7115
+  },
+  "native_result": null,
+  "accepted_delta": 0,
+  "limits": "Receipt internal paths remain literal execution paths. File relocation is custody only; no new physical or native observation."
+}
