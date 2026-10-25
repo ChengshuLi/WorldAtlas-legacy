@@ -1,0 +1,30 @@
+{
+  "code_head": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+  "accepted_code_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "data_inputs": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "4a351b620cce708584be63ff1c73fbece5007b1d",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/prepared-source-evidence/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "bfeb47e1890911d27533004ce0779459ea299a0d",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-input-plan/native-patch232.NONEXECUTED.json"
+    }
+  },
+  "claim_proof_head": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-diagnostic",
+    "data/regional-review/dma232-whole10-physical-20261025/claim-scope/native-diagnostic-config.json",
+    ".cache/delivery-handoff/dma232-native-diagnostic-20261025-01a16f2d8ad8-001"
+  ],
+  "destination": ".cache/delivery-handoff/dma232-native-diagnostic-20261025-01a16f2d8ad8-001",
+  "requested_cells": 232,
+  "excluded_separate_package_cells": 174,
+  "whole_original_sources": 10,
+  "native_authority": false,
+  "worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "started": 1792890795.010602
+}

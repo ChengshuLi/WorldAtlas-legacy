@@ -1,0 +1,122 @@
+{
+  "kind": "one-stock-DMA232-diagnostic-result-readback-not-acceptance",
+  "code_head": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+  "source_and_patch_pins": {
+    "native_patch": {
+      "bytes": 13314,
+      "commit": "bfeb47e1890911d27533004ce0779459ea299a0d",
+      "git_blob_oid": "b42818b776ca0de0b483e94a582ef2fccf1adb0e",
+      "mode": "100644",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-input-plan/native-patch232.NONEXECUTED.json",
+      "sha256": "20076b0b9d6b97e3f7514f7712522baf20378e82ba92817329b33c551e73ecf3"
+    },
+    "source_evidence": {
+      "bytes": 24554,
+      "commit": "4a351b620cce708584be63ff1c73fbece5007b1d",
+      "git_blob_oid": "2cb9f29118f6b986244178135361af05f2d3d1c2",
+      "mode": "100644",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/prepared-source-evidence/source-evidence.json",
+      "sha256": "34a152fb5af9657ffc89b84d7426095426f5ea1e1acf8d71ce7957d579a1c120"
+    }
+  },
+  "files": [
+    {
+      "name": "native-diagnostic.json",
+      "bytes": 22171,
+      "sha256": "58a81b1ce6d33967776d372d604c45f97154e8bcfb202770e76cf11c2c4fa5fd",
+      "original_path": ".cache/delivery-handoff/dma232-native-diagnostic-20261025-01a16f2d8ad8-001/native-diagnostic.json"
+    },
+    {
+      "name": "preparation.json",
+      "bytes": 266,
+      "sha256": "8f12a824054386943b3abd6f3acfb2368e1c5fb57d31f11f1b470f7ab81990fd",
+      "original_path": ".cache/delivery-handoff/dma232-native-diagnostic-20261025-01a16f2d8ad8-001/preparation.json"
+    }
+  ],
+  "requested": 232,
+  "technical_supported": 232,
+  "native_held": 0,
+  "separate_original_package_excluded": 174,
+  "decision_counts": {
+    "assigned_cells": 232
+  },
+  "by_original_parish": {
+    "Saint John": {
+      "assigned_cells": 84
+    },
+    "Saint Andrew": {
+      "assigned_cells": 15
+    },
+    "Saint Peter": {
+      "assigned_cells": 7
+    },
+    "Saint David": {
+      "assigned_cells": 1
+    },
+    "Saint Joseph": {
+      "assigned_cells": 28
+    },
+    "Saint Paul": {
+      "assigned_cells": 30
+    },
+    "Saint George": {
+      "assigned_cells": 4
+    },
+    "Saint Luke": {
+      "assigned_cells": 24
+    },
+    "Saint Patrick": {
+      "assigned_cells": 17
+    },
+    "Saint Mark": {
+      "assigned_cells": 22
+    }
+  },
+  "by_retained_context": {
+    "mixed156": {
+      "assigned_cells": 156
+    },
+    "favorable76": {
+      "assigned_cells": 76
+    }
+  },
+  "physical_kind_counts": {},
+  "physical_legend": [
+    "missing_reconstruction",
+    "extra_reconstruction",
+    "contradictory_land_water_support",
+    "L2-outside-L1",
+    "L3-outside-L2",
+    "L4-outside-L3",
+    "outside_mapped_L1_context",
+    "mapped_inland_water_support"
+  ],
+  "territorial_rows_count": 103,
+  "first_failure": null,
+  "requested_equals_original232": true,
+  "supported_held_disjoint_complete": true,
+  "sparse_physical_mask_rows_bound_to_requested": true,
+  "physical_mask_nonzero_keys": 0,
+  "accepted_delta": 0,
+  "native_authority_executed": false,
+  "physical_rerun": false,
+  "limitations": [
+    "Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.",
+    "All original source, physical, query, witness and territorial limits remain retained."
+  ],
+  "partition_plan": {
+    "original_patch": {
+      "bytes": 13314,
+      "commit": "bfeb47e1890911d27533004ce0779459ea299a0d",
+      "git_blob_oid": "b42818b776ca0de0b483e94a582ef2fccf1adb0e",
+      "mode": "100644",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-input-plan/native-patch232.NONEXECUTED.json",
+      "sha256": "20076b0b9d6b97e3f7514f7712522baf20378e82ba92817329b33c551e73ecf3"
+    },
+    "prior_holds": null,
+    "prior_holds_rationale": "Existing generic held status and76/156 context classes are not invented additional scientific hold rows. Any independently warranted specific prior holds must be supplied separately, not inferred.",
+    "ten_members_preserved": "All10 source targets share survivingowner7115; supported-inputs must retain all10 when any supported cell remains and only narrow complete owner coverage_rows.",
+    "separate174": "Not appended to original_patch or prior_holds; explicit outside-claim81interval package retained.",
+    "authority": "No native-authority or status adoption. Coordinator reviews supported partition and current selected-owner applicability separately."
+  }
+}

@@ -1,0 +1,29 @@
+# DMA232: sole native diagnostic and supported-input partition plan
+
+One stock native diagnostic completed with **232 requested, 232 technically supported, zero native-held**, `first_failure: null`. It ran at candidate CODE `ca20fc19ee65c942aa4ec0a9e003eb77c49917c2` using source-evidence DATA `4a351b620cce708584be63ff1c73fbece5007b1d` and the original232 patch at `bfeb47e1890911d27533004ce0779459ea299a0d`. The supported helper reported 112.59793625 seconds for its diagnostic operation. Source/physical producers were not repeated, and no native-authority operation ran.
+
+The complete raw report is `native-diagnostic.json`, 22,171 bytes, SHA256 `58a81b1ce6d33967776d372d604c45f97154e8bcfb202770e76cf11c2c4fa5fd`. Its 103 requested rows comprise the same109 intervals and232 unique original owner-coordinate keys. Every decision is `assigned_cells`. Supported/held rows were independently expanded and checked for exact disjoint conservation against the original claim keys. The per-key readback adds references and retained source context; it does not substitute for the raw report or rerun any geometry.
+
+## Actual physical and source interpretation
+
+All ten complete original source members, their accepted shared aggregate, literal source-family/semantic membership, executed physical method/support, original owner roster and normative latitude contract were consumed by the stock route. Full source/physical evidence remains unchanged. Saint David and Saint John retain their whole-member reconstruction issues, and five members retain nonempty outside-L1 context geometry. The diagnostic recorded no physical-witness-kind contacts at the232 requested cells. This is an exact-request result, not whole-member clearance or proof that any outside-claim cell is supported.
+
+The physical mask field is intentionally sparse: the actual consumer records only nonzero masks. The readback explicitly marks an omitted requested key as zero recorded witness bits with no invented row pointer. The empty territorial arrays correspond to this payload's absence of proposed additional territorial operands. They are not a newly measured absence of every possible foreign source or a source-applicability waiver. The complete same-family members remain in the source scan and aggregate reconciliation.
+
+All76 favorable cartographic-context keys and all156 mixed coast/channel/outline-context keys are technically supported. The original source-reading distinction remains in `summary.json` and the exact232 readback. The mixed category was not a uniformly failed scientific test, so it must not be turned into156 automatic prior-hold rows. Original administrative portrayal and accepted aggregate applicability remain affirmative; the raster-derived source's survey-precision limits and independent map-reading limits remain documented. No further generic legal-coastline certificate is invented as a prerequisite.
+
+## Original claim and the separate174-cell package
+
+The frozen queue explicitly names `gb-DMA-ADM1--repair-evaluation`:232 land cells,109 intervals, owner7115. It separately names `gb-DMA-ADM1--physical-interpretation`:174 source-relative cells,81 intervals, the same owner and five original source members. The original suspended completion comment covers only the232 land cells. The preceding `claim-scope` packet authenticates both queue records and preserves all174 original coordinate/source records with pointers to their complete immutable candidate, physical and water inputs.
+
+Thus232+174=406 retained candidate cells, in two disjoint original packages. The174 were not silently dropped or accepted. Historical source-relative/nonland classification is not a new assertion that these cells are sea, ineligible or permanently unresolved. Their full-source geometry remains present in the physical/source inputs, while their distinct claim is outside this authorized232 diagnostic.
+
+## Concrete supported-input planning
+
+The full diagnostic has no native-held partition. The ordinary supported-inputs helper should therefore preserve the entire232 request and every one of the ten source targets, with its existing owner-wide mapped-land class binding. It must retain all whole source/physical descriptors, geometry, original inputs and negative scope. It should emit an empty `held-original` result rather than an invented unresolved recommendation. No territorial-applicability envelope exists, so no contextual projection or second projection-binding pass is needed.
+
+A ready configuration must point to the real committed diagnostic and original patch. No `prior_holds` is proposed: generic existing hold status and the prior76/156 source-context split are not scientific hold dispositions. If independent review establishes a specific additional prior hold, it must retain its own exact evidence and rows. The separate174 package must not be appended to either the original patch or prior-hold rows for this claim.
+
+The diagnostic does **not** check current owner-zero or produce authority. Before eventual authority/composition, the coordinator must resolve the accepted current selector and use the supported accepted-selector check or existing appropriate current-bank route, preserving already-present same-owner cells and refusing other-owner conflict. This cannot be inferred from the old owner-only observation or today's232 technical support. Independent exact-result/source-role review and E2E delivery remain required. No native-authority run, source adoption, accepted-cell change, hold removal or package-completion reinstatement is made here.
+
+All operations use the original selected runtime and this worker's normal owned branch. Publication is normal Git push only. Actual stopped source routes remain stopped. No physical or diagnostic replay is justified merely to change output paths or produce a fresh timestamp.
