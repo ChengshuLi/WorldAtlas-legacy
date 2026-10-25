@@ -1,0 +1,129 @@
+{
+  "kind": "author-verification-of-stock-native-authority-not-independent-review",
+  "products": [
+    {
+      "name": "preparation.json",
+      "bytes": 501,
+      "sha256": "608d8330587cce441b46b33a58569941e6c9958eef4966f52d8e9ac4613d9ed7"
+    },
+    {
+      "name": "original-rule-preimage.json",
+      "bytes": 743,
+      "sha256": "0abc558837e5dac691cdb8122891925629417f6e98ba7bea2a07fb01aca21ece"
+    },
+    {
+      "name": "authority-binding.json",
+      "bytes": 746,
+      "sha256": "5467bf44e11b59e12025460c217178878dbbba3d12123059e21705a1c960d06e"
+    },
+    {
+      "name": "constructor-result.json",
+      "bytes": 38157,
+      "sha256": "4316df3b8dd16a2b23ad9bf505ca540014a6c4fe96cb1d91faaa719db044a6a5"
+    }
+  ],
+  "executing_code_commit": "008c662b4b1e4b32b9f8ba3cf8e885b5ad280326",
+  "input_data_commit": "ccb5cc337e030541a9474f118738a1464b0c3f67",
+  "qualified_cells": 200,
+  "qualified_components": 9,
+  "exact_patch_keys_and_owner_bindings_verified": true,
+  "unchanged_selected_base_geometry_values_verified": true,
+  "full_physical_evidence_binding_preserved": true,
+  "original_scope": {
+    "total": 502,
+    "authority_qualified": 200,
+    "already_present": 0,
+    "held": 302
+  },
+  "held_source_contexts": {
+    "parent_only": 182,
+    "foreign_containing": 120
+  },
+  "rule_sha256": "0abc558837e5dac691cdb8122891925629417f6e98ba7bea2a07fb01aca21ece",
+  "components": [
+    {
+      "component_id": "source-target:64f257aaa346fb735e632eb5e33169d0f91c7dd2216097f60bddd57a0efdd8bf",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "native_cells": 20,
+      "base_geometry_sha256": "81b46e33838ca3b0c603da5f007d4327be469103fee1bdf9d0cc712f41dbae0a",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:68a1e39a88868868a2967601be65b5247c33878e89199b0499aa2cb388fe49f4",
+      "target_id": "gb:ISR:ADM2:584046B61571705909900",
+      "pixelIndex": 24177,
+      "native_cells": 41,
+      "base_geometry_sha256": "993672cca0e812468b637e8191080c3b81a38210d0af661157c11f8ad2ce56fd",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:7b97989f292a23df2eb86b85e00412a2d7b43a0863e7f260b920119f49a4b2c0",
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "pixelIndex": 24178,
+      "native_cells": 55,
+      "base_geometry_sha256": "00abc42f10d4927b2962d08f6ecdce09452c337f27a131f49036749ac1928bb7",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:8b2415e7839e4a6da3cd1e162335fa33721dd5e5313b69341e141f89e5cc6c07",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "native_cells": 50,
+      "base_geometry_sha256": "4cdb21784e39964312fe82f99e4c11aa7039b3ac50ba23e84eb6ef1505639aee",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:9d5bd321f5446c19bf6172508bc3a8591ec9b77ebe169ab3c95c28f2456c70f6",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "native_cells": 4,
+      "base_geometry_sha256": "57e2ad599ed86a496e7069a956b045676f9721cb0082932c958cf7100d2ad76e",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:d0d226dabae9bfb7b58e269c216c70e3df494cab1f258f948d166a5662b37890",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "native_cells": 12,
+      "base_geometry_sha256": "c659d630b6bff08c3babeb21bba3c99d81ebdf0a27893e2d8115b8447fb537fa",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:d6aee67ffe7c0074644a360fb469f2745375ee13ddd1a219a4d4dfc234c02a4c",
+      "target_id": "gb:ISR:ADM2:584046B37321511847561",
+      "pixelIndex": 24174,
+      "native_cells": 8,
+      "base_geometry_sha256": "005eabf418d9b62ab5f8ddc10a904d7d565caa15d13ad1fd1adad74e2c5e6a23",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:f776d353338cbbd45665582e9491f7a3958b3fb32ad6d72253131750a336dabb",
+      "target_id": "gb:ISR:ADM2:584046B34315111222202",
+      "pixelIndex": 24173,
+      "native_cells": 9,
+      "base_geometry_sha256": "3907cb0cee3e8f49ba1203f1151017f65ae2cd37b8263be7ab47afe363711727",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    {
+      "component_id": "source-target:ff769e3d407e1f4f028e0bbe9c3dec0c2c2348dd792cdba04db4a859a60434c9",
+      "target_id": "gb:ISR:ADM2:584046B86518607604876",
+      "pixelIndex": 24182,
+      "native_cells": 1,
+      "base_geometry_sha256": "f366acfd7d460f16adc7e1f589e369dad1aa9b294b19b890ed04346721f4bf53",
+      "source_receipt_sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    }
+  ],
+  "new_adopted_applicability_exceptions": 0,
+  "new_native_diagnostic_or_source_physical_producer": false,
+  "independent_review_complete": false,
+  "selected_delivery_complete": false,
+  "accepted_scientific_credit": 0,
+  "limits": [
+    "Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.",
+    "Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred.",
+    "This author verification compares stock outputs and literal recorded keys; it is not the independent exact-public-head review.",
+    "The accepted-selector absence result was measured against53002fd1; final queue comparison remains separate.",
+    "All302 original holds persist, including182 parent-only source-role questions and120 foreign-containing cases."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "code_commit": "008c662b4b1e4b32b9f8ba3cf8e885b5ad280326",
+  "configuration": {
+    "commit": "008c662b4b1e4b32b9f8ba3cf8e885b5ad280326",
+    "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-authority-config.json",
+    "mode": "100644",
+    "git_blob_oid": "b630697f602f75869aee28c932a69830d2954b75",
+    "bytes": 421,
+    "sha256": "02d76072cd0ebaa3c7d0bd36f96778f2e4b4edecdf79811d908b2c6daf3a4397"
+  },
+  "inputs": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "ccb5cc337e030541a9474f118738a1464b0c3f67",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/supported-inputs-001/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "ccb5cc337e030541a9474f118738a1464b0c3f67",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/supported-inputs-001/native-patch.json"
+    }
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-authority",
+    "research/geography/isr502-whole-physical-20261025/native-plan/native-authority-config.json",
+    ".cache/delivery-handoff/isr200-native-authority-001"
+  ],
+  "destination": ".cache/delivery-handoff/isr200-native-authority-001",
+  "started_utc": "2026-10-25T01:49:51.971453+00:00",
+  "scope": {
+    "original_keys": 502,
+    "novel_requested": 200,
+    "already_present": 0,
+    "held_retained": 302,
+    "positive_targets": 9,
+    "whole_positive_family": 15,
+    "negative_families": 11,
+    "emitted_negative_operands": 81
+  },
+  "source_physical_or_native_diagnostic_requested": false,
+  "applicability_waivers": 0,
+  "acceptance_claimed": false,
+  "exit_code": 0,
+  "ended_utc": "2026-10-25T01:52:27.531885+00:00",
+  "destination_exists": true
+}
