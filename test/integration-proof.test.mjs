@@ -23,6 +23,25 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(current, /resume.{0,120}does not reload instructions/is);
 });
 
+test('reproducible review ledgers are not duplicated as generated documentation', () => {
+  const reports = [
+    'GLOBAL_GRANULARITY_REVIEW.md', 'SOURCE_POLICY_CORRECTIONS.md',
+    ...['AFRICA', 'ASIA', 'EUROPE', 'NORTH_AMERICA', 'OCEANIA', 'SOUTH_AMERICA']
+      .map(name => `review-decisions/${name}.md`),
+    ...['AFRICA', 'AMERICAS', 'ASIA_OCEANIA', 'EUROPE']
+      .map(name => `semantic-followup/${name}.md`)
+  ];
+  for (const name of reports) assert.equal(fs.existsSync(`docs/${name}`), false, name);
+  const producers = [
+    'scripts/review-granularity-global.py',
+    'scripts/prepare-europe-source-policy-corrections.py',
+    'scripts/audit-africa-semantic-followup.py',
+    'scripts/audit-americas-semantic-followup.py',
+    'scripts/audit-europe-semantic-followup.py'
+  ].map(path => fs.readFileSync(path, 'utf8')).join('\n');
+  assert.doesNotMatch(producers, /docs\/(?:GLOBAL_GRANULARITY_REVIEW|SOURCE_POLICY_CORRECTIONS|review-decisions|semantic-followup)/);
+});
+
 test('geography reuse requires one actual successful producer, independently of step projections', async () => {
   const geography = {id: 44, name: 'geography', status: 'completed', conclusion: 'success', steps: [
     'Checkout trusted geographic checker', 'Install trusted geographic dependencies',
