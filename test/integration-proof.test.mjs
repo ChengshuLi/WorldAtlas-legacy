@@ -21,6 +21,14 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.doesNotMatch(current, /review-issue-readiness\.mjs/);
   assert.match(current, /ordinary authoring does not require machine claim\/readiness/i);
   assert.match(current, /resume.{0,120}does not reload instructions/is);
+  const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
+  const validation = fs.readFileSync('docs/VALIDATION.md', 'utf8');
+  assert.match(development, /account identity alone neither proves nor disproves independence/i);
+  assert.match(validation, /selectedDataSelection[\s\S]*reviewedTestPlan/);
+  assert.match(validation, /do not automatically require `complete`/i);
+  const readme = fs.readFileSync('README.md', 'utf8');
+  assert.match(readme, /does not connect to the hosted content API/i);
+  assert.doesNotMatch(readme, /SQLite/i);
 });
 
 test('reproducible review ledgers are not duplicated as generated documentation', () => {

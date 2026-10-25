@@ -1,6 +1,6 @@
 # Development, workspaces and delivery
 
-This guide covers the ordinary path from an assigned task to an integrated PR. Current accepted `main`, the task's explicit scope, and higher-priority user and safety limits govern. A saved prompt, old checkout, issue, label, branch name, or handoff is context—not authority. Before new work or resuming a conversation, verify accepted `main` and read its `AGENTS.md` and relevant domain guides. Do not reset or overwrite a dirty primary checkout to refresh guidance.
+Use this guide after the repo-level [entrypoint](../AGENTS.md) for an assigned task through PR integration.
 
 ## Start and own the work
 
@@ -14,13 +14,13 @@ Preserve the primary checkout and shared Git store. Do not force-reset, clean, p
 
 Own only the assigned deliverable and declared paths; coordinate before overlapping a shared artifact or expanding scope. Keep parallel work disjoint. A specific package-repair assignment may authorize its named research, engineering, and delivery steps; it does not grant general production authority. An evidence-only geography role may publish scoped evidence or a recommendation, not change shared geography, import data, or write production. Engineering integrates accepted evidence. History research supports dated factual claims and proposals. An auditor reviews already-merged work only within its assignment; do not restart an old campaign by default. Issue intake records the request and provenance without claiming implementation or approval.
 
-Use the relevant existing issue or PR to record scope, ownership, overlaps, progress and acceptance. Issues track work and decisions; PRs contain the exact proposed changes and review. Ordinary authoring does not require machine claim/readiness labels or a new issue solely for helper work. Labels, issue state, account identity and branch names do not establish authority or independent review. Distinguish research, unresolved recommendations, technical preparation, merge, scientific acceptance, issue completion and live publication.
+Use the relevant existing issue or PR to record scope, ownership, overlaps, progress and acceptance. Issues track work and decisions; PRs contain the exact proposed changes and review. Ordinary authoring does not require machine claim/readiness labels or a new issue solely for helper work. Labels, issue state and branch names do not grant scope.
 
 ## Review and trusted integration
 
-Keep each PR coherent, push normally, and obtain substantive independent review of the exact public head. A shared account or checkout is not proof of an independent worker. Review actual changed bytes and behavior, source applicability, immutable pins, result accounting, scope, adverse cases and stated limitations—not summaries alone. Reuse unchanged evidence when it still binds; do not repeat expensive science without a material input or acceptance need.
+Keep each PR coherent, push normally, and obtain a substantive review of the exact public head from a worker distinct from the author. The author and reviewer may share a GitHub account: account identity alone neither proves nor disproves independence. Record the review as a PR review or clearly anchored PR comment, with its exact-head binding and reviewer-worker provenance. Review actual changed bytes and behavior, source applicability, immutable pins, result accounting, scope, adverse cases and stated limitations—not summaries alone. Reuse unchanged evidence when it still binds; do not repeat expensive science without a material input or acceptance need.
 
-Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` for current-base validation, applicable test/build selection, preparation, dispatch and terminal reconciliation. The accepted planner derives the consumer/test route from the actual candidate; do not invent a roster, skip a required consumer, run a parallel queue, or treat preview as acceptance. Revalidate exact base and head immediately before a request. Use the stock route; do not directly merge or fabricate a terminal result. Read the canonical terminal receipt and resulting accepted `main`, then report checks actually run, failures, unrun work and remaining limits.
+Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` for current-base validation, request preparation, dispatch and terminal reconciliation. Its automatic selected-data route is a strict eligibility optimization, not a judgment of review sufficiency. Select `auto`, an exact reviewed plan, or the complete suite using the criteria in [VALIDATION](VALIDATION.md). Revalidate exact base/head immediately before a request. Use the stock route; do not directly merge or fabricate a terminal result. Read the canonical terminal receipt and resulting accepted `main`, then report checks actually run, failures, unrun work and remaining limits.
 
 For routine read-only observation, use bounded provider reads and avoid rapid polling:
 
@@ -34,12 +34,12 @@ These examples do not authorize dispatches, writes, extra retries, a review, or 
 
 ## Progress and completion
 
-Send useful progress at substantive milestones: exact branch/head, work completed, evidence or tests, next action and a concrete blocker. A timeout or transport/format failure is not automatically a source denial; honor actual denials and never route around them. Do not invent readiness gates, disk floors, credentials, rebuilds or ceremonies without a current code/document contract and observed failure. A review, passing test, merge, or clean structural chain does not itself establish factual truth, scientific acceptance, import permission, or production authorization.
+Send useful progress at substantive milestones: exact branch/head, work completed, evidence or tests, next action and a concrete blocker. Report only checks actually performed and distinguish observed failures from work not done.
 ## Refresh a stale checkout without changing its files
 
 The helper that starts an allocation runs before the new checkout exists. Running
-an old primary checkout's script can therefore keep using a previously repaired
-allocator. Before a new job, refresh `origin/main` with blob filtering, pin its
+an older helper version from the primary checkout can therefore pin stale main.
+Before a new job, refresh `origin/main` with blob filtering, pin its
 commit, and read that pin's `AGENTS.md` and this guide. Do not pull, reset, switch
 or overwrite a checkout holding active work.
 
