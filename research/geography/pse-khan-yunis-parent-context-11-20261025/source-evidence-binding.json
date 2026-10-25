@@ -26,7 +26,105 @@
     "path": "research/geography/pse-parent-context-43-20261025/adopted-territorial-applicability.json",
     "sha256": "d4f1c854cebb9e7d945965c3d14da1f8d0c8700f7d4220124a8bba31a140d4cc"
   },
-  "status": "exact metadata rebind of existing immutable source body; no upstream source or geometry regenerated",
+  "status": "binding-only projection: source/context, source evidence, physical support, native predicates and 237 applicability records unchanged; exact immutable locators substituted only where old commit objects are unavailable.",
   "third_party_geometry_reproduced_or_redrawn": false,
-  "version": 1
+  "version": 1,
+  "locator_rebindings": [
+    {
+      "id": "source-evidence.physical_input",
+      "old": {
+        "commit": "2163690fe07ba2417a37c82657c951f500004b94",
+        "path": "coordination/engineering/pse-original-disposition-20261020/original-stage-inputs.json",
+        "git_blob_oid": "006277db9c8ac970d4d43f5d032baad951d4639a",
+        "bytes": 158732,
+        "sha256": "7eba6afac3cc857f499346cef4a4b68b6a298fafe045b2dc720a5f16cf06b9bd"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "coordination/engineering/pse-original-disposition-20261020/original-stage-inputs.json",
+        "git_blob_oid": "006277db9c8ac970d4d43f5d032baad951d4639a",
+        "bytes": 158732,
+        "sha256": "7eba6afac3cc857f499346cef4a4b68b6a298fafe045b2dc720a5f16cf06b9bd"
+      }
+    },
+    {
+      "id": "source-evidence.physical_evidence",
+      "old": {
+        "commit": "bd9a51014a7d0b3495cc4841600eb64d75adf325",
+        "path": "coordination/engineering/pse-original-disposition-20261020/physical-20261025/whole-target-support.json",
+        "git_blob_oid": "2fecbf9a55fc8b33e95c67813685b5d32fbea3ab",
+        "bytes": 227866,
+        "sha256": "a6972a88f57bb363ad91283a9ed23104d56429e6222628047833c207271bffb4"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "coordination/engineering/pse-original-disposition-20261020/physical-20261025/whole-target-support.json",
+        "git_blob_oid": "2fecbf9a55fc8b33e95c67813685b5d32fbea3ab",
+        "bytes": 227866,
+        "sha256": "a6972a88f57bb363ad91283a9ed23104d56429e6222628047833c207271bffb4"
+      }
+    },
+    {
+      "id": "adopted-app.provenance.adoption",
+      "old": {
+        "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+        "path": "inventory/pse-adm1-parent-context-decision-20261025.json",
+        "git_blob_oid": "17d30e5155c375d3c376a1eec58923010b4d6ff8",
+        "bytes": 5587,
+        "sha256": "28dc4b654e120b2d76b9515893abb0cf5ef34d4cf1f84949e795d5d1cc5d8774"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "inventory/pse-adm1-parent-context-decision-20261025.json",
+        "git_blob_oid": "17d30e5155c375d3c376a1eec58923010b4d6ff8",
+        "bytes": 5587,
+        "sha256": "28dc4b654e120b2d76b9515893abb0cf5ef34d4cf1f84949e795d5d1cc5d8774"
+      }
+    },
+    {
+      "id": "adopted-app.provenance.scope",
+      "old": {
+        "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+        "path": "inventory/pse-adm1-parent-context-scope-20261025.json",
+        "git_blob_oid": "aaeea7ea82a67eb02eacfa02150d9d14b13b7fbd",
+        "bytes": 53532,
+        "sha256": "503aadf5dc9547af6c374ab97d0069934988fb8e76030b29a21a94922482ca34"
+      },
+      "new": {
+        "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+        "path": "inventory/pse-adm1-parent-context-scope-20261025.json",
+        "git_blob_oid": "aaeea7ea82a67eb02eacfa02150d9d14b13b7fbd",
+        "bytes": 53532,
+        "sha256": "503aadf5dc9547af6c374ab97d0069934988fb8e76030b29a21a94922482ca34"
+      }
+    }
+  ],
+  "unavailable_old_commit_observations": [
+    {
+      "commit": "2163690fe07ba2417a37c82657c951f500004b94",
+      "attempts": [
+        "exact Git fetch returned not our ref",
+        "GitHub exact commit lookup returned 422 No commit found"
+      ],
+      "interpretation": "object availability only; no cause inferred"
+    },
+    {
+      "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+      "attempts": [
+        "exact Git fetch returned not our ref",
+        "GitHub exact commit lookup returned 422 No commit found"
+      ],
+      "interpretation": "object availability only; no cause inferred"
+    },
+    {
+      "commit": "bd9a51014a7d0b3495cc4841600eb64d75adf325",
+      "attempts": [
+        "exact Git fetch returned not our ref",
+        "GitHub exact commit lookup returned 422 No commit found"
+      ],
+      "interpretation": "object availability only; no cause inferred"
+    }
+  ],
+  "previous_locator_values_retained": true,
+  "payload_change": false
 }
