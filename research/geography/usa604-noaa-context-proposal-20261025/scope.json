@@ -1,0 +1,61 @@
+{
+  "schema": "usa604-noaa-context-proposal-v1",
+  "status": "proposal-only; root acceptance/accounting pending; no credit or assignment",
+  "scope": {
+    "package": "original USA physical-source residual",
+    "original_usa_scope": 107131,
+    "prior_accepted_usa": 105927,
+    "current_residual_usa": 1204,
+    "proposed_count": 604,
+    "proposed_exact_tuple_sha256": "cfdaf0dfeac8025fa211263b372a0462528fbcb1fb41fa8abfc37d7f97ce798b",
+    "tuple_encoding": "SHA-256 of compact UTF-8 JSON for sorted [y,x,owner_index] triples; exact rows are not serialized",
+    "owner_counts": {"Lincoln": 549, "Sagadahoc": 55},
+    "original_hold_reason": "conservative_unmeasured_physical_source",
+    "retained_status": "held_unresolved",
+    "accepted_disposition": false,
+    "new_credit": 0,
+    "repair_qualified": false
+  },
+  "partition_bindings": {
+    "full_private_1204_roster_sha256": "55c522bc2ae7d455492a6f6467ff54f0b2af31376627690e356ed538b1347821",
+    "all_1204_residual_partition": {
+      "conservative_unmeasured_physical_source": 604,
+      "usa31_source_history": 536,
+      "ownerless_foreign_original_contact": 63,
+      "fairfax_identity": 1
+    },
+    "excluded_other_residuals": 64,
+    "other_536_history_subsets": {"accepted_noaa": 131, "accepted_researched_unresolved": 405},
+    "prior_600_source_hold_union_overlap": 0,
+    "original_physical_hold_union_sha256": "8f5fef99816b7cfd54febb9b0f5a2ef3c530b4f9f3ec52327e21e988248fb4c9"
+  },
+  "source_application": {
+    "official_item": "NOAA InPort 77200, 2022-2023 NOAA NGS Topobathy Lidar DEM: Coastal Maine",
+    "official_metadata_url": "https://www.fisheries.noaa.gov/inport/item/77200",
+    "official_index_url": "https://noaa-nos-coastal-lidar-pds.s3.amazonaws.com/dem/NGS_CoastalMaine_Topobathy_2022_10422/index.html",
+    "tile_index_sha256": "205b473d3df760de5078d5fadc38b46636c3cade7a255108297e435afe4f4da8",
+    "tile_index_coverage_footprints": 544,
+    "selected_tile_count": 11,
+    "tile_pixel_size": "5000 x 5000 pixels at 1 m (5 km square)",
+    "raster_crs": "EPSG:6348",
+    "original_sample_summary": {"valid": 597, "nodata": 7, "below_zero": 85, "equal_zero": 1, "above_zero": 511},
+    "source_access": "ordinary public HTTPS; no access control/security warning bypass; raw source bodies remain private and are not included",
+    "exact_pixel_equivalence_receipt": {
+      "path": "/workspace/shared/usa604-center-pixel-equivalence-20261025.json",
+      "sha256": "8b5c60759ee6b325af6b048a9801c83900e0756c424961ef6c30fea90cc286ca",
+      "rows_same_tile": 604,
+      "rows_same_pixel": 604,
+      "changed_pixel_count": 0,
+      "independent_reviewer": "deliver_team_three_pse"
+    }
+  },
+  "limits": [
+    "No exact key rows, coordinates, raster values, raw DEM, or raw index archive are included.",
+    "Elevation is not translated to categorical land/water, MHW, legal, county, owner, or whole-cell status.",
+    "The NOAA elevation source is contemporary (2022-2023) and does not establish original GSHHG source-record lineage or historic target boundary.",
+    "Seven nodata observations and the separate negative/zero/positive groups are retained; no uniform classification is inferred.",
+    "CUSP/NSDE official viewer link returned HTTP 403 on the recorded attempt; no alternate endpoint/actor was used; this is not source absence or exhaustion.",
+    "Original native/physical holds and repair gates remain; the excluded other 64 residual records and prior 131/405 source-history cohorts are not included.",
+    "No source-search exhaustion, repair, ownership decision, acceptance, numerator change, or denominator change is claimed."
+  ]
+}

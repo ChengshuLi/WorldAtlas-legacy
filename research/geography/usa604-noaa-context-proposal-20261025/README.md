@@ -1,0 +1,34 @@
+# USA physical-source residual: bounded Maine NOAA elevation context
+
+**Status: proposal only; root science/accounting decision pending.** This packet covers exactly 604 original USA residual cells held under the conservative physical-source predicate: 549 Lincoln County and 55 Sagadahoc County cells. It proposes only a researched-unresolved disposition. It does not confer credit, reassign an owner, change geometry or native/physical status, clear rights, or certify land/water, mean-high-water (MHW), whole-cell support, or a legal boundary.
+
+## Scope and disjointness
+
+- The 604 exact original `[y,x,owner_index]` tuples match the private retained 1204-row hold roster, are unique, and remain `held_unresolved`, `accepted_disposition=false`, `repair_qualified=false`, and `new_credit=0`. The source-free tuple-set digest is in `scope.json`; key rows remain private.
+- These 604 are the `conservative_unmeasured_physical_source` stratum and are disjoint from the prior 600 source-held cells. The complete 1204 residual partition is 604 physical-source holds + 536 USA31 source-history holds + 63 ownerless foreign-original contacts + 1 Fairfax identity hold. The 536 source-history set separately consists of the already accepted NOAA131 subset plus 405 that was accepted as researched-unresolved; neither is included here. The other 64 cells (63 + 1) remain separate and are excluded.
+- The retained source study classified the 604 as conservative physical-source holds because original GSHHG source record 2380 was marked invalid and relation calculation was skipped for whole Lincoln/Sagadahoc targets. This is a missing checked relation, not evidence that any one cell is physically wrong. See exact immutable admission and run/failure artifacts in `MANIFEST.json`.
+- The original physical stock run completed 356 complete members and 283 issues across 155 members; that cohort execution is not a per-key physical result for these 604. The first native admission diagnostic failed before cell evaluation (`Unknown or duplicate physical residual issue`); a later diagnostic-002 observation is a separate successful run. Preserve both observations as they stand, not as interchangeable results. The original USA evidence and source-family negative bindings remain untouched.
+
+## Bounded NOAA source application
+
+NOAA's official InPort item 77200 describes the 2022–2023 Coastal Maine topobathy lidar DEM collection. The retained item metadata describes lidar collected from 2022-10-06 through 2023-12-16, classified ground/submerged-topography/submerged-object points, and 1 m DEMs whose elevations are referenced to Geoid18. The product is a contemporary elevation observation; NOAA warns that conditions may have changed and critical use requires understanding product limitations.
+
+Using the original private 604-key set, the prior local application selected cells whose centers fell in the official public tile index, then read the 11 public 1 m GeoTIFF tiles covering them. The original screen reports 597 valid elevation values and 7 nodata values. Of 597 valid observations, 85 are below 0 m, 1 equals 0 m, and 511 exceed 0 m: Lincoln has 542 valid/7 nodata (70 below, 1 equal, 471 above); Sagadahoc has 55 valid (15 below, 0 equal, 40 above). These are elevation groups only—not a categorical terrain, land/water, tidal-datum, county, owner, or shoreline classification.
+
+### Method correction and exact pixel equivalence
+
+The earlier shared research memo is preserved unchanged at its pinned hash. Its tile-index wording (“500m-tile polygons”) is incorrect: the index contains 544 coverage footprints, while each of the 11 selected raster tiles is 5000×5000 pixels at 1 m, or a 5 km square. Its center-method wording also needs qualification: the original sampler used formula-derived centers and rounded the longitude/latitude inputs to 12 decimals for the projection used to choose a tile; it did not consume the exact pinned row-latitude table. The actual `gdallocationinfo` lookup used the formula-derived full-precision coordinates.
+
+A bounded read-only comparison then joined each of the same 604 private records to the canonical row-latitude table at its accepted-main blob/path. Comparing the original full-precision formula-derived sample inputs to normative table centers, projected locally from EPSG:4326 to EPSG:6348, all 604 choose the same 5 km tile and same 1 m pixel. The rounded original tile-selection coordinates likewise chose the same tile for all 604. Ten spot checks of the affine pixel/line calculation agreed with `gdallocationinfo -xml`. Thus the existing elevation values are pixel-equivalent at normative centers and do not need resampling. The comparison is documented in the coordinate-free receipt referenced in `MANIFEST.json`; it does not upgrade elevation to a physical predicate.
+
+The seven nodata cases and mixed signs remain distinct; no averaging, threshold, sample-to-owner inference, or “no boundary” conclusion is made. No coordinates or key rows were transmitted to NOAA or another external source.
+
+## Source restrictions, contrary evidence, and remaining limit
+
+The NOAA index and the eleven targeted DEM bodies were retrieved by ordinary public HTTPS requests. The raw GeoTIFFs and index ZIP remain in private/local custody and are not packaged here. No access control, warning, or alternative route was bypassed. NOAA InPort item 60812 (“Coastal United States Shoreline, CUSP”) is a possible contextual lead, not a required legal certificate. Its official linked NSDE viewer returned HTTP 403 in the documented attempt; no alternate endpoint or actor was tried. Preserve that exact access result and do not claim source absence or exhaustion.
+
+The pixel-equivalent elevation evidence does not repair the unavailable original GSHHG relation, identify which source record defines each county target, establish a tidal datum or MHW trace, settle 2022–23 versus another boundary vintage, prove whole-cell support, or adjudicate an international/legal boundary. Keep every original owner, physical/native hold and repair gate intact. This finite source application supports root consideration of researched-unresolved treatment only; it does not require a universal source-lineage certificate and does not claim that all source avenues were exhausted.
+
+## Proposed treatment
+
+Root may accept the exact 604-key scope as researched-unresolved if the original source/physical investigation plus this bounded primary-source application satisfies the package standard. Until root posts and reads back acceptance, preserve the authoritative ledger and all 604 original hold rows unchanged. No numerator or denominator change is proposed by this packet alone.
