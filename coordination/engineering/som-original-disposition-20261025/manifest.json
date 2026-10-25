@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "scope": {
+    "issue": 2577,
+    "package": "gb-SOM-ADM2--repair-evaluation",
+    "keys": 2247,
+    "intervals": 1645,
+    "owners": 36,
+    "source_contacts": 47,
+    "owner_contact_groups": 64,
+    "recommendation": "preserve full original population pending root review; no repair, credit, claim, owner, hold, import, or release changes"
+  },
+  "original_packet": {
+    "commit": "0831f7e5fbfcca228dda175f73b6d8449b35982f",
+    "path": "coordination/engineering/som-original-disposition-20261020/som-disposition.json.gz",
+    "git_blob_oid": "6aeeee41cb80370e816044e3513828c8a911ff1e",
+    "gzip_sha256": "d9e87d1c360c3cfe21883b756bcd5da64bd4721abe91ac8c278c37c9e65075cf",
+    "decoded_sha256": "38835822455a95fa68d8e1392ce1b6470974a3b073061e315cb66d7e9c9a026c"
+  },
+  "missing_diagnostic": {
+    "physical_result_ref": "b478be96586f78b14e9344f83446b6f05bea127a",
+    "github_commit_api": "422 No commit found for SHA",
+    "required_local_artifact": "former-task physical-001/competitor-refusal receipt",
+    "path": null,
+    "content_sha256": null,
+    "refusal_ids": null,
+    "key_partition": null
+  },
+  "files": {
+    "README.md": {
+      "bytes": 10542,
+      "sha256": "9fdef45b4c16d3c5132735a4690c9fdaae141901bfe9b115f80cef0636cb1446"
+    },
+    "corrected-native-center-check.json": {
+      "bytes": 14861,
+      "sha256": "2b12071aff21b6fd0d854caa987766e467a5aef9f29545ed58a80b33eee56b59"
+    },
+    "corrected-native-center-check.md": {
+      "bytes": 8014,
+      "sha256": "16c29cbce28e03d3beba0ccf4b978728c5351d013771b613364259954d295697"
+    },
+    "historical-refusal-contact-reconciliation.md": {
+      "bytes": 8231,
+      "sha256": "aa9f0232326fc5a98fffa48b8741cfc2e0473c1d6cd5efd54af33168b439570a"
+    },
+    "owner-instrument-matrix.csv": {
+      "bytes": 42094,
+      "sha256": "e1146937dbb6ac605870daf2c81ea276e0b8696140c5c5e6d88742e1d0e119e6"
+    },
+    "som-11-ownerless-adm1-contact-key-map.csv": {
+      "bytes": 189741,
+      "sha256": "ac2b4da6c3dbbe73d752dad31952d87087a05950b9269dd67965908f92b3faec"
+    }
+  }
+}
