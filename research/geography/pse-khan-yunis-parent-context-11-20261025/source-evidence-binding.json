@@ -2,12 +2,12 @@
   "attribution_notice": "coordination/engineering/pse-original-disposition-20261020/native-authority-223-current-65ef/THIRD-PARTY-ATTRIBUTION.md",
   "kind": "pse-source-evidence-context-binding-v1",
   "new_applicability": {
-    "bytes": 161007,
-    "commit": "e475652911b8ec5b2a292d7d8d134f68526bfef3",
-    "git_blob_oid": "6f43b3e0d1f981d86b110f3c67a5e992bf36f1d3",
+    "bytes": 161023,
+    "commit": "fa9d54c0c247a4eaf4e9ac64bf6b6d803e91e04e",
+    "git_blob_oid": "6d0e22853b4b28ccd66bdb9ce5a7e972c73d69fe",
     "mode": "100644",
     "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/adopted-territorial-applicability.json",
-    "sha256": "f943bad97f18ec52d1d52971daa1c80e74940173ac6b715ef31432a69a320312"
+    "sha256": "6ab58191a34e46c57f6281d6fdeb3748bccc5d403468ef31c6f763f8eb8cf48a"
   },
   "only_changed_field": "/territorial_applicability",
   "original": {
@@ -131,7 +131,7 @@
     "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/source-evidence-with-context.json",
     "status": "exact original full-source evidence with source-relative applicability projection and locator-only rebinding of two unavailable commit pins",
     "payload_change": false,
-    "sha256": "4975692928a5c2a024132da5c9e246f040c937154ab09f3e53da6d8b646dcbf6"
+    "sha256": "4fd342630513cdaa976dbd44b93f9362a1a65b2085019211d444e35f6545dd07"
   },
   "native_patch_locator_rebinding": {
     "role": "original native patch input to the read-only changed-semantics diagnostic",
@@ -160,5 +160,12 @@
       "earlier exact-blob response had no containing path/tree binding; it was not then consumed"
     ],
     "interpretation": "object availability; no cause inferred; prior outcome preserved; current locator uses already authenticated exact body binding, not a fabricated historical commit or new producer"
+  },
+  "consumer_schema_correction": {
+    "prior_attempt": "The strict existing native diagnostic reader stopped before source/native screening with `Incomplete adopted territorial applicability`; no predicates or outputs ran.",
+    "requirement": "version 1, kind adopted-native-territorial-applicability-v1, provenance, records",
+    "change": "Added only the schema-required top-level version: 1; all 237 records and all provenance entries remain unchanged from the reviewed interpretation except the already reviewed exact locator bindings.",
+    "source_rows_changed": false,
+    "physical_or_geometry_payload_changed": false
   }
 }
