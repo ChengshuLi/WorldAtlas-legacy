@@ -1,0 +1,2107 @@
+{
+  "kind": "northern12-native-negative-source-audit-v1",
+  "worker_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "status": "source evidence only; all holds remain; zero credit",
+  "exact_keys": [
+    [
+      14443,
+      128217,
+      144649
+    ],
+    [
+      14443,
+      128218,
+      144648
+    ],
+    [
+      14443,
+      128232,
+      144635
+    ],
+    [
+      14509,
+      127342,
+      145235
+    ],
+    [
+      14509,
+      127342,
+      145236
+    ],
+    [
+      14509,
+      127342,
+      145237
+    ],
+    [
+      14509,
+      127343,
+      145240
+    ],
+    [
+      14509,
+      127343,
+      145241
+    ],
+    [
+      14509,
+      127343,
+      145242
+    ],
+    [
+      14509,
+      127343,
+      145243
+    ],
+    [
+      14519,
+      127934,
+      144593
+    ],
+    [
+      14519,
+      127935,
+      144592
+    ]
+  ],
+  "source_evidence": {
+    "bytes": 486052,
+    "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+  },
+  "metadata": {
+    "bytes": 661416,
+    "sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633",
+    "git_blob_oid": "2747b845f0c5654765da3b951c9074e52f220077"
+  },
+  "catalogue": {
+    "bytes": 403376,
+    "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9",
+    "git_blob_oid": "09afab19371f0814da61e79e5f310c5fb2405b6d"
+  },
+  "targets": [
+    {
+      "name": "Libenge",
+      "owner": 14443,
+      "source_id": "gb:COD:ADM2:63176286B16720510237815",
+      "negatives": [
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "7e409d40db329493e90bc9f47c8a4e8225d19d200b29e8ee67ad1f813cb1452b",
+          "negative_ordinal": 0,
+          "source_id": "gb:CAF:ADM1:63714938B21760912511834",
+          "verified_feature_properties": {
+            "shapeName": "Lobaye",
+            "shapeISO": "CF-LB",
+            "shapeID": "63714938B21760912511834",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "8c9aa0f344ba0aa0e75a21a7a96b24c690e546cdc6bafe536e024176bf5dae6d",
+          "negative_ordinal": 1,
+          "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+          "verified_feature_properties": {
+            "shapeName": "Ombella-M'Poko",
+            "shapeISO": "CF-MP",
+            "shapeID": "63714938B70915793391768",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 12,
+          "geometry_sha256": "62a2d2d8efacccc7ea80ab3ad4333e69e8fa8e9d22a83ffb6510eca339c1f383",
+          "negative_ordinal": 2,
+          "source_id": "gb:CAF:ADM1:63714938B18739157330103",
+          "verified_feature_properties": {
+            "shapeName": "Ouaka",
+            "shapeISO": "CF-UK",
+            "shapeID": "63714938B18739157330103",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 16,
+          "geometry_sha256": "5297682fc0fa6c969e9afece3b8a5b5396a4017b79a4e4ddf968d61a9f883f4b",
+          "negative_ordinal": 3,
+          "source_id": "gb:CAF:ADM1:63714938B39161688438046",
+          "verified_feature_properties": {
+            "shapeName": "Bangui",
+            "shapeISO": "CF-BGF",
+            "shapeID": "63714938B39161688438046",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 31,
+          "geometry_sha256": "7313b5ede959494e8c4a6c534c49b3d04a4660cd007f7ad7c99201c164ff53c5",
+          "negative_ordinal": 4,
+          "source_id": "gb:CAF:ADM2:33826404B9315728863093",
+          "verified_feature_properties": {
+            "shapeName": "Damara",
+            "shapeISO": "",
+            "shapeID": "33826404B9315728863093",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 32,
+          "geometry_sha256": "b4bc900a9ef5781575ddb691ef6724a02d3860f4d5d6c3cb9b9254a68eddb327",
+          "negative_ordinal": 5,
+          "source_id": "gb:CAF:ADM2:33826404B21321520993489",
+          "verified_feature_properties": {
+            "shapeName": "Mongoumba",
+            "shapeISO": "",
+            "shapeID": "33826404B21321520993489",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 33,
+          "geometry_sha256": "d2316bb78761dd932446292dc51b6b02ed49a5697230226f24ab47579e621853",
+          "negative_ordinal": 6,
+          "source_id": "gb:CAF:ADM2:33826404B24481683700723",
+          "verified_feature_properties": {
+            "shapeName": "Mbaïki",
+            "shapeISO": "",
+            "shapeID": "33826404B24481683700723",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 64,
+          "geometry_sha256": "ba2916b64a7ec34fc88564a234dc99769ed35c2f5213082690ed52215ce51a0f",
+          "negative_ordinal": 7,
+          "source_id": "gb:CAF:ADM2:33826404B11454155454969",
+          "verified_feature_properties": {
+            "shapeName": "Boali",
+            "shapeISO": "",
+            "shapeID": "33826404B11454155454969",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 70,
+          "geometry_sha256": "1e6df0beb5359c128360c445a63afa8e17d5f79673058b6cc687975766b4a696",
+          "negative_ordinal": 8,
+          "source_id": "gb:CAF:ADM2:33826404B58165985423079",
+          "verified_feature_properties": {
+            "shapeName": "Bangui",
+            "shapeISO": "",
+            "shapeID": "33826404B58165985423079",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 71,
+          "geometry_sha256": "48fc48d798002f927bf2ffbb8be11b7c4e9dd65535c10af2b4af3637c23f54e2",
+          "negative_ordinal": 9,
+          "source_id": "gb:CAF:ADM2:33826404B89402945162763",
+          "verified_feature_properties": {
+            "shapeName": "Bimbo",
+            "shapeISO": "",
+            "shapeID": "33826404B89402945162763",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "b17b650999d4543cf9375ff70ce4d9309bf2dc50b400e3a460a86a2499a88611",
+          "negative_ordinal": 10,
+          "source_id": "gb:CAF:ADM3:52401652B31277239674635",
+          "verified_feature_properties": {
+            "shapeName": "Mbata",
+            "shapeISO": "",
+            "shapeID": "52401652B31277239674635",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "6175b1618d8b6d1f252b27828a849e08df74588855b181545d3efe773545dff9",
+          "negative_ordinal": 11,
+          "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+          "verified_feature_properties": {
+            "shapeName": "Mongoumba",
+            "shapeISO": "",
+            "shapeID": "52401652B86682569461435",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 60,
+          "geometry_sha256": "6fe3611f11e4e268669af1833f4755bba8621995851c9a1f76f8ba0cba2c743e",
+          "negative_ordinal": 12,
+          "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+          "verified_feature_properties": {
+            "shapeName": "Bimbo",
+            "shapeISO": "",
+            "shapeID": "52401652B14361696899500",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 65,
+          "geometry_sha256": "b82b136b69ee5aa6d03024e9b5aa3c1b48f4ef4357f55769ff0f561ac81314b1",
+          "negative_ordinal": 13,
+          "source_id": "gb:CAF:ADM3:52401652B71644411344496",
+          "verified_feature_properties": {
+            "shapeName": "Boali",
+            "shapeISO": "",
+            "shapeID": "52401652B71644411344496",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 70,
+          "geometry_sha256": "3df200d94281e10aefebb67279fd7268569735a05b4606b5b03c02b6f55af52e",
+          "negative_ordinal": 14,
+          "source_id": "gb:CAF:ADM3:52401652B49227657461354",
+          "verified_feature_properties": {
+            "shapeName": "Damara",
+            "shapeISO": "",
+            "shapeID": "52401652B49227657461354",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 167,
+          "geometry_sha256": "f18909ce96fe046156d4c7aa2f26c6204114cd33422a6eb1102b180e579fb6b5",
+          "negative_ordinal": 15,
+          "source_id": "gb:CAF:ADM3:52401652B74484085536451",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 3",
+            "shapeISO": "",
+            "shapeID": "52401652B74484085536451",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 168,
+          "geometry_sha256": "4d61bdd019ec30ab49dc2113bde08ba7962c9e0ccccb65a189880405bc6d0f74",
+          "negative_ordinal": 16,
+          "source_id": "gb:CAF:ADM3:52401652B86986631052173",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 4",
+            "shapeISO": "",
+            "shapeID": "52401652B86986631052173",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 169,
+          "geometry_sha256": "160447edc0873d17102e2e50eeddf3c26297398839a107177342e4f80aa91443",
+          "negative_ordinal": 17,
+          "source_id": "gb:CAF:ADM3:52401652B84652622914513",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 5",
+            "shapeISO": "",
+            "shapeID": "52401652B84652622914513",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 170,
+          "geometry_sha256": "d9a9658a3d954c8e4e08946ef1226f1111f74285dbe9155067262e59d45851a0",
+          "negative_ordinal": 18,
+          "source_id": "gb:CAF:ADM3:52401652B97805646674619",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 6",
+            "shapeISO": "",
+            "shapeID": "52401652B97805646674619",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 171,
+          "geometry_sha256": "d66f1bc717d414657baabda06b82ae4042cbc3847efc78d518587db308ca6998",
+          "negative_ordinal": 19,
+          "source_id": "gb:CAF:ADM3:52401652B62391094293120",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 7",
+            "shapeISO": "",
+            "shapeID": "52401652B62391094293120",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 172,
+          "geometry_sha256": "a776258eb763bb6c60066493341c25c31a413394c281e9ca7b162a7a133d9089",
+          "negative_ordinal": 20,
+          "source_id": "gb:CAF:ADM3:52401652B9057863164098",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 8",
+            "shapeISO": "",
+            "shapeID": "52401652B9057863164098",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 173,
+          "geometry_sha256": "fde06c28b8eb1d615ed5962f41bf43c959dbd603ad5c424166191d2cef34fbe5",
+          "negative_ordinal": 21,
+          "source_id": "gb:CAF:ADM3:52401652B61514878619891",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 1",
+            "shapeISO": "",
+            "shapeID": "52401652B61514878619891",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 174,
+          "geometry_sha256": "db11f1eb158c29e580b46aa64c324121cbecce7703145f8ff83c40104b11b3ea",
+          "negative_ordinal": 22,
+          "source_id": "gb:CAF:ADM3:52401652B98074041041370",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 2",
+            "shapeISO": "",
+            "shapeID": "52401652B98074041041370",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 4,
+          "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+          "negative_ordinal": 23,
+          "source_id": "gb:COG:ADM1:67827341B88704799146201",
+          "verified_feature_properties": {
+            "shapeISO": "CG-2",
+            "shapeName": "Likouala",
+            "shapeID": "67827341B88704799146201",
+            "shapeGroup": "COG",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 41,
+          "geometry_sha256": "ff020d893f2e108769df9dc0cf52e4474c8f109c09210c8a3d27edacd11bf456",
+          "negative_ordinal": 24,
+          "source_id": "gb:COG:ADM2:1427508B65710782923529",
+          "verified_feature_properties": {
+            "shapeName": "Ngabe",
+            "shapeISO": "",
+            "shapeID": "1427508B65710782923529",
+            "shapeGroup": "COG",
+            "shapeType": "ADM2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bosobolo",
+      "owner": 14509,
+      "source_id": "gb:COD:ADM2:63176286B50098701443330",
+      "negatives": [
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "8c9aa0f344ba0aa0e75a21a7a96b24c690e546cdc6bafe536e024176bf5dae6d",
+          "negative_ordinal": 0,
+          "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+          "verified_feature_properties": {
+            "shapeName": "Ombella-M'Poko",
+            "shapeISO": "CF-MP",
+            "shapeID": "63714938B70915793391768",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 9,
+          "geometry_sha256": "15d91503a4e8f72092ecca33298b3c299a71ef2a80b151a71738b606218031a3",
+          "negative_ordinal": 1,
+          "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+          "verified_feature_properties": {
+            "shapeName": "Kémo",
+            "shapeISO": "CF-KG",
+            "shapeID": "63714938B4314817363012",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 12,
+          "geometry_sha256": "62a2d2d8efacccc7ea80ab3ad4333e69e8fa8e9d22a83ffb6510eca339c1f383",
+          "negative_ordinal": 2,
+          "source_id": "gb:CAF:ADM1:63714938B18739157330103",
+          "verified_feature_properties": {
+            "shapeName": "Ouaka",
+            "shapeISO": "CF-UK",
+            "shapeID": "63714938B18739157330103",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 25,
+          "geometry_sha256": "fa5f95a2013e42ecad8f7f7603ddc47f872fbc3f9c1bfbf3476f57ef0ef2bb6e",
+          "negative_ordinal": 3,
+          "source_id": "gb:CAF:ADM2:33826404B56773227283390",
+          "verified_feature_properties": {
+            "shapeName": "Kouango",
+            "shapeISO": "",
+            "shapeID": "33826404B56773227283390",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 27,
+          "geometry_sha256": "2c9df7f75baf51ae507235587eaebf248042f2f4a5dfcffa30eec65f3f4af1af",
+          "negative_ordinal": 4,
+          "source_id": "gb:CAF:ADM2:33826404B12088014945622",
+          "verified_feature_properties": {
+            "shapeName": "Djoukou",
+            "shapeISO": "",
+            "shapeID": "33826404B12088014945622",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 31,
+          "geometry_sha256": "7313b5ede959494e8c4a6c534c49b3d04a4660cd007f7ad7c99201c164ff53c5",
+          "negative_ordinal": 5,
+          "source_id": "gb:CAF:ADM2:33826404B9315728863093",
+          "verified_feature_properties": {
+            "shapeName": "Damara",
+            "shapeISO": "",
+            "shapeID": "33826404B9315728863093",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 62,
+          "geometry_sha256": "c1bd9bd581dafc63426bdb4072de7142cba49740bab2bb410c980320b122f05a",
+          "negative_ordinal": 6,
+          "source_id": "gb:CAF:ADM3:52401652B95349745734913",
+          "verified_feature_properties": {
+            "shapeName": "Galafondo",
+            "shapeISO": "",
+            "shapeID": "52401652B95349745734913",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 63,
+          "geometry_sha256": "9e4211ca9bd39c7fc4abe7bff1adf7e3054a9dd71c14773715ff5fc11d3bd4d1",
+          "negative_ordinal": 7,
+          "source_id": "gb:CAF:ADM3:52401652B92301081173176",
+          "verified_feature_properties": {
+            "shapeName": "Galabadja",
+            "shapeISO": "",
+            "shapeID": "52401652B92301081173176",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 70,
+          "geometry_sha256": "3df200d94281e10aefebb67279fd7268569735a05b4606b5b03c02b6f55af52e",
+          "negative_ordinal": 8,
+          "source_id": "gb:CAF:ADM3:52401652B49227657461354",
+          "verified_feature_properties": {
+            "shapeName": "Damara",
+            "shapeISO": "",
+            "shapeID": "52401652B49227657461354",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 80,
+          "geometry_sha256": "6a623ddb79c875725b27e5494ebd2444268aca48888fba5fac6d6d0cdb8c981c",
+          "negative_ordinal": 9,
+          "source_id": "gb:CAF:ADM3:52401652B29137968219246",
+          "verified_feature_properties": {
+            "shapeName": "Azengue-Mindou",
+            "shapeISO": "",
+            "shapeID": "52401652B29137968219246",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 119,
+          "geometry_sha256": "40b6b3f2ec43ce1d35e6b342b2c1b612c0f695d8802908eacdb81dda27bd619e",
+          "negative_ordinal": 10,
+          "source_id": "gb:CAF:ADM3:52401652B3164908651780",
+          "verified_feature_properties": {
+            "shapeName": "Cochio-Toulou",
+            "shapeISO": "",
+            "shapeID": "52401652B3164908651780",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 161,
+          "geometry_sha256": "5227f0968c7438967e577313f12dbbedab5eed98fd5aeb6165e50789fe164119",
+          "negative_ordinal": 11,
+          "source_id": "gb:CAF:ADM3:52401652B91880463318488",
+          "verified_feature_properties": {
+            "shapeName": "Kouango",
+            "shapeISO": "",
+            "shapeID": "52401652B91880463318488",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Zongo",
+      "owner": 14519,
+      "source_id": "gb:COD:ADM2:63176286B53748739739840",
+      "negatives": [
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "7e409d40db329493e90bc9f47c8a4e8225d19d200b29e8ee67ad1f813cb1452b",
+          "negative_ordinal": 0,
+          "source_id": "gb:CAF:ADM1:63714938B21760912511834",
+          "verified_feature_properties": {
+            "shapeName": "Lobaye",
+            "shapeISO": "CF-LB",
+            "shapeID": "63714938B21760912511834",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "8c9aa0f344ba0aa0e75a21a7a96b24c690e546cdc6bafe536e024176bf5dae6d",
+          "negative_ordinal": 1,
+          "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+          "verified_feature_properties": {
+            "shapeName": "Ombella-M'Poko",
+            "shapeISO": "CF-MP",
+            "shapeID": "63714938B70915793391768",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 16,
+          "geometry_sha256": "5297682fc0fa6c969e9afece3b8a5b5396a4017b79a4e4ddf968d61a9f883f4b",
+          "negative_ordinal": 2,
+          "source_id": "gb:CAF:ADM1:63714938B39161688438046",
+          "verified_feature_properties": {
+            "shapeName": "Bangui",
+            "shapeISO": "CF-BGF",
+            "shapeID": "63714938B39161688438046",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM1"
+          }
+        },
+        {
+          "feature_ordinal": 70,
+          "geometry_sha256": "1e6df0beb5359c128360c445a63afa8e17d5f79673058b6cc687975766b4a696",
+          "negative_ordinal": 3,
+          "source_id": "gb:CAF:ADM2:33826404B58165985423079",
+          "verified_feature_properties": {
+            "shapeName": "Bangui",
+            "shapeISO": "",
+            "shapeID": "33826404B58165985423079",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 71,
+          "geometry_sha256": "48fc48d798002f927bf2ffbb8be11b7c4e9dd65535c10af2b4af3637c23f54e2",
+          "negative_ordinal": 4,
+          "source_id": "gb:CAF:ADM2:33826404B89402945162763",
+          "verified_feature_properties": {
+            "shapeName": "Bimbo",
+            "shapeISO": "",
+            "shapeID": "33826404B89402945162763",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM2"
+          }
+        },
+        {
+          "feature_ordinal": 60,
+          "geometry_sha256": "6fe3611f11e4e268669af1833f4755bba8621995851c9a1f76f8ba0cba2c743e",
+          "negative_ordinal": 5,
+          "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+          "verified_feature_properties": {
+            "shapeName": "Bimbo",
+            "shapeISO": "",
+            "shapeID": "52401652B14361696899500",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 167,
+          "geometry_sha256": "f18909ce96fe046156d4c7aa2f26c6204114cd33422a6eb1102b180e579fb6b5",
+          "negative_ordinal": 6,
+          "source_id": "gb:CAF:ADM3:52401652B74484085536451",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 3",
+            "shapeISO": "",
+            "shapeID": "52401652B74484085536451",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 169,
+          "geometry_sha256": "160447edc0873d17102e2e50eeddf3c26297398839a107177342e4f80aa91443",
+          "negative_ordinal": 7,
+          "source_id": "gb:CAF:ADM3:52401652B84652622914513",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 5",
+            "shapeISO": "",
+            "shapeID": "52401652B84652622914513",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 170,
+          "geometry_sha256": "d9a9658a3d954c8e4e08946ef1226f1111f74285dbe9155067262e59d45851a0",
+          "negative_ordinal": 8,
+          "source_id": "gb:CAF:ADM3:52401652B97805646674619",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 6",
+            "shapeISO": "",
+            "shapeID": "52401652B97805646674619",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 171,
+          "geometry_sha256": "d66f1bc717d414657baabda06b82ae4042cbc3847efc78d518587db308ca6998",
+          "negative_ordinal": 9,
+          "source_id": "gb:CAF:ADM3:52401652B62391094293120",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 7",
+            "shapeISO": "",
+            "shapeID": "52401652B62391094293120",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 173,
+          "geometry_sha256": "fde06c28b8eb1d615ed5962f41bf43c959dbd603ad5c424166191d2cef34fbe5",
+          "negative_ordinal": 10,
+          "source_id": "gb:CAF:ADM3:52401652B61514878619891",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 1",
+            "shapeISO": "",
+            "shapeID": "52401652B61514878619891",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        },
+        {
+          "feature_ordinal": 174,
+          "geometry_sha256": "db11f1eb158c29e580b46aa64c324121cbecce7703145f8ff83c40104b11b3ea",
+          "negative_ordinal": 11,
+          "source_id": "gb:CAF:ADM3:52401652B98074041041370",
+          "verified_feature_properties": {
+            "shapeName": "Arrondissement 2",
+            "shapeISO": "",
+            "shapeID": "52401652B98074041041370",
+            "shapeGroup": "CAF",
+            "shapeType": "ADM3"
+          }
+        }
+      ]
+    }
+  ],
+  "families": [
+    {
+      "family": "gb:CAF:ADM1",
+      "parts": [
+        {
+          "pin": {
+            "bytes": 35452,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 115127,
+            "decoded_sha256": "f9180594ed02a19e423a94f226c489b128d755d306cdd5f00669019b6eb980e8",
+            "git_blob_oid": "baf6c38c02a3239f521ed26f7c6cd00766ad2820",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM1-000.bin.gz",
+            "sha256": "3d66ea0099b0b03ca75ea3e9dc1c098c7501f3360506acdc3fe5b75e790968ea"
+          },
+          "verified": true
+        }
+      ],
+      "feature_count": 17,
+      "metadata": {
+        "boundaryID": "CAF-ADM1-63714938",
+        "boundaryName": "Central African Republic",
+        "boundaryISO": "CAF",
+        "boundaryYearRepresented": "2006",
+        "boundaryType": "ADM1",
+        "boundaryCanonical": "Prefecture and Commune",
+        "boundarySource": "geoBoundaries, Wikimedia",
+        "boundaryLicense": "Creative Commons Attribution 2.5 Generic",
+        "licenseDetail": "nan",
+        "licenseSource": "commons.wikimedia.org/wiki/File",
+        "boundarySourceURL": "commons.wikimedia.org/wiki/File",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Middle Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "17",
+        "meanVertices": "164.0",
+        "minVertices": "17",
+        "maxVertices": "295",
+        "meanPerimeterLengthKM": "949.5787851069974",
+        "minPerimeterLengthKM": "64.83850845865095",
+        "maxPerimeterLengthKM": "1551.4243343075211",
+        "meanAreaSqKM": "36455.24129049195",
+        "minAreaSqKM": "267.7881583109446",
+        "maxAreaSqKM": "86468.47806276864",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1_simplified.geojson",
+        "sha256": "f9180594ed02a19e423a94f226c489b128d755d306cdd5f00669019b6eb980e8"
+      },
+      "operand_feature_properties": {
+        "3": {
+          "shapeName": "Lobaye",
+          "shapeISO": "CF-LB",
+          "shapeID": "63714938B21760912511834",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM1"
+        },
+        "5": {
+          "shapeName": "Ombella-M'Poko",
+          "shapeISO": "CF-MP",
+          "shapeID": "63714938B70915793391768",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM1"
+        },
+        "9": {
+          "shapeName": "Kémo",
+          "shapeISO": "CF-KG",
+          "shapeID": "63714938B4314817363012",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM1"
+        },
+        "12": {
+          "shapeName": "Ouaka",
+          "shapeISO": "CF-UK",
+          "shapeID": "63714938B18739157330103",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM1"
+        },
+        "16": {
+          "shapeName": "Bangui",
+          "shapeISO": "CF-BGF",
+          "shapeID": "63714938B39161688438046",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM1"
+        }
+      },
+      "catalogue_record": {
+        "advertised_feature_count": 17,
+        "cohort": "administrative-registry",
+        "feature_count": 17,
+        "key": "gb:CAF:ADM1",
+        "metadata_sha256": "7801fe6bdbd0f805c78c82e0681ddef39e50196a798e42ea05e08a659c070052",
+        "original_bytes": 115127,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "f9180594ed02a19e423a94f226c489b128d755d306cdd5f00669019b6eb980e8",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 35452,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM1-000.bin.gz",
+            "sha256": "3d66ea0099b0b03ca75ea3e9dc1c098c7501f3360506acdc3fe5b75e790968ea",
+            "uncompressed_bytes": 115127,
+            "uncompressed_sha256": "f9180594ed02a19e423a94f226c489b128d755d306cdd5f00669019b6eb980e8"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1_simplified.geojson",
+        "recorded_license": "Creative Commons Attribution 2.5 Generic",
+        "source_represented_year_claim": "2006"
+      }
+    },
+    {
+      "family": "gb:CAF:ADM2",
+      "parts": [
+        {
+          "pin": {
+            "bytes": 165838,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 597126,
+            "decoded_sha256": "891357fe42dcc29a7c2ef847bef6422eea857602c515e0141ab015a78b1899bc",
+            "git_blob_oid": "965a00a40a76644fbb368166d9b76418327045b6",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM2-000.bin.gz",
+            "sha256": "beed24d4682d1a3083093c53d435399860d23f615a449caf35d8ce5eec723066"
+          },
+          "verified": true
+        }
+      ],
+      "feature_count": 72,
+      "metadata": {
+        "boundaryID": "CAF-ADM2-33826404",
+        "boundaryName": "Central African Republic",
+        "boundaryISO": "CAF",
+        "boundaryYearRepresented": "2015",
+        "boundaryType": "ADM2",
+        "boundaryCanonical": "Sub-Prefectures",
+        "boundarySource": "geoBoundaries, UNHCR",
+        "boundaryLicense": "Creative Commons Attribution 3.0 License",
+        "licenseDetail": "nan",
+        "licenseSource": "data2.unhcr.org/en/documents/details/32968",
+        "boundarySourceURL": "data2.unhcr.org/en/documents/details/32968",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Middle Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "72",
+        "meanVertices": "527.0",
+        "minVertices": "60",
+        "maxVertices": "3953",
+        "meanPerimeterLengthKM": "477.5579066452236",
+        "minPerimeterLengthKM": "57.930411913489245",
+        "maxPerimeterLengthKM": "1303.5806706045937",
+        "meanAreaSqKM": "8578.338736373833",
+        "minAreaSqKM": "69.12942836398491",
+        "maxAreaSqKM": "41423.23566133018",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2_simplified.geojson",
+        "sha256": "891357fe42dcc29a7c2ef847bef6422eea857602c515e0141ab015a78b1899bc"
+      },
+      "operand_feature_properties": {
+        "25": {
+          "shapeName": "Kouango",
+          "shapeISO": "",
+          "shapeID": "33826404B56773227283390",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        },
+        "27": {
+          "shapeName": "Djoukou",
+          "shapeISO": "",
+          "shapeID": "33826404B12088014945622",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        },
+        "31": {
+          "shapeName": "Damara",
+          "shapeISO": "",
+          "shapeID": "33826404B9315728863093",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        },
+        "32": {
+          "shapeName": "Mongoumba",
+          "shapeISO": "",
+          "shapeID": "33826404B21321520993489",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        },
+        "33": {
+          "shapeName": "Mbaïki",
+          "shapeISO": "",
+          "shapeID": "33826404B24481683700723",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        },
+        "64": {
+          "shapeName": "Boali",
+          "shapeISO": "",
+          "shapeID": "33826404B11454155454969",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        },
+        "70": {
+          "shapeName": "Bangui",
+          "shapeISO": "",
+          "shapeID": "33826404B58165985423079",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        },
+        "71": {
+          "shapeName": "Bimbo",
+          "shapeISO": "",
+          "shapeID": "33826404B89402945162763",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM2"
+        }
+      },
+      "catalogue_record": {
+        "advertised_feature_count": 72,
+        "cohort": "administrative-registry",
+        "feature_count": 72,
+        "key": "gb:CAF:ADM2",
+        "metadata_sha256": "5d099f05a2b368cbf2aa4286e1f3f7b703f7e2dc4c2dc2a8439a16e1feaa7f8d",
+        "original_bytes": 597126,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "891357fe42dcc29a7c2ef847bef6422eea857602c515e0141ab015a78b1899bc",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 165838,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM2-000.bin.gz",
+            "sha256": "beed24d4682d1a3083093c53d435399860d23f615a449caf35d8ce5eec723066",
+            "uncompressed_bytes": 597126,
+            "uncompressed_sha256": "891357fe42dcc29a7c2ef847bef6422eea857602c515e0141ab015a78b1899bc"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2_simplified.geojson",
+        "recorded_license": "Creative Commons Attribution 3.0 License",
+        "source_represented_year_claim": "2015"
+      }
+    },
+    {
+      "family": "gb:CAF:ADM3",
+      "parts": [
+        {
+          "pin": {
+            "bytes": 230764,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 807513,
+            "decoded_sha256": "e368afac2f5c1ac7503a181e3e62541df88167cf9072a84c5453ffea999ee88a",
+            "git_blob_oid": "58f9bea9c23c34f8bd6cb3336da582801656c889",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+            "sha256": "9888409cb3cc0f35d2e49e9e6877e2b1e548cece703c6b8553819ca80171b9b5"
+          },
+          "verified": true
+        }
+      ],
+      "feature_count": 175,
+      "metadata": {
+        "boundaryID": "CAF-ADM3-52401652",
+        "boundaryName": "Central African Republic",
+        "boundaryISO": "CAF",
+        "boundaryYearRepresented": "2018",
+        "boundaryType": "ADM3",
+        "boundaryCanonical": "Municipalities",
+        "boundarySource": "Agency for Technical Cooperation and Development (ACTED), OCHA Central African Republic",
+        "boundaryLicense": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "licenseDetail": "nan",
+        "licenseSource": "data.humdata.org/dataset/central-african-republic-administrative-boundaries",
+        "boundarySourceURL": "data.humdata.org/dataset/central-african-republic-administrative-boundaries",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Middle Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "175",
+        "meanVertices": "450.0",
+        "minVertices": "39",
+        "maxVertices": "1503",
+        "meanPerimeterLengthKM": "278.4102911104559",
+        "minPerimeterLengthKM": "10.403571338483848",
+        "maxPerimeterLengthKM": "1289.9274033387212",
+        "meanAreaSqKM": "3544.5941486566508",
+        "minAreaSqKM": "5.291480335354525",
+        "maxAreaSqKM": "41332.30880004169",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM3/geoBoundaries-CAF-ADM3-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM3/geoBoundaries-CAF-ADM3.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM3/geoBoundaries-CAF-ADM3.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM3/geoBoundaries-CAF-ADM3-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM3/geoBoundaries-CAF-ADM3_simplified.geojson",
+        "sha256": "e368afac2f5c1ac7503a181e3e62541df88167cf9072a84c5453ffea999ee88a"
+      },
+      "operand_feature_properties": {
+        "3": {
+          "shapeName": "Mbata",
+          "shapeISO": "",
+          "shapeID": "52401652B31277239674635",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "5": {
+          "shapeName": "Mongoumba",
+          "shapeISO": "",
+          "shapeID": "52401652B86682569461435",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "60": {
+          "shapeName": "Bimbo",
+          "shapeISO": "",
+          "shapeID": "52401652B14361696899500",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "62": {
+          "shapeName": "Galafondo",
+          "shapeISO": "",
+          "shapeID": "52401652B95349745734913",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "63": {
+          "shapeName": "Galabadja",
+          "shapeISO": "",
+          "shapeID": "52401652B92301081173176",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "65": {
+          "shapeName": "Boali",
+          "shapeISO": "",
+          "shapeID": "52401652B71644411344496",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "70": {
+          "shapeName": "Damara",
+          "shapeISO": "",
+          "shapeID": "52401652B49227657461354",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "80": {
+          "shapeName": "Azengue-Mindou",
+          "shapeISO": "",
+          "shapeID": "52401652B29137968219246",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "119": {
+          "shapeName": "Cochio-Toulou",
+          "shapeISO": "",
+          "shapeID": "52401652B3164908651780",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "161": {
+          "shapeName": "Kouango",
+          "shapeISO": "",
+          "shapeID": "52401652B91880463318488",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "167": {
+          "shapeName": "Arrondissement 3",
+          "shapeISO": "",
+          "shapeID": "52401652B74484085536451",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "168": {
+          "shapeName": "Arrondissement 4",
+          "shapeISO": "",
+          "shapeID": "52401652B86986631052173",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "169": {
+          "shapeName": "Arrondissement 5",
+          "shapeISO": "",
+          "shapeID": "52401652B84652622914513",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "170": {
+          "shapeName": "Arrondissement 6",
+          "shapeISO": "",
+          "shapeID": "52401652B97805646674619",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "171": {
+          "shapeName": "Arrondissement 7",
+          "shapeISO": "",
+          "shapeID": "52401652B62391094293120",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "172": {
+          "shapeName": "Arrondissement 8",
+          "shapeISO": "",
+          "shapeID": "52401652B9057863164098",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "173": {
+          "shapeName": "Arrondissement 1",
+          "shapeISO": "",
+          "shapeID": "52401652B61514878619891",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        },
+        "174": {
+          "shapeName": "Arrondissement 2",
+          "shapeISO": "",
+          "shapeID": "52401652B98074041041370",
+          "shapeGroup": "CAF",
+          "shapeType": "ADM3"
+        }
+      },
+      "catalogue_record": {
+        "advertised_feature_count": 175,
+        "cohort": "administrative-registry",
+        "feature_count": 175,
+        "key": "gb:CAF:ADM3",
+        "metadata_sha256": "6465cbdbf80f983f7e35a95509d26cfc7792169d539cf2aadc6e4c6b1233032f",
+        "original_bytes": 807513,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "e368afac2f5c1ac7503a181e3e62541df88167cf9072a84c5453ffea999ee88a",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 230764,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CAF-ADM3-000.bin.gz",
+            "sha256": "9888409cb3cc0f35d2e49e9e6877e2b1e548cece703c6b8553819ca80171b9b5",
+            "uncompressed_bytes": 807513,
+            "uncompressed_sha256": "e368afac2f5c1ac7503a181e3e62541df88167cf9072a84c5453ffea999ee88a"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM3/geoBoundaries-CAF-ADM3_simplified.geojson",
+        "recorded_license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "source_represented_year_claim": "2018"
+      }
+    },
+    {
+      "family": "gb:COG:ADM1",
+      "parts": [
+        {
+          "pin": {
+            "bytes": 54037,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 170812,
+            "decoded_sha256": "2aea50c78d9c86139a73dfb72e20e59ae151d1c7d5c0e03bd0482f06e18d340b",
+            "git_blob_oid": "c778c13f89d1f0b1f51e50043a1d76b440a7a0de",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+            "sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b"
+          },
+          "verified": true
+        }
+      ],
+      "feature_count": 12,
+      "metadata": {
+        "boundaryID": "COG-ADM1-67827341",
+        "boundaryName": "Congo",
+        "boundaryISO": "COG",
+        "boundaryYearRepresented": "2017",
+        "boundaryType": "ADM1",
+        "boundaryCanonical": "Départements",
+        "boundarySource": "OpenStreetMap, Wambacher",
+        "boundaryLicense": "Open Data Commons Open Database License 1.0",
+        "licenseDetail": "Open Data Commons Open Database License 1.0",
+        "licenseSource": "www.openstreetmap.org/copyright",
+        "boundarySourceURL": "wambachers-osm.website/boundaries/",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Middle Africa",
+        "worldBankIncomeGroup": "Lower-middle-income Countries",
+        "admUnitCount": "12",
+        "meanVertices": "1414.0",
+        "minVertices": "163",
+        "maxVertices": "3702",
+        "meanPerimeterLengthKM": "972.8862516348509",
+        "minPerimeterLengthKM": "50.15052084763803",
+        "maxPerimeterLengthKM": "1812.4791835239805",
+        "meanAreaSqKM": "28606.23002598925",
+        "minAreaSqKM": "80.85184430128498",
+        "maxAreaSqKM": "66513.8368916218",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM1/geoBoundaries-COG-ADM1-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM1/geoBoundaries-COG-ADM1.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM1/geoBoundaries-COG-ADM1.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM1/geoBoundaries-COG-ADM1-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM1/geoBoundaries-COG-ADM1_simplified.geojson",
+        "sha256": "2aea50c78d9c86139a73dfb72e20e59ae151d1c7d5c0e03bd0482f06e18d340b"
+      },
+      "operand_feature_properties": {
+        "4": {
+          "shapeISO": "CG-2",
+          "shapeName": "Likouala",
+          "shapeID": "67827341B88704799146201",
+          "shapeGroup": "COG",
+          "shapeType": "ADM1"
+        }
+      },
+      "catalogue_record": {
+        "advertised_feature_count": 12,
+        "cohort": "administrative-registry",
+        "feature_count": 12,
+        "key": "gb:COG:ADM1",
+        "metadata_sha256": "ac1fe92e9fb8c5ef51680a93de667d67a1ad49f1350463d8d122bd053e9078d0",
+        "original_bytes": 170812,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "2aea50c78d9c86139a73dfb72e20e59ae151d1c7d5c0e03bd0482f06e18d340b",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 54037,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+            "sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b",
+            "uncompressed_bytes": 170812,
+            "uncompressed_sha256": "2aea50c78d9c86139a73dfb72e20e59ae151d1c7d5c0e03bd0482f06e18d340b"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM1/geoBoundaries-COG-ADM1_simplified.geojson",
+        "recorded_license": "Open Data Commons Open Database License 1.0",
+        "source_represented_year_claim": "2017"
+      }
+    },
+    {
+      "family": "gb:COG:ADM2",
+      "parts": [
+        {
+          "pin": {
+            "bytes": 95986,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 336602,
+            "decoded_sha256": "b44d1fdcc6f61f0d0b2a4b3402f49dfd317ea9cdddd0a854bd20cae0996291ae",
+            "git_blob_oid": "2c0b2d12d91391c90b7b13fd3bc6eeafcef9a151",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM2-000.bin.gz",
+            "sha256": "d16ed36ca657850044d6abe618958e16a36601ed687246761e44c5d964c8ac51"
+          },
+          "verified": true
+        }
+      ],
+      "feature_count": 46,
+      "metadata": {
+        "boundaryID": "COG-ADM2-1427508",
+        "boundaryName": "Congo",
+        "boundaryISO": "COG",
+        "boundaryYearRepresented": "2007",
+        "boundaryType": "ADM2",
+        "boundaryCanonical": "Unknown",
+        "boundarySource": "New York University Spatial Data Repository, Stanford University, Map Maker Limited",
+        "boundaryLicense": "Public Domain",
+        "licenseDetail": "License on metadata pop-up on source page",
+        "licenseSource": "geo.nyu.edu/catalog/stanford-hz799nq4536",
+        "boundarySourceURL": "geo.nyu.edu/catalog/stanford-hz799nq4536",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Middle Africa",
+        "worldBankIncomeGroup": "Lower-middle-income Countries",
+        "admUnitCount": "46",
+        "meanVertices": "272.0",
+        "minVertices": "56",
+        "maxVertices": "1051",
+        "meanPerimeterLengthKM": "416.2307269643455",
+        "minPerimeterLengthKM": "88.92638888769602",
+        "maxPerimeterLengthKM": "1216.5227922514498",
+        "meanAreaSqKM": "7428.455918776533",
+        "minAreaSqKM": "346.32695785827565",
+        "maxAreaSqKM": "37636.77500845552",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM2/geoBoundaries-COG-ADM2-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM2/geoBoundaries-COG-ADM2.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM2/geoBoundaries-COG-ADM2.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM2/geoBoundaries-COG-ADM2-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM2/geoBoundaries-COG-ADM2_simplified.geojson",
+        "sha256": "b44d1fdcc6f61f0d0b2a4b3402f49dfd317ea9cdddd0a854bd20cae0996291ae"
+      },
+      "operand_feature_properties": {
+        "41": {
+          "shapeName": "Ngabe",
+          "shapeISO": "",
+          "shapeID": "1427508B65710782923529",
+          "shapeGroup": "COG",
+          "shapeType": "ADM2"
+        }
+      },
+      "catalogue_record": {
+        "advertised_feature_count": 46,
+        "cohort": "administrative-registry",
+        "feature_count": 46,
+        "key": "gb:COG:ADM2",
+        "metadata_sha256": "b372aa6df80c12246c0b21acde9a975c88f3ad64a34096d0960f299a69eb8d62",
+        "original_bytes": 336602,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "b44d1fdcc6f61f0d0b2a4b3402f49dfd317ea9cdddd0a854bd20cae0996291ae",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 95986,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM2-000.bin.gz",
+            "sha256": "d16ed36ca657850044d6abe618958e16a36601ed687246761e44c5d964c8ac51",
+            "uncompressed_bytes": 336602,
+            "uncompressed_sha256": "b44d1fdcc6f61f0d0b2a4b3402f49dfd317ea9cdddd0a854bd20cae0996291ae"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COG/ADM2/geoBoundaries-COG-ADM2_simplified.geojson",
+        "recorded_license": "Public Domain",
+        "source_represented_year_claim": "2007"
+      }
+    }
+  ],
+  "retained_overlay": {
+    "identity": {
+      "bytes": 799945,
+      "sha256": "00fc57c3290d4d0cf1ef7df68860ac6d2c3ee82e67509d0ae2f9d1c550cdf24d"
+    },
+    "manifest": {
+      "bytes": 8090,
+      "sha256": "912ac9d8cad6f44be5208b3ed9fd49448f0b8dab3d1253a8852564593180b7e6"
+    },
+    "included_families": [
+      "gb:AGO:ADM1",
+      "gb:BDI:ADM1",
+      "gb:CAF:ADM1",
+      "gb:CAF:ADM2",
+      "gb:COD:ADM1",
+      "gb:COD:ADM2",
+      "gb:COG:ADM1",
+      "gb:TZA:ADM1",
+      "gb:UGA:ADM1",
+      "gb:UGA:ADM2"
+    ],
+    "omitted_native_families": [
+      "gb:CAF:ADM3",
+      "gb:COG:ADM2"
+    ],
+    "rows": [
+      {
+        "key": [
+          14443,
+          128217,
+          144649
+        ],
+        "center": [
+          18.629189139705375,
+          3.9317457999305456
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "source_index": 9193,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "source_index": 18740,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B16720510237815",
+            "source_index": 18860,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "name": "Ombella-M'Poko",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "name": "Sud-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B16720510237815",
+            "name": "Libenge",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14443,
+          128218,
+          144648
+        ],
+        "center": [
+          18.627815963931255,
+          3.9303758548817287
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "source_index": 9193,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "source_index": 18740,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B16720510237815",
+            "source_index": 18860,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "name": "Ombella-M'Poko",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "name": "Sud-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B16720510237815",
+            "name": "Libenge",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14443,
+          128232,
+          144635
+        ],
+        "center": [
+          18.609964678867584,
+          3.9111963882511356
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "source_index": 9193,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "source_index": 18740,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B16720510237815",
+            "source_index": 18860,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "name": "Ombella-M'Poko",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "name": "Sud-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B16720510237815",
+            "name": "Libenge",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14509,
+          127342,
+          145235
+        ],
+        "center": [
+          19.43387014334428,
+          5.129498051593859
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "source_index": 9197,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "source_index": 18732,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "source_index": 18779,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "name": "Kémo",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "name": "Nord-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "name": "Bosobolo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14509,
+          127342,
+          145236
+        ],
+        "center": [
+          19.435243319118428,
+          5.129498051593859
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "source_index": 9197,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "source_index": 18732,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "source_index": 18779,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "name": "Kémo",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "name": "Nord-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "name": "Bosobolo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14509,
+          127342,
+          145237
+        ],
+        "center": [
+          19.436616494892547,
+          5.129498051593859
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "source_index": 9197,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "source_index": 18732,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "source_index": 18779,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "name": "Kémo",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "name": "Nord-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "name": "Bosobolo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14509,
+          127343,
+          145240
+        ],
+        "center": [
+          19.440736022214935,
+          5.128130373693882
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "source_index": 9197,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "source_index": 18732,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "source_index": 18779,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "name": "Kémo",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "name": "Nord-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "name": "Bosobolo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14509,
+          127343,
+          145241
+        ],
+        "center": [
+          19.442109197989055,
+          5.128130373693882
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "source_index": 9197,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "source_index": 18732,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "source_index": 18779,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "name": "Kémo",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "name": "Nord-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "name": "Bosobolo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14509,
+          127343,
+          145242
+        ],
+        "center": [
+          19.443482373763175,
+          5.128130373693882
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "source_index": 9197,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "source_index": 18732,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "source_index": 18779,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "name": "Kémo",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "name": "Nord-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "name": "Bosobolo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14509,
+          127343,
+          145243
+        ],
+        "center": [
+          19.444855549537323,
+          5.128130373693882
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "source_index": 9197,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "source_index": 18732,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "source_index": 18779,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "name": "Kémo",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B30663222433478",
+            "name": "Nord-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B50098701443330",
+            "name": "Bosobolo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14519,
+          127934,
+          144593
+        ],
+        "center": [
+          18.552291296354213,
+          4.3193468363494425
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B39161688438046",
+            "source_index": 9204,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "source_index": 18740,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B53748739739840",
+            "source_index": 18941,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B39161688438046",
+            "name": "Bangui",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "name": "Sud-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B53748739739840",
+            "name": "Zongo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      },
+      {
+        "key": [
+          14519,
+          127935,
+          144592
+        ],
+        "center": [
+          18.550918120580093,
+          4.3179775594899
+        ],
+        "recorded_candidate_center_hits": [
+          {
+            "family_index": 50,
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "source_index": 9193,
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "source_index": 18740,
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "source_id": "gb:COD:ADM2:63176286B53748739739840",
+            "source_index": 18941,
+            "status": "inside"
+          }
+        ],
+        "full_537_feature_center_hits": [
+          {
+            "family_index": 50,
+            "family_key": "gb:CAF:ADM1",
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "name": "Ombella-M'Poko",
+            "status": "inside"
+          },
+          {
+            "family_index": 69,
+            "family_key": "gb:COD:ADM1",
+            "source_id": "gb:COD:ADM1:28894549B79448475719999",
+            "name": "Sud-Ubangi",
+            "status": "inside"
+          },
+          {
+            "family_index": 70,
+            "family_key": "gb:COD:ADM2",
+            "source_id": "gb:COD:ADM2:63176286B53748739739840",
+            "name": "Zongo",
+            "status": "inside"
+          }
+        ],
+        "additional_full_family_hits_not_in_recorded_vector": [],
+        "recorded_vector_candidates_without_center_hit": []
+      }
+    ]
+  },
+  "no_geometry_operation_performed": true,
+  "peer_scope_record": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/northern12-known-source-leads.json",
+    "bytes": 13867,
+    "sha256": "caa3f7cc469288febac2099c356f91b9652dd60ddcccd8ac6c40386a5248d30f"
+  },
+  "source_page_reads": [
+    {
+      "url": "https://data.humdata.org/dataset/central-african-republic-administrative-boundaries",
+      "result": "403 Forbidden",
+      "status": "denied; not retried; no alternate transfer attempted"
+    },
+    {
+      "url": "https://geo.nyu.edu/catalog/stanford-hz799nq4536",
+      "result": "403 Forbidden",
+      "status": "denied; not retried; no alternate transfer attempted"
+    }
+  ],
+  "reused_source_read": {
+    "record": "UNHCR32968",
+    "prior_worker_document": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/ango36-uvira6-primary-research.md",
+    "finding": "Prior exact source page provides one PDF638.33KB dated2015-06-09, no separate georeferenced vector attachment. Prior source map interpretation cannot establish identity with native polygon or12key applicability. Not re-read here."
+  }
+}

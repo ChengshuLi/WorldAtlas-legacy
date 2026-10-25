@@ -1,0 +1,110 @@
+{
+  "kind": "moba-rukwa-one-1989-treaty-source-research",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "date_utc": "2026-10-24",
+  "status": "Source research completed for bounded accessible leads; exact cell remains pending. No acceptance, credit, diagnostic rerun, constructor, or Git mutation.",
+  "scope_input": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/water35-retained-scope.json",
+    "sha256": "1a86c968b56f1b9d1243e91fa2a5a69c7a1c0d497196f7655a84fbd4860ee9d6"
+  },
+  "exact_retained_row": {
+    "key": [
+      14461,
+      137123,
+      153506
+    ],
+    "original_class": "inland-water",
+    "target_name": "Moba",
+    "original_cod_target": "gb:COD:ADM2:63176286B25314267977171",
+    "center_lon": 30.79140697115568,
+    "center_lat": -8.265845680506944,
+    "retained_competitors": [
+      {
+        "source_id": "gb:TZA:ADM1:36957248B68200678446738",
+        "name": "Rukwa",
+        "family_index": 338,
+        "family_key": "gb:TZA:ADM1",
+        "source": {
+          "family_key": "gb:TZA:ADM1",
+          "represented_year_claim": "2015",
+          "recorded_license": "Open Data Commons Open Database License 1.0",
+          "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TZA/ADM1/geoBoundaries-TZA-ADM1_simplified.geojson"
+        }
+      }
+    ],
+    "disposition": "held; no newly accepted resolution"
+  },
+  "question": "Identify the 1989 Zambia–Zaire agreement and map-annex lineage for the exceptional Moba/Rukwa water cell; distinguish adopted delimitation from later demarcation without treating 1965 alternatives as current disagreement.",
+  "official_sources": [
+    {
+      "url": "https://acp.cd/nation/poursuite-des-travaux-de-demarcation-des-frontieres-entre-la-rdc-et-la-zambie/",
+      "published": "2021-08-15",
+      "access": "Actual full HTML read; relevant lines 60–76 in tool output. Re-read after context continuation.",
+      "authority": "DRC national press agency explicitly attributes information to Foreign Affairs Communication Service.",
+      "finding": "Names 18 September 1989 treaty signed by Mobutu and Kaunda. Describes planned August 2021 demarcation of about 205 km of terrestrial frontier between Tanganyika and Mweru, with results to both governments.",
+      "limit": "Reporting is authoritative context, not the signed treaty, ratification exchange, adopted map annex, or a spatial clearance for this lake cell."
+    },
+    {
+      "url": "https://acp.cd/nation/vers-la-delimitation-effective-des-frontieres-entre-la-rdc-et-la-zambie/",
+      "published": "2021-08-22",
+      "access": "Actual full HTML read; relevant lines 60–69.",
+      "authority": "ACP report from Foreign Affairs ministry, naming both commission leaders.",
+      "finding": "Distinguishes the 1989 agreement settling differences from later work in public communication, topography and cartography. Technical details were to undergo cochair validation before field activity.",
+      "limit": "No annex or coordinate dataset exposed in this article. Does not establish current completion of field work."
+    }
+  ],
+  "reproduction_lead": {
+    "url": "https://www.issr-journals.org/links/papers.php?application=pdf&article=IJISR-23-339-08&journal=ijisr",
+    "publisher_issue": "https://ijisr.issr-journals.org/issue.php?issue=143",
+    "bibliographic_identity": "S. M. Kanke et al., International Journal of Innovation and Scientific Research 71(2), March 2024, pp. 135–151, article IJISR-23-339-08.",
+    "access": "Actual publisher PDF text read through its Full Text link; 17 pages, 596 extracted lines. Relevant printed pp. 146–148 (PDF indices 11–13), lines 348–446. A later raw URL reopen failed, but the already acquired source reference remained readable. No local PDF bytes or signed-document authenticity hash available.",
+    "classification": "Academic original-research article retyping a purported treaty. Used only as a specific primary-document discovery lead; not a certified official treaty record.",
+    "bounded_summary": "The reproduction dates signature to Kinshasa, 18 September 1989. Article I starts at Tanganyika’s median at 08°17′00″S, continuing through Cape Kipimbi; no median longitude or datum is supplied there. Article III envisages a later demarcation protocol submitted for approval. Article VIII identifies Appendix I, a map signed by both heads of state, and Appendix II, enlarged extracts signed by commission cochairs, including the Tanganyika endpoint. Appendix III concerns Luapula islands. Article X requires ratification and exchange of instruments. Inconsistent Roman numerals for the Panta beacon and transcription/OCR defects prevent treating the retyping as an exact authenticated text. No signed appendices or ratification instruments were acquired.",
+    "remaining_source_lead": "Obtain official or otherwise authenticated signed treaty with Appendix I and Tanganyika sheet(s) of Appendix II, or a government-approved demarcation protocol containing the applicable spatial endpoint. Do not construct a median from the prose."
+  },
+  "actual_obstacles": [
+    {
+      "action": "Read official Parliament node 4545 (23 July 2015) and node 1587 (30 July 2009)",
+      "targets": [
+        "https://www.parliament.gov.zm/node/4545",
+        "https://www.parliament.gov.zm/node/1587"
+      ],
+      "outcome": "Previously timed out; not retried during this new 1989-specific task. Sibling preserved search-index context only.",
+      "status": "Full page reads incomplete; indexed language is not a verified annex."
+    },
+    {
+      "action": "Read newly discovered Parliament pages",
+      "targets": [
+        "https://www.parliament.gov.zm/node/1304",
+        "https://www.parliament.gov.zm/node/682"
+      ],
+      "outcome": "Each attempted once; web returned 400 timeout.",
+      "status": "Incomplete; no body or ratification finding inferred."
+    },
+    {
+      "action": "Search official treaty and government indexes for exact bilateral 1989 agreement",
+      "targets": [
+        "UN Treaty Collection",
+        "African Union",
+        "SADC",
+        "Zambian government"
+      ],
+      "outcome": "No matching certified treaty or signed map annex identified in the bounded queries.",
+      "status": "Search did not establish nonregistration, nonpublication or absence."
+    },
+    {
+      "action": "Open original repository record for John W. Donaldson (2010), Marking Territory: demarcation of the DRC-Zambia boundary from 1894 to the present day",
+      "target": "https://etheses.dur.ac.uk/328/",
+      "outcome": "Failed to fetch restricted URL.",
+      "status": "Denied by web fetch restriction; no bypass or retry. Thesis body and its treaty archival references remain unread; third-party mirror not used to evade restriction."
+    }
+  ],
+  "interpretation": [
+    "Official 2021 reporting supports existence of an agreed 1989 delimitation instrument and distinguishes subsequent demarcation. It does not support claiming that historical 1965 alternatives remain the legal positions today.",
+    "This cell is the one retained Moba/Rukwa center case. A latitude-only comparison with a retyped treaty cannot determine its relation to the authenticated lake median, tripoint, native polygon exclusions or full cell footprint.",
+    "The exact treaty spatial lead has narrowed to named signed appendices and approved demarcation protocol, but these remain uninspected. Do not mark the step exhausted or transfer unresolved acceptance from the other 59 Tanganyika cells.",
+    "No universal sovereignty certificate is required. A finite reasonable qualification review can assess recorded source limitations, but this worker has neither received the missing spatial instrument nor performed acceptance."
+  ],
+  "coordination": "Kalemie sibling separately owns frozen Tanzania source-feature lineage. No repeated geometry, source observation production, or competing source-lineage search performed.",
+  "other_scope_preserved": "Bomongo5 proposal and Tanganyika60 subgroup assessment remain separate. All 35 original water holds and all 60 combined Tanganyika holds remain unchanged."
+}

@@ -1,0 +1,1008 @@
+{
+  "kind": "cod-original-pending-uige-popokabaka-20-crosscheck-v1",
+  "scope": {
+    "original_target_id": "gb:COD:ADM2:63176286B47421332346835",
+    "target_name": "Popokabaka",
+    "owner_id": 14501,
+    "count": 20,
+    "original_class_counts": {
+      "land": 20,
+      "inland_water": 0
+    }
+  },
+  "ledger_disjointness": {
+    "accepted_cod_outcomes_as_of_2026-10-23": "This 20-key group is owner 14501 / target Popokabaka; it is disjoint by target and exact key tuple from the named accepted COD groups Irumu, Kimvula, Rutshuru, Aru, Moxico, Lunda Sul, Oïcha, Kasongo-Lunda, Mahagi and Gbadolite. All 20 rows are marked accepted=false and credit=0 in the retained partition-b source.",
+    "proposed_or_pending_other_groups_excluded": [
+      "Padyere key [14441,129432,153804]",
+      "Okoro 28",
+      "Kahemba 47",
+      "Bondo 57"
+    ]
+  },
+  "source_identity": {
+    "original_uige_2021": {
+      "id": "gb:AGO:ADM1:26408823B906914650007",
+      "source_index": 449,
+      "feature_ordinal": 16,
+      "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589d9d",
+      "metadata": "geoBoundaries release 9469f09; represented-year claim 2021; source U.S. Census Bureau; Public Domain"
+    },
+    "original_kwango_2017": {
+      "id": "gb:COD:ADM1:28894549B46890622863620",
+      "source_index": 18738,
+      "geometry_sha256": "not separately asserted here"
+    },
+    "target_popokabaka_2019": {
+      "id": "gb:COD:ADM2:63176286B47421332346835",
+      "source_index": 18916,
+      "metadata": "geoBoundaries release 9469f09; source Référenciel Géographique Commun / OCHA DR Congo; CC BY 3.0 IGO"
+    }
+  },
+  "comparison_result": {
+    "2024_uscb_angola_adm1_feature": {
+      "archive_name": "angola-adm1-adm2-adm3-uscb-aug24.zip",
+      "bytes": 11480383,
+      "sha256": "48c3b457b38909396ca2bed7880400876c3c91ddbc13f6af6bcfd8be99787713",
+      "feature_index": 16,
+      "feature_attributes": {
+        "Shape_Leng": "1.29937917211e+01",
+        "Shape_Area": "5.06568213140e+00",
+        "AREA_NAME": "UÍGE",
+        "GEO_CONCAT": "ANGOLA_UÍGE",
+        "GEO_MATCH": "AGO_03",
+        "CNTRY_NAME": "ANGOLA",
+        "ADM1_NAME": "UÍGE",
+        "ADM_LEVEL": "1",
+        "GENC_CODE": "AO-UIG",
+        "FIPS_CODE": "AO15",
+        "NSO_NAME": "Uíge"
+      },
+      "projection_wkt": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+      "parts": 1,
+      "points": 1801,
+      "center_in": 17,
+      "center_out": 3,
+      "method": "WGS84 polygon ray casting against the single AO-UIG ring; approximate nearest-segment distance in a local equirectangular projection for the three outside points. This is a derived comparison, not the stock qualification method."
+    },
+    "original_center_overlay": {
+      "source_path": "complete-family-center-overlay-20261023.local.json",
+      "sha256": "00fc57c3290d4d0cf1ef7df68860ac6d2c3ee82e67509d0ae2f9d1c550cdf24d",
+      "center_hit": {
+        "original_2021_uige_feature": 20,
+        "original_2019_popokabaka_feature": 20,
+        "original_2017_kwango_feature": 5
+      }
+    },
+    "interpretation": "The newer 2024 USCB Uíge polygon is not identical in center-side results to the pinned 2021 geoBoundaries Uíge feature: 17/20 remain inside, while three are outside by this point-in-ring calculation and lie within 80 m of its edge (one approximately 1 m). All 20 still have the original Popokabaka hit. This establishes temporal/representation disagreement, not legal territorial applicability or permission to remove any hold.",
+    "2024_uscb_drc_adm2": {
+      "archive_name": "democratic-republic-of-the-congo-adm1-adm2-uscb-oct24.zip",
+      "archive_url": "https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/ep/democratic-republic-of-the-congo-adm1-adm2-uscb-oct24.zip",
+      "bytes": 8357535,
+      "sha256": "f7a9ef69f55b77a656beef308f8db482cb6bf82565fed85f5e760f35dd26b3f9",
+      "census_catalogue_page": "https://www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html",
+      "adm2_shapefile": "Democratic_Republic_of_the_Congo_adm2_uscb_2024.shp",
+      "adm2_feature_index_zero_based": 4,
+      "feature_attributes": {
+        "CNTRY_NAME": "DEMOCRATIC REPUBLIC OF THE CONGO",
+        "ADM1_NAME": "KWANGO",
+        "ADM2_NAME": "POPOKABAKA",
+        "GEO_MATCH": "COD_01_05",
+        "NSO_CODE": "CD3108",
+        "ADM_LEVEL": "2"
+      },
+      "feature_vertices": 1233,
+      "feature_parts": 1,
+      "projection": "WGS 84 geographic coordinate system; source .prj retained locally",
+      "metadata_xml": "Democratic_Republic_of_the_Congo_adm2_uscb_2024.shp.xml",
+      "metadata_summary": "USCB metadata says the DRC ADM2 polygons were downloaded from UN OCHA DRC on 2021-02-24; the 164 polygons matched the 2017 Annuaire Statistique territories/cities, with no USCB changes to subnational boundaries. USCB aligned the national boundary to U.S. State Department LSIB and warns it cannot guarantee boundary placement accuracy. This is a related OCHA-derived comparator, not independent lineage evidence for the pinned 2019 target geometry.",
+      "comparison": {
+        "fixed_centers": 20,
+        "inside_2024_uscb_popokabaka": 3,
+        "outside_popokabaka_and_all_other_drc_adm2": 17,
+        "exact_inside_keys": [
+          [
+            14501,
+            135347,
+            143089
+          ],
+          [
+            14501,
+            135350,
+            143072
+          ],
+          [
+            14501,
+            135354,
+            143074
+          ]
+        ],
+        "cross_tab_vs_2024_uscb_angola_uige": {
+          "inside_popokabaka_and_outside_uige": 3,
+          "outside_popokabaka_and_inside_uige": 17
+        },
+        "method": "WGS84 point-in-polygon ray casting; polygon holes/parts toggled by even-odd rule. Same 20 retained center coordinates; no physical/stock diagnostic rerun.",
+        "interpretation": "The 2024 USCB Angola Uige and DRC Popokabaka layers form a complementary center-side split for these 20 points (3 DRC target, 17 Angola Uige). This is a coherent current source-version border comparison, but not a legal ruling and not independent from the OCHA-derived family. It does not by itself remove the original 2021 Uige or 2019 Popokabaka candidate holds."
+      }
+    },
+    "2019_uscb_ao_uige": {
+      "archive_name": "angola-adm1-adm2-uscb-oct19.zip",
+      "archive_url": "https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/angola-adm1-adm2-uscb-oct19.zip",
+      "local_existing_source_path": "coordination/engineering/congo-original-repair-20261018/residual-930-20261019/source-lineage-evidence-20261023/angola-adm1-adm2-uscb-oct19.zip",
+      "bytes": 6042844,
+      "sha256": "c700d2f72d3c32dda77a89308930443eadd79005d5cb32d674ee681dadabe4af",
+      "adm1_shapefile": "Angola_adm1_uscb_2019.shp",
+      "feature_index_zero_based": 16,
+      "feature_attributes": {
+        "GENC_CODE": "AO-UIG",
+        "FIPS_CODE": "AO15",
+        "GEO_MATCH": "AGO_03",
+        "ADM_LEVEL": "1"
+      },
+      "feature_vertices": 1779,
+      "feature_parts": 1,
+      "projection": "WGS 84 geographic coordinate system",
+      "metadata_xml": "Angola_adm1_uscb_2019.shp.xml",
+      "metadata_summary": "USCB metadata says the original Angola first-order boundaries were downloaded from the HDX dataset ago_admbnda_adm2_gadm_ine_ocha_20180904.zip on 2019-09-09; international boundaries were aligned to 2018 U.S. State Department LSIB and ADM2s dissolved to 18 provinces. It warns it cannot guarantee boundary placement accuracy.",
+      "comparison": {
+        "fixed_centers": 20,
+        "inside_2019_uscb_uige": 17,
+        "outside_2019_uscb_uige": 3,
+        "exact_outside_keys": [
+          [
+            14501,
+            135347,
+            143089
+          ],
+          [
+            14501,
+            135350,
+            143072
+          ],
+          [
+            14501,
+            135354,
+            143074
+          ]
+        ],
+        "cross_tab_vs_2024_uscb": {
+          "same_uige_side_for_all_20": true,
+          "2019_uige_and_2024_uige_same_center_classification": 20,
+          "three_outside_both_uige_and_inside_2024_drc_popokabaka": 3
+        },
+        "method": "WGS84 point-in-polygon ray casting against the single AO-UIG ring using the same fixed center coordinates; no diagnostic or physical observer rerun.",
+        "interpretation": "The 2019 USCB AO-UIG feature places the same 17 centers inside and three outside as the 2024 USCB AO-UIG comparison. The same three are inside 2024 USCB DRC Popokabaka. These historical/modern official-source comparisons document a stable 17/3 center split in USCB snapshots from 2019 and 2024 versus all 20 in the pinned 2021 geoBoundaries Uige candidate. This does not establish which candidate is applicable under the original contract, nor prove the exact 2021 source snapshot."
+      }
+    }
+  },
+  "keys": [
+    {
+      "key": [
+        14501,
+        135347,
+        143089
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.48703493206594,
+        -5.845739655264543
+      ],
+      "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+      "approx_nearest_boundary_m": 1.14,
+      "2024_uscb_drc_popokabaka_center_hit": true,
+      "2024_uscb_drc_any_adm2_center_hit": true,
+      "2019_uscb_ao_uig_center_hit": false
+    },
+    {
+      "key": [
+        14501,
+        135348,
+        143084
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18738,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18738,
+          "source_id": "gb:COD:ADM1:28894549B46890622863620"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": true,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.48016905319531,
+        -5.847105688469784
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 35.74,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135348,
+        143085
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18738,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18738,
+          "source_id": "gb:COD:ADM1:28894549B46890622863620"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": true,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.48154222896943,
+        -5.847105688469784
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 71.97,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135348,
+        143086
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.48291540474355,
+        -5.847105688469784
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 97.42,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135349,
+        143081
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18738,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18738,
+          "source_id": "gb:COD:ADM1:28894549B46890622863620"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": true,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.476049525872924,
+        -5.848471718339776
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 39.08,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135349,
+        143082
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.477422701647043,
+        -5.848471718339776
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 89.86,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135349,
+        143083
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.478795877421163,
+        -5.848471718339776
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 140.64,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143070
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.46094459235752,
+        -5.849837744873748
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 163.06,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143071
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.46231776813164,
+        -5.849837744873748
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 63.83,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143072
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.46369094390576,
+        -5.849837744873748
+      ],
+      "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+      "approx_nearest_boundary_m": 79.04,
+      "2024_uscb_drc_popokabaka_center_hit": true,
+      "2024_uscb_drc_any_adm2_center_hit": true,
+      "2019_uscb_ao_uig_center_hit": false
+    },
+    {
+      "key": [
+        14501,
+        135350,
+        143080
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.474676350098804,
+        -5.849837744873748
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 96.39,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143078
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18738,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18738,
+          "source_id": "gb:COD:ADM1:28894549B46890622863620"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": true,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.471929998550536,
+        -5.852569787930563
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 8.12,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143099
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.50076668980722,
+        -5.852569787930563
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 476.31,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143100
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.50213986558134,
+        -5.852569787930563
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 358.44,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143101
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.50351304135549,
+        -5.852569787930563
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 240.58,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135352,
+        143102
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.50488621712961,
+        -5.852569787930563
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 122.72,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135353,
+        143102
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.50488621712961,
+        -5.853935804451869
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 227.7,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135353,
+        143103
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.50625939290373,
+        -5.853935804451869
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 129.52,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135353,
+        143104
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": false,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.50763256867785,
+        -5.853935804451869
+      ],
+      "2024_uscb_ao_uig_center_side": "inside",
+      "approx_nearest_boundary_m": 31.41,
+      "2024_uscb_drc_popokabaka_center_hit": false,
+      "2024_uscb_drc_any_adm2_center_hit": false,
+      "2019_uscb_ao_uig_center_hit": true
+    },
+    {
+      "key": [
+        14501,
+        135354,
+        143074
+      ],
+      "original_class": "land",
+      "original_candidate_source_indices": [
+        449,
+        18738,
+        18916
+      ],
+      "original_native_hold": "territorial_exclusion_cells",
+      "accepted": false,
+      "accepted_repair_credit": 0,
+      "prior_candidate_center_hits": [
+        {
+          "source_index": 449,
+          "source_id": "gb:AGO:ADM1:26408823B906914650007"
+        },
+        {
+          "source_index": 18738,
+          "source_id": "gb:COD:ADM1:28894549B46890622863620"
+        },
+        {
+          "source_index": 18916,
+          "source_id": "gb:COD:ADM2:63176286B47421332346835"
+        }
+      ],
+      "original_2021_uige_center_hit": true,
+      "original_2019_popokabaka_center_hit": true,
+      "original_2017_kwango_center_hit": true,
+      "physical_support": true,
+      "inland_water_support": false,
+      "center_lon_lat": [
+        16.46643729545403,
+        -5.855301817634082
+      ],
+      "2024_uscb_ao_uig_center_side": "outside_by_ray_cast",
+      "approx_nearest_boundary_m": 40.58,
+      "2024_uscb_drc_popokabaka_center_hit": true,
+      "2024_uscb_drc_any_adm2_center_hit": true,
+      "2019_uscb_ao_uig_center_hit": false
+    }
+  ],
+  "review_and_remaining_source_step": {
+    "reviewer": "existing independent reviewer brn828_reviewer",
+    "review_result": "The exact 20-key comparison documents a source-version conflict only. The 2019 and 2024 USCB AO-UIG boundaries put the same 17 centers inside and 3 outside; those 3 are inside the 2024 USCB DRC Popokabaka feature. The pinned 2021 geoBoundaries Uige and 2019 RGC Popokabaka candidates each include all 20. The USCB DRC layer is OCHA-derived and the Angola snapshots are HDX/OCHA-derived; these comparisons do not establish the pinned 2021 Uige snapshot or resolve original source applicability. All 20 remain held/pending with zero credit.",
+    "remaining_narrow_step": "Locate an exact official USCB 2021 Angola ADM1 product/release or its archived metadata/download locator, then compare the full Uige feature to the pinned 2021 geoBoundaries feature. The current Census products page lists Angola Aug-2024; its Previous Products page does not list Angola; the Census time-series directory exposes the retained 2019 archive and current 2024 archive, but no 2021 Angola ADM1 archive. This targeted public listing review did not establish that no such source exists; no broad search, access workaround, new download, stock rerun, or disposition change was made.",
+    "references": [
+      "https://www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html",
+      "https://www.census.gov/geographies/mapping-files/time-series/demo/international-programs/previous-subnationalpopulation.html",
+      "https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/"
+    ],
+    "official_2021_source_lookup": {
+      "census_current_products": "The official Census current-products page lists Angola Aug-2024, not a 2021 Angola boundary release.",
+      "census_archive_directory": "The official Census time-series directory contains the retained Oct-2019 Angola archive and Aug-2024 archive, but no 2021 Angola ADM1 archive in the inspected directory listing.",
+      "census_previous_products": "The official previous-products page does not list Angola.",
+      "related_current_release": "The Sept-2024 Census Demobase technical report says current Angola subnational boundaries came from HDX 2024; this identifies a 2024 source, not the pinned 2021 snapshot.",
+      "hdx_page_attempt": "The cited HDX Angola geoBoundaries dataset page returned HTTP 403 on the normal public page request. No alternate route, API bypass, repeated request, or download was attempted.",
+      "references": [
+        "https://www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html",
+        "https://www.census.gov/geographies/mapping-files/time-series/demo/international-programs/previous-subnationalpopulation.html",
+        "https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/",
+        "https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/Angola-Namibia-Technical-Document.pdf",
+        "https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-angola"
+      ]
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "kind": "bomongo5-cog2007-construction-and-wfp-visual-addendum",
+  "date": "2026-10-24",
+  "worker_thread": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "status": "Earlier readiness withdrawn pending family-specific native attribution; no acceptance.",
+  "reused_source_records": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/uige18_lineage/cog-adm2-source.xml",
+      "bytes": 45811,
+      "sha256": "0813ed0f0e234baf88845198068f3b963f3cb942799f15fc50754902de3a2753"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/uige18_lineage/cog-adm2-archive-inspection.json",
+      "bytes": 21831,
+      "sha256": "9587fb5cca21958b09202de487d299fc0580dd76ac2ee774972169cf877caebe"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/uige18_lineage/cog-adm2-archive-findings.md",
+      "bytes": 6729,
+      "sha256": "fc258698a43b236f88ca119bc6b29d61d8b5695b9ee6ac9b9fa791cc6c5fb288"
+    }
+  ],
+  "actual_outer_xml_fields": {
+    "idAbs": [
+      "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This polygon shapefile contains district and commune boundaries for the Republic of the Congo as of January 2007. This layer is part of the Map Library dataset containing line and polygon boundaries for individual countries on the African continent.</SPAN></P></DIV></DIV></DIV>"
+    ],
+    "idPurp": [
+      "The Map Library is a project of the UK charity “The Map Maker Trust.\" It aims to make public domain mapping data more readily available for development in all kinds of fields, from health care to urban management, from de-mining to environmental protection."
+    ],
+    "statement": [
+      "The boundary status and administrative names have been verified against various sources of information.\n\nThe information given by: www.wikipedia.org and www.statoids.com and 'SALB' proved to be most reliable. All often had links to governmental web-sites or other reliable references to verify it against.\n\nThe actual polygon set has become an amalgamation of other datasets available in the public domain.\n\nGreat care has been taken in 'edge matching' each polygon and we believe therefore the 'topology' is as good as one can get it.\n\nWhere two different sources for the polygon set were available, or where a different polygon set of two neighbouring nations were used, in this amalgamation process the most detailed line work was used.\n\nThe following web sites were used to amalgamate and update the polygon set:\n\nhttp://igskmncnwb015.cr.usgs.gov/adds/geolist.php (FEW-NET, Africa Data Dissemination Service)\n\nhttp://www.fao.org/geonetwork/srv/en/main.home\n\nhttp://www.diva-gis.org\n\nhttp://www3.who.int/whosis/gis/salb/salb_MDATA.htm\n\nhttp://www.depha.org/\n\nhttp://www.sahims.net/\n\nAll countries have been updated to at least ADM2 level or to a next level where reliable information was found.\n\nWhere in the old dataset more divisions were present, the polygon boundaries and names were left in place.\n\nAll updated names in the database are in Upper &amp; Lower case.\n\nIn general, one can assume that any names in the database solely in capitals reflect old unverified or possibly obsolete administrative division information (i.e. boundary and names)."
+    ],
+    "idCredit": [
+      "Map Maker Ltd. (2007). Districts and Communes, Republic of the Congo, 2007 Map Maker, Ltd. Available at: http://purl.stanford.edu/hz799nq4536."
+    ],
+    "othConsts": [
+      "This item is in the public domain. There are no restrictions on access or use."
+    ]
+  },
+  "exact_native_binding": {
+    "owner": 14484,
+    "target_source_id": "gb:COD:ADM2:63176286B36806520086654",
+    "complete_native_negative_inventory": [
+      {
+        "feature_ordinal": 4,
+        "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+        "negative_ordinal": 0,
+        "source_id": "gb:COG:ADM1:67827341B88704799146201"
+      },
+      {
+        "feature_ordinal": 7,
+        "geometry_sha256": "703948e3aaf9f0a3581998c6dfc206e3f3d9bfb32ddf1c665f71aa2e5ba6ca69",
+        "negative_ordinal": 1,
+        "source_id": "gb:COG:ADM2:1427508B73097317113528"
+      },
+      {
+        "feature_ordinal": 10,
+        "geometry_sha256": "16a065a5cbeebbc24d83b1381dfece08a3700836de1fbee9045673dfe1575522",
+        "negative_ordinal": 2,
+        "source_id": "gb:COG:ADM2:1427508B2711916711363"
+      },
+      {
+        "feature_ordinal": 41,
+        "geometry_sha256": "ff020d893f2e108769df9dc0cf52e4474c8f109c09210c8a3d27edacd11bf456",
+        "negative_ordinal": 3,
+        "source_id": "gb:COG:ADM2:1427508B65710782923529"
+      }
+    ],
+    "cog_adm2_bindings": [
+      {
+        "feature_ordinal": 7,
+        "geometry_sha256": "703948e3aaf9f0a3581998c6dfc206e3f3d9bfb32ddf1c665f71aa2e5ba6ca69",
+        "negative_ordinal": 1,
+        "source_id": "gb:COG:ADM2:1427508B73097317113528",
+        "native_properties": {
+          "shapeName": "Loukela",
+          "shapeISO": "",
+          "shapeID": "1427508B73097317113528",
+          "shapeGroup": "COG",
+          "shapeType": "ADM2"
+        },
+        "source_archive_dbf_record": {
+          "ordinal": 7,
+          "properties": {
+            "Name": "Loukela",
+            "Level": "ADM2"
+          }
+        }
+      },
+      {
+        "feature_ordinal": 10,
+        "geometry_sha256": "16a065a5cbeebbc24d83b1381dfece08a3700836de1fbee9045673dfe1575522",
+        "negative_ordinal": 2,
+        "source_id": "gb:COG:ADM2:1427508B2711916711363",
+        "native_properties": {
+          "shapeName": "Owando",
+          "shapeISO": "",
+          "shapeID": "1427508B2711916711363",
+          "shapeGroup": "COG",
+          "shapeType": "ADM2"
+        },
+        "source_archive_dbf_record": {
+          "ordinal": 10,
+          "properties": {
+            "Name": "Owando",
+            "Level": "ADM2"
+          }
+        }
+      },
+      {
+        "feature_ordinal": 41,
+        "geometry_sha256": "ff020d893f2e108769df9dc0cf52e4474c8f109c09210c8a3d27edacd11bf456",
+        "negative_ordinal": 3,
+        "source_id": "gb:COG:ADM2:1427508B65710782923529",
+        "native_properties": {
+          "shapeName": "Ngabe",
+          "shapeISO": "",
+          "shapeID": "1427508B65710782923529",
+          "shapeGroup": "COG",
+          "shapeType": "ADM2"
+        },
+        "source_archive_dbf_record": {
+          "ordinal": 41,
+          "properties": {
+            "Name": "Ngabe",
+            "Level": "ADM2"
+          }
+        }
+      }
+    ]
+  },
+  "assessment": [
+    "Actual outer2007COG record identifies district/commune polygons, not merely lines. Its construction is a composite of publicdatasets with edge matching and preferred detailed linework when joining neighbouring datasets.",
+    "This is source-relative lineage evidence for the consumed family. It supplies no source-to-feature table identifying the supplier/linework for Loukela7,Owando10,Ngabe41 and no specific river-channel/thalweg choice.",
+    "The statement about boundary-name/status checks from Wikipedia,Statoids,SALB does not establish official adoption of these three external edges. References to generic supplier portals are not exact known applicable river datasets.",
+    "EmbeddedBOT/Botswana template with placeholders cannot establish Congo line-to-polygon construction. Existing metadata processing and feature identity are preserved; no archive rescan, source conversion or geometry operation performed.",
+    "All five retained centers hit Likouala in the ten-family537overlay; COGADM2 is absent from that overlay. Thus earlier0values for the threeADM2 features are unobserved, not tested noncontacts. Input roster preservation did not complete all-operand source applicability."
+  ],
+  "new_completed_primary_step": {
+    "url": "https://logcluster.org/sites/default/files/public/maps/codglpmterritoirebomongoa3p_20200304.pdf",
+    "local_pdf": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/bomongo-wfp2020.pdf",
+      "bytes": 1231477,
+      "sha256": "13b5355128070e918781807e4d7f65586d38a406053a96b2b812123b4bb4950b"
+    },
+    "render": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/bomongo-wfp2020-render.png",
+      "bytes": 3204576,
+      "sha256": "a2c110e90ab569881146d17e41221c81764d8cb4529fc2313618a331f36124d5"
+    },
+    "actual_read": "Single A3page fully visually inspected, and text extracted",
+    "title": "Territoire de Bomongo - Carte generale de planification logistique,05Mars2020",
+    "map_reference": "COD_GLPM_Bomongo_A3P_20200305",
+    "source_date_distinction": "Filename20200304 versus actual title/creation/reference05March2020",
+    "observations": [
+      "Shows Oubangi along the western border, Bomongo territorial label, international/territorial/provincial boundary symbols, water areas and navigable axes.",
+      "Contains1degree-labelled graticule, geographicalWGS84datum and nominal1:861774 A3scale; previous imageunread limitation is now resolved.",
+      "CreditsUNGIWG,GeoNames,GAUL,LC,RGC,WFP,OCHA. Includes UN boundary/naming nonendorsement disclaimer.",
+      "The overview does not expose per-boundary supplier/edition identifiers or a hydrographic thalweg survey. Its graticule is not native-cell registration. No georeference, overlay, cell-placement or inferred positive clearance performed.",
+      "Published2020 humanitarian planning map cannot by itself explain which data created the2007COG composite or prove a later adopted bilateral boundary."
+    ],
+    "recovery": {
+      "prior_failure": "DNS only, known noPDF body; newly authorized per-command download succeeded",
+      "session": 39525,
+      "exit_code": 0,
+      "approval_id": "Not exposed"
+    }
+  },
+  "corrected_finite_limit": "Historical1887protocol,1972IBS and2025commission work remain completed substantive research. ActualCOGconstruction andWFPvisual inspection strengthen the source-relative limitation. They do not replace native attribution across fivekeys/fouroriginalnegatives. Await coordinator-only3905observation; no generic source metadata join earns unresolved credit.",
+  "remaining_obstacles": [
+    {
+      "target": "Existing original Ministry social URLs",
+      "state": "Prior403/throttle, not retried; no visual attachments claimed read"
+    },
+    {
+      "target": "Exact2007Loukela/Owando/Ngabe edge-supplier or channel-rule lineage",
+      "state": "Not supplied by inspected outermetadata/retainedattributes. No particular missing document presumed nonexistent."
+    }
+  ],
+  "native_dependency": {
+    "cells": 5,
+    "original_negatives": 4,
+    "potential_pairs_not_proven_contacts": 20,
+    "candidate_ADM2_ordinals": [
+      7,
+      10,
+      41
+    ],
+    "extra_ADM1": "Likouala ordinal4",
+    "all_holds_preserved": true,
+    "coordinator_owns_only_diagnostic": true
+  },
+  "acceptance": false,
+  "accepted_cells": 0,
+  "new_geometry_observations": 0
+}

@@ -1,0 +1,104 @@
+{
+  "task": "AU2026 Tanganyika/Lusaka primary passage inspected",
+  "researcher": {
+    "native_task": "/root/kalemie30_delimitation",
+    "thread_id": "01a16f2d-e91b-7416-b0f6-1b7829ab00e5",
+    "date_utc": "2026-10-24"
+  },
+  "source_url": "https://w.peaceau.org/uploads/peace-dividends-newsletter-june-2026-vol5-issue2.pdf",
+  "retrieval": {
+    "status": "completed",
+    "tool": "exec_command curl narrow require_escalated approval",
+    "session_id": 70381,
+    "terminal_exit": 0,
+    "bytes": 22272738,
+    "sha256": "0c7da8233d5413248c6fdd8ef59b7d13620f5af8570c43ec72d8a881e734b508",
+    "no_browser": true,
+    "precheck": {
+      "recorded_previous_operation": "Supported browser download wait had timed out and computer-use session was explicitly stopped. Retained evidence states no durable file at exact targets. No active tool wait was retained.",
+      "fresh_path_checks": "Both expected Downloads path and own scratch AU PDF absent before download.",
+      "process_check_limit": "Optional ps process inventory attempted in normal sandbox failed PermissionError/operation not permitted. No escalation or alternate process inspection performed. No claim made about all host processes or temporary files.",
+      "authorization": "Parent directed new nonbrowser exact-source download through normal approval control; earlier exact source approval does not reopen stoppedbrowser. New narrow download control permitted operation."
+    }
+  },
+  "files": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/au-peace-dividends-june2026.pdf",
+      "bytes": 22272738,
+      "sha256": "0c7da8233d5413248c6fdd8ef59b7d13620f5af8570c43ec72d8a881e734b508"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/au-2026-newsletter-extracted-pages.json",
+      "bytes": 78763,
+      "sha256": "1cee2fa907eb648f8deabcdb5a9f3118c2b4bf17473d654d2149cc99a6f4df82"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/au-newsletter-page-01.png",
+      "bytes": 590039,
+      "sha256": "1f6f860347b43f20ee51f9c2f2c6f61243e849af62e214db943f4ed9a688cd63"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/au-newsletter-page-17.png",
+      "bytes": 260426,
+      "sha256": "77129ae9b445a46e11d88ca082d22b2c6948594a15ae3fb057f60ac060ff6059"
+    }
+  ],
+  "document_identity": {
+    "pages": 38,
+    "cover_visual": "July2026 Vol.5 Issue2; AfricanUnion PeaceDividends, Department ofPoliticalAffairs,PeaceandSecurity newsletter",
+    "filename_date": "June2026",
+    "pdf_creation_metadata": "2026-08-07T12:31:49+03:00",
+    "pdf_modification_metadata": "2026-08-07T12:32:09+03:00",
+    "date_limit": "Cover month is July; PDF metadata dates technical production and does not prove public release day. June filename and former search-index date cannot establish publication date."
+  },
+  "reading": {
+    "methods": [
+      "pypdf text extraction all38pages",
+      "pypdfium2 rendering pages1and17",
+      "view_image visual inspection of both full renderedpages",
+      "text check adjacent pages16and18 and bounded terms across all38pages"
+    ],
+    "relevant_page": 17,
+    "printed_page": 17,
+    "heading": "AU Border Programme Engagements Between March and June2026",
+    "event_date": "2026-03-25 to2026-03-27",
+    "location": "Lusaka,Zambia",
+    "states": [
+      "DemocraticRepublicoftheCongo",
+      "Tanzania",
+      "Burundi",
+      "Zambia"
+    ],
+    "short_quote": "to review the draft memorandum of understanding on demarcation and reaffirm their international boundary",
+    "finding": "The passage reports a four-state JointTechnicalCommittee meeting and states its purpose. It does not explicitly say the draftMoU was adopted, reaffirmation completed, or coordinates agreed.",
+    "other_events_on_page": "The floating-buoy pilot and subsequent sensitisation are expressly LakeKariba activities between Zambia andZimbabwe. They cannot be transferred to Tanganyika.",
+    "map_caution": "Page17 continental map carries an explicit AU disclaimer against official endorsement or acceptance of shown boundaries/names/designations. It is not an adopted spatial annex.",
+    "scope_checks": "Tanganyika,Lusaka,anddemarcation text matches occur onpage17 only. No median/annex textmatches. Coordinate substring hits elsewhere were unrelated coordination wording, not used as spatial evidence. Adjacentpages16and18 have unrelated headings; no article continuation observed."
+  },
+  "applicability": {
+    "scope": [
+      "Kalemie30",
+      "Fizi2",
+      "MobaKatavi27",
+      "MobaRukwa1"
+    ],
+    "total": 60,
+    "interpretation": "Lake-wide process evidence updates2017/2018/2022context throughMarch2026. It supplies no source-specific frozenpolygon qualification, no exactkey spatial result, and no authority to extend one segment finding across59northlake and1southerntripoint.",
+    "resolved_obstacle": "Previously unread2026newsletter lead is now inspected and cannot remain listed as an unread-source blocker.",
+    "remaining_limit": "This publication does not supply an adopted coordinate line or annex for the relevant segment. That is a finite source-specific result, not a claim that no such instrument exists anywhere or that the boundary is disputed.",
+    "acceptance": "All60holds unchanged.0newresolvedcells;0newacceptedunresolvedcells."
+  },
+  "supersedes": [
+    "research-evidence.json AU-NEWSLETTER-2026 unreadstatus and nextstep",
+    "followup-newsletter-and-tripoint-evidence.json passage_inspectedfalse and2026unreadlimit",
+    "Later source-lineage reports retaining AU2026unreadstatus"
+  ],
+  "unchanged_restrictions": [
+    "Stoppedbrowserneverreopened",
+    "No AU X403retry",
+    "No deniedHDXorTanzLIIfetchretry",
+    "No insecureTLS",
+    "No geometryoperations",
+    "No Gitmutation"
+  ]
+}

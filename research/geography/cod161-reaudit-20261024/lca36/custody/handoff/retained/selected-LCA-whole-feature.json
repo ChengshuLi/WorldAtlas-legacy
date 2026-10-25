@@ -1,0 +1,290 @@
+{
+  "type": "Feature",
+  "id": "atlas:territory:LCA",
+  "properties": {
+    "id": "atlas:territory:LCA",
+    "name": "Saint Lucia",
+    "parent_id": "framework:province:saint-lucia:7365ee7bb85b",
+    "reference_owner": "Saint Lucia",
+    "metadata": {
+      "source_name": "Atlas source aggregation",
+      "source_id": "atlas:territory:LCA",
+      "source_url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Underlying source licenses retained in semantic-report.json",
+      "reference_year": "Undated modern reference",
+      "administrative_level": "Compact source country/territory",
+      "location_basis": "Compact source country/territory",
+      "representative_point": [
+        -60.975921226415096,
+        13.916
+      ],
+      "search_aliases": [
+        "Anse la Raya",
+        "Canaries",
+        "Castries",
+        "Choiseul",
+        "Dennery",
+        "Gros Islet",
+        "Laborie",
+        "Micoud",
+        "SaintLucia",
+        "Soufrière",
+        "Vieux Fort"
+      ],
+      "reference_version": 3,
+      "hierarchy_version": 4,
+      "topology_version": 1,
+      "semantic_version": 1,
+      "source_member_ids": [
+        "gb:LCA:ADM1:63095687B63570319440385",
+        "gb:LCA:ADM1:63095687B3915284984293",
+        "gb:LCA:ADM1:63095687B33875357323526",
+        "gb:LCA:ADM1:63095687B77911403325027",
+        "gb:LCA:ADM1:63095687B97045845903589",
+        "gb:LCA:ADM1:63095687B12253142447206",
+        "gb:LCA:ADM1:63095687B32971577162412",
+        "gb:LCA:ADM1:63095687B49372508754012",
+        "gb:LCA:ADM1:63095687B42817258586373",
+        "gb:LCA:ADM1:63095687B90177859016877"
+      ],
+      "coverage_version": 1,
+      "remote_version": 1,
+      "framework_reference": "Modern geographic framework; historical attributes require dated evidence",
+      "framework_match": {
+        "source": "Natural Earth",
+        "id": "LCA-5085",
+        "overlap": 0.148603
+      },
+      "hierarchy_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "parent_match": "Named city/territory represented as one atlas province; coextensive with its location",
+      "regional_match": {
+        "reference_iso": "LCA",
+        "source_id": null,
+        "overlap": 0.148603,
+        "method": "reference-territory-constrained overlap"
+      },
+      "reference_owner_id": "owner:Q760",
+      "reference_polity": "Saint Lucia",
+      "reference_polity_status": "reference",
+      "reference_polity_evidence": {
+        "source": "Natural Earth pinned administrative and sovereignty reference; dates vary",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19",
+        "reference_territory": "Saint Lucia",
+        "classification": "Sovereign country",
+        "note": null,
+        "uncertainty": false
+      },
+      "semantic_review": {
+        "status": "open",
+        "continent": "North America",
+        "decision_index": 485,
+        "evidence_file": "geographic-decisions"
+      }
+    }
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.9463,
+          13.7226
+        ],
+        [
+          -60.981,
+          13.7349
+        ],
+        [
+          -60.9968,
+          13.7507
+        ],
+        [
+          -61.0142,
+          13.7509
+        ],
+        [
+          -61.036,
+          13.7592
+        ],
+        [
+          -61.0445,
+          13.7649
+        ],
+        [
+          -61.0683,
+          13.7972
+        ],
+        [
+          -61.0786,
+          13.8088
+        ],
+        [
+          -61.0636,
+          13.8241
+        ],
+        [
+          -61.069,
+          13.8341
+        ],
+        [
+          -61.0617,
+          13.8532
+        ],
+        [
+          -61.0806,
+          13.8634
+        ],
+        [
+          -61.079,
+          13.885
+        ],
+        [
+          -61.0705,
+          13.9035
+        ],
+        [
+          -61.0528,
+          13.9353
+        ],
+        [
+          -61.0334,
+          13.9585
+        ],
+        [
+          -61.016,
+          14.0025
+        ],
+        [
+          -60.998,
+          14.0232
+        ],
+        [
+          -60.9915,
+          14.02
+        ],
+        [
+          -60.9729,
+          14.0387
+        ],
+        [
+          -60.9748,
+          14.0669
+        ],
+        [
+          -60.958,
+          14.0714
+        ],
+        [
+          -60.9569,
+          14.0882
+        ],
+        [
+          -60.9451,
+          14.1095
+        ],
+        [
+          -60.9193,
+          14.1036
+        ],
+        [
+          -60.9243,
+          14.0916
+        ],
+        [
+          -60.911,
+          14.0664
+        ],
+        [
+          -60.8993,
+          14.0671
+        ],
+        [
+          -60.8841,
+          14.0522
+        ],
+        [
+          -60.8891,
+          14.0298
+        ],
+        [
+          -60.8822,
+          13.9912
+        ],
+        [
+          -60.8742,
+          13.9872
+        ],
+        [
+          -60.8778,
+          13.9642
+        ],
+        [
+          -60.8765,
+          13.9369
+        ],
+        [
+          -60.8873,
+          13.9267
+        ],
+        [
+          -60.8893,
+          13.9053
+        ],
+        [
+          -60.882,
+          13.8907
+        ],
+        [
+          -60.8848,
+          13.8788
+        ],
+        [
+          -60.8839,
+          13.8368
+        ],
+        [
+          -60.8978,
+          13.8252
+        ],
+        [
+          -60.8947,
+          13.8007
+        ],
+        [
+          -60.9049,
+          13.7647
+        ],
+        [
+          -60.9262,
+          13.7648
+        ],
+        [
+          -60.9259,
+          13.7579
+        ],
+        [
+          -60.9463,
+          13.7226
+        ]
+      ],
+      [
+        [
+          -60.9389,
+          13.9656
+        ],
+        [
+          -60.9388,
+          13.967
+        ],
+        [
+          -60.9368,
+          14.0096
+        ],
+        [
+          -60.9389,
+          13.9656
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "bounded-local-AGO-ADM1-custody-lookup",
+  "worker": "01a16f2e-19a2-7470-acfd-59b39f3e90d1",
+  "status": "completed; bounded local nonfind of exact source ZIP; stop this lead",
+  "searched_roots": [
+    "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-popokabaka-20261023",
+    "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-preserved-20261024",
+    "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-kasongo-lunda-20261023",
+    "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018",
+    "/Users/chengshuli/Documents/Codex/2026-10-24/task"
+  ],
+  "method": "Read-only rg file enumeration including hidden and ignored files, excluding .git/.codex/.agents/.aws/node_modules; no symlink traversal. Filename and text descriptor checks, exact expected-size checks on enumerated files, and directory listings of 23 ZIPs. No geometry or network operation.",
+  "inventory_count": 1249,
+  "terminal_results": {
+    "initial_rg_enumeration_exit": 0,
+    "no_ignore_rg_enumeration_exit": 0,
+    "text_search_exit": 0,
+    "candidate_inspection_exit": 0,
+    "candidate_inspection_errors": []
+  },
+  "expected_original": {
+    "name": "pinned geoBoundaries 9469f09 AGO ADM1 sourceData archive",
+    "url": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/sourceData/gbOpen/AGO_ADM1.zip",
+    "bytes": 1269371,
+    "sha256": "28a8197080eec7270453478bef6fc403e20b455de61a1e04830caafabd302d77"
+  },
+  "outcome": {
+    "exact_archive_local_body_found": false,
+    "expected_size_file_candidates": 0,
+    "zip_member_body_matches": 0,
+    "descriptor_found": true,
+    "native_family_body_found": true,
+    "scope_limit": "No conclusion about object absence outside the searched roots, remote availability, or underlying deletion. Prior restricted network action was not retried.",
+    "interpretation": "The descriptor records the exact original ZIP identity, but is not its body. The retained gb-AGO-ADM1-000.bin.gz is the native family payload, not the sourceData ZIP. The 2019 and 2024 USCB archives are comparator bodies with distinct hashes."
+  },
+  "identity_records": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/geoboundaries-4.0.0-crosscheck-manifest.json",
+      "bytes": 3069,
+      "sha256": "292ca5d70dd3f8040389b49bec0ddfbb99feba22634d7a35756e4b243feae031"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/geoboundaries-4.0.0-crosscheck.md",
+      "bytes": 8484,
+      "sha256": "5c55c6d1856c5971fe1b5ffe6086c1f807cf3f09bc58940a00df6dda4f3b8d32"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-kasongo-lunda-20261023/geoboundaries-AGO-ADM1-9469f09-metaData.json",
+      "bytes": 931,
+      "sha256": "6897df4120622fef7043056b39a4e389bf8b8575431cb51844f9e06ec7bb89f3"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/source-family-bodies-20261023/gb-AGO-ADM1-000.bin.gz",
+      "bytes": 179282,
+      "sha256": "a54aaaf45c85240aba8b99cf98126350cc070306e6da12b746259168e6a6ee71"
+    }
+  ],
+  "crosscheck_manifest_file_checks": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/geoboundaries-4.0.0-crosscheck.md",
+      "bytes": 8484,
+      "sha256": "5c55c6d1856c5971fe1b5ffe6086c1f807cf3f09bc58940a00df6dda4f3b8d32",
+      "matches_manifest": true
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/exact-roster-and-crosscheck.json",
+      "bytes": 35532,
+      "sha256": "d3f074d36aca8c1cf60345e23cad88b8741201ec6d12832e139246fb8e3574f9",
+      "matches_manifest": true
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/source-version-crosscheck.md",
+      "bytes": 11143,
+      "sha256": "fdcd875436380e0aeebc41a046edf52c71941a1e8c27ea6011d0984d0f54753d",
+      "matches_manifest": true
+    }
+  ],
+  "supporting_files": [
+    "ago-adm1-bounded-local-files-v14.txt",
+    "ago-adm1-bounded-local-focused-hits-v14.json",
+    "ago-adm1-bounded-local-candidates-v14.json"
+  ],
+  "holds": "All held cells remain held; no credit or acceptance change."
+}

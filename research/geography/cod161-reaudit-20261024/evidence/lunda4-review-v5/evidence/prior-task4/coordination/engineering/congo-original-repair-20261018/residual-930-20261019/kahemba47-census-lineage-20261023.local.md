@@ -1,0 +1,46 @@
+# COD Kahemba 47 source-lineage follow-up — 2026-10-23
+
+**Status: local evidence only; 47 original residual keys remain pending.** No repair, owner change, hold removal, credit, or package completion is proposed by this note. The full COD accounting remains 3,905 originals, 2,975 previously supported, and 930 residual keys. The complete 930-key diagnostic already held all residuals; it was not rerun here.
+
+## Exact bounded stratum
+
+The existing independent reviewer reconciled 47 unique residual rows for original owner 14485 (Kahemba). All 47 are land and retain the original COD ADM2 target `gb:COD:ADM2:63176286B37251946319002`. Each has a center hit in the registered 2021 Lunda Norte ADM1 candidate, source ID `gb:AGO:ADM1:26408823B5362531623165` (source index 444, feature ordinal 11). Forty-six rows have only that non-COD family candidate; one also intersects the parent COD ADM1 family. The reviewer found no overlap with previously accepted or reviewed cohorts. These are center-membership results, not full-cell qualification or a territorial determination. Physical-support is true and inland-water is false for each row in the reviewed join; native diagnostic holds remain intact.
+
+## Source provenance and checks
+
+The pinned product metadata records the geoBoundaries AGO ADM1 source as 2021, public domain, source “U.S. Census Bureau,” with the generic Census subnational-population page as its source URL. The exact feature family came from the geoBoundaries release pinned at `9469f09`. The local provenance matrix records the candidate-family body SHA-256 `71796d87bc112f7969b92ca4c8beb2fa60a4e0a37c3a5e7801ee51a3e7e58c76`; the product metadata body is 661,416 bytes, SHA-256 `ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633`.
+
+The official Census landing page currently links an Angola ADM1–ADM3 ZIP described as the August 2024 product. The retrieved ZIP was 11,480,383 bytes, SHA-256 `48c3b457b38909396ca2bed7880400876c3c91ddbc13f6af6bcfd8be99787713`. Its ADM1 metadata dates the dataset to 2024 and says the subnational boundaries were downloaded from GeoBoundaries in April 2024; international boundaries coincide with State Department LSIB. Census also says it cannot guarantee boundary-placement accuracy. This verifies lineage and limitations for the 2024 product, not identity or lineage of the exact 2021 feature used by this candidate.
+
+The Census geographic-metadata document describes general practices for older international products: varied open shapefile sources and boundary fitting to LSIB/WVS, with no positional-accuracy guarantee. The official 2024 Angola/Namibia technical report likewise describes the 2024 product’s HDX/LSIB workflow. Neither document binds this exact 2021 Lunda Norte feature to a specific source snapshot. The Census previous-products page did not identify an Angola archive for the represented 2021 version. No exact year-matched official Census source snapshot or feature-level attribution has been found in the searched accessible material.
+
+## Assessment and next step
+
+The metadata chain supports that the candidate was represented as a Census-sourced 2021 ADM1 product, but the available primary Census material inspected here is for a later product or general methods. It does not establish whether this specific Lunda Norte feature is an applicable foreign territorial exclusion under the original COD source-relative contract. The reviewer therefore recommends keeping all 47 pending until the exact 2021 source provenance/applicability is resolved. This is a specific missing source-lineage question, not a demand for a universal modern legal-boundary certificate. No current accessible, year-matched downloadable record likely to decide it was identified; if one becomes available, inspect that exact source and re-evaluate without repeating the diagnostic.
+
+## Retained inputs and primary references
+
+- Local exact roster and original disposition evidence: `center-conflict-disposition-candidate-20261023.local.json` (1,977,447 bytes; SHA-256 `1b3805a65d528b24d9327bd4c13f1e0b4a8cc0ef908addd728dc2482ff986174`).
+- Local source provenance matrix: `source-specific-provenance-matrix.local.json` (20,969 bytes; SHA-256 `52ff1bb5c53d559e4dc7b77aaf0a321d980163b090ec300f1aa8fb890b8a5a46`).
+- Local source catalogue join: `source-family-catalogue-join.local.json` (16,335 bytes; SHA-256 `76fc0b276e57e3838485d58bf3fbd188464dd31334d58204867a61022c5bdc67`).
+- Independent roster reviews: `partition-a.full-roster-review.json` (926,400 bytes; SHA-256 `769a1f230ce59525ee7f0469be199b613557999a43445531e76e600b5c0dc7f9`) and `partition-b.full-roster-review.json` (271,642 bytes; SHA-256 `ef2559b851fb99cdd2cc0ea41ccadcf567aaa134327839d5fdc5f942bf2c065e`).
+- Official Census source page: https://www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html
+- Census geographic metadata: https://www2.census.gov/programs-surveys/international-programs/about/global-mapping/geo-metadata-pgs-uscb-dec16.pdf
+- 2024 Angola/Namibia technical report: https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/Angola-Namibia-Technical-Document.pdf
+- Retrieved 2024 product ZIP: https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/ep/angola-adm1-adm2-adm3-uscb-aug24.zip
+
+This note contains derived source assessment and local evidence references only; it does not redistribute source geometry.
+
+## Addendum — exact USCB 2019 feature crosswalk and disposition proposal (2026-10-23)
+
+This addendum supersedes the earlier statement above that no exact year-matched official Census source snapshot had been found. The official Census time-series directory lists `angola-adm1-adm2-uscb-oct19.zip` (posted 2019-11-25) and the archive is directly retrievable from that directory. The downloaded archive is 6,042,844 bytes, SHA-256 `c700d2f72d3c32dda77a89308930443eadd79005d5cb32d674ee681dadabe4af`. Its `Angola_adm1_uscb_2019.shp` and XML metadata identify Lunda Norte (`GENC_CODE AO-LNO`, `FIPS_CODE AO17`); the shapefile dates to 2019-09-12 and the XML to 2019-10-02. The Census metadata states the source ADM2 boundaries were aligned to State Department 2018 LSIB and dissolved into 18 ADM1 provinces, with the Lóvua split noted.
+
+A direct feature-level crosswalk now shows all 1,380 unique vertices in the pinned 2021 geoBoundaries Lunda Norte ring match the official Census 2019 Lunda Norte ring in one reverse cyclic subsequence; closed endpoint and bounds also match. The Census ring has 28,897 unique vertices. This closes practical source-representation identity for the retained foreign candidate and supersedes the earlier lack-of-archive rationale. It does **not** prove that geoBoundaries transferred the Census attribution into its separate 2021 record, or decide whether the foreign candidate is territorially applicable under the original COD source-relative contract. Center overlap remains source-conflict evidence, not a territorial determination or full-cell qualification.
+
+The original full 3,905-key native diagnostic remains the applicable stock qualification: 2,975 supported and 930 held, with first failure `unique-source-target-coverage`; it was not rerun. The bounded reconciliation confirms the 47 original owner-14485 Kahemba keys are all land, all retain COD target `gb:COD:ADM2:63176286B37251946319002`, all have a center hit in the Lunda Norte candidate `gb:AGO:ADM1:26408823B5362531623165`, and one also has the parent COD ADM1 center hit. All 47 retain physical-support true and inland-water-support false. The existing independent reviewer assessed the exact new crosswalk and found no distinct reasonable public digital primary-source step likely to change this remaining applicability question. It supports a researched-unresolved proposal for exactly these 47 only, with all holds retained and no repair, owner change, acceptance, credit, or package completion. No universal legal-boundary certificate is demanded.
+
+The full local proposal and exact key list are in `kahemba47-researched-unresolved-proposal-20261023.local.json` (24,166 bytes, SHA-256 `f78c3bee6b2fb4a4279392a7f195495bb75a25fde0368c67c02c2dd2298535a0`). It contains derived project-key identifiers and findings, not source polygons or map images. It remains local; this addendum does not authorize public redistribution of this 47-key derived packet.
+
+Primary source links: [official Census time-series directory](https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/) and [official October 2019 Angola ADM1/ADM2 archive](https://www2.census.gov/programs-surveys/international-programs/mapping-files/time-series/angola-adm1-adm2-uscb-oct19.zip).
+
+The exact Census archive has been retained locally at `source-lineage-evidence-20261023/angola-adm1-adm2-uscb-oct19.zip`, with the same 6,042,844-byte length and SHA-256 stated above. Current U.S. State Department LSIB 11.4 metadata was also inspected; it identifies the dataset as U.S.-policy boundary alignment, cautions that it need not reflect de facto control, and notes recent Angola/DRC updates. It is not used as a proxy for the historical 2018 LSIB layer or a retroactive territorial-applicability certificate.

@@ -1,0 +1,2075 @@
+{
+  "kind": "cod-lake60-native-operands-exporter-history-synthesis",
+  "date": "2026-10-24",
+  "worker_thread_id": "01a16f2d-e91b-7416-b0f6-1b7829ab00e5",
+  "status": "all60pending_holds_preserved_no_acceptance",
+  "input_pins": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/source-evidence.json",
+      "bytes": 486052,
+      "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/native-diagnostic.json",
+      "bytes": 327626,
+      "sha256": "a06c68b928bb6ce4f8c450712150d3e95a3284e7dbf9bcb12729b8c316fbda51"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/partition-a.json",
+      "bytes": 907137,
+      "sha256": "cbab29ff875d9d5fdb79cefe1e8c84910f4a4f98c9b4f251d3c8ba6769ce7d4b"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/partition-b.full-roster-review.json",
+      "bytes": 271642,
+      "sha256": "ef2559b851fb99cdd2cc0ea41ccadcf567aaa134327839d5fdc5f942bf2c065e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/full-source-roster-join.local.json",
+      "bytes": 10392,
+      "sha256": "cbf885d27611385dc88015c669b22761428423c27fc9c77cebb2a0d46a19807d"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/frozen-administrative-sources-20261023.json",
+      "bytes": 661416,
+      "sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633"
+    }
+  ],
+  "original_pins_in_native_diagnostic": {
+    "native_patch": {
+      "bytes": 90849,
+      "commit": "ea94be0de429ebbb19607f9d07e21ecd57214cff",
+      "git_blob_oid": "ed5851866ad2da7c55cab5a669b3945dc9147b32",
+      "mode": "100644",
+      "path": "coordination/engineering/congo-original-repair-20261018/native-request-001/native-requested-patch.json",
+      "sha256": "cf6b5dff6cee5996d32863dde90f927739f172b73a810aef35cb42976b28795e"
+    },
+    "source_evidence": {
+      "bytes": 486052,
+      "commit": "d3fff65b349a75b9cbfcaa40d15ade06e7f27770",
+      "git_blob_oid": "7cb5ac9fe1fa5505825d0aa9151083909dfb7822",
+      "mode": "100644",
+      "path": "coordination/engineering/congo-original-repair-20261018/uige-popokabaka-contextual-20261024/native-diagnostic-source-evidence-full-3905.json",
+      "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+    }
+  },
+  "method": "Read existing records, expand only diagnostic/coverage runs to match exact60 keys, parse original retained source-feature properties. No spatial predicates, geometry production, new native diagnostic or observer executed. Offline Git2.53cat-file reads existing blobs with GIT_NO_LAZY_FETCH=1 and GIT_NO_REPLACE_OBJECTS=1. Source checkout unchanged.",
+  "native_target_operands": [
+    {
+      "owner": 14453,
+      "target_id": "gb:COD:ADM2:63176286B21708239892428",
+      "pending_scope_count": 2,
+      "native_target_operand_count": 9,
+      "operands": [
+        {
+          "feature_ordinal": 13,
+          "geometry_sha256": "640d04d5cb3500ddee15068e2c872e1e01f251dfb0aaec13dcebc345deccba0a",
+          "negative_ordinal": 0,
+          "source_id": "gb:BDI:ADM1:87207978B39611815861631",
+          "family": "gb:BDI:ADM1",
+          "verified_properties": {
+            "shapeName": "Bujumbura Rural",
+            "shapeISO": "BI-BL",
+            "shapeID": "87207978B39611815861631",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM1"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2014",
+          "publisher": "geoBoundaries, Wikimedia"
+        },
+        {
+          "feature_ordinal": 17,
+          "geometry_sha256": "025cfbdefa774910d7b85615fc600a1ab0fbbae351e1a033465d0c9b12c1fbe6",
+          "negative_ordinal": 1,
+          "source_id": "gb:BDI:ADM1:87207978B49849916836933",
+          "family": "gb:BDI:ADM1",
+          "verified_properties": {
+            "shapeName": "Rumonge",
+            "shapeISO": "BI-RM",
+            "shapeID": "87207978B49849916836933",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM1"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2014",
+          "publisher": "geoBoundaries, Wikimedia"
+        },
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "4d9f2215e06eec1a1f5d4f61326176db9fe0d8fcc7a130242bfb387619b6d022",
+          "negative_ordinal": 2,
+          "source_id": "gb:BDI:ADM2:21766830B31049489476840",
+          "family": "gb:BDI:ADM2",
+          "verified_properties": {
+            "shapeName": "Bugarama",
+            "shapeISO": "",
+            "shapeID": "21766830B31049489476840",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2007",
+          "publisher": "New York University Spatial Data Repository, Stanford University, Map Maker Limited"
+        },
+        {
+          "feature_ordinal": 4,
+          "geometry_sha256": "64c4b812a392386edbb2cec132e5f0414673e03f93052430f4fbdfb6f441ebd3",
+          "negative_ordinal": 3,
+          "source_id": "gb:BDI:ADM2:21766830B32777890626704",
+          "family": "gb:BDI:ADM2",
+          "verified_properties": {
+            "shapeName": "Rumonge",
+            "shapeISO": "",
+            "shapeID": "21766830B32777890626704",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2007",
+          "publisher": "New York University Spatial Data Repository, Stanford University, Map Maker Limited"
+        },
+        {
+          "feature_ordinal": 5,
+          "geometry_sha256": "12b4da8be40a32f5f51225127980b74fad62459cd0a49e3c8c39060d40be714c",
+          "negative_ordinal": 4,
+          "source_id": "gb:BDI:ADM2:21766830B13270332643198",
+          "family": "gb:BDI:ADM2",
+          "verified_properties": {
+            "shapeName": "Burambi",
+            "shapeISO": "",
+            "shapeID": "21766830B13270332643198",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2007",
+          "publisher": "New York University Spatial Data Repository, Stanford University, Map Maker Limited"
+        },
+        {
+          "feature_ordinal": 7,
+          "geometry_sha256": "0494c6b37b2e6173380669ec6228118eaa969708cafd67b3dcaafc18d5c08f18",
+          "negative_ordinal": 5,
+          "source_id": "gb:BDI:ADM2:21766830B36835382033084",
+          "family": "gb:BDI:ADM2",
+          "verified_properties": {
+            "shapeName": "Kabezi",
+            "shapeISO": "",
+            "shapeID": "21766830B36835382033084",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2007",
+          "publisher": "New York University Spatial Data Repository, Stanford University, Map Maker Limited"
+        },
+        {
+          "feature_ordinal": 8,
+          "geometry_sha256": "744586d749a96416432f2aa3556dbb7f8c3f88022c25ad0027f0def2fc99871b",
+          "negative_ordinal": 6,
+          "source_id": "gb:BDI:ADM2:21766830B14140898215143",
+          "family": "gb:BDI:ADM2",
+          "verified_properties": {
+            "shapeName": "Muhuta",
+            "shapeISO": "",
+            "shapeID": "21766830B14140898215143",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2007",
+          "publisher": "New York University Spatial Data Repository, Stanford University, Map Maker Limited"
+        },
+        {
+          "feature_ordinal": 10,
+          "geometry_sha256": "00eb26695583867ea0602b976643029979a12255ab4bd6124d413f81a672ad33",
+          "negative_ordinal": 7,
+          "source_id": "gb:BDI:ADM2:21766830B26172674635426",
+          "family": "gb:BDI:ADM2",
+          "verified_properties": {
+            "shapeName": "Mutambu",
+            "shapeISO": "",
+            "shapeID": "21766830B26172674635426",
+            "shapeGroup": "BDI",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2007",
+          "publisher": "New York University Spatial Data Repository, Stanford University, Map Maker Limited"
+        },
+        {
+          "feature_ordinal": 16,
+          "geometry_sha256": "55766c30063cb193900fc7c4ea6617cea818d60e4fc556b4e3031795f79c774a",
+          "negative_ordinal": 8,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073",
+          "family": "gb:TZA:ADM1",
+          "verified_properties": {
+            "shapeName": "Kigoma",
+            "shapeISO": "TZ-08",
+            "shapeID": "36957248B11692782910073",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM1"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2015",
+          "publisher": "OpenStreetMap, Wambacher"
+        }
+      ],
+      "note": "Whole-target operand list. Listing an operand is not evidence that it contacts each pending key."
+    },
+    {
+      "owner": 14461,
+      "target_id": "gb:COD:ADM2:63176286B25314267977171",
+      "pending_scope_count": 28,
+      "native_target_operand_count": 12,
+      "operands": [
+        {
+          "feature_ordinal": 15,
+          "geometry_sha256": "525abdcf3097e2062be398537aa86049928f8640ad62869198cf1f1446b61b4b",
+          "negative_ordinal": 0,
+          "source_id": "gb:TZA:ADM1:36957248B68200678446738",
+          "family": "gb:TZA:ADM1",
+          "verified_properties": {
+            "shapeName": "Rukwa",
+            "shapeISO": "TZ-20",
+            "shapeID": "36957248B68200678446738",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM1"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2015",
+          "publisher": "OpenStreetMap, Wambacher"
+        },
+        {
+          "feature_ordinal": 16,
+          "geometry_sha256": "55766c30063cb193900fc7c4ea6617cea818d60e4fc556b4e3031795f79c774a",
+          "negative_ordinal": 1,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073",
+          "family": "gb:TZA:ADM1",
+          "verified_properties": {
+            "shapeName": "Kigoma",
+            "shapeISO": "TZ-08",
+            "shapeID": "36957248B11692782910073",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM1"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2015",
+          "publisher": "OpenStreetMap, Wambacher"
+        },
+        {
+          "feature_ordinal": 24,
+          "geometry_sha256": "badfc46061bc4bddb1cef48a3c86530794ed614affcbcc033fd6bb755c7c7354",
+          "negative_ordinal": 2,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112",
+          "family": "gb:TZA:ADM1",
+          "verified_properties": {
+            "shapeName": "Katavi",
+            "shapeISO": "TZ-28",
+            "shapeID": "36957248B34051677343112",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM1"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2015",
+          "publisher": "OpenStreetMap, Wambacher"
+        },
+        {
+          "feature_ordinal": 40,
+          "geometry_sha256": "e0eb0115afce714209aebe764e34a5ce322f2e05cfd14470f06634df5bba7dbb",
+          "negative_ordinal": 3,
+          "source_id": "gb:TZA:ADM2:72390352B28587760392267",
+          "family": "gb:TZA:ADM2",
+          "verified_properties": {
+            "shapeName": "Mpanda",
+            "shapeISO": "",
+            "shapeID": "72390352B28587760392267",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2021",
+          "publisher": "Tanzania National Bureau of Statistics / UN OCHA ROSA, OCHA ROSA"
+        },
+        {
+          "feature_ordinal": 49,
+          "geometry_sha256": "17e77a22c95148c1e76a9ba65fd33496659cd6dcef354085e13da5187dbce4e3",
+          "negative_ordinal": 4,
+          "source_id": "gb:TZA:ADM2:72390352B15676475935925",
+          "family": "gb:TZA:ADM2",
+          "verified_properties": {
+            "shapeName": "Uvinza",
+            "shapeISO": "",
+            "shapeID": "72390352B15676475935925",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2021",
+          "publisher": "Tanzania National Bureau of Statistics / UN OCHA ROSA, OCHA ROSA"
+        },
+        {
+          "feature_ordinal": 123,
+          "geometry_sha256": "646bd58ba3425e0b014c1602b600ff2924ca1df32103b316f14874e76638c858",
+          "negative_ordinal": 5,
+          "source_id": "gb:TZA:ADM2:72390352B34861075189695",
+          "family": "gb:TZA:ADM2",
+          "verified_properties": {
+            "shapeName": "Nkasi",
+            "shapeISO": "",
+            "shapeID": "72390352B34861075189695",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM2"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2021",
+          "publisher": "Tanzania National Bureau of Statistics / UN OCHA ROSA, OCHA ROSA"
+        },
+        {
+          "feature_ordinal": 3,
+          "geometry_sha256": "4f71554468e84a7cea9144cd734260ead82c91773a4bcf22789a0a795db89a32",
+          "negative_ordinal": 6,
+          "source_id": "gb:ZMB:ADM1:6923714B94361964796426",
+          "family": "gb:ZMB:ADM1",
+          "verification": "exact native descriptor read; original body inspection delegated to residual_water35",
+          "represented_year": "2020",
+          "publisher": "Zambia Data Hub"
+        },
+        {
+          "feature_ordinal": 8,
+          "geometry_sha256": "5eacfa1b1a48426b42ca12d7b31529fc29091481a90c9e60f5f69a648f383d64",
+          "negative_ordinal": 7,
+          "source_id": "gb:ZMB:ADM1:6923714B80596734375081",
+          "family": "gb:ZMB:ADM1",
+          "verification": "exact native descriptor read; original body inspection delegated to residual_water35",
+          "represented_year": "2020",
+          "publisher": "Zambia Data Hub"
+        },
+        {
+          "feature_ordinal": 6,
+          "geometry_sha256": "4af3484347c90e2c149a509c41724f80e19f2c089438d1392f6e9dac680703ea",
+          "negative_ordinal": 8,
+          "source_id": "gb:ZMB:ADM2:96606910B82152127957425",
+          "family": "gb:ZMB:ADM2",
+          "verification": "exact native descriptor read; original body inspection delegated to residual_water35",
+          "represented_year": "2020",
+          "publisher": "GRID3, Office of the Surveyor General"
+        },
+        {
+          "feature_ordinal": 36,
+          "geometry_sha256": "09ba0bf6198babf91976d2b752e6921db740ec02cf00a602de0c5dc8257f252e",
+          "negative_ordinal": 9,
+          "source_id": "gb:ZMB:ADM2:96606910B91372429992286",
+          "family": "gb:ZMB:ADM2",
+          "verification": "exact native descriptor read; original body inspection delegated to residual_water35",
+          "represented_year": "2020",
+          "publisher": "GRID3, Office of the Surveyor General"
+        },
+        {
+          "feature_ordinal": 76,
+          "geometry_sha256": "dc2fc5c9cd326641f6a1820bed671c2ebf323c7c42cc2e81369eba5304421438",
+          "negative_ordinal": 10,
+          "source_id": "gb:ZMB:ADM2:96606910B10449137451116",
+          "family": "gb:ZMB:ADM2",
+          "verification": "exact native descriptor read; original body inspection delegated to residual_water35",
+          "represented_year": "2020",
+          "publisher": "GRID3, Office of the Surveyor General"
+        },
+        {
+          "feature_ordinal": 94,
+          "geometry_sha256": "764feaef6aa1f9f5d9aef2f7c7541f4280d2046cceef5bf0153245472d2ea9fc",
+          "negative_ordinal": 11,
+          "source_id": "gb:ZMB:ADM2:96606910B46360514720663",
+          "family": "gb:ZMB:ADM2",
+          "verification": "exact native descriptor read; original body inspection delegated to residual_water35",
+          "represented_year": "2020",
+          "publisher": "GRID3, Office of the Surveyor General"
+        }
+      ],
+      "note": "Whole-target operand list. Listing an operand is not evidence that it contacts each pending key."
+    },
+    {
+      "owner": 14552,
+      "target_id": "gb:COD:ADM2:63176286B6958016734749",
+      "pending_scope_count": 30,
+      "native_target_operand_count": 1,
+      "operands": [
+        {
+          "feature_ordinal": 16,
+          "geometry_sha256": "55766c30063cb193900fc7c4ea6617cea818d60e4fc556b4e3031795f79c774a",
+          "negative_ordinal": 0,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073",
+          "family": "gb:TZA:ADM1",
+          "verified_properties": {
+            "shapeName": "Kigoma",
+            "shapeISO": "TZ-08",
+            "shapeID": "36957248B11692782910073",
+            "shapeGroup": "TZA",
+            "shapeType": "ADM1"
+          },
+          "verification": "body SHA, feature ordinal, shapeID; no geometry serializer comparison",
+          "represented_year": "2015",
+          "publisher": "OpenStreetMap, Wambacher"
+        }
+      ],
+      "note": "Whole-target operand list. Listing an operand is not evidence that it contacts each pending key."
+    }
+  ],
+  "authenticated_body_verifications": [
+    {
+      "family": "gb:TZA:ADM1",
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/source-family-bodies-20261023/gb-TZA-ADM1-000.bin.gz",
+      "compressed_sha256": "1594bd12d18f550af5eb9c0c7130d71ce57c400018070ef27b04db61f1a77f13",
+      "decoded_sha256": "8b84f3f0a9e6e16322b777a5bba90c8e33c5e93c0dcb03ef1d3f6332036d066f",
+      "original_immutable_descriptor": {
+        "bytes": 131832,
+        "commit": "923e9c210b59836e069c182d68daf85439096381",
+        "decoded_bytes": 426148,
+        "decoded_sha256": "8b84f3f0a9e6e16322b777a5bba90c8e33c5e93c0dcb03ef1d3f6332036d066f",
+        "git_blob_oid": "3c5016cc626f36fb17f6fa269b629317efcbe396",
+        "mode": "100644",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TZA-ADM1-000.bin.gz",
+        "sha256": "1594bd12d18f550af5eb9c0c7130d71ce57c400018070ef27b04db61f1a77f13"
+      }
+    },
+    {
+      "family": "gb:BDI:ADM1",
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/source-family-bodies-20261023/gb-BDI-ADM1-000.bin.gz",
+      "compressed_sha256": "39eb94814dc7a41afeefb836648d7c971b1caed1c794bfc72b21eb253d00fe43",
+      "decoded_sha256": "2e134d7b93d0c55c490afe45c7ff0a6ca6d78e6e841264d5119420caacdbf32b",
+      "original_immutable_descriptor": {
+        "bytes": 43830,
+        "commit": "923e9c210b59836e069c182d68daf85439096381",
+        "decoded_bytes": 138787,
+        "decoded_sha256": "2e134d7b93d0c55c490afe45c7ff0a6ca6d78e6e841264d5119420caacdbf32b",
+        "git_blob_oid": "53033c106d2b841c040c73a4dfa6359c24a651c8",
+        "mode": "100644",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BDI-ADM1-000.bin.gz",
+        "sha256": "39eb94814dc7a41afeefb836648d7c971b1caed1c794bfc72b21eb253d00fe43"
+      }
+    },
+    {
+      "family": "gb:TZA:ADM2",
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/gb-TZA-ADM2-original-retained.bin.gz",
+      "compressed_sha256": "197ba1deababd78ec85695ee9fb0d3d1d47b0fc61cd78535186b3e3bf0558a15",
+      "decoded_sha256": "ab80d1831c5c45f08d401514c057dcef05abad790225fa2208805fd0b93dc993",
+      "original_immutable_descriptor": {
+        "bytes": 874658,
+        "commit": "923e9c210b59836e069c182d68daf85439096381",
+        "decoded_bytes": 2828833,
+        "decoded_sha256": "ab80d1831c5c45f08d401514c057dcef05abad790225fa2208805fd0b93dc993",
+        "git_blob_oid": "324d4e19e804eda23f946c04f532f58dd52f71fe",
+        "mode": "100644",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TZA-ADM2-000.bin.gz",
+        "sha256": "197ba1deababd78ec85695ee9fb0d3d1d47b0fc61cd78535186b3e3bf0558a15"
+      }
+    },
+    {
+      "family": "gb:BDI:ADM2",
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/gb-BDI-ADM2-original-retained.bin.gz",
+      "compressed_sha256": "521c5c2318763d957a1b164ca1f41e540965c0f5db06e0974b247a0f3f203c0e",
+      "decoded_sha256": "b90f58bf70724da30e8fd2fc5e89ea68ce2139e88dade8722fd85d20f92b15c2",
+      "original_immutable_descriptor": {
+        "bytes": 85146,
+        "commit": "923e9c210b59836e069c182d68daf85439096381",
+        "decoded_bytes": 350000,
+        "decoded_sha256": "b90f58bf70724da30e8fd2fc5e89ea68ce2139e88dade8722fd85d20f92b15c2",
+        "git_blob_oid": "2443da0c46ca3884e36a0c8ab5a3dca9678cb332",
+        "mode": "100644",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BDI-ADM2-000.bin.gz",
+        "sha256": "521c5c2318763d957a1b164ca1f41e540965c0f5db06e0974b247a0f3f203c0e"
+      }
+    }
+  ],
+  "per_key_existing_evidence": [
+    {
+      "key": [
+        14453,
+        134450,
+        152467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18801,
+          "source_id": "gb:COD:ADM2:63176286B21708239892428"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14453,
+        134686,
+        152467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18801,
+          "source_id": "gb:COD:ADM2:63176286B21708239892428"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136087,
+        153004
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136088,
+        153005
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136097,
+        153013
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136098,
+        153014
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136099,
+        153015
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136100,
+        153016
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136101,
+        153017
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136102,
+        153018
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136103,
+        153019
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136104,
+        153020
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136108,
+        153023
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136109,
+        153024
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136110,
+        153025
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136111,
+        153026
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136112,
+        153027
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136113,
+        153028
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136114,
+        153029
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136115,
+        153030
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136116,
+        153031
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136119,
+        153033
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136120,
+        153034
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136121,
+        153035
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136122,
+        153036
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136123,
+        153037
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136129,
+        153042
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136130,
+        153043
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        136136,
+        153048
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60215,
+          "source_id": "gb:TZA:ADM1:36957248B34051677343112"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14461,
+        137123,
+        153506
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18896,
+          "source_id": "gb:COD:ADM2:63176286B25314267977171"
+        },
+        {
+          "source_index": 60206,
+          "source_id": "gb:TZA:ADM1:36957248B68200678446738"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134743,
+        152474
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134751,
+        152477
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134756,
+        152479
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134759,
+        152480
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134764,
+        152482
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134767,
+        152483
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134769,
+        152484
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134770,
+        152484
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134772,
+        152485
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134775,
+        152486
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134778,
+        152487
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        134783,
+        152489
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135687,
+        152649
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135689,
+        152650
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135690,
+        152650
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135691,
+        152651
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135692,
+        152651
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135693,
+        152651
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135694,
+        152652
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135695,
+        152652
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135696,
+        152652
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135696,
+        152653
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135697,
+        152653
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135698,
+        152653
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135699,
+        152653
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135699,
+        152654
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135700,
+        152654
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135701,
+        152654
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135702,
+        152654
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    },
+    {
+      "key": [
+        14552,
+        135704,
+        152655
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "source_coverage": "mapped_inland_water_support",
+      "original_extraction_source_ids": [
+        {
+          "source_index": 18826,
+          "source_id": "gb:COD:ADM2:63176286B6958016734749"
+        },
+        {
+          "source_index": 60207,
+          "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+        }
+      ],
+      "native_responsible_exclusion_operand": "not individually attributed by retained diagnostic"
+    }
+  ],
+  "contact_reporting_limit": {
+    "native_territorial_contact_count": 2,
+    "lake60_contact_count": 0,
+    "meaning": "Diagnostic provides60territorial_exclusion_cells outcomes but no per-operand lake attribution. Existing original extraction lineage gives32Kigoma,27Katavi,1Rukwa. Those identity joins and prior center observations do not exclude the other native target operands."
+  },
+  "source_semantics": {
+    "TZA_ADM1": "2015OpenStreetMap/Wambacher; previous evidence establishes water-inclusive vs optional land-only export, not exact2015source export settings or median-line provenance.",
+    "TZA_ADM2": "2021TanzaniaNBS/UNOCHA source. Moba includes Mpanda ordinal40,Uvinza49,Nkasi123. Cannot qualify these via2015Wambacher export rule. Source HDX URL mentions2012population; this alone is not proof that the geometry is2012.",
+    "BDI_ADM1": "2014geoBoundaries/Wikimedia. Fizi includes BujumburaRural13 and Rumonge17; selected feature identity verified, specific water-edge semantics unexamined.",
+    "BDI_ADM2": "2007MapMaker/Stanford/NYU. Fizi includes Bugarama3,Rumonge4,Burambi5,Kabezi7,Muhuta8,Mutambu10. Exact original body verified; catalogue page unavailable through web tool, boundary treatment unestablished.",
+    "ZMB_ADM1_ADM2": "2020ZambiaDataHub and GRID3/OfficeSurveyorGeneral. Moba6native operands retained and handed to residual_water35 for independent body/source assessment; no conclusions imported as my verification."
+  },
+  "exporter_history": [
+    {
+      "url": "https://community.openstreetmap.org/t/karte-nur-mit-der-landmasse-von-deutschland-und-bundeslander/73429/11",
+      "date": "2015-09-06",
+      "evidence_level": "primary author text returned by search index; direct full open unavailable",
+      "finding": "Wambacher describes clipping boundary polygons with coastlines, says integration into BoundariesMap still needs work and map cannot yet export these water-free shapes. This indicates development stage on that date, not proof about the later frozenTZA export."
+    },
+    {
+      "url": "https://community.openstreetmap.org/t/closed-internationale-admingrenzen-2016/74539/49",
+      "date": "2016-01-19",
+      "evidence_level": "primary author text returned by search index; direct full open unavailable",
+      "finding": "Wambacher describes forthcoming4.0land-only output clipped at coastlines and a Rio de la Plata coastline issue. No Tanzania-specific policy."
+    },
+    {
+      "url": "https://weeklyosm.eu/de/archives/0291/",
+      "date": "2016-02-19",
+      "evidence_level": "full inspected contemporaneous OSM community bulletin, lines1281-1289,1352-1354",
+      "finding": "Announces release4.0duringFeb9–15 and optional maritime/coastline-ending boundaries. Used as chronology corroboration, not source-specific legal evidence."
+    },
+    {
+      "url": "https://osm.wno-edv-service.de/index.php/projekte/internationale-administrative-grenzen/boundaries-map-german",
+      "evidence_level": "original release documentation linked from bulletin, not inspected",
+      "failure": "502BadGateway"
+    },
+    {
+      "url": "https://community.openstreetmap.org/t/generating-shapefiles-from-osm-data/86086",
+      "date": "2019-02-13",
+      "evidence_level": "full original author explanation retained in prior evidence",
+      "finding": "Optional LAND/ExportArea=land and Tanganyika clipping input1374224 established; date does not backdate the implementation to2015."
+    }
+  ],
+  "additional_primary_read": {
+    "url": "https://microdata.nbs.go.tz/index.php/catalog/44",
+    "identity": "TZA-NBS-CENSUS-2012-v01",
+    "finding": "2012census metadata describes EA visits with local leaders and census purpose, but provides no lake boundary method. This is census microdata documentation, not proof of2021ADM2geometry lineage. No microdata accessed."
+  },
+  "precise_failed_actions": [
+    {
+      "action": "web open originalTZAADM2HDXsourceURL",
+      "target": "https://data.humdata.org/dataset/tanzania-administrative-boundaries-level-1-to-3-regions-districts-and-wards-with-2012-population",
+      "status": "denied403Forbidden",
+      "next": "stopped; no canonicalURL or alternate-access retry"
+    },
+    {
+      "action": "web open BDIADM2originalcatalogue",
+      "target": "https://geo.nyu.edu/catalog/stanford-th822mn7301",
+      "status": "unavailable_via_tool",
+      "next": "source-body read independently from retained local immutable blob; no network retry"
+    },
+    {
+      "action": "web open primary exporter2015/2016permalinks",
+      "target": "forum73429/11;74539/49;66674/188;70778/217",
+      "status": "not_accessible_via_tool",
+      "next": "kept primary-index-only evidence level; no claimed full read"
+    },
+    {
+      "action": "web click original exporter release documentation from independent bulletin",
+      "target": "https://osm.wno-edv-service.de/index.php/projekte/internationale-administrative-grenzen/boundaries-map-german",
+      "status": "failed502BadGateway",
+      "next": "no retry"
+    }
+  ],
+  "synthesis": {
+    "north59": {
+      "count": 59,
+      "keys": [
+        [
+          14453,
+          134450,
+          152467
+        ],
+        [
+          14453,
+          134686,
+          152467
+        ],
+        [
+          14461,
+          136087,
+          153004
+        ],
+        [
+          14461,
+          136088,
+          153005
+        ],
+        [
+          14461,
+          136097,
+          153013
+        ],
+        [
+          14461,
+          136098,
+          153014
+        ],
+        [
+          14461,
+          136099,
+          153015
+        ],
+        [
+          14461,
+          136100,
+          153016
+        ],
+        [
+          14461,
+          136101,
+          153017
+        ],
+        [
+          14461,
+          136102,
+          153018
+        ],
+        [
+          14461,
+          136103,
+          153019
+        ],
+        [
+          14461,
+          136104,
+          153020
+        ],
+        [
+          14461,
+          136108,
+          153023
+        ],
+        [
+          14461,
+          136109,
+          153024
+        ],
+        [
+          14461,
+          136110,
+          153025
+        ],
+        [
+          14461,
+          136111,
+          153026
+        ],
+        [
+          14461,
+          136112,
+          153027
+        ],
+        [
+          14461,
+          136113,
+          153028
+        ],
+        [
+          14461,
+          136114,
+          153029
+        ],
+        [
+          14461,
+          136115,
+          153030
+        ],
+        [
+          14461,
+          136116,
+          153031
+        ],
+        [
+          14461,
+          136119,
+          153033
+        ],
+        [
+          14461,
+          136120,
+          153034
+        ],
+        [
+          14461,
+          136121,
+          153035
+        ],
+        [
+          14461,
+          136122,
+          153036
+        ],
+        [
+          14461,
+          136123,
+          153037
+        ],
+        [
+          14461,
+          136129,
+          153042
+        ],
+        [
+          14461,
+          136130,
+          153043
+        ],
+        [
+          14461,
+          136136,
+          153048
+        ],
+        [
+          14552,
+          134743,
+          152474
+        ],
+        [
+          14552,
+          134751,
+          152477
+        ],
+        [
+          14552,
+          134756,
+          152479
+        ],
+        [
+          14552,
+          134759,
+          152480
+        ],
+        [
+          14552,
+          134764,
+          152482
+        ],
+        [
+          14552,
+          134767,
+          152483
+        ],
+        [
+          14552,
+          134769,
+          152484
+        ],
+        [
+          14552,
+          134770,
+          152484
+        ],
+        [
+          14552,
+          134772,
+          152485
+        ],
+        [
+          14552,
+          134775,
+          152486
+        ],
+        [
+          14552,
+          134778,
+          152487
+        ],
+        [
+          14552,
+          134783,
+          152489
+        ],
+        [
+          14552,
+          135687,
+          152649
+        ],
+        [
+          14552,
+          135689,
+          152650
+        ],
+        [
+          14552,
+          135690,
+          152650
+        ],
+        [
+          14552,
+          135691,
+          152651
+        ],
+        [
+          14552,
+          135692,
+          152651
+        ],
+        [
+          14552,
+          135693,
+          152651
+        ],
+        [
+          14552,
+          135694,
+          152652
+        ],
+        [
+          14552,
+          135695,
+          152652
+        ],
+        [
+          14552,
+          135696,
+          152652
+        ],
+        [
+          14552,
+          135696,
+          152653
+        ],
+        [
+          14552,
+          135697,
+          152653
+        ],
+        [
+          14552,
+          135698,
+          152653
+        ],
+        [
+          14552,
+          135699,
+          152653
+        ],
+        [
+          14552,
+          135699,
+          152654
+        ],
+        [
+          14552,
+          135700,
+          152654
+        ],
+        [
+          14552,
+          135701,
+          152654
+        ],
+        [
+          14552,
+          135702,
+          152654
+        ],
+        [
+          14552,
+          135704,
+          152655
+        ]
+      ],
+      "composition": "Kalemie30,Fizi2,MobaKatavi27",
+      "applicability": "Treaty median-line language and AUprocess are shared context. They do not establish frozen-source lake-edge treatment. Kalemie has one native exclusion; Fizi9 and Moba12 require attention to actual target operand context, without assuming all listed operands contact each cell."
+    },
+    "south1": {
+      "key": [
+        14461,
+        137123,
+        153506
+      ],
+      "context": "Moba original extraction contributorRukwa at30.791406971E,8.265845681S. Zambia/DRC/Tanzania southern segment/tripoint context requires separate treatment; residual_water35 owns1989treaty/officialannex and ZMBsourcework. Do not extrapolate59north lake conclusions or derive ownership from latitude alone."
+    },
+    "AU2026": "Newsletter meeting outcome passage remains unread. Cover observedJuly2026despiteJunefilename. This blocks claiming no later adopted spatial result, but does not block inspection of source semantics, original identities and historical exporter configurations. No browser restart or AUretry.",
+    "three_dates": "Represented2015, actualOSM/export timestamp, and2023geoBoundariesintegration/build are distinct clocks. Even the2015/2016clipping development chronology cannot establish frozenTZA export configuration without the original archive/receipt.",
+    "acceptance": "No completed-cell credit. All60 remain held. Finite next needs are original TZA archive settings/OSMrelation versions, source-specific NBS/OCHA lake-boundary treatment, and existing native per-operand attribution if available. Do not fabricate missing contacts or run geometry to fill this record."
+  }
+}

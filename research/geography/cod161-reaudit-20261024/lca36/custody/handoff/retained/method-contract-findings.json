@@ -1,0 +1,74 @@
+{
+  "status": "author contract reading; not consumer execution",
+  "immutable_code_and_input_pins": [
+    {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/README.md",
+      "mode": "100644",
+      "git_blob_oid": "a1615c32e1977573e50bfba57f785a54b3906c3b"
+    },
+    {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "coordination/engineering/lca-original-repair-20261021/positive-qualification-20261021/README.md",
+      "mode": "100644",
+      "git_blob_oid": "fba54fa26f9a2328d29d19837cd2a6c815ca112b"
+    },
+    {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "coordination/engineering/lca-original-repair-20261021/positive-qualification-20261021/physical-inputs.json",
+      "mode": "100644",
+      "git_blob_oid": "da76ce6eb4405972f8fd2193786cb23e1be03a77"
+    },
+    {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "coordination/engineering/lca-original-repair-20261021/positive-qualification-20261021/physical-run-bindings.json",
+      "mode": "100644",
+      "git_blob_oid": "9bbc0f12f069d5512463db5eef4a4758312b442f"
+    },
+    {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs",
+      "mode": "100644",
+      "git_blob_oid": "6d44476563e492e40e09c09d8f81cb4a889156f4"
+    },
+    {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "scripts/check-effective-geographic-regression.mjs",
+      "mode": "100644",
+      "git_blob_oid": "a6bd2893443bceaf5d7932923ab456347a2c5da0"
+    },
+    {
+      "commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+      "path": "scripts/prepare-delivery-handoff.mjs",
+      "mode": "100644",
+      "git_blob_oid": "b952abb5ad15ccfc7b58a56edf6733150ec127cb"
+    }
+  ],
+  "original_contract_source": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/lca-proposal-20261021/proposal-packet.json",
+    "bytes": 966159,
+    "sha256": "ae7195191320049f8132eaacba59b70a30336c7f57bf0ea0224b1c06c0c2177c"
+  },
+  "selected_aggregate_separate_physical_result_required_for_LCA36_unresolved_request": false,
+  "current_positive_consumer_requires_selected_identity_and_complete_base_geometry_binding": true,
+  "existing_committed_LCA_inputs_supply_ten_selected_bindings": true,
+  "consumed_geometries_unchanged": true,
+  "physical_report_still_consumed_only": true,
+  "new_selected_physical_run_indicated_solely_by_missing_aggregate_result": false,
+  "method_resolution": "Original documented-exception alternative and source/physical witness checks; no positive-patch test prerequisite for non-repair disposition",
+  "current_code_sections": {
+    "prepare-delivery-handoff.mjs": [
+      "1749-1768"
+    ],
+    "selected-neighbor-prevention.mjs": [
+      "1614-1647",
+      "1869-1877",
+      "1882-1901",
+      "2214-2255"
+    ],
+    "queue README": [
+      "49-56"
+    ]
+  },
+  "no_new_native_decision": true
+}

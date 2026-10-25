@@ -1,0 +1,514 @@
+{
+  "kind": "fizi2-burundi-original-source-applicability-research",
+  "date": "2026-10-24",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "target": {
+    "pixelIndex": 14453,
+    "id": "gb:COD:ADM2:63176286B21708239892428",
+    "scope_rows": [
+      {
+        "key": [
+          14453,
+          134450,
+          152467
+        ],
+        "original_class": "inland-water",
+        "target_name": "Fizi",
+        "original_cod_target": "gb:COD:ADM2:63176286B21708239892428",
+        "center_lon": 29.364677341836853,
+        "center_lat": -4.61915756722554,
+        "retained_competitors": [
+          {
+            "source_id": "gb:TZA:ADM1:36957248B11692782910073",
+            "name": "Kigoma",
+            "family_index": 338,
+            "family_key": "gb:TZA:ADM1",
+            "source": {
+              "family_key": "gb:TZA:ADM1",
+              "represented_year_claim": "2015",
+              "recorded_license": "Open Data Commons Open Database License 1.0",
+              "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TZA/ADM1/geoBoundaries-TZA-ADM1_simplified.geojson"
+            }
+          }
+        ],
+        "disposition": "held; no newly accepted resolution"
+      },
+      {
+        "key": [
+          14453,
+          134686,
+          152467
+        ],
+        "original_class": "inland-water",
+        "target_name": "Fizi",
+        "original_cod_target": "gb:COD:ADM2:63176286B21708239892428",
+        "center_lon": 29.364677341836853,
+        "center_lat": -4.942099209074644,
+        "retained_competitors": [
+          {
+            "source_id": "gb:TZA:ADM1:36957248B11692782910073",
+            "name": "Kigoma",
+            "family_index": 338,
+            "family_key": "gb:TZA:ADM1",
+            "source": {
+              "family_key": "gb:TZA:ADM1",
+              "represented_year_claim": "2015",
+              "recorded_license": "Open Data Commons Open Database License 1.0",
+              "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TZA/ADM1/geoBoundaries-TZA-ADM1_simplified.geojson"
+            }
+          }
+        ],
+        "disposition": "held; no newly accepted resolution"
+      }
+    ],
+    "all_native_exclusions": [
+      {
+        "feature_ordinal": 13,
+        "geometry_sha256": "640d04d5cb3500ddee15068e2c872e1e01f251dfb0aaec13dcebc345deccba0a",
+        "negative_ordinal": 0,
+        "source_id": "gb:BDI:ADM1:87207978B39611815861631"
+      },
+      {
+        "feature_ordinal": 17,
+        "geometry_sha256": "025cfbdefa774910d7b85615fc600a1ab0fbbae351e1a033465d0c9b12c1fbe6",
+        "negative_ordinal": 1,
+        "source_id": "gb:BDI:ADM1:87207978B49849916836933"
+      },
+      {
+        "feature_ordinal": 3,
+        "geometry_sha256": "4d9f2215e06eec1a1f5d4f61326176db9fe0d8fcc7a130242bfb387619b6d022",
+        "negative_ordinal": 2,
+        "source_id": "gb:BDI:ADM2:21766830B31049489476840"
+      },
+      {
+        "feature_ordinal": 4,
+        "geometry_sha256": "64c4b812a392386edbb2cec132e5f0414673e03f93052430f4fbdfb6f441ebd3",
+        "negative_ordinal": 3,
+        "source_id": "gb:BDI:ADM2:21766830B32777890626704"
+      },
+      {
+        "feature_ordinal": 5,
+        "geometry_sha256": "12b4da8be40a32f5f51225127980b74fad62459cd0a49e3c8c39060d40be714c",
+        "negative_ordinal": 4,
+        "source_id": "gb:BDI:ADM2:21766830B13270332643198"
+      },
+      {
+        "feature_ordinal": 7,
+        "geometry_sha256": "0494c6b37b2e6173380669ec6228118eaa969708cafd67b3dcaafc18d5c08f18",
+        "negative_ordinal": 5,
+        "source_id": "gb:BDI:ADM2:21766830B36835382033084"
+      },
+      {
+        "feature_ordinal": 8,
+        "geometry_sha256": "744586d749a96416432f2aa3556dbb7f8c3f88022c25ad0027f0def2fc99871b",
+        "negative_ordinal": 6,
+        "source_id": "gb:BDI:ADM2:21766830B14140898215143"
+      },
+      {
+        "feature_ordinal": 10,
+        "geometry_sha256": "00eb26695583867ea0602b976643029979a12255ab4bd6124d413f81a672ad33",
+        "negative_ordinal": 7,
+        "source_id": "gb:BDI:ADM2:21766830B26172674635426"
+      },
+      {
+        "feature_ordinal": 16,
+        "geometry_sha256": "55766c30063cb193900fc7c4ea6617cea818d60e4fc556b4e3031795f79c774a",
+        "negative_ordinal": 8,
+        "source_id": "gb:TZA:ADM1:36957248B11692782910073"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "family": "gb:BDI:ADM1",
+      "original_archive": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/BDI_ADM1-9469f09.zip",
+        "bytes": 87780,
+        "sha256": "739821d1dae0cd4627f5761ac01c264137a568f37ca57b9f8a918c9494a4e92a"
+      },
+      "retained_source_part": {
+        "bytes": 43830,
+        "commit": "923e9c210b59836e069c182d68daf85439096381",
+        "decoded_bytes": 138787,
+        "decoded_sha256": "2e134d7b93d0c55c490afe45c7ff0a6ca6d78e6e841264d5119420caacdbf32b",
+        "git_blob_oid": "53033c106d2b841c040c73a4dfa6359c24a651c8",
+        "mode": "100644",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BDI-ADM1-000.bin.gz",
+        "sha256": "39eb94814dc7a41afeefb836648d7c971b1caed1c794bfc72b21eb253d00fe43"
+      },
+      "archive_meta": "Boundary Representative of Year: 2014\nISO-3166-1 (Alpha-3): BDI\nBoundary Type: ADM1\nCanonical Boundary Type Name: Province\nSource 1: geoBoundaries\nSource 2: Wikimedia\nRelease Type: gbOpen\nLicense: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication\nLicense Notes: \nLicense Source: https://commons.wikimedia.org/wiki/File:Provinces_of_Burundi_2014_(named).png\nLink to Source Data: https://commons.wikimedia.org/wiki/File:Provinces_of_Burundi_2014_(named).png\nOther Notes: ",
+      "original_DBF_count": 18,
+      "original_DBF_fields": [
+        [
+          "Name",
+          50
+        ],
+        [
+          "Level",
+          50
+        ],
+        [
+          "ISO_Code",
+          50
+        ]
+      ],
+      "original_archive_members": [
+        "BDI_ADM1.cpg",
+        "BDI_ADM1.dbf",
+        "BDI_ADM1.prj",
+        "BDI_ADM1.sbn",
+        "BDI_ADM1.sbx",
+        "BDI_ADM1.shp",
+        "BDI_ADM1.shp.xml",
+        "BDI_ADM1.shx",
+        "license.PNG",
+        "meta.txt"
+      ],
+      "SHP_header_shape_type": 5,
+      "original_XML_processes": [
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CreateFeatureclass",
+            "Date": "20221114",
+            "Time": "081505"
+          },
+          "text": "CreateFeatureclass C:\\Users\\dfornatora\\Documents\\ArcGIS\\Projects\\BDI BDI Polyline # No No \"GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]];-400 -400 1000000000;-100000 10000;-100000 10000;8.98315284119521E-09;0.001;0.001;IsHighPrecision\" # 0 0 0 #"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\FeatureToPolygon",
+            "Date": "20221114",
+            "Time": "082452"
+          },
+          "text": "FeatureToPolygon BDI C:\\Users\\dfornatora\\Documents\\ArcGIS\\Projects\\BDI\\BDI.gdb\\BDI_FeatureToPolygon # ATTRIBUTES #"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+            "Date": "20221114",
+            "Time": "090724"
+          },
+          "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.0.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\dfornatora\\Documents\\ArcGIS\\Projects\\BDI\\BDI.gdb</WorkspaceConnectionString><WorkspaceFactory>FileGDB</WorkspaceFactory><Dataset>BDI_FeatureToPolygon</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><AddField><field_name>Name</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow><workflow><AddField><field_name>Level</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow><workflow><AddField><field_name>ISO_Code</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow></operationSequence>"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+            "Date": "20221114",
+            "Time": "091048"
+          },
+          "text": "CalculateField BDI_FeatureToPolygon Level \"ADM1\" \"Python 3\" # Text NO_ENFORCE_DOMAINS"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Conversion Tools.tbx\\FeatureClassToFeatureClass",
+            "Date": "20221114",
+            "Time": "091338"
+          },
+          "text": "FeatureClassToFeatureClass BDI_FeatureToPolygon C:\\Users\\dfornatora\\Documents\\BDI BDI_ADM1.shp # \"Shape_Length \"Shape_Length\" false true true 8 Double 0 0,First,#,BDI_FeatureToPolygon,Shape_Length,-1,-1;Shape_Area \"Shape_Area\" false true true 8 Double 0 0,First,#,BDI_FeatureToPolygon,Shape_Area,-1,-1;Name \"Name\" true true false 50 Text 0 0,First,#,BDI_FeatureToPolygon,Name,0,50;Level \"Level\" true true false 50 Text 0 0,First,#,BDI_FeatureToPolygon,Level,0,50;ISO_Code \"ISO_Code\" true true false 50 Text 0 0,First,#,BDI_FeatureToPolygon,ISO_Code,0,50\" #"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\DeleteField",
+            "Date": "20221114",
+            "Time": "091344"
+          },
+          "text": "DeleteField BDI_ADM1 Shape_Leng \"Delete Fields\""
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\DeleteField",
+            "Date": "20221114",
+            "Time": "091348"
+          },
+          "text": "DeleteField BDI_ADM1 Shape_Area \"Delete Fields\""
+        }
+      ]
+    },
+    {
+      "family": "gb:BDI:ADM2",
+      "original_archive": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/BDI_ADM2-9469f09.zip",
+        "bytes": 448304,
+        "sha256": "522c15fd275ab02381d545e77c291a2a5b6bdc948d20597064e9c84e911d2eae"
+      },
+      "retained_source_part": {
+        "bytes": 85146,
+        "commit": "923e9c210b59836e069c182d68daf85439096381",
+        "decoded_bytes": 350000,
+        "decoded_sha256": "b90f58bf70724da30e8fd2fc5e89ea68ce2139e88dade8722fd85d20f92b15c2",
+        "git_blob_oid": "2443da0c46ca3884e36a0c8ab5a3dca9678cb332",
+        "mode": "100644",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BDI-ADM2-000.bin.gz",
+        "sha256": "521c5c2318763d957a1b164ca1f41e540965c0f5db06e0974b247a0f3f203c0e"
+      },
+      "archive_meta": "Boundary Representative of Year: 2007.0\nISO-3166-1 (Alpha-3): BDI\nBoundary Type: ADM2\nCanonical Boundary Type Name: \nSource 1: New York University Spatial Data Repository, Stanford University\nSource 2: Map Maker Limited\nRelease Type: gbOpen\nLicense: Public Domain\nLicense Notes: License on metadata pop-up on source page\nLicense Source: https://geo.nyu.edu/catalog/stanford-th822mn7301#iso-metadata-reference-info\nLink to Source Data: https://geo.nyu.edu/catalog/stanford-th822mn7301\nOther Notes: ",
+      "original_DBF_count": 119,
+      "original_DBF_fields": [
+        [
+          "Name",
+          10
+        ],
+        [
+          "Level",
+          10
+        ]
+      ],
+      "original_archive_members": [
+        "BDI_ADM2.shp",
+        "BDI_ADM2.qpj",
+        "BDI_ADM2.prj",
+        "BDI_ADM2.dbf",
+        "BDI_ADM2.cpg",
+        "BDI_ADM2.shx",
+        "meta.txt"
+      ],
+      "SHP_header_shape_type": 5
+    }
+  ],
+  "eight_BDI_features": [
+    {
+      "native_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "640d04d5cb3500ddee15068e2c872e1e01f251dfb0aaec13dcebc345deccba0a",
+        "negative_ordinal": 0,
+        "source_id": "gb:BDI:ADM1:87207978B39611815861631"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Bujumbura Rural",
+        "shapeISO": "BI-BL",
+        "shapeID": "87207978B39611815861631",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "archive_DBF_properties": {
+        "Name": "Bujumbura Rural",
+        "Level": "ADM1",
+        "ISO_Code": "BI-BL"
+      },
+      "native_geometry_hash_verified": true
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "025cfbdefa774910d7b85615fc600a1ab0fbbae351e1a033465d0c9b12c1fbe6",
+        "negative_ordinal": 1,
+        "source_id": "gb:BDI:ADM1:87207978B49849916836933"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Rumonge",
+        "shapeISO": "BI-RM",
+        "shapeID": "87207978B49849916836933",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "archive_DBF_properties": {
+        "Name": "Rumonge",
+        "Level": "ADM1",
+        "ISO_Code": "BI-RM"
+      },
+      "native_geometry_hash_verified": true
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 3,
+        "geometry_sha256": "4d9f2215e06eec1a1f5d4f61326176db9fe0d8fcc7a130242bfb387619b6d022",
+        "negative_ordinal": 2,
+        "source_id": "gb:BDI:ADM2:21766830B31049489476840"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Bugarama",
+        "shapeISO": "",
+        "shapeID": "21766830B31049489476840",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "archive_DBF_properties": {
+        "Name": "Bugarama",
+        "Level": "ADM2"
+      },
+      "native_geometry_hash_verified": true
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "64c4b812a392386edbb2cec132e5f0414673e03f93052430f4fbdfb6f441ebd3",
+        "negative_ordinal": 3,
+        "source_id": "gb:BDI:ADM2:21766830B32777890626704"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Rumonge",
+        "shapeISO": "",
+        "shapeID": "21766830B32777890626704",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "archive_DBF_properties": {
+        "Name": "Rumonge",
+        "Level": "ADM2"
+      },
+      "native_geometry_hash_verified": true
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "12b4da8be40a32f5f51225127980b74fad62459cd0a49e3c8c39060d40be714c",
+        "negative_ordinal": 4,
+        "source_id": "gb:BDI:ADM2:21766830B13270332643198"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Burambi",
+        "shapeISO": "",
+        "shapeID": "21766830B13270332643198",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "archive_DBF_properties": {
+        "Name": "Burambi",
+        "Level": "ADM2"
+      },
+      "native_geometry_hash_verified": true
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 7,
+        "geometry_sha256": "0494c6b37b2e6173380669ec6228118eaa969708cafd67b3dcaafc18d5c08f18",
+        "negative_ordinal": 5,
+        "source_id": "gb:BDI:ADM2:21766830B36835382033084"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Kabezi",
+        "shapeISO": "",
+        "shapeID": "21766830B36835382033084",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "archive_DBF_properties": {
+        "Name": "Kabezi",
+        "Level": "ADM2"
+      },
+      "native_geometry_hash_verified": true
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 8,
+        "geometry_sha256": "744586d749a96416432f2aa3556dbb7f8c3f88022c25ad0027f0def2fc99871b",
+        "negative_ordinal": 6,
+        "source_id": "gb:BDI:ADM2:21766830B14140898215143"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Muhuta",
+        "shapeISO": "",
+        "shapeID": "21766830B14140898215143",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "archive_DBF_properties": {
+        "Name": "Muhuta",
+        "Level": "ADM2"
+      },
+      "native_geometry_hash_verified": true
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 10,
+        "geometry_sha256": "00eb26695583867ea0602b976643029979a12255ab4bd6124d413f81a672ad33",
+        "negative_ordinal": 7,
+        "source_id": "gb:BDI:ADM2:21766830B26172674635426"
+      },
+      "frozen_feature_properties": {
+        "shapeName": "Mutambu",
+        "shapeISO": "",
+        "shapeID": "21766830B26172674635426",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "archive_DBF_properties": {
+        "Name": "Mutambu",
+        "Level": "ADM2"
+      },
+      "native_geometry_hash_verified": true
+    }
+  ],
+  "source_findings": [
+    "Eight BDI candidate features are all present at recorded ordinals in actual original archives and match native sourceIDs/hashes. This is source identity verification, not per-key spatial applicability.",
+    "BDI ADM1 is the represented2014 Wikimedia source. Actual original XML records2022-11-14 polyline creation and FeatureToPolygon, followed by attribution/export. No lake/river allocation, raster registration, control points or positional error is documented in the inspected archive. No constructor was executed here.",
+    "Actual named province raster was visually inspected: Bujumbura Rural and Rumonge labels/outlines are present; no coordinate grid, scale bar, lake median/thalweg legend or international allocation convention is shown. Exact historical raster-byte binding remains as qualified in sibling research.",
+    "BDI ADM2 is represented2007 NYU/Stanford/MapMaker. Original archive already contains119 polygon records and Name/Level attributes; no XML construction log or license screenshot. Do not transfer ADM1 polygonization history to ADM2 or infer a specific line-to-polygon operation from catalogue wording."
+  ],
+  "new_primary_step": {
+    "url": "https://faolex.fao.org/docs/pdf/Bur162997.pdf",
+    "local_pdf": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/burundi-law-2015-1-10-rumonge.pdf",
+      "bytes": 88657,
+      "sha256": "07197f33c7d380a8cd4274659c3e3bf06f6e582f196ee215db73b89ea018cb6f"
+    },
+    "actual_read": "All3pages extracted and independently visually inspected",
+    "title": "Loi no1/10 du26mars2015 portant creation de la province de Rumonge et delimitation des provinces de Bujumbura, Bururi et Rumonge",
+    "findings": [
+      "Article1creates Rumonge province. Article2lists Bugarama,Burambi,Buyengero,Muhuta,Rumonge and preserves their existing delimitations.",
+      "Article4lists Bujumbura communes including Kabezi and Mutambu and likewise preserves their existing delimitations. Article6does so for Bururi.",
+      "Article9provides entry into force on promulgation; signature date26March2015 visually verified.",
+      "No coordinate annex/map or river/lake line specification appears in this3page instrument. It concerns province grouping, not authenticated spatial equality with2007commune vectors."
+    ],
+    "interpretation_limits": [
+      "Rumonge in the represented2014 ADM1 source is a temporal/source-label inconsistency relative to2015legal creation, not automatic grounds to discard the frozen source.",
+      "Preserved2015commune delimitations do not prove no changes from2007 to2015 or establish equality with frozen MapMaker polygons.",
+      "This law supplies no international lake-edge rule and cannot clear either native key."
+    ],
+    "transfer_receipt": {
+      "session": 60208,
+      "exit_code": 0,
+      "approval_id": "Not exposed"
+    }
+  },
+  "retained_context_limits": {
+    "two_keys": [
+      [
+        14453,
+        134450,
+        152467
+      ],
+      [
+        14453,
+        134686,
+        152467
+      ]
+    ],
+    "old_center_context": "Both retained centers have Kigoma TZAADM1 hits. Those are center-only records, not attribution of original native exclusions.",
+    "full_native_candidate_count": 9,
+    "BDI_candidate_count": 8,
+    "BDI_potential_pairs": 16,
+    "all_native_potential_pairs": 18,
+    "potential_pairs_are_not_proven_contacts": true,
+    "overlay_omission": "The ten-family537overlay excludes BDIADM2. Absence of ADM2hits is therefore unobserved, not negative evidence.",
+    "new_diagnostic": "Coordinator alone owns the authorized single3905diagnostic under code0eb64fbc. This child ran no producer or geometry test."
+  },
+  "reused_tanganyika_source_findings": {
+    "TZA": "Sibling original TZA source archive/exporter research remains separate; no Burundi construction inferred from TZA.",
+    "AU2026": "Sibling visually read actual newsletterpage17. March2026four-state JTC reviewed draftMoU/reaffirmation; no adopted spatial result confirmed. Newsletter is no longer an unread blocker."
+  },
+  "access_obstacles": [
+    {
+      "target": "https://geo.nyu.edu/catalog/stanford-th822mn7301 and exact Stanford publisher routes retained by sibling",
+      "status": "Previously unavailable/retry prohibited by parent; not retried here",
+      "consequence": "Original MapMaker edge-construction record remains unresolved. No access bypass."
+    },
+    {
+      "target": "https://assemblee.bi/?p=21198",
+      "status": "Webreader timed out; exact law successfully read from FAOLEX, so no unread-law blocker remains"
+    }
+  ],
+  "finite_remaining_questions": [
+    "What exact lake or river coverage convention produced the original six MapMaker commune edges? No such record exposed in the inspected consumed ZIP. Do not call denied/unavailable publisher route exhausted as proof of absence.",
+    "Which of the original nine candidates actually participates in the two held native outcomes? Await coordinator-owned native evidence, not source-index joins.",
+    "If native evidence makes a BDI operand materially relevant, source-specific edge applicability still needs evaluation against the documented raster/MapMaker limitations. No universal sovereign certificate demanded."
+  ],
+  "disposition": {
+    "all2held": true,
+    "acceptance": false,
+    "credit": 0,
+    "new_geometry_observations": 0,
+    "duplicate_archive_downloads": 0,
+    "git_mutations": 0
+  }
+}

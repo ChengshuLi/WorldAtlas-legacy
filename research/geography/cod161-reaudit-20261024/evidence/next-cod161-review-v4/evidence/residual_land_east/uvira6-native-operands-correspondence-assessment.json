@@ -1,0 +1,1337 @@
+{
+  "kind": "uvira6-complete-native-operand-and-correspondence-assessment",
+  "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+  "date": "2026-10-24",
+  "status": "research pending; all holds retained; no acceptance proposal",
+  "accepted_cells": 0,
+  "hold_removals": 0,
+  "geometry_runs": 0,
+  "source_body_sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e",
+  "catalogue_sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9",
+  "baseline_metadata_sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633",
+  "exact_six_rows": [
+    {
+      "key": [
+        14494,
+        133179,
+        152269
+      ],
+      "partition": "B",
+      "original_class": "land",
+      "original_source_indices": [
+        2030,
+        18746,
+        18932
+      ],
+      "original_cod_target": "gb:COD:ADM2:63176286B42701779698156",
+      "original_cod_target_source_index": 18932,
+      "center_hit_count": 3,
+      "inside_center_candidates": [
+        {
+          "source_id": "gb:BDI:ADM1:87207978B68487327478732",
+          "name": "Cibitoke",
+          "family_index": 19,
+          "family_key": "gb:BDI:ADM1",
+          "source": {
+            "family_key": "gb:BDI:ADM1",
+            "represented_year_claim": "2014",
+            "recorded_license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM1:28894549B54646848790483",
+          "name": "South Kivu",
+          "family_index": 69,
+          "family_key": "gb:COD:ADM1",
+          "source": {
+            "family_key": "gb:COD:ADM1",
+            "represented_year_claim": "2017",
+            "recorded_license": "Open Data Commons Open Database License 1.0",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM1/geoBoundaries-COD-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM2:63176286B42701779698156",
+          "name": "Uvira",
+          "family_index": 70,
+          "family_key": "gb:COD:ADM2",
+          "source": {
+            "family_key": "gb:COD:ADM2",
+            "represented_year_claim": "2019",
+            "recorded_license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2_simplified.geojson"
+          }
+        }
+      ],
+      "foreign_family_center_hit_count": 2,
+      "assessment": "pending; center overlap is source-conflict evidence, not territorial applicability or full-cell qualification",
+      "other_registered_family_center_hit_count": 2,
+      "non_cod_family_center_hit_count": 1,
+      "original_cod_target_name": "Uvira",
+      "original_cod_target_source": {
+        "source_id": "gb:COD:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2.geojson",
+        "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "reference_year": "2019",
+        "administrative_level": "ADM2",
+        "source_role": "territory, city",
+        "original_geometry_sha256": "4cf650824e1096c13ccd3b3343cd35cda22afad92eb44e98db58455f6caade16"
+      },
+      "primary_target_source_vector_member": true
+    },
+    {
+      "key": [
+        14494,
+        133330,
+        152388
+      ],
+      "partition": "B",
+      "original_class": "land",
+      "original_source_indices": [
+        2030,
+        18746,
+        18932
+      ],
+      "original_cod_target": "gb:COD:ADM2:63176286B42701779698156",
+      "original_cod_target_source_index": 18932,
+      "center_hit_count": 3,
+      "inside_center_candidates": [
+        {
+          "source_id": "gb:BDI:ADM1:87207978B68487327478732",
+          "name": "Cibitoke",
+          "family_index": 19,
+          "family_key": "gb:BDI:ADM1",
+          "source": {
+            "family_key": "gb:BDI:ADM1",
+            "represented_year_claim": "2014",
+            "recorded_license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM1:28894549B54646848790483",
+          "name": "South Kivu",
+          "family_index": 69,
+          "family_key": "gb:COD:ADM1",
+          "source": {
+            "family_key": "gb:COD:ADM1",
+            "represented_year_claim": "2017",
+            "recorded_license": "Open Data Commons Open Database License 1.0",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM1/geoBoundaries-COD-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM2:63176286B42701779698156",
+          "name": "Uvira",
+          "family_index": 70,
+          "family_key": "gb:COD:ADM2",
+          "source": {
+            "family_key": "gb:COD:ADM2",
+            "represented_year_claim": "2019",
+            "recorded_license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2_simplified.geojson"
+          }
+        }
+      ],
+      "foreign_family_center_hit_count": 2,
+      "assessment": "pending; center overlap is source-conflict evidence, not territorial applicability or full-cell qualification",
+      "other_registered_family_center_hit_count": 2,
+      "non_cod_family_center_hit_count": 1,
+      "original_cod_target_name": "Uvira",
+      "original_cod_target_source": {
+        "source_id": "gb:COD:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2.geojson",
+        "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "reference_year": "2019",
+        "administrative_level": "ADM2",
+        "source_role": "territory, city",
+        "original_geometry_sha256": "4cf650824e1096c13ccd3b3343cd35cda22afad92eb44e98db58455f6caade16"
+      },
+      "primary_target_source_vector_member": true
+    },
+    {
+      "key": [
+        14494,
+        133331,
+        152388
+      ],
+      "partition": "B",
+      "original_class": "land",
+      "original_source_indices": [
+        2030,
+        18746,
+        18932
+      ],
+      "original_cod_target": "gb:COD:ADM2:63176286B42701779698156",
+      "original_cod_target_source_index": 18932,
+      "center_hit_count": 3,
+      "inside_center_candidates": [
+        {
+          "source_id": "gb:BDI:ADM1:87207978B68487327478732",
+          "name": "Cibitoke",
+          "family_index": 19,
+          "family_key": "gb:BDI:ADM1",
+          "source": {
+            "family_key": "gb:BDI:ADM1",
+            "represented_year_claim": "2014",
+            "recorded_license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM1:28894549B54646848790483",
+          "name": "South Kivu",
+          "family_index": 69,
+          "family_key": "gb:COD:ADM1",
+          "source": {
+            "family_key": "gb:COD:ADM1",
+            "represented_year_claim": "2017",
+            "recorded_license": "Open Data Commons Open Database License 1.0",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM1/geoBoundaries-COD-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM2:63176286B42701779698156",
+          "name": "Uvira",
+          "family_index": 70,
+          "family_key": "gb:COD:ADM2",
+          "source": {
+            "family_key": "gb:COD:ADM2",
+            "represented_year_claim": "2019",
+            "recorded_license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2_simplified.geojson"
+          }
+        }
+      ],
+      "foreign_family_center_hit_count": 2,
+      "assessment": "pending; center overlap is source-conflict evidence, not territorial applicability or full-cell qualification",
+      "other_registered_family_center_hit_count": 2,
+      "non_cod_family_center_hit_count": 1,
+      "original_cod_target_name": "Uvira",
+      "original_cod_target_source": {
+        "source_id": "gb:COD:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2.geojson",
+        "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "reference_year": "2019",
+        "administrative_level": "ADM2",
+        "source_role": "territory, city",
+        "original_geometry_sha256": "4cf650824e1096c13ccd3b3343cd35cda22afad92eb44e98db58455f6caade16"
+      },
+      "primary_target_source_vector_member": true
+    },
+    {
+      "key": [
+        14494,
+        133331,
+        152389
+      ],
+      "partition": "B",
+      "original_class": "land",
+      "original_source_indices": [
+        2030,
+        18746,
+        18932
+      ],
+      "original_cod_target": "gb:COD:ADM2:63176286B42701779698156",
+      "original_cod_target_source_index": 18932,
+      "center_hit_count": 3,
+      "inside_center_candidates": [
+        {
+          "source_id": "gb:BDI:ADM1:87207978B68487327478732",
+          "name": "Cibitoke",
+          "family_index": 19,
+          "family_key": "gb:BDI:ADM1",
+          "source": {
+            "family_key": "gb:BDI:ADM1",
+            "represented_year_claim": "2014",
+            "recorded_license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM1:28894549B54646848790483",
+          "name": "South Kivu",
+          "family_index": 69,
+          "family_key": "gb:COD:ADM1",
+          "source": {
+            "family_key": "gb:COD:ADM1",
+            "represented_year_claim": "2017",
+            "recorded_license": "Open Data Commons Open Database License 1.0",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM1/geoBoundaries-COD-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM2:63176286B42701779698156",
+          "name": "Uvira",
+          "family_index": 70,
+          "family_key": "gb:COD:ADM2",
+          "source": {
+            "family_key": "gb:COD:ADM2",
+            "represented_year_claim": "2019",
+            "recorded_license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2_simplified.geojson"
+          }
+        }
+      ],
+      "foreign_family_center_hit_count": 2,
+      "assessment": "pending; center overlap is source-conflict evidence, not territorial applicability or full-cell qualification",
+      "other_registered_family_center_hit_count": 2,
+      "non_cod_family_center_hit_count": 1,
+      "original_cod_target_name": "Uvira",
+      "original_cod_target_source": {
+        "source_id": "gb:COD:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2.geojson",
+        "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "reference_year": "2019",
+        "administrative_level": "ADM2",
+        "source_role": "territory, city",
+        "original_geometry_sha256": "4cf650824e1096c13ccd3b3343cd35cda22afad92eb44e98db58455f6caade16"
+      },
+      "primary_target_source_vector_member": true
+    },
+    {
+      "key": [
+        14494,
+        133332,
+        152388
+      ],
+      "partition": "B",
+      "original_class": "land",
+      "original_source_indices": [
+        2030,
+        18746,
+        18932
+      ],
+      "original_cod_target": "gb:COD:ADM2:63176286B42701779698156",
+      "original_cod_target_source_index": 18932,
+      "center_hit_count": 3,
+      "inside_center_candidates": [
+        {
+          "source_id": "gb:BDI:ADM1:87207978B68487327478732",
+          "name": "Cibitoke",
+          "family_index": 19,
+          "family_key": "gb:BDI:ADM1",
+          "source": {
+            "family_key": "gb:BDI:ADM1",
+            "represented_year_claim": "2014",
+            "recorded_license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM1:28894549B54646848790483",
+          "name": "South Kivu",
+          "family_index": 69,
+          "family_key": "gb:COD:ADM1",
+          "source": {
+            "family_key": "gb:COD:ADM1",
+            "represented_year_claim": "2017",
+            "recorded_license": "Open Data Commons Open Database License 1.0",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM1/geoBoundaries-COD-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM2:63176286B42701779698156",
+          "name": "Uvira",
+          "family_index": 70,
+          "family_key": "gb:COD:ADM2",
+          "source": {
+            "family_key": "gb:COD:ADM2",
+            "represented_year_claim": "2019",
+            "recorded_license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2_simplified.geojson"
+          }
+        }
+      ],
+      "foreign_family_center_hit_count": 2,
+      "assessment": "pending; center overlap is source-conflict evidence, not territorial applicability or full-cell qualification",
+      "other_registered_family_center_hit_count": 2,
+      "non_cod_family_center_hit_count": 1,
+      "original_cod_target_name": "Uvira",
+      "original_cod_target_source": {
+        "source_id": "gb:COD:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2.geojson",
+        "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "reference_year": "2019",
+        "administrative_level": "ADM2",
+        "source_role": "territory, city",
+        "original_geometry_sha256": "4cf650824e1096c13ccd3b3343cd35cda22afad92eb44e98db58455f6caade16"
+      },
+      "primary_target_source_vector_member": true
+    },
+    {
+      "key": [
+        14494,
+        133391,
+        152370
+      ],
+      "partition": "B",
+      "original_class": "land",
+      "original_source_indices": [
+        2032,
+        18746,
+        18932
+      ],
+      "original_cod_target": "gb:COD:ADM2:63176286B42701779698156",
+      "original_cod_target_source_index": 18932,
+      "center_hit_count": 3,
+      "inside_center_candidates": [
+        {
+          "source_id": "gb:BDI:ADM1:87207978B36636371084075",
+          "name": "Bubanza",
+          "family_index": 19,
+          "family_key": "gb:BDI:ADM1",
+          "source": {
+            "family_key": "gb:BDI:ADM1",
+            "represented_year_claim": "2014",
+            "recorded_license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM1:28894549B54646848790483",
+          "name": "South Kivu",
+          "family_index": 69,
+          "family_key": "gb:COD:ADM1",
+          "source": {
+            "family_key": "gb:COD:ADM1",
+            "represented_year_claim": "2017",
+            "recorded_license": "Open Data Commons Open Database License 1.0",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM1/geoBoundaries-COD-ADM1_simplified.geojson"
+          }
+        },
+        {
+          "source_id": "gb:COD:ADM2:63176286B42701779698156",
+          "name": "Uvira",
+          "family_index": 70,
+          "family_key": "gb:COD:ADM2",
+          "source": {
+            "family_key": "gb:COD:ADM2",
+            "represented_year_claim": "2019",
+            "recorded_license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+            "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2_simplified.geojson"
+          }
+        }
+      ],
+      "foreign_family_center_hit_count": 2,
+      "assessment": "pending; center overlap is source-conflict evidence, not territorial applicability or full-cell qualification",
+      "other_registered_family_center_hit_count": 2,
+      "non_cod_family_center_hit_count": 1,
+      "original_cod_target_name": "Uvira",
+      "original_cod_target_source": {
+        "source_id": "gb:COD:ADM2",
+        "source_name": "geoBoundaries gbOpen",
+        "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2.geojson",
+        "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "reference_year": "2019",
+        "administrative_level": "ADM2",
+        "source_role": "territory, city",
+        "original_geometry_sha256": "4cf650824e1096c13ccd3b3343cd35cda22afad92eb44e98db58455f6caade16"
+      },
+      "primary_target_source_vector_member": true
+    }
+  ],
+  "original_target_without_geometry": {
+    "coverage_classes": [
+      "mapped_land_support",
+      "mapped_inland_water_support"
+    ],
+    "coverage_rows": [
+      {
+        "runs": [
+          [
+            152245,
+            152246,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133148
+      },
+      {
+        "runs": [
+          [
+            152269,
+            152270,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133179
+      },
+      {
+        "runs": [
+          [
+            152352,
+            152353,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133284
+      },
+      {
+        "runs": [
+          [
+            152388,
+            152389,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133330
+      },
+      {
+        "runs": [
+          [
+            152388,
+            152390,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133331
+      },
+      {
+        "runs": [
+          [
+            152388,
+            152389,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133332
+      },
+      {
+        "runs": [
+          [
+            152386,
+            152387,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133349
+      },
+      {
+        "runs": [
+          [
+            152387,
+            152388,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133350
+      },
+      {
+        "runs": [
+          [
+            152370,
+            152371,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133391
+      },
+      {
+        "runs": [
+          [
+            152366,
+            152367,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133434
+      },
+      {
+        "runs": [
+          [
+            152366,
+            152367,
+            "mapped_land_support"
+          ]
+        ],
+        "y": 133435
+      },
+      {
+        "runs": [
+          [
+            152347,
+            152348,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133557
+      },
+      {
+        "runs": [
+          [
+            152368,
+            152369,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133662
+      },
+      {
+        "runs": [
+          [
+            152369,
+            152370,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133664
+      },
+      {
+        "runs": [
+          [
+            152369,
+            152370,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133665
+      },
+      {
+        "runs": [
+          [
+            152370,
+            152371,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133666
+      },
+      {
+        "runs": [
+          [
+            152370,
+            152371,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133667
+      },
+      {
+        "runs": [
+          [
+            152370,
+            152371,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133668
+      },
+      {
+        "runs": [
+          [
+            152371,
+            152372,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133669
+      },
+      {
+        "runs": [
+          [
+            152371,
+            152372,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133670
+      },
+      {
+        "runs": [
+          [
+            152371,
+            152372,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133671
+      },
+      {
+        "runs": [
+          [
+            152372,
+            152373,
+            "mapped_inland_water_support"
+          ]
+        ],
+        "y": 133673
+      }
+    ],
+    "id": "gb:COD:ADM2:63176286B42701779698156",
+    "pixelIndex": 14494,
+    "source_family": "gb:COD:ADM2",
+    "source_receipt_sha256": "8a926e4fa97f70f814c9cfd5d2c92792798669254de0d072761518bf91105a75",
+    "target_id": "gb:COD:ADM2:63176286B42701779698156",
+    "territorial_exclusions": [
+      {
+        "feature_ordinal": 9,
+        "geometry_sha256": "01da6af3037858540976ea36f912571a497771a49bc6cc86c03f17299febb67e",
+        "negative_ordinal": 0,
+        "source_id": "gb:BDI:ADM1:87207978B68487327478732"
+      },
+      {
+        "feature_ordinal": 11,
+        "geometry_sha256": "02983aa54aa9ea56a23c046c346589786a1c7ebe5822ce9f8061ac53db093b24",
+        "negative_ordinal": 1,
+        "source_id": "gb:BDI:ADM1:87207978B36636371084075"
+      },
+      {
+        "feature_ordinal": 13,
+        "geometry_sha256": "640d04d5cb3500ddee15068e2c872e1e01f251dfb0aaec13dcebc345deccba0a",
+        "negative_ordinal": 2,
+        "source_id": "gb:BDI:ADM1:87207978B39611815861631"
+      },
+      {
+        "feature_ordinal": 24,
+        "geometry_sha256": "67e462c7b8ab6c5de3acd244fbfc318729c96433be5979eb0ffdd70ff1e12a56",
+        "negative_ordinal": 3,
+        "source_id": "gb:BDI:ADM2:21766830B66237815735217"
+      },
+      {
+        "feature_ordinal": 88,
+        "geometry_sha256": "a266914dfc8c2feb441b79d9b7c0d19b2376b40fda130c14694132088fc4b730",
+        "negative_ordinal": 4,
+        "source_id": "gb:BDI:ADM2:21766830B75549003528399"
+      },
+      {
+        "feature_ordinal": 89,
+        "geometry_sha256": "e5034c1dec74ec052384b027929994ca7fd540578e3e2ab8ba5ad83e74b20b40",
+        "negative_ordinal": 5,
+        "source_id": "gb:BDI:ADM2:21766830B12025098844752"
+      },
+      {
+        "feature_ordinal": 90,
+        "geometry_sha256": "ed53d6bd4768c9f7586aa8d0272bab53b9c11701c69bc0bf9c0b81ff043a2a13",
+        "negative_ordinal": 6,
+        "source_id": "gb:BDI:ADM2:21766830B421358417112"
+      },
+      {
+        "feature_ordinal": 91,
+        "geometry_sha256": "b6bf7baf1c1a0193ae6bb9b357febe7f2b342ff6546f9e0d37d5cfd81ccf4f11",
+        "negative_ordinal": 7,
+        "source_id": "gb:BDI:ADM2:21766830B51540876931984"
+      },
+      {
+        "feature_ordinal": 92,
+        "geometry_sha256": "9979334dec870b9082c91059d57fb2463682a8e0792a79c8d8c9fd0166ca55f4",
+        "negative_ordinal": 8,
+        "source_id": "gb:BDI:ADM2:21766830B2147150443328"
+      },
+      {
+        "feature_ordinal": 93,
+        "geometry_sha256": "97f4f22afd50bc07c6c908c1645ed62aca03ed81ca2fbf871a86495cc85111dc",
+        "negative_ordinal": 9,
+        "source_id": "gb:BDI:ADM2:21766830B78591112120307"
+      },
+      {
+        "feature_ordinal": 94,
+        "geometry_sha256": "246eb27d7c2cda628da711d03c2137d13783faad30c5e0e83337171ca7378c9d",
+        "negative_ordinal": 10,
+        "source_id": "gb:BDI:ADM2:21766830B6345718789328"
+      },
+      {
+        "feature_ordinal": 4,
+        "geometry_sha256": "3212815f98f9ad5b09c6ee726a2534506c45d292e6eebbf5115a5a4e70c9b6ae",
+        "negative_ordinal": 11,
+        "source_id": "gb:RWA:ADM1:91480417B44016762519517"
+      },
+      {
+        "feature_ordinal": 16,
+        "geometry_sha256": "ed9e11e1efb6195c08f19f7325fa34dd3a5f7756c3fce3b97521c94e447144cc",
+        "negative_ordinal": 12,
+        "source_id": "gb:RWA:ADM2:39286606B89224673348511"
+      }
+    ]
+  },
+  "target_level_operand_count": 13,
+  "operand_rows": [
+    {
+      "native_operand": {
+        "feature_ordinal": 9,
+        "geometry_sha256": "01da6af3037858540976ea36f912571a497771a49bc6cc86c03f17299febb67e",
+        "negative_ordinal": 0,
+        "source_id": "gb:BDI:ADM1:87207978B68487327478732"
+      },
+      "feature_properties": {
+        "shapeName": "Cibitoke",
+        "shapeISO": "BI-CI",
+        "shapeID": "87207978B68487327478732",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM1"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 11,
+        "geometry_sha256": "02983aa54aa9ea56a23c046c346589786a1c7ebe5822ce9f8061ac53db093b24",
+        "negative_ordinal": 1,
+        "source_id": "gb:BDI:ADM1:87207978B36636371084075"
+      },
+      "feature_properties": {
+        "shapeName": "Bubanza",
+        "shapeISO": "BI-BB",
+        "shapeID": "87207978B36636371084075",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM1"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "640d04d5cb3500ddee15068e2c872e1e01f251dfb0aaec13dcebc345deccba0a",
+        "negative_ordinal": 2,
+        "source_id": "gb:BDI:ADM1:87207978B39611815861631"
+      },
+      "feature_properties": {
+        "shapeName": "Bujumbura Rural",
+        "shapeISO": "BI-BL",
+        "shapeID": "87207978B39611815861631",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM1"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM1"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 24,
+        "geometry_sha256": "67e462c7b8ab6c5de3acd244fbfc318729c96433be5979eb0ffdd70ff1e12a56",
+        "negative_ordinal": 3,
+        "source_id": "gb:BDI:ADM2:21766830B66237815735217"
+      },
+      "feature_properties": {
+        "shapeName": "Murwi",
+        "shapeISO": "",
+        "shapeID": "21766830B66237815735217",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 88,
+        "geometry_sha256": "a266914dfc8c2feb441b79d9b7c0d19b2376b40fda130c14694132088fc4b730",
+        "negative_ordinal": 4,
+        "source_id": "gb:BDI:ADM2:21766830B75549003528399"
+      },
+      "feature_properties": {
+        "shapeName": "Bukinanyan",
+        "shapeISO": "",
+        "shapeID": "21766830B75549003528399",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 89,
+        "geometry_sha256": "e5034c1dec74ec052384b027929994ca7fd540578e3e2ab8ba5ad83e74b20b40",
+        "negative_ordinal": 5,
+        "source_id": "gb:BDI:ADM2:21766830B12025098844752"
+      },
+      "feature_properties": {
+        "shapeName": "Mabayi",
+        "shapeISO": "",
+        "shapeID": "21766830B12025098844752",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 90,
+        "geometry_sha256": "ed53d6bd4768c9f7586aa8d0272bab53b9c11701c69bc0bf9c0b81ff043a2a13",
+        "negative_ordinal": 6,
+        "source_id": "gb:BDI:ADM2:21766830B421358417112"
+      },
+      "feature_properties": {
+        "shapeName": "Mugina",
+        "shapeISO": "",
+        "shapeID": "21766830B421358417112",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 91,
+        "geometry_sha256": "b6bf7baf1c1a0193ae6bb9b357febe7f2b342ff6546f9e0d37d5cfd81ccf4f11",
+        "negative_ordinal": 7,
+        "source_id": "gb:BDI:ADM2:21766830B51540876931984"
+      },
+      "feature_properties": {
+        "shapeName": "Rugombo",
+        "shapeISO": "",
+        "shapeID": "21766830B51540876931984",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 92,
+        "geometry_sha256": "9979334dec870b9082c91059d57fb2463682a8e0792a79c8d8c9fd0166ca55f4",
+        "negative_ordinal": 8,
+        "source_id": "gb:BDI:ADM2:21766830B2147150443328"
+      },
+      "feature_properties": {
+        "shapeName": "Buganda",
+        "shapeISO": "",
+        "shapeID": "21766830B2147150443328",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 93,
+        "geometry_sha256": "97f4f22afd50bc07c6c908c1645ed62aca03ed81ca2fbf871a86495cc85111dc",
+        "negative_ordinal": 9,
+        "source_id": "gb:BDI:ADM2:21766830B78591112120307"
+      },
+      "feature_properties": {
+        "shapeName": "Gihanga",
+        "shapeISO": "",
+        "shapeID": "21766830B78591112120307",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 94,
+        "geometry_sha256": "246eb27d7c2cda628da711d03c2137d13783faad30c5e0e83337171ca7378c9d",
+        "negative_ordinal": 10,
+        "source_id": "gb:BDI:ADM2:21766830B6345718789328"
+      },
+      "feature_properties": {
+        "shapeName": "Mutimbuzi",
+        "shapeISO": "",
+        "shapeID": "21766830B6345718789328",
+        "shapeGroup": "BDI",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:BDI:ADM2"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "3212815f98f9ad5b09c6ee726a2534506c45d292e6eebbf5115a5a4e70c9b6ae",
+        "negative_ordinal": 11,
+        "source_id": "gb:RWA:ADM1:91480417B44016762519517"
+      },
+      "feature_properties": {
+        "shapeName": "Western Province",
+        "shapeISO": "RW-04",
+        "shapeID": "91480417B44016762519517",
+        "shapeGroup": "RWA",
+        "shapeType": "ADM1"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:RWA:ADM1"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 16,
+        "geometry_sha256": "ed9e11e1efb6195c08f19f7325fa34dd3a5f7756c3fce3b97521c94e447144cc",
+        "negative_ordinal": 12,
+        "source_id": "gb:RWA:ADM2:39286606B89224673348511"
+      },
+      "feature_properties": {
+        "shapeName": "Rusizi",
+        "shapeISO": "",
+        "shapeID": "39286606B89224673348511",
+        "shapeGroup": "RWA",
+        "shapeType": "ADM2"
+      },
+      "geometry_type": "Polygon",
+      "geometry_unchanged": true,
+      "per_key_intersection_recomputed": false,
+      "source_family": "gb:RWA:ADM2"
+    }
+  ],
+  "source_products": [
+    {
+      "catalogue": {
+        "advertised_feature_count": 18,
+        "cohort": "administrative-registry",
+        "feature_count": 18,
+        "key": "gb:BDI:ADM1",
+        "metadata_sha256": "d69136daf1ce79190233e5fe1f4f178d74b2d6e517dd4545766d72d01000b7ba",
+        "original_bytes": 138787,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "2e134d7b93d0c55c490afe45c7ff0a6ca6d78e6e841264d5119420caacdbf32b",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 43830,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BDI-ADM1-000.bin.gz",
+            "sha256": "39eb94814dc7a41afeefb836648d7c971b1caed1c794bfc72b21eb253d00fe43",
+            "uncompressed_bytes": 138787,
+            "uncompressed_sha256": "2e134d7b93d0c55c490afe45c7ff0a6ca6d78e6e841264d5119420caacdbf32b"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson",
+        "recorded_license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "source_represented_year_claim": "2014"
+      },
+      "metadata": {
+        "boundaryID": "BDI-ADM1-87207978",
+        "boundaryName": "Burundi",
+        "boundaryISO": "BDI",
+        "boundaryYearRepresented": "2014",
+        "boundaryType": "ADM1",
+        "boundaryCanonical": "Province",
+        "boundarySource": "geoBoundaries, Wikimedia",
+        "boundaryLicense": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "licenseDetail": "nan",
+        "licenseSource": "commons.wikimedia.org/wiki/File",
+        "boundarySourceURL": "commons.wikimedia.org/wiki/File",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Eastern Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "18",
+        "meanVertices": "301.0",
+        "minVertices": "61",
+        "maxVertices": "557",
+        "meanPerimeterLengthKM": "205.8914409570872",
+        "minPerimeterLengthKM": "56.10073833421855",
+        "maxPerimeterLengthKM": "309.59065704254255",
+        "meanAreaSqKM": "1391.67728701509",
+        "minAreaSqKM": "110.47352729854649",
+        "maxAreaSqKM": "2252.986791630631",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM1/geoBoundaries-BDI-ADM1_simplified.geojson",
+        "sha256": "2e134d7b93d0c55c490afe45c7ff0a6ca6d78e6e841264d5119420caacdbf32b"
+      },
+      "read_path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/source-family-bodies-20261023/gb-BDI-ADM1-000.bin.gz",
+      "body_verified": true
+    },
+    {
+      "catalogue": {
+        "advertised_feature_count": 119,
+        "cohort": "administrative-registry",
+        "feature_count": 119,
+        "key": "gb:BDI:ADM2",
+        "metadata_sha256": "de2bb9c370b9fbbd6f8d3ef0ed824e1489675fc27fab5a034ade9c90f67164ad",
+        "original_bytes": 350000,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "b90f58bf70724da30e8fd2fc5e89ea68ce2139e88dade8722fd85d20f92b15c2",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 85146,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BDI-ADM2-000.bin.gz",
+            "sha256": "521c5c2318763d957a1b164ca1f41e540965c0f5db06e0974b247a0f3f203c0e",
+            "uncompressed_bytes": 350000,
+            "uncompressed_sha256": "b90f58bf70724da30e8fd2fc5e89ea68ce2139e88dade8722fd85d20f92b15c2"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM2/geoBoundaries-BDI-ADM2_simplified.geojson",
+        "recorded_license": "Public Domain",
+        "source_represented_year_claim": "2007"
+      },
+      "metadata": {
+        "boundaryID": "BDI-ADM2-21766830",
+        "boundaryName": "Burundi",
+        "boundaryISO": "BDI",
+        "boundaryYearRepresented": "2007",
+        "boundaryType": "ADM2",
+        "boundaryCanonical": "Unknown",
+        "boundarySource": "New York University Spatial Data Repository, Stanford University, Map Maker Limited",
+        "boundaryLicense": "Public Domain",
+        "licenseDetail": "License on metadata pop-up on source page",
+        "licenseSource": "geo.nyu.edu/catalog/stanford-th822mn7301#iso-metadata-reference-info",
+        "boundarySourceURL": "geo.nyu.edu/catalog/stanford-th822mn7301",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Eastern Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "119",
+        "meanVertices": "375.0",
+        "minVertices": "102",
+        "maxVertices": "1415",
+        "meanPerimeterLengthKM": "81.34991109139071",
+        "minPerimeterLengthKM": "22.079016878245994",
+        "maxPerimeterLengthKM": "178.27906603266473",
+        "meanAreaSqKM": "210.91882375620608",
+        "minAreaSqKM": "16.427120485963147",
+        "maxAreaSqKM": "564.2751542279393",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM2/geoBoundaries-BDI-ADM2-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM2/geoBoundaries-BDI-ADM2.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM2/geoBoundaries-BDI-ADM2.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM2/geoBoundaries-BDI-ADM2-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BDI/ADM2/geoBoundaries-BDI-ADM2_simplified.geojson",
+        "sha256": "b90f58bf70724da30e8fd2fc5e89ea68ce2139e88dade8722fd85d20f92b15c2"
+      },
+      "read_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/uvira-bdi-adm2-retained.bin.gz",
+      "body_verified": true
+    },
+    {
+      "catalogue": {
+        "advertised_feature_count": 5,
+        "cohort": "administrative-registry",
+        "feature_count": 5,
+        "key": "gb:RWA:ADM1",
+        "metadata_sha256": "015716f815d246f61df0b62cb417df46e679468620f79ff2ecf39436abc3b9ab",
+        "original_bytes": 132231,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "426c73767ed4bed8b2d92890eaeb2ce8906d5f07e9367dba3330077abcdcc383",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 50477,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-RWA-ADM1-000.bin.gz",
+            "sha256": "0edc5c7683e929c1bc582b3e707d815cdb808f43ad8ad3e1f7c8958dcf6e3439",
+            "uncompressed_bytes": 132231,
+            "uncompressed_sha256": "426c73767ed4bed8b2d92890eaeb2ce8906d5f07e9367dba3330077abcdcc383"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM1/geoBoundaries-RWA-ADM1_simplified.geojson",
+        "recorded_license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+        "source_represented_year_claim": "2020"
+      },
+      "metadata": {
+        "boundaryID": "RWA-ADM1-91480417",
+        "boundaryName": "Rwanda",
+        "boundaryISO": "RWA",
+        "boundaryYearRepresented": "2020",
+        "boundaryType": "ADM1",
+        "boundaryCanonical": "Province",
+        "boundarySource": "The Rwanda Geo Portal",
+        "boundaryLicense": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+        "licenseDetail": "nan",
+        "licenseSource": "rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0",
+        "boundarySourceURL": "rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Eastern Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "5",
+        "meanVertices": "11935.0",
+        "minVertices": "6266",
+        "maxVertices": "18513",
+        "meanPerimeterLengthKM": "440.55238820481566",
+        "minPerimeterLengthKM": "176.75847834662127",
+        "maxPerimeterLengthKM": "639.307400154314",
+        "meanAreaSqKM": "5060.879881636201",
+        "minAreaSqKM": "729.3876768129107",
+        "maxAreaSqKM": "9466.21146170837",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM1/geoBoundaries-RWA-ADM1-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM1/geoBoundaries-RWA-ADM1.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM1/geoBoundaries-RWA-ADM1.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM1/geoBoundaries-RWA-ADM1-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM1/geoBoundaries-RWA-ADM1_simplified.geojson",
+        "sha256": "426c73767ed4bed8b2d92890eaeb2ce8906d5f07e9367dba3330077abcdcc383"
+      },
+      "read_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/uvira-rwa-adm1-retained.bin.gz",
+      "body_verified": true
+    },
+    {
+      "catalogue": {
+        "advertised_feature_count": 30,
+        "cohort": "administrative-registry",
+        "feature_count": 30,
+        "key": "gb:RWA:ADM2",
+        "metadata_sha256": "5d7c8e558dea6dba69fbe0f16c81f1cac3b7b90da2c92f7e89e764bd42858594",
+        "original_bytes": 289074,
+        "original_metadata_file": "data/administrative-sources.json",
+        "original_sha256": "56b0995c7a7735847659b766e00c5cfa29b1b3a197f231dc396f399948c46c09",
+        "partition_method": "contiguous original raw bytes; no decoding/re-serialization of JSON geometry",
+        "parts": [
+          {
+            "bytes": 88928,
+            "hash_kind": "file-bytes",
+            "offset": 0,
+            "ordinal": 0,
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-RWA-ADM2-000.bin.gz",
+            "sha256": "65a42af93d00df775e39b859f1f5b3fd4b827f42b6fc446a343068749aef0ccf",
+            "uncompressed_bytes": 289074,
+            "uncompressed_sha256": "56b0995c7a7735847659b766e00c5cfa29b1b3a197f231dc396f399948c46c09"
+          }
+        ],
+        "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM2/geoBoundaries-RWA-ADM2_simplified.geojson",
+        "recorded_license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "source_represented_year_claim": "2012"
+      },
+      "metadata": {
+        "boundaryID": "RWA-ADM2-39286606",
+        "boundaryName": "Rwanda",
+        "boundaryISO": "RWA",
+        "boundaryYearRepresented": "2012",
+        "boundaryType": "ADM2",
+        "boundaryCanonical": "Unknown",
+        "boundarySource": "Open Data Rwanda",
+        "boundaryLicense": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "licenseDetail": "nan",
+        "licenseSource": "www.statistics.gov.rw/terms-use",
+        "boundarySourceURL": "geodata-nisr.opendata.arcgis.com/datasets/c0a3d1deab694f7998bc4b966be12cbb_0",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Eastern Africa",
+        "worldBankIncomeGroup": "Low-income Countries",
+        "admUnitCount": "30",
+        "meanVertices": "5136.0",
+        "minVertices": "2889",
+        "maxVertices": "9756",
+        "meanPerimeterLengthKM": "173.15402907981004",
+        "minPerimeterLengthKM": "85.45266247939519",
+        "maxPerimeterLengthKM": "278.4597841793451",
+        "meanAreaSqKM": "843.8799773007969",
+        "minAreaSqKM": "132.4628382962791",
+        "maxAreaSqKM": "1931.9231599735836",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM2/geoBoundaries-RWA-ADM2-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM2/geoBoundaries-RWA-ADM2.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM2/geoBoundaries-RWA-ADM2.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM2/geoBoundaries-RWA-ADM2-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM2/geoBoundaries-RWA-ADM2_simplified.geojson",
+        "sha256": "56b0995c7a7735847659b766e00c5cfa29b1b3a197f231dc396f399948c46c09"
+      },
+      "read_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/uvira-rwa-adm2-retained.bin.gz",
+      "body_verified": true
+    }
+  ],
+  "scope_limit": "Target has23 original coverage cells; six pending land keys only assigned here. No per-key claim for omitted8BDIADM2/2RWA operands. Prior overlay onlytwoBDIADM1hits, not complete negative roster.",
+  "substantive_omission_assessment": "Prior narrative omitted a distinct2007 MapMaker/NYU/Stanford commune lineage and2020/2012 Rwanda lineages. No omitted source-relative qualification result was found in retained material; recovering metadata/operands is not qualification. Publisher source bodies and construction history remain useful unread steps.",
+  "date_correction": "1950/1915/1963 control-record suggestions withdrawn by coordinator as unverified; excluded. No2011 BDIsource claim authenticated: frozen ADM1 represents2014,ADM2represents2007.",
+  "source_actions": [
+    {
+      "url": "https://communication.gouv.cd/actualites/39/revendications-territoriales-du-rwanda-sur-la-rdc-une-contre-verite",
+      "status": "full article reread",
+      "finding": "Names Mobutu–Buyoya correspondence about Ruzizi delta but gives no dates, archive cote, letter text or annex. Field-demarcation statement concerns Rwanda. No Burundi control inferred."
+    },
+    {
+      "url": "https://www.larcier-intersentia.com/fr/republique-democratique-congo-11-frontieres-internationales-9782802772712.html",
+      "status": "open failed405 Method Not Allowed; indexed catalogue only",
+      "finding": "Named author/title lead corresponds to Bruylant ISBN9782802772712. No body/contents/letter pages inspected. Earlier official article describes920pages; other catalogue edition1418pages must not be conflated."
+    },
+    {
+      "url": "https://bibliotheques-numeriques.defense.gouv.fr/emd/impression/document/91d8942c-7792-45b9-a9bc-fb55204a6b9b",
+      "status": "open failed400 Timeout fetching",
+      "finding": "Institutional catalogue search result exists; body not read. No actual letter custody established."
+    },
+    {
+      "url": "https://archives.graduateinstitute.ch/lettre-a-m-mobutu-sese-seko%3Bisad?sf_culture=ru",
+      "status": "not accessible via tool",
+      "finding": "Generic letter-title search hit is unqualified; no verified connection to Buyoya or Ruzizi. Not accepted as exact lead."
+    },
+    {
+      "url": "https://geo.nyu.edu/catalog/stanford-th822mn7301",
+      "status": "not accessible via tool; exact-ID search indexed text only",
+      "finding": "Indexed source describes commune boundary line shapefile asofJanuary2007. Frozen derivative polygon geometry verified. Original construction/revision equivalence unproven."
+    },
+    {
+      "url": "https://purl.stanford.edu/th822mn7301",
+      "status": "not accessible via tool",
+      "finding": "Exact Stanford repository identifier found in search; source body/metadata not inspected."
+    },
+    {
+      "url": "https://rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0",
+      "status": "not accessible via tool",
+      "finding": "Retained RWAADM1 publisher locator; no contemporary publisher body read."
+    },
+    {
+      "url": "https://geodata-nisr.opendata.arcgis.com/datasets/c0a3d1deab694f7998bc4b966be12cbb_0",
+      "status": "not accessible via tool",
+      "finding": "Retained RWAADM2 publisher locator; no contemporary publisher body read."
+    }
+  ],
+  "github_metadata_pointer": {
+    "path": "releaseData/gbOpen/BDI/ADM2/geoBoundaries-BDI-ADM2-metaData.json",
+    "ref": "9469f09",
+    "blob": "889c272bda4864c488fc4376e685a4224b795dd2",
+    "lfs_bytes": 924,
+    "lfs_sha256": "8fd6a2d1c76c2373a29dfb0cde59ac62738876ff6966313006eaf3f2dc7edb34",
+    "status": "authenticated pointer only; frozen baseline metadata independently read"
+  },
+  "remaining_steps": [
+    {
+      "step": "Exact BDIADM1 original sourceData archive lineage",
+      "state": "previous DNSfailed; instructed not to repeat; no newattempt"
+    },
+    {
+      "step": "BDIADM2 exact MapMaker/Stanford original metadata and construction lineage",
+      "state": "publisher/PURL unavailable viaweb; retained derivative read fully; potential lawful source access remains pending"
+    },
+    {
+      "step": "Mobutu–Buyoya correspondence exacttext/cote",
+      "state": "official assertion verified; catalogue leads unavailable, noletterdate/custodyestablished; no contact/purchase/accessrequest attempted"
+    },
+    {
+      "step": "RWA exactsource publisher context",
+      "state": "retainedmetadata andexactbodyfeatures verified; publicsourcepages unavailable; no perkey relevance inferred"
+    }
+  ],
+  "failure_classification": "No security escalation, actor/account switch, denial bypass or retries of failed BDIarchive. Web tool failures do not prove absence, permanent denial or exhaustion."
+}

@@ -1,0 +1,402 @@
+{
+  "method": "Read-only PDF catalog traversal for actual viewport/measure/alternate-control entries; reuses original conditional positions. No transform recomputation.",
+  "pdfs": [
+    {
+      "file": "CHOISEUL_district.pdf",
+      "sha256": "20870c234f326cc3395f0955fba0dd2392ed9ce509fce9258f302ecad3f7dea8",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            30,
+            1474,
+            1195,
+            60
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/PROJCS', '/WKT': 'PROJCS[\"St_Lucia_1955_British_West_Indies_Grid\",GEOGCS[\"GCS_St_Lucia_1955\",DATUM[\"D_St_Lucia_1955\",SPHEROID[\"Clarke_1880_RGS\",6378249.145,293.465]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",400000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",-62.0],PARAMETER[\"Scale_Factor\",0.9995],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]'}",
+          "GPTS": [
+            13.75373,
+            -61.07328,
+            13.84748,
+            -61.07291,
+            13.84717,
+            -60.99394,
+            13.75342,
+            -60.99434
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "2006"
+        ],
+        "operation_applicability": "St Lucia onshore scope; source map accuracy remains unspecified"
+      },
+      "additional_embedded_files": false
+    },
+    {
+      "file": "Canaries.pdf",
+      "sha256": "b6bff9580535455bc944d5f6bea7f8c64f884eed76000fd6c7dffc4d386e3626",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            22.08079,
+            1147.44178,
+            769.9474,
+            65.54696
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/GEOGCS', '/WKT': 'GEOGCS[\"GCS_North_American_1927\",DATUM[\"D_North_American_1927\",SPHEROID[\"Clarke_1866\",6378206.4,294.9786982]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]'}",
+          "GPTS": [
+            13.83843,
+            -61.07192,
+            13.94829,
+            -61.07192,
+            13.94829,
+            -60.99598,
+            13.83843,
+            -60.99598
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "4267"
+        ],
+        "operation_applicability": "NAD27 candidate area text explicitly excludes other islands: no supported St Lucia datum operation established; do not use bounding-box match"
+      },
+      "additional_embedded_files": false
+    },
+    {
+      "file": "Castries-1.pdf",
+      "sha256": "00f86ef147a0520e5acb36e6a664328c0a5d7168385b757a4ad7f9997807593e",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            22.08079,
+            1147.44178,
+            769.9474,
+            65.54696
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/GEOGCS', '/WKT': 'GEOGCS[\"GCS_North_American_1927\",DATUM[\"D_North_American_1927\",SPHEROID[\"Clarke_1866\",6378206.4,294.9786982]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]'}",
+          "GPTS": [
+            13.86108,
+            -61.04682,
+            14.041,
+            -61.04682,
+            14.041,
+            -60.92246,
+            13.86108,
+            -60.92246
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "4267"
+        ],
+        "operation_applicability": "NAD27 candidate area text explicitly excludes other islands: no supported St Lucia datum operation established; do not use bounding-box match"
+      },
+      "additional_embedded_files": false
+    },
+    {
+      "file": "Dennery.pdf",
+      "sha256": "35be0a0c53e385edc456d75a5ae934d3521a461a31090140a51c55ec162f43ad",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            30,
+            1474,
+            1195,
+            60
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/PROJCS', '/WKT': 'PROJCS[\"St_Lucia_1955_British_West_Indies_Grid\",GEOGCS[\"GCS_St_Lucia_1955\",DATUM[\"D_St_Lucia_1955\",SPHEROID[\"Clarke_1880_RGS\",6378249.145,293.465]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",400000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",-62.0],PARAMETER[\"Scale_Factor\",0.9995],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]'}",
+          "GPTS": [
+            13.85448,
+            -60.97666,
+            13.98268,
+            -60.9761,
+            13.9822,
+            -60.86804,
+            13.85401,
+            -60.86867
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "2006"
+        ],
+        "operation_applicability": "St Lucia onshore scope; source map accuracy remains unspecified"
+      },
+      "additional_embedded_files": false
+    },
+    {
+      "file": "Gros-Islet_district.pdf",
+      "sha256": "3da1cb873e5e3123249157d9fc61b11d606b0bde7c3f13cfdcda3e74a8b2e607",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            30,
+            1474,
+            1195,
+            60
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/PROJCS', '/WKT': 'PROJCS[\"St_Lucia_1955_British_West_Indies_Grid\",GEOGCS[\"GCS_St_Lucia_1955\",DATUM[\"D_St_Lucia_1955\",SPHEROID[\"Clarke_1880_RGS\",6378249.145,293.465]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",400000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",-62.0],PARAMETER[\"Scale_Factor\",0.9995],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]'}",
+          "GPTS": [
+            13.95316,
+            -60.99346,
+            14.11644,
+            -60.99274,
+            14.11582,
+            -60.85504,
+            13.95255,
+            -60.85585
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "2006"
+        ],
+        "operation_applicability": "St Lucia onshore scope; source map accuracy remains unspecified"
+      },
+      "additional_embedded_files": false
+    },
+    {
+      "file": "Micoud.pdf",
+      "sha256": "7945b2ac673193a2382fc14a9d1c541380f89a9818e242a8c7e3a085c698942e",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            22.08079,
+            1147.44178,
+            769.9474,
+            65.54696
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/GEOGCS', '/WKT': 'GEOGCS[\"GCS_North_American_1927\",DATUM[\"D_North_American_1927\",SPHEROID[\"Clarke_1866\",6378206.4,294.9786982]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]'}",
+          "GPTS": [
+            13.7293,
+            -61.00284,
+            13.92129,
+            -61.00284,
+            13.92129,
+            -60.87014,
+            13.7293,
+            -60.87014
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "4267"
+        ],
+        "operation_applicability": "NAD27 candidate area text explicitly excludes other islands: no supported St Lucia datum operation established; do not use bounding-box match"
+      },
+      "additional_embedded_files": false
+    },
+    {
+      "file": "Soufriere_district.pdf",
+      "sha256": "4b5d6b1f30c76d8d56456f4dca1da176c288f5907dedcbebd6c44cfb09cc4c03",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            30,
+            1474,
+            1195,
+            60
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/PROJCS', '/WKT': 'PROJCS[\"St_Lucia_1955_British_West_Indies_Grid\",GEOGCS[\"GCS_St_Lucia_1955\",DATUM[\"D_St_Lucia_1955\",SPHEROID[\"Clarke_1880_RGS\",6378249.145,293.465]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",400000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",-62.0],PARAMETER[\"Scale_Factor\",0.9995],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]'}",
+          "GPTS": [
+            13.78592,
+            -61.08666,
+            13.91496,
+            -61.08616,
+            13.91453,
+            -60.97742,
+            13.78549,
+            -60.97799
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "2006"
+        ],
+        "operation_applicability": "St Lucia onshore scope; source map accuracy remains unspecified"
+      },
+      "additional_embedded_files": false
+    },
+    {
+      "file": "Vieux-Fort.pdf",
+      "sha256": "f7db8c9a22eccda9586c153524d12e67623bb634b421f8ba267774bc513ba96f",
+      "pages": 1,
+      "catalog_reachable_control_objects": [
+        {
+          "path": "Root/Pages/Kids/0/VP/0",
+          "type": "Viewport",
+          "BBox": [
+            30,
+            1474,
+            1195,
+            60
+          ]
+        },
+        {
+          "path": "Root/Pages/Kids/0/VP/0/Measure",
+          "type": "GEO",
+          "GCS": "{'/Type': '/PROJCS', '/WKT': 'PROJCS[\"St_Lucia_1955_British_West_Indies_Grid\",GEOGCS[\"GCS_St_Lucia_1955\",DATUM[\"D_St_Lucia_1955\",SPHEROID[\"Clarke_1880_RGS\",6378249.145,293.465]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",400000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",-62.0],PARAMETER[\"Scale_Factor\",0.9995],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]'}",
+          "GPTS": [
+            13.7037,
+            -61.01957,
+            13.83905,
+            -61.01901,
+            13.83857,
+            -60.905,
+            13.70322,
+            -60.90563
+          ]
+        }
+      ],
+      "prior_control": {
+        "crs_authority": [
+          "EPSG",
+          "2006"
+        ],
+        "operation_applicability": "St Lucia onshore scope; source map accuracy remains unspecified"
+      },
+      "additional_embedded_files": false
+    }
+  ],
+  "five_uncovered_keys": [
+    {
+      "key": [
+        7120,
+        120769,
+        86657
+      ],
+      "source_member": "gb:LCA:ADM1:63095687B33875357323526",
+      "own_sheet": "Castries-1.pdf",
+      "prior_exact_application": "no_applicable_st_lucia_viewport_coverage",
+      "all_five_existing_StLucia1955_viewports_checked_previously": true,
+      "alternate_existing_StLucia1955_coverage": false,
+      "additional_viewports_or_LGIDict_found": false,
+      "own_NAD27_sheet_control_not_applied": "No published applicable St Lucia datum operation established; regional operation explicitly excludes other islands.",
+      "status": "specific source datum/control limitation persists; no new transform, extrapolation or geography observation"
+    },
+    {
+      "key": [
+        7120,
+        120839,
+        86618
+      ],
+      "source_member": "gb:LCA:ADM1:63095687B90177859016877",
+      "own_sheet": "Canaries.pdf",
+      "prior_exact_application": "no_applicable_st_lucia_viewport_coverage",
+      "all_five_existing_StLucia1955_viewports_checked_previously": true,
+      "alternate_existing_StLucia1955_coverage": false,
+      "additional_viewports_or_LGIDict_found": false,
+      "own_NAD27_sheet_control_not_applied": "No published applicable St Lucia datum operation established; regional operation explicitly excludes other islands.",
+      "status": "specific source datum/control limitation persists; no new transform, extrapolation or geography observation"
+    },
+    {
+      "key": [
+        7120,
+        120908,
+        86743
+      ],
+      "source_member": "gb:LCA:ADM1:63095687B12253142447206",
+      "own_sheet": "Micoud.pdf",
+      "prior_exact_application": "no_applicable_st_lucia_viewport_coverage",
+      "all_five_existing_StLucia1955_viewports_checked_previously": true,
+      "alternate_existing_StLucia1955_coverage": false,
+      "additional_viewports_or_LGIDict_found": false,
+      "own_NAD27_sheet_control_not_applied": "No published applicable St Lucia datum operation established; regional operation explicitly excludes other islands.",
+      "status": "specific source datum/control limitation persists; no new transform, extrapolation or geography observation"
+    },
+    {
+      "key": [
+        7120,
+        120914,
+        86737
+      ],
+      "source_member": "gb:LCA:ADM1:63095687B12253142447206",
+      "own_sheet": "Micoud.pdf",
+      "prior_exact_application": "no_applicable_st_lucia_viewport_coverage",
+      "all_five_existing_StLucia1955_viewports_checked_previously": true,
+      "alternate_existing_StLucia1955_coverage": false,
+      "additional_viewports_or_LGIDict_found": false,
+      "own_NAD27_sheet_control_not_applied": "No published applicable St Lucia datum operation established; regional operation explicitly excludes other islands.",
+      "status": "specific source datum/control limitation persists; no new transform, extrapolation or geography observation"
+    },
+    {
+      "key": [
+        7120,
+        120946,
+        86734
+      ],
+      "source_member": "gb:LCA:ADM1:63095687B12253142447206",
+      "own_sheet": "Micoud.pdf",
+      "prior_exact_application": "no_applicable_st_lucia_viewport_coverage",
+      "all_five_existing_StLucia1955_viewports_checked_previously": true,
+      "alternate_existing_StLucia1955_coverage": false,
+      "additional_viewports_or_LGIDict_found": false,
+      "own_NAD27_sheet_control_not_applied": "No published applicable St Lucia datum operation established; regional operation explicitly excludes other islands.",
+      "status": "specific source datum/control limitation persists; no new transform, extrapolation or geography observation"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "author-metadata-preservation-verification",
+  "original_source_pin": {
+    "bytes": 1494825,
+    "commit": "497272a77b868a040e04ad55a80a87ce03869d1d",
+    "git_blob_oid": "3a6c18b2ac7bf7183e599d17d920b6b430acb06e",
+    "mode": "100644",
+    "path": "research/geography/cod161-reaudit-20261024/popokabaka1/source-evidence-full-3905.json",
+    "sha256": "04fb63e48a20f454cd5fe3922cc95fdd19aab9fbba7648eb0166090c2e6a9a64"
+  },
+  "original_targets": 50,
+  "surviving_targets": 1,
+  "all_top_level_fields_equal_before_binding": true,
+  "surviving_whole_target_fields_except_coverage_equal": true,
+  "targets": [
+    {
+      "source_id": "gb:COD:ADM2:63176286B47421332346835",
+      "owner": 14501,
+      "negative_operands": 4,
+      "whole_fields_except_coverage_equal": true,
+      "coverage_rows": [
+        {
+          "runs": [
+            [
+              143074,
+              143075,
+              "mapped_land_support"
+            ]
+          ],
+          "y": 135354
+        }
+      ]
+    }
+  ],
+  "original_full_applicability": {
+    "commit": "325cd5ea3c8e9bdc337524fae9d086cacb8a6420",
+    "path": "research/geography/cod161-reaudit-20261024/popokabaka1/adopted-native-territorial-applicability.json",
+    "mode": "100644",
+    "git_blob_oid": "1f72bb5ea1ad87f06f00da07ba9f024293140ae5",
+    "bytes": 4721,
+    "sha256": "94418b27b7c4bddae98aa5b1728806b512c0f5c1b47fc677369d32db615d4f8e"
+  },
+  "partition": {
+    "original_cells": 3905,
+    "supported_cells": 1,
+    "already_present_cells": 2977,
+    "held_cells": 927
+  },
+  "no_science_credit": true,
+  "original_diagnostic_reused": true
+}
