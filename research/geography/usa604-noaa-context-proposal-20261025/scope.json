@@ -4,8 +4,10 @@
   "scope": {
     "package": "original USA physical-source residual",
     "original_usa_scope": 107131,
-    "prior_accepted_usa": 105927,
-    "current_residual_usa": 1204,
+    "historical_pre_subcohort_accepted_usa": 105927,
+    "historical_pre_subcohort_residual_usa": 1204,
+    "current_accepted_usa": 106463,
+    "current_residual_usa": 668,
     "proposed_count": 604,
     "proposed_exact_tuple_sha256": "cfdaf0dfeac8025fa211263b372a0462528fbcb1fb41fa8abfc37d7f97ce798b",
     "tuple_encoding": "SHA-256 of compact UTF-8 JSON for sorted [y,x,owner_index] triples; exact rows are not serialized",
@@ -18,9 +20,15 @@
   },
   "partition_bindings": {
     "full_private_1204_roster_sha256": "55c522bc2ae7d455492a6f6467ff54f0b2af31376627690e356ed538b1347821",
+    "full_private_1204_roster_stage": "historical original-hold snapshot before USA131 and USA405 subcohort dispositions",
     "all_1204_residual_partition": {
       "conservative_unmeasured_physical_source": 604,
       "usa31_source_history": 536,
+      "ownerless_foreign_original_contact": 63,
+      "fairfax_identity": 1
+    },
+    "current_668_residual_partition": {
+      "conservative_unmeasured_physical_source": 604,
       "ownerless_foreign_original_contact": 63,
       "fairfax_identity": 1
     },
