@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "kind": "PSE inland-water PCBS candidate crosscut",
+  "status": "read-only reconciliation; no geometry or source fetch, no status or acceptance change",
+  "worktree_head": "4b9f4cb5b3209d82dce16caae9a5e92ba823207e",
+  "scope": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "water_cells": 152,
+    "water_intervals": 87,
+    "native_supported_water_cells": 3,
+    "native_held_water_cells": 149,
+    "constructor_water_cells": 3
+  },
+  "exact_constructor_water_keys_y_x_owner": [
+    [
+      106676,
+      156935,
+      36950
+    ],
+    [
+      106681,
+      156932,
+      36950
+    ],
+    [
+      106684,
+      156930,
+      36950
+    ]
+  ],
+  "pcbs_2017_reported_owner36950_native_candidates": {
+    "outside": 1,
+    "Jericho & Al Aghwar": 2
+  },
+  "inference_from_existing_aggregates": "Exactly one of the three constructor water candidates is classified outside all 16 PCBS governorates and two are inside the PCBS Jericho & Al Aghwar feature. The retained aggregate does not identify which exact tuple is the outside candidate.",
+  "scope_caveat": "The prompt-mentioned 20 PCBS-outside water cells cannot be independently counted from retained output: PCBS report aggregates all original cells by owner/name and does not stratify by land/water. It reports all-class Jericho owner 36950 as 115 inside /17 outside and Bethlehem owner 36953 as 126 inside /18 outside. Raw PCBS geometry is intentionally not included in the report. No inference is made about the water subset beyond the three exact constructor candidates.",
+  "physical_context": {
+    "owner36950_target_issues": [
+      "contradictory_land_water_support",
+      "L2-outside-L1"
+    ],
+    "owner36953_target_issues": [
+      "extra_reconstruction",
+      "contradictory_land_water_support",
+      "L2-outside-L1"
+    ],
+    "limitation": "These are target-wide findings; this crosscut does not intersect issue geometries against individual candidate centers."
+  },
+  "source_applicability_limit": "Official PCBS layer is contextual; the recorded response has no source-lineage bridge to the retained ODW/geoBoundaries 2017 ADM2 payload. One outside candidate is adverse context, not an automatic veto or legal/sovereignty result.",
+  "inputs": {
+    "pcbs_aggregate": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/pcbs-2017-center-crosscheck-20261025.json",
+      "bytes": 5492,
+      "sha256": "8d3ad926f60ab89bc6c0c483546680f6604c61c32e621ed9b5550fe9efa39e15"
+    },
+    "water_reconciliation_inventory_path": "inventory/pse-inland-water-native-source-physical-reconciliation-20261025.json",
+    "native_diagnostic": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-diagnostic-20261025/native-diagnostic.json",
+      "bytes": 479385,
+      "sha256": "ddc890d5b16175c177303f78eae045135f9c4d8e54b93ffdea8b5c08104513a9"
+    },
+    "constructor_result": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-authority-20261025/constructor-result.json",
+      "bytes": 9636,
+      "sha256": "a2ec5b3f25ec826abc4ecbdd2029ab9ede077dfa173268ae824edac901559f3e"
+    }
+  }
+}

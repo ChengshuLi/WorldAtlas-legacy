@@ -1,0 +1,4240 @@
+{
+  "version": 1,
+  "kind": "PSE original inland-water exact PCBS 2017 cross-tab",
+  "status": "derived read-only cross-tab; no raw PCBS geometry copied, no status change, no producer rerun",
+  "worktree": "/Users/chengshuli/Documents/Codex/2026-10-20/task/.worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work",
+  "worktree_head": "4b9f4cb5b3209d82dce16caae9a5e92ba823207e",
+  "scope": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "original_cells": 427,
+    "water_cells": 152,
+    "water_intervals": 87,
+    "water_groups": 4
+  },
+  "method": {
+    "point_formula": "lon=((x+0.5)/262166*360)-180; lat=native_latitude[y]",
+    "native_latitudes_table": "262,166 little-endian float64 rows; pinned compressed and decoded hashes below",
+    "predicate": "Shapely Polygon.contains(point); evaluate Polygon.covers(point) for boundary/multiple classification",
+    "runtime": {
+      "python": "3.12.14",
+      "shapely": "2.1.2"
+    },
+    "source_features": 16,
+    "source_crs": "EPSG:4326",
+    "does_not_copy_raw_geometry": true
+  },
+  "inputs": {
+    "original_native_patch": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-requested-patch.json",
+      "bytes": 11869,
+      "sha256": "c5cdb04e5ad181593cfaeb0bb6270f6013ba8c3c20f7119b7b7ef36d9765dbcb"
+    },
+    "original_disposition": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/pse-disposition.json",
+      "bytes": 102352,
+      "sha256": "0b8b48671315dd4d20f23c28a034859964689c7747375e41e840d07f73bb7cb9"
+    },
+    "native_latitudes_compressed": {
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "bytes": 1851757,
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+    },
+    "pcbs_geojson_response": {
+      "path": "/tmp/pse-pcbs-governorates-2017.geojson",
+      "bytes": 2279481,
+      "sha256": "65c1efcee5223d3ae6a0d7823d8e5a01b1cc9a03908a3237de5be71ecfb280b9"
+    },
+    "native_diagnostic": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-diagnostic-20261025/native-diagnostic.json",
+      "bytes": 479385,
+      "sha256": "ddc890d5b16175c177303f78eae045135f9c4d8e54b93ffdea8b5c08104513a9"
+    },
+    "constructor_result": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-authority-20261025/constructor-result.json",
+      "bytes": 9636,
+      "sha256": "a2ec5b3f25ec826abc4ecbdd2029ab9ede077dfa173268ae824edac901559f3e"
+    },
+    "physical_whole_target_support": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/physical-20261025/whole-target-support.json",
+      "bytes": 227866,
+      "sha256": "a6972a88f57bb363ad91283a9ed23104d56429e6222628047833c207271bffb4"
+    },
+    "pcbs_aggregate_context_report": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/pcbs-2017-center-crosscheck-20261025.json",
+      "bytes": 5492,
+      "sha256": "8d3ad926f60ab89bc6c0c483546680f6604c61c32e621ed9b5550fe9efa39e15"
+    }
+  },
+  "summary": {
+    "total_water_keys": 152,
+    "pcbs_class_counts": {
+      "Jericho & Al Aghwar": 28,
+      "outside": 20,
+      "Bethlehem": 104
+    },
+    "native_status_by_pcbs_class": {
+      "Bethlehem": {
+        "supported": 0,
+        "territorial_exclusion_cells": 104
+      },
+      "Jericho & Al Aghwar": {
+        "supported": 2,
+        "territorial_exclusion_cells": 26
+      },
+      "outside": {
+        "supported": 1,
+        "territorial_exclusion_cells": 19
+      }
+    },
+    "native_supported_water": 3,
+    "constructor_assigned_water": 3,
+    "pcbs_outside_water_supported": 1,
+    "pcbs_outside_water_held": 19,
+    "by_owner": {
+      "36950": {
+        "cells": 35,
+        "pcbs": {
+          "Jericho & Al Aghwar": 28,
+          "outside": 7
+        },
+        "native": {
+          "territorial_exclusion_cells": 32,
+          "supported": 3
+        }
+      },
+      "36953": {
+        "cells": 117,
+        "pcbs": {
+          "Bethlehem": 104,
+          "outside": 13
+        },
+        "native": {
+          "territorial_exclusion_cells": 117
+        }
+      }
+    },
+    "outside_exact_keys_y_x_owner": [
+      [
+        106665,
+        156946,
+        36950
+      ],
+      [
+        106665,
+        156947,
+        36950
+      ],
+      [
+        106665,
+        156948,
+        36950
+      ],
+      [
+        106666,
+        156952,
+        36950
+      ],
+      [
+        106668,
+        156966,
+        36950
+      ],
+      [
+        106676,
+        156935,
+        36950
+      ],
+      [
+        106677,
+        156934,
+        36950
+      ],
+      [
+        106708,
+        156915,
+        36953
+      ],
+      [
+        106722,
+        156900,
+        36953
+      ],
+      [
+        106750,
+        156896,
+        36953
+      ],
+      [
+        106759,
+        156893,
+        36953
+      ],
+      [
+        106760,
+        156892,
+        36953
+      ],
+      [
+        106782,
+        156884,
+        36953
+      ],
+      [
+        106785,
+        156883,
+        36953
+      ],
+      [
+        106787,
+        156880,
+        36953
+      ],
+      [
+        106799,
+        156873,
+        36953
+      ],
+      [
+        106825,
+        156872,
+        36953
+      ],
+      [
+        106832,
+        156875,
+        36953
+      ],
+      [
+        106848,
+        156864,
+        36953
+      ],
+      [
+        106855,
+        156862,
+        36953
+      ]
+    ],
+    "supported_exact_keys_y_x_owner_status": [
+      [
+        106676,
+        156935,
+        36950,
+        "outside",
+        "supported"
+      ],
+      [
+        106681,
+        156932,
+        36950,
+        "Jericho & Al Aghwar",
+        "supported"
+      ],
+      [
+        106684,
+        156930,
+        36950,
+        "Jericho & Al Aghwar",
+        "supported"
+      ]
+    ]
+  },
+  "interpretive_limit": "This places the 20 exact original inland-water centers outside the retained PCBS governorate polygons and joins them to native outcome. It is an independent official-layer contextual cross-check, not a lineage bridge to ODW/geoBoundaries PSE ADM2 2017, not a legal/sovereignty determination, and not a status or acceptance rule. Whole-target physical issue codes are retained as context and were not intersected with individual cell centers.",
+  "keys": [
+    {
+      "y": 106664,
+      "x": 156943,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106664,
+      "x": 156944,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106665,
+      "x": 156946,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106665,
+      "x": 156947,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106665,
+      "x": 156948,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106665,
+      "x": 156949,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106665,
+      "x": 156950,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106665,
+      "x": 156951,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106666,
+      "x": 156950,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106666,
+      "x": 156951,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106666,
+      "x": 156952,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106667,
+      "x": 156962,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106667,
+      "x": 156963,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106667,
+      "x": 156964,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106668,
+      "x": 156966,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106668,
+      "x": 156967,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106668,
+      "x": 156968,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106668,
+      "x": 156969,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106668,
+      "x": 156970,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106668,
+      "x": 156971,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-03",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106670,
+      "x": 156937,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106672,
+      "x": 156936,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106673,
+      "x": 156936,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106674,
+      "x": 156935,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106674,
+      "x": 156936,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106675,
+      "x": 156935,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106676,
+      "x": 156934,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106676,
+      "x": 156935,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-06",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "supported",
+      "native_supported": true,
+      "constructor_assigned": true,
+      "original_source_indices": [
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106677,
+      "x": 156934,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106678,
+      "x": 156933,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106679,
+      "x": 156933,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106680,
+      "x": 156932,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106681,
+      "x": 156932,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-06",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "supported",
+      "native_supported": true,
+      "constructor_assigned": true,
+      "original_source_indices": [
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106682,
+      "x": 156931,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-05",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106684,
+      "x": 156930,
+      "owner": 36950,
+      "class": "inland-water",
+      "question_group": "PSE-06",
+      "pcbs_class": "Jericho & Al Aghwar",
+      "pcbs_inside_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "pcbs_covered_names": [
+        "Jericho & Al Aghwar"
+      ],
+      "native_status": "supported",
+      "native_supported": true,
+      "constructor_assigned": true,
+      "original_source_indices": [
+        52578
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "whole_target_issue_codes": [
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106703,
+      "x": 156919,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106704,
+      "x": 156918,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106705,
+      "x": 156916,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106705,
+      "x": 156917,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106706,
+      "x": 156915,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106706,
+      "x": 156916,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106707,
+      "x": 156914,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106707,
+      "x": 156915,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106708,
+      "x": 156913,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106708,
+      "x": 156914,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106708,
+      "x": 156915,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106709,
+      "x": 156912,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106709,
+      "x": 156913,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106709,
+      "x": 156914,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106710,
+      "x": 156911,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106710,
+      "x": 156912,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106710,
+      "x": 156913,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106711,
+      "x": 156910,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106720,
+      "x": 156900,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106721,
+      "x": 156900,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106722,
+      "x": 156900,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106747,
+      "x": 156897,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106748,
+      "x": 156897,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106749,
+      "x": 156896,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106749,
+      "x": 156897,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106750,
+      "x": 156896,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106752,
+      "x": 156895,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106757,
+      "x": 156893,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106758,
+      "x": 156893,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106759,
+      "x": 156893,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106760,
+      "x": 156892,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106776,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106777,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106778,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106779,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106779,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106780,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106780,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106780,
+      "x": 156883,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106781,
+      "x": 156880,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106781,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106781,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106781,
+      "x": 156883,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106782,
+      "x": 156880,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106782,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106782,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106782,
+      "x": 156883,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106782,
+      "x": 156884,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106783,
+      "x": 156879,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106783,
+      "x": 156880,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106783,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106783,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106783,
+      "x": 156883,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106783,
+      "x": 156884,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106784,
+      "x": 156879,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106784,
+      "x": 156880,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106784,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106784,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106784,
+      "x": 156883,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106784,
+      "x": 156884,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106785,
+      "x": 156878,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106785,
+      "x": 156879,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106785,
+      "x": 156880,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106785,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106785,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106785,
+      "x": 156883,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106786,
+      "x": 156878,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106786,
+      "x": 156879,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106786,
+      "x": 156880,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106786,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106786,
+      "x": 156882,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106787,
+      "x": 156880,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106787,
+      "x": 156881,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106792,
+      "x": 156875,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106799,
+      "x": 156872,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106799,
+      "x": 156873,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106800,
+      "x": 156872,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106800,
+      "x": 156873,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106801,
+      "x": 156871,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106801,
+      "x": 156872,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106801,
+      "x": 156873,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106824,
+      "x": 156871,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106825,
+      "x": 156872,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106827,
+      "x": 156873,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106828,
+      "x": 156873,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106829,
+      "x": 156874,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106830,
+      "x": 156874,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106832,
+      "x": 156875,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106834,
+      "x": 156875,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106835,
+      "x": 156875,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106836,
+      "x": 156874,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106837,
+      "x": 156874,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106838,
+      "x": 156872,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106838,
+      "x": 156873,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106839,
+      "x": 156871,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106839,
+      "x": 156872,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106840,
+      "x": 156871,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106841,
+      "x": 156870,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106841,
+      "x": 156871,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106842,
+      "x": 156870,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106843,
+      "x": 156869,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106845,
+      "x": 156867,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106846,
+      "x": 156866,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106847,
+      "x": 156865,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106848,
+      "x": 156864,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106854,
+      "x": 156862,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106855,
+      "x": 156862,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "outside",
+      "pcbs_inside_names": [],
+      "pcbs_covered_names": [],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106864,
+      "x": 156862,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106881,
+      "x": 156860,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106882,
+      "x": 156860,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106882,
+      "x": 156861,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106883,
+      "x": 156860,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106883,
+      "x": 156861,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106884,
+      "x": 156860,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106885,
+      "x": 156860,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106886,
+      "x": 156860,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    },
+    {
+      "y": 106887,
+      "x": 156860,
+      "owner": 36953,
+      "class": "inland-water",
+      "question_group": "PSE-09",
+      "pcbs_class": "Bethlehem",
+      "pcbs_inside_names": [
+        "Bethlehem"
+      ],
+      "pcbs_covered_names": [
+        "Bethlehem"
+      ],
+      "native_status": "territorial_exclusion_cells",
+      "native_supported": false,
+      "constructor_assigned": false,
+      "original_source_indices": [
+        52576,
+        52593
+      ],
+      "physical_target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "whole_target_issue_codes": [
+        "extra_reconstruction",
+        "contradictory_land_water_support",
+        "L2-outside-L1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "pse-owner-36950-source-physical-native-predicate-audit",
+  "as_of": "2026-10-25",
+  "claim": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "issue": 2606,
+    "audit_issue": 2649,
+    "original_scope": {"cells": 427, "intervals": 277, "owners": 11},
+    "owner_scope": {"owner": 36950, "name": "Jericho & Al Aghwar", "cells": 132, "intervals": 84, "status": "pending; no reclassification or credit"}
+  },
+  "owner_partition": [
+    {"source_group": 2, "cells": 97, "intervals": 65, "class": "land", "candidate_feature": "gb:PSE:ADM2:87354302B18647900198549", "contacts": ["gb:JOR:ADM1:50493656B62478729305943 (Balqa; 2006)", "gb:PSE:ADM1:83478781B28849486138516 (West Bank; 2021)"], "native_result": "held; not supported in the retained original run"},
+    {"source_group": 6, "cells": 23, "intervals": 14, "class": "inland-water", "candidate_feature": "gb:PSE:ADM2:87354302B18647900198549", "contacts": ["gb:PSE:ADM1:83478781B28849486138516 (West Bank; 2021)"], "native_result": "held; not supported in the retained original run"},
+    {"source_group": 3, "cells": 9, "intervals": 2, "class": "inland-water", "candidate_feature": "gb:PSE:ADM2:87354302B18647900198549", "contacts": ["gb:JOR:ADM1:50493656B62478729305943 (Balqa; 2006)", "gb:PSE:ADM1:83478781B28849486138516 (West Bank; 2021)"], "native_result": "held; not supported in the retained original run"},
+    {"source_group": 16, "cells": 3, "intervals": 3, "class": "inland-water", "candidate_feature": "gb:PSE:ADM2:87354302B18647900198549", "exact_keys_y_x_owner": [[106676,156935,36950],[106681,156932,36950],[106684,156930,36950]], "recorded_competitors": [], "native_result": "3/3 native-supported and constructor-assigned to the same Jericho & Al Aghwar ADM2 target in the retained 2025 run; this remains a proposal in the suspended claim, not accepted completion"}
+  ],
+  "source_and_native_interpretation": {
+    "candidate_source": {"id": "gb:PSE:ADM2", "feature_index": 52578, "shapeID": "87354302B18647900198549", "represented_year": 2017, "recorded_license": "CC BY 4.0", "source_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433"},
+    "source_contact_predicate": "For groups 2, 3, and 6 the original exact contact vectors include the stated Balqa and/or West Bank competitors. The retained stock water reconciliation reports interior contact on every cell in groups 3 and 6 and Balqa plus West Bank on all nine group-3 cells; group 2 remains held with both contacts in its source vector. Group 16 has candidate-only source contact and no recorded negative-interior competitor; all three exact tuples were natively supported and assigned in the original run.",
+    "owner_observation": {"commit": "d884410c7558eda9abfd9e8e9a8e2d2808b4a348", "query_sha256": "b7d4e7afe9327cf9bcae4518092a360593ff39fbd333c1a167e09e121173a76e", "meaning": "current-owner zero observation only; does not itself establish source applicability or historical zero"}
+  },
+  "physical_interpretation": {
+    "whole_target_issues": ["contradictory_land_water_support (MultiLineString)", "L2-outside-L1 (Polygon)"],
+    "scope": "These are whole-target findings attached to the Jericho ADM2 geometry. The retained physical audit expressly did not intersect issue geometries with individual native centers, so neither issue is an exact-center veto or positive witness for all 132 cells.",
+    "exact_center_class_support": "Retained exact masks distinguish 97 land cells from 35 inland-water cells across this owner. Group 16's three exact keys are each marked inland-water; water status alone is not a rejection predicate. The separate PCBS point comparison in the group-11 record covers nine different owner-36950 water cells and cannot be imputed to these three or to the 132-cell cohort."
+  },
+  "remaining_question": "The 3-cell group-16 subset is the only owner-36950 subset in the retained 2025 native run with a supported/assigned outcome and no recorded competitor; retain it as a proposal pending current re-audit review/accounting. The remaining 129 cells across 81 intervals are held with recorded candidate and competitor vectors. Current issue suspension means none of the 132 is accepted. Any new source-relative qualification must rebind exact inputs to current accepted code/selector under the owned stock route; do not require a universal PCBS certificate or treat whole-target physical issues as per-cell without an exact intersection result.",
+  "input_pins": [
+    {"path":"inventory/pse-adm2-427-group-evidence-matrix-20261024.json","sha256":"d50363ab3b1e4a826ab65c8ac03429db36fa178f23801a4fa86db36aa77c2223"},
+    {"path":"inventory/pse-adm2-427-group-source-qualification-crosswalk-20261024.json","sha256":"0b968fb407f2deff8d0f912b5a626dd2aae4dd76643873ea4fb2c02b88eb577a"},
+    {"path":"inventory/pse-adm2-427-group16-water-prerequisite-audit-20261024.json","sha256":"6ac3e96c2a2e7afa384405b7f7af12d7f2a5b4af9b218938c585a848b87be2c3"},
+    {"path":"inventory/pse-selected-owner-observation.json","sha256":"5be0e9c1d03a0a1a9cff0f3387bae15601d563796ebfd78fc8b634f8d27cfce6"},
+    {"path":"inventory/pse-inland-water-native-source-physical-reconciliation-20261025.json","sha256":"b16b73456083fa78b7e2997366f8612435a7270807b8f66f7710fea200c1124c"},
+    {"path":"inventory/pse-group11-jericho-balqa-primary-check-20261025/assessment.json","sha256":"computed from retained file; see pinned group-specific assessment"}
+  ],
+  "no_changes": ["No geometry, source or physical producer rerun", "No key, hold, denominator, or claim status changed", "No acceptance or completion credit asserted"]
+}

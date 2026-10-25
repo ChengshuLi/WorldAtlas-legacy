@@ -1,0 +1,63 @@
+{
+  "kind": "pse-odw-geoboundaries-source-bridge-check",
+  "as_of": "2026-10-25",
+  "claim_context": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "original_cells": 427,
+    "original_intervals": 277,
+    "owner36953": {"name": "Bethlehem", "cells": 144, "intervals": 94, "candidate_feature": "gb:PSE:ADM2:87354302B24436251599031"},
+    "status": "research only; no qualification or status change"
+  },
+  "pinned_input": {
+    "family": "gb:PSE:ADM2",
+    "source_feature": "87354302B24436251599031",
+    "full_family_features": 16,
+    "represented_year": 2017,
+    "source_metadata_recorded": "Open Data Watch",
+    "recorded_license": "CC BY 4.0",
+    "source_data_update": "2023-01-19",
+    "build_date": "2023-12-12",
+    "consumed_simplified_geojson_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2_simplified.geojson",
+    "body_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+    "family_metadata_sha256": "260b7355491626105a500a87c12767ca2ac67355e1f0604dc842849dbe6f2e2f",
+    "current_official_geoboundaries_api": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM2/",
+    "api_result": "The public API record reports 16 ADM2 units, 2017 represented year, CC BY 4.0, boundarySource Open Data Watch, sourceDataUpdateDate 2023-01-19 and buildDate 2023-12-12. It exposes generic source links to Open Data Watch About and a publication; no PSE 2017 polygon file, PCBS service, feature IDs, or input-vintage record is named. This matches the retained pin's source identity fields."
+  },
+  "official_odw_records": [
+    {
+      "url": "https://opendatawatch.com/about/",
+      "record": "ODW About page",
+      "result": "Describes ODW as a statistics/open-data support organization and identifies ODIN as its flagship product; no PSE administrative-boundary dataset or geometry lineage is identified."
+    },
+    {
+      "url": "https://opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/",
+      "record": "Open Data to Support Sustainable Development Goals (2016 IODC outcomes paper)",
+      "result": "Describes a workshop on NSO open-data needs and tools, including ODIN; it is not a Palestine boundary product or a description of the consumed 16-unit input."
+    },
+    {
+      "url": "https://odin.opendatawatch.com/country-profiles/PSE?year=2024",
+      "record": "ODIN Palestine 2024 profile search/open result",
+      "result": "Indexed result mentions an official PCBS land-use indicator table by governorate for 2017; ODIN evaluates official statistical coverage/openness, and the profile does not provide a PSE administrative polygon source or geometry lineage. Profile content was not retrievable by the web reader; no alternate route was used."
+    }
+  ],
+  "official_geoboundaries_historical_comparison": {
+    "metadata_url": "https://www.geoboundaries.org/data/geoBoundaries-2_0_0/PSE/ADM2/geoBoundaries-2_0_0-PSE-ADM2-metaData.json",
+    "boundary_id": "PSE-ADM2-2_0_0-G465",
+    "boundary_year": 2017,
+    "boundary_update": "2020-01-15",
+    "boundary_source": "OpenStreetMap, digitized from https://en.wikipedia.org/wiki/Governorates_of_Palestine#/media/File:Palestine_election_map.PNG",
+    "boundary_license": "CC BY-SA 3.0",
+    "result": "An older official geoBoundaries release has a materially different documented source and license from the current pinned 9469f09 metadata. The older entry does not establish that its geometry is byte-identical or otherwise the input to the current 16-feature 2023-built product; it is version history/context, not an identity bridge."
+  },
+  "access_and_limits": {
+    "api_access": "Official geoBoundaries API JSON and official ODW pages were readable. GitHub tree view for the pinned commit was rejected by web reader as a restricted URL; this is a reader limitation, not a source access denial. No geometry was fetched.",
+    "exact_source_bridge": false,
+    "meaning": "The exact consumed feature family is pinned and its metadata attributes its source generally to ODW. The linked ODW pages do not name the underlying PSE dataset, and the historical 2.0.0 geoBoundaries metadata documents a different source. No official ODW or geoBoundaries record located here establishes the precise 16-unit input source, PCBS linkage, or feature-level lineage for the consumed Bethlehem feature.",
+    "remaining_reasonable_step": "If source ancestry becomes necessary to resolve an interval, obtain the archived source/input citation or transformation record for the exact 9469f09 PSE ADM2 product; do not infer ancestry from the ODW label, shared 2017 year, or the older 2.0.0 record.",
+    "disposition": "Keep Bethlehem144 and full PSE427/277 pending. No geometry, source/physical/native producer, reclassification, repair acceptance, or credit."
+  },
+  "retained_source_pins": {
+    "inventory/pse-source-corpus-pins.json": "5d8ae7ef3b6e226a18bdcaa25503cb2b0fee79f7e1225eb1878154b08ff44a2a",
+    "inventory/pse-bethlehem-pcbs-source-identity-bridge-audit-20261025.json": "ae12479940bab7cd738f88acee0cd3ad5f41b6eaaf6e293b0cf253e02607dfc7"
+  }
+}

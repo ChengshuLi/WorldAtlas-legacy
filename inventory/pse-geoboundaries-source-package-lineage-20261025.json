@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "kind": "pse-geoboundaries-source-package-lineage-audit",
+  "scope": {
+    "package": "gb-PSE-ADM2--repair-evaluation",
+    "original_cells": 427,
+    "original_intervals": 277,
+    "status_changed": false,
+    "credit_changed": false
+  },
+  "source": {
+    "repository": "https://github.com/wmgeolab/geoBoundaries",
+    "release_ref": "9469f09",
+    "release_metadata_url": "https://raw.githubusercontent.com/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2-metaData.json",
+    "release_metadata_lfs": {
+      "oid_sha256": "c074038fbc17cfd958050477faa6524cb37679ae0db993dc7325e0941e276981",
+      "bytes": 855
+    },
+    "release_metadata_fields": {
+      "boundaryID": "PSE-ADM2-87354302",
+      "boundaryYear": "2017",
+      "boundaryType": "ADM2",
+      "boundaryCanonical": "governorate",
+      "boundarySource": "Open Data Watch",
+      "boundaryLicense": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+      "buildDate": "Dec 12, 2023",
+      "admUnitCount": "16",
+      "licenseSource": "https://opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/",
+      "boundarySourceURL": "https://opendatawatch.com/about/"
+    },
+    "source_input": {
+      "path": "sourceData/gbOpen/PSE_ADM2.zip",
+      "url": "https://raw.githubusercontent.com/wmgeolab/geoBoundaries/9469f09/sourceData/gbOpen/PSE_ADM2.zip",
+      "lfs_oid_sha256": "e1c8c97a30d36721ef9c8864cdc9942e0d304dbce0307aed73e20c8547a937be",
+      "bytes": 1654707,
+      "downloaded_zip_sha256": "e1c8c97a30d36721ef9c8864cdc9942e0d304dbce0307aed73e20c8547a937be",
+      "meta_txt": {
+        "Boundary Representative of Year": "2017",
+        "Boundary Type": "ADM2",
+        "Canonical Boundary Type Name": "governorate",
+        "Source 1": "Open Data Watch",
+        "License": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+        "License Source": "https://opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/",
+        "Link to Source Data": "https://opendatawatch.com/about/",
+        "Other Notes": "Listed as ADM1 on some other sources, using this breakdown as ADM2 and using two territorial splits as ADM1 layer"
+      },
+      "sanitized_shapefile_xml_lineage": [
+        {"operation": "FeatureClassToFeatureClass", "input_feature_class_name": "PSE_ADM1", "date": "2021-05-27", "coordinate_reference": "EPSG:4326"},
+        {"operation": "CalculateField", "field": "Level", "value": "ADM2", "date": "2021-05-28"},
+        {"operation": "FeatureClassToFeatureClass", "input_feature_class_name": "PSE_ADM2", "date": "2021-05-28"}
+      ],
+      "notes": [
+        "Only sanitized process names/dates are retained; local machine paths from the shapefile XML were omitted.",
+        "No source geometry, shapefile, or XML body is included in this audit record."
+      ]
+    },
+    "upstream_pse_adm1_input": {
+      "path": "sourceData/gbOpen/PSE_ADM1.zip",
+      "url": "https://raw.githubusercontent.com/wmgeolab/geoBoundaries/9469f09/sourceData/gbOpen/PSE_ADM1.zip",
+      "lfs_oid_sha256": "ce7bfcd6d2489088464f3b35f6f7ae7c07959251534b219749897ee90aa9fbfd",
+      "bytes": 1070020,
+      "downloaded_zip_sha256": "ce7bfcd6d2489088464f3b35f6f7ae7c07959251534b219749897ee90aa9fbfd",
+      "meta_txt": {
+        "Boundary Representative of Year": "2021",
+        "Boundary Type": "ADM1",
+        "Canonical Boundary Type Name": "territory",
+        "Source 1": "geoBoundaries",
+        "Source 2": "Open Data Watch",
+        "License": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+        "Other Notes": "Not officially listed as ADM1 but this breakdown seems to make the most sense"
+      },
+      "limitation": "The metadata and processing chain identify a 2021 ADM1 input feature class, but do not identify its underlying 2017 source file, tie individual feature IDs to the ADM2 release, or connect the product to PCBS geometry."
+    }
+  },
+  "assessment": {
+    "established": [
+      "The pinned 9469f09 release calls the PSE ADM2 product a 2017-represented, 16-unit, CC BY 4.0 Open Data Watch source.",
+      "The corresponding archived sourceData PSE_ADM2 package labels the 16-unit product ADM2 while noting that some sources list this breakdown as ADM1 and that the ADM1 layer is a two-territory split.",
+      "The sourceData shapefile processing metadata records the ADM2 file as derived from a PSE_ADM1 feature class on 2021-05-27, with the ADM2 level field set and re-exported on 2021-05-28.",
+      "The exact PSE_ADM1 input package is itself labeled 2021 and sourced jointly to geoBoundaries and ODW."
+    ],
+    "not_established": [
+      "The underlying origin/vintage of the 2021 PSE_ADM1 feature class used to construct the 16 ADM2 features.",
+      "A source-feature ID/version/geometry bridge from the PSE_ADM1 input to the consumed 2017-represented ODW/geoBoundaries ADM2 features.",
+      "A PCBS-to-ODW source lineage or a pointwise explanation of the two native-supported centers outside the current unversioned PCBS layer.",
+      "Any legal, sovereignty, or current-authority conclusion."
+    ],
+    "disposition": "This materially improves the documented product lineage and confirms the release's source attribution, level caveat, and 2021 construction path, but does not by itself resolve the original source-relative interval applicability question. Preserve six native-supported cells as proposal-only and all 421 other cells held; original 427-cell/277-interval denominator unchanged."
+  }
+}

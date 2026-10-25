@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "kind": "pse-adm2-owners-36951-36953-residual-source-physical-native-contract-assessment",
+  "as_of": "2026-10-25",
+  "claim": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "issue": 2606,
+    "suspension_issue": 2649,
+    "original_cells": 427,
+    "land_cells": 275,
+    "inland_water_cells": 152,
+    "intervals": 277,
+    "owners": 11,
+    "status": "all 427 pending; holds unchanged; no acceptance or credit"
+  },
+  "original_contract": {
+    "source": "inventory/pse-retained-source-contract-context.json",
+    "predicate": "qualify unique current-location source membership, retained territorial exclusions, and complete source competitors; derive and verify a zero-reassignment additive native patch. Each interval must be a qualified repair or a documented exception, with selected-native conservation and source/physical witnesses. Inland-water class is not itself a rejection."
+  },
+  "source_families": {
+    "candidate": {
+      "id": "gb:PSE:ADM2",
+      "feature_count": 16,
+      "represented_year": "2017",
+      "recorded_origin": "Open Data Watch",
+      "license": "CC BY 4.0",
+      "payload_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+      "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2_simplified.geojson"
+    },
+    "competitors": {
+      "gb:PSE:ADM1": {
+        "represented_year": "2021",
+        "license": "CC BY 4.0",
+        "payload_sha256": "2f065583a8be795533893fd4c62fed765959b47db2cf01e696cc795cc6c56b0a"
+      }
+    }
+  },
+  "official_pcbs_context": {
+    "source": "PCBS Governorates_LIST2017 layer 1, FeatureServer item d1ea572ff1eb4c64b642388489df5b7c",
+    "url": "https://services8.arcgis.com/x3OYmfTujNHGdoex/arcgis/rest/services/Dissmenation_layer/FeatureServer/1",
+    "recorded_layer_data_last_edit": "2017-11-16",
+    "response_status": 200,
+    "features": 16,
+    "crs": "EPSG:4326",
+    "center_crosscheck_sha256": "8d3ad926f60ab89bc6c0c483546680f6604c61c32e621ed9b5550fe9efa39e15",
+    "limit": "The current retained response is official, dated layer context, but does not bridge PCBS geometry to the consumed 2017 Open Data Watch/geoBoundaries payload or establish source lineage for the 2021 ADM1 competitors. PCBS layer metadata lacks usable source/license/lineage fields; the 2017 codebook and 2023 article are categorical/demographic context, not boundary adjudication."
+  },
+  "subgroups": [
+    {
+      "owner": 36951,
+      "name": "Khan Yunis",
+      "group_ids": [
+        9
+      ],
+      "cells": 11,
+      "intervals": 11,
+      "class": "land",
+      "candidate_feature": 52584,
+      "candidate_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "candidate_pcbs_category": "70 Khan Yunis",
+      "retained_competitor": {
+        "feature": 52577,
+        "id": "gb:PSE:ADM1:83478781B7121896376882",
+        "name": "Gaza",
+        "year": 2021,
+        "contact_evidence": "interior contact on all 11 keys in retained native diagnostic/source evidence"
+      },
+      "physical_findings": "No whole-target issue is listed for candidate target 87354302B21422506618890 in the retained 2025 physical issue summary. This is not a per-key physical or legal certificate.",
+      "native_result": {
+        "requested": 11,
+        "supported": 0,
+        "held": 11,
+        "held_reason": "territorial_exclusion_cells",
+        "constructor_assignment": 0
+      },
+      "pcbs_center_context": "11/11 retained centers matched the PCBS Governorates_LIST2017 Khan Yunis polygon; this does not invalidate or resolve the distinct 2021 geoBoundaries Gaza contact.",
+      "contract_assessment": "The candidate/category name is corroborated, but all 11 retain an interior competitor contact. PCBS hierarchy/context cannot remove that source contact or prove the 2017 candidate/2021 competitor lineage. Keep all 11 held/pending.",
+      "reasonable_next_step": "No further public PCBS category lookup is decision-useful. The concrete unresolved predicate is source-specific applicability/lineage of the retained 2021 Gaza ADM1 geometry relative to the 2017 candidate for these exact intervals; no exposed official PCBS record bridges either geoBoundaries payload. Existing stock diagnostic already records the conflict; do not rerun geometry."
+    },
+    {
+      "owner": 36952,
+      "name": "Deir Al Balah",
+      "group_ids": [
+        17
+      ],
+      "cells": 3,
+      "intervals": 3,
+      "class": "land",
+      "keys_yx": [
+        [
+          106927,
+          156112
+        ],
+        [
+          106928,
+          156111
+        ],
+        [
+          106933,
+          156107
+        ]
+      ],
+      "candidate_feature": 52587,
+      "candidate_id": "gb:PSE:ADM2:87354302B22339434669936",
+      "candidate_pcbs_category": "65 Deir Al-Balah",
+      "retained_competitor_contacts": [],
+      "physical_findings": "No whole-target issue is listed for candidate target 87354302B22339434669936 in the retained 2025 physical issue summary. The three rows have retained physical-support inputs; absence of a summarized issue is not a boundary certificate.",
+      "native_result": {
+        "requested": 3,
+        "supported": 3,
+        "held": 0,
+        "constructor_assigned": 3,
+        "constructor_target": "same pinned Deir Al Balah ADM2 target"
+      },
+      "pcbs_center_context": {
+        "matches": 2,
+        "outside": 1,
+        "outside_key_yx": [
+          106933,
+          156107
+        ],
+        "result": "two centers were inside PCBS Deir Al Balah; one had no matching PCBS governorate. This is a mismatch between the PCBS 2017 governorate layer and the retained candidate-native set, not proof the candidate is wrong or that the cell is another territory."
+      },
+      "contract_assessment": "No competitor contact was recorded, and native diagnostic/constructor support all three under the retained stock source/native test. However the independent official PCBS comparison disagrees on one candidate center and the PCBS record does not establish lineage to the Open Data Watch 2017 payload. Keep the three pending; do not convert constructor assignment into acceptance or ignore the single mismatch.",
+      "reasonable_next_step": "The accessible PCBS layer and retained source candidate are already compared; no exact PCBS-to-ODW lineage record or dated source bridge surfaced in the existing official catalog work. A further official source-specific lineage record would be needed to resolve the one discrepancy; absent that, retain the mismatch and pending status."
+    },
+    {
+      "owner": 36953,
+      "name": "Bethlehem",
+      "group_ids": [
+        1,
+        5
+      ],
+      "cells": 144,
+      "intervals": 94,
+      "classes": {
+        "inland_water": {
+          "cells": 117,
+          "intervals": 68
+        },
+        "land": {
+          "cells": 27,
+          "intervals": 26
+        }
+      },
+      "candidate_feature": 52593,
+      "candidate_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "candidate_pcbs_category": "45 Bethlehem",
+      "retained_competitor": {
+        "feature": 52576,
+        "id": "gb:PSE:ADM1:83478781B28849486138516",
+        "name": "West Bank",
+        "year": 2021,
+        "contact_evidence": "interior contact on all 144 keys across both retained groups"
+      },
+      "physical_findings": [
+        "extra_reconstruction (MultiPolygon)",
+        "contradictory_land_water_support (MultiLineString)",
+        "L2-outside-L1 (Polygon)"
+      ],
+      "physical_limit": "Whole-target findings are adverse context; retained physical receipt did not test every issue geometry against each individual center, so do not treat them as blanket per-key vetoes. They still require source-relative interpretation.",
+      "native_result": {
+        "requested": 144,
+        "supported": 0,
+        "held": 144,
+        "held_reason": "territorial_exclusion_cells",
+        "constructor_assignment": 0
+      },
+      "pcbs_center_context": {
+        "matches": 126,
+        "outside": 18,
+        "boundary_or_multiple": 0,
+        "result": "PCBS Governorates_LIST2017 point-in-polygon crosscheck found 126 Bethlehem and 18 outside all 16 PCBS governorate polygons; outside does not establish another territory or invalidate the candidate."
+      },
+      "contract_assessment": "PCBS 2017 codebook places Bethlehem within West Bank statistically, but does not adjudicate the interior 2021 West Bank feature contact or link that geometry to the source. The 117 water cells remain valid location candidates but are still held by the same competitor; water class is not the hold reason. Retain all 144.",
+      "reasonable_next_step": "The stock source/native evidence already establishes the conflict and records all 144 held; more generic PCBS category context cannot settle it. Any further useful step must be a specific source lineage/applicability record for the 2021 West Bank ADM1 geometry or a documented interval exception under the original contract. No accessible record in the retained work bridges it to the 2017 ADM2 source."
+    }
+  ],
+  "overall_assessment": {
+    "held_keys_in_this_assignment": 158,
+    "native_supported_but_not_accepted": 3,
+    "key_distinction": "A native constructor assignment is a proposal output; acceptance/credit and the original claim status remain unchanged. The PCBS center comparisons are contextual evidence and do not provide source feature equivalence or territorial authority.",
+    "next_step": "Do not repeat geometry, whole-target physical, or PCBS point queries. If a valid PSE-owned qualification/review and current bank delivery path is reopened, use the exact existing stock outputs and PCBS crosscheck with explicit bridges; for remaining lineage ambiguities, only a specific official source-to-geoBoundaries link would materially resolve the question.",
+    "held_intervals_in_assignment": 108
+  },
+  "evidence_refs": {
+    "group_matrix": {
+      "path": "inventory/pse-adm2-427-group-evidence-matrix-20261024.json",
+      "sha256": "d50363ab3b1e4a826ab65c8ac03429db36fa178f23801a4fa86db36aa77c2223"
+    },
+    "source_qualification_crosswalk": {
+      "path": "inventory/pse-adm2-427-group-source-qualification-crosswalk-20261024.json",
+      "sha256": "0b968fb407f2deff8d0f912b5a626dd2aae4dd76643873ea4fb2c02b88eb577a"
+    },
+    "selected_owner_observation": {
+      "path": "inventory/pse-selected-owner-observation.json",
+      "sha256": "5be0e9c1d03a0a1a9cff0f3387bae15601d563796ebfd78fc8b634f8d27cfce6"
+    },
+    "official_context_followup": {
+      "path": "inventory/pse-groups-36951-36953-official-context-followup-20261025.json",
+      "sha256": "25f27abb3960076bc387334d880fedd8e39b1e2dd652ebe54bf05191246c6da0"
+    },
+    "pcbs_current_layer_center_crosscheck": {
+      "path": ".worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work/coordination/engineering/pse-original-disposition-20261020/pcbs-2017-center-crosscheck-20261025.json",
+      "sha256": "8d3ad926f60ab89bc6c0c483546680f6604c61c32e621ed9b5550fe9efa39e15"
+    },
+    "whole_target_physical_support": {
+      "path": ".worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work/coordination/engineering/pse-original-disposition-20261020/physical-20261025/whole-target-support.json",
+      "sha256": "a6972a88f57bb363ad91283a9ed23104d56429e6222628047833c207271bffb4"
+    },
+    "physical_receipt": {
+      "path": ".worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work/coordination/engineering/pse-original-disposition-20261020/physical-20261025/execution-receipt.json",
+      "sha256": "b4cbcccbfe29f39bfce2dafe2cffd3e0134ac67bdc3106c269db42e0f0029988"
+    },
+    "source_evidence": {
+      "path": ".worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work/coordination/engineering/pse-original-disposition-20261020/source-evidence-20261025/source-evidence.json",
+      "sha256": "cae1128a4a42449d7c6bbf125c0d7087af9b195325e540c9102d29346676b293"
+    },
+    "native_diagnostic": {
+      "path": ".worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work/coordination/engineering/pse-original-disposition-20261020/native-diagnostic-20261025/native-diagnostic.json",
+      "sha256": "ddc890d5b16175c177303f78eae045135f9c4d8e54b93ffdea8b5c08104513a9"
+    },
+    "constructor_result": {
+      "path": ".worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work/coordination/engineering/pse-original-disposition-20261020/native-authority-20261025/constructor-result.json",
+      "sha256": "a2ec5b3f25ec826abc4ecbdd2029ab9ede077dfa173268ae824edac901559f3e"
+    },
+    "khan_yunis_pcbs_lineage": {
+      "path": "inventory/pse-group9-khan-yunis-pcbs-source-record-followup-20261025.json",
+      "sha256": "7da9cd81143f47cd545cad4b5dca506215bf2f0a50d8aa7a16328950ab7627dd"
+    },
+    "deir_source_predicate_audit": {
+      "path": "inventory/pse-group17-deir-al-balah-source-relative-predicate-audit-20261025.json",
+      "sha256": "55f0f31ee0cee074018faf4f397d8996876792b99e8ce3997a07c3f976bda989"
+    },
+    "bethlehem_water_contract_review": {
+      "path": "inventory/pse-group1-water-method-applicability-review-20261025.json",
+      "sha256": "e5b3cb75d647821d388b0bb36df86879eadcce0d2f2ad3eb191d2172f10f4dc0"
+    },
+    "bethlehem_land_lineage": {
+      "path": "inventory/pse-group5-bethlehem-pcbs-lineage-20261025/assessment.json",
+      "sha256": "389f1e7ae7b4dd3fa08abe9148b400c5f0f900fbc9a9023194c24079a8de202c"
+    }
+  }
+}
