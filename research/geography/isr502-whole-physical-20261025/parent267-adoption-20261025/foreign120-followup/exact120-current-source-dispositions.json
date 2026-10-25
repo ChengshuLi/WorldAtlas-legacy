@@ -1,0 +1,3548 @@
+{
+  "summary": {
+    "original_ISR": 502,
+    "current_qualified_land": 379,
+    "current_held_total": 123,
+    "foreign_scope": 120,
+    "foreign_land": 106,
+    "foreign_water": 14,
+    "foreign_mixed_parent_context": 85,
+    "foreign_only": 35,
+    "finite_unresolved_proposals": 110,
+    "pending_Irbid": 10,
+    "groups": {
+      "LBN-Nabatiye25": 25,
+      "JOR-Irbid10": 10,
+      "LBN-LibanSud18": 18,
+      "PSE-WestBank5": 5,
+      "JOR-Madaba-north5": 5,
+      "JOR-southern-water9": 9,
+      "JOR-Karak-land27": 27,
+      "JOR-Aqaba19": 19,
+      "EGY-NorthSinai2": 2
+    },
+    "all_foreign_identity_ordinal_geometry_kind_exactly_preserved": true,
+    "all_foreign_current_decisions_held": true,
+    "new_observer_or_geometry": false,
+    "new_native_or_physical_or_authority_run": false,
+    "new_source_acquisition": false,
+    "baqura_status": "terminal DNS failure; no body; not denial or exhaustion",
+    "separate_parent_only_water3_not_in_foreign_scope": true,
+    "diagnostic": {
+      "commit": "e2afc77d49bd2529b0878f4b36138028acdceaed",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-diagnostic-001/native-diagnostic.json",
+      "sha256": "5b2aff63aa22c970df18a5d8a1165ba4dbde47662e06961e77affcb297c9d16e"
+    },
+    "source_references": {
+      "original120_index": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr120-source-disposition-handoff/exact120-disposition-index.json",
+        "bytes": 172547,
+        "sha256": "83f2c8523d8d39463b0aae6a920fa5bc72aea2272add4d14e7118e5aa90c348e"
+      },
+      "completed110_handoff": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr120-source-disposition-handoff/HANDOFF.md",
+        "bytes": 11547,
+        "sha256": "74f4ba940c96fe6aa537d855636c6a6f40080131cab8c6b9954c6d153ff9fff8"
+      },
+      "latest_irbid_assessment": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr-irbid10-reach-application/ASSESSMENT.md",
+        "bytes": 10685,
+        "sha256": "a42124bca96bfd589f4197e24c12a02e4c1dc79e11d346c1a2365fcf71ed9021"
+      },
+      "latest_baqura_retry": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr-irbid10-reach-application/baqura-ordinary-retry1.json",
+        "bytes": 1905,
+        "sha256": "a735aaaa988cbafa8c65c2f28669ba3fbece9997ab621e34764d08c414dbe491"
+      },
+      "southern55_completed": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr55-documentary-comparison/assessment.md",
+        "bytes": 12700,
+        "sha256": "bfa0d89d410dbfd0334ab23ed1b1f7845d550f09e4524a24d0b04d0531b51b5b"
+      }
+    },
+    "accepted": false,
+    "holds_changed": false
+  },
+  "rows": [
+    {
+      "key": {
+        "owner_id": 24170,
+        "y": 105359,
+        "x": 156998
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 2,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105874,
+        "x": 157028
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157023
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157024
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157025
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105875,
+        "x": 157026
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157020
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157021
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157022
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105876,
+        "x": 157023
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24171,
+        "y": 105877,
+        "x": 157021
+      },
+      "group": "JOR-Irbid10",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+        "name": "Irbid",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 6,
+        "negative_ordinal": 1,
+        "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "pending_specific_source_application",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "1994 image/reach tie; Baqura AppendixIV potential anchor remains unread after terminal DNS failure",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105511,
+        "x": 156801
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105511,
+        "x": 156802
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105511,
+        "x": 156803
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105512,
+        "x": 156775
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105512,
+        "x": 156803
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105512,
+        "x": 156804
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105513,
+        "x": 156771
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105514,
+        "x": 156767
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105519,
+        "x": 156700
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105519,
+        "x": 156701
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156698
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156699
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156700
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156701
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105520,
+        "x": 156745
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156681
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156682
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156697
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105521,
+        "x": 156698
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105522,
+        "x": 156692
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105522,
+        "x": 156693
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105522,
+        "x": 156694
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105523,
+        "x": 156690
+      },
+      "group": "LBN-LibanSud18",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B17317068268844",
+        "name": "Liban-Sud",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 4,
+        "negative_ordinal": 2,
+        "geometry_sha256": "b57bf5470a5db5d364df6d619b678bd2025bb3ae2f6623db7efece6d8d72d7f8",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105531,
+        "x": 156810
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105531,
+        "x": 156811
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105532,
+        "x": 156811
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105532,
+        "x": 156812
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105533,
+        "x": 156812
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105533,
+        "x": 156813
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105534,
+        "x": 156813
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105534,
+        "x": 156814
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105535,
+        "x": 156814
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105536,
+        "x": 156815
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156830
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156831
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156832
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105550,
+        "x": 156833
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105551,
+        "x": 156835
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105551,
+        "x": 156836
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105552,
+        "x": 156839
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105552,
+        "x": 156840
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24181,
+        "y": 105552,
+        "x": 156841
+      },
+      "group": "LBN-Nabatiye25",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:LBN:ADM1:68408151B46493486830483",
+        "name": "Nabat\u00eey\u00e9",
+        "family": "gb:LBN:ADM1",
+        "feature_ordinal": 5,
+        "negative_ordinal": 3,
+        "geometry_sha256": "e8f199f523c2a3759b554bbb66fa68a879f0a2dfdcfee60d76b7eb3b6d466f30",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24182,
+        "y": 106746,
+        "x": 156605
+      },
+      "group": "PSE-WestBank5",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+        "name": "West Bank",
+        "family": "gb:PSE:ADM1",
+        "feature_ordinal": 0,
+        "negative_ordinal": 3,
+        "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24182,
+        "y": 106747,
+        "x": 156604
+      },
+      "group": "PSE-WestBank5",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+        "name": "West Bank",
+        "family": "gb:PSE:ADM1",
+        "feature_ordinal": 0,
+        "negative_ordinal": 3,
+        "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24182,
+        "y": 106748,
+        "x": 156602
+      },
+      "group": "PSE-WestBank5",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+        "name": "West Bank",
+        "family": "gb:PSE:ADM1",
+        "feature_ordinal": 0,
+        "negative_ordinal": 3,
+        "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24182,
+        "y": 106749,
+        "x": 156601
+      },
+      "group": "PSE-WestBank5",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+        "name": "West Bank",
+        "family": "gb:PSE:ADM1",
+        "feature_ordinal": 0,
+        "negative_ordinal": 3,
+        "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 106896,
+        "x": 156913
+      },
+      "group": "JOR-Madaba-north5",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B40052368003294",
+        "name": "Madaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 2,
+        "negative_ordinal": 10,
+        "geometry_sha256": "3f9191e3be06f4238144c2bf1023de11afa900addb03d9e71bb136864b5babd5",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 106896,
+        "x": 156914
+      },
+      "group": "JOR-Madaba-north5",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B40052368003294",
+        "name": "Madaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 2,
+        "negative_ordinal": 10,
+        "geometry_sha256": "3f9191e3be06f4238144c2bf1023de11afa900addb03d9e71bb136864b5babd5",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 106897,
+        "x": 156914
+      },
+      "group": "JOR-Madaba-north5",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B40052368003294",
+        "name": "Madaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 2,
+        "negative_ordinal": 10,
+        "geometry_sha256": "3f9191e3be06f4238144c2bf1023de11afa900addb03d9e71bb136864b5babd5",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 106897,
+        "x": 156915
+      },
+      "group": "JOR-Madaba-north5",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B40052368003294",
+        "name": "Madaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 2,
+        "negative_ordinal": 10,
+        "geometry_sha256": "3f9191e3be06f4238144c2bf1023de11afa900addb03d9e71bb136864b5babd5",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 106897,
+        "x": 156916
+      },
+      "group": "JOR-Madaba-north5",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B40052368003294",
+        "name": "Madaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 2,
+        "negative_ordinal": 10,
+        "geometry_sha256": "3f9191e3be06f4238144c2bf1023de11afa900addb03d9e71bb136864b5babd5",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 106898,
+        "x": 156916
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B40052368003294",
+        "name": "Madaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 2,
+        "negative_ordinal": 10,
+        "geometry_sha256": "3f9191e3be06f4238144c2bf1023de11afa900addb03d9e71bb136864b5babd5",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 106899,
+        "x": 156917
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B40052368003294",
+        "name": "Madaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 2,
+        "negative_ordinal": 10,
+        "geometry_sha256": "3f9191e3be06f4238144c2bf1023de11afa900addb03d9e71bb136864b5babd5",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107005,
+        "x": 156494
+      },
+      "group": "PSE-WestBank5",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+        "name": "West Bank",
+        "family": "gb:PSE:ADM1",
+        "feature_ordinal": 0,
+        "negative_ordinal": 23,
+        "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107017,
+        "x": 156901
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107232,
+        "x": 156902
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107234,
+        "x": 156901
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107235,
+        "x": 156901
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107236,
+        "x": 156901
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107237,
+        "x": 156900
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107238,
+        "x": 156900
+      },
+      "group": "JOR-southern-water9",
+      "physical_class": "inland-water",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107239,
+        "x": 156900
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107240,
+        "x": 156899
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107240,
+        "x": 156900
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107241,
+        "x": 156899
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107242,
+        "x": 156899
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107243,
+        "x": 156898
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107244,
+        "x": 156898
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107245,
+        "x": 156898
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107246,
+        "x": 156897
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107247,
+        "x": 156897
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107248,
+        "x": 156896
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107249,
+        "x": 156896
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107251,
+        "x": 156895
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107254,
+        "x": 156894
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107294,
+        "x": 156878
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107295,
+        "x": 156878
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107296,
+        "x": 156878
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107297,
+        "x": 156878
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107298,
+        "x": 156878
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107299,
+        "x": 156878
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107301,
+        "x": 156877
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107302,
+        "x": 156877
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107303,
+        "x": 156877
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107304,
+        "x": 156877
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107308,
+        "x": 156876
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107309,
+        "x": 156876
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107314,
+        "x": 156875
+      },
+      "group": "JOR-Karak-land27",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B94904250637342",
+        "name": "Karak",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 1,
+        "negative_ordinal": 9,
+        "geometry_sha256": "26e3b8e73d38bdf267fb863d2c1fcd859215b7b54b499e0d098c9296815063ef",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107751,
+        "x": 156708
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107753,
+        "x": 156707
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107755,
+        "x": 156706
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107756,
+        "x": 156706
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107758,
+        "x": 156705
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 107759,
+        "x": 156705
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108118,
+        "x": 156661
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108121,
+        "x": 156659
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108122,
+        "x": 156658
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108124,
+        "x": 156657
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108125,
+        "x": 156656
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108126,
+        "x": 156655
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108435,
+        "x": 156585
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108475,
+        "x": 156574
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108477,
+        "x": 156573
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108479,
+        "x": 156572
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108480,
+        "x": 156571
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": false,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108482,
+        "x": 156570
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108484,
+        "x": 156569
+      },
+      "group": "JOR-Aqaba19",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:JOR:ADM1:50493656B99764555865464",
+        "name": "Aqaba",
+        "family": "gb:JOR:ADM1",
+        "feature_ordinal": 9,
+        "negative_ordinal": 12,
+        "geometry_sha256": "d5ca97c9463b55892f90d7301c07cc1b804413ef95bbd47de85b212e7d43acd4",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108529,
+        "x": 156480
+      },
+      "group": "EGY-NorthSinai2",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:EGY:ADM1:46179711B72666466596415",
+        "name": "North Sinai Governorate",
+        "family": "gb:EGY:ADM1",
+        "feature_ordinal": 0,
+        "negative_ordinal": 0,
+        "geometry_sha256": "96d5eb77dd077c2d0546a9bf793a9d60bdf395f8f75c554a8b50e7a4a6da37cf",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    },
+    {
+      "key": {
+        "owner_id": 24183,
+        "y": 108530,
+        "x": 156480
+      },
+      "group": "EGY-NorthSinai2",
+      "physical_class": "land",
+      "current_native_reason": "territorial_exclusion_cells",
+      "original_foreign_contact": {
+        "source_id": "gb:EGY:ADM1:46179711B72666466596415",
+        "name": "North Sinai Governorate",
+        "family": "gb:EGY:ADM1",
+        "feature_ordinal": 0,
+        "negative_ordinal": 0,
+        "geometry_sha256": "96d5eb77dd077c2d0546a9bf793a9d60bdf395f8f75c554a8b50e7a4a6da37cf",
+        "kinds": [
+          "interior"
+        ]
+      },
+      "unchanged_foreign_operand": true,
+      "parent_context_adopted": true,
+      "foreign_role_waiver": false,
+      "source_recommendation": "finite_researched_unresolved_for_independent_consideration",
+      "source_adoption_asserted_by_this_followup": false,
+      "current_source_question": "Independent review of performed source-specific nondecisive applications; no newly identified readily accessible deciding body in retained packet",
+      "holds_changed": false,
+      "accepted": false
+    }
+  ]
+}
