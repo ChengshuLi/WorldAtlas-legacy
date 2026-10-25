@@ -1,0 +1,67 @@
+{
+  "CODE": "f82259ffd052e61ccb666765f991ce56e401b6b0",
+  "DATA": "5bdd34338397f51e16c8a74877a236cd9b16723c",
+  "config_path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-authority-config-379.json",
+  "configuration": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "5bdd34338397f51e16c8a74877a236cd9b16723c",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "5bdd34338397f51e16c8a74877a236cd9b16723c",
+      "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/native-patch.json"
+    }
+  },
+  "destination": ".cache/delivery-handoff/isr379-parent267-native-authority-001",
+  "scope": {
+    "original": 502,
+    "novel_land": 379,
+    "already_present": 0,
+    "held": 123,
+    "source_water_holds": 3,
+    "foreign_holds": 120,
+    "projected_contextual_records": 179,
+    "targets": 11,
+    "target_negative_pairs": 95,
+    "complete_family_physical_pins_unchanged": true,
+    "all_retained_target_fields_except_exact_coverage_rows_unchanged": true,
+    "bound_unbound_patch_hold_projection_bytes_equal": true,
+    "original502_keys_conserved": true,
+    "source_water_keys_held": [
+      [
+        24183,
+        106895,
+        156910
+      ],
+      [
+        24183,
+        106896,
+        156870
+      ],
+      [
+        24183,
+        106896,
+        156912
+      ]
+    ],
+    "accepted": false,
+    "authority_run": false
+  },
+  "coordinator_authorization_received": true,
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-authority",
+    "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-authority-config-379.json",
+    ".cache/delivery-handoff/isr379-parent267-native-authority-001"
+  ],
+  "started_utc": "2026-10-25T03:38:25.900067+00:00",
+  "original502_preserved": true,
+  "prior200_historical_not_additive": true,
+  "source_or_physical_producers_requested": false,
+  "new_diagnostic_requested": false,
+  "composition_or_finalizer_requested": false,
+  "exit_code": 0,
+  "ended_utc": "2026-10-25T03:41:10.065275+00:00"
+}
