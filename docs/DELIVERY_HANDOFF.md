@@ -748,33 +748,43 @@ is a distinct consumed product and is unchanged.
 
 ## Continue locally through the finalized candidate
 
-An already-qualified modern delivery needs two actual local snapshots, but
-not separate pushes or operator waits. Run the existing commands and
-ordinary scoped commits in one fail-fast shell sequence:
+Use the [current final-bank authoring route](#current-final-bank-authoring)
+above, not the retired version-1 finalizer or cumulative selected ledger. Local
+commit boundaries do not require separate pushes or operator waits:
 
-1. Run `compose CONFIG OWNED_COMPOSE_DIRECTORY` and commit its four sibling
-   products. Retain the ordinary preparation receipt for exact resume; the next
-   phase does not require it to be committed. Capture the actual local SHA with
-   `compose_commit=$(git rev-parse HEAD)`.
-2. For `finalize`, supply `version: 1` and exact `{commit, path}` locators for `selector`,
-   `package_inputs`, `rebind` and `composition`; the last names the emitted
-   `selected-ledger.json` at `$compose_commit`. Keep `new_prefix`,
-   `sidecar_output` under the existing owned-output contract.
-   The compact route derives the fixed sibling pins; do not mix it with explicit
-   derived product pins. Existing explicit configurations remain supported.
-3. Run `finalize CONFIG .cache/delivery-handoff/final-UNIQUE` and use the existing
-   [canonical staging/adoption contract](#configurations-and-explicit-commit-boundaries),
-   including any [original-path restorations](#inherited-package-read-roles-and-committed-restoration).
-   Finish intended candidate changes and commit the installed canonical tree.
-   Capture `candidate_commit=$(git rev-parse HEAD)`. Run applicable checks at
-   their ordinary working-tree or exact-commit boundaries.
+1. For additions, run version-2 `compose` with the complete new proposal pins
+   and commit its emitted `authority-registry.json`; use that actual commit/path
+   as `change_evidence` in version-2 `finalize`. Prepared corrections or withdrawals
+   use the documented `proposed_selector` route instead, without a fabricated
+   positive constructor or redundant composition.
+2. Run version-2 `finalize CONFIG .cache/delivery-handoff/final-UNIQUE` with
+   the actual accepted selector and package-input pins. The existing writer
+   authenticates the complete output set and adopts the canonical bank and
+   selector last. Preserve the preparation receipt for exact resume.
+3. Include the emitted **`selected-delivery-expectations.json`**, unchanged, at a
+   fresh owned `coordination/engineering/.../selected-delivery-expectations.json`
+   path in the candidate commit. A cache-only copy is not a published consumer
+   input. This existing version-2 sidecar's `bank` and `reference` must exactly
+   equal the final selector's `prepared_bank` and `reference`; do not invent a
+   selector expectations field or regenerate scientific inputs to copy it.
+   Commit the final canonical changes and applicable authority evidence together
+   with this sidecar, then capture `candidate_commit=$(git rev-parse HEAD)`.
+   Run applicable checks at their ordinary working-tree or exact-commit boundaries.
 
-The composition SHA can be passed by ordinary JSON serialization in the same
-shell. Local Git bodies are sufficient; readers keep lazy fetching disabled.
+The sidecar is necessary, not sufficient, for selected-data eligibility. The
+accepted planner still authenticates the complete bank transition, unchanged
+native/reference contract and every changed path's consumed role. Unbound extra
+custody or documentation can retain full regression; do not remove required
+evidence or weaken the classifier to obtain a smaller route. Retain unchanged
+original source/native proof and preparation history without republishing
+unconsumed duplicates solely for bookkeeping. Existing completed output can be
+reused when its exact input/output bindings still apply; adding the unchanged
+sidecar is not a new producer execution.
+
 Further candidate edits require refreshed applicable consumer checks and exact-head
 review, while unchanged source/native evidence remains reusable.
 
-Publish once after both local commits. With the expected owned branch in
+Publish once after the required local snapshots. With the expected owned branch in
 `branch`, retain and verify the actual final head:
 
 ```sh
