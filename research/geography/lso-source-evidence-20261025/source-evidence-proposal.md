@@ -52,4 +52,4 @@ Keep the two propositions separate:
 
 ## Worktree and publication status
 
-This packet is published in PR [#2815](https://github.com/ChengshuLi/WorldAtlas/pull/2815), currently open at head `7101e2d171962b1c2b5d8f3bd37d908fb4f49791`. The exact 577-key inventory and source/physical evidence are included in this PR; the retained geometry contact report is cited by path and hash above and was not independently verified here. Issue #2634 and #2649 have coordination comments. Distinct-worker exact-head review remains pending. No claim, acceptance or credit update is requested.
+This packet is published in PR [#2815](https://github.com/ChengshuLi/WorldAtlas/pull/2815), open on branch `geography/lso-source-evidence-20261025`; read its current head and merge state from GitHub, with Git as the canonical exact-head record. The exact 577-key inventory and source/physical evidence are included in this PR; the retained geometry contact report is cited by path and hash above and was not independently verified here. Issue #2634 and #2649 have coordination comments. Distinct-worker exact-head review remains pending. No claim, acceptance or credit update is requested.
