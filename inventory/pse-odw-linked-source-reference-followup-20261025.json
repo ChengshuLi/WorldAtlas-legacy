@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "kind": "pse-odw-linked-source-reference-lineage-followup",
+  "as_of": "2026-10-25",
+  "scope": {
+    "claim": "gb-PSE-ADM2--repair-evaluation",
+    "original_cells": 427,
+    "original_intervals": 277,
+    "status": "pending; no qualification or credit changed"
+  },
+  "pinned_metadata_context": {
+    "release_ref": "9469f09",
+    "boundary_id": "PSE-ADM2-87354302",
+    "represented_year": "2017",
+    "feature_count": 16,
+    "boundary_source": "Open Data Watch",
+    "license": "CC BY 4.0",
+    "sourceDataUpdateDate": "2023-01-19",
+    "buildDate": "2023-12-12",
+    "licenseSource": "https://opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/",
+    "boundarySourceURL": "https://opendatawatch.com/about/",
+    "consumed_body_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+    "metadata_lfs_sha256": "c074038fbc17cfd958050477faa6524cb37679ae0db993dc7325e0941e276981",
+    "official_api_url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM2/"
+  },
+  "bounded_source_checks": [
+    {
+      "url": "https://opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/",
+      "record": "ODW publication page",
+      "tool_result": "Page opened successfully (web reference turn3686view0). It identifies a 2016 International Open Data Conference pre-conference workshop about NSO openness, challenges, and open-data tools. It names ODIN as an ODW-created tool to assess coverage and openness of NSO statistical data. The page links the 4-page PDF version.",
+      "lineage_value": "The page is generic ODW organizational/publication context. It does not name a Palestine administrative boundary product, PCBS file, GIS layer, feature roster, spatial method, source vintage, or boundary rights record."
+    },
+    {
+      "url": "https://opendatawatch.com/wp-content/uploads/2016/10/IODC16-NSO-Outcomes-Paper-from-Workshop.pdf",
+      "record": "ODW-linked 2016 workshop outcomes paper (4 pages)",
+      "tool_result": "Official PDF opened (turn3687view0). Exact term checks returned no matches for Palestine, boundary, governorate, or shapefile (turn3691view0–turn3691view3). The document summarizes the workshop/tool presentations and does not identify a Palestinian boundary data input.",
+      "lineage_value": "This exact item referenced as `licenseSource` in the geoBoundaries metadata is not an underlying boundary source citation and supplies no 2017 PSE feature provenance or dataset/file link."
+    },
+    {
+      "url": "https://opendatawatch.com/about/",
+      "record": "ODW About page",
+      "tool_result": "Official page opened (turn3686view1). It describes ODW as an organization supporting official-statistics systems and identifies ODIN as its flagship product.",
+      "lineage_value": "No Palestine administrative-boundary source or feature/vintage lineage is identified."
+    },
+    {
+      "url": "https://odin.opendatawatch.com/country-profiles/PSE?year=2024",
+      "record": "ODW Open Data Inventory Palestine profile",
+      "tool_result": "Search result exists (turn3689search0), but opening returned zero body lines (turn3690view0). No alternate route was tried.",
+      "lineage_value": "Unavailable reader content supplies no evidence about boundary source/file/vintage; do not infer that ODIN contains geometry lineage."
+    },
+    {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM2/",
+      "record": "Official geoBoundaries current API metadata reference linked by the pinned source audit",
+      "tool_result": "JSON opened (turn3686view2); confirms `boundarySource: Open Data Watch`, `boundaryYearRepresented: 2017`, 16 units, CC BY4, and the two generic ODW links above.",
+      "lineage_value": "It does not add an underlying PSE dataset identity beyond ODW attribution."
+    }
+  ],
+  "conclusion": {
+    "result": "No accessible linked ODW source material identifies the actual Palestine ADM2 input dataset/file, a PCBS spatial layer, an upstream feature set, or feature vintage beyond the geoBoundaries metadata’s 2017 represented year and ODW attribution. The linked 2016 “license source” paper is about open-data capacity/tools and does not substantiate the boundary source or license. The 2017 product’s documented boundary source remains only generically ODW.",
+    "effect_on_prior_audit": "This confirms rather than closes the source-lineage gap from the geoBoundaries source-package audit: the archived package documents the 16-unit/two-territory hierarchy and processing route, but the ODW links do not identify what data supplied the polygons. No contact, hold, ownership or classification is changed.",
+    "next_material_step": "A specific archived source citation or transformation/input record for the 9469f09 PSE_ADM2 product would be needed to bridge ODW to an identifiable Palestinian boundary dataset; the two linked ODW pages do not provide it."
+  },
+  "evidence_refs": {
+    "source_package_audit": {
+      "path": ".worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work/inventory/pse-geoboundaries-source-package-lineage-20261025.json",
+      "sha256": "b290b925c22345c9d48d32dfe3a89c3ffecf7e269c15a8038a3ecd56879c0fb1"
+    },
+    "existing_odw_geoboundaries_bridge_note": {
+      "path": "inventory/pse-odw-geoboundaries-source-bridge-20261025.json",
+      "sha256": "efd03fe8383f993be1635c6fea8ec25f604968f48c021b3be919cdf482db9dee"
+    },
+    "source_corpus_pins": {
+      "path": "inventory/pse-source-corpus-pins.json",
+      "sha256": "5d8ae7ef3b6e226a18bdcaa25503cb2b0fee79f7e1225eb1878154b08ff44a2a"
+    }
+  },
+  "additional_linked_reference_check": {
+    "checked_on": "2026-10-25",
+    "purpose": "Follow only the concrete ODIN reference named by the exact 2016 ODW paper already cited in pinned geoBoundaries licenseSource; identify whether the linked source material identifies the input dataset/file for the consumed PSE ADM2 family.",
+    "official_source_results": [
+      {
+        "url": "https://opendatawatch.com/wp-content/uploads/2016/10/IODC16-NSO-Outcomes-Paper-from-Workshop.pdf",
+        "record": "Exact PDF cited by pinned geoBoundaries licenseSource; direct PDF opened as web result turn3692view0, 4 pages, 149 extracted lines.",
+        "observed_content": "The paper describes a 2016 IODC workshop on NSO open-data needs/tools. It names ODIN as an ODW-created tool assessing coverage/openness of NSO statistical data (PDF extracted lines 85-88). No PSE/Palestine boundary product, PCBS GIS layer, administrative polygon input, feature roster, geometry source, or boundary vintage is identified. The paper mentions ODIN as a tool, not as the source dataset for these polygons.",
+        "scope_limit": "Read-only text extraction; no linked imagery or underlying boundary data in this item."
+      },
+      {
+        "url": "https://odin.opendatawatch.com/country-profiles/PSE?year=2024",
+        "record": "Official ODW ODIN Palestine 2024 profile, reached as the specific ODIN destination named by the cited paper and prior pinned source-reference note.",
+        "actual_result": "Official web search result turn3693search0 identifies the profile and indexes a statistical indicator, “Area of Land in Palestine by Governorate and Type.” Opening the exact profile returned zero readable body lines (turn3694view0). No alternate access route was attempted.",
+        "lineage_value": "The indexed snippet establishes an ODW statistical profile with a governorate-level land-area indicator only. It does not identify a spatial boundary product, PCBS GIS service, source file, feature IDs, geometry, or lineage to the pinned 16-feature PSE ADM2 payload.",
+        "access_classification": "Reader returned an empty page body; this is a tool limitation, not a source denial."
+      }
+    ],
+    "conclusion": "The exact ODW publication linked as the geoBoundaries licenseSource and the specific ODIN Palestine profile it references add no underlying geometry source or file identity. The pinned geoBoundaries 9469f09 PSE ADM2 product remains identified as 2017-represented, 16 features, CC BY 4.0, with ODW as generic boundarySource; no accessible ODW material located here names the underlying Palestine dataset or feature vintage beyond that represented-year metadata.",
+    "contract_effect": "This narrows the source lineage question but does not resolve source applicability for any exact interval. Preserve all 427 original PSE cells and 277 intervals pending; do not treat the generic ODW label, ODIN indicator or owner-zero observation as qualification or a reason to exclude contacts.",
+    "remaining_specific_input": "An archived PSE source citation or transformation/input record for the exact 9469f09 16-feature product, linking it to an identifiable upstream boundary file and version, remains the material lineage input if a group’s original source-relative applicability turns on ancestry."
+  }
+}

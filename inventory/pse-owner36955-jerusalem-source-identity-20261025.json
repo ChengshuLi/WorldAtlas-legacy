@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "kind": "pse-owner36955-jerusalem-source-identity-followup",
+  "as_of": "2026-10-25",
+  "claim": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "issue": 2606,
+    "suspension_issue": 2649,
+    "owner": 36955,
+    "original_claim_cells": 427,
+    "original_claim_intervals": 277,
+    "owner_cells": 37,
+    "owner_intervals": 6,
+    "status": "all 37 owner cells remain pending; no credit or hold change"
+  },
+  "exact_jerusalem_contact_subset": {
+    "source_feature_index": 38217,
+    "source_id": "gb:ISR:ADM1:19161824B79530266069959",
+    "name": "Jerusalem District",
+    "represented_year": 2006,
+    "native_rows": [
+      {"y": 106602, "x_start": 156559, "x_end_exclusive": 156561, "owner": 36955, "candidate_feature_index": 52590, "parent_feature_index": 52576, "physical": "land"},
+      {"y": 106603, "x_start": 156559, "x_end_exclusive": 156560, "owner": 36955, "candidate_feature_index": 52590, "parent_feature_index": 52576, "physical": "land"}
+    ],
+    "cells": 3,
+    "intervals": 2
+  },
+  "pinned_retained_identity": {
+    "family_payload_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+    "accepted_source_family_payload": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+    "retained_decoded_feature_count": 6,
+    "retained_feature_index": 38217,
+    "retained_feature_name": "Jerusalem District"
+  },
+  "official_geoboundaries_metadata": {
+    "repository": "https://github.com/wmgeolab/geoBoundaries",
+    "release_ref": "9469f09",
+    "api_record": "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/",
+    "metadata_path": "releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1-metaData.json",
+    "boundaryID": "ISR-ADM1-19161824",
+    "boundaryYearRepresented": "2006",
+    "boundaryType": "ADM1",
+    "boundaryCanonical": "Districts",
+    "boundarySource": "geoBoundaries, Wikimedia",
+    "boundaryLicense": "Public Domain",
+    "licenseDetail": "nan",
+    "licenseSource": "commons.wikimedia.org/wiki/File",
+    "boundarySourceURL": "en.wikipedia.org/wiki/Wikipedia",
+    "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+    "buildDate": "Dec 12, 2023",
+    "admUnitCount": "6",
+    "simplified_payload_lfs_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+    "simplified_payload_lfs_bytes": 44192,
+    "official_lfs_pointer": "https://raw.githubusercontent.com/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1_simplified.geojson"
+  },
+  "assessment": {
+    "established": "The held Jerusalem contact is the exact Jerusalem District feature within the retained six-feature ISR ADM1 family, and its payload hash matches the official 9469f09 simplified-product LFS identity. The current official geoBoundaries API record describes this six-unit product as 2006-represented, ADM1/Districts, geoBoundaries/Wikimedia attributed, and Public Domain; its source-data update and build dates are 2023.",
+    "not_established": "The official metadata exposes only generic Wikimedia/Commons file and Wikipedia source URLs. It does not name the underlying map/file, give its date or scale, identify a source geometry version, or explain why the Jerusalem feature contacts these exact PSE cells. The record therefore does not establish that this contact is contextual, excluded, or a source-applicability exception under the original PSE 2017 contract.",
+    "disposition": "Keep all three Jerusalem-contact cells and both intervals fully adverse/held. The distinct 2006 ISR ADM1 source remains an independent competitor; the same-family West Bank parent relationship does not resolve it.",
+    "next_decision_changing_step": "A specific upstream Wikimedia/Commons item or source-file identity/version for the 9469f09 ISR ADM1 product, followed by an exact center-to-feature applicability evaluation under the original contract, could change interpretation. Until then, retain the complete competitor operand in any stock qualification; do not delete or waive it."
+  },
+  "sources": [
+    "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/",
+    "https://raw.githubusercontent.com/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1_simplified.geojson",
+    "inventory/pse-owner36955-parent-and-jerusalem-contact-audit-20261025.json",
+    "inventory/pse-geoboundaries-source-package-lineage-20261025.json"
+  ]
+}

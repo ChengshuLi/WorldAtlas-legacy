@@ -1,0 +1,91 @@
+{
+  "kind": "pse-owner36955-parent-and-jerusalem-contact-audit",
+  "as_of": "2026-10-25",
+  "claim": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "issue": 2606,
+    "suspension_issue": 2649,
+    "original_cells": 427,
+    "original_intervals": 277,
+    "original_owners": 11,
+    "owner": 36955,
+    "owner_name": "Ramallah & Al Bireh",
+    "owner_cells": 37,
+    "owner_intervals": 6,
+    "owner_physical_class": "all land",
+    "status": "all original outcomes remain pending; no credit or hold change"
+  },
+  "exact_source_roles": {
+    "candidate": {
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "feature_index": 52590,
+      "name": "Ramallah & Al Bireh",
+      "represented_year": 2017,
+      "family_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433"
+    },
+    "same_family_parent_context": {
+      "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+      "feature_index": 52576,
+      "name": "West Bank",
+      "represented_year": 2021,
+      "family_sha256": "2f065583a8be795533893fd4c62fed765959b47db2cf01e696cc795cc6c56b0a",
+      "documented_role": "The retained source-package audit describes the two-feature PSE ADM1 as the territorial split and the 16-unit ADM2 as its governorate hierarchy; 11 ADM2 parts are nested in West Bank and five in Gaza. This makes the West Bank contact same-country hierarchy context, not a proven foreign competitor. The source audit does not authorize deleting the contact or prove source-relative candidate qualification."
+    },
+    "independent_israeli_competitor": {
+      "source_id": "gb:ISR:ADM1:19161824B79530266069959",
+      "feature_index": 38217,
+      "name": "Jerusalem District",
+      "represented_year": 2006,
+      "family_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+      "applicability": "The original contact record identifies this separate-family feature for three cells; retained provenance remains generic geoBoundaries/Wikimedia metadata and does not identify the specific upstream map or an exclusion ruling. Keep the contact."
+    }
+  },
+  "exact_interval_partition": [
+    {
+      "contact_class": "same-family West Bank parent only",
+      "cells": 34,
+      "intervals": 4,
+      "block": 26,
+      "rows": [
+        {"y":106606,"x_start":156565,"x_end_exclusive":156580,"owner":36955,"source_features":[52576,52590],"physical":"land"},
+        {"y":106607,"x_start":156565,"x_end_exclusive":156573,"owner":36955,"source_features":[52576,52590],"physical":"land"},
+        {"y":106608,"x_start":156565,"x_end_exclusive":156573,"owner":36955,"source_features":[52576,52590],"physical":"land"},
+        {"y":106609,"x_start":156569,"x_end_exclusive":156572,"owner":36955,"source_features":[52576,52590],"physical":"land"}
+      ],
+      "assessment": "A documented parent-context distinction is supported by the pinned same-release hierarchy evidence. This is not a final source exception or a qualified repair; interval-level original-source and selected-native predicates remain untested."
+    },
+    {
+      "contact_class": "same-family West Bank parent plus independent Jerusalem District contact",
+      "cells": 3,
+      "intervals": 2,
+      "block": 26,
+      "rows": [
+        {"y":106602,"x_start":156559,"x_end_exclusive":156561,"owner":36955,"source_features":[38217,52576,52590],"physical":"land"},
+        {"y":106603,"x_start":156559,"x_end_exclusive":156560,"owner":36955,"source_features":[38217,52576,52590],"physical":"land"}
+      ],
+      "assessment": "Retain as a documented unresolved competitor contact. The parent hierarchy does not resolve the separate ISR feature. No source exclusion or territorial conclusion is established."
+    }
+  ],
+  "physical_and_native_evidence": {
+    "physical_support": "The retained original mask reconstruction assigns all 37 cells to land and splits the 37 cells into the six exact block-26 intervals above. It provides no inland-water support for this owner; land classification is context, not qualification.",
+    "current_owner_observation": {
+      "commit": "d884410c7558eda9abfd9e8e9a8e2d2808b4a348",
+      "scope": "all 427 original PSE cells",
+      "interpretation": "Current-owner-zero observation only; it is not source applicability, historical-zero proof, native qualification, or a territorial-exclusion decision."
+    },
+    "stock_readiness": "Retained crosswalk marks the source-candidate, physical and water-mask operands ready for a bounded stock source/native attempt, result not_run, exact_missing_inputs empty. No native constructor/qualification is evidenced for these six intervals. Normal execution still requires a valid PSE-owned allocation and current selector/code rebinding."
+  },
+  "contract_result": {
+    "supported_now": "Record groups 3 and 15 distinctly: the 34-cell/4-interval group has a same-family parent contact only; the 3-cell/2-interval group additionally has a separate Jerusalem District contact that must remain held.",
+    "not_supported_now": "No final interval exception, repair qualification, removal of the Jerusalem contact, or owner-clearance claim. Existing owner-zero observation and parent hierarchy do not satisfy the original unique-source, complete-competitor, physical/source witness and selected-native conservation requirements.",
+    "next_concrete_step": "Run the already-ready, bounded stock source/native qualification for exactly these six intervals under a valid PSE-owned allocation, retaining both PSE families and the ISR contact. Only if the stock result leaves an interval materially unresolved should source-specific upstream lineage for the 2006 Jerusalem District feature be pursued further.",
+    "no_change": "Preserve all 37 cells/6 intervals as pending within the complete 427-cell/277-interval PSE claim; no geometry rerun, reclassification, hold removal, or credit."
+  },
+  "evidence_bindings": [
+    {"path":"inventory/pse-adm1-two-territory-source-role-reconciliation-20261025.json","sha256":"b21ecc3345185f75f5c296e2c1fa1311bdc4768f17270130a0c394e6efc935b6"},
+    {"path":"inventory/pse-adm2-427-group-evidence-matrix-20261024.json","sha256":"d50363ab3b1e4a826ab65c8ac03429db36fa178f23801a4fa86db36aa77c2223"},
+    {"path":"inventory/pse-adm2-427-group-source-qualification-crosswalk-20261024.json","sha256":"0b968fb407f2deff8d0f912b5a626dd2aae4dd76643873ea4fb2c02b88eb577a"},
+    {"path":"inventory/pse-retained-source-physical-context.json","sha256":"a8f79fc1d0654748c539ba9ec59f4b803cdddcebcf2ed75f3e13d96dec84213e"},
+    {"path":"inventory/pse-selected-owner-observation.json","sha256":"5be0e9c1d03a0a1a9cff0f3387bae15601d563796ebfd78fc8b634f8d27cfce6"}
+  ]
+}

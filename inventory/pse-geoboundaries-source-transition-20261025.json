@@ -1,0 +1,73 @@
+{
+  "kind": "pse-geoboundaries-source-transition-check",
+  "as_of": "2026-10-25",
+  "scope": {
+    "claim": "gb-PSE-ADM2--repair-evaluation",
+    "original_cells": 427,
+    "original_intervals": 277,
+    "status": "research only; no qualification, reclassification, or credit"
+  },
+  "consumed_product": {
+    "official_current_api": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM2/",
+    "repository_commit": "9469f09",
+    "represented_year": 2017,
+    "boundary_source": "Open Data Watch",
+    "license": "CC BY 4.0",
+    "source_data_update": "2023-01-19",
+    "build_date": "2023-12-12",
+    "feature_count": 16,
+    "family_payload_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+    "metadata_sha256": "260b7355491626105a500a87c12767ca2ac67355e1f0604dc842849dbe6f2e2f",
+    "source": "The retained current-product API metadata matches these pins and provides generic ODW About/publication links, not an identified PSE boundary input file or transformation history."
+  },
+  "official_archival_release_metadata": [
+    {
+      "release": "2.0.0",
+      "release_commit": "not independently resolved to this country file",
+      "metadata_url": "https://www.geoboundaries.org/data/geoBoundaries-2_0_0/PSE/ADM2/geoBoundaries-2_0_0-PSE-ADM2-metaData.json",
+      "boundary_id": "PSE-ADM2-2_0_0-G465",
+      "represented_year": 2017,
+      "boundary_update": "2020-01-15",
+      "source": "OpenStreetMap, digitized from the Wikipedia/Commons file Palestine_election_map.PNG",
+      "license": "CC BY-SA 3.0",
+      "meaning": "Official metadata declares a source and license different from the current pinned product; it does not establish geometry identity or that this is the current product's ancestor."
+    },
+    {
+      "release": "2.0.1",
+      "metadata_url": "https://www.geoboundaries.org/data/geoBoundaries-2_0_1/PSE/ADM2/geoBoundaries-2_0_1-PSE-ADM2-metaData.json",
+      "boundary_id": "PSE-ADM2-2_0_1-G465",
+      "represented_year": 2017,
+      "boundary_update": "2020-01-16",
+      "source": "OpenStreetMap, digitized from the same named Wikipedia/Commons file",
+      "license": "CC BY-SA 3.0",
+      "meaning": "Documents continuity of the metadata description from 2.0.0 to 2.0.1 only; no bridge to the consumed 9469f09 source is given."
+    },
+    {
+      "release": "3.0.0",
+      "metadata_url": "https://www.geoboundaries.org/data/geoBoundaries-3_0_0/PSE/ADM2/geoBoundaries-3_0_0-PSE-ADM2-metaData.json",
+      "reported_metadata": {
+        "boundary_id": "PSE-ADM2-3_0_0-G432",
+        "represented_year": 2016,
+        "source": "Humdata",
+        "license": "Other - Humanitarian",
+        "source_url": "https://data.humdata.org/dataset/state-of-palestine-administrative-boundaries",
+        "update": "2020-05-29"
+      },
+      "access_note": "This exact official metadata record was inspected in retained research; a fresh web-reader open during this check returned inaccessible-via-tool. No geometry was accessed. The current official geoBoundaries README identifies the 3.0.0 release commit as 7c8dbc5."
+    }
+  ],
+  "official_project_history": {
+    "readme": "https://github.com/wmgeolab/geoBoundaries/blob/main/README.md",
+    "what_it_documents": "geoBoundaries describes versioned releases for replication and links release commits; README lists 3.0.0 (2020-06-05), 2.0.1 (2019-12-07), and later releases. It describes GitHub HTML access for archival versions.",
+    "what_was_not_found": "No public release note, per-country migration record, source-data commit bridge, file hash comparison, or same-file lineage connecting the 2.0.x OSM/Wikipedia input to the later 3.0.0 Humdata record or current 9469f09 ODW-attributed product.",
+    "reader_limit": "The official GitHub tree/history pages for sourceData at 9469f09 and archived release paths were rejected as restricted URLs by the web reader. This is a tool limitation, not evidence of denied source access; no alternate transport or geometry fetch was attempted."
+  },
+  "conclusion": {
+    "same_source_demonstrated": false,
+    "different_documented_source_labels": true,
+    "geometry_same_or_different_proven": false,
+    "interpretation": "Public release metadata documents materially different source and licensing declarations across product versions: 2.0.x OSM/Wikipedia-image, 3.0.0 Humdata, and the consumed 9469f09 product ODW. Shared or changed 2017 representation does not prove geometry identity. Nor does a changed label alone prove geometry changed.",
+    "contract_implication": "Apply the original source-relative contract to the exact pinned 9469f09 payload and its recorded metadata. Do not substitute older release geometry or infer ODW input lineage from generic linked pages. If a specific interval's applicability depends on ancestry, the precise missing record is the 9469f09 source input/citation or transformation/provenance record connecting its 16 features to an identifiable upstream boundary product.",
+    "disposition": "Keep all 427 original cells / 277 intervals pending under the existing review. This metadata check changes no cell disposition and supplies no qualification or credit."
+  }
+}

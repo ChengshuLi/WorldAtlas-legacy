@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "kind": "PSE-03 Balqa contact source-lineage follow-up",
+  "status": "read-only source applicability review; PSE-03 nine inland-water cells remain held; no geometry or qualification execution",
+  "original_scope": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "group": "PSE-03",
+    "owner_index": 36950,
+    "owner_source_id": "gb:PSE:ADM2:87354302B18647900198549",
+    "candidate_source_index": 52578,
+    "candidate_name": "Jericho & Al Aghwar",
+    "keys": 9,
+    "intervals": [147, 149],
+    "class": "inland-water",
+    "native_reason": "territorial_exclusion_cells",
+    "contacts": [
+      {"source_id":"gb:JOR:ADM1:50493656B62478729305943","source_index":38385,"name":"Balqa","feature_ordinal":3,"negative_ordinal":2,"keys_with_interior_contact":9,"geometry_sha256":"947d6ab8188f11cc7d485ea0b26ebf73e8b661be3c109b2da8d08fe9de875243"},
+      {"source_id":"gb:PSE:ADM1:83478781B28849486138516","source_index":52576,"name":"West Bank","feature_ordinal":0,"negative_ordinal":3,"keys_with_interior_contact":9,"geometry_sha256":"d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c"}
+    ]
+  },
+  "retained_source_evidence": {
+    "pse_hierarchy_crosswalk": {"path":"inventory/pse-water-parent-contact-applicability-crosswalk-20261025.json","sha256":"c9a03c56679a863a1567e2d62027b35b0ccbe656dc296f546ea499d22ca86988"},
+    "retained_source_context": {"path":"inventory/pse-retained-source-physical-context.json","sha256":"a8f79fc1d0654748c539ba9ec59f4b803cdddcebcf2ed75f3e13d96dec84213e"},
+    "original_catalogue": {"commit":"c6a26e1caba54e1b81a89fbda3a64fff56da323d","path":"data/administrative-sources.json","family":"gb:JOR:ADM1","boundary_id":"JOR-ADM1-50493656","represented_year":2006,"boundary_source":"geoBoundaries, Wikimedia","recorded_license":"Creative Commons Attribution 2.5 Generic","license_source":"commons.wikimedia.org/wiki/File","source_url":"commons.wikimedia.org/wiki/File","consumed_static_url":"https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/JOR/ADM1/geoBoundaries-JOR-ADM1_simplified.geojson"},
+    "exact_source_corpus": {"commit":"2d1fc6f430e756498908bf2c4e267356a13f5cc7","path":"coordination/engineering/original-geography-source-corpus-20261006/catalogue.json","family":"gb:JOR:ADM1","feature_count":12,"decoded_bytes":54979,"decoded_sha256":"f364401f87d800ca90bcb3a0cf7a0bff05fb9cf9e9843a7344aaa5376665f34b","compressed_payload_path":"coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM1-000.bin.gz","compressed_bytes":17364,"compressed_sha256":"afb40bc9120d2a3720e9934ec0ae4ff3f665802cc13e129e63befe6454924add","git_blob_oid":"8e3d3e1a852b6d07478e66606522af6514bb455b","balqa_properties":{"shapeName":"Balqa","shapeISO":"JO-BA","shapeID":"50493656B62478729305943","shapeGroup":"JOR","shapeType":"ADM1"}}
+  },
+  "new_primary_read": {
+    "url":"https://dosweb.dos.gov.jo/DataBank/Analytical_Reports/Poverty/poverty_rep/Jordan_Poverty_report_2006_part1.pdf",
+    "read_method":"programmatic PDF open/text extraction; no browser",
+    "result":"World Bank Document, Jordan Poverty Update, Volume I: Main Report, November 2009; 39 PDF pages. PDF page 39 (web extraction page P38) contains a Jordan map labeled GOVERNORATE BOUNDARIES, names BALQA, includes 35–39E/29–34N graticule and scale, and is marked IBRD 33424 / JANUARY 2005. Its imprint states it was produced by the World Bank Map Design Unit and says displayed boundaries do not imply a World Bank judgment on legal status or endorsement/acceptance. The report itself describes the joint DOS/World Bank poverty analysis, not the provenance of the consumed 2006 Balqa feature geometry.",
+    "relevant_pdf_page_lines":"https://dosweb.dos.gov.jo/DataBank/Analytical_Reports/Poverty/poverty_rep/Jordan_Poverty_report_2006_part1.pdf (PDF page 39; extracted lines include BALQA, 35–39E/29–34N, January 2005, IBRD 33424, Map Design Unit disclaimer)",
+    "scope_limit":"The map is broad dated cartographic context and identifies Balqa, but supplies no machine-readable Balqa feature, exact 2006 source lineage, local nine-key relation, or evidentiary basis for equating its generalized boundary with the consumed geoBoundaries/Wikimedia polygon. It is not an official DOS boundary-data record merely because DOS hosts the report. No geometry was derived from it."
+  },
+  "assessment": {
+    "parent_crosswalk_limit":"The PSE ADM1/ADM2 hierarchy supports same-source parent-role treatment for West Bank versus its PSE ADM2 children. Balqa is a separate Jordan ADM1 family, separately recorded as a territorial exclusion. The PSE parent relationship cannot explain or dispose of the Balqa contact.",
+    "finding":"The accessible DOS-hosted map confirms that a Balqa governorate boundary was depicted in a January 2005 World Bank map and locates the named governorate in regional context. It does not independently authenticate the 2006 Balqa polygon lineage or resolve the exact PSE-03 contact. Balqa remains a live competing source contact under the original contract.",
+    "disposition":"No change: preserve all nine PSE-03 native holds and the original PSE denominator. This bounded read adds contextual evidence, not a sovereignty conclusion, exclusion veto, or qualification result.",
+    "next_material_witness":"A source-specific link from the retained 2006 geoBoundaries/Wikimedia Balqa feature to an attributable Jordanian administrative boundary source/version, or an exact accessible Jordan primary spatial record that documents the feature lineage. No denial was encountered in the PDF read; this report does not claim exhaustive absence of other records."
+  }
+}

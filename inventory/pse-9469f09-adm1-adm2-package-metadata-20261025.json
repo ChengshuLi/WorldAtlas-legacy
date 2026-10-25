@@ -1,0 +1,68 @@
+{
+  "kind": "pse-9469f09-adm1-adm2-package-metadata-audit",
+  "as_of": "2026-10-25",
+  "repository": "https://github.com/wmgeolab/geoBoundaries",
+  "commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
+  "scope": "metadata and Git tree/package descriptors only; no geometry body accessed",
+  "official_api_records": [
+    {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM1/",
+      "boundary_id": "PSE-ADM1-83478781",
+      "canonical_unit": "territory",
+      "represented_year": 2021,
+      "source": "geoBoundaries, Open Data Watch",
+      "license": "CC BY 4.0",
+      "source_data_update": "2023-01-19",
+      "build_date": "2023-12-12",
+      "feature_count": 2,
+      "metadata_limit": "Dataset-level API record only; it does not enumerate the two feature IDs/names or source-file-to-feature transformations."
+    },
+    {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM2/",
+      "boundary_id": "PSE-ADM2-87354302",
+      "canonical_unit": "governorate",
+      "represented_year": 2017,
+      "source": "Open Data Watch",
+      "license": "CC BY 4.0",
+      "source_data_update": "2023-01-19",
+      "build_date": "2023-12-12",
+      "feature_count": 16,
+      "metadata_limit": "Dataset-level API record only; it does not enumerate feature IDs or the ODW upstream file/version. Existing Bethlehem feature identity remains from the retained corpus, not this API record."
+    }
+  ],
+  "pinned_git_tree_findings": {
+    "sourceData_root_tree": "2878b33f2342498f0a6ded89c99c2f5e4b68b0db",
+    "sourceData_gbOpen_tree": "5d89229074dcf062c9f4a54251b12e00d2d2a23f",
+    "source_packages": [
+      {
+        "path": "sourceData/gbOpen/PSE_ADM1.zip",
+        "git_blob_oid": "11daa7252282c126d402dfa9be01439685fdff4e",
+        "git_lfs_sha256": "ce7bfcd6d2489088464f3b35f6f7ae7c07959251534b219749897ee90aa9fbfd",
+        "git_lfs_bytes": 1070020
+      },
+      {
+        "path": "sourceData/gbOpen/PSE_ADM2.zip",
+        "git_blob_oid": "c1b20097b2fa212dfeb2e3fd8471dc5a73a32e07",
+        "git_lfs_sha256": "e1c8c97a30d36721ef9c8864cdc9942e0d304dbce0307aed73e20c8547a937be",
+        "git_lfs_bytes": 1654707
+      }
+    ],
+    "releaseData_paths": {
+      "ADM1_tree": "c8b35ce351c5098ff2a95893fdb7152a3e08c719",
+      "ADM2_tree": "190370125fd3f85386abf6c3e6bf5c3a169f0541",
+      "observed_products_each_level": ["CITATION-AND-USE text", "preview PNG", "all.zip", "metadata JSON/TXT", "DBF", "full and simplified GeoJSON/SHP/SHX/PRJ/TopoJSON"]
+    },
+    "metadata_lfs_pointers": [
+      {"path":"releaseData/gbOpen/PSE/ADM1/geoBoundaries-PSE-ADM1-metaData.json","git_lfs_sha256":"194c68283a55537f7917fc3c140d555d2dc73fd1ff7b3556400bb29182cafe15","git_lfs_bytes":867},
+      {"path":"releaseData/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2-metaData.json","git_lfs_sha256":"c074038fbc17cfd958050477faa6524cb37679ae0db993dc7325e0941e276981","git_lfs_bytes":855}
+    ],
+    "process_evidence": "At commit 9469f09, sourceData/gbOpen holds level-specific ZIP inputs as LFS objects; releaseData/gbOpen holds generated full/simplified geospatial products and metadata as LFS objects. The Git tree proves package paths/object identities and the official API gives product-level metadata. It does not expose source ZIP members, feature IDs, a transformation recipe, or a version-to-version ancestry bridge."
+  },
+  "access_method_and_limits": {
+    "source_package_inspected": false,
+    "reason": "The task was limited to exact public metadata and Git tree/package descriptors; source package archive contents and all boundary geometries were intentionally not downloaded or inspected.",
+    "feature_id_answer": "No feature IDs for the two ADM1 units or sixteen ADM2 units are present in the API records or Git tree filenames. The previously retained exact ADM2 feature ID is 87354302B24436251599031 (Bethlehem) from admitted feature-level corpus evidence, not from product-level API metadata.",
+    "transformation_answer": "The tree distinguishes input ZIP packages from released outputs, but provides no source processing log or feature-level transformation/version history sufficient to bridge ODW input to the released features."
+  },
+  "disposition": "This adds immutable package object identities and confirms the metadata granularity limit; it does not change PSE applicability, any key status, or the original 427-cell/277-interval scope. Preserve all existing holds and pending outcomes."
+}

@@ -1,0 +1,73 @@
+{
+  "basis": {
+    "crosswalk": {
+      "bytes": 16056,
+      "path": "inventory/pse-adm1-adm2-package-geometry-crosswalk-20261025.json",
+      "sha256": "b5ba2f63e929fa9eae0ee280d063c736a87cf2e360abe08d43ac8630d4c42896"
+    },
+    "native_contact_crosscut": {
+      "bytes": 81096,
+      "path": "inventory/pse-inland-water-held-interval-contact-crosscut-20261025.json",
+      "sha256": "5850b3a98ef6d63ffc9472036f16ad62fde25ad84710cab2911641fe7b855a67"
+    },
+    "original_full_source_evidence_sha256": "cae1128a4a42449d7c6bbf125c0d7087af9b195325e540c9102d29346676b293",
+    "original_native_diagnostic_sha256": "ddc890d5b16175c177303f78eae045135f9c4d8e54b93ffdea8b5c08104513a9",
+    "package_metadata": {
+      "bytes": 4437,
+      "path": "inventory/pse-9469f09-adm1-adm2-package-metadata-20261025.json",
+      "sha256": "2ae1d1712a3e49229f8be5b02952129c0a001fb350591ab01b1798b5c3d7c31d"
+    },
+    "parent_applicability_crosswalk": {
+      "bytes": 79616,
+      "path": "inventory/pse-water-parent-contact-applicability-crosswalk-20261025.json",
+      "sha256": "c9a03c56679a863a1567e2d62027b35b0ccbe656dc296f546ea499d22ca86988"
+    },
+    "source_lineage": "At geoBoundaries release 9469f09, archived PSE_ADM2 sourceData metadata records PSE_ADM1 as the input feature class for the 2021-05-27 FeatureClassToFeatureClass export; the retained 11 children map one-to-one by unique names to their parent features. Derived planar sourceData comparisons show near-complete but not exact containment/union correspondence; no exact geometry equality is claimed."
+  },
+  "decision": "For the exact listed original keys only, treat an interior hit on gb:PSE:ADM1:83478781B28849486138516 as same-release parent hierarchy context for the consumed PSE ADM2 source member. Retain the full PSE ADM1 operand and every other negative operand. This contextual interpretation does not apply to boundary contacts, any Israeli/Jordanian operand, or keys outside the enumerated scope. It is not a sovereignty or current-boundary conclusion and it does not establish a positive native owner.",
+  "independent_review": {
+    "finding": "Yes, the contract supports recording the same-release PSE ADM1 parent as hierarchy context for the exact affected cells while retaining the contact and its geometry in the evidence. The stock path for this is territorial_applicability, handled by prepare-delivery-handoff.mjs and deriveSourceTargetNativeDelta in src/native-grid.js. It requires per-contact bindings to the original source member, negative operand and geometry hash, exact key, and adoption decision. It contextualizes only matching interior exclusion hits; boundary contacts still veto. This is not permission to delete the PSE ADM1 negative from the input.\n\nThe ADM1/ADM2 package crosswalk and lineage evidence support the parent-role interpretation for the same-release PSE contact. A fresh qualification for the 149 water cells could therefore retain that PSE ADM1 contact as contextual, while preserving every other negative and the original water-class support requirements.\n\nThis does not clear PSE-03\u2019s nine Jordan Balqa contacts. They remain negative unless separately supported by exact applicability evidence. Nor does the hierarchy finding resolve Israel or other contacts. The six previously supported cells and the remaining held scope are unaffected. No reclassification or constructor run was performed.",
+    "reviewed_input_hashes": {
+      "crosscut_sha256": "5850b3a98ef6d63ffc9472036f16ad62fde25ad84710cab2911641fe7b855a67",
+      "native_diagnostic_sha256": "ddc890d5b16175c177303f78eae045135f9c4d8e54b93ffdea8b5c08104513a9",
+      "parent_contact_crosswalk_sha256": "c9a03c56679a863a1567e2d62027b35b0ccbe656dc296f546ea499d22ca86988",
+      "scope_key_set_sha256_y_x_owner": "e90c42deadc957614cf9069b37b17964cad1c1ff2cdba426df15343c77d0ed81",
+      "source_evidence_sha256": "cae1128a4a42449d7c6bbf125c0d7087af9b195325e540c9102d29346676b293"
+    },
+    "reviewer": "/root/bra_review",
+    "source": "direct returned reviewer result in the current Codex collaboration task"
+  },
+  "kind": "pse-adm1-parent-context-decision-v1",
+  "limits": [
+    "Only the 149 exact parent-interior key scope is covered.",
+    "All 3 negative families and their complete original operands remain in evidence.",
+    "The stock evaluator must validate every per-key/owner/source/negative binding; boundaries remain vetoes.",
+    "PSE-03 remains held due the separate Balqa contact.",
+    "PSE-05 and PSE-09 are candidates for a fresh qualification only; no current status, constructor, acceptance or package credit changes."
+  ],
+  "package_id": "gb-PSE-ADM2--repair-evaluation",
+  "scope": {
+    "cells": 149,
+    "groups": {
+      "PSE-03": 9,
+      "PSE-05": 23,
+      "PSE-09": 117
+    },
+    "key_set_sha256_y_x_owner": "e90c42deadc957614cf9069b37b17964cad1c1ff2cdba426df15343c77d0ed81",
+    "scope_artifact": {
+      "bytes": 53532,
+      "path": "inventory/pse-adm1-parent-context-scope-20261025.json",
+      "sha256": "503aadf5dc9547af6c374ab97d0069934988fb8e76030b29a21a94922482ca34"
+    }
+  },
+  "specific_preserved_competitor": {
+    "cells": 9,
+    "disposition": "remains an independent veto; no applicability decision is made",
+    "geometry_sha256": "947d6ab8188f11cc7d485ea0b26ebf73e8b661be3c109b2da8d08fe9de875243",
+    "group": "PSE-03",
+    "negative_ordinal": 2,
+    "source_id": "gb:JOR:ADM1:50493656B62478729305943"
+  },
+  "status": "scoped contextual applicability decision for a fresh native diagnostic; does not itself qualify or accept a repair",
+  "version": 1
+}

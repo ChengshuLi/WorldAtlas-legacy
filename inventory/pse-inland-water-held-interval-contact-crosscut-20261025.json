@@ -1,0 +1,2619 @@
+{
+  "version": 1,
+  "kind": "PSE original inland-water held-interval contact predicate crosscut",
+  "status": "read-only derivation from retained interval, source and native diagnostic records; no producer rerun or status change",
+  "worktree": "/Users/chengshuli/Documents/Codex/2026-10-20/task/.worldatlas-workspaces/2d82c0ae06b92ab3/42d17456f7a54d6568c34d0f3b55d222f56a720a7015812071dce708422d5208/work",
+  "worktree_head": "4b9f4cb5b3209d82dce16caae9a5e92ba823207e",
+  "package_id": "gb-PSE-ADM2--repair-evaluation",
+  "original_contract": {
+    "completion": "Every exact interval is either a qualified additive repair to its recorded location or a documented exception; run actual selected-native conservation and source/physical witness checks. Existing river water remains location-owned.",
+    "priority": 1,
+    "question": "Qualify the unique current-location source membership, retained territorial exclusions and complete source competitors; then derive and verify a zero-reassignment additive native patch."
+  },
+  "scope_counts": {
+    "water_cells": 152,
+    "water_intervals": 87,
+    "supported_cells": 3,
+    "held_cells": 149,
+    "held_intervals": 84,
+    "diagnostic_held_reason_counts": {
+      "territorial_exclusion_cells": 149
+    },
+    "accepted_exception_or_repair_claimed": false
+  },
+  "inputs": {
+    "disposition": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/pse-disposition.json",
+      "bytes": 102352,
+      "sha256": "0b8b48671315dd4d20f23c28a034859964689c7747375e41e840d07f73bb7cb9"
+    },
+    "native_diagnostic": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-diagnostic-20261025/native-diagnostic.json",
+      "bytes": 479385,
+      "sha256": "ddc890d5b16175c177303f78eae045135f9c4d8e54b93ffdea8b5c08104513a9"
+    },
+    "source_evidence": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/source-evidence-20261025/source-evidence.json",
+      "bytes": 55006,
+      "sha256": "cae1128a4a42449d7c6bbf125c0d7087af9b195325e540c9102d29346676b293"
+    },
+    "constructor_result": {
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-authority-20261025/constructor-result.json",
+      "bytes": 9636,
+      "sha256": "a2ec5b3f25ec826abc4ecbdd2029ab9ede077dfa173268ae824edac901559f3e"
+    },
+    "prior_exact_water_pcbs_native_cross_tab": {
+      "path": "inventory/pse-inland-water-exact-pcbs-native-cross-tab-20261025.json",
+      "sha256": "e63dd199f69e5f3786f72c4948d33826d0c5ac5d4881227b2a0ed0c43f0b465c"
+    }
+  },
+  "complete_negative_family_payloads": [
+    {
+      "parts": [
+        {
+          "bytes": 12533,
+          "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+          "decoded_bytes": 44192,
+          "decoded_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+          "git_blob_oid": "369e02e594b9345da7cfe00fcabb6859988d3c03",
+          "mode": "100644",
+          "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+          "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+        }
+      ],
+      "source_id": "gb:ISR:ADM1"
+    },
+    {
+      "parts": [
+        {
+          "bytes": 17364,
+          "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+          "decoded_bytes": 54979,
+          "decoded_sha256": "f364401f87d800ca90bcb3a0cf7a0bff05fb9cf9e9843a7344aaa5376665f34b",
+          "git_blob_oid": "8e3d3e1a852b6d07478e66606522af6514bb455b",
+          "mode": "100644",
+          "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM1-000.bin.gz",
+          "sha256": "afb40bc9120d2a3720e9934ec0ae4ff3f665802cc13e129e63befe6454924add"
+        }
+      ],
+      "source_id": "gb:JOR:ADM1"
+    },
+    {
+      "parts": [
+        {
+          "bytes": 12318,
+          "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+          "decoded_bytes": 34407,
+          "decoded_sha256": "2f065583a8be795533893fd4c62fed765959b47db2cf01e696cc795cc6c56b0a",
+          "git_blob_oid": "00227553ebf7d334f4b3e51548f53daf7741eee9",
+          "mode": "100644",
+          "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-PSE-ADM1-000.bin.gz",
+          "sha256": "74c1b0fe78a4dc5b1322ae909cc00d6d7e26e77ada47f80f6a531b434866dee7"
+        }
+      ],
+      "source_id": "gb:PSE:ADM1"
+    }
+  ],
+  "aggregate_triggering_contact_keys": {
+    "gb:JOR:ADM1:50493656B62478729305943": 9,
+    "gb:PSE:ADM1:83478781B28849486138516": 149
+  },
+  "held_groups": [
+    {
+      "question_id": "PSE-03",
+      "owner_indices": [
+        36950
+      ],
+      "owner_source_ids": [
+        "gb:PSE:ADM2:87354302B18647900198549"
+      ],
+      "candidate_and_contact_feature_indices": [
+        38385,
+        52576,
+        52578
+      ],
+      "physical_class": "inland-water",
+      "proposal_disposition": "documented-unresolved",
+      "group_level_reason": "The retained PSE ADM2 atom maps to the original recorded owner. Other retained contacts have empty direct-owner vectors; country labels, names and empty vectors do not establish exclusion, ancestry, territorial applicability or legal authority. The original keys are classified inland-water. Water classification does not reject a source-backed river/location assignment; existing river water remains location-owned. Current selected owners are zero, but source currency/applicability, complete competitor and territorial-exclusion treatment, and source/physical repair qualification remain unestablished. Missing qualification does not prove these original keys invalid.",
+      "exact_intervals": [
+        {
+          "original_interval_ordinal": 147,
+          "y": 106667,
+          "x_start": 156962,
+          "x_end_exclusive": 156965,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 3,
+          "source_feature_indices": [
+            38385,
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 3
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:JOR:ADM1:50493656B62478729305943",
+              "feature_ordinal": 3,
+              "negative_ordinal": 2,
+              "geometry_sha256": "947d6ab8188f11cc7d485ea0b26ebf73e8b661be3c109b2da8d08fe9de875243",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            },
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 149,
+          "y": 106668,
+          "x_start": 156966,
+          "x_end_exclusive": 156972,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 6,
+          "source_feature_indices": [
+            38385,
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 6
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:JOR:ADM1:50493656B62478729305943",
+              "feature_ordinal": 3,
+              "negative_ordinal": 2,
+              "geometry_sha256": "947d6ab8188f11cc7d485ea0b26ebf73e8b661be3c109b2da8d08fe9de875243",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 6
+            },
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "PSE-05",
+      "owner_indices": [
+        36950
+      ],
+      "owner_source_ids": [
+        "gb:PSE:ADM2:87354302B18647900198549"
+      ],
+      "candidate_and_contact_feature_indices": [
+        52576,
+        52578
+      ],
+      "physical_class": "inland-water",
+      "proposal_disposition": "documented-unresolved",
+      "group_level_reason": "The retained PSE ADM2 atom maps to the original recorded owner. Other retained contacts have empty direct-owner vectors; country labels, names and empty vectors do not establish exclusion, ancestry, territorial applicability or legal authority. The original keys are classified inland-water. Water classification does not reject a source-backed river/location assignment; existing river water remains location-owned. Current selected owners are zero, but source currency/applicability, complete competitor and territorial-exclusion treatment, and source/physical repair qualification remain unestablished. Missing qualification does not prove these original keys invalid.",
+      "exact_intervals": [
+        {
+          "original_interval_ordinal": 143,
+          "y": 106664,
+          "x_start": 156943,
+          "x_end_exclusive": 156945,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 144,
+          "y": 106665,
+          "x_start": 156946,
+          "x_end_exclusive": 156952,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 6,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 6
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 6
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 145,
+          "y": 106666,
+          "x_start": 156950,
+          "x_end_exclusive": 156953,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 3,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 3
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 150,
+          "y": 106670,
+          "x_start": 156937,
+          "x_end_exclusive": 156938,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 151,
+          "y": 106672,
+          "x_start": 156936,
+          "x_end_exclusive": 156937,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 152,
+          "y": 106673,
+          "x_start": 156936,
+          "x_end_exclusive": 156937,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 153,
+          "y": 106674,
+          "x_start": 156935,
+          "x_end_exclusive": 156937,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 154,
+          "y": 106675,
+          "x_start": 156935,
+          "x_end_exclusive": 156936,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 155,
+          "y": 106676,
+          "x_start": 156934,
+          "x_end_exclusive": 156935,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 157,
+          "y": 106677,
+          "x_start": 156934,
+          "x_end_exclusive": 156935,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 158,
+          "y": 106678,
+          "x_start": 156933,
+          "x_end_exclusive": 156934,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 159,
+          "y": 106679,
+          "x_start": 156933,
+          "x_end_exclusive": 156934,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 160,
+          "y": 106680,
+          "x_start": 156932,
+          "x_end_exclusive": 156933,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 162,
+          "y": 106682,
+          "x_start": 156931,
+          "x_end_exclusive": 156932,
+          "owner_indices": [
+            36950
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52578
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "PSE-09",
+      "owner_indices": [
+        36953
+      ],
+      "owner_source_ids": [
+        "gb:PSE:ADM2:87354302B24436251599031"
+      ],
+      "candidate_and_contact_feature_indices": [
+        52576,
+        52593
+      ],
+      "physical_class": "inland-water",
+      "proposal_disposition": "documented-unresolved",
+      "group_level_reason": "The retained PSE ADM2 atom maps to the original recorded owner. Other retained contacts have empty direct-owner vectors; country labels, names and empty vectors do not establish exclusion, ancestry, territorial applicability or legal authority. The original keys are classified inland-water. Water classification does not reject a source-backed river/location assignment; existing river water remains location-owned. Current selected owners are zero, but source currency/applicability, complete competitor and territorial-exclusion treatment, and source/physical repair qualification remain unestablished. Missing qualification does not prove these original keys invalid.",
+      "exact_intervals": [
+        {
+          "original_interval_ordinal": 164,
+          "y": 106703,
+          "x_start": 156919,
+          "x_end_exclusive": 156920,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 165,
+          "y": 106704,
+          "x_start": 156918,
+          "x_end_exclusive": 156919,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 166,
+          "y": 106705,
+          "x_start": 156916,
+          "x_end_exclusive": 156918,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 167,
+          "y": 106706,
+          "x_start": 156915,
+          "x_end_exclusive": 156917,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 168,
+          "y": 106707,
+          "x_start": 156914,
+          "x_end_exclusive": 156916,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 169,
+          "y": 106708,
+          "x_start": 156913,
+          "x_end_exclusive": 156916,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 3,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 3
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 170,
+          "y": 106709,
+          "x_start": 156912,
+          "x_end_exclusive": 156915,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 3,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 3
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 171,
+          "y": 106710,
+          "x_start": 156911,
+          "x_end_exclusive": 156914,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 3,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 3
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 172,
+          "y": 106711,
+          "x_start": 156910,
+          "x_end_exclusive": 156911,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 173,
+          "y": 106720,
+          "x_start": 156900,
+          "x_end_exclusive": 156901,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 174,
+          "y": 106721,
+          "x_start": 156900,
+          "x_end_exclusive": 156901,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 175,
+          "y": 106722,
+          "x_start": 156900,
+          "x_end_exclusive": 156901,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 182,
+          "y": 106747,
+          "x_start": 156897,
+          "x_end_exclusive": 156898,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 183,
+          "y": 106748,
+          "x_start": 156897,
+          "x_end_exclusive": 156898,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 184,
+          "y": 106749,
+          "x_start": 156896,
+          "x_end_exclusive": 156898,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 185,
+          "y": 106750,
+          "x_start": 156896,
+          "x_end_exclusive": 156897,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 186,
+          "y": 106752,
+          "x_start": 156895,
+          "x_end_exclusive": 156896,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 187,
+          "y": 106757,
+          "x_start": 156893,
+          "x_end_exclusive": 156894,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 188,
+          "y": 106758,
+          "x_start": 156893,
+          "x_end_exclusive": 156894,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 189,
+          "y": 106759,
+          "x_start": 156893,
+          "x_end_exclusive": 156894,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 190,
+          "y": 106760,
+          "x_start": 156892,
+          "x_end_exclusive": 156893,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 191,
+          "y": 106776,
+          "x_start": 156882,
+          "x_end_exclusive": 156883,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 192,
+          "y": 106777,
+          "x_start": 156882,
+          "x_end_exclusive": 156883,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 193,
+          "y": 106778,
+          "x_start": 156882,
+          "x_end_exclusive": 156883,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 194,
+          "y": 106779,
+          "x_start": 156881,
+          "x_end_exclusive": 156883,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 195,
+          "y": 106780,
+          "x_start": 156881,
+          "x_end_exclusive": 156884,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 3,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 3
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 196,
+          "y": 106781,
+          "x_start": 156880,
+          "x_end_exclusive": 156884,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 4,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 4
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 4
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 197,
+          "y": 106782,
+          "x_start": 156880,
+          "x_end_exclusive": 156885,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 5,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 5
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 5
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 198,
+          "y": 106783,
+          "x_start": 156879,
+          "x_end_exclusive": 156885,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 6,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 6
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 6
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 199,
+          "y": 106784,
+          "x_start": 156879,
+          "x_end_exclusive": 156885,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 6,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 6
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 6
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 200,
+          "y": 106785,
+          "x_start": 156878,
+          "x_end_exclusive": 156884,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 6,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 6
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 6
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 201,
+          "y": 106786,
+          "x_start": 156878,
+          "x_end_exclusive": 156883,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 5,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 5
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 5
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 202,
+          "y": 106787,
+          "x_start": 156880,
+          "x_end_exclusive": 156882,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 203,
+          "y": 106792,
+          "x_start": 156875,
+          "x_end_exclusive": 156876,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 204,
+          "y": 106799,
+          "x_start": 156872,
+          "x_end_exclusive": 156874,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 205,
+          "y": 106800,
+          "x_start": 156872,
+          "x_end_exclusive": 156874,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 206,
+          "y": 106801,
+          "x_start": 156871,
+          "x_end_exclusive": 156874,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 3,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 3
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 3
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 207,
+          "y": 106824,
+          "x_start": 156871,
+          "x_end_exclusive": 156872,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 208,
+          "y": 106825,
+          "x_start": 156872,
+          "x_end_exclusive": 156873,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 210,
+          "y": 106827,
+          "x_start": 156873,
+          "x_end_exclusive": 156874,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 211,
+          "y": 106828,
+          "x_start": 156873,
+          "x_end_exclusive": 156874,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 212,
+          "y": 106829,
+          "x_start": 156874,
+          "x_end_exclusive": 156875,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 213,
+          "y": 106830,
+          "x_start": 156874,
+          "x_end_exclusive": 156875,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 214,
+          "y": 106832,
+          "x_start": 156875,
+          "x_end_exclusive": 156876,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 215,
+          "y": 106834,
+          "x_start": 156875,
+          "x_end_exclusive": 156876,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 216,
+          "y": 106835,
+          "x_start": 156875,
+          "x_end_exclusive": 156876,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 217,
+          "y": 106836,
+          "x_start": 156874,
+          "x_end_exclusive": 156875,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 219,
+          "y": 106837,
+          "x_start": 156874,
+          "x_end_exclusive": 156875,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 220,
+          "y": 106838,
+          "x_start": 156872,
+          "x_end_exclusive": 156874,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 221,
+          "y": 106839,
+          "x_start": 156871,
+          "x_end_exclusive": 156873,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 222,
+          "y": 106840,
+          "x_start": 156871,
+          "x_end_exclusive": 156872,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 223,
+          "y": 106841,
+          "x_start": 156870,
+          "x_end_exclusive": 156872,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 225,
+          "y": 106842,
+          "x_start": 156870,
+          "x_end_exclusive": 156871,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 227,
+          "y": 106843,
+          "x_start": 156869,
+          "x_end_exclusive": 156870,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 230,
+          "y": 106845,
+          "x_start": 156867,
+          "x_end_exclusive": 156868,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 231,
+          "y": 106846,
+          "x_start": 156866,
+          "x_end_exclusive": 156867,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 232,
+          "y": 106847,
+          "x_start": 156865,
+          "x_end_exclusive": 156866,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 233,
+          "y": 106848,
+          "x_start": 156864,
+          "x_end_exclusive": 156865,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 234,
+          "y": 106854,
+          "x_start": 156862,
+          "x_end_exclusive": 156863,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 235,
+          "y": 106855,
+          "x_start": 156862,
+          "x_end_exclusive": 156863,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 236,
+          "y": 106864,
+          "x_start": 156862,
+          "x_end_exclusive": 156863,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 237,
+          "y": 106881,
+          "x_start": 156860,
+          "x_end_exclusive": 156861,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 238,
+          "y": 106882,
+          "x_start": 156860,
+          "x_end_exclusive": 156862,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 239,
+          "y": 106883,
+          "x_start": 156860,
+          "x_end_exclusive": 156862,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 2,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 2
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 2
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 240,
+          "y": 106884,
+          "x_start": 156860,
+          "x_end_exclusive": 156861,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 241,
+          "y": 106885,
+          "x_start": 156860,
+          "x_end_exclusive": 156861,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 242,
+          "y": 106886,
+          "x_start": 156860,
+          "x_end_exclusive": 156861,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        },
+        {
+          "original_interval_ordinal": 243,
+          "y": 106887,
+          "x_start": 156860,
+          "x_end_exclusive": 156861,
+          "owner_indices": [
+            36953
+          ],
+          "cell_count": 1,
+          "source_feature_indices": [
+            52576,
+            52593
+          ],
+          "native_reason_counts": {
+            "territorial_exclusion_cells": 1
+          },
+          "triggering_contacts": [
+            {
+              "source_id": "gb:PSE:ADM1:83478781B28849486138516",
+              "feature_ordinal": 0,
+              "negative_ordinal": 3,
+              "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+              "kind": [
+                "interior"
+              ],
+              "keys_with_contact": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "individual_disposition_readout": "The proposal records exact source rows and original interval ordinals; PSE-03, PSE-05 and PSE-09 each state group-level proposed_disposition=documented-unresolved with a group rationale/next action. This is not root-accepted per-interval exception credit and does not remove any native hold. All 149 held water cells across 84 intervals remain native-held; every one has the stock decision reason territorial_exclusion_cells. No held water cell was classified invalid because it is water, and no held cell here has another native decision reason.",
+  "predicate_readout": "For PSE-03, each of 9 held cells is interior to PSE ADM1 West Bank (feature ordinal 0, target negative ordinal 3) and JOR ADM1 Balqa (feature ordinal 3, target negative ordinal 2). For PSE-05, all 23 are interior to PSE ADM1 West Bank (feature ordinal 0, target negative ordinal 3). For PSE-09, all 117 are interior to PSE ADM1 West Bank (feature ordinal 0, target negative ordinal 3). Other complete negative families are retained and their non-hit predicates are not misrepresented as absence of family review. The three PSE-06 water cells are natively assigned with no triggering negative interior contact and are omitted from held_groups.",
+  "limits": "Whole-target physical results, PCBS context and this stock native source diagnostic are not legal/sovereignty determinations. The note does not perform geometry or prove current source applicability; it preserves exactly which retained negative inputs triggered native territorial exclusions."
+}
