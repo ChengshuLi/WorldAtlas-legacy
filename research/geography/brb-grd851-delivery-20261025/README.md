@@ -7,3 +7,11 @@ Independent substantive review supports positive consideration after coherent in
 The existing source/qualification packet is copied byte-for-byte from public e276d43582d063f6c4913d4549e54fc20dca68cc. Historical CODE/DATA, failed attempts, all whole-member issues and exact source-policy distinctions remain. The GRD v2 source note's original trailing blank line is deliberately retained; provenance-preserving whitespace is not rewritten to silence a diff warning. No source, physical, diagnostic or authority operation is repeated here.
 
 The source-notices directory preserves BRB attribution, GRD's literal metadata and ODbL-data/CC-BY-SA-documentation distinction, and unchanged GSHHG notices. The final selected output will be bound after its actual generation; no raw source archive or restricted source material is uploaded. Existing atlas notices retain their independent scope.
+
+## Completed candidate preparation
+
+The stock new-only composition and final-bank preparation completed successfully using the original reviewed 851-cell authority. The exact accepted before bank, actual preparation CODE, immutable authority/DATA and whole emitted descriptors are retained in composition and final-bank. No source, physical, native diagnostic or authority result was recomputed. The canonical output is a candidate until independent exact-public-head review, normal current-base conservation and stock delivery; root science acceptance remains separate.
+
+The original suspended scope is BRB289 plus GRD562. The 20 BRB and 273 GRD separate physical-interpretation contexts remain outside this delivery and receive no credit. Recorded native support does not imply a present coastline survey or complete whole-cell footprint support. Existing original source and physical limitations remain in the unchanged evidence packet.
+
+The final output's actual immutable locator is added in source-notices/final-selected-output-binding.json after the bank commit. That supplement leaves all original policy observations unchanged and links the exact selected product to BRB/GRD attribution and derivation evidence.
