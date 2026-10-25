@@ -20,7 +20,7 @@ The physical counts are a classification cross-tab for this exact held cohort, n
 
 The comparison receipt supplied by the parent is `/workspace/scratch/127991fc8b8e/caf181-cod2-new-comparison-20261025/source-free-method-provenance-count-receipt.json` (5,561 bytes; SHA-256 `6a00e879e8de2cd0f70e412952be50a5fa4e46619655518ab750517eea4febfc`). It pins source blob `dc4f2926dc0945eef1f35fa34c506a270b6239b2` at source-corpus commit `21984e9ec4ec7370bc807e2da23cea2228747698`. This task used that retained receipt; it did not download or reconstruct the raw OCHA source.
 
-The receipt reports **181 noncontacts** against a **189-feature** COD ADM2 product. Its coverage limitation is that only **79 requested rows** were in the 759 band; it reports no independent topology audit. I record this as a source-relative noncontact result for the stated cohort and product. It does not establish that the product fully covers the relevant territory, that all original operands are irrelevant, or that foreign attribution is absent.
+The receipt reports **181 noncontacts, 0 ties and 0 errors** against a **189-feature** COD ADM2 product. All 181 requested keys occupy **79 distinct latitude rows**; the application scanned every feature across the full contiguous **759-row band**, including gaps. No requested key was omitted. The receipt reports no independent topology audit. This is a source-relative noncontact result for the stated cohort and product, not proof that the product is nationally complete or that original operands are irrelevant.
 
 Retained documentary inspection of the COD ADM2 product is recorded in `research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/cod-adm2-original-target-documentation.json` (current-main blob `a75a0ee208808ca711d84dc37ae0b9ff5a0d2dd2`). It describes the product as COD ADM2, Boundary Representative of Year **2019**, with Référentiel Géographique Commun and OCHA DR Congo named as sources; the metadata records creation on 2019-09-06 and publication on 2019-09-11. Its retained documentary passages describe OCHA atlas digitization, watercourse splitting, UNDP topological validation, INS toponymy validation and IMWG/RGC context. The record also describes later processing, including a 2021 export. The product metadata gives CC BY 3.0 IGO; this note does not claim independent rights clearance.
 
@@ -35,10 +35,14 @@ The 2019 ADM2 noncontact comparison does not replace, erase or take precedence o
 | Evidence role | Retained product/result | What it establishes here | Limit |
 |---|---|---|---|
 | Original adverse source operands | 2017 COD ADM1 OSM/Wambacher; 127 Lower Uele and 54 Nord-Ubangi contacts | The original foreign ADM1 candidates contact all 181 selected keys in a disjoint 127/54 partition | Does not establish which dated administrative boundary governs or why the CAF ADM3 exclusion was recorded |
-| Later source-relative comparator | 2019 COD ADM2 RGC/OCHA product; 181 noncontacts among 189 features | The exact selected cohort returned no contact to those later ADM2 features in the retained application | Only 79 requested rows were in the 759 band; no independent topology audit; does not prove full coverage, legal exclusion, or absence of foreign attribution |
+| Later source-relative comparator | 2019 COD ADM2 RGC/OCHA product; 181 noncontacts, 0 ties and 0 errors among 189 features | The exact selected cohort returned no contact to those later ADM2 features in the retained application | The keys occupy 79 distinct rows within the fully scanned contiguous 759-row band; no requested key was omitted. No independent topology audit or national-completeness proof; no legal exclusion or absence-of-attribution finding |
 | CAF target/physical context | CAF ADM3 target product represented year 2018; exact selected physical class 181 land / 0 water | Keeps the comparator bound to the original held cohort and its physical classification | Does not supply a legal crosswalk between the target and either foreign source product |
 
 The source roles and vintages are intentionally kept separate: the OSM/Wambacher ADM1 result is the original adverse contact evidence; the RGC/OCHA ADM2 result is a later comparator; the CAF ADM3 record supplies target context. The retained metadata licenses are product-level metadata only and do not independently establish legal status or authority for these keys.
+
+## Bounded recommendation
+
+Recommend a finite **researched-unresolved** disposition for exactly this 181-key cohort, pending root acceptance. Preserve the original held statuses and all source operands. This comparison narrows the source-relative finding for these keys but does not erase the original 127/54 adverse ADM1 contacts, resolve legal applicability, provide positive attribution, change status, or earn credit. Keep the separate CAF131 cohort and the other 149 held keys outside this recommendation.
 
 ## Pins and limits
 
@@ -50,4 +54,4 @@ The source roles and vintages are intentionally kept separate: the OSM/Wambacher
 - Source-product documentary inspection: the COD ADM2 documentation path above, blob `a75a0ee208808ca711d84dc37ae0b9ff5a0d2dd2`.
 - The older selected-owner observation at `cdce5b02d354431321436b8f8674d804df629c01` is not used as current-owner evidence because its selector differs from current `main`. No current-owner result is asserted in this note.
 
-No geometry was recomputed and no source geometry was downloaded for this record. The application result is the parent-provided receipt; this note does not independently rerun or audit that comparison. No legal exclusion, blanket precedence, positive attribution, status change, or repair credit is proposed.
+No geometry was recomputed and no source geometry was downloaded for this record. The application result is the parent-provided receipt; this note does not independently rerun or audit that comparison. The recommendation is source-relative and finite, not a legal exclusion, blanket precedence, positive attribution, status change, or repair credit.
