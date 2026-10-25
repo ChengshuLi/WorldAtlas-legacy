@@ -369,6 +369,76 @@ test('both duplicate provider siblings remain measured when one is omitted from 
  assert.throws(()=>noBorrow.run(),/unique source-target coverage/);
 });
 
+// Complementary adopted provider members may jointly cover one canonical
+// owner's request. Each member retains only its own native key scope.
+const complementaryFamily='government:TST:borough',complementaryRow=size/2,
+ complementaryXs=Array.from({length:6},(_,i)=>size/2-12+i*4);
+function complementaryProviderSetup(s,{unboundVeto=false}={}){
+ const latitude=latitudes[complementaryRow],dy=Math.min(
+  Math.abs(latitude-latitudes[complementaryRow-1]),Math.abs(latitudes[complementaryRow+1]-latitude))/4,
+  dx=(360/size)/4;
+ const geometries=complementaryXs.map(x=>{
+  const longitude=(x+.5)/size*360-180;
+  return rectangle(longitude-dx,longitude+dx,latitude-dy,latitude+dy);
+ });
+ const base={type:'MultiPolygon',coordinates:geometries.map(geometry=>geometry.coordinates)};
+ const features=Array.from({length:33},(_,i)=>({type:'Feature',id:201+i,
+  properties:{OBJECTID:201+i,name:`member-${i+1}`},geometry:i<6?geometries[i]:rectangle(120,121,20,21)}));
+ if(unboundVeto)features[6].geometry=structuredClone(geometries[0]);
+ const id=i=>complementaryFamily+':OBJECTID:'+(201+i);
+ s.provider={family:complementaryFamily,features,bound:[0,1,2,3,4,5],target_id:'city'};
+ s.targets=Array.from({length:6},(_,i)=>({id:id(i),target_id:'city',pixelIndex:1,
+  source_family:complementaryFamily,base_geometry:base,coverage_classes:['mapped_land_support'],territorial_exclusions:[]}));
+ s.accepted=collection([{type:'Feature',id:'city',geometry:base,
+  properties:{metadata:{source_member_ids:[a,b]}}}]);
+ s.physical.results=geometries.map((geometry,i)=>({target:id(i),issues:[],support:{mapped_land_support:geometry}}));
+ s.measured=geometries.map((geometry,i)=>({target:id(i),consumed:features[i],selected:{id:'city',geometry:base}}));
+ s.proposed.rows=[{y:complementaryRow,runs:complementaryXs.map(x=>[x,x+1,1])}];
+}
+function complementaryScopes(adoption,overrides={}){
+ for(const binding of adoption.families[0].bindings){
+  const ordinal=binding.feature_ordinal;
+  binding.scope=overrides[ordinal]??[{y:complementaryRow,x:complementaryXs[ordinal]}];
+ }
+}
+test('complementary provider member scopes cover one owner without widening members and retain all competitors',()=>{
+ const f=constructorFixture(s=>complementaryProviderSetup(s),{changeAdoption:adoption=>complementaryScopes(adoption)});
+ const before=structuredClone(f.state),result=f.run();
+ assert.equal(result.ledger_rows[0].target_id,'city');assert.equal(result.ledger_rows[0].native_cells,6);
+ assert.deepEqual(f.state,before);
+ const report=f.diagnose();assert.equal(report.requested_cells,6);assert.equal(report.supported_cells,6);assert.equal(report.held_cells,0);
+ assert.equal(report.provider_competitors.length,27,'all 27 unbound original provider members remain competitors');
+ assert(report.provider_competitors.every(item=>item.veto_targets.some(target=>target.target_id==='city')));
+});
+test('provider member cannot support a requested key outside its own truthful scope',()=>{
+ const f=constructorFixture(s=>complementaryProviderSetup(s),{changeAdoption:adoption=>complementaryScopes(adoption,{
+  // Member 0 geometrically covers x0, but is declared only for x1. Member 1
+  // still has x1, so the owner-level union is complete without granting x0.
+  0:[{y:complementaryRow,x:complementaryXs[1]}],
+  1:[{y:complementaryRow,x:complementaryXs[0]},{y:complementaryRow,x:complementaryXs[1]}]
+ })});
+ const report=f.diagnose();assert.equal(report.requested_cells,6);assert.equal(report.supported_cells,5);assert.equal(report.held_cells,1);
+ assert.equal(report.decision_rows[0].runs.find(run=>run[0]===complementaryXs[0])[3],'unsupported_coverage_cells');
+});
+test('complementary provider scopes reject a union hole and a foreign requested key',()=>{
+ const hole=constructorFixture(s=>complementaryProviderSetup(s),{changeAdoption:adoption=>complementaryScopes(adoption,{
+  2:[{y:complementaryRow,x:complementaryXs[0]}]
+ })});
+ assert.throws(()=>hole.diagnose(),/lacks adopted provider member applicability/);
+ const foreign=constructorFixture(s=>complementaryProviderSetup(s),{changeAdoption:adoption=>complementaryScopes(adoption,{
+  0:[{y:complementaryRow,x:complementaryXs[0]+1}]
+ })});
+ assert.throws(()=>foreign.diagnose(),/foreign or unrequested native key/);
+});
+test('complementary scope overlap is not globally prohibited and unbound member veto remains active',()=>{
+ const f=constructorFixture(s=>complementaryProviderSetup(s,{unboundVeto:true}),{changeAdoption:adoption=>complementaryScopes(adoption,{
+  0:[{y:complementaryRow,x:complementaryXs[0]},{y:complementaryRow,x:complementaryXs[1]}]
+ })});
+ const report=f.diagnose();assert.equal(report.requested_cells,6);assert.equal(report.supported_cells,5);assert.equal(report.held_cells,1);
+ assert.equal(report.provider_competitors.length,27);
+ assert.equal(report.decision_rows[0].runs.find(run=>run[0]===complementaryXs[0])[3],'territorial_exclusion_cells');
+});
+
 test('a contextual original negative cannot clear an identical unmapped provider competitor',()=>{
  const setup=s=>{providerSetup(s);s.territorial=true;
   s.originals[0].geometry=rectangle(-90.01,-89.99,-.01,.01);

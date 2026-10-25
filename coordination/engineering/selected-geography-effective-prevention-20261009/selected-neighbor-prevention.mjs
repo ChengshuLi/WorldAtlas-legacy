@@ -1485,13 +1485,14 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
     'Adopted provider source member identity differs');
     demand(accepted&&owners.get(binding.target_id)===binding.pixelIndex
      &&valueSha(accepted.geometry)===binding.base_geometry_sha256,'Adopted provider canonical target differs');
-    const scope=new Set();
+    const scope=new Set(),scopePoints=[];
     for(const point of binding.scope){
      demand(keys(point,'y,x')&&Number.isSafeInteger(point.y)&&point.y>=0&&point.y<262166
       &&Number.isSafeInteger(point.x)&&point.x>=0&&point.x<262166&&!scope.has(point.y+':'+point.x),
      'Invalid or duplicate adopted provider native key');scope.add(point.y+':'+point.x);
+     scopePoints.push({y:point.y,x:point.x});
     }
-    bindings.set(binding.source_id,{...binding,scope,id:binding.target_id,feature:accepted});
+    bindings.set(binding.source_id,{...binding,scope,scopePoints,id:binding.target_id,feature:accepted});
    }
    adoptedFamilies.set(family.source_id,{product,originals,ordinals,bindings});
   }
@@ -1868,9 +1869,30 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   const selected=evidence.targets.filter(target=>target.source_family===family.source_id);
   demand(selected.length>0,'Unused source family');
   const selectedOwners=new Set(selected.map(t=>t.pixelIndex));
-  if(adopted)for(const binding of adopted.bindings.values())if(selectedOwners.has(binding.pixelIndex)){
-   for(const row of rowsByOwner.get(binding.pixelIndex)??[])for(const run of row.runs)for(let x=run[0];x<run[1];x++)
-    demand(binding.scope.has(row.y+':'+x),'Requested native key lacks adopted provider member applicability');
+  let sourceMemberApplicability;
+  if(adopted){
+   const requestedCell=(owner,y,x)=>{
+    const runsByY=rowsByOwner.get(owner)??[],row=runsByY.find(candidate=>candidate.y===y);
+    return row?.runs.some(([start,end])=>start<=x&&x<end)??false;
+   };
+   const unionByOwner=new Map([...selectedOwners].map(owner=>[owner,new Set()]));
+   sourceMemberApplicability=[];
+   for(const binding of adopted.bindings.values())if(selectedOwners.has(binding.pixelIndex)){
+    const union=unionByOwner.get(binding.pixelIndex);
+    for(const point of binding.scopePoints){
+     demand(requestedCell(binding.pixelIndex,point.y,point.x),
+      'Adopted provider member scope contains a foreign or unrequested native key');
+     union.add(point.y+':'+point.x);
+    }
+    sourceMemberApplicability.push({source_id:binding.source_id,pixelIndex:binding.pixelIndex,
+     scope:binding.scopePoints});
+   }
+   for(const owner of selectedOwners){
+    const rows=rowsByOwner.get(owner)??[];demand(rows.length>0,'Adopted provider target has no requested native keys');
+    const union=unionByOwner.get(owner);
+    for(const row of rows)for(const [start,end] of row.runs)for(let x=start;x<end;x++)
+     demand(union.has(row.y+':'+x),'Requested native key lacks adopted provider member applicability');
+   }
   }
   for(const target of selected){const original=originals.get(target.id),owner=resolve(target.id);
    const measured=physicalInputs.filter(input=>input.target===target.id);
@@ -2039,6 +2061,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
     });
    const allowed=deriveSourceTargetNativeDelta({targets:[...resolvedTargets.values()].filter(target=>target.source_family===family.source_id).map(({id,pixelIndex})=>({id,pixelIndex})),
     sourceFeatures,coverageFeatures,territorialExclusions:exclusions,size:262166,latitudes,rowStart,rowEnd,
+    ...(sourceMemberApplicability?{sourceMemberApplicability}:{}),
     ...(applicable.length?{territorialApplicability:applicable}:{}),
     ...(dated?{coverageCentres:blockCentres}:{}),
     ...(coverageFeatureGroups.length?{coverageFeatureGroups,...(dated?{coverageCentreGroups}:{})}:{}),
