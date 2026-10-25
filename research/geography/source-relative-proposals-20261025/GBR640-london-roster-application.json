@@ -1,0 +1,90 @@
+{
+  "kind": "worldatlas-gbr-london-source-application-assessment-v1",
+  "artifact_status": "new source-free derivative synthesized from already completed retained research; not previously present in this checkout",
+  "scope": {
+    "original_contract": "Issue #2343; atlas:city:GBR-Greater London; original owner 13; 640 held original keys",
+    "aggregate": "Whole 33-member mixed-source target: 32 geoBoundaries ADM2 borough features plus retained Natural Earth City of London GBR-4809",
+    "denominator": 640,
+    "held_reason": "held-mixed-source-positive-authority-not-qualified",
+    "original_accounting": "Retained owner-13 held keys are disjoint from accepted positive patch; the original 640-key owner-13 set is conserved.",
+    "key_serialization": "sorted by y then x, each record x,y followed by LF",
+    "owner13_key_set_sha256": "778ab90d3675d2e9e6b52151f5d44eccd0a27283185050383ec0c5376575a11f",
+    "held_ledger_note": "The complete local ledger expands to 668 keys, including 28 separate owner 20316 territorial_exclusion_cells keys. Those 28 are outside the owner-13 London set; their x,y serialization SHA-256 is 001115cee4950087a524cfb5f5f17e3921a22cfd2148e2d7456f962024d835c9."
+  },
+  "official_source": {
+    "provider": "Office for National Statistics Geography",
+    "item_id": "3f6feb4ae1dc467ba238029217329540",
+    "product": "Local Authority Districts (December 2019) Boundaries UK BFE",
+    "represented_boundary_date": "2019-12-31",
+    "edition": "24/07/2020: Original",
+    "geometry_role": "full-resolution extent-of-realm polygon source, EPSG:27700; same official features queried in EPSG:4326 for native grid application",
+    "source_members": [
+      {"name":"City of London","lad19cd":"E09000001","original_member":"Natural Earth GBR-4809"},
+      {"name":"Barking and Dagenham","lad19cd":"E09000002","original_member":"geoBoundaries ADM2"},
+      {"name":"Barnet","lad19cd":"E09000003","original_member":"geoBoundaries ADM2"},
+      {"name":"Bexley","lad19cd":"E09000004","original_member":"geoBoundaries ADM2"},
+      {"name":"Brent","lad19cd":"E09000005","original_member":"geoBoundaries ADM2"},
+      {"name":"Bromley","lad19cd":"E09000006","original_member":"geoBoundaries ADM2"},
+      {"name":"Camden","lad19cd":"E09000007","original_member":"geoBoundaries ADM2"},
+      {"name":"Croydon","lad19cd":"E09000008","original_member":"geoBoundaries ADM2"},
+      {"name":"Ealing","lad19cd":"E09000009","original_member":"geoBoundaries ADM2"},
+      {"name":"Enfield","lad19cd":"E09000010","original_member":"geoBoundaries ADM2"},
+      {"name":"Greenwich","lad19cd":"E09000011","original_member":"geoBoundaries ADM2"},
+      {"name":"Hackney","lad19cd":"E09000012","original_member":"geoBoundaries ADM2"},
+      {"name":"Hammersmith and Fulham","lad19cd":"E09000013","original_member":"geoBoundaries ADM2"},
+      {"name":"Haringey","lad19cd":"E09000014","original_member":"geoBoundaries ADM2"},
+      {"name":"Harrow","lad19cd":"E09000015","original_member":"geoBoundaries ADM2"},
+      {"name":"Havering","lad19cd":"E09000016","original_member":"geoBoundaries ADM2"},
+      {"name":"Hillingdon","lad19cd":"E09000017","original_member":"geoBoundaries ADM2"},
+      {"name":"Hounslow","lad19cd":"E09000018","original_member":"geoBoundaries ADM2"},
+      {"name":"Islington","lad19cd":"E09000019","original_member":"geoBoundaries ADM2"},
+      {"name":"Kensington and Chelsea","lad19cd":"E09000020","original_member":"geoBoundaries ADM2"},
+      {"name":"Kingston upon Thames","lad19cd":"E09000021","original_member":"geoBoundaries ADM2"},
+      {"name":"Lambeth","lad19cd":"E09000022","original_member":"geoBoundaries ADM2"},
+      {"name":"Lewisham","lad19cd":"E09000023","original_member":"geoBoundaries ADM2"},
+      {"name":"Merton","lad19cd":"E09000024","original_member":"geoBoundaries ADM2"},
+      {"name":"Newham","lad19cd":"E09000025","original_member":"geoBoundaries ADM2"},
+      {"name":"Redbridge","lad19cd":"E09000026","original_member":"geoBoundaries ADM2"},
+      {"name":"Richmond upon Thames","lad19cd":"E09000027","original_member":"geoBoundaries ADM2"},
+      {"name":"Southwark","lad19cd":"E09000028","original_member":"geoBoundaries ADM2"},
+      {"name":"Sutton","lad19cd":"E09000029","original_member":"geoBoundaries ADM2"},
+      {"name":"Tower Hamlets","lad19cd":"E09000030","original_member":"geoBoundaries ADM2"},
+      {"name":"Waltham Forest","lad19cd":"E09000031","original_member":"geoBoundaries ADM2"},
+      {"name":"Wandsworth","lad19cd":"E09000032","original_member":"geoBoundaries ADM2"},
+      {"name":"Westminster","lad19cd":"E09000033","original_member":"geoBoundaries ADM2"}
+    ],
+    "binding_result": "33 unique original member names match 33 unique ONS names/codes; no missing or extra names. The 32 geoBoundaries borough members map by exact name to E09000002–E09000033; Natural Earth GBR-4809 City of London maps by name to E09000001.",
+    "epsg27700_response": {"local_only":true,"bytes":1306195,"sha256":"79642c885e9358da751123c81dbf64bc01e561a5eed6c74cdba7d23d88b6166c"},
+    "epsg4326_response": {"local_only":true,"bytes":1756051,"sha256":"a0bb849ea544f3680d7f1d54e35ad76471d95f5e445fbb6accfb030d1e45693a","server_generation":12374086},
+    "latitude_table": {"source_commit":"5b32388df0501b013ac9a3ba97864932db493d59","blob":"de6905e162dc031b1b93248fae91190c39c4ad53","compressed_sha256":"ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147","decoded_bytes":2097328,"decoded_sha256":"66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"},
+    "native_method": {"name":"native-linear-evenodd-first-owner-v1","repository_path":"coordination/engineering/original-held-cell-exceptions-20261018/native-grid-pinned.mjs","git_blob":"3e1d3e7e6012b5b571345caad029ab7d124c07fd","sha256":"66b453bbb2e001b9ff56bd754d55087f5919845dceeefd886016494cefa1d3e0","scientific_approval":false,"native_topology_verified":false}
+  },
+  "application": {
+    "method":"Exact native scanline/column-ceiling application using full official polygons in EPSG:4326 and the pinned latitude table; no crop or spatial filter.",
+    "author_result": {"source_contact_keys":640,"unique_interior_member_contact_keys":640,"multi_member_keys":0,"uncovered_keys":0,"boundary_tied_keys":0,"odd_scanline_rows":0},
+    "independent_review": {"reviewer":"/root/per_sources; distinct native worker","result":"Recomputed exact rational scanline/column-ceiling rule on all 33 polygons and retained held ledger. The reviewer found 668 ledger keys total, matched the 640 London owner-13 set by its pinned hash, and excluded the 28 other keys from the target slice.","source_contact_keys":640,"unique_interior_member_contact_keys":640,"multi_member_keys":0,"uncovered_keys":0,"boundary_tied_keys":0,"odd_scanline_rows":0,"city_of_london_contacts":0},
+    "per_member_nonzero_contacts": [
+      {"name":"Barking and Dagenham","lad19cd":"E09000002","keys":1},
+      {"name":"Greenwich","lad19cd":"E09000011","keys":217},
+      {"name":"Havering","lad19cd":"E09000016","keys":1},
+      {"name":"Lewisham","lad19cd":"E09000023","keys":42},
+      {"name":"Newham","lad19cd":"E09000025","keys":1},
+      {"name":"Tower Hamlets","lad19cd":"E09000030","keys":378}
+    ],
+    "zero_contact_members": "The remaining 27 LADs, including City of London E09000001 / Natural Earth GBR-4809.",
+    "limitation": "Point/center membership under this numerical method is source correspondence only. It does not establish legal applicability, scientific source fitness, complete native topology, current ownership, or positive qualification."
+  },
+  "rights_and_source_limits": {
+    "ons_category_terms": "ONS Digital Boundaries terms state digital boundary products are supplied under OGL v3.0 and require ONS attribution plus 'Contains OS data © Crown copyright and database right [year]'.",
+    "item_rights_metadata": "The exact 2019 BFE item declares both ONS and OS intellectual-property rights.",
+    "unresolved": "The applicable OS owner licence and exact copyright year for this item remain unidentified. ONS terms state relevant data-owner terms apply; no blanket reuse permission is asserted.",
+    "publication_handling": "Both full ONS geometry responses remain local-only; this source-free derivative contains attributes, counts, hashes and findings, not geometry coordinates or raw source bodies."
+  },
+  "candidate_assessment": {
+    "recommendation": "A bounded source-relative researched-unresolved candidate is defensible for exactly the 640 owner-13 London keys after the substantive 33-member binding and 640-key application. Before application this was pending research; the application narrows the remaining question to fitness and source construction.",
+    "specific_unresolved_basis": "The exact 2019 BFE name/code and cell-contact results do not establish scientific applicability/native topology for the original mixed-source 33-member aggregate. ONS product represented year and the separate geoBoundaries/NE source roles, vintages, intended construction and applicable source rights are not fully reconciled.",
+    "city_of_london": "Zero direct key contacts; keep negative-only and do not infer qualification from zero hits.",
+    "status_and_credit": "No status change, clearance, positive claim, or science/native credit is made by this assessment.",
+    "remaining_material_evidence": ["Resolve the exact OS owner licence and copyright year applicable to the BFE item before any reuse/publication claim requiring it.","Reconcile the 2019 ONS BFE role and geometry to the original 32 geoBoundaries borough members and NE City-of-London member under the original aggregate construction/fitness criteria.","Keep all raw ONS-containing responses private; any source-free evidence update still requires the applicable separate public-review and delivery gates."]
+  }
+}

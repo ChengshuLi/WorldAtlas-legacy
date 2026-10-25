@@ -1,0 +1,6189 @@
+{
+  "version": 1,
+  "kind": "adopted-native-territorial-applicability-v1",
+  "provenance": [
+    {
+      "id": "isr-adm1-complete-original",
+      "role": "original-source",
+      "parts": [
+        {
+          "bytes": 12533,
+          "commit": "923e9c210b59836e069c182d68daf85439096381",
+          "decoded_bytes": 44192,
+          "decoded_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+          "git_blob_oid": "369e02e594b9345da7cfe00fcabb6859988d3c03",
+          "mode": "100644",
+          "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+          "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+        }
+      ]
+    },
+    {
+      "id": "isr-matching-parent267-adoption",
+      "role": "adoption",
+      "pin": {
+        "commit": "9d4884841558918530fe03cf81f9da0a2b983a4b",
+        "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/contextual-decision.json",
+        "mode": "100644",
+        "git_blob_oid": "4d641396698d623fd863036a4a6dd4898a8f9abc",
+        "bytes": 2998,
+        "sha256": "66be857f5d7c282f98311141259311382169b800bc4dad1289c31956fcfbdc7b"
+      }
+    },
+    {
+      "id": "isr-matching-parent267-scope",
+      "role": "scope",
+      "pin": {
+        "commit": "9d4884841558918530fe03cf81f9da0a2b983a4b",
+        "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/contextual-scope.json",
+        "mode": "100644",
+        "git_blob_oid": "003ac966fe615365d4aeea6c55a8473a1adc10f1",
+        "bytes": 19243,
+        "sha256": "9d0fa4f448c32c3443510e2516f7146c1e1cb120c938e40c692ef9a4452c225d"
+      }
+    }
+  ],
+  "records": [
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106797,
+      "x": 156209,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/0",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106802,
+      "x": 156206,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/1",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106807,
+      "x": 156203,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/2",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106809,
+      "x": 156202,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/3",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106813,
+      "x": 156535,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/4",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106814,
+      "x": 156535,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/5",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106817,
+      "x": 156534,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/6",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106820,
+      "x": 156533,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/7",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106823,
+      "x": 156532,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/8",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B11408100439208",
+      "target_id": "gb:ISR:ADM2:584046B11408100439208",
+      "pixelIndex": 24169,
+      "y": 106824,
+      "x": 156532,
+      "negative_ordinal": 0,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/9",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105873,
+      "x": 157031,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/10",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105874,
+      "x": 157027,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/11",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105874,
+      "x": 157028,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/12",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105875,
+      "x": 157023,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/13",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105875,
+      "x": 157024,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/14",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105875,
+      "x": 157025,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/15",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105875,
+      "x": 157026,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/16",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105876,
+      "x": 157020,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/17",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105876,
+      "x": 157021,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/18",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105876,
+      "x": 157022,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/19",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105876,
+      "x": 157023,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/20",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B15624900320210",
+      "target_id": "gb:ISR:ADM2:584046B15624900320210",
+      "pixelIndex": 24171,
+      "y": 105877,
+      "x": 157021,
+      "negative_ordinal": 0,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/21",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106358,
+      "x": 156561,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/22",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106359,
+      "x": 156561,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/23",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106360,
+      "x": 156562,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/24",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106361,
+      "x": 156562,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/25",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106362,
+      "x": 156562,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/26",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106363,
+      "x": 156562,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/27",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106365,
+      "x": 156563,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/28",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106366,
+      "x": 156563,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/29",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106366,
+      "x": 156564,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/30",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106367,
+      "x": 156563,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/31",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106367,
+      "x": 156564,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/32",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106368,
+      "x": 156564,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/33",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106368,
+      "x": 156565,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/34",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106369,
+      "x": 156564,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/35",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106369,
+      "x": 156565,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/36",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106370,
+      "x": 156564,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/37",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106370,
+      "x": 156565,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/38",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106371,
+      "x": 156564,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/39",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106371,
+      "x": 156565,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/40",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B54386898087809",
+      "target_id": "gb:ISR:ADM2:584046B54386898087809",
+      "pixelIndex": 24175,
+      "y": 106372,
+      "x": 156565,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/41",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B61571705909900",
+      "target_id": "gb:ISR:ADM2:584046B61571705909900",
+      "pixelIndex": 24177,
+      "y": 106111,
+      "x": 156478,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/42",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B61571705909900",
+      "target_id": "gb:ISR:ADM2:584046B61571705909900",
+      "pixelIndex": 24177,
+      "y": 106115,
+      "x": 156477,
+      "negative_ordinal": 0,
+      "geometry_sha256": "ac68bf0fec3623b856c5d159bb2b1606b444d4bf8d518822f51ce1329fe3596d",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/1/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/43",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B72217003232480",
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "pixelIndex": 24178,
+      "y": 106053,
+      "x": 156650,
+      "negative_ordinal": 1,
+      "geometry_sha256": "68af72f0675a1706b4ccd5658e0c237b4a4f394aa8f6d5f0064223944734c747",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/4/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/44",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B72217003232480",
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "pixelIndex": 24178,
+      "y": 106080,
+      "x": 156618,
+      "negative_ordinal": 1,
+      "geometry_sha256": "68af72f0675a1706b4ccd5658e0c237b4a4f394aa8f6d5f0064223944734c747",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/4/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/45",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B72217003232480",
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "pixelIndex": 24178,
+      "y": 106081,
+      "x": 156618,
+      "negative_ordinal": 1,
+      "geometry_sha256": "68af72f0675a1706b4ccd5658e0c237b4a4f394aa8f6d5f0064223944734c747",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/4/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/46",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B72217003232480",
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "pixelIndex": 24178,
+      "y": 106082,
+      "x": 156618,
+      "negative_ordinal": 1,
+      "geometry_sha256": "68af72f0675a1706b4ccd5658e0c237b4a4f394aa8f6d5f0064223944734c747",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/4/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/47",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B72217003232480",
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "pixelIndex": 24178,
+      "y": 106083,
+      "x": 156617,
+      "negative_ordinal": 1,
+      "geometry_sha256": "68af72f0675a1706b4ccd5658e0c237b4a4f394aa8f6d5f0064223944734c747",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/4/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/48",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B72217003232480",
+      "target_id": "gb:ISR:ADM2:584046B72217003232480",
+      "pixelIndex": 24178,
+      "y": 106084,
+      "x": 156617,
+      "negative_ordinal": 1,
+      "geometry_sha256": "68af72f0675a1706b4ccd5658e0c237b4a4f394aa8f6d5f0064223944734c747",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/4/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/49",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106030,
+      "x": 156860,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/50",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106110,
+      "x": 156922,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/51",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106111,
+      "x": 156923,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/52",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106112,
+      "x": 156924,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/53",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106113,
+      "x": 156925,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/54",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106119,
+      "x": 156937,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/55",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106120,
+      "x": 156939,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/56",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106120,
+      "x": 156940,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/57",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106120,
+      "x": 156941,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/58",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106122,
+      "x": 156948,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/59",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106122,
+      "x": 156949,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/60",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106123,
+      "x": 156950,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/61",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106123,
+      "x": 156951,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/62",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106123,
+      "x": 156952,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/63",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106123,
+      "x": 156953,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/64",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106124,
+      "x": 156954,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/65",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106124,
+      "x": 156955,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/66",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83064859640631",
+      "target_id": "gb:ISR:ADM2:584046B83064859640631",
+      "pixelIndex": 24180,
+      "y": 106124,
+      "x": 156956,
+      "negative_ordinal": 2,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/67",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105511,
+      "x": 156801,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/68",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105511,
+      "x": 156802,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/69",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105511,
+      "x": 156803,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/70",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105512,
+      "x": 156803,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/71",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105512,
+      "x": 156804,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/72",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105513,
+      "x": 156771,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/73",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105520,
+      "x": 156698,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/74",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105520,
+      "x": 156699,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/75",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105520,
+      "x": 156700,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/76",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105520,
+      "x": 156701,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/77",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105521,
+      "x": 156681,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/78",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105521,
+      "x": 156682,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/79",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105521,
+      "x": 156697,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/80",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105521,
+      "x": 156698,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/81",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105531,
+      "x": 156810,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/82",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105532,
+      "x": 156811,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/83",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105533,
+      "x": 156812,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/84",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105533,
+      "x": 156813,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/85",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105534,
+      "x": 156813,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/86",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105534,
+      "x": 156814,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/87",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105535,
+      "x": 156814,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/88",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105536,
+      "x": 156815,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/89",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105550,
+      "x": 156830,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/90",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105550,
+      "x": 156831,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/91",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105661,
+      "x": 156623,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/92",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105662,
+      "x": 156623,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/93",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105663,
+      "x": 156623,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/94",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105663,
+      "x": 156624,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/95",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105664,
+      "x": 156622,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/96",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105664,
+      "x": 156623,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/97",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105664,
+      "x": 156624,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/98",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105665,
+      "x": 156622,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/99",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105665,
+      "x": 156623,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/100",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105665,
+      "x": 156624,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/101",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105665,
+      "x": 156625,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/102",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105666,
+      "x": 156622,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/103",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105666,
+      "x": 156623,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/104",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105666,
+      "x": 156624,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/105",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105666,
+      "x": 156625,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/106",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105667,
+      "x": 156622,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/107",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105667,
+      "x": 156623,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/108",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105667,
+      "x": 156624,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/109",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105667,
+      "x": 156625,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/110",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105667,
+      "x": 156626,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/111",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B83749751332199",
+      "target_id": "gb:ISR:ADM2:584046B83749751332199",
+      "pixelIndex": 24181,
+      "y": 105668,
+      "x": 156626,
+      "negative_ordinal": 1,
+      "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/5/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/112",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B86518607604876",
+      "target_id": "gb:ISR:ADM2:584046B86518607604876",
+      "pixelIndex": 24182,
+      "y": 106746,
+      "x": 156605,
+      "negative_ordinal": 2,
+      "geometry_sha256": "a71a94be35ac9c7c4afa892c6b93696b9d0d5bf435c1c6cd416bd9e568e57951",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/2/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/113",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B86518607604876",
+      "target_id": "gb:ISR:ADM2:584046B86518607604876",
+      "pixelIndex": 24182,
+      "y": 106747,
+      "x": 156604,
+      "negative_ordinal": 2,
+      "geometry_sha256": "a71a94be35ac9c7c4afa892c6b93696b9d0d5bf435c1c6cd416bd9e568e57951",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/2/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/114",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B86518607604876",
+      "target_id": "gb:ISR:ADM2:584046B86518607604876",
+      "pixelIndex": 24182,
+      "y": 106748,
+      "x": 156602,
+      "negative_ordinal": 2,
+      "geometry_sha256": "a71a94be35ac9c7c4afa892c6b93696b9d0d5bf435c1c6cd416bd9e568e57951",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/2/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/115",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B86518607604876",
+      "target_id": "gb:ISR:ADM2:584046B86518607604876",
+      "pixelIndex": 24182,
+      "y": 106749,
+      "x": 156601,
+      "negative_ordinal": 2,
+      "geometry_sha256": "a71a94be35ac9c7c4afa892c6b93696b9d0d5bf435c1c6cd416bd9e568e57951",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/2/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/116",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B86518607604876",
+      "target_id": "gb:ISR:ADM2:584046B86518607604876",
+      "pixelIndex": 24182,
+      "y": 106750,
+      "x": 156599,
+      "negative_ordinal": 2,
+      "geometry_sha256": "a71a94be35ac9c7c4afa892c6b93696b9d0d5bf435c1c6cd416bd9e568e57951",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/2/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/117",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106895,
+      "x": 156910,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/118",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106896,
+      "x": 156870,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/119",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106896,
+      "x": 156912,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/120",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106896,
+      "x": 156913,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/121",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106896,
+      "x": 156914,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/122",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106897,
+      "x": 156914,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/123",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106897,
+      "x": 156915,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/124",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106897,
+      "x": 156916,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/125",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106898,
+      "x": 156916,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/126",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 106935,
+      "x": 156172,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/127",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107005,
+      "x": 156494,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/128",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107234,
+      "x": 156901,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/129",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107235,
+      "x": 156901,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/130",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107236,
+      "x": 156901,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/131",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107237,
+      "x": 156900,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/132",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107238,
+      "x": 156900,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/133",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107239,
+      "x": 156900,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/134",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107240,
+      "x": 156899,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/135",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107240,
+      "x": 156900,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/136",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107241,
+      "x": 156899,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/137",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107242,
+      "x": 156899,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/138",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107243,
+      "x": 156898,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/139",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107244,
+      "x": 156898,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/140",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107245,
+      "x": 156898,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/141",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107246,
+      "x": 156897,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/142",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107247,
+      "x": 156897,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/143",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107248,
+      "x": 156896,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/144",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107249,
+      "x": 156896,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/145",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107251,
+      "x": 156895,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/146",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107254,
+      "x": 156894,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/147",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107294,
+      "x": 156878,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/148",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107295,
+      "x": 156878,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/149",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107296,
+      "x": 156878,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/150",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107297,
+      "x": 156878,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/151",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107298,
+      "x": 156878,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/152",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107299,
+      "x": 156878,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/153",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107301,
+      "x": 156877,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/154",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107302,
+      "x": 156877,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/155",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107303,
+      "x": 156877,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/156",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107304,
+      "x": 156877,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/157",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107308,
+      "x": 156876,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/158",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107309,
+      "x": 156876,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/159",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107314,
+      "x": 156875,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/160",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107409,
+      "x": 156822,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/161",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107755,
+      "x": 156706,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/162",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107756,
+      "x": 156706,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/163",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107758,
+      "x": 156705,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/164",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107760,
+      "x": 156704,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/165",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107761,
+      "x": 156704,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/166",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107762,
+      "x": 156703,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/167",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107763,
+      "x": 156703,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/168",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107764,
+      "x": 156702,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/169",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107765,
+      "x": 156702,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/170",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107766,
+      "x": 156701,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/171",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107767,
+      "x": 156701,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/172",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107768,
+      "x": 156700,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/173",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107769,
+      "x": 156700,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/174",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107770,
+      "x": 156699,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/175",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107770,
+      "x": 156700,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/176",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107771,
+      "x": 156699,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/177",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107772,
+      "x": 156698,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/178",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107772,
+      "x": 156699,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/179",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107773,
+      "x": 156698,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/180",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107774,
+      "x": 156698,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/181",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107775,
+      "x": 156697,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/182",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107776,
+      "x": 156697,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/183",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107777,
+      "x": 156696,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/184",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107778,
+      "x": 156696,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/185",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107779,
+      "x": 156695,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/186",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107781,
+      "x": 156694,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/187",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107782,
+      "x": 156694,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/188",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107783,
+      "x": 156693,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/189",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107784,
+      "x": 156693,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/190",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107785,
+      "x": 156692,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/191",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107785,
+      "x": 156693,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/192",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107786,
+      "x": 156692,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/193",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107787,
+      "x": 156691,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/194",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107787,
+      "x": 156692,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/195",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107788,
+      "x": 156691,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/196",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107918,
+      "x": 156679,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/197",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107919,
+      "x": 156679,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/198",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107920,
+      "x": 156679,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/199",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 107922,
+      "x": 156678,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/200",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108272,
+      "x": 156626,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/201",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108278,
+      "x": 156621,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/202",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108282,
+      "x": 156619,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/203",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108284,
+      "x": 156618,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/204",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108285,
+      "x": 156618,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/205",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108286,
+      "x": 156618,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/206",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108287,
+      "x": 156617,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/207",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108288,
+      "x": 156617,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/208",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108290,
+      "x": 156616,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/209",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108301,
+      "x": 156612,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/210",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108302,
+      "x": 156612,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/211",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108303,
+      "x": 156612,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/212",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108304,
+      "x": 156611,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/213",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108316,
+      "x": 156607,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/214",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108319,
+      "x": 156606,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/215",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108320,
+      "x": 156606,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/216",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108321,
+      "x": 156606,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/217",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108324,
+      "x": 156605,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/218",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108325,
+      "x": 156605,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/219",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108326,
+      "x": 156605,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/220",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108329,
+      "x": 156604,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/221",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108330,
+      "x": 156604,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/222",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108331,
+      "x": 156604,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/223",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108334,
+      "x": 156603,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/224",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108335,
+      "x": 156603,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/225",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108336,
+      "x": 156603,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/226",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108337,
+      "x": 156603,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/227",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108338,
+      "x": 156603,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/228",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108339,
+      "x": 156602,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/229",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108340,
+      "x": 156602,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/230",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108351,
+      "x": 156594,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/231",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108353,
+      "x": 156593,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/232",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108354,
+      "x": 156593,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/233",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108355,
+      "x": 156593,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/234",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108356,
+      "x": 156592,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/235",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108357,
+      "x": 156592,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/236",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108365,
+      "x": 156461,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/237",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108373,
+      "x": 156462,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/238",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108435,
+      "x": 156585,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/239",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108482,
+      "x": 156570,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/240",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108484,
+      "x": 156569,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/241",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108517,
+      "x": 156479,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/242",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108518,
+      "x": 156479,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/243",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108519,
+      "x": 156479,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/244",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108520,
+      "x": 156479,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/245",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108524,
+      "x": 156480,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/246",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108525,
+      "x": 156480,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/247",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108526,
+      "x": 156480,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/248",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108527,
+      "x": 156480,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/249",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108528,
+      "x": 156480,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/250",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108529,
+      "x": 156480,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/251",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108530,
+      "x": 156480,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/252",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108531,
+      "x": 156481,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/253",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108532,
+      "x": 156481,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/254",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108533,
+      "x": 156481,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/255",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108534,
+      "x": 156481,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/256",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108535,
+      "x": 156481,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/257",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108537,
+      "x": 156482,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/258",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108538,
+      "x": 156482,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/259",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108539,
+      "x": 156482,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/260",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108540,
+      "x": 156482,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/261",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108544,
+      "x": 156483,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/262",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108545,
+      "x": 156483,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/263",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108557,
+      "x": 156526,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/264",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108560,
+      "x": 156524,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/265",
+        "owner_pointer": "/owner"
+      }
+    },
+    {
+      "role": "contextual",
+      "source_id": "gb:ISR:ADM2:584046B9730835639199",
+      "target_id": "gb:ISR:ADM2:584046B9730835639199",
+      "pixelIndex": 24183,
+      "y": 108561,
+      "x": 156523,
+      "negative_ordinal": 7,
+      "geometry_sha256": "a30b577825df73de847ffd5cbd7397a918824c0beb49a438652f3a00026360d4",
+      "original_source": {
+        "id": "isr-adm1-complete-original",
+        "pointer": "/features/0/geometry"
+      },
+      "adoption": {
+        "id": "isr-matching-parent267-adoption",
+        "pointer": "/decision"
+      },
+      "scope": {
+        "id": "isr-matching-parent267-scope",
+        "pointer": "/keys/266",
+        "owner_pointer": "/owner"
+      }
+    }
+  ]
+}

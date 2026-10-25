@@ -12,7 +12,7 @@ const safeInclude = value => typeof value === 'string' && /^(data|research|coord
   && value.split('/').every(part => part && part !== '.' && part !== '..');
 
 // No shell, background mutations, timeout retries, or automatic lock breaking.
-export function workspaceManager(repo, {freeBytes} = {}) {
+export function workspaceManager(repo, {freeBytes, onStartupGuidance} = {}) {
   // Every Git command is explicitly rooted with `-C`; inherited repository/index
   // selectors would override that path and mutate an unrelated checkout. Keep the
   // sanitized environment invocation-local; never rewrite the parent process.
@@ -196,12 +196,37 @@ export function workspaceManager(repo, {freeBytes} = {}) {
     }
     execFileSync('git', ['-C', entry.path, 'read-tree', '-mu', 'HEAD'], {env: noLazyFetch});
   };
+  const readStartupGuidance = commit => {
+    const rows = git('ls-tree', '-z', commit, '--', 'AGENTS.md').split('\0').filter(Boolean);
+    if (rows.length !== 1) throw Error(`Verified origin/main ${commit} has no root AGENTS.md; refusing a fresh author allocation`);
+    const separator = rows[0].indexOf('\t');
+    if (separator < 0 || rows[0].slice(separator + 1) !== 'AGENTS.md') throw Error('Unknown root AGENTS.md tree entry');
+    const [mode, type, oid] = rows[0].slice(0, separator).split(' ');
+    if (!['100644', '100755'].includes(mode) || type !== 'blob' || !/^[a-f0-9]{40,64}$/.test(oid ?? '')) {
+      throw Error('Verified origin/main AGENTS.md is not an ordinary pinned blob');
+    }
+    const result = spawnSync('git', ['-C', repo, '--no-replace-objects', 'cat-file', 'blob', oid], {
+      encoding: null, maxBuffer: 4 * 1024 * 1024, env: noLazyFetch
+    });
+    if (result.error) throw result.error;
+    if (result.status !== 0 || result.stderr?.length) {
+      throw Error(`Pinned AGENTS.md blob ${oid} unavailable for verified origin/main ${commit}: ${result.stderr?.toString('utf8').trim() || 'read failed'}`);
+    }
+    let text;
+    try { text = new TextDecoder('utf-8', {fatal: true}).decode(result.stdout); }
+    catch { throw Error(`Pinned AGENTS.md blob ${oid} is not valid UTF-8`); }
+    if (!text.trim()) throw Error(`Pinned AGENTS.md blob ${oid} is empty`);
+    const guides = [...new Set([...text.matchAll(/\[[^\]]+\]\((docs\/[A-Za-z0-9_./-]+\.md)\)/g)].map(match => match[1]))];
+    return {commit, path: 'AGENTS.md', gitBlobOid: oid,
+      sha256: createHash('sha256').update(result.stdout).digest('hex'), text, guides};
+  };
   const allocate = ({worker, slot = 'work', branch, commit, profile = 'sparse', include = []}) => {
     if (!id(worker) || !['work', 'review'].includes(slot)) throw Error('Supply a safe unique worker ID and work/review slot');
     if (!['sparse', 'full'].includes(profile) || !Array.isArray(include) || !include.every(safeInclude)) throw Error('Use sparse/full profile and literal data/research/coordination paths without traversal or globs');
     if (slot === 'work' && (typeof branch !== 'string' || !branch || branch.startsWith('-') || branch === 'main' || commit)) throw Error('Work needs a fresh branch; main is fetched by the allocator');
     if (slot === 'work') git('check-ref-format', `refs/heads/${branch}`);
     if (slot === 'review' && (branch || !/^[a-f0-9]{40}$/.test(commit ?? ''))) throw Error('Review needs an exact detached 40-character commit');
+    let fetchedWorkHead, startupGuidance;
     if (slot === 'work') {
       if (git('for-each-ref', '--format=%(refname)', `refs/heads/${branch}`).split('\n').includes(`refs/heads/${branch}`)) {
         throw Error('Fresh branch already exists; choose a new branch without changing its history');
@@ -210,10 +235,22 @@ export function workspaceManager(repo, {freeBytes} = {}) {
       // fetched commit before reserving; later ref movement cannot change it.
       // Request metadata only even from conventional clones; selected missing
       // blobs still need explicit acquisition before the inventory can pass.
-      git('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none', 'origin', 'main');
+      git('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none',
+        'origin', '+refs/heads/main:refs/remotes/origin/main');
+      const fetchedMain = git('rev-parse', '--verify', 'FETCH_HEAD^{commit}').trim();
+      const trackingMain = git('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').trim();
+      if (!/^[a-f0-9]{40}$/.test(fetchedMain) || fetchedMain !== trackingMain) {
+        throw Error('Fetched origin/main did not match its remote-tracking ref; refusing a stale startup base');
+      }
+      // Pin the exact commit just obtained, rather than trusting a possibly stale
+      // local branch or an origin/main ref left unchanged by unusual fetch config.
+      fetchedWorkHead = fetchedMain;
+      // Read guidance by exact immutable object before reserving or materializing
+      // a checkout. Never consult the dirty primary working tree or lazy-fetch.
+      if (onStartupGuidance) startupGuidance = readStartupGuidance(fetchedWorkHead);
     }
-    const head = slot === 'work' ? git('rev-parse', '--verify', 'origin/main').trim() : commit;
-    return locked(() => {
+    const head = slot === 'work' ? fetchedWorkHead : commit;
+    const entry = locked(() => {
       const value = state();
       if (value.entries.some(entry => entry.worker === worker && entry.slot === slot)) throw Error('Slot occupied; finish and release it before allocating another checkout');
       const destination = slotPath(worker, slot);
@@ -247,6 +284,8 @@ export function workspaceManager(repo, {freeBytes} = {}) {
       save(value);
       return entry;
     });
+    if (startupGuidance && onStartupGuidance) onStartupGuidance(startupGuidance);
+    return entry;
   };
 
   // Resume only an exact interrupted reservation. This deliberately refuses any
@@ -363,7 +402,14 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       else options[key] = args[index + 1];
     }
     if (['allocate', 'resume'].includes(action) && (options.slot ?? 'work') === 'work') assertAuthorWorkerIdentity(options.worker);
-    const manager = workspaceManager(path.dirname(fileURLToPath(import.meta.url)));
+    const manager = workspaceManager(path.dirname(fileURLToPath(import.meta.url)), {
+      onStartupGuidance: ({commit, path: instructionPath, gitBlobOid, sha256, text, guides}) => {
+        process.stderr.write(`Verified current-main startup instructions (${commit})\n`);
+        process.stderr.write(`${instructionPath} Git blob ${gitBlobOid}; SHA-256 ${sha256}\n`);
+        if (guides.length) process.stderr.write(`Domain guides: ${guides.join(', ')}\n`);
+        process.stderr.write(`--- begin ${instructionPath} ---\n${text}${text.endsWith('\n') ? '' : '\n'}--- end ${instructionPath} ---\n`);
+      }
+    });
     if (!['report', 'check', 'inspect', 'allocate', 'resume', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume or release with documented --key value arguments');
     console.log(JSON.stringify(manager[action](options), null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }

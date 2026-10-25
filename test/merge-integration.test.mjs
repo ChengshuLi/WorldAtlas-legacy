@@ -336,8 +336,8 @@ for (const [label, consumer, operand] of [
     'test/map-cell-diagnosis.test.mjs'].map(consumer =>
     [consumer,consumer,'coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz']),
   ['rebind custody', 'test/current-rebind-product-custody.test.mjs', 'coordination/engineering/additive-native-composition-20261009/execution-code-paths.json'],
-  ['workspace bootstrap', 'test/local-workspace.test.mjs', 'docs/LOCAL_WORKSPACES.md'],
-  ['quota observation guide', 'test/github-quota.test.mjs', 'docs/MERGE_QUEUE_CLIENT.md'],
+  ['workspace bootstrap', 'test/local-workspace.test.mjs', 'docs/DEVELOPMENT.md'],
+  ['quota observation guide', 'test/github-quota.test.mjs', 'docs/DEVELOPMENT.md'],
   ['regional research gate', 'test/regional-research-gate.test.mjs', 'data/research-geography-gate.json'],
   ...['test/publication-plan.test.mjs','test/package-current-additive.test.mjs'].map(consumer =>
     [consumer,consumer,'coordination/publication/cloudflare-history.json'])
@@ -365,7 +365,7 @@ for (const [label, consumer, operand] of [
 });
 
 test('reviewed quota consumer reads its current guide through actual sparse checkout', () => {
-  const consumer='test/github-quota.test.mjs',operand='docs/MERGE_QUEUE_CLIENT.md';
+  const consumer='test/github-quota.test.mjs',operand='docs/DEVELOPMENT.md';
   const row={sha:sha('e'),mode:'100644',type:'blob'};
   const entries=new Map([...EXECUTION_CODE,operand,consumer,'test/fixtures/contract/input.json'].map(name=>[name,row]));
   const request={base:sha('a'),head:sha('b'),files:[consumer]};
@@ -428,7 +428,7 @@ test(`reviewed ${consumer} materializes its normative latitude operand through a
 test('reviewed hosted consumers retain their current inputs through actual sparse materialization', () => {
   const operands=['coordination/publication/cloudflare-history.json','data/observation-registry-history/base-v1.json',
     'data/research-geography-gate.json','data/hosted-type-catalog.json','data/settlement-estimates.json',
-    'coordination/engineering/cloudflare-publication-846-20261007/registry-source.json','docs/MERGE_QUEUE_CLIENT.md'];
+    'coordination/engineering/cloudflare-publication-846-20261007/registry-source.json','docs/DEVELOPMENT.md'];
   const consumers=['test/neon-forward-migrations.test.mjs','test/compact-membership-profile.test.mjs','test/current-postgres-recovery.test.mjs',
     'test/merge-integration.test.mjs','test/settlement-population-import.test.mjs','test/publication-cloudflare.test.mjs','test/cloudflare-access.test.mjs','test/package-preview.test.mjs'];
   const row={sha:sha('e'),mode:'100644',type:'blob'};
@@ -541,7 +541,7 @@ test('reviewed lists cannot omit actual packaged consumers when package source c
     const required=['test/compact-ownership.test.mjs','test/prepared-parity.test.mjs'];
     const row={sha:sha('e'),type:'blob',mode:'100644'};
     const entries=new Map([...EXECUTION_CODE.map(name=>[name,row]),...required.map(name=>[name,row]),
-      [consumer,row],['docs/LOCAL_WORKSPACES.md',row],['test/fixtures/contract/input.json',row]]);
+      [consumer,row],['docs/DEVELOPMENT.md',row],['test/fixtures/contract/input.json',row]]);
     const request={base:sha('a'),head:sha('b'),files:[consumer]};
     const changed={filename:source,status:'modified'};
     const context={base:request.base,head:request.head,entries,files:[changed],definition:loadPackageInputs()};
@@ -794,7 +794,7 @@ test('trusted profile uses focused invariants only for isolated evidence and doc
      assert.equal(integrationProfile('engineering/example',[{filename:helper,previous_filename:scientific}],{}),'full');
    }
  }
- assert.equal(integrationProfile('engineering/example',[{filename:'docs/WORKER_COORDINATION.md'},{filename:'coordination/engineering/example/receipt.json',status:'added'}],{}),'evidence');
+ assert.equal(integrationProfile('engineering/example',[{filename:'docs/DEVELOPMENT.md'},{filename:'coordination/engineering/example/receipt.json',status:'added'}],{}),'evidence');
  for(const filename of ['src/attributes.js','data/hierarchy.json','drizzle/0001.sql','scripts/build-cloudflare.mjs'])
    assert.equal(integrationProfile('engineering/example',[{filename}],{}),'full');
  assert.equal(integrationProfile('engineering/example',[{filename:'docs/a.md',previous_filename:'src/attributes.js'}],{}),'full');
@@ -888,7 +888,7 @@ test('ordinary focused tests and checkpoint fixture compose while unknown runtim
       assert.equal(integrationProfile('engineering/tests',[file],{},changed),'full');
     }
     assert.equal(integrationProfile('engineering/tests',[file]),'full');
-    for(const filename of ['scripts/prepare-delivery-handoff.mjs','docs/LOCAL_WORKSPACES.md',
+    for(const filename of ['scripts/prepare-delivery-handoff.mjs','docs/DEVELOPMENT.md',
       'coordination/engineering/tests/evidence-quality.json'])
       assert.equal(integrationProfile('engineering/tests',[file,{filename,status:'modified'}],{},tree),'evidence');
     for(const filename of ['scripts/native-ownership/native-preparation-guards.mjs',
@@ -992,7 +992,7 @@ test('geography omission derives only non-scientific control and validated focus
   for (const name of ['scripts/evidence-quality.mjs','scripts/local-workspace.mjs',
     'src/native-grid.js','data/hierarchy.json','data/ownership-selection.json',
     '.github/workflows/worker-merge.yml','.github/workflows/merge-integration-checks.yml',
-    '.github/evidence-policy.json','docs/WORKER_COORDINATION.md','docs/unknown.md',
+    '.github/evidence-policy.json','docs/DEVELOPMENT.md','docs/unknown.md',
     'coordination/engineering/controls/source.json','test/unknown.test.mjs'])
     assert.equal(required(name),true,name);
   for (const status of ['added','modified','renamed','copied'])
@@ -1163,9 +1163,8 @@ test('omitted geography retains exact candidate, review, statuses and both main 
 });
 
 test('actual review-receipt PR 2010 paths use the complete applicable focused inventory', () => {
-  const names = ['docs/AUTHOR_PREFLIGHT.md','docs/GEOGRAPHIC_GAP_ADJUDICATION.md',
-    'docs/PREMERGE_EVIDENCE_REVIEW.md','docs/prompts/ENGINEERING.txt','docs/prompts/GEOGRAPHY.txt',
-    'docs/prompts/LUNA_HISTORY.txt','scripts/geographic-adjudication-api.mjs','scripts/merge-integration.mjs',
+  const names = ['docs/VALIDATION.md','docs/GEOGRAPHY.md','docs/DEVELOPMENT.md','docs/HISTORY.md',
+    'scripts/geographic-adjudication-api.mjs','scripts/merge-integration.mjs',
     'scripts/premerge-evidence.mjs','test/geographic-adjudication-api.test.mjs',
     'test/merge-integration.test.mjs','test/premerge-evidence.test.mjs'];
   const files = names.map(filename => ({filename, status: 'modified'}));

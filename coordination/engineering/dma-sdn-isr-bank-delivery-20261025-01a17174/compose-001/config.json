@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "22b504f3c2c6718040364504a641471df049a5c8",
+    "path": "data/ownership-selection.json"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "98573b7a86ff620bb0639c59afbbe2a356da6c7f",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/original-rule-preimage.json"
+      },
+      "source_authority": {
+        "commit": "98573b7a86ff620bb0639c59afbbe2a356da6c7f",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/authority-binding.json"
+      },
+      "ledger": {
+        "commit": "98573b7a86ff620bb0639c59afbbe2a356da6c7f",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/native-authority206/constructor-result.json"
+      },
+      "native_patch": {
+        "commit": "432e0779d94b01ba66107fc50d2a9da232acfb6f",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-result/native-patch.json"
+      }
+    },
+    {
+      "rule_preimage": {
+        "commit": "35420a3ef751b5d6d6f300f7a3da38960b758a22",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/original-rule-preimage.json"
+      },
+      "source_authority": {
+        "commit": "35420a3ef751b5d6d6f300f7a3da38960b758a22",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/authority-binding.json"
+      },
+      "ledger": {
+        "commit": "35420a3ef751b5d6d6f300f7a3da38960b758a22",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/native-authority-001/constructor-result.json"
+      },
+      "native_patch": {
+        "commit": "032dcc5fcb9d796b3542ffa4fcf33e1645874928",
+        "path": "research/geography/sdn2654-physical-20261025-01a16f2e/supported-inputs-001/native-patch.json"
+      }
+    },
+    {
+      "rule_preimage": {
+        "commit": "4e5fcddf8a7e3e7e566ff2f6794fb885b1490e93",
+        "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-authority-379-001/original-rule-preimage.json"
+      },
+      "source_authority": {
+        "commit": "4e5fcddf8a7e3e7e566ff2f6794fb885b1490e93",
+        "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-authority-379-001/authority-binding.json"
+      },
+      "ledger": {
+        "commit": "4e5fcddf8a7e3e7e566ff2f6794fb885b1490e93",
+        "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-authority-379-001/constructor-result.json"
+      },
+      "native_patch": {
+        "commit": "5bdd34338397f51e16c8a74877a236cd9b16723c",
+        "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/supported-inputs-bound-002/native-patch.json"
+      }
+    }
+  ]
+}
