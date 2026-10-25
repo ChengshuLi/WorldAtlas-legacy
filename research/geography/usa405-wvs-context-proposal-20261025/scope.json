@@ -1,0 +1,54 @@
+{
+  "schema": "usa405-wvs-source-context-proposal-v1",
+  "status": "proposal-only; root acceptance and accounting pending; no credit or owner assignment",
+  "scope": {
+    "package": "original USA31 source-history stratum",
+    "original_source_history_count": 536,
+    "separately_accepted_noaa_count": 131,
+    "proposed_remaining_count": 405,
+    "proposed_exact_tuple_sha256": "d3225530513796d4faa18b1ba39c47e99d9c51ccc9b9540ff575a024869f0ca1",
+    "tuple_encoding": "SHA-256 of compact UTF-8 JSON for the sorted array of [y,x,owner_index] tuples; no rows are serialized here",
+    "owner_counts": {
+      "Suffolk": 403,
+      "Westchester": 2
+    },
+    "candidate_component_count": 14,
+    "original_physical_candidate_count": 31,
+    "original_implicated_candidate_count": 21,
+    "held_reason": "USA31-existing-source-history-defer",
+    "retained_status": "held_unresolved",
+    "accepted_disposition": false,
+    "new_credit": 0,
+    "repair_qualified": false
+  },
+  "keyset_bindings": {
+    "original_usa31_witness_sha256": "8dd932327e9d919b7dc3b0c2945c69b1b92300a413970f8c7753ffd6f3152784",
+    "original_usa31_witness_commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+    "original_536_private_held_tuple_sha256": "79652c69e6f992618513317060b29d6d1d0439d3c9d647c80d2d08109817a837",
+    "separate_usa131_tuple_sha256": "8e15f687abe441367c45ab6ef6cdbbb9d756e4bf96b09ec880f72e79a8920389",
+    "private_1204_held_roster_sha256": "55c522bc2ae7d455492a6f6467ff54f0b2af31376627690e356ed538b1347821",
+    "private_405_tuple_binding_sha256": "38781888608fd7b2ff2935264c81fe083c29cc062c2c9c429032fd8501ac1a00"
+  },
+  "evidence": {
+    "original_study_pr1384_merge": "281424146684b98e754efba910178c7b42f3850a",
+    "original_source_screen_sha256": "5fc3a8ecec37fee7a8cd8bd640b643b8c082a7594aee52fdf99240664074aab3",
+    "original_native_wvs_query_rows_sha256": "33b5a2d185a901dbd9dbec7601450a9ee22589c1c1fac1c47657d908b4f67a85",
+    "source_body_private_sha256": "d49312b91c3f9020072f3a77381ebbc2d2c4b2c36c971e1ac4d1c50336994ec5",
+    "source_body_bytes": 18232320,
+    "official_decoder_source_sha256": "c52fce96c77f83188fe306bab87137f92e7df98e813a87a61947c48819bc14f5",
+    "private_decoder_sha256": "d3799b7587093adeccf1c7fff9bbc13dc89c973398a9a2d6d06916e0fa563127",
+    "private_target_summary_sha256": "4999b62c4183bebe11e9fa12352688422df86363d5d99f400628fbbe276376d5",
+    "private_target_application_note_sha256": "970367584fd9465c2f10bf91e1df5b1be3cdc532fee1f495f33e6c58e949a34b",
+    "private_source_read_memo_sha256": "f2b9769b9419815c1f4f6ce1498880a6b7623f9799141fa1d41eb719face696a",
+    "prior_noaa131_packet_commit": "20c049c492cc54d581729690249faf5a1d6969ec",
+    "prior_noaa131_packet_scope_sha256": "08c393e57855f63cfd59f2800027e5186a4b41e05642f6ce7b4f29f15e89ec3f"
+  },
+  "limits": [
+    "No 405 source keys or coordinates are serialized in this public scope file; exact key linkage remains in reviewer-only private custody.",
+    "No GSHHG component-to-WVS body record/date crosswalk is established.",
+    "Nearest segment metrics are context only, not source ancestry, threshold, physical class, legal boundary, or whole-cell predicate.",
+    "Raw WVS body/geometry is not included; public access is not a rights clearance; Data.gov metadata's non-public access-level signal remains unresolved.",
+    "The 131 NOAA map cohort and the other 668 USA residual keys are excluded; no findings are extrapolated to them.",
+    "No source-search exhaustion, repair, ownership decision, acceptance, numerator change, or denominator change is claimed."
+  ]
+}
