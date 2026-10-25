@@ -1,0 +1,854 @@
+{
+  "actual_CODE": "403791c13c936e7894e86a891951ab6078074845",
+  "original_DATA": "6d5282f9d378992c9bc3ade862607a68b08a6a0e",
+  "report": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/ca910f7b9f4d9b7889d681b0d74ee1d2a4e0cc255fca4a567f534fc9119a4c86/work/.cache/delivery-handoff/cmr4925-context-7298-20261025-01/native-diagnostic.json",
+    "bytes": 14136819,
+    "sha256": "f06a4f8a64f316977048ea1d597681f433c94b8f9dc903c59a3195aafec6c16a"
+  },
+  "original4925_preserved": true,
+  "requested_cells": 4925,
+  "supported_cells": 4555,
+  "held_cells": 370,
+  "decision_counts": {
+    "assigned_cells": 4555,
+    "territorial_exclusion_cells": 370
+  },
+  "transitions": [
+    {
+      "old": "territorial_exclusion_cells",
+      "new": "assigned_cells",
+      "count": 4192
+    },
+    {
+      "old": "assigned_cells",
+      "new": "assigned_cells",
+      "count": 363
+    },
+    {
+      "old": "territorial_exclusion_cells",
+      "new": "territorial_exclusion_cells",
+      "count": 370
+    }
+  ],
+  "pending4924_decisions": {
+    "assigned_cells": 4555,
+    "territorial_exclusion_cells": 369
+  },
+  "accepted_Ndelele": {
+    "key": [
+      14118,
+      128086,
+      142095
+    ],
+    "previously_accepted": true,
+    "target_id": "gb:CMR:ADM3:9386221B22697281755042",
+    "physical_class": "mapped_land_support",
+    "old_decision": "territorial_exclusion_cells",
+    "new_decision": "territorial_exclusion_cells",
+    "adopted_contextual_records": [],
+    "original_negative_operands": [
+      {
+        "geometry_sha256": "b893e47dfd6c49a705fb12affc930986ae035bbfc53cc8f60df1b0b6a9c706d3",
+        "kinds": [
+          "interior"
+        ],
+        "negative_ordinal": 0,
+        "original_source": {
+          "feature_ordinal": 2,
+          "geometry_sha256": "b893e47dfd6c49a705fb12affc930986ae035bbfc53cc8f60df1b0b6a9c706d3",
+          "negative_ordinal": 0,
+          "source_id": "gb:CAF:ADM1:63714938B93412376758102"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "bc01c47fae42649882fe2728d24b4ba2ee1504844795cecd0ea2b68986388ecf",
+        "kinds": [],
+        "negative_ordinal": 1,
+        "original_source": {
+          "feature_ordinal": 38,
+          "geometry_sha256": "bc01c47fae42649882fe2728d24b4ba2ee1504844795cecd0ea2b68986388ecf",
+          "negative_ordinal": 1,
+          "source_id": "gb:CAF:ADM2:33826404B19731387545693"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "3860a34acc5725eed6f0043b1eb6dc2a10453bdf2ee7090e16eb74bf420d1e2d",
+        "kinds": [
+          "interior"
+        ],
+        "negative_ordinal": 2,
+        "original_source": {
+          "feature_ordinal": 39,
+          "geometry_sha256": "3860a34acc5725eed6f0043b1eb6dc2a10453bdf2ee7090e16eb74bf420d1e2d",
+          "negative_ordinal": 2,
+          "source_id": "gb:CAF:ADM2:33826404B15620845480465"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "e13657555bf54f8e809d76737a419af1c16c83c45853f17d89a1f00244acd906",
+        "kinds": [],
+        "negative_ordinal": 3,
+        "original_source": {
+          "feature_ordinal": 147,
+          "geometry_sha256": "e13657555bf54f8e809d76737a419af1c16c83c45853f17d89a1f00244acd906",
+          "negative_ordinal": 3,
+          "source_id": "gb:CAF:ADM3:52401652B56175823548729"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "4ca953c985725e3fcfa44e074e80eea921ed9a7c31b1d6099b40045e41d723ca",
+        "kinds": [],
+        "negative_ordinal": 4,
+        "original_source": {
+          "feature_ordinal": 153,
+          "geometry_sha256": "4ca953c985725e3fcfa44e074e80eea921ed9a7c31b1d6099b40045e41d723ca",
+          "negative_ordinal": 4,
+          "source_id": "gb:CAF:ADM3:52401652B2745722682101"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "kinds": [
+          "interior"
+        ],
+        "negative_ordinal": 5,
+        "original_source": {
+          "feature_ordinal": 5,
+          "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+          "negative_ordinal": 5,
+          "source_id": "gb:CMR:ADM1:27767025B81519146961984"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "7b4c77a55745435f8e43fa7b15b2b0d7fe4d94f0eb6b072c70c34e56df96865f",
+        "kinds": [],
+        "negative_ordinal": 6,
+        "original_source": {
+          "feature_ordinal": 15,
+          "geometry_sha256": "7b4c77a55745435f8e43fa7b15b2b0d7fe4d94f0eb6b072c70c34e56df96865f",
+          "negative_ordinal": 6,
+          "source_id": "gb:CMR:ADM2:32672807B40314964499081"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "7c80da5f48a79eed87de7978eefa27b18ab74ef0c0dfff25b6b6e0431762a7b0",
+        "kinds": [],
+        "negative_ordinal": 7,
+        "original_source": {
+          "feature_ordinal": 16,
+          "geometry_sha256": "7c80da5f48a79eed87de7978eefa27b18ab74ef0c0dfff25b6b6e0431762a7b0",
+          "negative_ordinal": 7,
+          "source_id": "gb:CMR:ADM2:32672807B24706785822934"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      },
+      {
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "kinds": [
+          "interior"
+        ],
+        "negative_ordinal": 8,
+        "original_source": {
+          "feature_ordinal": 17,
+          "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+          "negative_ordinal": 8,
+          "source_id": "gb:CMR:ADM2:32672807B29047919086815"
+        },
+        "source_id": "gb:CMR:ADM3:9386221B22697281755042",
+        "target_id": "gb:CMR:ADM3:9386221B22697281755042"
+      }
+    ]
+  },
+  "water33_decisions": {
+    "assigned_cells": 32,
+    "territorial_exclusion_cells": 1
+  },
+  "all_original_raw_territorial_kinds_and_identities_unchanged": true,
+  "new_operand_sha256_is_provenance_not_changed_geometry": true,
+  "native_contract_unchanged": true,
+  "physical_source_triple_unchanged": true,
+  "old_physical_witness_rows": 0,
+  "new_physical_witness_rows": 0,
+  "physical_witness_legend": [
+    "missing_reconstruction",
+    "extra_reconstruction",
+    "contradictory_land_water_support",
+    "L2-outside-L1",
+    "L3-outside-L2",
+    "L4-outside-L3",
+    "outside_mapped_L1_context",
+    "mapped_inland_water_support"
+  ],
+  "territorial_contact_records": 7624,
+  "territorial_contact_outcomes": {
+    "interior": 7624
+  },
+  "authority_generated": false,
+  "acceptance_credit": 0,
+  "per_owner": {
+    "14070": {
+      "assigned_cells": 130
+    },
+    "14071": {
+      "assigned_cells": 31
+    },
+    "14082": {
+      "assigned_cells": 3
+    },
+    "14091": {
+      "assigned_cells": 14
+    },
+    "14094": {
+      "assigned_cells": 16
+    },
+    "14109": {
+      "assigned_cells": 40
+    },
+    "14111": {
+      "assigned_cells": 12
+    },
+    "14114": {
+      "assigned_cells": 25
+    },
+    "14115": {
+      "territorial_exclusion_cells": 21,
+      "assigned_cells": 15
+    },
+    "14118": {
+      "territorial_exclusion_cells": 4,
+      "assigned_cells": 5
+    },
+    "14119": {
+      "assigned_cells": 48
+    },
+    "14122": {
+      "assigned_cells": 106,
+      "territorial_exclusion_cells": 6
+    },
+    "14132": {
+      "territorial_exclusion_cells": 9,
+      "assigned_cells": 5
+    },
+    "14139": {
+      "assigned_cells": 94
+    },
+    "14146": {
+      "assigned_cells": 196
+    },
+    "14152": {
+      "assigned_cells": 84
+    },
+    "14154": {
+      "assigned_cells": 91,
+      "territorial_exclusion_cells": 1
+    },
+    "14157": {
+      "territorial_exclusion_cells": 33,
+      "assigned_cells": 8
+    },
+    "14161": {
+      "assigned_cells": 2,
+      "territorial_exclusion_cells": 72
+    },
+    "14188": {
+      "territorial_exclusion_cells": 8,
+      "assigned_cells": 22
+    },
+    "14190": {
+      "assigned_cells": 67
+    },
+    "14193": {
+      "assigned_cells": 186,
+      "territorial_exclusion_cells": 5
+    },
+    "14196": {
+      "assigned_cells": 20
+    },
+    "14197": {
+      "assigned_cells": 35
+    },
+    "14202": {
+      "assigned_cells": 10
+    },
+    "14204": {
+      "assigned_cells": 232,
+      "territorial_exclusion_cells": 6
+    },
+    "14205": {
+      "territorial_exclusion_cells": 91,
+      "assigned_cells": 21
+    },
+    "14207": {
+      "assigned_cells": 16
+    },
+    "14210": {
+      "assigned_cells": 90,
+      "territorial_exclusion_cells": 14
+    },
+    "14214": {
+      "assigned_cells": 16
+    },
+    "14223": {
+      "territorial_exclusion_cells": 1,
+      "assigned_cells": 86
+    },
+    "14229": {
+      "assigned_cells": 69
+    },
+    "14230": {
+      "assigned_cells": 2,
+      "territorial_exclusion_cells": 1
+    },
+    "14233": {
+      "assigned_cells": 300
+    },
+    "14235": {
+      "territorial_exclusion_cells": 32,
+      "assigned_cells": 18
+    },
+    "14236": {
+      "assigned_cells": 33
+    },
+    "14237": {
+      "assigned_cells": 29
+    },
+    "14243": {
+      "assigned_cells": 2,
+      "territorial_exclusion_cells": 14
+    },
+    "14244": {
+      "assigned_cells": 101
+    },
+    "14247": {
+      "assigned_cells": 19,
+      "territorial_exclusion_cells": 1
+    },
+    "14253": {
+      "assigned_cells": 7
+    },
+    "14260": {
+      "assigned_cells": 1
+    },
+    "14267": {
+      "assigned_cells": 46,
+      "territorial_exclusion_cells": 1
+    },
+    "14269": {
+      "assigned_cells": 1
+    },
+    "14276": {
+      "assigned_cells": 9
+    },
+    "14277": {
+      "assigned_cells": 40
+    },
+    "14280": {
+      "territorial_exclusion_cells": 28,
+      "assigned_cells": 363
+    },
+    "14283": {
+      "territorial_exclusion_cells": 1,
+      "assigned_cells": 12
+    },
+    "14294": {
+      "assigned_cells": 614
+    },
+    "14295": {
+      "assigned_cells": 33
+    },
+    "14305": {
+      "territorial_exclusion_cells": 1
+    },
+    "14306": {
+      "assigned_cells": 26
+    },
+    "14307": {
+      "assigned_cells": 3
+    },
+    "14330": {
+      "territorial_exclusion_cells": 3,
+      "assigned_cells": 1
+    },
+    "14335": {
+      "territorial_exclusion_cells": 1,
+      "assigned_cells": 86
+    },
+    "14340": {
+      "assigned_cells": 81
+    },
+    "14346": {
+      "assigned_cells": 7
+    },
+    "14353": {
+      "assigned_cells": 21
+    },
+    "14355": {
+      "assigned_cells": 101
+    },
+    "14361": {
+      "assigned_cells": 334
+    },
+    "14363": {
+      "assigned_cells": 1
+    },
+    "14366": {
+      "assigned_cells": 2
+    },
+    "14370": {
+      "assigned_cells": 9
+    },
+    "14378": {
+      "assigned_cells": 82
+    },
+    "14379": {
+      "assigned_cells": 11
+    },
+    "14392": {
+      "assigned_cells": 25
+    },
+    "14393": {
+      "assigned_cells": 43
+    },
+    "14399": {
+      "territorial_exclusion_cells": 12,
+      "assigned_cells": 17
+    },
+    "14404": {
+      "assigned_cells": 75
+    },
+    "14405": {
+      "assigned_cells": 124
+    },
+    "14411": {
+      "assigned_cells": 3
+    },
+    "14413": {
+      "territorial_exclusion_cells": 4,
+      "assigned_cells": 44
+    },
+    "14420": {
+      "assigned_cells": 18
+    },
+    "14424": {
+      "assigned_cells": 16
+    }
+  },
+  "territorial_contact_resolutions": {
+    "contextual": 7298,
+    "retained-territorial-veto": 326
+  },
+  "exact7298_contextual_contacts_match_adopted_records": true,
+  "remaining_veto_incidence_families_full370": {
+    "gb:CAF:ADM2": 90,
+    "gb:CAF:ADM1": 41,
+    "gb:CMR:ADM1": 8,
+    "gb:CMR:ADM2": 64,
+    "gb:TCD:ADM1": 3,
+    "gb:GAB:ADM1": 190,
+    "gb:NGA:ADM1": 1
+  },
+  "pending369_remaining_family_groups": [
+    {
+      "families": [
+        "gb:CAF:ADM2"
+      ],
+      "count": 73
+    },
+    {
+      "families": [
+        "gb:CAF:ADM1"
+      ],
+      "count": 25
+    },
+    {
+      "families": [
+        "gb:CAF:ADM1",
+        "gb:CAF:ADM2"
+      ],
+      "count": 15
+    },
+    {
+      "families": [
+        "gb:TCD:ADM1"
+      ],
+      "count": 3
+    },
+    {
+      "families": [
+        "gb:GAB:ADM1"
+      ],
+      "count": 184
+    },
+    {
+      "families": [
+        "gb:CMR:ADM2"
+      ],
+      "count": 55
+    },
+    {
+      "families": [
+        "gb:CAF:ADM2",
+        "gb:CMR:ADM1"
+      ],
+      "count": 1
+    },
+    {
+      "families": [
+        "gb:CMR:ADM1"
+      ],
+      "count": 4
+    },
+    {
+      "families": [
+        "gb:CMR:ADM2",
+        "gb:GAB:ADM1"
+      ],
+      "count": 6
+    },
+    {
+      "families": [
+        "gb:CMR:ADM1",
+        "gb:CMR:ADM2"
+      ],
+      "count": 2
+    },
+    {
+      "families": [
+        "gb:NGA:ADM1"
+      ],
+      "count": 1
+    }
+  ],
+  "water33_exact": [
+    {
+      "key": [
+        14196,
+        121941,
+        141412
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121942,
+        141412
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121942,
+        141413
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121943,
+        141412
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121943,
+        141413
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121943,
+        141414
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121943,
+        141415
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121944,
+        141412
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121944,
+        141413
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121944,
+        141414
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121945,
+        141412
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14196,
+        121945,
+        141413
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B46316017991506"
+    },
+    {
+      "key": [
+        14247,
+        121614,
+        141688
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121614,
+        141689
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121614,
+        141690
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121615,
+        141688
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121615,
+        141689
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121615,
+        141690
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121615,
+        141691
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121616,
+        141687
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121616,
+        141688
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121616,
+        141689
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121616,
+        141690
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121617,
+        141687
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121617,
+        141688
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121617,
+        141689
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121618,
+        141686
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121618,
+        141687
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121618,
+        141688
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121619,
+        141686
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121620,
+        141685
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14247,
+        121621,
+        141685
+      ],
+      "decision": "territorial_exclusion_cells",
+      "target_id": "gb:CMR:ADM3:9386221B58524800443339"
+    },
+    {
+      "key": [
+        14276,
+        121623,
+        141684
+      ],
+      "decision": "assigned_cells",
+      "target_id": "gb:CMR:ADM3:9386221B63686862212730"
+    }
+  ],
+  "source_extent_adverses_not_cleared": {
+    "supported_Dizangue2": [
+      [
+        14243,
+        128233,
+        138130
+      ],
+      [
+        14243,
+        128235,
+        138131
+      ]
+    ],
+    "contrary68": "all nonadopted actual operands retained; see exact370-held.jsonl"
+  },
+  "adopted_CAF1_dual_CAF2_33_all_still_held": true,
+  "contrary68_all_still_held": true
+}
