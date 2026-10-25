@@ -66,9 +66,9 @@ Version 3 is a local preview against the retained version 2 manifest, not a clai
 
 Stage against the latest published version and its matching registered-identity/source proofs, rather than hardcoding a release number. Verify imported memberships, counts and crosswalk hashes, inactive predecessor context, unchanged dated evidence, and matching prepared/server/static release pins. Regenerate only the approved reference hierarchy and reusable parent-boundary metadata; location ownership, environmental values and canonical pixel ownership do not need new computation because location footprints and IDs are unchanged. No publication or active-geography write is performed by this preparation script.
 
-## Installation dependency inventory and handoff boundary
+## Installation impact and preservation constraints
 
-The candidate and release-preparation work are validated. **No installer, temporary installation, new static build or active publication of these corrections has been completed.** Installation remains technical-maintainer work. Existing platform/build verification concerns the currently installed hierarchy, not this candidate. Broad additional rehearsal work was paused at the owner's request after this dependency inventory.
+The table below describes the exact data consumers affected by a future installation; it is not an installation authorization or a claim about live provider state. Any implementation must use the currently accepted baseline, obtain its own scoped review and publish only after the listed preservation checks pass. This preparation changes no active hierarchy, installed assets or production data.
 
 | Asset or contract | Required installation treatment |
 | --- | --- |
