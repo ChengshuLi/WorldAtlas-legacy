@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "kind": "pse-source-canonical-linkage-check",
+  "as_of": "2026-10-25",
+  "scope": {
+    "package_id": "gb-PSE-ADM2--repair-evaluation",
+    "original_cells": 427,
+    "original_intervals": 277,
+    "land_cells": 275,
+    "inland_water_cells": 152,
+    "status": "pending",
+    "credit_or_reclassification": 0
+  },
+  "method": "Bounded immutable-object lookup of the current canonical PSE ADM2 geography part, comparison of exact feature identities against the retained original source payload and the pinned public geoBoundaries LFS source file, and inspection of the existing stock admission contract. No native qualification, geometry repair, cell reassignment, or physical producer was run.",
+  "inputs": {
+    "current_owner_observation": {
+      "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+      "path": "coordination/engineering/pse-original-disposition-20261020/pse-selected-owner-observation-current-53002fd1.json",
+      "bytes": 114481,
+      "sha256": "07b8cc0b20a308be8b2d2d8386c1990e5c53c8807ee716d2f03e8af1865b7e56",
+      "query_count": 427,
+      "current_owner_zero_count": 427,
+      "scientific_qualification": false
+    },
+    "current_canonical_geography": {
+      "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+      "path": "data/geography/part-20.json",
+      "git_blob_oid": "efda4099740c3ef131ef631cdc6b6ecf345f226a",
+      "bytes": 6570767,
+      "sha256": "9dda1b495f3e9934d23c99d3ba1c6a631078798c42c5ddb060dc5238a32b7c9f",
+      "feature_count": 1500,
+      "matching_pse_adm2_features": 16
+    },
+    "current_stock_membership_part": {
+      "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+      "path": "coordination/engineering/native-grid-integration-1010-20261005-local17/build-readback-v1/assets/geography/part-20.json.gz",
+      "git_blob_oid": "58a138c34622d4c1e2d26da4ab69b3538d9258fa",
+      "compressed_bytes": 1093612,
+      "compressed_sha256": "93152061c301d32c93327fbc61958720748679ee0a9a482868944d0cf4da71f6",
+      "decoded_bytes": 3295803,
+      "decoded_sha256": "841a14104a1ccf81b57e46b880c22b20c61d421e29b4256e280ba902f5d05705",
+      "feature_count": 1500,
+      "matching_pse_adm2_features": 16
+    },
+    "retained_consumed_source": {
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-PSE-ADM2-000.bin.gz",
+      "git_blob_oid": "a5ecca9ebe9f17862040f2d80753017a91d9f1b1",
+      "compressed_bytes": 45733,
+      "compressed_sha256": "c9e90c5e980b65d9e21720b67bf3e13e45b959b9b22e92cc19591c5be176779c",
+      "decoded_bytes": 150914,
+      "decoded_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+      "feature_count": 16,
+      "recorded_reference_year": "2017",
+      "recorded_license": "CC BY 4.0"
+    },
+    "upstream_source_file": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2.geojson",
+      "git_lfs_oid_sha256": "69bf9a3baddaa5c102d9bea6681c586f8cb3a24f1bb78783f8ec68daabc798c0",
+      "bytes": 2402215,
+      "verified_sha256": "69bf9a3baddaa5c102d9bea6681c586f8cb3a24f1bb78783f8ec68daabc798c0",
+      "retrieval": "Ordinary public download; downloaded bytes matched the LFS pointer's exact size and SHA-256."
+    },
+    "accepted_transform_records": [
+      {
+        "commit": "4bdba3d40acc2d725e4aeb54c3b9aab559a91469",
+        "path": "data/topology-report.json",
+        "git_blob_oid": "67fe548e8cf9f76cd6b61ae66494b3eedc575824",
+        "bytes": 21666,
+        "sha256": "48f634733cf1d9c3c027ddfcd524c352479a061cb8e2cd8f496c76f50d890b7d"
+      },
+      {
+        "commit": "4bdba3d40acc2d725e4aeb54c3b9aab559a91469",
+        "path": "data/geographic-migration-review.json",
+        "git_blob_oid": "fe74fe3c084ca17ceb86ee21696a87e37d33a818",
+        "bytes": 16694976,
+        "sha256": "83405685940d93e56afc9b1fe65f8abfdbe37b16200e3a3f65d6d2097eb0c91b"
+      },
+      {
+        "commit": "4bdba3d40acc2d725e4aeb54c3b9aab559a91469",
+        "path": "data/geographic-repair-evidence/migration-receipt.json.gz",
+        "git_blob_oid": "6138bf1831d587667626f178f2fcc1b020527e5b",
+        "bytes": 555218,
+        "sha256": "c53b644a641f85d6bc225997e8f6836afd0a4ae82d46e0a86d5147a3d9255c3e"
+      },
+      {
+        "commit": "4bdba3d40acc2d725e4aeb54c3b9aab559a91469",
+        "path": "data/geographic-decision-migration.json.gz",
+        "git_blob_oid": "3fcca12bfc061f471d19cb63c85c59222f3742f7",
+        "bytes": 1910337,
+        "sha256": "8ded9175b78142d2e56dc5dc3f91ae830049409190bd9dc9a158dd14f1006324"
+      }
+    ]
+  },
+  "findings": [
+    "The exact 16 PSE ADM2 IDs and names in the retained 2017 payload are present in current canonical part-20 at the same feature IDs.",
+    "The recovered stock membership shard has the exact same 16 PSE IDs and geometry objects as current data/geography/part-20.json; this authenticates the selected canonical target geometries in the stock membership part.",
+    "For all 16 features, current canonical geometry is not byte-structure equal to the retained simplified source geometry or the exact upstream 9469f09 LFS geometry. The canonical records mark topology_reconciled=true and warn that original source boundaries may differ.",
+    "For all 16 features, metadata.original_geometry_sha256 does not match the geometry hash computed from the pinned upstream 9469f09 LFS file under the repository's sorted-JSON hashing method. Feature identity is therefore established, but the exact geometry-preimage/transform bridge for the selected canonical representation is not established by these records.",
+    "The exact initial-add accepted topology report and migration records were retrieved. The topology report is aggregate-only (5,792 adjusted locations) and contains no per-feature PSE preimage/hash binding; the migration review explicitly describes an atlas-reference revision rather than a historical territorial transition. Searching those exact records did not locate the PSE original_geometry_sha256 preimage or a source-to-pre-topology receipt.",
+    "The original PSE packet contains no source-evidence-config.json, native-patch.json, original-stage-inputs.json, or whole-target physical receipt. Its retained source and physical context explicitly records that geometry was not used and no geometry operation or source/native qualification was run.",
+    "The stock constructor admission path requires immutable source evidence and native patch, exact consumed-original and selected-target stage rows, pinned physical evidence/reproduction, canonical source membership, and original owner/native assets. The current-owner observation alone supplies none of that source/physical authority.",
+    "The accepted geographic-migration-review blob fe74fe3c084ca17ceb86ee21696a87e37d33a818 (16,694,976 bytes; SHA-256 83405685940d93e56afc9b1fe65f8abfdbe37b16200e3a3f65d6d2097eb0c91b) supplies an atlas-reference overlap crosswalk: archived West Bank ADM1 feature gb:PSE:ADM1:83478781B28849486138516 overlaps canonical Ramallah & Al Bireh ADM2 feature gb:PSE:ADM2:87354302B37341560226836 by 809.802673 km²; target fraction 0.14457908 and predecessor share 0.99933871. The record explicitly describes atlas-reference revision, not a historical territorial transition, and does not bind the 427 exact cell centers or supply a topology-preimage receipt.",
+    "The stock downstream source-evidence/native-authority steps can accept PSE-specific evidence, but the existing source-stage producer scripts/qualify-source-cohort.py validates a fixed Indonesia family and target method. It rejects PSE source configs as an unsupported source method; no existing PSE stage adapter or accepted stage records were found. A PSE-specific stage authoring step would be needed before using the generic downstream stages.",
+    "Independent exact-packet audit confirms the only retained physical operands are block-level historical source-candidate, physical-support, and inland-water masks. No PSE whole-target-support receipt, target stage, stock physical config, or executed physical reproduction exists in the accepted packet. Those masks do not satisfy the stock physical_evidence/physical_input/physical_reproduction roles."
+  ],
+  "limits": [
+    "Matching IDs/names establish an identity correspondence only; no sovereignty, legal applicability, or source-fitness conclusion is made.",
+    "No geometry was copied into this note or redistributed.",
+    "No stock sourceEvidence/native-diagnostic/native-authority phase was run because the admitted source/physical stage and native patch do not exist in the retained packet.",
+    "All 427 cells and 277 intervals remain pending; all existing holds remain."
+  ],
+  "next_required_input": "A PSE-specific, independently validated stage binding each consumed original source feature to its selected current canonical target; then exact full-scope physical input/config and a completed whole-target-support receipt plus execution receipt; then original-contract source-evidence/native-patch inputs that retain every contact and current selector/owner bindings. The current selected geometries are authenticated through the stock membership part, but no accepted source-stage or physical run exists. The existing source producer is Indonesia-only. Preserve the topology-reconciled source-to-canonical geometry difference without assuming geometric identity; neither the aggregate topology report nor atlas-reference overlap crosswalk supplies a per-feature preimage/transform bridge."
+}
