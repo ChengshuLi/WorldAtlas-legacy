@@ -1,6 +1,6 @@
 # Typed module integration and compatibility contract
 
-This finishes the structural contract integration for #529. Empty typed datasets work without factual research, changing the canonical grid, or implementing domain map modes. Production installation and publication are separate owner operations. A green local test is not a historical approval, geographic certificate, native D1 certificate or physical-device result.
+This guide describes the structural typed-module contract. Empty typed datasets work without factual research, changing the canonical grid, or implementing domain map modes. Production installation and publication are separate owner operations. A green local test is not geographic approval, a native D1 certificate or physical-device result.
 
 ## Controlled definitions
 
@@ -10,7 +10,7 @@ Each domain worker owns a declarative module and its tests. Coordinate the one e
 
 The registry hash is SHA256 of its JSON serialization, not the formatted file hash. The retained base registry in `data/observation-registry-history/base-v1.json` has logical hash `cc6aae6c18099d3e776c73ee4144556422ac87b911aa30aa95bef831ca18d2d2`. The loader verifies that hash and preserves every old definition and module version when adding current definitions. Retain additional reviewed vintages explicitly in that loader before advancing a deployed registry. Never remove a historical registry needed by stored rows or relabel those rows with a new digest. New imports pin the current registry; known old row hashes resolve through the retained unchanged definitions. Unknown hashes fail closed.
 
-Domain children own their algorithms, maps and evidence: GDP identities/units and uncertainty, exclusive polity government, language classifications, literacy cohorts, annual mortality unions, river/lake/shoreline contacts and port operation/functions. Shared provenance validation prevents missing, ambiguous, self/circular inputs and example-to-factual promotion; it does not calculate these domain results or establish their scientific compatibility. Coordinate shared edits and wait for explicit coordinator readiness after dependency completion.
+Domain children own their algorithms, maps and evidence: GDP identities/units and uncertainty, exclusive polity government, language classifications, literacy cohorts, annual mortality unions, river/lake/shoreline contacts and port operation/functions. Shared provenance validation prevents missing, ambiguous, self/circular inputs and example-to-factual promotion; it does not calculate these domain results or establish their scientific compatibility. Coordinate edits to the shared module list and registrar with their owner; registration is not source acceptance or permission to import facts.
 
 ## Additive API
 
@@ -86,17 +86,14 @@ run makes zero network requests and is not evidence of live schema installation,
 identity parity or import completion. An empty prepared archive advances only its
 current registry digest; it does not publish the population series to the map.
 
-Production inspection on 2026-10-21 found 582 real active settlement identities but
-none of the three V3 typed tables. Before any real import, the designated owner
-must apply the existing `0003_typed_observations` migration through the reviewed
-current-source preservation/maintenance route described below, deploy the matching
-API contract, and run the read-only parameterized
-[`postgres/settlement-identity-parity.sql`](../postgres/settlement-identity-parity.sql)
-against the retained series to verify all 582 IDs/kinds and retained labels/parent
-context. This comparison does not approve dated or current territorial membership.
-The old operation that lists only migrations 0001/0002 is not a V3 installation.
-Do not replay its stale baseline or change it to pretend it describes current data.
-No production migration, import or deployment is authorized by the repository test.
+Before any production import, the designated owner must verify the current schema
+and apply only an authorized migration through the accepted maintenance route.
+Deploy the matching API contract and run the parameterized identity-parity query
+against the exact retained source series, confirming every expected ID, kind,
+label and parent context. The query does not approve dated or current territorial
+membership. Repository tests do not authorize a production migration, import or
+deployment; use [CURRENT_POSTGRES_RECOVERY.md](CURRENT_POSTGRES_RECOVERY.md) and
+[PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md) for the operation boundary.
 
 After an authorized import, execute the read-only parameterized
 [`postgres/settlement-population-parity.sql`](../postgres/settlement-population-parity.sql)

@@ -1,8 +1,6 @@
 # Current native PostgreSQL recovery
 
-This is issue #51's current-source recovery protocol. The earlier retained-object receipt proves object bytes, not SQL recovery. Local synthetic fixtures are never a current-production certificate. ENG main owns production windows on the original issue and registers operations per PUBLICATION_RUNBOOK.md; #714 is legacy evidence.
-
-The one-time compact database migration and original-heap retirement completed on October 5, 2026 ([original result](https://github.com/ChengshuLi/WorldAtlas/issues/783#issuecomment-5986414627)). Its old Site-window executor and dispatch workflow are retired. Current compact verification, native backup/restore and offline storage/rollback helpers remain available. Issue #783 stays open for its distinct hosting, served-API and write residuals; historical reproduction uses the original executed commit and receipts.
+This guide defines the supported source-specific PostgreSQL recovery protocol. Retained-object evidence proves object bytes, not SQL recovery; local synthetic fixtures are never a current-production certificate. The designated publisher owns production windows on the original issue and registers operations through PUBLICATION_RUNBOOK.md. Previously retired Site-window executors and dispatch paths are not an alternative to the current workflow.
 
 The manual workflow `.github/workflows/current-postgres-recovery.yml` runs only trusted main, shares the `neon-storage-owner-maintenance` concurrency group, and needs existing Actions `NEON_API_KEY` and `NEON_PROJECT_ID`. It obtains the existing owner connection internally. Passwords travel through hidden stdin to named, read-only native clients. Neither the connection URI nor passwords belong in arguments, logs, Git or comments. This protocol does not rotate credentials, deploy Sites, run provider DDL, rerun baseline imports or change audience.
 
