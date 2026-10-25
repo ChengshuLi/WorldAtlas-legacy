@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {successfulGeographyJob} from '../scripts/integration-proof.mjs';
 import {integrationProfile, COORDINATION_PATHS, candidateGeographyCode} from '../scripts/integration-profile.mjs';
@@ -22,6 +25,15 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(current, /ordinary authoring does not require machine claim\/readiness/i);
   assert.match(current, /resume.{0,120}does not reload instructions/is);
   const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
+  const routingKeys = ['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
+    'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'];
+  const shellSanitizer = development.match(/for key in (GIT_DIR[^\n]+); do\n  unset "\$key"\ndone/);
+  assert(shellSanitizer, 'bootstrap must clear inherited Git routing before its first Git command');
+  for (const key of routingKeys) assert(shellSanitizer[1].includes(key), key);
+  assert(development.indexOf(shellSanitizer[0]) < development.indexOf('git -C "$TASK_REPO"'),
+    'routing cleanup must precede the bootstrap fetch');
+  assert.match(development, /for key in \('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',[\s\S]*?'GIT_ALTERNATE_OBJECT_DIRECTORIES'\):\n\s+env\.pop\(key, None\)/);
+  assert.match(development, /subprocess\.call\(\['node',[\s\S]*?\], env=env\)/);
   const validation = fs.readFileSync('docs/VALIDATION.md', 'utf8');
   assert.match(development, /account identity alone neither proves nor disproves independence/i);
   assert.match(validation, /selectedDataSelection[\s\S]*reviewedTestPlan/);
@@ -29,6 +41,35 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   const readme = fs.readFileSync('README.md', 'utf8');
   assert.match(readme, /does not connect to the hosted content API/i);
   assert.doesNotMatch(readme, /SQLite/i);
+});
+
+test('documented bootstrap ignores hostile inherited Git routing variables', () => {
+  const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
+  const match = development.match(/for key in (GIT_DIR[^\n]+); do\n  unset "\$key"\ndone/);
+  assert(match, 'bootstrap sanitizer is required');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'worldatlas-bootstrap-routing-'));
+  try {
+    const repo = path.join(dir, 'task');
+    const decoy = path.join(dir, 'decoy');
+    fs.mkdirSync(repo); fs.mkdirSync(decoy);
+    const clean = Object.fromEntries(Object.entries(process.env).filter(([key]) =>
+      !['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
+        'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'].includes(key)));
+    execFileSync('git', ['init', '--quiet', repo], {env: clean});
+    execFileSync('git', ['init', '--quiet', decoy], {env: clean});
+    const poisoned = {...clean, TASK_REPO: repo,
+      GIT_DIR: path.join(decoy, '.git'), GIT_WORK_TREE: decoy,
+      GIT_INDEX_FILE: path.join(decoy, '.git', 'index'), GIT_COMMON_DIR: path.join(decoy, '.git'),
+      GIT_OBJECT_DIRECTORY: path.join(decoy, '.git', 'objects'),
+      GIT_ALTERNATE_OBJECT_DIRECTORIES: path.join(decoy, 'alternate-objects')};
+    const top = execFileSync('bash', ['-c', `${match[0]}\ngit -C "$TASK_REPO" rev-parse --show-toplevel`],
+      {env: poisoned, encoding: 'utf8'}).trim();
+    assert.equal(top, fs.realpathSync(repo));
+    assert.equal(fs.existsSync(path.join(decoy, '.git', 'index')), false,
+      'the hostile index must not be created or modified');
+  } finally {
+    fs.rmSync(dir, {recursive: true, force: true});
+  }
 });
 
 test('reproducible review ledgers are not duplicated as generated documentation', () => {

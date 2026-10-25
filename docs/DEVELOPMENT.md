@@ -55,13 +55,17 @@ route below rather than falling back to an old executable. Use Node 24.
 (
 : "${TASK_REPO:?Use the repository path supplied by this task}"
 case "$TASK_REPO" in /*) ;; *) echo 'Absolute task repository required' >&2; exit 1;; esac
+for key in GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR GIT_OBJECT_DIRECTORY GIT_ALTERNATE_OBJECT_DIRECTORIES; do
+  unset "$key"
+done
+export GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1
 git -C "$TASK_REPO" -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules \
   --no-auto-maintenance --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main || exit
-fetched=$(GIT_NO_LAZY_FETCH=1 git -C "$TASK_REPO" rev-parse --verify 'FETCH_HEAD^{commit}') || exit
-tracked=$(GIT_NO_LAZY_FETCH=1 git -C "$TASK_REPO" rev-parse --verify 'origin/main^{commit}') || exit
+fetched=$(git -C "$TASK_REPO" rev-parse --verify 'FETCH_HEAD^{commit}') || exit
+tracked=$(git -C "$TASK_REPO" rev-parse --verify 'origin/main^{commit}') || exit
 [ "$fetched" = "$tracked" ] || { echo 'Fetched main does not match origin/main' >&2; exit 1; }
 base=$tracked
-GIT_NO_LAZY_FETCH=1 python3 - "$TASK_REPO" "$base" inspect --commit "$base" \
+python3 - "$TASK_REPO" "$base" inspect --commit "$base" \
   --include data/YOUR-REQUIRED-PATH <<'PYTHON'
 import os, re, subprocess, sys, tempfile
 from pathlib import Path
@@ -72,6 +76,9 @@ repo = str(Path(repo).resolve(strict=True))
 if not re.fullmatch('[a-f0-9]{40}', base):
     raise SystemExit('Exact accepted commit required')
 env = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1')
+for key in ('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
+            'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'):
+    env.pop(key, None)
 def git(*args, **kwargs):
     return subprocess.check_output(['git', '-C', repo, '--no-replace-objects', *args], env=env, **kwargs)
 common = Path(git('rev-parse', '--path-format=absolute', '--git-common-dir').decode().strip()).resolve(strict=True)
