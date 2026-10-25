@@ -1,0 +1,5570 @@
+{
+  "kind": "adopted-native-territorial-applicability-v1",
+  "provenance": [
+    {
+      "id": "adoption",
+      "pin": {
+        "bytes": 5587,
+        "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+        "git_blob_oid": "17d30e5155c375d3c376a1eec58923010b4d6ff8",
+        "mode": "100644",
+        "path": "inventory/pse-adm1-parent-context-decision-20261025.json",
+        "sha256": "28dc4b654e120b2d76b9515893abb0cf5ef34d4cf1f84949e795d5d1cc5d8774"
+      },
+      "role": "adoption"
+    },
+    {
+      "id": "scope",
+      "pin": {
+        "bytes": 53532,
+        "commit": "82797a66ed8532fdaf5d9f9e67649888be6b7e1f",
+        "git_blob_oid": "aaeea7ea82a67eb02eacfa02150d9d14b13b7fbd",
+        "mode": "100644",
+        "path": "inventory/pse-adm1-parent-context-scope-20261025.json",
+        "sha256": "503aadf5dc9547af6c374ab97d0069934988fb8e76030b29a21a94922482ca34"
+      },
+      "role": "scope"
+    },
+    {
+      "id": "original",
+      "parts": [
+        {
+          "bytes": 12318,
+          "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+          "decoded_bytes": 34407,
+          "decoded_sha256": "2f065583a8be795533893fd4c62fed765959b47db2cf01e696cc795cc6c56b0a",
+          "git_blob_oid": "00227553ebf7d334f4b3e51548f53daf7741eee9",
+          "mode": "100644",
+          "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-PSE-ADM1-000.bin.gz",
+          "sha256": "74c1b0fe78a4dc5b1322ae909cc00d6d7e26e77ada47f80f6a531b434866dee7"
+        }
+      ],
+      "role": "original-source"
+    },
+    {
+      "id": "ramallah-adoption",
+      "pin": {
+        "bytes": 2813,
+        "commit": "91a6ac9701650d248cee826a40d55eecd9cde295",
+        "git_blob_oid": "b0eba0c557a0bec83c27d8ae1fc9aa2bc9b535f2",
+        "mode": "100644",
+        "path": "research/geography/pse-owner36955-parent-context-20261025/decision.json",
+        "sha256": "c58bcb82690377f376ba191e16698ce976fb333fd29e55171b60f81a690e7fd4"
+      },
+      "role": "adoption"
+    },
+    {
+      "id": "ramallah-scope",
+      "pin": {
+        "bytes": 14898,
+        "commit": "91a6ac9701650d248cee826a40d55eecd9cde295",
+        "git_blob_oid": "4d54bce456ccb4e239e5f1805e1b742de9b8ee0e",
+        "mode": "100644",
+        "path": "research/geography/pse-owner36955-parent-context-20261025/scope.json",
+        "sha256": "476646b56e616975b7729ca57c58ead3edaa2633f1c581fb1876130098ced06f"
+      },
+      "role": "scope"
+    },
+    {
+      "id": "parent43-scope",
+      "pin": {
+        "bytes": 18455,
+        "commit": "40055a4f61683031e522966dd535ee920ac5fe4c",
+        "git_blob_oid": "a1890c0d3b159d380c448e4d892a0405337c2915",
+        "mode": "100644",
+        "path": "research/geography/pse-parent-context-43-20261025/scope.json",
+        "sha256": "ae72230bcaff67fd7106d07110603785d28946f0d24b82cbb09a000cc07abff7"
+      },
+      "role": "scope"
+    },
+    {
+      "id": "parent43-adoption",
+      "pin": {
+        "bytes": 2965,
+        "commit": "40055a4f61683031e522966dd535ee920ac5fe4c",
+        "git_blob_oid": "5637f5a1837981c5db96da1aafcd8ebe8e6f255a",
+        "mode": "100644",
+        "path": "research/geography/pse-parent-context-43-20261025/decision.json",
+        "sha256": "140830f6b71d2963d819cabb55d89aef1405bc72891f3f20efa1c8bbad7caac3"
+      },
+      "role": "adoption"
+    },
+    {
+      "id": "pse07-scope",
+      "pin": {
+        "bytes": 11562,
+        "commit": "f1e9c32a05d9d0f3554a8587c90180ad5dddbbab",
+        "git_blob_oid": "95986b170741a4e8aaa5e72d29320d2ca7d8fa52",
+        "mode": "100644",
+        "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/scope.json",
+        "sha256": "4701aa3a490cbae7edd2174e7433a096898e8724639dcaa64964052b41e65f57"
+      },
+      "role": "scope"
+    },
+    {
+      "id": "pse07-adoption",
+      "pin": {
+        "bytes": 4202,
+        "commit": "f1e9c32a05d9d0f3554a8587c90180ad5dddbbab",
+        "git_blob_oid": "020155392ef9f1eafaca68298dcc95851e4a3560",
+        "mode": "100644",
+        "path": "research/geography/pse-khan-yunis-parent-context-11-20261025/decision.json",
+        "sha256": "2f095213123225f6f25f644d15e428b66768ee723cca4391c126628aeb3e2dd3"
+      },
+      "role": "adoption"
+    }
+  ],
+  "records": [
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/0"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156565,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/1"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156566,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/2"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156567,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/3"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156568,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/4"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156569,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/5"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156570,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/6"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156571,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/7"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156572,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/8"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156573,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/9"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156574,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/10"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156575,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/11"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156576,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/12"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156577,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/13"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156578,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/14"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156579,
+      "y": 106606
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/15"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156565,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/16"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156566,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/17"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156567,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/18"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156568,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/19"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156569,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/20"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156570,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/21"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156571,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/22"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156572,
+      "y": 106607
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/23"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156565,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/24"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156566,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/25"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156567,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/26"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156568,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/27"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156569,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/28"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156570,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/29"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156571,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/30"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156572,
+      "y": 106608
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/31"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156569,
+      "y": 106609
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/32"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156570,
+      "y": 106609
+    },
+    {
+      "adoption": {
+        "id": "ramallah-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36955,
+      "role": "contextual",
+      "scope": {
+        "id": "ramallah-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/33"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "target_id": "gb:PSE:ADM2:87354302B37341560226836",
+      "x": 156571,
+      "y": 106609
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/0"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156943,
+      "y": 106664
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/1"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156944,
+      "y": 106664
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/2"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156946,
+      "y": 106665
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/3"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156947,
+      "y": 106665
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/4"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156948,
+      "y": 106665
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/5"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156949,
+      "y": 106665
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/6"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156950,
+      "y": 106665
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/7"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156951,
+      "y": 106665
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/8"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156950,
+      "y": 106666
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/9"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156951,
+      "y": 106666
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/10"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156952,
+      "y": 106666
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/11"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156962,
+      "y": 106667
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/12"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156963,
+      "y": 106667
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/13"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156964,
+      "y": 106667
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/14"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156966,
+      "y": 106668
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/15"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156967,
+      "y": 106668
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/16"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156968,
+      "y": 106668
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/17"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156969,
+      "y": 106668
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/18"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156970,
+      "y": 106668
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/19"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156971,
+      "y": 106668
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/20"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156937,
+      "y": 106670
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/21"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156936,
+      "y": 106672
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/22"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156936,
+      "y": 106673
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/23"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156935,
+      "y": 106674
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/24"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156936,
+      "y": 106674
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/25"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156935,
+      "y": 106675
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/26"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156934,
+      "y": 106676
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/27"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156934,
+      "y": 106677
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/28"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156933,
+      "y": 106678
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/29"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156933,
+      "y": 106679
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/30"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156932,
+      "y": 106680
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36950,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/31"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "target_id": "gb:PSE:ADM2:87354302B18647900198549",
+      "x": 156931,
+      "y": 106682
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/32"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156919,
+      "y": 106703
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/33"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156918,
+      "y": 106704
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/34"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156916,
+      "y": 106705
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/35"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156917,
+      "y": 106705
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/36"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156915,
+      "y": 106706
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/37"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156916,
+      "y": 106706
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/38"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156914,
+      "y": 106707
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/39"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156915,
+      "y": 106707
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/40"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156913,
+      "y": 106708
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/41"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156914,
+      "y": 106708
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/42"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156915,
+      "y": 106708
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/43"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156912,
+      "y": 106709
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/44"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156913,
+      "y": 106709
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/45"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156914,
+      "y": 106709
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/46"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156911,
+      "y": 106710
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/47"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156912,
+      "y": 106710
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/48"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156913,
+      "y": 106710
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/49"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156910,
+      "y": 106711
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/50"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156900,
+      "y": 106720
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/51"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156900,
+      "y": 106721
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/52"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156900,
+      "y": 106722
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/53"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156897,
+      "y": 106747
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/54"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156897,
+      "y": 106748
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/55"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156896,
+      "y": 106749
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/56"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156897,
+      "y": 106749
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/57"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156896,
+      "y": 106750
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/58"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156895,
+      "y": 106752
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/59"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156893,
+      "y": 106757
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/60"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156893,
+      "y": 106758
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/61"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156893,
+      "y": 106759
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/62"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156892,
+      "y": 106760
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/63"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106776
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/64"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106777
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/65"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106778
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/66"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106779
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/67"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106779
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/68"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106780
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/69"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106780
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/70"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156883,
+      "y": 106780
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/71"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156880,
+      "y": 106781
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/72"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106781
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/73"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106781
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/74"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156883,
+      "y": 106781
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/75"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156880,
+      "y": 106782
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/76"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106782
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/77"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106782
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/78"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156883,
+      "y": 106782
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/79"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156884,
+      "y": 106782
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/80"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156879,
+      "y": 106783
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/81"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156880,
+      "y": 106783
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/82"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106783
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/83"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106783
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/84"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156883,
+      "y": 106783
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/85"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156884,
+      "y": 106783
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/86"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156879,
+      "y": 106784
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/87"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156880,
+      "y": 106784
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/88"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106784
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/89"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106784
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/90"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156883,
+      "y": 106784
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/91"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156884,
+      "y": 106784
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/92"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156878,
+      "y": 106785
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/93"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156879,
+      "y": 106785
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/94"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156880,
+      "y": 106785
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/95"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106785
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/96"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106785
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/97"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156883,
+      "y": 106785
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/98"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156878,
+      "y": 106786
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/99"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156879,
+      "y": 106786
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/100"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156880,
+      "y": 106786
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/101"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106786
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/102"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156882,
+      "y": 106786
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/103"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156880,
+      "y": 106787
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/104"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156881,
+      "y": 106787
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/105"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156875,
+      "y": 106792
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/106"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106799
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/107"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106799
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/108"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106800
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/109"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106800
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/110"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156871,
+      "y": 106801
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/111"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106801
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/112"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106801
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/113"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156871,
+      "y": 106824
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/114"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106825
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/115"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106827
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/116"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106828
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/117"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156874,
+      "y": 106829
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/118"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156874,
+      "y": 106830
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/119"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156875,
+      "y": 106832
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/120"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156875,
+      "y": 106834
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/121"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156875,
+      "y": 106835
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/122"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156874,
+      "y": 106836
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/123"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156874,
+      "y": 106837
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/124"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106838
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/125"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106838
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/126"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156871,
+      "y": 106839
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/127"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106839
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/128"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156871,
+      "y": 106840
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/129"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156870,
+      "y": 106841
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/130"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156871,
+      "y": 106841
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/131"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156870,
+      "y": 106842
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/132"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156869,
+      "y": 106843
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/133"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156867,
+      "y": 106845
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/134"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156866,
+      "y": 106846
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/135"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156865,
+      "y": 106847
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/136"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156864,
+      "y": 106848
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/137"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156862,
+      "y": 106854
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/138"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156862,
+      "y": 106855
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/139"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156862,
+      "y": 106864
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/140"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156860,
+      "y": 106881
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/141"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156860,
+      "y": 106882
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/142"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156861,
+      "y": 106882
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/143"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156860,
+      "y": 106883
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/144"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156861,
+      "y": 106883
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/145"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156860,
+      "y": 106884
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/146"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156860,
+      "y": 106885
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/147"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156860,
+      "y": 106886
+    },
+    {
+      "adoption": {
+        "id": "adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/148"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156860,
+      "y": 106887
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/0"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156899,
+      "y": 106723
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/1"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156899,
+      "y": 106724
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/2"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156898,
+      "y": 106726
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/3"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156898,
+      "y": 106727
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/4"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156897,
+      "y": 106729
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/5"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156897,
+      "y": 106746
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/6"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156872,
+      "y": 106826
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/7"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156873,
+      "y": 106837
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/8"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156869,
+      "y": 106842
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/9"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156868,
+      "y": 106843
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/10"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156867,
+      "y": 106844
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/11"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156868,
+      "y": 106844
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/12"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156866,
+      "y": 106845
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/13"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156855,
+      "y": 106903
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/14"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156854,
+      "y": 106904
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/15"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156853,
+      "y": 106905
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/16"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156852,
+      "y": 106906
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/17"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156849,
+      "y": 106908
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/18"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156848,
+      "y": 106909
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/19"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156847,
+      "y": 106910
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/20"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156844,
+      "y": 106912
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/21"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156843,
+      "y": 106913
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/22"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156842,
+      "y": 106914
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/23"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156841,
+      "y": 106915
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/24"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156838,
+      "y": 106917
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/25"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156837,
+      "y": 106918
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 3,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36953,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/26"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "target_id": "gb:PSE:ADM2:87354302B24436251599031",
+      "x": 156833,
+      "y": 106921
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/27"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156764,
+      "y": 106017
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/28"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156766,
+      "y": 106018
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/29"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156768,
+      "y": 106019
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/30"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156770,
+      "y": 106020
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/31"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156840,
+      "y": 106020
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/32"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156843,
+      "y": 106022
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/33"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156844,
+      "y": 106023
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/34"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156845,
+      "y": 106023
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/35"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156846,
+      "y": 106024
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36956,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/36"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "target_id": "gb:PSE:ADM2:87354302B37411468451868",
+      "x": 156847,
+      "y": 106025
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/37"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156798,
+      "y": 106948
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/38"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156560,
+      "y": 107017
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/39"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156561,
+      "y": 107017
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/40"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156557,
+      "y": 107018
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/41"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156560,
+      "y": 107018
+    },
+    {
+      "adoption": {
+        "id": "parent43-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "d7d256d3cf9f2f133c997fd75128a2727c086eb7fcba88b28d1e8edc4155305c",
+      "negative_ordinal": 2,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/0/geometry"
+      },
+      "pixelIndex": 36961,
+      "role": "contextual",
+      "scope": {
+        "id": "parent43-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/42"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "target_id": "gb:PSE:ADM2:87354302B80979559279056",
+      "x": 156553,
+      "y": 107019
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/0"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156063,
+      "y": 106980
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/1"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156062,
+      "y": 106981
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/2"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156061,
+      "y": 106982
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/3"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156060,
+      "y": 106983
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/4"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156059,
+      "y": 106984
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/5"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156058,
+      "y": 106985
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/6"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156054,
+      "y": 106990
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/7"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156053,
+      "y": 106991
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/8"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156052,
+      "y": 106992
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/9"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156051,
+      "y": 106993
+    },
+    {
+      "adoption": {
+        "id": "pse07-adoption",
+        "pointer": "/decision"
+      },
+      "geometry_sha256": "f06f0af165c7a4816c16f0a1e585268b313f560bd16458b7ef6164aeab9154c0",
+      "negative_ordinal": 1,
+      "original_source": {
+        "id": "original",
+        "pointer": "/features/1/geometry"
+      },
+      "pixelIndex": 36951,
+      "role": "contextual",
+      "scope": {
+        "id": "pse07-scope",
+        "owner_pointer": "/pixelIndex",
+        "pointer": "/records/10"
+      },
+      "source_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "target_id": "gb:PSE:ADM2:87354302B21422506618890",
+      "x": 156050,
+      "y": 106994
+    }
+  ]
+}
