@@ -1,0 +1,367 @@
+{
+  "scope": {
+    "keys": 460,
+    "intervals": 181,
+    "native_rows": 150,
+    "all_land": true,
+    "owners": {
+      "40323": 342,
+      "40324": 118
+    },
+    "contexts": {
+      "sao-tome-main-island254": 254,
+      "sao-tome-southern-equatorial-rolas-context88": 88,
+      "principe-main-island118": 118
+    }
+  },
+  "original_corpus_witness": {
+    "summary": {
+      "cells": 460,
+      "groups": {
+        "40324": 118,
+        "40323": 342
+      },
+      "candidate_run_patterns": {
+        "[[[40324], [56238]]]": 118,
+        "[[[40323], [56239]]]": 342
+      },
+      "physical_present": 460,
+      "inland_water_present": 0,
+      "selected_owner_patterns": {
+        "(0, 0, 0)": 460
+      }
+    },
+    "input_pins": [
+      {
+        "path": "coordination/engineering/stp-owner-observation-20261021/selected-owner-observation.json",
+        "git_blob_oid": "bf0b6ad2871565561deaaa7ee047e41ec74b8c19",
+        "bytes": 111099,
+        "sha256": "9d85c89bfeed3463269d23d0d3d1cec920f7755a8a41ccec59d33f556b634f25"
+      },
+      {
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-031.json.gz",
+        "git_blob_oid": "8c513fafe3d2754547cba8c3e8a4c812e8cc520d",
+        "bytes": 589757,
+        "sha256": "9aa6e8ab65027095c27f43c2d15af0a3bb94c6af8fe19f342e3af37f5c3356e0",
+        "decoded_bytes": 4165464,
+        "decoded_sha256": "62cdce2b0bb10648103f6a6d335c06ffdca0490b9a04a4743ea3c23c4b833d5d"
+      },
+      {
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-031.json.gz",
+        "git_blob_oid": "ea10ba7f8cacba0d3ac4c4967d6f0f501afa1dbb",
+        "bytes": 403892,
+        "sha256": "045752377715c5b2ea0924f9c92e9b65f202b396fc0c585fb3c05831fb7e99ef",
+        "decoded_bytes": 1869450,
+        "decoded_sha256": "5dd95d58dfc675147d59d05ebed2bae008fb185db9ab295bdb8633aadb4b6ecd"
+      },
+      {
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/inland-water-support-block-031.json.gz",
+        "git_blob_oid": "15ddbafb578c0b664651bce93956080257e482ef",
+        "bytes": 5242,
+        "sha256": "9697f1635da0fedd24b4289c42bfd09a9468074f0414b8075dd50f925a990bc3",
+        "decoded_bytes": 28946,
+        "decoded_sha256": "f81ca96e91a6576475e0744e427bfe6ad94393322f7b31cd2806c2dba7fd730b"
+      },
+      {
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-032.json.gz",
+        "git_blob_oid": "5c56cb06a4879060a4ad933395cd643cdaaa5565",
+        "bytes": 800317,
+        "sha256": "00a677c75540d3be3a750e7f41d2d296f05dc24b84cec9d3776713986a7f6064",
+        "decoded_bytes": 5600583,
+        "decoded_sha256": "f86385a134758b6df4f13ad07ba81a2c545547a9068c5ad66fdffd0f8ece6aa9"
+      },
+      {
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-032.json.gz",
+        "git_blob_oid": "5f8f1e8aa032abc85e931930eb4eb9b0dbc0ebdb",
+        "bytes": 516947,
+        "sha256": "2b3d882155a28df8782b346bd7382b2faa1ccfa0ebf1c2f0f2c6d779c055905a",
+        "decoded_bytes": 2359068,
+        "decoded_sha256": "7f6b485f745b9523165108a1868b7b57e1677aac90f065bbc2e45694d4106566"
+      },
+      {
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/inland-water-support-block-032.json.gz",
+        "git_blob_oid": "9bee5462a2f4a8bf1e54816c4a3bd61d9227e221",
+        "bytes": 32628,
+        "sha256": "5a8910efab0c7f8667167655e138c1ae0efb7d5ec52ff143c7ef377f925c98a6",
+        "decoded_bytes": 207160,
+        "decoded_sha256": "fa64308a425e6d6484635c2c62cfbcce85e0cfdae138bbde81fec0e7798b632d"
+      }
+    ],
+    "limits": [
+      "Original candidate membership is a measured source-raster witness, not source applicability or current official authority.",
+      "Physical support is retained model evidence, not a new land/coast survey.",
+      "No external competitor inventory completeness inferred from single matching retained candidate.",
+      "No credits, holds, numerator or accepted disposition changed."
+    ]
+  },
+  "whole_two_physical_literal_summary": [
+    {
+      "target": "gb:STP:ADM1:19237168B40253326356618",
+      "issues": [],
+      "source_id_queries": [
+        1,
+        359,
+        11922,
+        35491,
+        68389,
+        98996,
+        113245,
+        130625
+      ],
+      "query_relations": [
+        {
+          "source_id": 1,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 359,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": true,
+          "disjoint": false,
+          "status": "checked",
+          "witness": "complete-operation-pointset"
+        },
+        {
+          "source_id": 11922,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": true,
+          "disjoint": false,
+          "status": "checked",
+          "witness": "complete-operation-pointset"
+        },
+        {
+          "source_id": 35491,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 68389,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 98996,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 113245,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 130625,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": true,
+          "disjoint": false,
+          "status": "checked",
+          "witness": "complete-operation-pointset"
+        }
+      ],
+      "support_stored_nonempty": {
+        "mapped_land_support": true,
+        "mapped_inland_water_support": false,
+        "outside_mapped_L1_context": true,
+        "hierarchy_disagreements": {
+          "L2-outside-L1": false,
+          "L3-outside-L2": false,
+          "L4-outside-L3": false
+        },
+        "missing_reconstruction": false,
+        "extra_reconstruction": false,
+        "contradictory_land_water_support": false
+      }
+    },
+    {
+      "target": "gb:STP:ADM1:19237168B82261817076051",
+      "issues": [
+        {
+          "reason": "missing_reconstruction",
+          "geometry_type": "MultiPolygon",
+          "nonempty": true
+        },
+        {
+          "reason": "extra_reconstruction",
+          "geometry_type": "MultiPolygon",
+          "nonempty": true
+        }
+      ],
+      "source_id_queries": [
+        0,
+        1,
+        1353,
+        47192,
+        154073
+      ],
+      "query_relations": [
+        {
+          "source_id": 0,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 1,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 1353,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": true,
+          "disjoint": false,
+          "status": "checked",
+          "witness": "complete-operation-pointset"
+        },
+        {
+          "source_id": 47192,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": false,
+          "intersects": false,
+          "disjoint": true,
+          "status": "checked",
+          "witness": "disjoint-after-explicit-predicate"
+        },
+        {
+          "source_id": 154073,
+          "periodic_offset": 0,
+          "source_covers_candidate": false,
+          "candidate_covers_source": true,
+          "intersects": true,
+          "disjoint": false,
+          "status": "checked",
+          "witness": "complete-source-record-reconstruction"
+        }
+      ],
+      "support_stored_nonempty": {
+        "mapped_land_support": true,
+        "mapped_inland_water_support": false,
+        "outside_mapped_L1_context": true,
+        "hierarchy_disagreements": {
+          "L2-outside-L1": false,
+          "L3-outside-L2": false,
+          "L4-outside-L3": false
+        },
+        "missing_reconstruction": true,
+        "extra_reconstruction": true,
+        "contradictory_land_water_support": false
+      }
+    }
+  ],
+  "diagnostic": {
+    "requested_cells": 460,
+    "supported_cells": 460,
+    "held_cells": 0,
+    "first_failure": null,
+    "limitations": [
+      "Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.",
+      "All original source, physical, query, witness and territorial limits remain retained."
+    ],
+    "rule_sha256": "e46458bf60217a63a73310cc5dc5e51897d6c660319c9caefec16e251bf09955"
+  },
+  "authority_existing_readback": {
+    "kind": "literal-completed-authority-readback",
+    "qualified_native_cells": 460,
+    "original_keys": 460,
+    "original_intervals": 181,
+    "components": [
+      {
+        "component_id": "source-target:0eed2f39610277305c943075105babcd1e9f8900807219c6f63c48b490d2a581",
+        "target_id": "gb:STP:ADM1:19237168B40253326356618",
+        "pixelIndex": 40323,
+        "disposition": "assigned",
+        "native_cells": 342,
+        "base_geometry_sha256": "afbd3046d4dcffb0d32dc2dcb2541266f2d56a69a1c58a5c1a46d3a70d836b2d",
+        "source_receipt_sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+      },
+      {
+        "component_id": "source-target:6e35a21d1de2774278815ba5646e19b8083715e48180e7cdcb35e75521155564",
+        "target_id": "gb:STP:ADM1:19237168B82261817076051",
+        "pixelIndex": 40324,
+        "disposition": "assigned",
+        "native_cells": 118,
+        "base_geometry_sha256": "3893bc12bbe59a4a54b831ba3c2ef60fc42bd618f7e0d620a6f10ed8ff370212",
+        "source_receipt_sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+      }
+    ],
+    "rule_sha256": "e46458bf60217a63a73310cc5dc5e51897d6c660319c9caefec16e251bf09955",
+    "same_original_input_pins_as_diagnostic": true,
+    "exact_original_key_equality": true,
+    "products": [
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/authority-binding.json",
+        "bytes": 729,
+        "sha256": "4c7671ec23ff0c73e6310134f07de8edda969429972f2af41fc9068aa2ceeb41"
+      },
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/constructor-result.json",
+        "bytes": 10644,
+        "sha256": "5eeea6bc1fa861e677fb19c36c83d5af6ad7c3562c674e13038b04321d324f90"
+      },
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/original-rule-preimage.json",
+        "bytes": 726,
+        "sha256": "e46458bf60217a63a73310cc5dc5e51897d6c660319c9caefec16e251bf09955"
+      },
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-authority-20261025-be76-001/preparation.json",
+        "bytes": 501,
+        "sha256": "c5cac234a68c052ffee0db77f03d6f53195198a7940f6dde49c87f08dd0840a2"
+      }
+    ],
+    "limitations": [
+      "Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.",
+      "Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred."
+    ],
+    "method": "Literal ledger row expansion, output byte hashes and immutable-input equality only; no new geographic predicate or producer.",
+    "accepted_credit": 0,
+    "selected_map_changed": false
+  },
+  "accepted_credit": 0,
+  "final_output_locator": null,
+  "no_new_spatial_operations": true
+}

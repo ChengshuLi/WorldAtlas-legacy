@@ -1,0 +1,43 @@
+{
+  "accepted_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+  "index_blob": "17b78a5998cbc6ab2d45b4c33722b2fbccfb0535",
+  "context_pin": {
+    "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "path": "data/canonical-grid/current-startup/geography/effective-context-5b99d693da66e9aa66d3388c6322505fdf876da18164e84009889d5160f100dc.json.gz",
+    "bytes": 712265,
+    "decoded_bytes": 3651678,
+    "decoded_sha256": "e30b5ffc6b21c8afd094e511ac90a6fc83d0ca58ccf96c6bb8624f900ebfc57e",
+    "encoding": "gzip",
+    "features": 1500,
+    "offset": 39000,
+    "sha256": "5b99d693da66e9aa66d3388c6322505fdf876da18164e84009889d5160f100dc",
+    "index_relative_path": "geography/effective-context-5b99d693da66e9aa66d3388c6322505fdf876da18164e84009889d5160f100dc.json.gz"
+  },
+  "rows": [
+    {
+      "native_index": 40323,
+      "indexed_array_ordinal": 1322,
+      "record": {
+        "id": "gb:STP:ADM1:19237168B40253326356618",
+        "pixelIndex": 40323,
+        "properties": {
+          "id": "gb:STP:ADM1:19237168B40253326356618",
+          "parent_id": "framework:province:sao-tome-province:4b696869dc61"
+        }
+      }
+    },
+    {
+      "native_index": 40324,
+      "indexed_array_ordinal": 1323,
+      "record": {
+        "id": "gb:STP:ADM1:19237168B82261817076051",
+        "pixelIndex": 40324,
+        "properties": {
+          "id": "gb:STP:ADM1:19237168B82261817076051",
+          "parent_id": "framework:province:principe-province:c09206cf27ff"
+        }
+      }
+    }
+  ],
+  "method": "Use explicit complete-context offset/features from accepted index, read whole pinned context body, then inspect exact native ordinal; no owner-index/source-part guess, geometry or owner-word observation."
+}
