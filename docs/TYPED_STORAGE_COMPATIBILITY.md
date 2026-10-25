@@ -2,7 +2,7 @@
 
 Current integration is documented in [TYPED_MODULE_INTEGRATION.md](TYPED_MODULE_INTEGRATION.md). The part-specific descriptions below retain their implementation checkpoint and verification limits.
 
-This is the second bounded part of #529, following the pure contract/registry seam in PR #659. It adds empty forward storage and a complete versioned raw backup path. Typed import/read APIs, optional capabilities, actual new adapter/static/prepared/snapshot parity and the final domain module handover remain the third part. No domain algorithms, factual records, geographic approvals or production maintenance happen as a side effect of merging this code.
+This document defines typed storage compatibility, empty forward storage and a versioned raw backup path. It does not add domain algorithms or factual records, approve geography or perform production maintenance.
 
 ## Additive storage
 
@@ -40,7 +40,7 @@ The version 1 fourteen-table baseline and version 2 twenty-three-table backup co
 
 The version 3 marker validates the complete catalog before reading new tables; an uninstalled or inconsistent schema fails closed. These routes do not advertise a typed write capability. A normal merge does not install owner PostgreSQL DDL, change application role privileges, rerun the baseline transfer, import research or publish the Site. The owner forward-migration workflow currently supports its already reviewed migrations; extending that verified workflow and its role/catalog proofs is still part of the final integration work. Never bypass its closed migration list with ad-hoc provider SQL.
 
-Current production remains on the verified version 2 forward schema. The designated publisher coordinates owner maintenance, future reviewed forward application and publication on issue #39, retains exact rollback/source/package/native receipts, and settles live-work ownership only after verification. Domain children remain blocked until all #529 acceptance criteria and the coordinator's explicit readiness are met.
+Production schema changes and publication require the designated publisher, exact source/package/native receipts, rollback and current operation authorization. This storage contract alone does not authorize production changes.
 
 Local reproduction: after `npm ci`, run `node --test test/storage-export-v3.test.mjs test/storage-export-v2.test.mjs test/storage-export.test.mjs`. To reproduce installed catalog byte hashes without changing any provider or existing source file, run `node data/engineering/observation-storage-20261003-7e91/catalog-reproduction.mjs /tmp/fresh-catalog-receipt.json`. The destination must not already exist. Source fixtures are explicitly synthetic; no geography/device certificate or production operation is inferred.
 

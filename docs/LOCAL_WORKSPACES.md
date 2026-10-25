@@ -331,12 +331,9 @@ or lock breaking: inspect processes, `git worktree list`, the registry and actua
 files, preserve work and reconcile under one operator. There is intentionally no
 automatic stale-lock recovery or broad destructive sweep.
 
-## Existing chats and legacy directories
+## Legacy directories
 
-Repository changes guide new work but do not rewrite saved chat goals. Refresh
-existing author/reviewer/Auditor/publisher instructions to read this guide before
-their next allocation. Finish active legacy jobs in place; do not move their live
-files. After a job is finished, inspect and preserve unique work before removing
+Finish active legacy jobs in place; do not move their live files. After a job is finished, inspect and preserve unique work before removing
 its completed legacy checkout with Git. `report` lists legacy usage; it never
 automatically deletes it. Actual disk exhaustion may therefore require safe legacy cleanup. Managed paths and the registry are
 local execution state, not another issue/status ledger.
