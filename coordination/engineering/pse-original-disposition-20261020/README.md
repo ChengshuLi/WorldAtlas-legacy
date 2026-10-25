@@ -1,5 +1,10 @@
 # Original PSE repair-evaluation disposition
 
+This README preserves the original 2026-10-20 proposal snapshot. The later
+[2026-10-25 qualification progress](qualification-progress-20261025.md)
+records six native-supported candidate cells and 421 still-held cells; it does
+not revise root acceptance or grant credit.
+
 This packet proposes documented-unresolved outcomes for all 427 native cells in `gb-PSE-ADM2--repair-evaluation`: 275 land and 152 inland-water cells, 277 intervals, 11 recorded owners and 21 disjoint owner/source/physical groups. Block 025 contains 147 land cells in 108 intervals; block 026 contains 128 land plus 152 water cells in 169 intervals. Zero repairs, ownership changes or native holds removed are proposed. Root retains acceptance and named-scoreboard accounting.
 
 The [original queue contract](https://github.com/ChengshuLi/WorldAtlas/blob/2d1fc6f430e756498908bf2c4e267356a13f5cc7/coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json) permits qualified additive repair or documented exception for every exact interval, with actual selected-native and retained source/physical checks. `pse-disposition.json` preserves every interval, owner, source vector and physical class, with a concrete question and next action per group. Missing qualification does not establish invalidity. Water classification does not reject source-backed river/location assignments; existing river water remains location-owned.
