@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "kind": "ARG343-source-free-native-author-input-manifest-v1",
+  "scope": {
+    "keys": 343,
+    "unique_keys": 343,
+    "land_only": true,
+    "targets": 7,
+    "owners": 7,
+    "original_intervals_touched": 185,
+    "source_scope_file": {
+      "path": "scope.json",
+      "bytes": 75073,
+      "sha256": "0709c07e868e9a8073afabcde1ed1a524b5c9257acd18e09bb2f3c9adf08ec1e"
+    }
+  },
+  "source_evidence": {
+    "commit": "38a7b0771a8d52f19b678709ea57c0c4ed896286",
+    "path": "coordination/engineering/argentina-repair-delivery-20261017/native-inputs-001/source-evidence.json",
+    "git_blob_oid": "ad04ce6a06221d4d3f7a6609362567f47d772f79",
+    "bytes": 1015948,
+    "sha256": "268975de3c34dbdfde0848b42864979a6cecfe5275cad1bd3e268cd44593b4bd"
+  },
+  "reconciliation": {
+    "local_path": "ARG343-inputs/arg343-target-negative-reconciliation-private.json",
+    "bytes": 164366,
+    "sha256": "d4df5725d5fda88481b5cf8158227fd6a24be72638838e7fcda92d4a8d56945b",
+    "rows": 343,
+    "matched": 343,
+    "unmatched": 0,
+    "duplicates": 0
+  },
+  "original_source_part": {
+    "bytes": 492093,
+    "commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+    "decoded_bytes": 1483651,
+    "decoded_sha256": "cf4541da2f999915e27147c68e6220b00ee2d19daa42d6eed451bfd131fd843b",
+    "git_blob_oid": "f987c295c2f58f307a510290d692d76069a85c2a",
+    "mode": "100644",
+    "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BRA-ADM1-000.bin.gz",
+    "sha256": "bdbbfe8237a365e295858164b70a574001de1fe8d80e1ca14d77297b69a1f9fe"
+  },
+  "ordinal_distinction": [
+    {
+      "source_id": "gb:BRA:ADM1:14911670B30315977547221",
+      "source_index": 3545,
+      "source_feature_ordinal": 24,
+      "target_negative_ordinal": 0,
+      "keys": 234,
+      "geometry_sha256": "92b2bbb1862127a0c8a9f7077bf4ddd135fd8861a83aae29b83ae580d3a204d4"
+    },
+    {
+      "source_id": "gb:BRA:ADM1:14911670B90188072957077",
+      "source_index": 3546,
+      "source_feature_ordinal": 25,
+      "target_negative_ordinal": 1,
+      "keys": 90,
+      "geometry_sha256": "6511852a1b0eaf57ffc6bbdb058503a14157025d2f1d46d0571a73b65a8423a4"
+    },
+    {
+      "source_id": "gb:BRA:ADM1:14911670B68448774564157",
+      "source_index": 3547,
+      "source_feature_ordinal": 26,
+      "target_negative_ordinal": 0,
+      "keys": 19,
+      "geometry_sha256": "6532a0b895f9a3c3234371be4c1f3c3deed915f9e59e88fe0747678b5460437e"
+    }
+  ],
+  "special_owner_split": {
+    "pixelIndex": 7965,
+    "keys": 270,
+    "operands": [
+      {
+        "source_feature_ordinal": 24,
+        "target_negative_ordinal": 0,
+        "keys": 219
+      },
+      {
+        "source_feature_ordinal": 25,
+        "target_negative_ordinal": 1,
+        "keys": 51
+      }
+    ]
+  },
+  "outputs": {
+    "decision.json": {
+      "bytes": 7944,
+      "sha256": "76ba10000fc56b89c729ac76c098556324b04257561c48e0d17020f560749dd7"
+    },
+    "scope.json": {
+      "bytes": 75073,
+      "sha256": "0709c07e868e9a8073afabcde1ed1a524b5c9257acd18e09bb2f3c9adf08ec1e"
+    },
+    "territorial-applicability.json": {
+      "bytes": 225896,
+      "sha256": "4130247c80c0d34af1708acc9703532a455ef1721fe34821bb63ec8fff326f2e",
+      "rows": 343
+    }
+  },
+  "comparison_pin": {
+    "archive_member": "bra380-two-publisher-comparison.json",
+    "bytes": 597271,
+    "sha256": "363c7996cbd540c04b9b5daf7d4a293686e0b147aa7e6bd417312790bb72dd2c",
+    "counts": {
+      "ibge_no_contact__ign_same_department": 343,
+      "ibge_contact__ign_no_contact": 17,
+      "ibge_no_contact__ign_no_contact": 5,
+      "ibge_contact__ign_same_department": 7,
+      "ibge_no_contact__ign_other_department": 8
+    }
+  },
+  "adverse_scope_preserved": {
+    "BRA_other_37": 37,
+    "CHL": 636,
+    "PRY": 8,
+    "CABA": 32,
+    "source_fitness": 4,
+    "TDF_queued_separately": 4502,
+    "accepted_delta": 0
+  },
+  "limits": [
+    "Source-role evidence only; no source or physical producer was rerun.",
+    "No geometry or lon/lat values are included in the authored files.",
+    "Original BRA competitor family remains unchanged; no legal attribution, owner, physical support, native eligibility, acceptance, or credit is claimed.",
+    "No native diagnostic, stock operation, public review, or status action has been run."
+  ],
+  "accepted_main_source_evidence": {
+    "commit": "d5ed8c1126782dfd3fa0ea00525f38b5c89f3289",
+    "path": "coordination/engineering/argentina-repair-delivery-20261017/native-inputs-001/source-evidence.json",
+    "mode": "100644",
+    "git_blob_oid": "ad04ce6a06221d4d3f7a6609362567f47d772f79",
+    "bytes": 1015948,
+    "sha256": "268975de3c34dbdfde0848b42864979a6cecfe5275cad1bd3e268cd44593b4bd"
+  },
+  "original_source_catalogue_pin": {
+    "bytes": 403376,
+    "commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+    "git_blob_oid": "09afab19371f0814da61e79e5f310c5fb2405b6d",
+    "mode": "100644",
+    "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+    "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+  }
+}
