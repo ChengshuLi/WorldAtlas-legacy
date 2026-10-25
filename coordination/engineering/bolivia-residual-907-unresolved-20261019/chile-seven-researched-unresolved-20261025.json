@@ -1,0 +1,553 @@
+{
+  "schema": "bol-2439-chile-seven-source-free-evidence-v1",
+  "prepared_date": "2026-10-25",
+  "issue": "https://github.com/ChengshuLi/WorldAtlas/issues/2439",
+  "accounting": {
+    "original_denominator": 11311,
+    "previously_accepted": 10404,
+    "pending_before_this_proposal": 907,
+    "this_exact_subset": 7,
+    "remaining_pending_if_independently_accepted": 900,
+    "proposed_disposition": "researched_unresolved",
+    "disposition_status": "proposal for independent review; not yet root accepted",
+    "repair_credit": 0,
+    "owner_changes": 0,
+    "map_changes": 0
+  },
+  "keyset": {
+    "count": 7,
+    "encoding": "compact JSON array of [x,y] pairs sorted lexicographically by x then y",
+    "sha256": "c1565af42d065f700d41bbb99148f0640b2549d991d2043e0d93c92f248f4fea",
+    "keys": [
+      [
+        80588,
+        144206
+      ],
+      [
+        80589,
+        144223
+      ],
+      [
+        80609,
+        144260
+      ],
+      [
+        81047,
+        146007
+      ],
+      [
+        81063,
+        146341
+      ],
+      [
+        81120,
+        145808
+      ],
+      [
+        81177,
+        146510
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "key": {
+        "x": 80588,
+        "y": 144206,
+        "native_owner": 10242
+      },
+      "original_tuple": {
+        "block": 35,
+        "class": "land",
+        "interval": [
+          144206,
+          80588,
+          80589
+        ],
+        "ordinal_1based": 1899,
+        "owners": [
+          10242
+        ],
+        "source_feature_indices": [
+          3405,
+          3492,
+          14899
+        ]
+      },
+      "proposal_hold_reason": "territorial_exclusion_cells",
+      "source_coverage_run": [
+        80588,
+        80589,
+        "mapped_land_support"
+      ],
+      "strict_interior_contact": {
+        "source_id": "gb:CHL:ADM1:47653553B1207481020383",
+        "feature_ordinal": 1,
+        "negative_ordinal": 0,
+        "geometry_sha256": "8a65a13f09f9d78abc8146b3fcfb5b5c28d670ac1e80c91f4712aefe361c03d3",
+        "contact_kinds": [
+          "interior"
+        ],
+        "dpa_match": {
+          "ordinal": 1,
+          "dpa_level": "REGION",
+          "dpa_name": "Arica y Parinacota",
+          "CUT_REG": "15"
+        }
+      }
+    },
+    {
+      "key": {
+        "x": 80589,
+        "y": 144223,
+        "native_owner": 10242
+      },
+      "original_tuple": {
+        "block": 35,
+        "class": "land",
+        "interval": [
+          144223,
+          80589,
+          80590
+        ],
+        "ordinal_1based": 1902,
+        "owners": [
+          10242
+        ],
+        "source_feature_indices": [
+          3405,
+          3492,
+          14940
+        ]
+      },
+      "proposal_hold_reason": "territorial_exclusion_cells",
+      "source_coverage_run": [
+        80589,
+        80590,
+        "mapped_land_support"
+      ],
+      "strict_interior_contact": {
+        "source_id": "gb:CHL:ADM2:35621905B17287365784279",
+        "feature_ordinal": 26,
+        "negative_ordinal": 2,
+        "geometry_sha256": "948be1c6cc39b3eac0432d0188868facd3dc05bf668ee75137df43c45de4217f",
+        "contact_kinds": [
+          "interior"
+        ],
+        "dpa_match": {
+          "ordinal": 26,
+          "dpa_level": "PROVINCIA",
+          "dpa_name": "Parinacota",
+          "CUT_REG": "15",
+          "CUT_PROV": "152"
+        }
+      }
+    },
+    {
+      "key": {
+        "x": 80609,
+        "y": 144260,
+        "native_owner": 10242
+      },
+      "original_tuple": {
+        "block": 35,
+        "class": "land",
+        "interval": [
+          144260,
+          80609,
+          80610
+        ],
+        "ordinal_1based": 1912,
+        "owners": [
+          10242
+        ],
+        "source_feature_indices": [
+          3405,
+          3492,
+          14899
+        ]
+      },
+      "proposal_hold_reason": "territorial_exclusion_cells",
+      "source_coverage_run": [
+        80609,
+        80610,
+        "mapped_land_support"
+      ],
+      "strict_interior_contact": {
+        "source_id": "gb:CHL:ADM1:47653553B1207481020383",
+        "feature_ordinal": 1,
+        "negative_ordinal": 0,
+        "geometry_sha256": "8a65a13f09f9d78abc8146b3fcfb5b5c28d670ac1e80c91f4712aefe361c03d3",
+        "contact_kinds": [
+          "interior"
+        ],
+        "dpa_match": {
+          "ordinal": 1,
+          "dpa_level": "REGION",
+          "dpa_name": "Arica y Parinacota",
+          "CUT_REG": "15"
+        }
+      }
+    },
+    {
+      "key": {
+        "x": 81047,
+        "y": 146007,
+        "native_owner": 10235
+      },
+      "original_tuple": {
+        "block": 35,
+        "class": "land",
+        "interval": [
+          146007,
+          81047,
+          81048
+        ],
+        "ordinal_1based": 3273,
+        "owners": [
+          10235
+        ],
+        "source_feature_indices": [
+          3408,
+          3441,
+          14914
+        ]
+      },
+      "proposal_hold_reason": "territorial_exclusion_cells",
+      "source_coverage_run": [
+        81047,
+        81048,
+        "mapped_land_support"
+      ],
+      "strict_interior_contact": {
+        "source_id": "gb:CHL:ADM2:35621905B64865881779948",
+        "feature_ordinal": 0,
+        "negative_ordinal": 1,
+        "geometry_sha256": "0227989b24d12c23679b50ffeb399236bc67d870f1381022a102171fddea6da9",
+        "contact_kinds": [
+          "interior"
+        ],
+        "dpa_match": {
+          "ordinal": 0,
+          "dpa_level": "PROVINCIA",
+          "dpa_name": "Tamarugal",
+          "CUT_REG": "01",
+          "CUT_PROV": "014"
+        }
+      }
+    },
+    {
+      "key": {
+        "x": 81063,
+        "y": 146341,
+        "native_owner": 10235
+      },
+      "original_tuple": {
+        "block": 35,
+        "class": "land",
+        "interval": [
+          146341,
+          81063,
+          81064
+        ],
+        "ordinal_1based": 4055,
+        "owners": [
+          10235
+        ],
+        "source_feature_indices": [
+          3408,
+          3441,
+          14914
+        ]
+      },
+      "proposal_hold_reason": "territorial_exclusion_cells",
+      "source_coverage_run": [
+        81063,
+        81064,
+        "mapped_land_support"
+      ],
+      "strict_interior_contact": {
+        "source_id": "gb:CHL:ADM2:35621905B64865881779948",
+        "feature_ordinal": 0,
+        "negative_ordinal": 1,
+        "geometry_sha256": "0227989b24d12c23679b50ffeb399236bc67d870f1381022a102171fddea6da9",
+        "contact_kinds": [
+          "interior"
+        ],
+        "dpa_match": {
+          "ordinal": 0,
+          "dpa_level": "PROVINCIA",
+          "dpa_name": "Tamarugal",
+          "CUT_REG": "01",
+          "CUT_PROV": "014"
+        }
+      }
+    },
+    {
+      "key": {
+        "x": 81120,
+        "y": 145808,
+        "native_owner": 10235
+      },
+      "original_tuple": {
+        "block": 35,
+        "class": "land",
+        "interval": [
+          145808,
+          81120,
+          81121
+        ],
+        "ordinal_1based": 2922,
+        "owners": [
+          10235
+        ],
+        "source_feature_indices": [
+          3408,
+          3441,
+          14914
+        ]
+      },
+      "proposal_hold_reason": "territorial_exclusion_cells",
+      "source_coverage_run": [
+        81120,
+        81121,
+        "mapped_land_support"
+      ],
+      "strict_interior_contact": {
+        "source_id": "gb:CHL:ADM2:35621905B64865881779948",
+        "feature_ordinal": 0,
+        "negative_ordinal": 1,
+        "geometry_sha256": "0227989b24d12c23679b50ffeb399236bc67d870f1381022a102171fddea6da9",
+        "contact_kinds": [
+          "interior"
+        ],
+        "dpa_match": {
+          "ordinal": 0,
+          "dpa_level": "PROVINCIA",
+          "dpa_name": "Tamarugal",
+          "CUT_REG": "01",
+          "CUT_PROV": "014"
+        }
+      }
+    },
+    {
+      "key": {
+        "x": 81177,
+        "y": 146510,
+        "native_owner": 10221
+      },
+      "original_tuple": {
+        "block": 35,
+        "class": "land",
+        "interval": [
+          146510,
+          81177,
+          81178
+        ],
+        "ordinal_1based": 4261,
+        "owners": [
+          10221
+        ],
+        "source_feature_indices": [
+          3408,
+          3485,
+          14914
+        ]
+      },
+      "proposal_hold_reason": "territorial_exclusion_cells",
+      "source_coverage_run": [
+        81177,
+        81178,
+        "mapped_land_support"
+      ],
+      "strict_interior_contact": {
+        "source_id": "gb:CHL:ADM2:35621905B64865881779948",
+        "feature_ordinal": 0,
+        "negative_ordinal": 5,
+        "geometry_sha256": "0227989b24d12c23679b50ffeb399236bc67d870f1381022a102171fddea6da9",
+        "contact_kinds": [
+          "interior"
+        ],
+        "dpa_match": {
+          "ordinal": 0,
+          "dpa_level": "PROVINCIA",
+          "dpa_name": "Tamarugal",
+          "CUT_REG": "01",
+          "CUT_PROV": "014"
+        }
+      }
+    }
+  ],
+  "source_application": {
+    "official_product": {
+      "name": "SUBDERE División Política Administrativa 2020",
+      "handle_url": "https://proactiva.subdere.gov.cl/handle/123456789/521",
+      "catalogue_url": "https://ide.subdere.gov.cl/division-politico-administrativa-2020-3/",
+      "represented_year": 2020,
+      "archive_bytes": 197692217,
+      "archive_sha256": "1ba4bfe783d9fa492972aba09e2195b5bff3a110b56f6f2d544816a938e04b16",
+      "raw_body_included": false
+    },
+    "verified_body_identities": {
+      "region_shape": {
+        "path": "DivisionPoliticoAdministrativa2020/REGION.rar:REGIONES_2020.shp",
+        "bytes": 104461716,
+        "sha256": "3508aa85413c6cfc4880cfcc4ea133d3ca33ff575337bbc5a58fa70595b45952"
+      },
+      "province_shape": {
+        "path": "DivisionPoliticoAdministrativa2020/PROVINCIA.rar:PROVINCIAS_2020.shp",
+        "bytes": 107063884,
+        "sha256": "85403f89a8db98059527b7ed4de71d6a93c272e0bcbea7d63a2de9256f8b6416"
+      }
+    },
+    "consumed_source_product": {
+      "adm1": {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CHL-ADM1-000.bin.gz",
+        "represented_year": 2020,
+        "recorded_source": "La Biblioteca del Congreso Nacional de Chile (BCN), OCHA ROLAC",
+        "recorded_license": "CC BY 3.0 IGO",
+        "compressed_bytes": 2506048,
+        "compressed_sha256": "3ee3e69aeb61a3a44fb71bfe7859f7516d97a8d12344ddae8d20b986295311f2",
+        "decoded_bytes": 8050036,
+        "decoded_sha256": "64ca160bd88f899ab5b2134733e1e191059fe20cdc9329dc189b40c1a9d194fa"
+      },
+      "adm2": {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CHL-ADM2-000.bin.gz",
+        "represented_year": 2017,
+        "recorded_source": "OpenStreetMap, Wambacher",
+        "recorded_license": "ODbL 1.0",
+        "compressed_bytes": 1297606,
+        "compressed_sha256": "dca2b150bd4aa8e62a961a5e527483693ccb4c0e5f9cc30f871449c8fe38877a",
+        "decoded_bytes": 4820206,
+        "decoded_sha256": "9dc86c2b3eb09a33c3c62634b4900591e70a2dbe27ba3b263bf53503180b74c7"
+      }
+    },
+    "geometry_comparison_summary": {
+      "method": "Exact pinned selected feature bodies compared with corresponding 2020 DPA records by CUT; no transform, simplification inference, or whole-bank scan.",
+      "features": [
+        {
+          "source_id": "gb:CHL:ADM1:47653553B1207481020383",
+          "dpa_cut": "15",
+          "gb_rings": 1,
+          "gb_vertices_including_closure": 562,
+          "dpa_rings": 1,
+          "dpa_vertices_including_closure": 6488,
+          "exact_shared_unique_vertices": 4,
+          "bbox_delta_degrees_max_approx": 0.0015073
+        },
+        {
+          "source_id": "gb:CHL:ADM2:35621905B17287365784279",
+          "dpa_cut": "152",
+          "gb_rings": 1,
+          "gb_vertices_including_closure": 368,
+          "dpa_rings": 1,
+          "dpa_vertices_including_closure": 4048,
+          "exact_shared_unique_vertices": 0,
+          "bbox_delta_degrees_max_approx": 0.0032381
+        },
+        {
+          "source_id": "gb:CHL:ADM2:35621905B64865881779948",
+          "dpa_cut": "014",
+          "gb_rings": 1,
+          "gb_vertices_including_closure": 746,
+          "dpa_rings": 46,
+          "dpa_vertices_including_closure": 9007,
+          "exact_shared_unique_vertices": 0,
+          "bbox_delta_degrees_max_approx": 0.0004268
+        }
+      ],
+      "interpretation": "The CUT/name match establishes a correspondence to the later DPA records, not source derivation or 2017 applicability. The 2017 versus 2020 vintages and material part/vertex differences lack a documented transform/generalization bridge."
+    },
+    "original_key_predicate_summary": {
+      "method": "Existing exact-seven-key point-in-polygon application reused; original longitude formula and normative native-row latitude table; no rerun.",
+      "groups": [
+        {
+          "dpa_name": "Arica y Parinacota",
+          "keys_tested": 2,
+          "inside": 0,
+          "outside": 2,
+          "approx_nearest_boundary_m": [
+            19.99,
+            63.53
+          ]
+        },
+        {
+          "dpa_name": "Parinacota",
+          "keys_tested": 1,
+          "inside": 0,
+          "outside": 1,
+          "approx_nearest_boundary_m": [
+            140.66
+          ]
+        },
+        {
+          "dpa_name": "Tamarugal",
+          "keys_tested": 4,
+          "inside": 1,
+          "outside": 3,
+          "approx_nearest_boundary_m": [
+            38.61,
+            10.3,
+            0.99,
+            6.89
+          ]
+        }
+      ],
+      "limitations": "Approximate distances use no CRS transformation; near-boundary values are uncertain. They are not per-key assignment error findings."
+    },
+    "redistribution_note": "No DPA source archive, raw shapefile, or shape body is included. Existing source review records a noncommercial restriction; the DSpace record itself has no explicit license field."
+  },
+  "review_conclusion": {
+    "basis": "Independent original-contract review of the retained exact-key application supports only these seven as researched-unresolved, based on the actual DPA application and preserved vintage/datum limits.",
+    "does_not_establish": [
+      "positive clearance",
+      "assignment error",
+      "2015/2017 applicability",
+      "a general waiver for foreign contacts"
+    ],
+    "remaining_action": "Continue the other 900 pending keys under their separate BRA 676, PER 167, and ARG 57 evidence scopes."
+  },
+  "evidence_pins": {
+    "original_held_rows": {
+      "git_blob_oid": "0a3e49335e5849679aa90a6d39c54ec3e18bf59",
+      "bytes": 31611,
+      "matched_by": "all seven [x,y,native_owner] triples; no source-native tuple ordinal inferred"
+    },
+    "held_diagnostic": {
+      "path": "coordination/engineering/bolivia-residual-907-unresolved-20261019/native-diagnostic-20261024-v2/native-diagnostic-held-907.json",
+      "bytes": 2623046,
+      "sha256": "dd8bcd92cddb4800464f895f44f6659255eff794f4e3f0e44651ebf2eba9d263"
+    },
+    "full_diagnostic": {
+      "bytes": 9421247,
+      "sha256": "9d985a9ce37d99ce430cab2e0fa97c5fb035447105675046a2ef686421a3d1c3"
+    },
+    "exception_proposal": {
+      "commit": "334fd645b05c7926127bb6d1a72d37d28c7e0144",
+      "path": "coordination/engineering/bolivia-residual-907-unresolved-20261019/exception-proposal.json",
+      "git_blob_oid": "244b3c9ead548b65ad5dcfd3ede0cf88e59df3f8",
+      "bytes": 916600,
+      "sha256": "164e570f600c189bcebf159084437f0a1e426f072c7e8c3bf2c6c75adb0b9585"
+    },
+    "partition_handoff": {
+      "path": "bolivia-2439-neighbor-partition-review-handoff-20261024.json",
+      "bytes": 22275,
+      "sha256": "b198408f3f5940172e43fe6e096fcba22db76d14182573b654bee7dca5eed25e"
+    },
+    "source_evidence": {
+      "commit": "252f2aa1e6309b6990985dec73611d6df0e11c70",
+      "path": "coordination/engineering/americas-original-repair-20261017/country-source-evidence-001/bol/source-evidence.json",
+      "bytes": 489069,
+      "git_blob_oid": "88ce7654c9c611b97621d5fef35510f566cf8aac",
+      "sha256": "aba320bf5712fd4f05db222a95bec87697fbb7dec42b77291906a7ddfd730614"
+    },
+    "normative_latitudes": {
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "bytes": 1851757,
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"
+    }
+  },
+  "safety_note": "This is a source-free derived-evidence file: it carries exact key/feature identities, hashes, method/results, and public citations; it contains no raw DPA or selected source geometry bodies."
+}
