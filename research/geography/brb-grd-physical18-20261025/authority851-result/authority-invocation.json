@@ -1,0 +1,44 @@
+{
+  "worker": "01a16f2e-19a2-7470-acfd-59b39f3e90d1",
+  "actual_code_commit": "d835ced91360655321accfca39fc44f5513ddd7c",
+  "data_input_locators": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+      "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+      "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/native-patch.exact851.json"
+    }
+  },
+  "current_accepted_data_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+  "accepted_code_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "accepted_current_code_map_difference": [
+    "docs/DELIVERY_HANDOFF.md",
+    "research/geography/swz-tikhuba-historical-geometry-20261025/README.md"
+  ],
+  "complete_original_claims": {
+    "BRB": 289,
+    "GRD": 562
+  },
+  "separate_contexts_unchanged": {
+    "BRB": 20,
+    "GRD": 273
+  },
+  "current_effective_owners_zero": 851,
+  "config_sha256": "6b7e8b14bd1b1ca6dcc080774d165bd8f093e9d0ab5596887ac854dcbfda9307",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-authority",
+    ".cache/brb-grd-physical18/native-authority851.json",
+    ".cache/delivery-handoff/brb-grd-authority851-20261025-01a16f2e"
+  ],
+  "worktree": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/7d2a1e5734ce55e4f8759779e6581a5e55b9c04f55d31159ad32a58446b4474d/work",
+  "destination": ".cache/delivery-handoff/brb-grd-authority851-20261025-01a16f2e",
+  "started_unix": 1792892150.8452501,
+  "phase": "native-authority",
+  "physical_rerun": false,
+  "supported_input_producer": false
+}

@@ -1,0 +1,57 @@
+{
+  "accepted_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+  "candidate_code_commit": "d835ced91360655321accfca39fc44f5513ddd7c",
+  "code_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "complete_base_to_current_changed_paths": [
+    "docs/DELIVERY_HANDOFF.md",
+    "research/geography/swz-tikhuba-historical-geometry-20261025/README.md"
+  ],
+  "exact_checks": [
+    {
+      "path": "data/ownership-selection.json",
+      "accepted_blob": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+      "candidate_blob": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+      "unchanged": true
+    },
+    {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "accepted_blob": "17b78a5998cbc6ab2d45b4c33722b2fbccfb0535",
+      "candidate_blob": "17b78a5998cbc6ab2d45b4c33722b2fbccfb0535",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/prepare-delivery-handoff.mjs",
+      "accepted_blob": "b952abb5ad15ccfc7b58a56edf6733150ec127cb",
+      "candidate_blob": "b952abb5ad15ccfc7b58a56edf6733150ec127cb",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/delivery-handoff-advance.mjs",
+      "accepted_blob": "08ecd09400f6a6e3064ebadbe8d757228d4255a8",
+      "candidate_blob": "08ecd09400f6a6e3064ebadbe8d757228d4255a8",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/observe-selected-owners.mjs",
+      "accepted_blob": "6c5c2aa96eb79f39f64c7107b61616e3a0952356",
+      "candidate_blob": "6c5c2aa96eb79f39f64c7107b61616e3a0952356",
+      "unchanged": true
+    },
+    {
+      "path": "coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs",
+      "accepted_blob": "6d44476563e492e40e09c09d8f81cb4a889156f4",
+      "candidate_blob": "6d44476563e492e40e09c09d8f81cb4a889156f4",
+      "unchanged": true
+    }
+  ],
+  "metadata_fetch": {
+    "first_session": 72355,
+    "first_exit": 128,
+    "first_reason": "Missing explicit GIT_EXEC_PATH caused remote-https helper failure before acquisition",
+    "corrected_session": 25414,
+    "corrected_exit": 0,
+    "operation": "fetch --filter=blob:none --no-tags --no-write-fetch-head origin 53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "origin_or_fetch_head_changed": false
+  },
+  "no_map_code_change": true
+}
