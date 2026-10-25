@@ -12,7 +12,7 @@ This campaign records bounded source-specific evidence for five held cohorts. It
 
 ## Review
 
-A distinct native worker reviewed the five proposals and the ARG application. It independently checked the exact private tuple partition for ARG: the 22-key set and 358-key set are disjoint and their union equals the 380-key original contact cohort, with zero duplicates, missing, or unassigned keys. Only counts and hashes are reported; tuple values are not included. Each packet is ready for root science review only.
+A distinct native worker reviewed the five proposals and ARG application. The original ARG review verified the exact private tuple partition for the then-current assessment version. A focused follow-up checked the expanded assessment’s partition summary and common-order hash against that prior reconciliation; it did not re-access the tuples. The review record distinguishes both ARG file hashes and scopes. Only counts and hashes are reported; tuple values are not included. Each packet is ready for root science review only.
 
 ## Files and SHA-256
 
@@ -31,5 +31,5 @@ A distinct native worker reviewed the five proposals and the ARG application. It
 | `CAF131-native-apply-result.json` | `2feced451bd8f8beeae470e512872e03a470c0e4d1a5300442d444aeb860fc6d` |
 | `SSD93-source-relative-candidate-proposal-v2.md` | `548bad615d5769d0028650ef76c270c6b9e7b5864542aaa9d57bd22cbf293713` |
 | `SSD93-native-center-application.json` | `328b98af7d4ef83b694c84908163bc661c2070f85401650cc3594cc32d796163` |
-| `independent-review-2026-10-25.md` | `213166532772474aea269414bfd0af8d0c95aef9399e39abd0a4aad58deb4208` |
+| `independent-review-2026-10-25.md` | `d75fc4642dff2be4c06c970d7a9d9e6302cc35aef403d510871ab42f56b469d9` |
 | `Coordinator-decision-matrix-2026-10-25-v3.md` | `8601c21eb77391b30361d3f0e2848bacb04674befdc46935fbf01b68eb41746d` |
