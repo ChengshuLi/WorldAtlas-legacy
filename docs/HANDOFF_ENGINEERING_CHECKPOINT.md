@@ -1,10 +1,10 @@
-# Engineering checkpoint before Luna research
+# Historical engineering checkpoint — 2026-10-02
 
-Future engineering threads receive [ENGINEERING_HANDOFF.md](ENGINEERING_HANDOFF.md) and its [prompt](prompts/ENGINEERING.txt). Content-only Luna threads receive [HISTORY_HANDOFF.md](HISTORY_HANDOFF.md) and its [prompt](prompts/LUNA_HISTORY.txt). These are instruction entry points; GitHub Issues holds authoritative TODOs and dated work history, and the `_TODO.md` guides supply acceptance details.
+**Archive only.** Operational readiness, deployment, endpoint, regional-approval and import statements below describe this dated checkpoint; they are not current instructions or authorization. Current worker instructions are [ENGINEERING_HANDOFF.md](ENGINEERING_HANDOFF.md), [HISTORY_HANDOFF.md](HISTORY_HANDOFF.md) and their prompts. At current start/resume, follow accepted-main `AGENTS.md` and relevant lane/workspace/merge guidance; any live write requires a current accepted gate, exact scope/certificates and explicit operation authorization. Preserve the receipts below as historical evidence.
 
 **Recorded 2026-10-02 UTC. Research/import platform ready; wider atlas work remains open.** The repository is `https://github.com/ChengshuLi/WorldAtlas`, branch `main`. Deployed engineering source is `cf8769a039267407fdaab1d3bf0d8ad6ef8cef42`; subsequent handoff-only commits contain documentation and verification receipts. The functional suite passed 394/394 with zero skips; five packaging checks and three focused browser checks passed. Owner-private **Site 18 is deployed with Neon PostgreSQL, retained R2 archives and imports enabled** (environment revision 3; deployment `appgdep_6abf573be0948191a5517d0b2cbe7948`, succeeded 2026-10-02 07:03:34.504 UTC). Production migration run 36973747147 and forward migration run 36974831053 are verified. Live checks cover all 23 factual tables and seven dates from 3000 BC to 2026 AD; capabilities are `mapSnapshots:1`, `datedGeography:1`, `datedFootprints:0`, `storageExport:2`. Original read-back preserved all 3,984 historical claims and 28 archives (16,199,861 bytes), at ingestion revision 1321. See `data/validation/neon-final-publication.json` and `neon-final-api-writable.json` for the exact release and checks. The existing content-research/import platform is ready for Luna. This does **not** complete every atlas goal: dated-footprint browser/cache integration, installation of three validated hierarchy candidates, blocked geographic repairs, worldwide semantic approval and physical mobile validation remain technical-maintainer work. Luna researches sources, prepares supported sparse evidence, imports it and logs results; Luna does not change code, geography, infrastructure or deployments.
 
-Luna's scope is **source research, factual evidence files, supported sparse imports, verification and durable research notes**. Coding, schema changes, provider configuration, deployments, geographic installation, grid/performance work and UI changes remain technical-maintainer responsibilities. Do not use this document to authorize a schema migration or production restore from a research thread.
+The scope and deployment notes below describe the 2026-10-02 handoff, not a current Luna assignment, import permission or service route. Research role boundaries remain in current accepted instructions. This document does not authorize schema migration, production restore or any live write.
 
 ## Preserved foundation and production state
 
@@ -28,37 +28,6 @@ Luna's scope is **source research, factual evidence files, supported sparse impo
 
 Worldwide local semantic approval, missing-source land/island questions and physical mobile performance remain separate open work; structural completeness or a database transfer cannot close them. Historical content expansion remains intentionally paused in the engineering thread.
 
-## Fresh-thread startup and research commands
+## Superseded operational notes
 
-Start from Git, read the latest receipts, and use the current approved release rather than a remembered label or URL response:
-
-```sh
-git clone --branch main https://github.com/ChengshuLi/WorldAtlas.git
-cd WorldAtlas
-git rev-parse HEAD
-npm ci
-```
-
-Read `AGENTS.md`, this checkpoint, `docs/HANDOFF_STATUS.md`, `docs/LUNA_DATA_HANDOFF.md` and `docs/RESEARCH_IMPORT_WORKFLOW.md`. Obtain `/api/geography/release` through documented private Site access and save the exact response as `geographic-release.json`. Imports are enabled; recheck the live release, revision, capabilities and capacity before a campaign. Capacity or maintenance conflicts require retaining receipts and reporting the blocker.
-
-```sh
-node scripts/prepare-research-bundle.mjs research.json geographic-release.json research-bundles/campaign-001
-node scripts/import-research-bundle.mjs https://worldatlas-explorer.chengshu-li-2013.chatgpt.site/ research-bundles/campaign-001 --dry-run
-```
-
-Once the latest production receipt confirms writes are available, the existing importer uses a hidden credential prompt:
-
-```sh
-node --use-env-proxy scripts/import-research-bundle.mjs https://worldatlas-explorer.chengshu-li-2013.chatgpt.site/ research-bundles/campaign-001
-```
-
-Keep sparse half-open intervals, stable IDs, fixed environmental classifications and traceable provenance. Unknown years need no fabricated rows. Commit and push original inputs, bundles, lawful source bytes/restoration manifests, receipts, read-back and open findings on the appropriate isolated lane branch; PRs integrate into **work** serially. Never commit credentials, `.cache`, local databases or provider connection URLs. Dated-geography campaigns must check the live capability and follow safe transaction phases in the campaign guide; dated footprints remain unsupported by the browser.
-
-For an optional **local-only**, credential-free inspection of the retained original storage checkpoint:
-
-```sh
-node scripts/storage-checkpoint.mjs unpack data/storage-checkpoints/d1-revision-1321 /tmp/worldatlas-d1-revision-1321
-node scripts/restore-postgres-storage.mjs /tmp/worldatlas-d1-revision-1321 --dry-run
-```
-
-These commands verify/unpack durable Git bytes; they do not provision a database, migrate production or move R2 blobs. No prior workspace or cache is required.
+The former clone-and-import steps, owner-private Site URL, import commands, claim of enabled writes and optional database restore commands have been removed from this handoff. They are not a supported current startup or operation route. Use the current accepted worker, workspace, publication and research contracts; verify the exact gate/certificate and authorized live operation before any write. This removal does not retract or alter the dated publication, migration, preservation or source receipts recorded above.

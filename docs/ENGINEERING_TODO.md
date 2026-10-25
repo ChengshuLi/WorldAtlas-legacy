@@ -2,7 +2,7 @@
 
 GitHub Issues is the single source of truth for TODOs, status and dated work history: [open issues](https://github.com/ChengshuLi/WorldAtlas/issues?q=is%3Aissue+is%3Aopen+label%3Atype%3Aengineering). This file retains detailed scope/acceptance references; its legacy ENG/RES IDs identify migrated issues, not a live checklist.
 
-This is detailed engineering acceptance guidance for future maintainer threads. Historical-content campaigns have a separate queue in [HISTORICAL_RESEARCH_TODO.md](HISTORICAL_RESEARCH_TODO.md). Clone branch **main**, read `AGENTS.md` and [HANDOFF_STATUS.md](HANDOFF_STATUS.md), and inspect the current live release before changing anything. The verified Site 18 platform is writable; no new baseline migration or rehearsal is required to start research.
+This is detailed engineering acceptance guidance for future maintainer threads. Historical-content campaigns have a separate queue in [HISTORICAL_RESEARCH_TODO.md](HISTORICAL_RESEARCH_TODO.md). Start from accepted branch **main**, read `AGENTS.md` and current lane guidance, and inspect the live release only when the assigned operation requires it. [HANDOFF_STATUS.md](HANDOFF_STATUS.md) and Site 18 receipts preserve historical evidence, not current write authorization or a prerequisite to ordinary source research. Any import/write needs the current accepted gate and an explicitly authorized operation contract; do not assume a new baseline migration or rehearsal is required without a demonstrated current failure.
 
 Use GitHub Issues for current status. A source checkpoint, candidate, structural pass or inventory does not establish deployment or semantic completion. Completion requires retained evidence, validation and actual publication receipts when applicable.
 
