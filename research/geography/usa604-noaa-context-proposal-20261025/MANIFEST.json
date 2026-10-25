@@ -1,0 +1,152 @@
+{
+  "schema": "usa604-noaa-context-manifest-v1",
+  "scope_file": "scope.json",
+  "readme_file": "README.md",
+  "source_free": true,
+  "proposal_only": true,
+  "no_raw_keys_coordinates_or_geometry_in_this_packet": true,
+  "accepted_base": "2463606eeaef8fe9115ea8ae88d7d5a640c011ac",
+  "private_scope_bindings": {
+    "held_roster_path": "private local /tmp/held.json",
+    "held_roster_sha256": "55c522bc2ae7d455492a6f6467ff54f0b2af31376627690e356ed538b1347821",
+    "exact_604_tuple_sha256": "cfdaf0dfeac8025fa211263b372a0462528fbcb1fb41fa8abfc37d7f97ce798b",
+    "exact_rows_retained_private": true
+  },
+  "original_project_evidence": {
+    "source_commit": "62dcd0b393930e6c5bbef6904ce004d9c7ed4b9f",
+    "current_main_reaches_pins_at": "2463606eeaef8fe9115ea8ae88d7d5a640c011ac",
+    "artifacts": [
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/README.md",
+        "git_blob": "ec51a1474d0da7b31dbef48ad6f40c95fca50360",
+        "sha256": "a00598b317a29b21ca895ad66d3bb1bf52c4fb40c81a90c57c2da9dd58552b50"
+      },
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/source-review/physical-admission-boundary.md",
+        "git_blob": "95bd789d58eee024e8fc852a1a86195ca274340c",
+        "sha256": "7652828559921d3912c84d0e89477ecb79e62681b3d03cd1f00285aaf42ca385"
+      },
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/source-review/physical-source-hold-union.json",
+        "git_blob": "df5454f41836da6d5cfbdc3aa086e8a3201ede40",
+        "sha256": "8f5fef99816b7cfd54febb9b0f5a2ef3c530b4f9f3ec52327e21e988248fb4c9"
+      },
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/source-review/physical-execution-observation.json",
+        "git_blob": "5d9f38fa1ce42afb2a6466c3f10964ee998a6f53"
+      },
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/source-review/native-diagnostic-001-failure-observation.json",
+        "git_blob": "0c42c3b0517e6c2eaf927f9054f02de8e1306e07"
+      },
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/source-review/native-diagnostic-001-failure.txt",
+        "git_blob": "3edbc317651d0bad8d8b84c5aa0263bfd0fab29b"
+      },
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/source-review/native-diagnostic-002-observation.json",
+        "git_blob": "44f3e0489931ecf5b3e833956a432cf36a992bc9"
+      },
+      {
+        "path": "coordination/engineering/usa-repair-delivery-20261017/source-review/native-executed-method-closure.json",
+        "git_blob": "a22b76c95ba69e529c3f9dd19c66ddd0bbd1dce0"
+      },
+      {
+        "path": "research/geography/usa31-gap-family-source-fitness-20261007/physical-query-rows.jsonl",
+        "git_blob": "71a3ed84786d17849ec02d0629cea2342731c614"
+      },
+      {
+        "path": "research/geography/usa31-gap-family-source-fitness-20261007/sources/upstream/physical-source-run-report.json",
+        "git_blob": "49fe500ba62154e8bad00626200284cfcc817428"
+      },
+      {
+        "path": "research/geography/usa31-gap-family-source-fitness-20261007/sources/upstream/physical-comparison-report.json",
+        "git_blob": "7c97f3e7feb1ef58a996ac199ddb886c4f024752"
+      }
+    ],
+    "original_physical_run_returncode": 0,
+    "original_physical_run_elapsed_seconds": 119.15385604597395,
+    "first_stock_native_diagnostic": "failed before evaluating requested cells; exact stderr `Unknown or duplicate physical residual issue`; not a successful result",
+    "separate_native_diagnostic_002_returncode": 0,
+    "no_source_or_geometry_producer_replayed": true,
+    "original_denominator": {
+      "cells": 107131,
+      "intervals": 46575,
+      "subjects": 351
+    },
+    "physical_execution_scope": {
+      "complete_members": 356,
+      "issues": 283,
+      "members_with_issues": 155,
+      "is_per_key_result_for_proposed_604": false
+    },
+    "retained_negative_evidence": {
+      "prior_negative_instances": 235,
+      "final_positive_instances": 227,
+      "complete_foreign_source_features_backing_final_positive": 121,
+      "all_original_negative_family_and_source_bindings_preserved": true
+    },
+    "diagnostic_distinction": "Diagnostic 001 failed pre-cell; diagnostic 002 success is a separate observed execution, not a retry used to erase the failed observation."
+  },
+  "new_contextual_source": {
+    "official_metadata_url": "https://www.fisheries.noaa.gov/inport/item/77200",
+    "metadata_claims": [
+      "2022-10-06 to 2023-12-16 acquisition",
+      "classified ground/submerged-topography/submerged-object lidar",
+      "1m DEM elevation referenced to Geoid18"
+    ],
+    "index_url": "https://noaa-nos-coastal-lidar-pds.s3.amazonaws.com/dem/NGS_CoastalMaine_Topobathy_2022_10422/index.html",
+    "index_archive_private_path": "/tmp/tileindex_NGS_CoastalMaine_Topobathy_2022.zip",
+    "index_archive_bytes": 27480,
+    "index_archive_sha256": "205b473d3df760de5078d5fadc38b46636c3cade7a255108297e435afe4f4da8",
+    "index_coverage_footprint_count": 544,
+    "selected_rasters_private_directory": "/tmp/maine_lidar_targeted/",
+    "selected_rasters_sha256": [
+      "323b897ed2a1efbb89ecf3f012b2a626367a2819ffa3e9476f67b7e3d143cd49",
+      "430263722bb845b2020cdb6e6bf7f9e0e0d4e0386d92367dfb00159952f5e22d",
+      "1ee790c6b708a2d0c4a2246142e60fb41c26fd77df0de9ebf40e9fb95ed32969",
+      "be0e99211cbdd1f47647ab7ee9257dc2f2cef74e6346eea112704baa08fa4cdb",
+      "34dad69985a50d4918e711e42e8e0992dcf0a58175ae681e7f88f6aeab83101d",
+      "d866ecefe96bb3d1ac8a78ad0a0e9aad15d3118f9e0ec5bde4a6be1b978303b9",
+      "3b46f4a147023fdad3c4f16fce79a37b8fc61185c300d1bb6ca08cf50d90338e",
+      "addae96c8068ef6d0623fbc23dbda280c8184c716f80bd433c4302b1bc3831a9",
+      "bf171181f441a6f7af1cb0f8bf761ad21c989304d0907b4ac6e99fe85a7b1372",
+      "52fc4d25acc67bc5326e37e50b429cc4a587324121cd13c40d40c0e7e63e4f2b",
+      "b229dd76e3f361345a6d3d04f4308f83ef17371b00bf839d2e83ce70d6b5a4d9"
+    ],
+    "tile_manifest_sha256": "cdd636cc973efc62140af44b4869db802f4601aac482a8740dcd6fdb22fff1f4",
+    "source_access": "ordinary unauthenticated HTTPS GET; no access control or security warning bypass; raw bodies are private and not included",
+    "rights_status": "not separately cleared; no redistribution of raw source bodies",
+    "selected_rasters_note": "eleven full-body hashes listed without geospatial filenames; raw rasters remain private"
+  },
+  "method_correction": {
+    "preserved_old_memo_path": "/workspace/shared/usa604-noaa-topobathy-point-screen-20261025.md",
+    "preserved_old_memo_sha256": "1b884010dd08b84dcb8b49a2c1b478248815ab03c2922b333a06a542254fa2f2",
+    "original_sampler_script_sha256": "4c48c6a93afdcc9103d39bb65d99196aad648f068b811affc2892cbd8a671bce",
+    "canonical_row_latitude_table": {
+      "accepted_commit": "2463606eeaef8fe9115ea8ae88d7d5a640c011ac",
+      "path": "data/canonical-grid/current-startup/native-v1/native-row-latitudes.f64le.gz",
+      "git_blob": "de6905e162dc031b1b93248fae91190c39c4ad53",
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "size_bytes": 1851757
+    },
+    "pixel_equivalence_receipt": {
+      "path": "/workspace/shared/usa604-center-pixel-equivalence-20261025.json",
+      "sha256": "8b5c60759ee6b325af6b048a9801c83900e0756c424961ef6c30fea90cc286ca",
+      "comparison_script_sha256": "f0a023b185150815a3918d014818db1ba5fda4647fc9385506e2937d230db9b7"
+    },
+    "independent_check": "deliver_team_three_pse confirmed 604/604 same raster pixels, exact/rounded tile selection and all 11 tile metadata; no raster values re-read"
+  },
+  "unperformed_primary_context_lead": {
+    "official_noaa_item": "https://www.fisheries.noaa.gov/inport/item/60812",
+    "linked_viewer_attempt": "https://nsde.ngs.noaa.gov/cusp.html",
+    "result": "HTTP 403; no alternate endpoint, actor, or bypass attempted",
+    "interpretation": "possible contextual lead only, not source absence, exhaustion, or a required legal certificate"
+  },
+  "prohibitions": [
+    "Do not publish exact cell keys, coordinates, raw elevation values, DEM tiles, or index archive.",
+    "Do not assert land/water, MHW, current-county, owner, whole-cell, or legal-boundary classification from elevation.",
+    "Do not change any original owner, geometry, native/physical hold, or repair gate.",
+    "Do not infer source absence, universal source-lineage certification, exhausted research, acceptance, or accounting credit."
+  ]
+}
