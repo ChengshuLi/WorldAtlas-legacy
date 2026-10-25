@@ -8,9 +8,15 @@ Repository: https://github.com/ChengshuLi/WorldAtlas. GitHub Issues holds curren
 | --- | --- | --- | --- |
 | Issue creation | [ISSUE_INTAKE_GUIDE.md](ISSUE_INTAKE_GUIDE.md) | [ISSUE_CREATION.txt](prompts/ISSUE_CREATION.txt) | Capture/classify requests and link duplicates/dependencies in GitHub Issues |
 | Publisher | [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md) | [PUBLISHER.txt](prompts/PUBLISHER.txt) | Pin latest main, discover merged delivery changes/original-issue acceptance and own serialized production operations |
-| Post-merge Auditor | [AUDIT_GUIDE.md](AUDIT_GUIDE.md) | [AUDITOR.txt](prompts/AUDITOR.txt) | Audit exact merged PRs; update #726's four-column table and record evidence on PRs/follow-up issues |
+| Post-merge Auditor | [AUDIT_GUIDE.md](AUDIT_GUIDE.md) | [AUDITOR.txt](prompts/AUDITOR.txt) | Audit explicitly assigned merged PRs/scopes; update #726 only when in scope, not as an automatic backlog |
 | Engineering | [ENGINEERING_GUIDE.md](ENGINEERING_GUIDE.md) | [ENGINEERING.txt](prompts/ENGINEERING.txt) | Work through engineering issues; code, UI, infrastructure and geographic releases |
 | Geography research | [GEOGRAPHY_GUIDE.md](GEOGRAPHY_GUIDE.md) | [GEOGRAPHY.txt](prompts/GEOGRAPHY.txt) | Research boundaries, hierarchy and source suitability; scoped evidence/proposals only |
 | History research | [HISTORY_RESEARCH_GUIDE.md](HISTORY_RESEARCH_GUIDE.md) | [LUNA_HISTORY.txt](prompts/LUNA_HISTORY.txt) | Work through research issues; internet sources, factual content, supported imports and receipts |
 
 Current geographic authorization is defined by accepted-main gate/certificate records; live publication/recovery procedures are in [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md) and [CLOUDFLARE_RECOVERY_RUNBOOK.md](CLOUDFLARE_RECOVERY_RUNBOOK.md). These specialist contracts are not substitutes for the general workflow guide.
+
+The geography row describes a source-only researcher. A specifically assigned
+end-to-end package repair may combine scientific/source qualification, engineering
+artifacts and standard delivery; follow its explicit task and tracked scope together
+with the relevant geography, engineering and delivery contracts. This does not
+grant general source researchers shared-bank or live-operation authority.

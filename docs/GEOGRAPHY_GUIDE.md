@@ -1,6 +1,6 @@
 # Geography research guide
 
-This lane researches territorial boundaries, hierarchy purpose, source suitability and granularity, then publishes scoped evidence or proposals. It does not change shared hierarchy, core geometry/grid/application code, original source archives, history campaigns, geographic releases or research gates. Engineering owns executable integration and publication; history research consumes only the approved scope.
+This lane describes optional source-only research on territorial boundaries, hierarchy purpose, source suitability and granularity. It publishes scoped evidence or proposals and does not itself authorize changes to shared hierarchy, core geometry/grid/application code, original source archives, history campaigns, geographic releases or research gates. Engineering normally owns executable integration and publication. A specifically assigned end-to-end package repair may combine these responsibilities under its explicit task and tracked scope; that owner follows both this source/science contract and the engineering/delivery contract. This exception does not grant general geography researchers package, shared-bank or live-operation authority.
 
 Use accepted `AGENTS.md` and [WORKER_COORDINATION.md](WORKER_COORDINATION.md) for current scope, identity and delivery. Write only in the coordinated `data/regional-review/<packet-id>/` or `research/geography/<campaign-id>/` directory. Preserve other workers' evidence and exact declared subjects/pins.
 

@@ -1,6 +1,6 @@
 # Post-merge audit guide
 
-Use [the copy-ready Auditor prompt](prompts/AUDITOR.txt) for a new Auditor chat. Read current main and the repository's worker, issue-creation and evidence guidance. This role inspects changes already merged to `main` and records quality findings; it does not implement, merge or publish them. [#726](https://github.com/ChengshuLi/WorldAtlas/issues/726) is the audit ledger. The designated publisher independently handles production delivery and acceptance under [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md).
+Use [the copy-ready Auditor prompt](prompts/AUDITOR.txt) for a new Auditor chat. Read accepted `AGENTS.md`, the worker coordination guide and the assigned scope's data/evidence contracts. This role inspects already-merged changes and records quality findings; it does not implement, merge or publish them. [#726](https://github.com/ChengshuLi/WorldAtlas/issues/726) is a standing audit record, not an automatic assignment or requirement to restart a completed audit cohort. Work only the PRs/scope explicitly assigned; the designated publisher independently handles production delivery and acceptance under [PUBLICATION_RUNBOOK.md](PUBLICATION_RUNBOOK.md).
 
 ## One ledger table
 
@@ -9,7 +9,7 @@ Keep #726's issue body as one growing table, with no prose audit dumps or checkp
 | PR | Merge commit | Audit status | Follow-up issues |
 | --- | --- | --- | --- |
 
-Each row represents one PR and its exact merge SHA. Link the PR and commit; an abbreviated display must still link to the full SHA. Discover missing merged-to-main PRs with complete pagination, including older merges missing from the ledger. A time window or capped search result cannot prove completeness. Preserve completed reviews, add new identities as Pending, and flag identity discrepancies rather than replacing old evidence. Coordinate one writer; reread and reconcile the latest body before updating it. This is cooperative coordination, not an atomic API lock.
+Each row represents one PR and its exact merge SHA. Link the PR and commit; an abbreviated display must still link to the full SHA. Do not infer work from table gaps or discover/populate new rows unless full merged-PR inventory is within the explicit assignment. When it is, paginate the complete scoped source inventory; a time window or capped search result cannot prove completeness. Preserve completed reviews and flag identity discrepancies rather than replacing old evidence. Coordinate one writer; reread and reconcile the latest body before updating it. This is cooperative coordination, not an atomic API lock.
 
 Use these statuses consistently:
 
