@@ -1,0 +1,266 @@
+{
+  "kind": "DMA232-independent-review-handoff-not-acceptance",
+  "version": 1,
+  "worker_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "published_authority_head": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+  "branch": "geography/dma232-whole10-physical-20261025-01a16f2d8ad8",
+  "scope": {
+    "original_claim": 232,
+    "original_intervals": 109,
+    "all_source_members": 10,
+    "owner": 7115,
+    "target_id": "atlas:territory:DMA",
+    "positive_map_context": 76,
+    "mixed_map_context": 156,
+    "separate_original_physical_interpretation": 174,
+    "newly_accepted": 0
+  },
+  "context_validation": {
+    "exact76plus156_equals_authority232": true,
+    "new_geometry_or_predicates": false
+  },
+  "current_supported_result": {
+    "accepted_selector": {
+      "bytes": 2286,
+      "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+      "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+      "mode": "100644",
+      "path": "data/ownership-selection.json",
+      "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+    },
+    "original_claim": 232,
+    "novel_supported": 232,
+    "already_present_same_owner": 0,
+    "held": 0,
+    "all10_members_retained": true,
+    "all_source_physical_geometry_and_negative_fields_preserved": true,
+    "original_source_evidence_byte_identical": true,
+    "accepted_input_inventory_count": 53
+  },
+  "authority_result": {
+    "qualified_cells": 232,
+    "component_ids": [
+      "source-target:902450ca12bfb4e5bb15f92c3b6fcd8280a95d7503559450c874d9b43f6fe167"
+    ],
+    "rule_sha256": "b11af07430242a32ecf2d3bc36f3ee238b578966880a7900298775d1e12e4f08",
+    "limits": [
+      "Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.",
+      "Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred."
+    ]
+  },
+  "immutable_core_evidence": {
+    "physical": [
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/execution-receipt.json",
+        "git_blob_oid": "27ed7595448465f25b573851113066eae05d2531",
+        "mode": "100644",
+        "bytes": 59057,
+        "sha256": "13ce0ccc61a6bdd1435df5f9e794b3e7bf0eedae7fcaf6bd1a906e58b410886e"
+      },
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/preparation.json",
+        "git_blob_oid": "c006dabeed672682746484a96ab2da24bfb4f83d",
+        "mode": "100644",
+        "bytes": 544,
+        "sha256": "a3d68367e2a9a44a09f66f2fd040b582da65e0a79811921fcc9e3f34e6b0ddc3"
+      },
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/retention.json",
+        "git_blob_oid": "b8d54262030f389103fde3d443079eddea722fed",
+        "mode": "100644",
+        "bytes": 1760,
+        "sha256": "f29b37d41bcfde5a17f28fca2f0d01ab4130b0529b45eeb9952cfdad40fa87bf"
+      },
+      {
+        "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/physical-result/whole-target-support.json",
+        "git_blob_oid": "5c9b46b310be182815d1cee94186c19de2977ef3",
+        "mode": "100644",
+        "bytes": 105390,
+        "sha256": "3aff5cef5ddad040a34fd7817dcd2d5b04cc334c62be8de8b74fea7e9893e591"
+      }
+    ],
+    "source_evidence": {
+      "bytes": 24554,
+      "commit": "4a351b620cce708584be63ff1c73fbece5007b1d",
+      "git_blob_oid": "2cb9f29118f6b986244178135361af05f2d3d1c2",
+      "mode": "100644",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/prepared-source-evidence/source-evidence.json",
+      "sha256": "34a152fb5af9657ffc89b84d7426095426f5ea1e1acf8d71ce7957d579a1c120"
+    },
+    "native_diagnostic": {
+      "commit": "94924d1ca2ea26783d23710ca3cf1cfce27ad2b5",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-result/native-diagnostic.json",
+      "mode": "100644",
+      "git_blob_oid": "8b8653f3c4d5b9c8bf6cb707369f4365a301f20f",
+      "bytes": 22171,
+      "sha256": "58a81b1ce6d33967776d372d604c45f97154e8bcfb202770e76cf11c2c4fa5fd"
+    },
+    "authority_products": {
+      "authority-binding.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "1d2eb5d46a118b248ad4dd7f3c39f7abcce4d6fa",
+        "bytes": 738,
+        "sha256": "8119f305ce8e07de6bc31976964e1a5c86f52cd9e11d813afa7fcaa299126d08"
+      },
+      "constructor-result.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "9b69f7b21b3614d5d2a2fea0564c9fa88898f8a1",
+        "bytes": 6933,
+        "sha256": "aae436b661f58be55d5cfb0c6da9f73fd70ca2e5562e5a763fadf827ebbdff90"
+      },
+      "original-rule-preimage.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "bf69788ff6bee75b5e410cd7c4db3252262e02c5",
+        "bytes": 735,
+        "sha256": "b11af07430242a32ecf2d3bc36f3ee238b578966880a7900298775d1e12e4f08"
+      },
+      "preparation.json": {
+        "commit": "552d44744f5ab7c50ece7b56a74d69fb75cc81a9",
+        "path": "data/regional-review/dma232-whole10-physical-20261025/native-authority-result/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "7ae24014189d1d6ceb7a75c5d124b7248e374ffb",
+        "bytes": 500,
+        "sha256": "0cba5045736e697f3725b7e58ef8e411d4b44bb3312915473f3246d2d9649216"
+      }
+    },
+    "claim_scope": {
+      "commit": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/claim-scope/claim-scope-proof.json",
+      "bytes": 3862,
+      "sha256": "08b3bcd57338cdf85f14d4ba1fca9919e9e8d2e48d682d167a445a20497dd196"
+    },
+    "separate174": {
+      "commit": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/claim-scope/excluded174-original-records.json",
+      "bytes": 432932,
+      "sha256": "1bbfd452a9a5245db544857d81cf960f567bb8cb8a4d5b19d62a4cf2e19b68f3"
+    },
+    "original_queue": {
+      "commit": "ca20fc19ee65c942aa4ec0a9e003eb77c49917c2",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/claim-scope/original-two-DMA-queue-records.json",
+      "bytes": 4617,
+      "sha256": "14a7c1fa7174197a97d4716468383c09108dda6f7fa5abd34ecb2d472d3e354f"
+    },
+    "current_partition": {
+      "commit": "a80b425ab05ec236d3cb6610ede62cdb9a9533f0",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/current-supported-result/original-scope-partition.json",
+      "bytes": 21963,
+      "sha256": "d6404270519cc941b10294133e44cbe9c2fdd71ff169d0b6f5c294aa01fa1559"
+    }
+  },
+  "prior_readings": [
+    {
+      "packet_path": "prior-readings/dma232_reaudit/dma232-source-assessment-v1.md",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/dma232-source-assessment-v1.md",
+      "bytes": 11036,
+      "sha256": "4decd805dba3d68f89ab90148907512959c1d20adc98ccb70c3378c1f798beda",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma232_reaudit/dma-charim-coastline-assessment-v2.md",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232_reaudit/dma-charim-coastline-assessment-v2.md",
+      "bytes": 2255,
+      "sha256": "9ae53a25d4d45bfcae1b091e04b0c9f072e68b3b889d5dd60a2e071024507d44",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma232-source-application/source-application-assessment.md",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/source-application-assessment.md",
+      "bytes": 13310,
+      "sha256": "368785f59d3deefdc79b6664d1db17815263df177a37d1f33262b8a8395b4b22",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma232-source-application/reading-subsets.json",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-source-application/reading-subsets.json",
+      "bytes": 16304,
+      "sha256": "409ce9e956517001ff0bdd84d14db6655fd4b4a5a63a3d21af5cf7dddd9565c3",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma232-filegdb-source-method/source-method-assessment.md",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-filegdb-source-method/source-method-assessment.md",
+      "bytes": 6279,
+      "sha256": "0b0a7690ff963956c447e260ddf025d562481e51285dc2d43f6f26ab98ba51c6",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma156-coastline-lineage/coastline-applicability-assessment.md",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma156-coastline-lineage/coastline-applicability-assessment.md",
+      "bytes": 6017,
+      "sha256": "ce6f420efa4418fcf1041b685b56c48c67583d87185b125d8654b5dd8950e473",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma156-coastline-lineage/exact156-context-questions.json",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma156-coastline-lineage/exact156-context-questions.json",
+      "bytes": 18649,
+      "sha256": "66fcd9cfd1e989ebaad1e9a7f40670cdf64e6f775fd7d0387f0072c2baa367be",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma156-coastline-lineage/primary-catalogue-finding.json",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma156-coastline-lineage/primary-catalogue-finding.json",
+      "bytes": 1310,
+      "sha256": "22cd27ea64d9352dbf24ebc8fd6233c62288a910af9e864c28fcb7fb6c2607c8",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma156-coastline-lineage/cdema-exact-service-receipt.json",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma156-coastline-lineage/cdema-exact-service-receipt.json",
+      "bytes": 280,
+      "sha256": "11f88fb9c24fb3383b454bd634789e37cf628e4a3822fa5a30b3cc1f59fa9e06",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma156-coastline-lineage/worldbank-exact-download-receipt.json",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma156-coastline-lineage/worldbank-exact-download-receipt.json",
+      "bytes": 209,
+      "sha256": "4495a0f912951e515d76b7ccc3d6e7819961e80d97e7a7a552c38861268fd088",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma156-coastline-lineage/receipt.json",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma156-coastline-lineage/receipt.json",
+      "bytes": 3242,
+      "sha256": "fe60b12077cf2c2eeea3aeb774ea784f3875be0f30a16bdd48493cd25f96b058",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    },
+    {
+      "packet_path": "prior-readings/dma232-physical-input-draft/source-role-and-remaining-questions.md",
+      "original_local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/dma232-physical-input-draft/source-role-and-remaining-questions.md",
+      "bytes": 9886,
+      "sha256": "b810571b38887d30f30faea563621c7dee885d0b3754cdeab407bcf61548ce06",
+      "treatment": "Unchanged prior source reading/receipt; original authorship retained, not a new body reading."
+    }
+  ],
+  "recommendation": {
+    "packet_path": "source-applicability-recommendation.md",
+    "bytes": 9418,
+    "sha256": "f7f46356a2529678af90ef7a6e3922855a8199d10ecffe0342131bbe5ed961be"
+  },
+  "unperformed": [
+    "Independent exact-public-head review",
+    "Coordinator composition/finalization and current selected-bank conservation",
+    "Final selected-delivery-expectations publication",
+    "Single stock request/dispatch/terminal delivery"
+  ],
+  "source_access_limits_preserved": [
+    "CDEMA exact service TLS certificate verification failed; no body",
+    "World Bank local PDF403; earlier web PDF reading retained",
+    "USCB active FileGDB national layer unread with checked supported readers"
+  ],
+  "owned_workspace_retained": true,
+  "cleanup": "No release or cleanup; retain own allocated worktree and exact output custody for coordinator integration.",
+  "publication": "Normal owned-worktree Git push only; no blob/tree/commit API upload fallback."
+}

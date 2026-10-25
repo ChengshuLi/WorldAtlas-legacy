@@ -1,0 +1,22 @@
+{
+  "kind": "new-primary-publisher-catalogue-lineage-not-vector-inspection",
+  "catalogue_url": "https://documents1.worldbank.org/curated/en/099022825083040857/pdf/P179371-2fc3899d-49cd-474f-9d1a-37bb985d5dfa.pdf",
+  "actual_read": "web PDF40pages, page1 lines34\u201352; before subsequent local403",
+  "finding": "Inventory identifies CHARIM/CDEMA ADM0/1/2 dated14March2016, based on a geometry-corrected boundary dataset used by GoCD. Public vector endpoints are listed, with EPSG4326 and ODbL. This is a documented national-boundary lead distinct from settlement-driven parish adjustment. It does not name the input edition/correction algorithm or establish identity with the printed coastline.",
+  "exact_adm0_service": "https://geocris2.cdema.org/features/collections/dma.dma_bnd_adm0_polygon/items.json",
+  "service_body_read": false,
+  "same_as_frozen_source": false,
+  "same_as_paper_map": "unestablished",
+  "geometric_comparison": false,
+  "acquisition_stops": [
+    {
+      "target": "exact CDEMA ADM0 service",
+      "status": "TLS certificate verification failure; no body written; stopped"
+    },
+    {
+      "target": "exact World Bank catalogue local materialization",
+      "status": "HTTP403; no body written; stopped; earlier web reading preserved"
+    }
+  ],
+  "server_approval_id": null
+}

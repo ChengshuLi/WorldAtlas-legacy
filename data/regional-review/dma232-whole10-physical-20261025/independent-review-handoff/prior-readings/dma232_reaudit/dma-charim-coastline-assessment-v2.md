@@ -1,0 +1,11 @@
+# CHARIM source-specific coastal-reference follow-up
+
+The held April2016 Dominica Topography GeoPDF was checked in full: displayed map, enlarged legend/credits, all alphabetic text, document metadata, and existing PDF coordinate-system dictionary. **It does have an explicit horizontal reference:** `/VP[0]/Measure/GCS` declares WGS_1984_UTM_Zone_20N, using D_WGS_1984. Its ArcMap10.2 creation date is14April2016. This is existing document metadata; no new georeference, map coordinates, overlay, geometry or exact-cell test was constructed.
+
+The visible coordinate grid and the GeoPDF WKT establish how this cartographic product is referenced horizontally. They do not establish a tidal shoreline convention or a surveyed coast. No high-/low-water definition, coastal vertical datum, shoreline capture vintage or coastal positional accuracy is printed in the map. April2016 is the map edition/production date, not a proven date of all component surveys.
+
+The [publisher's actual Dominica map-method text](https://www.cdema.org/virtuallibrary/index.php/charim-hbook/country-data/countrydocs-dom/dominica-maps) attributes roads, buildings and landmarks to Pleiades imagery and drainage to DEM derivation plus editing. Those named procedures do not specifically attribute coastline or parish linework. Consequently their image pixel resolution cannot be transferred to the shoreline's accuracy. The legend identifies dashed parish boundaries; it gives no separate source or adoption date for them.
+
+This closes the finite held-document reading question. It supports a known horizontal reference and independent cartographic context; it leaves shoreline construction and component source precision undetermined **in these read materials**, not universally absent. A useful next exact-cell assessment requires the coordinator's actual native contact/qualification context. All232 pending holds remain; no unresolved acceptance is proposed from this limitation alone.
+
+Supporting local files: `CHARIM-Dominica-Topographic-Map.pdf` SHA256 `7d854063e8583ad1dd6638be218d529af3cae47b79147d99b9225e5fd99b35c2`; `CHARIM-whole-page-text-audit.json`; `CHARIM-PDF-coordinate-system-metadata.json`; `CHARIM-topographic-full.png`; `CHARIM-topographic-legend-credit.png`.
