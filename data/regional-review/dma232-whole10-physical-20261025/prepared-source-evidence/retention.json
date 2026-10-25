@@ -1,0 +1,36 @@
+{
+  "kind": "actual-supported-source-evidence-metadata-preparation",
+  "code_head": "bfeb47e1890911d27533004ce0779459ea299a0d",
+  "selector": {
+    "commit": "40c4904ca45bae5affa3c1cd5d16bd7d48fd66e0",
+    "path": "data/ownership-selection.json"
+  },
+  "exit_code": 0,
+  "source_scope": 10,
+  "request_keys": 232,
+  "all_original_scientific_payload_values_unchanged": true,
+  "derived_added_fields": [
+    "base_reference",
+    "native_contract",
+    "native_latitudes"
+  ],
+  "owner_roster_literal_unchanged": true,
+  "original_destination": ".cache/delivery-handoff/dma232-source-evidence-20261025-01a16f2d8ad8-001",
+  "outputs": [
+    {
+      "name": "preparation.json",
+      "bytes": 262,
+      "sha256": "7e4b43e7f1867b522fefff5e2b3a2dc3c6fbadc739c14fd9502b30e610e80b9b"
+    },
+    {
+      "name": "source-evidence.json",
+      "bytes": 24554,
+      "sha256": "34a152fb5af9657ffc89b84d7426095426f5ea1e1acf8d71ce7957d579a1c120"
+    }
+  ],
+  "source_producer_executed": false,
+  "physical_rerun": false,
+  "native_diagnostic_executed": false,
+  "accepted_delta": 0,
+  "next": "Source evidence and original232 patch are ready for a single supported native diagnostic after coordinator review; no result is fabricated."
+}
