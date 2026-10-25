@@ -1,0 +1,41 @@
+{
+  "CODE": "e63c8d82f98b3e0c804aab48bd0cef73a7eab53b",
+  "DATA_stage": {
+    "commit": "e63c8d82f98b3e0c804aab48bd0cef73a7eab53b",
+    "path": "research/geography/cmr74-physical-20261025/original-stage-inputs.json",
+    "git_blob_oid": "fc30d07e734abbcd520c7ceec3014e70fc81e21f",
+    "bytes": 1924004,
+    "sha256": "f595fa7561dd0fa52b0044b4b2f79ef6f8110297dda18a275dfa81d92d643f84"
+  },
+  "DATA_common": "a285e89d0e2a7dd47a56abcbaaef15cd299a0bf8",
+  "accepted_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "worker": "01a16f2d-e91b-7416-b0f6-1b7829ab00e5",
+  "destination": ".cache/delivery-handoff/cmr74-physical-20261025-01a16f2de91b-01",
+  "config_sha256": "d1cb0bed50193a8054ac1eeeaf5bc1fa1f5a48c1b8ff50b405a5ac3e85775eb9",
+  "actual_helper_sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18",
+  "duplicate_check": "No whole-target-support.json under retained cmr* scratch directories; parent assigned exactly this one full74 continuation; no previous CMR physical run by this child. Original global native lattice observations remain distinct and are not rerun.",
+  "status": "completed stock physical; no native qualification or acceptance",
+  "exit_code": 0,
+  "resumed": false,
+  "retained_copies": [
+    {
+      "actual_execution_path": ".cache/delivery-handoff/cmr74-physical-20261025-01a16f2de91b-01/whole-target-support.json",
+      "retained_path": "research/geography/cmr74-physical-20261025/physical-001/whole-target-support.json",
+      "bytes": 1188170,
+      "sha256": "08de1ec0fc0e08151b37df29bd51ea06214af0af4e0ee297880224499c326470"
+    },
+    {
+      "actual_execution_path": ".cache/delivery-handoff/cmr74-physical-20261025-01a16f2de91b-01/execution-receipt.json",
+      "retained_path": "research/geography/cmr74-physical-20261025/physical-001/execution-receipt.json",
+      "bytes": 59046,
+      "sha256": "7ceeffcf98cb72031b26779ff90a48c869a52d797853042509dc3d29b48865d2"
+    },
+    {
+      "actual_execution_path": ".cache/delivery-handoff/cmr74-physical-20261025-01a16f2de91b-01/preparation.json",
+      "retained_path": "research/geography/cmr74-physical-20261025/physical-001/preparation.json",
+      "bytes": 545,
+      "sha256": "996ce9323d0cda084c1050db62fec3b5baf061bcdbd91ade634aa8270fac0ade"
+    }
+  ],
+  "stock_summary_path": "research/geography/cmr74-physical-20261025/stock-physical-summary.json"
+}

@@ -13,3 +13,11 @@ The original cell record body is 9,644,592 bytes, SHA-256 `692f2a5417bfbf816c472
 The supported next operation is the stock `prepare-delivery-handoff.mjs physical` phase with this immutable stage pin, all 24 original source-method inputs at `a285e89d0e2a7dd47a56abcbaaef15cd299a0bf8`, and the actual verified installed scientific runtime. It preserves the original GSHHG member and comparison method, including L1–L4 hierarchy, missing/extra reconstruction and contradictions. No physical output is claimed until the actual stock execution and receipt complete. This is one full-target operation, not 74 or per-child duplicate operations.
 
 Worker: `01a16f2d-e91b-7416-b0f6-1b7829ab00e5`. Scope: issue #2649, Team 2 continuation. Coordinator retains independent acceptance and end-to-end integration. Ordinary publication uses owned-worktree Git push only.
+
+## Completed physical preparation
+
+The one stock physical run completed with exit 0 in approximately 202 seconds. `physical-001/` retains byte-identical copies of its complete original products and receipts; the receipt paths remain the actual execution destinations. `physical-execution-provenance.json` records the unchanged custody mapping. CODE and target-stage DATA were commit `e63c8d82f98b3e0c804aab48bd0cef73a7eab53b`; all 24 common physical inputs retain their earlier immutable commit.
+
+All 74 exact target identities returned. Eleven targets have whole-source physical issues: Douala IV, Makary, Campo, Goulfey, Fotokol, Bamusso, Dizangué, Darak, Blangoua, Lokoundjé and Idabato. Across these records the method reports six missing reconstructions, five extra reconstructions, six contradictory land/water support geometries and two L2-outside-L1 hierarchy disagreements. These counts are issue occurrences, not native cells. Every originally water-bearing target has a reported contradiction, and Fotokol and Darak also have the hierarchy disagreement. No physical issue is suppressed.
+
+The 63 targets without reported whole-source issues are not automatically accepted. Actual source-family competition, territorial applicability, original physical-class rows and native coverage still require the supported full-input qualification or diagnostic. No administrative-parent or foreign-family waiver was adopted, and none of the 4,924 pending original cells received credit.

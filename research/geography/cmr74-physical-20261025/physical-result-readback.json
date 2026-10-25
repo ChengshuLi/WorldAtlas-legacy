@@ -1,0 +1,1607 @@
+{
+  "actual_stock_exit": 0,
+  "resumed": false,
+  "CODE": "e63c8d82f98b3e0c804aab48bd0cef73a7eab53b",
+  "helper_sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18",
+  "exact_stage_preserved": true,
+  "actual25_input_pins_match": true,
+  "actual202_runtime_pins_match": true,
+  "original": 4925,
+  "accepted_preserved": 1,
+  "pending": 4924,
+  "new_acceptance": 0,
+  "targets": 74,
+  "targets_with_issues": 11,
+  "issue_reason_counts": {
+    "missing_reconstruction": 6,
+    "extra_reconstruction": 5,
+    "contradictory_land_water_support": 6,
+    "L2-outside-L1": 2
+  },
+  "products": [
+    {
+      "path": "whole-target-support.json",
+      "bytes": 1188170,
+      "sha256": "08de1ec0fc0e08151b37df29bd51ea06214af0af4e0ee297880224499c326470"
+    },
+    {
+      "path": "execution-receipt.json",
+      "bytes": 59046,
+      "sha256": "7ceeffcf98cb72031b26779ff90a48c869a52d797853042509dc3d29b48865d2"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 545,
+      "sha256": "996ce9323d0cda084c1050db62fec3b5baf061bcdbd91ade634aa8270fac0ade"
+    }
+  ],
+  "rows": [
+    {
+      "target": "gb:CMR:ADM3:9386221B10114916038051",
+      "name": "Eyumodjock",
+      "owner_id": 14070,
+      "original_count": 130,
+      "accepted_count": 0,
+      "pending_count": 130,
+      "original_physical_classes": {
+        "land": 130
+      },
+      "source_id_queries": [
+        0,
+        1,
+        187126
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B10315738090869",
+      "name": "Mora",
+      "owner_id": 14071,
+      "original_count": 31,
+      "accepted_count": 0,
+      "pending_count": 31,
+      "original_physical_classes": {
+        "land": 31
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B12973403420020",
+      "name": "Mintom",
+      "owner_id": 14082,
+      "original_count": 3,
+      "accepted_count": 0,
+      "pending_count": 3,
+      "original_physical_classes": {
+        "land": 3
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B15912043956147",
+      "name": "Mudemba",
+      "owner_id": 14091,
+      "original_count": 14,
+      "accepted_count": 0,
+      "pending_count": 14,
+      "original_physical_classes": {
+        "land": 14
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B16560289387491",
+      "name": "Zhoa",
+      "owner_id": 14094,
+      "original_count": 16,
+      "accepted_count": 0,
+      "pending_count": 16,
+      "original_physical_classes": {
+        "land": 16
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B20564328998936",
+      "name": "Mozogo",
+      "owner_id": 14109,
+      "original_count": 40,
+      "accepted_count": 0,
+      "pending_count": 40,
+      "original_physical_classes": {
+        "land": 40
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B20856421798014",
+      "name": "Ngaoui",
+      "owner_id": 14111,
+      "original_count": 12,
+      "accepted_count": 0,
+      "pending_count": 12,
+      "original_physical_classes": {
+        "land": 12
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B2109018232138",
+      "name": "Douala IV",
+      "owner_id": 14114,
+      "original_count": 25,
+      "accepted_count": 0,
+      "pending_count": 25,
+      "original_physical_classes": {
+        "land": 25
+      },
+      "source_id_queries": [
+        0,
+        1,
+        2866,
+        17045,
+        18415,
+        20757,
+        30138,
+        30875,
+        37255,
+        38287,
+        45398,
+        62983,
+        73800,
+        97741,
+        111775,
+        122348,
+        122627,
+        123697
+      ],
+      "issue_reasons": {
+        "missing_reconstruction": 1,
+        "extra_reconstruction": 1
+      },
+      "query_statuses": {
+        "checked": 18
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B21402585210419",
+      "name": "Ouli",
+      "owner_id": 14115,
+      "original_count": 36,
+      "accepted_count": 0,
+      "pending_count": 36,
+      "original_physical_classes": {
+        "land": 36
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B22697281755042",
+      "name": "Nd\u00e9l\u00e9l\u00e9",
+      "owner_id": 14118,
+      "original_count": 9,
+      "accepted_count": 1,
+      "pending_count": 8,
+      "original_physical_classes": {
+        "land": 9
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B23103159398534",
+      "name": "Makary",
+      "owner_id": 14119,
+      "original_count": 48,
+      "accepted_count": 0,
+      "pending_count": 48,
+      "original_physical_classes": {
+        "land": 48
+      },
+      "source_id_queries": [
+        0,
+        1,
+        180520,
+        187312
+      ],
+      "issue_reasons": {
+        "extra_reconstruction": 1,
+        "contradictory_land_water_support": 1
+      },
+      "query_statuses": {
+        "checked": 4
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B24384451871957",
+      "name": "Garoua-Boula\u00ef",
+      "owner_id": 14122,
+      "original_count": 112,
+      "accepted_count": 0,
+      "pending_count": 112,
+      "original_physical_classes": {
+        "land": 112
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B27515073075422",
+      "name": "Salapoumb\u00e9",
+      "owner_id": 14132,
+      "original_count": 14,
+      "accepted_count": 0,
+      "pending_count": 14,
+      "original_physical_classes": {
+        "land": 14
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B28684632711326",
+      "name": "Limb\u00e9 III",
+      "owner_id": 14139,
+      "original_count": 94,
+      "accepted_count": 0,
+      "pending_count": 94,
+      "original_physical_classes": {
+        "land": 94
+      },
+      "source_id_queries": [
+        0,
+        1,
+        40247
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B29602702798924",
+      "name": "Campo",
+      "owner_id": 14146,
+      "original_count": 196,
+      "accepted_count": 0,
+      "pending_count": 196,
+      "original_physical_classes": {
+        "land": 196
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {
+        "missing_reconstruction": 1
+      },
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B32496835290273",
+      "name": "Rey-Bouba",
+      "owner_id": 14152,
+      "original_count": 84,
+      "accepted_count": 0,
+      "pending_count": 84,
+      "original_physical_classes": {
+        "land": 84
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B32586311123071",
+      "name": "Goulfey",
+      "owner_id": 14154,
+      "original_count": 92,
+      "accepted_count": 0,
+      "pending_count": 92,
+      "original_physical_classes": {
+        "land": 92
+      },
+      "source_id_queries": [
+        0,
+        1,
+        180520
+      ],
+      "issue_reasons": {
+        "contradictory_land_water_support": 1
+      },
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B33515010482661",
+      "name": "Ambam",
+      "owner_id": 14157,
+      "original_count": 41,
+      "accepted_count": 0,
+      "pending_count": 41,
+      "original_physical_classes": {
+        "land": 41
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B35442876083106",
+      "name": "Oveng",
+      "owner_id": 14161,
+      "original_count": 74,
+      "accepted_count": 0,
+      "pending_count": 74,
+      "original_physical_classes": {
+        "land": 74
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B43590333993773",
+      "name": "Djohong",
+      "owner_id": 14188,
+      "original_count": 30,
+      "accepted_count": 0,
+      "pending_count": 30,
+      "original_physical_classes": {
+        "land": 30
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B44003243479598",
+      "name": "Idenau",
+      "owner_id": 14190,
+      "original_count": 67,
+      "accepted_count": 0,
+      "pending_count": 67,
+      "original_physical_classes": {
+        "land": 67
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B45326950687577",
+      "name": "Kentzou",
+      "owner_id": 14193,
+      "original_count": 191,
+      "accepted_count": 0,
+      "pending_count": 191,
+      "original_physical_classes": {
+        "land": 191
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B46316017991506",
+      "name": "Fotokol",
+      "owner_id": 14196,
+      "original_count": 20,
+      "accepted_count": 0,
+      "pending_count": 20,
+      "original_physical_classes": {
+        "inland-water": 12,
+        "land": 8
+      },
+      "source_id_queries": [
+        0,
+        1,
+        180520
+      ],
+      "issue_reasons": {
+        "missing_reconstruction": 1,
+        "contradictory_land_water_support": 1,
+        "L2-outside-L1": 1
+      },
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B4723313213024",
+      "name": "Ako",
+      "owner_id": 14197,
+      "original_count": 35,
+      "accepted_count": 0,
+      "pending_count": 35,
+      "original_physical_classes": {
+        "land": 35
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B4855998486519",
+      "name": "Mayo-Oulo",
+      "owner_id": 14202,
+      "original_count": 10,
+      "accepted_count": 0,
+      "pending_count": 10,
+      "original_physical_classes": {
+        "land": 10
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B49027895017551",
+      "name": "Touboro",
+      "owner_id": 14204,
+      "original_count": 238,
+      "accepted_count": 0,
+      "pending_count": 238,
+      "original_physical_classes": {
+        "land": 238
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B49119882002663",
+      "name": "Mvangan",
+      "owner_id": 14205,
+      "original_count": 112,
+      "accepted_count": 0,
+      "pending_count": 112,
+      "original_physical_classes": {
+        "land": 112
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B49194032263505",
+      "name": "Buea",
+      "owner_id": 14207,
+      "original_count": 16,
+      "accepted_count": 0,
+      "pending_count": 16,
+      "original_physical_classes": {
+        "land": 16
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B49652047441621",
+      "name": "Bamusso",
+      "owner_id": 14210,
+      "original_count": 104,
+      "accepted_count": 0,
+      "pending_count": 104,
+      "original_physical_classes": {
+        "land": 104
+      },
+      "source_id_queries": [
+        0,
+        1,
+        1843,
+        14289,
+        46452,
+        82952,
+        98178,
+        131992
+      ],
+      "issue_reasons": {
+        "missing_reconstruction": 1,
+        "extra_reconstruction": 1
+      },
+      "query_statuses": {
+        "checked": 8
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B50142475459144",
+      "name": "Touroua",
+      "owner_id": 14214,
+      "original_count": 16,
+      "accepted_count": 0,
+      "pending_count": 16,
+      "original_physical_classes": {
+        "land": 16
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B52857545604026",
+      "name": "Basch\u00e9o",
+      "owner_id": 14223,
+      "original_count": 87,
+      "accepted_count": 0,
+      "pending_count": 87,
+      "original_physical_classes": {
+        "land": 87
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B54038015059464",
+      "name": "Kribi I",
+      "owner_id": 14229,
+      "original_count": 69,
+      "accepted_count": 0,
+      "pending_count": 69,
+      "original_physical_classes": {
+        "land": 69
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B54279120074144",
+      "name": "\u00c9d\u00e9a I",
+      "owner_id": 14230,
+      "original_count": 3,
+      "accepted_count": 0,
+      "pending_count": 3,
+      "original_physical_classes": {
+        "land": 3
+      },
+      "source_id_queries": [
+        0,
+        1,
+        19639,
+        32506,
+        46615,
+        48258,
+        92415,
+        128362,
+        141522,
+        145431,
+        183163
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 11
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B54934718963778",
+      "name": "Kombo-Itindi",
+      "owner_id": 14233,
+      "original_count": 300,
+      "accepted_count": 0,
+      "pending_count": 300,
+      "original_physical_classes": {
+        "land": 300
+      },
+      "source_id_queries": [
+        0,
+        1,
+        1843,
+        35681
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 4
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B55011074826496",
+      "name": "K\u00e9tt\u00e9",
+      "owner_id": 14235,
+      "original_count": 50,
+      "accepted_count": 0,
+      "pending_count": 50,
+      "original_physical_classes": {
+        "land": 50
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B55088340014824",
+      "name": "Bourha",
+      "owner_id": 14236,
+      "original_count": 33,
+      "accepted_count": 0,
+      "pending_count": 33,
+      "original_physical_classes": {
+        "land": 33
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B55243571105857",
+      "name": "Gobo",
+      "owner_id": 14237,
+      "original_count": 29,
+      "accepted_count": 0,
+      "pending_count": 29,
+      "original_physical_classes": {
+        "land": 29
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B56269474384543",
+      "name": "Dizangu\u00e9",
+      "owner_id": 14243,
+      "original_count": 16,
+      "accepted_count": 0,
+      "pending_count": 16,
+      "original_physical_classes": {
+        "land": 16
+      },
+      "source_id_queries": [
+        0,
+        1,
+        1477,
+        10162,
+        14333,
+        33399,
+        45059,
+        55904,
+        93387,
+        183163
+      ],
+      "issue_reasons": {
+        "contradictory_land_water_support": 1
+      },
+      "query_statuses": {
+        "checked": 10
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B56423298576810",
+      "name": "Galim-Tign\u00e8re",
+      "owner_id": 14244,
+      "original_count": 101,
+      "accepted_count": 0,
+      "pending_count": 101,
+      "original_physical_classes": {
+        "land": 101
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B58524800443339",
+      "name": "Darak",
+      "owner_id": 14247,
+      "original_count": 20,
+      "accepted_count": 0,
+      "pending_count": 20,
+      "original_physical_classes": {
+        "inland-water": 20
+      },
+      "source_id_queries": [
+        0,
+        1,
+        180520,
+        187312
+      ],
+      "issue_reasons": {
+        "contradictory_land_water_support": 1,
+        "L2-outside-L1": 1
+      },
+      "query_statuses": {
+        "checked": 4
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B59068819347143",
+      "name": "Zina",
+      "owner_id": 14253,
+      "original_count": 7,
+      "accepted_count": 0,
+      "pending_count": 7,
+      "original_physical_classes": {
+        "land": 7
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B6080891067496",
+      "name": "Mokolo",
+      "owner_id": 14260,
+      "original_count": 1,
+      "accepted_count": 0,
+      "pending_count": 1,
+      "original_physical_classes": {
+        "land": 1
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B62336518359995",
+      "name": "Meiganga",
+      "owner_id": 14267,
+      "original_count": 47,
+      "accepted_count": 0,
+      "pending_count": 47,
+      "original_physical_classes": {
+        "land": 47
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B6258875435792",
+      "name": "Gu\u00e9m\u00e9",
+      "owner_id": 14269,
+      "original_count": 1,
+      "accepted_count": 0,
+      "pending_count": 1,
+      "original_physical_classes": {
+        "land": 1
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B63686862212730",
+      "name": "Blangoua",
+      "owner_id": 14276,
+      "original_count": 9,
+      "accepted_count": 0,
+      "pending_count": 9,
+      "original_physical_classes": {
+        "inland-water": 1,
+        "land": 8
+      },
+      "source_id_queries": [
+        0,
+        1,
+        180520
+      ],
+      "issue_reasons": {
+        "contradictory_land_water_support": 1
+      },
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B6377751179039",
+      "name": "Mayo-Darl\u00e9",
+      "owner_id": 14277,
+      "original_count": 40,
+      "accepted_count": 0,
+      "pending_count": 40,
+      "original_physical_classes": {
+        "land": 40
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B64770974028815",
+      "name": "Mouloundou",
+      "owner_id": 14280,
+      "original_count": 391,
+      "accepted_count": 0,
+      "pending_count": 391,
+      "original_physical_classes": {
+        "land": 391
+      },
+      "source_id_queries": [
+        0,
+        1,
+        187110
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B65663858061851",
+      "name": "Ngoyla",
+      "owner_id": 14283,
+      "original_count": 13,
+      "accepted_count": 0,
+      "pending_count": 13,
+      "original_physical_classes": {
+        "land": 13
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B67102516877537",
+      "name": "Isanguele",
+      "owner_id": 14294,
+      "original_count": 614,
+      "accepted_count": 0,
+      "pending_count": 614,
+      "original_physical_classes": {
+        "land": 614
+      },
+      "source_id_queries": [
+        0,
+        1,
+        1843,
+        2169,
+        5734,
+        7800,
+        9480,
+        10180,
+        11918,
+        13121,
+        15047
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 11
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B67115727666707",
+      "name": "Waza",
+      "owner_id": 14295,
+      "original_count": 33,
+      "accepted_count": 0,
+      "pending_count": 33,
+      "original_physical_classes": {
+        "land": 33
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B69502983306293",
+      "name": "Batouri",
+      "owner_id": 14305,
+      "original_count": 1,
+      "accepted_count": 0,
+      "pending_count": 1,
+      "original_physical_classes": {
+        "land": 1
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B69899038770717",
+      "name": "Limb\u00e9 II",
+      "owner_id": 14306,
+      "original_count": 26,
+      "accepted_count": 0,
+      "pending_count": 26,
+      "original_physical_classes": {
+        "land": 26
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B70320783365301",
+      "name": "Furu-Awa",
+      "owner_id": 14307,
+      "original_count": 3,
+      "accepted_count": 0,
+      "pending_count": 3,
+      "original_physical_classes": {
+        "land": 3
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B74492421948677",
+      "name": "Figuil",
+      "owner_id": 14330,
+      "original_count": 4,
+      "accepted_count": 0,
+      "pending_count": 4,
+      "original_physical_classes": {
+        "land": 4
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B75151477977368",
+      "name": "Logone-Birni",
+      "owner_id": 14335,
+      "original_count": 87,
+      "accepted_count": 0,
+      "pending_count": 87,
+      "original_physical_classes": {
+        "land": 87
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B75894342225273",
+      "name": "Mayo-Bal\u00e9o",
+      "owner_id": 14340,
+      "original_count": 81,
+      "accepted_count": 0,
+      "pending_count": 81,
+      "original_physical_classes": {
+        "land": 81
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B77038757135535",
+      "name": "Yagoua",
+      "owner_id": 14346,
+      "original_count": 7,
+      "accepted_count": 0,
+      "pending_count": 7,
+      "original_physical_classes": {
+        "land": 7
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B7911071193470",
+      "name": "Ekondo-Titi",
+      "owner_id": 14353,
+      "original_count": 21,
+      "accepted_count": 0,
+      "pending_count": 21,
+      "original_physical_classes": {
+        "land": 21
+      },
+      "source_id_queries": [
+        0,
+        1,
+        1843,
+        14289,
+        35681,
+        82952
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 6
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B79899623199002",
+      "name": "Nwa",
+      "owner_id": 14355,
+      "original_count": 101,
+      "accepted_count": 0,
+      "pending_count": 101,
+      "original_physical_classes": {
+        "land": 101
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B80502497294933",
+      "name": "Kombo-Abedimo",
+      "owner_id": 14361,
+      "original_count": 334,
+      "accepted_count": 0,
+      "pending_count": 334,
+      "original_physical_classes": {
+        "land": 334
+      },
+      "source_id_queries": [
+        0,
+        1,
+        2169,
+        9480
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 4
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B80738734605470",
+      "name": "Maga",
+      "owner_id": 14363,
+      "original_count": 1,
+      "accepted_count": 0,
+      "pending_count": 1,
+      "original_physical_classes": {
+        "land": 1
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B817394517114",
+      "name": "B\u00e9ka",
+      "owner_id": 14366,
+      "original_count": 2,
+      "accepted_count": 0,
+      "pending_count": 2,
+      "original_physical_classes": {
+        "land": 2
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B82666420307712",
+      "name": "B\u00e9tar\u00e9-Oya",
+      "owner_id": 14370,
+      "original_count": 9,
+      "accepted_count": 0,
+      "pending_count": 9,
+      "original_physical_classes": {
+        "land": 9
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B83686298967433",
+      "name": "Douala VI",
+      "owner_id": 14378,
+      "original_count": 82,
+      "accepted_count": 0,
+      "pending_count": 82,
+      "original_physical_classes": {
+        "land": 82
+      },
+      "source_id_queries": [
+        0,
+        1,
+        1477,
+        2866,
+        4365,
+        5617,
+        17045,
+        18415,
+        21038,
+        22479,
+        43986,
+        45059,
+        47973,
+        53716,
+        73289,
+        73535,
+        73558,
+        88154,
+        96207,
+        132583,
+        155339
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 21
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B83688438968911",
+      "name": "Kontcha",
+      "owner_id": 14379,
+      "original_count": 11,
+      "accepted_count": 0,
+      "pending_count": 11,
+      "original_physical_classes": {
+        "land": 11
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B89412400808700",
+      "name": "Lokoundj\u00e9",
+      "owner_id": 14392,
+      "original_count": 25,
+      "accepted_count": 0,
+      "pending_count": 25,
+      "original_physical_classes": {
+        "land": 25
+      },
+      "source_id_queries": [
+        0,
+        1,
+        16500,
+        19639,
+        32506,
+        32975,
+        35244,
+        46615,
+        48258,
+        92415,
+        97636,
+        111428,
+        128362,
+        141522,
+        145431,
+        163126
+      ],
+      "issue_reasons": {
+        "missing_reconstruction": 1,
+        "extra_reconstruction": 1
+      },
+      "query_statuses": {
+        "checked": 16
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B8963081327305",
+      "name": "Mogod\u00e9",
+      "owner_id": 14393,
+      "original_count": 43,
+      "accepted_count": 0,
+      "pending_count": 43,
+      "original_physical_classes": {
+        "land": 43
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B92648663236889",
+      "name": "Mouanko",
+      "owner_id": 14399,
+      "original_count": 29,
+      "accepted_count": 0,
+      "pending_count": 29,
+      "original_physical_classes": {
+        "land": 29
+      },
+      "source_id_queries": [
+        0,
+        1,
+        1477,
+        4246,
+        14333,
+        20199,
+        22479,
+        22832,
+        45059,
+        47973,
+        53716,
+        60503,
+        68181,
+        68782,
+        69333,
+        73844,
+        79935,
+        88154,
+        112895,
+        120085,
+        128476,
+        132583,
+        155339,
+        183163
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 24
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B93864141471804",
+      "name": "Bibemi",
+      "owner_id": 14404,
+      "original_count": 75,
+      "accepted_count": 0,
+      "pending_count": 75,
+      "original_physical_classes": {
+        "land": 75
+      },
+      "source_id_queries": [
+        0,
+        1,
+        183144
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B9418579396637",
+      "name": "Idabato",
+      "owner_id": 14405,
+      "original_count": 124,
+      "accepted_count": 0,
+      "pending_count": 124,
+      "original_physical_classes": {
+        "land": 124
+      },
+      "source_id_queries": [
+        0,
+        1,
+        2169
+      ],
+      "issue_reasons": {
+        "missing_reconstruction": 1,
+        "extra_reconstruction": 1
+      },
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B95656062401724",
+      "name": "Ka\u00e9l\u00e9",
+      "owner_id": 14411,
+      "original_count": 3,
+      "accepted_count": 0,
+      "pending_count": 3,
+      "original_physical_classes": {
+        "land": 3
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B95759817871556",
+      "name": "Banyo",
+      "owner_id": 14413,
+      "original_count": 48,
+      "accepted_count": 0,
+      "pending_count": 48,
+      "original_physical_classes": {
+        "land": 48
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B97417747097064",
+      "name": "Akwaya",
+      "owner_id": 14420,
+      "original_count": 18,
+      "accepted_count": 0,
+      "pending_count": 18,
+      "original_physical_classes": {
+        "land": 18
+      },
+      "source_id_queries": [
+        0,
+        1,
+        187126
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 3
+      }
+    },
+    {
+      "target": "gb:CMR:ADM3:9386221B97848366185586",
+      "name": "Kribi II",
+      "owner_id": 14424,
+      "original_count": 16,
+      "accepted_count": 0,
+      "pending_count": 16,
+      "original_physical_classes": {
+        "land": 16
+      },
+      "source_id_queries": [
+        0,
+        1
+      ],
+      "issue_reasons": {},
+      "query_statuses": {
+        "checked": 2
+      }
+    }
+  ],
+  "limits": [
+    "Source-relative whole-target physical result; not native-cell qualification or territorial approval.",
+    "Zero reported whole-target issues is not automatic cell acceptance; all source/selected/negative and native context still required.",
+    "Existing accepted Nd\u00e9l\u00e9l\u00e9 key remains preserved and is not assigned new credit."
+  ]
+}
