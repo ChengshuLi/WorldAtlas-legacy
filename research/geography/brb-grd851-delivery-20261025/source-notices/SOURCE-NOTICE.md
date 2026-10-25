@@ -1,0 +1,25 @@
+# BRB289 / GRD562 source notice
+
+Reusable supplement for the exact851 authority and its subsequent selected-output contribution. Source identities, represented dates, recorded licenses and contradictory metadata remain unchanged. `notice-bindings.json` identifies all11BRB and7GRD members, their two selected aggregates, and immutable input/result paths. The separate BRB20 and GRD273 interpretation contexts are preserved and receive no acceptance from this notice.
+
+## Barbados
+
+The BRB contribution derives from geoBoundaries gbOpen's represented2005 parish source, which identifies **Golbez, “Barbados parishes blank.png”** (original upload27December2005), via Wikimedia Commons. Attribution and source: [original file page](https://commons.wikimedia.org/wiki/File:Barbados_parishes_blank.png). The retained license choice is [Creative Commons Attribution2.5 Generic](https://creativecommons.org/licenses/by/2.5/); the source offers this alongside other choices. No change of license choice is implied.
+
+Changes include upstream digitization and simplified-product preparation, followed by WorldAtlas's source-relative cell qualification and derived authority records. The result is not the original raster or an unmodified boundary survey. geoBoundaries release/source locators and exact consumed-byte hashes are in the binding file. Credit does not imply endorsement by Golbez, Wikimedia or geoBoundaries.
+
+## Grenada
+
+Contains information from **[OpenStreetMap contributors](https://www.openstreetmap.org/copyright)**, made available under the **[Open Database License1.0](https://opendatacommons.org/licenses/odbl/1-0/)**, through the represented2017 geoBoundaries GRDADM1 product. Preserve the ODbL terms for the OSM-derived data component; other independent source components keep their own notices and terms.
+
+The original GRD metadata literally names `OpenStreetMap, Wikipedia`, labels `boundaryLicense` as `Creative Commons Attribution-ShareAlike 2.0`, and records `licenseDetail: nan`. Those fields remain source observations. The archive's own `License.png` distinguishes OSM **data** under ODbL from OSM **documentation** under [CC BY-SA2.0](https://creativecommons.org/licenses/by-sa/2.0/). The latter is not substituted for the data license. No specific Wikipedia page/revision or contribution is identified by the archive; none is invented or declared cleared. The exact disagreement and screenshot hash are retained in `notice-bindings.json`.
+
+WorldAtlas uses the consumed simplified product to derive source-relative membership/qualification and an exact562-cell GRD authority contribution. The [machine-readable source evidence and input bindings](https://github.com/ChengshuLi/WorldAtlas/blob/d0650b7ec0b95c6401a035a6a2094fc2cb54889d/research/geography/brb-grd-physical18-20261025/native-input-plan/source-evidence.json), [exact851 patch](https://github.com/ChengshuLi/WorldAtlas/blob/d0650b7ec0b95c6401a035a6a2094fc2cb54889d/research/geography/brb-grd-physical18-20261025/native-input-plan/native-patch.exact851.json), and [authority](https://github.com/ChengshuLi/WorldAtlas/blob/7c1101b1ee311e0563430065d787c3aea7ed97df/research/geography/brb-grd-physical18-20261025/authority851-result/constructor-result.json) are retained at immutable revisions. GRD is owner7116; BRB is owner7113. The source/method/result locators distinguish their contributions; this notice does not relicense BRB, the whole atlas, software, or unrelated source material under ODbL.
+
+For the final selected output, retain this notice beside its distribution/metadata and add the coordinator's actual immutable output locator. That locator is intentionally pending the authorized composition; it is not fabricated here. Existing input/method records and authority are not a substitute for recording the final output actually distributed. The ODbL derivative-access route can use machine-readable alterations/methods; this notice does not require uploading the raw source archive or assert that every future output automatically satisfies that route.
+
+## Shared physical and selected-base context
+
+Physical evidence uses GSHHG2.3.7 full-resolution data, attributed to Paul Wessel and Walter H.F.Smith in its supplied README. The exact retained `gshhg/LICENSE.TXT` and `gshhg/README.TXT` accompany this supplement unchanged; retain their own notices, qualifications and use/advertising terms. They are notices, not the source archive or global physical geometry. The license's version wording and reference to COPYINGv3 are preserved without inventing a missing file or holder. No maintainer contact is required or made by this packet.
+
+The selected aggregate records retain their original underlying-source provenance. Existing repository [Natural Earth attribution](https://www.naturalearthdata.com/about/terms-of-use/) and other source notices remain applicable to their own contributions. This supplement supplies source credit and exact derivation references, not blanket redistribution clearance, a new scientific acceptance, or a sovereign-boundary claim.

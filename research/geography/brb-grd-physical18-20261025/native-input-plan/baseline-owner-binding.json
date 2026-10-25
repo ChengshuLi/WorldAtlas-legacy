@@ -1,0 +1,57 @@
+{
+  "selector": {
+    "commit": "e4a8414b25d88c592f1770fc67196a0a746fb0d9",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "bytes": 2286,
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "native_manifest": {
+    "commit": "e4a8414b25d88c592f1770fc67196a0a746fb0d9",
+    "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json",
+    "mode": "100644",
+    "git_blob_oid": "31d970d0fe2bf8c899f020aad09a3826ea451790",
+    "bytes": 252447,
+    "sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba"
+  },
+  "owner_roster": {
+    "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+    "path": "data/canonical-grid/bounds.json.gz",
+    "mode": "100644",
+    "git_blob_oid": "9c44513df64995d417dd3832ae604c703e84a506",
+    "bytes": 2663523,
+    "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f",
+    "decoded_bytes": 11096191,
+    "decoded_sha256": "a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428"
+  },
+  "exact_owners": [
+    {
+      "id": "atlas:territory:BRB",
+      "index": 7113,
+      "bounds": [
+        87643.04051055555,
+        121283.35645046107,
+        87809.80721611112,
+        121498.62346175061
+      ],
+      "province_id": "framework:province:barbados:0db4db6bb9a2",
+      "province_index": 810,
+      "canonical_index": 7113
+    },
+    {
+      "id": "atlas:territory:GRD",
+      "index": 7116,
+      "bounds": [
+        86088.17765888889,
+        121888.20739620508,
+        86354.64026833333,
+        122287.57593072126
+      ],
+      "province_id": "framework:province:grenada:2a95c43503c6",
+      "province_index": 1891,
+      "canonical_index": 7116
+    }
+  ],
+  "native_run": false
+}

@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "commit": "23c0842ae95eed5d6572447f1b935c5007670e28",
+    "mode": "100644",
+    "git_blob_oid": "c75a6ffecb61af02ce4d64ae89dcea6df197bd43",
+    "bytes": 2263,
+    "sha256": "42c997644d05449c934f85daf235ff45ed185294f8767eb04e9efe555460f4c5"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "path": "research/geography/brb-grd-physical18-20261025/authority851-result/original-rule-preimage.json",
+        "commit": "7c1101b1ee311e0563430065d787c3aea7ed97df",
+        "mode": "100644",
+        "git_blob_oid": "ab442af7d7df78ccb1b660503a45088e6b2bf57e",
+        "bytes": 718,
+        "sha256": "b059f8791241c2065c466844112e6f87e37c7142c36e773c83753a824542d892"
+      },
+      "source_authority": {
+        "path": "research/geography/brb-grd-physical18-20261025/authority851-result/authority-binding.json",
+        "commit": "7c1101b1ee311e0563430065d787c3aea7ed97df",
+        "mode": "100644",
+        "git_blob_oid": "8d3341485264b44a1ce3690a669f99d4a72c6f9e",
+        "bytes": 721,
+        "sha256": "c58714bef130376ac3991b2fe2aeeb02410f078bcd762f7f3ce8a00a19e15c5b"
+      },
+      "ledger": {
+        "path": "research/geography/brb-grd-physical18-20261025/authority851-result/constructor-result.json",
+        "commit": "7c1101b1ee311e0563430065d787c3aea7ed97df",
+        "mode": "100644",
+        "git_blob_oid": "454ec1dd8f276b2c011385324a6900fc589ca7e2",
+        "bytes": 16719,
+        "sha256": "f9b6cca222cd9ba6d10028f684feff0bda1e505eb4935572227bdfb3d2e08f1a"
+      },
+      "native_patch": {
+        "bytes": 40599,
+        "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+        "git_blob_oid": "b3517eefcc21253ead55ee24ec0ea3cb37969214",
+        "mode": "100644",
+        "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/native-patch.exact851.json",
+        "sha256": "e14ab7b9552a57cb8dd2998a85561580d349621a43942718bd4da150836fd404"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "original": 289,
+  "accepted": 0,
+  "all_holds_preserved": true,
+  "counts": {
+    "Saint Lucy": 75,
+    "Saint Andrew": 7,
+    "Saint Peter": 13,
+    "Saint James": 32,
+    "Saint John": 7,
+    "Saint Philip": 46,
+    "Saint Michael": 66,
+    "Christ Church": 43
+  },
+  "target_lineage": {
+    "id": "atlas:territory:BRB",
+    "index": 7113,
+    "bounds": [
+      87643.04051055555,
+      121283.35645046107,
+      87809.80721611112,
+      121498.62346175061
+    ],
+    "province_id": "framework:province:barbados:0db4db6bb9a2",
+    "province_index": 810,
+    "name": "Barbados",
+    "reference_owner": "Barbados",
+    "source_id": "atlas:territory:BRB",
+    "location_basis": "Compact source country/territory",
+    "source_atoms": [
+      "gb:BRB:ADM1:18249212B1074587975674",
+      "gb:BRB:ADM1:18249212B15509533795694",
+      "gb:BRB:ADM1:18249212B3001356606985",
+      "gb:BRB:ADM1:18249212B32162439805208",
+      "gb:BRB:ADM1:18249212B34902747010981",
+      "gb:BRB:ADM1:18249212B50725355749374",
+      "gb:BRB:ADM1:18249212B61473051882148",
+      "gb:BRB:ADM1:18249212B6474479975640",
+      "gb:BRB:ADM1:18249212B80874946619424",
+      "gb:BRB:ADM1:18249212B83249722744294",
+      "gb:BRB:ADM1:18249212B83355432632114"
+    ]
+  },
+  "source_corpus_scope": "original complete retained source vector, including unmapped features",
+  "within_target_parish_competition": false,
+  "source_body": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb_reaudit/brb-adm1-retained.geojson",
+    "bytes": 12184,
+    "sha256": "0a324c3112b9277fd3c986bb87485dcd434fad600b6d49e65b5f685e361757f9",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+    },
+    "read_scope": "properties only; no geometry predicate"
+  },
+  "method": "exact lookup of retained JSON intervals and source identities; no new observation"
+}

@@ -1,0 +1,90 @@
+{
+  "actual_code_commit": "d835ced91360655321accfca39fc44f5513ddd7c",
+  "data_input_locators": {
+    "version": 1,
+    "source_evidence": {
+      "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+      "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "d0650b7ec0b95c6401a035a6a2094fc2cb54889d",
+      "path": "research/geography/brb-grd-physical18-20261025/native-input-plan/native-patch.exact851.json"
+    }
+  },
+  "original_execution_destination": ".cache/delivery-handoff/brb-grd-authority851-20261025-01a16f2e",
+  "accepted_selector_observation_commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+  "files": [
+    {
+      "path": "AUTHORITY851-HANDOFF.md",
+      "bytes": 4917,
+      "sha256": "0daac00d413151431732199b7cc3a9495d02c1a03d501dc30f63dc7b130b81e4"
+    },
+    {
+      "path": "accepted-main-ref.json",
+      "bytes": 379,
+      "sha256": "e96a02bf4cbdb5fcc99541503bbe2024acb5177c7775426e98ec935aa6a821af"
+    },
+    {
+      "path": "accepted-selector-code-binding.json",
+      "bytes": 2249,
+      "sha256": "01d39223c93669e6279df22d5b275c6f3145b6da1f35b8369f6069c8294a9aa4"
+    },
+    {
+      "path": "authority-binding.json",
+      "bytes": 721,
+      "sha256": "c58714bef130376ac3991b2fe2aeeb02410f078bcd762f7f3ce8a00a19e15c5b"
+    },
+    {
+      "path": "authority-invocation.json",
+      "bytes": 1837,
+      "sha256": "070f052a09f5120aca0b97039aa649ee803252e67fd283f3fe40bac78205a1a5"
+    },
+    {
+      "path": "authority-readback.json",
+      "bytes": 2806,
+      "sha256": "adf7c405aeb1106cb9317ebbd0cb172e6b5e71b58033e0111bcce6eff53de89f"
+    },
+    {
+      "path": "authority-terminal.json",
+      "bytes": 1896,
+      "sha256": "864cd0f9e677484bba78a2e6e49e7259427f40bae723f207180103c0c91f26c2"
+    },
+    {
+      "path": "constructor-result.json",
+      "bytes": 16719,
+      "sha256": "f9b6cca222cd9ba6d10028f684feff0bda1e505eb4935572227bdfb3d2e08f1a"
+    },
+    {
+      "path": "current-BRB-owners53002.json",
+      "bytes": 79509,
+      "sha256": "4cbbc6b69b8bfe59ede407785308787d4724a9748b0d11a111e4e5eecbe88da5"
+    },
+    {
+      "path": "current-GRD-owners53002.json",
+      "bytes": 130041,
+      "sha256": "77080cda29192a856bbc12ccb2b13c3a90ce5c2a0dd467019748888ec34cd57c"
+    },
+    {
+      "path": "current-owner-execution.json",
+      "bytes": 1976,
+      "sha256": "c00e81259837d4741055e22e91bddd5c5a0abea4f6f0c92011a3b7d84f7e0979"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 2806,
+      "sha256": "ce4afdbefe0e68c74da7b1510e1390c9e0e5bc2ea7f280bdfc093389502ed951"
+    },
+    {
+      "path": "original-rule-preimage.json",
+      "bytes": 718,
+      "sha256": "b059f8791241c2065c466844112e6f87e37c7142c36e773c83753a824542d892"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 501,
+      "sha256": "c627bac6a68913e963b92ba4827e0710e90e863a041604965e5a0e0b5eb03cda"
+    }
+  ],
+  "accepted_delta": 0,
+  "holds_changed": false
+}

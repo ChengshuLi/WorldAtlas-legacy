@@ -1,0 +1,93 @@
+{
+  "kind": "BRB289-reference-system-and-source-applicability-addendum",
+  "created_utc": "2026-10-24T21:04:06.589157+00:00",
+  "scope": {
+    "original_pending_land": 289,
+    "accepted_by_this_work": 0,
+    "all_holds_preserved": true
+  },
+  "inputs": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb_reaudit/selected-owner-observation.json",
+      "bytes": 76890,
+      "sha256": "5055127249a53f4cf7d97ccc8146a4f1cf9d4aea33e3005cbc32ea00a27a192b"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb_reaudit/brb289-exact-pending-keys.json",
+      "bytes": 227668,
+      "sha256": "bf2a02b8f4c31f344df61be0005874d9480fc71f67aba2f7c1c8598ff5de234c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb_reaudit/brb289-recorded-context-and-sheet-coverage.json",
+      "bytes": 10575,
+      "sha256": "20c108c9f04d358e2e136ae29176ba3d615e3a798ba442961f35d3b79e4dc3a1"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb_reaudit/native-coordinate-method-readonly.json",
+      "bytes": 11362,
+      "sha256": "e008f225f07fa63c5c28da3ae78200b850dff684ab2b7f6d48d83cf083953548"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb_reaudit/proj-reference-definitions-readonly.json",
+      "bytes": 9436,
+      "sha256": "4be8c8d01cec7924c2adb452632350ed78a4f33ca14cfb76631621093835dc7a"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/brb_reaudit/ICZM-Plan_Vol2_Seg3_Final.pdf",
+      "bytes": 22768070,
+      "sha256": "6c9596cf9686220a6ecdcfb8eb470baea552d9baeb88b718b7a2966cd340b7cb"
+    }
+  ],
+  "native_method": {
+    "consumed_code_commit": "5d717903d392f6f5f910aed44440603e664b824f",
+    "git_tree_membership_verified": true,
+    "formula_as_read": "(360*x + 180 - 180*size)/size",
+    "size": 262166,
+    "method": "native-linear-evenodd-first-owner-v1",
+    "manifest_sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba",
+    "original_binding_matches_manifest_size_method_and_sha": true,
+    "original_binding_matches_manifest_latitude_descriptor": true,
+    "observation_matches_manifest_latitude_descriptor": true,
+    "observation_manifest_sha_matches": true,
+    "interpretation": "Recorded x and pinned size determine native ideal rational center longitude. The observer records authoritative consumed latitude values. A missing longitude output column is not missing geographic information. Code lines 807/891 document and use the rational longitude; no separate exported decoder was claimed. Native-grid.js was read as text, not run."
+  },
+  "grid_definition": {
+    "map_evidence": "Previously visually inspected PartD map legend: black Barbados National Grid EPSG21292; red UTM Zone21 WGS84; scale1:18000. Northern UTM identity EPSG32621 is interpretation from location and definition, not a claimed printed EPSG code.",
+    "implementation_source": {
+      "pyproj": "3.7.2",
+      "proj": "9.5.1",
+      "EPSG_VERSION": "v11.022",
+      "EPSG_DATE": "2024-11-05",
+      "database_sha256": "ec8cea0a5490a6f9247d9063645049e0f93fb83307067ebfc859187f0539e67e"
+    },
+    "black_grid": "EPSG21292 Barbados1938 / Barbados National Grid, Transverse Mercator, Clarke1880(RGS), EPSG4212 geographic datum. Conversion19943 records replacement of BWI grid after1983.",
+    "parameter_caution": "19943 stores latitude13.1035 and longitude-59.3335 in EPSG9110 sexagesimal DMS units; these are not decimal degrees. No conversion of these values was performed.",
+    "red_grid": "EPSG32621 WGS84 / UTM21N definition uses Transverse Mercator; central meridian-57 degrees, scale0.9996, false easting500000m and northing0m.",
+    "datum_operation_metadata": "EPSG15793 Barbados1938 to WGS84(1) has accuracy field3m, description2.5m and derivation at two stations in2004, versionUKHO-Brb. Separate ESRI108376 is also present. Neither proves the map producer selected it. No operation selected or executed.",
+    "external_primary_implementation_confirmation": "https://sis.apache.org/tables/CoordinateReferenceSystems.html lists EPSG21292 and EPSG4212. This currently reports EPSG13.101; it was not substituted for the pinned local database."
+  },
+  "official_report_method_reading": {
+    "url": "https://coastal.gov.bb/wp-content/uploads/2023/04/ICZM-Plan_Vol2_Seg1_Final.pdf",
+    "pages": "Printed35,37,53,55,56,59,76; PDF pages46,48,64,66,67,70,87 zero-indexed",
+    "summary": "Coastal stability follows CRMP Shoreline Change Study (Baird2015c); this citation is not a universal survey epoch. Erosion hazards use historical profiles, 0.6m LD shoreline extrema and setbacks over a50-year planning period. Unmeasured beaches require judgment; interpolation is less reliable away from stations. Severe storms and subsurface uncertainty remain; defence condition was not assessed. Cliff rates use historical aerial comparisons and cannot represent individual failures. The2015 LiDAR date explicitly supports landslide DEM analysis. Beach valuation trends use10\u201330years of surveys depending on site. These definitions do not establish a legal parish coast or a common acquisition date for every line.",
+    "scope_limit": "No horizontal datum transformation recipe or numerical coastline positional accuracy was identified in the reviewed PartA passages or previously read PartD legends. This is a bounded reading result, not an assertion that every underlying study lacks these details."
+  },
+  "correction_to_prior_coverage_note": "All289 remain unassigned to exact sheets in work performed. This is an execution state, not evidence of scientific intractability or a need for newly surveyed coordinates. A future controlled bridge can decode native longitude, retain the normative recorded latitude and use an explicitly chosen reference system to locate relevant published sheet coverage. That placement alone would not establish line applicability or cell qualification.",
+  "next_dependency": {
+    "routine": "Coordinator-authorized coordinate/reference bridge and documented sheet lookup, with no new geography observation presumed necessary merely to recover longitude. Red WGS84 grid offers a path that need not silently treat black Barbados1938 coordinates as WGS84.",
+    "scientific": "After placement, inspect the relevant actual line class and source epoch/uncertainty where it matters for the original source-relative claim. Preserve distinctions between physical coast, engineered coast, hazard/setback and management limits. Retained evidence must determine whether more specific source qualification is necessary; no universal survey or legal coastline certificate required.",
+    "not_performed": [
+      "longitude calculation for any cell",
+      "coordinate transformation",
+      "sheet intersection or manual georeference",
+      "native or geometry rerun",
+      "source replacement",
+      "acceptance or credit"
+    ]
+  },
+  "access_state": {
+    "EPSG_webpage": "Direct EPSG21292 page earlier returned tool InternalError; no official page body acquired. Local read-only definitions and Apache implementation catalogue supplied reference metadata. This is not an access-denial bypass.",
+    "previous_stopped_routes": "No retries of stopped CZMU annex or ArcGIS targets; no browser/CUA restart.",
+    "pending_not_denied": "Coordinate bridge remains outside this read-only task, not denied or executed."
+  }
+}
