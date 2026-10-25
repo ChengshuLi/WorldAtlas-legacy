@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "4e4ee7e64e2a25886ebae8a58197dd992d3bbdba",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "add346bc116cafb182439bd489d155feb3e8730e",
+    "bytes": 2298,
+    "sha256": "b739f8be456e11850633746f031d4ce237a2451ef887fa24baa841290f24b229"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "4cc083133e1115bd9c428487a77e509c8f602112",
+        "path": "coordination/engineering/estonia-native-repair-20261017/native-authority-002/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "bbc5c46999c6ea21a57e9646eae953811d2b55c3",
+        "bytes": 748,
+        "sha256": "9fb79c0f54264999028e2dcd0705b1852d335ae8a16b1d5757000f74a0193304"
+      },
+      "source_authority": {
+        "commit": "4cc083133e1115bd9c428487a77e509c8f602112",
+        "path": "coordination/engineering/estonia-native-repair-20261017/native-authority-002/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "1f9fd7dd01354712315348125143c2f86ee5d81c",
+        "bytes": 751,
+        "sha256": "5df5769c2e37e39b16ffa4b86fd33c0a741a28e3553f151c0ce4ae5e0e0fbec4"
+      },
+      "ledger": {
+        "commit": "4cc083133e1115bd9c428487a77e509c8f602112",
+        "path": "coordination/engineering/estonia-native-repair-20261017/native-authority-002/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "a79545cee76651b08a1484765475613742ddec9b",
+        "bytes": 1250076,
+        "sha256": "eebac2a5031c9d4e561ff8d9fc2a769bfa6bf5f13d92bf029422f6377a1b4f3e"
+      },
+      "native_patch": {
+        "bytes": 12371,
+        "commit": "7a3ea04ac5b8a95b76f7a20e28a401fc1a9b1bad",
+        "git_blob_oid": "1af2caa2e225295e60ddecfd322058e0ab553dd4",
+        "mode": "100644",
+        "path": "coordination/engineering/estonia-native-repair-20261017/qualified-native-inputs-002/native-patch.json",
+        "sha256": "f23712b226ba00cb7d5b6fae3ece7c0eb54f072f3d7a47bc9618ce56e6dd9594"
+      }
+    }
+  ]
+}

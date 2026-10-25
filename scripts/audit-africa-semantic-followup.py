@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Inventory current Africa semantics; network metadata is evidence, never approval.
-Only writes the new Africa follow-up ledger/document. --fetch refreshes source
+Only writes the Africa follow-up machine ledger. --fetch refreshes source
 metadata read-only; the default reuses its already retained response evidence.
 No active geography, historical claim, prepared asset or older review is changed.
 """
 import argparse,collections,gzip,hashlib,json,pathlib,re,statistics,urllib.request,urllib.parse,concurrent.futures,datetime,html,io
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-D=ROOT/'data'; OUT=D/'geographic-semantic-followup/africa.json.gz'; DOC=ROOT/'docs/semantic-followup/AFRICA.md'
+D=ROOT/'data'; OUT=D/'geographic-semantic-followup/africa.json.gz'
 def read(p):
  p=ROOT/p
  return json.load(gzip.open(p,'rt') if p.suffix=='.gz' else open(p))
@@ -233,27 +233,5 @@ def main():
  OUT.parent.mkdir(parents=True,exist_ok=True); compressed=io.BytesIO()
  with gzip.GzipFile(fileobj=compressed,mode='wb',filename='',mtime=0) as handle:handle.write((json.dumps(result,ensure_ascii=False,indent=2)+'\n').encode())
  OUT.write_bytes(compressed.getvalue())
- lines=['# Africa semantic follow-up','',f"Current pinned scope: **{len(locrows):,} locations, {len(groups):,} parent groups, {len(owner_ids)} reference-owner labels and {len(prows)} source-policy profiles**. Every current ID appears in the companion JSON, with an exact parent chain, source/geometry hashes and retained open decisions.",'','This is an exhaustive current inventory and a country-specific source-policy review, **not completed semantic approval of every location**. All branch/local purpose, city extent and named-island completeness reviews remain open. No active geography, dated claim, grid or earlier evidence ledger was changed.','', '## Top-down coverage','', '| Tier | Current units | Decision scope |','| --- | ---: | --- |']
- for level in ['continent','subcontinent','region','area','province']:
-  lines.append(f"| {level.title()} | {result['summary']['tiers'].get(level,0):,} | {tier[level]} All branches remain open. |")
- lines+= [f'| Location | {len(locrows):,} | Source roles, vintage, stable IDs, footprint hashes, exact five-parent chain and all available machine flags. Local purpose remains open. |','', '## Regional batches','', '| Subcontinent | Region | Areas | Provinces | Locations |','| --- | --- | ---: | ---: | ---: |']
- for g in sorted((x for x in groups if x['level']=='region'),key=lambda x:x['name']):
-  down=[x for x in groups if g['id'] in chain(x['id'])]; cnt=collections.Counter(x['level'] for x in down)
-  lines.append(f"| {ix[g['parent_id']]['name']} | {g['name']} | {cnt['area']} | {cnt['province']} | {len(descendants(g['id'])):,} |")
- lines+=['','## Country-specific policy decisions','', 'Counts below cover only Africa-parented locations, including associated islands of transcontinental/reference owner groups. A country-wide owner count is never substituted for the Africa batch count. Metadata and candidate links are retained in the JSON with retrieval status, full successful response and response checksum. Unavailable endpoints remain recorded as failures.','', '| Profile | Africa locations | Active role(s) | Review decision |','| --- | ---: | --- | --- |']
- for p in prows:lines.append('| '+ ' | '.join([p['iso'],str(p['location_count']),'; '.join(f'{k}: {v}' for k,v in p['active_roles'].items()),p['assessment']]).replace('|', '|')+' |')
- lines+=['','## Inspected source references','', '| Profile | Selected source | Upstream evidence | Candidate role decision |','| --- | --- | --- | --- |']
- for p in prows:
-  upstream=next((x for x in upstream_research if x.get('iso')==p['iso'] and x['key'].startswith('hdx:')),None)
-  description=f"[OCHA/HDX metadata]({upstream['url']}) — {upstream['status']}" if upstream else 'No OCHA/HDX response retained'
-  lines.append(f"| {p['iso']} | [Pinned layer]({p['policy'].get('source_url','')}) | {description} | {p['finer_candidate_assessment']} |")
- lines+=['','## Publisher role, completeness and vintage conflicts','', 'These are source-contract findings. Current publisher feature counts, pinned geometry counts and atlas location counts are different inventories. Differences require member crosswalks; counts alone do not authorize replacements.','', '| Profile | Published tier inventory | Cautions |','| --- | --- | --- |']
- for p in prows:
-  if p['publisher_tier_declarations'] or p['source_cautions']:
-   claims='; '.join(f"{d['level']}: {d['count']} {d['declared_role']}" for d in p['publisher_tier_declarations'])
-   lines.append(f"| {p['iso']} | {claims} | {'; '.join(p['source_cautions']) or 'No named caution extracted; this does not certify the source or descendants.'} |")
- lines+=['','## Reference/fallback groups without a dedicated policy','', '| Reference ISO | Locations | Owners | Review decision |','| --- | ---: | --- | --- |']
- for f in fallback:lines.append(f"| {f['reference_iso']} | {len(f['location_ids'])} | {', '.join(f['owners'])} | {f['assessment']} |")
- lines+=['','## Evidence and what remains','',f"Fresh source research: {result['summary']['source_metadata_inspected']} inspected layer metadata responses, {result['summary']['source_metadata_unavailable']} unavailable layer endpoints; plus {result['summary']['upstream_responses_inspected']} inspected upstream/physical/reference responses and {result['summary']['upstream_responses_unavailable']} unavailable upstream endpoints. Source metadata is evidence about the layer, not a substitute for complete local geometry/settlement identity inspection.",'',f"Machine screening identifies {result['summary']['locations_with_flags']:,} current African locations with one or more flags. Each exact affected ID and flag appears in the JSON. A clean screening result does not close a location. Original Africa evidence refers to {old.get('inspection',{}).get('valid_current_polygons',0):,} polygons and {len(old['inventory']['group_ids']):,} groups; the companion ledger lists every parent ID gained/lost since that snapshot.",'','Concrete next changes are separately enumerated for Comoros, São Tomé/Príncipe, Sierra Leone, Guinea, Mali, Lesotho, Morocco, Malawi, Togo, Seychelles, Madagascar, Mozambique and Uganda; Namibia retains its complete source-quality dossier and blockers. Candidate metadata does not define new member IDs or approve a split. Every proposed migration needs whole-land coverage, stable source member IDs, named city/rural purpose, licensing and record-preserving crosswalks.','', '## Reproduce','', 'Run `python scripts/audit-africa-semantic-followup.py` to reconcile the current committed atlas while reusing retained metadata. Add `--fetch` only to repeat public read-only metadata research. The script writes only this document and `data/geographic-semantic-followup/africa.json.gz`; successful assertions establish exhaustive membership coverage, not semantic closure. The complete ledger uses deterministic gzip (mtime 0), keeps every ID/evidence field, and belongs in Git rather than the website deployment package.','', 'Input hashes and all per-source URL/checksum/retrieval outcomes are retained in the [companion ledger](../../data/geographic-semantic-followup/africa.json.gz). Existing source assessments: [global granularity review](../GLOBAL_GRANULARITY_REVIEW.md), [region review](../REGION_SEMANTIC_REVIEW.md), [semantic closure state](../GLOBAL_SEMANTIC_CLOSURE.md), and [frozen Africa decisions](../../data/geographic-decisions/africa.json).']
- DOC.parent.mkdir(parents=True,exist_ok=True);DOC.write_text('\n'.join(lines)+'\n');print(json.dumps(result['summary'],indent=2))
+ print(json.dumps(result['summary'],indent=2))
 if __name__=='__main__':main()

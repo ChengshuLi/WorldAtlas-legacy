@@ -1,0 +1,108 @@
+{
+  "kind": "argentina-held-source-index-resolution-v1",
+  "scope": "global-to-local feature identity only; no seven-component source-fitness finding",
+  "source_feature_roster": {
+    "commit": "b3914bbdd2b6fdcb5e4ae7c860494425fa2c27ea",
+    "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-feature-roster.json.gz",
+    "bytes": 1844315,
+    "sha256": "87f2d47e104b3af640351e747d8300d0068a1be23caab9e80558c3f8914eb4aa",
+    "git_blob_oid": "e6e380ec13cd4bcc1d24399a76bfa85ca5805b26",
+    "decoded_bytes": 13496995,
+    "decoded_rows": 73567,
+    "index_semantics": "source_index is one-based global row index; ordinal is zero-based within source_id"
+  },
+  "index_semantics_pin": {
+    "commit": "b3914bbdd2b6fdcb5e4ae7c860494425fa2c27ea",
+    "path": "coordination/engineering/global-current-cell-work-queue-20261014/README.md",
+    "bytes": 9380,
+    "sha256": "55fe9c5b4aa97511967a3b5cd00d9196a4970c38084c6a046b61d2007d2e1c98",
+    "git_blob_oid": "14a2ff4202269a2a78fe4b46492955ad57841017",
+    "relevant_statement": "source indices are one-based entries in `source-feature-roster.json.gz`."
+  },
+  "held_keys": [
+    {
+      "y": 159121,
+      "x": 89292,
+      "owner_pixel_index": 7771,
+      "source_feature_indices": [675, 1030],
+      "mapped_sources": ["Buenos Aires ADM1", "Castelli ADM2"]
+    },
+    {
+      "y": 160221,
+      "x": 89685,
+      "owner_pixel_index": 8259,
+      "source_feature_indices": [675, 701],
+      "mapped_sources": ["Buenos Aires ADM1", "Pinamar ADM2"]
+    },
+    {
+      "y": 160237,
+      "x": 89674,
+      "owner_pixel_index": 8259,
+      "source_feature_indices": [675, 701],
+      "mapped_sources": ["Buenos Aires ADM1", "Pinamar ADM2"]
+    },
+    {
+      "y": 160253,
+      "x": 89665,
+      "owner_pixel_index": 8259,
+      "source_feature_indices": [675, 701],
+      "mapped_sources": ["Buenos Aires ADM1", "Pinamar ADM2"]
+    }
+  ],
+  "global_index_mappings": [
+    {
+      "source_index": 675,
+      "family_index": 8,
+      "source_id": "gb:ARG:ADM1:19177384B97722443848736",
+      "ordinal": 0,
+      "name": "Buenos Aires",
+      "owners": [],
+      "payload": {
+        "commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ARG-ADM1-000.bin.gz",
+        "bytes": 69978,
+        "sha256": "390ff41b6b7ed63d03a07de9bb9f08fef49bbc80ad2ffc089e82edb875d1135b",
+        "decoded_bytes": 184074,
+        "decoded_sha256": "7cc9b00ba139e57f59611993d96d07eb84d955ed5bd6bd6f1dcb864e1baf549c",
+        "decoded_feature_count": 23
+      }
+    },
+    {
+      "source_index": 701,
+      "family_index": 9,
+      "source_id": "gb:ARG:ADM2:61730980B99310691740446",
+      "ordinal": 3,
+      "name": "Pinamar",
+      "owners": [8259],
+      "payload": {
+        "commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ARG-ADM2-000.bin.gz",
+        "bytes": 2066007,
+        "sha256": "9b033d8e86946b8f14d9491ec51098e3c5c0e59785707058966d1fc77521546d",
+        "decoded_bytes": 5502879,
+        "decoded_sha256": "cedee8710e49d9017327fc1d4b2dc536e95a82317dc94c3bac8d9404af6bf771",
+        "decoded_feature_count": 525,
+        "catalogue_advertised_feature_count": 526
+      }
+    },
+    {
+      "source_index": 1030,
+      "family_index": 9,
+      "source_id": "gb:ARG:ADM2:61730980B13025573352502",
+      "ordinal": 332,
+      "name": "Castelli",
+      "owners": [7771],
+      "payload": {
+        "commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ARG-ADM2-000.bin.gz",
+        "bytes": 2066007,
+        "sha256": "9b033d8e86946b8f14d9491ec51098e3c5c0e59785707058966d1fc77521546d",
+        "decoded_bytes": 5502879,
+        "decoded_sha256": "cedee8710e49d9017327fc1d4b2dc536e95a82317dc94c3bac8d9404af6bf771",
+        "decoded_feature_count": 525,
+        "catalogue_advertised_feature_count": 526
+      }
+    }
+  ],
+  "limitation": "Exact feature identity does not validate source date/effective boundary, geometry fidelity, legal applicability, scale, or remaining source-fitness components; all four remain held pending the full criterion."
+}

@@ -1,0 +1,46 @@
+{
+  "method": "native-linear-evenodd-first-owner-v1",
+  "method_sha256": "66b453bbb2e001b9ff56bd754d55087f5919845dceeefd886016494cefa1d3e0",
+  "key_count": 727,
+  "key_sha256": "ffff89883c2274a88c627b7e0df2dc3167cf689aa8803d599ab2d278a9aa7b51",
+  "row_start": 134094,
+  "row_end": 134831,
+  "exact_recorded_array_mismatches": 0,
+  "center_hits": {
+    "3523": 727,
+    "48917": 41,
+    "49039": 727
+  },
+  "selected_boundary_ties": {
+    "3523": 0,
+    "48917": 0,
+    "49039": 0
+  },
+  "source_features": [
+    {
+      "index": 3523,
+      "source_id": "gb:BRA:ADM1:14911670B46798344041190",
+      "payload_sha256": "bdbbfe8237a365e295858164b70a574001de1fe8d80e1ca14d77297b69a1f9fe",
+      "feature_name": "Amazonas",
+      "geometry_type": "Polygon"
+    },
+    {
+      "index": 48917,
+      "source_id": "gb:PER:ADM1:1875124B3524833739478",
+      "payload_sha256": "22e15bae1d3d37af673e8e3ea2f1cefdb1cdd3961402036c271e5050a85a989f",
+      "feature_name": "Loreto",
+      "geometry_type": "Polygon"
+    },
+    {
+      "index": 49039,
+      "source_id": "gb:PER:ADM2:86281439B43857057528938",
+      "payload_sha256": "b3578247bece532832159fbe2250e3502be01f6fdd61bdc6527f6ac0b6f95311",
+      "feature_name": "Mariscal Ramon Castilla",
+      "geometry_type": "Polygon"
+    }
+  ],
+  "latitude_table_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+  "latitude_table_rows": 262166,
+  "scientific_approval": false,
+  "native_topology_verified": false
+}
