@@ -1,0 +1,141 @@
+[
+  {
+    "package_id": "gb-DMA-ADM1--repair-evaluation",
+    "primary_source": "gb:DMA:ADM1",
+    "source_family_index": 89,
+    "category": "repair-evaluation",
+    "native_cells": 232,
+    "land_cells": 232,
+    "inland_water_cells": 0,
+    "source_relative_cells": 0,
+    "interval_segments": 109,
+    "owners": [
+      7115
+    ],
+    "source_features": [
+      21050,
+      21051,
+      21052,
+      21053,
+      21054,
+      21055,
+      21056,
+      21057,
+      21058,
+      21059
+    ],
+    "source_families": [
+      89
+    ],
+    "native_blocks": [
+      29
+    ],
+    "provinces": [
+      "framework:province:dominica:2e5b9f128187"
+    ],
+    "location_count": 1,
+    "source_feature_count": 10,
+    "locality_count": 1,
+    "cost": {
+      "primary_source_decoded_bytes": 24013,
+      "all_required_source_decoded_bytes": 24013,
+      "primary_full_source_raster_measured_seconds": 0.042,
+      "source_interval_segments": 109,
+      "maximum_native_rows_per_execution_frame": 4096,
+      "observed_global_census_peak_rss_bytes": 884973568
+    },
+    "evidence": {
+      "selection": "ownership-binding.json",
+      "lineage": "lineage.json",
+      "territorial_source_catalogue": "retained-source-catalogue.json",
+      "territorial_catalogue_sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9",
+      "source_features": "source-feature-roster.json",
+      "territorial_native_blocks": "source-candidates-block-NNN.json.gz",
+      "physical": "physical-unassigned-summary.json",
+      "source_domain_transform": []
+    },
+    "work": {
+      "question": "Qualify the unique current-location source membership, retained territorial exclusions and complete source competitors; then derive and verify a zero-reassignment additive native patch.",
+      "completion": "Every exact interval is either a qualified additive repair to its recorded location or a documented exception; run actual selected-native conservation and source/physical witness checks. Existing river water remains location-owned.",
+      "priority": 1
+    },
+    "execution": {
+      "command": "node source-batch-intervals.mjs gb-DMA-ADM1--repair-evaluation OUTPUT_DIRECTORY",
+      "output_columns": [
+        "y",
+        "start",
+        "end",
+        "candidate_owner_indices",
+        "source_feature_indices",
+        "physical_class"
+      ]
+    }
+  },
+  {
+    "package_id": "gb-DMA-ADM1--physical-interpretation",
+    "primary_source": "gb:DMA:ADM1",
+    "source_family_index": 89,
+    "category": "physical-interpretation",
+    "native_cells": 174,
+    "land_cells": 0,
+    "inland_water_cells": 0,
+    "source_relative_cells": 174,
+    "interval_segments": 81,
+    "owners": [
+      7115
+    ],
+    "source_features": [
+      21050,
+      21052,
+      21053,
+      21054,
+      21058
+    ],
+    "source_families": [
+      89
+    ],
+    "native_blocks": [
+      29
+    ],
+    "provinces": [
+      "framework:province:dominica:2e5b9f128187"
+    ],
+    "location_count": 1,
+    "source_feature_count": 5,
+    "locality_count": 1,
+    "cost": {
+      "primary_source_decoded_bytes": 24013,
+      "all_required_source_decoded_bytes": 24013,
+      "primary_full_source_raster_measured_seconds": 0.042,
+      "source_interval_segments": 81,
+      "maximum_native_rows_per_execution_frame": 4096,
+      "observed_global_census_peak_rss_bytes": 884973568
+    },
+    "evidence": {
+      "selection": "ownership-binding.json",
+      "lineage": "lineage.json",
+      "territorial_source_catalogue": "retained-source-catalogue.json",
+      "territorial_catalogue_sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9",
+      "source_features": "source-feature-roster.json",
+      "territorial_native_blocks": "source-candidates-block-NNN.json.gz",
+      "physical": "physical-unassigned-summary.json",
+      "source_domain_transform": []
+    },
+    "work": {
+      "question": "Interpret unique territorial candidates outside the retained GSHHG land/inland-water classes using existing coast/river/local source evidence and source vintages.",
+      "completion": "Classify each interval with a reusable source interpretation or an explicit unresolved question. Physical-mask disagreement alone does not reject a source-backed river/location assignment.",
+      "priority": 4
+    },
+    "execution": {
+      "command": "node source-batch-intervals.mjs gb-DMA-ADM1--physical-interpretation OUTPUT_DIRECTORY",
+      "output_columns": [
+        "y",
+        "start",
+        "end",
+        "candidate_owner_indices",
+        "source_feature_indices",
+        "physical_class"
+      ]
+    }
+  }
+]

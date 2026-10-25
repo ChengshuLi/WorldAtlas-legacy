@@ -1,0 +1,89 @@
+{
+  "kind": "authenticated-original-DMA-claim-boundary",
+  "claim": {
+    "package": "gb-DMA-ADM1--repair-evaluation",
+    "cells": 232,
+    "intervals": 109,
+    "class": "land",
+    "accepted_now": false,
+    "suspended_claim_only": true
+  },
+  "separate_package": {
+    "package": "gb-DMA-ADM1--physical-interpretation",
+    "cells": 174,
+    "intervals": 81,
+    "class": "source-relative, outside retained land/inland-water masks",
+    "status": "Preserved outside this232 suspended claim; no acceptance, deletion or disposition supplied"
+  },
+  "candidate_total": 406,
+  "disjoint_and_complete": true,
+  "claim_keys_equal_prepared_patch": true,
+  "original_proposal": {
+    "path": "coordination/engineering/dma-current-owner-observation-20261020/dma232-proposed-unresolved-interval-dispositions-20261020.json",
+    "commit": "5d717903d392f6f5f910aed44440603e664b824f",
+    "git_blob_oid": "260c4ccb0fba47f9286d72070cabbaf4b738abe7",
+    "bytes": 320218,
+    "sha256": "b6a2c907537a78d1fb804576ab557f11cf7dca62b29116044e328ffd5af51cae"
+  },
+  "source_claim_url": "https://github.com/ChengshuLi/WorldAtlas/pull/2604#issuecomment-6304450686",
+  "input_pins": [
+    {
+      "role": "queue",
+      "pin": {
+        "bytes": 1754890,
+        "commit": "6dc935908f6397226445b1dc5acbd618c4a50a42",
+        "git_blob_oid": "9c9a9bc83627afd3e8435ff4009e39530543bf54",
+        "mode": "100644",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json",
+        "sha256": "78007430b6f9faedb188ef0619b7ff0a7a2cc7fff2ec9f1c41ee69936ec4ebd8",
+        "whole_body_consumed": true
+      },
+      "decoded_bytes": 1754890,
+      "decoded_sha256": "78007430b6f9faedb188ef0619b7ff0a7a2cc7fff2ec9f1c41ee69936ec4ebd8"
+    },
+    {
+      "role": "candidates",
+      "pin": {
+        "bytes": 613896,
+        "commit": "6dc935908f6397226445b1dc5acbd618c4a50a42",
+        "git_blob_oid": "3fc846f1a3a57841d82c695b97ad31b93af681e6",
+        "mode": "100644",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-029.json.gz",
+        "sha256": "7775f315311056808bfead2394034459a83a3590a201fe0deedb66fea1866528",
+        "whole_body_consumed": true
+      },
+      "decoded_bytes": 4552072,
+      "decoded_sha256": "a497602aa36f61e9d86b2078d6811e2362612fe7a11920f50df315b991106798"
+    },
+    {
+      "role": "physical",
+      "pin": {
+        "bytes": 508848,
+        "commit": "6dc935908f6397226445b1dc5acbd618c4a50a42",
+        "git_blob_oid": "2e1d884705c104bd3dbc61ac5444761875210ba5",
+        "mode": "100644",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-029.json.gz",
+        "sha256": "7af023db048ed84fe910c0ce966508b5b4127c95c6215f0d36213ed20d94b5d2",
+        "whole_body_consumed": true
+      },
+      "decoded_bytes": 2354796,
+      "decoded_sha256": "a62fb29038527ceba28ebef27ee3d487ec4fb0a31ca64610d16f02947b5189ee"
+    },
+    {
+      "role": "water",
+      "pin": {
+        "bytes": 19710,
+        "commit": "6dc935908f6397226445b1dc5acbd618c4a50a42",
+        "git_blob_oid": "01851c2ff5b06938769c6662bea70c19c69148ba",
+        "mode": "100644",
+        "path": "coordination/engineering/global-current-cell-work-queue-20261014/inland-water-support-block-029.json.gz",
+        "sha256": "c3a2e3b0c84e34e19aa39c7afbb02f62a434f29fad6e64aa7429522b9ebfe30f",
+        "whole_body_consumed": true
+      },
+      "decoded_bytes": 125470,
+      "decoded_sha256": "c4611ff0fcfb89048a4c524493a60b90ced1ff4d80ef9c1bc94a66d6b02b62c9"
+    }
+  ],
+  "warning": "Source-relative nonland is the historical queue mask class, not current water/sea or ineligibility proof. Full source geometry and physical witnesses stay in232diagnostic; excluded174original records remain separately visible.",
+  "no_new_science": true
+}
