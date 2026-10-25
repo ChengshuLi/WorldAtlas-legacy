@@ -34,7 +34,7 @@ export const COORDINATION_PATHS = new Set([
   '.github/workflows/worker-merge.yml',
   '.github/evidence-policy.json'
 ]);
-const packet = name => /\.(?:md|txt|jsonl?(?:\.gz)?|log|stdout|stderr|csv|tsv)$/.test(name) &&
+const packet = name => /\.(?:md|txt|jsonl?(?:\.gz)?|log|stdout|stderr|csv|tsv)$/i.test(name) &&
   !/^(?:package(?:-lock)?\.json|npm-shrinkwrap\.json|(?:requirements|constraints)(?:[.-].*)?\.txt|pyproject\.toml|setup\.(?:py|cfg)|__init__\.py|(?:site|user)customize\.py|(?:js|ts)config(?:\.[^.]+)?\.json|import[-_.]?map\.json)$/i.test(name.split('/').at(-1));
 const sourcePacketPath = name => safePackagePath(name) && /^(?:research\/(?:campaigns|geography)|data\/regional-review)\/[^/]+\//.test(name);
 
@@ -148,7 +148,7 @@ export function selectedDataCandidate(branch, files, reservation = {}) {
       ? file.status === 'modified' : file.filename === PREPARED_STARTUP_INDEX ? file.status === 'modified'
       : file.filename.startsWith(PREPARED_STARTUP_PREFIX) ? ['added','removed'].includes(file.status)
       : file.status === 'modified' && scientificManifest(file.filename) ||
-        file.status === 'added' && packetPath(file.filename)));
+        file.status === 'added' && (packetPath(file.filename) || sourcePacketPath(file.filename) && packet(file.filename))));
 }
 export async function integrationTree(api, repo, commit) {
   const object = await api(`/repos/${repo}/git/commits/${commit}`);
@@ -275,12 +275,24 @@ export async function selectedDataSelection({api, repo, branch, files, baseline,
         const raw=await read(name),expected=parseJSON(raw);
         if(expected.version!==2||expected.kind!=='selected-final-bank-consumer-v2'||!keys(expected,['version','kind','bank','reference'])
           ||!same(expected.bank,selection.prepared_bank)||!same(expected.reference,selection.reference))continue;
-        needSelected(!expectationsBytes||expectationsBytes.equals(raw),'Multiple final expectations');expectationsBytes=raw;expectationsPath??=name;reachable.add(name);
+        needSelected(!expectationsBytes||expectationsBytes.equals(raw),'Multiple final expectations');expectationsBytes=raw;if(packetPath(name))expectationsPath??=name;reachable.add(name);
       }
       needSelected(expectationsPath,'One exact final-bank expectations file required');
       if(packageDefinitions){const declarations=admitSelectedPackageDeclarations(packageDefinitions.before,packageDefinitions.after,{currentPaths:[...reachable]});
         needSelected(declarations.additions.every(name=>bank.changed.has(name)),'Final package declaration is not current bank data');}
-      needSelected(files.every(file=>reachable.has(file.filename)),'Unbound final-profile change');
+      const adjuncts=files.filter(file=>!reachable.has(file.filename));
+      if(adjuncts.length){
+        // Source readings/notices already use the inert evidence contract. They
+        // do not become selected roles, package operands or smoke expectations.
+        // Check both definitions so removing a consumed prefix cannot disguise
+        // an input change as an inert addition.
+        packageDefinitions ??= {before:validatePackageInputs(await json(PACKAGE_INPUT_FILE,baseline)),
+          after:validatePackageInputs(await json(PACKAGE_INPUT_FILE))};
+        needSelected(adjuncts.every(file=>sourcePacketPath(file.filename) &&
+          !/\/selected-delivery-expectations\.json$/i.test(file.filename)) &&
+          Object.values(packageDefinitions).every(definition=>inertEvidenceAdditions(adjuncts,authored.entries,definition)),
+        'Unbound final-profile change');
+      }
       return {test_selection:'selected-data',expectations_path:expectationsPath,shards:[0]};
     }
     needSelected(false,'Current selected-data delivery requires final-map version 2');
