@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "kind": "cmr-authority-composition-readback",
+  "status": "one exact new-only authority entry composed",
+  "selector_commit": "47bcece521c7d85ca2b9899d69637308702ca24c",
+  "entries": 1,
+  "authority_sha256": "a2696cad6d7886ac2d4358e2e54d2b5f4ce14f7212397843530b60a781d27afa",
+  "completed_constructor": {
+    "bytes": 4100617,
+    "commit": "cd533430d6f7eefd2c46b746bc8561eb340fe25f",
+    "git_blob_oid": "ffbfd5d23a51d502ea5437b56d26b175f532952a",
+    "mode": "100644",
+    "path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector-001/constructor-result.json",
+    "sha256": "0eb97c69f70115433950a9a32138db7242687d72c6e0fc7d81b043dc0ba2bf73"
+  },
+  "output_files": [
+    {
+      "path": "authority-registry.json",
+      "bytes": 1369,
+      "sha256": "3c53a77c0f453c86ad22f1bfea14c760486db31f98e01f77e93d07a5671424e0"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 256,
+      "sha256": "1a2d19067a2d9ecbb9bf2806b49ff08c443882d03addb8fa715ae7c51d09f738"
+    }
+  ],
+  "limitations": [
+    "Composition records the committed qualified native authority; it is not selected-map publication, owner-zero proof, science acceptance, or credit."
+  ]
+}
