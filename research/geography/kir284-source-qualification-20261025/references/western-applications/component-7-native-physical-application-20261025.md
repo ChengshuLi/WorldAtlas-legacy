@@ -1,0 +1,9 @@
+# KIR component 7: exact native/physical center application
+
+Date: 2026-10-25. Read-only application to the 32 held keys in source component 7, owner 26615 and source index 41033. The exact subset is filtered from `held-284-keys.json` (SHA-256 `889ae5dc339ed0f0132aa3ef1cdac5d846adada553fdab78b5fcb18d19806469`). The compact JSON serialization of the sorted `(y,x)` pairs has SHA-256 `4f35f0ddf41f1ea9ddcf059605d3d82c70d303157f3d7f8624944312dcbd8180`; the compact result rows `[[y,x,lon,lat,land,outside,missing,extra], ...]` use `I`/`O` labels, no trailing newline, and have SHA-256 `5deb83e1e9bfa1a61533ccc9535e860503100a869ae475c1730ce1994045ba3c`.
+
+The pinned native crosswalk is at commit `5c65b213d005607e769af66d39bf03d4554882d6`, blob `23aed23b0a2e92adb94a938953ac70fd8a40c806`, SHA-256 `284c38487a4a6c485d96b965e19aa2e00339bc0dc1ae0440bf3561af750a8e37`. Its owner-26615/component-7 record matches all 32 keys and reports `current_target_center_cells: 0`.
+
+The native latitude table compressed SHA-256 is `ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147`; decoded SHA-256 is `66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23`. Longitude centers used `((x + 0.5) * 360 / 262166) - 180`. The physical-001 artifact is blob `1fe2f786a667b0a8ca17c2650c5a84938afd4f02`, recorded SHA-256 `1caa825840869441e4acc3dc427b2eff145bb252f12c61b2d88ef5690ede8624`.
+
+Using even-odd polygon rings with holes, exact on-segment checks and no epsilon, all 32 native centers are inside retained `mapped_land_support`; all are outside `outside_mapped_L1_context`, `missing_reconstruction`, and `extra_reconstruction`; none is on a tested boundary. This is a center-only application to retained GSHHG-derived support, not full-cell coverage, current land truth, legal ownership, or a qualification decision. The original held disposition and all credit remain unchanged.
