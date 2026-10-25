@@ -1,0 +1,831 @@
+[
+  {
+    "ordinal": 0,
+    "source_index": 41674,
+    "source_id": "gb:LCA:ADM1:63095687B63570319440385",
+    "name": "Vieux Fort",
+    "pending_keys": 3,
+    "consumed_geometry_pointer": "/features/0/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "192941ba455908f614637484dad8f61160c97a313c36aa3c358799f1e19468fd",
+    "physical_target_pointer": "/results/0",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/0/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/0/query_relations/1",
+        "witness_geometry_serialized_sha256": "aed35b6320f48793e08cf322fff7592fff98d90ff7307906f85d9af86bcfaeec"
+      },
+      {
+        "source_id": 60282,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/0/query_relations/2",
+        "witness_geometry_serialized_sha256": "51c9bd88a1eb5c6b3899a74b87c8f0dbaaa009de1336b56c0e75c685a56193c6"
+      },
+      {
+        "source_id": 107132,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/0/query_relations/3",
+        "witness_geometry_serialized_sha256": "ee07a8d47e8ce21db9c141c7740abf2b452bd17d1018d50dd5ae8adade46c73d"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447,
+      60282,
+      107132
+    ],
+    "whole_target_issue_reasons": [],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/0/support/mapped_land_support",
+        "serialized_sha256": "428bf5a08d67f5bbc349bceb568900656790ea8f942a3f7e11dc8ccc4b49f646"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/0/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/0/support/outside_mapped_L1_context",
+        "serialized_sha256": "12662a3c59e622ebe261c0dde5665d50421e74507575cbd7f11dfb828174e251"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/0/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/0/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/0/support/extra_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/0/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 1,
+    "source_index": 41675,
+    "source_id": "gb:LCA:ADM1:63095687B3915284984293",
+    "name": "Anse la Raya",
+    "pending_keys": 0,
+    "consumed_geometry_pointer": "/features/1/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "e59e244545085a9999dbff69caa9ca692998ec66f1c2708644a53c3444056f69",
+    "physical_target_pointer": "/results/1",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/1/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/1/query_relations/1",
+        "witness_geometry_serialized_sha256": "939cf7af75235afcefbcaf61071d9b8232f9b9efa01a2c3e7f9f4541c0adc90e"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447
+    ],
+    "whole_target_issue_reasons": [
+      "extra_reconstruction"
+    ],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/1/support/mapped_land_support",
+        "serialized_sha256": "f09d5520c47db95f2c705873fed0e011a815bce9ce97b2094f3e4b66bb304ad1"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/1/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/1/support/outside_mapped_L1_context",
+        "serialized_sha256": "b2c436ce0ee85ec04196c1375b7805748b04d839108549bcc2babbc8554d2481"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/1/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/1/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/1/support/extra_reconstruction",
+        "serialized_sha256": "82f4353428d4931e8c0f66ef5d787dc6c1128541d4619f1161dbb80808e1e463"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/1/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 2,
+    "source_index": 41676,
+    "source_id": "gb:LCA:ADM1:63095687B33875357323526",
+    "name": "Castries",
+    "pending_keys": 1,
+    "consumed_geometry_pointer": "/features/2/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "f015fe70bd41e55c408fb6a770f84233ec3f1a27be757b59aa04e07bf592a5d7",
+    "physical_target_pointer": "/results/2",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/2/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/2/query_relations/1",
+        "witness_geometry_serialized_sha256": "4eb8b8cdfd2ce3223bc003024e767cbd7492bdf106801ac98d4e9beab2986403"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447
+    ],
+    "whole_target_issue_reasons": [
+      "extra_reconstruction"
+    ],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/2/support/mapped_land_support",
+        "serialized_sha256": "257956db94a6dfa301d8f501e5568f1b7d190c74ed817d3aceec835617674ba9"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/2/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/2/support/outside_mapped_L1_context",
+        "serialized_sha256": "29a51d144f4d5ec77f45b83c33495ef6a4f4f68f03dcfb4c74ba46dd41b29332"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/2/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/2/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/2/support/extra_reconstruction",
+        "serialized_sha256": "6e682cf11d2b51002425b8c6d6affbc4896985682d24d38b973ac7f490a093c1"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/2/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 3,
+    "source_index": 41677,
+    "source_id": "gb:LCA:ADM1:63095687B77911403325027",
+    "name": "Gros Islet",
+    "pending_keys": 5,
+    "consumed_geometry_pointer": "/features/3/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "d5e84ef14fc24039eed547c25180787f6eb35752138dc36cf14f49b6bcc2ff7f",
+    "physical_target_pointer": "/results/3",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/3/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/3/query_relations/1",
+        "witness_geometry_serialized_sha256": "1d0d3e129449baf05fc3d04b6f5a9fc86838c6feee2090225ce4dca7ca1c54c4"
+      },
+      {
+        "source_id": 43113,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/3/query_relations/2",
+        "witness_geometry_serialized_sha256": "25ecf721c6f54275ff0b95895362f4a372279320aec6f9e8e3e5e020d4759508"
+      },
+      {
+        "source_id": 95744,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/3/query_relations/3"
+      },
+      {
+        "source_id": 112337,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/3/query_relations/4"
+      },
+      {
+        "source_id": 131390,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/3/query_relations/5"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447,
+      43113,
+      95744,
+      112337,
+      131390
+    ],
+    "whole_target_issue_reasons": [
+      "missing_reconstruction",
+      "extra_reconstruction"
+    ],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/3/support/mapped_land_support",
+        "serialized_sha256": "b311ea59f75acb693a33f84b1489fff41c5ffade616260387f2c61df6fd3b120"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/3/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/3/support/outside_mapped_L1_context",
+        "serialized_sha256": "ef9e34c99bb023db3cb261231410dcd564a505229a9da0baacee429e9e5fdf56"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/3/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/3/support/missing_reconstruction",
+        "serialized_sha256": "cab6fe0ca1c7c5140e20d9b8d5e6311d7447cb926e1dee69e8ad3a5e4cf83629"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/3/support/extra_reconstruction",
+        "serialized_sha256": "74a629305b20a4763a662f9c2b0fdc5d39bd6dcca467f306807ffa519221dba0"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/3/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 4,
+    "source_index": 41678,
+    "source_id": "gb:LCA:ADM1:63095687B97045845903589",
+    "name": "Dennery",
+    "pending_keys": 7,
+    "consumed_geometry_pointer": "/features/4/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "fd6c0d3484a26f98d4c957bb189acb0f5c2114bd41727c28c3270f59d8a98ed6",
+    "physical_target_pointer": "/results/4",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/4/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/4/query_relations/1",
+        "witness_geometry_serialized_sha256": "edda859d6a60e3fbc97602979e505f3a57c6d37e47ce466a53118f633e7316d4"
+      },
+      {
+        "source_id": 74487,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/4/query_relations/2"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447,
+      74487
+    ],
+    "whole_target_issue_reasons": [],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/4/support/mapped_land_support",
+        "serialized_sha256": "db232f5d4f83e4eec37938b592ebbb6fc5049f35e2cf0deabf47194e551b8370"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/4/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/4/support/outside_mapped_L1_context",
+        "serialized_sha256": "3474d8e1f4daabf6d12ebf98dcdae3fe7ac401cb63e238b95d7061c1e0c763f7"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/4/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/4/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/4/support/extra_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/4/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 5,
+    "source_index": 41679,
+    "source_id": "gb:LCA:ADM1:63095687B12253142447206",
+    "name": "Micoud",
+    "pending_keys": 8,
+    "consumed_geometry_pointer": "/features/5/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "6eedd60519eceb523b70d67de2e4c62ef1a7dfa080802493df03f4a31e1eed15",
+    "physical_target_pointer": "/results/5",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/5/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/5/query_relations/1",
+        "witness_geometry_serialized_sha256": "330d3f1a813898167c191fb6345febeb03623241cf1999c06f069bb3ceeacd27"
+      },
+      {
+        "source_id": 114976,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/5/query_relations/2"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447,
+      114976
+    ],
+    "whole_target_issue_reasons": [],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/5/support/mapped_land_support",
+        "serialized_sha256": "4b94cc0f1b9e3da913effa9d0a84050b46b16ed87432cad80fd3cf14f10082f1"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/5/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/5/support/outside_mapped_L1_context",
+        "serialized_sha256": "10d688222e2739449373565bfa9899da06314f9cfe00abade685ff6bbaf0783e"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/5/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/5/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/5/support/extra_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/5/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 6,
+    "source_index": 41680,
+    "source_id": "gb:LCA:ADM1:63095687B32971577162412",
+    "name": "Soufrière",
+    "pending_keys": 6,
+    "consumed_geometry_pointer": "/features/6/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "8288adc49c3bc08533e9c7e4e6966c263f1238c97c83da82e75a1141be912eca",
+    "physical_target_pointer": "/results/6",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/6/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/6/query_relations/1",
+        "witness_geometry_serialized_sha256": "db4d567235932f76caf46aec3ab507efd684c84f32fb0c45d531ac17342b40d0"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447
+    ],
+    "whole_target_issue_reasons": [
+      "missing_reconstruction",
+      "extra_reconstruction"
+    ],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/6/support/mapped_land_support",
+        "serialized_sha256": "3fdd7b052d5eca6f9533e56e91fe0c3a1a595a9b64bf67b0b64e4589cccc198d"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/6/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/6/support/outside_mapped_L1_context",
+        "serialized_sha256": "28f2d15a53dac49bcd97524ebaf64e3b16c5d4df9a16830037448b168cedfc67"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/6/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/6/support/missing_reconstruction",
+        "serialized_sha256": "317af8e15e3e3ed6bf8f5a8b3b455bd33ae1e5bcf236ae59747dcc72fbf092a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/6/support/extra_reconstruction",
+        "serialized_sha256": "c80af80564684bc31ef8401519abe9e11b309e39a7ff70ff484275cf53ff07e7"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/6/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 7,
+    "source_index": 41681,
+    "source_id": "gb:LCA:ADM1:63095687B49372508754012",
+    "name": "Choiseul",
+    "pending_keys": 4,
+    "consumed_geometry_pointer": "/features/7/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "c8e8140a7f5a813f35363ba5586cfa7225ea23190c79e70ff1d1b6249efaf233",
+    "physical_target_pointer": "/results/7",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/7/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": true,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-candidate-reconstruction",
+        "pointer": "/results/7/query_relations/1"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447
+    ],
+    "whole_target_issue_reasons": [],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/7/support/mapped_land_support",
+        "serialized_sha256": "682fbb5c0332dd7ce2565b87359fc8913ab8660e7045fc036054ad59b82f299d"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/7/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/7/support/outside_mapped_L1_context",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/7/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/7/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/7/support/extra_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/7/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 8,
+    "source_index": 41682,
+    "source_id": "gb:LCA:ADM1:63095687B42817258586373",
+    "name": "Laborie",
+    "pending_keys": 0,
+    "consumed_geometry_pointer": "/features/8/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "6098e48b8357f390a99cbcc5ecce975c1a0ecbfac661da62f88628d51b754e6f",
+    "physical_target_pointer": "/results/8",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/8/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": true,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-candidate-reconstruction",
+        "pointer": "/results/8/query_relations/1"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447
+    ],
+    "whole_target_issue_reasons": [],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/8/support/mapped_land_support",
+        "serialized_sha256": "311d1425d2b8d18a882f979f1eb585d6b8fa441bdeb42392f82689e7f727f775"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/8/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/8/support/outside_mapped_L1_context",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/8/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/8/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/8/support/extra_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/8/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  },
+  {
+    "ordinal": 9,
+    "source_index": 41683,
+    "source_id": "gb:LCA:ADM1:63095687B90177859016877",
+    "name": "Canaries",
+    "pending_keys": 2,
+    "consumed_geometry_pointer": "/features/9/geometry",
+    "stage_geometry_literal_equal_to_consumed": true,
+    "geometry_serialized_sha256": "f1012ed00311a297876856ee013bffa3e7195065e0291a739440ac4f8a05bd2c",
+    "physical_target_pointer": "/results/9",
+    "physical_queries": [
+      {
+        "source_id": 2,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": false,
+        "disjoint": true,
+        "status": "checked",
+        "witness": "disjoint-after-explicit-predicate",
+        "pointer": "/results/9/query_relations/0"
+      },
+      {
+        "source_id": 447,
+        "periodic_offset": 0,
+        "source_covers_candidate": false,
+        "candidate_covers_source": false,
+        "intersects": true,
+        "disjoint": false,
+        "status": "checked",
+        "witness": "complete-operation-pointset",
+        "pointer": "/results/9/query_relations/1",
+        "witness_geometry_serialized_sha256": "1d4c6accfe921873c2c6431f40f1879b58dd5bb72866ed7799e39096181a0e38"
+      }
+    ],
+    "physical_source_ids": [
+      2,
+      447
+    ],
+    "whole_target_issue_reasons": [
+      "extra_reconstruction"
+    ],
+    "support_fields": {
+      "mapped_land_support": {
+        "pointer": "/results/9/support/mapped_land_support",
+        "serialized_sha256": "f232834bd8b896ff8228d2ad490c0eb5cf153e1d925b3a3277a021f7ce55d7a0"
+      },
+      "mapped_inland_water_support": {
+        "pointer": "/results/9/support/mapped_inland_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      },
+      "outside_mapped_L1_context": {
+        "pointer": "/results/9/support/outside_mapped_L1_context",
+        "serialized_sha256": "496ac4f1831916f4c715feac2ec879880d193d386c08d130418be87bddb64bdd"
+      },
+      "hierarchy_disagreements": {
+        "pointer": "/results/9/support/hierarchy_disagreements",
+        "serialized_sha256": "c4f6c667501306b6932008523d2474ae14ed4830c502768cdf638f168a4d8066"
+      },
+      "missing_reconstruction": {
+        "pointer": "/results/9/support/missing_reconstruction",
+        "serialized_sha256": "1a38949e1137d71db7b75672549c92800743e343d6a311db21043c94a41105a2"
+      },
+      "extra_reconstruction": {
+        "pointer": "/results/9/support/extra_reconstruction",
+        "serialized_sha256": "f92ea1427f195982de263d607c9bb7c2016d8a8f520bf1f1ebc2adde4de0ff0e"
+      },
+      "contradictory_land_water_support": {
+        "pointer": "/results/9/support/contradictory_land_water_support",
+        "serialized_sha256": "47f9e32a5dceb91dfc267be865b11fc0f968d2f469fb7ee7859015161815fdf7"
+      }
+    },
+    "scope_limit": "Whole consumed target results, not selected aggregate or individual pending-cell qualification."
+  }
+]

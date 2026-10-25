@@ -1,0 +1,189 @@
+{
+  "kind": "popokabaka18-target-documentary-lineage-read-v1",
+  "date": "2026-10-24",
+  "worker_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "archive": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/COD_ADM2-9469f09-source.zip",
+    "bytes": 2215535,
+    "sha256": "2cf73c7be7403b742c8e9682f7d51609485fa0e6eab01644a695a83f81a7bb5e"
+  },
+  "archive_target_dbf": {
+    "ordinal": 163,
+    "deleted": false,
+    "Name": "Popokabaka",
+    "Level": "ADM2"
+  },
+  "native_target": {
+    "id": "gb:COD:ADM2:63176286B47421332346835",
+    "pixelIndex": 14501,
+    "source_family": "gb:COD:ADM2",
+    "source_receipt_sha256": "8a926e4fa97f70f814c9cfd5d2c92792798669254de0d072761518bf91105a75",
+    "territorial_exclusions": [
+      {
+        "feature_ordinal": 16,
+        "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+        "negative_ordinal": 0,
+        "source_id": "gb:AGO:ADM1:26408823B906914650007"
+      },
+      {
+        "feature_ordinal": 145,
+        "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+        "negative_ordinal": 1,
+        "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+      },
+      {
+        "feature_ordinal": 150,
+        "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+        "negative_ordinal": 2,
+        "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+      },
+      {
+        "feature_ordinal": 8,
+        "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+        "negative_ordinal": 3,
+        "source_id": "gb:COG:ADM1:67827341B26824927831038"
+      }
+    ]
+  },
+  "source_evidence_sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e",
+  "documentary_passages": [
+    {
+      "tag": "resTitle",
+      "text": "DEMOCRATIC REPUBLIC OF THE CONGO: Admin Level 2 Boundaries"
+    },
+    {
+      "tag": "idAbs",
+      "text": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>The dataset represents the territories of DR Congo. The file originates from OCHA's digitization of the DR Congo atlas of administrative boundaries carried out by Father Léon de Saint Moulin. The geometry has been split where territory boundaries are defined by a watercourse. A topological validation has been done by UNDP and the Kinshasa municipal boundaries have been added. Toponymy has been validated by INS.</SPAN></P></DIV></DIV></DIV>"
+    },
+    {
+      "tag": "idPurp",
+      "text": "Administrative Level 2 Boundaries of DR Congo. Validated by the IMWG. Sourced from Référentiel Géographique Commun http://www.rgc.cd"
+    },
+    {
+      "tag": "statement",
+      "text": "Layer was downloaded as a shapefile by ITOS from an email from the IMO. It was then analyzed by ITOS for errors. Those errors were corrected and then the layer was sent back to UNOCHA as a feature class within a file geodatabase.\n\nThe following errors were found and fixed by ITOS: \n1. Created and populated a reference name field.\n2. Projection changed from undefined to \"GCS_WGS_1984\".\n3. Admin0 name now uses French UN Short Name \"République démocratique du Congo (la)\"."
+    }
+  ],
+  "relevant_2021_processing": [
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\DeleteField",
+        "Date": "20210623",
+        "Time": "111916"
+      },
+      "text": "DeleteField cod_admbnda_adm2_rgc_20190911 Shape_Leng;Shape_Area;ADM2_PCODE;ADM2_REF;ADM2ALT1FR;ADM2ALT2FR;ADM1_FR;ADM1_PCODE;ADM0_FR;ADM0_PCODE;date;validOn;validTo"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20210623",
+        "Time": "112003"
+      },
+      "text": "CalculateField cod_admbnda_adm2_rgc_20190911 Name !ADM2_FR! \"Python 3\" # Text NO_ENFORCE_DOMAINS"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\DeleteField",
+        "Date": "20210623",
+        "Time": "112008"
+      },
+      "text": "DeleteField cod_admbnda_adm2_rgc_20190911 ADM2_FR"
+    },
+    {
+      "attributes": {
+        "ToolSource": "c:\\users\\dominic\\appdata\\local\\programs\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+        "Date": "20210623",
+        "Time": "112016"
+      },
+      "text": "CalculateField cod_admbnda_adm2_rgc_20190911 Level \"ADM2\" \"Python 3\" # Text NO_ENFORCE_DOMAINS"
+    }
+  ],
+  "four_negative_context": [
+    {
+      "native_operand": {
+        "feature_ordinal": 16,
+        "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+        "negative_ordinal": 0,
+        "source_id": "gb:AGO:ADM1:26408823B906914650007"
+      },
+      "properties": {
+        "shapeName": "Uíge",
+        "shapeISO": "AO-UIG",
+        "shapeID": "26408823B906914650007",
+        "shapeGroup": "AGO",
+        "shapeType": "ADM1"
+      },
+      "represented_year": "2021",
+      "publisher": "U.S. Census Bureau"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 145,
+        "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+        "negative_ordinal": 1,
+        "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+      },
+      "properties": {
+        "shapeName": "Maquela do Zombo",
+        "shapeISO": "",
+        "shapeID": "16411231B1695185499214",
+        "shapeGroup": "AGO",
+        "shapeType": "ADM2"
+      },
+      "represented_year": "2018",
+      "publisher": "www.gadm.org and Instituto Nacional de Estatística (INE - www.ine.gov.ao) - see methodology, HDX"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 150,
+        "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+        "negative_ordinal": 2,
+        "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+      },
+      "properties": {
+        "shapeName": "Quimbele",
+        "shapeISO": "",
+        "shapeID": "16411231B94377396488260",
+        "shapeGroup": "AGO",
+        "shapeType": "ADM2"
+      },
+      "represented_year": "2018",
+      "publisher": "www.gadm.org and Instituto Nacional de Estatística (INE - www.ine.gov.ao) - see methodology, HDX"
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 8,
+        "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+        "negative_ordinal": 3,
+        "source_id": "gb:COG:ADM1:67827341B26824927831038"
+      },
+      "properties": {
+        "shapeISO": "CG-12",
+        "shapeName": "Pool",
+        "shapeID": "67827341B26824927831038",
+        "shapeGroup": "COG",
+        "shapeType": "ADM1"
+      },
+      "represented_year": "2017",
+      "publisher": "OpenStreetMap, Wambacher"
+    }
+  ],
+  "kwango_monograph": {
+    "source_url": "https://www.africamuseum.be/sites/default/files/media/docs/research/publications/rmca/online/monographies-provinces/kwango.pdf",
+    "local_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/uige18_lineage/kwango-rmca2012.pdf",
+    "bytes": 13040554,
+    "sha256": "33fef18d954f91562db366a08ecdfa33f848c1397f261c888c3509107f7eec27",
+    "approved_download_session": 14174,
+    "exit_code": 0,
+    "visual_read_pdf_page": 110,
+    "printed_pages": [
+      216,
+      217
+    ],
+    "qualification": "Institutional historical research, not the Saint Moulin atlas or the text of the cited ordinances; no native edge inference."
+  },
+  "new_geometry_observations": 0,
+  "new_accepted": 0,
+  "holds_preserved": 18,
+  "next_step": "Coordinator alone runs originalfull3905 reporting; interpret exact18 contacts when supplied without changing source identities."
+}

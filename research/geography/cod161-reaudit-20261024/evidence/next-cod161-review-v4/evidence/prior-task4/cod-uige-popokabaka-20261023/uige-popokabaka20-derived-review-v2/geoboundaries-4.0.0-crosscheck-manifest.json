@@ -1,0 +1,62 @@
+{
+  "title": "Popokabaka 20-key Uige geoBoundaries 4.0.0 cross-check",
+  "kind": "cod-original-pending-source-version-addendum-v1",
+  "status": "supplemental source-version evidence; all 20 keys remain held, pending, unaccepted, zero credit",
+  "files": [
+    {
+      "path": "geoboundaries-4.0.0-crosscheck.md",
+      "bytes": 8484,
+      "sha256": "5c55c6d1856c5971fe1b5ffe6086c1f807cf3f09bc58940a00df6dda4f3b8d32"
+    },
+    {
+      "path": "exact-roster-and-crosscheck.json",
+      "bytes": 35532,
+      "sha256": "d3f074d36aca8c1cf60345e23cad88b8741201ec6d12832e139246fb8e3574f9"
+    },
+    {
+      "path": "source-version-crosscheck.md",
+      "bytes": 11143,
+      "sha256": "fdcd875436380e0aeebc41a046edf52c71941a1e8c27ea6011d0984d0f54753d"
+    }
+  ],
+  "archives": [
+    {
+      "name": "geoBoundaries 4.0.0 AGO ADM1",
+      "repository": "https://github.com/wmgeolab/geoBoundariesArchive_4_0_0/tree/299e00623ece6c03bcb9a751eda6094b1eac85a6/releaseData/gbHumanitarian/AGO/ADM1",
+      "bytes": 1397973,
+      "sha256": "652fc0047b648649f0229952b94b4d34e5536888c90aa8db1f299f0d5af9aa79",
+      "metadata_bytes": 619,
+      "metadata_sha256": "5db26f8db7a893ff6352f8317364609f371799b048c889907fe2bdc71ba321cd"
+    },
+    {
+      "name": "pinned geoBoundaries 9469f09 AGO ADM1 metadata",
+      "url": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/releaseData/gbOpen/AGO/ADM1/geoBoundaries-AGO-ADM1-metaData.json",
+      "bytes": 931,
+      "sha256": "6897df4120622fef7043056b39a4e389bf8b8575431cb51844f9e06ec7bb89f3"
+    },
+    {
+      "name": "pinned geoBoundaries 9469f09 AGO ADM1 sourceData archive",
+      "url": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/sourceData/gbOpen/AGO_ADM1.zip",
+      "bytes": 1269371,
+      "sha256": "28a8197080eec7270453478bef6fc403e20b455de61a1e04830caafabd302d77"
+    },
+    {
+      "name": "pinned geoBoundaries 9469f09 AGO ADM1 release output",
+      "url": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/releaseData/gbOpen/AGO/ADM1/geoBoundaries-AGO-ADM1-all.zip",
+      "bytes": 3183754,
+      "sha256": "6f7ea8ee7b31ed249208518b6c5993d684904a431a7aa5a3a433cf48f9c1ca8e"
+    }
+  ],
+  "review": {
+    "reviewer": "brn828_reviewer",
+    "agent_thread_id": "01a154ad-6292-7344-8b7f-7effa3be2018",
+    "prior_review": "The original archive comparison and exact sourceData/full-output versus simplified geometry findings were independently verified.",
+    "current_delta_status": "The original reviewer supports considering contextual adoption only for [14501,135347,143089] and [14501,135350,143072], with an exact simplified-operand source pin and target/key/owner/negative-ordinal binding. [14501,135354,143074] remains held for its separate Kwango contact. No record or diagnostic was created; all 20 remain pending."
+  },
+  "prior_packet": {
+    "path": "uige-popokabaka20-derived-review-v2.zip",
+    "bytes": 10977,
+    "sha256": "950484f13a964a3d90185cc80b7c0f729dfd01b3ac99521be0b8816ee37fb4d7",
+    "note": "This addendum is separate; the prior ZIP and manifest were not changed."
+  }
+}

@@ -1,0 +1,55 @@
+# Luozi19: source-specific sufficiency after complete original negative observations
+
+24 October2026. Researcher01a16f2d-be76-72d7-bc46-8b89a6efb0f2. Coordinator ownership remains unchanged. This is a finite recommendation for independent review, not acceptance, new credit, delivery or reinstatement of COD package completion. All19 keys remain held.
+
+## Recommendation
+
+The revised v2 evidence is suitable for a fresh independent **researched-unresolved source-sufficiency review of all19**. Its justification is the actual historical/technical reading and unsuccessful reasonable link from that control to the frozen overlapping source products, not missing work that has now been performed. No newly identified, readily readable deciding manuscript/map body remained after the specific catalogue follow-through below. There are material custodian-mediated originals and an explicitly blocked Taunt opportunity; none is declared absent, exhausted or universally necessary for every unresolved disposition.
+
+Do not carry forward the earlier favorable review, which was correctly superseded when feasible1954/Jentgen readings remained undone. The latest v2 reading note/receipt documents those completed steps. All19 bindings in that receipt, including proposal, note and17 input entries, were checked against actual files this pass and matched. This is file verification, not another native diagnostic.
+
+## What the measured evidence now establishes
+
+The sole coordinator-produced full3905 diagnostic remains SHA256 `b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c`. Its exact19 view remains SHA256 `670e85500b22fa8754e5319e72cf679b5cf7ed073bef3241aa68a9827cdf7fa7`. Reading the existing rows confirms19 distinct keys, each with11 original negative operands, and unchanged `territorial_exclusion_cells` decisions. Every key belongs to owner14489/Luozi, target `gb:COD:ADM2:63176286B40063645047483`.
+
+| Context | Actual measured finding | Source-specific consequence |
+|---|---|---|
+|15 Bouenza keys | Only Bouenza negative ordinal0/feature0 has `interior`; shapeID67827341B31154795269334, geometrySHA9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a. | This original COG ADM1 source creates the measured adverse contact. It cannot be ignored in favor of the COD target merely because a historic watershed is described. |
+|4 Pool keys | Only Pool negative ordinal2/feature8 has `interior`; shapeID67827341B26824927831038, geometrySHA742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8. | The same source-production/line-applicability question applies, but these are a separate original feature and separate exact keys; no Bouenza identity is substituted. |
+|Other original operands | Niari and eight COG ADM2 features have empty kinds for each exact cell. The opposite Bouenza/Pool feature is also empty in the respective group. | This closes the earlier missing original-operand observation issue. It is not an exhaustive claim about every possible source, nor reason to invent primary research on a feature with no measured contact here. |
+
+`Interior` describes the recorded whole-cell contact operation's result. It is not a complete-cell-containment certificate, an area fraction, a boundary survey, or a sovereign assignment. There is no need to recreate a centre-only test or infer the cell result from the earlier15/4 centre tally: the complete original measured rows now exist. Outer `source_id` is the COD target; adverse identities are the `original_source.source_id` fields. The companion JSON preserves every full operand row and its geometry/ordinal binding.
+
+Frozen physical rows classify all19 as supported land, with no inland-water support. This rules the evidence context as land; it does not decide which administrative source applies. No new physical observation, coordinates or registration was computed.
+
+## Meaning of the actual source construction
+
+The later-acquired COG ADM1 original archive is available, not a remaining acquisition blocker. This pass reused its exact440062-byte ZIP, SHA256 `731e08ee7fa47ea55f6393d1d8a4364851ca8c6bc65f3bbc875d57feeca7cc8d`, and read DBF rows0/8 directly: Bouenza/CG-11 and Pool/CG-12. The original member study documents OpenStreetMap/Wambacher2017 provenance, field-processing dates and ODbL terms, but no authenticated relation/snapshot identifier or landmark control table. Name/ordinal correspondence does not claim untested archive-to-consumed geometry equivalence.
+
+The later-acquired original COD ADM2 documentation also supplies more than a publisher label. The retained actual XML/report describes OCHA digitization of the Saint Moulin administrative atlas, territory splitting at watercourses, UNDP topology checks, INS toponymy validation, IMWG validation, and ITOS correction of an undefined projection declaration to WGS84. It does not identify the atlas edition/page or a modern tie to the Manyanga commission line. None of those general validation steps proves the international edge was surveyed or reconciled with COG's independent OSM-derived edge. The watercourse statement must not be stretched into an adopted watershed/ridge rule for these cells.
+
+These are two plausible, independently constructed administrative representations with a concrete conflict, not evidence of fraud or an automatic priority rule. Later represented year, institutional attribution, field-name agreement, topology repair and OSM contact each fail to decide the exact conflict on their own.
+
+## Completed primary and technical reading, with exact remaining limits
+
+- The1885 treaty/protocol and annex reading supplies a limited named route and watershed landmarks. Its historical scale/north arrow and place names do not establish a verified modern control tie for these keys. No unsupported georeference has been made.
+- The complete AfricaMuseum public description of unfinished1903 technical minutes (HA.01.0115.68/object24052) is actually read. It gives a point4′05.1″ east of Kaonga, meridian observations30June–6July, joint triangulation and a stone cone. That is substantive historical method/control evidence. It is not the original observation tables, an authenticated modern Kaonga position, or proof a particular monument survives. The sketch description HA.01.0115.72/object24057 and parent records were also read. No manuscript/sketch image was exposed by those public pages; archive guidance describes consultation/reproduction access.
+- Jentgen1952 pp65–67 were acquired and actually read, including images. They distinguish four1903 markers from Kaonga to Kimpoa's source from unmarked1885 reconnaissance, and cite30August1903 minutes. The book is a documented historical study, not itself the signed minutes. Its countrywide/synoptic maps cannot resolve these cell edges. Adjacent Angola/Cabinda provisions are excluded from Luozi reasoning.
+- The two exact1954 SGG issues21/23 were acquired, all138 pages rendered/OCR-processed, relevant roots/date/names screened and plausible matches/contents visually inspected. The matching entries were unrelated. This is completed bounded reading with imperfect OCR/source clipping, not universal proof the18September minutes were never published.
+- ACP's official2024/2025 reports provide the1954minute date,2022reconnaissance and20km/150km work context. Their inspected public articles did not expose signed technical minutes or survey-coordinate annexes. An announced/received work report does not establish the adopted line at these cells.
+
+## Newly followed concrete map-custody passage
+
+The already-retained [Belgian official Cartothèque inventory](https://www.arch.be/docs/invent/archives-africaines/Cartotheque.pdf) was reused; no map/book was downloaded again. PDF249 was rendered and visually read. Portfolio132/FARDE D-3 identifies a commission map between Kaonga and the Congo/Niadi-Quillou watershed at1:50000, date05. D-1 identifies the1903 Mameme–Tembila ridge reconnaissance, and D-2 the Rouvier1885 reconnaissance. These are useful map requests, not acquired map images.
+
+The exact catalogue text was followed through its other entries: PDF83 lists the north-of-Kaonga commission map1:100000,date03 (35/6,DEL.FR-C.6); PDF406 lists292/55 for a similarly described Kaonga/watershed map,date03, marked as removed from MINICOL dossiers. PDF356 includes a putative Cabra north-of-Kaonga reduction,date09. Dates, scales and question marks are preserved; the entries are not assumed to be identical copies. No PDF hyperlinks were present on these catalogue pages. Two specific title searches returned this official inventory and an unconsumed mirror, not a public image body. No mirror or alternative access route was used.
+
+The map family could improve historical station/control identification, so its expected value is concrete. Whether it would support accurate registration to modern cells is unknown until an original is read. The inventory alone supplies neither the map's datum/legend/control nor a surviving-monument correspondence. The existing AE1/281 pieces15–21 Paris-copy lead and AfricaMuseum manuscript custody remain separate, potentially complementary routes. No archive inquiry was sent.
+
+## Access stops and finite stopping point
+
+The exact Taunt Wisconsin public-catalogue acquisition remains **denied before execution** by automatic approval review. Action: `tools.exec_command` with `require_escalated`, Python `urllib.request.urlopen('https://search.library.wisc.edu/digital/APOVYWVWKSSG5Y8B',timeout=40)` to `taunt-wisconsin-record.html`. The review said the public fetch was otherwise low-impact but viewed urllib after web failure as contrary to the supported Library-transfer instruction. No request/session ID was supplied; no file was created. Parent ordered no retry or alternate route. This pass made none. Taunt remains an unread, blocked opportunity, not evidence of absence or completed research. The prior Navy502, Wisconsin tool-inaccessible result and other source restrictions remain as recorded in v2; none is retried here.
+
+The source question can now be handed to an independent reviewer without another generic search loop: each original negative was actually measured; relevant readily available historical/technical passages and both1954 scans were actually read; source-construction differences are documented; and exact remaining map/minute custody is retained. The unresolved fact is the authenticated relationship between those historical or later controls and the modern conflicting source edges at these19 keys. A newly exposed signed survey/control body or valid historical-to-modern tie would justify reopening this assessment. No arbitrary universal certificate, unbounded archive acquisition or new geometry is made a prerequisite by this recommendation.
+
+This recommendation does not repair any of the19, waive the adverse contacts, reinstate COD completion, or count them again among the674 already accepted unresolved cells. Independent acceptance and exact delivery remain coordinator responsibilities.

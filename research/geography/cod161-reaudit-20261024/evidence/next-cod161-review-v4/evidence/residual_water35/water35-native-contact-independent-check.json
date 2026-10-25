@@ -1,0 +1,103 @@
+{
+  "kind": "independent-water35-existing-report-custody-check",
+  "date": "2026-10-24",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "inputs": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-native-contact-view-2784/residual_water35.json",
+      "bytes": 228066,
+      "sha256": "6a6cc265909ed0d41117b9ac5fe58ca7386907f9800b0f82ab1da5ad8e8f7923"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+      "bytes": 10190632,
+      "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/source-evidence.json",
+      "bytes": 486052,
+      "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-verified-partition.json",
+      "bytes": 22858,
+      "sha256": "656ba6320dc96c390c91250ec4b0599e1fec8e19c5f3a924bc0c5653fc443f2f"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/native-diagnostic.json",
+      "bytes": 327626,
+      "sha256": "a06c68b928bb6ce4f8c450712150d3e95a3284e7dbf9bcb12729b8c316fbda51"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-native-contact-view-2784/receipt.json",
+      "bytes": 2853,
+      "sha256": "d0a8339aed7d493058f9bdcca676ad5519ebcdf09103f05831de0efc96f22ff5"
+    }
+  ],
+  "checks": {
+    "exact35keys_equal_prior_retained_scope": true,
+    "all_original_operands_equal_source_evidence": true,
+    "each_view_row_equal_original_report_interval": true,
+    "preserved_fields_equal_old_report": [
+      "requested_cells",
+      "supported_cells",
+      "held_cells",
+      "requested_rows",
+      "supported_rows",
+      "held_rows",
+      "decision_rows",
+      "physical_witness_kind_legend",
+      "physical_witness_kind_rows",
+      "territorial_contacts",
+      "native_contract"
+    ],
+    "new_accepted_cells": 0
+  },
+  "active_contact_groups": [
+    {
+      "owner": 14453,
+      "original_source_id": "gb:TZA:ADM1:36957248B11692782910073",
+      "negative_ordinal": 8,
+      "feature_ordinal": 16,
+      "kinds": [
+        "interior"
+      ],
+      "keys": 2
+    },
+    {
+      "owner": 14461,
+      "original_source_id": "gb:TZA:ADM1:36957248B34051677343112",
+      "negative_ordinal": 2,
+      "feature_ordinal": 24,
+      "kinds": [
+        "interior"
+      ],
+      "keys": 27
+    },
+    {
+      "owner": 14461,
+      "original_source_id": "gb:TZA:ADM1:36957248B68200678446738",
+      "negative_ordinal": 0,
+      "feature_ordinal": 15,
+      "kinds": [
+        "interior"
+      ],
+      "keys": 1
+    },
+    {
+      "owner": 14484,
+      "original_source_id": "gb:COG:ADM1:67827341B88704799146201",
+      "negative_ordinal": 0,
+      "feature_ordinal": 4,
+      "kinds": [
+        "interior"
+      ],
+      "keys": 5
+    }
+  ],
+  "method": "Read and hash existing artifacts, compare retained intervals and immutable source descriptors. No spatial operation, producer or diagnostic rerun. source_id in diagnostic operand names target; original_source.source_id binds negative source.",
+  "semantic_limit": "interior is stock centre-sampled native scan-span membership, not rectangle intersection or jurisdiction. All35 active kinds interior only; no named tie. Empty kinds is absence under native predicates only.",
+  "physical_limit": "Original and new physical_witness_kind_rows are both empty. Inland-water classification is retained from frozen source scope/partition evidence; no new physical-witness row invented.",
+  "code": "8d38ff36d0b37b98bfd00ff2d7fb81a5081c7f4f",
+  "accepted_code_base": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239"
+}

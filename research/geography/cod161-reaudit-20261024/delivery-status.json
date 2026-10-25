@@ -1,0 +1,61 @@
+{
+  "status": "final-candidate-prepared-review-and-delivery-pending",
+  "current_accepted_accounting": {
+    "COD": {
+      "original": 3905,
+      "positive": 2977,
+      "researched_unresolved": 767,
+      "pending": 161
+    },
+    "LCA": {
+      "original": 360,
+      "positive": 324,
+      "pending": 36
+    }
+  },
+  "proposed_after_delivery_and_root_acceptance": {
+    "COD": {
+      "positive": 2978,
+      "researched_unresolved": 927,
+      "pending": 0
+    },
+    "LCA": {
+      "positive": 324,
+      "researched_unresolved": 36,
+      "pending": 0
+    }
+  },
+  "new_contextual_key": [
+    14501,
+    135354,
+    143074
+  ],
+  "native_holds_preserved": true,
+  "completed_changed_diagnostic": {
+    "requested": 3905,
+    "supported": 2978,
+    "held": 927,
+    "code": "feffd18c5748c47e87cc42cd7f5c63a60622d6b3",
+    "report_sha256": "7694ed38d5b346f324da3f7edf4b7064213fe540bb6afc7bc6e3cbe5618b33d7"
+  },
+  "supported_projection": {
+    "already_present": 2977,
+    "novel": 1,
+    "held": 927,
+    "bound_source_sha256": "5f8b6b9bfed6c5016b3cefd288c61545c42e08d6bbee7bc41688a63be831af02"
+  },
+  "native_authority": {
+    "qualified": 1,
+    "code": "0139d50aed87deaf243afa45c44bbaba2ac74cbf",
+    "constructor_sha256": "4e6217f4e4adeeba9ba1be114d77b9716bd03ef4f7a3d780ea6ecc54dca50de5"
+  },
+  "finalizer": {
+    "status": "completed",
+    "code": "8208f95fc895d38cc7e5f45deb1a4fa924f741ee",
+    "base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+    "receipt": "popokabaka1/final-bank/cod161-finalize-002-terminal.json"
+  },
+  "stock_dispatches": 0,
+  "exact_public_head_review": "pending",
+  "source_and_physical_producers_reused": true
+}

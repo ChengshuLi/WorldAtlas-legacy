@@ -1,0 +1,30 @@
+{
+  "accepted_producer_code": "6bfc0a494252690030f1d4b656cc53696fb0fac5",
+  "actual_candidate_code": "abcd1460ae5738ac3ab0b3b79ba7719a387c0e04",
+  "previous_candidate": "db8a7d2cc7435d490e36299872a880568d9cce04",
+  "config": {
+    "version": 1,
+    "diagnostic": {
+      "commit": "0f578a3e5acaf1243de9d0bc346e9b4f6a5868bc",
+      "path": "research/geography/cod161-reaudit-20261024/popokabaka1/changed-semantics-diagnostic/native-diagnostic.json"
+    },
+    "accepted_selector": {
+      "commit": "a57ed94dab43e6c10ae502111ea67e0cc51e1be5",
+      "path": "data/ownership-selection.json"
+    }
+  },
+  "command": [
+    "node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "supported-inputs",
+    "research/geography/cod161-reaudit-20261024/popokabaka1/supported-inputs-config.json",
+    ".cache/delivery-handoff/cod3905-popokabaka1-projection-pass1-20261024-01a16f2d"
+  ],
+  "old_interrupted_destination_absent": true,
+  "historical_diagnostic_code": "feffd18c5748c47e87cc42cd7f5c63a60622d6b3",
+  "historical_diagnostic_report_sha256": "7694ed38d5b346f324da3f7edf4b7064213fe540bb6afc7bc6e3cbe5618b33d7",
+  "started": "2026-10-24T23:37:21.513421+00:00",
+  "status": "completed",
+  "returncode": 0,
+  "finished": "2026-10-24T23:46:34.887471+00:00"
+}

@@ -1,0 +1,1319 @@
+{
+  "version": 1,
+  "issue": 2453,
+  "lane": "geography",
+  "worker_id": "01a16f2d-2749-7641-a3d4-090e251490ec",
+  "subject_ids": [
+    "gb:COD:ADM2:63176286B16720510237815",
+    "gb:COD:ADM2:63176286B21708239892428",
+    "gb:COD:ADM2:63176286B25314267977171",
+    "gb:COD:ADM2:63176286B29097498682851",
+    "gb:COD:ADM2:63176286B36806520086654",
+    "gb:COD:ADM2:63176286B40063645047483",
+    "gb:COD:ADM2:63176286B41140464701712",
+    "gb:COD:ADM2:63176286B42701779698156",
+    "gb:COD:ADM2:63176286B47015384768636",
+    "gb:COD:ADM2:63176286B47421332346835",
+    "gb:COD:ADM2:63176286B50098701443330",
+    "gb:COD:ADM2:63176286B53748739739840",
+    "gb:COD:ADM2:63176286B6958016734749",
+    "gb:COD:ADM2:63176286B77587123851522",
+    "gb:COD:ADM2:63176286B81146580347594"
+  ],
+  "subject_ids_sha256": "96cb13269d9091494c30c6a96d59200bc81ccfa9ee5aea2c50540450c6f3c3c5",
+  "baseline": {
+    "commit": "a57ed94dab43e6c10ae502111ea67e0cc51e1be5",
+    "files": [
+      {
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "bytes": 1074327,
+        "sha256": "a75f184d075817469627f2b9eff892ff043597fefccdb9d61d2503f31a8486db",
+        "hash_kind": "file-bytes",
+        "uncompressed_bytes": 3294607,
+        "uncompressed_sha256": "922427143fcff23010af3931fb3f5e4ffea8b05c5d2b797ca02fc04c6c8b1baa",
+        "role": "original-source"
+      }
+    ],
+    "pins": {},
+    "pin_files": {},
+    "subject_files": {
+      "gb:COD:ADM2:63176286B16720510237815": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B21708239892428": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B25314267977171": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B29097498682851": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B36806520086654": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B40063645047483": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B41140464701712": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B42701779698156": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B47015384768636": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B47421332346835": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B50098701443330": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B53748739739840": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B6958016734749": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B77587123851522": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      },
+      "gb:COD:ADM2:63176286B81146580347594": {
+        "version": 1,
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+        "id_template": "gb:{shapeGroup}:{shapeType}:{shapeID}",
+        "properties": [
+          "shapeGroup",
+          "shapeType",
+          "shapeID"
+        ]
+      }
+    }
+  },
+  "sources": [
+    {
+      "id": "cod161-retained-research",
+      "url": "https://github.com/ChengshuLi/WorldAtlas/issues/2453#issuecomment-6390474045",
+      "role": "Exact existing authored primary-source reading, original operand observations and scope-specific proposals; original source restrictions and unperformed opportunities preserved.",
+      "vintage": "Original source corpus and 2026-10-23/24 research; prior diagnostic at temporary8d38ff36.",
+      "retrieved_at": "2026-10-24",
+      "license": {
+        "status": "redistributable",
+        "terms": "Project-authored evidence authorized public; no restricted source scans/PDF/OCR bodies redistributed."
+      },
+      "retention": "retained",
+      "verification": "verified",
+      "files": [
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/kalemie30_delimitation/kalemie30-researched-unresolved-proposal-v2.json",
+          "bytes": 110226,
+          "sha256": "3454598e3a1d82d96ad1fb78ead0d099e6e7752550b3e7a7657a8e3b5cde6b16",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/kalemie30_delimitation/native-contact-method-0eb64fbc.md",
+          "bytes": 6153,
+          "sha256": "b69badd7673f771148ebb9a383d43e6f61bf7394f298986cf41425e5215771aa",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/luozi19_primary/luozi19-bounded-proposal-v2.md",
+          "bytes": 9756,
+          "sha256": "43cbcdd27e65bf5fc0c78bb37722eb6385c915c35f5dd1396e555e8addd59810",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/luozi19_primary/luozi19-contact-verification-v2.json",
+          "bytes": 5836,
+          "sha256": "d7f213bdeedd71da31cd9df242309a21e9ecab74ba5f05ea26b22b09c558361c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/luozi19_primary/luozi19-researched-unresolved-proposal-v2.json",
+          "bytes": 340646,
+          "sha256": "15391f26a885d6cfb464dcbe83ececc39317ecfe6bc904c995d75d4df238c5c1",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_land_east/uvira6-researched-unresolved-proposal-v1.json",
+          "bytes": 92847,
+          "sha256": "1b6786c9ab52b88d5a5f5018a602f32bb5a7eafcb878b9a2ed99652fe6e27da6",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_land_west/kasai4-lunda-norte-researched-unresolved-proposal-v15.json",
+          "bytes": 125692,
+          "sha256": "bbb7f057d365f9facec8faf4d6c664482ec9f6a8c2de482ce8ec9f53df791b6c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_land_west/songololo25-zaire-researched-unresolved-proposal-v15.json",
+          "bytes": 233152,
+          "sha256": "fb763eb96aca7cb05077ac7e660fe8262baa3d03d48ede012a870212e71cf41b",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_land_west/tshela3-niari-researched-unresolved-proposal-v15.json",
+          "bytes": 110961,
+          "sha256": "6cb6ebe097f0b6e24152f0a86ffde7763ee1db65f6cb72d0b4baa492f1eac242",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_water35/bomongo5-likouala-researched-unresolved-proposal-v2.json",
+          "bytes": 35397,
+          "sha256": "37a0a4488d6683dc0222cb3ab571415be597138522a7454ac5891f4a76572edc",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_water35/fizi2-kigoma-researched-unresolved-proposal-v2.json",
+          "bytes": 28787,
+          "sha256": "32ddafd080e3b625bd3e61f37a3df7899fea24f1979f0f28d99eb6a60a32ff69",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_water35/moba1-rukwa-researched-unresolved-proposal-v2.json",
+          "bytes": 23883,
+          "sha256": "640d5032b2370d5996a9a4eaf8c19275bf3c6812ddfb35b5e811a2d339ae16fc",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_water35/moba27-katavi-researched-unresolved-proposal-v2.json",
+          "bytes": 332603,
+          "sha256": "4e5820e6d95634e37fa9c554c3b082bcf7d29c594dea5320dbbb77700fdd834d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/residual_water35/water35-four-group-proposal-manifest.json",
+          "bytes": 1617,
+          "sha256": "4cc293f6cef59fe26ebd2744758cf3c41c7df145138564491c98a4fa5d5fd719",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/uige18_lineage/uige18-source-qualification-proposal.json",
+          "bytes": 17296,
+          "sha256": "c89e57793f3471d3ff5b0256ef85f423b036ed79f7a2cf8911161d87fd446f3a",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/current-research/uige18_lineage/uige18-source-qualification-proposal.md",
+          "bytes": 8822,
+          "sha256": "df8e9a94eca93ff08bec8976d8755e8a95ebe5593f00e42a7a4df963465bd811",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/exact-key-extracts/kalemie30_delimitation.json",
+          "bytes": 29210,
+          "sha256": "a8d4f82e578ef81db12902ffe2d4974ad07caa8e3ecd14d4afd6d22fc833503f",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/exact-key-extracts/luozi19_primary.json",
+          "bytes": 127949,
+          "sha256": "670e85500b22fa8754e5319e72cf679b5cf7ed073bef3241aa68a9827cdf7fa7",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/exact-key-extracts/residual_land_west.json",
+          "bytes": 107875,
+          "sha256": "2cd1a426dae0003653dfc5a24c087db524cf5c57fa76ef1668f40f560e20a42a",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/exact-key-extracts/residual_water35.json",
+          "bytes": 228066,
+          "sha256": "6a6cc265909ed0d41117b9ac5fe58ca7386907f9800b0f82ab1da5ad8e8f7923",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/exact-key-extracts/uige18_lineage.json",
+          "bytes": 50970,
+          "sha256": "c608c17c7507e1e0c0c7c50298d35bfdb46273cdf8c8df97e6130868e62966e3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/luozi19_primary/lunda4-004579/receipt.json",
+          "bytes": 13194,
+          "sha256": "34c4bf8de40a2eef7692670b23a269ba2e5d39eea5623bbc50565746cece6c3b",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/luozi19_primary/lunda4-004579/source-access-assessment.md",
+          "bytes": 7200,
+          "sha256": "b30bf7dabbb96ec4e771e1cdb414f425653c51d5860a5e269011b7c5f7d5c4a2",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/prior-task4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/kahemba47-census-lineage-20261023.local.md",
+          "bytes": 9309,
+          "sha256": "a95fb7a9c72b5df52fb6b77b2bd32f2c0e1499254f624c2ba03719dd18065f34",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/residual_land_west/lunda-norte4-researched-unresolved-proposal.json",
+          "bytes": 79029,
+          "sha256": "8f585d3a94e0bbcb315bcb69729dfc03dd228ea5d31a95842a292f002dae3874",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/residual_land_west/lunda4-1922-1923-custody-v11.md",
+          "bytes": 8856,
+          "sha256": "9638f1fd67af9b17a99acd20086245204e7438a80cd8dbd78d242fb9b77de29b",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/residual_land_west/west32-native-verification-v15.json",
+          "bytes": 8128,
+          "sha256": "ddef162c67e36af1d0cee842ca24aef74f60dfbf9db438b10918a05c8344f4c9",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/residual_land_west/west32-per-source-assessment-v15.json",
+          "bytes": 113548,
+          "sha256": "429efed4736b4b4e9542e0b5a932a30e997ee1a5d5214859e9fd405eeff77809",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/residual_land_west/west32-post-observation-verification-v16.json",
+          "bytes": 4177,
+          "sha256": "d9c42419a209ac7d1a8f9ce6d29c9dca18b0044d1ca308c9cfbd6adee6ba1653",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/evidence/residual_land_west/west32-source-qualification-v13.md",
+          "bytes": 10419,
+          "sha256": "d4a3f31181e683c19af6358012f9dc525eef263e847f1dd7470bb956ef5c7607",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/inertproposal.json",
+          "bytes": 32880,
+          "sha256": "76fc81ed6b54008fddf2c8e2e44e8800d1b21b5dcf1c43bccb84d22de0137d5f",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/lunda4-review-v5/source-reasoning.md",
+          "bytes": 10906,
+          "sha256": "a60217ecad1b5e1d14595d2cfbf2e1fe95657a6ffa2eaaf2cb93e2b95589c980",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/bondo57-stock-request.json",
+          "bytes": 1684,
+          "sha256": "3dcc75b83d43c37df8e4f88c673c39714bfd2728edcf91943239df1d755ac7d9",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/cod2785-owned-slot-preserved-inputs/preservation-manifest.json",
+          "bytes": 1074,
+          "sha256": "3dc1a1358efb869f32f3eee7ec9335e3042c39518a22ce463597329a502e3445",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/au-2018-annual-report-bounded-recovery-result.json",
+          "bytes": 1928,
+          "sha256": "2757f968ffab384d9460e578fd7627567e60fb6eea4dd1294a44ed584d04e105",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/au-2026-newsletter-lusaka-passage-inspected.json",
+          "bytes": 5922,
+          "sha256": "dea0b24e04b11c6ad3a547727021a946ca1118a8b84c3e6a5a42ebf56fd0bf89",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/cod-adm2-original-target-documentation.json",
+          "bytes": 6589,
+          "sha256": "ba49f21a15d3669a22a36ce6d0e2e990e25b4f35bb8584e6cbe5ab2d869d5348",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/exact-original-tza-archive-inspection.json",
+          "bytes": 12316,
+          "sha256": "f4b5bf5fd2604838e937e75ceda38a3774964e99bd40c4124565645eec8e3ac6",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/kalemie30-current-diagnostic-custody.json",
+          "bytes": 869,
+          "sha256": "72eaf8f35dcf5a4cccf7763646709a06c1ce5db15aff324a75361ee77eef9119",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/kalemie30-post-observation-finite-assessment.md",
+          "bytes": 10788,
+          "sha256": "b1ff5ff76246e98fb2e8bd485f788d8eaae57b13af5b22dd8b5bfd5b61052394",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/native-operands-exporter-history-synthesis.json",
+          "bytes": 68084,
+          "sha256": "e44cf263b148b0c29ce2f1e30a2c3e7476322b175644e9111bd54f9c7c0c8a1c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/original-publisher-water-semantics-followup.json",
+          "bytes": 12272,
+          "sha256": "8ff31f284972cf466b20dada727e06f49ac370e042e9c38b4665b26226509da8",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/research-evidence.json",
+          "bytes": 10597,
+          "sha256": "78831a83154631a7e7d5da3a03598339f9de53c1b6626b1cc9c38fb631351ee1",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/uvira6-target-cartography-and-rusizi-assessment.json",
+          "bytes": 32309,
+          "sha256": "77dc10266e68a7689a1802e3cf3c6a9c9cdeb1bc40c8b270d77aa47c8b0913d6",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/kalemie30_delimitation/uvira6-target-cartography-and-rusizi-assessment.md",
+          "bytes": 3811,
+          "sha256": "b74347790d343207bcd97803ae7362b4d596a2f09c066b28467dd36a506baa95",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/luozi19_primary/gazette1954-local/download-attempts.json",
+          "bytes": 357,
+          "sha256": "6204c3e20643d7ae7322bf7d6e1e3e6c61cd0bf3ae62ab96b077ab7cc4db14f0",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/luozi19_primary/gb-COG-ADM1-verified-body.json",
+          "bytes": 170812,
+          "sha256": "2aea50c78d9c86139a73dfb72e20e59ae151d1c7d5c0e03bd0482f06e18d340b",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/luozi19_primary/luozi19-source-sufficiency-v3.json",
+          "bytes": 154518,
+          "sha256": "265a29223355d5b429d28f18a153b629a7ea240162b8562960c0b9a3761bf162",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/luozi19_primary/luozi19-status-correction-pending-reading.md",
+          "bytes": 1483,
+          "sha256": "da56eb44834e6d3a2b4b70b90151dc614e029fc6281838dad5c5cf6c69e053ca",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/luozi19_primary/mobayi9-adm3-findings-and-proposal-limit.md",
+          "bytes": 5682,
+          "sha256": "4fc46c0563a1669634dfbb3adbf19c1da88a754bf4fe0f67559b593d8d8158dc",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/luozi19_primary/mobayi9-adm3-source-inspection.json",
+          "bytes": 162988,
+          "sha256": "f9a5c892ad3a9360f5a10f9bf7baf2b60d7cd24443d69b1048bdcaf7260f7bf4",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/luozi19_primary/mobayi9-independent-source-assessment.md",
+          "bytes": 6450,
+          "sha256": "4aa8731013bacec1a8b7c886c1cfdbbbb49a03b0c70f5cb62a38161e071a3ff3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/prior-task4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/exact-roster-and-crosscheck.json",
+          "bytes": 35532,
+          "sha256": "d3f074d36aca8c1cf60345e23cad88b8741201ec6d12832e139246fb8e3574f9",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/prior-task4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/geoboundaries-4.0.0-crosscheck-manifest.json",
+          "bytes": 3069,
+          "sha256": "292ca5d70dd3f8040389b49bec0ddfbb99feba22634d7a35756e4b243feae031",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/prior-task4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/geoboundaries-4.0.0-crosscheck.md",
+          "bytes": 8484,
+          "sha256": "5c55c6d1856c5971fe1b5ffe6086c1f807cf3f09bc58940a00df6dda4f3b8d32",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/prior-task4/cod-uige-popokabaka-20261023/uige-popokabaka20-derived-review-v2/source-version-crosscheck.md",
+          "bytes": 11143,
+          "sha256": "fdcd875436380e0aeebc41a046edf52c71941a1e8c27ea6011d0984d0f54753d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/prior-task4/coordination/engineering/congo-original-repair-20261018/residual-930-20261019/kigoma-kalemie-30-boundary-applicability-20261024.md",
+          "bytes": 4750,
+          "sha256": "8053b52d0566e11d34cda471e3adc43f0351fea9983f50b9bd080e105f934cad",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/ango36-uvira6-primary-research.md",
+          "bytes": 9447,
+          "sha256": "6876770f2ccef06ea7d88a082e2236c7433d50d6788fa67fccd718f994fedef3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/northern12-known-source-leads.json",
+          "bytes": 13867,
+          "sha256": "caa3f7cc469288febac2099c356f91b9652dd60ddcccd8ac6c40386a5248d30f",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/northern21-postobservation/assessment.md",
+          "bytes": 17673,
+          "sha256": "ebf0ab737ed4aa9463ad90a4f4fedaa3d9e675362c11a32c10534a5ee7e9dc1c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/northern21-postobservation/northern21-actual-native-source-bindings.json",
+          "bytes": 284510,
+          "sha256": "b2a08535cc4feab5ed563dd0c6ca2f3845a1918890de8ee145651aee833158d8",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/northern21-postobservation/target-original-source-bindings.json",
+          "bytes": 1750,
+          "sha256": "6688be70382cc07862cb9438078f679a9e43a3baa8ddf4493cf3e1133f9cd18d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira-bdi1-archive-primary-lineage.json",
+          "bytes": 12128,
+          "sha256": "703fa8b715d829287b76e0b16981f76038f332a2e2bf103f23c353e88053056f",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira-kalala-exact-book-followup.md",
+          "bytes": 3612,
+          "sha256": "6d6ea170294236fb03ceff3ca83b10b62ba438f59300f9cc972daab870e2a54e",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira3-source-archives-primary-inspection.json",
+          "bytes": 38004,
+          "sha256": "61df87a62a3cf2050479e3aea5c7e634ca770b02faa9ab55a5d2221f11ca890d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira6-consolidated-source-assessment.md",
+          "bytes": 6351,
+          "sha256": "58161c11a822cca069efca0d2da67feccc8565fd2b1774e36b31cfd214ebbdac",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira6-native-operands-correspondence-assessment.json",
+          "bytes": 53488,
+          "sha256": "40ee3d49165f97fac2dd5314dd0cdde991371a4a2ef8172fef2a06b52ecf4ce0",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira6-post2020-institutional-research.md",
+          "bytes": 4045,
+          "sha256": "da7928352ee7e4294cde83d8f5113ebba60189402b0972f760cf49ae97a2e4dc",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira6-postobservation/actual-native6-all13.json",
+          "bytes": 127862,
+          "sha256": "114430fb31b0bdf8a6085829ee685726b35c942d2166eda3793d16c5fe2e9dad",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira6-postobservation/assessment.md",
+          "bytes": 12908,
+          "sha256": "23cc75690d8884de5ae05cc27ab95ee01edf1e004ecbd22036ed8bf4fd04735e",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_east/uvira6-postobservation/source-receipts.json",
+          "bytes": 4865,
+          "sha256": "6f2d26350ed2fdf5b817fbdacc3b909aa626128860e7e1407e4a74b2d442232e",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/BOC1913-Noqui-Kwango-reading-v10.md",
+          "bytes": 3974,
+          "sha256": "c4af9e1a787f25ecb01bb2513c6bbf1603b2c922b8fb851d9c58994dfc37d5af",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/BOC1913-annex-discovery.json",
+          "bytes": 174493,
+          "sha256": "dd7f89ac8c226fb15cbf4dce68d575ed78242f0d203fe4ef7969a63713cd0997",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/BOC1913-reading-receipt-v10.json",
+          "bytes": 3046,
+          "sha256": "bb90ab644369b58aef6970c3937c4dfe2c8794165fa08607e5dfecdedb658fe4",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/Cartotheque-selected-pages.json",
+          "bytes": 10941,
+          "sha256": "36e45f5059e9adbcdb156b30cd4d34349f58548c574a11f51ae04c16f43a31ca",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/Chamber1909-text-v16.json",
+          "bytes": 20925,
+          "sha256": "f27203ecf0516827349a00600b802503b3354b1106122f2d4c930f0fb834ce2c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/Jentgen1952-Angola-reading-receipt-v9.json",
+          "bytes": 2160,
+          "sha256": "792f913fcbf9e79887ed1b2a21dcc5f7e7bd95974b240a1bd4e36965257581b5",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/Jentgen1952-Angola-reading-v9.md",
+          "bytes": 4656,
+          "sha256": "b9bc97b7a8d362c834359454d30917cb5f76a5ae05351c8ef9ffa206d89a4e94",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/Jentgen1952-Luozi-Tshela-reading-v6.md",
+          "bytes": 3655,
+          "sha256": "102f9657689a01313965d60494661b51347cf07ddc270b3139f5b77d341a49ad",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/Jentgen1952-reading-receipt.json",
+          "bytes": 4208,
+          "sha256": "8bb690500041df9c4572dc8e4eb6ca7db9a006eca7e5ba9fff8ac493f948530c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/ago-adm1-bounded-local-candidates-v14.json",
+          "bytes": 13916,
+          "sha256": "94e35164650f7fc840cc2b1d33cf5ae781cc41a1b22c58b87c8990cb620d6962",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/ago-adm1-bounded-local-result-v14.json",
+          "bytes": 4571,
+          "sha256": "85e20a2024c84fd006819d726b1fb07d7b820e12a6d9a1ffd51918966fe70858",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/angola-strategy-v3.md",
+          "bytes": 3651,
+          "sha256": "cb9e8c4e3f3f208f1e30b1bce262c0454f769fe29d636f9b34fc4fdf24845a83",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/cod-west28-original-target-inspection-v12.json",
+          "bytes": 30391,
+          "sha256": "62e635d85ccc8fb0156e700a7381a3c0f6a7a7ad4a690ac211eda540ecf2b484",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/cod-west28-receipt-v12.json",
+          "bytes": 1105,
+          "sha256": "f1cdf2b4d8da6b935def5d91bdccf54bc833aa07afae1af9c5511ef094898ddc",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/cod-west28-target-construction-v12.md",
+          "bytes": 8197,
+          "sha256": "026bcfad1ae590fe624cded185158e1e21f845ad09beae39c66493e71b368132",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/lunda4-custody-receipt-v11.json",
+          "bytes": 2051,
+          "sha256": "00ef9536c62598e8a8600c5fc63d608457d5786d71c5dcd0641ab9728ce3d775",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/niari3-lineage-v2.md",
+          "bytes": 5754,
+          "sha256": "bac51104fcbe3703be7f854e8a3b3facaf5d4f2422018398538bcaa1450137d7",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/niari3-source-archive-inspection-v7.json",
+          "bytes": 6437,
+          "sha256": "61de3a1b5886bfa7d09a285ae7bc4b0803e848e2cc886f3076472033811f0f0a",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/niari3-source-archive-reading-v7.md",
+          "bytes": 3742,
+          "sha256": "50c7408fc471779a58510c8607989b336ef39e8840345e97c8cde901463e1ce5",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/research32.md",
+          "bytes": 9496,
+          "sha256": "a6d940a52ccb54e20c076d76e9d2059e4ccf7ee957e78e935c0db7b4fa7de73d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/scope32.json",
+          "bytes": 39286,
+          "sha256": "558b6502604fb00f309b18721b003d46d59472c1357ec95c90c43c55ff9c0baf",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/tshela3-1908-declaration-v5.md",
+          "bytes": 4951,
+          "sha256": "5444b09fdee207ff48fa2ce2d2317b55718483436f769e6bd3a6f0a7468e64ac",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/tshela3-commission-map-custody-v8.md",
+          "bytes": 1957,
+          "sha256": "a9c2be173839f5124699d0fc6aa14f2930f2f3bd904de480145b281008fb16d8",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/west32-post-observation-assessment-v16.md",
+          "bytes": 12487,
+          "sha256": "0d8cadfb9a7e0a5b04414dc6b1ccaaa540bf302be1c19e6ba257172834f5acfa",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_land_west/west32-post-observation-receipt-v16.json",
+          "bytes": 2832,
+          "sha256": "18cc25621395dd4559cf8d03f8a329d3f9cf9a9b3aaf08c7ec1e0c96fd12d321",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/bomongo5-cog-construction-and-map-addendum.json",
+          "bytes": 10953,
+          "sha256": "924aa8d043b0c3fe7d1c8a036e5bcb46ef0060c5e1f7e685acc2b61c5dd6fd40",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/bomongo5-likouala-original-archive-inspection.json",
+          "bytes": 9952,
+          "sha256": "e5ebc9a44524087a4b05e8bc6d54461df04849261d2f7f5bcb170588dc31ca31",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/bomongo5-water35-research.md",
+          "bytes": 10647,
+          "sha256": "e2acaa0fe6a445fffb6903db4c79bfec3233e2c2336e4ed8441e3868fc8029ab",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/burundi-law-2015-1-10-rumonge-text.json",
+          "bytes": 2971,
+          "sha256": "b6d6c8c2477b2075893bf68a337c2561b5263525d8bdc1f5f9884835dfed4ada",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/fizi2-2015-implementation-followup.json",
+          "bytes": 4604,
+          "sha256": "00d022cf9b759d7c231f40d42ba4f7425ad55a1a5e779c3af35d424b3a2207e5",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/fizi2-bdi-eight-operands-and-rumonge-law.json",
+          "bytes": 23010,
+          "sha256": "de223829d194b726c9abb6799cdf3aa446bc9287dbbded8b11fa844733220d7f",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/grid3-original-source-provenance-followup.json",
+          "bytes": 12170,
+          "sha256": "793b08ac4176ab75e7ad4f2c7fa40d3ad61f8120bf4792a3a44dfe1dbe39f0f9",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/moba-rukwa1-1989-treaty-lineage.json",
+          "bytes": 8209,
+          "sha256": "6a3d7f3ca5116b445d9675437f03245aaf7ba78b829e2923334a33dd1046b1a7",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/moba-rukwa1-official-catalogue-followup.json",
+          "bytes": 5812,
+          "sha256": "8d31e298fef0b7a1250f56b1c316fbe6eb4c0b6a627ac4d7b38f8cbc9f94cbd5",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/moba1-rukwa-unts-catalogue-executed-v1.json",
+          "bytes": 8326,
+          "sha256": "65eeb6a1e9da85ecc0b54b0e02d6ed142cf230cd67945c1ae8d756240632d507",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/moba28-parliament-1587-treaty-custody-followup.json",
+          "bytes": 3738,
+          "sha256": "78d9d9911e039c336defd54f25bbb3f8b9f4416125b51d667e4d97cd3097e311",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/moba28-parliament-2004-catalogue-inspection.json",
+          "bytes": 73439,
+          "sha256": "95e3df5656d4db8258191599145824b7bd68d20384d902dc80420fac0c56dc29",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/moba28-source-specific-qualification-pending-contacts.json",
+          "bytes": 18134,
+          "sha256": "f22b324c801ad6423083bb2b91a1d2bfedc35d75e12fdf50d328fb0783053680",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/water35-cross-source-applicability-interpretation.json",
+          "bytes": 5078,
+          "sha256": "23c27e407128eb68a45eb55a0c1ee6fe2010b1c9225288fa2878c4a73e12b40b",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/water35-native-contact-independent-check.json",
+          "bytes": 4035,
+          "sha256": "ebf5eeaafa9261dd48efcf7f9cd296011c813ae905507fc2e3af1ad3f953b2e7",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/water35-post-observation-finite-source-assessment-v1.json",
+          "bytes": 31339,
+          "sha256": "1359a1247dbeee9ed4da23dbf874df31124d9c341f44806fbdcde71fff5eb9a3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/water35-retained-scope.json",
+          "bytes": 33702,
+          "sha256": "1a86c968b56f1b9d1243e91fa2a5a69c7a1c0d497196f7655a84fbd4860ee9d6",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/residual_water35/zmb-original-archives-and-statutory-findings.json",
+          "bytes": 12614,
+          "sha256": "e8c57f85c95e2f7a76e8244020cb285f300a7d0511561bf3664b2c5b6cff4be1",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/adopted-two-key-decision-retained.json",
+          "bytes": 2329,
+          "sha256": "953eb7f9fb257a18918ef8c6b92b4a587641e736693d2be18419b546380a2fe8",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/adopted-two-key-record-retained.json",
+          "bytes": 3126,
+          "sha256": "cd107bd26b165c9684e18b428a40f479491056979077e6c60d64f7345d874d1c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/ago-adm2-archive-findings.md",
+          "bytes": 6420,
+          "sha256": "988d1254df2da944012b7ec2bdedda210210c65fd0b1fb431199c28c51be7f33",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/ago-adm2-archive-inspection.json",
+          "bytes": 20046,
+          "sha256": "f7188c7cdf1265da2c5db3b3ae822467be2db9086dfe95583c0ad8c6f5442ff4",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/cog-adm2-archive-inspection.json",
+          "bytes": 21831,
+          "sha256": "9587fb5cca21958b09202de487d299fc0580dd76ac2ee774972169cf877caebe",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/four-negative-findings.md",
+          "bytes": 6104,
+          "sha256": "1e19cc9c6343bde217b234e0abad13bde0b39c2267b378f6c8f344eeaacd7cfc",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/four-negative-input-audit.json",
+          "bytes": 22455,
+          "sha256": "9d2916b8a485502d9482e30d799d940bc5fa96ce609bd3974e26d905b00930ef",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/ine2014-cartography-source-findings.md",
+          "bytes": 7034,
+          "sha256": "6c0c54c8a32a70e297d668651866fdcc2126693d8add16e2c6d595eb5a0905c3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/ine2014-cartography-source-read.json",
+          "bytes": 1738,
+          "sha256": "5678c49d9dbfdb2405602212198fe6f1d6f92f51468570db28debd8b737b3ab3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/kalemie30-independent-source-assessment.md",
+          "bytes": 9010,
+          "sha256": "0758fd4e840105998a2189c28ee743f430fc70238586726ec7c62516af4f8932",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/lineage-findings-v1.json",
+          "bytes": 4192,
+          "sha256": "1612126f6fc5e24c707d4bdfecf033126ccb32f14ed7e85342ae1fefc7537819",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/lineage-scope-confirmation.json",
+          "bytes": 1232,
+          "sha256": "d28f872c19dd36d36d1b3e49ca4c9def7b9a0cb8424b54a11e3f2b48a57c3774",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/northern12-caf12-actual-archive-reading.json",
+          "bytes": 36855,
+          "sha256": "7445bcf124c9668233457451267c1c1ebec40847abc9661729a105d0b51f4577",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/northern12-caf12-source-body-addendum.md",
+          "bytes": 6719,
+          "sha256": "d246562b18de95b7b4b4765eeb2f72344e3b993ee629f82103ab0887ba3434c7",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/northern12-negative-source-audit.json",
+          "bytes": 75242,
+          "sha256": "de7a49f2186f6984a0d97801c9f7894495f3c69553bfdb3270e2e90e715dd361",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/pool18-original-source-inspection.json",
+          "bytes": 10526,
+          "sha256": "f06764ffa841d1afcd7a6a06b60ad58206c58e1bb99d19d96f42ce7367af1bd9",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/pool18-source-and-four-negative-qualification.md",
+          "bytes": 7412,
+          "sha256": "672166804498dd983ab89d23bb155db6302ad47eda13446ef212ec2dc33ad1d4",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/popokabaka-single-key-contextual-recommendation-receipt.json",
+          "bytes": 1110,
+          "sha256": "3d7360dbefc29a82d5b40afea90a186bbad4251a9e2af744fbfbfa9da28ccff8",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/popokabaka-single-key-contextual-recommendation.json",
+          "bytes": 19385,
+          "sha256": "54a6f158b3547bea6d11012602a4d4a8b36963dec5c2d1dc70fbfec5ef9f8cc0",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/popokabaka-single-key-contextual-recommendation.md",
+          "bytes": 8965,
+          "sha256": "c833b1beeeab7f1e1af88e21f450d68cbe6b762ff40dbb5796b6aff394803c6e",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/popokabaka18-target-documentary-lineage.json",
+          "bytes": 7985,
+          "sha256": "9cad7ca60472eff48e7c7ac8abd133e7d8bb2d70bc4a16befe3777f3c2a2884d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/popokabaka18-target-source-findings.md",
+          "bytes": 8608,
+          "sha256": "f35b4591f5effb0736eff400e1c37c33ef7dc56709dd19ee96dbaf68620f089c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/uige18-native-contact-independent-readback.json",
+          "bytes": 52685,
+          "sha256": "459729eafcb3527f1811259b736c87b142e9738a975c66b60b44f7867393eaba",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/uige18-post-observation-source-sufficiency-v2-receipt.json",
+          "bytes": 2932,
+          "sha256": "42b9b26ec63c847344fe6df8610a8f2d0f24c9bd26c6147af3a2e0142c5d0171",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/uige18-post-observation-source-sufficiency-v2.json",
+          "bytes": 60567,
+          "sha256": "03439a4ffa9a4b31ec2718e48443a0e2ae303366f966d7ac83304c5f000628e7",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/uige18-post-observation-source-sufficiency-v2.md",
+          "bytes": 11751,
+          "sha256": "042795bc311aadba2c46c1dfe6c112fb7a961e6eda95d9785465b491106f530d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/evidence/uige18_lineage/zaire25-lineage-findings.md",
+          "bytes": 5596,
+          "sha256": "2972de745521d1c3613616956a8a8fea875088af7812c8ff07f31db81bc5ff22",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-kalemie30-delivery-proposal/inertproposal.json",
+          "bytes": 105289,
+          "sha256": "292b51a88697d2d6abc6dc9f03d9209f4816c3bc146b1c31eca5336a9184272e",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-kalemie30-delivery-proposal/manifest.json",
+          "bytes": 1132,
+          "sha256": "146a9107fd60f843aa4c85774755fe542cd55129a32534323341c4d3d44ea4b0",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-kalemie30-delivery-proposal/receipt-references.json",
+          "bytes": 8965,
+          "sha256": "6b65a01062b25c683c6f5278a2b0228f9c42ffe3f0b279021dd193da77f3ad44",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-kalemie30-delivery-proposal/source-reasoning.md",
+          "bytes": 6998,
+          "sha256": "af42b109f700566aee3c72aaf283a69b7e5f59a2bcadcad1d4a33b734f9275a9",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/existing-read-receipts/Cartotheque-Luozi-selected-records.json",
+          "bytes": 31097,
+          "sha256": "6e90ceccae0ea502bd89e10e39cccc60730c4d03863e337f8715e190f8ef9401",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-1954-scans-and-1903-reading.md",
+          "bytes": 7971,
+          "sha256": "3bb8552d849b3c7101180c1e93b114bb47979c934e16b62642a879ff35b17459",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-contact-verification-v2.json",
+          "bytes": 5836,
+          "sha256": "d7f213bdeedd71da31cd9df242309a21e9ecab74ba5f05ea26b22b09c558361c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-original-operand-body-check.json",
+          "bytes": 5392,
+          "sha256": "e70bafa9a9de9a494401ebf11b897f985a5105605abdb027d7b5e892141a6bb6",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-proposal-v2-receipt.json",
+          "bytes": 4739,
+          "sha256": "ff5170757a970c21828444bfc7440bd6197492500052593524060a661ab9f812",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-source-reading-manifest.json",
+          "bytes": 29566,
+          "sha256": "5f8b2e5425afdd41f7a7c65987bacec87e4151d6d0d086e6a653e49e40f7d192",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/existing-read-receipts/luozi19-source-sufficiency-v3.md",
+          "bytes": 11049,
+          "sha256": "3f567f88e663607dcea60b27de8816fdcaf2d3e8e5dac8117caf3edf36e25a22",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/inertproposal.json",
+          "bytes": 241274,
+          "sha256": "0473ce8e2d2cf1261fe10af5e9e180fb827ff5e8cde3dfe53dfbae1cacf134b3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/receipt.json",
+          "bytes": 4106,
+          "sha256": "9d63dc72d21a1a8da980223b612e57b45adc177c6262c39e353f583161d90a19",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-luozi19-delivery-proposal/source-reasoning.md",
+          "bytes": 6114,
+          "sha256": "8c403fbce8ca71c56ef791fe6f9e378f51d50de010bc68f1021d403ce961cc13",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-northern-uvira27-delivery-proposal/assembly-receipt.json",
+          "bytes": 1546,
+          "sha256": "3c4ebf0e84c74e43294e2b5cfbf5fd6f87f37464da0f5fbe872f95326fbb1776",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-northern-uvira27-delivery-proposal/proposal.json",
+          "bytes": 365341,
+          "sha256": "a6c6ce71c68d03db3ea73710c363da03e61cf3ebf72110a80e4b7a0e33958696",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-northern-uvira27-delivery-proposal/source-read-receipts.json",
+          "bytes": 20145,
+          "sha256": "6d3f6ddd2bee8e938316f8e2b8c3391f664d945bbc953de4ed8d4a14be3f54f3",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-northern-uvira27-delivery-proposal/source-reasoning.md",
+          "bytes": 8738,
+          "sha256": "8a098634f5e5460d90ffda5138b9bbaa55a7cc898a0b561a0f53f00f1bbdb36d",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-uige18-delivery-proposal/README.md",
+          "bytes": 13392,
+          "sha256": "6537e9d406ddbfc5c803da4d2b8d017461c00ced47ce8245a7be64a3f4dcb7ee",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-uige18-delivery-proposal/evidence-references.json",
+          "bytes": 8549,
+          "sha256": "733042d24cbcced1582a9f1063e7619d79c17bb126a76fcd562bee03bf1fe8b0",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-uige18-delivery-proposal/proposal.json",
+          "bytes": 93032,
+          "sha256": "2278514d22a02aa65c53a7aeeea107caeb2b8ea59cf41625578e74d67d6aebf5",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-uige18-delivery-proposal/receipt.json",
+          "bytes": 1399,
+          "sha256": "d22bc1d6632b604d1067e1bf87c0e01c17433ba83baeb017c8a3e0acf4c428d1",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-uige18-delivery-proposal/validation.json",
+          "bytes": 576,
+          "sha256": "22749e645c493c0570fe87b7e1eafad625ba730b04d06bbda49a10bbb1b03411",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-water35-delivery-proposal/inertproposal.json",
+          "bytes": 258975,
+          "sha256": "eedc7cbf2d5952e3d911a9a6b9360c87ba0a7591b1100f1d9718069f538b868a",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-water35-delivery-proposal/read-receipts.json",
+          "bytes": 12321,
+          "sha256": "8b7d91f9332b13c080b6180a4b217eaf1321e94d10863950bb35ce06dbcee2e6",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-water35-delivery-proposal/source-reasoning.md",
+          "bytes": 11458,
+          "sha256": "7e3fecd4179cff3891dd54f1203429821e08cdacaa9a8c825d47e6be2ea75ac4",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-west28-delivery-proposal/proposal.json",
+          "bytes": 396183,
+          "sha256": "865962a3e7ff8f1f791a5e05501612097b85e4cbcdff6ce3ecfce7c44d545347",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-west28-delivery-proposal/receipt.json",
+          "bytes": 942,
+          "sha256": "8fd8e94105b1a4b68ed9462cbaff5ee48f87518c345b2b972916eb8fa26f3ca8",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-west28-delivery-proposal/source-reading-references.json",
+          "bytes": 10742,
+          "sha256": "d3d2cf1ca877f89583487b2e082d439f39d5759b4843ae4434e796f74366620c",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-west28-delivery-proposal/source-reasoning.md",
+          "bytes": 6575,
+          "sha256": "fc21e5fa732ee29196d036421831dc6c4ed9187e87d56b80dec1b5929f2cb6c9",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/next-cod161-review-v4/proposals/cod-west28-delivery-proposal/verification.json",
+          "bytes": 3977,
+          "sha256": "f4940e2dc4164724305b01fd59501553953a8903c043dd79d5f16976347fc576",
+          "hash_kind": "file-bytes"
+        },
+        {
+          "path": "research/geography/cod161-reaudit-20261024/evidence/observation/native-diagnostic.json",
+          "bytes": 10190632,
+          "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c",
+          "hash_kind": "file-bytes"
+        }
+      ],
+      "temporal_status": "reference"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/geography/cod161-reaudit-20261024/proposal160.json",
+      "bytes": 11433,
+      "sha256": "e371e73fc11f9db70b96d50e46fb99c3ba2953dd746f7db54982b20b80a9e0c6",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "research/geography/cod161-reaudit-20261024/custody-bridge.json",
+      "bytes": 88999,
+      "sha256": "257abdf6b5e9593dd84e915d8603a408f484de2f136607920131c00cba76dd7a",
+      "hash_kind": "file-bytes"
+    }
+  ],
+  "methods": [
+    {
+      "id": "source-specific-exact-review",
+      "kind": "source",
+      "description": "Reuses exact independently reviewed authored source evidence and original all-operand observations; seven groups partition160 proposed unresolved keys, separate from the one newly authorized contextual key. Documentary scope counts do not establish geographic acceptance.",
+      "software": "Existing source readers and stock native diagnostic; no unrelated source or physical producer replay. New exact-key qualification is separately recorded under popokabaka1.",
+      "units": "Original native owner/y/x keys; exact target and operand identities."
+    }
+  ],
+  "metrics": [
+    {
+      "id": "proposed_unresolved",
+      "value": 160,
+      "unit": "native-map-cells",
+      "vintage": "current",
+      "input_sha256": "e371e73fc11f9db70b96d50e46fb99c3ba2953dd746f7db54982b20b80a9e0c6",
+      "evaluation_commit": "a57ed94dab43e6c10ae502111ea67e0cc51e1be5"
+    },
+    {
+      "id": "new_accepted",
+      "value": 0,
+      "unit": "native-map-cells",
+      "vintage": "current",
+      "input_sha256": "e371e73fc11f9db70b96d50e46fb99c3ba2953dd746f7db54982b20b80a9e0c6",
+      "evaluation_commit": "a57ed94dab43e6c10ae502111ea67e0cc51e1be5"
+    }
+  ],
+  "metric_bindings": [
+    {
+      "metric_id": "proposed_unresolved",
+      "path": "research/geography/cod161-reaudit-20261024/proposal160.json",
+      "json_pointer": "/count"
+    },
+    {
+      "metric_id": "new_accepted",
+      "path": "research/geography/cod161-reaudit-20261024/proposal160.json",
+      "json_pointer": "/new_accepted_cells"
+    }
+  ],
+  "summaries": [],
+  "conclusions": [
+    {
+      "text": "160 exact keys have independently supported researched-unresolved proposals, retaining their full source-specific limits. Delivery and separate root acceptance remain required. One distinct Popokabaka key has root-authorized contextual applicability but requires successful changed-semantics qualification and final-map checks.",
+      "status": "unresolved",
+      "source_ids": [
+        "cod161-retained-research"
+      ]
+    }
+  ],
+  "stages": {
+    "research": "partial",
+    "implementation": "proposed",
+    "geographic_approval": "unapproved"
+  },
+  "commands": [
+    "node scripts/evidence-quality.mjs research/geography/cod161-reaudit-20261024/evidence-quality.json"
+  ]
+}

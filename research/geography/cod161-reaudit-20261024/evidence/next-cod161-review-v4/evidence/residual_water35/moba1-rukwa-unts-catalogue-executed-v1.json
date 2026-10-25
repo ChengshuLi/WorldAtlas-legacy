@@ -1,0 +1,117 @@
+{
+  "kind": "Rukwa1-UNTS-supported-catalogue-execution-and-pause-correction-v1",
+  "date_utc": "2026-10-24",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "key": [
+    14461,
+    137123,
+    153506
+  ],
+  "prior_receipts": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba-rukwa1-official-catalogue-followup.json",
+      "bytes": 5812,
+      "sha256": "8d31e298fef0b7a1250f56b1c316fbe6eb4c0b6a627ac4d7b38f8cbc9f94cbd5"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba-rukwa1-1989-treaty-lineage.json",
+      "bytes": 8209,
+      "sha256": "6a3d7f3ca5116b445d9675437f03245aaf7ba78b829e2923334a33dd1046b1a7"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/water35-post-observation-finite-source-assessment-v1.json",
+      "bytes": 31339,
+      "sha256": "1359a1247dbeee9ed4da23dbf874df31124d9c341f44806fbdcde71fff5eb9a3"
+    }
+  ],
+  "pause_audit": {
+    "exact_url": "https://treaties.un.org/pages/AdvanceSearch.aspx?clang=_en&tab=UNTS",
+    "original_cause": "Successful page read but text-only web tool lacked form submission. No UNTS source denial recorded. Later wording generalized the unsupported form pause alongside a stopped AU browser action; that was not an independently evidenced prohibition against a fresh UNTS read-only catalogue query.",
+    "other_stops": "The AU newsletter computer-use action remains stopped; Durham restricted URL, gazettes.africa403, denied ZMB ArcGIS and other source denials were not revisited.",
+    "current_authorization": "Parent expressly authorized independently available read-only UNTS catalogue work outside the stopped AU action when no actual denial applied."
+  },
+  "citation": {
+    "participants": [
+      "Zambia",
+      "Zaire / Democratic Republic of the Congo"
+    ],
+    "conclusion_date": "1989-09-18",
+    "place_from_academic_reproduction": "Kinshasa",
+    "title_status": "Described as the 1989 delimitation/boundary treaty in official parliamentary context; no authenticated full signed title acquired. Do not present a synthesized English title as a quoted official title.",
+    "basis": "Actual ACP2021 reports identify 18 September1989; actual official2009 parliamentary answer treats the delimitation as agreed. Academic reproduction identifies signed AppendixI and enlarged AppendixII sheets, including Tanganyika, but is not authenticated signed-map custody."
+  },
+  "current_execution": {
+    "tools": "web open plus supported cua_repl browser API and accessibility/screenshot reading",
+    "fresh_web_read": "UNTS form successfully read; no login or access denial.",
+    "unavailable_surface": "Initial createBrowserTab(iab) returned Browser is not available: iab. No tab created there.",
+    "selected_surface": "Inventory exposed existing Chrome; created a fresh UNTS research tab921183052 under session UNTS treaty. No account/profile/permission changes, no AU tab claimed or reopened.",
+    "transient_tool_limits": "DOM snapshot calls timed out; documented accessibility interface remained usable. Date typing initially changed/duplicated values; corrected through supported setValue and verified rendered exact range before search. A final AX request timed out; screenshot confirmed the completed result. No submission duplicated due timeout."
+  },
+  "queries": [
+    {
+      "criterion": "Treaty; Show All Agreements; Date of Conclusion from18/09/1989to18/09/1989",
+      "verification": "Both the rendered criteria screenshot and subsequent AX back-navigation showed the exact date range.",
+      "state": "COMPLETED",
+      "result_count": 4,
+      "result_url": "https://treaties.un.org/pages/SearchResults.aspx?flag=Treaty&tab=UNTS",
+      "results": [
+        {
+          "registration": "I-58203",
+          "conclusion_date": "18/09/1989",
+          "title_summary": "Canada–UNESCO office establishment agreement",
+          "detail_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280422822&clang=_en"
+        },
+        {
+          "registration": "A-22537",
+          "conclusion_date": "18/09/1989",
+          "title_summary": "Bangladesh–IFAD Southwest Rural Development loan amendment",
+          "detail_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280061af0&clang=_en"
+        },
+        {
+          "registration": "I-31709",
+          "conclusion_date": "18/09/1989",
+          "title_summary": "Crime investigation/prosecution and confiscation of proceeds agreement",
+          "detail_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800ad268&clang=_en"
+        },
+        {
+          "registration": "I-26800",
+          "conclusion_date": "18/09/1989",
+          "title_summary": "Second UN international remote-sensing training course agreement",
+          "detail_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800c36cd&clang=_en"
+        }
+      ],
+      "finding": "No Zambia–Zaire delimitation title among the four actual returned records. Unrelated bodies were not downloaded."
+    },
+    {
+      "criterion": "Treaty; Show All Agreements; Participant Match all these words (Zaire,Zambia); date criterion removed",
+      "state": "COMPLETED",
+      "result_count": 96,
+      "result_limit": "First result page shows multilateral instruments including Paris Agreement and nuclear-weapons prohibition treaty. Did not inspect all96 or claim no matching record from this broad result."
+    },
+    {
+      "criterion": "Same participant match-all query plus Treaty type Bilateral; no date restriction",
+      "criteria_verification": "Actual AX showed Participant Match all these words (Zaire,Zambia) and Treaty type Match any of these words (Bilateral); prior date criterion removed and verified.",
+      "state": "COMPLETED",
+      "visible_result": "Record Not Found.",
+      "verification": "Screenshot of official Search Results page visibly read after AX timeout. Screenshot remains in tool conversation; no fabricated local screenshot file or hash.",
+      "finding": "No bilateral catalogue result under these participant labels. Does not establish nonregistration, legal invalidity, universal absence or lack of signed-map custody."
+    }
+  ],
+  "new_source_result": "The concrete UNTS form lead is now actually performed with two bounded selection approaches: exact conclusion date and paired participants narrowed to bilateral. No matching treaty identifier or annex locator returned. The earlier unsupported/unexecuted form blocker is superseded; the signed treaty and MapsI/II remain unlocated.",
+  "finite_limits": [
+    "No separate DRC-label query or exhaustive full-text query was performed; the exact-date query did not depend on participant labels. The participant query itself returned modern multilateral instruments despite Zaire label, but no assertion about internal alias equivalence is made.",
+    "Official gazette pages earlier timed out or returned502, no exact issue/accession known. Durham and gazettes.africa remain restricted/stopped. No changed access controls, source mirrors, outreach or purchase.",
+    "Academic reproduction remains a discovery lead; the signed appendices, their scale/datum and ratification exchange have not been authenticated. No direct new readable signed item arose from these results."
+  ],
+  "scientific_consequence": "Rukwa1 remains held and separate from the other29 lake cells. Recommend independent researched-unresolved consideration using its completed original-source/statutory/treaty-process research plus these actual unsuccessful catalogue queries. Remove the specific condition that acceptance must await an unexecuted UNTS form. Keep the unresolved signed-map custody and all source-relative limits explicit; no universal exhaustion or positive clearance is claimed.",
+  "acceptance": {
+    "accepted_cells": 0,
+    "hold_removals": 0,
+    "new_native_observations": 0,
+    "geometry_operations": 0
+  },
+  "supersedes": [
+    "UNTS form unexecuted/paused status in water35-post-observation-finite-source-assessment-v1.json and earlier Rukwa proposal records, only for the documented executed query scopes.",
+    "Any inference that the old AU browser stop was itself an actual UNTS source denial."
+  ]
+}

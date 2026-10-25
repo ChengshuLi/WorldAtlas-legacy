@@ -1,0 +1,2773 @@
+{
+  "kind": "exact-cod-pending-native-contact-view-v1",
+  "scope": "residual_land_west",
+  "key_order": [
+    "owner",
+    "y",
+    "x"
+  ],
+  "code": "8d38ff36d0b37b98bfd00ff2d7fb81a5081c7f4f",
+  "unchanged_accepted_code_base": "0eb64fbc65a9abec2c627ed2bc5dccaffc6f6239",
+  "diagnostic": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/native-diagnostic.json",
+    "bytes": 10190632,
+    "sha256": "b631af1c0e2e1206a19551f800de36c8183ddfefc5c1d9b84cd178c778df754c"
+  },
+  "preparation": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/bd3098e4eb2d1a2ee6b11b26248adacbd320a7a524f8b678a54b46d4638eba9c/work/.cache/delivery-handoff/cod3905-2784-authorized-bridge-20261024-01a16f2d/preparation.json",
+    "bytes": 269,
+    "sha256": "4ec67562b703c79fed2e2772e5a30ea157d8f6e6a27e6c2a6f40db3803303282"
+  },
+  "source_evidence": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-custody-20261024/immutable-custody/source-evidence.json",
+    "bytes": 486052,
+    "sha256": "db66ce1220ad16c5287de8ac29f135051e351ec71384eeb1aed9625a11ada77e"
+  },
+  "partition": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-verified-partition.json",
+    "bytes": 22858,
+    "sha256": "656ba6320dc96c390c91250ec4b0599e1fec8e19c5f3a924bc0c5653fc443f2f"
+  },
+  "records": [
+    {
+      "key": [
+        14467,
+        135342,
+        141355
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141355,
+        141356,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135343,
+        141352
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141352,
+        141355,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135343,
+        141353
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141352,
+        141355,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135343,
+        141354
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141352,
+        141355,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135344,
+        141342
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141342,
+        141343,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135344,
+        141415
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141415,
+        141416,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135345,
+        141415
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141415,
+        141416,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135348,
+        141320
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141320,
+        141321,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135348,
+        141325
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141325,
+        141327,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135348,
+        141326
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141325,
+        141327,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135349,
+        141304
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141304,
+        141305,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135349,
+        141318
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141318,
+        141321,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135349,
+        141319
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141318,
+        141321,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135349,
+        141320
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141318,
+        141321,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135349,
+        141326
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141326,
+        141327,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135350,
+        141316
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141316,
+        141320,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135350,
+        141317
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141316,
+        141320,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135350,
+        141318
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141316,
+        141320,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135350,
+        141319
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141316,
+        141320,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135351,
+        141314
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141314,
+        141319,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135351,
+        141315
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141314,
+        141319,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135351,
+        141316
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141314,
+        141319,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135351,
+        141317
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141314,
+        141319,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135351,
+        141318
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141314,
+        141319,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14467,
+        135352,
+        141312
+      ],
+      "target_id": "gb:COD:ADM2:63176286B29097498682851",
+      "native_interval": [
+        141312,
+        141313,
+        14467
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B906914650007"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 17,
+            "geometry_sha256": "873b52d6e777675277b48e05d1189036804cb13a3ee6a9dad0179ff24c12ec41",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B68708736810578"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 155,
+            "geometry_sha256": "95f203be3704573eba289c55c75012fdebd1f2dcb2b672a3f81b2b8a7ef67a3d",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B28575978802945"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 156,
+            "geometry_sha256": "b6911ec2280a5a644a6702d95edf59d2bd2994d3037d66ce75ee564dc26f2876",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B4285388649129"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        },
+        {
+          "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 158,
+            "geometry_sha256": "d148721427aa31800ecee40a873f55a079bd21e204c6961c1918aaf88d8efdba",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B81083944254276"
+          },
+          "source_id": "gb:COD:ADM2:63176286B29097498682851",
+          "target_id": "gb:COD:ADM2:63176286B29097498682851"
+        }
+      ]
+    },
+    {
+      "key": [
+        14492,
+        136869,
+        146925
+      ],
+      "target_id": "gb:COD:ADM2:63176286B41140464701712",
+      "native_interval": [
+        146925,
+        146926,
+        14492
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "01bb7224806c1c81d9e98231cbb273c73247f8668fe34b62deb1f8fff5f203ed",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 12,
+            "geometry_sha256": "01bb7224806c1c81d9e98231cbb273c73247f8668fe34b62deb1f8fff5f203ed",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM1:26408823B58820355179323"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "526e3c6b1a7901ca337d5686f70f1bc9217a8d840fb5fb6d77ba19cc9f79e0ae",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 109,
+            "geometry_sha256": "526e3c6b1a7901ca337d5686f70f1bc9217a8d840fb5fb6d77ba19cc9f79e0ae",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B62164044722881"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        },
+        {
+          "geometry_sha256": "91a441d7c980e4af6049356ce419bc47d33e9d73b41fb447f471ff48a6c743fa",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 110,
+            "geometry_sha256": "91a441d7c980e4af6049356ce419bc47d33e9d73b41fb447f471ff48a6c743fa",
+            "negative_ordinal": 4,
+            "source_id": "gb:AGO:ADM2:16411231B59057839791077"
+          },
+          "source_id": "gb:COD:ADM2:63176286B41140464701712",
+          "target_id": "gb:COD:ADM2:63176286B41140464701712"
+        }
+      ]
+    },
+    {
+      "key": [
+        14500,
+        134608,
+        140827
+      ],
+      "target_id": "gb:COD:ADM2:63176286B47015384768636",
+      "native_interval": [
+        140827,
+        140828,
+        14500
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "7c0936bd03803031bcff914e7cb407f0401b192af126ed9de11f68bef5e26def",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "7c0936bd03803031bcff914e7cb407f0401b192af126ed9de11f68bef5e26def",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B25821416016710"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "67d48f93c305ec98b380dea82417a0944992e1ac882ef4a429f23375668c4e02",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 25,
+            "geometry_sha256": "67d48f93c305ec98b380dea82417a0944992e1ac882ef4a429f23375668c4e02",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B22766430211667"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2835318a140e3ae923593b9aeeefde56d73105b4b718d803a1cb7c5ea371ecf8",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 26,
+            "geometry_sha256": "2835318a140e3ae923593b9aeeefde56d73105b4b718d803a1cb7c5ea371ecf8",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B679187258105"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "110c508ef4376187495224c5a555819a334465b0094c20e2accb444f5df7faf1",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 27,
+            "geometry_sha256": "110c508ef4376187495224c5a555819a334465b0094c20e2accb444f5df7faf1",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B42954517222252"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 0,
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "negative_ordinal": 4,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "d664974179f86586624e44e7dd2b711e1bb95c8953c8ff7be8f4e023d2957461",
+          "kinds": [],
+          "negative_ordinal": 5,
+          "original_source": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "d664974179f86586624e44e7dd2b711e1bb95c8953c8ff7be8f4e023d2957461",
+            "negative_ordinal": 5,
+            "source_id": "gb:COG:ADM1:67827341B19376310286278"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 6,
+          "original_source": {
+            "feature_ordinal": 6,
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "negative_ordinal": 6,
+            "source_id": "gb:COG:ADM1:67827341B58284401685335"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+          "kinds": [],
+          "negative_ordinal": 7,
+          "original_source": {
+            "feature_ordinal": 28,
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "negative_ordinal": 7,
+            "source_id": "gb:COG:ADM2:1427508B96831343191841"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2ccc8aa687aee30712700a7bde905bbcf08cbfab18de885c55701e6795e77571",
+          "kinds": [],
+          "negative_ordinal": 8,
+          "original_source": {
+            "feature_ordinal": 33,
+            "geometry_sha256": "2ccc8aa687aee30712700a7bde905bbcf08cbfab18de885c55701e6795e77571",
+            "negative_ordinal": 8,
+            "source_id": "gb:COG:ADM2:1427508B96128266527522"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+          "kinds": [],
+          "negative_ordinal": 9,
+          "original_source": {
+            "feature_ordinal": 43,
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "negative_ordinal": 9,
+            "source_id": "gb:COG:ADM2:1427508B53261587685070"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        }
+      ]
+    },
+    {
+      "key": [
+        14500,
+        134609,
+        140827
+      ],
+      "target_id": "gb:COD:ADM2:63176286B47015384768636",
+      "native_interval": [
+        140827,
+        140829,
+        14500
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "7c0936bd03803031bcff914e7cb407f0401b192af126ed9de11f68bef5e26def",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "7c0936bd03803031bcff914e7cb407f0401b192af126ed9de11f68bef5e26def",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B25821416016710"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "67d48f93c305ec98b380dea82417a0944992e1ac882ef4a429f23375668c4e02",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 25,
+            "geometry_sha256": "67d48f93c305ec98b380dea82417a0944992e1ac882ef4a429f23375668c4e02",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B22766430211667"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2835318a140e3ae923593b9aeeefde56d73105b4b718d803a1cb7c5ea371ecf8",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 26,
+            "geometry_sha256": "2835318a140e3ae923593b9aeeefde56d73105b4b718d803a1cb7c5ea371ecf8",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B679187258105"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "110c508ef4376187495224c5a555819a334465b0094c20e2accb444f5df7faf1",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 27,
+            "geometry_sha256": "110c508ef4376187495224c5a555819a334465b0094c20e2accb444f5df7faf1",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B42954517222252"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 0,
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "negative_ordinal": 4,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "d664974179f86586624e44e7dd2b711e1bb95c8953c8ff7be8f4e023d2957461",
+          "kinds": [],
+          "negative_ordinal": 5,
+          "original_source": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "d664974179f86586624e44e7dd2b711e1bb95c8953c8ff7be8f4e023d2957461",
+            "negative_ordinal": 5,
+            "source_id": "gb:COG:ADM1:67827341B19376310286278"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 6,
+          "original_source": {
+            "feature_ordinal": 6,
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "negative_ordinal": 6,
+            "source_id": "gb:COG:ADM1:67827341B58284401685335"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+          "kinds": [],
+          "negative_ordinal": 7,
+          "original_source": {
+            "feature_ordinal": 28,
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "negative_ordinal": 7,
+            "source_id": "gb:COG:ADM2:1427508B96831343191841"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2ccc8aa687aee30712700a7bde905bbcf08cbfab18de885c55701e6795e77571",
+          "kinds": [],
+          "negative_ordinal": 8,
+          "original_source": {
+            "feature_ordinal": 33,
+            "geometry_sha256": "2ccc8aa687aee30712700a7bde905bbcf08cbfab18de885c55701e6795e77571",
+            "negative_ordinal": 8,
+            "source_id": "gb:COG:ADM2:1427508B96128266527522"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+          "kinds": [],
+          "negative_ordinal": 9,
+          "original_source": {
+            "feature_ordinal": 43,
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "negative_ordinal": 9,
+            "source_id": "gb:COG:ADM2:1427508B53261587685070"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        }
+      ]
+    },
+    {
+      "key": [
+        14500,
+        134609,
+        140828
+      ],
+      "target_id": "gb:COD:ADM2:63176286B47015384768636",
+      "native_interval": [
+        140827,
+        140829,
+        14500
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "7c0936bd03803031bcff914e7cb407f0401b192af126ed9de11f68bef5e26def",
+          "kinds": [],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "7c0936bd03803031bcff914e7cb407f0401b192af126ed9de11f68bef5e26def",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B25821416016710"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "67d48f93c305ec98b380dea82417a0944992e1ac882ef4a429f23375668c4e02",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 25,
+            "geometry_sha256": "67d48f93c305ec98b380dea82417a0944992e1ac882ef4a429f23375668c4e02",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B22766430211667"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2835318a140e3ae923593b9aeeefde56d73105b4b718d803a1cb7c5ea371ecf8",
+          "kinds": [],
+          "negative_ordinal": 2,
+          "original_source": {
+            "feature_ordinal": 26,
+            "geometry_sha256": "2835318a140e3ae923593b9aeeefde56d73105b4b718d803a1cb7c5ea371ecf8",
+            "negative_ordinal": 2,
+            "source_id": "gb:AGO:ADM2:16411231B679187258105"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "110c508ef4376187495224c5a555819a334465b0094c20e2accb444f5df7faf1",
+          "kinds": [],
+          "negative_ordinal": 3,
+          "original_source": {
+            "feature_ordinal": 27,
+            "geometry_sha256": "110c508ef4376187495224c5a555819a334465b0094c20e2accb444f5df7faf1",
+            "negative_ordinal": 3,
+            "source_id": "gb:AGO:ADM2:16411231B42954517222252"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+          "kinds": [],
+          "negative_ordinal": 4,
+          "original_source": {
+            "feature_ordinal": 0,
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "negative_ordinal": 4,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "d664974179f86586624e44e7dd2b711e1bb95c8953c8ff7be8f4e023d2957461",
+          "kinds": [],
+          "negative_ordinal": 5,
+          "original_source": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "d664974179f86586624e44e7dd2b711e1bb95c8953c8ff7be8f4e023d2957461",
+            "negative_ordinal": 5,
+            "source_id": "gb:COG:ADM1:67827341B19376310286278"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 6,
+          "original_source": {
+            "feature_ordinal": 6,
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "negative_ordinal": 6,
+            "source_id": "gb:COG:ADM1:67827341B58284401685335"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+          "kinds": [],
+          "negative_ordinal": 7,
+          "original_source": {
+            "feature_ordinal": 28,
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "negative_ordinal": 7,
+            "source_id": "gb:COG:ADM2:1427508B96831343191841"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2ccc8aa687aee30712700a7bde905bbcf08cbfab18de885c55701e6795e77571",
+          "kinds": [],
+          "negative_ordinal": 8,
+          "original_source": {
+            "feature_ordinal": 33,
+            "geometry_sha256": "2ccc8aa687aee30712700a7bde905bbcf08cbfab18de885c55701e6795e77571",
+            "negative_ordinal": 8,
+            "source_id": "gb:COG:ADM2:1427508B96128266527522"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        },
+        {
+          "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+          "kinds": [],
+          "negative_ordinal": 9,
+          "original_source": {
+            "feature_ordinal": 43,
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "negative_ordinal": 9,
+            "source_id": "gb:COG:ADM2:1427508B53261587685070"
+          },
+          "source_id": "gb:COD:ADM2:63176286B47015384768636",
+          "target_id": "gb:COD:ADM2:63176286B47015384768636"
+        }
+      ]
+    },
+    {
+      "key": [
+        14586,
+        136402,
+        146945
+      ],
+      "target_id": "gb:COD:ADM2:63176286B81146580347594",
+      "native_interval": [
+        146945,
+        146946,
+        14586
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        }
+      ]
+    },
+    {
+      "key": [
+        14586,
+        136429,
+        146966
+      ],
+      "target_id": "gb:COD:ADM2:63176286B81146580347594",
+      "native_interval": [
+        146966,
+        146967,
+        14586
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        }
+      ]
+    },
+    {
+      "key": [
+        14586,
+        136638,
+        146992
+      ],
+      "target_id": "gb:COD:ADM2:63176286B81146580347594",
+      "native_interval": [
+        146992,
+        146993,
+        14586
+      ],
+      "native_decision": "territorial_exclusion_cells",
+      "operands": [
+        {
+          "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+          "kinds": [
+            "interior"
+          ],
+          "negative_ordinal": 0,
+          "original_source": {
+            "feature_ordinal": 11,
+            "geometry_sha256": "74d83cb444a05d4d5004bc4516166a1c974f0bcb9025c175a523b4ecb7428c52",
+            "negative_ordinal": 0,
+            "source_id": "gb:AGO:ADM1:26408823B5362531623165"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        },
+        {
+          "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+          "kinds": [],
+          "negative_ordinal": 1,
+          "original_source": {
+            "feature_ordinal": 98,
+            "geometry_sha256": "0a89c87e3031067a87e973d67e0b296ea7f7d51314941d7f31160bfd5154494a",
+            "negative_ordinal": 1,
+            "source_id": "gb:AGO:ADM2:16411231B92925110223694"
+          },
+          "source_id": "gb:COD:ADM2:63176286B81146580347594",
+          "target_id": "gb:COD:ADM2:63176286B81146580347594"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Lossless lookup of original stock intervals, not a new geometry observation.",
+    "Empty kinds means only native-predicate absence, not semantic clearance.",
+    "All254 pending holds unchanged; no accepted unresolved or positive key added.",
+    "Contact-key counts can overlap across operands and do not award credit."
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "kind": "zmb-original-archives-and-statutory-narratives-primary-research",
+  "worker_thread_id": "01a16f2e-6dd5-750e-a5d4-d5c3860f80e2",
+  "date_utc": "2026-10-24",
+  "scope": "Exact Moba28 with12 original native exclusions; this continuation concerns six Zambia operands, no implied responsible-operand attribution. Rukwa1 remains center-label context.",
+  "prior_research": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba28-zmb-six-operands-source-research.json",
+    "bytes": 64533,
+    "sha256": "82eac90e529495395f61bf1984df792fcef1c289747296333e241544d045d259"
+  },
+  "archive_member_evidence": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/zmb-original-archive-member-evidence.json",
+    "bytes": 5995,
+    "sha256": "c0548e5a9ede558805c0439463dc845c66330962c7b569b8057aff58c1dec90e"
+  },
+  "access_correction": {
+    "prior_obstacles": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/moba28-zmb-six-operands-transfer-obstacles.json",
+      "bytes": 1694,
+      "sha256": "0daa56e4f29156038c47e81f40e955550a18a4be674e89faa4cb7ea1f0115451"
+    },
+    "new_authorization": "Parent explicitly authorized precise per-command approval after verifying known failed transfers left no partial files. No browser, credentials, network-setting changes or source403 bypass.",
+    "actual_results": [
+      {
+        "target": "ZMB_ADM2-original.zip",
+        "exec_session": 30663,
+        "exit_code": 0
+      },
+      {
+        "target": "SI-2012-53.pdf",
+        "exec_session": 51593,
+        "exit_code": 0
+      },
+      {
+        "target": "ZMB_ADM1-original.zip",
+        "exec_session": 73744,
+        "exit_code": 0
+      },
+      {
+        "target": "zambia-delegated-legislation-third-session.pdf",
+        "exec_session": 85661,
+        "exit_code": 0
+      }
+    ],
+    "server_approval_id": "No separate approval ID exposed in tool responses; successful command sessions/exit results retained.",
+    "interpretation": "Initial DNS failures no longer block these four acquired inputs. Earlier obstacle artifact is preserved as history rather than overwritten or treated as exhaustion."
+  },
+  "original_archive_findings": {
+    "ADM1": {
+      "archive": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/ZMB_ADM1-original.zip",
+        "bytes": 2677919,
+        "sha256": "cecc58aaf9c9ada42d79d9fc6e57846dd0470726ec941f8a325de7d0fa60a2c2"
+      },
+      "source_url": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/sourceData/gbOpen/ZMB_ADM1.zip",
+      "expected_lfs_hash_verified": true,
+      "representative_year": "2020",
+      "meta_source": "Zambia Data Hub",
+      "meta_exact_source_url": "https://zambia-nsdi-mlnr.hub.arcgis.com/datasets/6fe71ff483ab491782c8524ec3d1a3b8_0/about",
+      "dbf_fields": [
+        "Name",
+        "Level",
+        "ISO_Code"
+      ],
+      "dbf_record_count": 10,
+      "selected_records": [
+        {
+          "ordinal": 3,
+          "values": {
+            "Name": "Luapula",
+            "Level": "ADM1",
+            "ISO_Code": "ZM-04"
+          }
+        },
+        {
+          "ordinal": 8,
+          "values": {
+            "Name": "Northern",
+            "Level": "ADM1",
+            "ISO_Code": "ZM-05"
+          }
+        }
+      ],
+      "lineage": "XML records22April2022 field derivation Name from PROVINCE, Level assignment and export from Zambia_Provinces. This processing timestamp is distinct from represented2020.",
+      "license_visual": "Actual embedded license.PNG read: generic CC BY4.0 license-page screenshot. It does not itself show Zambia source-item identity.",
+      "limitations": "No per-feature boundary narrative or treaty spatial annex included. Exact decoded release corpus remains separately authenticated; no re-simplification or geometry equality between unsimplified archive and simplified release claimed."
+    },
+    "ADM2": {
+      "archive": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/ZMB_ADM2-original.zip",
+        "bytes": 9540777,
+        "sha256": "4bcde79f113e249a0863cb95da0a39052fee4dd347f16c83efe8285fcdeffdbe"
+      },
+      "source_url": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/sourceData/gbOpen/ZMB_ADM2.zip",
+      "expected_lfs_hash_verified": true,
+      "representative_year": "2020",
+      "meta_sources": [
+        "GRID3",
+        "Office of the Surveyor General"
+      ],
+      "meta_exact_source_url": "https://data.grid3.org/datasets/GRID3::grid3-zambia-administrative-boundaries-districts-2020/about",
+      "new_vintage_detail": "Actual meta.txt says boundaries represent legislative changes of2017 while shapefile updated2020.",
+      "dbf_fields": [
+        "Shape_Leng",
+        "Shape_Area",
+        "Name",
+        "Level"
+      ],
+      "dbf_record_count": 116,
+      "selected_records": [
+        {
+          "source_record_ordinal": 6,
+          "values": {
+            "Shape_Leng": "2.83043742164e+00",
+            "Shape_Area": "3.11469411327e-01",
+            "Name": "Chiengi",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "source_record_ordinal": 36,
+          "values": {
+            "Shape_Leng": "4.78464867743e+00",
+            "Shape_Area": "4.12759935999e-01",
+            "Name": "Kaputa",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "source_record_ordinal": 76,
+          "values": {
+            "Shape_Leng": "5.88205641511e+00",
+            "Shape_Area": "8.27845287441e-01",
+            "Name": "Mpulungu",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "source_record_ordinal": 94,
+          "values": {
+            "Shape_Leng": "5.40963813369e+00",
+            "Shape_Area": "6.14738424766e-01",
+            "Name": "Nsama",
+            "Level": "ADM2"
+          }
+        }
+      ],
+      "lineage": "XML records14July2021 WGS84project operation, Name calculated fromDISTRICT, Level assignedADM2 and deletion of originalPROVINCE/PROV_CODE/DIST_CODE/DISTRICT and other fields before export. It records source transformation, not a lake-edge/treaty justification.",
+      "license_visual": "Actual embedded license.PNG read: GRID3 Zambia Administrative Boundaries Districts2020 item,116records, published31October2019, publicaccess and CC BY license. Screenshot binds the archive to the more precise original dataset URL.",
+      "limitations": "No district narrative text, adopted tripoint coordinate, signed treaty map or water-eligibility metadata in archive member inventory. Archive source-record ordinals/names6Chiengi,36Kaputa,76Mpulungu,94Nsama match release-native identities; no geometry rerun."
+    }
+  },
+  "statutory_primary_document": {
+    "file": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/SI-2012-53.pdf",
+      "bytes": 529076,
+      "sha256": "30fd2ca9e98cd0a33f99dcc805c92ae4a0ad4b3abc0611f4d2a5b027d90915d1"
+    },
+    "url": "https://www.zambialaws.com/Zambia2012Pdfsi/SI-2012-53.pdf",
+    "identity": "Government of Zambia, Statutory Instrument53of2012, Provincial and District Boundaries(Division)(Amendment)(No.2)Order2012, underChapter286; signedMichaelC.Sata atLusaka27July2012 onfinalpage.",
+    "inspection": "12-page image-only PDF; pypdf returned0text onallpages. All12pages rendered locally; actual model-visible pages1,2,8,9,10,12 read. No claim to have read omitted unrelated pages.",
+    "applicability": "Pages1–2 insertNsama district inNorthernProvince and replaceKaputa boundarydescription, insertingKaputa andNsama narratives. ReferencesprincipalSI106of1996.",
+    "nsama_narrative": "Page9 begins atMukongeStream crossing Zambia/DRCinternationalboundary, follows that boundary northeast to a tripoint shared byZambia,DRC andTanzania, then southwest approximately39km toCapeNundo onTanganyika betweenNsumbu andNkambaBays. Further narrative followsChinsala/Kamwinda/Lufubu/Chiteta features andMuchingaEscarpment; continuationp10 closes viaMukubweRiver,LakeMweruWantipa andMukongeStream.",
+    "kaputa_narrative": "Page9 followsKalungwishi/Luntomfwe,ChisebweHills/KisebweBeacon,Musongoshi/Choma andZambia/DRCinternationalboundary toMukonge, thenLakeMweruWantipa andsouthern rivers.",
+    "source_relative_result": "Concrete primary support for lake/tripoint reach ofNsama and separately namedinternational-boundarycourse ofKaputa. It does not make allMoba28 cells Zambiaapplicable; these are sourcecontext findings.",
+    "limits": "Relevant paragraphs supply relative routes/distances without tripointcoordinate or datum. No signedinternationaltreatymap reproduced in inspected passages. No invented point or polygon construction. Fullcell/native attribution remains separate.",
+    "render_evidence": [
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/SI-2012-53-pages/page-01.png",
+        "bytes": 177316,
+        "sha256": "abd021c3a9f4c2e5e85b4cc3ba2157abc9d1aa68a40e29f1ad384b22ee8b3a93"
+      },
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/SI-2012-53-pages/page-02.png",
+        "bytes": 209161,
+        "sha256": "5617e21dc7dbabe419dfdf905f03f03f6e48107eec04ba95bcc1d8d3dfde659e"
+      },
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/SI-2012-53-pages/page-09.png",
+        "bytes": 385631,
+        "sha256": "e7bba1784f51d5ad35d94cfc9fd406c11a61fd63144d93c439640fa5b1bd09a9"
+      },
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/SI-2012-53-pages/page-10.png",
+        "bytes": 383174,
+        "sha256": "118bf4cacc4ad121e3aa2ddc1e210b91eee8659c547197a7509d264bac89f199"
+      },
+      {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/SI-2012-53-pages/page-12.png",
+        "bytes": 299942,
+        "sha256": "b77a355e978c33bcddde9b2315c1277207ee8c71c95956a60f96e8ef508d8e97"
+      }
+    ]
+  },
+  "parliamentary_primary_followup": {
+    "file": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_water35/zambia-delegated-legislation-third-session.pdf",
+      "bytes": 666337,
+      "sha256": "d60a30e9d7423b56ae4482e10736b957549918003873a302810ea8d4287b2cd9"
+    },
+    "url": "https://www.parliament.gov.zm/sites/default/files/documents/committee_reports/REPORT%20FOR%20THE%20THIRD%20SESSION%20OF%20THE%20ELEVENTH%20NATIONAL%20ASSEMBLY.pdf",
+    "identity": "Report ofCommittee onDelegatedLegislation forThirdSession ofEleventhNationalAssembly; committee appointed25September2013; report signedJune2014 onp71.",
+    "inspection": "Actual pypdf text read p1–2,p22andp71;72pages total.",
+    "finding": "Paragraph56,p22 identifiesSI104of2013 asTownandCountryPlanning(Application)Order, concerningMpulungu andNsama boundarynarrativedescriptions undersection3,Chapter283. Committee notes compliance with that enablingstatute.",
+    "limit": "This is a planningapplicationorder. Do not silently treat it as replacingChapter286districtdescriptions. The instrument itself remains unread.",
+    "next_attempt": {
+      "candidate_url": "https://www.zambialaws.com/Zambia2013Pdfsi/SI-2013-104.pdf",
+      "url_status": "Candidate path inferred from publisher annualPDF pattern; not a verified catalogue link.",
+      "action": "Web reader inaccessible; one preciseapprovedcurlattempt",
+      "exec_session": 70017,
+      "exit_code": 56,
+      "http_status": 404,
+      "destination_exists": false,
+      "conclusion": "Exactcandidatepath missing; no claim instrumentabsent/unpublished or blockedbypermission."
+    }
+  },
+  "qualification": "These results replace generic absence with specific substantive source facts. Official production and legal narratives support source-relative investigation but do not alone resolve exactnativecell overlap. All28 Moba holds preserved; no sciencecredit, acceptance, diagnosticreproduction, newobservation, import orGitmutation.",
+  "next_bounded_options": [
+    "Use actualretainednativeper-operand evidence if available to determine whichof12 negatives affecteachheldMoba cell; currentdiagnostic hasno lakeper-operand attribution.",
+    "Find a verifiedcatalogue record forSI104of2013 if its planningapplication scope materially matters; do not repeatedlyguesspaths.",
+    "1989signedspatialannexes remain distinct pending work; officialUNTSinteractivequery previouslypaused.",
+    "No further archivehydration needed forZMBADM1/ADM2: both exactpinnedarchives acquired and source docs inspected."
+  ]
+}

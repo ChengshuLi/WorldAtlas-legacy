@@ -1,0 +1,34 @@
+{
+  "candidate_code": "0cc7cb61138d8d52cf12d0ac281e164ddfb4c8dc",
+  "diagnostic_commit": "0f578a3e5acaf1243de9d0bc346e9b4f6a5868bc",
+  "config": {
+    "version": 1,
+    "diagnostic": {
+      "commit": "0f578a3e5acaf1243de9d0bc346e9b4f6a5868bc",
+      "path": "research/geography/cod161-reaudit-20261024/popokabaka1/changed-semantics-diagnostic/native-diagnostic.json"
+    },
+    "accepted_selector": {
+      "commit": "a57ed94dab43e6c10ae502111ea67e0cc51e1be5",
+      "path": "data/ownership-selection.json"
+    }
+  },
+  "command": [
+    "node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "supported-inputs",
+    "research/geography/cod161-reaudit-20261024/popokabaka1/supported-inputs-config.json",
+    ".cache/delivery-handoff/cod3905-popokabaka1-incremental-20261024-01a16f2d"
+  ],
+  "started": "2026-10-24T23:03:14.057016+00:00",
+  "status": "interrupted-no-completed-output",
+  "termination_cause": "unknown",
+  "tool_session": 78084,
+  "last_tool_result": "Unknown process id",
+  "scoped_process_check": "pgrep exit1: no matching wrapper or supported-inputs Node process",
+  "output_directory_exists": false,
+  "stdout_bytes": 0,
+  "stderr_bytes": 0,
+  "checked_at": "2026-10-24T23:06:47.605346+00:00",
+  "retry_issued": false,
+  "full_diagnostic_intact": true
+}

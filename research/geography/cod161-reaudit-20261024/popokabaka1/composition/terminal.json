@@ -1,0 +1,64 @@
+{
+  "accepted_code": "6bfc0a494252690030f1d4b656cc53696fb0fac5",
+  "actual_composition_code": "2a6755741ef9af77f828ab7135ed8dab7646d57b",
+  "authority_output_commit": "10afdf386ea76b15e6c33ebd21ddfd1b5310128b",
+  "actual_authority_code": "0139d50aed87deaf243afa45c44bbaba2ac74cbf",
+  "command": [
+    "node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "compose",
+    "research/geography/cod161-reaudit-20261024/popokabaka1/compose-config.json",
+    ".cache/delivery-handoff/cod-popokabaka1-compose-20261025-01a16f2d"
+  ],
+  "config": {
+    "version": 2,
+    "selector": {
+      "path": "data/ownership-selection.json",
+      "commit": "6bfc0a494252690030f1d4b656cc53696fb0fac5",
+      "mode": "100644",
+      "git_blob_oid": "b025cfe295546dfdac401e2ce7dbf6e51036b695",
+      "bytes": 2318,
+      "sha256": "940dc10bf5b091e30c0669a8d745e9e38e7f0f36f0361467fe9c6bd01cf609b8"
+    },
+    "authorities": [
+      {
+        "rule_preimage": {
+          "path": "research/geography/cod161-reaudit-20261024/popokabaka1/native-authority/original-rule-preimage.json",
+          "commit": "10afdf386ea76b15e6c33ebd21ddfd1b5310128b",
+          "mode": "100644",
+          "git_blob_oid": "c681f2a1f3f01508e786e2213c6ffdb86cf35480",
+          "bytes": 721,
+          "sha256": "3e77998858df510ff20b8bd8e4bcb38898123e270fcae6ec37ce0068aa1722d1"
+        },
+        "source_authority": {
+          "path": "research/geography/cod161-reaudit-20261024/popokabaka1/native-authority/authority-binding.json",
+          "commit": "10afdf386ea76b15e6c33ebd21ddfd1b5310128b",
+          "mode": "100644",
+          "git_blob_oid": "31eb017eaf2eeeac53ab14a7b737631de79fa685",
+          "bytes": 724,
+          "sha256": "7ea7a47d91abd20bcab9faa3dd43ee577138aef97a77d55f9149c9fabb926d48"
+        },
+        "ledger": {
+          "path": "research/geography/cod161-reaudit-20261024/popokabaka1/native-authority/constructor-result.json",
+          "commit": "10afdf386ea76b15e6c33ebd21ddfd1b5310128b",
+          "mode": "100644",
+          "git_blob_oid": "5195c5aa7f70a9c552679fff3c6f8848ddcb1c6d",
+          "bytes": 6361,
+          "sha256": "4e6217f4e4adeeba9ba1be114d77b9716bd03ef4f7a3d780ea6ecc54dca50de5"
+        },
+        "native_patch": {
+          "bytes": 55,
+          "commit": "f63bb9f6ebb92c81f482ab7c28a2fbe3cc67ce24",
+          "git_blob_oid": "ceb1f41a29674cae23b1a1020d6308f895cf4e0a",
+          "mode": "100644",
+          "path": "research/geography/cod161-reaudit-20261024/popokabaka1/incremental-bound/native-patch.json",
+          "sha256": "6745a2b320dc9aa9489344237c37b668bad61eb7a1dc988c16977b5e583e0b61"
+        }
+      }
+    ]
+  },
+  "started": "2026-10-25T00:06:40.905509+00:00",
+  "status": "completed",
+  "returncode": 0,
+  "finished": "2026-10-25T00:08:28.758949+00:00"
+}

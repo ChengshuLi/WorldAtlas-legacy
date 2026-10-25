@@ -1,0 +1,933 @@
+{
+  "date": "2026-10-24",
+  "worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "scope": "Libenge3/Bosobolo7/Zongo2",
+  "status": "All12 held; documentary reading, no geometry or acceptance",
+  "exact_keys": [
+    [
+      14443,
+      128217,
+      144649
+    ],
+    [
+      14443,
+      128218,
+      144648
+    ],
+    [
+      14443,
+      128232,
+      144635
+    ],
+    [
+      14509,
+      127342,
+      145235
+    ],
+    [
+      14509,
+      127342,
+      145236
+    ],
+    [
+      14509,
+      127342,
+      145237
+    ],
+    [
+      14509,
+      127343,
+      145240
+    ],
+    [
+      14509,
+      127343,
+      145241
+    ],
+    [
+      14509,
+      127343,
+      145242
+    ],
+    [
+      14509,
+      127343,
+      145243
+    ],
+    [
+      14519,
+      127934,
+      144593
+    ],
+    [
+      14519,
+      127935,
+      144592
+    ]
+  ],
+  "archives": [
+    {
+      "family": "gb:CAF:ADM1",
+      "archive": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/CAF_ADM1-9469f09-source.zip",
+        "sha256": "8447fc91b0a2d42182781060f9dec6f57a98e3427d684c80c29026ea355f957a",
+        "bytes": 66400
+      },
+      "manifest": [
+        {
+          "name": "CAF_ADM1.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "name": "CAF_ADM1.dbf",
+          "bytes": 2697,
+          "sha256": "3f466ce89a3704ea380f17beb8fd8fad4fcbaa9bf4cf3af33081f691cb40f35f"
+        },
+        {
+          "name": "CAF_ADM1.prj",
+          "bytes": 145,
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "CAF_ADM1.sbn",
+          "bytes": 292,
+          "sha256": "e101dec0ce16a46f5d5b1e0c468ffffbc55373129df10d01cf1a17bdcfa409a7"
+        },
+        {
+          "name": "CAF_ADM1.sbx",
+          "bytes": 132,
+          "sha256": "45303bc426104d2d52d48c8a3dc85f98bc056b4e24779801fa72a264902215e0"
+        },
+        {
+          "name": "CAF_ADM1.shp",
+          "bytes": 45596,
+          "sha256": "efb20e68c419d21ba51cb1721e74ff40363de52d2183aa7da7435deba05aa18a"
+        },
+        {
+          "name": "CAF_ADM1.shp.xml",
+          "bytes": 9966,
+          "sha256": "b4b95574a03611c200bdd0d1734f5533c01f240c4160dc570484a2ea96390a78"
+        },
+        {
+          "name": "CAF_ADM1.shx",
+          "bytes": 236,
+          "sha256": "218fd964361fd59ae3feb7bca89f30c88e7e403c6a9c22893171ae4cfc40c9ed"
+        },
+        {
+          "name": "license.PNG",
+          "bytes": 36509,
+          "sha256": "c11a715f600edad601533661ab780c2fd9ee28e784f3f9927430fdf3265525d2"
+        },
+        {
+          "name": "meta.txt",
+          "bytes": 492,
+          "sha256": "98e2a14865f12731d53b06240c4f190cba89229785e1892a18add5a108a01369"
+        }
+      ],
+      "dbf_count": 17,
+      "dbf_fields": [
+        [
+          "Name",
+          "C",
+          50
+        ],
+        [
+          "Level",
+          "C",
+          50
+        ],
+        [
+          "ISO_Code",
+          "C",
+          50
+        ]
+      ],
+      "relevant_records": [
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "7e409d40db329493e90bc9f47c8a4e8225d19d200b29e8ee67ad1f813cb1452b",
+            "negative_ordinal": 0,
+            "source_id": "gb:CAF:ADM1:63714938B21760912511834",
+            "verified_feature_properties": {
+              "shapeName": "Lobaye",
+              "shapeISO": "CF-LB",
+              "shapeID": "63714938B21760912511834",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 3,
+          "deleted": false,
+          "fields": {
+            "Name": "Lobaye",
+            "Level": "ADM1",
+            "ISO_Code": "CF-LB"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 5,
+            "geometry_sha256": "8c9aa0f344ba0aa0e75a21a7a96b24c690e546cdc6bafe536e024176bf5dae6d",
+            "negative_ordinal": 1,
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "verified_feature_properties": {
+              "shapeName": "Ombella-M'Poko",
+              "shapeISO": "CF-MP",
+              "shapeID": "63714938B70915793391768",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 5,
+          "deleted": false,
+          "fields": {
+            "Name": "Ombella-M'Poko",
+            "Level": "ADM1",
+            "ISO_Code": "CF-MP"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 12,
+            "geometry_sha256": "62a2d2d8efacccc7ea80ab3ad4333e69e8fa8e9d22a83ffb6510eca339c1f383",
+            "negative_ordinal": 2,
+            "source_id": "gb:CAF:ADM1:63714938B18739157330103",
+            "verified_feature_properties": {
+              "shapeName": "Ouaka",
+              "shapeISO": "CF-UK",
+              "shapeID": "63714938B18739157330103",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 12,
+          "deleted": false,
+          "fields": {
+            "Name": "Ouaka",
+            "Level": "ADM1",
+            "ISO_Code": "CF-UK"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "5297682fc0fa6c969e9afece3b8a5b5396a4017b79a4e4ddf968d61a9f883f4b",
+            "negative_ordinal": 3,
+            "source_id": "gb:CAF:ADM1:63714938B39161688438046",
+            "verified_feature_properties": {
+              "shapeName": "Bangui",
+              "shapeISO": "CF-BGF",
+              "shapeID": "63714938B39161688438046",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 16,
+          "deleted": false,
+          "fields": {
+            "Name": "Bangui",
+            "Level": "ADM1",
+            "ISO_Code": "CF-BGF"
+          }
+        },
+        {
+          "target": "Bosobolo",
+          "owner": 14509,
+          "native_negative": {
+            "feature_ordinal": 5,
+            "geometry_sha256": "8c9aa0f344ba0aa0e75a21a7a96b24c690e546cdc6bafe536e024176bf5dae6d",
+            "negative_ordinal": 0,
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "verified_feature_properties": {
+              "shapeName": "Ombella-M'Poko",
+              "shapeISO": "CF-MP",
+              "shapeID": "63714938B70915793391768",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 5,
+          "deleted": false,
+          "fields": {
+            "Name": "Ombella-M'Poko",
+            "Level": "ADM1",
+            "ISO_Code": "CF-MP"
+          }
+        },
+        {
+          "target": "Bosobolo",
+          "owner": 14509,
+          "native_negative": {
+            "feature_ordinal": 9,
+            "geometry_sha256": "15d91503a4e8f72092ecca33298b3c299a71ef2a80b151a71738b606218031a3",
+            "negative_ordinal": 1,
+            "source_id": "gb:CAF:ADM1:63714938B4314817363012",
+            "verified_feature_properties": {
+              "shapeName": "Kémo",
+              "shapeISO": "CF-KG",
+              "shapeID": "63714938B4314817363012",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 9,
+          "deleted": false,
+          "fields": {
+            "Name": "Kémo",
+            "Level": "ADM1",
+            "ISO_Code": "CF-KG"
+          }
+        },
+        {
+          "target": "Bosobolo",
+          "owner": 14509,
+          "native_negative": {
+            "feature_ordinal": 12,
+            "geometry_sha256": "62a2d2d8efacccc7ea80ab3ad4333e69e8fa8e9d22a83ffb6510eca339c1f383",
+            "negative_ordinal": 2,
+            "source_id": "gb:CAF:ADM1:63714938B18739157330103",
+            "verified_feature_properties": {
+              "shapeName": "Ouaka",
+              "shapeISO": "CF-UK",
+              "shapeID": "63714938B18739157330103",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 12,
+          "deleted": false,
+          "fields": {
+            "Name": "Ouaka",
+            "Level": "ADM1",
+            "ISO_Code": "CF-UK"
+          }
+        },
+        {
+          "target": "Zongo",
+          "owner": 14519,
+          "native_negative": {
+            "feature_ordinal": 3,
+            "geometry_sha256": "7e409d40db329493e90bc9f47c8a4e8225d19d200b29e8ee67ad1f813cb1452b",
+            "negative_ordinal": 0,
+            "source_id": "gb:CAF:ADM1:63714938B21760912511834",
+            "verified_feature_properties": {
+              "shapeName": "Lobaye",
+              "shapeISO": "CF-LB",
+              "shapeID": "63714938B21760912511834",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 3,
+          "deleted": false,
+          "fields": {
+            "Name": "Lobaye",
+            "Level": "ADM1",
+            "ISO_Code": "CF-LB"
+          }
+        },
+        {
+          "target": "Zongo",
+          "owner": 14519,
+          "native_negative": {
+            "feature_ordinal": 5,
+            "geometry_sha256": "8c9aa0f344ba0aa0e75a21a7a96b24c690e546cdc6bafe536e024176bf5dae6d",
+            "negative_ordinal": 1,
+            "source_id": "gb:CAF:ADM1:63714938B70915793391768",
+            "verified_feature_properties": {
+              "shapeName": "Ombella-M'Poko",
+              "shapeISO": "CF-MP",
+              "shapeID": "63714938B70915793391768",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 5,
+          "deleted": false,
+          "fields": {
+            "Name": "Ombella-M'Poko",
+            "Level": "ADM1",
+            "ISO_Code": "CF-MP"
+          }
+        },
+        {
+          "target": "Zongo",
+          "owner": 14519,
+          "native_negative": {
+            "feature_ordinal": 16,
+            "geometry_sha256": "5297682fc0fa6c969e9afece3b8a5b5396a4017b79a4e4ddf968d61a9f883f4b",
+            "negative_ordinal": 2,
+            "source_id": "gb:CAF:ADM1:63714938B39161688438046",
+            "verified_feature_properties": {
+              "shapeName": "Bangui",
+              "shapeISO": "CF-BGF",
+              "shapeID": "63714938B39161688438046",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM1"
+            }
+          },
+          "archive_record": 16,
+          "deleted": false,
+          "fields": {
+            "Name": "Bangui",
+            "Level": "ADM1",
+            "ISO_Code": "CF-BGF"
+          }
+        }
+      ],
+      "metadata": "Boundary Representative of Year: 2006\nISO-3166-1 (Alpha-3): CAF\nBoundary Type: ADM1\nCanonical Boundary Type Name: Prefecture and Commune\nSource 1: geoBoundaries\nSource 2: Wikimedia\nRelease Type: gbOpen\nLicense: Creative Commons Attribution 2.5 Generic\nLicense Notes: \nLicense Source: https://commons.wikimedia.org/wiki/File:Central_African_Republic_prefectures_blank.png\nLink to Source Data: https://commons.wikimedia.org/wiki/File:Central_African_Republic_prefectures_blank.png\nOther Notes: ",
+      "processes": [
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CreateFeatureclass",
+            "Date": "20221114",
+            "Time": "150003"
+          },
+          "text": "CreateFeatureclass U:\\GIS410\\Students\\dfornatora\\lab\\CAF\\CAF CAF Polyline # No No \"GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]];-400 -400 1000000000;-100000 10000;-100000 10000;8.98315284119521E-09;0.001;0.001;IsHighPrecision\" # 0 0 0 #"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\FeatureToPolygon",
+            "Date": "20221114",
+            "Time": "150910"
+          },
+          "text": "FeatureToPolygon CAF U:\\GIS410\\Students\\dfornatora\\lab\\CAF\\CAF\\CAF.gdb\\CAF_FeatureToPolygon # ATTRIBUTES #"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+            "Date": "20221114",
+            "Time": "152927"
+          },
+          "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.0.0'><WorkspaceConnectionString>DATABASE=U:\\GIS410\\Students\\dfornatora\\lab\\CAF\\CAF\\CAF.gdb</WorkspaceConnectionString><WorkspaceFactory>FileGDB</WorkspaceFactory><Dataset>CAF_FeatureToPolygon</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><AddField><field_name>Name</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow><workflow><AddField><field_name>Level</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow><workflow><AddField><field_name>ISO_Code</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><field_is_required>False</field_is_required></AddField></workflow></operationSequence>"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+            "Date": "20221114",
+            "Time": "153413"
+          },
+          "text": "CalculateField CAF_FeatureToPolygon Level \"ADM1\" \"Python 3\" # Text NO_ENFORCE_DOMAINS"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Conversion Tools.tbx\\FeatureClassToFeatureClass",
+            "Date": "20221114",
+            "Time": "154046"
+          },
+          "text": "FeatureClassToFeatureClass CAF_FeatureToPolygon U:\\GIS410\\Students\\dfornatora\\lab\\CAF\\adm1 CAF_ADM1.shp # \"Shape_Length \"Shape_Length\" false true true 8 Double 0 0,First,#,CAF_FeatureToPolygon,Shape_Length,-1,-1;Shape_Area \"Shape_Area\" false true true 8 Double 0 0,First,#,CAF_FeatureToPolygon,Shape_Area,-1,-1;Name \"Name\" true true false 50 Text 0 0,First,#,CAF_FeatureToPolygon,Name,0,50;Level \"Level\" true true false 50 Text 0 0,First,#,CAF_FeatureToPolygon,Level,0,50;ISO_Code \"ISO_Code\" true true false 50 Text 0 0,First,#,CAF_FeatureToPolygon,ISO_Code,0,50\" #"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\DeleteField",
+            "Date": "20221114",
+            "Time": "154056"
+          },
+          "text": "DeleteField CAF_ADM1 Shape_Leng \"Delete Fields\""
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\DeleteField",
+            "Date": "20221114",
+            "Time": "154103"
+          },
+          "text": "DeleteField CAF_ADM1 Shape_Area \"Delete Fields\""
+        }
+      ]
+    },
+    {
+      "family": "gb:CAF:ADM2",
+      "archive": {
+        "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/CAF_ADM2-9469f09-source.zip",
+        "sha256": "9edc1346fa069c2bc2cfe1bac54e1ab84e82f963167139e868690fa4ad9a7d64",
+        "bytes": 677307
+      },
+      "manifest": [
+        {
+          "name": "CAF_ADM2.cpg",
+          "bytes": 5,
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.cpg",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "CAF_ADM2.dbf",
+          "bytes": 36746,
+          "sha256": "ebfa1c929790cb2a2ad42ade65708a0e3e155c85d6292d91a9a5cb4ae3174f46"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.dbf",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "CAF_ADM2.prj",
+          "bytes": 145,
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.prj",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "CAF_ADM2.sbn",
+          "bytes": 884,
+          "sha256": "0e3a7c6a63365aa99142270544784f661d51d5f438578fabde4b0c7f820f4137"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.sbn",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "CAF_ADM2.sbx",
+          "bytes": 188,
+          "sha256": "1f463b4381307e80874ab4897c35ff66d033b222251f36750f3b5417a656a4c0"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.sbx",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "CAF_ADM2.shp",
+          "bytes": 1220036,
+          "sha256": "5cdd15d2d23a32eb827929f13ab268e2db27d29fbe4a8e2784f840e7a4dc66ce"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.shp",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "CAF_ADM2.shp.xml",
+          "bytes": 16902,
+          "sha256": "108fa15a541b29341892fa284c88f4c359324b29c6e1e1262cae53fc34fecec0"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.shp.xml",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "CAF_ADM2.shx",
+          "bytes": 676,
+          "sha256": "db5e743e7c7c1f82570f163afc54790a255088df653239cae9b86e0a22bd44d8"
+        },
+        {
+          "name": "__MACOSX/._CAF_ADM2.shx",
+          "bytes": 212,
+          "sha256": "271bc921fc2addfd44ff28c3deb24fadb273c5c711ba5277c65528a4df2754d1"
+        },
+        {
+          "name": "license.png",
+          "bytes": 238354,
+          "sha256": "5a3037046bd4338c2c01a241dadb452029101597845a04c871c95297e5b8c8b9"
+        },
+        {
+          "name": "__MACOSX/._license.png",
+          "bytes": 631,
+          "sha256": "b6a3111a72f6b6a2a47ff769ca8c38695fdf54e0fbc29bde56c1d2b703312318"
+        },
+        {
+          "name": "meta.txt",
+          "bytes": 464,
+          "sha256": "ef1996ddda9dbe74b85ccfc703fdb353a140d50d52bbc50caa902d9d7b69935b"
+        },
+        {
+          "name": "__MACOSX/._meta.txt",
+          "bytes": 484,
+          "sha256": "e16c2306e0471fc8c60901277b55aeca1e7d36cb0591dd34a5006fca18084554"
+        }
+      ],
+      "dbf_count": 72,
+      "dbf_fields": [
+        [
+          "Name",
+          "C",
+          254
+        ],
+        [
+          "Level",
+          "C",
+          254
+        ]
+      ],
+      "relevant_records": [
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 31,
+            "geometry_sha256": "7313b5ede959494e8c4a6c534c49b3d04a4660cd007f7ad7c99201c164ff53c5",
+            "negative_ordinal": 4,
+            "source_id": "gb:CAF:ADM2:33826404B9315728863093",
+            "verified_feature_properties": {
+              "shapeName": "Damara",
+              "shapeISO": "",
+              "shapeID": "33826404B9315728863093",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 31,
+          "deleted": false,
+          "fields": {
+            "Name": "Damara",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 32,
+            "geometry_sha256": "b4bc900a9ef5781575ddb691ef6724a02d3860f4d5d6c3cb9b9254a68eddb327",
+            "negative_ordinal": 5,
+            "source_id": "gb:CAF:ADM2:33826404B21321520993489",
+            "verified_feature_properties": {
+              "shapeName": "Mongoumba",
+              "shapeISO": "",
+              "shapeID": "33826404B21321520993489",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 32,
+          "deleted": false,
+          "fields": {
+            "Name": "Mongoumba",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 33,
+            "geometry_sha256": "d2316bb78761dd932446292dc51b6b02ed49a5697230226f24ab47579e621853",
+            "negative_ordinal": 6,
+            "source_id": "gb:CAF:ADM2:33826404B24481683700723",
+            "verified_feature_properties": {
+              "shapeName": "Mbaïki",
+              "shapeISO": "",
+              "shapeID": "33826404B24481683700723",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 33,
+          "deleted": false,
+          "fields": {
+            "Name": "Mbaïki",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 64,
+            "geometry_sha256": "ba2916b64a7ec34fc88564a234dc99769ed35c2f5213082690ed52215ce51a0f",
+            "negative_ordinal": 7,
+            "source_id": "gb:CAF:ADM2:33826404B11454155454969",
+            "verified_feature_properties": {
+              "shapeName": "Boali",
+              "shapeISO": "",
+              "shapeID": "33826404B11454155454969",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 64,
+          "deleted": false,
+          "fields": {
+            "Name": "Boali",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 70,
+            "geometry_sha256": "1e6df0beb5359c128360c445a63afa8e17d5f79673058b6cc687975766b4a696",
+            "negative_ordinal": 8,
+            "source_id": "gb:CAF:ADM2:33826404B58165985423079",
+            "verified_feature_properties": {
+              "shapeName": "Bangui",
+              "shapeISO": "",
+              "shapeID": "33826404B58165985423079",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 70,
+          "deleted": false,
+          "fields": {
+            "Name": "Bangui",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Libenge",
+          "owner": 14443,
+          "native_negative": {
+            "feature_ordinal": 71,
+            "geometry_sha256": "48fc48d798002f927bf2ffbb8be11b7c4e9dd65535c10af2b4af3637c23f54e2",
+            "negative_ordinal": 9,
+            "source_id": "gb:CAF:ADM2:33826404B89402945162763",
+            "verified_feature_properties": {
+              "shapeName": "Bimbo",
+              "shapeISO": "",
+              "shapeID": "33826404B89402945162763",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 71,
+          "deleted": false,
+          "fields": {
+            "Name": "Bimbo",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Bosobolo",
+          "owner": 14509,
+          "native_negative": {
+            "feature_ordinal": 25,
+            "geometry_sha256": "fa5f95a2013e42ecad8f7f7603ddc47f872fbc3f9c1bfbf3476f57ef0ef2bb6e",
+            "negative_ordinal": 3,
+            "source_id": "gb:CAF:ADM2:33826404B56773227283390",
+            "verified_feature_properties": {
+              "shapeName": "Kouango",
+              "shapeISO": "",
+              "shapeID": "33826404B56773227283390",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 25,
+          "deleted": false,
+          "fields": {
+            "Name": "Kouango",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Bosobolo",
+          "owner": 14509,
+          "native_negative": {
+            "feature_ordinal": 27,
+            "geometry_sha256": "2c9df7f75baf51ae507235587eaebf248042f2f4a5dfcffa30eec65f3f4af1af",
+            "negative_ordinal": 4,
+            "source_id": "gb:CAF:ADM2:33826404B12088014945622",
+            "verified_feature_properties": {
+              "shapeName": "Djoukou",
+              "shapeISO": "",
+              "shapeID": "33826404B12088014945622",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 27,
+          "deleted": false,
+          "fields": {
+            "Name": "Djoukou",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Bosobolo",
+          "owner": 14509,
+          "native_negative": {
+            "feature_ordinal": 31,
+            "geometry_sha256": "7313b5ede959494e8c4a6c534c49b3d04a4660cd007f7ad7c99201c164ff53c5",
+            "negative_ordinal": 5,
+            "source_id": "gb:CAF:ADM2:33826404B9315728863093",
+            "verified_feature_properties": {
+              "shapeName": "Damara",
+              "shapeISO": "",
+              "shapeID": "33826404B9315728863093",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 31,
+          "deleted": false,
+          "fields": {
+            "Name": "Damara",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Zongo",
+          "owner": 14519,
+          "native_negative": {
+            "feature_ordinal": 70,
+            "geometry_sha256": "1e6df0beb5359c128360c445a63afa8e17d5f79673058b6cc687975766b4a696",
+            "negative_ordinal": 3,
+            "source_id": "gb:CAF:ADM2:33826404B58165985423079",
+            "verified_feature_properties": {
+              "shapeName": "Bangui",
+              "shapeISO": "",
+              "shapeID": "33826404B58165985423079",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 70,
+          "deleted": false,
+          "fields": {
+            "Name": "Bangui",
+            "Level": "ADM2"
+          }
+        },
+        {
+          "target": "Zongo",
+          "owner": 14519,
+          "native_negative": {
+            "feature_ordinal": 71,
+            "geometry_sha256": "48fc48d798002f927bf2ffbb8be11b7c4e9dd65535c10af2b4af3637c23f54e2",
+            "negative_ordinal": 4,
+            "source_id": "gb:CAF:ADM2:33826404B89402945162763",
+            "verified_feature_properties": {
+              "shapeName": "Bimbo",
+              "shapeISO": "",
+              "shapeID": "33826404B89402945162763",
+              "shapeGroup": "CAF",
+              "shapeType": "ADM2"
+            }
+          },
+          "archive_record": 71,
+          "deleted": false,
+          "fields": {
+            "Name": "Bimbo",
+            "Level": "ADM2"
+          }
+        }
+      ],
+      "metadata": "Boundary Representative of Year: 2015\nISO-3166-1 (Alpha-3): CAF\nBoundary Type: ADM2\nCanonical Boundary Type Name: Sub-Prefectures\nSource 1: geoBoundaries\nSource 2: UNHCR\nRelease Type: gbOpen\nLicense: Creative Commons Attribution 3.0 License\nLicense Notes:\nLicense Source: https://data2.unhcr.org/en/documents/details/32968\nLink to Source Data: https://data2.unhcr.org/en/documents/details/32968\nOther Notes: Georeferenced and digitized pdf map provided by source 2",
+      "processes": [
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\CreateFeatureclass",
+            "Date": "20210111",
+            "Time": "113008"
+          },
+          "text": "CreateFeatureclass \"C:\\Users\\Dorian\\Desktop\\gB Testing\\gB Testing.gdb\" CAF_ADM2 Polygon # No Yes \"GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]];-400 -400 1000000000;-100000 10000;-100000 10000;8.98315284119521E-09;0.001;0.001;IsHighPrecision\" # # # # #"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+            "Date": "20210111",
+            "Time": "113009"
+          },
+          "text": "UpdateSchema \"C:\\Users\\Dorian\\Desktop\\gB Testing\\gB Testing.gdb\\CAF_ADM2\" <operationSequence><workflow><AddField><field_name>Name</field_name><field_type>TEXT</field_type><field_is_nullable>TRUE</field_is_nullable><field_length>255</field_length></AddField></workflow><workflow><AddField><field_name>Level</field_name><field_type>TEXT</field_type><field_is_nullable>TRUE</field_is_nullable><field_length>255</field_length></AddField></workflow></operationSequence>"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\Toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+            "Date": "20210111",
+            "Time": "113010"
+          },
+          "text": "UpdateSchema \"C:\\Users\\Dorian\\Desktop\\gB Testing\\gB Testing.gdb\\CAF_ADM2\" <operationSequence><workflow><AlterField><field_name>OBJECTID</field_name><field_alias>OBJECTID</field_alias></AlterField></workflow><workflow><AlterField><field_name>SHAPE</field_name><field_alias>SHAPE</field_alias></AlterField></workflow></operationSequence>"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+            "Date": "20210112",
+            "Time": "095818"
+          },
+          "text": "CalculateField CAF_ADM2 Level 'ADM2' \"Python 3\" # Text"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+            "Date": "20210112",
+            "Time": "095836"
+          },
+          "text": "CalculateField CAF_ADM2 Level 'ADM2' \"Python 3\" # Text"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\CalculateField",
+            "Date": "20210112",
+            "Time": "095924"
+          },
+          "text": "CalculateField CAF_ADM2 Level 'ADM2' \"Python 3\" # Text"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Data Management Tools.tbx\\UpdateSchema",
+            "Date": "20210112",
+            "Time": "103106"
+          },
+          "text": "UpdateSchema \"CIMDATA=<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/2.7.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\Dorian\\Desktop\\gB Testing\\gB Testing.gdb</WorkspaceConnectionString><WorkspaceFactory>FileGDB</WorkspaceFactory><Dataset>CAF_ADM2</Dataset><DatasetType>esriDTFeatureClass</DatasetType></CIMStandardDataConnection>\" <operationSequence><workflow><AlterField><field_name>Name</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><clear_field_alias>False</clear_field_alias></AlterField></workflow><workflow><AlterField><field_name>Level</field_name><field_type>TEXT</field_type><field_length>50</field_length><field_is_nullable>True</field_is_nullable><clear_field_alias>False</clear_field_alias></AlterField></workflow></operationSequence>"
+        },
+        {
+          "attributes": {
+            "ToolSource": "c:\\program files\\arcgis\\pro\\Resources\\ArcToolbox\\toolboxes\\Conversion Tools.tbx\\FeatureClassToFeatureClass",
+            "Date": "20210112",
+            "Time": "104331"
+          },
+          "text": "FeatureClassToFeatureClass CAF_ADM2 C:\\Users\\Dorian\\Desktop CAF_ADM2.shp # \"Shape_Length \"Shape_Length\" false true true 8 Double 0 0,First,#,CAF_ADM2,Shape_Length,-1,-1;Shape_Area \"Shape_Area\" false true true 8 Double 0 0,First,#,CAF_ADM2,Shape_Area,-1,-1;Name \"Name\" true true false 255 Text 0 0,First,#,CAF_ADM2,Name,0,255;Level \"Level\" true true false 255 Text 0 0,First,#,CAF_ADM2,Level,0,255\" #"
+        }
+      ]
+    }
+  ],
+  "geometry_executed": false,
+  "actual_source_body": {
+    "commons": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/uige18_lineage/CAF-prefectures-blank-2006.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Central_African_Republic_prefectures_blank.png",
+      "page": "https://commons.wikimedia.org/wiki/File:Central_African_Republic_prefectures_blank.png",
+      "bytes": 21472,
+      "sha256": "7b54ac5655a52634fb59ccb8b11c408ed576c6c0a689cfb0cff24f500cbaf65b",
+      "sha1": "cb0ba5139be0f08605d0ba9d51b0d254fb338de9",
+      "sha1_matches_page": true,
+      "dimensions": [
+        2000,
+        1366
+      ],
+      "download_session": 39672,
+      "download_exit_code": 0,
+      "approval": "Narrow single-source require_escalated download approved and completed; no previous denial for this object.",
+      "visual_read": "Full image inspected: black country/prefecture outlines on white; no names, coordinate grid, scale, river channels, legend, control points or method note. No image-to-world transformation performed.",
+      "page_read": "Description states blank map for labeling, upload5April2006, Golbez attribution, no machine-readable underlying source; original image history has single listed2006version."
+    },
+    "unhcr": {
+      "render": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/unhcr-32968-review.png",
+      "sha256": "a94d24cf022050204bcc23441a1f86270feadb6d723e92550d9c370abee2d953",
+      "visual_read": "Whole map dated9June2015 inspected. Named relevant sub-prefectures are present; legend distinguishes administrative line, international boundary, undetermined boundary and sub-prefecture boundary. No coordinate grid or explicit river-channel rule. The50km scale bar does not supply digitization-registration residuals. Disclaimer addresses endorsement, not demonstrated accuracy."
+    },
+    "license_screenshot": {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_east/caf-adm1-archive-license.PNG",
+      "visually_read": true,
+      "finding": "Address bar authenticates exact Commons filename and screenshot displaysCCBY2.5; screenshot is not map body."
+    }
+  },
+  "assessment": [
+    "CAFADM1 exact image is now authenticated, replacing prior candidate inference.",
+    "Represented2006 is distinct from derivative14Nov2022polyline-to-polygon processing.",
+    "CAFADM2 explicitly digitizes2015UNHCR32968PDF; Jan2021processing is derivative construction, not boundary-vintage claim.",
+    "No inspected archive control files or source-body river-channel convention supports exact pending-key edge qualification. This is not proof of invalidity or universal absence.",
+    "CAFADM3 andCOGADM2 remain independent operands; their omission from537overlay cannot be treated as noncontact.",
+    "Native per-key/per-operand full-cell evidence remains pending after coordinator diagnostic failure. No absence or completion inferred."
+  ]
+}

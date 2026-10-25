@@ -1,0 +1,3732 @@
+{
+  "kind": "Luozi19 source-sufficiency supplement, not acceptance",
+  "worker": "01a16f2d-be76-72d7-bc46-8b89a6efb0f2",
+  "all19held": true,
+  "new_credit": 0,
+  "diagnostic_rerun": false,
+  "exact_key_count": 19,
+  "original_operand_count": 209,
+  "groups": {
+    "Bouenza15": 15,
+    "Pool4": 4
+  },
+  "v2_receipt_bindings_rechecked": 19,
+  "v2_binding_mismatches": [],
+  "source_bindings": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/luozi19-source-sufficiency-v3.md",
+      "bytes": 11049,
+      "sha256": "3f567f88e663607dcea60b27de8816fdcaf2d3e8e5dac8117caf3edf36e25a22"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/luozi19-proposal-v2-receipt.json",
+      "bytes": 4739,
+      "sha256": "ff5170757a970c21828444bfc7440bd6197492500052593524060a661ab9f812"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/luozi19-researched-unresolved-proposal-v2.json",
+      "bytes": 340646,
+      "sha256": "15391f26a885d6cfb464dcbe83ececc39317ecfe6bc904c995d75d4df238c5c1"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/cod254-native-contact-view-2784/luozi19_primary.json",
+      "bytes": 127949,
+      "sha256": "670e85500b22fa8754e5319e72cf679b5cf7ed073bef3241aa68a9827cdf7fa7"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/luozi19-1954-scans-and-1903-reading.md",
+      "bytes": 7971,
+      "sha256": "3bb8552d849b3c7101180c1e93b114bb47979c934e16b62642a879ff35b17459"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/Cartotheque-Luozi-selected-records.json",
+      "bytes": 31097,
+      "sha256": "6e90ceccae0ea502bd89e10e39cccc60730c4d03863e337f8715e190f8ef9401"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/luozi19_primary/Cartotheque-p249.png",
+      "bytes": 245973,
+      "sha256": "94156252476dc68e98134e25a82b27326dfe279a1e9c92a396b4c05d6619ea83"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/Cartotheque-source.pdf",
+      "bytes": 3483300,
+      "sha256": "273df3de6ab069f73ebb38cb12bde43d8a11dae25ac21a719ea023811b619073"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/niari3-source-archive-reading-v7.md",
+      "bytes": 3742,
+      "sha256": "50c7408fc471779a58510c8607989b336ef39e8840345e97c8cde901463e1ce5"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/COG_ADM1-9469f095-source.zip",
+      "bytes": 440062,
+      "sha256": "731e08ee7fa47ea55f6393d1d8a4364851ca8c6bc65f3bbc875d57feeca7cc8d"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/cod-adm2-original-target-documentation.json",
+      "bytes": 6589,
+      "sha256": "ba49f21a15d3669a22a36ce6d0e2e990e25b4f35bb8584e6cbe5ab2d869d5348"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/residual_land_west/Jentgen1952-Luozi-Tshela-reading-v6.md",
+      "bytes": 3655,
+      "sha256": "102f9657689a01313965d60494661b51347cf07ddc270b3139f5b77d341a49ad"
+    }
+  ],
+  "new_bounded_searches": [
+    "site:arch.be \"KAONGA\" \"CARTE\"",
+    "\"COMMISSION DE DELIMITATION FRANCO-CONGOLAISE\" \"KAONGA\""
+  ],
+  "search_result": "Official retained catalogue and unconsumed mirror; no identified original map image. No source-denial retry.",
+  "rows": [
+    {
+      "key": [
+        14489,
+        134331,
+        141163
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134331,
+          141163
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141163,
+          141165,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134331,
+        "x": 141163,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134331,
+        141164
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134331,
+          141164
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141163,
+          141165,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134331,
+        "x": 141164,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134332,
+        141162
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134332,
+          141162
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141162,
+          141165,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134332,
+        "x": 141162,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134332,
+        141163
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134332,
+          141163
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141162,
+          141165,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134332,
+        "x": 141163,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134332,
+        141164
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134332,
+          141164
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141162,
+          141165,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134332,
+        "x": 141164,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134333,
+        141162
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134333,
+          141162
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141162,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134333,
+        "x": 141162,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134333,
+        141163
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134333,
+          141163
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141162,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134333,
+        "x": 141163,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134333,
+        141164
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134333,
+          141164
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141162,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134333,
+        "x": 141164,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134333,
+        141165
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134333,
+          141165
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141162,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134333,
+        "x": 141165,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134334,
+        141163
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134334,
+          141163
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141163,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134334,
+        "x": 141163,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134334,
+        141164
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134334,
+          141164
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141163,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134334,
+        "x": 141164,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134334,
+        141165
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134334,
+          141165
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141163,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134334,
+        "x": 141165,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134335,
+        141164
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134335,
+          141164
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141164,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134335,
+        "x": 141164,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134335,
+        141165
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134335,
+          141165
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141164,
+          141166,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134335,
+        "x": 141165,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134337,
+        141166
+      ],
+      "context": "Bouenza15",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134337,
+          141166
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141166,
+          141167,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134337,
+        "x": 141166,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18942,
+            "source_id": "gb:COG:ADM1:67827341B31154795269334"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134510,
+        141575
+      ],
+      "context": "Pool4",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134510,
+          141575
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141575,
+          141576,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134510,
+        "x": 141575,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18950,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134511,
+        141575
+      ],
+      "context": "Pool4",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134511,
+          141575
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141575,
+          141576,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134511,
+        "x": 141575,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18950,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134518,
+        141576
+      ],
+      "context": "Pool4",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134518,
+          141576
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141576,
+          141577,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134518,
+        "x": 141576,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18950,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          }
+        ]
+      }
+    },
+    {
+      "key": [
+        14489,
+        134519,
+        141576
+      ],
+      "context": "Pool4",
+      "status": "held_pending",
+      "recommendation": "fresh independent researched-unresolved source-sufficiency review; no acceptance",
+      "remaining_question": "Historical/later line-control applicability to conflicting frozen COD and COG source edges",
+      "full_existing_native_record": {
+        "key": [
+          14489,
+          134519,
+          141576
+        ],
+        "target_id": "gb:COD:ADM2:63176286B40063645047483",
+        "native_interval": [
+          141576,
+          141577,
+          14489
+        ],
+        "native_decision": "territorial_exclusion_cells",
+        "operands": [
+          {
+            "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+            "kinds": [],
+            "negative_ordinal": 0,
+            "original_source": {
+              "feature_ordinal": 0,
+              "geometry_sha256": "9715085e4ef2c2cdd218455b1018cb7ed51440d29f16ffa5b72ad6b0e750a51a",
+              "negative_ordinal": 0,
+              "source_id": "gb:COG:ADM1:67827341B31154795269334"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+            "kinds": [],
+            "negative_ordinal": 1,
+            "original_source": {
+              "feature_ordinal": 6,
+              "geometry_sha256": "d1f3d21fbb86b0462a33cd51a48b735572c8e63b2dfd936be72796343385eb4c",
+              "negative_ordinal": 1,
+              "source_id": "gb:COG:ADM1:67827341B58284401685335"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+            "kinds": [
+              "interior"
+            ],
+            "negative_ordinal": 2,
+            "original_source": {
+              "feature_ordinal": 8,
+              "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+              "negative_ordinal": 2,
+              "source_id": "gb:COG:ADM1:67827341B26824927831038"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+            "kinds": [],
+            "negative_ordinal": 3,
+            "original_source": {
+              "feature_ordinal": 24,
+              "geometry_sha256": "11068f7546194499d68def5cced4d97402c73e16c2ed6809550432268cb19a5e",
+              "negative_ordinal": 3,
+              "source_id": "gb:COG:ADM2:1427508B94586768331104"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+            "kinds": [],
+            "negative_ordinal": 4,
+            "original_source": {
+              "feature_ordinal": 25,
+              "geometry_sha256": "afe09a0ba2e7096e0372239cccbdead4cd7a091fb69ca0942360c513a697e5c6",
+              "negative_ordinal": 4,
+              "source_id": "gb:COG:ADM2:1427508B40681064196886"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+            "kinds": [],
+            "negative_ordinal": 5,
+            "original_source": {
+              "feature_ordinal": 27,
+              "geometry_sha256": "2a6eac14f92324f583b8e959f22ccdbec5ad8a182313c28af484418b4dbbe250",
+              "negative_ordinal": 5,
+              "source_id": "gb:COG:ADM2:1427508B61088264973461"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+            "kinds": [],
+            "negative_ordinal": 6,
+            "original_source": {
+              "feature_ordinal": 28,
+              "geometry_sha256": "35953a2b15f233c0ddfd35d9b1e6fe16fcbfb302b3c1d7439c41bdf0b0afaa2b",
+              "negative_ordinal": 6,
+              "source_id": "gb:COG:ADM2:1427508B96831343191841"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+            "kinds": [],
+            "negative_ordinal": 7,
+            "original_source": {
+              "feature_ordinal": 29,
+              "geometry_sha256": "358720820254536d4c8820578bb949a54d18bc78a93330a8f52a177f7f149fcf",
+              "negative_ordinal": 7,
+              "source_id": "gb:COG:ADM2:1427508B57341338749174"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+            "kinds": [],
+            "negative_ordinal": 8,
+            "original_source": {
+              "feature_ordinal": 43,
+              "geometry_sha256": "2742fc75111135103c6c1f71b055e913be7d2e6ccd38ec0b76d67677c81ef278",
+              "negative_ordinal": 8,
+              "source_id": "gb:COG:ADM2:1427508B53261587685070"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+            "kinds": [],
+            "negative_ordinal": 9,
+            "original_source": {
+              "feature_ordinal": 44,
+              "geometry_sha256": "1b1230a593a32322410388458a6b7e560459d08bf50014a6ee18e2ab5e25a110",
+              "negative_ordinal": 9,
+              "source_id": "gb:COG:ADM2:1427508B36736410961843"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+            "kinds": [],
+            "negative_ordinal": 10,
+            "original_source": {
+              "feature_ordinal": 45,
+              "geometry_sha256": "5a23e76781f592cac42ddd70ea985b8ad161c6ece490897c87d72fac0f53fca4",
+              "negative_ordinal": 10,
+              "source_id": "gb:COG:ADM2:1427508B74488627772391"
+            },
+            "source_id": "gb:COD:ADM2:63176286B40063645047483",
+            "target_id": "gb:COD:ADM2:63176286B40063645047483"
+          }
+        ]
+      },
+      "retained_physical_source_row": {
+        "owner_id": 14489,
+        "y": 134519,
+        "x": 141576,
+        "original_class": "land",
+        "physical_support_mask": true,
+        "inland_water_support_mask": false,
+        "source_center_hits": [
+          {
+            "family_index": 70,
+            "source_index": 18877,
+            "source_id": "gb:COD:ADM2:63176286B40063645047483"
+          },
+          {
+            "family_index": 71,
+            "source_index": 18950,
+            "source_id": "gb:COG:ADM1:67827341B26824927831038"
+          }
+        ]
+      }
+    }
+  ]
+}

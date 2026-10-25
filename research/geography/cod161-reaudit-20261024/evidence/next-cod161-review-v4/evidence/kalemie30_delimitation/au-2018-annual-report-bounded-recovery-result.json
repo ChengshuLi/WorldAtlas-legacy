@@ -1,0 +1,37 @@
+{
+  "kind": "au2018-canonical-report-bounded-recovery-result",
+  "date": "2026-10-24",
+  "worker_thread_id": "01a16f2d-e91b-7416-b0f6-1b7829ab00e5",
+  "url": "https://archives.au.int/bitstream/handle/123456789/10101/EX%20CL%201134%20XXXIV%20_E.pdf?isAllowed=y&sequence=1",
+  "prior_state": {
+    "retained_record": "kalemie30-researched-unresolved-proposal.json, finite lead ledger",
+    "session": 68631,
+    "terminal_exit_code": 56,
+    "http_status": 522,
+    "complete_body": false,
+    "scope": "Prior2018trainingexcerpt only; full report not read"
+  },
+  "new_attempt": {
+    "method": "Narrow approved nonbrowser curl --fail --location --max-time60 to own scratch; exact same canonical URL",
+    "session": 5813,
+    "terminal_exit_code": 56,
+    "http_status": 522,
+    "error": "curl: (56) The requested URL returned error: 522",
+    "elapsed_reported_seconds": 19,
+    "downloaded_bytes": 0,
+    "expected_output_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/kalemie30_delimitation/au-2018-annual-report-1134-recovery.pdf",
+    "output_exists_after_terminal": false,
+    "state": "failed; completed terminal result; not pending or uncertain; origin/transport error, not a source-access denial"
+  },
+  "reading_status": "Full2018report and fullrelevantboundarysection remain unread. No finding about their contents inferred. Existing limited2018trainingexcerpt remains the only inspected2018content.",
+  "disposition": "One bounded canonical recovery attempted after inspecting retained failure/no completedbody. Sameorigin522 persists; this finite lead closes as failed reasonable qualification, not proof of source absence or exhaustion of all possible sources. No further retry in this task.",
+  "constraints": {
+    "browser_calls": 0,
+    "geometry_runs": 0,
+    "native_diagnostics": 0,
+    "accepted_cells": 0,
+    "credit": 0,
+    "kalemie30_holds_retained": 30,
+    "security_bypass": false
+  }
+}

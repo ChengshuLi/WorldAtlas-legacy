@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "decision": "For this source-relative territorial-exclusion diagnostic only, treat the simplified Uíge feature contact as contextual for these two exact Popokabaka cells. The consumed 683-vertex simplified Uíge geometry places them inside; the complete pinned 9469f09 full output and the sourceData feature matching the official 2019 USCB source place them outside. The evidence supports treating these two simplified-only contacts as representation-sensitive rather than as applicable territorial exclusions for this target. This is not a legal sovereignty statement, not a correction to the candidate geometry, not a clearance of any other contact, and not an owner/map/status change.",
+  "target_id": "gb:COD:ADM2:63176286B47421332346835",
+  "owner": 14501,
+  "keys": [
+    {
+      "key": "14501:135347:143089",
+      "owner": 14501,
+      "y": 135347,
+      "x": 143089
+    },
+    {
+      "key": "14501:135350:143072",
+      "owner": 14501,
+      "y": 135350,
+      "x": 143072
+    }
+  ],
+  "candidate_negative": {
+    "source_id": "gb:AGO:ADM1:26408823B906914650007",
+    "negative_ordinal": 0,
+    "feature_ordinal": 16,
+    "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+    "candidate_commit": "9469f09"
+  },
+  "supporting_comparison": {
+    "source_data_archive_sha256": "28a8197080eec7270453478bef6fc403e20b455de61a1e04830caafabd302d77",
+    "full_output_archive_sha256": "6f7ea8ee7b31ed249208518b6c5993d684904a431a7aa5a3a433cf48f9c1ca8e",
+    "official_2019_uige_coordinate_stream_sha256": "eb451ee092b062280a75f153ab5c98d8b69963aba63789cb8a49d479bffb024e"
+  },
+  "review": {
+    "reviewer": "brn828_reviewer",
+    "agent_thread_id": "01a154ad-6292-7344-8b7f-7effa3be2018",
+    "result": "supports considering this narrow two-key contextual applicability; stock diagnostic remains required"
+  },
+  "preserved_contacts": [
+    "Popokabaka target remains original member",
+    "Any other original exclusion remains intact",
+    "The third simplified-only key 14501:135354:143074 retains separate 2017 Kwango contact and is excluded from this record",
+    "The other 17 full-source Uíge contacts remain unchanged"
+  ],
+  "status": "proposal input only; diagnostic, constructor, conservation, acceptance, repair credit and hold removal not yet established"
+}

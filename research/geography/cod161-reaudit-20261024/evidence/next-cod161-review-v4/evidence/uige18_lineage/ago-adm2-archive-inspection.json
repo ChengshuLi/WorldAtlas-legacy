@@ -1,0 +1,407 @@
+{
+  "kind": "original-uige18-ago-adm2-exact-archive-inspection-v1",
+  "worker_thread_id": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "status": "all18held; archive lineage only; zero credit",
+  "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/sourceData/gbHumanitarian/AGO_ADM2.zip",
+  "pointer_git_blob": "13cd4bfa39ba47fc10a4cae3a7c9ee1ea7b16653",
+  "archive": {
+    "bytes": 602248,
+    "sha256": "e8c91005399a78000aecf5e968ccc3ce4bb74441219312339975318c0497725f"
+  },
+  "members": [
+    {
+      "bytes": 5,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "path": "AGO_ADM2.cpg"
+    },
+    {
+      "bytes": 38931,
+      "sha256": "1ea8b012bb11c0b2a51414f7310f0a556704212b7cf43fc3599c2b45442e220f",
+      "path": "AGO_ADM2.dbf"
+    },
+    {
+      "bytes": 145,
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "path": "AGO_ADM2.prj"
+    },
+    {
+      "bytes": 1552604,
+      "sha256": "c1ac611f09c86b85fa762685cc9df83542ffea4bbbced617236a9bca52035fe1",
+      "path": "AGO_ADM2.shp"
+    },
+    {
+      "bytes": 1388,
+      "sha256": "3ff8563e1bdcbe8c63b93a7462faad27b82cccf77df8cc81b6fe43cc28d5885d",
+      "path": "AGO_ADM2.shx"
+    },
+    {
+      "bytes": 487,
+      "sha256": "0c75640223ea31597a05f0beb6ac58eda1b4a9ad374219950f3aa43aeba3b233",
+      "path": "meta.txt"
+    }
+  ],
+  "meta_text": "Boundary Representative of Year: 2018\nISO-3166-1 (Alpha-3): AGO\nBoundary Type: ADM2\nCanonical Boundary Type Name:\nSource 1: www.gadm.org and Instituto Nacional de Estatística (INE - www.ine.gov.ao) - see methodology\nSource 2: HDX\nRelease Type: gbHumanitarian\nLicense: Creative Commons Attribution for Intergovernmental Organisations\nLicense Notes:\nLicense Source: https://data.humdata.org/dataset/cod-ab-ago\nLink to Source Data: https://data.humdata.org/dataset/cod-ab-ago\nOther Notes: ",
+  "dbf_fields": [
+    [
+      "name",
+      "C",
+      80
+    ],
+    [
+      "pcode",
+      "C",
+      80
+    ],
+    [
+      "level",
+      "C",
+      80
+    ]
+  ],
+  "dbf_records": 161,
+  "dbf_header_last_update": "2022-09-05; file-processing marker only, not survey date",
+  "exact_keys": [
+    [
+      14501,
+      135348,
+      143084
+    ],
+    [
+      14501,
+      135348,
+      143085
+    ],
+    [
+      14501,
+      135348,
+      143086
+    ],
+    [
+      14501,
+      135349,
+      143081
+    ],
+    [
+      14501,
+      135349,
+      143082
+    ],
+    [
+      14501,
+      135349,
+      143083
+    ],
+    [
+      14501,
+      135350,
+      143070
+    ],
+    [
+      14501,
+      135350,
+      143071
+    ],
+    [
+      14501,
+      135350,
+      143080
+    ],
+    [
+      14501,
+      135352,
+      143078
+    ],
+    [
+      14501,
+      135352,
+      143099
+    ],
+    [
+      14501,
+      135352,
+      143100
+    ],
+    [
+      14501,
+      135352,
+      143101
+    ],
+    [
+      14501,
+      135352,
+      143102
+    ],
+    [
+      14501,
+      135353,
+      143102
+    ],
+    [
+      14501,
+      135353,
+      143103
+    ],
+    [
+      14501,
+      135353,
+      143104
+    ],
+    [
+      14501,
+      135354,
+      143074
+    ]
+  ],
+  "native_bindings": [
+    {
+      "native_operand": {
+        "feature_ordinal": 145,
+        "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+        "negative_ordinal": 1,
+        "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+      },
+      "native_properties": {
+        "shapeName": "Maquela do Zombo",
+        "shapeISO": "",
+        "shapeID": "16411231B1695185499214",
+        "shapeGroup": "AGO",
+        "shapeType": "ADM2"
+      },
+      "source_archive_dbf_record": {
+        "ordinal": 145,
+        "properties": {
+          "name": "Maquela do Zombo",
+          "pcode": "AO17148",
+          "level": "ADM2"
+        }
+      },
+      "native_source_descriptor": {
+        "parts": [
+          {
+            "bytes": 236896,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 813152,
+            "decoded_sha256": "7cf2a401b36480f7c22d9783e4364d3eb93c3ac643e2d34778b1ce059c786dcf",
+            "git_blob_oid": "20eba6ea202c44f29cf89c4a947b144ee35bfc32",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-AGO-ADM2-000.bin.gz",
+            "sha256": "377b1a666f58c913dec27b7d4557d98041e4d590d6555a2cdbfe13527ac8e55f"
+          }
+        ],
+        "source_id": "gb:AGO:ADM2"
+      },
+      "native_metadata": {
+        "boundaryID": "AGO-ADM2-16411231",
+        "boundaryName": "Angola",
+        "boundaryISO": "AGO",
+        "boundaryYearRepresented": "2018",
+        "boundaryType": "ADM2",
+        "boundaryCanonical": "Unknown",
+        "boundarySource": "www.gadm.org and Instituto Nacional de Estatística (INE - www.ine.gov.ao) - see methodology, HDX",
+        "boundaryLicense": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "licenseDetail": "nan",
+        "licenseSource": "data.humdata.org/dataset/cod-ab-ago",
+        "boundarySourceURL": "data.humdata.org/dataset/cod-ab-ago",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Middle Africa",
+        "worldBankIncomeGroup": "Lower-middle-income Countries",
+        "admUnitCount": "161",
+        "meanVertices": "599.0",
+        "minVertices": "33",
+        "maxVertices": "7928",
+        "meanPerimeterLengthKM": "415.8574579594246",
+        "minPerimeterLengthKM": "27.994874448601724",
+        "maxPerimeterLengthKM": "1256.8726004234338",
+        "meanAreaSqKM": "7749.578124466859",
+        "minAreaSqKM": "36.27219209625985",
+        "maxAreaSqKM": "46894.69971995518",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2_simplified.geojson",
+        "collection": "gbHumanitarian",
+        "sha256": "7cf2a401b36480f7c22d9783e4364d3eb93c3ac643e2d34778b1ce059c786dcf"
+      }
+    },
+    {
+      "native_operand": {
+        "feature_ordinal": 150,
+        "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+        "negative_ordinal": 2,
+        "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+      },
+      "native_properties": {
+        "shapeName": "Quimbele",
+        "shapeISO": "",
+        "shapeID": "16411231B94377396488260",
+        "shapeGroup": "AGO",
+        "shapeType": "ADM2"
+      },
+      "source_archive_dbf_record": {
+        "ordinal": 150,
+        "properties": {
+          "name": "Quimbele",
+          "pcode": "AO17153",
+          "level": "ADM2"
+        }
+      },
+      "native_source_descriptor": {
+        "parts": [
+          {
+            "bytes": 236896,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 813152,
+            "decoded_sha256": "7cf2a401b36480f7c22d9783e4364d3eb93c3ac643e2d34778b1ce059c786dcf",
+            "git_blob_oid": "20eba6ea202c44f29cf89c4a947b144ee35bfc32",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-AGO-ADM2-000.bin.gz",
+            "sha256": "377b1a666f58c913dec27b7d4557d98041e4d590d6555a2cdbfe13527ac8e55f"
+          }
+        ],
+        "source_id": "gb:AGO:ADM2"
+      },
+      "native_metadata": {
+        "boundaryID": "AGO-ADM2-16411231",
+        "boundaryName": "Angola",
+        "boundaryISO": "AGO",
+        "boundaryYearRepresented": "2018",
+        "boundaryType": "ADM2",
+        "boundaryCanonical": "Unknown",
+        "boundarySource": "www.gadm.org and Instituto Nacional de Estatística (INE - www.ine.gov.ao) - see methodology, HDX",
+        "boundaryLicense": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+        "licenseDetail": "nan",
+        "licenseSource": "data.humdata.org/dataset/cod-ab-ago",
+        "boundarySourceURL": "data.humdata.org/dataset/cod-ab-ago",
+        "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+        "buildDate": "Dec 12, 2023",
+        "Continent": "Africa",
+        "UNSDG-region": "Sub-Saharan Africa",
+        "UNSDG-subregion": "Middle Africa",
+        "worldBankIncomeGroup": "Lower-middle-income Countries",
+        "admUnitCount": "161",
+        "meanVertices": "599.0",
+        "minVertices": "33",
+        "maxVertices": "7928",
+        "meanPerimeterLengthKM": "415.8574579594246",
+        "minPerimeterLengthKM": "27.994874448601724",
+        "maxPerimeterLengthKM": "1256.8726004234338",
+        "meanAreaSqKM": "7749.578124466859",
+        "minAreaSqKM": "36.27219209625985",
+        "maxAreaSqKM": "46894.69971995518",
+        "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2-all.zip",
+        "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2.geojson",
+        "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2.topojson",
+        "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2-PREVIEW.png",
+        "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/AGO/ADM2/geoBoundaries-AGO-ADM2_simplified.geojson",
+        "collection": "gbHumanitarian",
+        "sha256": "7cf2a401b36480f7c22d9783e4364d3eb93c3ac643e2d34778b1ce059c786dcf"
+      }
+    }
+  ],
+  "all_four_negative_inventory": [
+    {
+      "feature_ordinal": 16,
+      "geometry_sha256": "39fcf2d95283675f6c2eecf0466063678a04c7803dc92eae502123879d589e9d",
+      "negative_ordinal": 0,
+      "source_id": "gb:AGO:ADM1:26408823B906914650007"
+    },
+    {
+      "feature_ordinal": 145,
+      "geometry_sha256": "62068c3083189911061d0878ae9c106fe79878eb37bf4c00770caa53ef01feab",
+      "negative_ordinal": 1,
+      "source_id": "gb:AGO:ADM2:16411231B1695185499214"
+    },
+    {
+      "feature_ordinal": 150,
+      "geometry_sha256": "855aafb3b0d7c228ff1ad92ca8ad92b446f6d9bf5371d9d57fee267eb8430751",
+      "negative_ordinal": 2,
+      "source_id": "gb:AGO:ADM2:16411231B94377396488260"
+    },
+    {
+      "feature_ordinal": 8,
+      "geometry_sha256": "742629efdf20b8b68b815038050b50a71cfd051d5158d2a5ee9bf8af781aaba8",
+      "negative_ordinal": 3,
+      "source_id": "gb:COG:ADM1:67827341B26824927831038"
+    }
+  ],
+  "prior_four_negative_audit": {
+    "bytes": 22455,
+    "sha256": "9d2916b8a485502d9482e30d799d940bc5fa96ce609bd3974e26d905b00930ef"
+  },
+  "prior_scope_confirmation": {
+    "bytes": 1232,
+    "sha256": "d28f872c19dd36d36d1b3e49ca4c9def7b9a0cb8424b54a11e3f2b48a57c3774"
+  },
+  "prior_official2019comparator": {
+    "xml": {
+      "bytes": 25391,
+      "sha256": "117b56ab4ae5f95fe6373aa1f596dd2f9585830a82b1e4c2f8aad2d6e53340fa",
+      "member": "Angola_adm2_uscb_2019.shp.xml"
+    },
+    "processing_text": {
+      "idCredit": [
+        "CENSUS DATA\n\nAge-Sex data: Resultados Definitivos do Recenseamento Geral da População e Habitação de Angola 2014, Quadro 1.04: População Residente por Grupos Etários e Municípios, Segundo a Área de Residência, Sexo e Índice de Masculinidade. Instituto Nacional de Estatística de Angola. Available online at https://www.ine.gov.ao/publicacoes/populacao-e-sociedade/ (provincial reports must be downloaded individually, accessed September 5, 2019). The U.S. Census Bureau cannot guarantee the accuracy of non-U.S. census and survey data.\n\nGEOSPATIAL BOUNDARIES\n\nInternational boundaries coincide with the Large Scale International Boundaries (LSIB) dataset from the U.S. Department of State, Office of the Geographer and Global Issues. Available online at http://geonode.state.gov (accessed 2019). Geospatial data for the second-order administrative divisions of Angola were downloaded from the Humanitarian Data Exchange, available online at http://data.humdata.org/dataset/angola-administrative-levels-0-3, \"ago_admbnda_adm2_gadm_ine_ocha_20180904.zip\" (accessed September 9, 2019). The U.S. Census Bureau cannot guarantee the accuracy of boundary placements.\n\nNATIONAL ESTIMATES AND PROJECTIONS \n\nU.S. Census Bureau, Population Division.  INTERNATIONAL DATA BASE, September 2018 release, available at http://www.census.gov/data-tools/demo/idb/informationGateway.php, accessed in August 2019.\n\nNATIONAL AND SUBNATIONAL AREA NAMES AND CODES \n\n(1) U.S. National Geospatial-Intelligence Agency.  NGA GEOnet Names Server (GNS), available at http://geonames.nga.mil/gns/html/, accessed in August 2019.  For geographic area names from the U.S. Board on Geographic Names and the U.S. Government Federal Information Processing System (FIPS) codes.  \n(2) U.S. Government Geopolitical Entities, Names, and Codes (GENC) Standard.  NSG Standards Registry, available at http://nsgreg.nga.mil/genc/discovery, accessed in August 2019."
+      ],
+      "suppInfo": [
+        "SUBNATIONAL DIVISIONS\n\nAngola's second-order administrative divisions: 162 Districts as of the 2014 census.\n\nSHAPEFILES\n\nThe original shapefile downloaded by USCB staff had 161 polygons and matched the 2016 census districts (ADM2) after one minor change by USCB staff: In Lunda Norte province, Chitato district was split to accommodate the new Lóvua district. The U.S. Census Bureau aligned the boundaries in the shapefile to the “Large Scale International Boundary Line” (LSIB) polygon file (2018) from the U.S. Department of State, Office of the Geographer and Global Issues. The final shapefile contains 162 polygons, one for each of Angola's second-order administrative divisions (municipalities) as reported by Instituto Nacional de Estatística de Angola in the 2014 census.\n\nFEATURE AND ATTRIBUTE DETAILS\n\nThe 2000-2025 population estimates for Angola's administrative divisions are provided in the following 2 tables:\nThe Unicode tab-delimited text file (table) \"Angola_5yr_age_sex_2000-2025_uscb_oct2019.txt,\" which can be joined to the shapefile via the common field \"GEO_MATCH.\"\nThe Excel table \"Angola_5yr_age_sex_2000-2025_508_uscb_oct2019.xlsx,\" formatted for accessibility in compliance with Section 508 of the U.S. Government's Federal Rehabilitation Act.\n\nDetails on processing of the census data and calculation of 2000-2025 estimates are provided in the \"Census_Metadata\" tab of the Excel file and \"Methods for Calculating 5-Year Age Group Population Estimates by Sex for Subnational Areas\" document.\n\nFor the subnational areas, the U.S. Board on Geographic Names (BGN) \"approved\" names from the NGA GEOnet Names Server (cited in the \"Credits\") were used.  For any area that a BGN name was not available, the name from the national census was used.  Official codes for the subnational areas from the country's national statistical office, when available, are entered in the \"NSO_CODE\" field in both the text and Excel tables.  Information on any alternative area names or recent name or boundary changes is entered in the \"USCBCMNT\" field.\n\nA partial list of the fields in the Excel and Unicode text files, including all fields identifying geographic names and codes, is provided in the Excel file's \"Data_Dictionary\" tab.\n\nADDITIONAL INFORMATION\n\nMore detail on the U.S. Census Bureau subnational age and sex group estimates and maps for PEPFAR can be found in the document \"Subnational Population Estimates Components for the Spatial Data Repository.\"  It includes a data dictionary that is similar to that in the Excel table.\n\nACCESS\n\nThe U.S. Census Bureau’s products for PEPFAR can be accessed from the SPATIAL DATA REPOSITORY: \n\nZipped file containing geographic boundary data, tables with subnational population estimates, and instructions for linking (joining) the text file to the geographic boundary data: http://spatialdata.dhsprogram.com/home/.  This web address also provides access to data and maps from the DHS (Demographic and Health Surveys) Program.\n\nInstructions for linking (joining) the text file to the geographic boundary data can also be found in a standalone methodology document in the Spatial Data Repository.\n\nFor more information, see the following methodology documents in the Spatial Data Repository:\n(1) \"Subnational Population Estimates Components for the Spatial Data Repository.\"\n(2) \"Methods for Calculating 5-Year Age Group Population Estimates by Sex for Subnational Areas.\" \n\nAll of the above documents, tables, and geographic boundary data (zipped) are also available on the Census Bureau website at http://www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html for download.\n"
+      ]
+    },
+    "known_feature_records": [
+      {
+        "name": "MAQUELA DO ZOMBO",
+        "dbf_ordinal": 146,
+        "GEO_MATCH": "AGO_03_07",
+        "ADM1_NAME": "UÍGE",
+        "USCBCMNT": ""
+      },
+      {
+        "name": "QUIMBELE",
+        "dbf_ordinal": 151,
+        "GEO_MATCH": "AGO_03_12",
+        "ADM1_NAME": "UÍGE",
+        "USCBCMNT": ""
+      }
+    ],
+    "limits": "USCB archive has162ADM2records and documented Lovua split and LSIB2018 alignment. Name relation does not establish identical geometry/sourcearchive; no geometryrerun."
+  },
+  "publisher_history": {
+    "relevant_humanitarian_PR": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/pull/829",
+      "merged": false,
+      "head": "63437433b3901178932789559706da229d8f8a7d",
+      "finding": "Unmerged2021humanitarian submission, botmetadatafailure; not evidence of adoption or identity with consumed2022datedDBF."
+    },
+    "excluded_gbOpen_PR": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/pull/2533",
+      "merged": true,
+      "head": "6af400150a3f84407ebf1c3ec986fefd8df99ca0",
+      "merge_commit": "9147e735566c58306a7b9a612e2b333240af941c",
+      "merged_at": "2022-10-12T13:13:22Z",
+      "actual_changed_path": "sourceData/gbOpen/AGO_ADM2.zip",
+      "finding": "Differentreleaseproduct. Reviewmentionsdigitizing and submissionnotesoutdatedboundaries; neither claim is transferredtohumanitarianinput."
+    },
+    "path_history": "Consumedhumanitarianpath history returns2023-01-19 Clearedhistory commit b7dd6a55701c76a330500ad9d9240f2b9997c6a8. It doesnot recoveroriginalconstructionsteps."
+  },
+  "acquisition": {
+    "session": 75705,
+    "exit_code": 0,
+    "route": "separately reviewed require_escalated singlepublicGitHubarchive download",
+    "size_and_hash_verified": true
+  },
+  "obstacles": {
+    "AGO_ADM1_PR1352": "Restrictedobject not accessed or retried",
+    "HDX_cod_ab_ago": "Prior403 not accessed or retried",
+    "methodology": "meta.txt sayssee methodology; ZIPhasno methodologydocument/XML/licenseimage andOtherNotesempty. Detailedconstructionandfeatureedgesremainunestablished."
+  },
+  "needed_next_observation": "Use pending18 four-operand native attribution request. No unchangeddiagnosticrerun, no source geometry substitute, no automaticholdremoval.",
+  "accounting": {
+    "native_geometry_tests": 0,
+    "accepted": 0,
+    "credit": 0,
+    "holds_preserved": true
+  }
+}

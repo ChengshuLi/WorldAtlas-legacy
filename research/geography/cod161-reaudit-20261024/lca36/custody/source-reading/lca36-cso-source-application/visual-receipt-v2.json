@@ -1,0 +1,267 @@
+{
+  "status": "author_research_only_all36_held",
+  "counts": {
+    "accepted_preserved": 324,
+    "pending_preserved": 36,
+    "clear_conditional_readings": 24,
+    "symbol_adjacent": 4,
+    "occluded": 3,
+    "unsupported_datum_coverage": 5
+  },
+  "exact_subjects_and_native_context_unchanged": true,
+  "source_context_sha256": "5827395f41d7a4002eb51f54c4e5fc6924bf3872cb3004e6c3118b591ca9355d",
+  "routes": {
+    "eight_official_pdfs": "Chrome viewer Save then local byte verification and pypdf/pypdfium2; success",
+    "first_download_event": "timed out; same native save dialog inspected and completed; no duplicate download",
+    "navigation_timeouts": "inspected existing tab; successful renders; tab closed",
+    "prior_curl": "DNS6 no file; not retried",
+    "web_screenshot": "text references only; not claimed as pixels",
+    "acrobat": "getApp returned empty window after683.8seconds; no PDF opened; no explicit permission state/ID in result; no further calls",
+    "plotting_helper": "matplotlib absent; no installation; existing PDF renderer instead"
+  },
+  "prohibitions_observed": [
+    "no native producer/observer",
+    "no polygon predicate or traced boundary",
+    "no forced NAD27 conversion",
+    "no Git/publication",
+    "no DoPDUR raw geometry copying",
+    "no security/network setting change or escalation"
+  ],
+  "files": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/visual-assessment-v2.md",
+      "bytes": 15140,
+      "sha256": "bb99e0b3d24641b270f158bf69841ef8e7cfd17020982b72a40f07f66b427bd3"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/exact36-visual-assessment.json",
+      "bytes": 104226,
+      "sha256": "643a435cdba608cfdd824447bc7aedb0499622979871401b4c2ec5dc33553c40"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/visual-recommendations.json",
+      "bytes": 3412,
+      "sha256": "b19a5d0556ff0031371eac5e5720811d21aa69e87b9b6ce66aabb47827f6fe58"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/cso-pdf-controls.json",
+      "bytes": 234036,
+      "sha256": "91eabbbe6db6ff7b4365362a44b5fbcfd216c01a6b78d97eca8c168915101d5a"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/exact36-conditional-page-context.json",
+      "bytes": 91312,
+      "sha256": "9a6f81bf96479b43bcf4ffe285813adc1bd971bdca5823bb6d6ca6f492bf638b"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/inspect_cso_controls.py",
+      "bytes": 4724,
+      "sha256": "a6e5205b4641d17fedb93b79a979766e97a8a31358a1736fd6a44e859aea46a9"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/render_conditional_windows.py",
+      "bytes": 1451,
+      "sha256": "2c1f329522724441b006029e88752caafb55442063dd7439294663c9375c9590"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/finalize_visual_assessment.py",
+      "bytes": 5542,
+      "sha256": "243143f3cf1bff5c0e3c401635f5556a9e52f91e01cb2eb3908a8e28f725e1ca"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/CHOISEUL_district.pdf",
+      "bytes": 3269591,
+      "sha256": "20870c234f326cc3395f0955fba0dd2392ed9ce509fce9258f302ecad3f7dea8"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/Canaries.pdf",
+      "bytes": 556594,
+      "sha256": "b6bff9580535455bc944d5f6bea7f8c64f884eed76000fd6c7dffc4d386e3626"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/Castries-1.pdf",
+      "bytes": 1807946,
+      "sha256": "00f86ef147a0520e5acb36e6a664328c0a5d7168385b757a4ad7f9997807593e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/Dennery.pdf",
+      "bytes": 3253039,
+      "sha256": "35be0a0c53e385edc456d75a5ae934d3521a461a31090140a51c55ec162f43ad"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/Gros-Islet_district.pdf",
+      "bytes": 3640796,
+      "sha256": "3da1cb873e5e3123249157d9fc61b11d606b0bde7c3f13cfdcda3e74a8b2e607"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/Micoud.pdf",
+      "bytes": 1390042,
+      "sha256": "7945b2ac673193a2382fc14a9d1c541380f89a9818e242a8c7e3a085c698942e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/Soufriere_district.pdf",
+      "bytes": 3270003,
+      "sha256": "4b5d6b1f30c76d8d56456f4dca1da176c288f5907dedcbebd6c44cfb09cc4c03"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/Vieux-Fort.pdf",
+      "bytes": 3800556,
+      "sha256": "f7db8c9a22eccda9586c153524d12e67623bb634b421f8ba267774bc513ba96f"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-01.png",
+      "bytes": 39902,
+      "sha256": "fceee28ff22319d4a4557afeccd82f372a77bd3b8e61c519cd08a53d91f639c6"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-02.png",
+      "bytes": 27242,
+      "sha256": "1c3905f5249d9ab5f7b23d85a52acc209cd2874d2ef846e9a773401195e2ca28"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-03.png",
+      "bytes": 25289,
+      "sha256": "d4201e1bb6f6286ccd1835e1a9840fe5a6713ab7ffd712a6b2ed114af8243571"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-04.png",
+      "bytes": 21461,
+      "sha256": "251abad8710a21bd0d5d38dc67d283b6ac0dd1543d5b1de77f57ea9f33ac4d9c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-05.png",
+      "bytes": 54418,
+      "sha256": "156e08fcba2606d6e2f1fb58b1059a75b25268bdeec47e325dbb97a66e8ceab5"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-07.png",
+      "bytes": 23004,
+      "sha256": "b8ca6a7cafd2929f44c4ca325a13e06d55812dd5971524e99414983b2a90ee3a"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-09.png",
+      "bytes": 43136,
+      "sha256": "a0c0fdaa388299de211a71920c4dc067848e167117b1300cbba10ee57b703ced"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-10.png",
+      "bytes": 27070,
+      "sha256": "6f0ca572b0e8408b37e330fa89da8dce1214cb68d20da834d1bb45d054cd6617"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-11.png",
+      "bytes": 50909,
+      "sha256": "16bd95cec4c2181edd26ed4200d336f25af7c7f9c3ca3ec5af990a527b06fd9f"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-12.png",
+      "bytes": 33550,
+      "sha256": "4e0ad091862531d0afde30ed3e0d5c3c7ccc49e81e8010849ce2d7293572299e"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-13.png",
+      "bytes": 73727,
+      "sha256": "8f283cb789ded1950fcc58e3a497b21e3ad707718590cf5f84712d77ee579045"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-14.png",
+      "bytes": 58428,
+      "sha256": "864fd2348d5d12187094a51dbcdb6e84b30dc35b4c2b3298bf8ecdf8d4512308"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-15.png",
+      "bytes": 56820,
+      "sha256": "e77ece5719449736c7c268b7a4b69f850c919885f7ba42d85071d4ed9337d59d"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-16.png",
+      "bytes": 6573,
+      "sha256": "e2e04f2fcbfc6540a94d9c5393737d206382b99af136f3c40e3dee18be15c6e5"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-17.png",
+      "bytes": 9464,
+      "sha256": "ed117d12bfd0e9a1958fb29727e1615a801fa4230ec62b7b486689deefe95dc9"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-18.png",
+      "bytes": 9692,
+      "sha256": "571a08117eb58116678e7bc9b7d546d244dc354ae2c02701f092e467e9fc8a33"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-19.png",
+      "bytes": 25806,
+      "sha256": "6ad924ff8b181c4c499a50506bb3e429ba8b2e8fae3771c507f67bc9c31fc173"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-21.png",
+      "bytes": 16948,
+      "sha256": "68c3f28f9a0968c7f88a2bfdef63bab60e2cce665fe603960f15456ba3444459"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-23.png",
+      "bytes": 14479,
+      "sha256": "e64543430b0cf8117cb5c332042da225ca1499a16a317b73a01f0b73830768d6"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-24.png",
+      "bytes": 13940,
+      "sha256": "629a5a6db68b644033f0bd62a4ea1a6e8432b700a9b4a9ae97014f3f47dd8386"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-25.png",
+      "bytes": 17819,
+      "sha256": "9a8fb079c975a51c7231dbe90a3f55639737bf2e3f9b162c19dcb775d69b5c01"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-26.png",
+      "bytes": 24175,
+      "sha256": "088f0f56db297187fde3dcc5c6839a7261f2d10ac16712e42c4182b7595798cd"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-27.png",
+      "bytes": 24805,
+      "sha256": "37697088eaa2b79999593256909477e2b55eb70e59e9752ad98c363f259aa36f"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-28.png",
+      "bytes": 32133,
+      "sha256": "847bdad72612af33dacb7ae18c206e43cc6c8eb0605675e724701838595b8366"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-30.png",
+      "bytes": 33255,
+      "sha256": "8b3f22cc124b93cd2f557b77b7605b56f959f76ed80eea969f43e2519f837f4c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-31.png",
+      "bytes": 36580,
+      "sha256": "61d09af25fac9da8c76d4714307ea4df45c7aa87725e74544336bb4ff458b48c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-32.png",
+      "bytes": 41147,
+      "sha256": "15fb36c00f3b638c19326b6116fc9fd0686cf0fa28ed5aec2631342e955d46f0"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-33.png",
+      "bytes": 38919,
+      "sha256": "712ac383df6c8ac5673730804b8df60c994885c766b9e00fd603828239129b28"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-34.png",
+      "bytes": 29895,
+      "sha256": "119e8bed2a734dd49a31f4b318e43136ca8d06aa2f2754b15fa811be4538f10f"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-35.png",
+      "bytes": 33601,
+      "sha256": "7eb64096ff5330819ebb8814cb09869603bf2217fdf8024d45d104c0d92d085a"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/lca36-cso-source-application/reading-window-36.png",
+      "bytes": 29102,
+      "sha256": "4b359051fead2d05320e2551b632a193021d02387ce6df4c7b473134d5bd0b04"
+    }
+  ]
+}
