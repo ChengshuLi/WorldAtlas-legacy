@@ -440,13 +440,40 @@ test('author refresh does not acquire new excluded blobs in a conventional clone
   assert.equal(git('for-each-ref', '--format=%(refname)', 'refs/heads/engineering/missing-selected'), '');
 });
 
+test('author allocation pins fetched origin/main even without a configured fetch refspec', t => {
+  const source = fixture(t);
+  const remote = path.join(source.temporary, 'remote.git');
+  const repo = path.join(source.temporary, 'client');
+  execFileSync('git', ['clone', '--bare', source.repo, remote], {stdio: 'pipe'});
+  execFileSync('git', ['clone', '--no-checkout', remote, repo], {stdio: 'pipe'});
+  const git = (...args) => execFileSync('git', ['-C', repo, ...args], {encoding: 'utf8', stdio: 'pipe'}).trim();
+  const oldMain = git('rev-parse', 'refs/remotes/origin/main');
+
+  fs.writeFileSync(path.join(source.repo, 'README.md'), 'fresh remote main');
+  source.git('add', 'README.md'); source.git('commit', '-m', 'advance remote main');
+  const latestMain = source.git('rev-parse', 'HEAD').trim();
+  source.git('push', remote, 'main');
+  git('update-ref', 'refs/remotes/origin/main', oldMain);
+  git('config', '--unset-all', 'remote.origin.fetch');
+  assert.equal(git('rev-parse', 'main'), oldMain, 'the local branch remains stale');
+  assert.equal(git('rev-parse', 'refs/remotes/origin/main'), oldMain, 'the tracking ref begins stale');
+
+  const manager = workspaceManager(repo);
+  const entry = manager.allocate({worker: 'no-fetch-refspec', branch: 'engineering/fresh-main'});
+  assert.equal(entry.head, latestMain);
+  assert.equal(git('rev-parse', 'refs/remotes/origin/main'), latestMain);
+  assert.equal(git('rev-parse', 'main'), oldMain, 'allocation does not advance the caller worktree branch');
+  assert.equal(fs.readFileSync(path.join(entry.path, 'README.md'), 'utf8'), 'fresh remote main');
+  manager.release({worker: 'no-fetch-refspec', token: entry.token});
+});
+
 test('failed fetch never acquires a registry lock and keeps other workers intact', t => {
   const {manager, head} = fixture(t);
   const existing = manager.allocate({worker: 'existing', slot: 'review', commit: head});
   const {registry} = manager.report(), before = fs.readFileSync(path.join(registry, 'state.json'));
   const execute = childProcess.execFileSync;
   t.mock.method(childProcess, 'execFileSync', (command, args, ...options) => {
-    if (command === 'git' && args.slice(2).join(' ') === 'fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin main') {
+    if (command === 'git' && args.slice(2).join(' ') === 'fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main') {
       assert.ok(!fs.existsSync(path.join(registry, 'lock')));
       throw Error('interrupted fetch');
     }
@@ -467,7 +494,7 @@ test('hard process interruption during fetch leaves no allocator lock or reserva
     import {workspaceManager} from ${JSON.stringify(moduleURL)};
     const execute=cp.execFileSync;
     cp.execFileSync=(command,args,...options)=>{
-      if(command==='git'&&args.slice(2).join(' ')==='fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin main'){
+      if(command==='git'&&args.slice(2).join(' ')==='fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main'){
         fs.writeFileSync(${JSON.stringify(path.join(repo, 'fetch-started'))},'started');process.kill(process.pid,'SIGTERM');
       }
       return execute(command,args,...options);
@@ -681,8 +708,8 @@ function partialFixture(t, missing, {packSource = false, configureSource} = {}) 
   const checkUnfetched = (allowMainFetch = false) => {
     let log = fs.readFileSync(trace, 'utf8');
     if (allowMainFetch) {
-      assert.equal(log.match(/built-in: git fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin main/g)?.length, 1, 'only the ordinary main refresh is allowed');
-      log = log.split('\n').filter(line => !line.includes('built-in: git fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin main')).join('\n');
+      assert.equal(log.match(/built-in: git fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin \+refs\/heads\/main:refs\/remotes\/origin\/main/g)?.length, 1, 'only the ordinary main refresh is allowed');
+      log = log.split('\n').filter(line => !line.includes('built-in: git fetch --no-tags --no-recurse-submodules --no-auto-maintenance --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main')).join('\n');
     }
     assert.doesNotMatch(log, /(?:built-in: git|run_command:) .*fetch/);
     assert.match(log, /ls-tree --full-tree -rz/);
