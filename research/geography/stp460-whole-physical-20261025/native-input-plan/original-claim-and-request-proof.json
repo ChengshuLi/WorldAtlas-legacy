@@ -1,0 +1,64 @@
+{
+  "kind": "original-claim-and-request-reconciliation",
+  "original_claim_url": "https://github.com/ChengshuLi/WorldAtlas/pull/2626#issuecomment-6305790011",
+  "suspension_reaffirmation_url": "https://github.com/ChengshuLi/WorldAtlas/pull/2626#issuecomment-6383028583",
+  "original_claim_cells": 460,
+  "original_interval_count": 181,
+  "request_native_rows": 150,
+  "interpretation": "460 is the original cell denominator. 181 counts original interval segments, not a reduced cell denominator or separate completed-cell scope. 150 counts distinct y rows after exact interval grouping.",
+  "matched_original_observation_blob": "bf0b6ad2871565561deaaa7ee047e41ec74b8c19",
+  "matched_original_observation_sha256": "9d85c89bfeed3463269d23d0d3d1cec920f7755a8a41ccec59d33f556b634f25",
+  "all460_original_claim_keys_equal_request": true,
+  "original_owner_counts": {
+    "40324": 118,
+    "40323": 342
+  },
+  "prior_observed_ownership_patterns": {
+    "(0, 0, 0)": 460
+  },
+  "prior_observation_scientific_qualification": false,
+  "prior_observation_limit": "Original literal owner-state evidence only, not fresh selected conservation or physical/source qualification.",
+  "original_census_witness_pins": [
+    {
+      "bytes": 1844315,
+      "commit": "04c0bef8bfd8a5d685aaa91b60247152904267c7",
+      "git_blob_oid": "e6e380ec13cd4bcc1d24399a76bfa85ca5805b26",
+      "mode": "100644",
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-feature-roster.json.gz",
+      "sha256": "87f2d47e104b3af640351e747d8300d0068a1be23caab9e80558c3f8914eb4aa",
+      "whole_body_consumed": true
+    },
+    {
+      "bytes": 589757,
+      "commit": "04c0bef8bfd8a5d685aaa91b60247152904267c7",
+      "git_blob_oid": "8c513fafe3d2754547cba8c3e8a4c812e8cc520d",
+      "mode": "100644",
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-031.json.gz",
+      "sha256": "9aa6e8ab65027095c27f43c2d15af0a3bb94c6af8fe19f342e3af37f5c3356e0",
+      "whole_body_consumed": true
+    },
+    {
+      "bytes": 800317,
+      "commit": "04c0bef8bfd8a5d685aaa91b60247152904267c7",
+      "git_blob_oid": "5c56cb06a4879060a4ad933395cd643cdaaa5565",
+      "mode": "100644",
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-032.json.gz",
+      "sha256": "00a677c75540d3be3a750e7f41d2d296f05dc24b84cec9d3776713986a7f6064",
+      "whole_body_consumed": true
+    }
+  ],
+  "duplicate_check": {
+    "baseline_commit": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+    "current_STP_named_paths": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-physical-continuation/current-stp-path-check.json",
+    "retained_handoffs_checked": [
+      "stp460",
+      "stp460-qualification-groundwork",
+      "stp460-two-member-input-draft",
+      "stp460-physical-continuation"
+    ],
+    "result": "No prior completed equivalent whole460 native diagnostic identified in these bounded records; sole new physical execution completed and published.",
+    "not_a_global_absence_claim": true,
+    "new_native_invocations": 0
+  },
+  "accepted_credit": 0
+}

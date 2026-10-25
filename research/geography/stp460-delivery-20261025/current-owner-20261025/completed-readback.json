@@ -1,0 +1,35 @@
+{
+  "kind": "completed-full-original-literal-owner-readback",
+  "scientific_qualification": false,
+  "package": "gb-STP-ADM1--repair-evaluation",
+  "query_count": 460,
+  "interval_count": 181,
+  "original_intervals_identical_to_historical": true,
+  "query_order_and_keys_identical_to_historical": true,
+  "query_sha256": "16ce546fcd21fdafb75024f0da17f9e7036df453ea3b7f9b860c29e73934920b",
+  "original_intervals_sha256": "1cb690c29af406cb79c5a1226a4d0e16c7b44f97dda89316535f506fa87d701a",
+  "CODE": "57077a57a2e3953e7f6cb3e572037bff30afc1bb",
+  "DATA": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+  "current_accepted_head_via_unchanged_bank_proof": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "final_bank_pin": {
+    "bytes": 49610,
+    "path": "data/canonical-grid/current-startup/index.json",
+    "sha256": "b8fd11b5d3789385b961a4c0e298e53278448d963142a2cce429a4418b1d5e28"
+  },
+  "occupied_count": 0,
+  "zero_count": 460,
+  "owner_counts": {
+    "0": 460
+  },
+  "observed_owner_ids": [],
+  "legacy_final_bank_fields_preserved_null": true,
+  "result": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-current-owner65ef/current-STP-owners-c22.json",
+    "bytes": 113404,
+    "sha256": "b6d922abbc7417f505151ff655040cf750b7adf36539b512f2585b0fe3ec6270"
+  },
+  "execution_receipt": "literal-c22-launch.json",
+  "bridge": "../accepted65ef-unchanged-bank-bridge.json",
+  "historical_53002_unchanged": true,
+  "scope_limit": "Literal selected-owner only. No new source/physical/native qualification, authority, acceptance, composition or finalizer."
+}

@@ -1,0 +1,10 @@
+{
+  "phase": "native-authority",
+  "config": {"path": "research/geography/cmr-source-holds-20261025/native-authority-current-stp-main.config.json", "sha256": "5257181349989feb7e50562b7bcbcd6878570b2a70c47d4883b6fe0fc63008f8"},
+  "destination": ".cache/delivery-handoff/cmr4925-source-holds-current-stp-main-authority-20261025-01",
+  "command": "node scripts/prepare-delivery-handoff.mjs native-authority research/geography/cmr-source-holds-20261025/native-authority-current-stp-main.config.json .cache/delivery-handoff/cmr4925-source-holds-current-stp-main-authority-20261025-01",
+  "resume": false,
+  "exit_code": 0,
+  "qualified_cells": 4438,
+  "limitations": ["no source or physical producer replay", "constructor qualification is not current-owner-zero or selected-output acceptance"]
+}

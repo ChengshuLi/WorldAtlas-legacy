@@ -1,0 +1,31 @@
+# STP460 source, method and notice clarification
+
+The cumulative handoff supports its stated460-key positive source-relative recommendation and explicitly distinguishes it from modern administrative equivalence or whole-footprint clearance. This continuation does not change that recommendation or acceptance. No new producer, geometry operation, native observation, authority, composition or finalization ran.
+
+## Actual source and transformation scope
+
+The actual retained45,118-byte upstream STP_ADM1 archive was opened. Its meta.txt names OpenStreetMap/Wambacher, represented2017 and ODbL1.0. The XML records24September2017 ArcGIS CalculateField operations for Level and ISO_Code only. Those operations establish attribute processing, not surveyed coastline accuracy, an adopted administrative boundary or a complete geometry-simplification recipe. Original DBF names and ADM1/ISO values are source observations.
+
+The consumed complete original geometry is the distinct13,794-byte simplified GeoJSON release at9469f09, SHA08be7b52bcc1d3923590a046810bc24606f5e2eba4d86b6a241a27ab8507c7b8. Its two whole feature members, contiguous original-byte corpus custody and source URL are retained in method-and-input-scope.json. The raw ZIP and full-resolution release were not substituted for it. The selected base is yet another retained representation. Therefore “upstream preparation/simplification” in the existing notice identifies the released product and observed representation differences; it must not imply that the archive XML independently reproduces every upstream geometric transformation. No exact upstream algorithm or tolerance is asserted by this clarification.
+
+The completed WorldAtlas qualification has a concrete method basis beyond license metadata. The physical execution receipt identifies qualify-source-cohort.py SHAabc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18; the already-retained method body has that same hash. Actual source reading of its query/container/support section and the pinned comparison.py shows supported complete container chains, explicit whole-source relations, alternating GSHHG levels and retained reconstruction/hierarchy witnesses. This is a reading of the executed method, not another execution.
+
+## Exact geographic limits
+
+The handoff distinguishes São Tomé's geographic island aggregate containing six districts from Príncipe's autonomous-island institution. It retains the original Province strings and generic source-role annotations as observations. It neither installs two equivalent statutory Provinces nor migrates hierarchy/IDs. The consumed source and source/location lineage, actual INE institutional reading and generalization comparison jointly support the geographic subjects; no one name alone does.
+
+Rolas88 is a contextual association supported by the official named-islet portrayal, a distinct southern component of the whole São Tomé source member, inherited exact membership and retained land support. The selected main-island base omits that component. The official locator was not traced or calibrated into a new exact shoreline; no new Rolas owner or district boundary is inferred. Its88 keys remain part of São Tomé342.
+
+Both whole members retain outside-mapped-L1 context. Príncipe retains nonempty missing- and extra-reconstruction MultiPolygon witnesses. In the actual method, exterior is the candidate portion outside level1; reconstruction residuals compare the candidate with the union of mapped land, inland water and exterior. These are source-relative computational witnesses, not automatically ocean classifications or proof of missing territory. No residual was discarded as “small” or covered by an invented tolerance. The already-completed diagnostic screened the exact254/88/118 requested-key contexts and reported460 assigned, zero held and no requested-key witness effects. That does not erase the whole-source witnesses, certify arbitrary full-cell intersections, or decide wider named Príncipe islets/Cabras beyond these keys.
+
+## Publication notice application
+
+The actual archive declaration and recorded consumed-release license support ODbL attribution for this STP-derived contribution. The operative [ODbL text](https://opendatacommons.org/licenses/odbl/1-0/) distinguishes database and produced-work notices, derivative share-alike, and an applicable machine-readable derivative or complete alteration/method offer (§§4.2–4.6). It does not automatically license independent contents or software (§§2.3–2.4), nor warrant accuracy (§7). [OpenStreetMap's notice guidance](https://www.openstreetmap.org/copyright) requires contributor credit and clear license information. These are output-specific obligations; an intermediate authority hash alone is not the complete future distribution offer.
+
+The existing notice supplies OSM/Wambacher/geoBoundaries credit, source/request/physical/authority links and GSHHG's actual license/readme. The coordinator must connect that notice to the actual distributed output and complete applicable derivation. The finaloutput locator remains unbound. Do not describe all atlas components as ODbL or equate data licensing with current territorial truth.
+
+The retained INE census rights page permits credited reproduction except commercial purposes. It informed institutional context; no INE geometry was digitized into this contribution. That separate condition remains intact and is not overridden by OSM licensing. No raw INE PDF/map, source ZIP or extensive source text is copied into this clarification.
+
+## Finite outcome
+
+Existing work already addresses the relevant source-role, named-islet, physical-method and licensing questions at the stated scope. No newly identified accessible deciding geographic passage is left unperformed in this bounded review. This is not a universal-exhaustion claim: upstream survey/simplification detail, all-islet completeness and modern shoreline truth are unproved, but are not asserted by the source-relative recommendation. The concrete remaining work is coordinator review/current-base transition and output-specific notice/derivation binding, not a fresh generic boundary search or a rerun of unchanged science. All source-access stops remain in force.
