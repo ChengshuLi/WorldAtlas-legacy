@@ -1,0 +1,70 @@
+{
+  "kind": "actual-stock-supported-input-current-owner-result",
+  "code_head": "84a147fdf0731604e90dff3e86f4c2190a8eb0dd",
+  "accepted_selector": {
+    "bytes": 2286,
+    "commit": "53002fd1eca5114a82e45fec32bddfc3ab52aa35",
+    "git_blob_oid": "6881b82bacab02cbc8f505305ac03ccc9afba317",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8737742ef21d3ceda9a2ddba28d20b0f9456b1370a1630af4e15a0903658c370"
+  },
+  "original_claim": 232,
+  "novel_supported": 232,
+  "already_present_same_owner": 0,
+  "held": 0,
+  "separate_original174_preserved": true,
+  "all10_members_retained": true,
+  "all_source_physical_geometry_and_negative_fields_preserved": true,
+  "original_source_evidence_byte_identical": true,
+  "original_source_pin_reusable": {
+    "bytes": 24554,
+    "commit": "4a351b620cce708584be63ff1c73fbece5007b1d",
+    "git_blob_oid": "2cb9f29118f6b986244178135361af05f2d3d1c2",
+    "mode": "100644",
+    "path": "data/regional-review/dma232-whole10-physical-20261025/prepared-source-evidence/source-evidence.json",
+    "sha256": "34a152fb5af9657ffc89b84d7426095426f5ea1e1acf8d71ce7957d579a1c120"
+  },
+  "accepted_input_inventory_count": 53,
+  "files": [
+    {
+      "name": "already-present-original.json",
+      "original_path": ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001/already-present-original.json",
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    {
+      "name": "held-original.json",
+      "original_path": ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001/held-original.json",
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    {
+      "name": "native-patch.json",
+      "original_path": ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001/native-patch.json",
+      "bytes": 4348,
+      "sha256": "4b03f8066260f902402e8b6546484784331806abd63c7432b1cfa7708f10f865"
+    },
+    {
+      "name": "original-scope-partition.json",
+      "original_path": ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001/original-scope-partition.json",
+      "bytes": 21963,
+      "sha256": "d6404270519cc941b10294133e44cbe9c2fdd71ff169d0b6f5c294aa01fa1559"
+    },
+    {
+      "name": "preparation.json",
+      "original_path": ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001/preparation.json",
+      "bytes": 729,
+      "sha256": "a7b2e24538526e4cf8412de004b501c2f2f473432bc534c7a9a89bf1d9f4c751"
+    },
+    {
+      "name": "source-evidence.json",
+      "original_path": ".cache/delivery-handoff/dma232-supported-current-20261025-01a16f2d8ad8-001/source-evidence.json",
+      "bytes": 24554,
+      "sha256": "34a152fb5af9657ffc89b84d7426095426f5ea1e1acf8d71ce7957d579a1c120"
+    }
+  ],
+  "accepted_delta": 0,
+  "authority_executed": false,
+  "interpretation": "Actual accepted-bank partition; not final selected ownership acceptance. Reuse exact prior source-evidence pin when byte-identical; no source/physical/diagnostic replay."
+}
