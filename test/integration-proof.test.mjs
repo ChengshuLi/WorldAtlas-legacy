@@ -26,7 +26,8 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(current, /resume.{0,120}does not reload instructions/is);
   const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
   assert.match(development, /task\/environment's supported Node and Git executables/i);
-  assert.match(development, /requires Node `>=24`[\s\S]*Node 24 and Git 2\.53/i);
+  assert.match(development, /Node requirement declared by `package\.json`[\s\S]*Git with the capabilities required by the documented helper/i);
+  assert.doesNotMatch(development, /Git 2\.53|managed task runtime for this workflow supplies/i);
   const routingKeys = ['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
     'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'];
   const shellSanitizer = development.match(/for key in (GIT_DIR[^\n]+); do\n  unset "\$key"\ndone/);
