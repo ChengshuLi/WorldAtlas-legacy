@@ -20,15 +20,15 @@
     "roster_semantics": "global source_index is one-based; local ordinal is zero-based within source_id",
     "mapping_artifact": "source-index-mapping.json"
   },
-  "grid_center": {
+  "grid_method_and_pins": {
     "grid_width": 262166,
     "latitude_table_commit": "5b32388df0501b013ac9a3ba97864932db493d59",
     "latitude_table_blob": "de6905e162dc031b1b93248fae91190c39c4ad53",
     "latitude_table_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
-    "longitude_formula": "-180 + 360 * (x + 0.5) / 262166",
-    "longitude": -56.87350762493993,
-    "latitude": -37.142860498850744,
-    "crs": "WGS 84 longitude, latitude"
+    "method": "native-linear-evenodd-first-owner-v1",
+    "coordinate_values": "omitted from this public evidence record",
+    "prior_assessment_sha256": "2196016d8ef5d6fb908cc21224edac0de0e0ba832418014cfe64c57497ba8e55",
+    "prior_version_note": "The prior artifact is retained in ordinary Git history; no history was rewritten."
   },
   "consumed_source": {
     "source_id": "gb:ARG:ADM2:61730980B99310691740446",
@@ -100,11 +100,11 @@
     }
   ],
   "comparison_method": {
-    "method": "even-odd ray casting over polygon rings, checking holes and boundary explicitly; cell center derived from pinned native latitude row and project longitude formula",
+    "method": "Even-odd ray casting over polygon rings, checking holes and boundary explicitly; center membership was evaluated from the pinned native latitude row and project longitude formula. The derived center coordinate values are omitted from this public evidence record.",
     "independent_review": "A distinct worker independently reproduced the outside result from the same pinned source captures and grid row.",
     "shape_note": "Each Pinamar feature has one MultiPolygon component with one closed 5,263-vertex exterior ring and no holes. The captured Pinamar rings differ at two indexed positions; the nearest boundary segment is the same.",
     "distance_note": "Independent local distance estimates are approximately 56.0–56.1 m outside the IGN line. The earlier 53.5 m estimate was invalid because it incorrectly cosine-scaled both longitude and latitude; do not use it.",
-    "raw_capture_policy": "Official response bodies remain local at /tmp/arg-ign-two-departments.geojson and /tmp/arg-ign-ivsd2024-two.geojson and are not copied into this source-free evidence file. Their byte lengths and SHA-256 digests above identify the captures."
+    "raw_capture_policy": "Official response bodies remain local and are not included in this source-free evidence file. Their byte lengths and SHA-256 digests identify the captures. The derived cell-center longitude and latitude values are omitted from this version."
   },
   "legal_context_and_remaining_qualification": {
     "official_records": [
