@@ -1,0 +1,190 @@
+{
+  "kind": "argentina-held-cell-source-capture-comparison-v1",
+  "scope": "one held Pinamar cell; source identity and point containment comparison only",
+  "disposition": "unchanged; unresolved-seven-component-source-fitness",
+  "held_row": {
+    "pull_request": 2566,
+    "merge_commit": "c58875b56e3954070632f1626a0724ef3108dc11",
+    "code_and_data_commit": "cdce5b02d354431321436b8f8674d804df629c01",
+    "held_roster_blob": "d54be66ce49fa5f25b43efe04b0c5c47465d1f67",
+    "held_roster_sha256": "95b0b947a853f167f60bffaa44578a87f5301f661850a863d210c19f4dd5a604",
+    "key": { "x": 89665, "y": 160253, "owner_pixel_index": 8259 },
+    "physical_class": "land",
+    "reason": "unresolved-seven-component-source-fitness"
+  },
+  "original_key_lineage": {
+    "physical_class": "land",
+    "source_feature_indices": [675, 701],
+    "source_index_675": "Buenos Aires ADM1 parent; gb:ARG:ADM1:19177384B97722443848736; local ordinal 0",
+    "source_index_701": "Pinamar ADM2; gb:ARG:ADM2:61730980B99310691740446; local ordinal 3; owner 8259",
+    "roster_semantics": "global source_index is one-based; local ordinal is zero-based within source_id",
+    "mapping_artifact": "source-index-mapping.json"
+  },
+  "grid_method_and_pins": {
+    "grid_width": 262166,
+    "latitude_table_commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+    "latitude_table_blob": "de6905e162dc031b1b93248fae91190c39c4ad53",
+    "latitude_table_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+    "method": "native-linear-evenodd-first-owner-v1",
+    "coordinate_values": "omitted from this public evidence record",
+    "prior_assessment_sha256": "2196016d8ef5d6fb908cc21224edac0de0e0ba832418014cfe64c57497ba8e55",
+    "prior_version_note": "The prior artifact is retained in ordinary Git history; no history was rewritten."
+  },
+  "consumed_source": {
+    "source_id": "gb:ARG:ADM2:61730980B99310691740446",
+    "source_name": "Pinamar",
+    "family": "ARG ADM2",
+    "source_index": 701,
+    "local_ordinal_zero_based": 3,
+    "catalogue_baseline_commit": "c6a26e1caba54e1b81a89fbda3a64fff56da323d",
+    "catalogue_metadata_sha256": "a8cc97e809aab02fb2805e32825b596aed159d8ea36aaa83a8f36d284bddd463",
+    "catalogue_cohort": "administrative-registry",
+    "represented_year_claim": "2020",
+    "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ARG/ADM2/geoBoundaries-ARG-ADM2_simplified.geojson",
+    "license": "CC BY 3.0 IGO",
+    "payload_commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+    "payload_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ARG-ADM2-000.bin.gz",
+    "payload_bytes": 2066007,
+    "payload_sha256": "9b033d8e86946b8f14d9491ec51098e3c5c0e59785707058966d1fc77521546d",
+    "decoded_bytes": 5502879,
+    "decoded_sha256": "cedee8710e49d9017327fc1d4b2dc536e95a82317dc94c3bac8d9404af6bf771",
+    "feature_count": 525,
+    "catalogue_advertised_feature_count": 526,
+    "geometry_crs": "OGC:CRS84",
+    "geometry_type": "Polygon",
+    "geometry_rings": 1,
+    "geometry_positions": 17,
+    "geometry_generalization": "simplified consumed product",
+    "point_result": "inside",
+    "nearest_boundary_distance_approx_m": 2.1
+  },
+  "official_comparison_captures": [
+    {
+      "source_role": "IGN official department WFS; feature capture source is ARBA and source authority is IGN",
+      "layer": "ign:departamento",
+      "query_scope": "Two department records selected by in1 codes 06168 and 06644; Pinamar target code is 06644.",
+      "feature_id": "departamento.1085",
+      "feature_name": "Partido de Pinamar",
+      "capture_time_utc": "2026-10-25T07:59:34.778Z",
+      "request_service": "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Adepartamento",
+      "response_bytes": 273635,
+      "response_sha256": "9896adfc3d5af4cf8f8327d739477534b3ace24f4b21f424bbddb9b749307fa1",
+      "crs": "EPSG:4326; GeoJSON positions interpreted [longitude, latitude]",
+      "fdc": "ARBA - Gerencia de Servicios Catastrales",
+      "sag": "IGN",
+      "geometry_type": "MultiPolygon",
+      "geometry_components": 1,
+      "exterior_ring_positions": 5263,
+      "interior_rings": 0,
+      "boundary_basis_or_effective_date": "not established by this live capture",
+      "point_result": "outside"
+    },
+    {
+      "source_role": "IGN IVSD 2024 departmental risk indicator layer",
+      "layer": "ign_riesgo:ivsd_2024_depto",
+      "query_scope": "Two department records selected by in1 codes 06168 and 06644; Pinamar target code is 06644.",
+      "feature_id": "38",
+      "feature_name": "Partido de Pinamar",
+      "capture_time_utc": "2026-10-25T08:01:19.553Z",
+      "request_service": "https://wms.ign.gob.ar/geoserver/ign_riesgo/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign_riesgo%3Aivsd_2024_depto",
+      "response_bytes": 274696,
+      "response_sha256": "52baf15cd0320f3eb94ddbcfda8d52c0b87402ce87902d8c64ba0c49496a2039",
+      "crs": "EPSG:4326; GeoJSON positions interpreted [longitude, latitude]",
+      "geometry_type": "MultiPolygon",
+      "geometry_components": 1,
+      "exterior_ring_positions": 5263,
+      "interior_rings": 0,
+      "ivsd": 35.4,
+      "documented_boundary_basis": "IGN metadata says departmental boundaries correspond to CNPHyV 2010",
+      "point_result": "outside"
+    }
+  ],
+  "comparison_method": {
+    "method": "Even-odd ray casting over polygon rings, checking holes and boundary explicitly; center membership was evaluated from the pinned native latitude row and project longitude formula. The derived center coordinate values are omitted from this public evidence record.",
+    "independent_review": "A distinct worker independently reproduced the outside result from the same pinned source captures and grid row.",
+    "shape_note": "Each Pinamar feature has one MultiPolygon component with one closed 5,263-vertex exterior ring and no holes. The captured Pinamar rings differ at two indexed positions; the nearest boundary segment is the same.",
+    "distance_note": "Independent local distance estimates are approximately 56.0–56.1 m outside the IGN line. The earlier 53.5 m estimate was invalid because it incorrectly cosine-scaled both longitude and latitude; do not use it.",
+    "raw_capture_policy": "Official response bodies remain local and are not included in this source-free evidence file. Their byte lengths and SHA-256 digests identify the captures. The derived cell-center longitude and latitude values are omitted from this version."
+  },
+  "legal_context_and_remaining_qualification": {
+    "official_records": [
+      {
+        "instrument": "Buenos Aires Decree-Law 9024/1978",
+        "url": "https://normas.gba.gob.ar/documentos/p0XDETa0.html",
+        "capture": {
+          "local_path": "/tmp/arg-9024.html",
+          "http_status": 200,
+          "content_type": "text/html",
+          "response_bytes": 16982,
+          "response_sha256": "d23c1fd9ee06639830ea88ed242059a84428588ce2589c19f59968c25a05f28f"
+        },
+        "page_consolidation_note": "The page states: Texto actualizado con las modificaciones introducidas por el Dec-Ley 9504/80.",
+        "recorded_scope": "The consolidated text describes the Pinamar unit created from General Madariaga and its boundary descriptions.",
+        "article_3_boundary_description": "The municipality comprises lands then belonging to General Madariaga. Its north limit is the boundary with Municipio Urbano de la Costa; its east limit is the Atlantic coast from that boundary to the southern limit of Estancia Cariló; its south limit is the southern limit of those lands, according to a Dirección de Geodesia survey, from the Atlantic to Ruta Interbalnearia; its west limit is Ruta Interbalnearia and its alignment to the then-current General Lavalle boundary.",
+        "attachment_check": "Retrieved HTML has no anchor, iframe, embed, object, script or link references to an attached plan/map.",
+        "official_original_act_pdf": {
+          "url": "https://normas.gba.gob.ar/documentos/ZxbDyTpV.pdf",
+          "local_path": "/tmp/arg-9024-escalated.pdf",
+          "http_status": 200,
+          "content_type": "application/pdf",
+          "pdf_version": "1.6",
+          "pages": 5,
+          "response_bytes": 637911,
+          "response_sha256": "e5dcae6675894af575de7b5d0ca3c3ea0f5839f98b135d3389de5bf0cb817961",
+          "inspection": "Scanned/image-only; all five pages inspected locally. Article 3 repeats the Dirección de Geodesia mensura reference; remaining pages are statutory text and Fundamentos. No survey/map/plan annex, embedded files, or annotations."
+        },
+        "limit": "Neither the consolidated HTML nor original-act PDF supplies the survey/plan, survey identifier, implementing-decree identifier, or direct feature/cadastral crosswalk. The exact southern limit is expressly tied to the missing Dirección de Geodesia survey."
+      },
+      {
+        "instrument": "Buenos Aires Decree-Law 9949/1983",
+        "url": "https://normas.gba.gob.ar/documentos/70QMvs40.html",
+        "capture": {
+          "local_path": "/tmp/arg-9949.html",
+          "http_status": 200,
+          "content_type": "text/html",
+          "response_bytes": 4301,
+          "response_sha256": "36d1aafccdd7de0fc5fb4da9ddbbe7bb73993587e04713aa7afa0ccdbf7db275"
+        },
+        "recorded_scope": "Changes the unit designation to Partido de Pinamar.",
+        "articles_1_2_finding": "Article 1 substitutes the names of parties created under 9024/9245, including Municipio Urbano de Pinamar with Partido de Pinamar; Article 2 is promulgation/publication.",
+        "attachment_check": "Retrieved HTML has no anchor, iframe, embed, object, script or link references to an attached plan/map.",
+        "limit": "A name change alone does not resolve the geometry discrepancy or current boundary lineage."
+      },
+      {
+        "instrument": "Buenos Aires Decree-Law 9504/1980",
+        "url": "https://normas.gba.gob.ar/documentos/ZxbrRhGx.html",
+        "capture": {
+          "local_path": "/tmp/arg-9504.html",
+          "http_status": 200,
+          "content_type": "text/html",
+          "response_bytes": 10861,
+          "response_sha256": "26ddb93e086e434c92610eb4d742e793d9974c6f3c5a21087464b090d464efc0"
+        },
+        "relevant_articles": "Articles 2 and 4 amend Law 5827 on judicial organization. Article 4 states that no justice-of-the-peace court operates in Municipio Urbano de Pinamar and includes Pinamar within the territorial jurisdiction of the General Madariaga justice-of-the-peace court. Article 6 repeals Article 13 of Law 9024 and Article 11 of Law 9245.",
+        "boundary_effect": "The act does not amend or repeal Article 3 or the Pinamar boundary description. Its absence would not materially prevent interpreting the consolidated Article 3 text for this cell; the missing geodesy survey is the material unresolved input."
+      }
+    ],
+    "next_primary_checks": [
+      "Locate the Dirección de Geodesia mensura/plan for Estancia Cariló referenced by Article 3 of the consolidated Decree-Law 9024 text and bind it explicitly to the IGN feature in1=06644; check for later boundary amendments.",
+      "Establish the effective date and source lineage of the live ign:departamento feature, whose capture identifies ARBA as source and IGN as authority but carries no effective date.",
+      "Compare the complete applicable legal/current polygon and the consumed simplified polygon with a pinned, scale-aware method; the point-center disagreement does not establish whole-cell coverage or legal applicability.",
+      "Evaluate the remaining required source-fitness components before any disposition change; the IVSD 2024 layer and a single center test do not substitute for them."
+    ]
+  },
+  "finite_single_key_assessment": {
+    "scope": "Only the held key (x=89665, y=160253, owner_pixel_index=8259). The three other retained Castelli/Pinamar keys were inside all compared polygons.",
+    "source_relative_conflict": "The 17-position consumed simplified 2020 GeoBoundaries feature contains the center; both retained 5,263-position official IGN representations exclude it by approximately 56.0–56.1 m. The IGN products are not treated as independent legal boundary determinations: the current department layer has no effective date, and IVSD 2024 is an indicator layer with 2010 boundary basis.",
+    "9504_materiality": "No. The exact 9504/80 text repeals Article 13 of 9024, not Article 3 or its boundary description; the consolidated Article 3 text is interpretable without 9504/80 as a blocker.",
+    "remaining_material_gap": "Yes. Article 3 defines the southern boundary by the southern limit of Estancia Cariló lands according to a Dirección de Geodesia survey. The captured act, its original five-page PDF, and bounded official searches did not surface that survey/plan or bind it to the IGN feature and held cell, so exact legal cell membership at the southern boundary cannot be resolved from these records.",
+    "candidate_assessment": "A narrowly scoped source-relative-unresolved candidate is reasonable after this key-specific qualification. This supports neither positive credit nor a legal-ownership finding; it is not a disposition change.",
+    "next_primary_step": "Obtain the cited Geodesia mensura/plan, crosswalk it to IGN in1=06644 and the held cell, and check later boundary amendments if the plan is located.",
+    "package_scope": "This single-key assessment does not complete the package-wide seven-component source-fitness review."
+  },
+  "result": "The held center is inside the consumed simplified GeoBoundaries feature and outside both retained official IGN polygons. Decree-Law 9504/80 does not change Article 3's consolidated boundary description; however, that description makes the south limit depend on a Dirección de Geodesia survey that is not present or crosswalked here. The discrepancy is a substantiated source-relative unresolved candidate for review, not a positive or legal-boundary conclusion.",
+  "limitations": [
+    "The current department WFS capture has no established effective date or legal boundary vintage.",
+    "The IVSD 2024 product documents a 2010 boundary basis but is an indicator layer, not a direct legal-boundary certification.",
+    "This point comparison alone does not establish legal applicability, source fitness, whole-cell coverage, or geometry equivalence.",
+    "No status, clearance, or credit change is made; the key remains held."
+  ]
+}
