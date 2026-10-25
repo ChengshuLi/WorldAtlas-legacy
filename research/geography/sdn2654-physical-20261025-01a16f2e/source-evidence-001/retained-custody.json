@@ -1,0 +1,100 @@
+{
+  "kind": "unchanged-stock-source-evidence-and-exact-request-retention",
+  "operation": {
+    "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+    "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work",
+    "command": [
+      "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/prepare-delivery-handoff.mjs",
+      "source-evidence",
+      ".cache/sdn2654-source-evidence-preparation/source-evidence-config.json",
+      ".cache/delivery-handoff/sdn2654-source-evidence-20261025-01a16f2e-001"
+    ],
+    "config_sha256": "8224b17bb1730420c800ddef370daabb9837646841ce6d74c0e747aea1820882",
+    "destination": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-source-evidence-20261025-01a16f2e-001",
+    "state": "completed",
+    "started_utc": "2026-10-25T01:19:45.643559+00:00",
+    "native_diagnostic_requested": false,
+    "physical_rerun_requested": false,
+    "exit_code": 0,
+    "finished_utc": "2026-10-25T01:24:44.515952+00:00"
+  },
+  "files": [
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/completed-original/source-evidence.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/source-evidence.json",
+      "bytes": 189805,
+      "sha256": "922d5e7ba12070d1335aed1ad30a7583cdc0bb1d9d1750d0a058770a72512c37"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/completed-original/territorial-exclusion-provenance.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/territorial-exclusion-provenance.json",
+      "bytes": 2295464,
+      "sha256": "5a2b3e3dc8ab9fb2d9336a0b3c640fadd5504896f517396f6554fb6d50f9f238"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/completed-original/preparation.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/preparation.json",
+      "bytes": 397,
+      "sha256": "712ede8a41ed8d1382a48031f002572a1d60d2a2d9c868108e1ac326885bf94a"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-native-input-plan/exact2654-requested-native-patch.draft.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/native-patch.json",
+      "bytes": 158185,
+      "sha256": "6d68cce7bc46943df98ddb10f228c00c21171ab773928539bdb042171466bbed"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/source-evidence-config.corrected.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/source-evidence-config.json",
+      "bytes": 540399,
+      "sha256": "8224b17bb1730420c800ddef370daabb9837646841ce6d74c0e747aea1820882"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/completed-readback.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/completed-readback.json",
+      "bytes": 16504,
+      "sha256": "409fb7764e66c1b4dcd35650ed570dff3324b2ecc044ec49ac58416bae82481b"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/original-foreign223-operand-custody.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/original-foreign223-operand-custody.json",
+      "bytes": 85448,
+      "sha256": "f63111ed040a725cc903af5e56ad403dbe97579afd67be2ff228fa529b79bda9"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/sdn1-context-retention.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/sdn1-context-retention.json",
+      "bytes": 2132,
+      "sha256": "3e6f208ad653f8c433be4abf964577f059f35f7b8323b89c570421e9f0713964"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-native-input-plan/exact2654-parent-context-application-v2.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/exact2654-parent-context-application.json",
+      "bytes": 3291122,
+      "sha256": "25b1dece52a99023f4304f920d52d09bc8b23e8852a602a14f54d313e2d2fe08"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-native-input-plan/neighbor15-complete-original-family-proposal.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/neighbor15-complete-original-family-proposal.json",
+      "bytes": 78704,
+      "sha256": "8b2de5601bf2090e1611a241e12bd6f87f56a0f6861d77f9eff3e2e071ebc870"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-native-input-plan/complete-SDN189-membership-binding.json",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/complete-SDN189-membership-binding.json",
+      "bytes": 17056,
+      "sha256": "d3b01193b2f50dd15b6e590ed79c674d5ed957022e89ae799be79ee34b556caf"
+    },
+    {
+      "source_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-native-input-plan/source-role-scope-v2.md",
+      "repository_path": "research/geography/sdn2654-physical-20261025-01a16f2e/source-evidence-001/source-role-scope.md",
+      "bytes": 8683,
+      "sha256": "073ddf8063e5a0b330691b2195c8ef2a4dfba6c43f8880ab7dcc1a9a60c707a5"
+    }
+  ],
+  "original2654_unchanged": true,
+  "physical_rerun": false,
+  "native_diagnostic_not_yet_run": true,
+  "SDN1_limit": "Full19 hierarchy/context retained separately; no native parent-consistency clearance, negative-family designation or adopted contextual exception."
+}

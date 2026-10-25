@@ -1,0 +1,494 @@
+{
+  "kind": "completed-stock-source-evidence-readback",
+  "state": "completed preparation, no native diagnostic",
+  "operation": {
+    "worker": "01a16f2e-5016-7790-8a41-4e2d149750f2",
+    "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work",
+    "command": [
+      "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/prepare-delivery-handoff.mjs",
+      "source-evidence",
+      ".cache/sdn2654-source-evidence-preparation/source-evidence-config.json",
+      ".cache/delivery-handoff/sdn2654-source-evidence-20261025-01a16f2e-001"
+    ],
+    "config_sha256": "8224b17bb1730420c800ddef370daabb9837646841ce6d74c0e747aea1820882",
+    "destination": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-source-evidence-20261025-01a16f2e-001",
+    "state": "completed",
+    "started_utc": "2026-10-25T01:19:45.643559+00:00",
+    "native_diagnostic_requested": false,
+    "physical_rerun_requested": false,
+    "exit_code": 0,
+    "finished_utc": "2026-10-25T01:24:44.515952+00:00"
+  },
+  "output_receipts": [
+    {
+      "original_path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-source-evidence-20261025-01a16f2e-001/source-evidence.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/completed-original/source-evidence.json",
+      "bytes": 189805,
+      "sha256": "922d5e7ba12070d1335aed1ad30a7583cdc0bb1d9d1750d0a058770a72512c37"
+    },
+    {
+      "original_path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-source-evidence-20261025-01a16f2e-001/territorial-exclusion-provenance.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/completed-original/territorial-exclusion-provenance.json",
+      "bytes": 2295464,
+      "sha256": "5a2b3e3dc8ab9fb2d9336a0b3c640fadd5504896f517396f6554fb6d50f9f238"
+    },
+    {
+      "original_path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/65f9622c90a4438aff07cf71b9c952e79f939531354c4bd1fe2ca2e21a6e3a73/work/.cache/delivery-handoff/sdn2654-source-evidence-20261025-01a16f2e-001/preparation.json",
+      "retained_path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/sdn2654-source-evidence-preparation/completed-original/preparation.json",
+      "bytes": 397,
+      "sha256": "712ede8a41ed8d1382a48031f002572a1d60d2a2d9c868108e1ac326885bf94a"
+    }
+  ],
+  "exact_keys_preserved": 2654,
+  "targets": 35,
+  "complete_positive_originals": 189,
+  "complete_territorial_families": 15,
+  "complete_territorial_originals": 1698,
+  "all_target_candidate_identities_partition1698": true,
+  "emitted_operand_incidences": 155,
+  "emitted_operand_incidences_by_family": {
+    "gb:ETH:ADM1": 9,
+    "gb:ETH:ADM2": 10,
+    "gb:ETH:ADM3": 21,
+    "gb:SSD:ADM1": 18,
+    "gb:SSD:ADM2": 22,
+    "gb:TCD:ADM1": 15,
+    "gb:TCD:ADM2": 16,
+    "gb:CAF:ADM1": 4,
+    "gb:CAF:ADM2": 5,
+    "gb:CAF:ADM3": 7,
+    "gb:ERI:ADM1": 10,
+    "gb:ERI:ADM2": 15,
+    "gb:EGY:ADM1": 1,
+    "gb:EGY:ADM2": 2
+  },
+  "distinct_emitted_originals_by_family": {
+    "gb:ETH:ADM1": 4,
+    "gb:ETH:ADM2": 6,
+    "gb:ETH:ADM3": 16,
+    "gb:SSD:ADM1": 6,
+    "gb:SSD:ADM2": 14,
+    "gb:TCD:ADM1": 4,
+    "gb:TCD:ADM2": 6,
+    "gb:CAF:ADM1": 2,
+    "gb:CAF:ADM2": 3,
+    "gb:CAF:ADM3": 4,
+    "gb:ERI:ADM1": 3,
+    "gb:ERI:ADM2": 7,
+    "gb:EGY:ADM1": 1,
+    "gb:EGY:ADM2": 2
+  },
+  "target_summary": [
+    {
+      "source_id": "gb:SDN:ADM2:16777658B11118605799379",
+      "owner": 39469,
+      "emitted_operand_count": 17,
+      "emitted_by_family": {
+        "gb:ETH:ADM1": 2,
+        "gb:ETH:ADM2": 2,
+        "gb:ETH:ADM3": 9,
+        "gb:SSD:ADM1": 2,
+        "gb:SSD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1681,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B14333470072302",
+      "owner": 39473,
+      "emitted_operand_count": 3,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 2,
+        "gb:TCD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1695,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B1532389349494",
+      "owner": 39476,
+      "emitted_operand_count": 2,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 1,
+        "gb:TCD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1696,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B17269795285399",
+      "owner": 39481,
+      "emitted_operand_count": 4,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 2,
+        "gb:TCD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1694,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B21408858343438",
+      "owner": 39489,
+      "emitted_operand_count": 8,
+      "emitted_by_family": {
+        "gb:ETH:ADM1": 2,
+        "gb:ETH:ADM2": 2,
+        "gb:ETH:ADM3": 3,
+        "gb:SSD:ADM1": 1
+      },
+      "whole_bounds_disjoint_originals": 1690,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B26622342825559",
+      "owner": 39496,
+      "emitted_operand_count": 3,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 1,
+        "gb:TCD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1695,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B2941917788931",
+      "owner": 39503,
+      "emitted_operand_count": 3,
+      "emitted_by_family": {
+        "gb:SSD:ADM1": 1,
+        "gb:SSD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1695,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B31925406348154",
+      "owner": 39510,
+      "emitted_operand_count": 2,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 1,
+        "gb:TCD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1696,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B32181362177213",
+      "owner": 39512,
+      "emitted_operand_count": 5,
+      "emitted_by_family": {
+        "gb:CAF:ADM1": 1,
+        "gb:CAF:ADM2": 1,
+        "gb:CAF:ADM3": 1,
+        "gb:TCD:ADM1": 1,
+        "gb:TCD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1693,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B35788536409023",
+      "owner": 39522,
+      "emitted_operand_count": 5,
+      "emitted_by_family": {
+        "gb:ETH:ADM1": 1,
+        "gb:ETH:ADM2": 1,
+        "gb:ETH:ADM3": 3
+      },
+      "whole_bounds_disjoint_originals": 1693,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B3769079063022",
+      "owner": 39524,
+      "emitted_operand_count": 4,
+      "emitted_by_family": {
+        "gb:ERI:ADM1": 1,
+        "gb:ERI:ADM2": 3
+      },
+      "whole_bounds_disjoint_originals": 1694,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B42019308608710",
+      "owner": 39537,
+      "emitted_operand_count": 0,
+      "emitted_by_family": {},
+      "whole_bounds_disjoint_originals": 1698,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B44845642747034",
+      "owner": 39542,
+      "emitted_operand_count": 6,
+      "emitted_by_family": {
+        "gb:CAF:ADM1": 1,
+        "gb:CAF:ADM2": 1,
+        "gb:CAF:ADM3": 2,
+        "gb:SSD:ADM1": 1,
+        "gb:SSD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1692,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B45805430370558",
+      "owner": 39543,
+      "emitted_operand_count": 5,
+      "emitted_by_family": {
+        "gb:ERI:ADM1": 2,
+        "gb:ERI:ADM2": 3
+      },
+      "whole_bounds_disjoint_originals": 1693,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B48283750984727",
+      "owner": 39549,
+      "emitted_operand_count": 2,
+      "emitted_by_family": {
+        "gb:ERI:ADM1": 1,
+        "gb:ERI:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1696,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B54397395103229",
+      "owner": 39559,
+      "emitted_operand_count": 0,
+      "emitted_by_family": {},
+      "whole_bounds_disjoint_originals": 1698,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B55033891828638",
+      "owner": 39564,
+      "emitted_operand_count": 2,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 1,
+        "gb:TCD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1696,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B58699373531896",
+      "owner": 39572,
+      "emitted_operand_count": 0,
+      "emitted_by_family": {},
+      "whole_bounds_disjoint_originals": 1698,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B60092664698782",
+      "owner": 39577,
+      "emitted_operand_count": 4,
+      "emitted_by_family": {
+        "gb:ERI:ADM1": 2,
+        "gb:ERI:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1694,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B61826891911039",
+      "owner": 39579,
+      "emitted_operand_count": 2,
+      "emitted_by_family": {
+        "gb:SSD:ADM1": 1,
+        "gb:SSD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1696,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B65142556264342",
+      "owner": 39587,
+      "emitted_operand_count": 3,
+      "emitted_by_family": {
+        "gb:EGY:ADM1": 1,
+        "gb:EGY:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1695,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B66976297159843",
+      "owner": 39591,
+      "emitted_operand_count": 3,
+      "emitted_by_family": {
+        "gb:ETH:ADM1": 1,
+        "gb:SSD:ADM1": 1,
+        "gb:SSD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1695,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B67194501280165",
+      "owner": 39592,
+      "emitted_operand_count": 6,
+      "emitted_by_family": {
+        "gb:ERI:ADM1": 1,
+        "gb:ERI:ADM2": 2,
+        "gb:ETH:ADM1": 1,
+        "gb:ETH:ADM2": 1,
+        "gb:ETH:ADM3": 1
+      },
+      "whole_bounds_disjoint_originals": 1692,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B69119058579524",
+      "owner": 39596,
+      "emitted_operand_count": 8,
+      "emitted_by_family": {
+        "gb:SSD:ADM1": 4,
+        "gb:SSD:ADM2": 4
+      },
+      "whole_bounds_disjoint_originals": 1690,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B70397884779871",
+      "owner": 39599,
+      "emitted_operand_count": 4,
+      "emitted_by_family": {
+        "gb:SSD:ADM1": 2,
+        "gb:SSD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1694,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B70477888733853",
+      "owner": 39600,
+      "emitted_operand_count": 11,
+      "emitted_by_family": {
+        "gb:CAF:ADM1": 2,
+        "gb:CAF:ADM2": 3,
+        "gb:CAF:ADM3": 4,
+        "gb:SSD:ADM1": 1,
+        "gb:SSD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1687,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B72808091845483",
+      "owner": 39604,
+      "emitted_operand_count": 7,
+      "emitted_by_family": {
+        "gb:SSD:ADM1": 2,
+        "gb:SSD:ADM2": 5
+      },
+      "whole_bounds_disjoint_originals": 1691,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B73946128996237",
+      "owner": 39608,
+      "emitted_operand_count": 5,
+      "emitted_by_family": {
+        "gb:ERI:ADM1": 2,
+        "gb:ERI:ADM2": 3
+      },
+      "whole_bounds_disjoint_originals": 1693,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B76242579856769",
+      "owner": 39615,
+      "emitted_operand_count": 5,
+      "emitted_by_family": {
+        "gb:SSD:ADM1": 2,
+        "gb:SSD:ADM2": 3
+      },
+      "whole_bounds_disjoint_originals": 1693,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B76489940696560",
+      "owner": 39616,
+      "emitted_operand_count": 4,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 2,
+        "gb:TCD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1694,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B79230518314977",
+      "owner": 39619,
+      "emitted_operand_count": 5,
+      "emitted_by_family": {
+        "gb:ERI:ADM1": 1,
+        "gb:ERI:ADM2": 1,
+        "gb:ETH:ADM1": 1,
+        "gb:ETH:ADM2": 1,
+        "gb:ETH:ADM3": 1
+      },
+      "whole_bounds_disjoint_originals": 1693,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B88334295817955",
+      "owner": 39633,
+      "emitted_operand_count": 3,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 1,
+        "gb:TCD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1695,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B89515248440242",
+      "owner": 39635,
+      "emitted_operand_count": 8,
+      "emitted_by_family": {
+        "gb:ETH:ADM1": 1,
+        "gb:ETH:ADM2": 3,
+        "gb:ETH:ADM3": 4
+      },
+      "whole_bounds_disjoint_originals": 1690,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B96624341658613",
+      "owner": 39644,
+      "emitted_operand_count": 2,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 1,
+        "gb:TCD:ADM2": 1
+      },
+      "whole_bounds_disjoint_originals": 1696,
+      "native_contact_kinds": "not measured by preparation"
+    },
+    {
+      "source_id": "gb:SDN:ADM2:16777658B9931993566109",
+      "owner": 39652,
+      "emitted_operand_count": 4,
+      "emitted_by_family": {
+        "gb:TCD:ADM1": 2,
+        "gb:TCD:ADM2": 2
+      },
+      "whole_bounds_disjoint_originals": 1694,
+      "native_contact_kinds": "not measured by preparation"
+    }
+  ],
+  "SDN1_behavior": "Not emitted as competing territory or positive family. Full19 original hierarchy/context and exact2654 parent observations retained separately in sdn1-context-retention.json; stock preparation has not adjudicated parent consistency. No adopted exception or blanket waiver.",
+  "missing_parent_key_preserved": [
+    39473,
+    121315,
+    147277
+  ],
+  "source_membership_readback_limit": "Prepared envelope preserves full189/selected source membership pins; native competitor/lineage predicates have not been executed.",
+  "bounds_disjoint_limit": "Stock complete-bounds omission is not a native no-hit or full-footprint territorial clearance claim.",
+  "physical_rerun": false,
+  "native_diagnostic_run": false,
+  "all2654_holds_unchanged": true
+}
