@@ -1,0 +1,6 @@
+{
+  "command": "node scripts/prepare-delivery-handoff.mjs finalize research/geography/cmr-source-holds-20261025/finalize-current-stp-main.config.json .cache/delivery-handoff/cmr4925-source-holds-current-stp-main-finalize-20261025-01",
+  "exit_code": 1,
+  "error": "Final-bank retirement index changed before adoption: data/canonical-grid/current-startup/geography/effective-context-a40514e94a981fd590071382947ea5b687edb2ba19515aa2c8f2a4c0a434b409.json.gz",
+  "observed_after_failure": "No tracked worktree bytes changed; only exact expected output files and preparation receipt were present at the bound cache destination. Sparse materialization had changed a retirement entry's index flag."
+}

@@ -1,0 +1,74 @@
+{
+  "status": "bound-exact-projection; preparation-only; no authority or acceptance",
+  "actual_CODE": "f0dda3408aac1f17b888e2ec967ed267d791c61e",
+  "config_sha256": "9c4306860a43932628bcd3993c223b579e2bd235edee0c44e92be5b9bf14da75",
+  "destination": ".cache/delivery-handoff/cmr4925-source-holds-current-selector-20261025-02",
+  "original_cells": 4925,
+  "supported_cells": 4438,
+  "held_cells": 487,
+  "already_present_cells": 0,
+  "prior_held_cells": 117,
+  "native_supported_cells": 4555,
+  "native_held_cells": 370,
+  "accepted_selector": {
+    "bytes": 2256,
+    "commit": "47bcece521c7d85ca2b9899d69637308702ca24c",
+    "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1"
+  },
+  "territorial_applicability": {
+    "original": {
+      "bytes": 5103810,
+      "commit": "5f4b7b74b7ebd9b4015c56c0c450791a37fbed6f",
+      "git_blob_oid": "86532112436995e27e2b47732a1b622ce90fa741",
+      "mode": "100644",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/adopted-native-territorial-applicability.json",
+      "sha256": "842caab6f8fa67d1643126ce4955b993687426b01c01ad3e965883a8e3c0d9ad"
+    },
+    "original_records": 7298,
+    "projected": {
+      "bytes": 3424002,
+      "commit": "2d3254ea5fa03bb8203c860ef1b30bde56ee24d0",
+      "git_blob_oid": "f14b4d4e8cf22a85ae103ebff21f5c994cdcce2c",
+      "mode": "100644",
+      "path": "research/geography/cmr-source-holds-20261025/territorial-applicability-001.json",
+      "sha256": "4b9c54b83989fa5a25ebe3e93e6917555e3575ff05858b755ced5122b1ae4f06"
+    },
+    "selected_records": 6710,
+    "status": "bound-exact-projection"
+  },
+  "outputs": {
+    "already-present-original.json": {
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    "held-original.json": {
+      "bytes": 22495,
+      "sha256": "cb6ac6bc045861442cea92884ae23f441971ce598f8aac00bc2e1ffe4c4475d5"
+    },
+    "native-patch.json": {
+      "bytes": 91883,
+      "sha256": "6b5166396493d7e214886e0a09a0c97fe80dfa110716b2e5fa168e6c59124ee6"
+    },
+    "original-scope-partition.json": {
+      "bytes": 65608,
+      "sha256": "04390159ee7fa6d5201b99cff8600b49cc300e9bc0a6447a7b95f4c95586cef1"
+    },
+    "source-evidence.json": {
+      "bytes": 378725,
+      "sha256": "650f34a7511b4b83ea889a97b92839b41e35b09f9cf7c6e666d3add634d7bbef"
+    },
+    "territorial-applicability.json": {
+      "bytes": 3424002,
+      "sha256": "4b9c54b83989fa5a25ebe3e93e6917555e3575ff05858b755ced5122b1ae4f06"
+    }
+  },
+  "no_execution": {
+    "diagnostic": true,
+    "source_producer": true,
+    "physical_producer": true,
+    "native_authority": true
+  }
+}
