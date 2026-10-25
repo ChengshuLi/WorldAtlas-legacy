@@ -1,8 +1,160 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {successfulGeographyJob} from '../scripts/integration-proof.mjs';
 import {integrationProfile, COORDINATION_PATHS, candidateGeographyCode} from '../scripts/integration-profile.mjs';
+
+test('agent entrypoint routes to the current canonical guides, not retired handoffs', () => {
+  const guides = ['DEVELOPMENT.md', 'GEOGRAPHY.md', 'HISTORY.md', 'DATA_ARCHITECTURE.md', 'VALIDATION.md', 'OPERATIONS.md'];
+  const entry = fs.readFileSync('AGENTS.md', 'utf8');
+  for (const name of guides) {
+    assert(fs.existsSync(`docs/${name}`), name);
+    assert(entry.includes(`docs/${name}`), name);
+  }
+  const retired = ['WORKFLOW.md', 'WORKSPACES.md', 'RECOVERY_SECURITY.md', 'HANDOFF_STATUS.md', 'THREE_THREAD_START.md'];
+  for (const name of retired) {
+    assert(!fs.existsSync(`docs/${name}`), name);
+    assert(!entry.includes(`docs/${name}`), name);
+  }
+  const current = [entry, ...guides.map(name => fs.readFileSync(`docs/${name}`, 'utf8'))].join('\n');
+  assert.doesNotMatch(current, /review-issue-readiness\.mjs/);
+  assert.match(current, /ordinary authoring does not require machine claim\/readiness/i);
+  assert.match(current, /resume.{0,120}does not reload instructions/is);
+  const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
+  assert.match(development, /task\/environment's supported Node and Git executables/i);
+  assert.match(development, /Node requirement declared by `package\.json`[\s\S]*Git with the capabilities required by the documented helper/i);
+  assert.doesNotMatch(development, /Git 2\.53|managed task runtime for this workflow supplies/i);
+  const routingKeys = ['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
+    'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'];
+  const shellSanitizer = development.match(/for key in (GIT_DIR[^\n]+); do\n  unset "\$key"\ndone/);
+  assert(shellSanitizer, 'bootstrap must clear inherited Git routing before its first Git command');
+  for (const key of routingKeys) assert(shellSanitizer[1].includes(key), key);
+  assert.doesNotMatch(shellSanitizer[1], /GIT_CONFIG|GH_CONFIG|TOKEN/i,
+    'do not clear approved auth/configuration variables with repository routing');
+  assert(development.indexOf(shellSanitizer[0]) < development.indexOf('git -C "$TASK_REPO"'),
+    'routing cleanup must precede the bootstrap fetch');
+  assert.match(development, /for key in \('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',[\s\S]*?'GIT_ALTERNATE_OBJECT_DIRECTORIES'\):\n\s+env\.pop\(key, None\)/);
+  assert.match(development, /subprocess\.call\(\['node',[\s\S]*?\], env=env\)/);
+  const validation = fs.readFileSync('docs/VALIDATION.md', 'utf8');
+  const mergeIntegration = fs.readFileSync('scripts/merge-integration.mjs', 'utf8');
+  const architecture = fs.readFileSync('docs/DATA_ARCHITECTURE.md', 'utf8');
+  assert.match(architecture, /field-specific evidence priorities and then a stable record-ID tie-break/i);
+  assert.doesNotMatch(architecture, /equal-precedence contradictions are rejected/);
+  const history = fs.readFileSync('docs/HISTORY.md', 'utf8');
+  assert.match(history, /`Unsettled` is a sourced no-inhabitants conclusion/i);
+  assert.match(history, /direct sourced literal population zero/i);
+  assert.match(history, /equal-precedence inhabitance contradictions become disputed/i);
+  assert.match(history, /test\/unsettled-rank\.test\.mjs/);
+  assert.match(history, /stable location ID alone does not make a value-bearing record eligible across changed footprints/i);
+  assert.match(history, /footprint-versions\.js::footprintAttributeEligibility/);
+  assert.match(history, /test\/footprint-versions\.test\.mjs/);
+  const operations = fs.readFileSync('docs/OPERATIONS.md', 'utf8');
+  assert.match(operations, /Encryption provides confidentiality, not sender authentication/i);
+  assert.match(operations, /sender-supplied hash alone does not establish origin/i);
+  assert.match(operations, /authorized workflow and event, head commit, successful run and attempt, and the artifact/i);
+  assert.match(operations, /restricted application database URL/i);
+  assert.match(operations, /least-privilege runtime role/i);
+  assert.match(operations, /private recipient key outside Git in an owner-only `0600` file/i);
+  assert.match(operations, /ciphertext is not `DATABASE_URL`/i);
+  assert.match(operations, /explicit authorization for that exact live destination/i);
+  assert.match(development, /account identity alone neither proves nor disproves independence/i);
+  assert.match(validation, /selectedDataSelection[\s\S]*inertEvidenceAdditions[\s\S]*reviewedTestPlan/);
+  assert.match(mergeIntegration, /inertEvidenceAdditions\(files, integrated\.entries, packageInputs\)/);
+  assert.match(mergeIntegration, /need\(!automatic \|\| reviewed \|\| selection/);
+  assert.match(validation, /do not automatically require `complete`/i);
+  const readme = fs.readFileSync('README.md', 'utf8');
+  assert.match(readme, /does not connect to the hosted content API/i);
+  assert.doesNotMatch(readme, /SQLite/i);
+});
+
+test('documented bootstrap ignores hostile inherited Git routing variables', () => {
+  const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
+  const match = development.match(/for key in (GIT_DIR[^\n]+); do\n  unset "\$key"\ndone/);
+  assert(match, 'bootstrap sanitizer is required');
+  const block = [...development.matchAll(/```sh\n([\s\S]*?)\n```/g)].find(candidate => candidate[1].includes(match[0]));
+  assert(block, 'documented bootstrap shell must be testable');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'worldatlas-bootstrap-routing-'));
+  try {
+    const remote = path.join(dir, 'origin.git');
+    const repo = path.join(dir, 'task');
+    const decoy = path.join(dir, 'decoy');
+    fs.mkdirSync(repo); fs.mkdirSync(decoy);
+    const clean = Object.fromEntries(Object.entries(process.env).filter(([key]) =>
+      !['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
+        'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'].includes(key)));
+    clean.GIT_NO_LAZY_FETCH = '1'; clean.GIT_NO_REPLACE_OBJECTS = '1';
+    execFileSync('git', ['init', '--quiet', '--bare', remote], {env: clean});
+    execFileSync('git', ['init', '--quiet', repo], {env: clean});
+    execFileSync('git', ['init', '--quiet', decoy], {env: clean});
+    fs.mkdirSync(path.join(repo, 'scripts'), {recursive: true});
+    fs.mkdirSync(path.join(repo, 'coordination', 'example'), {recursive: true});
+    fs.mkdirSync(path.join(decoy, 'tracked'), {recursive: true});
+    for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+      fs.copyFileSync(`scripts/${name}`, path.join(repo, 'scripts', name));
+    fs.writeFileSync(path.join(repo, 'coordination', 'example', 'input.json'), '{}\n');
+    fs.writeFileSync(path.join(decoy, 'tracked', 'sentinel.txt'), 'leave this decoy untouched\n');
+    for (const cwd of [repo, decoy]) {
+      execFileSync('git', ['-C', cwd, 'config', 'user.name', 'Bootstrap Test'], {env: clean});
+      execFileSync('git', ['-C', cwd, 'config', 'user.email', 'bootstrap@example.invalid'], {env: clean});
+      execFileSync('git', ['-C', cwd, 'add', '.'], {env: clean});
+      execFileSync('git', ['-C', cwd, 'commit', '--quiet', '-m', 'fixture'], {env: clean});
+    }
+    execFileSync('git', ['-C', repo, 'remote', 'add', 'origin', remote], {env: clean});
+    execFileSync('git', ['-C', repo, 'push', '--quiet', 'origin', 'HEAD:main'], {env: clean});
+    const refsBefore = execFileSync('git', ['-C', decoy, 'for-each-ref', '--format=%(refname) %(objectname)'],
+      {env: clean, encoding: 'utf8'});
+    const indexPath = path.join(decoy, '.git', 'index');
+    const indexBefore = createHash('sha256').update(fs.readFileSync(indexPath)).digest('hex');
+    const filesBefore = execFileSync('git', ['-C', decoy, 'ls-files', '-z'], {env: clean})
+      .toString().split('\0').filter(Boolean).map(name => [name, createHash('sha256')
+        .update(fs.readFileSync(path.join(decoy, name))).digest('hex')]);
+    const poisoned = {...clean, TASK_REPO: repo,
+      GIT_DIR: path.join(decoy, '.git'), GIT_WORK_TREE: decoy,
+      GIT_INDEX_FILE: indexPath, GIT_COMMON_DIR: path.join(decoy, '.git'),
+      GIT_OBJECT_DIRECTORY: path.join(decoy, '.git', 'objects'),
+      GIT_ALTERNATE_OBJECT_DIRECTORIES: path.join(decoy, 'alternate-objects')};
+    const script = block[1].replace('--include data/YOUR-REQUIRED-PATH',
+      '--include coordination/example/input.json');
+    execFileSync('bash', ['-c', script], {env: poisoned, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe']});
+    const refsAfter = execFileSync('git', ['-C', decoy, 'for-each-ref', '--format=%(refname) %(objectname)'],
+      {env: clean, encoding: 'utf8'});
+    const filesAfter = execFileSync('git', ['-C', decoy, 'ls-files', '-z'], {env: clean})
+      .toString().split('\0').filter(Boolean).map(name => [name, createHash('sha256')
+        .update(fs.readFileSync(path.join(decoy, name))).digest('hex')]);
+    assert.equal(refsAfter, refsBefore, 'no decoy refs may be changed');
+    assert.equal(createHash('sha256').update(fs.readFileSync(indexPath)).digest('hex'), indexBefore,
+      'the inherited decoy index must remain unchanged');
+    assert.deepEqual(filesAfter, filesBefore, 'no decoy worktree files may be changed');
+    assert.equal(execFileSync('git', ['-C', repo, 'rev-parse', 'FETCH_HEAD^{commit}'],
+      {env: clean, encoding: 'utf8'}).trim(), execFileSync('git', ['-C', repo, 'rev-parse', 'origin/main^{commit}'],
+      {env: clean, encoding: 'utf8'}).trim(), 'fetch must target the task repository');
+  } finally {
+    fs.rmSync(dir, {recursive: true, force: true});
+  }
+});
+
+test('reproducible review ledgers are not duplicated as generated documentation', () => {
+  const reports = [
+    'GLOBAL_GRANULARITY_REVIEW.md', 'SOURCE_POLICY_CORRECTIONS.md',
+    ...['AFRICA', 'ASIA', 'EUROPE', 'NORTH_AMERICA', 'OCEANIA', 'SOUTH_AMERICA']
+      .map(name => `review-decisions/${name}.md`),
+    ...['AFRICA', 'AMERICAS', 'ASIA_OCEANIA', 'EUROPE']
+      .map(name => `semantic-followup/${name}.md`)
+  ];
+  for (const name of reports) assert.equal(fs.existsSync(`docs/${name}`), false, name);
+  const producers = [
+    'scripts/review-granularity-global.py',
+    'scripts/prepare-europe-source-policy-corrections.py',
+    'scripts/audit-africa-semantic-followup.py',
+    'scripts/audit-americas-semantic-followup.py',
+    'scripts/audit-europe-semantic-followup.py'
+  ].map(path => fs.readFileSync(path, 'utf8')).join('\n');
+  assert.doesNotMatch(producers, /docs\/(?:GLOBAL_GRANULARITY_REVIEW|SOURCE_POLICY_CORRECTIONS|review-decisions|semantic-followup)/);
+});
 
 test('geography reuse requires one actual successful producer, independently of step projections', async () => {
   const geography = {id: 44, name: 'geography', status: 'completed', conclusion: 'success', steps: [
@@ -28,7 +180,7 @@ test('explicit coordination allowlist defaults full for unknown/application/data
     'scripts/import.mjs','scripts/build-cloudflare.mjs','docs/unknown.json',
     '.github/workflows/deploy.yml','test/application.test.mjs']) {
     assert.equal(integrationProfile('engineering/job',[{filename}]),'full',filename);
-    assert.equal(integrationProfile('engineering/job',[{filename:'docs/WORKER_COORDINATION.md',previous_filename:filename}]),'full',filename);
+    assert.equal(integrationProfile('engineering/job',[{filename:'docs/DEVELOPMENT.md',previous_filename:filename}]),'full',filename);
   }
   assert.equal(integrationProfile('engineering/job',[{filename:'docs/prompts/reviewer.md'}]),'evidence');
   assert.equal(integrationProfile('engineering/job',[]),'full');
@@ -62,7 +214,7 @@ test('geography software route is derived from changed checker inputs, retaining
   assert.equal(candidateGeographyCode('full', changed(name), 'selected-data'), false, name);
  }
  for (const name of ['data/geography/part-0.json', 'src/app.js', 'src/attributes.js',
-  'research/geography/example/source.py', 'docs/WORKER_COORDINATION.md',
+  'research/geography/example/source.py', 'docs/DEVELOPMENT.md',
   'coordination/engineering/example/evidence-quality.json', 'scripts/native-ownership/verified-candidates.json']) {
   assert.equal(candidateGeographyCode('full', changed(name)), false, name);
  }

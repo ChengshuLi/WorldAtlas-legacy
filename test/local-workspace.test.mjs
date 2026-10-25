@@ -1129,7 +1129,7 @@ test('documented pinned bootstrap binds its task repository and preserves stale 
   fs.writeFileSync(path.join(repo, 'scripts/worker-identity.mjs'), stale);
   const before = git('status', '--porcelain');
   const refs = git('show-ref');
-  const docs = fs.readFileSync(new URL('../docs/LOCAL_WORKSPACES.md', import.meta.url), 'utf8');
+  const docs = fs.readFileSync(new URL('../docs/DEVELOPMENT.md', import.meta.url), 'utf8');
   const bootstrap = docs.split("<<'PYTHON'\n")[1].split('\nPYTHON')[0];
   const run = () => execFileSync('python3', ['-', repo, head, 'inspect', '--commit', head, '--include', 'data/one.json'], {
     cwd: ambient.repo, input: bootstrap, encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH: '1'}
@@ -1152,7 +1152,7 @@ test('documented bootstrap refuses an absent promisor helper without an old-Git 
       git('add', 'scripts'); git('commit', '-m', 'accepted promisor helpers');
     }
   });
-  const docs = fs.readFileSync(new URL('../docs/LOCAL_WORKSPACES.md', import.meta.url), 'utf8');
+  const docs = fs.readFileSync(new URL('../docs/DEVELOPMENT.md', import.meta.url), 'utf8');
   const bootstrap = docs.split("<<'PYTHON'\n")[1].split('\nPYTHON')[0];
   const refs = git('show-ref');
   const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
@@ -1207,7 +1207,7 @@ test('complete documented shell bootstrap refuses failed refresh instead of exec
   git('remote', 'set-url', 'origin', path.join(repo, 'unavailable-origin'));
   const refs = git('show-ref');
   const status = git('status', '--porcelain');
-  const docs = fs.readFileSync(new URL('../docs/LOCAL_WORKSPACES.md', import.meta.url), 'utf8');
+  const docs = fs.readFileSync(new URL('../docs/DEVELOPMENT.md', import.meta.url), 'utf8');
   const block = docs.split('## Refresh a stale checkout without changing its files')[1].split('```sh\n')[1].split('\n```')[0]
     .replace('data/YOUR-REQUIRED-PATH', 'data/one.json');
   assert.throws(() => execFileSync('bash', ['-c', block], {cwd: repo, encoding: 'utf8', stdio: 'pipe', env: {...process.env, TASK_REPO: repo}}), error => {
@@ -1226,10 +1226,10 @@ test('complete documented shell bootstrap refuses failed refresh instead of exec
   assert.ok(!fs.readdirSync(path.join(repo, '.git')).some(name => name.startsWith('worldatlas-helper-')));
   git('config', '--unset-all', 'remote.origin.fetch');
   git('update-ref', '-d', 'refs/remotes/origin/main');
-  assert.throws(() => execFileSync('bash', ['-c', block], {cwd: repo, encoding: 'utf8', stdio: 'pipe', env: {...process.env, TASK_REPO: repo}}), error => {
-    assert.doesNotMatch(error.stdout, /inputCount|selectedBytes/);
-    assert.match(error.stderr, /Needed a single revision/);
-    return error.status !== 0;
-  });
+  const explicitRefspec = JSON.parse(execFileSync('bash', ['-c', block], {cwd: repo, encoding: 'utf8', stdio: 'pipe', env: {...process.env, TASK_REPO: repo}}));
+  assert.equal(explicitRefspec.head, head);
+  assert.equal(git('rev-parse', 'origin/main').trim(), head);
+  assert.equal(git('rev-parse', 'FETCH_HEAD').trim(), head);
+  assert.equal(git('status', '--porcelain'), status);
   assert.ok(!fs.readdirSync(path.join(repo, '.git')).some(name => name.startsWith('worldatlas-helper-')));
 });
