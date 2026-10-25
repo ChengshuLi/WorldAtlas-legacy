@@ -20,7 +20,7 @@ The held roster is `references/team2-prior/held-284-keys.json` (SHA-256 `889ae5d
 | 11 | 111 | Same limitation. |
 | **Total** | **284** | **4 + 280** |
 
-Component 6 has no held keys. The exact four component-1 `(y,x)` pairs are `(133102,6032)`, `(133102,6041)`, `(133170,6102)`, `(133171,6100)`. The seven western-component counts total 280; the original classification is not 1 eastern plus 280 western—the eastern component has four keys.
+Component 6 has no held keys. The exact four component-1 `(y,x)` pairs are `(133102,6032)`, `(133102,6041)`, `(133170,6102)`, `(133171,6100)`. The copied decision-prep companion lists the same numeric pairs without an axis label; use the exact roster and the `(y,x)` order above as canonical. The seven western-component counts total 280; the original classification is not 1 eastern plus 280 western—the eastern component has four keys.
 
 ## Retained source and native evidence
 
