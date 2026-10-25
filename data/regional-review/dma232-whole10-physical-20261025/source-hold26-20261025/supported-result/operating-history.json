@@ -1,0 +1,59 @@
+{
+  "kind": "actual-DMA-continuation-operating-history",
+  "events": [
+    {
+      "action": "ordinary Git ls-remote origin refs/heads/main",
+      "session": 93182,
+      "status": "failed",
+      "exit_code": 128,
+      "reason": "Could not resolve host: github.com",
+      "mutation": false
+    },
+    {
+      "action": "owned registry report and elevated normal Git ls-remote",
+      "session": 30169,
+      "status": "completed",
+      "exit_code": 0,
+      "main": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+      "owned_worker_and_token_match_verified": true
+    },
+    {
+      "action": "filtered Git main fetch at supplied TASK_REPO",
+      "tool": "functions.exec -> tools.exec_command require_escalated",
+      "status": "denied-before-execution",
+      "server_approval_id": null,
+      "reason": "This fetch mutates the stale source checkout’s Git object database/refs, contrary to the explicit instruction to treat that checkout as immutable; use the owned worktree or a read-only existing object set instead.",
+      "retry": false,
+      "safe_alternative": "No new acquisition. Reused authenticated c22 accepted-selector objects with root direct65ef public diff/selector bridge."
+    },
+    {
+      "action": "scoped process snapshot with ps",
+      "status": "denied",
+      "reason": "Operation not permitted",
+      "retry": false,
+      "effect": "No process data obtained; terminal sessions inspected normally."
+    },
+    {
+      "action": "stage current selector and supported-input config",
+      "session": 97063,
+      "status": "prelaunch-failure",
+      "reason": "git add refused selector outside original sparse definition",
+      "stock_invocation": false
+    },
+    {
+      "action": "extend exact selector sparse path",
+      "session": 62003,
+      "status": "prelaunch-syntax-failure",
+      "reason": "sparse-checkout add does not accept --no-cone; existing non-cone config subsequently verified",
+      "stock_invocation": false
+    },
+    {
+      "action": "normal exact-path sparse addition, commit and ONE supported-input launch",
+      "session": 80877,
+      "status": "actual-invocation-see-launch-and-terminal",
+      "code": "c6dbf0eca8821a78bbef7048c4eaaeaa80adb06c",
+      "guard_bypass": false
+    }
+  ],
+  "no_source_physical_or_diagnostic_rerun": true
+}

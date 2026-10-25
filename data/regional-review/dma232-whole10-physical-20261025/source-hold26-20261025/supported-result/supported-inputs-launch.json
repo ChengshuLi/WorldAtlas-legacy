@@ -1,0 +1,46 @@
+{
+  "phase": "supported-inputs",
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "supported-inputs",
+    "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/supported-input/config.json",
+    ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001"
+  ],
+  "code_head": "c6dbf0eca8821a78bbef7048c4eaaeaa80adb06c",
+  "accepted_selector": {
+    "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+    "path": "data/ownership-selection.json"
+  },
+  "current_public_bridge": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "config": {
+    "version": 1,
+    "diagnostic": {
+      "commit": "94924d1ca2ea26783d23710ca3cf1cfce27ad2b5",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-result/native-diagnostic.json"
+    },
+    "original_patch": {
+      "commit": "bfeb47e1890911d27533004ce0779459ea299a0d",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/native-input-plan/native-patch232.NONEXECUTED.json"
+    },
+    "prior_holds": {
+      "commit": "575ab65c098c8769c20c8d4c116638f12acf9693",
+      "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/prior-holds26.json"
+    },
+    "accepted_selector": {
+      "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+      "path": "data/ownership-selection.json"
+    }
+  },
+  "output": ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001",
+  "started": 1792901319.724274,
+  "worker": "01a16f2d-8ad8-7352-a1b0-11757b3e40e7",
+  "original232_diagnostic_reused": true,
+  "all10_source_members_required": true,
+  "expected206_not_asserted_result": true,
+  "prior_prelaunch_failures": [
+    "git add refused outside sparse scope; no stock launch",
+    "sparse-checkout add rejected unsupported --no-cone; no scope change or stock launch"
+  ],
+  "repair": "Verified existing core.sparseCheckoutCone=false; normal sparse-checkout add exact selector only."
+}

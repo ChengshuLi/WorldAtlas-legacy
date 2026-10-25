@@ -1,0 +1,78 @@
+{
+  "kind": "actual-adopted-source-hold-supported-input-result",
+  "code_head": "c6dbf0eca8821a78bbef7048c4eaaeaa80adb06c",
+  "accepted_selector": {
+    "bytes": 2256,
+    "commit": "c22d0ffba69ff6c4e916d4e64ac046953e08f995",
+    "git_blob_oid": "ca1daf4555b34a4d04a61790b2a0d7fea1109ae2",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "8e4d7dd009dd8c76189db973b4ec22edbfa36f4ee471be132a1e3d8b12d76ae1"
+  },
+  "current_public_unchanged_bank_bridge": "65efc1f27ca5071c5bbdfce2e5c0773fe5bf60aa",
+  "original_claim": 232,
+  "novel_supported": 206,
+  "already_present_same_owner": 0,
+  "source_held": 26,
+  "original232_technical_success_preserved": true,
+  "separate174_unchanged": true,
+  "exact_reviewed_adopted_sets_conserved": true,
+  "all10_members_retained": true,
+  "all_noncoverage_source_fields_byte_value_unchanged": true,
+  "coverage_carriers": [
+    "gb:DMA:ADM1:96108325B47785236493574"
+  ],
+  "absent_other9_coverage_fields_preserved": true,
+  "original_classes_preserved": true,
+  "prior_holds": {
+    "bytes": 111887,
+    "commit": "575ab65c098c8769c20c8d4c116638f12acf9693",
+    "git_blob_oid": "ca8b2b9e1730a5ea1a213d46bdf1a77223e8b616",
+    "mode": "100644",
+    "path": "data/regional-review/dma232-whole10-physical-20261025/source-hold26-20261025/prior-holds26.json",
+    "sha256": "9b0471b1dbc1dac7fee6881e94671360a656983f68ca3219c913682bc8fe334d"
+  },
+  "accepted_input_inventory_count": 53,
+  "files": [
+    {
+      "name": "already-present-original.json",
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680",
+      "original_path": ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001/already-present-original.json"
+    },
+    {
+      "name": "held-original.json",
+      "bytes": 2223,
+      "sha256": "bcd5b9ded4273e9b69bb49fb487061f9a72fcbc46ad7574f8c0e0f35dd3e3c97",
+      "original_path": ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001/held-original.json"
+    },
+    {
+      "name": "native-patch.json",
+      "bytes": 3837,
+      "sha256": "e95f730581662e15a828d47348d14ee2b1abe712c6f0f8d050d116d6ca849d9f",
+      "original_path": ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001/native-patch.json"
+    },
+    {
+      "name": "original-scope-partition.json",
+      "bytes": 22304,
+      "sha256": "16902d15e366aefd26e25cf9ac0a5b3326f14b37e67557e17d45f044a8c60c31",
+      "original_path": ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001/original-scope-partition.json"
+    },
+    {
+      "name": "preparation.json",
+      "bytes": 731,
+      "sha256": "9feeb24799c674943b17f45ac578c34070a3b0ab2351f3ecbe83d17c9291c63e",
+      "original_path": ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001/preparation.json"
+    },
+    {
+      "name": "source-evidence.json",
+      "bytes": 23822,
+      "sha256": "27cea363eb639bf1118a08ac1c9528151be0b602ff2321dbcc8d6a95053024df",
+      "original_path": ".cache/delivery-handoff/dma206-supported-source-holds-20261025-01a16f2d8ad8-001/source-evidence.json"
+    }
+  ],
+  "elapsed_wrapper_seconds": 574.5344262123108,
+  "authority_executed": false,
+  "accepted_delta": 0,
+  "limits": "Stock current-owner partition only. Actual emitted narrowed source/patch require a fresh native authority. No source, physical or diagnostic rerun; no acceptance."
+}
