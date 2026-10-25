@@ -6,14 +6,12 @@
     "current_accepted_before_proposal": 107067,
     "current_residual_before_proposal": 64,
     "proposed_exact_records": 64,
-    "separate_fairfax_record_untouched": false,
     "canada_contact_records": 50,
     "mexico_contact_records": 13,
     "physical_class_counts": {
       "land": 61,
       "inland-water": 3
     },
-    "original_hold_reason": "complete-foreign-original-contact",
     "retained_status": "held_unresolved",
     "repair_qualified": false,
     "documented_exception_candidate": true,
@@ -28,7 +26,9 @@
     "fairfax_identity_records": 1,
     "fairfax_hold_reason": "Fairfax-distinct-city-county-identity-976",
     "fairfax_positive_request_eligible": false,
-    "fairfax_acceptance": "unresolved; no assignment or owner rewrite proposed"
+    "fairfax_acceptance": "unresolved; no assignment or owner rewrite proposed",
+    "canada_mexico_hold_reason": "complete-foreign-original-contact",
+    "fairfax_included_as_separate_subcohort": true
   },
   "keyset_bindings": {
     "original_held_roster_sha256": "55c522bc2ae7d455492a6f6467ff54f0b2af31376627690e356ed538b1347821",
@@ -40,7 +40,7 @@
     "canada_tuple_sha256": "ff5ee829c1beef5a6635075cfea70cf57651ec77e25911be00a84b2a95c00307",
     "mexico_tuple_sha256": "fdd9b9441a0f3ffc01a9925f4f2cecd0e19fb54e16bc24d9cfd0c8b0f5680b64",
     "tuple_encoding": "SHA-256 of compact UTF-8 JSON for the sorted [y,x,owner_index] tuple array; no key rows serialized",
-    "private_roster_intersection": "Canada 50/50 and Mexico 13/13 exactly match original foreign-contact held cohort; groups disjoint; Fairfax excluded",
+    "private_roster_intersection": "Canada50 and Mexico13 exactly match the foreign-contact held cohort and are disjoint; Fairfax identity key is a separate one-key held subcohort included in exact union64.",
     "canada_mexico_union_tuple_sha256": "14ff3ef71b33132feeb8ed98559c3588a205eac8e509ae9bf75053996992a819",
     "fairfax_tuple_sha256": "9cc45a60ace47bd558b8f4093a82b512dfdc49c2355d8b12a66c86c5cbdb2f90",
     "exact_union64_tuple_sha256": "4bfc9fc8fb0b46e00ed7e4e9ce928f75eaf0e36d7e68e78f4eb5afed25cff78b",

@@ -9,7 +9,6 @@
     "proposed_keys": 64,
     "Canada": 50,
     "Mexico": 13,
-    "separate_Fairfax_untouched": false,
     "prior_acceptance_and_denominator_unchanged": true,
     "USA_count_reference": "prior USA acceptance after USA604; current global ledger USA counts unchanged",
     "current_global_ledger_sha256": "3be336d75545323178654d8924157918b809ed5d26b722534c15c2cc7dba6ab3",
@@ -22,7 +21,8 @@
     "fairfax_positive_request_eligible": false,
     "fairfax_current_native_owner_value": 0,
     "prior_63_packet_head": "5b94c3b7c6f9b8f140b4ce3d4de835d23c3ab571",
-    "prior_63_packet_review": 5645571195
+    "prior_63_packet_review": 5645571195,
+    "fairfax_included_as_separate_subcohort": true
   },
   "files": {
     "README.md": {
@@ -30,8 +30,8 @@
       "sha256": "4130c5f95a4f1c7f12bbc6632a7890a1c0f8b35a97ea676da4857e66d383a9f7"
     },
     "scope.json": {
-      "bytes": 7078,
-      "sha256": "6289277645cc37c2c0ceaca71d003e9f721a71dcbef12eab0839cf86f2eb6b34"
+      "bytes": 7142,
+      "sha256": "c9c0f58b12383db4a57b5c39e7fda3fa328d24a59e158cad710afca11e9fffd9"
     }
   },
   "source_access": {
