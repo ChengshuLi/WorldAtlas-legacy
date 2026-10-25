@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "code_base": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "immutable_input_commit": "989c1b601b23960e687567741db41e24a2f4ab26",
+  "program_sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18",
+  "common24_verification": {
+    "sha256": "21b052b4d2602523e61deda39c871a1416e53fec81215c1db6abca3a224b6f85",
+    "bytes": 13262
+  },
+  "runtime_probe": {
+    "versions": {
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "numpy": "2.3.5",
+      "shapely": "2.1.2",
+      "geos": "3.13.1"
+    },
+    "inventory_reused_from": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-qualification-groundwork/method-example-execution-receipt.json",
+    "actual_byte_verification_receipt": "/Users/chengshuli/Documents/Codex/2026-10-24/task/stp460-physical-continuation/runtime-actual-check.json",
+    "file_count": 202,
+    "loaded_file_count": 199,
+    "missing_runtime_files": [],
+    "collector_excluded": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr12-owned-physical-continuation/runtime-closure-probe.py",
+    "helper_sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18",
+    "limits": [
+      "Import-only runtime closure probe; no geometry constructors, predicates, native inputs or producer invoked.",
+      "Final stock wrapper and verify_runtime before/after remain required."
+    ]
+  },
+  "no_resource_forecast_or_reservation": true,
+  "memory_policy": "Current5ea PROCESSING_MEMORY_ADMISSION; ordinary runtime/OS behavior. Required exact input/runtime/scientific/disk/output checks remain.",
+  "result": null,
+  "accepted": 0
+}

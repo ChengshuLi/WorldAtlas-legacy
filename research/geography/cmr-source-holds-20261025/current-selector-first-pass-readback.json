@@ -1,0 +1,87 @@
+{
+  "status": "first-pass-only; strict-subset projection requires immutable second-pass binding; not runnable source/authority",
+  "actual_code": "509218bb4d61ee7edd7a34ec7ac7691a9c2f2c06",
+  "config": {
+    "path": "research/geography/cmr-source-holds-20261025/supported-inputs-current-selector-unbound.config.json",
+    "sha256": "cf42787628183ac0f9c8ea917a0cd5e301d406506c190290e79e85b992176826"
+  },
+  "inputs": {
+    "diagnostic": {
+      "commit": "7471c8c1510caf7ba2b9ba6d9f81b8678968f050",
+      "path": "research/geography/cmr74-physical-20261025/contextual-7298-001/native-diagnostic-001/native-diagnostic.json",
+      "cells": {
+        "requested": 4925,
+        "supported": 4555,
+        "held": 370
+      }
+    },
+    "original_patch": {
+      "commit": "6d5282f9d378992c9bc3ade862607a68b08a6a0e",
+      "path": "research/geography/cmr74-physical-20261025/native-inputs/native-patch4925.json"
+    },
+    "prior_holds": {
+      "commit": "f3a285e52a2821aaf103e9eeb671b9a63a3ffead",
+      "path": "research/geography/cmr-source-holds-20261025/prior-holds.json",
+      "keys": 117
+    },
+    "accepted_selector": {
+      "commit": "47bcece521c7d85ca2b9899d69637308702ca24c",
+      "path": "data/ownership-selection.json",
+      "already_present_cells": 0
+    }
+  },
+  "conservation": {
+    "original": 4925,
+    "supported_positive": 4438,
+    "prior_held": 117,
+    "native_held": 370,
+    "total_held": 487,
+    "already_present": 0,
+    "unresolved_recommendations": 482,
+    "pending": 4,
+    "preserved_prior_accepted_native_hold": 1,
+    "positive_keyset_matches_exact_disposition_index": true,
+    "unresolved_keyset_in_held": true,
+    "pending_keyset_in_held": true
+  },
+  "territorial_applicability": {
+    "original_records": 7298,
+    "selected_records": 6710,
+    "omitted_records": 588,
+    "projection_path": "research/geography/cmr-source-holds-20261025/territorial-applicability-001.json",
+    "projection_bytes": 3424002,
+    "projection_sha256": "4b9c54b83989fa5a25ebe3e93e6917555e3575ff05858b755ced5122b1ae4f06",
+    "status": "requires-immutable-projection-binding"
+  },
+  "outputs": {
+    "already-present-original.json": {
+      "bytes": 12,
+      "sha256": "6c45288a5e9d1444ab024fac905b02495e73426d74e22544bbf867e5f4811680"
+    },
+    "held-original.json": {
+      "bytes": 22495,
+      "sha256": "cb6ac6bc045861442cea92884ae23f441971ce598f8aac00bc2e1ffe4c4475d5"
+    },
+    "native-patch.json": {
+      "bytes": 91883,
+      "sha256": "6b5166396493d7e214886e0a09a0c97fe80dfa110716b2e5fa168e6c59124ee6"
+    },
+    "original-scope-partition.json": {
+      "bytes": 65302,
+      "sha256": "98cdfc8e3e7d196e2eb1924a7b8ac8cf87d29105ccfcdd6c3b41d6d6e7bfb3dc"
+    },
+    "territorial-applicability.json": {
+      "bytes": 3424002,
+      "sha256": "4b9c54b83989fa5a25ebe3e93e6917555e3575ff05858b755ced5122b1ae4f06"
+    },
+    "unbound-source-evidence.json": {
+      "bytes": 378754,
+      "sha256": "23d2eefbd4ab8a7207b1c0dc17febf78eb4ccc028f0edd24121d16b1f532e6a3"
+    }
+  },
+  "notes": [
+    "The previous no-selector first-pass receipt is retained as non-authoritative prep; current selector47b confirmed same 4,438 positive set and zero current-bank overlap.",
+    "No diagnostic, source producer, physical producer, or authority was run.",
+    "No unresolved or pending row was converted into authority; prior accepted key remains held and is not counted twice."
+  ]
+}

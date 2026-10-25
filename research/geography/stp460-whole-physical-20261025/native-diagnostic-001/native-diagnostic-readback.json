@@ -1,0 +1,59 @@
+{
+  "report": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work/.cache/delivery-handoff/stp460-native-diagnostic-20261025-be76-001/native-diagnostic.json",
+    "bytes": 35373,
+    "sha256": "9e538f67a2df2312b7921776f7545f8f718b1a95aaba07d317bdfa57a2c82be9"
+  },
+  "exact_original_keys": 460,
+  "original_intervals": 181,
+  "native_rows": 150,
+  "requested_cells": 460,
+  "diagnostic_supported_cells": 460,
+  "diagnostic_held_cells": 0,
+  "contexts": {
+    "principe-main-island118": {
+      "original_keys": 118,
+      "diagnostic_supported": 118,
+      "diagnostic_held": 0,
+      "reasons": {
+        "assigned_cells": 118
+      },
+      "witness_kinds": {}
+    },
+    "sao-tome-main-island254": {
+      "original_keys": 254,
+      "diagnostic_supported": 254,
+      "diagnostic_held": 0,
+      "reasons": {
+        "assigned_cells": 254
+      },
+      "witness_kinds": {}
+    },
+    "sao-tome-southern-equatorial-rolas-context88": {
+      "original_keys": 88,
+      "diagnostic_supported": 88,
+      "diagnostic_held": 0,
+      "reasons": {
+        "assigned_cells": 88
+      },
+      "witness_kinds": {}
+    }
+  },
+  "first_failure": null,
+  "physical_witness_kind_legend": [
+    "missing_reconstruction",
+    "extra_reconstruction",
+    "contradictory_land_water_support",
+    "L2-outside-L1",
+    "L3-outside-L2",
+    "L4-outside-L3",
+    "outside_mapped_L1_context",
+    "mapped_inland_water_support"
+  ],
+  "limits": [
+    "Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.",
+    "All original source, physical, query, witness and territorial limits remain retained."
+  ],
+  "readback_method": "Literal expansion and equality/count checks of retained diagnostic rows only; no geometry, predicates, reconstruction or observer.",
+  "accepted_credit": 0
+}

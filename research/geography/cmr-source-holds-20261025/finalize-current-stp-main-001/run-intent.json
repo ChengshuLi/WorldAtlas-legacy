@@ -1,0 +1,18 @@
+{
+  "phase": "finalize",
+  "config": {"path":"research/geography/cmr-source-holds-20261025/finalize-current-stp-main.config.json","sha256":"fbacaf2c1ed5996c5b9376cf4e621f80dd50392a0ef55b43abc4f332c94de179"},
+  "destination": ".cache/delivery-handoff/cmr4925-source-holds-current-stp-main-finalize-20261025-01",
+  "initial_attempt": {"exit_code":1,"failure_receipt":"research/geography/cmr-source-holds-20261025/finalize-current-stp-main-001/finalizer-attempt-001.json"},
+  "resume_command": "node scripts/prepare-delivery-handoff.mjs finalize research/geography/cmr-source-holds-20261025/finalize-current-stp-main.config.json .cache/delivery-handoff/cmr4925-source-holds-current-stp-main-finalize-20261025-01 --resume",
+  "resume": true,
+  "resume_exit_code": 0,
+  "resume_observation": "resumed:true; exact cache output inventory/config verified; sparse finalization continued",
+  "accepted_selector_commit": "8ff9a3cc92fca50738c48b8843bde3a67699dae5",
+  "diagnostic_reexecuted": false,
+  "source_producer_reexecuted": false,
+  "physical_producer_reexecuted": false,
+  "final_index_files":79,
+  "compatibility_sparse_files":30,
+  "new_files":6,
+  "retired_files":6
+}

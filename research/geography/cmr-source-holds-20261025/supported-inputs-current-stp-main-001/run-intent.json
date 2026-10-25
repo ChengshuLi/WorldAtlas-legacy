@@ -1,0 +1,14 @@
+{
+  "phase": "supported-inputs",
+  "config": {"path": "research/geography/cmr-source-holds-20261025/supported-inputs-current-stp-main-bound.config.json", "sha256": "80be9e08a69f7cf0930fcd7fa5a744b09e558fb3148f136932e881cb7f8348de"},
+  "destination": ".cache/delivery-handoff/cmr4925-source-holds-current-stp-main-20261025-02",
+  "command": "node scripts/prepare-delivery-handoff.mjs supported-inputs research/geography/cmr-source-holds-20261025/supported-inputs-current-stp-main-bound.config.json .cache/delivery-handoff/cmr4925-source-holds-current-stp-main-20261025-02",
+  "resume": false,
+  "diagnostic_reexecuted": false,
+  "source_producer_reexecuted": false,
+  "physical_producer_reexecuted": false,
+  "accepted_selector_commit": "8ff9a3cc92fca50738c48b8843bde3a67699dae5",
+  "exit_code": 0,
+  "started_utc": "2026-10-25T08:46:48Z",
+  "finished_utc": "2026-10-25T08:47:05Z"
+}

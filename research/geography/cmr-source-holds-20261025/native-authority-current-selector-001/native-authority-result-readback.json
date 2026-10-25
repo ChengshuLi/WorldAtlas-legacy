@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "kind": "cmr-native-authority-result-readback",
+  "status": "stock-modern-native-constructor-qualified",
+  "scope": {
+    "current_selector": "47bcece521c7d85ca2b9899d69637308702ca24",
+    "original_cell_scope": 4925,
+    "supported_positive_recommendations": 4438,
+    "constructor_qualified_cells": 4438,
+    "unresolved_recommendations_retained": 482,
+    "pending_rows_retained": 4,
+    "prior_accepted_key_retained": 1
+  },
+  "checks": {
+    "native_patch_interval_rows": 1792,
+    "native_patch_expanded_keys": 4438,
+    "constructor_ledger_components": 70,
+    "constructor_ledger_cells": 4438,
+    "patch_keys_equal_constructor_keys": true,
+    "patch_keys_equal_positive_recommendation_keys": true,
+    "overlap_with_unresolved_or_pending": 0,
+    "already_present_current_bank": 0
+  },
+  "inputs": {
+    "config_path": "research/geography/cmr-source-holds-20261025/native-authority-current-selector.config.json",
+    "config_sha256": "c7641fbeb66e33b86e44b63df32bd45896f539eaa9bc4d1b2e3dfab85f093bbf",
+    "source_evidence": {
+      "commit": "8fcae218aaaef5292250e1e1b837ed9a3a78ede0",
+      "path": "research/geography/cmr-source-holds-20261025/supported-inputs-current-main-001/source-evidence.json"
+    },
+    "native_patch": {
+      "commit": "8fcae218aaaef5292250e1e1b837ed9a3a78ede0",
+      "path": "research/geography/cmr-source-holds-20261025/supported-inputs-current-main-001/native-patch.json"
+    }
+  },
+  "outputs": [
+    {
+      "path": "authority-binding.json",
+      "bytes": 740,
+      "sha256": "e75b3cf07286233fc7725dc146f99b5ecf3a33a43ff02864625a38cc57823f9f"
+    },
+    {
+      "path": "original-rule-preimage.json",
+      "bytes": 737,
+      "sha256": "1eb1240960de6b26c7df7e69b48a58e2433dc251e48ae973cbeb83c4a8fac487"
+    },
+    {
+      "path": "constructor-result.json",
+      "bytes": 4100617,
+      "sha256": "0eb97c69f70115433950a9a32138db7242687d72c6e0fc7d81b043dc0ba2bf73"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 503,
+      "sha256": "5473136e98022a9353e3dac59dc298e39556097c3796f920c878f83ff8a22141"
+    }
+  ],
+  "limitations": [
+    "Constructor qualification only; not current-owner-zero or final selected-output acceptance.",
+    "No source or physical producer rerun; historical 4,555/370 diagnostic unchanged.",
+    "No scientific acceptance or credit is claimed; root owns acceptance."
+  ]
+}

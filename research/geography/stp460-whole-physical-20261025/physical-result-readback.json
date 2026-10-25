@@ -1,0 +1,120 @@
+{
+  "kind": "literal-result-inspection-no-new-geometry",
+  "code_commit": "4624e09ad69293979ef7dca6db34a6ce859e9202",
+  "immutable_stage_commit": "989c1b601b23960e687567741db41e24a2f4ab26",
+  "actual_launch": {
+    "command": [
+      "node",
+      "scripts/prepare-delivery-handoff.mjs",
+      "physical",
+      "research/geography/stp460-whole-physical-20261025/physical-config.json",
+      ".cache/delivery-handoff/stp2-whole-physical-20261025-be76"
+    ],
+    "cwd": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/fe20716b14ccb736953bbbefe1203c41584269006a01115868cc10036ef90c13/work",
+    "code_commit": "4624e09ad69293979ef7dca6db34a6ce859e9202",
+    "started_utc": "2026-10-25T00:52:46.045441+00:00",
+    "worker": "01a16f2d-be76-72d7-bc46-8b89a6efb0f2",
+    "previous_attempt": "Pre-producer destination guard rejection; unchanged input/config.",
+    "pid": 79097,
+    "exit_code": 0,
+    "ended_utc": "2026-10-25T00:56:32.795914+00:00"
+  },
+  "raw_byte_copies": [
+    {
+      "original_execution_path": ".cache/delivery-handoff/stp2-whole-physical-20261025-be76/whole-target-support.json",
+      "retained_repository_path": "research/geography/stp460-whole-physical-20261025/physical-001/whole-target-support.json",
+      "bytes": 132920,
+      "sha256": "b8271f9bd79625d5c8f5dd3fd979ac85e2bc9fa6ba2ee84eaf514cbfac6af074"
+    },
+    {
+      "original_execution_path": ".cache/delivery-handoff/stp2-whole-physical-20261025-be76/execution-receipt.json",
+      "retained_repository_path": "research/geography/stp460-whole-physical-20261025/physical-001/execution-receipt.json",
+      "bytes": 59044,
+      "sha256": "17c8923c2d4de54b297e45b707aed1c76eef360bdae76bf88469bf48fd62e446"
+    },
+    {
+      "original_execution_path": ".cache/delivery-handoff/stp2-whole-physical-20261025-be76/preparation.json",
+      "retained_repository_path": "research/geography/stp460-whole-physical-20261025/physical-001/preparation.json",
+      "bytes": 544,
+      "sha256": "3f972a21ba413eb8054ef4951a31bff981e58b4b1ab11cf67bd201ed828021bd"
+    }
+  ],
+  "results": [
+    {
+      "target": "gb:STP:ADM1:19237168B40253326356618",
+      "issue_reasons": [],
+      "source_id_queries": [
+        1,
+        359,
+        11922,
+        35491,
+        68389,
+        98996,
+        113245,
+        130625
+      ],
+      "query_count": 8,
+      "query_statuses": [
+        "checked",
+        "checked",
+        "checked",
+        "checked",
+        "checked",
+        "checked",
+        "checked",
+        "checked"
+      ],
+      "support_stored_nonempty": {
+        "mapped_land_support": true,
+        "mapped_inland_water_support": false,
+        "outside_mapped_L1_context": true,
+        "hierarchy_disagreements": {
+          "L2-outside-L1": false,
+          "L3-outside-L2": false,
+          "L4-outside-L3": false
+        },
+        "missing_reconstruction": false,
+        "extra_reconstruction": false,
+        "contradictory_land_water_support": false
+      }
+    },
+    {
+      "target": "gb:STP:ADM1:19237168B82261817076051",
+      "issue_reasons": [
+        "missing_reconstruction",
+        "extra_reconstruction"
+      ],
+      "source_id_queries": [
+        0,
+        1,
+        1353,
+        47192,
+        154073
+      ],
+      "query_count": 5,
+      "query_statuses": [
+        "checked",
+        "checked",
+        "checked",
+        "checked",
+        "checked"
+      ],
+      "support_stored_nonempty": {
+        "mapped_land_support": true,
+        "mapped_inland_water_support": false,
+        "outside_mapped_L1_context": true,
+        "hierarchy_disagreements": {
+          "L2-outside-L1": false,
+          "L3-outside-L2": false,
+          "L4-outside-L3": false
+        },
+        "missing_reconstruction": true,
+        "extra_reconstruction": true,
+        "contradictory_land_water_support": false
+      }
+    }
+  ],
+  "elapsed_seconds": 226.39536612499978,
+  "native_or_cell_outcomes_inferred": false,
+  "accepted": 0
+}

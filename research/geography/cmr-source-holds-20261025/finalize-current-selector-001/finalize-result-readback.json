@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "kind": "cmr-final-bank-finalization-readback",
+  "status": "stock-finalizer-prepared-not-yet-accepted",
+  "source_authority_registry": {
+    "bytes": 1369,
+    "commit": "a381a0a04eabd9e6bcc704bfec3825824e725ed5",
+    "git_blob_oid": "9f0385b0a7f1ad11550cbfb2d4a3d89ab6bad7ae",
+    "mode": "100644",
+    "path": "research/geography/cmr-source-holds-20261025/compose-current-selector-001/authority-registry.json",
+    "sha256": "3c53a77c0f453c86ad22f1bfea14c760486db31f98e01f77e93d07a5671424e0"
+  },
+  "selector": {
+    "version": 2,
+    "kind": "selected-final-native-bank-v2",
+    "prepared_bank": {
+      "bytes": 49610,
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "8fefb659642dd09e736afcde6c044f08d3409fb45bb45675e5c3f6cf850ed1cb"
+    },
+    "reference": {
+      "footprints_sha256": "b001a878466c2885754799fee81531ede648f7420c0d74a5526113a161a52f59",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:8e675f8bc8b58ce209aedb2a4da28ae8ff527638bd8e872ee00304bc28a37e36"
+    }
+  },
+  "selected_consumer_expectations": {
+    "bank": {
+      "bytes": 49610,
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "8fefb659642dd09e736afcde6c044f08d3409fb45bb45675e5c3f6cf850ed1cb"
+    },
+    "kind": "selected-final-bank-consumer-v2",
+    "reference": {
+      "footprints_sha256": "b001a878466c2885754799fee81531ede648f7420c0d74a5526113a161a52f59",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:8e675f8bc8b58ce209aedb2a4da28ae8ff527638bd8e872ee00304bc28a37e36"
+    },
+    "version": 2
+  },
+  "startup_bank": {
+    "index_sha256": "8fefb659642dd09e736afcde6c044f08d3409fb45bb45675e5c3f6cf850ed1cb",
+    "owners": 49625,
+    "files": 79,
+    "compatibility_files": 30,
+    "reused_files": 30,
+    "new_files": 49,
+    "retired_prior_files": 49,
+    "all_new_file_pin_hashes_verified": true,
+    "missing_pins_only_skip_worktree": true
+  },
+  "inputs": {
+    "accepted_base_selector_commit": "47bcece521c7d85ca2b9899d69637308702ca24c",
+    "package_inputs_sha256": "b247c4b8aaec93893e71705ab123dbbdadd44f77fa9e5980a1ee07744fccb099",
+    "package_inputs_unchanged_from_base": true
+  },
+  "outputs": [
+    {
+      "path": "ownership-selection.json",
+      "bytes": 2270,
+      "sha256": "07b45ad3d272cac4a3527c76d994f51527a9400c7da45ff5731b086cf8f51b27"
+    },
+    {
+      "path": "package-inputs.json",
+      "bytes": 38460,
+      "sha256": "b247c4b8aaec93893e71705ab123dbbdadd44f77fa9e5980a1ee07744fccb099"
+    },
+    {
+      "path": "selected-delivery-expectations.json",
+      "bytes": 485,
+      "sha256": "d714b831b6030e4d34b27ea572bc8ead819f51eb3c9693331525abfcf07782f6"
+    },
+    {
+      "path": "startup-ownership.json",
+      "bytes": 49610,
+      "sha256": "8fefb659642dd09e736afcde6c044f08d3409fb45bb45675e5c3f6cf850ed1cb"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 1156,
+      "sha256": "204ee15d76b2eef04855609c492da838e05cfa05092c78dbc2287465fa1e9262"
+    }
+  ],
+  "limitations": [
+    "Finalizer prepared the exact next canonical selection/startup bank; no PR, current-owner-zero acceptance, independent review, root acceptance, or credit yet.",
+    "The 49 staged prior-bank retirements exactly match old index files absent from the new index; 49 new assets hash-match new pins. Thirty absent retained compatibility bodies are exact skip-worktree omissions."
+  ]
+}
