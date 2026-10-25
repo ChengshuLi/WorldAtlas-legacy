@@ -1,0 +1,668 @@
+{
+  "kind": "inert-exact267-parent-role-independent-review-handoff",
+  "thread_id": "01a16f2d-be76-72d7-bc46-8b89a6efb0f2",
+  "original_package": 502,
+  "original_diagnostic_supported": 200,
+  "original_diagnostic_held": 302,
+  "parent_incidences": 267,
+  "distinct_parent_subjects": 267,
+  "classes": {
+    "land": 253,
+    "inland-water": 14
+  },
+  "parent_only": {
+    "subjects": 182,
+    "land": 179,
+    "inland-water": 3
+  },
+  "mixed": {
+    "subjects": 85,
+    "land": 74,
+    "inland-water": 11
+  },
+  "all_foreign_cases": 120,
+  "foreign_with_matching_parent": 85,
+  "foreign_without_matching_parent": 35,
+  "scope_equality_checked": true,
+  "all267_exact_original_negative_ordinals_ids_whole_hashes_checked": true,
+  "all120_peer_rows_match_full502_original_report": true,
+  "complete_original_scope": {
+    "positive_family": [
+      {
+        "parts": [
+          {
+            "bytes": 39035,
+            "commit": "867740323969355fb3691f0130120fd99e7a7426",
+            "decoded_bytes": 122084,
+            "decoded_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+            "git_blob_oid": "20ea11079f632b858cc288f2400bf037b0cb5e42",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM2-000.bin.gz",
+            "sha256": "d599a4559e64fa9fa64ddba023a14eba34be15b2b025cb665fe21852f95ab244"
+          }
+        ],
+        "source_id": "gb:ISR:ADM2"
+      }
+    ],
+    "territorial_exclusion_sources": [
+      {
+        "parts": [
+          {
+            "bytes": 60723,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 195166,
+            "decoded_sha256": "6f521038eaf80b2925677b05f1fcb65f5f976bfd61ebbe0aef369c85895336a2",
+            "git_blob_oid": "fe1fa52e1d1a3b2a18e3d410a35e4a2d1d8e5560",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-EGY-ADM1-000.bin.gz",
+            "sha256": "baf8c258a7114cf8d4d1fc2ddc9a18e7ccad9bb2418c1757f98e903c1ad7e5fc"
+          }
+        ],
+        "source_id": "gb:EGY:ADM1"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 420055,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 1379010,
+            "decoded_sha256": "abd2e419ce95e1cdd46bb18025a4eccfa6f877956494a56da3ebed4bc6a153d9",
+            "git_blob_oid": "f2ad1397a7b0184518e06bed93a380fd06a7faa2",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-EGY-ADM2-000.bin.gz",
+            "sha256": "d38309a6d01706293d25a6a361ea99e447a5a0a2361762e8c4c8f0e3259dbaec"
+          }
+        ],
+        "source_id": "gb:EGY:ADM2"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 12533,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 44192,
+            "decoded_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+            "git_blob_oid": "369e02e594b9345da7cfe00fcabb6859988d3c03",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+            "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+          }
+        ],
+        "source_id": "gb:ISR:ADM1"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 17364,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 54979,
+            "decoded_sha256": "f364401f87d800ca90bcb3a0cf7a0bff05fb9cf9e9843a7344aaa5376665f34b",
+            "git_blob_oid": "8e3d3e1a852b6d07478e66606522af6514bb455b",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM1-000.bin.gz",
+            "sha256": "afb40bc9120d2a3720e9934ec0ae4ff3f665802cc13e129e63befe6454924add"
+          }
+        ],
+        "source_id": "gb:JOR:ADM1"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 133556,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 454171,
+            "decoded_sha256": "a68a61fe1ee44e85560946b961fe4ea4867983e94d98eb85043ef43103cba571",
+            "git_blob_oid": "319c7b3d769c8fd77c1a4bcad4864932d6d903ab",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM2-000.bin.gz",
+            "sha256": "835c08b7e50fbf131bbd664f3dab4bd740663db771e1245991287be0c7ba8444"
+          }
+        ],
+        "source_id": "gb:JOR:ADM2"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 30744,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 96413,
+            "decoded_sha256": "dedb31ee7931de59689011490c7244c7f773dd757af27258c4bd41386dd563ad",
+            "git_blob_oid": "75076248e3ffa2e49901c76338d213470f1ee595",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-LBN-ADM1-000.bin.gz",
+            "sha256": "03b308742227e1fba01c14d005711067d3c89fc5bdcd48f1fcaaf4867b18ef19"
+          }
+        ],
+        "source_id": "gb:LBN:ADM1"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 33389,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 144672,
+            "decoded_sha256": "5a3382f024aea0e5a204893dcf0738e18166ee6e4282518d30250d013b744042",
+            "git_blob_oid": "288538515ba9f910778fa69caad9a5308f5b602c",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-LBN-ADM2-000.bin.gz",
+            "sha256": "b3cfbcc364f43567846157222000efa05b61f03f8cbfdaf0c42e8ec91f922b13"
+          }
+        ],
+        "source_id": "gb:LBN:ADM2"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 12318,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 34407,
+            "decoded_sha256": "2f065583a8be795533893fd4c62fed765959b47db2cf01e696cc795cc6c56b0a",
+            "git_blob_oid": "00227553ebf7d334f4b3e51548f53daf7741eee9",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-PSE-ADM1-000.bin.gz",
+            "sha256": "74c1b0fe78a4dc5b1322ae909cc00d6d7e26e77ada47f80f6a531b434866dee7"
+          }
+        ],
+        "source_id": "gb:PSE:ADM1"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 45733,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 150914,
+            "decoded_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+            "git_blob_oid": "a5ecca9ebe9f17862040f2d80753017a91d9f1b1",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-PSE-ADM2-000.bin.gz",
+            "sha256": "c9e90c5e980b65d9e21720b67bf3e13e45b959b9b22e92cc19591c5be176779c"
+          }
+        ],
+        "source_id": "gb:PSE:ADM2"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 57621,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 189254,
+            "decoded_sha256": "f3707f36534fbbed27a61e4abc2ac7b6b0d4e43f99674c9d7639e2cbb8d444b1",
+            "git_blob_oid": "60865532310043316628299c8cf2b96a4fdb9d02",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SYR-ADM1-000.bin.gz",
+            "sha256": "d272a9076a5fee619e7d90c946de3eb1c3aaf5f832f6988432295fa1b8f52d3a"
+          }
+        ],
+        "source_id": "gb:SYR:ADM1"
+      },
+      {
+        "parts": [
+          {
+            "bytes": 110752,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 417692,
+            "decoded_sha256": "864ec968af360c252942d3052a544fb7ed5d88795d3075f6791bd94cff4c90a1",
+            "git_blob_oid": "b46aa27278d7f9f918ee14f208876632e749b899",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SYR-ADM2-000.bin.gz",
+            "sha256": "6a343c2c29fef307ca05ceff8009310219c68785a632049233cae92fac3feb0e"
+          }
+        ],
+        "source_id": "gb:SYR:ADM2"
+      }
+    ],
+    "complete_source_provenance": [
+      {
+        "feature_count": 27,
+        "original_bytes": 195166,
+        "original_sha256": "6f521038eaf80b2925677b05f1fcb65f5f976bfd61ebbe0aef369c85895336a2",
+        "parts": [
+          {
+            "bytes": 60723,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 195166,
+            "decoded_sha256": "6f521038eaf80b2925677b05f1fcb65f5f976bfd61ebbe0aef369c85895336a2",
+            "git_blob_oid": "fe1fa52e1d1a3b2a18e3d410a35e4a2d1d8e5560",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-EGY-ADM1-000.bin.gz",
+            "sha256": "baf8c258a7114cf8d4d1fc2ddc9a18e7ccad9bb2418c1757f98e903c1ad7e5fc"
+          }
+        ],
+        "source_family": "gb:EGY:ADM1"
+      },
+      {
+        "feature_count": 365,
+        "original_bytes": 1379010,
+        "original_sha256": "abd2e419ce95e1cdd46bb18025a4eccfa6f877956494a56da3ebed4bc6a153d9",
+        "parts": [
+          {
+            "bytes": 420055,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 1379010,
+            "decoded_sha256": "abd2e419ce95e1cdd46bb18025a4eccfa6f877956494a56da3ebed4bc6a153d9",
+            "git_blob_oid": "f2ad1397a7b0184518e06bed93a380fd06a7faa2",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-EGY-ADM2-000.bin.gz",
+            "sha256": "d38309a6d01706293d25a6a361ea99e447a5a0a2361762e8c4c8f0e3259dbaec"
+          }
+        ],
+        "source_family": "gb:EGY:ADM2"
+      },
+      {
+        "feature_count": 6,
+        "original_bytes": 44192,
+        "original_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+        "parts": [
+          {
+            "bytes": 12533,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 44192,
+            "decoded_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+            "git_blob_oid": "369e02e594b9345da7cfe00fcabb6859988d3c03",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+            "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+          }
+        ],
+        "source_family": "gb:ISR:ADM1"
+      },
+      {
+        "feature_count": 12,
+        "original_bytes": 54979,
+        "original_sha256": "f364401f87d800ca90bcb3a0cf7a0bff05fb9cf9e9843a7344aaa5376665f34b",
+        "parts": [
+          {
+            "bytes": 17364,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 54979,
+            "decoded_sha256": "f364401f87d800ca90bcb3a0cf7a0bff05fb9cf9e9843a7344aaa5376665f34b",
+            "git_blob_oid": "8e3d3e1a852b6d07478e66606522af6514bb455b",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM1-000.bin.gz",
+            "sha256": "afb40bc9120d2a3720e9934ec0ae4ff3f665802cc13e129e63befe6454924add"
+          }
+        ],
+        "source_family": "gb:JOR:ADM1"
+      },
+      {
+        "feature_count": 52,
+        "original_bytes": 454171,
+        "original_sha256": "a68a61fe1ee44e85560946b961fe4ea4867983e94d98eb85043ef43103cba571",
+        "parts": [
+          {
+            "bytes": 133556,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 454171,
+            "decoded_sha256": "a68a61fe1ee44e85560946b961fe4ea4867983e94d98eb85043ef43103cba571",
+            "git_blob_oid": "319c7b3d769c8fd77c1a4bcad4864932d6d903ab",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM2-000.bin.gz",
+            "sha256": "835c08b7e50fbf131bbd664f3dab4bd740663db771e1245991287be0c7ba8444"
+          }
+        ],
+        "source_family": "gb:JOR:ADM2"
+      },
+      {
+        "feature_count": 9,
+        "original_bytes": 96413,
+        "original_sha256": "dedb31ee7931de59689011490c7244c7f773dd757af27258c4bd41386dd563ad",
+        "parts": [
+          {
+            "bytes": 30744,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 96413,
+            "decoded_sha256": "dedb31ee7931de59689011490c7244c7f773dd757af27258c4bd41386dd563ad",
+            "git_blob_oid": "75076248e3ffa2e49901c76338d213470f1ee595",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-LBN-ADM1-000.bin.gz",
+            "sha256": "03b308742227e1fba01c14d005711067d3c89fc5bdcd48f1fcaaf4867b18ef19"
+          }
+        ],
+        "source_family": "gb:LBN:ADM1"
+      },
+      {
+        "feature_count": 26,
+        "original_bytes": 144672,
+        "original_sha256": "5a3382f024aea0e5a204893dcf0738e18166ee6e4282518d30250d013b744042",
+        "parts": [
+          {
+            "bytes": 33389,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 144672,
+            "decoded_sha256": "5a3382f024aea0e5a204893dcf0738e18166ee6e4282518d30250d013b744042",
+            "git_blob_oid": "288538515ba9f910778fa69caad9a5308f5b602c",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-LBN-ADM2-000.bin.gz",
+            "sha256": "b3cfbcc364f43567846157222000efa05b61f03f8cbfdaf0c42e8ec91f922b13"
+          }
+        ],
+        "source_family": "gb:LBN:ADM2"
+      },
+      {
+        "feature_count": 2,
+        "original_bytes": 34407,
+        "original_sha256": "2f065583a8be795533893fd4c62fed765959b47db2cf01e696cc795cc6c56b0a",
+        "parts": [
+          {
+            "bytes": 12318,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 34407,
+            "decoded_sha256": "2f065583a8be795533893fd4c62fed765959b47db2cf01e696cc795cc6c56b0a",
+            "git_blob_oid": "00227553ebf7d334f4b3e51548f53daf7741eee9",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-PSE-ADM1-000.bin.gz",
+            "sha256": "74c1b0fe78a4dc5b1322ae909cc00d6d7e26e77ada47f80f6a531b434866dee7"
+          }
+        ],
+        "source_family": "gb:PSE:ADM1"
+      },
+      {
+        "feature_count": 16,
+        "original_bytes": 150914,
+        "original_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+        "parts": [
+          {
+            "bytes": 45733,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 150914,
+            "decoded_sha256": "a16d5381822e198b8f5aa8aaa9f4a4bf8fb1d8e090a8a3dc007c1798328a5433",
+            "git_blob_oid": "a5ecca9ebe9f17862040f2d80753017a91d9f1b1",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-PSE-ADM2-000.bin.gz",
+            "sha256": "c9e90c5e980b65d9e21720b67bf3e13e45b959b9b22e92cc19591c5be176779c"
+          }
+        ],
+        "source_family": "gb:PSE:ADM2"
+      },
+      {
+        "feature_count": 14,
+        "original_bytes": 189254,
+        "original_sha256": "f3707f36534fbbed27a61e4abc2ac7b6b0d4e43f99674c9d7639e2cbb8d444b1",
+        "parts": [
+          {
+            "bytes": 57621,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 189254,
+            "decoded_sha256": "f3707f36534fbbed27a61e4abc2ac7b6b0d4e43f99674c9d7639e2cbb8d444b1",
+            "git_blob_oid": "60865532310043316628299c8cf2b96a4fdb9d02",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SYR-ADM1-000.bin.gz",
+            "sha256": "d272a9076a5fee619e7d90c946de3eb1c3aaf5f832f6988432295fa1b8f52d3a"
+          }
+        ],
+        "source_family": "gb:SYR:ADM1"
+      },
+      {
+        "feature_count": 61,
+        "original_bytes": 417692,
+        "original_sha256": "864ec968af360c252942d3052a544fb7ed5d88795d3075f6791bd94cff4c90a1",
+        "parts": [
+          {
+            "bytes": 110752,
+            "commit": "923e9c210b59836e069c182d68daf85439096381",
+            "decoded_bytes": 417692,
+            "decoded_sha256": "864ec968af360c252942d3052a544fb7ed5d88795d3075f6791bd94cff4c90a1",
+            "git_blob_oid": "b46aa27278d7f9f918ee14f208876632e749b899",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SYR-ADM2-000.bin.gz",
+            "sha256": "6a343c2c29fef307ca05ceff8009310219c68785a632049233cae92fac3feb0e"
+          }
+        ],
+        "source_family": "gb:SYR:ADM2"
+      },
+      {
+        "feature_count": 15,
+        "original_bytes": 122084,
+        "original_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+        "parts": [
+          {
+            "bytes": 39035,
+            "commit": "867740323969355fb3691f0130120fd99e7a7426",
+            "decoded_bytes": 122084,
+            "decoded_sha256": "7ac8dbeab70a711f9c05e38c4c200457775eccbc9e67ce70a47cabd11d3c2cf8",
+            "git_blob_oid": "20ea11079f632b858cc288f2400bf037b0cb5e42",
+            "mode": "100644",
+            "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM2-000.bin.gz",
+            "sha256": "d599a4559e64fa9fa64ddba023a14eba34be15b2b025cb665fe21852f95ab244"
+          }
+        ],
+        "source_family": "gb:ISR:ADM2"
+      }
+    ],
+    "negative_families": [
+      "gb:EGY:ADM1",
+      "gb:EGY:ADM2",
+      "gb:ISR:ADM1",
+      "gb:JOR:ADM1",
+      "gb:JOR:ADM2",
+      "gb:LBN:ADM1",
+      "gb:LBN:ADM2",
+      "gb:PSE:ADM1",
+      "gb:PSE:ADM2",
+      "gb:SYR:ADM1",
+      "gb:SYR:ADM2"
+    ]
+  },
+  "immutable_input_pins": [
+    {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/source-evidence.json",
+      "bytes": 85912,
+      "sha256": "4d8d1ed001998ea65bc29110974d7dee687c3029f4708f452f54ecc1b105be07",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/territorial-exclusion-provenance.json",
+      "bytes": 296314,
+      "sha256": "872c9bf3c4312bdef872e1ea90732c55949038fa10c61adb1d9d2263eaaf2b3e",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "b89158a7857cb7b1a2f393becc19a89a79d3eea8",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-001/native-diagnostic.json",
+      "bytes": 3265632,
+      "sha256": "c79e84b054034b57f7f277f6a1c816749cbe1131331e52f2f237edb23b201e71",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "b89158a7857cb7b1a2f393becc19a89a79d3eea8",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-001/exact502-diagnostic-interpretation.jsonl",
+      "bytes": 705332,
+      "sha256": "05d09af10548641abd2bc63792f9e2ab4aea2c851d3739149d3145bb3867fc50",
+      "local_bytes_identical": true
+    },
+    {
+      "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+      "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json",
+      "bytes": 50833,
+      "sha256": "b7e58372c954d73b01a65ca20a78c1571e2ef181f669ebcc4c293d1980e6f655",
+      "local_bytes_identical": true
+    }
+  ],
+  "stock_diagnostic_CODE": "8431e5417f5fa84d434625261241488c348664af",
+  "stock_source_preparation_CODE": "d7219b458f25a4a582d245bf6654d0564cd17777",
+  "existing_physical_and_native_refs": {
+    "catalogue": {
+      "bytes": 403376,
+      "commit": "923e9c210b59836e069c182d68daf85439096381",
+      "git_blob_oid": "09afab19371f0814da61e79e5f310c5fb2405b6d",
+      "mode": "100644",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    "native_contract": {
+      "coordinateBits": 19,
+      "hierarchy_sha256": "568301690ef231a85856666b57876a5efe8d8c7c6e671a56d81307b2dc28b80b",
+      "method": "native-linear-evenodd-first-owner-v1",
+      "native_latitudes": {
+        "bytes": 1851757,
+        "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+        "decoded_bytes": 2097328,
+        "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+        "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+        "role": "immutable-normative-rule-input",
+        "root": "repository",
+        "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+      },
+      "original_assets": {
+        "bounds": {
+          "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+          "path": "data/canonical-grid/bounds.json.gz",
+          "role": "original-identity-parent-camera-context",
+          "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f"
+        },
+        "province_membership": {
+          "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+          "path": "data/canonical-grid/province-membership.bin.gz",
+          "role": "original-identity-crosswalk",
+          "sha256": "01f42b69ca969090d10c42d6a1311215a19ce436b0f3e720f7f873f4a18f90da"
+        }
+      },
+      "size": 262166
+    },
+    "native_latitudes": {
+      "bytes": 1851757,
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "git_blob_oid": "de6905e162dc031b1b93248fae91190c39c4ad53",
+      "mode": "100644",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+    },
+    "owner_roster": {
+      "bytes": 2663523,
+      "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+      "decoded_bytes": 11096191,
+      "decoded_sha256": "a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428",
+      "git_blob_oid": "9c44513df64995d417dd3832ae604c703e84a506",
+      "mode": "100644",
+      "path": "data/canonical-grid/bounds.json.gz",
+      "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f"
+    },
+    "physical_evidence": {
+      "bytes": 317455,
+      "commit": "e600c0759f4ec6ec2d8d01e499f91d74e5e537ed",
+      "git_blob_oid": "36485a2190f647ffdb99a0a18cc40acb84da09ec",
+      "mode": "100644",
+      "path": "research/geography/isr502-whole-physical-20261025/physical-001/whole-target-support.json",
+      "sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    },
+    "physical_input": {
+      "bytes": 367705,
+      "commit": "ce32528b8b3289681dc3b238549bd6b0f69de66d",
+      "git_blob_oid": "1a467c8a3691d76917e25c6f7bd65763ded4b625",
+      "mode": "100644",
+      "path": "research/geography/isr502-whole-physical-20261025/whole-twelve-stage-inputs.json",
+      "sha256": "64f646f654f33607d0e3b02b706c0f1abc011695a61f2eec2d641abcd6c65c2a"
+    },
+    "physical_reproduction": {
+      "bytes": 43642,
+      "commit": "ce32528b8b3289681dc3b238549bd6b0f69de66d",
+      "git_blob_oid": "f69180b425d665a022dd18290688864674dd20a5",
+      "mode": "100644",
+      "path": "scripts/qualify-source-cohort.py",
+      "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+    }
+  },
+  "retained_research_references": [
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/assessment.md",
+      "bytes": 11046,
+      "sha256": "a187a17a5152551ea0b2607557a629eeb051e08920d9399b80f8259bef154c67"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/receipt.json",
+      "bytes": 4510,
+      "sha256": "680705beda58be45b7da8e4a168212206117b5548c5c381f2d0629e5c5ab76fb"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/exact182-original-held-rows.jsonl",
+      "bytes": 299911,
+      "sha256": "9abc0c539717a0bf0a65f3de07d9fc84368501990c2452dfc0472e443c3ce2fc"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/all267-parent-contact-rows.jsonl",
+      "bytes": 494152,
+      "sha256": "bff19fa6a809ecadf5c98db7e41c7d5997cb21928ae6388aaa85d0cdae6a7159"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/exact-nine-parent-correspondences.json",
+      "bytes": 6481,
+      "sha256": "ce359a989277eba7ba444131a21bb3dbfa768a4b08bc9783f12c783e432982ab"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/three-water-application-assessment.md",
+      "bytes": 9271,
+      "sha256": "1ef9f38f3e0c3b797e2325d125f252e6661359865db0b8a36ad781acf1db012c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/three-water-application-pins.json",
+      "bytes": 2384,
+      "sha256": "61e6ca16f2f348c1cab92714dbb27aaa3ab2b530f0ecb958636f71d5da4080ff"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/CBS-2018-hierarchy-key.pdf",
+      "bytes": 90654,
+      "sha256": "93f5f47edc92ebe44cc2293c515dda537d2d5c1a7b13470eb25142ae8785d07c"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/CBS-2020-administrative-map.pdf",
+      "bytes": 753444,
+      "sha256": "39067fa32c8a87f09a61cd345a874eecfef22ef49fea2b6a5abbf0b6ae788947"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/CBS-map-embedded-control-read.json",
+      "bytes": 1372,
+      "sha256": "616d17481db53b62f9c9df09766cf4b73b849574c582e76f537ad14bec063fec"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/CBS-three-water-control-application.json",
+      "bytes": 5473,
+      "sha256": "6522ffe75911e7f02cb9cc602d9d382e35ec56a836c6cba5991b86656f014180"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/CBS-map-source-layer-and-CRS-inspection.json",
+      "bytes": 5195,
+      "sha256": "c680c67e70b5058504e8b8c3d286f2310fa0f5f13c2582d66b3f0879a1e3bdf9"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr182-parent-applicability/CBS-layer-painting-metadata.json",
+      "bytes": 7320,
+      "sha256": "87f5ce17e93049e25206d3fd0cd642e1255f637c49a3974d8d4c8c601ec52799"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-native-input-plan/parent-construction-evidence-followup.json",
+      "bytes": 4658,
+      "sha256": "c906935b5c4b2254995833dc7af01a3afb4c9fcde36368478e26cbadf774613d"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502-qualification-design/original-input-lineage/source-construction-references.json",
+      "bytes": 2347,
+      "sha256": "c2805fbd862b53f1bad988aa6ee6f5410ad7e4961fabdf99cf8e676c64aaa0ee"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr502/source-assessment.json",
+      "bytes": 23877,
+      "sha256": "e1f8f915a2c7bdc7f5407bba2e1c0c9ad004f21a34fa39c57ec9ad9324099bcd"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr120-foreign-source-applicability/source-applicability-assessment.md",
+      "bytes": 15561,
+      "sha256": "c5dd519b8eafafb9ae6d8c8c9623939e77783408eaf380692f67d7e59447fdf8"
+    },
+    {
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task/isr120-foreign-source-applicability/exact120-measured-source-application.jsonl",
+      "bytes": 392906,
+      "sha256": "05187e3bbe6b715616b85301fe2ffb3a86986e3b800b894c5ccb5039bac7e861"
+    }
+  ],
+  "no_duplicate_bundle": "Existing bodies referenced by exact paths and hashes, not copied/rebuilt; only explicit new role annotations assembled.",
+  "new_predicates": 0,
+  "coordinate_recomputation": false,
+  "new_geometry": false,
+  "adopted": false,
+  "holds_changed": false,
+  "credit_cells": 0
+}

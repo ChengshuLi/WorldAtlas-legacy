@@ -1,0 +1,53 @@
+# Irbid10: historical river-image correspondence
+
+25 October 2026. Source application by `/root/luozi19_primary`, coordinated with the owner of ISR foreign120. This is not an independent review, native predicate, source replacement, authority decision or acceptance.
+
+## Result
+
+All ten exact original Irbid-contact land subjects remain pending. A newly acquired and actually read Appendix III sheet11 adds primary photographed river delineation; a bounded application of the already controlled CBS2020 map narrows the modern context. Neither supplies an authenticated link from these ten subjects to a particular 1994 orthophoto reach. No exact side, historical channel or current sovereignty conclusion is made.
+
+The remaining question is specific: which photographed reach in Appendix III contains the exact Kinneret/Irbid neighborhood, and which identifiable, independently located features connect that photograph to the original scalar coordinate context? Only after that connection can the marked river line and the treaty's natural-change/artificial-change/avulsion distinctions be applied. Another general treaty search would not answer it.
+
+## Exact scope and original evidence
+
+`exact10-inherited-measured-rows.jsonl` preserves the ten `JOR-Irbid10` rows verbatim as JSON objects from water35's exact120 packet. The complete parent input SHA256 is `05187e3bbe6b715616b85301fe2ffb3a86986e3b800b894c5ccb5039bac7e861`; the extracted ten file is 35,380 bytes, SHA256 `37bc90f8c74a2e945e52fc9877004fef3a44f2e74b2842a2182884f2b05cb94c`.
+
+All ten target owner24171 Kinneret, with the original Irbid source `gb:JOR:ADM1:50493656B72492647240238`, emitted negative ordinal1, original feature ordinal6 and whole-geometry SHA256 `88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a`. All ten retain the measured interior foreign contact and matching Northern District contact. Original physical class is land; recorded witness masks and the whole-target limitations are unchanged. A zero key mask is not physical clearance. The full502 diagnostic and ISR200 authority are not rerun or revised.
+
+Keys (owner24171 throughout): `[105874,157028]`; `[105875,157023]`, `[105875,157024]`, `[105875,157025]`, `[105875,157026]`; `[105876,157020]`, `[105876,157021]`, `[105876,157022]`, `[105876,157023]`; `[105877,157021]`.
+
+## New actual primary sheet reading
+
+The ECF treaty issue catalogue exposes Appendix III sheets and the separate Appendix IV Baqura/Naharayim area map. The catalogue's general interactive treaty map returned a general description/layer interface, not a geographic river-sheet coverage index. No hidden interface or map geometry was used.
+
+Sheet11 was acquired from the catalogue's actual exposed PDF link using the supported Chrome `downloadMedia` operation, then copied into this scratch directory and rendered with installed Poppler. It is 567,759 bytes, SHA256 `a9974181c45f21ebb8a277915df927a15982d3ba5a587341dd5e6b7bf4bde163`. The complete page, title, image, north arrow, margins and authentication note were visually read. The image contains a sinuous river with a marked boundary line, agricultural plots, roads, clustered buildings and distinct bends. Its stated reproduction scale is 1:20,000, reduced from the original 1:10,000 attachment to the 26 October1994 treaty. UNTS2042 I-35325 and the boundary subcommission attribution are visible. The custodian's displayed1970 date is inconsistent with the body and is not adopted as the vintage.
+
+No printed coordinate grid, geographic ticks, named locality labels or sheet-coverage index is visible on the inspected sheet. The actual PDF object inspection found no GEO/VP/Registration/Projection controls among14 reachable indirect objects; it has image content and no extracted text. This does not prove an image is unregistrable. The actual roads, field patterns, north arrow and scale could be useful if independently authenticated ground/image controls were supplied. They do not give an absolute geographic translation by themselves, and resemblance to an unnamed modern or historical feature is not an authenticated control.
+
+Previously completed sheet1 and12 readings and their identity pins remain applicable. Sheet12 pixels were consulted for this continuation; no new location was assigned to a photographed village or bend. No claim is made that the other nine river sheets lack useful controls. Sheet10 was located in the same catalogue and opened by the web document reader, but the latter returned no extracted text and only a screenshot marker, not readable pixels; its body has not been visually read or locally downloaded here.
+
+Sources: https://ecf.org.il/issues/issue/185 ; sheet11 https://ecf.org.il/media_items/745 ; exact body https://content.ecf.org.il/files/M00546_IsraelJordanPeaceTreatyMapJordanAndYarmouk11of12_0.PDF . Sheet10 catalogue https://ecf.org.il/media_items/744 . The already read river rule is in the retained PA-X copy, PDF13. Its main-flow/change provisions are retained, not replaced by a modern map or the southern1998 point list.
+
+## Actual bounded local application
+
+`read-local-context.py` reuses the completed CBS map's four-control page solution; it does not refit or invent controls. The PDF's actual GPTS and signed BBox match that receipt. The original ten recorded latitudes were joined by exact key, and the same authenticated lattice-x inverse already used in the foreign120 packet was evaluated as a literal scalar locator. No geographic predicate or source geometry was produced.
+
+The original latitude range is32.680285384388114–32.68375270930727; literal longitude displays are35.61674664144092–35.62773204763394. As in the prior CBS application, equal angular numbers in the document's actual geodetic frame are an expressly conditional approximation, not an established WGS84 datum transformation or EPSG2039 substitution. The existing document-control fit residual is not positional accuracy. All assumptions and exact scalars are retained in `conditional-local-map-context.json`.
+
+The300dpi crop places the ten conditional centers within about11 horizontal by4 vertical rendered pixels, around the southeast Kinneret/code221 exterior neighborhood south of the Sea of Galilee. The image actually labels the lake, Tiberias, Kefar Tavor, regional/subdistrict codes and distinct line styles; it does not label a corresponding1994 river sheet, Baqura/Naharayim location or photographed ground controls there. This is useful broad administrative context and confirms that the ten share one compact application question. It cannot identify the historical reach, discriminate original source boundaries, or assign whole cells from a generalized stroke. No color-to-territory test, boundary trace, line-distance calculation or nominal exact-side decision was made.
+
+## Appendix IV materiality and interrupted custody
+
+The identified Baqura/Naharayim Appendix IV is a genuine named-area primary photographic appendix in the same treaty, not a guessed download or a generic governorate overview. Such a map might supply a named anchor or recognizable overlap from which river-sheet coverage could be established. That is the supported reason to inspect it. It is not yet demonstrated to overlap these ten subjects, contain coordinate controls, or decide their source conflict. Its name alone does not establish any of those claims. It is therefore a bounded potential control lead, not an automatic mandatory source or a proven deciding document.
+
+Exact catalogue: https://ecf.org.il/media_items/747 . Observed body: https://content.ecf.org.il/files/M00548_IsraelJordanPeaceTreatyMapBaquraNaharayim_0.PDF . Catalogue attribution identifies the boundary commission1994; the body's pixels were not read here. No coverage or control content is inferred from the catalogue.
+
+The Chrome exposed-link `downloadMedia` action timed out after30 seconds and reset the execution kernel before returning a path; the subsequent navigation in that same call did not reach sheet10. Inspection found the existing tab still at ECF747. Two bounded filesystem checks, separated by substantive local work, found no matching completed or partial Baqura file under its exact observed download prefix. This does not establish that the interrupted remote action never executed. CUA reported that the Mac was locked and automatic unlock unsuccessful. No download retry, alternate acquisition, permission change or security action followed. The action's outcome remains uncertain, with no local body confirmed. Web PDF screenshots separately returned markers without pixels. Those are transport/render limits, not source absence or exhaustion.
+
+## Recommendation and next finite action
+
+Keep all ten pending for the specific historical-image correspondence or an explicit source-relative contract decision retaining the measured Irbid competitor. Do not waive the foreign governorate as a parent; it is a separate administrative portrayal, constructed from a digitized governorate image, and no observed construction record ties its edge to a specific treaty orthophoto. The original target/source purpose, physical facts and competing parent remain unchanged. Source version differences do not automatically invalidate either product.
+
+If the historical-line application is pursued, first resolve the existing interrupted Baqura operation through supported controls after the Mac is unlocked, before considering any repeat. Inspect whether it actually offers an anchor or coverage connection; do not presuppose it does. A documented series index or independently authenticated photographic controls for the compact neighborhood are the actual needed evidence. North arrows and scale without an anchor, proximity to survey pointIJBD12, an Irbid governorate name, or a modern CBS portrayal cannot substitute for this tie. No claim is made that further useful evidence cannot exist.
+
+The remaining local bodies do not provide a distinct unperformed deciding control. Manual desktop unlock is required to inspect the interrupted browser operation if that acquisition is continued; it is not a request for broader access or a newapp. No ordinary source download authorization is missing. The prior denied UN/MFA/UNIFIL/FIG/UNISPAL routes and MFO TLS failure remain stopped. Public evidence of any format is authorized through existing supported access; source restrictions and redistribution obligations remain. The new primary reproduction is retained for research, not represented as newly licensed raw data. Repository publication, if later needed, uses normal owned Git push only. No Git write, producer, diagnostic, authority, independent review or acceptance occurred.
