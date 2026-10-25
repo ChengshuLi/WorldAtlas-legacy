@@ -132,5 +132,33 @@
     "status": "exact original full-source evidence with source-relative applicability projection and locator-only rebinding of two unavailable commit pins",
     "payload_change": false,
     "sha256": "4975692928a5c2a024132da5c9e246f040c937154ab09f3e53da6d8b646dcbf6"
+  },
+  "native_patch_locator_rebinding": {
+    "role": "original native patch input to the read-only changed-semantics diagnostic",
+    "old": {
+      "commit": "e0e2c3cc03e2a5e4c0c9d6354c94b80ac9350e2f",
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-requested-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "07d1f93ab8841b87ef1d6ff00186f5e5cc4031d7",
+      "bytes": 11869,
+      "sha256": "c5cdb04e5ad181593cfaeb0bb6270f6013ba8c3c20f7119b7b7ef36d9765dbcb"
+    },
+    "new": {
+      "commit": "1a29aa2f404cb09c4c8e0bdd73390e8a124c78e5",
+      "path": "coordination/engineering/pse-original-disposition-20261020/native-requested-patch.json",
+      "mode": "100644",
+      "git_blob_oid": "07d1f93ab8841b87ef1d6ff00186f5e5cc4031d7",
+      "bytes": 11869,
+      "sha256": "c5cdb04e5ad181593cfaeb0bb6270f6013ba8c3c20f7119b7b7ef36d9765dbcb"
+    },
+    "proof": "Existing exact tree entry at new commit/path has the same ordinary blob OID, size and SHA; raw body independently verified.",
+    "old_locator_attempts_private_receipt": "/workspace/scratch/127991fc8b8e/pse07-source-review-20261025/native-patch-input-route-blocker.private.json",
+    "old_lookup_outcomes": [
+      "exact Git fetch: not our ref",
+      "GitHub exact commit lookup: HTTP 422 No commit found",
+      "GitHub exact path/ref lookup: HTTP 404 No commit found",
+      "earlier exact-blob response had no containing path/tree binding; it was not then consumed"
+    ],
+    "interpretation": "object availability; no cause inferred; prior outcome preserved; current locator uses already authenticated exact body binding, not a fabricated historical commit or new producer"
   }
 }
