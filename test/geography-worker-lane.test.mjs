@@ -23,7 +23,7 @@ test('declared geography ownership is finite, safe and limited to source evidenc
 });
 test('geography cannot edit core, history, another packet or an undeclared proposal directory',()=>{
  validateLanePaths('geography/packet-a',[owned[0]+'sources.json',owned[0]+'reproduce/check.py'],{ownedPaths:owned});
- for(const file of ['data/hierarchy.json','data/world-index.json','data/canonical-grid/a.bin','src/main.js','hosted/server.js','drizzle/a.sql','research/campaigns/history-a/input.json','data/regional-review/other/a.json','research/geography/other/a.json','docs/GEOGRAPHY_GUIDE.md',owned[0]+'../other/a.json'])assert.throws(()=>validateLanePaths('geography/packet-a',[file],{ownedPaths:owned}));
+ for(const file of ['data/hierarchy.json','data/world-index.json','data/canonical-grid/a.bin','src/main.js','hosted/server.js','drizzle/a.sql','research/campaigns/history-a/input.json','data/regional-review/other/a.json','research/geography/other/a.json','docs/GEOGRAPHY.md',owned[0]+'../other/a.json'])assert.throws(()=>validateLanePaths('geography/packet-a',[file],{ownedPaths:owned}));
  assert.throws(()=>validateLanePaths('geography/packet-a',[owned[0]+'source.json']),/owned_paths/);
 });
 test('engineering consumes but preserves geography evidence while existing lanes still work',()=>{

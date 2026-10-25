@@ -28,7 +28,7 @@ test('explicit coordination allowlist defaults full for unknown/application/data
     'scripts/import.mjs','scripts/build-cloudflare.mjs','docs/unknown.json',
     '.github/workflows/deploy.yml','test/application.test.mjs']) {
     assert.equal(integrationProfile('engineering/job',[{filename}]),'full',filename);
-    assert.equal(integrationProfile('engineering/job',[{filename:'docs/WORKER_COORDINATION.md',previous_filename:filename}]),'full',filename);
+    assert.equal(integrationProfile('engineering/job',[{filename:'docs/WORKFLOW.md',previous_filename:filename}]),'full',filename);
   }
   assert.equal(integrationProfile('engineering/job',[{filename:'docs/prompts/reviewer.md'}]),'evidence');
   assert.equal(integrationProfile('engineering/job',[]),'full');
@@ -62,7 +62,7 @@ test('geography software route is derived from changed checker inputs, retaining
   assert.equal(candidateGeographyCode('full', changed(name), 'selected-data'), false, name);
  }
  for (const name of ['data/geography/part-0.json', 'src/app.js', 'src/attributes.js',
-  'research/geography/example/source.py', 'docs/WORKER_COORDINATION.md',
+  'research/geography/example/source.py', 'docs/WORKFLOW.md',
   'coordination/engineering/example/evidence-quality.json', 'scripts/native-ownership/verified-candidates.json']) {
   assert.equal(candidateGeographyCode('full', changed(name)), false, name);
  }
