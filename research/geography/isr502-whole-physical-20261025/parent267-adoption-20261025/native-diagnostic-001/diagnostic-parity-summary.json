@@ -1,0 +1,78 @@
+{
+  "kind": "full502-adopted-parent-diagnostic-parity-not-acceptance",
+  "CODE": "ecc35e1a9e6e5e0066c016c097c1f75d95c21c16",
+  "source_DATA": {
+    "commit": "d1be96c92e23170ae5b8ad9893855d5b7a759211",
+    "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/source-evidence.json",
+    "mode": "100644",
+    "git_blob_oid": "d378135f17a1ffb141f588d3ec1e38d28b6cecd5",
+    "bytes": 223561,
+    "sha256": "34948f1ea15170de6ba7fd83b62574864de9a7bb53dd0910c2657f82428f0543"
+  },
+  "patch_DATA": {
+    "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+    "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json",
+    "mode": "100644",
+    "git_blob_oid": "98df42ce398d39936969872a11c53bf2c8d59dc4",
+    "bytes": 50833,
+    "sha256": "b7e58372c954d73b01a65ca20a78c1571e2ef181f669ebcc4c293d1980e6f655"
+  },
+  "diagnostic": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-18/task-4/.worldatlas-workspaces/746183045662994f/29b0f7066f0a7fb80c75435a2a0c20d6f568d3b41b2837f5c3a5eef24868d7c6/work/.cache/delivery-handoff/isr502-parent267-native-diagnostic-001/native-diagnostic.json",
+    "bytes": 3478426,
+    "sha256": "5b2aff63aa22c970df18a5d8a1165ba4dbde47662e06961e77affcb297c9d16e"
+  },
+  "requested": 502,
+  "supported": 382,
+  "held": 120,
+  "prior_supported": 200,
+  "newly_supported": 182,
+  "changed_decisions": 182,
+  "unchanged_literal_report_fields": [
+    "requested_rows",
+    "physical_witness_kind_rows",
+    "physical_witness_kind_legend"
+  ],
+  "foreign120_unchanged": true,
+  "all_raw_original_operand_facts_unchanged": true,
+  "additional_adopted_operand_provenance_fields": 484,
+  "source_role_partition": {
+    "parent_only_land_candidates": {
+      "assigned_cells": 179
+    },
+    "parent_only_water_unresolved_recommendation": {
+      "assigned_cells": 3
+    },
+    "mixed_foreign_operands_operative": {
+      "territorial_exclusion_cells": 85
+    },
+    "foreign_without_matching_parent_operative": {
+      "territorial_exclusion_cells": 35
+    }
+  },
+  "supported_physical_classes": {
+    "land": 379,
+    "inland-water": 3
+  },
+  "water3_source_hold_keys": [
+    [
+      24183,
+      106895,
+      156910
+    ],
+    [
+      24183,
+      106896,
+      156870
+    ],
+    [
+      24183,
+      106896,
+      156912
+    ]
+  ],
+  "native_territorial_context_contact_count": 352,
+  "next_method": "Stock supported-inputs with actual accepted selector, exact three-water prior_holds and exact emitted applicability projection binding; report scope before authority.",
+  "holds_changed": false,
+  "authority_run": false
+}

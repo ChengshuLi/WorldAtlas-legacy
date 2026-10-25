@@ -1,0 +1,55 @@
+{
+  "code_commit": "ecc35e1a9e6e5e0066c016c097c1f75d95c21c16",
+  "unchanged_executable_baseline": "5ea3f8e75089905690bfb7a8c8589d84f0d45ca9",
+  "configuration": {
+    "commit": "ecc35e1a9e6e5e0066c016c097c1f75d95c21c16",
+    "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-diagnostic-config.json",
+    "mode": "100644",
+    "git_blob_oid": "c1ca76581d5c410e8c290ce25a3844906212da35",
+    "bytes": 408,
+    "sha256": "282ea9fdc4566623530975320dd5ad2545c1c325d96a11c302089b3ed488c7e1"
+  },
+  "source_DATA": {
+    "commit": "d1be96c92e23170ae5b8ad9893855d5b7a759211",
+    "path": "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/source-evidence.json",
+    "mode": "100644",
+    "git_blob_oid": "d378135f17a1ffb141f588d3ec1e38d28b6cecd5",
+    "bytes": 223561,
+    "sha256": "34948f1ea15170de6ba7fd83b62574864de9a7bb53dd0910c2657f82428f0543"
+  },
+  "patch_DATA": {
+    "commit": "d607b5376c51b98da8a89a51325ccb575cfb9ce0",
+    "path": "research/geography/isr502-whole-physical-20261025/native-plan/native-patch-all502.draft.json",
+    "mode": "100644",
+    "git_blob_oid": "98df42ce398d39936969872a11c53bf2c8d59dc4",
+    "bytes": 50833,
+    "sha256": "b7e58372c954d73b01a65ca20a78c1571e2ef181f669ebcc4c293d1980e6f655"
+  },
+  "command": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-diagnostic",
+    "research/geography/isr502-whole-physical-20261025/parent267-adoption-20261025/native-diagnostic-config.json",
+    ".cache/delivery-handoff/isr502-parent267-native-diagnostic-001"
+  ],
+  "destination": ".cache/delivery-handoff/isr502-parent267-native-diagnostic-001",
+  "node_version": "v24.19.0",
+  "started_utc": "2026-10-25T03:08:24.427906+00:00",
+  "scope": {
+    "original_keys": 502,
+    "physical_classes": {
+      "land": 485,
+      "inland-water": 17
+    },
+    "targets": 12,
+    "complete_source_families": 12,
+    "complete_source_features": 605,
+    "original_negative_pairs": 105,
+    "adopted_parent_records": 267,
+    "foreign_subjects_retained": 120
+  },
+  "source_or_physical_producers_requested": false,
+  "authority_requested": false,
+  "coordinator_combination_confirmation_received": true,
+  "three_parent_only_water_separate_source_disposition_required": true
+}
