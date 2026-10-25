@@ -25,11 +25,15 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(current, /ordinary authoring does not require machine claim\/readiness/i);
   assert.match(current, /resume.{0,120}does not reload instructions/is);
   const development = fs.readFileSync('docs/DEVELOPMENT.md', 'utf8');
+  assert.match(development, /task\/environment's supported Node and Git executables/i);
+  assert.match(development, /requires Node `>=24`[\s\S]*Node 24 and Git 2\.53/i);
   const routingKeys = ['GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
     'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'];
   const shellSanitizer = development.match(/for key in (GIT_DIR[^\n]+); do\n  unset "\$key"\ndone/);
   assert(shellSanitizer, 'bootstrap must clear inherited Git routing before its first Git command');
   for (const key of routingKeys) assert(shellSanitizer[1].includes(key), key);
+  assert.doesNotMatch(shellSanitizer[1], /GIT_CONFIG|GH_CONFIG|TOKEN/i,
+    'do not clear approved auth/configuration variables with repository routing');
   assert(development.indexOf(shellSanitizer[0]) < development.indexOf('git -C "$TASK_REPO"'),
     'routing cleanup must precede the bootstrap fetch');
   assert.match(development, /for key in \('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',[\s\S]*?'GIT_ALTERNATE_OBJECT_DIRECTORIES'\):\n\s+env\.pop\(key, None\)/);
