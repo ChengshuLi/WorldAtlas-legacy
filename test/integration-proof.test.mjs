@@ -43,6 +43,7 @@ test('agent entrypoint routes to the current canonical guides, not retired hando
   assert.match(operations, /sender-supplied hash alone does not establish origin/i);
   assert.match(operations, /authorized workflow and event, head commit, successful run and attempt, and the artifact/i);
   assert.match(operations, /restricted application database URL/i);
+  assert.match(operations, /least-privilege runtime role/i);
   assert.match(operations, /private recipient key outside Git in an owner-only `0600` file/i);
   assert.match(operations, /ciphertext is not `DATABASE_URL`/i);
   assert.match(operations, /explicit authorization for that exact live destination/i);
