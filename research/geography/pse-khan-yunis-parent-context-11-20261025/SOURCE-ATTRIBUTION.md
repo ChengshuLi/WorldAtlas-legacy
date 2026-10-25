@@ -1,0 +1,5 @@
+# Source attribution and retained rights notice
+
+`source-evidence-with-context.json` is an exact metadata-only rebinding of the existing full PSE source-evidence body pinned at commit `4440154b9b4169df4582b3aa1048c95ab80089a6`, blob `f9a8d4959c1091503bb4a0393617bafe5df39691`, raw SHA-256 `8f2eee7d4a9903cecd09f3b0e46cff586f0f212c834939eba0f3642cc12b29ae`. All source, physical, geometry and observation fields are unchanged; only the contextual-applicability pin changes to the exact 237-record artifact in this folder. No upstream geometry archive was downloaded, added, transformed or redrawn here.
+
+Retain the full third-party attributions and licenses from [`THIRD-PARTY-ATTRIBUTION.md`](../../../coordination/engineering/pse-original-disposition-20261020/native-authority-223-current-65ef/THIRD-PARTY-ATTRIBUTION.md): PSE ADM2 2017 CC BY 4.0; PSE ADM1 2021 CC BY 4.0; Jordan ADM1 2006 CC BY 2.5; Israel ADM1 2006 public domain; GSHHG 2.2.2 LGPL-3.0-or-later. This file is derived evidence and does not redistribute upstream source archives or change those rights notices.
