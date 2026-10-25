@@ -1,3 +1,5 @@
+> Current custody update, 25 October 2026: the complete independent110 assessment and checks have now been received through Library, authenticated and read. Their exact110 recommended and10 pending key sets match the existing author index. See `independent110-actual-read-receipt.json`. The inherited missing-body statements below describe the earlier author handoff and are retained as history. Native379/123, separate three-water recommendation, Irbid10 pending and final-output-unbound status are unchanged. No raw review bodies or coordinate summary are republished.
+
 # ISR502 cumulative author source disposition
 
 This is the author's combined source argument for the coordinator's existing review and delivery. It adds no measurement, qualification, adoption or acceptance. The original denominator is **502 = 379 qualified land + 110 independently reviewed unresolved (root-reported outcome) + 3 separately recommended parent-only water unresolved + 10 Irbid pending**. Those last123 remain held in the actual published qualification. Reviewed-unresolved is a proposed delivery disposition, not a newly executed change to that qualification.
