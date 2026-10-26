@@ -1,0 +1,48 @@
+{
+  "scope": {
+    "issue": 2577,
+    "original": {"keys": 2247, "intervals": 1645, "owner_groups": 36, "source_contacts": 47, "owner_contact_groups": 64},
+    "previous_recommendation": {"keys": 1102, "intervals": 842, "owner_groups": 15},
+    "this_recommendation": {"keys": 522, "intervals": 344, "owner_groups": 8, "status": "researched-unresolved recommendation only"},
+    "residual_unclassified": {"keys": 623, "intervals": 459, "owner_groups": 13}
+  },
+  "owners": [
+    {"owner_index":"40089","name":"KISMAYO","source_feature_id":"gb:SOM:ADM2:84685775B88570008116698","source_label":"Somalia","framework_parent":"framework:province:lower-juba:9343dba5e57a","keys":252,"intervals":134,"question_ids":["SOM-Q061","SOM-Q062"],"recommendation":"researched-unresolved"},
+    {"owner_index":"40054","name":"BARGAAL","source_feature_id":"gb:SOM:ADM2:84685775B61236699531309","source_label":"Somalia","framework_parent":"framework:province:bari:d4a6902b9ae9","keys":75,"intervals":74,"question_ids":["SOM-Q004","SOM-Q009"],"recommendation":"researched-unresolved"},
+    {"owner_index":"40068","name":"EYL","source_feature_id":"gb:SOM:ADM2:84685775B71976909807732","source_label":"Somalia","framework_parent":"framework:province:nugaal:23ef6972e323","keys":133,"intervals":92,"question_ids":["SOM-Q019","SOM-Q020","SOM-Q021"],"recommendation":"researched-unresolved"},
+    {"owner_index":"40010","name":"ABDUL AZIZ","source_feature_id":"gb:SOM:ADM2:84685775B24635972964099","source_label":"Somalia","framework_parent":"framework:province:banadir:98621d32e244","keys":11,"intervals":7,"question_ids":["SOM-Q044","SOM-Q045"],"recommendation":"researched-unresolved"},
+    {"owner_index":"40026","name":"HELIWA","source_feature_id":"gb:SOM:ADM2:84685775B37468249397520","source_label":"Somalia","framework_parent":"framework:province:banadir:98621d32e244","keys":5,"intervals":5,"question_ids":["SOM-Q042"],"recommendation":"researched-unresolved"},
+    {"owner_index":"40036","name":"KARAN","source_feature_id":"gb:SOM:ADM2:84685775B48165620113230","source_label":"Somalia","framework_parent":"framework:province:banadir:98621d32e244","keys":9,"intervals":6,"question_ids":["SOM-Q043"],"recommendation":"researched-unresolved"},
+    {"owner_index":"40055","name":"WABERI","source_feature_id":"gb:SOM:ADM2:84685775B61400607894578","source_label":"Somalia","framework_parent":"framework:province:banadir:98621d32e244","keys":8,"intervals":7,"question_ids":["SOM-Q047","SOM-Q048"],"recommendation":"researched-unresolved"},
+    {"owner_index":"40064","name":"MADINA","source_feature_id":"gb:SOM:ADM2:84685775B6942068492284","source_label":"Somalia","framework_parent":"framework:province:lower-shebelle:d68318da3834","keys":29,"intervals":19,"question_ids":["SOM-Q049","SOM-Q050"],"recommendation":"researched-unresolved"}
+  ],
+  "excluded_overlap": {"owner_index":"40047","name":"HAMAR JABJAB","keys":8,"intervals":4,"reason":"all exact keys are already in the previous 1,102-key proposal"},
+  "partition_verification": {
+    "method":"Expand each frozen original interval over [start,end_exclusive), with each original owner; join the prior proposal by owner and key, checking native_block:original_interval_ordinal_in_block. Select the complete seven assigned groups plus the four Banaadir parent-aligned source groups described in the assessment; Hamar Jabjab is excluded because it is already in the prior set.",
+    "accepted_subset_csv_sha256":"c7ef5accb6305ffdaadc894357bcfde2813a080aa29500d2cf6d9d1f42f18c51",
+    "original_packet_gzip_sha256":"d9e87d1c360c3cfe21883b756bcd5da64bd4721abe91ac8c278c37c9e65075cf",
+    "original_packet_decoded_sha256":"38835822455a95fa68d8e1392ce1b6470974a3b073061e315cb66d7e9c9a026c",
+    "owner_matrix_sha256":"e1146937dbb6ac605870daf2c81ea276e0b8696140c5c5e6d88742e1d0e119e6",
+    "accepted_rows_match_original":1102,"proposed_rows":522,"overlap":0,"missing":0,"residual_rows":623,"exact_union_of_original":true,
+    "selected_owner_key_interval_sha256":"d80c01486b4f210c27ea3f106290b992747bac00992800dc1dcb611e34765cfb",
+    "residual_owner_key_sha256":"6f3f7a5db2dcabe298ac4ee8663394895c2246caf3625da96486562cacbdd901",
+    "hash_serialization":"For selected tuples, emit owner_index, key_y, key_x, native_block, original_interval_ordinal_in_block as tab-separated fields, sort complete lines lexicographically, append LF to every line, then SHA-256 UTF-8 bytes. For residual tuples, emit owner_index, key_y, key_x with the same sorting and LF rule. Headers omitted; raw tuple rows excluded."
+  },
+  "source_memos": {
+    "kismayo":{"sha256":"b0d92987076975c843d4da2d806bd2a688245372f4c5c4d51ba8d6dbf08ff5ed","status":"Parent-supplied source-free memo hash; no local body file."},
+    "bargaal_prior_combined":{"sha256":"6e8058a38649a82681ec6880195304f5ac1dc4ddac6a2bc3f0414bdfb900de50","status":"Parent-supplied source memo reference; Bargaal findings restated in the operative parent handoff."},
+    "bargaal_corrected_combined":{"sha256":"bbddb744e79727c20e6630d63d35dc81e3b09190f803ef85c82b70b413e7ecec","status":"Parent-supplied corrected combined memo reference; supersedes the earlier combined copy."},
+    "eyl_r2":{"sha256":"28cd04d90dfc45997d98a382b4584d745dec025c381aa9ddf397a5c3d2721244","status":"Parent-supplied EYL r2 source-free memo; covers the complete frozen owner row."},
+    "banaadir62":{"sha256":"7b6e38640459bcc4deb51b9e5a1dc70affdfacc3a5fabef78c3326ed86e4e901","status":"Parent-supplied source-free assessment; four parent-aligned rows selected; Madina separate."},
+    "madina_parent_lineage":{"sha256":"4116f394032003b88a743c065c89e27bc581f2ac8e7dc5f1ac14abec219d138c","status":"Parent-supplied source-free parent-lineage memo."}
+  },
+  "preserved": {
+    "all_native_physical_source_competitor_holds":true,
+    "unknown_historical_refusal_ids":9,"refusal_ids_mapped":false,
+    "ownerless_adm1_contact_vectors":11,"ownerless_contacts_identify_refusals":false,
+    "cod_ab_v03":"aggregate-only: 1379 single hits / 868 outside; no per-key assignment",
+    "hamar_jabjab_newly_selected":false,
+    "raw_keys_coordinates_geometry_or_source_payload_included":false,
+    "credit_or_recorded_disposition_changed":false
+  }
+}
