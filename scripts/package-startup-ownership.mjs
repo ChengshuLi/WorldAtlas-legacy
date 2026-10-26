@@ -256,7 +256,7 @@ export async function packagePreparedStartupOwnership({manifest,manifestSha,sour
 
 // Load exactly the selected finished bank for preparation/conservation. This
 // authenticates transport and words, not acceptance of a caller's selection.
-export async function readPreparedFinalOwnership({indexRaw,manifest,manifestSha,selected,features,ownerCount=features?.length,read}) {
+export async function readPreparedFinalOwnership({indexRaw,manifest,manifestSha,selected,features,ownerCount=features?.length,read,stableBufferReader=false}) {
   const index=JSON.parse(indexRaw);
   if(![2,3].includes(index.version))throw Error('A complete prepared final bank is required');
   if(!Number.isSafeInteger(ownerCount)||ownerCount<1)throw Error('Complete final owner denominator required');
@@ -265,7 +265,13 @@ export async function readPreparedFinalOwnership({indexRaw,manifest,manifestSha,
   async function whole(name){
     const pin=pins.get(name);if(!pin)throw Error('Final ownership input outside the complete prepared roster');
     if(!bodies.has(name)){
-      const raw=Buffer.from(await read(pin));
+      const input=await read(pin);
+      // By default, take ownership of a private copy: callers may retain or
+      // mutate the bytes returned by their reader. The finalizer may opt in only
+      // when its reader returns a Buffer whose lifetime is stable for this call
+      // (authenticated Git-object bodies held privately by the finalizer).
+      // Non-Buffer byte sources retain Buffer.from's normal conversion path.
+      const raw=stableBufferReader&&Buffer.isBuffer(input)?input:Buffer.from(input);
       if(raw.length!==pin.bytes||digest(raw)!==pin.sha256)throw Error('Prepared final input whole identity differs: '+name);
       bodies.set(name,raw);
     }

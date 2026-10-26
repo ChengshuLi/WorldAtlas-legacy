@@ -26,6 +26,8 @@ Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` 
 
 For a final-bank update, use the finalizer's complete `current-startup` roster as the output boundary. It may retire an old generated file only when the current accepted index or an authenticated committed finalization receipt pins the exact prior body; pass exact committed `preparation.json` and `startup-ownership.json` pins through `prior_finalizations` when needed. Unknown, edited, nonordinary, or roster-changing extras fail closed. Exact retirement paths are staged as deletions only after byte and index rechecks; inspect the complete staged file set against the new index before commit. Other prepared output changes remain ordinary worktree edits.
 
+`readPreparedFinalOwnership` copies reader-supplied `Buffer` values by default. The finalizer may explicitly opt into reusing a `Buffer` only when its private reader returns already-authenticated bytes that remain immutable for the full call; whole-byte length and SHA-256 checks still apply. Keep generic callbacks on the defensive-copy path.
+
 For routine read-only observation, use bounded provider reads and avoid rapid polling:
 
 ```sh
