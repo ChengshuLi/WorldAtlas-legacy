@@ -1,0 +1,31 @@
+# Turkmenistan: exact Avaza 46 source-role researched-unresolved proposal
+
+**Proposal only; root acceptance is pending.** This recommends a finite researched-unresolved outcome for exactly 46 original keys. It is not a positive assignment, owner change, boundary repair, package completion, or credit. No raw source geometry or longitude/latitude is included.
+
+## Exact scope and inherited application
+
+The original `gb-TKM-ADM2--repair-evaluation` package has 1,759 keys, 1,001 intervals, 45 original owners; the retained original mask is 1,622 land and 137 inland water. This proposal covers 46 distinct generated `(owner,y,x)` keys, all original land-mask class, owner index 42142, direct candidate feature `gb:TKM:ADM2:10190150B47051626377462` (Avaza). Exact sorted tuple digest is `dacaf96d7eee1f53dad35f30ef633bca512fca9660e31f4f5d2103f28876e817` using compact JSON `[owner,y,x]`; the original tab-delimited tuple serialization digest is `d5049b8d35a744cbe1c896dbe3bdaf4cab4ab97ad3d681d14fd5cc8c626e8e68`. Full key and per-key candidate evidence is in `scope.json`.
+
+These 46 are a subset of the existing 915-key land/source-relative candidate cohort. The retained full/simplified comparison is 46/46 identical: each has one center match to the same unique direct ADM2 feature ID in both the 2009 full and simplified representations. This is source-relative center membership only, not proof of feature purpose, physical truth, whole-cell containment, current territorial role, or legal assignment. Each row also retains parent TKM ADM1 candidate `gb:TKM:ADM1:27578892B85944744725550` (exact per-key list in scope); it is hierarchy context, not independent clearance. No captured foreign AFG/KAZ/UZB competitor occurs in this 46-key subset, but all 30 such foreign-contact keys in the original package remain pending and are not cleared by this proposal.
+
+The other 1,748 keys after prior root acceptance remain pending before this proposal; if this exact 46 is later accepted, 1,702 other keys remain pending. The previously root-accepted 11 (8 land, 3 water) are disjoint and expressly excluded. No denominator is removed.
+
+## Source-role issue and bounded primary work
+
+The source product claims represented year 2009. Its 2009 feature name alone cannot establish whether this polygon represented the National Tourist Zone, an administrative etrap, or another source unit. The official Mejlis historical page (https://mejlis.gov.tm/turkmenistan/avaza?lang=en) reports Avaza as a National Tourist Zone in 2009 and notes 5,000 hectares allocated for the project; this is relevant historical context, not a geometric or lineage crosswalk. The official 2013 Mejlis Resolution No. 420-IV (https://mejlis.gov.tm/single-decree/125?lang=ru) says Avaza and Kenar etraps are formed according to an annex, labels the annex text as original, and directs a later boundary description for Turkmenbashi city. The official page supplies no annex attachment. A bounded check of the linked KanunTM file listing (https://kanuntm.com/ru/docs/decree-125/files/?lang=ru) found only a portal reading/index PDF, explicitly not a substitute for the official state text; it reports suitable original files as unspecified. No original annex/map was retrieved or authenticated. This was not an access denial. The annex would be relevant to the later administrative division, but even its recovery would not automatically establish the role of the 2009 source feature without a source-to-unit linkage.
+
+The retained full source is pinned to geoBoundaries release `9469f09` (source metadata: https://github.com/wmgeolab/geoBoundaries/blob/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/TKM/ADM2/geoBoundaries-TKM-ADM2-metaData.json) (59 present features versus 66 advertised; 271,437 bytes; SHA-256 `0d0b3745e275bfadb1d0137fbca014b56f2ed72cb83b0a98dd0e2f0632e7c507`). Its attribution names CIESIN GRUMPv1 population-density Map 7 and CC BY-SA 3.0. The effective upstream authority, exact feature purpose and applicability remain uncertain; the derivative release license does not reapprove the upstream source. The simplified source is retained as a distinct representation; its full IDs agree for these 46, but that does not resolve lineage/purpose. Detailed source/method and custody pins are in `scope.json`, along with the private source-free investigation note hash.
+
+## Recommendation and preserved limits
+
+The paired source application provides relevant, consistent center contacts for these 46, but the source-role question is not decided by the 2009 feature name, the 2013 creation of an etrap, or center overlap. The bounded primary-source work did not find the annex; the available official historical context does not identify the source polygon’s role. A finite unresolved recommendation is therefore appropriate for these exact 46 pending source-role resolution; this does not assert that a later administrative creation invalidates the 2009 feature and does not require a universal legal-boundary certificate.
+
+No physical producer was rerun: original land-mask classes are retained evidence only. Native ownership, physical predicates, full original candidate contacts, and source rights/provenance uncertainty remain as before. No constructor, patch, owner change, positive qualification, or source geometry is proposed. The other 1,702 pending keys and all their source/physical/native/foreign predicates remain pending; accepted 11 are not recounted. This is not a claim of exhaustion of all possible public sources.
+
+## Evidence pins
+
+- Full/simplified source-free exact-center application: `/workspace/shared/worldatlas-TKM1759-qualification-20261026/.private/full-simplified-exact-center-application-v2.json`; SHA-256 `e7b49e43f8df1427e8ec03e669302e9f988d90cb4139d9f4f1016afd5527c09c`.
+- Aggregate custody v2 SHA-256 `8e80b44049648eb356ef4872a6f3a5d6bf86cefcc7c4441866c4b7b9bb40096c`.
+- Existing source-role assessment SHA-256 `d6b623f6d840341973552532000c3f662dd7eaccd61ce8d7ddbecf55aab30306`.
+- Bounded Avaza annex retrieval note: `/workspace/shared/worldatlas-TKM-Avaza46-annex-retrieval-20261026.md`, SHA-256 `a4de3cde577db476145ad42236c96ec8e18506de02c2c42b9a39f1469f452c73`.
+- Prior 11 root acceptance is cited only for disjointness/context; it is not a renewed claim.
