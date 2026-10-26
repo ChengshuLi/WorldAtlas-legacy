@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "kind": "official-act-exact-product-extraction-v1",
+  "source_url": "https://download.data.public.lu/resources/limites-administratives-du-grand-duche-de-luxembourg/20261005-030016/limadmin.geojson",
+  "publisher": "Administration du cadastre et de la topographie (ACT)",
+  "license": "CC0",
+  "retrieved_product": {
+    "path": "coordination/engineering/lux-original-repair-20261021/evidence-investigation-002/act-limadmin-20261005.geojson",
+    "bytes": 1207257,
+    "sha256": "6c3128de3763704397d9a7c44ea04d952fd467fc88a368e2d188c236cbfbae83",
+    "collections": {
+      "cantons": 12,
+      "communes": 100,
+      "districts": 3,
+      "pays": 1
+    }
+  },
+  "extraction": {
+    "json_pointer": "/pays",
+    "type": "FeatureCollection",
+    "feature_count": 1,
+    "feature_id_property": "PAYS",
+    "feature_id": "Grand-Duché du Luxembourg",
+    "bytes": 72507,
+    "sha256": "3214565ebebbf461936c56f5b709b0235e0736f354cc3b1a94253eb14d47e0a3"
+  },
+  "limitations": [
+    "Complete four-collection source is preserved unchanged and pinned separately.",
+    "The extracted pays FeatureCollection is exactly one feature; not a 13-feature collection.",
+    "ACT refresh date is not declared temporal coverage or positional accuracy; source-relative administrative context only."
+  ]
+}
