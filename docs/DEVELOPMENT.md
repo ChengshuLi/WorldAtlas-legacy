@@ -48,13 +48,26 @@ checkout. This is a stale-helper recovery path, not a workaround for the CLI's
 location under `scripts/`; root guidance is read from the pinned repository tree.
 Do not pull, reset, switch or overwrite a checkout holding active work.
 
+For allocator input recovery, `inspect` remains read-only and reports the exact
+selected paths that are missing. `allocate` resolves only those paths against the
+exact commit tree, checks capacity for both the selected checkout and retained
+object storage, then uses the existing bounded object-acquisition transport once
+for the unique selected OIDs. It verifies each body before taking the registry
+lock; the locked phase rechecks ownership, inventory and checkout capacity. Retry
+may reuse verified objects already retained in the common Git store. A mismatch,
+missing object, transport denial, malformed body, unknown dirty state, or low-space
+condition fails closed. Do not hand-copy OIDs, issue ad hoc Git fetches, disable
+no-lazy-fetch, or hydrate excluded bodies. Interrupted `preparing` reservations
+remain operator-inspection-only; this selected acquisition is not a resume bypass.
+
 The following code-only bootstrap loads both allocator modules from one exact
 locally available main commit. It uses an exclusive temporary directory inside
 the task repository's shared Git store and removes only its generated helper copies
 afterward. Git reads and helper execution do not depend on the shell's cwd. A failed main refresh or
-commit lookup stops without using a cached older pin. Missing helper blobs
-stop before execution; acquire those exact pinned objects through the coordinated
-route below rather than falling back to an old executable. Use Node 24.
+commit lookup stops without using a cached older pin. Missing helper source blobs
+stop this bootstrap before execution; do not hand-fetch OIDs, hydrate unrelated
+objects, or execute a cached older helper. Use the accepted helper only when its
+source bodies are already locally available, with Node 24.
 
 ```sh
 (
@@ -98,10 +111,10 @@ for name in ('local-workspace.mjs', 'worker-identity.mjs'):
                   '--missing=print', '--ignore-missing', '--no-walk=unsorted', '--no-object-names',
                   '--stdin', input=oid.encode() + b'\n').decode().strip()
     if present != oid:
-        raise SystemExit('Pinned helper missing; coordinate exact-object acquisition')
+        raise SystemExit('Pinned helper missing; stop and use the accepted helper workflow when its source bodies are available')
     status = git('cat-file', '--batch-check=%(objectname) %(objecttype) %(objectsize)', input=oid.encode() + b'\n').decode().split()
     if len(status) != 3 or status[0] != oid or status[1] != 'blob' or not status[2].isdigit():
-        raise SystemExit('Pinned helper missing; coordinate exact-object acquisition')
+        raise SystemExit('Pinned helper missing; stop and use the accepted helper workflow when its source bodies are available')
     sources[name] = git('cat-file', 'blob', oid)
 with tempfile.TemporaryDirectory(prefix='worldatlas-helper-', dir=common) as directory:
     for name, body in sources.items():
