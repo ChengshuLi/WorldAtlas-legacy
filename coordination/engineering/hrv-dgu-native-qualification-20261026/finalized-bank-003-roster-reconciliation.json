@@ -98,7 +98,7 @@
       "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz"
     ],
     "all_absent_index_entries_are_skip_worktree": true,
-    "unindexed_extras_preserved": 9,
+    "unindexed_extras_preserved": 7,
     "unindexed_extra_files": [
       {
         "path": "geography/effective-context-7f4afda371b135a640e574ed3b9218c4046c5be625179fcf44d570415af5550a.json.gz",
@@ -134,18 +134,6 @@
         "path": "ownership-vintages/56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5/native-v1/ownership/startup-runs-54525952.bin.gz",
         "bytes": 3103196,
         "sha256": "56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5",
-        "mode": "0644"
-      },
-      {
-        "path": "ownership-vintages/7c4db61e46fe7dcc1de03a905569afd83c51d42e5887a2448609bc883f56ba03/native-v1/ownership/startup-runs-54525952.bin.gz",
-        "bytes": 3103229,
-        "sha256": "7c4db61e46fe7dcc1de03a905569afd83c51d42e5887a2448609bc883f56ba03",
-        "mode": "0644"
-      },
-      {
-        "path": "ownership-vintages/84b0a6614613c9c3b95561954930858b0debd9c32fe42c6757f988392b4525b4/native-v1/ownership/rows-0.bin.gz",
-        "bytes": 317138,
-        "sha256": "84b0a6614613c9c3b95561954930858b0debd9c32fe42c6757f988392b4525b4",
         "mode": "0644"
       },
       {
@@ -186,6 +174,10 @@
       "compatibility_file_member": false,
       "package_input_or_tracked_text_reference": false
     },
-    "correction": "Remove only these two generated files from the new candidate tree. Their exact bodies remain in the prior a5dd333 history and local worktree; no indexed body, source evidence, or private extra is removed."
+    "correction": "The two stale generated tracked files were removed only from the new candidate tree. Their exact bodies remain in the earlier a5dd333 commit and as local untracked copies. Seven other local unindexed extras remain preserved; no indexed file or source evidence was removed.",
+    "corrective_commit": "3078b82d5ef224ad0eda79c63f2e05f349ad9a24",
+    "candidate_tree_index_exact_after_retirement": true,
+    "candidate_tree_blobs_including_index_after_retirement": 80,
+    "two_retired_outputs_local_workspace_bodies_preserved": true
   }
 }
