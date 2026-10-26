@@ -15,6 +15,8 @@ import {unshuffleOwnershipBytes} from '../src/ownership-codec.js';
 import {readSelectedAdditive,selectedAdditiveRows,valueSha} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
 import {validateReferenceMetadataProjection} from './selected-reference-metadata.mjs';
 import {finalBankSelection,scientificNativeSelection} from '../src/reference-metadata.js';
+import {selectInstalledGit} from './geography-prefetch.mjs';
+export {selectInstalledGit} from './geography-prefetch.mjs';
 
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const demand=(v,m)=>{if(!v)throw Error(m);};
@@ -1177,19 +1179,6 @@ export function repairVisibilityWitnesses({candidates,size,latitudes,beforeRows,
   }
   }
   return Array.from(candidates,row=>witnesses.get(repairComponentKey(row))??null);
-}
-
-export function selectInstalledGit() {
-  const selected=(process.env.PATH??'').split(path.delimiter).map(p=>path.join(p,'git')).find(p=>{try{return fs.statSync(p).isFile();}catch{return false;}});
-  demand(selected,'Missing installed Git');
-  const launchGit=fs.realpathSync(selected);
-  // Resolve the full Git implementation, including a macOS command-line shim.
-  const gitExecPath=fs.realpathSync(execFileSync(launchGit,['--exec-path']).toString().trim());
-  const gitExecutable=fs.realpathSync(path.resolve(gitExecPath,'../../bin/git'));
-  // Bind helpers to this installed implementation, not an unrelated prefix alias.
-  // This is an installation relationship, not independent helper-byte authentication.
-  demand(path.resolve(gitExecPath,'../../bin')===path.dirname(gitExecutable),'Selected Git helpers do not share the implementation installation');
-  return {launchGit,gitExecutable,gitExecPath};
 }
 
 function selectedExecutionCode(codePaths) {
