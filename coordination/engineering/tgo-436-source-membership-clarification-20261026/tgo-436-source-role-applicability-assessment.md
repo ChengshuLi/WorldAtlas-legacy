@@ -8,7 +8,7 @@ The retained evidence supports carrying the 436 as a source-free **researched-un
 
 ## What the original source application establishes
 
-The pinned 2017 geoBoundaries TGO ADM2/ADM1 application records one ADM2 interior membership for each of these 436 keys across 18 source features. It records 414 ADM1 interior memberships and 22 ADM1 no-hits across the 436. The cohort touches 253 original interval rows and maps to 22 original question groups. The original disposition's `question_groups[].original_owner` resolves each group to a named geoBoundaries ADM2 source identity; `original_source_contact_records` resolves the group-level TGO ADM1/ADM2 source IDs and names. These are dataset/source identities, not a competent authority, legal title, or proof of ownership. The exact group-level join is recorded in `tgo-436-question-group-source-join.md`, SHA-256 `d9deebbe13da675803f55767abce5e8b9a439d199bae2e83dcec150229383b34`.
+The pinned 2017 geoBoundaries TGO ADM2/ADM1 application records one ADM2 interior membership for each of these 436 keys across 18 source features. It records 414 ADM1 interior memberships and 22 ADM1 no-hits across the 436. The cohort touches 253 original interval rows and maps to 22 original question groups. The original disposition's `question_groups[].original_owner` resolves each group to a named geoBoundaries ADM2 source identity; `original_source_contact_records` resolves the group-level TGO ADM1/ADM2 source IDs and names. These are dataset/source identities, not a competent authority, legal title, or proof of ownership. The exact group-level join is recorded in `tgo-436-question-group-source-join.md`, SHA-256 `5cd47f84983b3609115a53d6a6b3a6771aa02cbea26079b3bab7fda983ea0ab8`.
 
 The 22 ADM1 no-hits are differences between the pinned ADM2 and ADM1 source layers. They are not evidence of a foreign location or a wrong ADM2 membership. All source-membership results describe the pinned original geometry only, not an operative legal boundary. The separate accepted 13-key Q020 source comparison and accepted TGO60/60 cohort are excluded; neither result is generalized to this 436-key cohort.
 
@@ -35,7 +35,7 @@ A per-key foreign-candidate source-role decision would require an authenticated 
 ## Retained artifact pins
 
 - Exact 436 source-membership summary: `tgo-436-original-source-membership-summary.md`, SHA-256 `cbcf48c47e8b5c9cac192737932899249d887c71441bff7056a95b0254a70d37`.
-- 436 question-group/source identity join: `tgo-436-question-group-source-join.md`, SHA-256 `d9deebbe13da675803f55767abce5e8b9a439d199bae2e83dcec150229383b34`.
+- 436 question-group/source identity join: `tgo-436-question-group-source-join.md`, SHA-256 `5cd47f84983b3609115a53d6a6b3a6771aa02cbea26079b3bab7fda983ea0ab8`.
 - Original 509-row 2017 application CSV: `tgo-509-original-2017-source-application.csv`, SHA-256 `9d474cd5cf1655b97e31d0d02e9772910060c964e5021cc1948823cdeb271b48`.
 - Exact 496-row source crosswalk from which the 436 residual is defined: `tgo-496-per-key-source-crosswalk.private.csv`, SHA-256 `fe9bb058c5370e070c2782cfc6721311ec725976a7794dedaa374bdd394842e2` (mode 0600).
 - Original-source fit partition (2017 membership and unresolved lineage limits): `tgo-496-original-source-fit-partition.md`, SHA-256 `ada8a30f82e3d2ec87aafdc7b673783317c3ac0c52a27d2012e60f7c26dd3890`.
