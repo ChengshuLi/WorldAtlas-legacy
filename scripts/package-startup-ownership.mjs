@@ -271,7 +271,7 @@ export async function readPreparedFinalOwnership({indexRaw,manifest,manifestSha,
       // when its reader returns a Buffer whose lifetime is stable for this call
       // (authenticated Git-object bodies held privately by the finalizer).
       // Non-Buffer byte sources retain Buffer.from's normal conversion path.
-      const raw=stableBufferReader&&Buffer.isBuffer(input)?input:Buffer.from(input);
+      const raw=stableBufferReader===true&&Buffer.isBuffer(input)?input:Buffer.from(input);
       if(raw.length!==pin.bytes||digest(raw)!==pin.sha256)throw Error('Prepared final input whole identity differs: '+name);
       bodies.set(name,raw);
     }
