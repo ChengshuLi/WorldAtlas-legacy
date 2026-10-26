@@ -44,7 +44,7 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
   const source=put('original-source.json',collection(state.originals)),roster=put('owners.json',state.roster);
   const physical=put('physical.json',state.physical),measured=put('measured.json',state.measured);
   const catalogue=put('coordination/engineering/original-geography-source-corpus-20261006/catalogue.json',{
-    products:[{key:family,parts:[{path:source.path,bytes:source.bytes,sha256:source.sha256}],
+    products:[{key:family,parts:[source],
       feature_count:state.originals.length,original_bytes:source.bytes,original_sha256:source.sha256}]});
   const nativeLatitudes=put('latitudes.f64le',latitudeBytes);
   const membership={index:put('data/world-index.json',state.index),lineage:put('data/semantic-report.json',state.lineage),
@@ -86,7 +86,7 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
        scope:{id:'scope',pointer:'/record',owner_pointer:'/owner'}}))};
     territorial=put('territorial-applicability.json',body);put(territorial.path,body,executingHead);
   }
-  const evidence=put('source-evidence.json',{version:1,kind:'source-target-native-evidence-v1',catalogue,
+  const evidenceBody={version:1,kind:'source-target-native-evidence-v1',catalogue,
     owner_roster:roster,physical_evidence:physical,physical_input:measured,
     physical_reproduction:put(state.physicalProgram?.path??'physical.py',state.physicalProgram?.body??Buffer.from('# retained fixture')),
     native_latitudes:nativeLatitudes,native_contract:{size,native_latitudes:nativeLatitudes,original_assets:{bounds:{sha256:roster.sha256}}},
@@ -94,8 +94,25 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
       ??[{source_id:family,parts:[source]}],
     targets:state.targets.map(target=>({...target,source_receipt_sha256:physical.sha256})),
     ...(state.membership?{source_membership:membership}:{}),...(adoption?{adopted_provider_families:adoption}:{}),
-    ...(territorial?{territorial_applicability:territorial}:{})});
+    ...(territorial?{territorial_applicability:territorial}:{})};
   const patch=put('patch.json',state.proposed);
+  let retained;
+  if(state.retained==='valid'){
+    const target=state.targets[0];
+    const originalTerritorial=put('original-territorial-provenance.json',{version:1,
+      kind:'whole-original-territorial-exclusions-v1',catalogue,physical_input:measured,
+      complete_sources:[{source_family:family,parts:[source]}],
+      targets:evidenceBody.targets.map(item=>({source_id:item.id,exclusions:[]}))});
+    const originalEvidence=put('original-source-evidence.json',evidenceBody);
+    const retainedBody={version:1,kind:'retained-original-positive-provenance-v1',source_family:family,
+      target_id:'city',original_source_evidence:originalEvidence,original_native_patch:patch,
+      original_territorial_provenance:originalTerritorial,owner:1,
+      records:[{source_id:target.id,pixelIndex:1,y:state.proposed.rows[0].y,
+        x:state.proposed.rows[0].runs[0][0],geometry_sha256:valueSha(state.originals[0].geometry),negative_operands:[]}]};
+    retained=put('retained-original-positive.json',retainedBody);
+    evidenceBody.retained_original_positive=retained;
+  }else if(state.retained){retained=put('retained-original-positive.json',state.retained);evidenceBody.retained_original_positive=retained;}
+  const evidence=put('source-evidence.json',evidenceBody);
   class FixtureReader extends ImmutableReader{
     git(...args){
       if(args[0]==='ls-tree'){
@@ -521,4 +538,15 @@ test('periodic measured sibling retains owner-wide residual veto',()=>{
  const r=conflict(s,'contradictory_land_water_support',{type:'LineString',coordinates:[[-.03,latitude],[0,latitude]]},1);
  r.query_relations[0].periodic_offset=-360;});
  assert.throws(()=>f.run(),/intersect a physical reconstruction residual or conflict witness/);
+});
+test('retained original positive provenance refuses incomplete or foreign-schema input',()=>{
+ const f=constructorFixture(s=>{s.retained={version:1,kind:'retained-original-positive-provenance-v1',records:[]};});
+ assert.throws(()=>f.run(),/Incomplete retained original positive provenance/);
+});
+test('retained original positive provenance authenticates whole prior family and exact requested key without activating it',()=>{
+ const f=constructorFixture(s=>{s.retained='valid';s.targets[0].coverage_rows=s.proposed.rows.map(row=>({y:row.y,
+  runs:row.runs.map(run=>[run[0],run[1],'mapped_land_support'])}));});
+ const result=f.diagnose();assert.equal(result.retained_original_positive.records,1);
+ assert.equal(result.retained_original_positive.keys,1);
+ assert.equal(result.supported_cells,1);
 });

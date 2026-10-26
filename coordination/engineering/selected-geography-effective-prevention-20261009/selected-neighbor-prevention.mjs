@@ -2137,6 +2137,101 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
  demand(usedExternalOriginals.size===externalOriginals.size,'Unused negative Natural Earth atom');
  demand(usedSeamViews.size===seamViews.size,'Unused canonical seam operand');
  demand(checked.size===proposed.rows.reduce((n,row)=>n+row.runs.length,0),'Unqualified proposed native intervals');
+ let retainedOriginalPositive=null;
+ if(evidence.retained_original_positive!==undefined){
+  const retained=(yield* readAdopted(evidence.retained_original_positive,'Retained original positive provenance'));
+  demand(keys(retained,'version,kind,source_family,target_id,original_source_evidence,original_native_patch,original_territorial_provenance,owner,records')
+   &&retained.version===1&&retained.kind==='retained-original-positive-provenance-v1'
+   &&typeof retained.source_family==='string'&&retained.source_family&&typeof retained.target_id==='string'&&retained.target_id
+   &&Number.isSafeInteger(retained.owner)&&retained.owner>0&&Array.isArray(retained.records)&&retained.records.length>0,
+   'Incomplete retained original positive provenance');
+  const old=(yield* json(retained.original_source_evidence)),oldPatch=(yield* json(retained.original_native_patch));
+  const oldTerritorial=(yield* json(retained.original_territorial_provenance));
+  demand(old?.version===1&&old.kind==='source-target-native-evidence-v1'
+   &&old.catalogue?.git_blob_oid===evidence.catalogue.git_blob_oid
+   &&old.native_contract?.size===evidence.native_contract.size
+   &&Array.isArray(old.families)&&Array.isArray(old.targets)&&Array.isArray(oldPatch.rows),
+   'Retained original positive source differs from the original native contract');
+  demand(oldTerritorial?.kind==='whole-original-territorial-exclusions-v1','Retained original territorial kind differs');
+  demand(oldTerritorial.catalogue?.git_blob_oid===old.catalogue.git_blob_oid,'Retained original territorial catalogue differs');
+  demand(oldTerritorial.physical_input?.git_blob_oid===old.physical_input?.git_blob_oid,'Retained original territorial physical input differs');
+  demand(Array.isArray(oldTerritorial.targets)&&oldTerritorial.targets.length===old.targets.length,'Retained original territorial target roster differs');
+  demand(Array.isArray(oldTerritorial.complete_sources),'Retained original territorial complete sources are absent');
+  const completeSourceMap=new Map(oldTerritorial.complete_sources.map(item=>[item.source_family,item.parts]));
+  const expectedOriginalSources=[...old.families,...(old.territorial_exclusion_sources??[])];
+  demand(completeSourceMap.size===expectedOriginalSources.length&&expectedOriginalSources.every(item=>
+   same(completeSourceMap.get(item.source_id),item.parts)),
+   'Retained original positive/negative family inventory is incomplete');
+  const originalFamilies=old.families.filter(f=>f.source_id===retained.source_family);
+  const originalProduct=catalogue.products.find(p=>p.key===retained.source_family);
+  demand(originalFamilies.length===1&&same(originalFamilies[0].parts,originalProduct?.parts),
+   'Retained original LUX complete family differs');
+  const originalFeatures=yield* readCompleteSource(originalFamilies[0].parts,originalProduct);
+  const sourceById=new Map(originalFeatures.features.map((feature,feature_ordinal)=>
+   [retained.source_family+':'+feature.properties?.shapeID,{feature,feature_ordinal}]));
+  const originalTargets=new Map(old.targets.map(target=>[target.id,target]));
+  const originalTerritorialTargets=new Map(oldTerritorial.targets.map(target=>[target.source_id,target]));
+  demand(originalTerritorialTargets.size===old.targets.length
+   &&old.targets.every(target=>originalTerritorialTargets.has(target.id)),
+   'Retained original territorial member roster is not an exact join');
+  const patchKeys=new Set();for(const row of oldPatch.rows)for(const run of row.runs??[])
+   if(run[2]===retained.owner)for(let x=run[0];x<run[1];x++)patchKeys.add(row.y+':'+x);
+  const requestedKeys=new Set((rowsByOwner.get(retained.owner)??[]).flatMap(row=>row.runs.flatMap(run=>
+   Array.from({length:run[1]-run[0]},(_,i)=>row.y+':'+(run[0]+i)))));
+  const seen=new Set(),negativeFeatures=new Map();
+  for(const record of retained.records){
+   demand(keys(record,'source_id,pixelIndex,y,x,geometry_sha256,negative_operands')
+    &&typeof record.source_id==='string'
+    &&record.pixelIndex===retained.owner&&Number.isSafeInteger(record.y)&&Number.isSafeInteger(record.x)
+    &&hash(record.geometry_sha256)&&Array.isArray(record.negative_operands),
+    'Malformed retained original positive member binding');
+   const key=record.y+':'+record.x,identity=key+':'+record.source_id,source=sourceById.get(record.source_id),target=originalTargets.get(record.source_id);
+   demand(requestedKeys.has(key)&&patchKeys.has(key)&&!seen.has(identity)&&source&&target
+    &&target.source_family===retained.source_family&&target.pixelIndex===retained.owner
+    &&(target.target_id??target.id)===retained.target_id&&target.base_geometry
+    &&valueSha(source.feature.geometry)===record.geometry_sha256
+    &&valueSha(target.base_geometry)===valueSha(resolvedTargets.get(retained.target_id)?.base_geometry)
+    &&(target.coverage_rows??[]).some(row=>row.y===record.y&&row.runs.some(run=>run[0]<=record.x&&record.x<run[1])),
+    'Retained original positive member/owner/key differs');seen.add(identity);
+   const negatives=new Set();
+   for(const negative of record.negative_operands){
+    demand(keys(negative,'source_id,negative_ordinal,geometry_sha256')&&typeof negative.source_id==='string'
+     &&Number.isSafeInteger(negative.negative_ordinal)&&negative.negative_ordinal>=0&&hash(negative.geometry_sha256)
+     &&!negatives.has(negative.source_id+':'+negative.negative_ordinal),
+     'Malformed retained original negative operand');negatives.add(negative.source_id+':'+negative.negative_ordinal);
+    const oldTarget=originalTerritorialTargets.get(record.source_id);
+    const mapped=oldTarget?.exclusions?.find(item=>item.negative_ordinal===negative.negative_ordinal);
+    demand(target.territorial_exclusions?.[negative.negative_ordinal]
+     &&valueSha(target.territorial_exclusions[negative.negative_ordinal])===negative.geometry_sha256
+     &&mapped?.source_id===negative.source_id&&mapped.geometry_sha256===negative.geometry_sha256,
+     'Retained original positive negative operand differs');
+    const matches=[...completeSourceMap.keys()].filter(family=>negative.source_id.startsWith(family+':'));
+    demand(matches.length===1&&mapped.source_family===matches[0],
+     'Retained original negative source family identity differs');
+    const sourceFamily=matches[0];
+    if(!negativeFeatures.has(sourceFamily)){
+     const product=catalogue.products.find(p=>p.key===sourceFamily);
+     demand(product&&same(completeSourceMap.get(sourceFamily),product.parts),
+      'Retained original negative family is not complete');
+     const loaded=yield* readCompleteSource(completeSourceMap.get(sourceFamily),product);
+     negativeFeatures.set(sourceFamily,new Map(loaded.features.map((feature,feature_ordinal)=>
+      [sourceFamily+':'+feature.properties?.shapeID,{feature,feature_ordinal}])));
+    }
+    const negativeMember=negativeFeatures.get(sourceFamily).get(negative.source_id);
+    demand(negativeMember&&negativeMember.feature_ordinal===mapped.feature_ordinal
+     &&valueSha(negativeMember.feature.geometry)===negative.geometry_sha256,
+     'Retained original negative source member identity differs');
+   }
+  }
+  demand(same([...new Set(retained.records.map(r=>r.y+':'+r.x))].sort(),[...requestedKeys].sort())
+   &&retained.records.length===new Set(retained.records.map(r=>r.y+':'+r.x)).size,
+   'Retained original positive provenance does not exactly cover requested owner scope');
+  retainedOriginalPositive={pin:evidence.retained_original_positive,source_family:retained.source_family,
+   target_id:retained.target_id,owner:retained.owner,
+   records:retained.records.length,keys:requestedKeys.size,
+   original_source_evidence:retained.original_source_evidence,original_native_patch:retained.original_native_patch,
+   original_territorial_provenance:retained.original_territorial_provenance};
+ }
  if(diagnostic){
   const decisions=[...diagnosticRows].sort((a,b)=>a[0]-b[0]).map(([y,runs])=>({y,runs:runs.sort((a,b)=>a[0]-b[0])}));
   const partition=accepted=>decisions.map(row=>{const runs=[];
@@ -2158,6 +2253,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
    ...(splitCompetitors.length?{split_source_competitors:splitCompetitors}:{}),
    ...(dated?{physical_context_hits:physicalContextHits}:{}),
    ...(evidence.territorial_applicability===undefined?{}:{territorial_contacts:territorialContextHits}),
+   ...(retainedOriginalPositive?{retained_original_positive:retainedOriginalPositive}:{}),
    rule_sha256:valueSha(preimage),native_contract:evidence.native_contract,
    limitations:['Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.',
     'All original source, physical, query, witness and territorial limits remain retained.']};
@@ -2182,6 +2278,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
    ...(splitCompetitors.length?{split_source_competitors:splitCompetitors}:{}),
   ...(dated?{physical_context_hits:physicalContextHits}:{}),
   ...(evidence.territorial_applicability===undefined?{}:{territorial_contacts:territorialContextHits}),
+  ...(retainedOriginalPositive?{retained_original_positive:retainedOriginalPositive}:{}),
   limitations:['Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.',
    'Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred.']};
 }
