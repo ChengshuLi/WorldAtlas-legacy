@@ -288,11 +288,12 @@ export async function prepareIntegration(options) {
   const requested = automatic || complete ? undefined : options.reviewedTests;
   const state = await inspectMerge(options);
   if (state.replayed) return state;
+  const suppliedPlan = suppliedPlanRequest(options.reviewedTests);
   const deliveryContext = {
-    supplied_pair: {base:suppliedPlanRequest(options.reviewedTests)?.base ?? null, head:options.expectedHead},
+    supplied_pair: {base:suppliedPlan?.base ?? null, head:suppliedPlan?.head ?? options.expectedHead},
     observed_pr_pair: {base:commitID(state.pr.base?.sha), head:commitID(state.pr.head?.sha)},
     current_pair: {base:state.base, head:state.pr.head.sha},
-    supplied_plan_request: suppliedPlanRequest(options.reviewedTests)
+    supplied_plan_request: suppliedPlan
   };
   let fresh;
   try {

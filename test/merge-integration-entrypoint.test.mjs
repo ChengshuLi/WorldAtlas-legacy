@@ -20,11 +20,11 @@ globalThis.Response=class extends NativeResponse {
 };
 `;
 
-function run({readFails=false,commentFails=false,phase='prepare',merged=true,head='a'.repeat(40),integration='skipped',geography='skipped',mergeOnReconcile=false,mergeCommit='b'.repeat(40),hosted=false,reviewedTests}={}) {
+function run({readFails=false,commentFails=false,phase='prepare',merged=true,head='a'.repeat(40),expectedHead='a'.repeat(40),integration='skipped',geography='skipped',mergeOnReconcile=false,mergeCommit='b'.repeat(40),hosted=false,reviewedTests}={}) {
   const directory=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-merge-entry-'));
   fs.mkdirSync(path.join(directory,'.github'));
   fs.copyFileSync(path.join(root,'.github/evidence-policy.json'),path.join(directory,'.github/evidence-policy.json'));
-  fs.writeFileSync(path.join(directory,'event.json'),JSON.stringify({inputs:{pr_number:'2',expected_head:'a'.repeat(40),request_id:'entrypoint-test-request',...(reviewedTests?{reviewed_tests:reviewedTests}:{})}}));
+  fs.writeFileSync(path.join(directory,'event.json'),JSON.stringify({inputs:{pr_number:'2',expected_head:expectedHead,request_id:'entrypoint-test-request',...(reviewedTests?{reviewed_tests:reviewedTests}:{})}}));
   fs.writeFileSync(path.join(directory,'mock.mjs'),capacityShim+`import fs from 'node:fs';let reads=0;globalThis.fetch=async(url,options)=> {
     if(options.method==='PUT')throw Error('Unexpected new merge');
     if(new URL(url).pathname.includes('/contents/')||new URL(url).pathname.includes('/attempts/'))throw Error('Job-clock metadata must not be fetched');
@@ -68,6 +68,16 @@ test('actual prepare result distinguishes stale supplied head from current PR he
  assert.match(commentBody,/Observed PR pair: `dddddddddddddddddddddddddddddddddddddddd`/);
  assert.match(commentBody,/Current pair: not observed/);
  assert.match(commentBody,/exact-head review/);
+});
+test('supplied plan pair is not mixed with a different expected PR head',()=>{
+ const supplied={base:'b'.repeat(40),head:'e'.repeat(40),files:['test/example.test.mjs']};
+ const observed='c'.repeat(40),{receipt,commentBody}=run({phase:'prepare',head:observed,expectedHead:'a'.repeat(40),reviewedTests:JSON.stringify(supplied)});
+ assert.deepEqual(receipt.supplied_pair,{base:supplied.base,head:supplied.head});
+ assert.deepEqual(receipt.supplied_plan_request,supplied);
+ assert.deepEqual(receipt.observed_pr_pair,{base:'d'.repeat(40),head:observed});
+ assert.equal(receipt.current_pair,undefined);
+ assert.ok(commentBody.includes('Supplied/tested pair: `'+supplied.base+'` → `'+supplied.head+'`'));
+ assert.ok(commentBody.includes('Observed PR pair: `'+('d'.repeat(40))+'` → `'+observed+'`'));
 });
 test('actual trusted entry point retains its preparation receipt before successful notification',()=>{
   const {result,receipt}=run();assert.equal(result.status,0,result.stderr);

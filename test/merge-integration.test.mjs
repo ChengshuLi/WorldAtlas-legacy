@@ -211,9 +211,10 @@ test('default actual preparation derives the inert packet consumers without an o
   assert.deepEqual(explicit.test_files,PACKET_TESTS);
   assert.deepEqual(explicit.plan_request,{base:f.base,head:f.head,files:PACKET_TESTS});
   // The existing dispatch input distinguishes this identical manual roster.
-  const stale={base:sha('0'),head:f.head,files:PACKET_TESTS};
+  const stale={base:sha('0'),head:sha('9'),files:PACKET_TESTS};
   await assert.rejects(prepareIntegration({...f.options(),reviewedTests:stale}),error=>{
     assert.match(error.message,/stale/);
+    assert.deepEqual(error.delivery_context.supplied_pair,{base:stale.base,head:stale.head});
     assert.deepEqual(error.delivery_context.current_pair,{base:f.base,head:f.head});
     assert.deepEqual(error.delivery_context.observed_pr_pair,{base:f.base,head:f.head});
     assert.deepEqual(error.delivery_context.supplied_plan_request,stale);

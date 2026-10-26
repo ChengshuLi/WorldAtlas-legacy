@@ -37,7 +37,7 @@ function parsePlanRequest(value) {
 }
 const suppliedPlan = parsePlanRequest(input.reviewed_tests);
 let result = {accepted: false, request_id: input.request_id, pr_number: number, phase,
-  supplied_pair: {base: suppliedPlan?.base ?? (phase === 'merge' ? process.env.TESTED_BASE ?? null : null), head: input.expected_head},
+  supplied_pair: {base: suppliedPlan?.base ?? (phase === 'merge' ? process.env.TESTED_BASE ?? null : null), head: suppliedPlan?.head ?? input.expected_head},
   ...(suppliedPlan ? {supplied_plan_request: suppliedPlan} : {})};
 try {
   if (phase === 'prepare') {
