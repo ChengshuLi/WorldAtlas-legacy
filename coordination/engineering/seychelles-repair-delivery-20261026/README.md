@@ -86,32 +86,51 @@ reconstruction issues remain documented; their five pointsets do not hit the
 2,458 original native centers, which does not clear whole-target geometry or
 certify the unmatched remote islands.
 
-The full original candidate and current accepted selector were then passed
-through the supported current-owner projection and final-map writer. The
-selector-bound finalizer used current main `a356c120cf689881bf228796c44daef783a8c74d`.
-Its `finalize-002/output/preparation.json` binds all four emitted products;
-`startup-ownership.json` is 49,610 bytes, SHA-256
-`6c1d5a714461b057d3953cf7a547a5b415abbde42441270e8a07a8632b716776`, and
-indexes 79 files (15 current pixel-map parts, 34 context parts, 30 unchanged
-compatibility bodies). The output's effective-reference identifier is
-`geography:final:83f8e9527d9d76874c55150627fce20605678a8aba7fdda29f8160918365c79e`.
-This is a prepared bank, not independent acceptance or science credit.
+The full original candidate and current accepted selector were passed through
+the supported current-owner projection and final-map writer. After GNB's
+source-relative 214-cell bank addition was accepted at main
+8fe0499ba2b2b7e7d442b941287d50a0c13ccb05, the selector-bound
+supported-inputs-002 projection re-evaluated the exact original request:
+2,458 supported, zero held, zero already present. Its emitted native patch
+SHA-256 is 0eeb7e7b9096add3ff8c70fea1fa24793565f2ae363e8fb2141abf92c0c7f089;
+source and native science inputs were not regenerated. Compose-003 retained
+the existing source-authority binding (registry SHA-256
+d95b2114b7d8d1d4dbb7690425f8299f04379620e745b72e2c8d03bc033c729a).
 
-To keep the accepted writer within available memory, after all preparation
+The first post-GNB finalizer attempt (finalize-003) exited 1 at the retirement
+index guard because the candidate still had five stale startup paths from the
+pre-GNB bank. Those exact stale paths were removed from the candidate, leaving
+the pre-finalization selector and index equal to accepted main. Finalize-004
+then completed with exit 0 against that exact accepted selector/package-input
+pair. Its preparation.json binds all four emitted products. The prepared
+startup-ownership.json is 49,610 bytes, SHA-256
+96f32c932bad12c35a08f736de3fe22e668fc5a96cf57390c792e5c793cae655,
+and indexes 79 files (15 current pixel-map parts, 34 context parts, and 30
+compatibility files). Its effective reference is
+geography:final:1f2204a4e9c5d4011cd03ae9f2b0fcb3d4e0dfbdffd7aac7b79ba0ac238a0725.
+The emitted selector SHA-256 is
+bf4b8454bc6a4bd4b80288be22d5c0ebd2a01b61dba58767c502f2bd069da48d;
+the package-input output is unchanged from accepted main
+(e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3),
+and the expectation sidecar SHA-256 is
+7b4f141686dc557272ff30b26718bb7b57ec6d52eb83ea04c30467db58d31834.
+The stdout log is retained with SHA-256
+b21a1fc9e9ac3c89132985cf183cb333add503cdda41b5f20211130364c16011;
+the process status records exit 0. This is a prepared bank, not independent
+acceptance or science credit.
+
+To keep the accepted writer within observed local capacity, after preparation
 and output identities are complete it discards its reader's cached Git bodies;
-subsequent preflight reads continue to resolve exact committed blobs and
-validate whole-file hashes without retaining a second copy of the bank. No
-qualification predicate, output, or writer guard is skipped. The successful
-finalizer invocation exited 0. Four earlier no-output attempts were observed:
-two setup/preflight failures (a config preflight error and a missing installed
-lockfile dependency), followed by two finalizer process runs (exit 137 and
-SIGKILL). The attempt3 receipt's `prior_failures_preserved` field records the
-two process runs and the separate supported-inputs abnormal exit; it does not
-inventory the earlier setup failures. No separate retained log/receipt was
-found for those two setup failures, so this paragraph is the retained summary;
-none is treated as success. The separate supported-inputs invocation also
-returned exit 137 after writing its complete hash-bound preparation receipt;
-its outputs are preserved, but the command is not described as a normal-exit
-success. Focused local controls pass (48 final-bank-finalizer tests and 22
-delivery-handoff tests); the build and stock integration remain separate
-controls. No credit is asserted here.
+subsequent preflight reads continue resolving exact committed blobs and
+validating whole-file hashes without retaining a second copy of the bank. No
+qualification predicate, output, or writer guard is skipped. Historical
+attempts remain distinguished: two setup/preflight failures (config preflight
+and missing installed lockfile dependency), two finalizer process runs (exit
+137 and SIGKILL), and finalize-003's retirement-guard failure; no failed
+attempt is treated as success. The supported-inputs-001 invocation returned
+exit 137 after writing a hash-bound preparation receipt and is not described
+as a normal-exit success; the later selector-bound supported-inputs-002
+invocation exited 0. Focused local controls passed (48
+final-bank-finalizer and 22 delivery-handoff tests). Full current-base
+stock integration/build/emitted controls remain separate, and no credit is
+asserted here.
