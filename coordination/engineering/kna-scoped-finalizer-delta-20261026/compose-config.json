@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "2a8d8cae5c8c63394bff118f1e80e60cc3537e43",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "42c110d269a4c48eab56ed1e435c264a7d53fc6a",
+    "bytes": 2303,
+    "sha256": "50d5ae5f70ebbbda97ca8084fc4bd4cef81fb9a32a4cbe4e28b5bd6d498dcde5"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "5ccdfd3dfc30b7f933cffe4dfeb32b296fefd01e",
+        "path": "coordination/engineering/kna-scoped-finalizer-delta-20261026/native-authority-current/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "baea9b822134536048dc8d47514b9d24e714fc4a",
+        "bytes": 713,
+        "sha256": "520b26e645c3acd8b482adc9057d9d419b4a85152787683d0b986479b70bf72c"
+      },
+      "source_authority": {
+        "commit": "5ccdfd3dfc30b7f933cffe4dfeb32b296fefd01e",
+        "path": "coordination/engineering/kna-scoped-finalizer-delta-20261026/native-authority-current/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "5905733f8061d591b27afd6e3167f1164cd97c2e",
+        "bytes": 716,
+        "sha256": "13c5706d7d80ec6ef54a1ca6fa2066e9406f50380b57877acea7f58eb58c4598"
+      },
+      "ledger": {
+        "commit": "5ccdfd3dfc30b7f933cffe4dfeb32b296fefd01e",
+        "path": "coordination/engineering/kna-scoped-finalizer-delta-20261026/native-authority-current/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "1dfe317bf4cd97e02437c1abfbfd0918cb1df2bc",
+        "bytes": 5198,
+        "sha256": "e8f902db119f5341df215be7c6a5b798682c9d30ea574331b223d00ea3a04740"
+      },
+      "native_patch": {
+        "commit": "2a8d8cae5c8c63394bff118f1e80e60cc3537e43",
+        "path": "research/KNA/scoped-odbl1-232-offer-20261026/native-requested-patch-232.json",
+        "mode": "100644",
+        "git_blob_oid": "914b3f30e58373c13420bdd07f62fc004cb02d2b",
+        "bytes": 2854,
+        "sha256": "7aae92f5b3d3d8570c0910bbf0e8bc48f575f1f44e14e0adec85e32fd208601c"
+      }
+    }
+  ]
+}
