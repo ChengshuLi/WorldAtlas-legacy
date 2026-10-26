@@ -156,5 +156,36 @@
       }
     ]
   },
-  "limitation": "This reconciles emitted startup manifest/index with actual materialized/sparse worktree paths and preserves all unindexed extras. It is not an old/new interval conservation report and makes no accepted-bank addition, loss, reassignment or package acceptance claim."
+  "limitation": "Roster reconciliation and stale-output diagnosis only; no old/new interval conservation, bank addition/loss/reassignment, or package acceptance claim.",
+  "candidate_tree_reconciliation": {
+    "stock_run": 40326113074,
+    "candidate_commit": "a03da92be0d2e4e32923689e3ea14ecbc1a8c889",
+    "base_commit": "2ee960483556fc4760a0ad2cd3c916c336970198",
+    "failure": "Selected final bank whole tree roster differs",
+    "base_tree_roster_exact": true,
+    "candidate_tree_indexed_files": 79,
+    "candidate_tree_file_blobs_including_index": 82,
+    "candidate_tree_unindexed_tracked_outputs": [
+      {
+        "path": "ownership-vintages/7c4db61e46fe7dcc1de03a905569afd83c51d42e5887a2448609bc883f56ba03/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "git_blob_oid": "a3990995950e870da3ef15d65bda83c11cac3161",
+        "bytes": 3103229,
+        "sha256": "7c4db61e46fe7dcc1de03a905569afd83c51d42e5887a2448609bc883f56ba03",
+        "introduced_by": "a5dd333f41461daaefc8a2384916a84f56f1338a"
+      },
+      {
+        "path": "ownership-vintages/84b0a6614613c9c3b95561954930858b0debd9c32fe42c6757f988392b4525b4/native-v1/ownership/rows-0.bin.gz",
+        "git_blob_oid": "2c8e6525f43ba0822b528141ede27caf55089b1f",
+        "bytes": 317138,
+        "sha256": "84b0a6614613c9c3b95561954930858b0debd9c32fe42c6757f988392b4525b4",
+        "introduced_by": "a5dd333f41461daaefc8a2384916a84f56f1338a"
+      }
+    ],
+    "reference_checks": {
+      "current_index_member": false,
+      "compatibility_file_member": false,
+      "package_input_or_tracked_text_reference": false
+    },
+    "correction": "Remove only these two generated files from the new candidate tree. Their exact bodies remain in the prior a5dd333 history and local worktree; no indexed body, source evidence, or private extra is removed."
+  }
 }
