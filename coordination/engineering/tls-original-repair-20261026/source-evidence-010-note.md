@@ -1,0 +1,7 @@
+# TLS complete-family source evidence binding (2026-10-26)
+
+The bounded 562-key source evidence is bound to the original TLS ADM2 target features and the complete East Nusa Tenggara ADM1 foreign competitor. The ownerless TLS ADM1 contacts remain in the pinned original source-contact inventory as context; they are not relabeled as target features or negative competitors.
+
+An initial prepared bundle (`source-evidence-config-009.json`) included TLS ADM1 as a positive family even though no target referenced an ADM1 feature as its own source. The native diagnostic consumer rejected it as an unused source family. That attempted binding is superseded and is not used for qualification. The corrected `source-evidence-config-010.json` includes only TLS ADM2 as positive target family and IDN ADM1 as the negative territorial-exclusion family. Its preparation receipt binds the exact config and outputs.
+
+The exact 71 simplified-only/full-comparator center contacts are preserved in `source-variant-differences-001.json` and converted to owner-preserving `prior_holds` in `source-variant-prior-holds-001.json`. They remain unresolved source-variant differences, not positive assignments. Full and simplified source pins, all original contacts, the Hatu-Udo whole-target physical issue, and the original 562-key/337-interval scope remain intact. This is evidence preparation only; the next supported diagnostic and exact interval partition are still required, and no scientific credit is claimed.
