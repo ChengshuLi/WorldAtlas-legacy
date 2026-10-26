@@ -1,12 +1,13 @@
 import {gunzipSync} from 'node:zlib';
-import {ImmutableReader, selectInstalledGit} from './check-effective-geographic-regression.mjs';
+import {ImmutableReader} from './check-effective-geographic-regression.mjs';
 import {valueBytes, valueSha, readOriginalRuleAuthority, qualifyOriginalSourceAuthority, qualifyOriginalNativeAuthority, readRetainedRegistryAuthority, qualifySourceTargetNativeAuthority, qualifySourceTargetNativeAuthorityStored} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
 // Immutable delivery metadata, authority constructors and exact-body acquisition.
 // Resolve actual committed outputs; never accept caller-written derived hashes.
 import path from 'node:path';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
-import {createAcquisition} from './geography-prefetch.mjs';
+import {createAcquisition, deliveryAcquisitionExecute} from './geography-prefetch.mjs';
+export {deliveryAcquisitionExecute} from './geography-prefetch.mjs';
 import {createHash} from 'node:crypto';
 
 const need = (value, message) => { if (!value) throw Error(message); };
@@ -193,30 +194,6 @@ export function deliveryAuthorityReader(root, pinReader) {
     git(...args) { return git(...args); }
   }
   return new DeliveryReader(root, git('rev-parse', 'HEAD').toString().trim());
-}
-
-// Reuse the already authenticated gh account only at an actual cold fetch.
-// The token stays in this one subprocess environment; no credential is created
-// or persisted, and warm verification never consults account credentials.
-export function deliveryAcquisitionExecute({execute = execFileSync,
-  readToken = () => execFileSync('gh', ['auth', 'token'], {encoding: 'utf8', maxBuffer: 16384, timeout: 20_000}).trim()} = {}) {
-  let token, selectedGit;
-  return (command, args, options) => {
-    if (command === 'git' && args.includes('fetch')) {
-      need(args.includes('https://github.com/ChengshuLi/WorldAtlas.git'), 'Unexpected acquisition repository');
-      token ??= readToken(); need(typeof token === 'string' && token.trim(), 'Existing gh login required for cold acquisition');
-      const env = {...options.env, GIT_CONFIG_COUNT: '3',
-        GIT_CONFIG_KEY_2: 'http.https://github.com/.extraheader',
-        GIT_CONFIG_VALUE_2: 'AUTHORIZATION: basic ' + Buffer.from('x-access-token:' + token).toString('base64')};
-      options = {...options, env};
-    }
-    if (command === 'git') {
-      selectedGit ??= selectInstalledGit();
-      command = selectedGit.gitExecutable;
-      options = {...options, env: {...options.env, GIT_EXEC_PATH: selectedGit.gitExecPath}};
-    }
-    return execute(command, args, options);
-  };
 }
 
 // Exact-body acquisition reuses the existing prefetch importer and ordinary writer.

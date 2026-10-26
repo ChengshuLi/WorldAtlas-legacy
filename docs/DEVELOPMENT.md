@@ -26,6 +26,8 @@ Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` 
 
 For a final-bank update, use the finalizer's complete `current-startup` roster as the output boundary. It may retire an old generated file only when the current accepted index or an authenticated committed finalization receipt pins the exact prior body; pass exact committed `preparation.json` and `startup-ownership.json` pins through `prior_finalizations` when needed. Unknown, edited, nonordinary, or roster-changing extras fail closed. Exact retirement paths are staged as deletions only after byte and index rechecks; inspect the complete staged file set against the new index before commit. Other prepared output changes remain ordinary worktree edits.
 
+`readPreparedFinalOwnership` copies reader-supplied `Buffer` values by default. The finalizer may explicitly opt into reusing a `Buffer` only when its private reader returns already-authenticated bytes that remain immutable for the full call; whole-byte length and SHA-256 checks still apply. Keep generic callbacks on the defensive-copy path.
+
 For routine read-only observation, use bounded provider reads and avoid rapid polling:
 
 ```sh
@@ -60,15 +62,18 @@ condition fails closed. Do not hand-copy OIDs, issue ad hoc Git fetches, disable
 no-lazy-fetch, or hydrate excluded bodies. Interrupted `preparing` reservations
 remain operator-inspection-only; this selected acquisition is not a resume bypass.
 
-The following code-only bootstrap loads both allocator modules from one exact
-locally available main commit. It uses an exclusive temporary directory inside
+The following code-only bootstrap loads the allocator, its identity guard, and
+the one direct lightweight acquisition module from one exact locally available
+main commit. This module contains only the selected-object acquisition adapter
+and Node built-ins; it does not import the scientific delivery workflow. It
+uses an exclusive temporary directory inside
 the task repository's shared Git store and removes only its generated helper copies
 afterward. Git reads and helper execution do not depend on the shell's cwd. A failed main refresh or
-commit lookup stops without using a cached older pin. If either helper blob is
-missing, the bootstrap tree-binds both helper paths to that exact commit and
+commit lookup stops without using a cached older pin. If any pinned helper blob is
+missing, the bootstrap tree-binds all three helper paths to that exact commit and
 requests only the missing blob OIDs through Git's bounded `fetch --stdin` path.
 It verifies each returned object against the pinned OID and ordinary-blob type
-before copying either helper to the temporary directory. A failed fetch or
+before copying any helper to the temporary directory. A failed fetch or
 verification stops before helper execution. Do not fetch other OIDs, hydrate
 unrelated objects, or execute a cached older helper. Use Node 24.
 
@@ -107,7 +112,7 @@ def git(*args, **kwargs):
     return subprocess.check_output(['git', '--git-dir', str(common), '--no-replace-objects', *args], env=env, **kwargs)
 pins = {}
 missing = []
-for name in ('local-workspace.mjs', 'worker-identity.mjs'):
+for name in ('local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'):
     row = git('ls-tree', '-z', base, '--', 'scripts/' + name).rstrip(b'\0')
     metadata, member = row.split(b'\t')
     mode, kind, oid = metadata.decode().split()
@@ -143,7 +148,8 @@ with tempfile.TemporaryDirectory(prefix='worldatlas-helper-', dir=common) as dir
     for name, body in sources.items():
         with (Path(directory) / name).open('xb') as output:
             output.write(body)
-    result = subprocess.call(['node', str(Path(directory) / 'local-workspace.mjs'), *args], env=env)
+    result = subprocess.call(['node', str(Path(directory) / 'local-workspace.mjs'),
+        *args, '--repo', repo], env=env)
 sys.exit(result)
 PYTHON
 )

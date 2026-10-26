@@ -205,9 +205,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   };
   const selectedBytes = async (head, inventory) => {
     if (!inventory.missing.length) return inventory.estimated;
-    const [{createAcquisition, githubTree}, {deliveryAcquisitionExecute}] = await Promise.all([
-      import('./geography-prefetch.mjs'), import('./delivery-handoff-advance.mjs')
-    ]);
+    const {createAcquisition, githubTree, deliveryAcquisitionExecute} = await import('./geography-prefetch.mjs');
     // Resolve only missing selected paths against the exact accepted commit tree.
     // githubTree supplies metadata only; descriptor() independently binds each
     // selected path/OID/mode to the local exact commit before any body is fetched.
@@ -476,13 +474,18 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
     const options = {include: []};
     for (let index = 0; index < args.length; index += 2) {
       const key = args[index]?.replace(/^--/, '');
-      if (!['worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume or release with documented --key value arguments');
+      if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume or release with documented --repo/--key value arguments');
       if (key === 'include') options.include.push(args[index + 1]);
       else if (Object.hasOwn(options, key)) throw Error(`Duplicate ${key}`);
       else options[key] = args[index + 1];
     }
     if (['allocate', 'resume'].includes(action) && (options.slot ?? 'work') === 'work') assertAuthorWorkerIdentity(options.worker);
-    const manager = workspaceManager(path.dirname(fileURLToPath(import.meta.url)), {
+    const repo = options.repo === undefined ? path.dirname(fileURLToPath(import.meta.url)) : options.repo;
+    if (options.repo !== undefined && (!path.isAbsolute(repo) || !fs.statSync(repo).isDirectory())) {
+      throw Error('Explicit --repo must be an absolute existing repository directory');
+    }
+    delete options.repo;
+    const manager = workspaceManager(repo, {
       onStartupGuidance: ({commit, path: instructionPath, gitBlobOid, sha256, text, guides}) => {
         process.stderr.write(`Verified current-main startup instructions (${commit})\n`);
         process.stderr.write(`${instructionPath} Git blob ${gitBlobOid}; SHA-256 ${sha256}\n`);

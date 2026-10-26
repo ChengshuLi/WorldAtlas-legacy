@@ -14,6 +14,8 @@ Use `node --test` with the test files selected by the trusted profile. For alloc
 
 For final-bank retirement changes, cover both files already listed by the prior startup index and old files authenticated only by a committed finalization receipt. Check exact-byte reuse, unknown/edited/symlink rejection, sparse and resume behavior, and that publication leaves no unindexed tracked output outside the new roster. A successful local finalizer is preparation, not the trusted old/new bank-conservation or emitted-package result.
 
+For prepared-bank readers, verify defensive `Buffer` copying remains the default and that any finalizer-only stable-buffer opt-in still checks the complete byte length and digest. Exercise non-`Buffer` byte sources through their ordinary conversion path.
+
 ## Evidence review
 
 Independent review is by a worker distinct from the author and addresses the exact public head; see [DEVELOPMENT](DEVELOPMENT.md) for worker provenance and the PR-comment review record. Review the actual source body, path/mode/hash, immutable inputs, output bodies, accounting and source rights; use a focused independent assessment rather than repeating unchanged expensive science. Preserve full original scope, all adverse/outside outcomes and held/pending cases. A source-free proposal can recommend a finite researched-unresolved cohort only when substantial relevant research and reasonable bounded qualification attempts are demonstrated; distinguish inaccessible/unlocated from not yet attempted, timeout from denial, and unresolved from accepted.
