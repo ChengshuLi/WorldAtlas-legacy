@@ -25,7 +25,7 @@ function* fixedWordChunks(source,totalWords) {
       yield source.subarray(offset,Math.min(offset+WORDS_PER_PART,source.length));
     return;
   }
-  if(typeof source!=='function'||!Number.isSafeInteger(totalWords)||totalWords<1)throw Error('Complete ownership word stream required');
+  if(typeof source!=='function'||!Number.isSafeInteger(totalWords)||totalWords<0)throw Error('Complete ownership word stream required');
   let chunk=new Uint32Array(Math.min(WORDS_PER_PART,totalWords)),used=0,seen=0;
   for(const segment of source()){
     if(!(segment instanceof Uint32Array)||segment.length%2!==0)throw Error('Invalid streamed ownership run segment');
@@ -109,7 +109,7 @@ export async function encodeFinalOwnershipWords({ownership,destination,previousP
     ||!(ownership.rows instanceof Uint32Array)||ownership.rows.length!==metadata.size*2
     ||(!(ownership.runs instanceof Uint32Array)&&typeof ownership.runSegments!=='function')
     ||(ownership.runs instanceof Uint32Array&&ownership.runs.length!==metadata.runWords)
-    ||(typeof ownership.runSegments==='function'&&!(Number.isSafeInteger(metadata.runWords)&&metadata.runWords>0))
+    ||(typeof ownership.runSegments==='function'&&!(Number.isSafeInteger(metadata.runWords)&&metadata.runWords>=0))
     ||metadata.runWords%2!==0)
     throw Error('Complete final ownership words required');
   const parts=[],outputs=[];
