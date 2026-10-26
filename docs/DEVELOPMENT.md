@@ -38,7 +38,7 @@ These examples do not authorize dispatches, writes, extra retries, a review, or 
 
 ## Progress and completion
 
-Send useful progress at substantive milestones: exact branch/head, work completed, evidence or tests, next action and a concrete blocker. Report only checks actually performed and distinguish observed failures from work not done.
+Send useful progress at substantive milestones: exact branch/head, work completed, evidence or tests, next action and a concrete blocker. Report only checks actually performed and distinguish observed failures from work not done. Coordinators continue managing ready steps through completion; preserve blockers and terminal receipts, and do not stop merely because work was delegated.
 ## Refresh a stale checkout without changing its files
 
 Normally invoke the accepted helper directly. If the primary helper is stale or
