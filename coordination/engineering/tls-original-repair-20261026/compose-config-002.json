@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "31397c9b8810fcd8955b708577632ee5fdcd62af",
+    "path": "data/ownership-selection.json",
+    "git_blob_oid": "3ff9aa68dc662d8802a27f9614bde15246e6023a",
+    "bytes": 2291,
+    "sha256": "a6dfdc5018d123177b09d28f063055be8c038c88e4469d5f3371a311992bf957",
+    "mode": "100644"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "f1b1ef1540a7191c7845347b19bfe64ad8cec0e0",
+        "path": "coordination/engineering/tls-original-repair-20261026/native-authority-001/original-rule-preimage.json",
+        "git_blob_oid": "1339d609a4bf8ce76a289883d23531ce1ac8ba7d",
+        "bytes": 728,
+        "sha256": "c021cb8b23246d03dde315f4b39f77262312509f0efecfc3ad0c6048ed84c7b2",
+        "mode": "100644"
+      },
+      "source_authority": {
+        "commit": "f1b1ef1540a7191c7845347b19bfe64ad8cec0e0",
+        "path": "coordination/engineering/tls-original-repair-20261026/native-authority-001/authority-binding.json",
+        "git_blob_oid": "c7a0aac009c4fab4cd3c9d4bb5b990fcec7e18da",
+        "bytes": 731,
+        "sha256": "96c89923738cb298d997edd529152582d905613df0545cc6f5bec8c0949dbe78",
+        "mode": "100644"
+      },
+      "ledger": {
+        "commit": "f1b1ef1540a7191c7845347b19bfe64ad8cec0e0",
+        "path": "coordination/engineering/tls-original-repair-20261026/native-authority-001/constructor-result.json",
+        "git_blob_oid": "28c1c9e61fac1f4ca56cf20f9812d8c12714d4f4",
+        "bytes": 42734,
+        "sha256": "44d208849edc9e266ed259b9c6af1ce96a4e1a3a9d8f37bc01112e9f8df30092",
+        "mode": "100644"
+      },
+      "native_patch": {
+        "commit": "34b7f1fe1abd09ee59ff7c7564304b00a04071ab",
+        "path": "coordination/engineering/tls-original-repair-20261026/supported-inputs-001/native-patch.json",
+        "git_blob_oid": "40c0a36869435bfcc2590df896d08e3266d2ee93",
+        "bytes": 11165,
+        "sha256": "2e4df1a57db10db91d551761e1ce364287f7f5d5ff851e4004a31516f7e904e9",
+        "mode": "100644"
+      }
+    }
+  ]
+}
