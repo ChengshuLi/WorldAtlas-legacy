@@ -10,7 +10,7 @@ Trusted CI authenticates the candidate commit and combined tree before checkout/
 
 Structural checks establish only their named invariants. `scripts/validate-structure.mjs` checks structure; source/evidence validators check declared bytes, identities and ledgers; geography and native-grid checks use the exact pinned operands; emitted-output checks compare actual artifacts. Review the implemented checker and schema for current fields and command syntax. Never run candidate code as evidence unless the trusted contract explicitly authorizes it.
 
-Use `node --test` with the test files selected by the trusted profile. For relevant changes, inspect package declaration behavior in `scripts/integration-profile.mjs`, `scripts/merge-integration.mjs` and `test/ci-checkout.test.mjs`; these are the executable contract. The complete current test set is discovered from `test/*.test.mjs`; do not treat old shard counts, run timings, disk measurements or historical CI incidents as current capacity guarantees.
+Use `node --test` with the test files selected by the trusted profile. For allocator startup changes, cover both the manager API and the real CLI at its checked-in `scripts/` path; assert the fetched-main commit, root `AGENTS.md` blob identity/hash and refusal behavior before reservation. For relevant changes, inspect package declaration behavior in `scripts/integration-profile.mjs`, `scripts/merge-integration.mjs` and `test/ci-checkout.test.mjs`; these are the executable contract. The complete current test set is discovered from `test/*.test.mjs`; do not treat old shard counts, run timings, disk measurements or historical CI incidents as current capacity guarantees.
 
 ## Evidence review
 
