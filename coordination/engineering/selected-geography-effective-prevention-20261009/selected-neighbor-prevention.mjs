@@ -20,6 +20,30 @@ const PROGRAMME_MODULE='coordination/engineering/selected-geography-effective-pr
 const demand=(v,m)=>{if(!v)throw Error(m);};
 const hash=v=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v);
 const sha=b=>createHash('sha256').update(b).digest('hex');
+// The legacy LUX source evidence stores authenticated gzip-body pins, while
+// the immutable catalogue describes those same bodies as ordered product
+// parts. Normalize only the two known schemas; never rewrite either receipt.
+export function legacyCompletePartsMatchCatalogue(pins,record) {
+ const exact=(value,names)=>value&&typeof value==='object'&&!Array.isArray(value)
+  &&Object.keys(value).sort().join(',')===[...names].sort().join(',');
+ const pinKeys=['bytes','commit','decoded_bytes','decoded_sha256','git_blob_oid','mode','path','sha256'];
+ const partKeys=['bytes','hash_kind','offset','ordinal','path','sha256','uncompressed_bytes','uncompressed_sha256'];
+ if(!Array.isArray(pins)||pins.length!==1||!record||!Array.isArray(record.parts)||record.parts.length!==1)return false;
+ let offset=0;
+ for(let i=0;i<pins.length;i++){
+  const pin=pins[i],part=record.parts[i];
+  if(!exact(pin,pinKeys)||!exact(part,partKeys)
+   ||!Number.isSafeInteger(pin.bytes)||pin.bytes<0
+   ||!Number.isSafeInteger(pin.decoded_bytes)||pin.decoded_bytes<0
+   ||!Number.isSafeInteger(part.bytes)||part.bytes<0
+   ||!Number.isSafeInteger(part.uncompressed_bytes)||part.uncompressed_bytes<0
+   ||part.ordinal!==0||part.offset!==0||part.hash_kind!=='file-bytes'
+   ||pin.path!==part.path||pin.bytes!==part.bytes||pin.sha256!==part.sha256
+   ||pin.decoded_bytes!==part.uncompressed_bytes||pin.decoded_sha256!==part.uncompressed_sha256)return false;
+  offset+=part.uncompressed_bytes;
+ }
+ return Number.isSafeInteger(offset)&&offset===record.original_bytes;
+}
 const canonical=v=>{
  if(Array.isArray(v))return v.map(canonical);
  if(isNativeSequence(v))return Array.from(v,canonical);
@@ -2346,7 +2370,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   }
   const originalFamilies=old.families.filter(f=>f.source_id===retained.source_family);
   const originalProduct=catalogue.products.find(p=>p.key===retained.source_family);
-  demand(originalFamilies.length===1&&same(originalFamilies[0].parts,originalProduct?.parts),
+  demand(originalFamilies.length===1&&legacyCompletePartsMatchCatalogue(originalFamilies[0].parts,originalProduct),
    'Retained original LUX complete family differs');
   const originalFeatures=yield* readCompleteSource(originalFamilies[0].parts,originalProduct);
   const sourceById=new Map(originalFeatures.features.map((feature,feature_ordinal)=>
@@ -2384,10 +2408,14 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
      &&!negatives.has(negative.source_id+':'+negative.negative_ordinal),
      'Malformed retained original negative operand');negatives.add(negative.source_id+':'+negative.negative_ordinal);
     const oldTarget=originalTerritorialTargets.get(record.source_id);
+    const originalExclusion=target.territorial_exclusions?.[negative.negative_ordinal];
     const mapped=oldTarget?.exclusions?.find(item=>item.negative_ordinal===negative.negative_ordinal);
-    demand(target.territorial_exclusions?.[negative.negative_ordinal]
-     &&valueSha(target.territorial_exclusions[negative.negative_ordinal])===negative.geometry_sha256
-     &&mapped?.source_id===negative.source_id&&mapped.geometry_sha256===negative.geometry_sha256,
+    demand(keys(originalExclusion,'feature_ordinal,geometry_sha256,negative_ordinal,source_id')
+     &&originalExclusion.negative_ordinal===negative.negative_ordinal
+     &&originalExclusion.source_id===negative.source_id
+     &&originalExclusion.geometry_sha256===negative.geometry_sha256
+     &&mapped?.source_id===negative.source_id&&mapped.geometry_sha256===negative.geometry_sha256
+     &&mapped.feature_ordinal===originalExclusion.feature_ordinal,
      'Retained original positive negative operand differs');
     const matches=[...completeSourceMap.keys()].filter(family=>negative.source_id.startsWith(family+':'));
     demand(matches.length===1&&mapped.source_family===matches[0],
@@ -2395,7 +2423,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
     const sourceFamily=matches[0];
     if(!negativeFeatures.has(sourceFamily)){
      const product=catalogue.products.find(p=>p.key===sourceFamily);
-     demand(product&&same(completeSourceMap.get(sourceFamily),product.parts),
+     demand(product&&legacyCompletePartsMatchCatalogue(completeSourceMap.get(sourceFamily),product),
       'Retained original negative family is not complete');
      const loaded=yield* readCompleteSource(completeSourceMap.get(sourceFamily),product);
      negativeFeatures.set(sourceFamily,new Map(loaded.features.map((feature,feature_ordinal)=>

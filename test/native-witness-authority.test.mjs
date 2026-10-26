@@ -3,10 +3,11 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {gzipSync} from 'node:zlib';
 import {deriveSourceTargetNativeDelta,nativeRowLatitudes,nativePolygonIntervals,polygonParts,witnessCellEffects,validateWitnessGeometry} from '../src/native-grid.js';
 import {ImmutableReader} from '../scripts/check-effective-geographic-regression.mjs';
 import {constructOriginalAuthority} from '../scripts/delivery-handoff-advance.mjs';
-import {valueSha,diagnoseSourceTargetNativeAuthority,validateRetainedOriginalPositiveKey} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
+import {valueSha,diagnoseSourceTargetNativeAuthority,validateRetainedOriginalPositiveKey,legacyCompletePartsMatchCatalogue} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
 
 const rectangle=(left,right,bottom=-40,top=40)=>({type:'Polygon',coordinates:[[[left,bottom],[right,bottom],[right,top],[left,top],[left,bottom]]]});
 const feature=(id,pixelIndex,geometry,target_id)=>({id,pixelIndex,geometry,...(target_id?{target_id}:{})});
@@ -41,11 +42,17 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
     const pin={commit,path:name,mode:'100644',git_blob_oid:blob(raw),bytes:raw.length,sha256:digest(raw)};
     files.set(commit+':'+name,{raw,pin});byBlob.set(pin.git_blob_oid,raw);return pin;
   };
-  const source=put('original-source.json',collection(state.originals)),roster=put('owners.json',state.roster);
+  const sourceRaw=Buffer.from(JSON.stringify(collection(state.originals)));
+  const source=put('original-source.json.gz',gzipSync(sourceRaw));
+  source.decoded_bytes=sourceRaw.length;source.decoded_sha256=digest(sourceRaw);
+  const roster=put('owners.json',state.roster);
   const physical=put('physical.json',state.physical),measured=put('measured.json',state.measured);
+  const cataloguePart={bytes:source.bytes,hash_kind:'file-bytes',offset:0,ordinal:0,
+    path:source.path,sha256:source.sha256,uncompressed_bytes:source.decoded_bytes,
+    uncompressed_sha256:source.decoded_sha256};
   const catalogue=put('coordination/engineering/original-geography-source-corpus-20261006/catalogue.json',{
-    products:[{key:family,parts:[source],
-      feature_count:state.originals.length,original_bytes:source.bytes,original_sha256:source.sha256}]});
+    products:[{key:family,parts:[cataloguePart],
+      feature_count:state.originals.length,original_bytes:source.decoded_bytes,original_sha256:source.decoded_sha256}]});
   const nativeLatitudes=put('latitudes.f64le',latitudeBytes);
   const membership={index:put('data/world-index.json',state.index),lineage:put('data/semantic-report.json',state.lineage),
     parts:[put('data/geography/part-0.json',state.accepted)]};
@@ -571,4 +578,33 @@ test('retained LUX positive bindings preserve every original per-key foreign sou
  const wrongOwner=structuredClone(retained.records[0]);
  assert.throws(()=>validateRetainedOriginalPositiveKey(wrongOwner,rows.get(wrongOwner.y+':'+wrongOwner.x),'gb:LUX:ADM1',7123),
   /absent from exact per-key source comparison/);
+});
+
+
+test('legacy original source part normalizes only against its exact catalogue body identity',()=>{
+ const pin={bytes:7,commit:'1'.repeat(40),decoded_bytes:17,decoded_sha256:'3'.repeat(64),
+  git_blob_oid:'5'.repeat(40),mode:'100644',path:'payload.gz',sha256:'2'.repeat(64)};
+ const part={bytes:7,hash_kind:'file-bytes',offset:0,ordinal:0,path:pin.path,sha256:pin.sha256,
+  uncompressed_bytes:pin.decoded_bytes,uncompressed_sha256:pin.decoded_sha256};
+ const record={parts:[part],original_bytes:17};
+ assert.equal(legacyCompletePartsMatchCatalogue([pin],record),true);
+ assert.equal(legacyCompletePartsMatchCatalogue([],record),false);
+ assert.equal(legacyCompletePartsMatchCatalogue([pin,pin],record),false);
+ const extra=structuredClone(pin);extra.unexpected=true;
+ assert.equal(legacyCompletePartsMatchCatalogue([extra],record),false);
+ for(const mutate of [
+  p=>{p.ordinal=1;},p=>{p.offset=1;},p=>{p.hash_kind='compressed';},p=>{p.path='changed.gz';},
+  p=>{p.sha256='f'.repeat(64);},p=>{p.bytes++;},p=>{p.uncompressed_bytes++;},
+  p=>{p.uncompressed_sha256='f'.repeat(64);},p=>{p.extra=true;}
+ ]){const changed=structuredClone(record);mutate(changed.parts[0]);
+  assert.equal(legacyCompletePartsMatchCatalogue([pin],changed),false);}
+ for(const mutate of [
+  p=>{p.path='changed.gz';},p=>{p.sha256='f'.repeat(64);},p=>{p.bytes++;},
+  p=>{p.decoded_bytes++;},p=>{p.decoded_sha256='f'.repeat(64);},p=>{p.unexpected=true;}
+ ]){const changed=structuredClone(pin);mutate(changed);
+  assert.equal(legacyCompletePartsMatchCatalogue([changed],record),false);}
+ const noOffset=structuredClone(record);delete noOffset.parts[0].offset;
+ assert.equal(legacyCompletePartsMatchCatalogue([pin],noOffset),false);
+ const wrongLength=structuredClone(record);wrongLength.original_bytes++;
+ assert.equal(legacyCompletePartsMatchCatalogue([pin],wrongLength),false);
 });
