@@ -1,0 +1,192 @@
+{
+  "kind": "worldatlas.source-relative-positive-preparation-manifest.v1",
+  "proposal_id": "gnb214-source-relative-positive-preparation-20261026",
+  "contents": [
+    {
+      "path": "scope.json",
+      "bytes": 14603,
+      "sha256": "e4fd3a5cd9fb53f28b79334516399c59477cb4d18f69ec23858570646109d4a2"
+    },
+    {
+      "path": "native-patch-214.json",
+      "bytes": 3113,
+      "sha256": "dc0c9fa285a24ff10ebace917b3b08149d48ff3c56f525ddbf85c22782908615"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4468,
+      "sha256": "9b7b0fe58dcbf1963a5ded4d5b2c9f6d25692894eb4cca66845491d825152850"
+    },
+    {
+      "path": "source-role-decision.json",
+      "bytes": 6199,
+      "sha256": "1d8d6c5f632dd86cf87c2e0fa6e8e6b1e5dd3cdf93d13a0ad302d3634d05744a"
+    },
+    {
+      "path": "quinh38-physical-issue-application.json",
+      "bytes": 6664,
+      "sha256": "6b88b20292a8b96b1b64b6272eca0148d20d1b8f744efe8bed127e0658925d57"
+    }
+  ],
+  "scope_total": 214,
+  "keyset_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6",
+  "derived_input_pins": {
+    "source_evidence": {
+      "commit": "efc36a3fc6f67350f69c8cd1ffd8278d4adaf8c5",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/source-evidence-002/source-evidence.json",
+      "git_blob_oid": "0f48192edcab5b556ea7cb88d7fd183c7eb72528",
+      "bytes": 154131,
+      "sha256": "8b46ab03c836d5de0cf0d511391906865f3bfae59017d0162ff58c4f9d4d789c"
+    },
+    "original_patch": {
+      "commit": "efc36a3fc6f67350f69c8cd1ffd8278d4adaf8c5",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/native-request-001/native-requested-patch.json",
+      "git_blob_oid": "50e6dd8ce35c3d2347dc8e4438caa8e14f6d5946",
+      "bytes": 54813,
+      "sha256": "47d4b88e972c6d615e59c2ad800b363dee6ea24c40c05746e1699af6de377caf"
+    },
+    "original_diagnostic": {
+      "commit": "03ccde25528475b374be5c891834e74e7fdfea2e",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/native-diagnostic-001/native-diagnostic.json",
+      "git_blob_oid": "f59c78f98b25683474b8b6bdf14ebdc95aa5f767",
+      "bytes": 198795,
+      "sha256": "944dea89a9658329b48d97860b74c9fb8ac979075dabbbe972d1f52235af8944"
+    }
+  },
+  "no_raw_source_geometry": false,
+  "provenance_note": "native-patch-214 is an exact owner-filter projection of the original full patch; target roster was narrowed using the supported source-evidence phase; the original complete GNB family, all GIN/SEN territorial-exclusion families, original physical evidence and source pins remain preserved.",
+  "derived_preparation": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/source-evidence-214",
+    "selector_commit": "93d5c12b26974e60a614a998aaa65e67f86cbf06",
+    "outputs": [
+      {
+        "path": "source-evidence.json",
+        "bytes": 30299,
+        "sha256": "dc40a18f55ad91e46eb061f934af76a05741af86cbff6db96eae099a851d9b9b"
+      },
+      {
+        "path": "preparation.json",
+        "bytes": 262,
+        "sha256": "49e71cd3b6ec1cc678fb6288a0bb8149a58ac4b8156b693ae64753232c29d0f5"
+      }
+    ],
+    "source_evidence_pin": {
+      "commit": "4511e5a322f8166a7906abbe53ad84143d79b9dc",
+      "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/source-evidence-214/source-evidence.json",
+      "git_blob_oid": "f7e9641693989bd4de75af39f6aa0609f39c937a",
+      "bytes": 30299,
+      "sha256": "dc40a18f55ad91e46eb061f934af76a05741af86cbff6db96eae099a851d9b9b"
+    }
+  },
+  "raw_geometry_note": "The prepared source-evidence file and constructor result contain the four original target geometries needed by the accepted native constructor. They do not contain the full source archive or any new external source data; source representations are pinned to the existing public geoBoundaries ODbL product.",
+  "native_authority": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/native-authority-214",
+    "config_sha256": "fbc3e10f76874b52c1535fef3103f3a5ac46e12430fd000e19a859c3482c7aa4",
+    "qualified_cells": 214,
+    "outputs": [
+      {
+        "path": "authority-binding.json",
+        "bytes": 754,
+        "sha256": "2e007271f84612bf6eff540773e95aceed2523cd8d9cd099012f9b000e6f9d55"
+      },
+      {
+        "path": "constructor-result.json",
+        "bytes": 10113,
+        "sha256": "658461adcbc87c19a1dad9d5a84595dde76b2e538fe3ff885c6f767c0cec452e"
+      },
+      {
+        "path": "original-rule-preimage.json",
+        "bytes": 751,
+        "sha256": "a41ed9415ca21196892111505d4d3548959b83f2752329faad4c13472de61be4"
+      },
+      {
+        "path": "preparation.json",
+        "bytes": 501,
+        "sha256": "04ea4b205b315a17345f91bfb27091f9821f6b2fd8e4825031ad46ed39770c6b"
+      }
+    ],
+    "inputs": {
+      "native_patch": {
+        "commit": "e8544e67c74a0eb0146cea5b4dd4c81dc07dbe73",
+        "path": "research/geography/gnb214-source-relative-positive-preparation-20261026/native-patch-214.json",
+        "git_blob_oid": "cc768401dce1afa50083500a14c3a5be445b57fd",
+        "bytes": 3113,
+        "sha256": "dc0c9fa285a24ff10ebace917b3b08149d48ff3c56f525ddbf85c22782908615"
+      },
+      "source_evidence": {
+        "commit": "4511e5a322f8166a7906abbe53ad84143d79b9dc",
+        "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/source-evidence-214/source-evidence.json",
+        "git_blob_oid": "f7e9641693989bd4de75af39f6aa0609f39c937a",
+        "bytes": 30299,
+        "sha256": "dc40a18f55ad91e46eb061f934af76a05741af86cbff6db96eae099a851d9b9b"
+      }
+    },
+    "tuple_conservation": {
+      "cells": 214,
+      "patch_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6",
+      "constructor_tuple_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6"
+    }
+  },
+  "composition": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/compose-214",
+    "selector_commit": "a356c120cf689881bf228796c44daef783a8c74d",
+    "selector_sha256": "1f2ba152430affa49b3900c80695b872c9334284791d636e8872b439e83f6ee5",
+    "config_sha256": "ad0d0d31e5566c80bd282cce2101e7152222677efc6fea7950c2ca023d9fc514",
+    "outputs": [
+      {
+        "path": "authority-registry.json",
+        "bytes": 1415,
+        "sha256": "b0f7eb8b6ef5ae02311ce5fa76590542cf88af1b615b0ecd0e0fad06fff2d97f"
+      },
+      {
+        "path": "preparation.json",
+        "bytes": 256,
+        "sha256": "8c6f91eea7ade354906e29b2ebe65bb806fefcdf2ec31978a3c15211bc42c1b2"
+      }
+    ]
+  },
+  "bounded_quinh_issue_application": {
+    "path": "research/geography/gnb214-source-relative-positive-preparation-20261026/quinh38-physical-issue-application.json",
+    "bytes": 6664,
+    "sha256": "6b88b20292a8b96b1b64b6272eca0148d20d1b8f744efe8bed127e0658925d57",
+    "receipt_path": "research/geography/gnb214-source-relative-positive-preparation-20261026/quinh38-physical-issue-application.json",
+    "method": "native-linear-evenodd-first-owner-v1",
+    "scope_cells": 38,
+    "issue_geometries": 2,
+    "interior": 0,
+    "boundary": 0,
+    "outside_each": 38,
+    "scope_limit": "Exact center vs retained witness polygons only; no full-cell or whole-target clearance."
+  },
+  "finalization": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/finalization-214",
+    "phase": "finalize",
+    "config_sha256": "8cb0ff970bfb9405430198e0ba06615ba22f5c7f95f8246226a2de4626d0035b",
+    "phase_stdout_bytes": 782,
+    "stdout_emitted_after": "publishFinalizedDelivery",
+    "original_exit_status": "unavailable",
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2286,
+        "sha256": "89187ec273cec3a79f174db0ade448b9f7fe407493e6be5217629a3da6051be8"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "preparation.json": {
+        "bytes": 1156,
+        "sha256": "540a65fc59f49630dcb83ed074886b5efaa41e267dbbc4358eaf33c22b5f3805"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "87f143d69825ac63cbbbbd822961e19c1ca1d7bcd63d321611b6d9ce34d15332"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "6e8e0939fad408881b1bbb66c7b66dd28592a6e7af4b16d363470a876645b3a2"
+      }
+    },
+    "transition_check": "pending trusted stock geography and selected-bank consumers"
+  }
+}
