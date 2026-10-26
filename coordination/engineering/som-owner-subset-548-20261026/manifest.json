@@ -1,0 +1,336 @@
+{
+  "version": 1,
+  "kind": "som-private-548-owner-source-application-proposal",
+  "generated_utc_date": "2026-10-26",
+  "status": "Private source-free proposal only; no claim, disposition, acceptance, hold, release, or credit change.",
+  "files": {
+    "proposal.md": {
+      "bytes": 9368,
+      "sha256": "9a289b9d94dffcc0da5b9fae121cbfc48678dcf7a36df147b2a27791f1bd1cfb"
+    }
+  },
+  "frozen_scope": {
+    "package": "gb-SOM-ADM2--repair-evaluation",
+    "original_packet_commit": "0831f7e5fbfcca228dda175f73b6d8449b35982f",
+    "original_packet_path": "coordination/engineering/som-original-disposition-20261020/som-disposition.json.gz",
+    "original_packet_blob": "6aeeee41cb80370e816044e3513828c8a911ff1e",
+    "original_packet_gzip_sha256": "d9e87d1c360c3cfe21883b756bcd5da64bd4721abe91ac8c278c37c9e65075cf",
+    "original_packet_decoded_sha256": "38835822455a95fa68d8e1392ce1b6470974a3b073061e315cb66d7e9c9a026c",
+    "full_keys": 2247,
+    "full_unique_owner_y_x_rows": 2247,
+    "full_intervals": 1645,
+    "full_owners": 36,
+    "full_owner_y_x_sha256": "419a36c9a491fbdd3cded5ada5b2a8dd46c4018b4921bb207f7f66e046bcff1e"
+  },
+  "local_reconciliation_inputs": {
+    "full_key_owner_interval_roster": {
+      "path": "research/SOM/som-2247-owner-interval-roster.csv",
+      "sha256": "05a809c1db2e0e08c01fffb9fba1a18c674e70c27f1e710af1ff0c668c2dd91c",
+      "rows": 2247,
+      "unique_owner_y_x_rows": 2247
+    },
+    "published_owner_source_matrix": {
+      "commit": "3313b88470d11aa5371192d222c2d95b8091e3be",
+      "path": "coordination/engineering/som-original-disposition-20261025/owner-instrument-matrix.csv",
+      "git_blob": "25292e95f37e4631f9dca04341e11323fe273d19",
+      "sha256": "e1146937dbb6ac605870daf2c81ea276e0b8696140c5c5e6d88742e1d0e119e6",
+      "owner_rows": 36,
+      "key_total": 2247,
+      "interval_total": 1645
+    },
+    "accepted_1102_key_proposal": {
+      "commit": "3313b88470d11aa5371192d222c2d95b8091e3be",
+      "path": "coordination/engineering/som-original-disposition-20261025/researched-unresolved-subset-1102-key-proposal-20261025.csv",
+      "git_blob": "7d5f22af58dfdffae0df6e4fee5c67d08d048faa",
+      "sha256": "c7ef5accb6305ffdaadc894357bcfde2813a080aa29500d2cf6d9d1f42f18c51",
+      "rows": 1102,
+      "owner_y_x_sha256": "cdb05e29fd48482d9c85bc82098a5cc46b500fb55930face164bb28bb42151ed",
+      "exact_original_tuple_mismatches": 0
+    }
+  },
+  "canonical_hash_serializations": {
+    "owner_y_x": "UTF-8 decimal `owner,y,x\\n`, sorted numerically by owner then y then x.",
+    "key_owner_interval_join": "UTF-8 decimal/string `owner,y,x,native_block,original_interval_ordinal_in_block,expanded_interval_sequence_1based,question_id,original_owner_source_id\\n`, sorted by owner/y/x. This contains digests only; raw rows are not included in this packet."
+  },
+  "new_subset": {
+    "recommended_class": "researched-unresolved",
+    "recommendation_only": true,
+    "owner_groups": 12,
+    "keys": 548,
+    "intervals": 389,
+    "owner_y_x_sha256": "5380d367fabb59277fc5b21d1f8e392759a7525bed908d88ef8771fda52676d9",
+    "key_owner_interval_join_sha256": "b30b9db74c8d5855a8ff4cc71ee3a0f41dabf5cff05579d9aa2c02f216b77c27",
+    "exact_owner_source_question_mapping_mismatches": 0,
+    "source_feature_id_present_in_original_source_contacts_for_all_rows": true,
+    "groups": [
+      {
+        "owner": 39999,
+        "name": "ADALE",
+        "source_id": "gb:SOM:ADM2:84685775B13317235490488",
+        "question_ids": [
+          "SOM-Q035",
+          "SOM-Q036"
+        ],
+        "keys": 42,
+        "intervals": 42,
+        "owner_y_x_sha256": "df745867599606744cc9fc43515cb9350cb8279799cfc6fa112e96b626df0c3f",
+        "join_sha256": "a9c800cbbe37f82f55440394665695405680c16d13662e73473503f5ef5bbd20"
+      },
+      {
+        "owner": 40007,
+        "name": "WARSHEIKH",
+        "source_id": "gb:SOM:ADM2:84685775B19685876664607",
+        "question_ids": [
+          "SOM-Q039",
+          "SOM-Q040"
+        ],
+        "keys": 24,
+        "intervals": 20,
+        "owner_y_x_sha256": "a1ac7cee9d4a183165c488213c54673d018deb295e37035b1c350d0ff79f8d92",
+        "join_sha256": "396c7695017345e66e2160336697238793dbfece203f4c3e2a508c5774476295"
+      },
+      {
+        "owner": 40009,
+        "name": "JAMAAME EAST",
+        "source_id": "gb:SOM:ADM2:84685775B22359262366449",
+        "question_ids": [
+          "SOM-Q060"
+        ],
+        "keys": 2,
+        "intervals": 2,
+        "owner_y_x_sha256": "adb53581e98314bb46b3c9ff176e0911f8e53096eb3002630053868641164806",
+        "join_sha256": "a09e879900d948738cb2e1c8486b11e831827d1b7f2650e83bc7f96dcd6665fe"
+      },
+      {
+        "owner": 40031,
+        "name": "JILIB EAST",
+        "source_id": "gb:SOM:ADM2:84685775B45912091310280",
+        "question_ids": [
+          "SOM-Q059"
+        ],
+        "keys": 1,
+        "intervals": 1,
+        "owner_y_x_sha256": "38416ec45faf45e9ca53c41be58de6630db6d2fc5595d5a45714dc6f7ef96a6a",
+        "join_sha256": "b93505388106c483f50025cbbaef4ea123ac71656f7bc32361ee0bd614627f8e"
+      },
+      {
+        "owner": 40033,
+        "name": "RABDURE",
+        "source_id": "gb:SOM:ADM2:84685775B46619978923687",
+        "question_ids": [
+          "SOM-Q029",
+          "SOM-Q031"
+        ],
+        "keys": 2,
+        "intervals": 2,
+        "owner_y_x_sha256": "5d3c6f0720ae7dc3e6786f0d0099dfab602584d1e235b06c5884dfd44f0dacb4",
+        "join_sha256": "2112c0c35d78508e4e9c3919bea24a90944eaf2537ead6748fb34e0c5e1b654b"
+      },
+      {
+        "owner": 40048,
+        "name": "BRAVA",
+        "source_id": "gb:SOM:ADM2:84685775B57970277493095",
+        "question_ids": [
+          "SOM-Q057",
+          "SOM-Q058"
+        ],
+        "keys": 108,
+        "intervals": 73,
+        "owner_y_x_sha256": "a7d744ca65acbd907acaa18946ab1bd34bf8dfe09404c2428e36972f4db61cf6",
+        "join_sha256": "554a976ba208e26fe0b5efbb57e52e619c213d29ed29ff01d8bba091f7ee7db7"
+      },
+      {
+        "owner": 40063,
+        "name": "BALAD",
+        "source_id": "gb:SOM:ADM2:84685775B67470388371162",
+        "question_ids": [
+          "SOM-Q041"
+        ],
+        "keys": 2,
+        "intervals": 2,
+        "owner_y_x_sha256": "4d14d69c933235da9ebc25c16e674bc791dcbb0018f0d6276170bc8008d0ce59",
+        "join_sha256": "5fa758dff0e720d6ab80df40fbdbe059ff4f3a97773a29e0d90fc2606c2d3360"
+      },
+      {
+        "owner": 40065,
+        "name": "KURTUNWAAREY",
+        "source_id": "gb:SOM:ADM2:84685775B70562611750423",
+        "question_ids": [
+          "SOM-Q055",
+          "SOM-Q056"
+        ],
+        "keys": 37,
+        "intervals": 31,
+        "owner_y_x_sha256": "316fc5090d872dd1fa10777c21b5e94bdb286a18387b5af028ae29729bd6e41c",
+        "join_sha256": "7a1ec320109ad91f3a66e2f0f71ca044181532f93589baa15d147e28bec07c75"
+      },
+      {
+        "owner": 40067,
+        "name": "BADHADHE",
+        "source_id": "gb:SOM:ADM2:84685775B71342338947416",
+        "question_ids": [
+          "SOM-Q063",
+          "SOM-Q064"
+        ],
+        "keys": 119,
+        "intervals": 82,
+        "owner_y_x_sha256": "4357c21dcab2d96fe437a8ca5f979c97e5bef4c5a491c7292b3f5ea4c1fca27c",
+        "join_sha256": "db81879bcc92d47a9a9c6ba34c1627164f3c14aa4e8ebedc82a6d90182c14463"
+      },
+      {
+        "owner": 40075,
+        "name": "MARKA",
+        "source_id": "gb:SOM:ADM2:84685775B78307821916269",
+        "question_ids": [
+          "SOM-Q053",
+          "SOM-Q054"
+        ],
+        "keys": 126,
+        "intervals": 79,
+        "owner_y_x_sha256": "51958a33f5d1dde9506a7a0a7b0494cd753be4b0a3f8e25849da22c79d31465d",
+        "join_sha256": "d70bca167449bad3c685ab9d18d05561e6778ba788b446a55f5f6d98775fb523"
+      },
+      {
+        "owner": 40083,
+        "name": "AFGOI",
+        "source_id": "gb:SOM:ADM2:84685775B82872988311402",
+        "question_ids": [
+          "SOM-Q051",
+          "SOM-Q052"
+        ],
+        "keys": 13,
+        "intervals": 9,
+        "owner_y_x_sha256": "1bdc079b348a0de10c6120275cae48f8c0a2883232de21ad23034e9cd4b93872",
+        "join_sha256": "67bfeceab1eb8facdf319e5678e5f954f37cefa77b6ae67d25b8632dac0ec32e"
+      },
+      {
+        "owner": 40084,
+        "name": "RAGA ELLE",
+        "source_id": "gb:SOM:ADM2:84685775B83703395559495",
+        "question_ids": [
+          "SOM-Q037",
+          "SOM-Q038"
+        ],
+        "keys": 72,
+        "intervals": 46,
+        "owner_y_x_sha256": "8e5159943a4821f948c4a450b13b87f1ea6fa500f342b6f08f10d29b99f9691e",
+        "join_sha256": "fcea99c3abfb45de6894bf09af4da05cac482032e6012b67ccc3bca0d498043c"
+      }
+    ]
+  },
+  "partition_reconciliation": {
+    "accepted_1102_keys": 1102,
+    "matrix_defined_522_owner_complement": {
+      "keys": 522,
+      "intervals": 344,
+      "owner_groups": 8,
+      "owner_y_x_sha256": "ea72859f5be392a0089ecf5988170dc9e7bfd0d64f23ea4b6960614b8b4c9d13",
+      "actual_local_draft_key_bytes_available": false,
+      "actual_local_draft_exact_rows_compared": false,
+      "actual_local_draft_owner_y_x_sha256": null
+    },
+    "new_548_keys": 548,
+    "98_owner_group_parent_commitment": {
+      "owners": [
+        40007,
+        40084,
+        40063
+      ],
+      "keys": 98,
+      "parent_reported_key_hash": "195872934f24fb414c8ce844abc5d54f0f5467b0c72676048ca2c941c02de518",
+      "parent_hash_serialization": "not supplied in handoff; not directly comparable",
+      "canonical_owner_y_x_hash_from_frozen_roster": "e9da6200f17211d787cc3eee2cac3ad615b797ade707d5dcc5220f57299f8ad",
+      "note": "The parent-reported memo SHA is also assigned to the separate five-key memo; neither memo byte stream was available here for independent digest verification."
+    },
+    "EL_DHERE_owner_40035": {
+      "keys": 75,
+      "intervals": 70,
+      "owner_y_x_sha256": "03af860484e7106fa225e47c70c59e965311aa7d2423d3945af4ea2efdb8f951"
+    },
+    "owner_groups_sum": 36,
+    "key_totals_sum": 2247,
+    "interval_totals_sum": 1645,
+    "roster_partition_union_rows": 2247,
+    "roster_partition_union_matches_frozen_roster": true,
+    "pairwise_intersection_counts_under_matrix_defined_522_complement": {
+      "accepted_new": 0,
+      "accepted_522_owner_complement": 0,
+      "accepted_eldhere": 0,
+      "new_522_owner_complement": 0,
+      "new_eldhere": 0,
+      "522_owner_complement_eldhere": 0
+    },
+    "draft_overlap_limit": "The actual 522 draft key bytes were inaccessible; the partition uses only the matrix-defined owner complement. No row-level identity or within-owner non-overlap claim is made against that local draft."
+  },
+  "parent_assessment_memos": [
+    {
+      "label": "Lower Shebelle owner applications",
+      "sha256_as_supplied": "5849b4d04f169da040328b028ac05999b286d1c3ad15936701b7733e2f008332",
+      "contents_reverified": false
+    },
+    {
+      "label": "Badhaadhe and Afgoi owner applications",
+      "sha256_as_supplied": "b64652320786dd2110fc3c98b0109a69a610c4fd8fdc2fe06fcb21af27b1d82a",
+      "contents_reverified": false
+    },
+    {
+      "label": "WARSHEIKH/RAGA ELLE/BALAD owner-role memo",
+      "archive_path": "worldatlas-SOM-WARSHEIKH24-RAGAELLE72-BALAD2-source-role-review-20261026.md",
+      "sha256_verified": "5a1439371166b84eb62e0a782832aa1c9299de2ad695dae776a6b43ca6645441",
+      "bytes": 10963,
+      "contents_reverified": true
+    },
+    {
+      "label": "Jamaame East/Jilib East/Rabdure small-groups memo",
+      "archive_path": "worldatlas-SOM-JAMAAMEEAST2-JILIBEAST1-RABDURE2-source-role-20261026.md",
+      "sha256_verified": "6e03cf79867a75174ef9564f93ce982a5b756a3a0e8af7703c54cacfda838393",
+      "bytes": 6539,
+      "contents_reverified": true
+    },
+    {
+      "label": "Adale owner-source application",
+      "sha256_as_supplied": "ab205d4e18b7682292767f25615f842a2d04c8d65eb2cc2cae9670da0743c88b",
+      "contents_reverified": false
+    },
+    {
+      "label": "GPEI/Frank Salet source-role context",
+      "sha256_as_supplied": "4b5f5e43e04f2751206aea26a8d3b495b9fd1b0eb1dd09c7e7981c3971e2f0ac",
+      "contents_reverified": false
+    }
+  ],
+  "checks_and_limits": {
+    "new_keys_match_original_matrix_owner_source_question_records": true,
+    "new_keys_match_original_roster_owner_y_x_interval_sequence": true,
+    "accepted_1102_exact_original_row_mismatches": 0,
+    "new_548_overlap_with_accepted_1102_exact_owner_y_x": 0,
+    "new_548_overlap_with_EL_DHERE75_exact_owner_y_x": 0,
+    "new_548_overlap_with_actual_522_local_draft_verified": false,
+    "native_or_geometry_replayed": false,
+    "source_payload_added": false,
+    "raw_keys_or_coordinates_published": false,
+    "disposition_or_credit_changed": false
+  },
+  "verified_library_memo_transfer": {
+    "library_file_id": "libfile_cbe45fb6c1a881919a064a15b3b52064",
+    "file_name": "worldatlas-GBR28-SOM-cross-runtime-transfer-20261026.zip",
+    "version": 0,
+    "bytes": 16014,
+    "sha256": "45caed8bfcb24166f29f450dad91e7e342fb214d469ce55d2c17cfab68bcf9d9",
+    "verified_entries": {
+      "worldatlas-SOM-WARSHEIKH24-RAGAELLE72-BALAD2-source-role-review-20261026.md": {
+        "bytes": 10963,
+        "sha256": "5a1439371166b84eb62e0a782832aa1c9299de2ad695dae776a6b43ca6645441"
+      },
+      "worldatlas-SOM-JAMAAMEEAST2-JILIBEAST1-RABDURE2-source-role-20261026.md": {
+        "bytes": 6539,
+        "sha256": "6e03cf79867a75174ef9564f93ce982a5b756a3a0e8af7703c54cacfda838393"
+      }
+    },
+    "archive_manifest": {
+      "path": "MANIFEST.json",
+      "bytes": 1727,
+      "sha256": "9f35b6e6c8a096b43667908f99de8071a24a8a3bd30d174ec02d69030ad82175",
+      "declared_entry_hashes_verified": 4
+    }
+  }
+}
