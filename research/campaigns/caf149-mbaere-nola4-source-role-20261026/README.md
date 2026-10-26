@@ -10,6 +10,8 @@ Identity-based exclusion of the accepted 39-key Yobé-Sangha/COG cohort, the 18 
 
 The Dar El Kouti/TCD Moyen-Chari note included in this bundle covers a different two-key subset: those keys are drawn from the USCB-inside-63 partition, while the two Dar El Kouti keys in the outside-USCB seven-key remainder above are separate identities. The shared target and source labels do not make the two subsets overlap.
 
+Together the four attached notes cover nine unique keys: Mbaere/Nola four (`8ab690f59bb0402f9509d07b8849ef46aa9f062f7b9701fd3f68e999274fe76d`), the distinct Dar El Kouti inside-63 pair (`d91bce54506264cb3451bcd8e900496934e861725d7c7b7e91f9b4881b29f470`), the Dar El Kouti outside-86 pair (`541086312c18eed3400d167a10a0fcc0e5d9351737c8d6b5fa1c5e112ea46e24`), and Lili one (`d5a9be419f03f65a9e970eea59c7dc0dae24dc99e3d4135dc1ea7104d315af37`). The outside-USCB seven-key remainder is Mbaere/Nola four, the outside Dar pair two, and Lili one. All nine remain held; the Dar key sets do not overlap.
+
 The selected Mbaere/Nola subset contains four unique keys, hash `8ab690f59bb0402f9509d07b8849ef46aa9f062f7b9701fd3f68e999274fe76d`, over sorted compact JSON `[owner,y,x]` arrays. Its four actual-contact atoms hash to `af6e8dc0bc76009de2cac6c2a76c1aecebdfdc55733c93af3c7beb3b9f80058c` over sorted `[owner,y,x,positive_source_id,foreign_source_id,source_feature_ordinal,target_negative_ordinal,geometry_sha256,strict_interior,declared_negative]` rows. The four are disjoint by key identity from each previously listed cohort. The source feature ID is shared with the separate CAF39 Likouala cohort, but these four have different CAF target identities and are not added to or counted as CAF39.
 
 ## Original target and actual foreign-contact operands
