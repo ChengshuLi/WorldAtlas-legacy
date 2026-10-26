@@ -1,9 +1,10 @@
 import test from 'node:test';
+import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {sha256} from '@noble/hashes/sha2.js';
 import {canonicalValue} from '../src/native-grid.js';
 import {finalBankSelection,scientificNativeSelection} from '../src/reference-metadata.js';
-import {effectivePrimitiveGeometries, effectiveFootprintValue, effectiveFootprintBounds, assertLegacyFootprint, canonicalFootprintJsonChunks, footprintValueSha256, finishEffectiveFootprint, finishedReleaseFootprintDigest, effectiveNativeAdditionRows, effectiveNativeRuntimeIndex,mergeUnassignedNativeIntervals,extendFinishedNativeFootprint} from '../src/effective-footprint.js';
+import {effectivePrimitiveGeometries, effectiveFootprintValue, effectiveFootprintBounds, assertLegacyFootprint, canonicalFootprintJsonChunks, canonicalFootprintValueEqual, footprintValueSha256, bindPreparedNativeFeatures, finishEffectiveFootprint, finishedReleaseFootprintDigest, effectiveNativeAdditionRows, effectiveNativeRuntimeIndex,mergeUnassignedNativeIntervals,extendFinishedNativeFootprint} from '../src/effective-footprint.js';
 const rectangle = (a,b,c,d) => ({type:'Polygon',coordinates:[[[a,b],[c,b],[c,d],[a,d],[a,b]]]});
 const old = {id:'A',pixelIndex:1,properties:{parent_id:'P',name:'original'},geometry:rectangle(0,0,1,1)};
 const oldFootprintDigest = value => Array.from(sha256(new TextEncoder().encode(JSON.stringify(canonicalValue(value)) + '\n')),
@@ -18,12 +19,79 @@ test('streamed footprint digest is byte-equivalent to canonical JSON serializati
  const legacy=Buffer.from(JSON.stringify(canonicalValue(value))+'\n');
  assert.deepEqual(streamed,legacy);
  assert.equal(footprintValueSha256(value),oldFootprintDigest(value));
+ const nodeHash=createHash('sha256');for(const piece of canonicalFootprintJsonChunks(value))nodeHash.update(piece,'utf8');nodeHash.update('\n','utf8');
+ assert.equal(nodeHash.digest('hex'),oldFootprintDigest(value));
  assert.equal(footprintValueSha256(Symbol('root')),oldFootprintDigest(Symbol('root')));
  assert.equal(footprintValueSha256(function root(){}),oldFootprintDigest(function root(){}));
+ const withToJSON={a:1,toJSON(){return {serialized:'legacy toJSON'}}};
+ assert.deepEqual(Buffer.from([...canonicalFootprintJsonChunks(withToJSON), '\n'].join('')),Buffer.from(JSON.stringify(canonicalValue(withToJSON))+'\n'));
+ assert.equal(footprintValueSha256(withToJSON),oldFootprintDigest(withToJSON));
+ const accessor=Object.create(null);let reads=0;Object.defineProperty(accessor,'10',{enumerable:true,get(){return ++reads;}});Object.defineProperty(accessor,'2',{enumerable:true,get(){return ++reads;}});
+ reads=0;const accessorLegacy=JSON.stringify(canonicalValue(accessor))+'\n';reads=0;
+ assert.equal([...canonicalFootprintJsonChunks(accessor),'\n'].join(''),accessorLegacy);
  for(const invalid of [undefined,NaN,Infinity,-Infinity,{bad:undefined},[undefined]]){
   assert.throws(()=>footprintValueSha256(invalid));assert.throws(()=>oldFootprintDigest(invalid));
  }
  assert.throws(()=>footprintValueSha256(1n));assert.throws(()=>oldFootprintDigest(1n));
+});
+
+test('streamed canonical equality preserves eager validation and JSON ordering',()=>{
+ const left={z:[null,[-0,1e-7,1e21]],a:{'4294967295':'upper','10':'ten','2':'two','01':'leading','4294967294':'last-index'},text:'Unicode 🧭 lone \ud800'};
+ const right={text:'Unicode 🧭 lone \ud800',a:{'2':'two','10':'ten','4294967294':'last-index','01':'leading','4294967295':'upper'},z:[null,[0,1e-7,1e21]]};
+ const legacy=(a,b)=>JSON.stringify(canonicalValue(a))===JSON.stringify(canonicalValue(b));
+ assert.equal(canonicalFootprintValueEqual(left,right),legacy(left,right));
+ assert.equal(canonicalFootprintValueEqual(left,left),true);
+ const nestedJSON={a:{toJSON(key){return {serializedKey:key};}}};
+ const nestedLegacy=JSON.stringify(canonicalValue(nestedJSON));
+ assert.equal([...canonicalFootprintJsonChunks(nestedJSON)].join(''),nestedLegacy);
+ const nestedJSONCopy={a:{toJSON(key){return {serializedKey:key};}}};
+ assert.equal(canonicalFootprintValueEqual(nestedJSON,nestedJSONCopy),true);
+ const events=[];
+ const getterValue=label=>Object.defineProperty({},'value',{enumerable:true,get(){events.push(label);return 1;}});
+ const leftEffects={one:getterValue('left-one'),two:getterValue('left-two')};
+ const rightEffects={one:getterValue('right-one'),two:getterValue('right-two')};
+ assert.equal(canonicalFootprintValueEqual(leftEffects,rightEffects),true);
+ assert.deepEqual(events,['left-one','left-two','right-one','right-two']);
+ const customMap=[1];customMap.map=function(callback){return [callback(7,0,this)];};
+ assert.deepEqual([...canonicalFootprintJsonChunks(customMap)].join(''),JSON.stringify(canonicalValue(customMap)));
+ assert.equal(canonicalFootprintValueEqual(customMap,[7]),true);
+ const sparse=new Array(2),prior=Array.prototype[0];
+ try{Array.prototype[0]='inherited';const expected=JSON.stringify(canonicalValue(sparse));assert.equal([...canonicalFootprintJsonChunks(sparse)].join(''),expected);assert.equal(canonicalFootprintValueEqual(sparse,structuredClone(sparse)),true);}
+ finally{if(prior===undefined)delete Array.prototype[0];else Array.prototype[0]=prior;}
+ assert.equal(canonicalFootprintValueEqual({...left,z:[2]},right),false);
+ for(const invalid of [undefined,NaN,Infinity,-Infinity,{bad:undefined},[undefined],{nested:[{bad:NaN}]}]){
+  assert.throws(()=>canonicalFootprintValueEqual(invalid,invalid));
+  assert.throws(()=>canonicalFootprintValueEqual({a:0,z:invalid},{a:1,z:null}));
+ }
+ assert.throws(()=>canonicalFootprintValueEqual(1n,1n));
+});
+test('prepared feature binding uses validated streamed equality for distinct contexts',()=>{
+ const geometry=rectangle(0,0,1,1),base={id:'geography:base',footprints_sha256:'a'.repeat(64),hierarchy_sha256:'b'.repeat(64)};
+ const feature={id:'A',pixelIndex:1,properties:{parent_id:'P'},geometry};
+ const context={id:'A',pixelIndex:1,geometry:structuredClone(geometry),properties:{id:'A',parent_id:'P'},gridBounds:[0,0,1,1]};
+ const ownerBytes=new TextEncoder().encode(JSON.stringify([[feature.pixelIndex,feature.id]]));
+ const ownerDigest=Array.from(sha256(ownerBytes),byte=>byte.toString(16).padStart(2,'0')).join('');
+ const proof={version:3,owners:1,context_parts:[{features:1}],base_reference:base,
+  effective_reference:{footprints_sha256:finishedReleaseFootprintDigest(base,[feature],footprintValueSha256)},reference_owner_sha256:ownerDigest};
+ assert.equal(bindPreparedNativeFeatures({preparedOwnership:proof},[feature],[[context]])[0].geometry.coordinates[0][0][0],0);
+ const changed=structuredClone(context);changed.geometry.coordinates[0][1][0]=0.5;
+ assert.throws(()=>bindPreparedNativeFeatures({preparedOwnership:proof},[feature],[[changed]]),/Prepared base geometry differs/);
+});
+test('large canonical equality never serializes a whole object or skips late validation',()=>{
+ const large=()=>Array.from({length:5000},(_,index)=>({id:`owner-${index}`,geometry:{type:'Polygon',coordinates:[[[index,index],[index+1,index],[index+1,index+1],[index,index+1],[index,index]]]}}));
+ const left=large(),equal=structuredClone(left),unequal=structuredClone(left);unequal.at(-1).geometry.coordinates[0][4][0]++;
+ const stringify=JSON.stringify;let whole=false;
+ JSON.stringify=function(value,...args){if(value!==null&&(typeof value==='object'||typeof value==='bigint'))whole=true;return stringify.call(this,value,...args);};
+ try{
+  assert.equal(canonicalFootprintValueEqual(left,equal),true);
+  assert.equal(canonicalFootprintValueEqual(left,unequal),false);
+  const shared={nested:{value:1}},sharedLeft={first:shared,second:shared},sharedRight={first:{nested:{value:1}},second:{nested:{value:1}}};
+  assert.equal(canonicalFootprintValueEqual(sharedLeft,sharedRight),true);
+  assert.equal(whole,false);
+ }finally{JSON.stringify=stringify;}
+ const early={a:'x',z:{invalid:undefined}},other={a:'a much longer value',z:{valid:true}};
+ assert.throws(()=>canonicalFootprintValueEqual(early,other));
+ assert.throws(()=>canonicalFootprintValueEqual(other,early));
 });
 test('large footprint digest encodes bounded chunks instead of one canonical-document buffer',()=>{
  const value=Array.from({length:8000},(_,index)=>({id:`owner-${index}`,pixelIndex:index+1,

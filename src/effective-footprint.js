@@ -1,7 +1,7 @@
-import {canonicalValue,mergeUnassignedNativeIntervals,finishedPrimitiveGeometries as finishedPrimitiveGeometriesPure,finishEffectiveFootprint as finishEffectiveFootprintPure,extendFinishedNativeFootprint as extendFinishedNativeFootprintPure,finishedReleaseFootprintDigest as finishedReleaseFootprintDigestPure,effectivePrimitiveGeometries as effectivePrimitiveGeometriesPure,effectiveFootprintValue as effectiveFootprintValuePure,versionedPrimitiveGeometries as versionedPrimitiveGeometriesPure,additiveReleaseFootprintDigest as additiveReleaseFootprintDigestPure,versionedReleaseFootprintDigest as versionedReleaseFootprintDigestPure} from './native-grid.js';
+import {canonicalValue,canonicalFootprintJsonChunks,canonicalFootprintValueEqual,mergeUnassignedNativeIntervals,finishedPrimitiveGeometries as finishedPrimitiveGeometriesPure,finishEffectiveFootprint as finishEffectiveFootprintPure,extendFinishedNativeFootprint as extendFinishedNativeFootprintPure,finishedReleaseFootprintDigest as finishedReleaseFootprintDigestPure,effectivePrimitiveGeometries as effectivePrimitiveGeometriesPure,effectiveFootprintValue as effectiveFootprintValuePure,versionedPrimitiveGeometries as versionedPrimitiveGeometriesPure,additiveReleaseFootprintDigest as additiveReleaseFootprintDigestPure,versionedReleaseFootprintDigest as versionedReleaseFootprintDigestPure} from './native-grid.js';
 import {finalBankReference as finalBankReferencePure,additiveBaseReference as additiveBaseReferencePure,nativeReferenceForData as nativeReferenceForDataPure,bindPreparedNativeFeatures as bindPreparedNativeFeaturesPure} from './reference-metadata.js';
 import {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND} from './native-grid.js';
-export {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND};
+export {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND,canonicalFootprintJsonChunks,canonicalFootprintValueEqual};
 import {compileNativeRuntime} from './native-runtime.js';
 import {repairComponentKey,compareRepairComponents,nativeRuntimeIndex,polygonParts,nativeOnlyComponent as validateNativeOnlyComponent} from './native-grid.js';
 export {polygonParts} from './native-grid.js';
@@ -14,57 +14,6 @@ function require(value, message) { if (!value) throw Error(message); }
 function exactKeys(value, keys, name) {
   require(value && typeof value === 'object' && !Array.isArray(value), name + ' must be an object');
   require(Object.keys(value).sort().join('\0') === [...keys].sort().join('\0'), name + ' has missing/foreign fields');
-}
-
-export function* canonicalFootprintJsonChunks(value) {
-  if (Array.isArray(value)) {
-    yield '[';
-    for (let index = 0; index < value.length; index++) {
-      if (index) yield ',';
-      if (!Object.hasOwn(value, index)) { yield 'null'; continue; }
-      const item = value[index];
-      require(item !== undefined && (typeof item !== 'number' || Number.isFinite(item)), 'Nonfinite or missing footprint value');
-      if (typeof item === 'function' || typeof item === 'symbol') yield 'null';
-      else yield* canonicalFootprintJsonChunks(item);
-    }
-    yield ']';
-    return;
-  }
-  if (value && typeof value === 'object') {
-    const keys = Object.keys(value).sort(), integerKeys = [], otherKeys = [];
-    for (const key of keys) {
-      // JSON.stringify enumerates array-index property names numerically, ahead
-      // of other strings, even when the canonical object inserted keys in lexical order.
-      if (key === '0') integerKeys.push(key);
-      else if (/^[1-9][0-9]*$/.test(key)) {
-        const number = Number(key);
-        if (Number.isSafeInteger(number) && number <= 0xfffffffe && String(number) === key) integerKeys.push(key);
-        else otherKeys.push(key);
-      } else otherKeys.push(key);
-    }
-    integerKeys.sort((left, right) => Number(left) - Number(right));
-    yield '{';
-    let emitted = 0;
-    for (const key of [...integerKeys, ...otherKeys]) {
-      const item = value[key];
-      require(item !== undefined && (typeof item !== 'number' || Number.isFinite(item)), 'Nonfinite or missing footprint value');
-      // This matches JSON.stringify on canonicalValue's object result: callable
-      // and symbol-valued object fields are omitted, but explicit undefined and
-      // nonfinite numbers were rejected by canonicalValue before serialization.
-      if (typeof item === 'function' || typeof item === 'symbol') continue;
-      if (emitted++) yield ',';
-      yield JSON.stringify(key);
-      yield ':';
-      yield* canonicalFootprintJsonChunks(item);
-    }
-    yield '}';
-    return;
-  }
-  require(value !== undefined && (typeof value !== 'number' || Number.isFinite(value)), 'Nonfinite or missing footprint value');
-  const encoded = JSON.stringify(value);
-  // At the root, JSON.stringify(function/symbol) yields undefined and the old
-  // `undefined + '\n'` expression hashes the literal text `undefined\n`.
-  yield encoded === undefined ? 'undefined' : encoded;
 }
 
 export function footprintValueSha256(value) {
@@ -612,4 +561,4 @@ export function versionedReleaseFootprintDigest(...args){return versionedRelease
 export function finalBankReference(...args){return finalBankReferencePure(...args,footprintValueSha256);}
 export function additiveBaseReference(...args){return additiveBaseReferencePure(...args,footprintValueSha256);}
 export function nativeReferenceForData(...args){return nativeReferenceForDataPure(...args,footprintValueSha256);}
-export function bindPreparedNativeFeatures(...args){return bindPreparedNativeFeaturesPure(...args,footprintValueSha256,bytes=>Array.from(sha256(bytes),b=>b.toString(16).padStart(2,'0')).join(''));}
+export function bindPreparedNativeFeatures(...args){return bindPreparedNativeFeaturesPure(...args,footprintValueSha256,bytes=>Array.from(sha256(bytes),b=>b.toString(16).padStart(2,'0')).join(''),canonicalFootprintValueEqual);}
