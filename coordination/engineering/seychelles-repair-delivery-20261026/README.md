@@ -101,11 +101,17 @@ To keep the accepted writer within available memory, after all preparation
 and output identities are complete it discards its reader's cached Git bodies;
 subsequent preflight reads continue to resolve exact committed blobs and
 validate whole-file hashes without retaining a second copy of the bank. No
-qualification predicate, output, or writer guard is skipped. The successful finalizer invocation exited 0. Four earlier finalizer attempts
-created no canonical output: one config preflight error, one missing locked
-dependency, one exit 137, and one SIGKILL. None is treated as success. The
-separate supported-inputs invocation also returned exit 137 after writing its
-complete hash-bound preparation receipt; its outputs are preserved, but the
-command is not described as a normal-exit success. Focused local controls pass
-(48 final-bank-finalizer tests and 22 delivery-handoff tests); the build and
-stock integration remain separate controls. No credit is asserted here.
+qualification predicate, output, or writer guard is skipped. The successful
+finalizer invocation exited 0. Four earlier no-output attempts were observed:
+two setup/preflight failures (a config preflight error and a missing installed
+lockfile dependency), followed by two finalizer process runs (exit 137 and
+SIGKILL). The attempt3 receipt's `prior_failures_preserved` field records the
+two process runs and the separate supported-inputs abnormal exit; it does not
+inventory the earlier setup failures. No separate retained log/receipt was
+found for those two setup failures, so this paragraph is the retained summary;
+none is treated as success. The separate supported-inputs invocation also
+returned exit 137 after writing its complete hash-bound preparation receipt;
+its outputs are preserved, but the command is not described as a normal-exit
+success. Focused local controls pass (48 final-bank-finalizer tests and 22
+delivery-handoff tests); the build and stock integration remain separate
+controls. No credit is asserted here.
