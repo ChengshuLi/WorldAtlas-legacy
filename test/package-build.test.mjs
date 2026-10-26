@@ -138,7 +138,7 @@ test('normal guarded release consumes only the unchanged database issued by the 
   git('init', '-b', 'main'); git('config', 'user.name', 'Fixture'); git('config', 'user.email', 'fixture@example.org');
   git('config', 'filter.must-not-run.clean', 'false'); git('config', 'filter.must-not-run.required', 'true');
   git('add', '.'); git('commit', '-m', 'declared package fixture'); git('remote', 'add', 'origin', root);
-  const manager = workspaceManager(root), entry = manager.allocate({worker:'generated-db', branch:'engineering/generated-db'});
+  const manager = workspaceManager(root), entry = await manager.allocate({worker:'generated-db', branch:'engineering/generated-db'});
   const head = git('rev-parse', 'HEAD').trim(), release = () => manager.release({worker:entry.worker, token:entry.token});
   const cache = path.join(entry.path, '.cache'), database = path.join(cache, 'package-atlas.sqlite'), receiptFile = path.join(cache, 'package-input-build.json');
   await fs.mkdir(path.join(entry.path, 'node_modules'));

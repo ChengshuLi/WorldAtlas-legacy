@@ -34,7 +34,7 @@ async function fixture(t,{profile='full',include=[],inheritRouting=false}={}){
   const saved={};
   if(inheritRouting) for(const [key,value] of Object.entries(routed(repo))){saved[key]=process.env[key];process.env[key]=value;}
   let manager,entry;
-  try{manager=workspaceManager(repo);entry=manager.allocate({worker:'cmr-resume-test',slot:'work',branch:'test/resume-cmr',profile,include});}
+  try{manager=workspaceManager(repo);entry=await manager.allocate({worker:'cmr-resume-test',slot:'work',branch:'test/resume-cmr',profile,include});}
   finally{for(const key of Object.keys(saved)){if(saved[key]===undefined)delete process.env[key];else process.env[key]=saved[key];}}
   const destination=entry.path;
   // Simulate only this disposable fixture's post-worktree-add/pre-materialization state.
