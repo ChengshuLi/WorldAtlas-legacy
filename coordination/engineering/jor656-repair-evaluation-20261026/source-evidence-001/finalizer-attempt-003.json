@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "kind": "jor656-finalizer-attempt-diagnostic",
+  "attempt": "003",
+  "worktree_head": "8382b454d01713c125201b78d0e1c06e2ce82bc7",
+  "config": {
+    "workspace_path": ".jor-source-prep/finalize-config-002.json",
+    "bytes": 661,
+    "sha256": "6971de2181247572852fd3f7475cc1cdeb816f3279592681fe214edd903a3558"
+  },
+  "operation": {
+    "entrypoint": "scripts/prepare-delivery-handoff.mjs",
+    "phase": "finalize",
+    "exact_argv_receipt": "not retained; no exact destination argument is asserted here",
+    "prior operator invocation note": "env -u NODE_PATH node scripts/prepare-delivery-handoff.mjs finalize [config] [destination] (destination and exact raw argv not durably recorded)"
+  },
+  "runtime": {
+    "node_path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "node_version": "v24.19.0"
+  },
+  "status": {
+    "recorded_exit_code": 137,
+    "captured_stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "finalizer_output_emitted": false,
+    "cause": "undetermined; exit 137 is not by itself proof of OOM"
+  },
+  "timing": {
+    "prelaunch_free_space_receipt": {
+      "path": ".jor-source-prep/finalize-attempt-003-free-before",
+      "bytes": 580771840,
+      "file_timestamp_utc": "2026-10-26T18:56:34.366072Z"
+    },
+    "exit_receipt": {
+      "path": ".jor-source-prep/finalize-attempt-003.exit",
+      "file_timestamp_utc": "2026-10-26T18:58:01.110803Z"
+    },
+    "timestamp_difference_seconds": 86.745,
+    "actual_process_elapsed": "not recorded; timestamp difference is a receipt interval, not a measured process duration"
+  },
+  "memory_diagnostics": {
+    "cgroup_path": "/proc/self/cgroup reported unified root, but /sys/fs/cgroup and cgroup mount are absent in this runtime",
+    "memory_current_max_events": "unavailable",
+    "max_rss": "not captured",
+    "kernel_oom_or_external_kill": "not distinguished"
+  },
+  "interpretation": "This is a failed finalizer attempt record only. It is not OOM attribution, an output receipt, owner-zero evidence, selected-bank validation, or credit."
+}
