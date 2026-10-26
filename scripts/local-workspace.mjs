@@ -48,6 +48,12 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     return commit;
   };
   const common = fs.realpathSync(git('rev-parse', '--path-format=absolute', '--git-common-dir').trim());
+  // Remote metadata belongs to the shared repository even when this manager
+  // was invoked from one linked checkout. Worktree-local `FETCH_HEAD` is not
+  // the allocator's base-selection state and must not be refreshed by allocate.
+  const gitCommon = (...args) => execFileSync('git', ['--git-dir', common, ...args], {
+    encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, env: noLazyFetch
+  });
   const registry = path.join(common, 'worldatlas-local-workspaces');
   const root = path.resolve(common, '../../.worldatlas-workspaces', createHash('sha256').update(common).digest('hex').slice(0, 16));
   const stateFile = path.join(registry, 'state.json');
@@ -289,10 +295,10 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       // fetched commit before reserving; later ref movement cannot change it.
       // Request metadata only even from conventional clones; selected missing
       // blobs still need explicit acquisition before the inventory can pass.
-      git('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none',
+      gitCommon('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none',
         'origin', '+refs/heads/main:refs/remotes/origin/main');
-      const fetchedMain = git('rev-parse', '--verify', 'FETCH_HEAD^{commit}').trim();
-      const trackingMain = git('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').trim();
+      const fetchedMain = gitCommon('rev-parse', '--verify', 'FETCH_HEAD^{commit}').trim();
+      const trackingMain = gitCommon('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').trim();
       if (!/^[a-f0-9]{40}$/.test(fetchedMain) || fetchedMain !== trackingMain) {
         throw Error('Fetched origin/main did not match its remote-tracking ref; refusing a stale startup base');
       }
