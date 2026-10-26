@@ -6,7 +6,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {packagePreparedStartupOwnership,readPreparedFinalOwnership} from '../scripts/package-startup-ownership.mjs';
 const hash=raw=>createHash('sha256').update(raw).digest('hex');
-const nativePath='coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json';
+const nativePath='test/fixtures/selected-native-reference/native-manifest.json';
 
 async function fixture(t){
   const directory=await fs.mkdtemp(path.join(os.tmpdir(),'atlas-prepared-startup-'));
