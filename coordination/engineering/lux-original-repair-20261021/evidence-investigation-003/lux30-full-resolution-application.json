@@ -1,0 +1,708 @@
+{
+  "version": 1,
+  "kind": "lux30-same-release-full-versus-original-simplified-native-center-application",
+  "status": "bounded-source-comparison-only-no-owner-change-or-credit",
+  "package_id": "gb-LUX-ADM1--repair-evaluation",
+  "scope": {
+    "count": 30,
+    "representation": "sorted original exact grid tuples (y,x,owner_index); raw grid tuples are in this research record only",
+    "sorted_y_x_owner_sha256": "2a96c04aa8281ce28d68274f41368ffebad468995ad478725862619b53efd79b"
+  },
+  "method": {
+    "algorithm": "native-linear-evenodd-first-owner-v1; nativePolygonIntervals from pinned source code",
+    "code_commit": "5c1919dd1c7e89618398454220b57edf0fa388d2",
+    "code_blob": "add4cef02bb5a790f22a9078fdf9bd51679059d3",
+    "grid_size": 262166,
+    "latitude_source": {
+      "path": "test/fixtures/native-row-latitudes.f64le.gz",
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "decoded_bytes": 2097328
+    },
+    "scope_rows": {
+      "start": 88819,
+      "end_exclusive": 89520
+    },
+    "no_full_624_diagnostic": true
+  },
+  "full_source": {
+    "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LUX/ADM1/geoBoundaries-LUX-ADM1.geojson",
+    "release_ref": "9469f09",
+    "lfs_oid_sha256": "6d94cd5c195bd0d103fe5bef528a3ee1ed7b2622f7dd261c43ef273b80558e90",
+    "bytes": 1803171,
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+    },
+    "license": "Open Data Commons Open Database License 1.0",
+    "attribution": "geoBoundaries, source attributed to OpenStreetMap / Wambacher; preserve license and attribution obligations",
+    "feature_count": 12,
+    "features": [
+      {
+        "ordinal": 1,
+        "shapeID": "76397094B75044033408583",
+        "shapeName": "Canton Echternach",
+        "shapeISO": "LU-EC",
+        "simplified_vertices": 144,
+        "full_vertices": 4237
+      },
+      {
+        "ordinal": 2,
+        "shapeID": "76397094B81286574502905",
+        "shapeName": "Canton Grevenmacher",
+        "shapeISO": "LU-GR",
+        "simplified_vertices": 156,
+        "full_vertices": 5289
+      },
+      {
+        "ordinal": 3,
+        "shapeID": "76397094B46061876108979",
+        "shapeName": "Canton Remich",
+        "shapeISO": "LU-RM",
+        "simplified_vertices": 118,
+        "full_vertices": 3633
+      },
+      {
+        "ordinal": 4,
+        "shapeID": "76397094B49543500261856",
+        "shapeName": "Canton Mersch",
+        "shapeISO": "LU-ME",
+        "simplified_vertices": 172,
+        "full_vertices": 4885
+      },
+      {
+        "ordinal": 5,
+        "shapeID": "76397094B22879125121781",
+        "shapeName": "Canton Capellen",
+        "shapeISO": "LU-CA",
+        "simplified_vertices": 164,
+        "full_vertices": 6193
+      },
+      {
+        "ordinal": 6,
+        "shapeID": "76397094B53618071923197",
+        "shapeName": "Canton Luxembourg",
+        "shapeISO": "LU-LU",
+        "simplified_vertices": 172,
+        "full_vertices": 5378
+      },
+      {
+        "ordinal": 7,
+        "shapeID": "76397094B45773647818245",
+        "shapeName": "Canton Redange",
+        "shapeISO": "LU-RD",
+        "simplified_vertices": 226,
+        "full_vertices": 5557
+      },
+      {
+        "ordinal": 8,
+        "shapeID": "76397094B91879595380480",
+        "shapeName": "Canton Diekirch",
+        "shapeISO": "LU-DI",
+        "simplified_vertices": 201,
+        "full_vertices": 6009
+      },
+      {
+        "ordinal": 9,
+        "shapeID": "76397094B23155303849994",
+        "shapeName": "Canton Esch-sur-Alzette",
+        "shapeISO": "LU-ES",
+        "simplified_vertices": 213,
+        "full_vertices": 6643
+      },
+      {
+        "ordinal": 10,
+        "shapeID": "76397094B70222545473363",
+        "shapeName": "Canton Clervaux",
+        "shapeISO": "LU-CL",
+        "simplified_vertices": 261,
+        "full_vertices": 11043
+      },
+      {
+        "ordinal": 11,
+        "shapeID": "76397094B67457450323927",
+        "shapeName": "Canton Wiltz",
+        "shapeISO": "LU-WI",
+        "simplified_vertices": 253,
+        "full_vertices": 7827
+      },
+      {
+        "ordinal": 12,
+        "shapeID": "76397094B51041035930086",
+        "shapeName": "Canton Vianden",
+        "shapeISO": "LU-VD",
+        "simplified_vertices": 98,
+        "full_vertices": 4236
+      }
+    ],
+    "exact_pin": {
+      "commit_ref": "9469f09",
+      "path": "releaseData/gbOpen/LUX/ADM1/geoBoundaries-LUX-ADM1.geojson",
+      "git_lfs_sha256": "6d94cd5c195bd0d103fe5bef528a3ee1ed7b2622f7dd261c43ef273b80558e90",
+      "bytes": 1803171,
+      "retrieval": "ordinary public GitHub raw URL; curl --fail --location returned exit 0; exact LFS size/hash matched GitHub pointer"
+    }
+  },
+  "original_simplified_source": {
+    "comparison_path": "coordination/engineering/lux-original-repair-20261021/evidence-investigation/lux-original-source-native-comparison.json",
+    "comparison_sha256": "aa7c37021ac2b68dfb8b40689cbc017729e3ee21c5f05e0e25421c2535439956",
+    "original_family": "gb:LUX:ADM1",
+    "source_body_commit": "1bf4bb01d76a76953d4a11308f5af2dd50fe3365",
+    "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-LUX-ADM1-000.bin.gz",
+    "compressed_sha256": "eeb43150251bb8fb0cc901a2a802da97e37770f3c67d4e8ff88f13f2adf56b16",
+    "decoded_sha256": "80b7488f2214934e2fa37c4796a3d28f58ac820cbbb02deb71d16ee7d7564a2b",
+    "feature_count": 12,
+    "matched_to_full_by": "exact shapeID, shapeName, shapeISO and original one-based feature ordinal; no rename/rekey",
+    "recorded_consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LUX/ADM1/geoBoundaries-LUX-ADM1_simplified.geojson",
+    "exact_decoded_body_sha256": "80b7488f2214934e2fa37c4796a3d28f58ac820cbbb02deb71d16ee7d7564a2b",
+    "decoded_bytes": 58247,
+    "license": "Open Data Commons Open Database License 1.0",
+    "attribution": "geoBoundaries, source attributed to OpenStreetMap / Wambacher",
+    "same_release_ref": "9469f09",
+    "same_release_geometry_confirmation": "Downloaded exact recorded _simplified.geojson body from the same immutable release ref; SHA-256 exactly equals the uncompressed original source-corpus body. All 12 shapeIDs/names/ISO fields and one-based feature ordinals are identical to the fetched full GeoJSON."
+  },
+  "results": {
+    "tested": 30,
+    "keys_with_same_lux_shape_ids": 2,
+    "keys_with_changed_lux_shape_ids": 28,
+    "full_resolution_foreign_families_retested": false,
+    "original_other_family_results_reused": true,
+    "keys": [
+      {
+        "x": 135370,
+        "y": 88819,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 10,
+            "id": "76397094B70222545473363",
+            "name": "Canton Clervaux"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135536,
+        "y": 88847,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 10,
+            "id": "76397094B70222545473363",
+            "name": "Canton Clervaux"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135544,
+        "y": 88856,
+        "owner_index": 7122,
+        "prior_label": "pending_ACT_SIG_GR_boundary_representation_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 10,
+            "id": "76397094B70222545473363",
+            "name": "Canton Clervaux"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [
+          {
+            "ordinal": 10,
+            "id": "76397094B70222545473363",
+            "name": "Canton Clervaux"
+          }
+        ],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135545,
+        "y": 88858,
+        "owner_index": 7122,
+        "prior_label": "pending_ACT_SIG_GR_boundary_representation_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 10,
+            "id": "76397094B70222545473363",
+            "name": "Canton Clervaux"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135563,
+        "y": 88922,
+        "owner_index": 7122,
+        "prior_label": "pending_ACT_SIG_GR_boundary_representation_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 10,
+            "id": "76397094B70222545473363",
+            "name": "Canton Clervaux"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135584,
+        "y": 88965,
+        "owner_index": 7122,
+        "prior_label": "pending_ACT_SIG_GR_boundary_representation_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 12,
+            "id": "76397094B51041035930086",
+            "name": "Canton Vianden"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135632,
+        "y": 89031,
+        "owner_index": 7122,
+        "prior_label": "pending_ACT_SIG_GR_boundary_representation_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135634,
+        "y": 89034,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135635,
+        "y": 89036,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135636,
+        "y": 89037,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135671,
+        "y": 89062,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135672,
+        "y": 89062,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135669,
+        "y": 89063,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135670,
+        "y": 89063,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 8,
+            "id": "76397094B91879595380480",
+            "name": "Canton Diekirch"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135683,
+        "y": 89074,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135683,
+        "y": 89075,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135684,
+        "y": 89076,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135685,
+        "y": 89077,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135685,
+        "y": 89088,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135685,
+        "y": 89091,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135685,
+        "y": 89092,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135766,
+        "y": 89126,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 1,
+            "id": "76397094B75044033408583",
+            "name": "Canton Echternach"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135818,
+        "y": 89215,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 2,
+            "id": "76397094B81286574502905",
+            "name": "Canton Grevenmacher"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135819,
+        "y": 89216,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 2,
+            "id": "76397094B81286574502905",
+            "name": "Canton Grevenmacher"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135819,
+        "y": 89221,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 2,
+            "id": "76397094B81286574502905",
+            "name": "Canton Grevenmacher"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135766,
+        "y": 89285,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 2,
+            "id": "76397094B81286574502905",
+            "name": "Canton Grevenmacher"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135352,
+        "y": 89396,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 9,
+            "id": "76397094B23155303849994",
+            "name": "Canton Esch-sur-Alzette"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [
+          {
+            "ordinal": 9,
+            "id": "76397094B23155303849994",
+            "name": "Canton Esch-sur-Alzette"
+          }
+        ],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135715,
+        "y": 89455,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 3,
+            "id": "76397094B46061876108979",
+            "name": "Canton Remich"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135626,
+        "y": 89461,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 9,
+            "id": "76397094B23155303849994",
+            "name": "Canton Esch-sur-Alzette"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      },
+      {
+        "x": 135524,
+        "y": 89519,
+        "owner_index": 7122,
+        "prior_label": "pending_source_current_canton_disagreement",
+        "original_simplified_lux_hits": [
+          {
+            "ordinal": 9,
+            "id": "76397094B23155303849994",
+            "name": "Canton Esch-sur-Alzette"
+          }
+        ],
+        "original_other_family_hits": [],
+        "full_resolution_lux_hits": [],
+        "full_resolution_boundary_ties": []
+      }
+    ],
+    "source_resolution_effect": {
+      "same_release_original_simplified_body_exact_match": true,
+      "feature_identity_map": "12/12 identical shapeID, shapeName, shapeISO and one-based ordinal; no rename/rekey",
+      "original_simplified_vertices_by_feature": {
+        "Canton Echternach": 144,
+        "Canton Grevenmacher": 156,
+        "Canton Remich": 118,
+        "Canton Mersch": 172,
+        "Canton Capellen": 164,
+        "Canton Luxembourg": 172,
+        "Canton Redange": 226,
+        "Canton Diekirch": 201,
+        "Canton Esch-sur-Alzette": 213,
+        "Canton Clervaux": 261,
+        "Canton Wiltz": 253,
+        "Canton Vianden": 98
+      },
+      "full_resolution_vertices_by_feature": {
+        "Canton Echternach": 4237,
+        "Canton Grevenmacher": 5289,
+        "Canton Remich": 3633,
+        "Canton Mersch": 4885,
+        "Canton Capellen": 6193,
+        "Canton Luxembourg": 5378,
+        "Canton Redange": 5557,
+        "Canton Diekirch": 6009,
+        "Canton Esch-sur-Alzette": 6643,
+        "Canton Clervaux": 11043,
+        "Canton Wiltz": 7827,
+        "Canton Vianden": 4236
+      },
+      "original_simplified_total_vertices": 2178,
+      "full_resolution_total_vertices": 70930
+    }
+  },
+  "limits": [
+    "This is a source-member location comparison for the exact prior-held 30 only, not a new native diagnostic/constructor or ownership decision.",
+    "The full and simplified LUX products are same geoBoundaries releaseRef, have identical 12 shapeIDs/names/ISO and feature ordinals, but differ in vertex detail.",
+    "The original non-LUX family results are preserved verbatim as source hits from the pinned 624-key comparison; none of these 30 had a foreign-family match.",
+    "No source geometry body is included in the result artifact; no coordinate reproject/normalization, source change, hold removal, ownership assignment, or credit.",
+    "Current ACT and SIG-GR disagreement results remain adverse evidence; full-resolution contact only answers whether a simplification artifact explains original LUX membership for these points."
+  ]
+}
