@@ -97,6 +97,25 @@ function canonicalDigest(value,measureBytes) {
  const sha256=hash.digest('hex');return measureBytes?{sha256,bytes}:sha256;
 }
 const same=(a,b)=>valueSha(a)===valueSha(b);
+// Retained positive lineage must include the exact foreign source contacts
+// already recorded for that native key. Authenticating only a caller-supplied
+// subset would let an omitted adverse operand disappear from the new pass.
+export function validateRetainedOriginalPositiveKey(record,comparisonRow,sourceFamily,owner) {
+ demand(record&&Number.isSafeInteger(record.y)&&Number.isSafeInteger(record.x)
+  &&comparisonRow?.y===record.y&&comparisonRow?.x===record.x
+  &&Array.isArray(comparisonRow.queue_owner_indices)&&comparisonRow.queue_owner_indices.includes(owner)
+  &&Array.isArray(comparisonRow.source_matches),'Retained original positive key is absent from exact per-key source comparison');
+ const own=comparisonRow.source_matches.filter(match=>match?.family===sourceFamily);
+ demand(own.length===1&&typeof own[0].shapeID==='string'&&record.source_id===sourceFamily+':'+own[0].shapeID,
+  'Retained original positive member differs from exact per-key source comparison');
+ const expected=comparisonRow.source_matches.filter(match=>match?.family!==sourceFamily)
+  .map(match=>{demand(typeof match?.family==='string'&&match.family&&typeof match.shapeID==='string'&&match.shapeID,
+    'Malformed foreign match in exact per-key source comparison');return match.family+':'+match.shapeID;}).sort();
+ const actual=(record.negative_operands??[]).map(item=>item?.source_id).sort();
+ demand(expected.length===new Set(expected).size&&actual.length===new Set(actual).size
+  &&same(actual,expected),'Retained original adverse operands differ from exact per-key source comparison');
+ return {source_id:record.source_id,negative_source_ids:expected};
+}
 const freeze=v=>{if(v&&typeof v==='object'){Object.values(v).forEach(freeze);Object.freeze(v);}return v;};
 // The executing checkout supplies policy authority. reader.version can be an
 // untrusted candidate and therefore must never choose the catalogue. Policy is
@@ -2140,13 +2159,14 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
  let retainedOriginalPositive=null;
  if(evidence.retained_original_positive!==undefined){
   const retained=(yield* readAdopted(evidence.retained_original_positive,'Retained original positive provenance'));
-  demand(keys(retained,'version,kind,source_family,target_id,original_source_evidence,original_native_patch,original_territorial_provenance,owner,records')
+  demand(keys(retained,'version,kind,source_family,target_id,original_source_evidence,original_native_patch,original_territorial_provenance,original_per_key_source_comparison,owner,records')
    &&retained.version===1&&retained.kind==='retained-original-positive-provenance-v1'
    &&typeof retained.source_family==='string'&&retained.source_family&&typeof retained.target_id==='string'&&retained.target_id
    &&Number.isSafeInteger(retained.owner)&&retained.owner>0&&Array.isArray(retained.records)&&retained.records.length>0,
    'Incomplete retained original positive provenance');
   const old=(yield* json(retained.original_source_evidence)),oldPatch=(yield* json(retained.original_native_patch));
   const oldTerritorial=(yield* json(retained.original_territorial_provenance));
+  const oldPerKey=(yield* json(retained.original_per_key_source_comparison));
   demand(old?.version===1&&old.kind==='source-target-native-evidence-v1'
    &&old.catalogue?.git_blob_oid===evidence.catalogue.git_blob_oid
    &&old.native_contract?.size===evidence.native_contract.size
@@ -2162,6 +2182,20 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   demand(completeSourceMap.size===expectedOriginalSources.length&&expectedOriginalSources.every(item=>
    same(completeSourceMap.get(item.source_id),item.parts)),
    'Retained original positive/negative family inventory is incomplete');
+  demand(oldPerKey?.kind==='lux-original-retained-source-native-mask-comparison-v1'
+   &&oldPerKey.package_id==='gb-LUX-ADM1--repair-evaluation'&&Array.isArray(oldPerKey.source_families)
+   &&Array.isArray(oldPerKey.per_key),'Retained original per-key source comparison is incomplete');
+  const comparisonFamilies=oldPerKey.source_families.map(item=>item.family);
+  demand(comparisonFamilies.length===new Set(comparisonFamilies).size
+   &&same([...comparisonFamilies].sort(),expectedOriginalSources.map(item=>item.source_id).sort()),
+   'Retained original per-key source comparison family inventory differs');
+  const comparisonByKey=new Map();
+  for(const item of oldPerKey.per_key){
+   demand(Number.isSafeInteger(item.y)&&Number.isSafeInteger(item.x)&&Array.isArray(item.source_matches),
+    'Malformed retained original per-key source comparison row');
+   const key=item.y+':'+item.x;demand(!comparisonByKey.has(key),'Duplicate retained original per-key source comparison row');
+   comparisonByKey.set(key,item);
+  }
   const originalFamilies=old.families.filter(f=>f.source_id===retained.source_family);
   const originalProduct=catalogue.products.find(p=>p.key===retained.source_family);
   demand(originalFamilies.length===1&&same(originalFamilies[0].parts,originalProduct?.parts),
@@ -2193,6 +2227,8 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
     &&valueSha(target.base_geometry)===valueSha(resolvedTargets.get(retained.target_id)?.base_geometry)
     &&(target.coverage_rows??[]).some(row=>row.y===record.y&&row.runs.some(run=>run[0]<=record.x&&record.x<run[1])),
     'Retained original positive member/owner/key differs');seen.add(identity);
+   const comparisonRow=comparisonByKey.get(key);
+   validateRetainedOriginalPositiveKey(record,comparisonRow,retained.source_family,retained.owner);
    const negatives=new Set();
    for(const negative of record.negative_operands){
     demand(keys(negative,'source_id,negative_ordinal,geometry_sha256')&&typeof negative.source_id==='string'

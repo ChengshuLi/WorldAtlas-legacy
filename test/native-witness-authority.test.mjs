@@ -6,7 +6,7 @@ import {execFileSync} from 'node:child_process';
 import {deriveSourceTargetNativeDelta,nativeRowLatitudes,nativePolygonIntervals,polygonParts,witnessCellEffects,validateWitnessGeometry} from '../src/native-grid.js';
 import {ImmutableReader} from '../scripts/check-effective-geographic-regression.mjs';
 import {constructOriginalAuthority} from '../scripts/delivery-handoff-advance.mjs';
-import {valueSha,diagnoseSourceTargetNativeAuthority} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
+import {valueSha,diagnoseSourceTargetNativeAuthority,validateRetainedOriginalPositiveKey} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
 
 const rectangle=(left,right,bottom=-40,top=40)=>({type:'Polygon',coordinates:[[[left,bottom],[right,bottom],[right,top],[left,top],[left,bottom]]]});
 const feature=(id,pixelIndex,geometry,target_id)=>({id,pixelIndex,geometry,...(target_id?{target_id}:{})});
@@ -104,11 +104,15 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
       complete_sources:[{source_family:family,parts:[source]}],
       targets:evidenceBody.targets.map(item=>({source_id:item.id,exclusions:[]}))});
     const originalEvidence=put('original-source-evidence.json',evidenceBody);
+    const key=state.proposed.rows[0],x=key.runs[0][0];
+    const originalComparison=put('original-per-key-comparison.json',{kind:'lux-original-retained-source-native-mask-comparison-v1',
+      package_id:'gb-LUX-ADM1--repair-evaluation',source_families:[{family}],
+      per_key:[{y:key.y,x,queue_owner_indices:[1],source_matches:[{family,shapeID:target.id.slice(family.length+1),direct_contact:true}]}]});
     const retainedBody={version:1,kind:'retained-original-positive-provenance-v1',source_family:family,
       target_id:'city',original_source_evidence:originalEvidence,original_native_patch:patch,
-      original_territorial_provenance:originalTerritorial,owner:1,
-      records:[{source_id:target.id,pixelIndex:1,y:state.proposed.rows[0].y,
-        x:state.proposed.rows[0].runs[0][0],geometry_sha256:valueSha(state.originals[0].geometry),negative_operands:[]}]};
+      original_territorial_provenance:originalTerritorial,original_per_key_source_comparison:originalComparison,owner:1,
+      records:[{source_id:target.id,pixelIndex:1,y:key.y,
+        x,geometry_sha256:valueSha(state.originals[0].geometry),negative_operands:[]}]};
     retained=put('retained-original-positive.json',retainedBody);
     evidenceBody.retained_original_positive=retained;
   }else if(state.retained){retained=put('retained-original-positive.json',state.retained);evidenceBody.retained_original_positive=retained;}
@@ -549,4 +553,22 @@ test('retained original positive provenance authenticates whole prior family and
  const result=f.diagnose();assert.equal(result.retained_original_positive.records,1);
  assert.equal(result.retained_original_positive.keys,1);
  assert.equal(result.supported_cells,1);
+});
+test('retained LUX positive bindings preserve every original per-key foreign source contact',()=>{
+ const read=path=>JSON.parse(fs.readFileSync(new URL('../'+path,import.meta.url),'utf8'));
+ const root='coordination/engineering/lux-original-repair-20261021/';
+ const retained=read(root+'adopted-provider-20261026/original-positive-provenance-26.private.json');
+ const comparison=read(root+'evidence-investigation/lux-original-source-native-comparison.json');
+ assert.equal(retained.records.length,26);
+ assert.equal(new Set(retained.records.map(record=>record.source_id)).size,3);
+ assert.equal(retained.records.reduce((n,record)=>n+record.negative_operands.length,0),27);
+ const rows=new Map(comparison.per_key.map(row=>[row.y+':'+row.x,row]));
+ for(const record of retained.records)
+  validateRetainedOriginalPositiveKey(record,rows.get(record.y+':'+record.x),'gb:LUX:ADM1',7122);
+ const omitted=structuredClone(retained.records[0]);omitted.negative_operands=[];
+ assert.throws(()=>validateRetainedOriginalPositiveKey(omitted,rows.get(omitted.y+':'+omitted.x),'gb:LUX:ADM1',7122),
+  /adverse operands differ/);
+ const wrongOwner=structuredClone(retained.records[0]);
+ assert.throws(()=>validateRetainedOriginalPositiveKey(wrongOwner,rows.get(wrongOwner.y+':'+wrongOwner.x),'gb:LUX:ADM1',7123),
+  /absent from exact per-key source comparison/);
 });
