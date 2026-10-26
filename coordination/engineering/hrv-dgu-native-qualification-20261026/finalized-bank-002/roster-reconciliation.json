@@ -1,0 +1,491 @@
+{
+  "kind": "hrv-finalizer-002-roster-reconciliation-v1",
+  "created_utc": "2026-10-26T11:47:00Z",
+  "branch_head": "1e8efec859f3924541474698b18b22a5f3dea1c7",
+  "current_main": "260c3681b581c1dc1f345a7e82b24f1dc672d92c",
+  "current_main_diff_from_prior": "one added CAF39 source-relative evidence Markdown; no bank/code paths",
+  "finalizer": {
+    "command": "node scripts/prepare-delivery-handoff.mjs finalize config/finalize-current-d504.json finalized-bank-002 --resume",
+    "exit": 0,
+    "elapsed_seconds": 114,
+    "sampled_peak_rss_kb": 1480884,
+    "stdout": {
+      "path": "/tmp/hrv-finalizer-002-resume.stdout",
+      "sha256": "341c64709f57777c690fbc421935d21a42b51c059188d97faf1d1265ef9e32e9"
+    },
+    "stderr_bytes": 0,
+    "rss_tsv_sha256": "a1a39ba0c0ca6b051904ab878d03ed797d51b346abad1bbd0f4b3a90cb6fafed",
+    "config_sha256": "01a3e43571fe133184fab2308a8fa4d4e121d9c771f40dd581f9cee2e73030e1",
+    "generated_manifest_sha256": "b26dcf8d61bc56387320ac4a3e471890829abb46d8c2ed276e9301296c85de98"
+  },
+  "roster": {
+    "new_indexed_files": 79,
+    "actual_files_excluding_index": 56,
+    "actual_indexed_intersection": 49,
+    "actual_unindexed_extras": [
+      {
+        "path": "geography/effective-context-7f4afda371b135a640e574ed3b9218c4046c5be625179fcf44d570415af5550a.json.gz",
+        "bytes": 1028456,
+        "sha256": "7f4afda371b135a640e574ed3b9218c4046c5be625179fcf44d570415af5550a",
+        "matches_finalizer001": true,
+        "old_manifest_pin": {
+          "bytes": 1028456,
+          "path": "geography/effective-context-7f4afda371b135a640e574ed3b9218c4046c5be625179fcf44d570415af5550a.json.gz",
+          "sha256": "7f4afda371b135a640e574ed3b9218c4046c5be625179fcf44d570415af5550a"
+        }
+      },
+      {
+        "path": "ownership-vintages/0349f24b917ae418422ecbf4718e0e98d098d81cbd3a58db88c66b09af376812/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "bytes": 3572311,
+        "sha256": "0349f24b917ae418422ecbf4718e0e98d098d81cbd3a58db88c66b09af376812",
+        "matches_finalizer001": true,
+        "old_manifest_pin": {
+          "bytes": 3572311,
+          "path": "ownership-vintages/0349f24b917ae418422ecbf4718e0e98d098d81cbd3a58db88c66b09af376812/native-v1/ownership/startup-runs-41943040.bin.gz",
+          "sha256": "0349f24b917ae418422ecbf4718e0e98d098d81cbd3a58db88c66b09af376812"
+        }
+      },
+      {
+        "path": "ownership-vintages/2081e3382aab576347ba8931ec50fd19a0f13831557ee72f340a2c20a0ff0ba0/native-v1/ownership/rows-0.bin.gz",
+        "bytes": 317170,
+        "sha256": "2081e3382aab576347ba8931ec50fd19a0f13831557ee72f340a2c20a0ff0ba0",
+        "matches_finalizer001": true,
+        "old_manifest_pin": {
+          "bytes": 317170,
+          "path": "ownership-vintages/2081e3382aab576347ba8931ec50fd19a0f13831557ee72f340a2c20a0ff0ba0/native-v1/ownership/rows-0.bin.gz",
+          "sha256": "2081e3382aab576347ba8931ec50fd19a0f13831557ee72f340a2c20a0ff0ba0"
+        }
+      },
+      {
+        "path": "ownership-vintages/50f114056226b66142f874514655d48271172a01bfcd5bd84198f7dfd7382ea2/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "bytes": 3518041,
+        "sha256": "50f114056226b66142f874514655d48271172a01bfcd5bd84198f7dfd7382ea2",
+        "matches_finalizer001": true,
+        "old_manifest_pin": {
+          "bytes": 3518041,
+          "path": "ownership-vintages/50f114056226b66142f874514655d48271172a01bfcd5bd84198f7dfd7382ea2/native-v1/ownership/startup-runs-37748736.bin.gz",
+          "sha256": "50f114056226b66142f874514655d48271172a01bfcd5bd84198f7dfd7382ea2"
+        }
+      },
+      {
+        "path": "ownership-vintages/53df07e85defde76e1e97c44532e083cd44a88d2b2bd7402a073736bab3484ca/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "bytes": 3484800,
+        "sha256": "53df07e85defde76e1e97c44532e083cd44a88d2b2bd7402a073736bab3484ca",
+        "matches_finalizer001": true,
+        "old_manifest_pin": {
+          "bytes": 3484800,
+          "path": "ownership-vintages/53df07e85defde76e1e97c44532e083cd44a88d2b2bd7402a073736bab3484ca/native-v1/ownership/startup-runs-50331648.bin.gz",
+          "sha256": "53df07e85defde76e1e97c44532e083cd44a88d2b2bd7402a073736bab3484ca"
+        }
+      },
+      {
+        "path": "ownership-vintages/56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "bytes": 3103196,
+        "sha256": "56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5",
+        "matches_finalizer001": true,
+        "old_manifest_pin": {
+          "bytes": 3103196,
+          "path": "ownership-vintages/56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5/native-v1/ownership/startup-runs-54525952.bin.gz",
+          "sha256": "56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5"
+        }
+      },
+      {
+        "path": "ownership-vintages/8b81926f143c59f17e2785edad25418dff0aa9a1185851253216ef0e23fb9b99/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "bytes": 3620196,
+        "sha256": "8b81926f143c59f17e2785edad25418dff0aa9a1185851253216ef0e23fb9b99",
+        "matches_finalizer001": true,
+        "old_manifest_pin": {
+          "bytes": 3620196,
+          "path": "ownership-vintages/8b81926f143c59f17e2785edad25418dff0aa9a1185851253216ef0e23fb9b99/native-v1/ownership/startup-runs-46137344.bin.gz",
+          "sha256": "8b81926f143c59f17e2785edad25418dff0aa9a1185851253216ef0e23fb9b99"
+        }
+      }
+    ],
+    "expected_but_sparse_unmaterialized": [
+      {
+        "path": "native-v1/native-row-latitudes.f64le.gz",
+        "manifest_pin": {
+          "bytes": 1851757,
+          "path": "native-v1/native-row-latitudes.f64le.gz",
+          "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/native-row-latitudes.f64le.gz",
+        "head_tree_entry": "100644 blob de6905e162dc031b1b93248fae91190c39c4ad53\tdata/canonical-grid/current-startup/native-v1/native-row-latitudes.f64le.gz"
+      },
+      {
+        "path": "native-v1/ownership/rows-0.bin.gz",
+        "manifest_pin": {
+          "bytes": 306620,
+          "path": "native-v1/ownership/rows-0.bin.gz",
+          "sha256": "89ed3564db641f992746bf4f6f01c1eed89cb470520734ac1b85ee95e9a70ba0"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/rows-0.bin.gz",
+        "head_tree_entry": "100644 blob 5d8aa5e0341ae0a24f3553d67e1b8581d36c7d1b\tdata/canonical-grid/current-startup/native-v1/ownership/rows-0.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-0.bin.gz",
+        "manifest_pin": {
+          "bytes": 3854101,
+          "path": "native-v1/ownership/startup-runs-0.bin.gz",
+          "sha256": "3d551738a3454d2028e1d9adc352b7446d7c0f25c8d42044704cf1efb6f64b6b"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-0.bin.gz",
+        "head_tree_entry": "100644 blob bd4b48c5888c7749a6db1e1c1437bd8309ab81b1\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-0.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-12582912.bin.gz",
+        "manifest_pin": {
+          "bytes": 3478667,
+          "path": "native-v1/ownership/startup-runs-12582912.bin.gz",
+          "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "head_tree_entry": "100644 blob d986eb10382f668e5ff9cd9cb1c10b0c511023cc\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-12582912.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-16777216.bin.gz",
+        "manifest_pin": {
+          "bytes": 3289324,
+          "path": "native-v1/ownership/startup-runs-16777216.bin.gz",
+          "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "head_tree_entry": "100644 blob b9b90e91f69e56585ff49bc46dbfcc0035116d75\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-16777216.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-20971520.bin.gz",
+        "manifest_pin": {
+          "bytes": 3146696,
+          "path": "native-v1/ownership/startup-runs-20971520.bin.gz",
+          "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "head_tree_entry": "100644 blob 7595351d14cad31f792b184c4dfffe1224b43e64\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-20971520.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-25165824.bin.gz",
+        "manifest_pin": {
+          "bytes": 3272873,
+          "path": "native-v1/ownership/startup-runs-25165824.bin.gz",
+          "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "head_tree_entry": "100644 blob 1c750fc517ab808f25479c50c2ac16aa0c2c3ae6\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-25165824.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-29360128.bin.gz",
+        "manifest_pin": {
+          "bytes": 3296575,
+          "path": "native-v1/ownership/startup-runs-29360128.bin.gz",
+          "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "head_tree_entry": "100644 blob 0eeec052bfcc759bc6fd564e93bdca953b29474b\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-29360128.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-33554432.bin.gz",
+        "manifest_pin": {
+          "bytes": 3521891,
+          "path": "native-v1/ownership/startup-runs-33554432.bin.gz",
+          "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "head_tree_entry": "100644 blob 0c11ab143e831013f045f768b4e33f9c0d1d09bd\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-33554432.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-37748736.bin.gz",
+        "manifest_pin": {
+          "bytes": 3497645,
+          "path": "native-v1/ownership/startup-runs-37748736.bin.gz",
+          "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "head_tree_entry": "100644 blob 11c065922281b70564febafadf8121215b095661\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-37748736.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-4194304.bin.gz",
+        "manifest_pin": {
+          "bytes": 3428397,
+          "path": "native-v1/ownership/startup-runs-4194304.bin.gz",
+          "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "head_tree_entry": "100644 blob 4cd3369d268f958db6cba804cc987931aeeaad14\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-4194304.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-41943040.bin.gz",
+        "manifest_pin": {
+          "bytes": 3534601,
+          "path": "native-v1/ownership/startup-runs-41943040.bin.gz",
+          "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "head_tree_entry": "100644 blob c62ad1dd1fecefa59753aa86c16af2dc08690f71\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-41943040.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-46137344.bin.gz",
+        "manifest_pin": {
+          "bytes": 3556931,
+          "path": "native-v1/ownership/startup-runs-46137344.bin.gz",
+          "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "head_tree_entry": "100644 blob 2363585a7d5c3a533a09923f089f5bd37fe55fc7\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-46137344.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-50331648.bin.gz",
+        "manifest_pin": {
+          "bytes": 3397952,
+          "path": "native-v1/ownership/startup-runs-50331648.bin.gz",
+          "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "head_tree_entry": "100644 blob 880bc9137a47daf314a70ef03ffcd30d2ac80e9f\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-50331648.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-54525952.bin.gz",
+        "manifest_pin": {
+          "bytes": 2460609,
+          "path": "native-v1/ownership/startup-runs-54525952.bin.gz",
+          "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "head_tree_entry": "100644 blob 61e7d50e1d74c22f4f1e4adf75044ff9fd60ea72\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-54525952.bin.gz"
+      },
+      {
+        "path": "native-v1/ownership/startup-runs-8388608.bin.gz",
+        "manifest_pin": {
+          "bytes": 3423683,
+          "path": "native-v1/ownership/startup-runs-8388608.bin.gz",
+          "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "head_tree_entry": "100644 blob 19622b43c11bdd3e328dca4687b0e5fc376508cf\tdata/canonical-grid/current-startup/native-v1/ownership/startup-runs-8388608.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+        "manifest_pin": {
+          "bytes": 3854096,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+          "sha256": "5e73bd6ee306f3be021c7f89bf336c590ae3c02021df1c436d22088ed4284171"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+        "head_tree_entry": "100644 blob 45946db81b65ae3709fa9c51c84007ba42738853\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "manifest_pin": {
+          "bytes": 3478667,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+          "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "head_tree_entry": "100644 blob d986eb10382f668e5ff9cd9cb1c10b0c511023cc\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "manifest_pin": {
+          "bytes": 3289324,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+          "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "head_tree_entry": "100644 blob b9b90e91f69e56585ff49bc46dbfcc0035116d75\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "manifest_pin": {
+          "bytes": 3146696,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+          "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "head_tree_entry": "100644 blob 7595351d14cad31f792b184c4dfffe1224b43e64\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "manifest_pin": {
+          "bytes": 3272873,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+          "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "head_tree_entry": "100644 blob 1c750fc517ab808f25479c50c2ac16aa0c2c3ae6\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "manifest_pin": {
+          "bytes": 3296575,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+          "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "head_tree_entry": "100644 blob 0eeec052bfcc759bc6fd564e93bdca953b29474b\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "manifest_pin": {
+          "bytes": 3521891,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+          "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "head_tree_entry": "100644 blob 0c11ab143e831013f045f768b4e33f9c0d1d09bd\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "manifest_pin": {
+          "bytes": 3497645,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+          "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "head_tree_entry": "100644 blob 11c065922281b70564febafadf8121215b095661\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "manifest_pin": {
+          "bytes": 3428397,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+          "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "head_tree_entry": "100644 blob 4cd3369d268f958db6cba804cc987931aeeaad14\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "manifest_pin": {
+          "bytes": 3534601,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+          "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "head_tree_entry": "100644 blob c62ad1dd1fecefa59753aa86c16af2dc08690f71\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "manifest_pin": {
+          "bytes": 3556931,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+          "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "head_tree_entry": "100644 blob 2363585a7d5c3a533a09923f089f5bd37fe55fc7\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "manifest_pin": {
+          "bytes": 3397952,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+          "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "head_tree_entry": "100644 blob 880bc9137a47daf314a70ef03ffcd30d2ac80e9f\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "manifest_pin": {
+          "bytes": 2460609,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+          "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "head_tree_entry": "100644 blob 61e7d50e1d74c22f4f1e4adf75044ff9fd60ea72\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz"
+      },
+      {
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "manifest_pin": {
+          "bytes": 3423683,
+          "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz",
+          "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+        },
+        "index_entry": "S data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "head_tree_entry": "100644 blob 19622b43c11bdd3e328dca4687b0e5fc376508cf\tdata/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz"
+      }
+    ],
+    "staged_supported_retirements": [
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-fd8c3804b0eb136ebd7eeb36282b53a17f11aff1a50dbcf9eafccdc967c194eb.json.gz",
+        "bytes": 1029278,
+        "sha256": "fd8c3804b0eb136ebd7eeb36282b53a17f11aff1a50dbcf9eafccdc967c194eb",
+        "git_blob_oid": "ef45a6ea814cc8a0664264e1e76c88d097ed44bc",
+        "in_new_index": false
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/050d9da3aa29f51546f7115c8de7dcf9a0f5f30db7c89dd28cc0d648de803b7b/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "bytes": 3484034,
+        "sha256": "050d9da3aa29f51546f7115c8de7dcf9a0f5f30db7c89dd28cc0d648de803b7b",
+        "git_blob_oid": "e4bb67823202a91b30804a03fc63bf73c5732d7f",
+        "in_new_index": false
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/1b45d61e86b09ad5b4944aa47c9cd0063024d15d61552aefe3c44f0caa6ad198/native-v1/ownership/rows-0.bin.gz",
+        "bytes": 317143,
+        "sha256": "1b45d61e86b09ad5b4944aa47c9cd0063024d15d61552aefe3c44f0caa6ad198",
+        "git_blob_oid": "b3180970380e681e31eb3436951aae87521d96b8",
+        "in_new_index": false
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/83946368a58b0c3d4d5ed5fe281bc0cdea4b02bbf89b102a1d9fcc93889bb749/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "bytes": 3572332,
+        "sha256": "83946368a58b0c3d4d5ed5fe281bc0cdea4b02bbf89b102a1d9fcc93889bb749",
+        "git_blob_oid": "a5fc1e84231ab96d37b487496cf37e174c625cc9",
+        "in_new_index": false
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/9d88f336f19c446390354d41f71bf2f84e7039e65b9dfff7e9c6a6be0450542c/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "bytes": 3518140,
+        "sha256": "9d88f336f19c446390354d41f71bf2f84e7039e65b9dfff7e9c6a6be0450542c",
+        "git_blob_oid": "f24ba2f83e04a1b5d0a7a1a045da65178e5fb4ee",
+        "in_new_index": false
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/af3dfdc1e439a5aa45d886a72d46f9cc1eb38f66ecba5e8c1bf7db28dbaaa421/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "bytes": 3100636,
+        "sha256": "af3dfdc1e439a5aa45d886a72d46f9cc1eb38f66ecba5e8c1bf7db28dbaaa421",
+        "git_blob_oid": "9b05263f98fc3c4d727fb3e29568bd687769b79b",
+        "in_new_index": false
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/f7012a53fae34ff3893fcbbd88a964af33e15ed14f7829de3db9859d549d57b5/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "bytes": 3620706,
+        "sha256": "f7012a53fae34ff3893fcbbd88a964af33e15ed14f7829de3db9859d549d57b5",
+        "git_blob_oid": "791743142dbcb3f4c28c7ebdd3cf556cde0f049e",
+        "in_new_index": false
+      }
+    ],
+    "no_untracked_old_output_deleted": true
+  },
+  "finalized_metadata_files": [
+    {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-002/ownership-selection.json",
+      "bytes": 2291,
+      "sha256": "6c2bfb82fa90b7f28bea8c9f274c76bc629cd6dc2f4982527908b6c050617a33"
+    },
+    {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-002/package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-002/preparation.json",
+      "bytes": 1156,
+      "sha256": "470e3dec837b77f4c898a959767cc22f1aeee89d7671be6bd9189160fe25c763"
+    },
+    {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-002/selected-delivery-expectations.json",
+      "bytes": 485,
+      "sha256": "7d9cd31a7899d0eeb60d6c8cde03deac4f1f59df14271077792c49e30c22df24"
+    },
+    {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-002/startup-ownership.json",
+      "bytes": 49610,
+      "sha256": "b26dcf8d61bc56387320ac4a3e471890829abb46d8c2ed276e9301296c85de98"
+    }
+  ],
+  "limits": [
+    "Preparation only; no trusted old/new current-bank conservation report, CI/build/emitted control, public review or root acceptance is claimed.",
+    "Unindexed prior-output files are preserved; only the seven old tracked retirement paths handled by the finalizer are staged as retirements.",
+    "30 missing paths are present in merged HEAD and index with skip-worktree markers; they are not unavailable Git objects."
+  ]
+}
