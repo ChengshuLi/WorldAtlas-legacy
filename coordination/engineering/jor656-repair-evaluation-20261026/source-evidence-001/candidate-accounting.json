@@ -46,5 +46,20 @@
     },
     "full_foreign_application_hits": 0,
     "interpretation": "All 93 original source-contact records remain adverse inputs. The full-Jordan same-member result does not erase them. The three contact keys that miss full JOR membership remain outside the 624 requested patch; the other 90 remain in the candidate patch with original ISR/SAU catalogue exclusion families and descriptors. The separate full-family foreign application found no exact foreign hits for these rows; it does not negate contacts from the original source variant or establish no contact from unqueried sources."
+  },
+  "native_diagnostic": {
+    "kind": "source-target-native-diagnostic-v1",
+    "requested_cells": 624,
+    "supported_cells": 534,
+    "held_cells": 90,
+    "supported_land": 509,
+    "supported_inland_water": 25,
+    "held_all_land": 90,
+    "held_reason_cell_counts": {
+      "territorial_exclusion_cells": 90
+    },
+    "physical_witness_kind_rows": 0,
+    "diagnostic_sha256": "1f4bcca2d9168df594ccc915f8a57e77081da22e110972029bc09cca58afad6c",
+    "limits": "Diagnostic only; not native authority, current-owner-zero, selected-bank acceptance or credit. The 90 original foreign-contact keys remain held. The 3 full-JOR source-member misses stay outside this candidate. Whole-target physical issue evidence remains retained; no per-key physical witness rows were emitted for the exact requested centers."
   }
 }
