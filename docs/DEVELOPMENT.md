@@ -26,6 +26,8 @@ Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` 
 
 For a final-bank update, use the finalizer's complete `current-startup` roster as the output boundary. It may retire an old generated file only when the current accepted index or an authenticated committed finalization receipt pins the exact prior body; pass exact committed `preparation.json` and `startup-ownership.json` pins through `prior_finalizations` when needed. Unknown, edited, nonordinary, or roster-changing extras fail closed. Exact retirement paths are staged as deletions only after byte and index rechecks; inspect the complete staged file set against the new index before commit. Other prepared output changes remain ordinary worktree edits.
 
+`readPreparedFinalOwnership` copies reader-supplied `Buffer` values by default. A private final-bank reader may explicitly opt into reusing a `Buffer` only when it returns already-authenticated bytes that remain immutable for the full call; whole-byte length and SHA-256 checks still apply. The accepted final-bank/supported-input paths may discard their pin-reader body cache after complete bank validation; subsequent reads remain pinned and revalidated. Keep generic callbacks on the defensive-copy path.
+
 For routine read-only observation, use bounded provider reads and avoid rapid polling:
 
 ```sh
@@ -74,6 +76,12 @@ It verifies each returned object against the pinned OID and ordinary-blob type
 before copying any helper to the temporary directory. A failed fetch or
 verification stops before helper execution. Do not fetch other OIDs, hydrate
 unrelated objects, or execute a cached older helper. Use Node 24.
+
+During selected-object acquisition, immutable GitHub tree metadata reads and
+the bounded Git fetch share one invocation-local authentication resolver. It
+uses `GH_TOKEN` when supplied; otherwise it reads the existing `gh auth token`
+for that invocation, respecting `GH_CONFIG_DIR`. The token is neither logged
+nor persisted, and callers do not need to export a second token variable.
 
 ```sh
 (
