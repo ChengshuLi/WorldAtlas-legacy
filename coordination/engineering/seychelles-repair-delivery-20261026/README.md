@@ -100,8 +100,9 @@ d95b2114b7d8d1d4dbb7690425f8299f04379620e745b72e2c8d03bc033c729a).
 The first post-GNB finalizer attempt (finalize-003) exited 1 at the retirement
 index guard. The exact candidate-vs-base tree comparison found five extra
 paths: one effective-context body and four ownership bodies. The failure
-receipt's analysis counts four prior-SYC startup bodies and its stderr names
-the additional effective-context retirement path; both records are retained.
+receipt's analysis counts four prior-SYC startup bodies; its stderr identifies
+an effective-context retirement path. The receipt wording is preserved without
+treating its path inventory as exhaustive.
 Those exact stale paths were removed from the candidate, leaving
 the pre-finalization selector and index equal to accepted main. Finalize-004
 then completed with exit 0 against that exact accepted selector/package-input
