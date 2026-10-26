@@ -509,9 +509,10 @@ export function nativeReferenceForData(data,hashValue) {
   return metadata.native_reference;
 }
 
-export function bindPreparedNativeFeatures(data,features,parts,hashValue,hashBytes) {
+export function bindPreparedNativeFeatures(data,features,parts,hashValue,hashBytes,equalCanonicalValues) {
   require(typeof hashValue==='function','Explicit canonical footprint hash required');
-  const proof=data.preparedOwnership,same=(a,b)=>JSON.stringify(canonicalValue(a))===JSON.stringify(canonicalValue(b));
+  const proof=data.preparedOwnership,same=equalCanonicalValues??((a,b)=>JSON.stringify(canonicalValue(a))===JSON.stringify(canonicalValue(b)));
+  require(typeof same==='function','Explicit canonical footprint equality required');
   require([2,3].includes(proof?.version)&&features.length===proof.owners&&parts.length===proof.context_parts.length,'Incomplete prepared feature context');
   const final=proof.version===3;
   const byId=new Map(features.map(f=>[f.id,f])),seen=new Set(),indices=new Set(),prepared=new Map();
