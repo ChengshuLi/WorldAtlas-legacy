@@ -11,7 +11,7 @@ const STAGE = 'e8b1f61eae8c1c4c892514904f5ba4e65fd83ea5';
 const COMPARISON = 'a285e89d0e2a7dd47a56abcbaaef15cd299a0bf8';
 const PKG = 'coordination/engineering/seychelles-repair-delivery-20261026';
 const sourceStage = 'coordination/engineering/seychelles-repair-delivery-20261026/source-stage-001/stage-data/original-stage-inputs.json';
-const configPath = PKG + '/config/physical-001.json';
+const configPath = PKG + '/config/physical-001-corrected.json';
 const runtimePath = '/workspace/shared/worldatlas-SYC2458-source-audit-20261026/physical-runtime-inventory.json';
 const need = (condition, message) => { if (!condition) throw new Error(message); };
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -38,7 +38,9 @@ pins.delete(previousStage); pins.set(sourceStage,stagePin);
 const physical = structuredClone(originalConfig.physical);
 physical.inputs = [...pins.values()].sort((a,b)=>a.path.localeCompare(b.path));
 physical.roles.stages = sourceStage;
-physical.runtime = {python:runtime.version.split(' ')[0],numpy:runtime.numpy,shapely:runtime.shapely,geos:runtime.geos};
+// The producer compares Python's full sys.version string, not just the
+// semantic version; retain the exact runtime identity from the inventory.
+physical.runtime = {python:runtime.version,numpy:runtime.numpy,shapely:runtime.shapely,geos:runtime.geos};
 // Runtime proof is local and read-only: pin each actual executed file by exact
 // current bytes. `sourceCohort` rechecks these identities before/after use.
 const runtimeFiles = runtime.files.map(({path,bytes,sha256})=>({path,bytes,sha256}));
