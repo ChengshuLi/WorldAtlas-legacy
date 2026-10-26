@@ -205,12 +205,14 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   };
   const selectedBytes = async (head, inventory) => {
     if (!inventory.missing.length) return inventory.estimated;
-    const {createAcquisition, githubTree, deliveryAcquisitionExecute} = await import('./geography-prefetch.mjs');
+    const {createAcquisition, createGitHubTokenProvider, githubTree, deliveryAcquisitionExecute} = await import('./geography-prefetch.mjs');
     // Resolve only missing selected paths against the exact accepted commit tree.
     // githubTree supplies metadata only; descriptor() independently binds each
     // selected path/OID/mode to the local exact commit before any body is fetched.
-    const acquisition = createAcquisition({repo, loadTree: loadTree ?? githubTree,
-      execute: acquisitionExecute ?? deliveryAcquisitionExecute(), token: ''});
+    const getToken = createGitHubTokenProvider();
+    const loadMetadata = loadTree ?? ((version, recursive) => githubTree(version, recursive, {getToken}));
+    const acquisition = createAcquisition({repo, loadTree: loadMetadata,
+      execute: acquisitionExecute ?? deliveryAcquisitionExecute({getToken}), token: ''});
     const missingInputs = inventory.inputs.filter(input => input.bytes === null);
     const paths = await Promise.all(missingInputs.map(input => acquisition.descriptor(head, input.name,
       {mode: input.mode, git_blob_oid: input.oid})));
