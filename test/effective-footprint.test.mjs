@@ -1,9 +1,46 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {sha256} from '@noble/hashes/sha2.js';
+import {canonicalValue} from '../src/native-grid.js';
 import {finalBankSelection,scientificNativeSelection} from '../src/reference-metadata.js';
-import {effectivePrimitiveGeometries, effectiveFootprintValue, effectiveFootprintBounds, assertLegacyFootprint, footprintValueSha256, finishEffectiveFootprint, finishedReleaseFootprintDigest, effectiveNativeAdditionRows, effectiveNativeRuntimeIndex,mergeUnassignedNativeIntervals,extendFinishedNativeFootprint} from '../src/effective-footprint.js';
+import {effectivePrimitiveGeometries, effectiveFootprintValue, effectiveFootprintBounds, assertLegacyFootprint, canonicalFootprintJsonChunks, footprintValueSha256, finishEffectiveFootprint, finishedReleaseFootprintDigest, effectiveNativeAdditionRows, effectiveNativeRuntimeIndex,mergeUnassignedNativeIntervals,extendFinishedNativeFootprint} from '../src/effective-footprint.js';
 const rectangle = (a,b,c,d) => ({type:'Polygon',coordinates:[[[a,b],[c,b],[c,d],[a,d],[a,b]]]});
 const old = {id:'A',pixelIndex:1,properties:{parent_id:'P',name:'original'},geometry:rectangle(0,0,1,1)};
+const oldFootprintDigest = value => Array.from(sha256(new TextEncoder().encode(JSON.stringify(canonicalValue(value)) + '\n')),
+ byte => byte.toString(16).padStart(2,'0')).join('');
+test('streamed footprint digest is byte-equivalent to canonical JSON serialization',()=>{
+ const numeric=Object.create(null);Object.assign(numeric,{'4294967295':'upper-not-index','10':'ten','2':'two','01':'leading-zero','4294967294':'last-index','__proto__':'plain-key'});
+ Object.defineProperty(numeric,'__proto__',{value:'own-proto-key',enumerable:true,configurable:true});
+ const value={z:'Unicode 🧭 and lone surrogate \ud800',negativeZero:-0,small:1e-7,large:1e21,numeric,
+  array:[,0,-0,1.25,'\u2028\n',false,null,Symbol('array-symbol'),function omitted(){}],
+  omitSymbol:Symbol('object-symbol'),omitFunction(){}};
+ const streamed=Buffer.from([...canonicalFootprintJsonChunks(value),'\n'].join(''));
+ const legacy=Buffer.from(JSON.stringify(canonicalValue(value))+'\n');
+ assert.deepEqual(streamed,legacy);
+ assert.equal(footprintValueSha256(value),oldFootprintDigest(value));
+ assert.equal(footprintValueSha256(Symbol('root')),oldFootprintDigest(Symbol('root')));
+ assert.equal(footprintValueSha256(function root(){}),oldFootprintDigest(function root(){}));
+ for(const invalid of [undefined,NaN,Infinity,-Infinity,{bad:undefined},[undefined]]){
+  assert.throws(()=>footprintValueSha256(invalid));assert.throws(()=>oldFootprintDigest(invalid));
+ }
+ assert.throws(()=>footprintValueSha256(1n));assert.throws(()=>oldFootprintDigest(1n));
+});
+test('large footprint digest encodes bounded chunks instead of one canonical-document buffer',()=>{
+ const value=Array.from({length:8000},(_,index)=>({id:`owner-${index}`,pixelIndex:index+1,
+  geometry:{type:'Polygon',coordinates:[[[index,index],[index+1,index],[index+1,index+1],[index,index+1],[index,index]]]},
+  native_rows:[{y:index,runs:[[index,index+1]]}]}));
+ let pieceCount=0,maxPieceCharacters=0;
+ for(const piece of canonicalFootprintJsonChunks(value)){pieceCount++;maxPieceCharacters=Math.max(maxPieceCharacters,piece.length);}
+ assert.ok(pieceCount>100000);assert.ok(maxPieceCharacters<256,`serializer emitted a large piece: ${maxPieceCharacters}`);
+ const OriginalTextEncoder=globalThis.TextEncoder, originalStringify=JSON.stringify;
+ let maxEncodedCharacters=0,maxSerializedValue=0;
+ globalThis.TextEncoder=class extends OriginalTextEncoder { encode(input,...args){maxEncodedCharacters=Math.max(maxEncodedCharacters,input.length);return super.encode(input,...args);} };
+ JSON.stringify=function(...args){const result=originalStringify(...args);if(typeof result==='string')maxSerializedValue=Math.max(maxSerializedValue,result.length);return result;};
+ try { assert.match(footprintValueSha256(value),/^[a-f0-9]{64}$/); }
+ finally { globalThis.TextEncoder=OriginalTextEncoder;JSON.stringify=originalStringify; }
+ assert.ok(maxEncodedCharacters<=16*1024,`encoded chunk exceeded 16 KiB: ${maxEncodedCharacters}`);
+ assert.ok(maxSerializedValue<256,`a whole structure was serialized at once: ${maxSerializedValue}`);
+});
 function additive() { return {...old, additiveFootprint:{version:1,kind:'retained-base-plus-additions',baseline_release_sha256:'a'.repeat(64),base_geometry_sha256:footprintValueSha256(old.geometry),ledger_sha256:'b'.repeat(64),rule_sha256:'c'.repeat(64),additions:[{component_id:'gap-1',geometry:rectangle(1,0,2,1),geometry_sha256:footprintValueSha256(rectangle(1,0,2,1)),source_receipt_sha256:'d'.repeat(64)}]}}; }
 test('legacy geometry/digest input is literal and additive primitives keep complete base',()=>{
  assert.equal(effectiveFootprintValue(old),old.geometry); const feature=additive(), raw=JSON.stringify(old);

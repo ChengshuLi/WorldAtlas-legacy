@@ -16,9 +16,79 @@ function exactKeys(value, keys, name) {
   require(Object.keys(value).sort().join('\0') === [...keys].sort().join('\0'), name + ' has missing/foreign fields');
 }
 
+export function* canonicalFootprintJsonChunks(value) {
+  if (Array.isArray(value)) {
+    yield '[';
+    for (let index = 0; index < value.length; index++) {
+      if (index) yield ',';
+      if (!Object.hasOwn(value, index)) { yield 'null'; continue; }
+      const item = value[index];
+      require(item !== undefined && (typeof item !== 'number' || Number.isFinite(item)), 'Nonfinite or missing footprint value');
+      if (typeof item === 'function' || typeof item === 'symbol') yield 'null';
+      else yield* canonicalFootprintJsonChunks(item);
+    }
+    yield ']';
+    return;
+  }
+  if (value && typeof value === 'object') {
+    const keys = Object.keys(value).sort(), integerKeys = [], otherKeys = [];
+    for (const key of keys) {
+      // JSON.stringify enumerates array-index property names numerically, ahead
+      // of other strings, even when the canonical object inserted keys in lexical order.
+      if (key === '0') integerKeys.push(key);
+      else if (/^[1-9][0-9]*$/.test(key)) {
+        const number = Number(key);
+        if (Number.isSafeInteger(number) && number <= 0xfffffffe && String(number) === key) integerKeys.push(key);
+        else otherKeys.push(key);
+      } else otherKeys.push(key);
+    }
+    integerKeys.sort((left, right) => Number(left) - Number(right));
+    yield '{';
+    let emitted = 0;
+    for (const key of [...integerKeys, ...otherKeys]) {
+      const item = value[key];
+      require(item !== undefined && (typeof item !== 'number' || Number.isFinite(item)), 'Nonfinite or missing footprint value');
+      // This matches JSON.stringify on canonicalValue's object result: callable
+      // and symbol-valued object fields are omitted, but explicit undefined and
+      // nonfinite numbers were rejected by canonicalValue before serialization.
+      if (typeof item === 'function' || typeof item === 'symbol') continue;
+      if (emitted++) yield ',';
+      yield JSON.stringify(key);
+      yield ':';
+      yield* canonicalFootprintJsonChunks(item);
+    }
+    yield '}';
+    return;
+  }
+  require(value !== undefined && (typeof value !== 'number' || Number.isFinite(value)), 'Nonfinite or missing footprint value');
+  const encoded = JSON.stringify(value);
+  // At the root, JSON.stringify(function/symbol) yields undefined and the old
+  // `undefined + '\n'` expression hashes the literal text `undefined\n`.
+  yield encoded === undefined ? 'undefined' : encoded;
+}
+
 export function footprintValueSha256(value) {
-  const raw = new TextEncoder().encode(JSON.stringify(canonicalValue(value)) + '\n');
-  return Array.from(sha256(raw), byte => byte.toString(16).padStart(2, '0')).join('');
+  const hash = sha256.create(), encoder = new TextEncoder();
+  let pending = '';
+  const limit = 16 * 1024;
+  const flush = () => { if (pending) { hash.update(encoder.encode(pending)); pending = ''; } };
+  const write = piece => {
+    if (pending.length + piece.length <= limit) { pending += piece; return; }
+    flush();
+    for (let start = 0; start < piece.length;) {
+      let end = Math.min(start + limit, piece.length);
+      if (end < piece.length) {
+        const last = piece.charCodeAt(end - 1), next = piece.charCodeAt(end);
+        if (last >= 0xd800 && last <= 0xdbff && next >= 0xdc00 && next <= 0xdfff) end--;
+      }
+      hash.update(encoder.encode(piece.slice(start, end)));
+      start = end;
+    }
+  };
+  for (const piece of canonicalFootprintJsonChunks(value)) write(piece);
+  write('\n');
+  flush();
+  return Array.from(hash.digest(), byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
 // The final profile carries complete current geometry and native-only coverage,
