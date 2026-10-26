@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "scope": {
+    "issue": 2577,
+    "package": "gb-SOM-ADM2--repair-evaluation",
+    "proposal_keys": 522,
+    "proposal_intervals": 344,
+    "owner_groups": [
+      "40089",
+      "40054",
+      "40068",
+      "40010",
+      "40026",
+      "40036",
+      "40055",
+      "40064"
+    ],
+    "recommendation": "source-free researched-unresolved recommendation only; no recorded disposition, credit or hold changes"
+  },
+  "base_commit": "a7e64667e74035c3fd00922e9b24e8df2b4a4678",
+  "input_pins": {
+    "original_packet": {
+      "commit": "0831f7e5fbfcca228dda175f73b6d8449b35982f",
+      "path": "coordination/engineering/som-original-disposition-20261020/som-disposition.json.gz",
+      "gzip_sha256": "d9e87d1c360c3cfe21883b756bcd5da64bd4721abe91ac8c278c37c9e65075cf",
+      "decoded_sha256": "38835822455a95fa68d8e1392ce1b6470974a3b073061e315cb66d7e9c9a026c"
+    },
+    "owner_matrix": {
+      "path": "coordination/engineering/som-original-disposition-20261025/owner-instrument-matrix.csv",
+      "sha256": "e1146937dbb6ac605870daf2c81ea276e0b8696140c5c5e6d88742e1d0e119e6"
+    },
+    "prior_proposal": {
+      "path": "coordination/engineering/som-original-disposition-20261025/researched-unresolved-subset-1102-key-proposal-20261025.csv",
+      "sha256": "c7ef5accb6305ffdaadc894357bcfde2813a080aa29500d2cf6d9d1f42f18c51"
+    },
+    "retained_native_result": {
+      "path": "coordination/engineering/som-original-disposition-20261025/corrected-native-center-check.json",
+      "sha256": "2b12071aff21b6fd0d854caa987766e467a5aef9f29545ed58a80b33eee56b59",
+      "use": "read-only existing 2247-center result; not rerun"
+    }
+  },
+  "parent_supplied_memos": {
+    "kismayo": "b0d92987076975c843d4da2d806bd2a688245372f4c5c4d51ba8d6dbf08ff5ed",
+    "bargaal_prior_combined": "6e8058a38649a82681ec6880195304f5ac1dc4ddac6a2bc3f0414bdfb900de50",
+    "bargaal_corrected_combined": "bbddb744e79727c20e6630d63d35dc81e3b09190f803ef85c82b70b413e7ecec",
+    "eyl_r2": "28cd04d90dfc45997d98a382b4584d745dec025c381aa9ddf397a5c3d2721244",
+    "banaadir62": "7b6e38640459bcc4deb51b9e5a1dc70affdfacc3a5fabef78c3326ed86e4e901",
+    "madina_parent_lineage": "4116f394032003b88a743c065c89e27bc581f2ac8e7dc5f1ac14abec219d138c"
+  },
+  "outputs": {
+    "README.md": {
+      "bytes": 1195,
+      "sha256": "0ccb41c40e243822c33130623d97318900b794746bc7083312671d706d7cd5c4"
+    },
+    "owner-summary.csv": {
+      "bytes": 2197,
+      "sha256": "e9c6f083c0f41320dd8bcf10d1de7701f561aff1ad5d0dace016c2b8b23f8084"
+    },
+    "assessment.md": {
+      "bytes": 12603,
+      "sha256": "02173204d763ce53fdc3d00211a304b833c2bcaf29b04541522735bcbcac26fd"
+    },
+    "summary.json": {
+      "bytes": 6186,
+      "sha256": "9986f92ab8cf43fd4b7dc59bb725616d6f475b581480eb57c06567986745f5a5"
+    }
+  },
+  "restrictions": {
+    "raw_keys_coordinates_geometry_source_payload_included": false,
+    "credit_or_recorded_disposition_changed": false,
+    "all_original_holds_preserved": true,
+    "eyl_included": true,
+    "hamar_jabjab_duplicate_included": false
+  }
+}
