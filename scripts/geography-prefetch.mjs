@@ -167,7 +167,7 @@ export function createAcquisition({repo, loadTree, loadDescriptor, execute = exe
       mismatch({type: 'blob', mode: original.mode, git_blob_oid: original.git_blob_oid}));
     else {
       const expectedTreeRow = `${row.mode} blob ${row.sha}\t${name}\0`;
-      const actualTreeRow = git(['ls-tree', '-z', version, '--', name], undefined, Buffer.byteLength(expectedTreeRow)).toString();
+      const actualTreeRow = git(['ls-tree', '--full-tree', '-z', version, '--', name], undefined, Buffer.byteLength(expectedTreeRow)).toString();
       if (actualTreeRow !== expectedTreeRow) {
         const match = actualTreeRow.match(/^(100644|100755|120000|040000|160000) (blob|tree|commit) ([a-f0-9]{40})\t/);
         const actual = match && actualTreeRow === `${match[0]}${name}\0`
