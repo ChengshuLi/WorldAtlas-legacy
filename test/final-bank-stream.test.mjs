@@ -79,3 +79,18 @@ test('stream encoder rejects truncated, excess and malformed segments',async t=>
     await assert.rejects(encodeFinalOwnershipWords({ownership,destination}));
   }
 });
+
+test('fixed encoder chunk boundary is identical across differently sized segments',async t=>{
+  const root=await fs.mkdtemp(path.join(os.tmpdir(),'native-interval-stream-boundary-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
+  const runWords=4194304+6,rows=new Uint32Array(size*2),runs=new Uint32Array(runWords);
+  for(let i=0;i<runs.length;i++)runs[i]=(i*1664525+1013904223)>>>0;
+  const base={version:2,method:'native-linear-evenodd-first-owner-v1',size,coordinateBits,rows,runWords,
+    native_latitudes:{},reference_owner_sha256:'a'.repeat(64)};
+  function* runSegments(){yield runs.subarray(0,1000000);yield runs.subarray(1000000,4194306);yield runs.subarray(4194306);}
+  const materialized={...base,runs},streamed={...base,runSegments};
+  await encodePair(t,materialized,streamed);
+  const destination=path.join(root,'stream-index');await fs.mkdir(destination);
+  const result=await encodeFinalOwnershipWords({ownership:streamed,destination});
+  assert.deepEqual(result.pixelMap.parts.filter(part=>part.kind==='runs').map(({offset,words})=>({offset,words})),
+    [{offset:0,words:4194304},{offset:4194304,words:6}]);
+});
