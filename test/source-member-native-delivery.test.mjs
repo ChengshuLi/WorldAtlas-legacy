@@ -101,15 +101,56 @@ function constructorFixture(change=()=>{}){
     const raw=Buffer.from(JSON.stringify(collection(state.external.features)));
     membership.negative_natural_earth={registry:put('data/sources.json',{
       hashes:{ne_10m_admin_1_states_provinces:state.external.registryHash??digest(raw)}}),source:put('whole-ne.json',raw),
-      atoms:state.external.atoms??[{source_id:'TST-1',feature_ordinal:0,geometry_sha256:valueSha(state.external.features[0].geometry)}]};
+      atoms:state.external.atoms??[{source_id:state.external.features[0].properties.adm1_code,
+       feature_ordinal:0,geometry_sha256:valueSha(state.external.features[0].geometry)}]};
     state.external.mutate?.(membership.negative_natural_earth);
   }
+  if(state.originalTargetMembership){
+    const {target_id,members,externalFeatures}=state.originalTargetMembership;
+    let receipt;
+    if(state.adoptedProvider){
+      const scopedPoints=state.adoptedProvider.bindings.flatMap(binding=>binding.scope);
+      const scopedKeyHash=digest(scopedPoints.sort((a,b)=>a.y-b.y||a.x-b.x).map(point=>`${point.x},${point.y}\n`).join(''));
+      const application={source_contact_keys:scopedPoints.length,unique_interior_member_contact_keys:scopedPoints.length,
+        multi_member_keys:0,uncovered_keys:0,boundary_tied_keys:0,odd_scanline_rows:0};
+      const contactReceipt={kind:'worldatlas-gbr-london-source-application-assessment-v1',
+        scope:{denominator:scopedPoints.length,owner13_key_set_sha256:scopedKeyHash},
+        official_source:{source_members:externalFeatures.map(feature=>({name:'City of London',lad19cd:'E09000001',
+          original_member:`Natural Earth ${feature.properties.adm1_code}`}))},
+        application:{author_result:application,independent_review:{...application,city_of_london_contacts:0}}};
+      if(state.originalTargetMembership.corruptContactReceipt)
+        contactReceipt.scope.owner13_key_set_sha256='0'.repeat(64);
+      if(!state.originalTargetMembership.omitContactReceipt)receipt=put('contact-receipt.json',contactReceipt);
+    }
+    const intent=put('coordination/engineering/uk-native-repair-20261017/source-stage/london-construction-intent.json',{
+      version:1,subject_id:target_id,semantic_change:{id:target_id,replaces:members},
+      recorded_city_membership_audit:{members:members.map(id=>({id}))}});
+    const raw=Buffer.from(JSON.stringify(collection(externalFeatures)));
+    const contextSource=put('context-only-natural-earth.json',raw);
+    const contextRegistry=put('data/sources.json',{hashes:{ne_10m_admin_1_states_provinces:digest(raw)}});
+    membership.original_target_membership={target_id,construction_intent:intent,
+      families:[{source_id:family,parts:[source]}],...(receipt?{zero_contact_receipt:receipt}:{}),
+      external_members:{registry:contextRegistry,source:contextSource,atoms:externalFeatures.map((feature,feature_ordinal)=>({
+        source_id:feature.properties.adm1_code,feature_ordinal,geometry_sha256:valueSha(feature.geometry)}))}};
+  }
   Object.assign(membership,state.membershipExtra);
+  let evidenceFamilies=[{source_id:family,parts:[source]},...extraSources.map(f=>({source_id:f.source_id,parts:[f.pin]}))];
+  let adoptedProviderPin;
+  if(state.adoptedProvider){
+    const provider=state.adoptedProvider,product=collection(provider.features),productPin=put('ons-provider.json',product);
+    evidenceFamilies=[{source_id:provider.source_id,parts:[productPin]}];
+    const bindings=provider.bindings.map(binding=>({...binding}));
+    adoptedProviderPin=put('adopted-provider-families.json',{version:1,kind:'adopted-provider-source-families-v1',families:[{
+      source_id:provider.source_id,product:productPin,feature_count:provider.features.length,id_property:provider.id_property,
+      id_prefix:provider.id_prefix,bindings
+    }]});
+  }
   const evidence=put('source-evidence.json',{version:1,kind:'source-target-native-evidence-v1',catalogue,
     owner_roster:roster,physical_evidence:physical,physical_input:measured,physical_reproduction:put('physical.py',Buffer.from('# retained fixture')),
     native_latitudes:nativeLatitudes,native_contract:{size,native_latitudes:nativeLatitudes,original_assets:{bounds:{sha256:roster.sha256}}},
-    base_reference:{id:'fixture-base'},families:[{source_id:family,parts:[source]},...extraSources.map(f=>({source_id:f.source_id,parts:[f.pin]}))],
+    base_reference:{id:'fixture-base'},families:evidenceFamilies,
     targets:state.targets.map(target=>({...target,source_receipt_sha256:physical.sha256})),
+    ...(adoptedProviderPin?{adopted_provider_families:adoptedProviderPin}:{}),
     ...(state.membership?{source_membership:membership}:{})});
   const patch=put('patch.json',state.proposed);
   class FixtureReader extends ImmutableReader{
@@ -630,6 +671,114 @@ function externalCompetitorFixture(change=()=>{}){
   s.lineage.changes[2].replaces.push('TST-1');change(s);
  },true);
 }
+function adoptedLondonContextFixture({contextOnly=true,promoteContextMember=false,
+  omitContactReceipt=false,corruptContactReceipt=false}={}){
+ return constructorFixture(state=>{
+  const gbMembers=addFullLondonMemberRoster(state,{includeExternalMember:contextOnly});
+  const provider='ons:GBR:LAD19-BFE-2019';
+  const geometry=rectangle(-1,1,-1,1);
+  state.accepted.features[0].geometry=structuredClone(geometry);
+  const y=state.proposed.rows[0].y,x=130900;
+  const boundCodes=['E09000002','E09000011','E09000016','E09000023','E09000025','E09000030'];
+  const counts=[1,217,1,42,1,378];
+  const codes=[...boundCodes,...Array.from({length:33},(_,i)=>'E090000'+String(i+1).padStart(2,'0'))
+   .filter(code=>!boundCodes.includes(code))];
+  const features=codes.map((code,i)=>({type:'Feature',properties:{LAD19CD:code},
+   geometry:i<boundCodes.length?structuredClone(geometry):rectangle(50+i/100,50.05+i/100,-10,10)}));
+  state.proposed.rows=[{y,runs:[[x,x+counts.reduce((n,count)=>n+count,0),1]]}];
+  let scopeStart=x;
+  const bindings=boundCodes.map((code,i)=>{
+   const feature=features[i],id=provider+':LAD19CD:'+code;
+   const scope=Array.from({length:counts[i]},(_,offset)=>({y,x:scopeStart+offset}));scopeStart+=counts[i];
+   return {source_id:id,feature_ordinal:i,source_property:code,properties_sha256:valueSha(feature.properties),
+    geometry_sha256:valueSha(feature.geometry),target_id:'city',pixelIndex:1,base_geometry_sha256:valueSha(geometry),
+    decision:'Distinct adopted provider source member for the fixture target; original source membership remains context only.',
+    scope};
+  });
+  state.adoptedProvider={source_id:provider,id_property:'LAD19CD',id_prefix:provider+':LAD19CD:',features,bindings};
+  state.targets=bindings.map(binding=>({id:binding.source_id,target_id:'city',pixelIndex:1,source_family:provider,
+   base_geometry:geometry,coverage_classes:['mapped_land_support']}));
+  state.physical.results=bindings.map(binding=>({target:binding.source_id,issues:[],support:{mapped_land_support:geometry}}));
+  state.measured=bindings.map((binding,i)=>({target:binding.source_id,consumed:features[i],selected:{id:'city',geometry}}));
+  const externalFeature={type:'Feature',properties:{adm1_code:'GBR-4809'},geometry:rectangle(2,3,-.02,.02)};
+  if(contextOnly)state.originalTargetMembership={target_id:'city',members:[...gbMembers,'GBR-4809'],externalFeatures:[externalFeature],
+    omitContactReceipt,corruptContactReceipt};
+  else state.external={features:[externalFeature]};
+  if(promoteContextMember)state.targets.push({id:'GBR-4809',target_id:'city',pixelIndex:1,
+   source_family:provider,base_geometry:geometry,coverage_classes:['mapped_land_support']});
+ });
+}
+function addFullLondonMemberRoster(state,{includeExternalMember=true}={}){
+ const extra=Array.from({length:30},(_,i)=>family+':EXTRA-'+String(i+1).padStart(2,'0'));
+ for(const id of extra)state.originals.push(rawFeature(id.slice(family.length+1),rectangle(100,101,-10,10)));
+ const gbMembers=[a,b,...extra];
+ const members=[...gbMembers,...(includeExternalMember?['GBR-4809']:[])];
+ state.lineage.changes[0].replaces=members;
+ state.accepted.features[0].properties.metadata.source_member_ids=members;
+ return gbMembers;
+}
+function originalTargetAggregationContextFixture({contextOnly=true}={}){
+ return constructorFixture(state=>{
+  const gbMembers=addFullLondonMemberRoster(state);
+  const externalFeature={type:'Feature',properties:{adm1_code:'GBR-4809'},geometry:rectangle(2,3,-.02,.02)};
+  if(contextOnly)state.originalTargetMembership={target_id:'city',members:[...gbMembers,'GBR-4809'],externalFeatures:[externalFeature]};
+  else state.external={features:[externalFeature]};
+ });
+}
+test('adopted ONS provider keeps the pinned zero-contact NE original member as context only',()=>{
+ const fixture=adoptedLondonContextFixture(),result=fixture.run(),diagnostic=fixture.diagnose();
+ assert.equal(result.ledger_rows[0].target_id,'city');assert.equal(result.ledger_rows[0].native_cells,640);
+ assert.equal(diagnostic.supported_cells,640);assert.equal(diagnostic.held_cells,0);
+ assert.deepEqual(result.split_source_competitors,undefined);
+ assert.deepEqual(diagnostic.split_source_competitors,undefined);
+ assert.equal(fixture.state.adoptedProvider.source_id,'ons:GBR:LAD19-BFE-2019');
+ assert.equal(fixture.state.adoptedProvider.features.length,33);
+ assert.equal(fixture.state.adoptedProvider.bindings.length,6);
+ assert.equal(fixture.state.adoptedProvider.features.length-fixture.state.adoptedProvider.bindings.length,27);
+ assert.deepEqual(fixture.state.adoptedProvider.bindings.map(binding=>binding.scope.length),[1,217,1,42,1,378]);
+ assert.equal(fixture.state.adoptedProvider.bindings.reduce((n,binding)=>n+binding.scope.length,0),640);
+ assert.equal(fixture.state.originalTargetMembership.members.length,33);
+ assert.equal(fixture.state.originalTargetMembership.members.filter(id=>id.startsWith(family+':')).length,32);
+ assert.equal(fixture.state.originalTargetMembership.members.includes('GBR-4809'),true);
+});
+test('adopted ONS provider without a semantic edge reproduces the unused NE failure',()=>{
+ const fixture=adoptedLondonContextFixture({contextOnly:false});
+ const stored=JSON.parse(fixture.files.get('whole-ne.json').raw);
+ const atom=fixture.membership.negative_natural_earth.atoms[0];
+ assert.equal(stored.features[0].properties.adm1_code,atom.source_id);
+ assert.equal(atom.feature_ordinal,0);
+ assert.equal(valueSha(stored.features[0].geometry),atom.geometry_sha256);
+ assert.throws(()=>fixture.run(),/Unused negative Natural Earth atom/);
+ assert.throws(()=>fixture.diagnose(),/Unused negative Natural Earth atom/);
+});
+test('context-only adopted member requires its exact keyset-bound zero-contact receipt',()=>{
+ const missing=adoptedLondonContextFixture({omitContactReceipt:true});
+ assert.throws(()=>missing.run(),/requires an exact zero-contact receipt/);
+ assert.throws(()=>missing.diagnose(),/requires an exact zero-contact receipt/);
+ const mismatched=adoptedLondonContextFixture({corruptContactReceipt:true});
+ assert.throws(()=>mismatched.run(),/lacks an exact zero-contact receipt for the selected native key scope/);
+ assert.throws(()=>mismatched.diagnose(),/lacks an exact zero-contact receipt for the selected native key scope/);
+});
+test('complete original aggregation requires the pinned context-only external member role',()=>{
+ const fixture=originalTargetAggregationContextFixture({contextOnly:false});
+ assert.throws(()=>fixture.run(),/Missing or conflicting complete source aggregation member/);
+ assert.throws(()=>fixture.diagnose(),/Missing or conflicting complete source aggregation member/);
+});
+test('pinned context-only member completes the exact original aggregation without veto output',()=>{
+ const fixture=originalTargetAggregationContextFixture(),result=fixture.run(),diagnostic=fixture.diagnose();
+ assert.equal(result.ledger_rows[0].target_id,'city');assert.equal(result.ledger_rows[0].native_cells,1);
+ assert.equal(diagnostic.supported_cells,1);assert.equal(diagnostic.held_cells,0);
+ assert.deepEqual(result.split_source_competitors,undefined);
+ assert.deepEqual(diagnostic.split_source_competitors,undefined);
+ assert.equal(fixture.state.originalTargetMembership.members.length,33);
+ assert.equal(fixture.state.originalTargetMembership.members.filter(id=>id.startsWith(family+':')).length,32);
+ assert.equal(fixture.state.originalTargetMembership.members.includes('GBR-4809'),true);
+});
+test('context-only original member cannot be promoted to positive source coverage',()=>{
+ const fixture=adoptedLondonContextFixture({promoteContextMember:true});
+ assert.throws(()=>fixture.run(),/cannot be an external negative or positive native owner/);
+ assert.throws(()=>fixture.diagnose(),/cannot be an external negative or positive native owner/);
+});
 test('complete external Natural Earth atom joins only negative ancestry with whole original geometry',()=>{
  const f=externalCompetitorFixture(),proof=f.run(),diagnostic=f.diagnose();
  assert.equal(proof.ledger_rows[0].target_id,c);assert.equal(proof.ledger_rows[0].native_cells,1);
