@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "scope": {
+    "issue": 2577,
+    "original_denominator": {
+      "keys": 2247,
+      "intervals": 1645,
+      "owner_groups": 36
+    },
+    "candidate": {
+      "owner_index": "40035",
+      "owner_name": "EL DHERE",
+      "source_feature_id": "gb:SOM:ADM2:84685775B48124794142204",
+      "source_ordinal": 90,
+      "keys": 75,
+      "intervals": 70,
+      "question_groups": [
+        "SOM-Q030",
+        "SOM-Q032"
+      ],
+      "status": "finite researched-unresolved recommendation only"
+    },
+    "source_contact_split": {
+      "adm2_only": {
+        "keys": 23,
+        "intervals": 23,
+        "question_group": "SOM-Q030"
+      },
+      "adm2_plus_empty_owner_galgaduud_adm1": {
+        "keys": 52,
+        "intervals": 47,
+        "question_group": "SOM-Q032",
+        "adm1_source_id": "gb:SOM:ADM1:83879307B20044253365087"
+      }
+    },
+    "prior_owner_group_exclusion": {
+      "owner_40035_present_in_prior_1102_rows": false,
+      "owner_40035_present_in_pr2850_522_owner_summary": false,
+      "pr2850_head": "8a412cabc67a3e2bfefaa04b0aeddee3d2ab5dba",
+      "relationship_to_separate_548_key_work": "not asserted; this packet remains separate"
+    }
+  },
+  "source_application": {
+    "provider": "GPEI / Frank Salet",
+    "represented_year": 2022,
+    "source_feature_ordinal": 90,
+    "source_feature_id": "gb:SOM:ADM2:84685775B48124794142204",
+    "rights": "CC BY 4.0 recorded in source metadata; underlying agreement and exact feature lineage are not authenticated by the retained metadata",
+    "primary_findings": "Parent-supplied WHO and SNBS assessments support distinct Ceel Dheer/Ceel Buur and Galgaduud district/operational context but do not crosswalk the exact 2022 feature.",
+    "bounded_api_result": {
+      "http_status": 200,
+      "results": 0,
+      "body_sha256": "94ba666d85d1cd9bf99d19e9eea2b30cff17f48ae6c0a7814f4d484e45bff351",
+      "interpretation": "bounded unindexed-catalog result; not denial or proof of absence"
+    }
+  },
+  "key_join": {
+    "method": "Read pinned original packet rows; select rows whose original_owner_indices contain 40035; expand x in [start,end_exclusive) and emit owner_index, y, x, native_block, original_interval_ordinal_in_block; sort complete tab-separated records and append LF before SHA-256. Raw tuples are excluded.",
+    "expanded_keys": 75,
+    "distinct_owner_key_tuples": 75,
+    "intervals": 70,
+    "question_groups": [
+      "SOM-Q030",
+      "SOM-Q032"
+    ],
+    "owner_key_interval_tuple_sha256": "aca6726b1e0c567edf59603591082696d41137a41270598eee01ace955fd8f43",
+    "owner_key_tuple_sha256": "1424f00ad01b7cb21fa41ef96778b0b5993a08fd5f69263d8cb8b2d33d1f5bbf",
+    "interval_identity_sha256": "a2d537653d8eb3aa276b4a280d5d681138e61030d585d091292cc4fa21a19f9d"
+  },
+  "preserved": {
+    "all_native_physical_source_competitor_holds": true,
+    "unknown_historical_refusal_ids": 9,
+    "refusal_ids_mapped": false,
+    "ownerless_adm1_contacts": 11,
+    "ownerless_contacts_identify_refusals": false,
+    "cod_ab_v03": "aggregate-only: 1379 single-hits / 868 outside; no per-key assignment",
+    "raw_keys_coordinates_geometry_or_source_payload_included": false,
+    "geometry_or_native_physical_replay_performed": false,
+    "recorded_disposition_or_credit_changed": false,
+    "other_pr_or_548_key_head_modified": false
+  },
+  "parent_supplied_memos": {
+    "primary_assessment_sha256": "cb83291dc3d0adc4fa8fd286cc84a1775f086d58e125711c91f6b34f3191d0e0",
+    "supplement_sha256": "d22fbc72ce92b366b4cc19ac64d0b4f54e9d666a96647ad1c578f29576a01a67",
+    "who_drought_response_map_pdf_sha256": "dbfab526879bf3fedc8a07c44a78530ee5210fabd2628fd5e76a16d02ddc3de0",
+    "snbs_district_poverty_report_pdf_sha256": "66d006f55e8181c51b9b24d8944f7dbd05a335be636ae83825e2e4d78bcaf76b"
+  }
+}
