@@ -4,8 +4,8 @@
   "contents": [
     {
       "path": "scope.json",
-      "bytes": 13862,
-      "sha256": "a00a523e88a0c98353dcda963e573770c43af51a968db1ebb9eb61909e68aa1e"
+      "bytes": 14603,
+      "sha256": "e4fd3a5cd9fb53f28b79334516399c59477cb4d18f69ec23858570646109d4a2"
     },
     {
       "path": "native-patch-214.json",
@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3123,
-      "sha256": "d56cf32324eb0396eb9f6057a929e554ad2937d662e89cecf21d9807c1ba5480"
+      "bytes": 3577,
+      "sha256": "dc86b976119060a8d3c06f2b1aec28704dbc0c20a8b24cae53aa511cc22b0a48"
     },
     {
       "path": "source-role-decision.json",
@@ -49,9 +49,10 @@
     }
   },
   "no_raw_source_geometry": false,
-  "provenance_note": "native-patch-214 is an exact owner-filter projection of the original full patch; source-evidence targets are narrowed using the supported source-evidence phase; full original competitors/physical evidence remain retained.",
+  "provenance_note": "native-patch-214 is an exact owner-filter projection of the original full patch; target roster was narrowed using the supported source-evidence phase; the original complete GNB family, all GIN/SEN territorial-exclusion families, original physical evidence and source pins remain preserved.",
   "derived_preparation": {
     "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/source-evidence-214",
+    "selector_commit": "93d5c12b26974e60a614a998aaa65e67f86cbf06",
     "outputs": [
       {
         "path": "source-evidence.json",
@@ -64,7 +65,61 @@
         "sha256": "49e71cd3b6ec1cc678fb6288a0bb8149a58ac4b8156b693ae64753232c29d0f5"
       }
     ],
-    "selector_commit": "93d5c12b26974e60a614a998aaa65e67f86cbf06"
+    "source_evidence_pin": {
+      "commit": "4511e5a322f8166a7906abbe53ad84143d79b9dc",
+      "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/source-evidence-214/source-evidence.json",
+      "git_blob_oid": "f7e9641693989bd4de75af39f6aa0609f39c937a",
+      "bytes": 30299,
+      "sha256": "dc40a18f55ad91e46eb061f934af76a05741af86cbff6db96eae099a851d9b9b"
+    }
   },
-  "raw_geometry_note": "The prepared source-evidence file contains the four original target geometries required by the accepted native constructor; it is not the complete source archive, is pinned to the existing geoBoundaries product, and is distributed under its recorded ODbL terms."
+  "raw_geometry_note": "The prepared source-evidence file and constructor result contain the four original target geometries needed by the accepted native constructor. They do not contain the full source archive or any new external source data; source representations are pinned to the existing public geoBoundaries ODbL product.",
+  "native_authority": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/native-authority-214",
+    "config_sha256": "fbc3e10f76874b52c1535fef3103f3a5ac46e12430fd000e19a859c3482c7aa4",
+    "qualified_cells": 214,
+    "outputs": [
+      {
+        "path": "authority-binding.json",
+        "bytes": 754,
+        "sha256": "2e007271f84612bf6eff540773e95aceed2523cd8d9cd099012f9b000e6f9d55"
+      },
+      {
+        "path": "constructor-result.json",
+        "bytes": 10113,
+        "sha256": "658461adcbc87c19a1dad9d5a84595dde76b2e538fe3ff885c6f767c0cec452e"
+      },
+      {
+        "path": "original-rule-preimage.json",
+        "bytes": 751,
+        "sha256": "a41ed9415ca21196892111505d4d3548959b83f2752329faad4c13472de61be4"
+      },
+      {
+        "path": "preparation.json",
+        "bytes": 501,
+        "sha256": "04ea4b205b315a17345f91bfb27091f9821f6b2fd8e4825031ad46ed39770c6b"
+      }
+    ],
+    "inputs": {
+      "native_patch": {
+        "commit": "e8544e67c74a0eb0146cea5b4dd4c81dc07dbe73",
+        "path": "research/geography/gnb214-source-relative-positive-preparation-20261026/native-patch-214.json",
+        "git_blob_oid": "cc768401dce1afa50083500a14c3a5be445b57fd",
+        "bytes": 3113,
+        "sha256": "dc0c9fa285a24ff10ebace917b3b08149d48ff3c56f525ddbf85c22782908615"
+      },
+      "source_evidence": {
+        "commit": "4511e5a322f8166a7906abbe53ad84143d79b9dc",
+        "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/source-evidence-214/source-evidence.json",
+        "git_blob_oid": "f7e9641693989bd4de75af39f6aa0609f39c937a",
+        "bytes": 30299,
+        "sha256": "dc40a18f55ad91e46eb061f934af76a05741af86cbff6db96eae099a851d9b9b"
+      }
+    },
+    "tuple_conservation": {
+      "cells": 214,
+      "patch_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6",
+      "constructor_tuple_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6"
+    }
+  }
 }

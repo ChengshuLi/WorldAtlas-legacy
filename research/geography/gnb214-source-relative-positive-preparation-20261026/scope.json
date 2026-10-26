@@ -1127,5 +1127,25 @@
     "No denominator removal or package-completion claim.",
     "No raw source geometry, coordinates beyond pre-existing public native patch inputs, aliases, legal-boundary, current-border, sovereignty, physical-clearance or current-authority claim.",
     "Preserve all original source/physical/native/foreign predicates and aggregate SALB disagreements."
-  ]
+  ],
+  "derivation_check": {
+    "derived_native_patch_sha256": "dc0c9fa285a24ff10ebace917b3b08149d48ff3c56f525ddbf85c22782908615",
+    "candidate_keyset_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6",
+    "exact_equal_sets": [
+      {
+        "source": "original 6,117 requested native patch filtered to owners 20868/20889/20893/20895",
+        "count": 214
+      },
+      {
+        "source": "original native diagnostic supported_rows filtered to same owner set",
+        "count": 214
+      },
+      {
+        "source": "original source evidence coverage_rows filtered to same four targets",
+        "count": 214
+      }
+    ],
+    "symmetric_difference_cells": 0,
+    "no_geometry_or_diagnostic_replay": true
+  }
 }
