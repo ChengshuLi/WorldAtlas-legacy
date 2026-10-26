@@ -1,0 +1,162 @@
+{
+  "kind": "worldatlas.source-free-researched-unresolved-proposal.v1",
+  "title": "Exact ten-key Irbid researched-unresolved proposal",
+  "status": "proposal-only; independent exact-head review, stock delivery, and root acceptance pending; no current credit is asserted",
+  "summary": {
+    "package_id": "gb-ISR-ADM2--repair-evaluation",
+    "original_denominator": 502,
+    "already_accepted_positives": 379,
+    "already_accepted_researched_unresolved": 113,
+    "proposed_researched_unresolved": 10,
+    "unresolved_context": "ISR_IRBID_10",
+    "positive_claims": 0,
+    "package_completions": 0,
+    "denominator_removals": 0
+  },
+  "key_schema": [
+    "owner",
+    "y",
+    "x"
+  ],
+  "schema_note": "Exact original grid-key tuples only; keyset hash is SHA-256 of UTF-8 compact JSON of tuples sorted by owner,y,x. No geometry, longitude/latitude, raw source bodies, map images, or new geographic computation.",
+  "scopes": [
+    {
+      "package_id": "gb-ISR-ADM2--repair-evaluation",
+      "context_id": "ISR_IRBID_10",
+      "original_denominator": 502,
+      "proposed_researched_unresolved": 10,
+      "keys": [
+        [
+          24171,
+          105874,
+          157028
+        ],
+        [
+          24171,
+          105875,
+          157023
+        ],
+        [
+          24171,
+          105875,
+          157024
+        ],
+        [
+          24171,
+          105875,
+          157025
+        ],
+        [
+          24171,
+          105875,
+          157026
+        ],
+        [
+          24171,
+          105876,
+          157020
+        ],
+        [
+          24171,
+          105876,
+          157021
+        ],
+        [
+          24171,
+          105876,
+          157022
+        ],
+        [
+          24171,
+          105876,
+          157023
+        ],
+        [
+          24171,
+          105877,
+          157021
+        ]
+      ],
+      "keyset_sha256": "32ab5fcf43017fb9d02cf0e947d28801816e298f58aff8aff8613034a2d3422f",
+      "original_owner_context": {
+        "source_id": "gb:ISR:ADM2:584046B15624900320210",
+        "name": "Kinneret"
+      },
+      "preserved_nonempty_native_contacts": [
+        {
+          "source_id": "gb:ISR:ADM1:19161824B91089536365577",
+          "name": "Northern District",
+          "feature_ordinal": 5,
+          "geometry_sha256": "5f64029f65c8ef136e46adbb6dd4bbf058cc6ffd2e1004521f9aa447e7af6871",
+          "kind": "interior"
+        },
+        {
+          "source_id": "gb:JOR:ADM1:50493656B72492647240238",
+          "name": "Irbid",
+          "feature_ordinal": 6,
+          "geometry_sha256": "88db388fdeb9a422f7d90d16bfaf36621ba148256714d5c5fe513d4e902de65a",
+          "kind": "interior"
+        }
+      ],
+      "original_class": "land",
+      "original_diagnostic": "material_source_application_step_unperformed; territorial_exclusion_cells",
+      "physical_witness_mask": 0,
+      "interpretation": "The ten remain held. No claim of successful physical qualification or map application. Competing exact interior contacts and an unlocated treaty-referenced orthophoto operand leave source-relative assignment unresolved.",
+      "original_source_evidence_pin": {
+        "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+        "repository_path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/source-evidence.json",
+        "bytes": 85912,
+        "sha256": "4d8d1ed001998ea65bc29110974d7dee687c3029f4708f452f54ecc1b105be07"
+      },
+      "whole_target_physical_result_pin": {
+        "commit": "e600c0759f4ec6ec2d8d01e499f91d74e5e537ed",
+        "repository_path": "research/geography/isr502-whole-physical-20261025/physical-001/whole-target-support.json",
+        "bytes": 317455,
+        "sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+      }
+    }
+  ],
+  "assessment_refs": [
+    {
+      "path": "root-ledger: worldatlas-root-acceptance-after-SSDcomplete143-2855-20261026.json",
+      "sha256": "1116c52ce6cda23cc609514812c8ba44472e22a84cfea3a5ae31045651377faa0"
+    },
+    {
+      "path": "root-original-scope: worldatlas-root-isr2622-disposition.json",
+      "sha256": "4625f6c71f4ab7ffed7f2540000d19b29dc742ef408024a6589617dda594e7e8"
+    },
+    {
+      "path": "isr-parent-review-20261025/exact502-diagnostic-interpretation.jsonl",
+      "original_commit": "b89158a7857cb7b1a2f393becc19a89a79d3eea8",
+      "repository_path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-001/exact502-diagnostic-interpretation.jsonl",
+      "bytes": 705332,
+      "sha256": "05d09af10548641abd2bc63792f9e2ab4aea2c851d3739149d3145bb3867fc50"
+    },
+    {
+      "path": "isr110-review-20261025/ASSESSMENT.md",
+      "sha256": "f9a7d117713f9fd8b317fa1493473240a001b89d8e99fa88967543f18d66e862"
+    },
+    {
+      "path": "isr110-review-20261025/independent-checks.json",
+      "sha256": "66ba0e96571c99c96019827444fe6f47f2b2f2ab20c6b04a3511df63e0279817"
+    },
+    {
+      "path": "isr110-review-20261025/custody/packet/task/isr502/pax594-treaty-geodetic-appendix.pdf",
+      "bytes": 1043631,
+      "sha256": "760185c28ec851e1e9dbc4bb4b4a8c577a03f6a13509f424ac03b414e5dcbf63"
+    }
+  ],
+  "source_and_physical_limits": [
+    "Do not delete, relabel, or waive the ISR Northern District or Jordan Irbid native contacts.",
+    "The original 1994 treaty rule refers to the main flow and Appendix III orthophotos; no authenticated sheet/index/control maps these keys to a reach.",
+    "The PA-X treaty copy is retained and read; its Appendix III orthophoto sheets are not included.",
+    "A prior handoff's claim that sheets 1 and 12 were held/read is unsupported by authenticated body/readback and is expressly not relied upon.",
+    "UN 627925 direct request returned HTTP 403 and was stopped; no alternate route was attempted.",
+    "Physical witness mask 0 does not clear whole-target physical or native holds.",
+    "No legal or sovereignty conclusion, current-control claim, source-exhaustion claim, positive-repair claim, completion, or acceptance.",
+    "Reopen if authenticated Appendix III sheet(s) and source-grounded image/reach index or control are supplied.",
+    "Prior UN 627925 request was reported as HTTP 403; this packet relies on that task-provided stop and does not retry. No independent response-body receipt is claimed.",
+    "No map index, georeference, or recognizable control tied to the exact ten was authenticated in the reviewed retained custody; this is not a claim that no other source exists.",
+    "The packet makes no new source-license or redistribution assertion; existing source notices and restrictions remain operative."
+  ]
+}

@@ -1111,26 +1111,35 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
  const memberOwners=new Map(), canonicalOwners=new Map(), semanticOwners=new Map();
  let completeCohort=null;
  const externalOriginals=new Map(),usedExternalOriginals=new Set();
+ const currentMembership=function*(p){
+  pinCheck(p);const actual=reader.descriptor(p.path);
+  const exact=actual.mode===p.mode&&actual.git_blob_oid===p.git_blob_oid&&actual.bytes===p.bytes;
+  if(!exact){
+   // A current metadata application does not alter original aggregation
+   // membership or pointsets. Use only the privately validated N source view;
+   // actual M bytes and all non-parent properties were checked in full first.
+   demand(snapshot?.selection.reference_projection,'Source membership differs from selected canonical bytes');
+   demand(snapshot.reader.repo===reader.repo&&snapshot.reader.version===reader.version,
+    'Source membership belongs to another actual selected reader');
+   selectedNativeSourceMembership(snapshot,p);
+  }
+  return (yield* json(p));
+ };
  if(evidence.source_membership!==undefined){
   const membership=evidence.source_membership;
   demand(membership&&same(Object.keys(membership).sort(),['index','lineage','parts',
    ...(membership.cohort_inventory===undefined?[]:['cohort_inventory']),
-   ...(membership.negative_natural_earth===undefined?[]:['negative_natural_earth'])].sort())
+   ...(membership.negative_natural_earth===undefined?[]:['negative_natural_earth']),
+   ...(membership.original_target_membership===undefined?[]:['original_target_membership'])].sort())
    &&Array.isArray(membership.parts)&&membership.parts.length>0,'Incomplete accepted source membership');
-  const current=function*(p){
-   pinCheck(p);const actual=reader.descriptor(p.path);
-   const exact=actual.mode===p.mode&&actual.git_blob_oid===p.git_blob_oid&&actual.bytes===p.bytes;
-   if(!exact){
-    // A current metadata application does not alter original aggregation
-    // membership or pointsets. Use only the privately validated N source view;
-    // actual M bytes and all non-parent properties were checked in full first.
-    demand(snapshot?.selection.reference_projection,'Source membership differs from selected canonical bytes');
-    demand(snapshot.reader.repo===reader.repo&&snapshot.reader.version===reader.version,
-     'Source membership belongs to another actual selected reader');
-    selectedNativeSourceMembership(snapshot,p);
-   }
-   return (yield* json(p));
-  };
+  if(membership.original_target_membership!==undefined){
+   const atoms=membership.original_target_membership?.external_members?.atoms;
+   demand(Array.isArray(atoms),'Incomplete context-only original member atoms');
+   for(const atom of atoms)if(typeof atom?.source_id==='string')demand(!owners.has(atom.source_id)
+    &&!evidence.targets.some(target=>target.id===atom.source_id),
+   'Context-only original member cannot be an external negative or positive native owner');
+  }
+  const current=currentMembership;
   // The accepted registry authenticates the entire Natural Earth original,
   // not a selected feature collection or a name-based crosswalk. These leaves
   // are available only to negative ancestry, never to positive reconciliation.
@@ -1238,9 +1247,11 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   demand(accepted&&owners.has(change.id)&&Array.isArray(members)&&members.length>0
    &&members.every(member=>typeof member==='string'&&member)&&new Set(members).size===members.length
    &&same([...members].sort(),[...change.replaces].sort()),'Incomplete accepted aggregation member set');
+  const contextMembers=contextOnlyOriginalMembers.get(change.id)?.members;
   for(const member of members){
    const reverse=memberOwners.get(member);
-   demand(originals.has(member)&&(!owners.has(member)||member===change.id)&&reverse?.length===1&&reverse[0]===change,
+   demand((originals.has(member)||contextMembers?.has(member))
+    &&(!owners.has(member)||member===change.id)&&reverse?.length===1&&reverse[0]===change,
     'Missing or conflicting complete source aggregation member');
   }
   return {id:change.id,pixelIndex:owners.get(change.id),feature:accepted};
@@ -1728,6 +1739,143 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   demand(product.features?.length===record.feature_count,'Incomplete original source feature roster');
   completeOriginalSources.set(identity,product);return product;
  };
+
+ // A pinned source-construction roster can retain a disjoint original member
+ // as context without turning it into an external competitor or a provider.
+ // This role is deliberately separate from negative_natural_earth: its members
+ // are identity-checked and recorded, but never enter positive coverage or the
+ // external-negative/veto path.
+ const contextOnlyOriginalMembers=new Map();
+ if(evidence.source_membership?.original_target_membership!==undefined){
+  const role=evidence.source_membership.original_target_membership;
+  demand(keys(role,'target_id,construction_intent,families,external_members'
+   +(role.zero_contact_receipt===undefined?'':',zero_contact_receipt'))
+   &&typeof role.target_id==='string'&&role.target_id
+   &&Array.isArray(role.families)&&role.families.length>0,
+  'Invalid context-only original target membership');
+  const intent=(yield* currentMembership(role.construction_intent));
+  const semantic=intent?.semantic_change,audit=intent?.recorded_city_membership_audit;
+  demand(intent?.version===1&&intent.subject_id===role.target_id
+   &&semantic?.id===role.target_id&&Array.isArray(semantic.replaces)&&semantic.replaces.length>0
+   &&semantic.replaces.every(id=>typeof id==='string'&&id)&&new Set(semantic.replaces).size===semantic.replaces.length
+   &&audit&&Array.isArray(audit.members)
+   &&same(audit.members.map(member=>member?.id).sort(),[...semantic.replaces].sort()),
+  'Context-only original target membership differs from its pinned construction intent');
+  const lineageRecords=semanticOwners.get(role.target_id)??[];
+  const canonical=canonicalOwners.get(role.target_id),canonicalMembers=canonical?.properties?.metadata?.source_member_ids;
+  demand(lineageRecords.length===1&&Array.isArray(lineageRecords[0].replaces)
+   &&same([...lineageRecords[0].replaces].sort(),[...semantic.replaces].sort())
+   &&canonical?.id===role.target_id&&Array.isArray(canonicalMembers)
+   &&same([...canonicalMembers].sort(),[...semantic.replaces].sort())
+   &&semantic.replaces.every(id=>{
+    const edges=memberOwners.get(id)??[];return edges.length===1&&edges[0]===lineageRecords[0];
+   }),
+  'Context-only original target roster differs from canonical membership ancestry');
+  const targetRows=evidence.targets.filter(target=>(target.target_id??target.id)===role.target_id);
+  demand(owners.has(role.target_id)&&targetRows.length>0
+   &&targetRows.every(target=>target.pixelIndex===owners.get(role.target_id)),
+  'Context-only original target membership is not bound to the selected canonical target');
+
+  const familyMembers=new Set();
+  for(const family of role.families){
+   demand(keys(family,'source_id,parts')&&typeof family.source_id==='string'&&family.source_id
+    &&!adoptedFamilies.has(family.source_id),
+   'Context-only original source family conflicts with a selected provider family');
+   const declaredFamily=evidence.families.filter(item=>item.source_id===family.source_id);
+   demand(declaredFamily.length===0||declaredFamily.length===1&&same(declaredFamily[0].parts,family.parts),
+    'Context-only original source family differs from its selected source family');
+   const records=catalogue.products.filter(product=>product.key===family.source_id);
+   demand(records.length===1,'Missing unique context-only original source family');
+   const product=(yield* readCompleteSource(family.parts,records[0]));
+   demand(product.type==='FeatureCollection'&&Array.isArray(product.features)
+    &&product.features.length===records[0].feature_count,
+   'Incomplete context-only original source family');
+   for(const feature of product.features){
+    const shape=feature.properties?.shapeID;
+    demand(feature.type==='Feature'&&typeof shape==='string'&&shape,
+     'Missing context-only original source identity');
+    const id=family.source_id+':'+shape;
+    demand(!familyMembers.has(id),'Duplicate context-only original source identity');
+    familyMembers.add(id);
+   }
+  }
+  const external=role.external_members;
+  demand(keys(external,'registry,source,atoms')&&external.registry?.path==='data/sources.json'
+   &&Array.isArray(external.atoms)&&external.atoms.length>0,
+  'Invalid context-only external original member source');
+  const registry=(yield* currentMembership(external.registry)),raw=read(external.source);
+  demand(hash(registry.hashes?.ne_10m_admin_1_states_provinces)
+   &&sha(raw)===registry.hashes.ne_10m_admin_1_states_provinces,
+  'Context-only external original whole source differs from accepted registry');
+  const product=JSON.parse(raw),externalMembers=new Map();
+  demand(product.type==='FeatureCollection'&&Array.isArray(product.features)&&product.features.length>0,
+   'Missing complete context-only external original collection');
+  for(const [ordinal,feature]of product.features.entries()){
+   const id=feature.properties?.adm1_code;
+   demand(feature.type==='Feature'&&typeof id==='string'&&id&&!externalMembers.has(id),
+    'Missing or duplicate context-only external native identity');
+   coordinateBounds(feature.geometry);externalMembers.set(id,{feature,ordinal});
+  }
+  const externalIds=new Set();
+  for(const atom of external.atoms){
+   demand(atom&&keys(atom,'source_id,feature_ordinal,geometry_sha256')
+    &&typeof atom.source_id==='string'&&atom.source_id&&!externalIds.has(atom.source_id)
+    &&Number.isSafeInteger(atom.feature_ordinal)&&atom.feature_ordinal>=0&&hash(atom.geometry_sha256),
+   'Invalid or duplicate context-only external original member');
+   const original=externalMembers.get(atom.source_id);
+   demand(original&&original.ordinal===atom.feature_ordinal
+    &&valueSha(original.feature.geometry)===atom.geometry_sha256,
+   'Context-only external original identity or geometry differs');
+   demand(!familyMembers.has(atom.source_id)&&!externalOriginals.has(atom.source_id)
+    &&!owners.has(atom.source_id)&&!evidence.targets.some(target=>target.id===atom.source_id),
+   'Context-only original member cannot be an external negative or positive native owner');
+   externalIds.add(atom.source_id);
+  }
+  if(adoptedFamilies.size>0){
+   demand(role.zero_contact_receipt!==undefined,
+    'Context-only adopted member requires an exact zero-contact receipt');
+   const contactReceipt=(yield* currentMembership(role.zero_contact_receipt));
+   const targetPoints=new Map();
+   for(const adopted of adoptedFamilies.values())for(const binding of adopted.bindings.values())
+    if(binding.target_id===role.target_id)for(const point of binding.scopePoints){
+     const key=point.y+':'+point.x;demand(!targetPoints.has(key),
+      'Context-only target scope has duplicate provider keys');targetPoints.set(key,point);
+    }
+   demand(targetPoints.size>0,'Context-only target has no adopted source key scope');
+   const orderedTargetPoints=[...targetPoints.values()].sort((a,b)=>a.y-b.y||a.x-b.x);
+   const targetKeyHash=sha(Buffer.from(orderedTargetPoints.map(point=>`${point.x},${point.y}\n`).join('')));
+   const sourceRows=contactReceipt?.official_source?.source_members;
+   const expectedExternalRows=[...externalIds].map(id=>`Natural Earth ${id}`).sort();
+   const matchedExternalRows=Array.isArray(sourceRows)?sourceRows.filter(row=>
+    expectedExternalRows.includes(row?.original_member)):[];
+   const authorApplication=contactReceipt?.application?.author_result;
+   const independentApplication=contactReceipt?.application?.independent_review;
+   demand(contactReceipt?.kind==='worldatlas-gbr-london-source-application-assessment-v1'
+    &&contactReceipt.scope?.denominator===targetPoints.size
+    &&contactReceipt.scope?.owner13_key_set_sha256===targetKeyHash
+    &&Array.isArray(sourceRows)&&matchedExternalRows.length===expectedExternalRows.length
+    &&matchedExternalRows.every(row=>row.lad19cd==='E09000001')
+    &&authorApplication?.source_contact_keys===targetPoints.size
+    &&authorApplication?.unique_interior_member_contact_keys===targetPoints.size
+    &&authorApplication?.multi_member_keys===0&&authorApplication?.uncovered_keys===0
+    &&authorApplication?.boundary_tied_keys===0
+    &&independentApplication?.source_contact_keys===targetPoints.size
+    &&independentApplication?.unique_interior_member_contact_keys===targetPoints.size
+    &&independentApplication?.multi_member_keys===0&&independentApplication?.uncovered_keys===0
+    &&independentApplication?.boundary_tied_keys===0
+    &&independentApplication?.city_of_london_contacts===0,
+   'Context-only original member lacks an exact zero-contact receipt for the selected native key scope');
+  }else demand(role.zero_contact_receipt===undefined,
+   'Context-only zero-contact receipt has no adopted key scope to bind');
+  const declared=new Set(semantic.replaces);
+  demand([...familyMembers].filter(id=>declared.has(id)).length
+   +[...externalIds].filter(id=>declared.has(id)).length===declared.size
+   &&[...declared].every(id=>familyMembers.has(id)||externalIds.has(id))
+   &&[...externalIds].every(id=>declared.has(id)),
+  'Context-only original target roster does not bind every member to a complete source family');
+  contextOnlyOriginalMembers.set(role.target_id,{members:declared,familyMembers,externalIds,
+   construction_intent:role.construction_intent});
+ }
 
  // Optional references share authenticated complete originals, while retaining
  // every per-target operand and ordinal. Expansion precedes the unchanged
