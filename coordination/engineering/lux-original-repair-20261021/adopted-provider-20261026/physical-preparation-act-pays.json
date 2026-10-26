@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "kind": "bounded-act-pays-physical-source-result-v1",
+  "scope": {
+    "source_id": "act:LU:pays:Grand-Duch\u00e9 du Luxembourg",
+    "provider": "ACT 2026-10-05 pays feature only",
+    "owner": 7122,
+    "candidate_keys": 26
+  },
+  "program": {
+    "path": "scripts/qualify-source-cohort.py",
+    "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+  },
+  "config": {
+    "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-config-act-pays.json",
+    "sha256": "6a6f977993c698a00f503bf16fa40b7cb12a179094b0fb9c0d7c6290b1dc7081"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "command": [
+        "python",
+        "scripts/qualify-source-cohort.py",
+        "--phase",
+        "physical",
+        "--repo",
+        "<owned-worktree>",
+        "--config",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-config-act-pays.json",
+        "--admission",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-admission-act-pays.json",
+        "--output",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-001",
+        "--publication-prefix",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-001"
+      ],
+      "exit_code": 1,
+      "output_created": false,
+      "error": "Loaded runtime file omitted from admission inventory: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/bz2.py, /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/lzma.py, /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py",
+      "admission_sha256_before_correction": "e8b49f518d907cf077e0ea08af655bfee6d2d9d0026124093566671b2feb23d5"
+    },
+    {
+      "attempt": 2,
+      "command": [
+        "python",
+        "scripts/qualify-source-cohort.py",
+        "--phase",
+        "physical",
+        "--repo",
+        "<owned-worktree>",
+        "--config",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-config-act-pays.json",
+        "--admission",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-admission-act-pays.json",
+        "--output",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-001",
+        "--publication-prefix",
+        "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-001"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.63008144905325,
+      "output_created": true,
+      "admission_sha256": "9b8b8f22bb19899282d87332d35ff6b6ba4fbf5eb9e23f93ffee51a5eb9a18a1"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-001/whole-target-support.json",
+      "bytes": 89802,
+      "sha256": "06686eff0b4e5f258649ab2d64da3037676690602a52fd49c41edc8f8a22d4e1"
+    },
+    {
+      "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-001/execution-receipt.json",
+      "bytes": 58329,
+      "sha256": "6b6a0d01b1aeb686dfec896cbd341a71bc765cc7e65b11bb9f2a92c25ab46ecb"
+    }
+  ],
+  "limits": [
+    "Physical source-relative GSHHG comparison only; not native qualification, source authority, law, or repaired credit.",
+    "One complete source member coverage relation was checked with no issues; source covers ACT target but ACT target does not cover the full GSHHG source polygon."
+  ]
+}
