@@ -41,11 +41,34 @@ The data also have known vintage, scale, and positional limitations. Physical
 output is source-relative evidence only, not legal attribution or proof of
 all-island completeness.
 
+`physical-001/whole-target-support.json` contains bounded GSHHG-derived
+polygon geometry, not just aggregate metrics. The exact GSHHG 2.3.7
+`LICENSE.TXT` and `README.TXT` are retained verbatim in
+`source-notices/gshhg/`; their CRLF line endings were normalized to LF without
+changing text. Original and published byte hashes are recorded in
+`source-notices/gshhg/notice-manifest.json` (SHA-256
+`977428a6d755366491206b0cee10aa444cb54185e5e5c4a19f3c761ea2844ece`).
+The source attribution identifies Paul Wessel and Walter H. F. Smith; NOAA's
+NCEI GSHHG page identifies them as developers/maintainers and describes the
+data as released under the GNU Lesser General Public License:
+<https://www.ngdc.noaa.gov/mgg/shorelines/shorelines.html>. The retained
+license's separate data permission allows use, copying, modification, and
+distribution subject to its notice conditions; it also restricts use of the
+GSHHG name in advertising/publicity for software distribution without prior
+written permission. Here GSHHG is named only for source attribution and
+technical description, not advertising. The source-provided notices accompany
+the derived output.
+
 ## Method status
 
 `source-stage-001` is an identity-only join of all eight exact original source
 features to the same-ID current selected features. It does not simplify,
-repair, clip, transform, or overlay either geometry. The whole-target physical
-stage, native constructor, and selected-owner checks are separate operations;
-their results and limits must be reported independently. No acceptance or
-credit is implied by this package directory.
+repair, clip, transform, or overlay either geometry. The independently
+required whole-target physical run is retained at `physical-001/`; it used the
+accepted physical producer on all eight target geometries and the complete
+pinned GSHHG record/metadata inputs. It produced five real reconstruction
+issues (three missing, two extra) over three targets, preserved as source
+geometry and receipt; these are not owner-wide clearances or denials. Native
+qualification must project the actual witnesses to the full original cell
+request using the existing native route. Physical, native, and selected-owner
+checks remain separate; no acceptance or credit is implied.
