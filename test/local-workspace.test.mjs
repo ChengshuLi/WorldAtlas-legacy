@@ -546,6 +546,50 @@ test('author startup guidance is bound to freshly fetched main and never reads a
   manager.release({worker: 'fresh-guidance', token: entry.token});
 });
 
+test('allocation refreshes shared fetch metadata without changing linked-worktree state', async t => {
+  const source = fixture(t);
+  source.git('config', 'uploadpack.allowFilter', 'true');
+  const remote = path.join(source.temporary, 'remote.git');
+  const repo = path.join(source.temporary, 'client');
+  execFileSync('git', ['clone', '--bare', source.repo, remote], {stdio: 'pipe'});
+  execFileSync('git', ['clone', '--no-checkout', remote, repo], {stdio: 'pipe'});
+  const git = (...args) => execFileSync('git', ['-C', repo, ...args], {encoding: 'utf8', stdio: 'pipe'}).trim();
+  const linked = path.join(source.temporary, 'linked');
+  git('worktree', 'add', '-b', 'primary/linked', linked);
+  const linkedGit = (...args) => execFileSync('git', ['-C', linked, ...args], {encoding: 'utf8', stdio: 'pipe'}).trim();
+  const localFetchHead = linkedGit('rev-parse', '--git-path', 'FETCH_HEAD');
+  const localIndex = linkedGit('rev-parse', '--git-path', 'index');
+  fs.writeFileSync(localFetchHead, 'primary checkout sentinel\n');
+  fs.writeFileSync(path.join(linked, 'README.md'), 'staged and unstaged primary bytes');
+  linkedGit('add', 'README.md');
+  fs.writeFileSync(path.join(linked, 'README.md'), 'staged and unstaged primary bytes plus unstaged edit');
+  const beforeHead = linkedGit('rev-parse', 'HEAD');
+  const beforeBranch = linkedGit('symbolic-ref', 'HEAD');
+  const beforeIndex = fs.readFileSync(localIndex);
+  const beforeStatus = linkedGit('status', '--porcelain=v2');
+  const beforeFetchHead = fs.readFileSync(localFetchHead);
+
+  fs.writeFileSync(path.join(source.repo, 'AGENTS.md'), '# Linked checkout refresh\n');
+  source.git('add', 'AGENTS.md'); source.git('commit', '-m', 'advance linked checkout main');
+  const latest = source.git('rev-parse', 'HEAD').trim();
+  source.git('push', remote, 'main');
+
+  const common = git('rev-parse', '--path-format=absolute', '--git-common-dir');
+  const commonFetchHead = path.join(common, 'FETCH_HEAD');
+  const manager = workspaceManager(linked);
+  const entry = await manager.allocate({worker: 'linked-refresh', branch: 'engineering/linked-refresh'});
+  assert.equal(entry.head, latest);
+  assert.equal(execFileSync('git', ['--git-dir', common, 'rev-parse', '--verify', 'FETCH_HEAD^{commit}'], {encoding: 'utf8'}).trim(), latest);
+  assert.equal(linkedGit('rev-parse', 'HEAD'), beforeHead);
+  assert.equal(linkedGit('symbolic-ref', 'HEAD'), beforeBranch);
+  assert.deepEqual(fs.readFileSync(localIndex), beforeIndex);
+  assert.equal(linkedGit('status', '--porcelain=v2'), beforeStatus);
+  assert.deepEqual(fs.readFileSync(localFetchHead), beforeFetchHead);
+  assert.ok(fs.existsSync(commonFetchHead), 'the shared Git directory carries the allocator fetch result');
+  assert.equal(fs.readFileSync(path.join(linked, 'README.md'), 'utf8'), 'staged and unstaged primary bytes plus unstaged edit');
+  manager.release({worker: 'linked-refresh', token: entry.token});
+});
+
 test('CLI keeps stdout as one allocation JSON object and presents exact pinned AGENTS on stderr', async t => {
   const {repo, git, manager} = fixture(t);
   const helper = cliHelper(repo);
@@ -1403,8 +1447,8 @@ test('documented pinned bootstrap binds its task repository and preserves stale 
   assert.ok(!fs.existsSync(manager.report().registry));
 });
 
-test('documented bootstrap refuses an absent promisor helper without an old-Git lazy-fetch fatal', async t => {
-  const {repo, git, head, trace, manager} = partialFixture(t, ['scripts/worker-identity.mjs', 'data/other/large.json'], {
+test('documented bootstrap fetches only exact pinned helper blobs and leaves unrelated promises absent', async t => {
+  const {repo, sourceRepo, git, head, trace, manager} = partialFixture(t, ['scripts/worker-identity.mjs', 'data/other/large.json'], {
     configureSource: ({repo, git}) => {
       for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
         fs.writeFileSync(path.join(repo, 'scripts', name), fs.readFileSync(new URL('../scripts/' + name, import.meta.url)));
@@ -1414,18 +1458,21 @@ test('documented bootstrap refuses an absent promisor helper without an old-Git 
   const docs = fs.readFileSync(new URL('../docs/DEVELOPMENT.md', import.meta.url), 'utf8');
   const bootstrap = docs.split("<<'PYTHON'\n")[1].split('\nPYTHON')[0];
   const refs = git('show-ref');
-  const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
-  assert.throws(() => execFileSync('python3', ['-', repo, head, 'inspect', '--commit', head], {
-    cwd: repo, input: bootstrap, encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}
-  }), error => {
-    assert.equal(error.stdout, '');
-    assert.match(error.stderr, /Pinned helper missing/);
-    assert.doesNotMatch(error.stderr, /could not fetch|lazy fetching disabled/);
-    return true;
+  const workerOid = git('rev-parse', `${head}:scripts/worker-identity.mjs`).trim();
+  const unrelatedOid = git('rev-parse', `${head}:data/other/large.json`).trim();
+  const result = execFileSync('python3', ['-', repo, head, 'inspect', '--commit', head], {
+    cwd: repo, input: bootstrap, encoding: 'utf8', stdio: 'pipe',
+    env: {...process.env, PATH: `${path.dirname(process.execPath)}:${process.env.PATH}`, GIT_NO_LAZY_FETCH: '1', GIT_TRACE: trace}
   });
-  assert.doesNotMatch(fs.readFileSync(trace, 'utf8'), /(?:built-in: git|run_command:) .*fetch/);
-  assert.deepEqual(fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort(), before);
-  assert.equal(git('show-ref'), refs);
+  assert.deepEqual(JSON.parse(result), manager.inspect({commit: head}));
+  assert.doesNotThrow(() => git('cat-file', '-e', workerOid), 'the exact pinned helper is acquired');
+  const unrelated = spawnSync('git', ['-C', repo, 'cat-file', '-e', unrelatedOid], {
+    encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLACE_OBJECTS: '1'}
+  });
+  assert.notEqual(unrelated.status, 0, 'the unrelated promised body remains unavailable');
+  assert.equal(git('cat-file', '-t', workerOid).trim(), 'blob');
+  assert.equal(git('cat-file', 'blob', workerOid), fs.readFileSync(path.join(sourceRepo, 'scripts/worker-identity.mjs'), 'utf8'));
+  assert.equal(git('show-ref'), refs, 'exact-object fetch creates no ref');
   assert.ok(!fs.readdirSync(path.join(repo, '.git')).some(name => name.startsWith('worldatlas-helper-')));
   assert.ok(!fs.existsSync(manager.report().registry));
 });
