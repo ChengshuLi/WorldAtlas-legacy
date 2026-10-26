@@ -1,0 +1,53 @@
+{
+  "kind": "worldatlas.source-relative-positive-preparation-manifest.v1",
+  "proposal_id": "gnb214-source-relative-positive-preparation-20261026",
+  "contents": [
+    {
+      "path": "README.md",
+      "bytes": 2766,
+      "sha256": "3af3590ec7e791aea7269dbd1cddf26479e0dd96b0545d326b69e05557a35b4d"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 13862,
+      "sha256": "a00a523e88a0c98353dcda963e573770c43af51a968db1ebb9eb61909e68aa1e"
+    },
+    {
+      "path": "source-role-decision.json",
+      "bytes": 5560,
+      "sha256": "a5c859092702e06c57ce7e079993428a57983e4754c0e8791bf6e7aac33bf3a3"
+    },
+    {
+      "path": "native-patch-214.json",
+      "bytes": 3113,
+      "sha256": "dc0c9fa285a24ff10ebace917b3b08149d48ff3c56f525ddbf85c22782908615"
+    }
+  ],
+  "scope_total": 214,
+  "keyset_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6",
+  "derived_input_pins": {
+    "source_evidence": {
+      "commit": "efc36a3fc6f67350f69c8cd1ffd8278d4adaf8c5",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/source-evidence-002/source-evidence.json",
+      "git_blob_oid": "0f48192edcab5b556ea7cb88d7fd183c7eb72528",
+      "bytes": 154131,
+      "sha256": "8b46ab03c836d5de0cf0d511391906865f3bfae59017d0162ff58c4f9d4d789c"
+    },
+    "original_patch": {
+      "commit": "efc36a3fc6f67350f69c8cd1ffd8278d4adaf8c5",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/native-request-001/native-requested-patch.json",
+      "git_blob_oid": "50e6dd8ce35c3d2347dc8e4438caa8e14f6d5946",
+      "bytes": 54813,
+      "sha256": "47d4b88e972c6d615e59c2ad800b363dee6ea24c40c05746e1699af6de377caf"
+    },
+    "original_diagnostic": {
+      "commit": "03ccde25528475b374be5c891834e74e7fdfea2e",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/native-diagnostic-001/native-diagnostic.json",
+      "git_blob_oid": "f59c78f98b25683474b8b6bdf14ebdc95aa5f767",
+      "bytes": 198795,
+      "sha256": "944dea89a9658329b48d97860b74c9fb8ac979075dabbbe972d1f52235af8944"
+    }
+  },
+  "no_raw_source_geometry": false,
+  "provenance_note": "native-patch-214 is an exact owner-filter projection of the original full patch; source-evidence remains a historical immutable input and is not duplicated. Constructor output pending."
+}
