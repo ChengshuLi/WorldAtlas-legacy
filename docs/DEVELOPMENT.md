@@ -4,7 +4,7 @@ Use this guide after the repo-level [entrypoint](../AGENTS.md) for an assigned t
 
 ## Start and own the work
 
-Use the accepted `scripts/local-workspace.mjs` allocator for managed author and exact-head review checkouts. It fetches `main` with the explicit remote-tracking refspec, verifies `FETCH_HEAD` matches `origin/main`, and freezes that commit for a new author branch. A review slot is detached at the requested commit. Read the helper's current CLI and implementation for arguments and guards; do not maintain a second option specification here.
+Use the accepted `scripts/local-workspace.mjs` allocator for managed author and exact-head review checkouts. It fetches `main` with the explicit remote-tracking refspec, verifies `FETCH_HEAD` matches `origin/main`, and freezes that commit for a new author branch. Before reserving an author slot it reads the root `AGENTS.md` from that exact commit, verifies the ordinary blob and SHA-256, and prints the pinned text; resolution is repository-root-relative even though the CLI itself lives under `scripts/`. A review slot is detached at the requested commit. Read the helper's current CLI and implementation for arguments and guards; do not maintain a second option specification here.
 
 Use the task/environment's supported Node and Git executables, not ambient `PATH` assumptions; verify the selected versions with `node --version` and `git --version`. Meet the Node requirement declared by `package.json` and use Git with the capabilities required by the documented helper. Do not copy private executable paths into guides. Preserve approved authentication configuration when isolating Git commands; clear only repository-routing variables invocation-locally as below.
 
@@ -39,11 +39,12 @@ These examples do not authorize dispatches, writes, extra retries, a review, or 
 Send useful progress at substantive milestones: exact branch/head, work completed, evidence or tests, next action and a concrete blocker. Report only checks actually performed and distinguish observed failures from work not done.
 ## Refresh a stale checkout without changing its files
 
-The helper that starts an allocation runs before the new checkout exists. Running
-an older helper version from the primary checkout can therefore pin stale main.
-Before a new job, refresh `origin/main` with blob filtering, pin its
-commit, and read that pin's `AGENTS.md` and this guide. Do not pull, reset, switch
-or overwrite a checkout holding active work.
+Normally invoke the accepted helper directly. If the primary helper is stale or
+the primary checkout is dirty, use the verified-helper bootstrap below to load
+both modules from one exact freshly fetched `main` commit without changing that
+checkout. This is a stale-helper recovery path, not a workaround for the CLI's
+location under `scripts/`; root guidance is read from the pinned repository tree.
+Do not pull, reset, switch or overwrite a checkout holding active work.
 
 The following code-only bootstrap loads both allocator modules from one exact
 locally available main commit. It uses an exclusive temporary directory inside
