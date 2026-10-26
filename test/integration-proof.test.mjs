@@ -93,7 +93,7 @@ test('documented bootstrap ignores hostile inherited Git routing variables', () 
     fs.mkdirSync(path.join(repo, 'scripts'), {recursive: true});
     fs.mkdirSync(path.join(repo, 'coordination', 'example'), {recursive: true});
     fs.mkdirSync(path.join(decoy, 'tracked'), {recursive: true});
-    for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+    for (const name of ['local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'])
       fs.copyFileSync(`scripts/${name}`, path.join(repo, 'scripts', name));
     fs.writeFileSync(path.join(repo, 'coordination', 'example', 'input.json'), '{}\n');
     fs.writeFileSync(path.join(decoy, 'tracked', 'sentinel.txt'), 'leave this decoy untouched\n');

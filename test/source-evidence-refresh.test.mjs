@@ -11,12 +11,25 @@ function withPriorSelector(reader,commit,selection){
  const oid=createHash('sha1').update(`blob ${raw.length}\0`).update(raw).digest('hex');
  const pin={commit,path,mode:'100644',git_blob_oid:oid,bytes:raw.length,
   sha256:createHash('sha256').update(raw).digest('hex')};
- return new Proxy(reader,{get(target,key){
+ let overlay;
+ overlay=new Proxy(reader,{get(target,key){
   if(key==='pin')return (at,name)=>at===commit&&name===path?pin:target.pin(at,name);
-  if(key==='read')return value=>value===pin?raw:target.read(value);
-  if(key==='json')return value=>JSON.parse((value===pin?raw:target.read(value)).toString());
+  if(key==='read')return value=>{
+   if(value===pin)return raw;
+   if(value?.commit&&value.commit!==commit){
+    const current=target.pin(commit,value.path);
+    assert.equal(current.mode,value.mode,`shallow fixture mode for ${value.path}`);
+    assert.equal(current.git_blob_oid,value.git_blob_oid,`shallow fixture blob for ${value.path}`);
+    assert.equal(current.bytes,value.bytes,`shallow fixture length for ${value.path}`);
+    assert.equal(current.sha256,value.sha256,`shallow fixture digest for ${value.path}`);
+    return target.read(current);
+   }
+   return target.read(value);
+  };
+  if(key==='json')return value=>JSON.parse(overlay.read(value).toString());
   const value=target[key];return typeof value==='function'?value.bind(target):value;
  }});
+ return overlay;
 }
 
 test('source-evidence refresh prepares the exact 20 TLS members without changing the selected bank',async()=>{
