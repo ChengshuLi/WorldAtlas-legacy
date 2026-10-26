@@ -11,3 +11,7 @@ The 882-interval original package identity remains bound by the original queue p
 ## Superseded phase-1 attempt (not a diagnostic result)
 
 An initial invocation using `source-evidence-001` stopped before producing any `native-diagnostic.json` with the exact error `Source family part differs from retained catalogue`. The source-evidence config did not carry the original compressed part's decoded length/hash fields. The failure is preserved; it is not a science outcome or a source denial. Corrected, fully catalog-bound source evidence is separately prepared as `source-evidence-002` and its native diagnostic is a new phase directory.
+
+## Accepted-current-bank projection
+
+The current-main selector at `f67bf55ef63c7eaf622cd9eded03aa45c12d0b77` was applied through the accepted `supported-inputs` helper to the complete native diagnostic and full original request. It partitions the full 2,458 cells as 2,458 source-supported/0 held/0 already present, across all eight original owners. Product bytes and each of the five output hashes match the helper-written `preparation.json` receipt (`config_sha256` `b7b64d29853c07d182b9260bd6009f027b3e567037fc2681e9d4b1b42e43d395`). The process returned exit 137 after writing the complete manifest and all five listed outputs; no stdout/normal exit was retained, so this is recorded as a terminal-status uncertainty rather than asserted as a clean exit. Every output was independently length/hash checked against the receipt. This projection is a current-owner non-addition check only; it is not bank composition or delivery.
