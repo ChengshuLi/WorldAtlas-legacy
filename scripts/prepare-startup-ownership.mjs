@@ -229,7 +229,7 @@ export async function prepareFinalBankStartupOwnership({manifest,manifestSha,pre
     &&new Set(compatibility.map(p=>p.path)).size===compatibility.length
     &&compatibility.every(pin=>previous.files.some(old=>isDeepStrictEqual(pin,old))), 'Finished bank cannot change original native or compatibility custody');
   need(Array.isArray(features)&&features.length===previous.preparedOwnership.owners
-    &&Number.isSafeInteger(runWords)&&runWords>0&&runWords%2===0
+    &&Number.isSafeInteger(runWords)&&runWords>=0&&runWords%2===0
     &&(ownership.runs instanceof Uint32Array&&ownership.runs.length===runWords
       ||!(ownership.runs instanceof Uint32Array)&&typeof ownership.runSegments==='function')
     &&ownership.reference_owner_sha256===previous.preparedOwnership.reference_owner_sha256
