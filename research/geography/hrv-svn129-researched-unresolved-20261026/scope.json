@@ -1,0 +1,2619 @@
+{
+  "evidence_pins": {
+    "dgu_application": {
+      "path": "workspace-private:HRV-DGU-35738-native-application-20261026.json",
+      "sha256": "40c4db1199d60ba9163a0bdcf49449d7e604259e1817ca1344964379553052bf"
+    },
+    "dgu_owner_role_crosswalk": {
+      "path": "workspace-private:HRV-DGU-owner-role-crosswalk-20261026.json",
+      "sha256": "60666aea548f54999816d9dc7dd9879ba34ad29db43db088709247093d784ec2"
+    },
+    "gurs_2017_explanation": {
+      "date": "2017-12-30",
+      "sha256": "3c0b5c6678656456820e1fd6d048acb86d46ba6154b8a2e442e3a51227ffec54",
+      "url": "https://www.e-prostor.gov.si/fileadmin/struktura/DRZ_MEJA/Drzavna_meja_obrazlozitev_zarisa_meje.docx"
+    },
+    "gurs_general_terms": {
+      "date": "2023-04-01",
+      "license": "CC BY 4.0 attribution; use source, type, data period/date; note OPSI license metadata discrepancy for separate register listing.",
+      "sha256": "69f5480b9466045c06b88ea4f2a515f57da30db1502cec12112e8a842494232a",
+      "url": "https://www.e-prostor.gov.si/fileadmin/struktura/General_terms.docx"
+    },
+    "gurs_jgp_file": {
+      "crs": "EPSG:3794",
+      "date": "December 2024",
+      "selected_shp_sha256": "051af94bd3d8115f5c3a6cfac3b3e9f56dbf1659aaab558122c4955772c26c6e",
+      "url": "https://ipi.eprostor.gov.si/jgp-service-api/display-views/groups/117/files/493",
+      "zip_sha256": "7431813a817940391060c092f60cdc2cdf86c89d9939010dccff7061894c3ffd",
+      "distance_comparison_features": "Only the three SOSED=Hrvaška features (FIDs 1, 2 and 5) were included; FID 5 was nearest for all 129 points."
+    },
+    "native_latitudes": {
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz"
+    },
+    "original_contract": {
+      "commit": "23318dd9d70680495138297b9cc1a7533a466200",
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json"
+    },
+    "prior_197_keyset": {
+      "path": "workspace-private:HRV-residual-197-expected-DGU-foreign-contact-keys-20261026.v2.json",
+      "sha256": "a90e95c7edc5b14399f2226790cd7fcf9827ed655011f17c5e08583a3cfa75ed",
+      "tuple_sha256": "a3720aed50a8304da6f7f44c6bacad4e15361c072a1061a699b1db54b9b99135"
+    },
+    "root_acceptance_28885": {
+      "path": "worldatlas-root-acceptance-after-HRV28885-2899-20261026.json",
+      "sha256": "510762a17e76218552b2280361c03f2bd43751999e7a725f5ab2de640ddcd27d"
+    },
+    "gurs_129_application_receipt": {
+      "path": "workspace-private:HRV-SVN129-GURS-border-line-application-20261026.v3.json",
+      "sha256": "4ebeb62a41183792b96154fcf5876a2de26c0d19bd8547ab1a56af88a3ac4f11"
+    }
+  },
+  "key_count": 129,
+  "key_schema": [
+    "owner_index",
+    "y",
+    "x"
+  ],
+  "keys": [
+    [
+      22228,
+      93089,
+      142454
+    ],
+    [
+      22228,
+      93090,
+      142453
+    ],
+    [
+      22228,
+      93091,
+      142452
+    ],
+    [
+      22228,
+      93092,
+      142451
+    ],
+    [
+      22228,
+      93092,
+      142452
+    ],
+    [
+      22228,
+      93093,
+      142450
+    ],
+    [
+      22228,
+      93093,
+      142451
+    ],
+    [
+      22228,
+      93094,
+      142450
+    ],
+    [
+      22277,
+      92687,
+      143009
+    ],
+    [
+      22277,
+      92687,
+      143010
+    ],
+    [
+      22277,
+      92687,
+      143011
+    ],
+    [
+      22277,
+      92688,
+      143006
+    ],
+    [
+      22277,
+      92688,
+      143007
+    ],
+    [
+      22277,
+      92688,
+      143008
+    ],
+    [
+      22277,
+      92688,
+      143009
+    ],
+    [
+      22277,
+      92688,
+      143010
+    ],
+    [
+      22277,
+      92688,
+      143011
+    ],
+    [
+      22277,
+      92689,
+      143003
+    ],
+    [
+      22277,
+      92689,
+      143004
+    ],
+    [
+      22277,
+      92689,
+      143005
+    ],
+    [
+      22277,
+      92689,
+      143006
+    ],
+    [
+      22277,
+      92689,
+      143007
+    ],
+    [
+      22277,
+      92689,
+      143008
+    ],
+    [
+      22277,
+      92689,
+      143009
+    ],
+    [
+      22277,
+      92689,
+      143010
+    ],
+    [
+      22277,
+      92689,
+      143011
+    ],
+    [
+      22277,
+      92690,
+      143002
+    ],
+    [
+      22277,
+      92690,
+      143003
+    ],
+    [
+      22277,
+      92690,
+      143004
+    ],
+    [
+      22277,
+      92690,
+      143005
+    ],
+    [
+      22277,
+      92690,
+      143006
+    ],
+    [
+      22277,
+      92690,
+      143007
+    ],
+    [
+      22277,
+      92690,
+      143008
+    ],
+    [
+      22277,
+      92690,
+      143009
+    ],
+    [
+      22277,
+      92690,
+      143010
+    ],
+    [
+      22277,
+      92690,
+      143011
+    ],
+    [
+      22277,
+      92691,
+      143002
+    ],
+    [
+      22277,
+      92691,
+      143003
+    ],
+    [
+      22277,
+      92691,
+      143004
+    ],
+    [
+      22277,
+      92691,
+      143005
+    ],
+    [
+      22277,
+      92691,
+      143006
+    ],
+    [
+      22277,
+      92691,
+      143007
+    ],
+    [
+      22277,
+      92691,
+      143008
+    ],
+    [
+      22277,
+      92691,
+      143009
+    ],
+    [
+      22277,
+      92692,
+      143001
+    ],
+    [
+      22277,
+      92692,
+      143002
+    ],
+    [
+      22277,
+      92692,
+      143003
+    ],
+    [
+      22277,
+      92693,
+      142991
+    ],
+    [
+      22277,
+      92693,
+      142992
+    ],
+    [
+      22277,
+      92693,
+      142993
+    ],
+    [
+      22277,
+      92693,
+      142997
+    ],
+    [
+      22277,
+      92693,
+      142998
+    ],
+    [
+      22277,
+      92693,
+      142999
+    ],
+    [
+      22277,
+      92693,
+      143000
+    ],
+    [
+      22277,
+      92693,
+      143001
+    ],
+    [
+      22277,
+      92693,
+      143002
+    ],
+    [
+      22277,
+      92693,
+      143003
+    ],
+    [
+      22277,
+      92694,
+      142992
+    ],
+    [
+      22277,
+      92694,
+      142993
+    ],
+    [
+      22277,
+      92694,
+      142994
+    ],
+    [
+      22277,
+      92694,
+      142996
+    ],
+    [
+      22277,
+      92694,
+      142997
+    ],
+    [
+      22277,
+      92694,
+      142998
+    ],
+    [
+      22277,
+      92694,
+      142999
+    ],
+    [
+      22277,
+      92694,
+      143000
+    ],
+    [
+      22277,
+      92694,
+      143001
+    ],
+    [
+      22277,
+      92694,
+      143002
+    ],
+    [
+      22277,
+      92694,
+      143003
+    ],
+    [
+      22277,
+      92695,
+      142995
+    ],
+    [
+      22277,
+      92695,
+      142996
+    ],
+    [
+      22277,
+      92695,
+      142997
+    ],
+    [
+      22277,
+      92695,
+      142998
+    ],
+    [
+      22277,
+      92695,
+      142999
+    ],
+    [
+      22277,
+      92695,
+      143000
+    ],
+    [
+      22277,
+      92695,
+      143001
+    ],
+    [
+      22277,
+      92695,
+      143002
+    ],
+    [
+      22277,
+      92695,
+      143003
+    ],
+    [
+      22277,
+      92696,
+      142990
+    ],
+    [
+      22277,
+      92696,
+      142991
+    ],
+    [
+      22277,
+      92696,
+      142992
+    ],
+    [
+      22277,
+      92696,
+      142995
+    ],
+    [
+      22277,
+      92696,
+      142996
+    ],
+    [
+      22277,
+      92697,
+      142982
+    ],
+    [
+      22277,
+      92697,
+      142983
+    ],
+    [
+      22277,
+      92697,
+      142984
+    ],
+    [
+      22277,
+      92697,
+      142985
+    ],
+    [
+      22368,
+      93447,
+      142367
+    ],
+    [
+      22368,
+      93447,
+      142368
+    ],
+    [
+      22368,
+      93448,
+      142368
+    ],
+    [
+      22368,
+      93448,
+      142369
+    ],
+    [
+      22368,
+      93448,
+      142370
+    ],
+    [
+      22368,
+      93448,
+      142371
+    ],
+    [
+      22368,
+      93448,
+      142372
+    ],
+    [
+      22368,
+      93449,
+      142368
+    ],
+    [
+      22368,
+      93449,
+      142369
+    ],
+    [
+      22368,
+      93449,
+      142370
+    ],
+    [
+      22368,
+      93449,
+      142371
+    ],
+    [
+      22368,
+      93449,
+      142372
+    ],
+    [
+      22368,
+      93450,
+      142369
+    ],
+    [
+      22368,
+      93450,
+      142370
+    ],
+    [
+      22368,
+      93450,
+      142371
+    ],
+    [
+      22368,
+      93451,
+      142370
+    ],
+    [
+      22368,
+      93451,
+      142371
+    ],
+    [
+      22368,
+      93452,
+      142370
+    ],
+    [
+      22368,
+      93452,
+      142371
+    ],
+    [
+      22368,
+      93453,
+      142371
+    ],
+    [
+      22368,
+      93454,
+      142371
+    ],
+    [
+      22451,
+      93770,
+      141279
+    ],
+    [
+      22451,
+      93770,
+      141280
+    ],
+    [
+      22451,
+      93770,
+      141281
+    ],
+    [
+      22451,
+      93770,
+      141282
+    ],
+    [
+      22451,
+      93770,
+      141283
+    ],
+    [
+      22451,
+      93770,
+      141284
+    ],
+    [
+      22451,
+      93771,
+      141278
+    ],
+    [
+      22451,
+      93771,
+      141279
+    ],
+    [
+      22451,
+      93771,
+      141280
+    ],
+    [
+      22451,
+      93771,
+      141281
+    ],
+    [
+      22451,
+      93772,
+      141278
+    ],
+    [
+      22451,
+      93772,
+      141279
+    ],
+    [
+      22451,
+      93780,
+      141269
+    ],
+    [
+      22451,
+      93798,
+      141322
+    ],
+    [
+      22451,
+      93799,
+      141323
+    ],
+    [
+      22451,
+      93800,
+      141324
+    ],
+    [
+      22451,
+      93801,
+      141325
+    ],
+    [
+      22451,
+      93801,
+      141326
+    ],
+    [
+      22451,
+      93802,
+      141326
+    ],
+    [
+      22451,
+      93802,
+      141327
+    ],
+    [
+      22451,
+      93803,
+      141327
+    ],
+    [
+      22451,
+      93803,
+      141328
+    ]
+  ],
+  "keyset_sha256": "c35187599e0f0bf6bd8a0b88cb8ff6e1a192319dc93cc8cce53143260af198a7",
+  "keyset_sha256_method": "SHA-256 of UTF-8 compact JSON encoding of sorted exact [owner_index,y,x] tuples; no geographic latitude/longitude pairs.",
+  "kind": "worldatlas.source-free-researched-unresolved-proposal.v1",
+  "original_contact_bindings": [
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93089,
+        142454
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93090,
+        142453
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93091,
+        142452
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93092,
+        142451
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93092,
+        142452
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93093,
+        142450
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93093,
+        142451
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22228,
+        93094,
+        142450
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B60551938195766"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92687,
+        143009
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92687,
+        143010
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92687,
+        143011
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92688,
+        143006
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92688,
+        143007
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92688,
+        143008
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92688,
+        143009
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92688,
+        143010
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92688,
+        143011
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143003
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143004
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143005
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143006
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143007
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143008
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143009
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143010
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92689,
+        143011
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143002
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143003
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143004
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143005
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143006
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143007
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143008
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143009
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143010
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92690,
+        143011
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143002
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143003
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143004
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143005
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143006
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143007
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143008
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92691,
+        143009
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92692,
+        143001
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92692,
+        143002
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92692,
+        143003
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        142991
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        142992
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        142993
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        142997
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        142998
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        142999
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        143000
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        143001
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        143002
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92693,
+        143003
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        142992
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        142993
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        142994
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        142996
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        142997
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        142998
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        142999
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        143000
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        143001
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        143002
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92694,
+        143003
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        142995
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        142996
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        142997
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        142998
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        142999
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        143000
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        143001
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        143002
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92695,
+        143003
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92696,
+        142990
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92696,
+        142991
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92696,
+        142992
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92696,
+        142995
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92696,
+        142996
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92697,
+        142982
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92697,
+        142983
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92697,
+        142984
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22277,
+        92697,
+        142985
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B6726726376933"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93447,
+        142367
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93447,
+        142368
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93448,
+        142368
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93448,
+        142369
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93448,
+        142370
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93448,
+        142371
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93448,
+        142372
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93449,
+        142368
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93449,
+        142369
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93449,
+        142370
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93449,
+        142371
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93449,
+        142372
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93450,
+        142369
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93450,
+        142370
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93450,
+        142371
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93451,
+        142370
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93451,
+        142371
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93452,
+        142370
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93452,
+        142371
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93453,
+        142371
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_feature_index": 56396,
+      "foreign_ordinal": 0,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B32704473481330",
+      "key": [
+        22368,
+        93454,
+        142371
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B81263259444247"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93770,
+        141279
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93770,
+        141280
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93770,
+        141281
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93770,
+        141282
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93770,
+        141283
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93770,
+        141284
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93771,
+        141278
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93771,
+        141279
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93771,
+        141280
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93771,
+        141281
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93772,
+        141278
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93772,
+        141279
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93780,
+        141269
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93798,
+        141322
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93799,
+        141323
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93800,
+        141324
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93801,
+        141325
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93801,
+        141326
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93802,
+        141326
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93802,
+        141327
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93803,
+        141327
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    },
+    {
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_feature_index": 56397,
+      "foreign_ordinal": 1,
+      "foreign_source_id": "gb:SVN:ADM1:3739544B2739881953900",
+      "key": [
+        22451,
+        93803,
+        141328
+      ],
+      "owner_id": "gb:HRV:ADM2:41942358B9507377140986"
+    }
+  ],
+  "owner_partition": {
+    "gb:HRV:ADM2:41942358B60551938195766": {
+      "count": 8,
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187934327"
+      ],
+      "foreign_source_ids": [
+        "gb:SVN:ADM1:3739544B32704473481330"
+      ]
+    },
+    "gb:HRV:ADM2:41942358B6726726376933": {
+      "count": 78,
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186051102"
+      ],
+      "foreign_source_ids": [
+        "gb:SVN:ADM1:3739544B32704473481330"
+      ]
+    },
+    "gb:HRV:ADM2:41942358B81263259444247": {
+      "count": 21,
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2187336240"
+      ],
+      "foreign_source_ids": [
+        "gb:SVN:ADM1:3739544B32704473481330"
+      ]
+    },
+    "gb:HRV:ADM2:41942358B9507377140986": {
+      "count": 22,
+      "dgu_gml_ids": [
+        "AdministrativeUnit.2186171372"
+      ],
+      "foreign_source_ids": [
+        "gb:SVN:ADM1:3739544B2739881953900"
+      ]
+    }
+  },
+  "physical_native_limits": {
+    "native_diagnostic_003_scope": "Accepted28885 only; does not clear these129",
+    "no_physical_001_per_key_witness_for_129": true,
+    "no_physical_or_native_clearance_claimed": true,
+    "original_physical_001_includes_two_contact_owners_only_as_target_support_not_per_cell_clearance": true,
+    "positive_promotion_requires_exact_original_source_physical_and_native_predicates": true
+  },
+  "preservation": {
+    "all_original_hun_contacts_preserved_in_separate_cohort": 68,
+    "all_original_svn_contacts_preserved": 129,
+    "dgu_gurs_nuts_shapes_included": false,
+    "geographic_coordinate_pairs_included": false,
+    "other_held_residual_cohorts_changed": false,
+    "prior_28885_replayed_or_recounted": false,
+    "raw_source_bodies_included": false,
+    "source_geometry_included": false
+  },
+  "residual_partition_before_proposal": {
+    "accepted_positive": 28885,
+    "expected_dgu_with_original_hun_svn_contact": 197,
+    "other_dgu_unit": 4905,
+    "outside_or_unmatched_dgu_units": 1751,
+    "total": 35738
+  },
+  "source_partition": {
+    "gb:SVN:ADM1:3739544B2739881953900": {
+      "count": 22,
+      "foreign_ordinal": 1,
+      "owner_ids": [
+        "gb:HRV:ADM2:41942358B9507377140986"
+      ]
+    },
+    "gb:SVN:ADM1:3739544B32704473481330": {
+      "count": 107,
+      "foreign_ordinal": 0,
+      "owner_ids": [
+        "gb:HRV:ADM2:41942358B60551938195766",
+        "gb:HRV:ADM2:41942358B6726726376933",
+        "gb:HRV:ADM2:41942358B81263259444247"
+      ]
+    }
+  },
+  "source_role_summary": {
+    "application": "Exact129 cell-center-to-Hrvaška segment FID5 line distances: 14 <=25m; 55 >25m and <=100m; 60 >100m and <=325m. All129 nearest among the three SOSED=Hrvaška features (FIDs1,2,5) to FID5; distances range 0.066-324.931m. Descriptive only; no side-of-line classification or acceptance threshold.",
+    "expected_dgu_context": "All129 exact centers strictly matched unique expected-name+county DGU 3rdOrder local-unit memberships in the existing 2025/26 application. The DGU GML export completeness caveat and rights discrepancy remain disclosed; no new DGU application was performed.",
+    "gurs_boundary_context": "GURS 2024 National border line provides official Slovenian state-border context. Linked GURS 2017 explanation says the line follows tribunal description plus prior official records, was approved by Slovenian Government and entered in border record; field demarcation/geodetic survey still pending. It is not treated as bilateral acceptance or final demarcation.",
+    "original_competitor": "geoBoundaries SVN ADM1 NUTS2 macroregions (2021 catalogue/source role: statistical cohesion-region grouping, not local-government municipality). Exact contact source IDs are preserved above; no contact is waived.",
+    "retained_hrv_positive_source": "Original geoBoundaries HRV ADM2 2021 remains the original positive source; DGU remains separate later expected-unit context; neither geometry was replaced."
+  },
+  "status": "proposal-only; root acceptance pending; no new positive repair, credit, source replacement or package completion claimed",
+  "summary": {
+    "already_accepted_positive_repairs": 28885,
+    "already_accepted_researched_unresolved": 0,
+    "completion_claimed": false,
+    "denominator_removals": 0,
+    "original_denominator": 35738,
+    "original_owners": 198,
+    "other_held_residual_after_this_proposal": 6724,
+    "package_id": "gb-HRV-ADM2--repair-evaluation",
+    "positive_claims": 0,
+    "proposed_researched_unresolved": 129
+  },
+  "title": "HRV exact 129 SVN border-adjacent researched-unresolved proposal"
+}
