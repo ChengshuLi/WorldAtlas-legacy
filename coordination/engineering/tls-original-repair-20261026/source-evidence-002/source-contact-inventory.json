@@ -1,0 +1,448 @@
+{
+  "version": 1,
+  "kind": "tls-original-source-contact-inventory-v1",
+  "scope": {
+    "package_id": "gb-TLS-ADM2--repair-evaluation",
+    "native_cells": 562,
+    "interval_rows": 337,
+    "owners": 22,
+    "source_contact_features": 31
+  },
+  "pins": {
+    "provenance": {
+      "path": "coordination/engineering/tls-original-repair-20261026/source-stage-001/input-provenance.json",
+      "sha256": "d74012362da34401a1844f1fc5879b30988562472f22bdea757f38613e055e73"
+    },
+    "queue": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json",
+      "commit": "30519afd69a09b1234b77296b8578e5aafcc9b6c",
+      "git_blob_oid": "9c9a9bc83627afd3e8435ff4009e39530543bf54",
+      "bytes": 1754890,
+      "sha256": "78007430b6f9faedb188ef0619b7ff0a7a2cc7fff2ec9f1c41ee69936ec4ebd8"
+    },
+    "roster": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-feature-roster.json.gz",
+      "commit": "30519afd69a09b1234b77296b8578e5aafcc9b6c",
+      "git_blob_oid": "e6e380ec13cd4bcc1d24399a76bfa85ca5805b26",
+      "bytes": 1844315,
+      "sha256": "87f2d47e104b3af640351e747d8300d0068a1be23caab9e80558c3f8914eb4aa"
+    },
+    "candidates": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-033.json.gz",
+      "commit": "30519afd69a09b1234b77296b8578e5aafcc9b6c",
+      "git_blob_oid": "192de4b75ca39bf07e4ead53647b39892a904642",
+      "bytes": 533464,
+      "sha256": "dfd5c9e9e7aa5768b13d80799d8ec899fbaa64baf2a8fdf35d3bb7d8c9db3933"
+    },
+    "lineage": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/lineage.json.gz",
+      "commit": "30519afd69a09b1234b77296b8578e5aafcc9b6c",
+      "git_blob_oid": "4ef0728e74e11e069bd7bb11e287c6fbb59946fa",
+      "bytes": 4404456,
+      "sha256": "bacfc99714f832aa4b5719b9fb4ae9837080b948f10df9e9be2b150b281e20d4"
+    },
+    "physicalMask": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-033.json.gz",
+      "commit": "30519afd69a09b1234b77296b8578e5aafcc9b6c",
+      "git_blob_oid": "f489fb1c9f462c1bda2c1e0b2818114e51bcc061",
+      "bytes": 431020,
+      "sha256": "440955ea8d0654a1bc5367c4da0b9eb73df1e79c152ebc7c8576d9a2af9bb7a1"
+    }
+  },
+  "family_roles": {
+    "gb:TLS:ADM2": "target source family; 22 directly bound target features",
+    "gb:TLS:ADM1": "parent-tier context/competing family; complete product retained, not a territorial exclusion",
+    "gb:IDN:ADM1": "foreign competing family; complete contact operand retained, not declared a reviewed territorial exclusion"
+  },
+  "contacts": [
+    {
+      "source_index": 36248,
+      "source_id": "gb:IDN:ADM1:65028918B90323071856071",
+      "family_index": 152,
+      "source_family": "gb:IDN:ADM1",
+      "feature_name": "East Nusa Tenggara",
+      "feature_ordinal": 22,
+      "interval_rows": 13,
+      "owner_indices": [
+        42172,
+        42194,
+        42217,
+        42226,
+        42234
+      ]
+    },
+    {
+      "source_index": 58354,
+      "source_id": "gb:TLS:ADM1:58719522B69518090574338",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Oecusse",
+      "feature_ordinal": 0,
+      "interval_rows": 30,
+      "owner_indices": [
+        42208,
+        42226,
+        42234
+      ]
+    },
+    {
+      "source_index": 58356,
+      "source_id": "gb:TLS:ADM1:58719522B96669271034989",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Ainaro",
+      "feature_ordinal": 2,
+      "interval_rows": 1,
+      "owner_indices": [
+        42188
+      ]
+    },
+    {
+      "source_index": 58358,
+      "source_id": "gb:TLS:ADM1:58719522B64128847782213",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Bobonaro",
+      "feature_ordinal": 4,
+      "interval_rows": 4,
+      "owner_indices": [
+        42190,
+        42215
+      ]
+    },
+    {
+      "source_index": 58359,
+      "source_id": "gb:TLS:ADM1:58719522B58123781478976",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Cova Lima",
+      "feature_ordinal": 5,
+      "interval_rows": 44,
+      "owner_indices": [
+        42172,
+        42189,
+        42210
+      ]
+    },
+    {
+      "source_index": 58360,
+      "source_id": "gb:TLS:ADM1:58719522B43373882655947",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Dili",
+      "feature_ordinal": 6,
+      "interval_rows": 37,
+      "owner_indices": [
+        42171,
+        42180
+      ]
+    },
+    {
+      "source_index": 58362,
+      "source_id": "gb:TLS:ADM1:58719522B74673759114814",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Lautém",
+      "feature_ordinal": 8,
+      "interval_rows": 96,
+      "owner_indices": [
+        42178,
+        42179,
+        42183
+      ]
+    },
+    {
+      "source_index": 58365,
+      "source_id": "gb:TLS:ADM1:58719522B42816757733835",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Manufahi",
+      "feature_ordinal": 11,
+      "interval_rows": 33,
+      "owner_indices": [
+        42186,
+        42193,
+        42203
+      ]
+    },
+    {
+      "source_index": 58366,
+      "source_id": "gb:TLS:ADM1:58719522B88874257219633",
+      "family_index": 327,
+      "source_family": "gb:TLS:ADM1",
+      "feature_name": "Viqueque",
+      "feature_ordinal": 12,
+      "interval_rows": 48,
+      "owner_indices": [
+        42178,
+        42195,
+        42204,
+        42230
+      ]
+    },
+    {
+      "source_index": 58369,
+      "source_id": "gb:TLS:ADM2:22284137B36199594403094",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Alas",
+      "feature_ordinal": 2,
+      "interval_rows": 19,
+      "owner_indices": [
+        42186
+      ]
+    },
+    {
+      "source_index": 58370,
+      "source_id": "gb:TLS:ADM2:22284137B39370724774054",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Atabae",
+      "feature_ordinal": 3,
+      "interval_rows": 2,
+      "owner_indices": [
+        42190
+      ]
+    },
+    {
+      "source_index": 58371,
+      "source_id": "gb:TLS:ADM2:22284137B11289182458696",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Atauro",
+      "feature_ordinal": 4,
+      "interval_rows": 30,
+      "owner_indices": [
+        42171
+      ]
+    },
+    {
+      "source_index": 58374,
+      "source_id": "gb:TLS:ADM2:22284137B63057021325797",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Balibo",
+      "feature_ordinal": 7,
+      "interval_rows": 2,
+      "owner_indices": [
+        42215
+      ]
+    },
+    {
+      "source_index": 58380,
+      "source_id": "gb:TLS:ADM2:22284137B23086342577141",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Cristo Rei",
+      "feature_ordinal": 13,
+      "interval_rows": 11,
+      "owner_indices": [
+        42180
+      ]
+    },
+    {
+      "source_index": 58383,
+      "source_id": "gb:TLS:ADM2:22284137B51170089916625",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Fatuberliu",
+      "feature_ordinal": 16,
+      "interval_rows": 15,
+      "owner_indices": [
+        42203
+      ]
+    },
+    {
+      "source_index": 58385,
+      "source_id": "gb:TLS:ADM2:22284137B11881161065747",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Fatumean",
+      "feature_ordinal": 18,
+      "interval_rows": 15,
+      "owner_indices": [
+        42172
+      ]
+    },
+    {
+      "source_index": 58389,
+      "source_id": "gb:TLS:ADM2:22284137B3809405900530",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Hatu-Udo",
+      "feature_ordinal": 22,
+      "interval_rows": 2,
+      "owner_indices": [
+        42188
+      ]
+    },
+    {
+      "source_index": 58390,
+      "source_id": "gb:TLS:ADM2:22284137B19934279863207",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Iliomar",
+      "feature_ordinal": 23,
+      "interval_rows": 8,
+      "owner_indices": [
+        42178
+      ]
+    },
+    {
+      "source_index": 58402,
+      "source_id": "gb:TLS:ADM2:22284137B26175223982630",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Lospalos",
+      "feature_ordinal": 35,
+      "interval_rows": 34,
+      "owner_indices": [
+        42183
+      ]
+    },
+    {
+      "source_index": 58404,
+      "source_id": "gb:TLS:ADM2:22284137B67837040381832",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Maliana",
+      "feature_ordinal": 37,
+      "interval_rows": 2,
+      "owner_indices": [
+        42217
+      ]
+    },
+    {
+      "source_index": 58411,
+      "source_id": "gb:TLS:ADM2:22284137B96760248350473",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Nitibe",
+      "feature_ordinal": 44,
+      "interval_rows": 20,
+      "owner_indices": [
+        42234
+      ]
+    },
+    {
+      "source_index": 58412,
+      "source_id": "gb:TLS:ADM2:22284137B5780280326887",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Oesilo",
+      "feature_ordinal": 45,
+      "interval_rows": 1,
+      "owner_indices": [
+        42208
+      ]
+    },
+    {
+      "source_index": 58414,
+      "source_id": "gb:TLS:ADM2:22284137B41915999739632",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Pante Macassar",
+      "feature_ordinal": 47,
+      "interval_rows": 4,
+      "owner_indices": [
+        42194
+      ]
+    },
+    {
+      "source_index": 58415,
+      "source_id": "gb:TLS:ADM2:22284137B78589082369873",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Passabe",
+      "feature_ordinal": 48,
+      "interval_rows": 15,
+      "owner_indices": [
+        42226
+      ]
+    },
+    {
+      "source_index": 58419,
+      "source_id": "gb:TLS:ADM2:22284137B41872156490215",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Same",
+      "feature_ordinal": 52,
+      "interval_rows": 3,
+      "owner_indices": [
+        42193
+      ]
+    },
+    {
+      "source_index": 58421,
+      "source_id": "gb:TLS:ADM2:22284137B60263836524270",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Suai",
+      "feature_ordinal": 54,
+      "interval_rows": 18,
+      "owner_indices": [
+        42210
+      ]
+    },
+    {
+      "source_index": 58422,
+      "source_id": "gb:TLS:ADM2:22284137B39285760424005",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Tilomar",
+      "feature_ordinal": 55,
+      "interval_rows": 22,
+      "owner_indices": [
+        42189
+      ]
+    },
+    {
+      "source_index": 58424,
+      "source_id": "gb:TLS:ADM2:22284137B2107732035789",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Tutuala",
+      "feature_ordinal": 57,
+      "interval_rows": 64,
+      "owner_indices": [
+        42179
+      ]
+    },
+    {
+      "source_index": 58425,
+      "source_id": "gb:TLS:ADM2:22284137B41938791268987",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Uato-Lari",
+      "feature_ordinal": 58,
+      "interval_rows": 24,
+      "owner_indices": [
+        42195
+      ]
+    },
+    {
+      "source_index": 58426,
+      "source_id": "gb:TLS:ADM2:22284137B52677210689185",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Uatucarbau",
+      "feature_ordinal": 59,
+      "interval_rows": 1,
+      "owner_indices": [
+        42204
+      ]
+    },
+    {
+      "source_index": 58430,
+      "source_id": "gb:TLS:ADM2:22284137B80785204174249",
+      "family_index": 328,
+      "source_family": "gb:TLS:ADM2",
+      "feature_name": "Viqueque",
+      "feature_ordinal": 63,
+      "interval_rows": 25,
+      "owner_indices": [
+        42230
+      ]
+    }
+  ]
+}
