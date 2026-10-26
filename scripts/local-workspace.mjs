@@ -455,7 +455,16 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   return {report, check, inspect, allocate, resume, release};
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+function isCliEntrypoint(argvPath, moduleUrl) {
+  if (!argvPath) return false;
+  try {
+    return fs.realpathSync(argvPath) === fs.realpathSync(fileURLToPath(moduleUrl));
+  } catch {
+    return false;
+  }
+}
+
+if (isCliEntrypoint(process.argv[1], import.meta.url)) {
   try {
     const [action, ...args] = process.argv.slice(2);
     const options = {include: []};

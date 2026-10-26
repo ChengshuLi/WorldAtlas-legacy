@@ -1,0 +1,27 @@
+# TLS 562-key proposal: pre-authoring review criteria
+
+This is a review checklist, not a TLS result or a request to rerun prior science. It uses the assigned original denominator: **562 land keys, 337 intervals, 22 owners, 31 source features**, with source families 152/327/328. Do not infer those joins from aggregate counts. Bind each assertion to the frozen source records and exact bytes.
+
+## Required bindings in a proposal
+
+1. **Original scope and owner joins.** Pin the exact immutable 562-row roster and its digest. For every unique `(owner, x, y)` key, bind the original interval/interval ordinal, owner index, source-family/source-feature ID and original disposition. Reconcile to exactly 337 intervals, 22 owners and 31 source features, and state how the 152/327/328 families partition those records. Show a disjoint, exhaustive partition of all 562 keys into supported, held and any other explicit class; preserve prior accepted keys and every hold/adverse result.
+
+2. **Selected-target identity.** For each key, name the current accepted target ID and owner index from the pinned `data/ownership-selection.json` and current-startup index, with the exact selector/base commit and selected feature geometry pin. A source-name or ADM-level match is not a target binding. Report mismatches, absent targets, contacts with other selected features, and any proposed owner change explicitly.
+
+3. **Source contact.** Bind each of the 31 original source-feature IDs to its exact whole feature in the consumed source product, not just to an ADM family or a later full-resolution comparator. Record the product variant, source role, represented-year claim, license declaration, source metadata and file/feature hashes. Report per-key interior, exact boundary, outside, no-match and other-feature contacts for the consumed product; retain all conflicting/foreign operands and contrary results. Keep the original simplified TLS ADM2 product (metadata claims 2020, 65 features, WHO/OCHA ROAP, CC BY 3.0 IGO) separate from its full comparator. Keep TLS ADM1 (metadata claims 2017, 13 features, OpenStreetMap/Wambacher, ODbL 1.0) as a coarse comparator, not a substitute for the fine source. Preserve the malformed stored ADM2 dataset URL as stored until independently resolved; do not silently repair it or claim rights clearance.
+
+4. **Physical evidence.** For the same exact keys, bind each consumed whole source geometry and selected-target geometry to the complete physical-stage input set, configuration, runtime inventory, program and immutable output/receipt hashes. Preserve per-key land/water/etc. classes, unknowns and residual contacts. Distinguish whole-target missing/extra reconstruction flags from whether a particular key center contacts those residuals. Physical classification does not establish source membership, political authority, or native ownership.
+
+5. **Native predicate.** Bind the exact accepted native manifest, complete competitor/owner roster, native method/version, original coordinate bits and verified latitude-table bytes/hash. Use the pinned rule `native-linear-evenodd-first-owner-v1` with the source polygons’ rings/holes and exact boundary semantics; report per-key center contact with its own source feature, other source features, selected target, and competing owner polygons separately. Include all native rows and resulting owner assignments, with exact supported/held/input counts. Center membership is evidence for the stated predicate only; it is not full-cell coverage or a legal boundary finding.
+
+6. **Prior TLS2 evidence is only a narrow adapter.** `coordination/engineering/indonesia-source-choice46-20261016/repairTLS2-retained-evidence-verification.json` covers two TLS keys in an Indonesia comparison. It records original-IDN positive membership and contrary TLS fine/coarse contacts for those keys; it does not establish a result for the 562-key TLS scope. Do not generalize its outcomes or source-choice recommendation to the package.
+
+## What the generic template checks
+
+`scripts/evidence-quality.mjs` validates the declared manifest/schema, safe paths, byte counts and hashes, pinned baseline/source references, declared source/retained/output bytes, and (when used) the exact declared subject-ID roster. Its own contract says a prior-evidence subject inventory proves identity custody only, not original source membership or geometry. These checks cannot validate that a source is applicable to a key, that a source label denotes a political authority, that physical/native predicates are substantively right, or that a license declaration is clearance.
+
+For any candidate bank change, use the current geographic-release/finalizer and regression contracts to verify the complete old/new indexed rows against the accepted selector and patch: exact adds/removes/holds and no dropped or reassigned prior owner. A patch count or 562 total alone is insufficient. Select tests from the actual changed behavior and current supported consumer plan; do not impose a package-wide test list from this checklist.
+
+## Review boundary
+
+This note specifies the bindings a later independent exact-head reviewer should inspect. It does not assert TLS currently has any of these per-key results, that the proposed sources are authoritative, or that any key qualifies. A later review should cite actual input/output paths and hashes and identify any missing operand precisely; it should not require an unrelated universal certificate or repeat unchanged expensive calculations.
