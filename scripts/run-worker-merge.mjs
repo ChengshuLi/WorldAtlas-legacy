@@ -2,7 +2,7 @@ import {gitBlobTransport} from './git-blob-transport.mjs';
 import {quotaDelay,requestAccounting} from './github-quota.mjs';
 import {loadGeographicReport} from './geographic-report-artifact.mjs';
 import fs from 'node:fs';
-import {renderWorkerResult} from './worker-result.mjs';
+import {deliveryNextStep, renderWorkerResult} from './worker-result.mjs';
 import {githubAPI} from './issue-claim-contract.mjs';
 import {loadEvidencePolicy} from './evidence-policy.mjs';
 import {prepareIntegration, completeIntegration, cleanupCandidate} from './merge-integration.mjs';
@@ -27,13 +27,26 @@ const transport = gitBlobTransport(rawAPI, {repo, token: process.env.GH_TOKEN, d
   onFetch: row => console.log(JSON.stringify({phase, immutable_transport: row}))});
 const api = transport.api, options = {api, repo, number, expectedHead: input.expected_head, policy: loadEvidencePolicy(), reviewedTests: input.reviewed_tests,
   integrationRequestId: input.request_id + (process.env.GITHUB_RUN_ID ? `-${process.env.GITHUB_RUN_ID}` : '')};
-let result = {accepted: false, request_id: input.request_id, pr_number: number, phase};
+function parsePlanRequest(value) {
+  if (typeof value === 'string') {
+    try { value = JSON.parse(value); } catch { return null; }
+  }
+  return value && !Array.isArray(value) && typeof value === 'object' &&
+    /^[a-f0-9]{40}$/.test(value.base ?? '') && /^[a-f0-9]{40}$/.test(value.head ?? '') && Array.isArray(value.files)
+    ? value : null;
+}
+const suppliedPlan = parsePlanRequest(input.reviewed_tests);
+let result = {accepted: false, request_id: input.request_id, pr_number: number, phase,
+  supplied_pair: {base: suppliedPlan?.base ?? (phase === 'merge' ? process.env.TESTED_BASE ?? null : null), head: suppliedPlan?.head ?? input.expected_head},
+  ...(suppliedPlan ? {supplied_plan_request: suppliedPlan} : {})};
 try {
   if (phase === 'prepare') {
     const state = await prepareIntegration(options);
     if (!state.replayed && !/^[a-f0-9]{40}$/.test(state.candidate_tree ?? '')) throw Error('Integration candidate tree unavailable');
     result = {...result, accepted: Boolean(state.replayed), ...(state.replayed ? {merge_commit: state.pr.merge_commit_sha} : {}), status: state.replayed ? 'already-merged' : 'testing',
       tested_base: state.base, tested_candidate: state.candidate, reviewed_head: input.expected_head, profile: state.profile, geography_required: state.geography_required, geography_software: state.geography_software, test_selection: state.test_selection ?? 'complete', test_files: state.test_files, expectations_path: state.expectations_path,
+      current_pair: state.current_pair ?? {base:state.base,head:state.pr.head.sha},
+      ...(state.plan_request ? {validated_plan_request:state.plan_request} : {}),
       candidate_ref: state.candidate_ref};
     // Only validated commit/tree IDs, owned refs and literal safe sparse patterns become job outputs.
     // Queued workflow definitions can precede this ref:main producer. Only an
@@ -64,10 +77,20 @@ try {
   }
 } catch (error) {
   result.reason = error.message;
+  result.unmet_condition = error.message;
+  if (error.delivery_context && typeof error.delivery_context === 'object') {
+    for (const key of ['current_pair','observed_pr_pair','validated_plan_request']) {
+      if (error.delivery_context[key] !== undefined) result[key] = error.delivery_context[key];
+    }
+    if (error.delivery_context.supplied_plan_request && !result.supplied_plan_request)
+      result.supplied_plan_request = error.delivery_context.supplied_plan_request;
+  }
   if (error.github) result.api_error = error.github;
   if (error.quotaCause?.github)result.quota_cause=error.quotaCause.github;
   if (error.candidateCleanup) result.candidate_cleanup = error.candidateCleanup;
   if (error.candidateDiagnostics) result.candidate_diagnostics = error.candidateDiagnostics;
+  if (!result.observed_pr_pair && error.candidateDiagnostics?.observed_head)
+    result.observed_pr_pair = {base:error.candidateDiagnostics.observed_pr_base ?? null, head:error.candidateDiagnostics.observed_head};
   result.status = /conflict|changes reviewed bytes|substantive review/.test(error.message) ? 'intervention-required' : 'not-merged';
   if((quotaDelay(error)??quotaDelay(error.quotaCause))!==null)result.quota_retry_at=new Date(Date.now()+(quotaDelay(error)??quotaDelay(error.quotaCause))).toISOString();
   // A lost merge response or canceled predecessor can still have committed.
@@ -81,6 +104,7 @@ try {
   }
   if (!result.accepted) process.exitCode = 1;
 }
+result.next_step = deliveryNextStep(result);
 if (phase === 'merge' && process.env.CANDIDATE_REF) {
   try { result.candidate_cleanup = await cleanupCandidate(options, process.env.CANDIDATE_REF, process.env.TESTED_CANDIDATE); }
   catch (error) { result.candidate_cleanup = {status: 'pending', reference: process.env.CANDIDATE_REF, reason: error.message}; }
