@@ -19,3 +19,7 @@ This is not constructor qualification, current owner-zero, stock delivery, root 
 ## Existing native constructor qualification (not delivery)
 
 The supported constructor consumed the committed supported source-evidence and 12-cell patch from commit `bfb256b2ebd05ed2127a4605b84a19601038e111`. It emitted one source-target component with 12 qualified cells. This is not current-owner-zero, a final bank, a test result, acceptance, or credit. Constructor limits continue to preserve source/physical/hierarchy limitations and all original competitors; there is no whole-parent certification. See the immutable authority binding, rule preimage, constructor result and preparation record under `native-authority-001/`, all pinned below.
+
+## Exact authority composition (not final selection)
+
+The existing final-map v2 `compose` helper produced one retained-rule authority registry from the exact Cacheu native constructor, authority binding, rule preimage, and 12-cell patch. It does not change the accepted bank. The versioned config and registry are pinned in this manifest.
