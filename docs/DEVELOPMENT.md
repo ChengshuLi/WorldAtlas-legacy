@@ -71,7 +71,7 @@ commit lookup stops without using a cached older pin. If any pinned helper blob 
 missing, the bootstrap tree-binds all three helper paths to that exact commit and
 requests only the missing blob OIDs through Git's bounded `fetch --stdin` path.
 It verifies each returned object against the pinned OID and ordinary-blob type
-before copying either helper to the temporary directory. A failed fetch or
+before copying any helper to the temporary directory. A failed fetch or
 verification stops before helper execution. Do not fetch other OIDs, hydrate
 unrelated objects, or execute a cached older helper. Use Node 24.
 
