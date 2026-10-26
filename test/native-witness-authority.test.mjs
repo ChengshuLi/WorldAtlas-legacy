@@ -563,9 +563,21 @@ test('retained original positive provenance authenticates whole prior family and
 });
 test('retained LUX positive bindings preserve every original per-key foreign source contact',()=>{
  const read=path=>JSON.parse(fs.readFileSync(new URL('../'+path,import.meta.url),'utf8'));
- const root='coordination/engineering/lux-original-repair-20261021/';
- const retained=read(root+'adopted-provider-20261026/original-positive-provenance-26.private.json');
- const comparison=read(root+'evidence-investigation/lux-original-source-native-comparison.json');
+ // These exact selected rows are copied into the ordinary test-fixture
+ // boundary from the immutable full-source evidence below. The runtime still
+ // reads/authenticates the complete original sources; this fixture keeps the
+ // focused test self-contained under the reviewed stock checkout patterns.
+ const fixture=read('test/fixtures/lux-retained-original-positive-validation.json');
+ assert.equal(fixture.kind,'lux-retained-original-positive-validation-fixture-v1');
+ assert.deepEqual(fixture.source_pins,[
+  {role:'retained original positive provenance',commit:'caa2123cc112f69fe4346be945c5490da3187ea2',
+   path:'coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/original-positive-provenance-26.private.json',
+   bytes:11463,sha256:'b226f9124dc1812456b2fc454d5e024ff957d989999aca273414febd9d4f714b'},
+  {role:'original full source-native comparison',commit:'35be34d6d4688b50fbe009c8882a09e801633d81',
+   path:'coordination/engineering/lux-original-repair-20261021/evidence-investigation/lux-original-source-native-comparison.json',
+   bytes:511819,sha256:'aa7c37021ac2b68dfb8b40689cbc017729e3ee21c5f05e0e25421c2535439956'}
+ ]);
+ const retained={records:fixture.records},comparison={per_key:fixture.comparison_rows};
  assert.equal(retained.records.length,26);
  assert.equal(new Set(retained.records.map(record=>record.source_id)).size,3);
  assert.equal(retained.records.reduce((n,record)=>n+record.negative_operands.length,0),27);
