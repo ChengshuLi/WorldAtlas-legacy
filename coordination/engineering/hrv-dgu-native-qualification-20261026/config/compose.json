@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "d311559384f65e2995391d7ac5b0fe165c0cfbdd",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "42c110d269a4c48eab56ed1e435c264a7d53fc6a",
+    "bytes": 2303,
+    "sha256": "50d5ae5f70ebbbda97ca8084fc4bd4cef81fb9a32a4cbe4e28b5bd6d498dcde5"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "d311559384f65e2995391d7ac5b0fe165c0cfbdd",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "336c6e4af6473155f004b04b53b78d464e89f0a2",
+        "bytes": 743,
+        "sha256": "bd4dd0d58c86c843da94de95e5fb1ead498c59447ee933b9252063d94fe111ed"
+      },
+      "source_authority": {
+        "commit": "d311559384f65e2995391d7ac5b0fe165c0cfbdd",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "c244828ddbe93fe9fa39c7f4c8128eef238cdb6e",
+        "bytes": 746,
+        "sha256": "a07cc2eaab63258cd02b7f0e509ef0298a0083b4c5cb509fa269a25529f1aa31"
+      },
+      "ledger": {
+        "commit": "d311559384f65e2995391d7ac5b0fe165c0cfbdd",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "5e3cae172c8fbdd777763d7457265a53e1b40439",
+        "bytes": 473421,
+        "sha256": "5a8c237b3fcc4d87710800fb7d53041d1ccd22bdda4d086dcb4557ce1edd255f"
+      },
+      "native_patch": {
+        "bytes": 228764,
+        "commit": "95fd60255529498b4151b0cacdf5ae7aa3437bf9",
+        "git_blob_oid": "1d581186791b5182c6f8430590cc58e7754ada46",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-patch-002/native-patch.json",
+        "sha256": "7a5e2ba4df091e64dfc2ad1efc14c478447a31691b2acddbaf300aed347c3d28"
+      }
+    }
+  ]
+}
