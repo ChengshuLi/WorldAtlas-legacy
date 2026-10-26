@@ -24,6 +24,8 @@ Keep each PR coherent, push normally, and obtain a substantive review of the exa
 
 Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` for current-base validation, request preparation, dispatch and terminal reconciliation. Its automatic selected-data route is a strict eligibility optimization, not a judgment of review sufficiency. Select `auto`, an exact reviewed plan, or the complete suite using the criteria in [VALIDATION](VALIDATION.md). Revalidate exact base/head immediately before a request. Use the stock route; do not directly merge or fabricate a terminal result. Read the canonical terminal receipt and resulting accepted `main`, then report checks actually run, failures, unrun work and remaining limits.
 
+For a final-bank update, use the finalizer's complete `current-startup` roster as the output boundary. It may retire an old generated file only when the current accepted index or an authenticated committed finalization receipt pins the exact prior body; pass exact committed `preparation.json` and `startup-ownership.json` pins through `prior_finalizations` when needed. Unknown, edited, nonordinary, or roster-changing extras fail closed. Exact retirement paths are staged as deletions only after byte and index rechecks; inspect the complete staged file set against the new index before commit. Other prepared output changes remain ordinary worktree edits.
+
 For routine read-only observation, use bounded provider reads and avoid rapid polling:
 
 ```sh
@@ -36,7 +38,7 @@ These examples do not authorize dispatches, writes, extra retries, a review, or 
 
 ## Progress and completion
 
-Send useful progress at substantive milestones: exact branch/head, work completed, evidence or tests, next action and a concrete blocker. Report only checks actually performed and distinguish observed failures from work not done.
+Send useful progress at substantive milestones: exact branch/head, work completed, evidence or tests, next action and a concrete blocker. Report only checks actually performed and distinguish observed failures from work not done. Coordinators continue managing ready steps through completion; preserve blockers and terminal receipts, and do not stop merely because work was delegated.
 ## Refresh a stale checkout without changing its files
 
 Normally invoke the accepted helper directly. If the primary helper is stale or
