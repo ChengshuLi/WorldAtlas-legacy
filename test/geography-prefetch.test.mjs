@@ -77,6 +77,28 @@ async function acquireFixture(a, f, versions = [f.baseline, f.candidate]) {
   return a.stats;
 }
 
+test('concurrent selected descriptors share one in-flight immutable tree metadata read', async () => {
+  const f = fixture();
+  try {
+    let treeLoads = 0;
+    let release;
+    const gate = new Promise(resolve => { release = resolve; });
+    const a = f.acquisition({loadTree: async root => {
+      treeLoads++;
+      await gate;
+      return [...f.maps.values()].find(value => value.sha === root);
+    }});
+    const names = f.maps.get(f.candidate).tree.map(row => row.path);
+    const reads = names.map(name => a.descriptor(f.candidate, name));
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(treeLoads, 1);
+    release();
+    const descriptors = await Promise.all(reads);
+    assert.equal(descriptors.length, names.length);
+    assert.equal(treeLoads, 1);
+  } finally { f.close(); }
+});
+
 // Exercise the default subprocess route, including real Git's helper launches.
 // Only the repository URL is redirected inside this selected test installation.
 function relocatedGitFixture(f) {

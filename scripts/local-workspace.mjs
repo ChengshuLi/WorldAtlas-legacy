@@ -12,7 +12,8 @@ const safeInclude = value => typeof value === 'string' && /^(data|research|coord
   && value.split('/').every(part => part && part !== '.' && part !== '..');
 
 // No shell, background mutations, timeout retries, or automatic lock breaking.
-export function workspaceManager(repo, {freeBytes, onStartupGuidance} = {}) {
+export function workspaceManager(repo, {freeBytes, onStartupGuidance,
+  acquisitionExecute, loadTree} = {}) {
   // Every Git command is explicitly rooted with `-C`; inherited repository/index
   // selectors would override that path and mutate an unrelated checkout. Keep the
   // sanitized environment invocation-local; never rewrite the parent process.
@@ -196,6 +197,56 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance} = {}) {
     }
     execFileSync('git', ['-C', entry.path, 'read-tree', '-mu', 'HEAD'], {env: noLazyFetch});
   };
+  const selectedBytes = async (head, inventory) => {
+    if (!inventory.missing.length) return inventory.estimated;
+    const [{createAcquisition, githubTree}, {deliveryAcquisitionExecute}] = await Promise.all([
+      import('./geography-prefetch.mjs'), import('./delivery-handoff-advance.mjs')
+    ]);
+    // Resolve only missing selected paths against the exact accepted commit tree.
+    // githubTree supplies metadata only; descriptor() independently binds each
+    // selected path/OID/mode to the local exact commit before any body is fetched.
+    const acquisition = createAcquisition({repo, loadTree: loadTree ?? githubTree,
+      execute: acquisitionExecute ?? deliveryAcquisitionExecute(), token: ''});
+    const missingInputs = inventory.inputs.filter(input => input.bytes === null);
+    const paths = await Promise.all(missingInputs.map(input => acquisition.descriptor(head, input.name,
+      {mode: input.mode, git_blob_oid: input.oid})));
+    const byPath = new Map();
+    const unique = new Map();
+    for (let index = 0; index < missingInputs.length; index++) {
+      const input = missingInputs[index], row = paths[index];
+      if (row.oid !== input.oid) throw Error(`Selected input differs from exact tree: ${input.name}`);
+      byPath.set(input.name, row);
+      const previous = unique.get(row.oid);
+      if (previous && previous.bytes !== row.bytes) throw Error('Conflicting selected object lengths');
+      if (!previous) unique.set(row.oid, row);
+    }
+    let checkoutBytes = 0;
+    for (const input of inventory.inputs) {
+      const bytes = input.bytes ?? byPath.get(input.name)?.bytes;
+      if (!Number.isSafeInteger(bytes) || bytes < 0 || !Number.isSafeInteger(checkoutBytes + bytes)) {
+        throw Error('Unknown selected input size');
+      }
+      checkoutBytes += bytes;
+    }
+    const objectBytes = [...unique.values()].reduce((sum, row) => {
+      if (!Number.isSafeInteger(sum + row.bytes)) throw Error('Selected objects must represent a safe finite byte count');
+      return sum + row.bytes;
+    }, 0);
+    // Fetch packs retain object headers/indexes in the common store in addition
+    // to their uncompressed bodies. Reserve a conservative 1% plus bounded
+    // per-object/index overhead rather than assuming object storage is free.
+    const objectStorage = objectBytes + Math.ceil(objectBytes / 100) + unique.size * 64 + 4096;
+    const required = checkoutBytes + objectStorage;
+    if (!Number.isSafeInteger(required) || availableBytes() < required) {
+      throw Error('Insufficient free space for exact selected objects and checkout');
+    }
+    acquisition.acquire([...unique.values()]);
+    // acquire() imports complete Git objects but deliberately leaves byte-level
+    // validation to body(). Verify every unique object before re-inventorying or
+    // making a reservation; failed/partial fetches remain retryable without refs.
+    for (const row of unique.values()) acquisition.body(row);
+    return checkoutBytes;
+  };
   const readStartupGuidance = commit => {
     // The CLI passes its own directory (`scripts/`) as the repository selector.
     // Pin the root entry explicitly so pathspec interpretation cannot depend on
@@ -223,7 +274,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance} = {}) {
     return {commit, path: 'AGENTS.md', gitBlobOid: oid,
       sha256: createHash('sha256').update(result.stdout).digest('hex'), text, guides};
   };
-  const allocate = ({worker, slot = 'work', branch, commit, profile = 'sparse', include = []}) => {
+  const allocate = async ({worker, slot = 'work', branch, commit, profile = 'sparse', include = []}) => {
     if (!id(worker) || !['work', 'review'].includes(slot)) throw Error('Supply a safe unique worker ID and work/review slot');
     if (!['sparse', 'full'].includes(profile) || !Array.isArray(include) || !include.every(safeInclude)) throw Error('Use sparse/full profile and literal data/research/coordination paths without traversal or globs');
     if (slot === 'work' && (typeof branch !== 'string' || !branch || branch.startsWith('-') || branch === 'main' || commit)) throw Error('Work needs a fresh branch; main is fetched by the allocator');
@@ -248,19 +299,30 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance} = {}) {
       // Pin the exact commit just obtained, rather than trusting a possibly stale
       // local branch or an origin/main ref left unchanged by unusual fetch config.
       fetchedWorkHead = fetchedMain;
-      // Read guidance by exact immutable object before reserving or materializing
-      // a checkout. Never consult the dirty primary working tree or lazy-fetch.
-      if (onStartupGuidance) startupGuidance = readStartupGuidance(fetchedWorkHead);
     }
     const head = slot === 'work' ? fetchedWorkHead : commit;
+    // Avoid network acquisition for an already-owned slot or unknown destination.
+    // The same checks are repeated under lock immediately before reservation.
+    const beforeAcquire = state();
+    if (beforeAcquire.entries.some(entry => entry.worker === worker && entry.slot === slot)) throw Error('Slot occupied; finish and release it before allocating another checkout');
+    const destinationBeforeAcquire = slotPath(worker, slot);
+    ordinaryDirectory(destinationBeforeAcquire);
+    if (fs.lstatSync(destinationBeforeAcquire, {throwIfNoEntry: false})) throw Error('Unregistered checkout directory exists; inspect instead of overwriting');
+    const initial = inputInventory(head, profile, include);
+    await selectedBytes(head, initial);
+    // AGENTS.md is part of the selected root-file inventory; acquire and verify
+    // it with that exact batch before reading guidance. Never consult the dirty
+    // primary working tree or allow Git's lazy-fetch fallback.
+    if (slot === 'work' && onStartupGuidance) startupGuidance = readStartupGuidance(fetchedWorkHead);
     const entry = locked(() => {
       const value = state();
       if (value.entries.some(entry => entry.worker === worker && entry.slot === slot)) throw Error('Slot occupied; finish and release it before allocating another checkout');
       const destination = slotPath(worker, slot);
       ordinaryDirectory(destination);
       if (fs.lstatSync(destination, {throwIfNoEntry: false})) throw Error('Unregistered checkout directory exists; inspect instead of overwriting');
-      const {sparsePatterns, missing} = inputInventory(head, profile, include);
+      const {sparsePatterns, missing, estimated} = inputInventory(head, profile, include);
       if (missing.length) throw Error(`Unknown input size; selected blobs must be available locally. Run inspect --commit ${head} with this same profile/include scope to list missing paths/OIDs.`);
+      if (availableBytes() < estimated) throw Error('Insufficient free space for selected workspace checkout');
       const entry = {worker, slot, path: destination, token: randomUUID(), head, branch: branch ?? null,
         profile, include, reservation: 0, status: 'preparing', createdAt: new Date().toISOString()};
       value.entries.push(entry);
@@ -414,6 +476,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       }
     });
     if (!['report', 'check', 'inspect', 'allocate', 'resume', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume or release with documented --key value arguments');
-    console.log(JSON.stringify(manager[action](options), null, 2));
+    console.log(JSON.stringify(await manager[action](options), null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
