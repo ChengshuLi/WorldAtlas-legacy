@@ -48,6 +48,12 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     return commit;
   };
   const common = fs.realpathSync(git('rev-parse', '--path-format=absolute', '--git-common-dir').trim());
+  // Remote metadata belongs to the shared repository even when this manager
+  // was invoked from one linked checkout. Worktree-local `FETCH_HEAD` is not
+  // the allocator's base-selection state and must not be refreshed by allocate.
+  const gitCommon = (...args) => execFileSync('git', ['--git-dir', common, ...args], {
+    encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, env: noLazyFetch
+  });
   const registry = path.join(common, 'worldatlas-local-workspaces');
   const root = path.resolve(common, '../../.worldatlas-workspaces', createHash('sha256').update(common).digest('hex').slice(0, 16));
   const stateFile = path.join(registry, 'state.json');
@@ -199,9 +205,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   };
   const selectedBytes = async (head, inventory) => {
     if (!inventory.missing.length) return inventory.estimated;
-    const [{createAcquisition, githubTree}, {deliveryAcquisitionExecute}] = await Promise.all([
-      import('./geography-prefetch.mjs'), import('./delivery-handoff-advance.mjs')
-    ]);
+    const {createAcquisition, githubTree, deliveryAcquisitionExecute} = await import('./geography-prefetch.mjs');
     // Resolve only missing selected paths against the exact accepted commit tree.
     // githubTree supplies metadata only; descriptor() independently binds each
     // selected path/OID/mode to the local exact commit before any body is fetched.
@@ -289,10 +293,10 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       // fetched commit before reserving; later ref movement cannot change it.
       // Request metadata only even from conventional clones; selected missing
       // blobs still need explicit acquisition before the inventory can pass.
-      git('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none',
+      gitCommon('fetch', '--no-tags', '--no-recurse-submodules', '--no-auto-maintenance', '--filter=blob:none',
         'origin', '+refs/heads/main:refs/remotes/origin/main');
-      const fetchedMain = git('rev-parse', '--verify', 'FETCH_HEAD^{commit}').trim();
-      const trackingMain = git('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').trim();
+      const fetchedMain = gitCommon('rev-parse', '--verify', 'FETCH_HEAD^{commit}').trim();
+      const trackingMain = gitCommon('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').trim();
       if (!/^[a-f0-9]{40}$/.test(fetchedMain) || fetchedMain !== trackingMain) {
         throw Error('Fetched origin/main did not match its remote-tracking ref; refusing a stale startup base');
       }
@@ -455,19 +459,33 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   return {report, check, inspect, allocate, resume, release};
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+function isCliEntrypoint(argvPath, moduleUrl) {
+  if (!argvPath) return false;
+  try {
+    return fs.realpathSync(argvPath) === fs.realpathSync(fileURLToPath(moduleUrl));
+  } catch {
+    return false;
+  }
+}
+
+if (isCliEntrypoint(process.argv[1], import.meta.url)) {
   try {
     const [action, ...args] = process.argv.slice(2);
     const options = {include: []};
     for (let index = 0; index < args.length; index += 2) {
       const key = args[index]?.replace(/^--/, '');
-      if (!['worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume or release with documented --key value arguments');
+      if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume or release with documented --repo/--key value arguments');
       if (key === 'include') options.include.push(args[index + 1]);
       else if (Object.hasOwn(options, key)) throw Error(`Duplicate ${key}`);
       else options[key] = args[index + 1];
     }
     if (['allocate', 'resume'].includes(action) && (options.slot ?? 'work') === 'work') assertAuthorWorkerIdentity(options.worker);
-    const manager = workspaceManager(path.dirname(fileURLToPath(import.meta.url)), {
+    const repo = options.repo === undefined ? path.dirname(fileURLToPath(import.meta.url)) : options.repo;
+    if (options.repo !== undefined && (!path.isAbsolute(repo) || !fs.statSync(repo).isDirectory())) {
+      throw Error('Explicit --repo must be an absolute existing repository directory');
+    }
+    delete options.repo;
+    const manager = workspaceManager(repo, {
       onStartupGuidance: ({commit, path: instructionPath, gitBlobOid, sha256, text, guides}) => {
         process.stderr.write(`Verified current-main startup instructions (${commit})\n`);
         process.stderr.write(`${instructionPath} Git blob ${gitBlobOid}; SHA-256 ${sha256}\n`);

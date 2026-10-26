@@ -33,7 +33,7 @@ function fixture(t, overrides = {}) {
 
 function cliHelper(repo, directory = path.join(repo, '.git', 'worldatlas-helper-test')) {
   fs.mkdirSync(directory, {recursive: true});
-  for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+  for (const name of ['local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'])
     fs.writeFileSync(path.join(directory, name), fs.readFileSync(new URL('../scripts/' + name, import.meta.url)));
   return path.join(directory, 'local-workspace.mjs');
 }
@@ -48,20 +48,21 @@ test('allocator CLI binds its helper Git store, never an unrelated or missing cw
   for (const directory of [path.join(intended.repo, 'scripts'), path.join(intended.repo, '.git', 'worldatlas-helper-test')]) {
     const helper = cliHelper(intended.repo, directory);
     for (const cwd of [ambient.repo, ambient.temporary]) {
-      const run = (...args) => JSON.parse(execFileSync(process.execPath, [helper, ...args], {cwd, encoding: 'utf8'}));
+      const run = (...args) => JSON.parse(execFileSync(process.execPath,
+        [helper, args[0], '--repo', intended.repo, ...args.slice(1)], {cwd, encoding: 'utf8'}));
       assert.equal(run('report').registry, registry);
       assert.ok(Number.isFinite(run('check').freeBytes));
       assert.deepEqual(run('inspect', '--commit', intended.head), intended.manager.inspect({commit: intended.head}));
     }
   }
   const helper = cliHelper(intended.repo);
-  const allocate = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'independent-fixture-review',
+  const allocate = spawnSync(process.execPath, [helper, 'allocate', '--repo', intended.repo, '--worker', 'independent-fixture-review',
     '--slot', 'review', '--commit', intended.head], {cwd: ambient.repo, encoding: 'utf8'});
   assert.equal(allocate.status, 0, allocate.stderr);
   const entry = JSON.parse(allocate.stdout);
   assert.equal(entry.head, intended.head);
   assert.ok(entry.path.startsWith(intended.manager.report().root + path.sep));
-  const released = JSON.parse(execFileSync(process.execPath, [helper, 'release', '--worker', entry.worker,
+  const released = JSON.parse(execFileSync(process.execPath, [helper, 'release', '--repo', intended.repo, '--worker', entry.worker,
     '--slot', entry.slot, '--token', entry.token], {cwd: ambient.repo, encoding: 'utf8'}));
   assert.equal(released.released, true);
   assert.equal(intended.git('rev-parse', released.preservedRef).trim(), intended.head);
@@ -74,6 +75,30 @@ test('allocator CLI binds its helper Git store, never an unrelated or missing cw
   assert.equal(ambient.git('show-ref'), before);
   assert.deepEqual(intended.manager.report().entries, []);
   assert.ok(!fs.existsSync(ambient.manager.report().registry));
+});
+
+test('CLI entrypoint detection canonicalizes macOS /var and /private/var paths', async t => {
+  const {repo, manager} = fixture(t);
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const requestedPath = path.resolve(helper);
+  const canonicalPath = fs.realpathSync(helper);
+  if (!requestedPath.startsWith('/var/') || !canonicalPath.startsWith('/private/var/')) {
+    t.skip('requires the macOS /var to /private/var temporary-path alias');
+    return;
+  }
+  assert.notEqual(requestedPath, canonicalPath);
+
+  const result = spawnSync(process.execPath, [requestedPath, 'report'], {
+    cwd: repo, encoding: 'utf8'
+  });
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(JSON.parse(result.stdout).registry, manager.report().registry);
+  assert.equal(result.stderr, '');
+
+  const imported = spawnSync(process.execPath, ['--input-type=module', '-e',
+    `import(${JSON.stringify(pathToFileURL(helper).href)});`], {encoding: 'utf8'});
+  assert.equal(imported.status, 0, imported.stderr);
+  assert.equal(imported.stdout, '', 'importing the CLI module does not invoke its command handler');
 });
 
 test('ordinary branch names need only Git validity and fresh isolated ownership', async t => {
@@ -232,10 +257,10 @@ test('small work and review checkouts need no fixed free-space floor or reservat
 test('removed reserve CLI option is rejected before any slot or branch mutation', async t => {
   const {repo, git, manager, head} = fixture(t);
   const result = spawnSync(process.execPath, [cliHelper(repo),
-    'allocate', '--worker', 'legacy-options', '--slot', 'review', '--commit', head, '--reserve-gib', '1'],
+    'allocate', '--repo', repo, '--worker', 'legacy-options', '--slot', 'review', '--commit', head, '--reserve-gib', '1'],
   {cwd: repo, encoding: 'utf8'});
   assert.equal(result.status, 1);
-  assert.match(result.stderr, /documented --key value arguments/);
+  assert.match(result.stderr, /documented --repo\/--key value arguments/);
   assert.deepEqual(manager.report().entries, []);
   assert.equal(git('worktree', 'list', '--porcelain').match(/^worktree /gm).length, 1);
 });
@@ -522,10 +547,54 @@ test('author startup guidance is bound to freshly fetched main and never reads a
   manager.release({worker: 'fresh-guidance', token: entry.token});
 });
 
+test('allocation refreshes shared fetch metadata without changing linked-worktree state', async t => {
+  const source = fixture(t);
+  source.git('config', 'uploadpack.allowFilter', 'true');
+  const remote = path.join(source.temporary, 'remote.git');
+  const repo = path.join(source.temporary, 'client');
+  execFileSync('git', ['clone', '--bare', source.repo, remote], {stdio: 'pipe'});
+  execFileSync('git', ['clone', '--no-checkout', remote, repo], {stdio: 'pipe'});
+  const git = (...args) => execFileSync('git', ['-C', repo, ...args], {encoding: 'utf8', stdio: 'pipe'}).trim();
+  const linked = path.join(source.temporary, 'linked');
+  git('worktree', 'add', '-b', 'primary/linked', linked);
+  const linkedGit = (...args) => execFileSync('git', ['-C', linked, ...args], {encoding: 'utf8', stdio: 'pipe'}).trim();
+  const localFetchHead = linkedGit('rev-parse', '--git-path', 'FETCH_HEAD');
+  const localIndex = linkedGit('rev-parse', '--git-path', 'index');
+  fs.writeFileSync(localFetchHead, 'primary checkout sentinel\n');
+  fs.writeFileSync(path.join(linked, 'README.md'), 'staged and unstaged primary bytes');
+  linkedGit('add', 'README.md');
+  fs.writeFileSync(path.join(linked, 'README.md'), 'staged and unstaged primary bytes plus unstaged edit');
+  const beforeHead = linkedGit('rev-parse', 'HEAD');
+  const beforeBranch = linkedGit('symbolic-ref', 'HEAD');
+  const beforeIndex = fs.readFileSync(localIndex);
+  const beforeStatus = linkedGit('status', '--porcelain=v2');
+  const beforeFetchHead = fs.readFileSync(localFetchHead);
+
+  fs.writeFileSync(path.join(source.repo, 'AGENTS.md'), '# Linked checkout refresh\n');
+  source.git('add', 'AGENTS.md'); source.git('commit', '-m', 'advance linked checkout main');
+  const latest = source.git('rev-parse', 'HEAD').trim();
+  source.git('push', remote, 'main');
+
+  const common = git('rev-parse', '--path-format=absolute', '--git-common-dir');
+  const commonFetchHead = path.join(common, 'FETCH_HEAD');
+  const manager = workspaceManager(linked);
+  const entry = await manager.allocate({worker: 'linked-refresh', branch: 'engineering/linked-refresh'});
+  assert.equal(entry.head, latest);
+  assert.equal(execFileSync('git', ['--git-dir', common, 'rev-parse', '--verify', 'FETCH_HEAD^{commit}'], {encoding: 'utf8'}).trim(), latest);
+  assert.equal(linkedGit('rev-parse', 'HEAD'), beforeHead);
+  assert.equal(linkedGit('symbolic-ref', 'HEAD'), beforeBranch);
+  assert.deepEqual(fs.readFileSync(localIndex), beforeIndex);
+  assert.equal(linkedGit('status', '--porcelain=v2'), beforeStatus);
+  assert.deepEqual(fs.readFileSync(localFetchHead), beforeFetchHead);
+  assert.ok(fs.existsSync(commonFetchHead), 'the shared Git directory carries the allocator fetch result');
+  assert.equal(fs.readFileSync(path.join(linked, 'README.md'), 'utf8'), 'staged and unstaged primary bytes plus unstaged edit');
+  manager.release({worker: 'linked-refresh', token: entry.token});
+});
+
 test('CLI keeps stdout as one allocation JSON object and presents exact pinned AGENTS on stderr', async t => {
   const {repo, git, manager} = fixture(t);
   const helper = cliHelper(repo);
-  const result = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'cli-guidance',
+  const result = spawnSync(process.execPath, [helper, 'allocate', '--repo', repo, '--worker', 'cli-guidance',
     '--branch', 'engineering/cli-guidance'], {
     cwd: repo, encoding: 'utf8', env: {...process.env, CODEX_THREAD_ID: 'cli-guidance'}
   });
@@ -562,7 +631,7 @@ test('actual scripts-directory CLI reads root AGENTS from freshly fetched main a
   assert.notEqual(latestMain, staleMain);
 
   const helper = cliHelper(repo, path.join(repo, 'scripts'));
-  const result = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'scripts-guidance',
+  const result = spawnSync(process.execPath, [helper, 'allocate', '--repo', repo, '--worker', 'scripts-guidance',
     '--branch', 'engineering/scripts-guidance'], {
     cwd: source.temporary, encoding: 'utf8', env: {...process.env, CODEX_THREAD_ID: 'scripts-guidance'}
   });
@@ -1086,7 +1155,7 @@ test('full promisor inspection includes excluded missing inputs and CLI exposes 
   assert.equal(result.selectedBytes, null);
   assert.deepEqual(result.missing.flatMap(row => row.paths), ['data/other/large.json']);
   const cli = execFileSync(process.execPath, [cliHelper(repo),
-    'inspect', '--commit', head, '--profile', 'full'], {
+    'inspect', '--repo', repo, '--commit', head, '--profile', 'full'], {
     cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0'}
   });
   assert.deepEqual(JSON.parse(cli), result);
@@ -1176,7 +1245,7 @@ test('unavailable exact commit fails without fetching or claiming a complete sel
   const trace = path.join(repo, 'commit-inspection.trace');
   const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
   const result = spawnSync(process.execPath, [cliHelper(repo),
-    'inspect', '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
+    'inspect', '--repo', repo, '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
   assert.equal(result.status, 1);
   assert.equal(result.stdout, '');
   assert.match(result.stderr, new RegExp(`Exact commit unavailable locally: ${head}`));
@@ -1227,7 +1296,7 @@ test('missing root and descendant tree metadata are classified before any blob s
     const refs = git('show-ref');
     const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
     const result = spawnSync(process.execPath, [cliHelper(repo),
-      'inspect', '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
+      'inspect', '--repo', repo, '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
     assert.equal(result.status, 1);
     assert.equal(result.stdout, '');
     assert.match(result.stderr, new RegExp(`Missing tree metadata:.*${oid}`));
@@ -1354,8 +1423,10 @@ test('documented pinned bootstrap binds its task repository and preserves stale 
   const ambient = fixture(t);
   const helper = fs.readFileSync(new URL('../scripts/local-workspace.mjs', import.meta.url));
   const identity = fs.readFileSync(new URL('../scripts/worker-identity.mjs', import.meta.url));
+  const prefetch = fs.readFileSync(new URL('../scripts/geography-prefetch.mjs', import.meta.url));
   fs.writeFileSync(path.join(repo, 'scripts/local-workspace.mjs'), helper);
   fs.writeFileSync(path.join(repo, 'scripts/worker-identity.mjs'), identity);
+  fs.writeFileSync(path.join(repo, 'scripts/geography-prefetch.mjs'), prefetch);
   git('add', 'scripts'); git('commit', '-m', 'accepted helpers');
   const head = git('rev-parse', 'HEAD').trim();
   git('repack', '-ad');
@@ -1379,31 +1450,89 @@ test('documented pinned bootstrap binds its task repository and preserves stale 
   assert.ok(!fs.existsSync(manager.report().registry));
 });
 
-test('documented bootstrap refuses an absent promisor helper without an old-Git lazy-fetch fatal', async t => {
-  const {repo, git, head, trace, manager} = partialFixture(t, ['scripts/worker-identity.mjs', 'data/other/large.json'], {
+test('documented cold bootstrap allocates from a linked partial clone with exact selected acquisition', async t => {
+  const {repo, sourceRepo, git, head, trace, manager} = partialFixture(t, [
+    'scripts/local-workspace.mjs', 'scripts/geography-prefetch.mjs', 'data/needed/input.json', 'data/other/large.json'
+  ], {
     configureSource: ({repo, git}) => {
-      for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+      for (const name of ['local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'])
         fs.writeFileSync(path.join(repo, 'scripts', name), fs.readFileSync(new URL('../scripts/' + name, import.meta.url)));
       git('add', 'scripts'); git('commit', '-m', 'accepted promisor helpers');
     }
   });
+  const sourceGit = (...args) => execFileSync('git', ['-C', sourceRepo, ...args], {encoding:'utf8',stdio:'pipe'}).trim();
+  const primary = path.join(path.dirname(repo), 'linked-primary');
+  git('worktree', 'add', '--detach', '--no-checkout', primary, head);
+  const primaryGit = (...args) => execFileSync('git', ['-C', primary, ...args], {
+    encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH:'1', GIT_NO_REPLACE_OBJECTS:'1'}
+  }).trim();
+  primaryGit('sparse-checkout', 'init', '--no-cone');
+  primaryGit('sparse-checkout', 'set', '--no-cone', '/AGENTS.md', '/README.md');
+  primaryGit('read-tree', '-mu', 'HEAD');
+  assert.equal(primaryGit('status', '--porcelain'), '', 'linked primary starts clean');
+  const primaryIndex = primaryGit('rev-parse', '--path-format=absolute', '--git-path', 'index');
+  const primaryFetchHead = primaryGit('rev-parse', '--path-format=absolute', '--git-path', 'FETCH_HEAD');
+  fs.writeFileSync(primaryFetchHead, 'primary-worktree-fetch-head-sentinel\n');
+  const before = {
+    head: primaryGit('rev-parse', 'HEAD'), refs: primaryGit('show-ref'),
+    status: primaryGit('status', '--porcelain=v2'), index: fs.readFileSync(primaryIndex),
+    files: ['AGENTS.md','README.md'].map(name => [name, fs.readFileSync(path.join(primary,name))]),
+    fetchHead: fs.readFileSync(primaryFetchHead)
+  };
+  const rootTree = sourceGit('rev-parse', `${head}^{tree}`);
+  const treeRows = sourceGit('ls-tree', '-r', '-t', '-z', head).split('\0').filter(Boolean).map(line => {
+    const [metadata, name] = line.split('\t'), [mode, type, sha] = metadata.split(' ');
+    return {path:name, mode, type, sha, ...(type === 'blob' ? {size:Number(sourceGit('cat-file','-s',sha))} : {})};
+  });
+  const mockTree = path.join(path.dirname(repo), 'github-tree.json');
+  fs.writeFileSync(mockTree, JSON.stringify({sha:rootTree,truncated:false,tree:treeRows}));
+  const preload = path.join(path.dirname(repo), 'mock-github-tree.mjs');
+  fs.writeFileSync(preload, `import fs from 'node:fs';\nconst originalFetch=globalThis.fetch;\nglobalThis.fetch=async(input,init)=>{\n const url=String(input);\n if(url.startsWith('https://api.github.com/repos/ChengshuLi/WorldAtlas/git/trees/')){\n  const value=JSON.parse(fs.readFileSync(process.env.WA_TEST_TREE,'utf8'));\n  if(!url.includes('/'+value.sha)) throw Error('unexpected fixture tree request');\n  return new Response(JSON.stringify(value),{status:200,headers:{'content-type':'application/json'}});\n }\n return originalFetch(input,init);\n};\n`);
+  const fakeBin = path.join(path.dirname(repo), 'fake-bin'); fs.mkdirSync(fakeBin);
+  const fakeGh = path.join(fakeBin, 'gh');
+  fs.writeFileSync(fakeGh, '#!/bin/sh\n[ "$1" = auth ] && [ "$2" = token ] || exit 2\nprintf fixture-token\n', {mode:0o755});
+  fs.chmodSync(fakeGh, 0o755);
+  git('config', '--add', `url.${pathToFileURL(sourceRepo).href}.insteadOf`, 'https://github.com/ChengshuLi/WorldAtlas.git');
   const docs = fs.readFileSync(new URL('../docs/DEVELOPMENT.md', import.meta.url), 'utf8');
   const bootstrap = docs.split("<<'PYTHON'\n")[1].split('\nPYTHON')[0];
-  const refs = git('show-ref');
-  const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
-  assert.throws(() => execFileSync('python3', ['-', repo, head, 'inspect', '--commit', head], {
-    cwd: repo, input: bootstrap, encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}
-  }), error => {
-    assert.equal(error.stdout, '');
-    assert.match(error.stderr, /Pinned helper missing/);
-    assert.doesNotMatch(error.stderr, /could not fetch|lazy fetching disabled/);
-    return true;
+  const refs = git('for-each-ref', '--format=%(refname) %(objectname)', 'refs/heads', 'refs/tags', 'refs/remotes').split('\n').filter(Boolean);
+  const workspaceOid = git('rev-parse', `${head}:scripts/local-workspace.mjs`).trim();
+  const workerOid = git('rev-parse', `${head}:scripts/worker-identity.mjs`).trim();
+  const prefetchOid = git('rev-parse', `${head}:scripts/geography-prefetch.mjs`).trim();
+  const selectedOid = git('rev-parse', `${head}:data/needed/input.json`).trim();
+  const unrelatedOid = git('rev-parse', `${head}:data/other/large.json`).trim();
+  const result = execFileSync('python3', ['-', primary, head, 'allocate', '--worker', 'bootstrap-author',
+    '--branch', 'engineering/cold-bootstrap-fixture', '--profile', 'sparse', '--include', 'data/needed'], {
+    cwd: path.dirname(repo), input: bootstrap, encoding: 'utf8', stdio: 'pipe',
+    env: {...process.env, TASK_REPO:primary, CODEX_THREAD_ID:'bootstrap-author',
+      PATH:`${fakeBin}:${path.dirname(process.execPath)}:${process.env.PATH}`,
+      NODE_OPTIONS:`--import=${pathToFileURL(preload).href}`, WA_TEST_TREE:mockTree,
+      GIT_NO_LAZY_FETCH:'1', GIT_NO_REPLACE_OBJECTS:'1', GIT_TRACE:trace}
   });
-  assert.doesNotMatch(fs.readFileSync(trace, 'utf8'), /(?:built-in: git|run_command:) .*fetch/);
-  assert.deepEqual(fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort(), before);
-  assert.equal(git('show-ref'), refs);
+  const entry = JSON.parse(result);
+  assert.equal(entry.head, head);
+  assert.equal(entry.worker, 'bootstrap-author');
+  assert.equal(fs.readFileSync(path.join(entry.path, 'data/needed/input.json'), 'utf8'), 'input');
+  for (const oid of [workspaceOid, workerOid, prefetchOid, selectedOid]) {
+    assert.equal(git('cat-file', '-t', oid).trim(), 'blob');
+    assert.doesNotThrow(() => git('cat-file', '-e', oid));
+  }
+  const unrelated = spawnSync('git', ['-C', repo, 'cat-file', '-e', unrelatedOid], {
+    encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLACE_OBJECTS: '1'}
+  });
+  assert.notEqual(unrelated.status, 0, 'the unrelated promised body remains unavailable');
+  assert.equal(primaryGit('rev-parse', 'HEAD'), before.head);
+  assert.equal(primaryGit('rev-parse', 'refs/heads/main'), head, 'the primary branch ref remains unchanged');
+  const afterRefs = primaryGit('for-each-ref', '--format=%(refname) %(objectname)', 'refs/heads', 'refs/tags', 'refs/remotes');
+  assert.deepEqual(afterRefs.split('\n').filter(Boolean).filter(row => !row.startsWith('refs/heads/engineering/cold-bootstrap-fixture ')),
+    refs, 'all pre-existing refs remain unchanged; only the expected allocator branch is added');
+  assert.equal(primaryGit('status', '--porcelain=v2'), before.status);
+  assert.deepEqual(fs.readFileSync(primaryIndex), before.index);
+  for (const [name, bytes] of before.files) assert.deepEqual(fs.readFileSync(path.join(primary,name)), bytes);
+  assert.deepEqual(fs.readFileSync(primaryFetchHead), before.fetchHead, 'common metadata refresh leaves linked-primary FETCH_HEAD untouched');
   assert.ok(!fs.readdirSync(path.join(repo, '.git')).some(name => name.startsWith('worldatlas-helper-')));
-  assert.ok(!fs.existsSync(manager.report().registry));
+  manager.release({worker: entry.worker, token: entry.token});
+  assert.deepEqual(manager.report().entries, []);
 });
 
 test('inspection and allocation share every support prefix without suppressing an existing allocation lock', async t => {
@@ -1434,7 +1563,7 @@ test('inspection and allocation share every support prefix without suppressing a
 
 test('complete documented shell bootstrap refuses failed refresh instead of executing cached main', async t => {
   const {repo, git} = fixture(t);
-  for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+  for (const name of ['local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'])
     fs.writeFileSync(path.join(repo, 'scripts', name), fs.readFileSync(new URL('../scripts/' + name, import.meta.url)));
   git('add', 'scripts'); git('commit', '-m', 'cached accepted helpers');
   const head = git('rev-parse', 'HEAD').trim();
@@ -1447,7 +1576,7 @@ test('complete documented shell bootstrap refuses failed refresh instead of exec
     .replace('data/YOUR-REQUIRED-PATH', 'data/one.json');
   assert.throws(() => execFileSync('bash', ['-c', block], {cwd: repo, encoding: 'utf8', stdio: 'pipe', env: {...process.env, TASK_REPO: repo}}), error => {
     assert.doesNotMatch(error.stdout, /inputCount|selectedBytes/);
-    assert.match(error.stderr, /does not appear to be a git repository/);
+    assert.match(error.stderr, /unavailable-origin|not a git repository|repository .* does not exist/);
     return error.status !== 0;
   });
   assert.equal(git('show-ref'), refs);
