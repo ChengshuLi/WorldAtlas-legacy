@@ -27,10 +27,19 @@
     "whole_target_flags_are_contextual": true
   },
   "publication_boundary": {
-    "contains_cell_keys_or_coordinate_arrays": false,
-    "contains_raw_source_or_derived_geometry": false,
-    "contains_native_patch_rows": false,
-    "includes_only_source_free_decision_note_and_this_receipt": true
+    "this_receipt_contains_cell_keys_or_coordinate_arrays": false,
+    "this_receipt_contains_raw_source_or_derived_geometry": false,
+    "this_receipt_contains_native_patch_rows": false,
+    "pr_base_diff_contains_inline_source_geometry": true,
+    "geometry_bearing_json_files": [
+      "coordination/engineering/peru727-source-relative-positive-20261025/native-inputs/source-evidence.json",
+      "coordination/engineering/peru727-source-relative-positive-20261025/native-inputs-adopted-677-001/source-evidence.json",
+      "coordination/engineering/peru727-source-relative-positive-20261025/native-inputs-membership-001/source-evidence.json",
+      "coordination/engineering/peru727-source-relative-positive-20261025/supported-inputs-selected-b20-001/source-evidence.json",
+      "coordination/engineering/peru727-source-relative-positive-20261025/source-evidence-config.json"
+    ],
+    "mrc_polygon_already_in_base_source_corpus": true,
+    "history_rewritten": false
   },
   "decision_limit": "Source-role proposal only; no legal-boundary claim, whole-cell claim, scientific acceptance, status change, or credit."
 }
