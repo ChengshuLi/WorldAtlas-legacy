@@ -44,7 +44,7 @@ export function createAcquisition({repo, loadTree, loadDescriptor, execute = exe
       stdio: ['pipe', expectedBytes === undefined ? 'ignore' : 'pipe', 'ignore']}); }
     catch { throw Error('Geography object acquisition failed'); }
   };
-  const trees = new Map(), inventory = new Map();
+  const trees = new Map(), treeLoads = new Map(), inventory = new Map();
   const stats = {scope: 'declared-selected-bank-and-direct-additive-assets', complete_scientific_closure: false,
     unique_objects: 0, declared_bytes: 0, fetched_objects: 0, fetched_bytes: 0, fetch_batches: 0,
     tree_metadata_ms: 0, fetch_ms: 0, declarations: 0,
@@ -128,20 +128,29 @@ export function createAcquisition({repo, loadTree, loadDescriptor, execute = exe
   }
   async function tree(version) {
     requireValue(oid(version), 'Invalid immutable geography commit');
-    if (!trees.has(version)) {
-      const started = performance.now();
-      const root = git(['rev-parse', version + '^{tree}'], undefined, 41).toString().trim();
-      requireValue(oid(root), 'Invalid immutable geography root tree');
-      // GitHub echoes a supplied commit in the envelope SHA. Request the actual
-      // locally bound tree OID so the envelope and every row remain exact-bound.
-      const value = await loadTree(root);
-      stats.tree_metadata_ms += Math.round(performance.now() - started);
-      requireValue(value && !value.truncated && value.sha === root && Array.isArray(value.tree), 'Incomplete or wrong immutable tree metadata');
-      const rows = new Map(value.tree.map(row => [row.path, row]));
-      requireValue(rows.size === value.tree.length, 'Duplicate tree metadata paths');
-      trees.set(version, rows);
+    if (trees.has(version)) return trees.get(version);
+    let pending = treeLoads.get(version);
+    if (!pending) {
+      pending = (async () => {
+        const started = performance.now();
+        const root = git(['rev-parse', version + '^{tree}'], undefined, 41).toString().trim();
+        requireValue(oid(root), 'Invalid immutable geography root tree');
+        // GitHub echoes a supplied commit in the envelope SHA. Request the actual
+        // locally bound tree OID so the envelope and every row remain exact-bound.
+        const value = await loadTree(root);
+        stats.tree_metadata_ms += Math.round(performance.now() - started);
+        requireValue(value && !value.truncated && value.sha === root && Array.isArray(value.tree), 'Incomplete or wrong immutable tree metadata');
+        const rows = new Map(value.tree.map(row => [row.path, row]));
+        requireValue(rows.size === value.tree.length, 'Duplicate tree metadata paths');
+        trees.set(version, rows);
+        return rows;
+      })();
+      treeLoads.set(version, pending);
+      // Rejected metadata reads are retryable, but concurrent callers share the
+      // same in-flight request and never fan out duplicate recursive tree loads.
+      pending.catch(() => { if (treeLoads.get(version) === pending) treeLoads.delete(version); });
     }
-    return trees.get(version);
+    return pending;
   }
   async function descriptor(version, name, expected = {}) {
     requireValue(safe(name), 'Unsafe declared geography path');

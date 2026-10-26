@@ -13,7 +13,7 @@
     {
       "path": "scope.json",
       "bytes": 13576,
-      "sha256": "95166208505fc147dd88e007087587f1268a460da20d547c31bd07d5d61d98b4",
+      "sha256": "eb7280d73df54019f6034a1d57eb629a63b48e1a8ba24d863ae20b1f1daa2209",
       "role": "exact scope, conservation, provenance and input/result pins"
     },
     {
@@ -39,7 +39,14 @@
     {
       "path": "/workspace/shared/worldatlas-root-acceptance-after-LUX26-2884-20261026.json",
       "sha256": "7868a40cf6cd01eddb5f68a4c764bb84df307bd5b9493c7a4c6fbc96c123428a",
-      "role": "root ledger pin establishing 594 accepted /30 pending prior to this proposal"
+      "role": "root ledger pin establishing 594 accepted /30 pending prior to this proposal",
+      "bytes": 17265665
+    },
+    {
+      "path": "/workspace/shared/worldatlas-LUX26-2884-root-readback-20261026.json",
+      "bytes": 7454,
+      "sha256": "6e7a95c4f4304471c8e9e60384dc15358bb130746d605d71cff23976d8fcffcf",
+      "role": "canonical LUX26 acceptance comment readback; distinct from the root ledger"
     }
   ]
 }
