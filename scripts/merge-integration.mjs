@@ -273,6 +273,12 @@ export function reviewedTestPlan(request, {base, head, entries, files, definitio
     checkout_patterns:build ? fullCheckoutPatterns(definition) : focusedCheckoutPatterns(definition, inputs)};
 }
 
+export function validatedPlanForRoute(reviewed, selection, automatic) {
+  need(!reviewed || !selection, 'Selected-data delivery retains its mandatory native and emitted execution path');
+  need(!automatic || reviewed || selection, 'Automatic test scope is unavailable; supply exact plan.request JSON or explicitly request complete');
+  return reviewed?.request ?? null;
+}
+
 function suppliedPlanRequest(value) {
   if (typeof value === 'string') {
     try { value = JSON.parse(value); } catch { return null; }
@@ -328,9 +334,7 @@ export async function prepareIntegration(options) {
       : requested;
     const reviewed = reviewedTestPlan(request, {base:state.base, head:state.pr.head.sha,
       entries:integrated.entries, files, definition:packageInputs});
-    deliveryContext.validated_plan_request = reviewed?.request ?? null;
-    need(!reviewed || !selection, 'Selected-data delivery retains its mandatory native and emitted execution path');
-    need(!automatic || reviewed || selection, 'Automatic test scope is unavailable; supply exact plan.request JSON or explicitly request complete');
+    deliveryContext.validated_plan_request = validatedPlanForRoute(reviewed, selection, automatic);
     const profile = complete ? 'full' : reviewed ? (reviewed.build ? 'full' : 'evidence') : applicability;
     const checkoutPatterns = selection?.test_selection === 'selected-data'
       ? selectedDataCheckoutPatterns(packageInputs, integrated.entries, selection.expectations_path)
