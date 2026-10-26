@@ -24,6 +24,8 @@ Keep each PR coherent, push normally, and obtain a substantive review of the exa
 
 Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` for current-base validation, request preparation, dispatch and terminal reconciliation. Its automatic selected-data route is a strict eligibility optimization, not a judgment of review sufficiency. Select `auto`, an exact reviewed plan, or the complete suite using the criteria in [VALIDATION](VALIDATION.md). Revalidate exact base/head immediately before a request. Use the stock route; do not directly merge or fabricate a terminal result. Read the canonical terminal receipt and resulting accepted `main`, then report checks actually run, failures, unrun work and remaining limits.
 
+For a final-bank update, use the finalizer's complete `current-startup` roster as the output boundary. It may retire an old generated file only when the current accepted index or an authenticated committed finalization receipt pins the exact prior body; pass exact committed `preparation.json` and `startup-ownership.json` pins through `prior_finalizations` when needed. Unknown, edited, nonordinary, or roster-changing extras fail closed. Exact retirement paths are staged as deletions only after byte and index rechecks; inspect the complete staged file set against the new index before commit. Other prepared output changes remain ordinary worktree edits.
+
 For routine read-only observation, use bounded provider reads and avoid rapid polling:
 
 ```sh
