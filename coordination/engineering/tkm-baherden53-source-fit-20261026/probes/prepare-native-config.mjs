@@ -69,7 +69,9 @@ const config={version:1,compact_territorial_exclusions:true,
   families:[{source_id:FAMILY,parts:familyParts}],physical_evidence:pin(`${P}/physical-002/result-001/whole-target-support.json`,PHYS),
   physical_input:pin(`${P}/physical-001/original-stage-inputs.json`,STAGE),physical_reproduction:pin('scripts/qualify-source-cohort.py'),
   source_membership:{index:world,lineage:pin('data/semantic-report.json'),parts:[pin('data/geography/part-23.json')],cohort_inventory:{index:pin(projectionPath),parts:cohortParts}},targets:[target]}};
-const candidateOut={version:1,kind:'source-relative-native-diagnostic-candidate-v1',source_id:SOURCE,source_family:FAMILY,rows:requested};
+// The accepted native diagnostic consumes a patch body whose only top-level
+// field is rows; broader candidate metadata remains in its private receipt.
+const candidateOut={rows:requested};
 const configOut={version:1,source_evidence:{commit:PHYS,path:`${P}/source-evidence-001/source-evidence.json`},
  native_patch:{commit:PHYS,path:`${P}/native-diagnostic-001/native-patch-input.json`}};
 for(const [rel,obj] of [['source-evidence-config.json',config],['native-patch-input.json',candidateOut],['native-diagnostic-config.json',configOut]]){
