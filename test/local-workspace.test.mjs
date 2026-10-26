@@ -527,6 +527,48 @@ test('CLI keeps stdout as one allocation JSON object and presents exact pinned A
   manager.release({worker: entry.worker, token: entry.token});
 });
 
+test('actual scripts-directory CLI reads root AGENTS from freshly fetched main and validates its exact blob', t => {
+  const source = fixture(t);
+  source.git('config', 'uploadpack.allowFilter', 'true');
+  const remote = path.join(source.temporary, 'remote.git');
+  const repo = path.join(source.temporary, 'client');
+  execFileSync('git', ['clone', '--bare', source.repo, remote], {stdio: 'pipe'});
+  execFileSync('git', ['clone', '--no-checkout', remote, repo], {stdio: 'pipe'});
+  const git = (...args) => execFileSync('git', ['-C', repo, ...args], {
+    encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH: '1'}
+  }).trim();
+  const staleMain = git('rev-parse', 'main');
+  const staleTracking = git('rev-parse', 'refs/remotes/origin/main');
+  assert.equal(staleTracking, staleMain);
+  const latestAgents = '# Fresh root instructions from fetched main\n- [DEVELOPMENT](docs/DEVELOPMENT.md): verified root guidance\n';
+  fs.writeFileSync(path.join(source.repo, 'AGENTS.md'), latestAgents);
+  source.git('add', 'AGENTS.md'); source.git('commit', '-m', 'advance root startup guidance');
+  const latestMain = source.git('rev-parse', 'HEAD').trim();
+  source.git('push', remote, 'main');
+  assert.notEqual(latestMain, staleMain);
+
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const result = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'scripts-guidance',
+    '--branch', 'engineering/scripts-guidance'], {
+    cwd: source.temporary, encoding: 'utf8', env: {...process.env, CODEX_THREAD_ID: 'scripts-guidance'}
+  });
+  assert.equal(result.status, 0, result.stderr);
+  const entry = JSON.parse(result.stdout);
+  assert.equal(entry.head, latestMain);
+  assert.equal(git('rev-parse', 'FETCH_HEAD'), latestMain);
+  assert.equal(git('rev-parse', 'refs/remotes/origin/main'), latestMain);
+  assert.equal(git('rev-parse', 'main'), staleMain, 'the primary branch remains untouched');
+  const agentsBlob = git('rev-parse', `${latestMain}:AGENTS.md`);
+  const agentsSha = createHash('sha256').update(latestAgents).digest('hex');
+  assert.match(result.stderr, new RegExp(`Verified current-main startup instructions \\(${latestMain}\\)`));
+  assert.ok(result.stderr.includes(`AGENTS.md Git blob ${agentsBlob}; SHA-256 ${agentsSha}`));
+  assert.ok(result.stderr.includes(latestAgents), 'the CLI presents the exact fetched root instruction bytes');
+  assert.equal(fs.readFileSync(path.join(entry.path, 'AGENTS.md'), 'utf8'), latestAgents);
+
+  const manager = workspaceManager(repo);
+  manager.release({worker: entry.worker, token: entry.token});
+});
+
 test('missing fetched-main AGENTS fails before reservation, branch or worktree creation', t => {
   const {git, repo, head} = fixture(t);
   const manager = workspaceManager(repo, {onStartupGuidance: () => {}});

@@ -197,7 +197,10 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance} = {}) {
     execFileSync('git', ['-C', entry.path, 'read-tree', '-mu', 'HEAD'], {env: noLazyFetch});
   };
   const readStartupGuidance = commit => {
-    const rows = git('ls-tree', '-z', commit, '--', 'AGENTS.md').split('\0').filter(Boolean);
+    // The CLI passes its own directory (`scripts/`) as the repository selector.
+    // Pin the root entry explicitly so pathspec interpretation cannot depend on
+    // that invocation directory.
+    const rows = git('ls-tree', '--full-tree', '-z', commit, '--', 'AGENTS.md').split('\0').filter(Boolean);
     if (rows.length !== 1) throw Error(`Verified origin/main ${commit} has no root AGENTS.md; refusing a fresh author allocation`);
     const separator = rows[0].indexOf('\t');
     if (separator < 0 || rows[0].slice(separator + 1) !== 'AGENTS.md') throw Error('Unknown root AGENTS.md tree entry');
