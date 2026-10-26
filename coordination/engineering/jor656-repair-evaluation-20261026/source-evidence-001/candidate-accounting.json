@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "kind": "jor656-source-relative-candidate-accounting-v1",
+  "original_cells": 656,
+  "candidate_cells": 624,
+  "original_interval_input_sha256": "6928e90e444540c95f56172088a54c12145db7ae87a547cd36c8758d95eeb003",
+  "source_feature_roster_sha256": "7fa99cbf064121e0130b66758c212ae22b2a7be5649f2e250e9cda89a9bd595e",
+  "full_jordan_same_member_hits": 624,
+  "full_jordan_no_same_member": 32,
+  "original_foreign_contacts": 93,
+  "full_foreign_exact_hits": 0,
+  "candidate_owners": 15,
+  "land": 599,
+  "inland_water": 25,
+  "foreign_full_application_sha256": "50563eedf0be448b345962315aae75b8e8fccb915d27440a2137d6ac8bf733a8",
+  "full_simplified_application_sha256": "d33aa167fe79c3c5fdf4dfdafc87ca8a746152fd5373de733b516d3878312ab1",
+  "physical_output_sha256": "5c7e4a5fab9bae42f0016661d553a8030de5dd5a456bdae9978a44d684081113",
+  "context_input_sha256": "b5071ceae5627ae2f9d3681339d6cccfcbddcd77b6404ad74cac47edcb82e0e2",
+  "limits": [
+    "624 is source-relative preparation only, not accepted native qualification or credit.",
+    "The 32 exact full-JOR source-member misses remain held.",
+    "All 93 original simplified ISR/SAU contacts remain recorded; the separate complete full-source application found 0 exact hits, which is not proof that no unqueried source can contact.",
+    "The source family records are 2006 geoBoundaries JOR ADM2 with required CC BY attribution/citation and incomplete underlying source URL metadata.",
+    "Original 25 water-class rows are retained in exact candidate keys and class rows; 4 targets have contradictory land/water whole-target physical issues, 3 have extra reconstruction issues. Issue incidences are not per-cell determinations.",
+    "Source-role/census evidence is 2004 DOS hierarchy context, not exact current boundary identity."
+  ],
+  "original_foreign_contact_audit": {
+    "contact_keys": 93,
+    "exact_sequence_join": "full-simplified-source-application.per_key filtered to foreign_source_ids equals full-foreign-application.records by owner and source-id lists",
+    "same_original_full_jordan_member_hit": 90,
+    "full_jordan_member_miss": 3,
+    "catalogue_source_id_incidence": {
+      "gb:ISR:ADM1:19161824B24193204184747": 72,
+      "gb:SAU:ADM1:25081817B21311317754967": 12,
+      "gb:SAU:ADM1:25081817B5742042673291": 8,
+      "gb:SAU:ADM1:25081817B61333239611232": 1
+    },
+    "within_90_same_member_hit": {
+      "gb:ISR:ADM1:19161824B24193204184747": 69,
+      "gb:SAU:ADM1:25081817B21311317754967": 12,
+      "gb:SAU:ADM1:25081817B5742042673291": 8,
+      "gb:SAU:ADM1:25081817B61333239611232": 1
+    },
+    "within_3_full_jordan_miss": {
+      "gb:ISR:ADM1:19161824B24193204184747": 3
+    },
+    "full_foreign_application_hits": 0,
+    "interpretation": "All 93 original source-contact records remain adverse inputs. The full-Jordan same-member result does not erase them. The three contact keys that miss full JOR membership remain outside the 624 requested patch; the other 90 remain in the candidate patch with original ISR/SAU catalogue exclusion families and descriptors. The separate full-family foreign application found no exact foreign hits for these rows; it does not negate contacts from the original source variant or establish no contact from unqueried sources."
+  }
+}
