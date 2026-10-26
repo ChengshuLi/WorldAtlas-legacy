@@ -1,0 +1,48 @@
+{
+  "baseline_commit": "6ca08334e1bfbe86d63db1a19e9a87c5e2829cb3",
+  "build_controls": {
+    "static_package_build": "blocked before image creation by sparse checkout materialized-input ENOENTs; no broad hydration attempted",
+    "vite_build": "passed"
+  },
+  "candidate_commit_checked": "27580ace69cda42909e246c19fce33bfa4fec26a",
+  "checker": {
+    "added_cells": 677,
+    "affected_rows": 222,
+    "gate_status": "passed",
+    "method": "worldatlas-trusted-geography-check-v1",
+    "published": false,
+    "reassigned_cells": 0,
+    "regressions": 0,
+    "removed_cells": 0,
+    "source_approval": false,
+    "status": "no-new-native-loss"
+  },
+  "checker_report": {
+    "bytes": 102614,
+    "path": "coordination/engineering/peru727-source-relative-positive-20261025/geographic-check-6ca-candidate-002.json",
+    "sha256": "5b27cc25ff82f01c112643a5351fbda6ae9f9cfcb7c1ba766d67f8525a414d6e"
+  },
+  "finalizer": {
+    "config_sha256": "8f06756f09a2d861bdb6b76690cd30e2f573cb226b8f7d783080b25dce62ed33",
+    "destination": "finalized-bank-677-6ca-001",
+    "ownership_selection_sha256": "6e1250f5e3f76a1e9198bccfdffe95be2fdc9069454349586ab7ef9dbf916ebd",
+    "package_inputs_sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3",
+    "preparation_sha256": "54206e518e23a21fa5e73d8e9f787c1179c09b2cd74449bef1fbb90d580de4a0",
+    "proposed_release_id": "geography:final:81409266436f757875607525ce1bf8d562e1621bcbe7f0c5af34198abfea0a35",
+    "selected_delivery_expectations_sha256": "0ae515e5316b2986375955cf730a3b448fb5ab619158bb99018032f623f2becb",
+    "startup_ownership_sha256": "9fd1acdd369cf4d869bc22957ef88b39a6c6c3dd88f098232f4af2d159510780"
+  },
+  "package": "PER",
+  "scope_count": 677,
+  "scope_limits": {
+    "dispatch": "not performed",
+    "original_denominator": "10,371 = 8,922 previously accepted + 1,449 residual",
+    "other_residual_untouched": 722,
+    "outside_parent_held": 50,
+    "science_credit": "none claimed",
+    "whole_cell_or_legal_boundary_claim": false
+  },
+  "target_owner": 33741,
+  "trusted_code_commit": "27580ace69cda42909e246c19fce33bfa4fec26a",
+  "version": 1
+}
