@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "kind": "gnb-consumed-source-relative-role-decision-v1",
+  "status": "positive-preparation-only; root scientific acceptance and stock delivery pending",
+  "scope": {
+    "name": "Catie/Quinh/Caiv/Sto Domingos only",
+    "owners": {
+      "20868": 42,
+      "20889": 38,
+      "20893": 113,
+      "20895": 21
+    },
+    "key_count": 214,
+    "keyset_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6",
+    "keyset_method": "SHA-256 of compact JSON serialization of numerically sorted [owner,y,x] tuples."
+  },
+  "primary": {
+    "publisher": "INE/DGGC",
+    "title": "Boletim Estatístico da Guiné-Bissau, Guiné-Bissau em Números 2017",
+    "url": "https://www.stat-guinebissau.com/Menu_principal/Pubica%C3%A7%C3%B5es/anuario/boletim_estatistico_GB/guinebissau-em-numero2017.pdf",
+    "location": "Tabela 1: Divisão administrativa, PDF pages 9–10 (printed 9–10; browser P8–P9)",
+    "limits": "Official sector-name/code/parent table; front matter ©2015, table effective date not independently determined, no shapeID alias or polygon/cell-boundary evidence; text was read in the root source assessment, no local PDF body hash claimed."
+  },
+  "groups": [
+    {
+      "owner": 20868,
+      "source_id": "gb:GNB:ADM2:13655514B24413703823033",
+      "source_name": "Setor de Catie",
+      "official_roster": "Catió / Tombali",
+      "count": 42,
+      "original_parent_id": "framework:province:tombali:692952bab6f4",
+      "original_parent_index": 4627
+    },
+    {
+      "owner": 20889,
+      "source_id": "gb:GNB:ADM2:13655514B66751603958816",
+      "source_name": "Setor de Quinh",
+      "official_roster": "Quinhamel / Biombo",
+      "count": 38,
+      "original_parent_id": "framework:province:biombo:5213c731892e",
+      "original_parent_index": 931
+    },
+    {
+      "owner": 20893,
+      "source_id": "gb:GNB:ADM2:13655514B8216177448850",
+      "source_name": "Setor de Caiv",
+      "official_roster": "Caió / Cacheu",
+      "count": 113,
+      "original_parent_id": "framework:province:cacheu:8c70976871f9",
+      "original_parent_index": 1129
+    },
+    {
+      "owner": 20895,
+      "source_id": "gb:GNB:ADM2:13655514B91994517778696",
+      "source_name": "Setor de Sto Domingos",
+      "official_roster": "São Domingos / Cacheu",
+      "count": 21,
+      "original_parent_id": "framework:province:cacheu:8c70976871f9",
+      "original_parent_index": 1129
+    }
+  ],
+  "decision": "For these exact four retained original owner/source identities, the official INE/DGGC name-and-parent roster corroborates a source-role correspondence to the already-consumed original ADM2 feature. Use the original source member, original owner ID and parent identity without modifying names, parent, shapeID, or geometry. This is a bounded source-relative applicability decision; it is not a claim that source names are exact aliases, that modern/offical polygons are geometrically equivalent, or that 2017 table dates its boundaries.",
+  "preserved": {
+    "aggregate_salB": "All aggregate SALB overlaps/disagreements and original source members remain unchanged; no per-key SALB geometry application is claimed.",
+    "foreign": "Complete original GIN/SEN source families and every recorded native competitor remain present; no foreign contact is suppressed by this role decision.",
+    "physical": "Reuse original physical evidence; no physical authority/date/whole-feature certification.",
+    "otherHolds": "Madina do Boé 96, Cacheu12, Tite36, Boé47, Pitche1, and all other original held keys remain outside this candidate and held."
+  },
+  "pins": {
+    "source_evidence": {
+      "commit": "efc36a3fc6f67350f69c8cd1ffd8278d4adaf8c5",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/source-evidence-002/source-evidence.json",
+      "git_blob_oid": "0f48192edcab5b556ea7cb88d7fd183c7eb72528",
+      "bytes": 154131,
+      "sha256": "8b46ab03c836d5de0cf0d511391906865f3bfae59017d0162ff58c4f9d4d789c"
+    },
+    "original_patch": {
+      "commit": "efc36a3fc6f67350f69c8cd1ffd8278d4adaf8c5",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/native-request-001/native-requested-patch.json",
+      "git_blob_oid": "50e6dd8ce35c3d2347dc8e4438caa8e14f6d5946",
+      "bytes": 54813,
+      "sha256": "47d4b88e972c6d615e59c2ad800b363dee6ea24c40c05746e1699af6de377caf"
+    },
+    "original_diagnostic": {
+      "commit": "03ccde25528475b374be5c891834e74e7fdfea2e",
+      "path": "coordination/engineering/guinea-bissau-original-repair-20261017/native-diagnostic-001/native-diagnostic.json",
+      "git_blob_oid": "f59c78f98b25683474b8b6bdf14ebdc95aa5f767",
+      "bytes": 198795,
+      "sha256": "944dea89a9658329b48d97860b74c9fb8ac979075dabbbe972d1f52235af8944"
+    },
+    "source_product": {
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-GNB-ADM2-000.bin.gz",
+      "bytes": 73784,
+      "sha256": "a606c9388972c98b00e813b1fb35b896b9234e5466524c3176dc53c31197ba74"
+    },
+    "original_request_count": 6117,
+    "original_native_diagnostic_counts": {
+      "requested": 6117,
+      "supported": 6116,
+      "held": 1
+    },
+    "owner_roster": {
+      "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+      "path": "data/canonical-grid/bounds.json.gz",
+      "git_blob_oid": "9c44513df64995d417dd3832ae604c703e84a506",
+      "bytes": 2663523,
+      "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f"
+    }
+  },
+  "source_product": {
+    "provider": "geoBoundaries",
+    "consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GNB/ADM2/geoBoundaries-GNB-ADM2_simplified.geojson",
+    "recorded_license": "Open Data Commons Open Database License 1.0",
+    "source_represented_year_claim": "2017",
+    "original_source_bytes": 273863,
+    "original_source_sha256": "8e7d33531e3febc81420d07ceddb1a89c4393139534c6633bcc9330c4a9be5f9",
+    "note": "Only four target geometries are present in the narrowed source-evidence input; no full raw source archive is copied. Preserve recorded attribution and source licence."
+  }
+}

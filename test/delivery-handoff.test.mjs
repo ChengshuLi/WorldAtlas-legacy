@@ -242,6 +242,26 @@ test('immutable Git input reader reuses exact descriptor queries without trustin
   } finally { childProcess.execFileSync = execute; syncBuiltinESMExports(); }
 });
 
+test('immutable Git input reader can discard body cache and retain strict re-read verification', t => {
+  const {root, head} = immutableReaderFixture(t), r = pinReader(root);
+  const execute = childProcess.execFileSync, bodies = [];
+  childProcess.execFileSync = (command, args, options) => {
+    if (command === 'git' && options?.cwd === root && args[0] === 'cat-file' && args[1] === 'blob') bodies.push(args[2]);
+    return execute(command, args, options);
+  }; syncBuiltinESMExports();
+  try {
+    const pin = r.pin(head, 'input.json');
+    assert.equal(r.json(pin).value, 1);
+    const initialReads = bodies.length;
+    assert.equal(initialReads, 1);
+    r.discardBodyCache();
+    assert.equal(r.json(pin).value, 1);
+    assert.equal(r.json(pin).value, 1);
+    assert.equal(bodies.length, initialReads + 2, 'post-release reads stay uncached and independently revalidated');
+    assert.equal(r.descriptor(head, 'input.json').git_blob_oid, pin.git_blob_oid);
+  } finally { childProcess.execFileSync = execute; syncBuiltinESMExports(); }
+});
+
 test('immutable Git input reader separates exact paths, vintages and fresh readers', t => {
   const {root, git, head} = immutableReaderFixture(t), r = pinReader(root);
   const first = r.pin(head, 'input.json'), alias = r.pin(head, 'alias.json');
