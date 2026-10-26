@@ -11,7 +11,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {focusedIntegrationTest, integrationTestFiles, integrationNeedsBrowser, prepareIntegrationTests} from '../scripts/run-integration-tests.mjs';
 import {renderClaim, githubAPI} from '../scripts/issue-claim-contract.mjs';
-import {reviewedTestPlan, prepareIntegration, completeIntegration, checkCurrentChecks, integrationProfile, integrationChanges, geographyRequired, createCandidate, cleanupCandidate, cleanupMergedHead} from '../scripts/merge-integration.mjs';
+import {reviewedTestPlan, validatedPlanForRoute, prepareIntegration, completeIntegration, checkCurrentChecks, integrationProfile, integrationChanges, geographyRequired, createCandidate, cleanupCandidate, cleanupMergedHead} from '../scripts/merge-integration.mjs';
 
 import {EXECUTION_CODE, REBIND_CODE} from '../scripts/selected-geography-code.mjs';
 import {staticModuleClosure} from './helpers/static-module-closure.mjs';
@@ -199,6 +199,8 @@ test('default actual preparation derives the inert packet consumers without an o
     assert.deepEqual(prepared.checkout_patterns,focusedCheckoutPatterns(f.packageInputs,EXECUTION_CODE));
     assert.equal(prepared.geography_required,true);assert.equal(prepared.geography_software,false);
     assert.equal(prepared.base,f.base);assert.equal(prepared.pr.head.sha,f.head);assert.equal(prepared.candidate,f.candidate);
+    assert.deepEqual(prepared.current_pair,{base:f.base,head:f.head});
+    assert.deepEqual(prepared.plan_request,{base:f.base,head:f.head,files:PACKET_TESTS});
     assert.equal(f.calls.filter(row=>row.route.includes('/contents/.github/package-inputs.json')).length,1);
     await assert.rejects(f.complete({geographyResult:'skipped'}),/Trusted combined geography/);
   }
@@ -207,8 +209,18 @@ test('default actual preparation derives the inert packet consumers without an o
   const explicit=await prepareIntegration({...f.options(),reviewedTests});
   assert.equal(explicit.profile,'evidence');assert.equal(explicit.test_selection,'reviewed');
   assert.deepEqual(explicit.test_files,PACKET_TESTS);
+  assert.deepEqual(explicit.plan_request,{base:f.base,head:f.head,files:PACKET_TESTS});
   // The existing dispatch input distinguishes this identical manual roster.
-  await assert.rejects(prepareIntegration({...f.options(),reviewedTests:{base:sha('0'),head:f.head,files:PACKET_TESTS}}),/stale/);
+  const stale={base:sha('0'),head:sha('9'),files:PACKET_TESTS};
+  await assert.rejects(prepareIntegration({...f.options(),reviewedTests:stale}),error=>{
+    assert.match(error.message,/stale/);
+    assert.deepEqual(error.delivery_context.supplied_pair,{base:stale.base,head:stale.head});
+    assert.deepEqual(error.delivery_context.current_pair,{base:f.base,head:f.head});
+    assert.deepEqual(error.delivery_context.observed_pr_pair,{base:f.base,head:f.head});
+    assert.deepEqual(error.delivery_context.supplied_plan_request,stale);
+    assert.equal(error.delivery_context.validated_plan_request,undefined);
+    return true;
+  });
 });
 
 test('actual automatic packet roster runs without installed dependencies or external executables',async()=>{
@@ -328,6 +340,17 @@ test('reviewed tests derive the complete fixture and executing-policy boundary w
   const noFixtures=new Map(entries);noFixtures.delete('test/fixtures/contract/input.json');
   assert.throws(()=>reviewedTestPlan(plan,{...context,entries:noFixtures}),/fixture boundary/);
   for(const absent of [undefined,null,'']) assert.equal(reviewedTestPlan(absent,context),null);
+});
+
+test('selected-data exclusivity rejects a schema-valid reviewed plan before it can be recorded for reuse',()=>{
+  const request={base:sha('a'),head:sha('b'),files:['test/example.test.mjs']};
+  const reviewed={request,files:request.files,build:false};
+  assert.deepEqual(validatedPlanForRoute(reviewed,null,false),request);
+  assert.throws(()=>validatedPlanForRoute(reviewed,{test_selection:'selected-data'},false),
+    /Selected-data delivery retains its mandatory native and emitted execution path/);
+  assert.throws(()=>validatedPlanForRoute(null,null,true),
+    /Automatic test scope is unavailable; supply exact plan.request JSON or explicitly request complete/);
+  assert.equal(validatedPlanForRoute(null,{test_selection:'selected-data'},true),null);
 });
 
 
