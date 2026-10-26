@@ -68,7 +68,8 @@
     ],
     "owner_key_interval_tuple_sha256": "aca6726b1e0c567edf59603591082696d41137a41270598eee01ace955fd8f43",
     "owner_key_tuple_sha256": "1424f00ad01b7cb21fa41ef96778b0b5993a08fd5f69263d8cb8b2d33d1f5bbf",
-    "interval_identity_sha256": "a2d537653d8eb3aa276b4a280d5d681138e61030d585d091292cc4fa21a19f9d"
+    "interval_identity_sha256": "a2d537653d8eb3aa276b4a280d5d681138e61030d585d091292cc4fa21a19f9d",
+    "interval_identity_method": "For each selected original interval row, emit owner_index, native_block, original_interval_ordinal_in_block, y, start, end_exclusive, and question_id as tab-separated fields; sort complete lines lexicographically, append LF to every line, and SHA-256 the UTF-8 bytes. Raw rows are excluded."
   },
   "source_rights_and_limits": {
     "metadata_rights_record": "CC BY 4.0 recorded in source metadata",
@@ -95,8 +96,8 @@
       "sha256": "287eb1343255f9f77612f0e36fa80747dea0653f1f6273e24be47ad10eb1974c"
     },
     "summary.json": {
-      "bytes": 3798,
-      "sha256": "4cf8145b76e20e30d10358e9114d6a6d2d496a4797a8ca163e5fca3c90389e60"
+      "bytes": 4124,
+      "sha256": "c799af0729bc2a3cc5010c39b242863355dd835bc014c1f6e19f78007c75a892"
     }
   },
   "public_content": {

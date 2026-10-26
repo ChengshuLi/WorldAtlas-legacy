@@ -65,7 +65,8 @@
     ],
     "owner_key_interval_tuple_sha256": "aca6726b1e0c567edf59603591082696d41137a41270598eee01ace955fd8f43",
     "owner_key_tuple_sha256": "1424f00ad01b7cb21fa41ef96778b0b5993a08fd5f69263d8cb8b2d33d1f5bbf",
-    "interval_identity_sha256": "a2d537653d8eb3aa276b4a280d5d681138e61030d585d091292cc4fa21a19f9d"
+    "interval_identity_sha256": "a2d537653d8eb3aa276b4a280d5d681138e61030d585d091292cc4fa21a19f9d",
+    "interval_identity_method": "For each selected original interval row, emit owner_index, native_block, original_interval_ordinal_in_block, y, start, end_exclusive, and question_id as tab-separated fields; sort complete lines lexicographically, append LF to every line, and SHA-256 the UTF-8 bytes. Raw rows are excluded."
   },
   "preserved": {
     "all_native_physical_source_competitor_holds": true,
