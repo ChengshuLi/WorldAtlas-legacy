@@ -1,0 +1,4672 @@
+{
+  "version": 1,
+  "kind": "source-center-scope-partition-v1",
+  "scope": {
+    "original_queue_commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+    "original_disposition_commit": "775f0a1eddf8964b81d217d01a801c2b338db9c6",
+    "original_disposition_path": "coordination/engineering/kna-original-disposition-20261020/kna-disposition.json",
+    "original_disposition_sha256": "655601821aa5bd2089aa4b1b59397d701541744311d2326e89dfee893e277e7a",
+    "owner_index": 7119,
+    "original_keys": 305,
+    "original_intervals": 125,
+    "accepted_nevis_root_decision_comment": "6400846551",
+    "accepted_nevis_keys": 57,
+    "conservation": "305 = 232 source-center concordant + 16 full-source outside + 57 prior accepted Nevis"
+  },
+  "typed_preparation_scope": {
+    "source_evidence_path": "coordination/engineering/kna-source-positive-preparation-20261025/source-evidence-v1/derived-source-evidence-003/source-evidence.json",
+    "source_evidence_sha256": "932b61e595deb54785963e9a9fc040bc590f892c35a8ff4b31fd19e797ce39b4",
+    "source_evidence_targets": 10,
+    "source_family_features": 14,
+    "source_evidence_residual_keys": 248,
+    "native_diagnostic_path": "coordination/engineering/kna-source-positive-preparation-20261025/source-evidence-v1/native-diagnostic-003/native-diagnostic.json",
+    "native_diagnostic_sha256": "4b213dab2f2d66f0da182ada950f236717dee9cc400838d703110d7f25a2a077",
+    "native_requested": 248,
+    "native_supported": 248,
+    "native_held": 0,
+    "supported_inputs_partition_path": "coordination/engineering/kna-source-positive-preparation-20261025/source-evidence-v1/supported-inputs-003/original-scope-partition.json",
+    "supported_inputs_partition_sha256": "cea8de218c1a38acde2e1913145b0d3d1233fd59b56e1bb088ae029ecd3b2792"
+  },
+  "comparison": {
+    "basis": "Parent-computed result tuples only; no geometry rerun and no Library ZIP materialization in this worker.",
+    "source_data_zip_sha256": "696004e61ce360245bd87372973f8420ecba6139299a2f9ae2105acde7ef1909",
+    "parent_comparison_receipt_sha256": "e66ccf5e1896cdf537677fe5a223a88c28609147c00917e7c055a82515afe4c7",
+    "parent_reported_all_14_feature_identities_unique": true,
+    "parent_reported_boundary_or_other_feature_hits": 0,
+    "parent_reported_simplified_interiors": 248,
+    "parent_reported_full_source_interiors": 232,
+    "parent_reported_full_source_outside_simplified_interiors": 16,
+    "tuple_serialization": "SHA256 of UTF-8 compact JSON of numeric-lexicographically sorted [owner,y,x,source_feature_index] tuples; no trailing newline.",
+    "library_transfer_attempt": {
+      "filename": "KNA-248-source-comparison-and-license-evidence-20261026.zip",
+      "version": 0,
+      "expected_bytes": 16357,
+      "expected_sha256": "58a4c7e3746d74cc36259de4b2a75bc8c53439880f4eeaffb5e7e264d1711815",
+      "outcome": "Failed before download: helper syntax error on available Python 3.7.3/3.8.5; no archive downloaded or inspected."
+    }
+  },
+  "sets": [
+    {
+      "name": "source_center_concordant_candidate_only",
+      "count": 232,
+      "sha256": "16c7486626ca1b6d32e1d7dee167cf6c651c4ef18384484dfc15451d200a7ab0",
+      "feature_counts": {
+        "41036": 5,
+        "41037": 181,
+        "41040": 13,
+        "41043": 11,
+        "41047": 1,
+        "41048": 21
+      },
+      "key_interval_bindings": [
+        {
+          "tuple": [
+            7119,
+            118201,
+            85338,
+            41040
+          ],
+          "original_interval_row_index": 0,
+          "interval": [
+            118201,
+            85338,
+            85342
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118201,
+            85339,
+            41040
+          ],
+          "original_interval_row_index": 0,
+          "interval": [
+            118201,
+            85338,
+            85342
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118201,
+            85340,
+            41040
+          ],
+          "original_interval_row_index": 0,
+          "interval": [
+            118201,
+            85338,
+            85342
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118201,
+            85341,
+            41040
+          ],
+          "original_interval_row_index": 0,
+          "interval": [
+            118201,
+            85338,
+            85342
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118202,
+            85340,
+            41040
+          ],
+          "original_interval_row_index": 1,
+          "interval": [
+            118202,
+            85340,
+            85343
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118202,
+            85341,
+            41040
+          ],
+          "original_interval_row_index": 1,
+          "interval": [
+            118202,
+            85340,
+            85343
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118202,
+            85342,
+            41040
+          ],
+          "original_interval_row_index": 1,
+          "interval": [
+            118202,
+            85340,
+            85343
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118203,
+            85342,
+            41040
+          ],
+          "original_interval_row_index": 2,
+          "interval": [
+            118203,
+            85342,
+            85344
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118203,
+            85343,
+            41040
+          ],
+          "original_interval_row_index": 2,
+          "interval": [
+            118203,
+            85342,
+            85344
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118204,
+            85318,
+            41043
+          ],
+          "original_interval_row_index": 3,
+          "interval": [
+            118204,
+            85318,
+            85319
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118204,
+            85320,
+            41043
+          ],
+          "original_interval_row_index": 4,
+          "interval": [
+            118204,
+            85320,
+            85322
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118204,
+            85321,
+            41043
+          ],
+          "original_interval_row_index": 4,
+          "interval": [
+            118204,
+            85320,
+            85322
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118205,
+            85317,
+            41043
+          ],
+          "original_interval_row_index": 5,
+          "interval": [
+            118205,
+            85317,
+            85320
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118205,
+            85318,
+            41043
+          ],
+          "original_interval_row_index": 5,
+          "interval": [
+            118205,
+            85317,
+            85320
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118205,
+            85319,
+            41043
+          ],
+          "original_interval_row_index": 5,
+          "interval": [
+            118205,
+            85317,
+            85320
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118206,
+            85350,
+            41040
+          ],
+          "original_interval_row_index": 6,
+          "interval": [
+            118206,
+            85349,
+            85353
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118206,
+            85351,
+            41040
+          ],
+          "original_interval_row_index": 6,
+          "interval": [
+            118206,
+            85349,
+            85353
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118206,
+            85352,
+            41040
+          ],
+          "original_interval_row_index": 6,
+          "interval": [
+            118206,
+            85349,
+            85353
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118207,
+            85353,
+            41040
+          ],
+          "original_interval_row_index": 7,
+          "interval": [
+            118207,
+            85353,
+            85354
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118214,
+            85307,
+            41043
+          ],
+          "original_interval_row_index": 8,
+          "interval": [
+            118214,
+            85307,
+            85309
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118214,
+            85308,
+            41043
+          ],
+          "original_interval_row_index": 8,
+          "interval": [
+            118214,
+            85307,
+            85309
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118215,
+            85307,
+            41043
+          ],
+          "original_interval_row_index": 9,
+          "interval": [
+            118215,
+            85307,
+            85308
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118216,
+            85306,
+            41043
+          ],
+          "original_interval_row_index": 10,
+          "interval": [
+            118216,
+            85306,
+            85307
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118218,
+            85305,
+            41043
+          ],
+          "original_interval_row_index": 11,
+          "interval": [
+            118218,
+            85305,
+            85306
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118222,
+            85303,
+            41036
+          ],
+          "original_interval_row_index": 13,
+          "interval": [
+            118222,
+            85303,
+            85304
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118250,
+            85315,
+            41036
+          ],
+          "original_interval_row_index": 15,
+          "interval": [
+            118250,
+            85315,
+            85316
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118251,
+            85315,
+            41036
+          ],
+          "original_interval_row_index": 16,
+          "interval": [
+            118251,
+            85315,
+            85317
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118251,
+            85316,
+            41036
+          ],
+          "original_interval_row_index": 16,
+          "interval": [
+            118251,
+            85315,
+            85317
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118252,
+            85317,
+            41036
+          ],
+          "original_interval_row_index": 17,
+          "interval": [
+            118252,
+            85317,
+            85318
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118256,
+            85321,
+            41047
+          ],
+          "original_interval_row_index": 20,
+          "interval": [
+            118256,
+            85321,
+            85322
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118281,
+            85355,
+            41048
+          ],
+          "original_interval_row_index": 21,
+          "interval": [
+            118281,
+            85355,
+            85356
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118282,
+            85356,
+            41048
+          ],
+          "original_interval_row_index": 22,
+          "interval": [
+            118282,
+            85356,
+            85357
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118283,
+            85357,
+            41048
+          ],
+          "original_interval_row_index": 23,
+          "interval": [
+            118283,
+            85356,
+            85358
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118284,
+            85357,
+            41048
+          ],
+          "original_interval_row_index": 24,
+          "interval": [
+            118284,
+            85357,
+            85360
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118284,
+            85358,
+            41048
+          ],
+          "original_interval_row_index": 24,
+          "interval": [
+            118284,
+            85357,
+            85360
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118284,
+            85359,
+            41048
+          ],
+          "original_interval_row_index": 24,
+          "interval": [
+            118284,
+            85357,
+            85360
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118285,
+            85357,
+            41048
+          ],
+          "original_interval_row_index": 25,
+          "interval": [
+            118285,
+            85357,
+            85361
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118285,
+            85358,
+            41048
+          ],
+          "original_interval_row_index": 25,
+          "interval": [
+            118285,
+            85357,
+            85361
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118285,
+            85359,
+            41048
+          ],
+          "original_interval_row_index": 25,
+          "interval": [
+            118285,
+            85357,
+            85361
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118285,
+            85360,
+            41048
+          ],
+          "original_interval_row_index": 25,
+          "interval": [
+            118285,
+            85357,
+            85361
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118286,
+            85361,
+            41048
+          ],
+          "original_interval_row_index": 26,
+          "interval": [
+            118286,
+            85361,
+            85362
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118292,
+            85373,
+            41048
+          ],
+          "original_interval_row_index": 27,
+          "interval": [
+            118292,
+            85373,
+            85376
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118292,
+            85374,
+            41048
+          ],
+          "original_interval_row_index": 27,
+          "interval": [
+            118292,
+            85373,
+            85376
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118292,
+            85375,
+            41048
+          ],
+          "original_interval_row_index": 27,
+          "interval": [
+            118292,
+            85373,
+            85376
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85378,
+            41048
+          ],
+          "original_interval_row_index": 28,
+          "interval": [
+            118293,
+            85378,
+            85385
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85379,
+            41048
+          ],
+          "original_interval_row_index": 28,
+          "interval": [
+            118293,
+            85378,
+            85385
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85380,
+            41048
+          ],
+          "original_interval_row_index": 28,
+          "interval": [
+            118293,
+            85378,
+            85385
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85381,
+            41048
+          ],
+          "original_interval_row_index": 28,
+          "interval": [
+            118293,
+            85378,
+            85385
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85382,
+            41048
+          ],
+          "original_interval_row_index": 28,
+          "interval": [
+            118293,
+            85378,
+            85385
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85383,
+            41048
+          ],
+          "original_interval_row_index": 28,
+          "interval": [
+            118293,
+            85378,
+            85385
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85384,
+            41048
+          ],
+          "original_interval_row_index": 28,
+          "interval": [
+            118293,
+            85378,
+            85385
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85405,
+            41037
+          ],
+          "original_interval_row_index": 29,
+          "interval": [
+            118293,
+            85405,
+            85407
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118293,
+            85406,
+            41037
+          ],
+          "original_interval_row_index": 29,
+          "interval": [
+            118293,
+            85405,
+            85407
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85390,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85391,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85392,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85393,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85394,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85395,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85396,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85397,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85398,
+            41037
+          ],
+          "original_interval_row_index": 30,
+          "interval": [
+            118294,
+            85390,
+            85399
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85405,
+            41037
+          ],
+          "original_interval_row_index": 31,
+          "interval": [
+            118294,
+            85405,
+            85407
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118294,
+            85406,
+            41037
+          ],
+          "original_interval_row_index": 31,
+          "interval": [
+            118294,
+            85405,
+            85407
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118295,
+            85391,
+            41037
+          ],
+          "original_interval_row_index": 32,
+          "interval": [
+            118295,
+            85391,
+            85398
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118295,
+            85392,
+            41037
+          ],
+          "original_interval_row_index": 32,
+          "interval": [
+            118295,
+            85391,
+            85398
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118295,
+            85393,
+            41037
+          ],
+          "original_interval_row_index": 32,
+          "interval": [
+            118295,
+            85391,
+            85398
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118295,
+            85394,
+            41037
+          ],
+          "original_interval_row_index": 32,
+          "interval": [
+            118295,
+            85391,
+            85398
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118295,
+            85396,
+            41037
+          ],
+          "original_interval_row_index": 32,
+          "interval": [
+            118295,
+            85391,
+            85398
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118295,
+            85397,
+            41037
+          ],
+          "original_interval_row_index": 32,
+          "interval": [
+            118295,
+            85391,
+            85398
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118296,
+            85416,
+            41037
+          ],
+          "original_interval_row_index": 34,
+          "interval": [
+            118296,
+            85416,
+            85417
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118297,
+            85416,
+            41037
+          ],
+          "original_interval_row_index": 35,
+          "interval": [
+            118297,
+            85416,
+            85418
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118297,
+            85417,
+            41037
+          ],
+          "original_interval_row_index": 35,
+          "interval": [
+            118297,
+            85416,
+            85418
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118298,
+            85415,
+            41037
+          ],
+          "original_interval_row_index": 36,
+          "interval": [
+            118298,
+            85415,
+            85416
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118298,
+            85418,
+            41037
+          ],
+          "original_interval_row_index": 37,
+          "interval": [
+            118298,
+            85417,
+            85419
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118299,
+            85418,
+            41037
+          ],
+          "original_interval_row_index": 38,
+          "interval": [
+            118299,
+            85418,
+            85420
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118299,
+            85419,
+            41037
+          ],
+          "original_interval_row_index": 38,
+          "interval": [
+            118299,
+            85418,
+            85420
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118300,
+            85419,
+            41037
+          ],
+          "original_interval_row_index": 39,
+          "interval": [
+            118300,
+            85419,
+            85420
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118322,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 41,
+          "interval": [
+            118322,
+            85452,
+            85453
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118325,
+            85468,
+            41037
+          ],
+          "original_interval_row_index": 43,
+          "interval": [
+            118325,
+            85468,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118325,
+            85469,
+            41037
+          ],
+          "original_interval_row_index": 43,
+          "interval": [
+            118325,
+            85468,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118327,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 44,
+          "interval": [
+            118327,
+            85453,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118328,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 45,
+          "interval": [
+            118328,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118329,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 46,
+          "interval": [
+            118329,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118329,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 46,
+          "interval": [
+            118329,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118330,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 47,
+          "interval": [
+            118330,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118330,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 47,
+          "interval": [
+            118330,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118331,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 48,
+          "interval": [
+            118331,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118331,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 48,
+          "interval": [
+            118331,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118332,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 49,
+          "interval": [
+            118332,
+            85453,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118333,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 50,
+          "interval": [
+            118333,
+            85453,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118333,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 50,
+          "interval": [
+            118333,
+            85453,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118334,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 51,
+          "interval": [
+            118334,
+            85454,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118335,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 52,
+          "interval": [
+            118335,
+            85453,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118335,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 52,
+          "interval": [
+            118335,
+            85453,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118336,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 53,
+          "interval": [
+            118336,
+            85453,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118336,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 53,
+          "interval": [
+            118336,
+            85453,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118336,
+            85476,
+            41037
+          ],
+          "original_interval_row_index": 54,
+          "interval": [
+            118336,
+            85476,
+            85477
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118337,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 55,
+          "interval": [
+            118337,
+            85452,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118337,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 55,
+          "interval": [
+            118337,
+            85452,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118337,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 55,
+          "interval": [
+            118337,
+            85452,
+            85455
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118337,
+            85474,
+            41037
+          ],
+          "original_interval_row_index": 56,
+          "interval": [
+            118337,
+            85474,
+            85476
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118337,
+            85475,
+            41037
+          ],
+          "original_interval_row_index": 56,
+          "interval": [
+            118337,
+            85474,
+            85476
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 57,
+          "interval": [
+            118338,
+            85451,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 57,
+          "interval": [
+            118338,
+            85451,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 57,
+          "interval": [
+            118338,
+            85451,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 57,
+          "interval": [
+            118338,
+            85451,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85472,
+            41037
+          ],
+          "original_interval_row_index": 58,
+          "interval": [
+            118338,
+            85472,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85473,
+            41037
+          ],
+          "original_interval_row_index": 58,
+          "interval": [
+            118338,
+            85472,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85474,
+            41037
+          ],
+          "original_interval_row_index": 58,
+          "interval": [
+            118338,
+            85472,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85450,
+            41037
+          ],
+          "original_interval_row_index": 59,
+          "interval": [
+            118339,
+            85450,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 59,
+          "interval": [
+            118339,
+            85450,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 59,
+          "interval": [
+            118339,
+            85450,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 59,
+          "interval": [
+            118339,
+            85450,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 59,
+          "interval": [
+            118339,
+            85450,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 59,
+          "interval": [
+            118339,
+            85450,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85470,
+            41037
+          ],
+          "original_interval_row_index": 60,
+          "interval": [
+            118339,
+            85470,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85471,
+            41037
+          ],
+          "original_interval_row_index": 60,
+          "interval": [
+            118339,
+            85470,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85472,
+            41037
+          ],
+          "original_interval_row_index": 60,
+          "interval": [
+            118339,
+            85470,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118339,
+            85473,
+            41037
+          ],
+          "original_interval_row_index": 60,
+          "interval": [
+            118339,
+            85470,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85449,
+            41037
+          ],
+          "original_interval_row_index": 61,
+          "interval": [
+            118340,
+            85449,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85450,
+            41037
+          ],
+          "original_interval_row_index": 61,
+          "interval": [
+            118340,
+            85449,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 61,
+          "interval": [
+            118340,
+            85449,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 61,
+          "interval": [
+            118340,
+            85449,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 61,
+          "interval": [
+            118340,
+            85449,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 61,
+          "interval": [
+            118340,
+            85449,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 61,
+          "interval": [
+            118340,
+            85449,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85468,
+            41037
+          ],
+          "original_interval_row_index": 62,
+          "interval": [
+            118340,
+            85468,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85469,
+            41037
+          ],
+          "original_interval_row_index": 62,
+          "interval": [
+            118340,
+            85468,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85470,
+            41037
+          ],
+          "original_interval_row_index": 62,
+          "interval": [
+            118340,
+            85468,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85471,
+            41037
+          ],
+          "original_interval_row_index": 62,
+          "interval": [
+            118340,
+            85468,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118340,
+            85472,
+            41037
+          ],
+          "original_interval_row_index": 62,
+          "interval": [
+            118340,
+            85468,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85448,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85449,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85450,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 63,
+          "interval": [
+            118341,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85466,
+            41037
+          ],
+          "original_interval_row_index": 64,
+          "interval": [
+            118341,
+            85466,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85467,
+            41037
+          ],
+          "original_interval_row_index": 64,
+          "interval": [
+            118341,
+            85466,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85468,
+            41037
+          ],
+          "original_interval_row_index": 64,
+          "interval": [
+            118341,
+            85466,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85469,
+            41037
+          ],
+          "original_interval_row_index": 64,
+          "interval": [
+            118341,
+            85466,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85470,
+            41037
+          ],
+          "original_interval_row_index": 64,
+          "interval": [
+            118341,
+            85466,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85471,
+            41037
+          ],
+          "original_interval_row_index": 64,
+          "interval": [
+            118341,
+            85466,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118341,
+            85472,
+            41037
+          ],
+          "original_interval_row_index": 64,
+          "interval": [
+            118341,
+            85466,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85448,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85449,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85450,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 65,
+          "interval": [
+            118342,
+            85448,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85464,
+            41037
+          ],
+          "original_interval_row_index": 66,
+          "interval": [
+            118342,
+            85464,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85465,
+            41037
+          ],
+          "original_interval_row_index": 66,
+          "interval": [
+            118342,
+            85464,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85466,
+            41037
+          ],
+          "original_interval_row_index": 66,
+          "interval": [
+            118342,
+            85464,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85467,
+            41037
+          ],
+          "original_interval_row_index": 66,
+          "interval": [
+            118342,
+            85464,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85468,
+            41037
+          ],
+          "original_interval_row_index": 66,
+          "interval": [
+            118342,
+            85464,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85469,
+            41037
+          ],
+          "original_interval_row_index": 66,
+          "interval": [
+            118342,
+            85464,
+            85470
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85472,
+            41037
+          ],
+          "original_interval_row_index": 67,
+          "interval": [
+            118342,
+            85472,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118342,
+            85473,
+            41037
+          ],
+          "original_interval_row_index": 67,
+          "interval": [
+            118342,
+            85472,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85448,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85449,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85450,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85456,
+            41037
+          ],
+          "original_interval_row_index": 68,
+          "interval": [
+            118343,
+            85448,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85463,
+            41037
+          ],
+          "original_interval_row_index": 69,
+          "interval": [
+            118343,
+            85463,
+            85468
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85464,
+            41037
+          ],
+          "original_interval_row_index": 69,
+          "interval": [
+            118343,
+            85463,
+            85468
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85465,
+            41037
+          ],
+          "original_interval_row_index": 69,
+          "interval": [
+            118343,
+            85463,
+            85468
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85466,
+            41037
+          ],
+          "original_interval_row_index": 69,
+          "interval": [
+            118343,
+            85463,
+            85468
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85467,
+            41037
+          ],
+          "original_interval_row_index": 69,
+          "interval": [
+            118343,
+            85463,
+            85468
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118343,
+            85473,
+            41037
+          ],
+          "original_interval_row_index": 70,
+          "interval": [
+            118343,
+            85473,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 71,
+          "interval": [
+            118344,
+            85450,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 71,
+          "interval": [
+            118344,
+            85450,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 71,
+          "interval": [
+            118344,
+            85450,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 71,
+          "interval": [
+            118344,
+            85450,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 71,
+          "interval": [
+            118344,
+            85450,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85456,
+            41037
+          ],
+          "original_interval_row_index": 71,
+          "interval": [
+            118344,
+            85450,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85462,
+            41037
+          ],
+          "original_interval_row_index": 72,
+          "interval": [
+            118344,
+            85462,
+            85467
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85463,
+            41037
+          ],
+          "original_interval_row_index": 72,
+          "interval": [
+            118344,
+            85462,
+            85467
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85464,
+            41037
+          ],
+          "original_interval_row_index": 72,
+          "interval": [
+            118344,
+            85462,
+            85467
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85465,
+            41037
+          ],
+          "original_interval_row_index": 72,
+          "interval": [
+            118344,
+            85462,
+            85467
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85466,
+            41037
+          ],
+          "original_interval_row_index": 72,
+          "interval": [
+            118344,
+            85462,
+            85467
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85473,
+            41037
+          ],
+          "original_interval_row_index": 73,
+          "interval": [
+            118344,
+            85473,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 74,
+          "interval": [
+            118345,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 74,
+          "interval": [
+            118345,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 74,
+          "interval": [
+            118345,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 74,
+          "interval": [
+            118345,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85456,
+            41037
+          ],
+          "original_interval_row_index": 74,
+          "interval": [
+            118345,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85463,
+            41037
+          ],
+          "original_interval_row_index": 75,
+          "interval": [
+            118345,
+            85463,
+            85465
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85464,
+            41037
+          ],
+          "original_interval_row_index": 75,
+          "interval": [
+            118345,
+            85463,
+            85465
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118346,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 76,
+          "interval": [
+            118346,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118346,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 76,
+          "interval": [
+            118346,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118346,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 76,
+          "interval": [
+            118346,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118346,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 76,
+          "interval": [
+            118346,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118346,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 76,
+          "interval": [
+            118346,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118346,
+            85456,
+            41037
+          ],
+          "original_interval_row_index": 76,
+          "interval": [
+            118346,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118347,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 77,
+          "interval": [
+            118347,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118347,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 77,
+          "interval": [
+            118347,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118347,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 77,
+          "interval": [
+            118347,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118347,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 77,
+          "interval": [
+            118347,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118348,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 78,
+          "interval": [
+            118348,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118348,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 78,
+          "interval": [
+            118348,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118348,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 78,
+          "interval": [
+            118348,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118348,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 78,
+          "interval": [
+            118348,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118349,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 79,
+          "interval": [
+            118349,
+            85453,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118349,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 79,
+          "interval": [
+            118349,
+            85453,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118349,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 79,
+          "interval": [
+            118349,
+            85453,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118350,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 80,
+          "interval": [
+            118350,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118350,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 80,
+          "interval": [
+            118350,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118350,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 80,
+          "interval": [
+            118350,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118350,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 80,
+          "interval": [
+            118350,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118351,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 81,
+          "interval": [
+            118351,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118351,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 81,
+          "interval": [
+            118351,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118351,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 81,
+          "interval": [
+            118351,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118351,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 81,
+          "interval": [
+            118351,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118352,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 82,
+          "interval": [
+            118352,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118352,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 82,
+          "interval": [
+            118352,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118352,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 82,
+          "interval": [
+            118352,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118352,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 82,
+          "interval": [
+            118352,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118353,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 83,
+          "interval": [
+            118353,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118353,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 83,
+          "interval": [
+            118353,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118353,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 83,
+          "interval": [
+            118353,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118354,
+            85453,
+            41037
+          ],
+          "original_interval_row_index": 84,
+          "interval": [
+            118354,
+            85453,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118354,
+            85454,
+            41037
+          ],
+          "original_interval_row_index": 84,
+          "interval": [
+            118354,
+            85453,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118354,
+            85455,
+            41037
+          ],
+          "original_interval_row_index": 84,
+          "interval": [
+            118354,
+            85453,
+            85456
+          ],
+          "physical_class": "land"
+        }
+      ]
+    },
+    {
+      "name": "full_source_outside_simplified_interior_hold",
+      "count": 16,
+      "sha256": "ac6cceb694727140cc427f9e881aa17a33c4e0033ec0704e2686d78bc6d64ff9",
+      "feature_counts": {
+        "41036": 2,
+        "41037": 10,
+        "41040": 1,
+        "41047": 2,
+        "41048": 1
+      },
+      "key_interval_bindings": [
+        {
+          "tuple": [
+            7119,
+            118206,
+            85349,
+            41040
+          ],
+          "original_interval_row_index": 6,
+          "interval": [
+            118206,
+            85349,
+            85353
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118220,
+            85304,
+            41036
+          ],
+          "original_interval_row_index": 12,
+          "interval": [
+            118220,
+            85304,
+            85305
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118229,
+            85303,
+            41036
+          ],
+          "original_interval_row_index": 14,
+          "interval": [
+            118229,
+            85303,
+            85304
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118254,
+            85319,
+            41047
+          ],
+          "original_interval_row_index": 18,
+          "interval": [
+            118254,
+            85319,
+            85320
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118255,
+            85320,
+            41047
+          ],
+          "original_interval_row_index": 19,
+          "interval": [
+            118255,
+            85320,
+            85321
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118283,
+            85356,
+            41048
+          ],
+          "original_interval_row_index": 23,
+          "interval": [
+            118283,
+            85356,
+            85358
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118295,
+            85395,
+            41037
+          ],
+          "original_interval_row_index": 32,
+          "interval": [
+            118295,
+            85391,
+            85398
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118296,
+            85396,
+            41037
+          ],
+          "original_interval_row_index": 33,
+          "interval": [
+            118296,
+            85396,
+            85397
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118298,
+            85417,
+            41037
+          ],
+          "original_interval_row_index": 37,
+          "interval": [
+            118298,
+            85417,
+            85419
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118308,
+            85439,
+            41037
+          ],
+          "original_interval_row_index": 40,
+          "interval": [
+            118308,
+            85439,
+            85440
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118323,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 42,
+          "interval": [
+            118323,
+            85452,
+            85453
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118328,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 45,
+          "interval": [
+            118328,
+            85452,
+            85454
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118338,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 57,
+          "interval": [
+            118338,
+            85451,
+            85456
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118344,
+            85450,
+            41037
+          ],
+          "original_interval_row_index": 71,
+          "interval": [
+            118344,
+            85450,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118345,
+            85451,
+            41037
+          ],
+          "original_interval_row_index": 74,
+          "interval": [
+            118345,
+            85451,
+            85457
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118353,
+            85452,
+            41037
+          ],
+          "original_interval_row_index": 83,
+          "interval": [
+            118353,
+            85452,
+            85456
+          ],
+          "physical_class": "land"
+        }
+      ]
+    },
+    {
+      "name": "prior_accepted_nevis_researched_unresolved_excluded",
+      "count": 57,
+      "sha256": "e1df35db531ee4bbd844a7bf3455e85fd1952627a9976acac30f46c872c2d902",
+      "feature_counts": {
+        "41039": 8,
+        "41041": 31,
+        "41044": 1,
+        "41046": 17
+      },
+      "key_interval_bindings": [
+        {
+          "tuple": [
+            7119,
+            118360,
+            85497,
+            41039
+          ],
+          "original_interval_row_index": 85,
+          "interval": [
+            118360,
+            85497,
+            85502
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118360,
+            85498,
+            41039
+          ],
+          "original_interval_row_index": 85,
+          "interval": [
+            118360,
+            85497,
+            85502
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118360,
+            85499,
+            41039
+          ],
+          "original_interval_row_index": 85,
+          "interval": [
+            118360,
+            85497,
+            85502
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118360,
+            85500,
+            41039
+          ],
+          "original_interval_row_index": 85,
+          "interval": [
+            118360,
+            85497,
+            85502
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118360,
+            85501,
+            41039
+          ],
+          "original_interval_row_index": 85,
+          "interval": [
+            118360,
+            85497,
+            85502
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118360,
+            85506,
+            41039
+          ],
+          "original_interval_row_index": 86,
+          "interval": [
+            118360,
+            85506,
+            85507
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118362,
+            85486,
+            41039
+          ],
+          "original_interval_row_index": 87,
+          "interval": [
+            118362,
+            85486,
+            85488
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118362,
+            85487,
+            41039
+          ],
+          "original_interval_row_index": 87,
+          "interval": [
+            118362,
+            85486,
+            85488
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118368,
+            85484,
+            41046
+          ],
+          "original_interval_row_index": 88,
+          "interval": [
+            118368,
+            85484,
+            85485
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118369,
+            85483,
+            41046
+          ],
+          "original_interval_row_index": 89,
+          "interval": [
+            118369,
+            85483,
+            85484
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118370,
+            85482,
+            41046
+          ],
+          "original_interval_row_index": 90,
+          "interval": [
+            118370,
+            85482,
+            85484
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118370,
+            85483,
+            41046
+          ],
+          "original_interval_row_index": 90,
+          "interval": [
+            118370,
+            85482,
+            85484
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118371,
+            85482,
+            41046
+          ],
+          "original_interval_row_index": 91,
+          "interval": [
+            118371,
+            85482,
+            85483
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118372,
+            85482,
+            41046
+          ],
+          "original_interval_row_index": 92,
+          "interval": [
+            118372,
+            85482,
+            85483
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118374,
+            85481,
+            41046
+          ],
+          "original_interval_row_index": 93,
+          "interval": [
+            118374,
+            85481,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118379,
+            85478,
+            41046
+          ],
+          "original_interval_row_index": 94,
+          "interval": [
+            118379,
+            85478,
+            85479
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118381,
+            85477,
+            41046
+          ],
+          "original_interval_row_index": 95,
+          "interval": [
+            118381,
+            85477,
+            85478
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118383,
+            85476,
+            41046
+          ],
+          "original_interval_row_index": 96,
+          "interval": [
+            118383,
+            85476,
+            85477
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118391,
+            85474,
+            41046
+          ],
+          "original_interval_row_index": 97,
+          "interval": [
+            118391,
+            85474,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118392,
+            85474,
+            41046
+          ],
+          "original_interval_row_index": 98,
+          "interval": [
+            118392,
+            85474,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118393,
+            85474,
+            41046
+          ],
+          "original_interval_row_index": 99,
+          "interval": [
+            118393,
+            85474,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118394,
+            85474,
+            41046
+          ],
+          "original_interval_row_index": 100,
+          "interval": [
+            118394,
+            85474,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118395,
+            85474,
+            41046
+          ],
+          "original_interval_row_index": 101,
+          "interval": [
+            118395,
+            85474,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118396,
+            85474,
+            41046
+          ],
+          "original_interval_row_index": 102,
+          "interval": [
+            118396,
+            85474,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118397,
+            85474,
+            41046
+          ],
+          "original_interval_row_index": 103,
+          "interval": [
+            118397,
+            85474,
+            85475
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118411,
+            85473,
+            41044
+          ],
+          "original_interval_row_index": 104,
+          "interval": [
+            118411,
+            85473,
+            85474
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118415,
+            85472,
+            41041
+          ],
+          "original_interval_row_index": 105,
+          "interval": [
+            118415,
+            85472,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118416,
+            85471,
+            41041
+          ],
+          "original_interval_row_index": 106,
+          "interval": [
+            118416,
+            85471,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118416,
+            85472,
+            41041
+          ],
+          "original_interval_row_index": 106,
+          "interval": [
+            118416,
+            85471,
+            85473
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118417,
+            85471,
+            41041
+          ],
+          "original_interval_row_index": 107,
+          "interval": [
+            118417,
+            85471,
+            85472
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118425,
+            85475,
+            41041
+          ],
+          "original_interval_row_index": 108,
+          "interval": [
+            118425,
+            85475,
+            85476
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118426,
+            85476,
+            41041
+          ],
+          "original_interval_row_index": 109,
+          "interval": [
+            118426,
+            85476,
+            85477
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118428,
+            85477,
+            41041
+          ],
+          "original_interval_row_index": 110,
+          "interval": [
+            118428,
+            85477,
+            85478
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118429,
+            85478,
+            41041
+          ],
+          "original_interval_row_index": 111,
+          "interval": [
+            118429,
+            85478,
+            85479
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118430,
+            85478,
+            41041
+          ],
+          "original_interval_row_index": 112,
+          "interval": [
+            118430,
+            85478,
+            85480
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118430,
+            85479,
+            41041
+          ],
+          "original_interval_row_index": 112,
+          "interval": [
+            118430,
+            85478,
+            85480
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118431,
+            85479,
+            41041
+          ],
+          "original_interval_row_index": 113,
+          "interval": [
+            118431,
+            85479,
+            85480
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118432,
+            85479,
+            41041
+          ],
+          "original_interval_row_index": 114,
+          "interval": [
+            118432,
+            85479,
+            85481
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118432,
+            85480,
+            41041
+          ],
+          "original_interval_row_index": 114,
+          "interval": [
+            118432,
+            85479,
+            85481
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118433,
+            85479,
+            41041
+          ],
+          "original_interval_row_index": 115,
+          "interval": [
+            118433,
+            85479,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118433,
+            85480,
+            41041
+          ],
+          "original_interval_row_index": 115,
+          "interval": [
+            118433,
+            85479,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118433,
+            85481,
+            41041
+          ],
+          "original_interval_row_index": 115,
+          "interval": [
+            118433,
+            85479,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118434,
+            85478,
+            41041
+          ],
+          "original_interval_row_index": 116,
+          "interval": [
+            118434,
+            85478,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118434,
+            85479,
+            41041
+          ],
+          "original_interval_row_index": 116,
+          "interval": [
+            118434,
+            85478,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118434,
+            85480,
+            41041
+          ],
+          "original_interval_row_index": 116,
+          "interval": [
+            118434,
+            85478,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118434,
+            85481,
+            41041
+          ],
+          "original_interval_row_index": 116,
+          "interval": [
+            118434,
+            85478,
+            85482
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118435,
+            85481,
+            41041
+          ],
+          "original_interval_row_index": 117,
+          "interval": [
+            118435,
+            85481,
+            85483
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118435,
+            85482,
+            41041
+          ],
+          "original_interval_row_index": 117,
+          "interval": [
+            118435,
+            85481,
+            85483
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118436,
+            85482,
+            41041
+          ],
+          "original_interval_row_index": 118,
+          "interval": [
+            118436,
+            85482,
+            85484
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118436,
+            85483,
+            41041
+          ],
+          "original_interval_row_index": 118,
+          "interval": [
+            118436,
+            85482,
+            85484
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118437,
+            85483,
+            41041
+          ],
+          "original_interval_row_index": 119,
+          "interval": [
+            118437,
+            85483,
+            85484
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118438,
+            85484,
+            41041
+          ],
+          "original_interval_row_index": 120,
+          "interval": [
+            118438,
+            85484,
+            85485
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118438,
+            85511,
+            41041
+          ],
+          "original_interval_row_index": 121,
+          "interval": [
+            118438,
+            85511,
+            85512
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118439,
+            85485,
+            41041
+          ],
+          "original_interval_row_index": 122,
+          "interval": [
+            118439,
+            85485,
+            85486
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118442,
+            85502,
+            41041
+          ],
+          "original_interval_row_index": 123,
+          "interval": [
+            118442,
+            85502,
+            85503
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118443,
+            85500,
+            41041
+          ],
+          "original_interval_row_index": 124,
+          "interval": [
+            118443,
+            85500,
+            85502
+          ],
+          "physical_class": "land"
+        },
+        {
+          "tuple": [
+            7119,
+            118443,
+            85501,
+            41041
+          ],
+          "original_interval_row_index": 124,
+          "interval": [
+            118443,
+            85500,
+            85502
+          ],
+          "physical_class": "land"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "The 232/16 source-center result is not source-use, legal, physical, native, current-owner, selected-output, qualification, acceptance, or credit evidence.",
+    "The Library comparison/license archive and exact sourceData ZIP were not inspected locally.",
+    "Existing source-use terms remain unresolved."
+  ]
+}
