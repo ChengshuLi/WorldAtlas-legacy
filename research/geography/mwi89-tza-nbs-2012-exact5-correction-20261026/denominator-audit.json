@@ -1,0 +1,66 @@
+{
+  "kind": "mwi-tza-nbs-2012-exact5-denominator-correction-v1",
+  "date": "2026-10-26",
+  "scope": "Method-specific correction to the five captured Tanzania Mbeya competitor center comparison only; no MWI disposition or original receipt is rewritten.",
+  "original_receipt": {
+    "path": "/workspace/shared/worldatlas-MWI89-tza-nbs-2012-exact5-application-20261026.json",
+    "bytes": 8238,
+    "sha256": "43a544241faaea22e4987965ac341d28680d199c26e5a48387796a09f0093cea",
+    "historical_reported_method": "The receipt states longitude derived from x with denominator 262144 and reports five strict interior hits (four land and one inland-water). It is retained unchanged as the original record, not treated as proof of which denominator its unretained executable driver actually applied."
+  },
+  "independent_same_source_diagnostic": {
+    "path": "/workspace/shared/worldatlas-MWI5-longitude-denominator-root-diagnostic-20261026.json",
+    "bytes": 1643,
+    "sha256": "8786cc0e754b512aef003412aa6cac20090d6b0829f0302540eaf6b5096c9afb",
+    "source_transformed_geojson_sha256": "decb321e77a3c8d5905f4f19992532705fe04e0c8b105d5defc3baa4963bdddd",
+    "method": "Bounded independent check using the same acquired/transformed NBS 2012 Mbeya polygon and the exact five original key latitudes; compared the receipt's longitude denominator 262144 with the accepted native grid width 262166, using strict ray crossing and separate boundary handling. No new geometry/source acquisition or full-package rerun.",
+    "native_grid_contract": {
+      "width": 262166,
+      "pixel_grid_path": "src/pixel-grid.js",
+      "pixel_grid_blob": "008aaf69e65105029e64e09317b8f9aa4df1f352",
+      "native_grid_method": "native-linear-evenodd-first-owner-v1",
+      "native_grid_path": "src/native-grid.js",
+      "native_grid_blob": "4311ff7ecf4acf90f34829cb28d420066c4d2dd6"
+    },
+    "same_transformed_source_crs": "WGS 84 / UTM zone 37S as declared by the retained NBS source .prj before the already-retained local transform to EPSG:4326; no generic or unrelated datum context overrides that file declaration."
+  },
+  "per_key_result_reference": [
+    {
+      "key_hash_x_tab_y_lf_first16": "51e7563aaee91733",
+      "original_class": "land",
+      "denominator_262144": "inside",
+      "native_width_262166": "inside"
+    },
+    {
+      "key_hash_x_tab_y_lf_first16": "253aa3c483a1df80",
+      "original_class": "land",
+      "denominator_262144": "inside",
+      "native_width_262166": "inside"
+    },
+    {
+      "key_hash_x_tab_y_lf_first16": "66f7fdeed4fdc4af",
+      "original_class": "land",
+      "denominator_262144": "inside",
+      "native_width_262166": "inside"
+    },
+    {
+      "key_hash_x_tab_y_lf_first16": "aabd09b74508cf49",
+      "original_class": "land",
+      "denominator_262144": "inside",
+      "native_width_262166": "inside"
+    },
+    {
+      "key_hash_x_tab_y_lf_first16": "7e8c959370522ece",
+      "original_class": "inland-water",
+      "denominator_262144": "inside",
+      "native_width_262166": "outside"
+    }
+  ],
+  "corrected_interpretation": {
+    "stable_land_hits": 4,
+    "water_hit_method_sensitive": true,
+    "claim_superseded": "The earlier categorical statement that all five are corroborated as inside is withdrawn. Four land centers remain inside under both compared denominator methods; the single inland-water center changes from inside at 262144 to outside at the contract-native 262166 width.",
+    "driver_uncertainty": "No exact executable/script or terminal log for the original five-center driver is retained in the examined custody. The receipt records 262144, while the independent diagnostic explicitly does not establish which denominator that unretained original driver used. Therefore do not attribute one historical run method beyond the receipt's written claim; treat the water result as method-sensitive.",
+    "unchanged": "The five captured 2015 Tanzania source contacts remain in the original scope and the NBS 2012 polygon remains relevant historical official census-geography context. This does not establish sovereignty or positive MWI qualification, clear physical/native predicates, or erase adverse MWI source evidence. All 89 remain unresolved/pending root decision; this is a correction to one comparison, not a new disposition."
+  }
+}
