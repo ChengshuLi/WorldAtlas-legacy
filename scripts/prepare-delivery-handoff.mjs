@@ -618,6 +618,81 @@ function startupDiskFiles(root, prefix) {
   return files;
 }
 
+// A metadata-only refresh is allowed only when a previously prepared native
+// candidate is re-bound to newly authenticated source membership. It never
+// feeds the already-assigned patch back through the additive merge path.
+async function validateSourceEvidenceRefresh(oldRegistryPin, newRegistryPin, reader, selection, manifest) {
+  need(selection.version===2 && same(selection.change_evidence,oldRegistryPin)
+    && oldRegistryPin && newRegistryPin && !same(oldRegistryPin,newRegistryPin),
+  'Source-evidence refresh must bind the currently selected registry');
+  const oldRegistry=reader.json(oldRegistryPin),newRegistry=reader.json(newRegistryPin);
+  const oldEntries=[...authorityRegistry(oldRegistry).values()],newEntries=[...authorityRegistry(newRegistry).values()];
+  need(oldEntries.length===1&&newEntries.length===1,'Source-evidence refresh requires one exact retained authority');
+  const oldEntry=oldEntries[0],newEntry=newEntries[0];
+  const oldPreimage=reader.json(oldEntry.rule_preimage),newPreimage=reader.json(newEntry.rule_preimage);
+  const withoutEvidence=value=>{const copy=structuredClone(value);delete copy.source_evidence;return copy;};
+  need(oldEntry.policy_id===newEntry.policy_id&&oldEntry.policy_version===newEntry.policy_version
+    &&same(withoutEvidence(oldPreimage),withoutEvidence(newPreimage))
+    &&same(oldPreimage.native_patch,newPreimage.native_patch)
+    &&same(oldEntry.original_source_paths,newEntry.original_source_paths)
+    &&oldEntry.completed_constructor&&newEntry.completed_constructor,
+  'Source-evidence refresh changed authority scope or omitted completed custody');
+  const oldBinding=reader.json(oldEntry.source_authority),newBinding=reader.json(newEntry.source_authority);
+  need(same(Object.keys(oldBinding).sort(),['kind','native_patch','source_evidence','version'])
+    &&same(Object.keys(newBinding).sort(),['kind','native_patch','source_evidence','version'])
+    &&oldBinding.kind==='source-target-native-custody-v1'&&newBinding.kind===oldBinding.kind
+    &&same(oldBinding.native_patch,newBinding.native_patch)
+    &&same(oldPreimage.native_patch,oldBinding.native_patch)
+    &&same(newPreimage.native_patch,newBinding.native_patch)
+    &&same(oldPreimage.source_evidence,oldBinding.source_evidence)
+    &&same(newPreimage.source_evidence,newBinding.source_evidence),
+  'Source-evidence refresh changed the exact native patch binding');
+  const oldEvidence=reader.json(oldBinding.source_evidence),newEvidence=reader.json(newBinding.source_evidence);
+  const withoutMembership=value=>{const copy=structuredClone(value);delete copy.source_membership;return copy;};
+  need(oldEvidence.source_membership===undefined&&newEvidence.source_membership
+    &&same(withoutMembership(oldEvidence),withoutMembership(newEvidence)),
+  'Source-evidence refresh may add only source membership');
+  const membership=newEvidence.source_membership;
+  need(membership&&same(Object.keys(membership).sort(),['index','lineage','parts'])
+    &&Array.isArray(membership.parts)&&membership.parts.length>0,
+  'Complete accepted source-membership pins required');
+  const index=reader.json(membership.index);
+  need(index&&Array.isArray(index.parts)&&membership.parts.every(pin=>index.parts.includes(pin.path.replace(/^data\//,''))),
+    'Source membership part is outside its accepted world index');
+  await reader.acquire?.([membership.index,membership.lineage,...membership.parts]);
+  const targetIds=new Set(newEvidence.targets.map(target=>target.target_id??target.id));
+  need(targetIds.size===newEvidence.targets.length&&targetIds.size>0,'Unique exact source-target roster required');
+  const members=new Set();
+  for(const pin of membership.parts){
+    const body=reader.json(pin);
+    need(body?.type==='FeatureCollection'&&Array.isArray(body.features),'Source membership part must be a GeoJSON feature collection');
+    for(const feature of body.features){
+      const id=feature?.properties?.id??feature?.id;
+      if(typeof id==='string')members.add(id);
+    }
+  }
+  need([...targetIds].every(id=>members.has(id)),'Source membership does not contain every exact candidate target');
+  const patch=reader.read(oldBinding.native_patch);
+  need(patch.equals(reader.read(newBinding.native_patch)),'Source-evidence refresh changed candidate patch bytes');
+  const preimage=reader.json(oldEntry.rule_preimage);
+  const oldConstructed=reader.json(oldEntry.completed_constructor),newConstructed=reader.json(newEntry.completed_constructor);
+  const oldProof=verifyCompletedSourceTargetNativeAuthority({constructed:oldConstructed,binding:oldBinding,preimage,
+    evidence:oldEvidence,candidate:reader.json(oldBinding.native_patch)});
+  const newProof=verifyCompletedSourceTargetNativeAuthority({constructed:newConstructed,binding:newBinding,preimage:newPreimage,
+    evidence:newEvidence,candidate:reader.json(newBinding.native_patch)});
+  const rows=proof=>proof.original_ledger.rows.map(({component_id,...row})=>row)
+    .sort((a,b)=>a.target_id.localeCompare(b.target_id));
+  need(same(rows(oldProof),rows(newProof))&&same(oldProof.native_proof,newProof.native_proof)
+    &&same(oldProof.limitations,newProof.limitations),
+  'Source-evidence refresh changed candidate target/owner/pixel/native scope');
+  const native=scientificNativeSelection(selection),contract=Object.fromEntries(
+    ['size','coordinateBits','method','native_latitudes','hierarchy_sha256','original_assets'].map(key=>[key,manifest[key]]));
+  need(same(oldEvidence.native_contract,contract)&&same(newEvidence.native_contract,contract)
+    &&same(oldEvidence.base_reference,originalNativeReference(manifest)),
+  'Source-evidence refresh changed the accepted native/reference contract');
+  return {oldRegistryPin,newRegistryPin,native};
+}
+
 function currentStartupTree(reader, commit, prefix) {
   const rows = reader.git('ls-tree', '-r', '-l', '-z', commit, '--', prefix).toString().split('\0').filter(Boolean);
   const files = new Map();
@@ -696,7 +771,7 @@ function verifyPriorStartupReconciliation(root, plan, index, head) {
 // qualifier. The ordinary accepted-code transition independently admits the new
 // authority scope and compares every before/after word and context value.
 function finalizeFinalBankDelivery(config, reader) {
-  need(config.version===2 && Object.keys(config).every(key=>['version','selector','package_inputs','change_evidence','reference_projection','proposed_selector','prior_finalizations'].includes(key)),
+  need(config.version===2 && Object.keys(config).every(key=>['version','selector','package_inputs','change_evidence','reference_projection','proposed_selector','prior_finalizations','source_evidence_refresh'].includes(key)),
     'Exact final-bank preparation config required');
   const selector=locate(reader,config.selector),packageInputs=locate(reader,config.package_inputs);
   need(selector.path==='data/ownership-selection.json'&&packageInputs.path==='.github/package-inputs.json', 'Canonical final-bank inputs required');
@@ -704,6 +779,14 @@ function finalizeFinalBankDelivery(config, reader) {
   const raw=reader.read(selector),selection=JSON.parse(raw),native=scientificNativeSelection(selection);
   need(native.method==='native-linear-evenodd-first-owner-v1', 'Explicit native selection required');
   need(selection.version===2, 'Final preparation requires an existing accepted final bank');
+  if(config.source_evidence_refresh){
+    need(!config.change_evidence&&!config.reference_projection&&!config.proposed_selector,
+      'Source-evidence refresh is exclusive with additive, reference and selector changes');
+    const refreshPin=locate(reader,config.source_evidence_refresh);
+    const manifest=JSON.parse(reader.read(reader.pin(selector.commit,native.manifest_path)));
+    validateSourceEvidenceRefresh(selection.change_evidence,refreshPin,reader,selection,manifest);
+    config={...config,source_evidence_refresh:refreshPin};
+  }
   if(config.proposed_selector){
     need(selection.version===2&&!config.change_evidence&&!config.reference_projection,
       'A proposed final bank already carries its complete change/reference selection');
@@ -716,7 +799,7 @@ function finalizeFinalBankDelivery(config, reader) {
     need(safe(name)&&Buffer.isBuffer(bytes)&&!adoption.has(name),'Distinct ordinary final-bank roles required');
     adoption.set(name,{path:name,bytes,expected:visitProduct(bytes),previous:previous?visitProduct(previous):undefined,kind});
   };
-  for(const pin of [config.change_evidence,config.reference_projection].filter(Boolean)) {
+  for(const pin of [config.change_evidence,config.reference_projection,config.source_evidence_refresh].filter(Boolean)) {
     need(pin.commit&&pin.mode==='100644'&&hex(pin.git_blob_oid,40),'Complete issued final input pin required');
     add(pin.path,reader.read(pin),reader.hasPath(selector.commit,pin.path)?reader.read(reader.pin(selector.commit,pin.path)):undefined,'input');
   }
@@ -791,6 +874,20 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
     reference_release:selection.reference,base:previous.preparedOwnership.base_reference,referenceMetadata};
   const before=await readPreparedFinalOwnership({indexRaw:originalIndex,manifest,manifestSha:native.sha256,selected,
     ownerCount:previous.preparedOwnership.owners,read:pin=>{need(originalBodies.has(pin.path),'Missing accepted final body');return originalBodies.get(pin.path);}});
+  if(config.source_evidence_refresh){
+    const proposed={...selection,change_evidence:config.source_evidence_refresh};
+    need(finalBankSelection(proposed)&&same(scientificNativeSelection(proposed),native)
+      &&same(proposed.reference_projection,selection.reference_projection)
+      &&same(proposed.prepared_bank,selection.prepared_bank)
+      &&same(proposed.reference,selection.reference),
+    'Source-evidence refresh changed selected bank/native/reference state');
+    const index=await prepareFinalBankStartupOwnership({manifest,manifestSha:native.sha256,previous,
+      ownership:before.ownership,features:before.features,
+      baseReference:before.index.preparedOwnership.base_reference,referenceMetadata,destination});
+    plan.proposedSelection=proposed;
+    plan.sourceEvidenceRefresh=true;
+    return index;
+  }
   // Adopt an already prepared current-state proposal through the same writer.
   // The queue compares the complete before/after maps; preparation does not
   // grant scientific authority or reconstruct a correction from old repairs.
@@ -935,6 +1032,12 @@ export async function prepareFinalizedStartupOwnership(outputs, root) {
     collect(temporary);
     need([...retained.keys()].every(name => !bodies.has(name)), 'Generated output overlaps retained compatibility');
     index.files = [...retained.values(), ...[...bodies].map(([name, bytes]) => ({path: name, ...visitProduct(bytes)}))].sort((a, b) => a.path.localeCompare(b.path));
+    if(plan.sourceEvidenceRefresh){
+      const accepted=JSON.parse(originalIndex),changed=Object.keys({...accepted,...index}).filter(key=>!same(accepted[key],index[key]));
+      const oldFiles=new Map(accepted.files.map(row=>[row.path,row.sha256])),newFiles=new Map(index.files.map(row=>[row.path,row.sha256]));
+      const fileChanges=[...new Set([...oldFiles.keys(),...newFiles.keys()])].filter(name=>oldFiles.get(name)!==newFiles.get(name));
+      need(jsonBytes(index).equals(originalIndex),'Source-evidence refresh would change the prepared bank: '+changed.join(',')+'; members '+fileChanges.slice(0,5).join(','));
+    }
     const indexBytes = jsonBytes(index), adoption = new Map(plan.adoption.map(row => [row.path, row]));
     for (const [name, pin] of retained) {
       const expected = {bytes: pin.bytes, sha256: pin.sha256};
