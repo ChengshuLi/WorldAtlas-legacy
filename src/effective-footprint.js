@@ -1,7 +1,7 @@
-import {canonicalValue,mergeUnassignedNativeIntervals,finishedPrimitiveGeometries as finishedPrimitiveGeometriesPure,finishEffectiveFootprint as finishEffectiveFootprintPure,extendFinishedNativeFootprint as extendFinishedNativeFootprintPure,finishedReleaseFootprintDigest as finishedReleaseFootprintDigestPure,effectivePrimitiveGeometries as effectivePrimitiveGeometriesPure,effectiveFootprintValue as effectiveFootprintValuePure,versionedPrimitiveGeometries as versionedPrimitiveGeometriesPure,additiveReleaseFootprintDigest as additiveReleaseFootprintDigestPure,versionedReleaseFootprintDigest as versionedReleaseFootprintDigestPure} from './native-grid.js';
+import {canonicalValue,canonicalFootprintJsonChunks,canonicalFootprintValueEqual,mergeUnassignedNativeIntervals,finishedPrimitiveGeometries as finishedPrimitiveGeometriesPure,finishEffectiveFootprint as finishEffectiveFootprintPure,extendFinishedNativeFootprint as extendFinishedNativeFootprintPure,finishedReleaseFootprintDigest as finishedReleaseFootprintDigestPure,effectivePrimitiveGeometries as effectivePrimitiveGeometriesPure,effectiveFootprintValue as effectiveFootprintValuePure,versionedPrimitiveGeometries as versionedPrimitiveGeometriesPure,additiveReleaseFootprintDigest as additiveReleaseFootprintDigestPure,versionedReleaseFootprintDigest as versionedReleaseFootprintDigestPure} from './native-grid.js';
 import {finalBankReference as finalBankReferencePure,additiveBaseReference as additiveBaseReferencePure,nativeReferenceForData as nativeReferenceForDataPure,bindPreparedNativeFeatures as bindPreparedNativeFeaturesPure} from './reference-metadata.js';
 import {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND} from './native-grid.js';
-export {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND};
+export {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND,canonicalFootprintJsonChunks,canonicalFootprintValueEqual};
 import {compileNativeRuntime} from './native-runtime.js';
 import {repairComponentKey,compareRepairComponents,nativeRuntimeIndex,polygonParts,nativeOnlyComponent as validateNativeOnlyComponent} from './native-grid.js';
 export {polygonParts} from './native-grid.js';
@@ -17,8 +17,27 @@ function exactKeys(value, keys, name) {
 }
 
 export function footprintValueSha256(value) {
-  const raw = new TextEncoder().encode(JSON.stringify(canonicalValue(value)) + '\n');
-  return Array.from(sha256(raw), byte => byte.toString(16).padStart(2, '0')).join('');
+  const hash = sha256.create(), encoder = new TextEncoder();
+  let pending = '';
+  const limit = 16 * 1024;
+  const flush = () => { if (pending) { hash.update(encoder.encode(pending)); pending = ''; } };
+  const write = piece => {
+    if (pending.length + piece.length <= limit) { pending += piece; return; }
+    flush();
+    for (let start = 0; start < piece.length;) {
+      let end = Math.min(start + limit, piece.length);
+      if (end < piece.length) {
+        const last = piece.charCodeAt(end - 1), next = piece.charCodeAt(end);
+        if (last >= 0xd800 && last <= 0xdbff && next >= 0xdc00 && next <= 0xdfff) end--;
+      }
+      hash.update(encoder.encode(piece.slice(start, end)));
+      start = end;
+    }
+  };
+  for (const piece of canonicalFootprintJsonChunks(value)) write(piece);
+  write('\n');
+  flush();
+  return Array.from(hash.digest(), byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
 // The final profile carries complete current geometry and native-only coverage,
@@ -542,4 +561,4 @@ export function versionedReleaseFootprintDigest(...args){return versionedRelease
 export function finalBankReference(...args){return finalBankReferencePure(...args,footprintValueSha256);}
 export function additiveBaseReference(...args){return additiveBaseReferencePure(...args,footprintValueSha256);}
 export function nativeReferenceForData(...args){return nativeReferenceForDataPure(...args,footprintValueSha256);}
-export function bindPreparedNativeFeatures(...args){return bindPreparedNativeFeaturesPure(...args,footprintValueSha256,bytes=>Array.from(sha256(bytes),b=>b.toString(16).padStart(2,'0')).join(''));}
+export function bindPreparedNativeFeatures(...args){return bindPreparedNativeFeaturesPure(...args,footprintValueSha256,bytes=>Array.from(sha256(bytes),b=>b.toString(16).padStart(2,'0')).join(''),canonicalFootprintValueEqual);}
