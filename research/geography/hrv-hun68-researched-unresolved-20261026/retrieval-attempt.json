@@ -1,0 +1,33 @@
+{
+  "kind": "worldatlas.public-source-retrieval-attempt.v1",
+  "scope": "one exact official Hungarian legislation attachment linked for the 31 March 2000 Pula Croatia-Hungary border supplement; no other documents or routes",
+  "source_listing": {
+    "url": "https://njt.jog.gov.hu/jogszabaly/2009-12-00-00",
+    "retrieved_via": "web.open",
+    "observed": "200 OK HTML; Annex IV at lines 1098-1102 lists the Pula 2000 supplement, 42 pages, attached file MK_09_040_047.pdf; link id 67"
+  },
+  "exact_attachment": "https://njt.jog.gov.hu/document/6d/6d0220090000000012_47.PDF",
+  "attempts": [
+    {
+      "time_utc": "2026-10-26T17:00:16Z",
+      "method": "web.click on official statute page link id 67",
+      "result": "Failed to fetch exact PDF: Cache miss",
+      "interpretation": "tool retrieval failure only; no HTTP status/access denial inferred"
+    },
+    {
+      "time_utc": "2026-10-26T17:00:34Z",
+      "method": "supported cloud Chrome (CDP) direct navigation to exact official URL; followed by one same-URL reload at 2026-10-26T17:01:22Z",
+      "result": "PDF viewer stayed blank with a loading progress bar; exact URL/title remained visible. No attachment bytes or page text became available. No login, challenge, warning, or provider denial was shown. Console had only an unrelated browser-extension metadata error.",
+      "diagnostic_limit": "PDF viewer tab's page context did not expose the Performance API, so request status/transfer size could not be read."
+    }
+  ],
+  "result": {
+    "bytes_acquired": false,
+    "sha256": null,
+    "document_contents_assessed": false,
+    "provider_denial": false,
+    "access_controls_bypassed": false,
+    "alternate_endpoint_or_route_attempted": false,
+    "status": "bounded technical retrieval failure; exact public attachment remains unread, not claimed absent or exhausted"
+  }
+}
