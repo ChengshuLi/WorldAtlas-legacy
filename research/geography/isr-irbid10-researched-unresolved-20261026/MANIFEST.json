@@ -1,0 +1,69 @@
+{
+  "kind": "worldatlas.source-free-proposal-manifest.v1",
+  "proposal_id": "isr-irbid10-researched-unresolved-20261026",
+  "contents": [
+    {
+      "path": "README.md",
+      "bytes": 3646,
+      "sha256": "b9db5aff3c3659b4ebf479af4d83ccaac6c8e483d244173e3eb3560657b440d4"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 6647,
+      "sha256": "9cdfb24b0d5a00b9ee42490bbfb2d6920e93003203a6ac3a2debd1817c5935ad"
+    }
+  ],
+  "scope_total": 10,
+  "no_source_geometry_or_raw_source_bodies": true,
+  "assessment_pins": [
+    {
+      "path": "root-ledger: worldatlas-root-acceptance-after-SSDcomplete143-2855-20261026.json",
+      "sha256": "1116c52ce6cda23cc609cdf010561b12943b1d1319a690ded155b22bdafa389c"
+    },
+    {
+      "path": "root-original-scope: worldatlas-root-isr2622-disposition.json",
+      "sha256": "4625f6c71f4ab7ffed7f2540000d19b29dc742ef408024a6589617dda594e7e8"
+    },
+    {
+      "path": "isr-parent-review-20261025/exact502-diagnostic-interpretation.jsonl",
+      "original_commit": "b89158a7857cb7b1a2f393becc19a89a79d3eea8",
+      "repository_path": "research/geography/isr502-whole-physical-20261025/native-plan/native-diagnostic-001/exact502-diagnostic-interpretation.jsonl",
+      "bytes": 705332,
+      "sha256": "05d09af10548641abd2bc63792f9e2ab4aea2c851d3739149d3145bb3867fc50"
+    },
+    {
+      "path": "isr110-review-20261025/ASSESSMENT.md",
+      "sha256": "f9a7d117713f9fd8b317fa1493473240a001b89d8e99fa88967543f18d66e862"
+    },
+    {
+      "path": "isr110-review-20261025/independent-checks.json",
+      "sha256": "66ba0e96571c99c96019827444fe6f47f2b2f2ab20c6b04a3511df63e0279817"
+    },
+    {
+      "path": "isr110-review-20261025/custody/packet/task/isr502/pax594-treaty-geodetic-appendix.pdf",
+      "bytes": 1043631,
+      "sha256": "760185c28ec851e1e9dbc4bb4b4a8c577a03f6a13509f424ac03b414e5dcbf63"
+    },
+    {
+      "path": "original source evidence (public WorldAtlas blob at commit be4bdc00)",
+      "repository_path": "research/geography/isr502-whole-physical-20261025/native-plan/prepared-source-evidence-002/source-evidence.json",
+      "commit": "be4bdc00656da7b155b475655c8cc1e809738a71",
+      "bytes": 85912,
+      "sha256": "4d8d1ed001998ea65bc29110974d7dee687c3029f4708f452f54ecc1b105be07"
+    },
+    {
+      "path": "whole-target physical result (public WorldAtlas blob at commit e600c075)",
+      "repository_path": "research/geography/isr502-whole-physical-20261025/physical-001/whole-target-support.json",
+      "commit": "e600c0759f4ec6ec2d8d01e499f91d74e5e537ed",
+      "bytes": 317455,
+      "sha256": "302c150be58a23c2afff20ac11b9a334abcec527f816286fee55ccbd11d625af"
+    }
+  ],
+  "notices_and_limits": [
+    "The PA-X copy is the only treaty body relied upon in this proposal; no Appendix III image sheet is bundled.",
+    "No source image, raw geometry, longitude/latitude, or extra scientific computation is published.",
+    "UN 627925 direct access previously returned HTTP 403 and was stopped; this packet does not retry or route around that stop.",
+    "A prior handoff’s statement that Appendix III sheets 1 and 12 were held/read is unsupported by authenticated body/readback and is expressly withdrawn as evidentiary support.",
+    "The ten remain held; recommendation is nonbinding; root acceptance is required."
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "kind": "ARG343-source-role-decision-v1",
+  "decision": "For only the 343 exact native keys in the pinned scope, treat each identified 2006 geoBoundaries BRA ADM1 operand as contextual source evidence for this source-relative proposal. The retained two-publisher comparison places all 343 keys outside the three current IBGE 2025 state polygons and inside the same intended department in the complete eight-department IGN comparison. IBGE MMD2025 technical notes (printed p. 28 / PDF p. 30) report that the 2015 Paraná, Santa Catarina and Rio Grande do Sul area adjustments followed updated Argentina/Uruguay international traces defined by the Second Brazilian Commission for Demarcation of Boundaries (SCDL) and available from MRE; the 2025 notes say those traces are fully incorporated. This is a concrete source-version explanation, not a legal territorial ruling or proof that every historical overlap is erroneous. Keep the original BRA source and its geometry unchanged as adverse context; no boundary, owner, physical support, native eligibility, owner-zero, full-parent closure, acceptance, or credit is decided here.",
+  "scope": {
+    "records": 343,
+    "owners": {
+      "7828": 15,
+      "7851": 1,
+      "7931": 6,
+      "7965": 270,
+      "7990": 39,
+      "8052": 1,
+      "8153": 11
+    },
+    "land_only": true,
+    "original_intervals_touched": 185,
+    "original_denominator": 28846,
+    "original_intervals": 10702,
+    "original_owners": 115,
+    "prior_accepted_untouched": 22697,
+    "residual": 6149
+  },
+  "source_role_basis": {
+    "original_competitor": {
+      "source_id": "gb:BRA:ADM1",
+      "represented_year_claim": 2006,
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "full_body_sha256": "cf4541da2f999915e27147c68e6220b00ee2d19daa42d6eed451bfd131fd843b",
+      "three_contact_feature_counts": {
+        "ordinal24": 234,
+        "ordinal25": 90,
+        "ordinal26": 19
+      },
+      "pin": {
+        "commit": "d4968ddc37aa3aa6105e9610c9e6fadbb368ba14",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-BRA-ADM1-000.bin.gz",
+        "git_blob_oid": "f987c295c2f58f307a510290d692d76069a85c2a",
+        "bytes": 492093,
+        "sha256": "bdbbfe8237a365e295858164b70a574001de1fe8d80e1ca14d77297b69a1f9fe",
+        "decoded_bytes": 1483651,
+        "decoded_sha256": "cf4541da2f999915e27147c68e6220b00ee2d19daa42d6eed451bfd131fd843b"
+      }
+    },
+    "source_history": {
+      "publisher": "IBGE",
+      "document": "Malha Municipal Digital e Áreas Territoriais 2025 — Informações técnicas e legais",
+      "url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102268.pdf",
+      "capture_utc": "2026-10-21T10:34:51.240918+00:00",
+      "bytes": 707028,
+      "sha256": "bc88c44624c8852b4796b72b525f9092cd770415403c1a3486a8d48bcefc9e89",
+      "finding": "Printed p. 28 / PDF p. 30 reports 2015 area adjustments for PR/SC/RS due to updated international traces with Argentina and Uruguay, fully incorporated as defined by SCDL and available from MRE. The 2025 notes state the traces are fully incorporated. The adjacent 2017 note says the 2017 area total maintained the value published in 2016; it does not establish an exact 2016 geometry identity.",
+      "limits": [
+        "IBGE describes statistical boundaries and says they are approximate, not legal demarcations.",
+        "Current 2025 polygons are not backdated to 2006."
+      ]
+    },
+    "ign_comparison": {
+      "publisher": "Instituto Geográfico Nacional (Argentina)",
+      "layer": "ign:departamento",
+      "url": "https://wms.ign.gob.ar/geoserver/ign/ows",
+      "capture_utc": "2026-10-21T10:36:07.203512+00:00",
+      "crs": "EPSG:4326",
+      "features": 8,
+      "bytes": 762551,
+      "sha256": "1ffac739fcb9a855fad6ff3c5e6a05e906152db9d1ef46af4c09b779397f6a38",
+      "finding": "The complete eight-feature comparison places the 343 proposed keys in their same intended Argentina department. Current capture is not asserted to be the 2020 original. Seven Misiones records name Ministerio de Ecología as capture source and IGN as authority; Santo Tomé identifies IGN.",
+      "limits": [
+        "This is not legal sovereignty or a whole-target authority certificate."
+      ]
+    },
+    "ibge_2025_comparator": {
+      "publisher": "IBGE",
+      "crs": "EPSG:4674",
+      "features": 3,
+      "finding": "All 343 proposed keys have no contact with the current Paraná, Santa Catarina and Rio Grande do Sul state polygons.",
+      "source_zips": [
+        {
+          "state": "PR",
+          "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/UFs/PR/PR_UF_2025.zip",
+          "bytes": 346662,
+          "sha256": "9429eaf1b5a15f6b4d2dc2b9762da6f0642c237bfa54b5dab13d078a3dfe2998"
+        },
+        {
+          "state": "SC",
+          "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/UFs/SC/SC_UF_2025.zip",
+          "bytes": 1766597,
+          "sha256": "8c216c0b794f13a6535b713ceab8ec6b2f9f8473a12c163c56b71cbffeee804c"
+        },
+        {
+          "state": "RS",
+          "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/UFs/RS/RS_UF_2025.zip",
+          "bytes": 286905,
+          "sha256": "9b66a3e31d691d92a12cd822ef56ec1d516edcf5feb3298847cafc9d51a9ead7"
+        }
+      ],
+      "limits": [
+        "The comparison uses current 2025 statistical state polygons, not a historical 2006 boundary.",
+        "Retained FAQ supports practical SIRGAS2000/WGS84 coincidence only; no sub-metre or exact epoch equivalence is claimed."
+      ]
+    }
+  },
+  "comparison_pin": {
+    "archive_member": "bra380-two-publisher-comparison.json",
+    "bytes": 597271,
+    "sha256": "363c7996cbd540c04b9b5daf7d4a293686e0b147aa7e6bd417312790bb72dd2c",
+    "counts": {
+      "ibge_no_contact__ign_same_department": 343,
+      "ibge_contact__ign_no_contact": 17,
+      "ibge_no_contact__ign_no_contact": 5,
+      "ibge_contact__ign_same_department": 7,
+      "ibge_no_contact__ign_other_department": 8
+    }
+  },
+  "adjacent_preserved_strata": {
+    "BRA380_other_37": {
+      "total": 37,
+      "dual_contact": 7,
+      "IGN_other_department": 8,
+      "outside_returned_IGN_features": 22,
+      "outside_returned_IGN_split": {
+        "IBGE_contact_IGN_no_contact": 17,
+        "IBGE_no_contact_IGN_no_contact": 5
+      }
+    },
+    "other_non_TDF_held": 680,
+    "TDF_queued_separately": 4502,
+    "all_other_residual": 5806
+  },
+  "original_negative_context": {
+    "all_original_negative_families_retained": true,
+    "only_contextualized_family": "gb:BRA:ADM1",
+    "no_source_geometry_replaced_or_deleted": true
+  },
+  "status": {
+    "accepted_delta": 0,
+    "positive_acceptance_claimed": false,
+    "science_credit_claimed": false
+  },
+  "input_pins": {
+    "arg343_keyset": {
+      "bytes": 761972,
+      "sha256": "1ee24ce4912a38c7ea0bf5a81c698859a0264800f417cad8518888aba24958e2"
+    },
+    "source_evidence": {
+      "commit": "d5ed8c1126782dfd3fa0ea00525f38b5c89f3289",
+      "path": "coordination/engineering/argentina-repair-delivery-20261017/native-inputs-001/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "ad04ce6a06221d4d3f7a6609362567f47d772f79",
+      "bytes": 1015948,
+      "sha256": "268975de3c34dbdfde0848b42864979a6cecfe5275cad1bd3e268cd44593b4bd"
+    },
+    "reconciliation_receipt": {
+      "path": "ARG343-inputs/arg343-target-negative-reconciliation-private.json",
+      "bytes": 164366,
+      "sha256": "d4df5725d5fda88481b5cf8158227fd6a24be72638838e7fcda92d4a8d56945b"
+    },
+    "bundle": {
+      "path": "ARG343-inputs/argentina-343-redistributable-research.zip",
+      "bytes": 7440777,
+      "sha256": "2aa609dec2e2d7bc6f7927e1e2e9db8b0cfd7e5b7e954a23c87a83a8c4cede0f"
+    }
+  }
+}

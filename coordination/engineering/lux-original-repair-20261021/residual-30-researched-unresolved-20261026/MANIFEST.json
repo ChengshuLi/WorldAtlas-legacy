@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "lux-original-residual30-researched-unresolved-manifest",
+  "status": "proposal-only-not-root-accepted",
+  "package_id": "gb-LUX-ADM1--repair-evaluation",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6551,
+      "sha256": "768788a43708a078cd4188fc0ab65dc569f9ac384c57f262799b16e494caa38b",
+      "role": "scope and scientific rationale"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 13576,
+      "sha256": "95166208505fc147dd88e007087587f1268a460da20d547c31bd07d5d61d98b4",
+      "role": "exact scope, conservation, provenance and input/result pins"
+    },
+    {
+      "path": "../evidence-investigation-003/lux30-full-resolution-application.json",
+      "bytes": 23257,
+      "sha256": "be353b557215008ef061076e2905b17b4677fb06e726e47d881140e39db4e95b",
+      "role": "bounded same-release full-versus-simplified application result; exact30 grid-key records; no source geometry"
+    },
+    {
+      "path": "../evidence-investigation-003/README.md",
+      "bytes": 4240,
+      "sha256": "f6408d95a7d27db8c7d6aba10155a1fb6f81e640ac323f294ef4c169dd5cca0d",
+      "role": "bounded source comparison methodology and results, no raw source geometry"
+    }
+  ],
+  "external_pins": [
+    {
+      "path": "/workspace/shared/lux30-historical-primary-context-20261026.md",
+      "bytes": 6176,
+      "sha256": "bf71f8f685b3279ce9ee3b4d5aec6ff37528d18c9f300c0b1ea306cd90759bc3",
+      "role": "primary source-role and historical context memo, not copied into packet"
+    },
+    {
+      "path": "/workspace/shared/worldatlas-root-acceptance-after-LUX26-2884-20261026.json",
+      "sha256": "7868a40cf6cd01eddb5f68a4c764bb84df307bd5b9493c7a4c6fbc96c123428a",
+      "role": "root ledger pin establishing 594 accepted /30 pending prior to this proposal"
+    }
+  ]
+}
