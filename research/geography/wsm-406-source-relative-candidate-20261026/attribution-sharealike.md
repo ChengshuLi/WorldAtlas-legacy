@@ -12,7 +12,7 @@ The exact image has API SHA-1 `505188e10ab4a77566504d254324c5f6b013925a` and dow
 
 ## Separate geoBoundaries attribution
 
-The geoBoundaries publisher separately states that geoBoundaries code and derivative works are CC BY 4.0 and requests attribution to geoBoundaries plus citation of each boundary file’s metadata-listed source. Preserve that attribution separately. The CC BY 4.0 statement is not treated as an override or replacement for the source image’s CC BY-SA 3.0 terms; the scoped candidate table uses the conservative CC BY-SA 3.0 adapted-material treatment.
+The geoBoundaries publisher separately states that its code and derivative works are CC BY 4.0. It requests attribution to [geoBoundaries](https://www.geoboundaries.org) and citation of each boundary file’s metadata-listed source. For this packet, that source citation is geoBoundaries WSM ADM1 `WSM-ADM1-40696546` and the linked [Samoa district-borders image](https://commons.wikimedia.org/wiki/File:Samoa_District_borders_(numbered).png). Preserve this attribution separately. The CC BY 4.0 statement is not treated as an override or replacement for the source image’s CC BY-SA 3.0 terms; the scoped candidate table uses the conservative CC BY-SA 3.0 adapted-material treatment.
 
 ## Scope and remaining limits
 
