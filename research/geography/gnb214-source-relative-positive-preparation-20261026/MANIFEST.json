@@ -3,24 +3,24 @@
   "proposal_id": "gnb214-source-relative-positive-preparation-20261026",
   "contents": [
     {
-      "path": "README.md",
-      "bytes": 2766,
-      "sha256": "3af3590ec7e791aea7269dbd1cddf26479e0dd96b0545d326b69e05557a35b4d"
-    },
-    {
       "path": "scope.json",
       "bytes": 13862,
       "sha256": "a00a523e88a0c98353dcda963e573770c43af51a968db1ebb9eb61909e68aa1e"
     },
     {
-      "path": "source-role-decision.json",
-      "bytes": 5560,
-      "sha256": "a5c859092702e06c57ce7e079993428a57983e4754c0e8791bf6e7aac33bf3a3"
-    },
-    {
       "path": "native-patch-214.json",
       "bytes": 3113,
       "sha256": "dc0c9fa285a24ff10ebace917b3b08149d48ff3c56f525ddbf85c22782908615"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3123,
+      "sha256": "d56cf32324eb0396eb9f6057a929e554ad2937d662e89cecf21d9807c1ba5480"
+    },
+    {
+      "path": "source-role-decision.json",
+      "bytes": 6199,
+      "sha256": "1d8d6c5f632dd86cf87c2e0fa6e8e6b1e5dd3cdf93d13a0ad302d3634d05744a"
     }
   ],
   "scope_total": 214,
@@ -49,5 +49,22 @@
     }
   },
   "no_raw_source_geometry": false,
-  "provenance_note": "native-patch-214 is an exact owner-filter projection of the original full patch; source-evidence remains a historical immutable input and is not duplicated. Constructor output pending."
+  "provenance_note": "native-patch-214 is an exact owner-filter projection of the original full patch; source-evidence targets are narrowed using the supported source-evidence phase; full original competitors/physical evidence remain retained.",
+  "derived_preparation": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/source-evidence-214",
+    "outputs": [
+      {
+        "path": "source-evidence.json",
+        "bytes": 30299,
+        "sha256": "dc40a18f55ad91e46eb061f934af76a05741af86cbff6db96eae099a851d9b9b"
+      },
+      {
+        "path": "preparation.json",
+        "bytes": 262,
+        "sha256": "49e71cd3b6ec1cc678fb6288a0bb8149a58ac4b8156b693ae64753232c29d0f5"
+      }
+    ],
+    "selector_commit": "93d5c12b26974e60a614a998aaa65e67f86cbf06"
+  },
+  "raw_geometry_note": "The prepared source-evidence file contains the four original target geometries required by the accepted native constructor; it is not the complete source archive, is pinned to the existing geoBoundaries product, and is distributed under its recorded ODbL terms."
 }
