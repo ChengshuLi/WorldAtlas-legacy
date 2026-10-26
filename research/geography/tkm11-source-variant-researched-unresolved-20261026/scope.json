@@ -313,10 +313,10 @@
     "partition": "11 proposed unresolved are a unique subset of the original 1,759; 1,748 other keys remain pending; no original key is removed."
   },
   "source_application": {
-    "application_path_private": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/.private/full-simplified-exact-center-application.json",
-    "application_sha256": "433980ea0cba1bf6c40298cc50908e3e41517faa8640df4b58ab6346a8bfc19c",
-    "aggregate_receipt_path": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/full-simplified-source-application-custody-v1.json",
-    "aggregate_receipt_sha256": "f60634ad589b404673f1e214321144e62d9773a062f10e5cc478f11901e96e56",
+    "application_path_private": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/.private/full-simplified-exact-center-application-v2.json",
+    "application_sha256": "e7b49e43f8df1427e8ec03e669302e9f988d90cb4139d9f4f1016afd5527c09c",
+    "aggregate_receipt_path": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/full-simplified-source-application-custody-v2.json",
+    "aggregate_receipt_sha256": "8e80b44049648eb356ef4872a6f3a5d6bf86cefcc7c4441866c4b7b9bb40096c",
     "method": "native-linear-evenodd-first-owner-v1 at exact canonical-grid centers; same 59-feature 2009 full source and 59-feature simplified derivative compared for every one of 1,759 original keys.",
     "source_2009_full": {
       "creation_commit": "f203ec291162e2f90d146a8047a6347714d10293",
@@ -342,6 +342,12 @@
       "underlying_attribution": "CIESIN GRUMPv1 population-density Map 7",
       "recorded_license": "CC BY-SA 3.0",
       "limitations": "Underlying source authority and effective applicability are unverified; derivative geoBoundaries CC BY 4.0 does not reapprove upstream material."
+    },
+    "provenance_correction": {
+      "superseded_application_path": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/.private/full-simplified-exact-center-application.json",
+      "superseded_application_sha256": "433980ea0cba1bf6c40298cc50908e3e41517faa8640df4b58ab6346a8bfc19c",
+      "issue": "its full-source blob field was the literal TO_FILL; exact full source object was verified from the original commit:path (blob ba95488d39c1344227d89b4d1bba07461a0ada58; 271437 bytes; SHA-256 0d0b3745e275bfadb1d0137fbca014b56f2ed72cb83b0a98dd0e2f0632e7c507).",
+      "effect": "The v2 copy corrects only that source identity field and records the old receipt hash; per-key application results were not recomputed and are identical."
     }
   },
   "limits": [
