@@ -23,6 +23,14 @@ The accepted selector at `b20e0da65ed2fd909a1ed1fb79caa2b8e3198a83` was checked 
 
 The final selector-narrowed constructor candidate is `native-authority-selected-b20-001/constructor-result.json`, SHA-256 `f5f19965c23100c09ec19e2e80f0c91616831c7772437246eb3a06f2a356f1b7`; it contains 222 native rows for 677 cells, one target and one owner. The distinct `caf_nola` review passed exact input-pin and key-conservation checks. The source diagnostic and constructor do not authorize final science acceptance, status, credit, or release.
 
+## Later finalizer and selector checkpoints
+
+An earlier feature-branch snapshot at `c357e7bb824dbdd30ebb83c1ad2361417577154b` recorded 677 original keys = 677 already present + 0 novel + 0 held for owner 33741. Its preparation SHA-256 was `0be7886046cadc238ad336a2027c7cafbabfaa1108dd9746ef1309047e06bdd8` and partition SHA-256 was `df14b29c4000c23921c37241fb921d9bd429b8b3697177e574590e0348128c21`. This is a historical snapshot and is distinct from the later current-main `supported-inputs` check below.
+
+The PER-only v2 finalizer output `finalized-bank-677-004` completed against its then-pinned baseline; preparation SHA-256 `e657aa662272a26a36765dc4fedd47c2f768663b27246a52b19b5ede7ace4336`. It did not establish a new science decision or credit. A combined BOL+PER registry attempt was recorded as rejected with `Native additive patch would replace an assigned cell`; no saved failure receipt is available, so that event was not independently verified and does not establish an accepted combined output.
+
+On current main `75838515ae6f7e590c93bcf7667521623b934e67`, the supported `supported-inputs` phase ran using the exact accepted selector and 53 pinned inputs totaling 64,896,863 declared bytes. For owner 33741, the actual result is 677 original = 677 supported + 0 already present + 0 held; native requested/supported are 677 and native held is 0. The accepted selector pin is `data/ownership-selection.json`, blob `9dce7089f8138014fdf257fcf081e03978091b6c`, 2,310 bytes, SHA-256 `1f2ba152430affa49b3900c80695b872c9334284791d636e8872b439e83f6ee5`. Preparation SHA-256 is `8fc15592659626605a7d64d6c135a5003ae540224684943ba06eeeead4702c33`; partition SHA-256 is `0c661e2f12ef1d067764e4cfcf7f9ffae7363cec754598eb597e8c1ac7444d05`. This is an input-support/conservation check against the current accepted selector; it does not claim a bank ownership change or science acceptance.
+
 ## Scope limits and pending decision
 
 This proposal is for parent-level source-role treatment of exactly 677 centres. The 50 outside-parent keys, 722 other residuals, Loreto 35/6 split, all Brazil historical contacts, and whole-target physical flags remain intact. No feature-level MRC boundary or legal authority is inferred; centre membership is not whole-cell containment. Root scientific acceptance is pending. No status or credit has changed.
