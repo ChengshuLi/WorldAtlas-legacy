@@ -199,6 +199,8 @@ test('default actual preparation derives the inert packet consumers without an o
     assert.deepEqual(prepared.checkout_patterns,focusedCheckoutPatterns(f.packageInputs,EXECUTION_CODE));
     assert.equal(prepared.geography_required,true);assert.equal(prepared.geography_software,false);
     assert.equal(prepared.base,f.base);assert.equal(prepared.pr.head.sha,f.head);assert.equal(prepared.candidate,f.candidate);
+    assert.deepEqual(prepared.current_pair,{base:f.base,head:f.head});
+    assert.deepEqual(prepared.plan_request,{base:f.base,head:f.head,files:PACKET_TESTS});
     assert.equal(f.calls.filter(row=>row.route.includes('/contents/.github/package-inputs.json')).length,1);
     await assert.rejects(f.complete({geographyResult:'skipped'}),/Trusted combined geography/);
   }
@@ -207,8 +209,17 @@ test('default actual preparation derives the inert packet consumers without an o
   const explicit=await prepareIntegration({...f.options(),reviewedTests});
   assert.equal(explicit.profile,'evidence');assert.equal(explicit.test_selection,'reviewed');
   assert.deepEqual(explicit.test_files,PACKET_TESTS);
+  assert.deepEqual(explicit.plan_request,{base:f.base,head:f.head,files:PACKET_TESTS});
   // The existing dispatch input distinguishes this identical manual roster.
-  await assert.rejects(prepareIntegration({...f.options(),reviewedTests:{base:sha('0'),head:f.head,files:PACKET_TESTS}}),/stale/);
+  const stale={base:sha('0'),head:f.head,files:PACKET_TESTS};
+  await assert.rejects(prepareIntegration({...f.options(),reviewedTests:stale}),error=>{
+    assert.match(error.message,/stale/);
+    assert.deepEqual(error.delivery_context.current_pair,{base:f.base,head:f.head});
+    assert.deepEqual(error.delivery_context.observed_pr_pair,{base:f.base,head:f.head});
+    assert.deepEqual(error.delivery_context.supplied_plan_request,stale);
+    assert.equal(error.delivery_context.validated_plan_request,undefined);
+    return true;
+  });
 });
 
 test('actual automatic packet roster runs without installed dependencies or external executables',async()=>{

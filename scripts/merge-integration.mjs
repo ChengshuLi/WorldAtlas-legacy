@@ -273,14 +273,30 @@ export function reviewedTestPlan(request, {base, head, entries, files, definitio
     checkout_patterns:build ? fullCheckoutPatterns(definition) : focusedCheckoutPatterns(definition, inputs)};
 }
 
+function suppliedPlanRequest(value) {
+  if (typeof value === 'string') {
+    try { value = JSON.parse(value); } catch { return null; }
+  }
+  return value && !Array.isArray(value) && typeof value === 'object' &&
+    commitID(value.base) && commitID(value.head) && Array.isArray(value.files)
+    ? value : null;
+}
+
 export async function prepareIntegration(options) {
   options = {...options, api: memoizeImmutableGitBlobs(options.api)};
   const automatic = options.reviewedTests === 'auto', complete = options.reviewedTests === 'complete';
   const requested = automatic || complete ? undefined : options.reviewedTests;
   const state = await inspectMerge(options);
   if (state.replayed) return state;
-  const fresh = await createCandidate(options, state);
+  const deliveryContext = {
+    supplied_pair: {base:suppliedPlanRequest(options.reviewedTests)?.base ?? null, head:options.expectedHead},
+    observed_pr_pair: {base:commitID(state.pr.base?.sha), head:commitID(state.pr.head?.sha)},
+    current_pair: {base:state.base, head:state.pr.head.sha},
+    supplied_plan_request: suppliedPlanRequest(options.reviewedTests)
+  };
+  let fresh;
   try {
+    fresh = await createCandidate(options, state);
     // Candidate creation cannot grant merge permission: final integration binds
     // the reviewed head, current checks and main again before the squash.
     const candidate = fresh.candidate;
@@ -311,6 +327,7 @@ export async function prepareIntegration(options) {
       : requested;
     const reviewed = reviewedTestPlan(request, {base:state.base, head:state.pr.head.sha,
       entries:integrated.entries, files, definition:packageInputs});
+    deliveryContext.validated_plan_request = reviewed?.request ?? null;
     need(!reviewed || !selection, 'Selected-data delivery retains its mandatory native and emitted execution path');
     need(!automatic || reviewed || selection, 'Automatic test scope is unavailable; supply exact plan.request JSON or explicitly request complete');
     const profile = complete ? 'full' : reviewed ? (reviewed.build ? 'full' : 'evidence') : applicability;
@@ -321,10 +338,13 @@ export async function prepareIntegration(options) {
       ...(complete ? {test_selection:'complete', shards:[0,1,2]} : {}),
       ...(reviewed ? {test_selection:'reviewed', test_files:reviewed.files, shards:[0]} : {}), geography_software: software,
       geography_required: geographyRequiredForCandidate,
+      plan_request: reviewed?.request ?? null,
+      current_pair: {base:state.base, head:state.pr.head.sha},
       candidate_tree: integrated.object.tree.sha, checkout_patterns: checkoutPatterns,
       candidate_ref: fresh.reference};
   } catch (error) {
-    if (fresh.reference) {
+    if (error && typeof error === 'object') error.delivery_context = {...deliveryContext, ...(error.delivery_context ?? {})};
+    if (fresh?.reference) {
       try { await cleanupCandidate(options, fresh.reference, fresh.candidate); }
       catch (cleanupError) { error.candidateCleanup = {status: 'pending', reference: fresh.reference, reason: cleanupError.message}; }
     }

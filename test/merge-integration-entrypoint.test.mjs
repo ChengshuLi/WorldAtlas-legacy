@@ -20,32 +20,54 @@ globalThis.Response=class extends NativeResponse {
 };
 `;
 
-function run({readFails=false,commentFails=false,phase='prepare',merged=true,head='a'.repeat(40),integration='skipped',geography='skipped',mergeOnReconcile=false,mergeCommit='b'.repeat(40),hosted=false}={}) {
+function run({readFails=false,commentFails=false,phase='prepare',merged=true,head='a'.repeat(40),integration='skipped',geography='skipped',mergeOnReconcile=false,mergeCommit='b'.repeat(40),hosted=false,reviewedTests}={}) {
   const directory=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-merge-entry-'));
   fs.mkdirSync(path.join(directory,'.github'));
   fs.copyFileSync(path.join(root,'.github/evidence-policy.json'),path.join(directory,'.github/evidence-policy.json'));
-  fs.writeFileSync(path.join(directory,'event.json'),JSON.stringify({inputs:{pr_number:'2',expected_head:'a'.repeat(40),request_id:'entrypoint-test-request'}}));
-  fs.writeFileSync(path.join(directory,'mock.mjs'),capacityShim+`let reads=0;globalThis.fetch=async(url,options)=> {
+  fs.writeFileSync(path.join(directory,'event.json'),JSON.stringify({inputs:{pr_number:'2',expected_head:'a'.repeat(40),request_id:'entrypoint-test-request',...(reviewedTests?{reviewed_tests:reviewedTests}:{})}}));
+  fs.writeFileSync(path.join(directory,'mock.mjs'),capacityShim+`import fs from 'node:fs';let reads=0;globalThis.fetch=async(url,options)=> {
     if(options.method==='PUT')throw Error('Unexpected new merge');
     if(new URL(url).pathname.includes('/contents/')||new URL(url).pathname.includes('/attempts/'))throw Error('Job-clock metadata must not be fetched');
     const posting=options.method==='POST';
+    if(posting)fs.writeFileSync('posted-comment.json',JSON.stringify(JSON.parse(options.body).body));
     if(new URL(url).pathname.endsWith('/pulls/2'))reads++;
-    return new Response(JSON.stringify(posting?{}:{merged:${merged}||(${mergeOnReconcile}&&reads>1),head:{sha:'${head}'},merge_commit_sha:${JSON.stringify(mergeCommit)}}),
+    return new Response(JSON.stringify(posting?{}:{merged:${merged}||(${mergeOnReconcile}&&reads>1),head:{sha:'${head}'},base:{sha:'${'d'.repeat(40)}'},merge_commit_sha:${JSON.stringify(mergeCommit)}}),
       {status:posting?${commentFails?403:201}:${readFails?418:200},headers:{'Content-Type':'application/json'}});
   };`);
   const result=spawnSync(process.execPath,['--import',path.join(directory,'mock.mjs'),path.join(root,'scripts/run-worker-merge.mjs')],{
     cwd:directory,encoding:'utf8',env:{...process.env,GITHUB_ACTIONS:String(hosted),GH_TOKEN:'synthetic-test-token',GITHUB_REPOSITORY:'owner/repo',GITHUB_REF:'refs/heads/main',
       GITHUB_EVENT_PATH:path.join(directory,'event.json'),GITHUB_OUTPUT:path.join(directory,'outputs'),GITHUB_STEP_SUMMARY:path.join(directory,'summary'),MERGE_PHASE:phase,INTEGRATION_RESULT:integration,GEOGRAPHY_RESULT:geography}});
   const receipt=JSON.parse(fs.readFileSync(path.join(directory,'merge-result.json'))),summary=fs.readFileSync(path.join(directory,'summary'),'utf8');
-  fs.rmSync(directory,{recursive:true,force:true});return {result,receipt,summary};
+  const commentBody=fs.readFileSync(path.join(directory,'posted-comment.json'),'utf8');
+  fs.rmSync(directory,{recursive:true,force:true});return {result,receipt,summary,commentBody:JSON.parse(commentBody)};
 }
 test('actual trusted entry point preserves the original rejection before a denied comment',()=>{
-  const {result,receipt,summary}=run({readFails:true,commentFails:true});
+  const base='b'.repeat(40),plan={base,head:'a'.repeat(40),files:['test/example.test.mjs']};
+  const {result,receipt,summary,commentBody}=run({readFails:true,commentFails:true,reviewedTests:JSON.stringify(plan)});
   assert.notEqual(result.status,0);
   assert.equal(receipt.accepted,false);assert.equal(receipt.status,'not-merged');
   assert.match(receipt.reason,/GET.*HTTP 418/);assert.match(summary,/GET.*HTTP 418/);
+  assert.equal(receipt.unmet_condition,receipt.reason);
+  assert.deepEqual(receipt.supplied_pair,{base,head:'a'.repeat(40)});
+  assert.deepEqual(receipt.supplied_plan_request,plan);
+  assert.match(receipt.next_step,/Read the live main and PR head first/);
+  assert.match(commentBody,/Supplied\/tested pair/);
+  assert.match(commentBody,/Current pair: not observed/);
+  assert.match(commentBody,/Unmet condition/);
+  assert.match(commentBody,/Next: Read the live main and PR head first/);
+  assert.match(commentBody,/Supplied plan\.request: 1 test file/);
   assert.equal(Object.hasOwn(receipt,'retryable'),false);
   assert.equal(receipt.api_error.http_status,418);assert.equal(receipt.notification_api_error.http_status,403);
+});
+test('actual prepare result distinguishes stale supplied head from current PR head without claiming current main',()=>{
+ const observed='c'.repeat(40),{receipt,commentBody}=run({phase:'prepare',head:observed});
+ assert.match(receipt.reason,/PR head changed/);
+ assert.deepEqual(receipt.supplied_pair,{base:null,head:'a'.repeat(40)});
+ assert.deepEqual(receipt.observed_pr_pair,{base:'d'.repeat(40),head:observed});
+ assert.equal(receipt.current_pair,undefined);
+ assert.match(commentBody,/Observed PR pair: `dddddddddddddddddddddddddddddddddddddddd`/);
+ assert.match(commentBody,/Current pair: not observed/);
+ assert.match(commentBody,/exact-head review/);
 });
 test('actual trusted entry point retains its preparation receipt before successful notification',()=>{
   const {result,receipt}=run();assert.equal(result.status,0,result.stderr);
@@ -226,6 +248,12 @@ for(const wrapped of [false,true]) for(const notification of ['denied','transpor
     assert.match(outputs,wrapped?/shards=\[0\]/:/shards=\[0,1,2\]/);
     assert.deepEqual(JSON.parse(Buffer.from(outputs.match(/^test_files_base64=(.+)$/m)[1],'base64')),wrapped?reviewed.files:[]);
     assert.equal(receipt.test_selection,wrapped?'reviewed':'complete');
+    if(wrapped){
+      assert.deepEqual(receipt.current_pair,{base,head});
+      assert.deepEqual(receipt.supplied_pair,{base,head});
+      assert.deepEqual(receipt.validated_plan_request,{base,head,files:reviewed.files});
+      assert.match(receipt.next_step,/Follow this request through its required trusted geography and integration jobs/);
+    }
     const encoded=outputs.match(wrapped?/^checkout_patterns_base64<<CHECKOUT_BASE64\n([A-Za-z0-9+/=\n]+)\nCHECKOUT_BASE64$/m:/^checkout_patterns_base64=([A-Za-z0-9+/=]+)$/m)?.[1];assert(encoded);
     if(wrapped)assert(encoded.split('\n').every(line=>line.length<=76),'Encoded data uses short lines without limiting the complete payload');
     else assert(!encoded.includes('\n'),'Old queued workflow keeps its single-quoted decoder input');
