@@ -226,5 +226,45 @@
       "source_payload_sha256": "6c3128de3763704397d9a7c44ea04d952fd467fc88a368e2d188c236cbfbae83",
       "license": "CC0, as documented for ACT source"
     }
+  },
+  "bank_preparation": {
+    "status": "prepared-current-bank-candidate-awaiting-exact-head-review-stock-delivery-and-root-acceptance",
+    "base_commit": "72f420441da5e220133e921d237753732614bf95",
+    "selector_input": {
+      "path": "data/ownership-selection.json",
+      "commit": "72f420441da5e220133e921d237753732614bf95",
+      "git_blob_oid": "fbbcacf934b6ec25dfd1d191c2b02af31d45e939",
+      "bytes": 2269,
+      "sha256": "bf4b8454bc6a4bd4b80288be22d5c0ebd2a01b61dba58767c502f2bd069da48d"
+    },
+    "compose_output": {
+      "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/compose-002/authority-registry.json",
+      "commit": "01085ea1251df3d8568c02b4c5b7922738139e6e",
+      "bytes": 1487,
+      "sha256": "400c8af40b7a8e61c6c0c154939964f334bb002fd565f251ceaeab140be155a0"
+    },
+    "finalizer_preparation": {
+      "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/finalize-002/preparation.json",
+      "config_sha256": "4615b5cfe7cb2dfe16a2ad1b10da88ae7e6e99c4ebafad1a1e32f824fc940bd0"
+    },
+    "selected_output": {
+      "selector_path": "data/ownership-selection.json",
+      "selector_sha256": "6710a8f03ed2f095578e003656bd6dae7eaa238b5d59f14566918576b034b59d",
+      "index_path": "data/canonical-grid/current-startup/index.json",
+      "index_bytes": 49610,
+      "index_sha256": "07fe9dcb70853721803ed9701144a5c5c6e9b2c5eb4d13efa507f4b2b124e202",
+      "reference_id": "geography:final:59545364d9c31d681b62e19c5467a85283a4577d821bcbaf447c8c125b341c94",
+      "indexed_bodies": 79,
+      "compatibility_bodies_retained": 30,
+      "added_paths_vs_base": 12,
+      "retired_paths_vs_base": 12,
+      "same_path_body_changes": 0,
+      "native_manifest_unchanged": true
+    },
+    "limits": [
+      "This is a current-bank candidate, not a stock terminal, root acceptance, or credit.",
+      "Per-cell zero-loss/no-reassignment and emitted-package controls remain for the accepted stock workflow/review; the indexed-body roster check is not a per-cell proof.",
+      "No source, physical, native-diagnostic, constructor, or full 624-cell replay was performed in this bank-preparation step."
+    ]
   }
 }
