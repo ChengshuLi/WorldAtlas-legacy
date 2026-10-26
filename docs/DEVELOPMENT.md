@@ -4,7 +4,7 @@ Use this guide after the repo-level [entrypoint](../AGENTS.md) for an assigned t
 
 ## Start and own the work
 
-Use the accepted `scripts/local-workspace.mjs` allocator for managed author and exact-head review checkouts. It fetches `main` with the explicit remote-tracking refspec, verifies `FETCH_HEAD` matches `origin/main`, and freezes that commit for a new author branch. Before reserving an author slot it reads the root `AGENTS.md` from that exact commit, verifies the ordinary blob and SHA-256, and prints the pinned text; resolution is repository-root-relative even though the CLI itself lives under `scripts/`. A review slot is detached at the requested commit. Read the helper's current CLI and implementation for arguments and guards; do not maintain a second option specification here.
+Use the accepted `scripts/local-workspace.mjs` allocator for managed author and exact-head review checkouts. It fetches `main` with the explicit remote-tracking refspec through the shared Git directory, verifies common `FETCH_HEAD` matches `origin/main`, and freezes that commit for a new author branch. This keeps remote metadata refresh out of a linked primary checkout's worktree-specific administrative state. Before reserving an author slot it reads the root `AGENTS.md` from that exact commit, verifies the ordinary blob and SHA-256, and prints the pinned text; resolution is repository-root-relative even though the CLI itself lives under `scripts/`. A review slot is detached at the requested commit. Read the helper's current CLI and implementation for arguments and guards; do not maintain a second option specification here.
 
 Use the task/environment's supported Node and Git executables, not ambient `PATH` assumptions; verify the selected versions with `node --version` and `git --version`. Meet the Node requirement declared by `package.json` and use Git with the capabilities required by the documented helper. Do not copy private executable paths into guides. Preserve approved authentication configuration when isolating Git commands; clear only repository-routing variables invocation-locally as below.
 
@@ -64,10 +64,13 @@ The following code-only bootstrap loads both allocator modules from one exact
 locally available main commit. It uses an exclusive temporary directory inside
 the task repository's shared Git store and removes only its generated helper copies
 afterward. Git reads and helper execution do not depend on the shell's cwd. A failed main refresh or
-commit lookup stops without using a cached older pin. Missing helper source blobs
-stop this bootstrap before execution; do not hand-fetch OIDs, hydrate unrelated
-objects, or execute a cached older helper. Use the accepted helper only when its
-source bodies are already locally available, with Node 24.
+commit lookup stops without using a cached older pin. If either helper blob is
+missing, the bootstrap tree-binds both helper paths to that exact commit and
+requests only the missing blob OIDs through Git's bounded `fetch --stdin` path.
+It verifies each returned object against the pinned OID and ordinary-blob type
+before copying either helper to the temporary directory. A failed fetch or
+verification stops before helper execution. Do not fetch other OIDs, hydrate
+unrelated objects, or execute a cached older helper. Use Node 24.
 
 ```sh
 (
@@ -77,10 +80,11 @@ for key in GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR GIT_OBJECT_DIRECT
   unset "$key"
 done
 export GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1
-git -C "$TASK_REPO" -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules \
+common=$(git -C "$TASK_REPO" rev-parse --path-format=absolute --git-common-dir) || exit
+git --git-dir="$common" -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules \
   --no-auto-maintenance --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main || exit
-fetched=$(git -C "$TASK_REPO" rev-parse --verify 'FETCH_HEAD^{commit}') || exit
-tracked=$(git -C "$TASK_REPO" rev-parse --verify 'origin/main^{commit}') || exit
+fetched=$(git --git-dir="$common" rev-parse --verify 'FETCH_HEAD^{commit}') || exit
+tracked=$(git --git-dir="$common" rev-parse --verify 'refs/remotes/origin/main^{commit}') || exit
 [ "$fetched" = "$tracked" ] || { echo 'Fetched main does not match origin/main' >&2; exit 1; }
 base=$tracked
 python3 - "$TASK_REPO" "$base" inspect --commit "$base" \
@@ -97,25 +101,44 @@ env = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1')
 for key in ('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
             'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'):
     env.pop(key, None)
+common = Path(subprocess.check_output(['git', '-C', repo, 'rev-parse',
+    '--path-format=absolute', '--git-common-dir'], env=env).decode().strip()).resolve(strict=True)
 def git(*args, **kwargs):
-    return subprocess.check_output(['git', '-C', repo, '--no-replace-objects', *args], env=env, **kwargs)
-common = Path(git('rev-parse', '--path-format=absolute', '--git-common-dir').decode().strip()).resolve(strict=True)
-sources = {}
+    return subprocess.check_output(['git', '--git-dir', str(common), '--no-replace-objects', *args], env=env, **kwargs)
+pins = {}
+missing = []
 for name in ('local-workspace.mjs', 'worker-identity.mjs'):
     row = git('ls-tree', '-z', base, '--', 'scripts/' + name).rstrip(b'\0')
     metadata, member = row.split(b'\t')
     mode, kind, oid = metadata.decode().split()
     if mode not in ('100644', '100755') or kind != 'blob' or member != ('scripts/' + name).encode():
         raise SystemExit('Ordinary pinned helper required')
+    pins[name] = oid
     present = git('-c', 'core.commitGraph=false', 'rev-list', '--objects', '--filter=tree:0',
                   '--missing=print', '--ignore-missing', '--no-walk=unsorted', '--no-object-names',
                   '--stdin', input=oid.encode() + b'\n').decode().strip()
     if present != oid:
-        raise SystemExit('Pinned helper missing; stop and use the accepted helper workflow when its source bodies are available')
+        missing.append(oid)
+    else:
+        status = git('cat-file', '--batch-check=%(objectname) %(objecttype) %(objectsize)', input=oid.encode() + b'\n').decode().split()
+        if len(status) != 3 or status[0] != oid or status[1] != 'blob' or not status[2].isdigit():
+            raise SystemExit('Pinned helper has an invalid local object; stop')
+if missing:
+    result = subprocess.run(['git', '--git-dir', str(common), '-c', 'fetch.negotiationAlgorithm=noop',
+        'fetch', '--no-tags', '--no-write-fetch-head', '--recurse-submodules=no',
+        '--filter=blob:none', '--stdin', 'origin'], input=(''.join(oid + '\n' for oid in missing)).encode(),
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=env)
+    if result.returncode:
+        raise SystemExit('Exact pinned helper fetch failed: ' + result.stderr.decode('utf-8', 'replace').strip())
+sources = {}
+for name, oid in pins.items():
     status = git('cat-file', '--batch-check=%(objectname) %(objecttype) %(objectsize)', input=oid.encode() + b'\n').decode().split()
     if len(status) != 3 or status[0] != oid or status[1] != 'blob' or not status[2].isdigit():
-        raise SystemExit('Pinned helper missing; stop and use the accepted helper workflow when its source bodies are available')
-    sources[name] = git('cat-file', 'blob', oid)
+        raise SystemExit('Pinned helper unavailable or invalid after exact-object acquisition; stop')
+    body = git('cat-file', 'blob', oid)
+    if len(body) != int(status[2]) or git('hash-object', '--stdin', input=body).decode().strip() != oid:
+        raise SystemExit('Pinned helper body failed object verification; stop')
+    sources[name] = body
 with tempfile.TemporaryDirectory(prefix='worldatlas-helper-', dir=common) as directory:
     for name, body in sources.items():
         with (Path(directory) / name).open('xb') as output:
