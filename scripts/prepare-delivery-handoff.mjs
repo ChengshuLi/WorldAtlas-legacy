@@ -790,7 +790,8 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
   selected={selection,selectionBytes:reader.read(plan.selector),finalBank:selection.prepared_bank,
     reference_release:selection.reference,base:previous.preparedOwnership.base_reference,referenceMetadata};
   const before=await readPreparedFinalOwnership({indexRaw:originalIndex,manifest,manifestSha:native.sha256,selected,
-    ownerCount:previous.preparedOwnership.owners,read:pin=>{need(originalBodies.has(pin.path),'Missing accepted final body');return originalBodies.get(pin.path);}});
+    ownerCount:previous.preparedOwnership.owners,stableBufferReader:true,
+    read:pin=>{need(originalBodies.has(pin.path),'Missing accepted final body');return originalBodies.get(pin.path);}});
   // Adopt an already prepared current-state proposal through the same writer.
   // The queue compares the complete before/after maps; preparation does not
   // grant scientific authority or reconstruct a correction from old repairs.
@@ -812,7 +813,7 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
     const proposedBank=await readPreparedFinalOwnership({indexRaw,manifest,manifestSha:native.sha256,
       selected:{finalBank:proposed.prepared_bank,base:before.index.preparedOwnership.base_reference,
         reference_release:proposed.reference,referenceMetadata},ownerCount:before.features.length,
-      read:p=>read({...p,path:root+'/'+p.path})});
+      stableBufferReader:true,read:p=>read({...p,path:root+'/'+p.path})});
     const prepared=await prepareFinalBankStartupOwnership({manifest,manifestSha:native.sha256,previous,
       ownership:proposedBank.ownership,features:proposedBank.features,
       baseReference:before.index.preparedOwnership.base_reference,referenceMetadata,destination});
