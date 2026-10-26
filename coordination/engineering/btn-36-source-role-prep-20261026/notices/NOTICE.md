@@ -25,5 +25,6 @@ The accompanying GSHHG license/readme files are byte-for-byte retained source te
 | Repository path | Bytes | SHA-256 | Contents |
 |---|---:|---|---|
 | `supported-inputs-current-main-f8c5-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Two embedded geoBoundaries-derived base geometries |
+| `native-authority-current-4810-001/constructor-result.json` | 7,667 | `1928930134b789fa7d659298ae82908c052986ed88324976e17144058edf5dc7` | Two constructor rows embed the same geoBoundaries-derived base geometries; output is native-authority construction evidence, not a legal boundary or acceptance |
 
 No status, credit, source-year acceptance, or legal-boundary claim is implied by these artifacts.
