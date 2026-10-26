@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {execFileSync, spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {createAcquisition, githubTree} from '../scripts/geography-prefetch.mjs';
+import {createAcquisition, createGitHubTokenProvider, deliveryAcquisitionExecute, githubTree} from '../scripts/geography-prefetch.mjs';
 import {ImmutableReader} from '../scripts/check-effective-geographic-regression.mjs';
 import {createRoutingMetadataAcquisition} from '../scripts/geography-routing-metadata.mjs';
 
@@ -379,6 +379,45 @@ test('GitHub metadata retries only one interrupted immutable GET, including body
   } finally {
     globalThis.fetch = originalFetch;
     if (originalToken === undefined) delete process.env.GH_TOKEN; else process.env.GH_TOKEN = originalToken;
+  }
+});
+
+test('GH_CONFIG_DIR-only acquisition shares one gh token across metadata and Git fetch', async () => {
+  const originalFetch = globalThis.fetch;
+  const originalPath = process.env.PATH, originalConfig = process.env.GH_CONFIG_DIR, originalToken = process.env.GH_TOKEN;
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'geography-gh-auth-'));
+  const ghBin = path.join(directory, 'bin'), ghConfig = path.join(directory, 'config');
+  fs.mkdirSync(ghBin); fs.mkdirSync(ghConfig);
+  const ghPath = path.join(ghBin, 'gh');
+  fs.writeFileSync(ghPath, '#!/bin/sh\n[ "$1" = auth ] && [ "$2" = token ] && [ -n "$GH_CONFIG_DIR" ] && [ -z "${GH_TOKEN:-}" ] || exit 12\nprintf called >> "$GH_CONFIG_DIR/calls"\nprintf fixture-token\n');
+  fs.chmodSync(ghPath, 0o755);
+  process.env.PATH = `${ghBin}${path.delimiter}${originalPath ?? ''}`;
+  process.env.GH_CONFIG_DIR = ghConfig;
+  delete process.env.GH_TOKEN;
+  const id = 'a'.repeat(40), tokenProvider = createGitHubTokenProvider();
+  try {
+    globalThis.fetch = async (_url, options) => {
+      assert.equal(options.headers.Authorization, 'Bearer fixture-token');
+      return new Response(JSON.stringify({sha: id, tree: []}));
+    };
+    assert.deepEqual(await githubTree(id, false, {getToken: tokenProvider}), {sha: id, tree: []});
+
+    let gitCall;
+    const execute = (command, args, options) => { gitCall = {command, args, options}; return Buffer.alloc(0); };
+    deliveryAcquisitionExecute({execute, getToken: tokenProvider})('git',
+      ['fetch', 'https://github.com/ChengshuLi/WorldAtlas.git'],
+      {env: {...process.env, GIT_CONFIG_NOSYSTEM: '1'}});
+    assert(gitCall);
+    const header = gitCall.options.env.GIT_CONFIG_VALUE_2;
+    assert.match(header, /^AUTHORIZATION: basic /);
+    assert.equal(Buffer.from(header.slice('AUTHORIZATION: basic '.length), 'base64').toString(), 'x-access-token:fixture-token');
+    assert.equal(fs.readFileSync(path.join(ghConfig, 'calls'), 'utf8'), 'called', 'metadata and Git use one gh auth lookup');
+  } finally {
+    globalThis.fetch = originalFetch;
+    if (originalPath === undefined) delete process.env.PATH; else process.env.PATH = originalPath;
+    if (originalConfig === undefined) delete process.env.GH_CONFIG_DIR; else process.env.GH_CONFIG_DIR = originalConfig;
+    if (originalToken === undefined) delete process.env.GH_TOKEN; else process.env.GH_TOKEN = originalToken;
+    fs.rmSync(directory, {recursive: true, force: true});
   }
 });
 

@@ -145,4 +145,28 @@ test('finished-bank profile uses the existing copier and complete decoder withou
  await assert.rejects(readPreparedFinalOwnership({indexRaw,manifest:f.manifest,manifestSha:f.manifestSha,selected:{...selected,finalBank:{...selected.finalBank,sha256:'f'.repeat(64)}},features,read}),/one-way selected index pin/);
  const badRead=async pin=>{const raw=await read(pin);return pin.path===index.pixelMap.parts[0].path?Buffer.concat([raw,Buffer.from('changed')]):raw;};
  await assert.rejects(readPreparedFinalOwnership({indexRaw,manifest:f.manifest,manifestSha:f.manifestSha,selected,features,read:badRead}),/whole identity differs/);
+ await assert.rejects(readPreparedFinalOwnership({indexRaw,manifest:f.manifest,manifestSha:f.manifestSha,selected,features,stableBufferReader:true,read:badRead}),/whole identity differs/);
+ const badHashRead=async pin=>{const raw=await read(pin);if(pin.path!==index.pixelMap.parts[0].path)return raw;const changed=Buffer.from(raw);changed[0]^=1;return changed;};
+ await assert.rejects(readPreparedFinalOwnership({indexRaw,manifest:f.manifest,manifestSha:f.manifestSha,selected,features,read:badHashRead}),/whole identity differs/);
+ await assert.rejects(readPreparedFinalOwnership({indexRaw,manifest:f.manifest,manifestSha:f.manifestSha,selected,features,stableBufferReader:true,read:badHashRead}),/whole identity differs/);
+
+ // The default reader boundary owns a defensive copy. Only the explicit
+ // finalizer opt-in may consume an authenticated, stable Buffer without copying.
+ const selectedPart=index.pixelMap.parts[0],stable=await fs.readFile(path.join(f.source,selectedPart.path));
+ async function copiesFor(stableBufferReader){
+  let copies=0;const original=Buffer.from;
+  Buffer.from=function(value,...args){if(value===stable)copies++;return original.call(this,value,...args);};
+  try{
+   const stableRead=async pin=>pin.path===selectedPart.path?stable:fs.readFile(path.join(f.source,pin.path));
+   await readPreparedFinalOwnership({indexRaw,manifest:f.manifest,manifestSha:f.manifestSha,selected,features,stableBufferReader,read:stableRead});
+   return copies;
+  }finally{Buffer.from=original;}
+ }
+ assert.equal(await copiesFor(false),1);
+ assert.equal(await copiesFor(true),0);
+ // The stable-buffer optimization is Buffer-specific; typed-array readers keep
+ // the ordinary conversion/validation path and decode identically.
+ const typedRead=async pin=>pin.path===selectedPart.path?new Uint8Array(stable):fs.readFile(path.join(f.source,pin.path));
+ const typedDecoded=await readPreparedFinalOwnership({indexRaw,manifest:f.manifest,manifestSha:f.manifestSha,selected,features,stableBufferReader:true,read:typedRead});
+ assert.deepEqual(typedDecoded.ownership.rows,rows);
 });
