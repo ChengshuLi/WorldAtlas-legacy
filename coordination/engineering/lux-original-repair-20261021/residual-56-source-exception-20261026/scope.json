@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "luxembourg-original-residual-56-documented-unresolved-proposal",
+  "status": "proposal-awaiting-independent-review-stock-delivery-and-root-acceptance",
+  "package_id": "gb-LUX-ADM1--repair-evaluation",
+  "original_scope": {"cells": 624, "intervals": 214, "owner_index": 7122},
+  "prior_root_accepted": {"cells": 568, "receipt": "https://github.com/ChengshuLi/WorldAtlas/pull/2652#issuecomment-6308268693", "treatment": "historical accepted scope; not recounted or re-credited by this proposal"},
+  "proposed_residual": {"cells": 56, "native_held": 26, "prior_source_current_canton_held": 30, "new_repairs": 0, "owner_changes": 0, "native_holds_removed": 0, "accepted_credit_claimed": 0, "scope_recommendation": "26 ACT-contained foreign-contact keys are an exact-scope source-relative candidate for positive preparation, not yet source-adopted or repaired; 30 LUX-only representation disagreements are proposed documented exceptions. Root alone determines source adoption and acceptance."},
+  "exact_key_partition": {
+    "representation": "Expand each pinned interval run to tuples (y, x, owner_index); sort numerically by (y, x, owner_index); serialize each tuple as decimal `y,x,owner_index` plus LF; SHA-256 the bytes.",
+    "held56_sorted_y_x_owner_sha256": "3df15a7a78d7a080e9c568eaa0ae4780e33241d47e256ac2f7fbcb0bdfc5f6cc",
+    "native26_sorted_y_x_owner_sha256": "d8a190466fc8617e6f2f4a0cf62dec3b0d84d0237c059e7ade58a0edf0176d87",
+    "prior30_sorted_y_x_owner_sha256": "2a96c04aa8281ce28d68274f41368ffebad468995ad478725862619b53efd79b",
+    "prior30_comparison_subsets": {"outside_both_ACT_and_SIG_GR_canton_union": 25, "inside_SIG_GR_but_outside_ACT_canton_and_national_polygon": 5},
+    "native26_ACT_membership": {"inside_ACT_canton_and_national_polygon": 26, "canton_counts": {"Clervaux": 22, "Redange": 3, "Echternach": 1}},
+    "accepted568_patch_sorted_y_x_owner_sha256": "4b7a24a7355af70bbca26f4f3e7a9e5cc70d0673abe9b2b4b259b7338479ed8e",
+    "checks": {"held_native_prior_disjoint": true, "native_plus_prior_equals_held56": true, "accepted568_patch_disjoint_from_held56": true, "56_plus_568_equals_original624": true}
+  },
+  "source_free": true,
+  "no_geometry_or_science_replay": true,
+  "evidence_pins": [
+    {"role": "original queue contract", "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7", "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json", "blob": "9c9a9bc83627afd3e8435ff4009e39530543bf54"},
+    {"role": "original package disposition and acceptance reconciliation", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-disposition-20261020/lux-disposition.json", "blob": "5ff9ec771ecaad5e32bccb481e5b31211bbbd8f2", "sha256": "b0828d4c35913f0ea8dd0256321122f459891281a7ee67217fcd9725144abd32", "bytes": 103196},
+    {"role": "native diagnostic: 26 held / 598 supported", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/native-diagnostic-001/native-diagnostic.json", "blob": "80ca521a73915d8dad9e6353c88b9080401cb711", "sha256": "1613a6068cfed881724a833fd37e945753b05fa502089657f5ffc5df628f17e2", "bytes": 33052},
+    {"role": "full original physical evidence and execution receipt", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/physical-001/execution-receipt.json", "blob": "1e4c986f7f703a4063be8a35a24e8df8bb6e48ba", "sha256": "1809487476dae39a90db33b675a3d520571c2f822d5f380ed4f05507344087d2", "bytes": 59077},
+    {"role": "accepted-input partition: 568 positive candidate / 56 held", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/supported-inputs-002/original-scope-partition.json", "blob": "9d31371e3b7210d39df40582f3112101f632a83b", "sha256": "6e55a8cbd71cdf37808bce638646f047bb041b00f85d74e0d6fe3fa4598ca8d6", "bytes": 2248},
+    {"role": "exact 56 held intervals", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/supported-inputs-002/held-original.json", "blob": "5d6a84cec0fc84ae71dc3f5ac76d5a1936d29f42", "sha256": "200924d5c3a4718c3f3b8911b925819988acb3c25100fdf77cb35a5f467690e0", "bytes": 3808},
+    {"role": "prior 30 held intervals", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/evidence-investigation-002/prior-holds.json", "blob": "ff9f0ea80f7822932637e846e3c0dcd48a20d8e6", "sha256": "658a7e961ec7ac880235d3a9a4db4cc9d043785855491260bddf6d11a5bd4065", "bytes": 3952},
+    {"role": "complete source/native/physical and territorial competitor evidence", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/supported-inputs-002/source-evidence.json", "blob": "b50faa5213106249602307d43c55ddd67a404ff7", "sha256": "0e032689b837082c790a5b1af16d0e09bdfafb90febd1073843272d968874c87", "bytes": 267915},
+    {"role": "ACT official representation comparison", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/evidence-investigation-002/lux-act-official-boundary-adverse-comparison.json", "blob": "4a3fc8300e89e24fc92d47b8e21c86777ceb1b22", "sha256": "6be9bd763fc931b03f3f99252a16b302a482fbdd1b2fcf4ea4d10b6e14acf7ec", "bytes": 8314},
+    {"role": "official ACT source-vintage and border-context readings", "commit": "35be34d6d4688b50fbe009c8882a09e801633d81", "path": "coordination/engineering/lux-original-repair-20261021/evidence-investigation-002/lux-active-primary-source-vintage-evidence.json", "blob": "e4ca9d9ebef10c1e0decb0b62cf1b2c107ec464e", "sha256": "3c8d15f4b521523f9fed5bed1863ee1dee4eccd51aeffb032257e8d797e6c63a", "bytes": 12426}
+  ],
+  "limits": [
+    "ACT containment is a candidate for bounded source-relative adoption; it is not itself source adoption, a native patch, or a claim that the original geoBoundaries layer is wrong or ACT legally controls.",
+    "ACT update date does not establish observation date, positional accuracy, or universal current legal adoption.",
+    "The specifically cited ACT archival Belgium segment LB190-LB202 was not georeferenced to these cells; it remains an optional future source-fit opportunity.",
+    "The exact Belgian data transfer attempt is stopped/uncertain and was not retried or routed around.",
+    "No raw geometry is included; source-family rights and source roles remain separately attributable.",
+    "This packet does not replace original receipts, accepted 568 record, or global root ledger; root alone makes acceptance/accounting decision."
+  ]
+}
