@@ -172,9 +172,12 @@
     "reference_checks": {
       "current_index_member": false,
       "compatibility_file_member": false,
-      "package_input_or_tracked_text_reference": false
+      "individually_named_package_file": false,
+      "covered_by_package_directory_input": true,
+      "package_directory_input": ".github/package-inputs.json includes data/canonical-grid/current-startup/; both descendants are package inputs through that directory declaration",
+      "explicit_tracked_text_reference": false
     },
-    "correction": "The two stale generated tracked files were removed only from the new candidate tree. Their exact bodies remain in the earlier a5dd333 commit and as local untracked copies. Seven other local unindexed extras remain preserved; no indexed file or source evidence was removed.",
+    "correction": "The two stale generated tracked files were removed only from the new candidate tree because they are outside the strict selected-bank index/compatibility roster. They were not individually named by package-input metadata, but are covered by its broad current-startup directory input. Their exact bodies remain in the earlier a5dd333 commit and as local untracked copies. Seven other local unindexed extras remain preserved; no indexed file or source evidence was removed.",
     "corrective_commit": "3078b82d5ef224ad0eda79c63f2e05f349ad9a24",
     "candidate_tree_index_exact_after_retirement": true,
     "candidate_tree_blobs_including_index_after_retirement": 80,
