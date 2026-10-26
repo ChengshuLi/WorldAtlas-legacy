@@ -20,6 +20,30 @@ const PROGRAMME_MODULE='coordination/engineering/selected-geography-effective-pr
 const demand=(v,m)=>{if(!v)throw Error(m);};
 const hash=v=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v);
 const sha=b=>createHash('sha256').update(b).digest('hex');
+// The legacy LUX source evidence stores authenticated gzip-body pins, while
+// the immutable catalogue describes those same bodies as ordered product
+// parts. Normalize only the two known schemas; never rewrite either receipt.
+export function legacyCompletePartsMatchCatalogue(pins,record) {
+ const exact=(value,names)=>value&&typeof value==='object'&&!Array.isArray(value)
+  &&Object.keys(value).sort().join(',')===[...names].sort().join(',');
+ const pinKeys=['bytes','commit','decoded_bytes','decoded_sha256','git_blob_oid','mode','path','sha256'];
+ const partKeys=['bytes','hash_kind','offset','ordinal','path','sha256','uncompressed_bytes','uncompressed_sha256'];
+ if(!Array.isArray(pins)||pins.length!==1||!record||!Array.isArray(record.parts)||record.parts.length!==1)return false;
+ let offset=0;
+ for(let i=0;i<pins.length;i++){
+  const pin=pins[i],part=record.parts[i];
+  if(!exact(pin,pinKeys)||!exact(part,partKeys)
+   ||!Number.isSafeInteger(pin.bytes)||pin.bytes<0
+   ||!Number.isSafeInteger(pin.decoded_bytes)||pin.decoded_bytes<0
+   ||!Number.isSafeInteger(part.bytes)||part.bytes<0
+   ||!Number.isSafeInteger(part.uncompressed_bytes)||part.uncompressed_bytes<0
+   ||part.ordinal!==0||part.offset!==0||part.hash_kind!=='file-bytes'
+   ||pin.path!==part.path||pin.bytes!==part.bytes||pin.sha256!==part.sha256
+   ||pin.decoded_bytes!==part.uncompressed_bytes||pin.decoded_sha256!==part.uncompressed_sha256)return false;
+  offset+=part.uncompressed_bytes;
+ }
+ return Number.isSafeInteger(offset)&&offset===record.original_bytes;
+}
 const canonical=v=>{
  if(Array.isArray(v))return v.map(canonical);
  if(isNativeSequence(v))return Array.from(v,canonical);
@@ -97,6 +121,25 @@ function canonicalDigest(value,measureBytes) {
  const sha256=hash.digest('hex');return measureBytes?{sha256,bytes}:sha256;
 }
 const same=(a,b)=>valueSha(a)===valueSha(b);
+// Retained positive lineage must include the exact foreign source contacts
+// already recorded for that native key. Authenticating only a caller-supplied
+// subset would let an omitted adverse operand disappear from the new pass.
+export function validateRetainedOriginalPositiveKey(record,comparisonRow,sourceFamily,owner) {
+ demand(record&&Number.isSafeInteger(record.y)&&Number.isSafeInteger(record.x)
+  &&comparisonRow?.y===record.y&&comparisonRow?.x===record.x
+  &&Array.isArray(comparisonRow.queue_owner_indices)&&comparisonRow.queue_owner_indices.includes(owner)
+  &&Array.isArray(comparisonRow.source_matches),'Retained original positive key is absent from exact per-key source comparison');
+ const own=comparisonRow.source_matches.filter(match=>match?.family===sourceFamily);
+ demand(own.length===1&&typeof own[0].shapeID==='string'&&record.source_id===sourceFamily+':'+own[0].shapeID,
+  'Retained original positive member differs from exact per-key source comparison');
+ const expected=comparisonRow.source_matches.filter(match=>match?.family!==sourceFamily)
+  .map(match=>{demand(typeof match?.family==='string'&&match.family&&typeof match.shapeID==='string'&&match.shapeID,
+    'Malformed foreign match in exact per-key source comparison');return match.family+':'+match.shapeID;}).sort();
+ const actual=(record.negative_operands??[]).map(item=>item?.source_id).sort();
+ demand(expected.length===new Set(expected).size&&actual.length===new Set(actual).size
+  &&same(actual,expected),'Retained original adverse operands differ from exact per-key source comparison');
+ return {source_id:record.source_id,negative_source_ids:expected};
+}
 const freeze=v=>{if(v&&typeof v==='object'){Object.values(v).forEach(freeze);Object.freeze(v);}return v;};
 // The executing checkout supplies policy authority. reader.version can be an
 // untrusted candidate and therefore must never choose the catalogue. Policy is
@@ -2285,6 +2328,122 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
  demand(usedExternalOriginals.size===externalOriginals.size,'Unused negative Natural Earth atom');
  demand(usedSeamViews.size===seamViews.size,'Unused canonical seam operand');
  demand(checked.size===proposed.rows.reduce((n,row)=>n+row.runs.length,0),'Unqualified proposed native intervals');
+ let retainedOriginalPositive=null;
+ if(evidence.retained_original_positive!==undefined){
+  const retained=(yield* readAdopted(evidence.retained_original_positive,'Retained original positive provenance'));
+  demand(keys(retained,'version,kind,source_family,target_id,original_source_evidence,original_native_patch,original_territorial_provenance,original_per_key_source_comparison,owner,records')
+   &&retained.version===1&&retained.kind==='retained-original-positive-provenance-v1'
+   &&typeof retained.source_family==='string'&&retained.source_family&&typeof retained.target_id==='string'&&retained.target_id
+   &&Number.isSafeInteger(retained.owner)&&retained.owner>0&&Array.isArray(retained.records)&&retained.records.length>0,
+   'Incomplete retained original positive provenance');
+  const old=(yield* json(retained.original_source_evidence)),oldPatch=(yield* json(retained.original_native_patch));
+  const oldTerritorial=(yield* json(retained.original_territorial_provenance));
+  const oldPerKey=(yield* json(retained.original_per_key_source_comparison));
+  demand(old?.version===1&&old.kind==='source-target-native-evidence-v1'
+   &&old.catalogue?.git_blob_oid===evidence.catalogue.git_blob_oid
+   &&old.native_contract?.size===evidence.native_contract.size
+   &&Array.isArray(old.families)&&Array.isArray(old.targets)&&Array.isArray(oldPatch.rows),
+   'Retained original positive source differs from the original native contract');
+  demand(oldTerritorial?.kind==='whole-original-territorial-exclusions-v1','Retained original territorial kind differs');
+  demand(oldTerritorial.catalogue?.git_blob_oid===old.catalogue.git_blob_oid,'Retained original territorial catalogue differs');
+  demand(oldTerritorial.physical_input?.git_blob_oid===old.physical_input?.git_blob_oid,'Retained original territorial physical input differs');
+  demand(Array.isArray(oldTerritorial.targets)&&oldTerritorial.targets.length===old.targets.length,'Retained original territorial target roster differs');
+  demand(Array.isArray(oldTerritorial.complete_sources),'Retained original territorial complete sources are absent');
+  const completeSourceMap=new Map(oldTerritorial.complete_sources.map(item=>[item.source_family,item.parts]));
+  const expectedOriginalSources=[...old.families,...(old.territorial_exclusion_sources??[])];
+  demand(completeSourceMap.size===expectedOriginalSources.length&&expectedOriginalSources.every(item=>
+   same(completeSourceMap.get(item.source_id),item.parts)),
+   'Retained original positive/negative family inventory is incomplete');
+  demand(oldPerKey?.kind==='lux-original-retained-source-native-mask-comparison-v1'
+   &&oldPerKey.package_id==='gb-LUX-ADM1--repair-evaluation'&&Array.isArray(oldPerKey.source_families)
+   &&Array.isArray(oldPerKey.per_key),'Retained original per-key source comparison is incomplete');
+  const comparisonFamilies=oldPerKey.source_families.map(item=>item.family);
+  demand(comparisonFamilies.length===new Set(comparisonFamilies).size
+   &&same([...comparisonFamilies].sort(),expectedOriginalSources.map(item=>item.source_id).sort()),
+   'Retained original per-key source comparison family inventory differs');
+  const comparisonByKey=new Map();
+  for(const item of oldPerKey.per_key){
+   demand(Number.isSafeInteger(item.y)&&Number.isSafeInteger(item.x)&&Array.isArray(item.source_matches),
+    'Malformed retained original per-key source comparison row');
+   const key=item.y+':'+item.x;demand(!comparisonByKey.has(key),'Duplicate retained original per-key source comparison row');
+   comparisonByKey.set(key,item);
+  }
+  const originalFamilies=old.families.filter(f=>f.source_id===retained.source_family);
+  const originalProduct=catalogue.products.find(p=>p.key===retained.source_family);
+  demand(originalFamilies.length===1&&legacyCompletePartsMatchCatalogue(originalFamilies[0].parts,originalProduct),
+   'Retained original LUX complete family differs');
+  const originalFeatures=yield* readCompleteSource(originalFamilies[0].parts,originalProduct);
+  const sourceById=new Map(originalFeatures.features.map((feature,feature_ordinal)=>
+   [retained.source_family+':'+feature.properties?.shapeID,{feature,feature_ordinal}]));
+  const originalTargets=new Map(old.targets.map(target=>[target.id,target]));
+  const originalTerritorialTargets=new Map(oldTerritorial.targets.map(target=>[target.source_id,target]));
+  demand(originalTerritorialTargets.size===old.targets.length
+   &&old.targets.every(target=>originalTerritorialTargets.has(target.id)),
+   'Retained original territorial member roster is not an exact join');
+  const patchKeys=new Set();for(const row of oldPatch.rows)for(const run of row.runs??[])
+   if(run[2]===retained.owner)for(let x=run[0];x<run[1];x++)patchKeys.add(row.y+':'+x);
+  const requestedKeys=new Set((rowsByOwner.get(retained.owner)??[]).flatMap(row=>row.runs.flatMap(run=>
+   Array.from({length:run[1]-run[0]},(_,i)=>row.y+':'+(run[0]+i)))));
+  const seen=new Set(),negativeFeatures=new Map();
+  for(const record of retained.records){
+   demand(keys(record,'source_id,pixelIndex,y,x,geometry_sha256,negative_operands')
+    &&typeof record.source_id==='string'
+    &&record.pixelIndex===retained.owner&&Number.isSafeInteger(record.y)&&Number.isSafeInteger(record.x)
+    &&hash(record.geometry_sha256)&&Array.isArray(record.negative_operands),
+    'Malformed retained original positive member binding');
+   const key=record.y+':'+record.x,identity=key+':'+record.source_id,source=sourceById.get(record.source_id),target=originalTargets.get(record.source_id);
+   demand(requestedKeys.has(key)&&patchKeys.has(key)&&!seen.has(identity)&&source&&target
+    &&target.source_family===retained.source_family&&target.pixelIndex===retained.owner
+    &&(target.target_id??target.id)===retained.target_id&&target.base_geometry
+    &&valueSha(source.feature.geometry)===record.geometry_sha256
+    &&valueSha(target.base_geometry)===valueSha(resolvedTargets.get(retained.target_id)?.base_geometry)
+    &&(target.coverage_rows??[]).some(row=>row.y===record.y&&row.runs.some(run=>run[0]<=record.x&&record.x<run[1])),
+    'Retained original positive member/owner/key differs');seen.add(identity);
+   const comparisonRow=comparisonByKey.get(key);
+   validateRetainedOriginalPositiveKey(record,comparisonRow,retained.source_family,retained.owner);
+   const negatives=new Set();
+   for(const negative of record.negative_operands){
+    demand(keys(negative,'source_id,negative_ordinal,geometry_sha256')&&typeof negative.source_id==='string'
+     &&Number.isSafeInteger(negative.negative_ordinal)&&negative.negative_ordinal>=0&&hash(negative.geometry_sha256)
+     &&!negatives.has(negative.source_id+':'+negative.negative_ordinal),
+     'Malformed retained original negative operand');negatives.add(negative.source_id+':'+negative.negative_ordinal);
+    const oldTarget=originalTerritorialTargets.get(record.source_id);
+    const originalExclusion=target.territorial_exclusions?.[negative.negative_ordinal];
+    const mapped=oldTarget?.exclusions?.find(item=>item.negative_ordinal===negative.negative_ordinal);
+    demand(keys(originalExclusion,'feature_ordinal,geometry_sha256,negative_ordinal,source_id')
+     &&originalExclusion.negative_ordinal===negative.negative_ordinal
+     &&originalExclusion.source_id===negative.source_id
+     &&originalExclusion.geometry_sha256===negative.geometry_sha256
+     &&mapped?.source_id===negative.source_id&&mapped.geometry_sha256===negative.geometry_sha256
+     &&mapped.feature_ordinal===originalExclusion.feature_ordinal,
+     'Retained original positive negative operand differs');
+    const matches=[...completeSourceMap.keys()].filter(family=>negative.source_id.startsWith(family+':'));
+    demand(matches.length===1&&mapped.source_family===matches[0],
+     'Retained original negative source family identity differs');
+    const sourceFamily=matches[0];
+    if(!negativeFeatures.has(sourceFamily)){
+     const product=catalogue.products.find(p=>p.key===sourceFamily);
+     demand(product&&legacyCompletePartsMatchCatalogue(completeSourceMap.get(sourceFamily),product),
+      'Retained original negative family is not complete');
+     const loaded=yield* readCompleteSource(completeSourceMap.get(sourceFamily),product);
+     negativeFeatures.set(sourceFamily,new Map(loaded.features.map((feature,feature_ordinal)=>
+      [sourceFamily+':'+feature.properties?.shapeID,{feature,feature_ordinal}])));
+    }
+    const negativeMember=negativeFeatures.get(sourceFamily).get(negative.source_id);
+    demand(negativeMember&&negativeMember.feature_ordinal===mapped.feature_ordinal
+     &&valueSha(negativeMember.feature.geometry)===negative.geometry_sha256,
+     'Retained original negative source member identity differs');
+   }
+  }
+  demand(same([...new Set(retained.records.map(r=>r.y+':'+r.x))].sort(),[...requestedKeys].sort())
+   &&retained.records.length===new Set(retained.records.map(r=>r.y+':'+r.x)).size,
+   'Retained original positive provenance does not exactly cover requested owner scope');
+  retainedOriginalPositive={pin:evidence.retained_original_positive,source_family:retained.source_family,
+   target_id:retained.target_id,owner:retained.owner,
+   records:retained.records.length,keys:requestedKeys.size,
+   original_source_evidence:retained.original_source_evidence,original_native_patch:retained.original_native_patch,
+   original_territorial_provenance:retained.original_territorial_provenance};
+ }
  if(diagnostic){
   const decisions=[...diagnosticRows].sort((a,b)=>a[0]-b[0]).map(([y,runs])=>({y,runs:runs.sort((a,b)=>a[0]-b[0])}));
   const partition=accepted=>decisions.map(row=>{const runs=[];
@@ -2306,6 +2465,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
    ...(splitCompetitors.length?{split_source_competitors:splitCompetitors}:{}),
    ...(dated?{physical_context_hits:physicalContextHits}:{}),
    ...(evidence.territorial_applicability===undefined?{}:{territorial_contacts:territorialContextHits}),
+   ...(retainedOriginalPositive?{retained_original_positive:retainedOriginalPositive}:{}),
    rule_sha256:valueSha(preimage),native_contract:evidence.native_contract,
    limitations:['Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.',
     'All original source, physical, query, witness and territorial limits remain retained.']};
@@ -2330,6 +2490,7 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
    ...(splitCompetitors.length?{split_source_competitors:splitCompetitors}:{}),
   ...(dated?{physical_context_hits:physicalContextHits}:{}),
   ...(evidence.territorial_applicability===undefined?{}:{territorial_contacts:territorialContextHits}),
+  ...(retainedOriginalPositive?{retained_original_positive:retainedOriginalPositive}:{}),
   limitations:['Physical interpretation and semantic reconciliation are retained reviewed source evidence; actual current owner-zero is checked by native consumers.',
    'Witness exclusion applies only to requested native centres. Original whole-source physical/hierarchy issues and historical source/resource limits remain retained; no whole-parent certification or acceptance is inferred.']};
 }

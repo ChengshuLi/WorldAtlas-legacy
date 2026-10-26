@@ -1331,6 +1331,7 @@ export async function sourceEvidence(config, reader) {
   if (config.source_evidence.version === 3) reader.read(config.source_evidence.revised_source_adoption);
   if (config.source_evidence.territorial_applicability !== undefined) reader.read(config.source_evidence.territorial_applicability);
   if (config.source_evidence.adopted_provider_families !== undefined) reader.read(config.source_evidence.adopted_provider_families);
+  if (config.source_evidence.retained_original_positive !== undefined) reader.read(config.source_evidence.retained_original_positive);
   if (config.source_evidence.canonical_seam_views !== undefined) reader.read(config.source_evidence.canonical_seam_views);
   const {locate} = await import('./delivery-handoff-advance.mjs');
   const selectorPin = locate(reader, config.selector);
