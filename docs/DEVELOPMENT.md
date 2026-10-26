@@ -77,6 +77,12 @@ before copying any helper to the temporary directory. A failed fetch or
 verification stops before helper execution. Do not fetch other OIDs, hydrate
 unrelated objects, or execute a cached older helper. Use Node 24.
 
+During selected-object acquisition, immutable GitHub tree metadata reads and
+the bounded Git fetch share one invocation-local authentication resolver. It
+uses `GH_TOKEN` when supplied; otherwise it reads the existing `gh auth token`
+for that invocation, respecting `GH_CONFIG_DIR`. The token is neither logged
+nor persisted, and callers do not need to export a second token variable.
+
 ```sh
 (
 : "${TASK_REPO:?Use the repository path supplied by this task}"
