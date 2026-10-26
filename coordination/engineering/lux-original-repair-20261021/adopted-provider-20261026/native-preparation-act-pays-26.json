@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "kind": "act-pays-scoped-native-land-support-preparation-v1",
+  "program": {
+    "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/native-land-support-act-pays.mjs",
+    "bytes": 5113,
+    "sha256": "e074bae329feec0037b8c25bc2f8dbd27228944977b333a3d73ee32722e03d8c"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "command": "env -u NODE_PATH node --input-type=module; Git show exact native latitude gzip via execFileSync default maxBuffer",
+      "exit_code": 1,
+      "output_created": false,
+      "error": "spawnSync git ENOBUFS; default 1MiB output buffer truncated the 1,114,112-byte native latitude gzip before gzip decode."
+    },
+    {
+      "attempt": 2,
+      "command": "env -u NODE_PATH node coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/native-land-support-act-pays.mjs",
+      "exit_code": 0,
+      "output_created": true,
+      "maxBuffer_bytes": 3145728
+    }
+  ],
+  "output": {
+    "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/act-pays-native-land-membership-26.json",
+    "bytes": 9511,
+    "sha256": "74213d537052dfebce0808d64d245ce7401a657ca31775ed0e60c53e41cc1517"
+  },
+  "result": {
+    "in_mapped_land_support": 26,
+    "outside_mapped_land_support": 0,
+    "candidate_boundary_ties": 0
+  },
+  "limits": [
+    "Native-centre membership in the measured ACT/GSHHG land-support geometry only. No geometry/topology/legal certificate, owner reassignment, source authority, or repaired credit."
+  ]
+}

@@ -3,10 +3,11 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {gzipSync} from 'node:zlib';
 import {deriveSourceTargetNativeDelta,nativeRowLatitudes,nativePolygonIntervals,polygonParts,witnessCellEffects,validateWitnessGeometry} from '../src/native-grid.js';
 import {ImmutableReader} from '../scripts/check-effective-geographic-regression.mjs';
 import {constructOriginalAuthority} from '../scripts/delivery-handoff-advance.mjs';
-import {valueSha,diagnoseSourceTargetNativeAuthority} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
+import {valueSha,diagnoseSourceTargetNativeAuthority,validateRetainedOriginalPositiveKey,legacyCompletePartsMatchCatalogue} from '../coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs';
 
 const rectangle=(left,right,bottom=-40,top=40)=>({type:'Polygon',coordinates:[[[left,bottom],[right,bottom],[right,top],[left,top],[left,bottom]]]});
 const feature=(id,pixelIndex,geometry,target_id)=>({id,pixelIndex,geometry,...(target_id?{target_id}:{})});
@@ -41,11 +42,17 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
     const pin={commit,path:name,mode:'100644',git_blob_oid:blob(raw),bytes:raw.length,sha256:digest(raw)};
     files.set(commit+':'+name,{raw,pin});byBlob.set(pin.git_blob_oid,raw);return pin;
   };
-  const source=put('original-source.json',collection(state.originals)),roster=put('owners.json',state.roster);
+  const sourceRaw=Buffer.from(JSON.stringify(collection(state.originals)));
+  const source=put('original-source.json.gz',gzipSync(sourceRaw));
+  source.decoded_bytes=sourceRaw.length;source.decoded_sha256=digest(sourceRaw);
+  const roster=put('owners.json',state.roster);
   const physical=put('physical.json',state.physical),measured=put('measured.json',state.measured);
+  const cataloguePart={bytes:source.bytes,hash_kind:'file-bytes',offset:0,ordinal:0,
+    path:source.path,sha256:source.sha256,uncompressed_bytes:source.decoded_bytes,
+    uncompressed_sha256:source.decoded_sha256};
   const catalogue=put('coordination/engineering/original-geography-source-corpus-20261006/catalogue.json',{
-    products:[{key:family,parts:[{path:source.path,bytes:source.bytes,sha256:source.sha256}],
-      feature_count:state.originals.length,original_bytes:source.bytes,original_sha256:source.sha256}]});
+    products:[{key:family,parts:[cataloguePart],
+      feature_count:state.originals.length,original_bytes:source.decoded_bytes,original_sha256:source.decoded_sha256}]});
   const nativeLatitudes=put('latitudes.f64le',latitudeBytes);
   const membership={index:put('data/world-index.json',state.index),lineage:put('data/semantic-report.json',state.lineage),
     parts:[put('data/geography/part-0.json',state.accepted)]};
@@ -86,7 +93,7 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
        scope:{id:'scope',pointer:'/record',owner_pointer:'/owner'}}))};
     territorial=put('territorial-applicability.json',body);put(territorial.path,body,executingHead);
   }
-  const evidence=put('source-evidence.json',{version:1,kind:'source-target-native-evidence-v1',catalogue,
+  const evidenceBody={version:1,kind:'source-target-native-evidence-v1',catalogue,
     owner_roster:roster,physical_evidence:physical,physical_input:measured,
     physical_reproduction:put(state.physicalProgram?.path??'physical.py',state.physicalProgram?.body??Buffer.from('# retained fixture')),
     native_latitudes:nativeLatitudes,native_contract:{size,native_latitudes:nativeLatitudes,original_assets:{bounds:{sha256:roster.sha256}}},
@@ -94,8 +101,29 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
       ??[{source_id:family,parts:[source]}],
     targets:state.targets.map(target=>({...target,source_receipt_sha256:physical.sha256})),
     ...(state.membership?{source_membership:membership}:{}),...(adoption?{adopted_provider_families:adoption}:{}),
-    ...(territorial?{territorial_applicability:territorial}:{})});
+    ...(territorial?{territorial_applicability:territorial}:{})};
   const patch=put('patch.json',state.proposed);
+  let retained;
+  if(state.retained==='valid'){
+    const target=state.targets[0];
+    const originalTerritorial=put('original-territorial-provenance.json',{version:1,
+      kind:'whole-original-territorial-exclusions-v1',catalogue,physical_input:measured,
+      complete_sources:[{source_family:family,parts:[source]}],
+      targets:evidenceBody.targets.map(item=>({source_id:item.id,exclusions:[]}))});
+    const originalEvidence=put('original-source-evidence.json',evidenceBody);
+    const key=state.proposed.rows[0],x=key.runs[0][0];
+    const originalComparison=put('original-per-key-comparison.json',{kind:'lux-original-retained-source-native-mask-comparison-v1',
+      package_id:'gb-LUX-ADM1--repair-evaluation',source_families:[{family}],
+      per_key:[{y:key.y,x,queue_owner_indices:[1],source_matches:[{family,shapeID:target.id.slice(family.length+1),direct_contact:true}]}]});
+    const retainedBody={version:1,kind:'retained-original-positive-provenance-v1',source_family:family,
+      target_id:'city',original_source_evidence:originalEvidence,original_native_patch:patch,
+      original_territorial_provenance:originalTerritorial,original_per_key_source_comparison:originalComparison,owner:1,
+      records:[{source_id:target.id,pixelIndex:1,y:key.y,
+        x,geometry_sha256:valueSha(state.originals[0].geometry),negative_operands:[]}]};
+    retained=put('retained-original-positive.json',retainedBody);
+    evidenceBody.retained_original_positive=retained;
+  }else if(state.retained){retained=put('retained-original-positive.json',state.retained);evidenceBody.retained_original_positive=retained;}
+  const evidence=put('source-evidence.json',evidenceBody);
   class FixtureReader extends ImmutableReader{
     git(...args){
       if(args[0]==='ls-tree'){
@@ -521,4 +549,74 @@ test('periodic measured sibling retains owner-wide residual veto',()=>{
  const r=conflict(s,'contradictory_land_water_support',{type:'LineString',coordinates:[[-.03,latitude],[0,latitude]]},1);
  r.query_relations[0].periodic_offset=-360;});
  assert.throws(()=>f.run(),/intersect a physical reconstruction residual or conflict witness/);
+});
+test('retained original positive provenance refuses incomplete or foreign-schema input',()=>{
+ const f=constructorFixture(s=>{s.retained={version:1,kind:'retained-original-positive-provenance-v1',records:[]};});
+ assert.throws(()=>f.run(),/Incomplete retained original positive provenance/);
+});
+test('retained original positive provenance authenticates whole prior family and exact requested key without activating it',()=>{
+ const f=constructorFixture(s=>{s.retained='valid';s.targets[0].coverage_rows=s.proposed.rows.map(row=>({y:row.y,
+  runs:row.runs.map(run=>[run[0],run[1],'mapped_land_support'])}));});
+ const result=f.diagnose();assert.equal(result.retained_original_positive.records,1);
+ assert.equal(result.retained_original_positive.keys,1);
+ assert.equal(result.supported_cells,1);
+});
+test('retained LUX positive bindings preserve every original per-key foreign source contact',()=>{
+ const read=path=>JSON.parse(fs.readFileSync(new URL('../'+path,import.meta.url),'utf8'));
+ // These exact selected rows are copied into the ordinary test-fixture
+ // boundary from the immutable full-source evidence below. The runtime still
+ // reads/authenticates the complete original sources; this fixture keeps the
+ // focused test self-contained under the reviewed stock checkout patterns.
+ const fixture=read('test/fixtures/lux-retained-original-positive-validation.json');
+ assert.equal(fixture.kind,'lux-retained-original-positive-validation-fixture-v1');
+ assert.deepEqual(fixture.source_pins,[
+  {role:'retained original positive provenance',commit:'caa2123cc112f69fe4346be945c5490da3187ea2',
+   path:'coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/original-positive-provenance-26.private.json',
+   bytes:11463,sha256:'b226f9124dc1812456b2fc454d5e024ff957d989999aca273414febd9d4f714b'},
+  {role:'original full source-native comparison',commit:'35be34d6d4688b50fbe009c8882a09e801633d81',
+   path:'coordination/engineering/lux-original-repair-20261021/evidence-investigation/lux-original-source-native-comparison.json',
+   bytes:511819,sha256:'aa7c37021ac2b68dfb8b40689cbc017729e3ee21c5f05e0e25421c2535439956'}
+ ]);
+ const retained={records:fixture.records},comparison={per_key:fixture.comparison_rows};
+ assert.equal(retained.records.length,26);
+ assert.equal(new Set(retained.records.map(record=>record.source_id)).size,3);
+ assert.equal(retained.records.reduce((n,record)=>n+record.negative_operands.length,0),27);
+ const rows=new Map(comparison.per_key.map(row=>[row.y+':'+row.x,row]));
+ for(const record of retained.records)
+  validateRetainedOriginalPositiveKey(record,rows.get(record.y+':'+record.x),'gb:LUX:ADM1',7122);
+ const omitted=structuredClone(retained.records[0]);omitted.negative_operands=[];
+ assert.throws(()=>validateRetainedOriginalPositiveKey(omitted,rows.get(omitted.y+':'+omitted.x),'gb:LUX:ADM1',7122),
+  /adverse operands differ/);
+ const wrongOwner=structuredClone(retained.records[0]);
+ assert.throws(()=>validateRetainedOriginalPositiveKey(wrongOwner,rows.get(wrongOwner.y+':'+wrongOwner.x),'gb:LUX:ADM1',7123),
+  /absent from exact per-key source comparison/);
+});
+
+
+test('legacy original source part normalizes only against its exact catalogue body identity',()=>{
+ const pin={bytes:7,commit:'1'.repeat(40),decoded_bytes:17,decoded_sha256:'3'.repeat(64),
+  git_blob_oid:'5'.repeat(40),mode:'100644',path:'payload.gz',sha256:'2'.repeat(64)};
+ const part={bytes:7,hash_kind:'file-bytes',offset:0,ordinal:0,path:pin.path,sha256:pin.sha256,
+  uncompressed_bytes:pin.decoded_bytes,uncompressed_sha256:pin.decoded_sha256};
+ const record={parts:[part],original_bytes:17};
+ assert.equal(legacyCompletePartsMatchCatalogue([pin],record),true);
+ assert.equal(legacyCompletePartsMatchCatalogue([],record),false);
+ assert.equal(legacyCompletePartsMatchCatalogue([pin,pin],record),false);
+ const extra=structuredClone(pin);extra.unexpected=true;
+ assert.equal(legacyCompletePartsMatchCatalogue([extra],record),false);
+ for(const mutate of [
+  p=>{p.ordinal=1;},p=>{p.offset=1;},p=>{p.hash_kind='compressed';},p=>{p.path='changed.gz';},
+  p=>{p.sha256='f'.repeat(64);},p=>{p.bytes++;},p=>{p.uncompressed_bytes++;},
+  p=>{p.uncompressed_sha256='f'.repeat(64);},p=>{p.extra=true;}
+ ]){const changed=structuredClone(record);mutate(changed.parts[0]);
+  assert.equal(legacyCompletePartsMatchCatalogue([pin],changed),false);}
+ for(const mutate of [
+  p=>{p.path='changed.gz';},p=>{p.sha256='f'.repeat(64);},p=>{p.bytes++;},
+  p=>{p.decoded_bytes++;},p=>{p.decoded_sha256='f'.repeat(64);},p=>{p.unexpected=true;}
+ ]){const changed=structuredClone(pin);mutate(changed);
+  assert.equal(legacyCompletePartsMatchCatalogue([changed],record),false);}
+ const noOffset=structuredClone(record);delete noOffset.parts[0].offset;
+ assert.equal(legacyCompletePartsMatchCatalogue([pin],noOffset),false);
+ const wrongLength=structuredClone(record);wrongLength.original_bytes++;
+ assert.equal(legacyCompletePartsMatchCatalogue([pin],wrongLength),false);
 });
