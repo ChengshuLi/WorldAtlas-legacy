@@ -23,7 +23,7 @@ async function prepare(t,options={}){
 }
 async function finalize(f,commit,extra={},destination='coordination/engineering/final-bank-test/finalized'){
  const reader=pinReader(f.root),config={version:2,selector:{commit,path:'data/ownership-selection.json'},package_inputs:{commit,path:'.github/package-inputs.json'},...extra};
- const outputs=finalizeDelivery(config,reader);await prepareFinalizedStartupOwnership(outputs);
+ const outputs=finalizeDelivery(config,reader);await prepareFinalizedStartupOwnership(outputs,f.root);
  publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize',fixture:true});
  return {outputs,selection:JSON.parse(outputs['ownership-selection.json']),index:JSON.parse(outputs['startup-ownership.json'])};
 }
@@ -309,7 +309,7 @@ test('final-to-final preparation retains cold sparse compatibility bodies and ex
   const normal=pinReader(f.root,{execute(command,args,options){assert(!args.includes('fetch'),'Unchanged compatibility body must not be acquired');return execFileSync(command,args,options);}});
   const read=normal.read,reader={...normal,read(pin){assert.notEqual(pin.path,name,'Unchanged compatibility body must not be read');return read(pin);}};
   const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
-  await prepareFinalizedStartupOwnership(outputs);
+  await prepareFinalizedStartupOwnership(outputs,f.root);
   const destination='coordination/engineering/final-bank-test/cold-finalized';
   publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
   publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'},true);
@@ -335,7 +335,7 @@ test('retained final compatibility keeps canonical preflight, committed identity
  const fixed=migration.index.compatibility_files.find(p=>p.path.endsWith('startup-runs-999.bin.gz'));assert(fixed);
  const name=bank+fixed.path,file=path.join(f.root,name),original=fs.readFileSync(file),reader=pinReader(f.root);
  const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
- await prepareFinalizedStartupOwnership(outputs);
+ await prepareFinalizedStartupOwnership(outputs,f.root);
  const destination='coordination/engineering/final-bank-test/retained-guards';
  const publish=()=>publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
  for(const mutation of ['bytes','symlink','mode','directory','missing']){
@@ -375,6 +375,41 @@ test('retained final compatibility keeps canonical preflight, committed identity
  assert.deepEqual(fs.readFileSync(file),original,'Exact explicit resume preserves compatibility');
 });
 
+test('authenticated prior finalization receipt retires only its exact unindexed startup body',async t=>{
+ const {f}=await prepare(t),firstDestination='coordination/engineering/final-bank-test/prior-auth';
+ const first=await finalize(f,f.bankCommit,{},firstDestination),priorCommit=f.commit();
+ const active=new Set([...first.index.pixelMap.parts,...first.index.preparedOwnership.native_pixel_map.parts,
+   ...first.index.preparedOwnership.context_parts].map(p=>p.path));
+ active.add(first.index.preparedOwnership.native_pixel_map.native_latitudes.transport_path);
+ const stale=first.index.compatibility_files.find(p=>!active.has(p.path));assert(stale);
+ const indexPath=bank+'index.json',oldIndex=JSON.parse(f.git('show',priorCommit+':'+indexPath));
+ oldIndex.files=oldIndex.files.filter(p=>p.path!==stale.path);
+ oldIndex.compatibility_files=oldIndex.compatibility_files.filter(p=>p.path!==stale.path);
+ const changedIndex=jsonBytes(oldIndex),selection=JSON.parse(f.git('show',priorCommit+':data/ownership-selection.json'));
+ selection.prepared_bank={path:indexPath,bytes:changedIndex.length,sha256:digest(changedIndex)};
+ f.save(indexPath,oldIndex);f.save('data/ownership-selection.json',selection);const candidate=f.commit();
+ const prior_finalizations=[{preparation:f.pin(firstDestination+'/preparation.json',priorCommit),
+   startup_ownership:f.pin(firstDestination+'/startup-ownership.json',priorCommit)}];
+ const reader=pinReader(f.root),config={version:2,
+   selector:{commit:candidate,path:'data/ownership-selection.json'},
+   package_inputs:{commit:candidate,path:'.github/package-inputs.json'}};
+ const unauthorized=finalizeDelivery(config,reader);
+ await assert.rejects(prepareFinalizedStartupOwnership(unauthorized,f.root),/unauthenticated extra/);
+ const staleFile=path.join(f.root,bank,stale.path),staleBody=fs.readFileSync(staleFile);
+ fs.writeFileSync(staleFile,Buffer.from('edited historical generated output'));
+ const edited=finalizeDelivery({...config,prior_finalizations},reader);
+ await assert.rejects(prepareFinalizedStartupOwnership(edited,f.root),/differs in worktree/);
+ fs.writeFileSync(staleFile,staleBody);
+ const outputs=finalizeDelivery({...config,prior_finalizations},reader);
+ await prepareFinalizedStartupOwnership(outputs,f.root);
+ const destination='coordination/engineering/final-bank-test/prior-auth-next';
+ publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
+ const nextIndex=JSON.parse(outputs['startup-ownership.json']);
+ assert(!nextIndex.files.some(p=>p.path===stale.path),'The prior body does not re-enter the new complete roster');
+ assert(!fs.existsSync(path.join(f.root,bank,stale.path)),'Authenticated stale worktree body retires through the ordinary writer');
+ assert.equal(f.git('ls-files','--stage','--',bank+stale.path).toString(),'','Authenticated stale tracked body is staged for retirement');
+});
+
 test('compatibility roles that also serve current E retain complete body acquisition',async t=>{
  const {f,before}=await prepare(t),migration=await finalize(f,f.bankCommit);
  const part=migration.index.pixelMap.parts.find(p=>!migration.index.compatibility_files.some(c=>c.path===p.path));assert(part);
@@ -383,7 +418,7 @@ test('compatibility roles that also serve current E retain complete body acquisi
  f.save(bank+'index.json',raw);f.save('data/ownership-selection.json',selection);const at=f.commit(),normal=pinReader(f.root),acquire=normal.acquire;
  const reader={...normal,async acquire(pins){if(pins.some(p=>p.path===bank+part.path))throw Error('required current-E member acquired');return acquire(pins);}};
  const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
- await assert.rejects(prepareFinalizedStartupOwnership(outputs),/required current-E member acquired/);
+ await assert.rejects(prepareFinalizedStartupOwnership(outputs,f.root),/required current-E member acquired/);
 });
 
 
@@ -400,14 +435,16 @@ test('finalizer retires exact sparse current-bank preimages through normal stagi
  for(const name of [...retired,fixed]){assert(!fs.existsSync(path.join(f.root,name)));assert.equal(f.git('ls-files','-v','--',name).toString(),'S '+name+'\n');}
  const originalIndex=f.git('ls-files','--stage','-v','-z').toString().split('\0').filter(Boolean);
  const reader=pinReader(f.root),outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
- await prepareFinalizedStartupOwnership(outputs);
+ await prepareFinalizedStartupOwnership(outputs,f.root);
  const index=JSON.parse(outputs['startup-ownership.json']);
  for(const name of retired)assert(!index.files.some(p=>bank+p.path===name),'The control must actually retire this old current part');
  const destination='coordination/engineering/final-bank-test/sparse-retired';
  publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
  for(const name of retired){assert(!fs.existsSync(path.join(f.root,name)));assert.equal(f.git('ls-files','--stage','--',name).length,0,'Sparse retirement must remove the obsolete index entry');}
+ const currentPaths=new Set([bank+'index.json',...index.files.map(p=>bank+p.path)]);
+ const stagedRetirements=originalIndex.filter(row=>row.includes('\t'+bank)&&!currentPaths.has(row.slice(row.indexOf('\t')+1)));
  assert.deepEqual(f.git('ls-files','--stage','-v','-z').toString().split('\0').filter(Boolean),
-  originalIndex.filter(row=>!retired.some(name=>row.endsWith('\t'+name))),'Every unrelated index identity and flag remains exact');
+  originalIndex.filter(row=>!stagedRetirements.includes(row)),'Only exact paths outside the new complete roster are staged for retirement');
  assert.equal(f.git('ls-files','--stage','-z','--',fixed).toString(),fixedEntry);assert.equal(f.git('ls-files','-v','--',fixed).toString(),'S '+fixed+'\n');
  publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'},true);
  f.git('add','-A');const committed=f.commit();
@@ -425,7 +462,7 @@ test('retiring current-bank paths refuse non-sparse loss, staged replacements an
  const source=f.commit(),hook=f.pin('coordination/engineering/retirement-guards/registry.json',source);
  const name=bank+migration.index.preparedOwnership.context_parts[0].path,file=path.join(f.root,name),original=fs.readFileSync(file),oid=f.git('rev-parse',source+':'+name).toString().trim();
  const reader=pinReader(f.root),outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
- await prepareFinalizedStartupOwnership(outputs);assert(!JSON.parse(outputs['startup-ownership.json']).files.some(p=>bank+p.path===name));
+ await prepareFinalizedStartupOwnership(outputs,f.root);assert(!JSON.parse(outputs['startup-ownership.json']).files.some(p=>bank+p.path===name));
  const destination='coordination/engineering/final-bank-test/retirement-guards',publish=(resume=false)=>publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'},resume);
  const pristine=()=>{f.git('update-index','--no-assume-unchanged','--no-skip-worktree','--',name);fs.writeFileSync(file,original,{mode:0o644});fs.chmodSync(file,0o644);f.git('add','--',name);};
  for(const mutation of ['missing','deleted-index','staged-bytes','staged-mode','assume-unchanged']){
@@ -445,7 +482,7 @@ test('retiring current-bank paths refuse non-sparse loss, staged replacements an
  assert.throws(()=>publish(),/Indexed final-bank retirement differs/,'A removed HEAD path cannot conceal a newly staged replacement');f.commit();
  execFileSync('git',['sparse-checkout','set','--no-cone','--stdin'],{cwd:f.root,input:`/*\n!/${name}\n`,stdio:'pipe'});
  assert(!fs.existsSync(file));assert.equal(f.git('ls-files','-v','--',name).toString(),'S '+name+'\n');
- f.save(name,Buffer.from('changed sparse body'));assert.throws(()=>publish(),/Canonical output changed outside/);fs.unlinkSync(file);
+ f.save(name,Buffer.from('changed sparse body'));assert.throws(()=>publish(),/Canonical output changed outside|Candidate retirement worktree body changed/);fs.unlinkSync(file);
  fs.symlinkSync('missing-sentinel',file);assert.throws(()=>publish(),/Nonordinary canonical output/);fs.unlinkSync(file);
  assert(!fs.existsSync(path.join(f.root,destination)),'Sparse byte/type refusals precede staging');
  const selector=fs.readFileSync(path.join(f.root,'data/ownership-selection.json')),write=fs.writeFileSync;let changed=false;
@@ -470,7 +507,7 @@ test('finalizer derives complete sparse output preimages without a caller input 
  const initial=f.git('ls-files','--stage','-v','-z').toString().split('\0').filter(Boolean),normal=pinReader(f.root),calls=[];
  const reader={...normal,git(...args){if(args[0]==='sparse-checkout')calls.push(args);return normal.git(...args);}};
  const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
- await prepareFinalizedStartupOwnership(outputs);const index=JSON.parse(outputs['startup-ownership.json']);
+ await prepareFinalizedStartupOwnership(outputs,f.root);const index=JSON.parse(outputs['startup-ownership.json']);
  const destination='coordination/engineering/final-bank-test/automatic-preimages';
  publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
  assert.equal(calls.length,1);assert.deepEqual(calls[0].slice(0,3),['sparse-checkout','add','--']);
@@ -498,7 +535,7 @@ test('automatic sparse preimages refuse deleted, staged, edited and racing canon
  const reader={...normal,git(...args){if(args[0]==='sparse-checkout')calls.push(args);const result=normal.git(...args);
   if(duringMaterialization&&args[0]==='sparse-checkout')f.git('update-index','--add','--cacheinfo',`100644,${bad},${name}`);return result;}};
  const outputs=finalizeDelivery({version:2,selector:{commit:f.bankCommit,path:'data/ownership-selection.json'},package_inputs:{commit:f.bankCommit,path:'.github/package-inputs.json'}},reader);
- await prepareFinalizedStartupOwnership(outputs);
+ await prepareFinalizedStartupOwnership(outputs,f.root);
  const name='data/ownership-selection.json',file=path.join(f.root,name),original=f.git('show',f.bankCommit+':'+name),oid=f.git('rev-parse',f.bankCommit+':'+name).toString().trim();
  execFileSync('git',['sparse-checkout','set','--no-cone','--stdin'],{cwd:f.root,input:'/*\n!/data/\n!/.github/package-inputs.json\n',stdio:'pipe'});
  const destination='coordination/engineering/final-bank-test/preimage-refusals',publish=(resume=false)=>publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'},resume);
