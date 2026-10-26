@@ -4,7 +4,7 @@
 
 Recommend recording only the original held Aiwo cell as **researched-unresolved** because source-specific provenance and reuse terms for the proposed 2018 district geometry are not established by the retained records. This is a source-free proposal, not a source adoption, repair acceptance, status change, or credit claim.
 
-The original package contains 13 native cells across 11 intervals for owner 7127. Twelve rows remain accepted; the single Aiwo candidate remains unresolved. Its exact key is `(131469,252633)`. The original source/physical context custody is identified by `retained-source-physical-context.json`, SHA-256 `ce99be9f565227c0431d0e2a03a6426694cd37f9e4100b0dc96344839f7851fc`; the file and the remaining tuple rows are not reproduced here. The separate 66-cell physical scope is outside this proposal.
+The original package contains 13 native cells across 11 intervals for owner 7127. Twelve rows remain accepted; the single Aiwo candidate remains unresolved. The original source/physical context custody is identified by `retained-source-physical-context.json`, SHA-256 `ce99be9f565227c0431d0e2a03a6426694cd37f9e4100b0dc96344839f7851fc`; the file and the remaining tuple rows are not reproduced here. The separate 66-cell physical scope is outside this proposal.
 
 Issue [#2584](https://github.com/ChengshuLi/WorldAtlas/issues/2584) requires each in-scope interval to be either a qualified additive repair to its recorded location or a documented exception, with native conservation and source/physical checks. It does not require a universal modern legal-boundary certificate. The current source-use gap is specific to the proposed 2018 GIS body.
 
