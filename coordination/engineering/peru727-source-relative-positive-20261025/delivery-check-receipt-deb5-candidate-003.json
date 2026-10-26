@@ -1,0 +1,50 @@
+{
+  "baseline_commit": "deb5d51514bd839381b38c304e601fbad13957c4",
+  "build_controls": {
+    "static_package_build": "blocked before image creation by sparse checkout materialized-input ENOENTs; no broad hydration attempted",
+    "vite_build": "passed before documentation-only merge from current main; no application code changed in that merge"
+  },
+  "candidate_commit_checked": "5c1a135eb17565940c7b8448e22f0ccecf5997e5",
+  "checker": {
+    "added_cells": 677,
+    "affected_rows": 222,
+    "gate_status": "passed",
+    "lost_or_reassigned_cells": 0,
+    "method": "worldatlas-trusted-geography-check-v1",
+    "published": false,
+    "reassigned_cells": 0,
+    "regressions": 0,
+    "removed_cells": 0,
+    "source_approval": false,
+    "status": "no-new-native-loss"
+  },
+  "checker_report": {
+    "bytes": 102397,
+    "path": "coordination/engineering/peru727-source-relative-positive-20261025/geographic-check-deb5-candidate-003.json",
+    "sha256": "d006d5c8cb41c1d20553292fe22a7fe89439c13316f12abfec9ca99bf95cf292"
+  },
+  "current_main_note": "6ca selector/finalizer candidate was refreshed by a normal merge of deb5, whose delta from 6ca was three TGO Markdown files only; bank selectors unchanged.",
+  "finalizer": {
+    "config_sha256": "8f06756f09a2d861bdb6b76690cd30e2f573cb226b8f7d783080b25dce62ed33",
+    "destination": "finalized-bank-677-6ca-001",
+    "ownership_selection_sha256": "6e1250f5e3f76a1e9198bccfdffe95be2fdc9069454349586ab7ef9dbf916ebd",
+    "package_inputs_sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3",
+    "preparation_sha256": "54206e518e23a21fa5e73d8e9f787c1179c09b2cd74449bef1fbb90d580de4a0",
+    "proposed_release_id": "geography:final:81409266436f757875607525ce1bf8d562e1621bcbe7f0c5af34198abfea0a35",
+    "selected_delivery_expectations_sha256": "0ae515e5316b2986375955cf730a3b448fb5ab619158bb99018032f623f2becb",
+    "startup_ownership_sha256": "9fd1acdd369cf4d869bc22957ef88b39a6c6c3dd88f098232f4af2d159510780"
+  },
+  "package": "PER",
+  "scope_count": 677,
+  "scope_limits": {
+    "dispatch": "not performed",
+    "original_denominator": "10,371 = 8,922 previously accepted + 1,449 residual",
+    "other_residual_untouched": 722,
+    "outside_parent_held": 50,
+    "science_credit": "none claimed",
+    "whole_cell_or_legal_boundary_claim": false
+  },
+  "target_owner": 33741,
+  "trusted_code_commit": "5c1a135eb17565940c7b8448e22f0ccecf5997e5",
+  "version": 1
+}

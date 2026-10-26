@@ -550,14 +550,157 @@ function appendFinalPackageReadPaths(original, paths, plan) {
 
 const finalizedAdoptions = new WeakMap();
 
+function authenticatePriorFinalizations(config, reader, currentCommit) {
+  const sources = config.prior_finalizations ?? [];
+  need(Array.isArray(sources) && sources.every(source => source && same(Object.keys(source).sort(), ['preparation', 'startup_ownership'])),
+    'Exact prior finalization receipts required');
+  const files = new Map();
+  for (const source of sources) {
+    const preparationPin = source.preparation, ownershipPin = source.startup_ownership;
+    need(preparationPin && ownershipPin && preparationPin.commit === ownershipPin.commit
+      && path.posix.dirname(preparationPin.path) === path.posix.dirname(ownershipPin.path)
+      && ['preparation.json', 'startup-ownership.json'].every((name, index) =>
+        [preparationPin, ownershipPin][index].path.endsWith('/' + name)
+        && [preparationPin, ownershipPin][index].mode === '100644'
+        && hex([preparationPin, ownershipPin][index].git_blob_oid, 40)
+        && Number.isSafeInteger([preparationPin, ownershipPin][index].bytes)
+        && hex([preparationPin, ownershipPin][index].sha256, 64)),
+    'Prior finalization receipt pins must bind one exact committed output directory');
+    reader.git('merge-base', '--is-ancestor', preparationPin.commit, currentCommit);
+    const preparation = reader.json(preparationPin), ownershipRaw = reader.read(ownershipPin), ownership = JSON.parse(ownershipRaw);
+    const binding = preparation?.binding, selector = binding?.selector, packageInputs = binding?.package_inputs;
+    const exactInputPin = (pin, expectedPath) => pin?.path === expectedPath && hex(pin.commit, 40)
+      && pin.mode === '100644' && hex(pin.git_blob_oid, 40)
+      && Number.isSafeInteger(pin.bytes) && pin.bytes > 0 && hex(pin.sha256, 64);
+    need(preparation?.version === 1 && binding?.phase === 'finalize'
+      && exactInputPin(selector, 'data/ownership-selection.json')
+      && exactInputPin(packageInputs, '.github/package-inputs.json'),
+    'Prior finalization receipt has no exact finalize input binding');
+    need(preparation.outputs?.['startup-ownership.json']?.bytes === ownershipRaw.length
+      && preparation.outputs?.['startup-ownership.json']?.sha256 === digest(ownershipRaw)
+      && ownership?.version === 3 && Array.isArray(ownership.files)
+      && unique(ownership.files.map(row => row.path))
+      && ownership.files.every(row => safe(row.path) && Number.isSafeInteger(row.bytes) && row.bytes > 0 && hex(row.sha256, 64)),
+    'Prior output roster is not authenticated by its completed finalization receipt');
+    for (const row of ownership.files) {
+      const name = 'data/canonical-grid/current-startup/' + row.path, old = files.get(name);
+      const pin = {bytes: row.bytes, sha256: row.sha256};
+      need(!old || same(old, pin), 'Conflicting authenticated prior startup output: ' + name);
+      files.set(name, pin);
+    }
+  }
+  return files;
+}
+
+function startupDiskFiles(root, prefix) {
+  const base = path.resolve(root, prefix);
+  const baseStat = fs.lstatSync(base, {throwIfNoEntry: false});
+  need(!baseStat || baseStat.isDirectory() && fs.realpathSync(base) === base, 'Nonordinary canonical output directory: ' + base);
+  const files = new Map();
+  const walk = (directory, relative = '') => {
+    for (const entry of fs.readdirSync(directory, {withFileTypes: true})) {
+      const name = relative + entry.name, filename = path.join(directory, entry.name), stat = fs.lstatSync(filename);
+      need(safe(name), 'Unsafe current-startup member');
+      if (stat.isDirectory()) {
+        need(fs.realpathSync(filename) === filename, 'Nonordinary canonical output directory');
+        walk(filename, name + '/');
+      } else {
+        need(stat.isFile() && !(stat.mode & 0o111) && fs.realpathSync(filename) === filename,
+          'Nonordinary canonical output: ' + prefix + name);
+        const hash = createHash('sha256'), fd = fs.openSync(filename, 'r'), buffer = Buffer.alloc(65536); let bytes = 0;
+        try { for (let count; (count = fs.readSync(fd, buffer, 0, buffer.length, null));) { bytes += count; hash.update(buffer.subarray(0, count)); } }
+        finally { fs.closeSync(fd); }
+        files.set(prefix + name, {bytes, sha256: hash.digest('hex')});
+      }
+    }
+  };
+  if (baseStat) walk(base);
+  return files;
+}
+
+function currentStartupTree(reader, commit, prefix) {
+  const rows = reader.git('ls-tree', '-r', '-l', '-z', commit, '--', prefix).toString().split('\0').filter(Boolean);
+  const files = new Map();
+  for (const line of rows) {
+    const match = /^(100644) blob ([a-f0-9]{40})\s+([0-9]+|BAD)\t(.+)$/.exec(line);
+    need(match && match[4].startsWith(prefix), 'Nonordinary candidate current-startup tree member');
+    const name = match[4], pin = {path: name, commit, mode: match[1], git_blob_oid: match[2], bytes: match[3] === 'BAD' ? null : Number(match[3])};
+    need((pin.bytes === null || Number.isSafeInteger(pin.bytes)) && !files.has(name), 'Duplicate/invalid candidate current-startup tree member');
+    files.set(name, pin);
+  }
+  return files;
+}
+
+async function reconcilePriorStartupOutputs(root, plan, index, head) {
+  const prefix = 'data/canonical-grid/current-startup/', current = new Set([prefix + 'index.json',
+    ...index.files.map(row => prefix + row.path)]), prior = plan.retirementAuthorizationFiles;
+  const tree = currentStartupTree(plan.reader, head, prefix), disk = startupDiskFiles(root, prefix);
+  const extras = new Set([...tree.keys(), ...disk.keys()].filter(name => !current.has(name)));
+  const retirements = [];
+  const acquisitions = [];
+  for (const name of [...extras].sort()) {
+    const old = prior.get(name);
+    need(old, 'Unindexed current-startup output is not present in an authenticated prior finalization: ' + name);
+    const treePin = tree.get(name);
+    if (treePin) {
+      need(treePin.bytes === null || treePin.bytes === old.bytes, 'Prior finalization body size differs from candidate tree: ' + name);
+      acquisitions.push({...treePin, sha256: old.sha256});
+    }
+    const onDisk = disk.get(name);
+    if (onDisk) need(same(onDisk, old), 'Prior finalization body differs in worktree: ' + name);
+    const existing = plan.adoption.find(row => row.path === name);
+    if (existing) {
+      need(existing.kind === 'retired' && same(existing.previous, old), 'Conflicting existing final-bank retirement: ' + name);
+      retirements.push(existing);
+    } else retirements.push({path: name, bytes: null, expected: undefined, previous: old,
+      ...(treePin ? {git_blob_oid: treePin.git_blob_oid} : {}), kind: 'retired'});
+  }
+  if (acquisitions.length) await plan.reader.acquire(acquisitions);
+  for (const pin of acquisitions) {
+    const raw = plan.reader.read({...pin, sha256: prior.get(pin.path).sha256});
+    need(raw.length === prior.get(pin.path).bytes && digest(raw) === prior.get(pin.path).sha256,
+      'Authenticated prior output differs from candidate tree: ' + pin.path);
+  }
+  // A previously finalized body may be reused at a new current-roster path. Permit
+  // replacement only from its exact authenticated preimage, never an arbitrary file.
+  const rows = new Map(plan.adoption.map(row => [row.path, row]));
+  for (const name of current) {
+    if (name.endsWith('/index.json')) continue;
+    const old = prior.get(name), onDisk = disk.get(name), row = rows.get(name);
+    if (old && onDisk && same(old, onDisk) && row && !row.previous) row.previous = old;
+  }
+  plan.retirementRows = retirements;
+  plan.startupRoster = [...current].sort();
+  plan.adoption.push(...retirements.filter(row => !plan.adoption.includes(row)));
+  return retirements;
+}
+
+function verifyPriorStartupReconciliation(root, plan, index, head) {
+  const prefix = 'data/canonical-grid/current-startup/', current = new Set([prefix + 'index.json',
+    ...index.files.map(row => prefix + row.path)]), tree = currentStartupTree(plan.reader, head, prefix), disk = startupDiskFiles(root, prefix);
+  need(same([...current].sort(), plan.startupRoster), 'Final startup roster changed after preparation');
+  const extras = new Set([...tree.keys(), ...disk.keys()].filter(name => !current.has(name)));
+  const retirementPaths = new Set(plan.retirementRows.map(row => row.path));
+  need([...extras].every(name => retirementPaths.has(name)), 'Candidate current-startup extras changed after reconciliation');
+  for (const row of plan.retirementRows) {
+    const pin = plan.retirementAuthorizationFiles.get(row.path);
+    need(pin && same(row.previous, pin), 'Retirement no longer matches authenticated prior output');
+    const inTree = tree.get(row.path), onDisk = disk.get(row.path);
+    if (inTree) need(inTree.git_blob_oid === row.git_blob_oid && (inTree.bytes === null || inTree.bytes === pin.bytes),
+      'Candidate retirement tree body changed');
+    if (onDisk) need(same(onDisk, pin), 'Candidate retirement worktree body changed');
+  }
+}
+
 // Final-profile preparation is deterministic current-bank editing, not a second
 // qualifier. The ordinary accepted-code transition independently admits the new
 // authority scope and compares every before/after word and context value.
 function finalizeFinalBankDelivery(config, reader) {
-  need(config.version===2 && Object.keys(config).every(key=>['version','selector','package_inputs','change_evidence','reference_projection','proposed_selector'].includes(key)),
+  need(config.version===2 && Object.keys(config).every(key=>['version','selector','package_inputs','change_evidence','reference_projection','proposed_selector','prior_finalizations'].includes(key)),
     'Exact final-bank preparation config required');
   const selector=locate(reader,config.selector),packageInputs=locate(reader,config.package_inputs);
   need(selector.path==='data/ownership-selection.json'&&packageInputs.path==='.github/package-inputs.json', 'Canonical final-bank inputs required');
+  const priorFinalizationFiles = authenticatePriorFinalizations(config, reader, selector.commit);
   const raw=reader.read(selector),selection=JSON.parse(raw),native=scientificNativeSelection(selection);
   need(native.method==='native-linear-evenodd-first-owner-v1', 'Explicit native selection required');
   need(selection.version===2, 'Final preparation requires an existing accepted final bank');
@@ -579,6 +722,7 @@ function finalizeFinalBankDelivery(config, reader) {
   }
   add(packageInputs.path,originalPackage,originalPackage,'canonical');add(selector.path,raw,raw,'canonical');
   finalizedAdoptions.set(outputs,{reader,selector,package_inputs:packageInputs,adoption:[...adoption.values()],startupRequired:true,finalProfile:config,
+    priorFinalizationFiles,
     outputs:Object.fromEntries(Object.entries(outputs).map(([name,bytes])=>[name,visitProduct(bytes)]))});
   return outputs;
 }
@@ -715,9 +859,9 @@ export function finalizeDelivery(config, reader) {
 // The existing asynchronous finalization boundary prepares the finished map
 // before the ordinary whole-set writer can adopt its selector. This private map
 // is not a caller-provided write roster or a second publication mechanism.
-export async function prepareFinalizedStartupOwnership(outputs) {
+export async function prepareFinalizedStartupOwnership(outputs, root) {
   const plan = finalizedAdoptions.get(outputs);
-  need(plan, 'Authenticated finalization required for startup preparation');
+  need(plan && typeof root === 'string' && path.isAbsolute(root), 'Authenticated finalization and repository root required for startup preparation');
   const reader = plan.reader, selection = JSON.parse(outputs['ownership-selection.json']),native=scientificNativeSelection(selection);
   const prefix = 'data/canonical-grid/current-startup/', indexPath = prefix + 'index.json';
   const definition = JSON.parse(outputs['package-inputs.json']);
@@ -727,16 +871,24 @@ export async function prepareFinalizedStartupOwnership(outputs) {
     && Array.isArray(previous.files) && previous.files.length > 0
     && new Set(previous.files.map(pin => pin.path)).size === previous.files.length,
   'Complete original prepared bank required');
-  const tree = new Map(reader.git('ls-tree', '-rz', plan.selector.commit, '--', prefix).toString().split('\0').filter(Boolean).map(line => {
-    const match = /^100644 blob ([a-f0-9]{40})\t(.+)$/.exec(line);
-    need(match && match[2].startsWith(prefix), 'Nonordinary prepared bank member');
-    return [match[2].slice(prefix.length), match[1]];
-  }));
-  need(same([...tree.keys()].filter(name => name !== 'index.json').sort(), previous.files.map(pin => pin.path).sort()),
-    'Original prepared bank inventory differs');
+  const tree = currentStartupTree(reader, plan.selector.commit, prefix);
+  const indexedNames = new Set(previous.files.map(pin => pin.path));
+  need([...indexedNames].every(name => tree.has(prefix + name)) && tree.has(indexPath),
+    'Original prepared bank inventory is missing an indexed member');
+  const baseExtras = [...tree.keys()].filter(name => name !== indexPath && !indexedNames.has(name.slice(prefix.length)));
+  const baseExtraPins = baseExtras.map(name => {
+    const prior = plan.priorFinalizationFiles.get(name), pin = tree.get(name);
+    need(prior && (pin.bytes === null || prior.bytes === pin.bytes), 'Original prepared bank has an unauthenticated extra: ' + name);
+    return {...pin, bytes: prior.bytes, sha256: prior.sha256};
+  });
+  if (baseExtraPins.length) await reader.acquire(baseExtraPins);
+  for (const pin of baseExtraPins) {
+    const raw = reader.read(pin), prior = plan.priorFinalizationFiles.get(pin.path);
+    need(raw.length === prior.bytes && digest(raw) === prior.sha256, 'Prior finalization does not bind extra original bank member: ' + pin.path);
+  }
   const pins = previous.files.map(pin => {
     need(safe(pin.path) && Number.isSafeInteger(pin.bytes) && pin.bytes > 0 && hex(pin.sha256, 64), 'Invalid prepared bank pin');
-    return {...pin, path: prefix + pin.path, commit: plan.selector.commit, mode: '100644', git_blob_oid: tree.get(pin.path)};
+    return {...pin, path: prefix + pin.path, commit: plan.selector.commit, mode: '100644', git_blob_oid: tree.get(prefix + pin.path).git_blob_oid};
   });
   // Final-to-final preparation consumes current E and context, not the fixed
   // compatibility copies. Keep their complete accepted pins/tree identities; a
@@ -788,12 +940,12 @@ export async function prepareFinalizedStartupOwnership(outputs) {
       const expected = {bytes: pin.bytes, sha256: pin.sha256};
       need(!adoption.has(prefix + name), 'Conflicting retained compatibility role');
       adoption.set(prefix + name, {path: prefix + name, expected, previous: expected,
-        git_blob_oid: tree.get(name), kind: 'input', retained: true});
+        git_blob_oid: tree.get(prefix + name).git_blob_oid, kind: 'input', retained: true});
     }
     for (const [name, bytes] of originalBodies) if (!bodies.has(name)) {
       need([2,3].includes(previous.version) && [...previous.pixelMap.parts, ...previous.preparedOwnership.context_parts].some(pin => pin.path === name),
         'Only inactive prior final-bank operands may retire');
-      adoption.set(prefix + name, {path: prefix + name, bytes: null, expected: undefined, previous: visitProduct(bytes), git_blob_oid: tree.get(name), kind: 'retired'});
+      adoption.set(prefix + name, {path: prefix + name, bytes: null, expected: undefined, previous: visitProduct(bytes), git_blob_oid: tree.get(prefix + name).git_blob_oid, kind: 'retired'});
     }
     for (const [name, bytes] of [...bodies, ['index.json', indexBytes]]) {
       const target = prefix + name, expected = visitProduct(bytes), old = adoption.get(target);
@@ -816,7 +968,16 @@ export async function prepareFinalizedStartupOwnership(outputs) {
     outputs['startup-ownership.json'] = indexBytes;
     plan.outputs['startup-ownership.json'] = visitProduct(indexBytes);
     const selector = adoption.get(plan.selector.path); adoption.delete(plan.selector.path); adoption.set(plan.selector.path, selector);
-    plan.adoption = [...adoption.values()]; plan.startupPrepared = true;
+    plan.adoption = [...adoption.values()];
+    plan.retirementAuthorizationFiles = new Map(plan.priorFinalizationFiles);
+    for (const pin of previous.files) {
+      const name = prefix + pin.path, old = plan.retirementAuthorizationFiles.get(name), value = {bytes: pin.bytes, sha256: pin.sha256};
+      need(!old || same(old, value), 'Current bank conflicts with prior finalization output: ' + name);
+      plan.retirementAuthorizationFiles.set(name, value);
+    }
+    const head = reader.git('rev-parse', 'HEAD').toString().trim();
+    await reconcilePriorStartupOutputs(root, plan, index, head);
+    plan.startupPrepared = true;
     reader.discardBodyCache();
   } finally { fs.rmSync(temporary, {recursive: true, force: true}); }
 }
@@ -881,6 +1042,7 @@ export function publishFinalizedDelivery(root, destination, outputs, binding, re
   need(rows.every(row => row.path !== destination && !row.path.startsWith(destination + '/')
     && !destination.startsWith(row.path + '/')),
     'Staging destination overlaps canonical finalization outputs');
+  if (plan.startupRequired) verifyPriorStartupReconciliation(root, plan, JSON.parse(outputs['startup-ownership.json']), head);
   // Derive preparation from the actual authenticated write set, not a second
   // caller-maintained input list. This first pass still rejects every dirty or
   // nonordinary output before staging or changing sparse checkout selection.
@@ -925,6 +1087,14 @@ export function publishFinalizedDelivery(root, destination, outputs, binding, re
       'Retired sparse output reappeared before staging: ' + row.path);
     reader.git('update-index', '--force-remove', '--', ...sparseRetirements.map(row => row.path));
     for (const row of sparseRetirements) need(indexed(row) === '', 'Sparse retirement was not staged: ' + row.path);
+  }
+  const indexedRetirements = retired.filter(row => row.retirementIndex && !row.sparseRetirement);
+  for (const row of indexedRetirements) need(indexed(row) === row.retirementIndex,
+    'Final-bank retirement index changed before staging: ' + row.path);
+  if (indexedRetirements.length) {
+    reader.git('update-index', '--force-remove', '--', ...indexedRetirements.map(row => row.path));
+    for (const row of indexedRetirements) need(indexed(row) === '',
+      'Final-bank retirement was not staged: ' + row.path);
   }
   return publication;
 }
@@ -1845,7 +2015,7 @@ async function main(args) {
   if (phase === 'compose') outputs = await composeAuthorities(config, reader);
   if (phase === 'finalize') {
     outputs=finalizeDelivery(config,reader);
-    await prepareFinalizedStartupOwnership(outputs);
+    await prepareFinalizedStartupOwnership(outputs, root);
     const publication = publishFinalizedDelivery(root, destination, outputs, binding, flags.includes('--resume'));
     console.log(JSON.stringify(publication)); return;
   }
