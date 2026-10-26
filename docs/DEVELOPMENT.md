@@ -67,8 +67,8 @@ and Node built-ins; it does not import the scientific delivery workflow. It
 uses an exclusive temporary directory inside
 the task repository's shared Git store and removes only its generated helper copies
 afterward. Git reads and helper execution do not depend on the shell's cwd. A failed main refresh or
-commit lookup stops without using a cached older pin. If either helper blob is
-missing, the bootstrap tree-binds both helper paths to that exact commit and
+commit lookup stops without using a cached older pin. If any pinned helper blob is
+missing, the bootstrap tree-binds all three helper paths to that exact commit and
 requests only the missing blob OIDs through Git's bounded `fetch --stdin` path.
 It verifies each returned object against the pinned OID and ordinary-blob type
 before copying either helper to the temporary directory. A failed fetch or
