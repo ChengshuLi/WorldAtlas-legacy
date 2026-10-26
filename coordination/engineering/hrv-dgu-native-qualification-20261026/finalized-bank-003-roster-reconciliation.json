@@ -1,0 +1,160 @@
+{
+  "kind": "hrv-finalizer-003-current-base-roster-reconciliation-v1",
+  "config": {
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/config/finalize-current-febd.json",
+    "sha256": "9600a0c0e39317b39d9ac5cff21bbb993abe3cd023071f4635e7d15679d9bc07"
+  },
+  "base_commit": "febd788155300df6fc5bb003e88b982434a8ddc8",
+  "preparation": {
+    "binding": {
+      "config_sha256": "9600a0c0e39317b39d9ac5cff21bbb993abe3cd023071f4635e7d15679d9bc07",
+      "package_inputs": {
+        "bytes": 38421,
+        "commit": "febd788155300df6fc5bb003e88b982434a8ddc8",
+        "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "mode": "100644",
+        "path": ".github/package-inputs.json",
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "phase": "finalize",
+      "selector": {
+        "bytes": 2303,
+        "commit": "febd788155300df6fc5bb003e88b982434a8ddc8",
+        "git_blob_oid": "3f989c0f4c0a603990f83a2417f448381ff0d58f",
+        "mode": "100644",
+        "path": "data/ownership-selection.json",
+        "sha256": "dc5593ed1f8c018587735d3cdd20b8ac86fb010246c153be4ba40bade3136dce"
+      }
+    },
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2291,
+        "sha256": "a6dfdc5018d123177b09d28f063055be8c038c88e4469d5f3371a311992bf957"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "918b3f0578ef3388d474f730f6eb317ed61268c527d2d08f389a8070ad0539f1"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "a7729024f8e443e6b8c0b59e9bcdadf3744d531f670a541c53f5557231ad975b"
+      }
+    },
+    "version": 1
+  },
+  "finalizer_process": {
+    "command": "node scripts/prepare-delivery-handoff.mjs finalize config/finalize-current-febd.json finalized-bank-003 --resume",
+    "exit": 0,
+    "elapsed_seconds": 182.2,
+    "sampled_peak_process_tree_rss_kib": 1508440,
+    "stdout_sha256": "061485580bb91054417d25daf5fc2fa141d22f3738e00fab043e6e2d4163fd36",
+    "stderr_bytes": 0
+  },
+  "manifest_index": {
+    "files": 79,
+    "index_sha256": "a7729024f8e443e6b8c0b59e9bcdadf3744d531f670a541c53f5557231ad975b",
+    "startup_ownership_sha256": "a7729024f8e443e6b8c0b59e9bcdadf3744d531f670a541c53f5557231ad975b",
+    "index_equals_finalizer_startup_ownership": true,
+    "manifest_file_count": 79
+  },
+  "worktree_roster": {
+    "expected": 79,
+    "materialized_expected": 49,
+    "skip_worktree_absent_expected": 30,
+    "skip_worktree_absent_paths": [
+      "native-v1/native-row-latitudes.f64le.gz",
+      "native-v1/ownership/rows-0.bin.gz",
+      "native-v1/ownership/startup-runs-0.bin.gz",
+      "native-v1/ownership/startup-runs-12582912.bin.gz",
+      "native-v1/ownership/startup-runs-16777216.bin.gz",
+      "native-v1/ownership/startup-runs-20971520.bin.gz",
+      "native-v1/ownership/startup-runs-25165824.bin.gz",
+      "native-v1/ownership/startup-runs-29360128.bin.gz",
+      "native-v1/ownership/startup-runs-33554432.bin.gz",
+      "native-v1/ownership/startup-runs-37748736.bin.gz",
+      "native-v1/ownership/startup-runs-4194304.bin.gz",
+      "native-v1/ownership/startup-runs-41943040.bin.gz",
+      "native-v1/ownership/startup-runs-46137344.bin.gz",
+      "native-v1/ownership/startup-runs-50331648.bin.gz",
+      "native-v1/ownership/startup-runs-54525952.bin.gz",
+      "native-v1/ownership/startup-runs-8388608.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz"
+    ],
+    "all_absent_index_entries_are_skip_worktree": true,
+    "unindexed_extras_preserved": 9,
+    "unindexed_extra_files": [
+      {
+        "path": "geography/effective-context-7f4afda371b135a640e574ed3b9218c4046c5be625179fcf44d570415af5550a.json.gz",
+        "bytes": 1028456,
+        "sha256": "7f4afda371b135a640e574ed3b9218c4046c5be625179fcf44d570415af5550a",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/0349f24b917ae418422ecbf4718e0e98d098d81cbd3a58db88c66b09af376812/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "bytes": 3572311,
+        "sha256": "0349f24b917ae418422ecbf4718e0e98d098d81cbd3a58db88c66b09af376812",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/2081e3382aab576347ba8931ec50fd19a0f13831557ee72f340a2c20a0ff0ba0/native-v1/ownership/rows-0.bin.gz",
+        "bytes": 317170,
+        "sha256": "2081e3382aab576347ba8931ec50fd19a0f13831557ee72f340a2c20a0ff0ba0",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/50f114056226b66142f874514655d48271172a01bfcd5bd84198f7dfd7382ea2/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "bytes": 3518041,
+        "sha256": "50f114056226b66142f874514655d48271172a01bfcd5bd84198f7dfd7382ea2",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/53df07e85defde76e1e97c44532e083cd44a88d2b2bd7402a073736bab3484ca/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "bytes": 3484800,
+        "sha256": "53df07e85defde76e1e97c44532e083cd44a88d2b2bd7402a073736bab3484ca",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "bytes": 3103196,
+        "sha256": "56823d89f6f9d18ef7805a4ff3880d6a18ccddc8aae31fd43a8404d4ff50c8e5",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/7c4db61e46fe7dcc1de03a905569afd83c51d42e5887a2448609bc883f56ba03/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "bytes": 3103229,
+        "sha256": "7c4db61e46fe7dcc1de03a905569afd83c51d42e5887a2448609bc883f56ba03",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/84b0a6614613c9c3b95561954930858b0debd9c32fe42c6757f988392b4525b4/native-v1/ownership/rows-0.bin.gz",
+        "bytes": 317138,
+        "sha256": "84b0a6614613c9c3b95561954930858b0debd9c32fe42c6757f988392b4525b4",
+        "mode": "0644"
+      },
+      {
+        "path": "ownership-vintages/8b81926f143c59f17e2785edad25418dff0aa9a1185851253216ef0e23fb9b99/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "bytes": 3620196,
+        "sha256": "8b81926f143c59f17e2785edad25418dff0aa9a1185851253216ef0e23fb9b99",
+        "mode": "0644"
+      }
+    ]
+  },
+  "limitation": "This reconciles emitted startup manifest/index with actual materialized/sparse worktree paths and preserves all unindexed extras. It is not an old/new interval conservation report and makes no accepted-bank addition, loss, reassignment or package acceptance claim."
+}
