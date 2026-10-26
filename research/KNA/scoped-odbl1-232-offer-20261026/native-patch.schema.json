@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KNA 232-cell owner-assignment table",
+  "description": "Complete scoped 232-cell assignment table for the St Kitts source-center-concordant subset. This schema describes only the output table; see SOURCE-NOTICE.md for its scoped ODbL 1.0 grant and source attributions. The table does not assert legal status, physical completeness, selector acceptance, current-owner acceptance, or science credit.",
+  "type": "object",
+  "required": ["rows"],
+  "additionalProperties": false,
+  "properties": {
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["y", "runs"],
+        "additionalProperties": false,
+        "properties": {
+          "y": {"type": "integer", "minimum": 0},
+          "runs": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "prefixItems": [
+                {"type": "integer", "minimum": 0},
+                {"type": "integer", "minimum": 0},
+                {"type": "integer", "const": 7119}
+              ],
+              "minItems": 3,
+              "maxItems": 3,
+              "description": "[x_start_inclusive, x_end_exclusive, native_owner_pixelIndex]"
+            }
+          }
+        }
+      }
+    }
+  }
+}
