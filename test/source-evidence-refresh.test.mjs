@@ -5,9 +5,11 @@ import {pinReader,finalizeDelivery,prepareFinalizedStartupOwnership} from '../sc
 const registryPath='coordination/engineering/tls-original-repair-20261026/compose-003/authority-registry.json';
 
 test('source-evidence refresh prepares the exact 20 TLS members without changing the selected bank',async()=>{
- const root=process.cwd(),reader=pinReader(root),head=reader.git('rev-parse','HEAD').toString().trim();
- const refresh=reader.pin(head,registryPath),selected=reader.pin(head,'data/ownership-selection.json');
- const oldSelection=reader.json(selected),registry=reader.json(refresh);
+ const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
+ const receiptPath='coordination/engineering/tls-original-repair-20261026/finalize-005/preparation.json';
+ const prior=reader.json(reader.pin(latest,receiptPath)),head=prior.binding.selector.commit;
+ const registry=reader.json(reader.pin(latest,registryPath)),refresh=reader.pin(head,registryPath),selected=reader.pin(head,'data/ownership-selection.json');
+ const oldSelection=reader.json(selected);
  assert.equal(registry.entries.length,1);
  const binding=reader.json(registry.entries[0].source_authority),evidence=reader.json(binding.source_evidence);
  assert.equal(evidence.targets.length,20);
@@ -25,7 +27,9 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
 });
 
 test('source-evidence refresh cannot be combined with additive or unrelated selector changes',()=>{
- const root=process.cwd(),reader=pinReader(root),head=reader.git('rev-parse','HEAD').toString().trim();
+ const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
+ const prior=reader.json(reader.pin(latest,'coordination/engineering/tls-original-repair-20261026/finalize-005/preparation.json'));
+ const head=prior.binding.selector.commit;
  const base={version:2,selector:{commit:head,path:'data/ownership-selection.json'},
   package_inputs:{commit:head,path:'.github/package-inputs.json'},source_evidence_refresh:{commit:head,path:registryPath}};
  for(const extra of [
