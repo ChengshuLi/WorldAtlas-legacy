@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3577,
-      "sha256": "dc86b976119060a8d3c06f2b1aec28704dbc0c20a8b24cae53aa511cc22b0a48"
+      "bytes": 3822,
+      "sha256": "8f58eef4169e7fe0c52c65fb46c487a048e2c81075f25bd043f81746294dd04a"
     },
     {
       "path": "source-role-decision.json",
@@ -121,5 +121,23 @@
       "patch_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6",
       "constructor_tuple_sha256": "4baff327a43b9125c8f64c0fac5bb92725bd755614d6657fa7116c94ec04e0d6"
     }
+  },
+  "composition": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/compose-214",
+    "selector_commit": "a356c120cf689881bf228796c44daef783a8c74d",
+    "selector_sha256": "1f2ba152430affa49b3900c80695b872c9334284791d636e8872b439e83f6ee5",
+    "config_sha256": "ad0d0d31e5566c80bd282cce2101e7152222677efc6fea7950c2ca023d9fc514",
+    "outputs": [
+      {
+        "path": "authority-registry.json",
+        "bytes": 1415,
+        "sha256": "b0f7eb8b6ef5ae02311ce5fa76590542cf88af1b615b0ecd0e0fad06fff2d97f"
+      },
+      {
+        "path": "preparation.json",
+        "bytes": 256,
+        "sha256": "8c6f91eea7ade354906e29b2ebe65bb806fefcdf2ec31978a3c15211bc42c1b2"
+      }
+    ]
   }
 }
