@@ -98,8 +98,11 @@ the existing source-authority binding (registry SHA-256
 d95b2114b7d8d1d4dbb7690425f8299f04379620e745b72e2c8d03bc033c729a).
 
 The first post-GNB finalizer attempt (finalize-003) exited 1 at the retirement
-index guard because the candidate still had five stale startup paths from the
-pre-GNB bank. Those exact stale paths were removed from the candidate, leaving
+index guard. The exact candidate-vs-base tree comparison found five extra
+paths: one effective-context body and four ownership bodies. The failure
+receipt's analysis counts four prior-SYC startup bodies and its stderr names
+the additional effective-context retirement path; both records are retained.
+Those exact stale paths were removed from the candidate, leaving
 the pre-finalization selector and index equal to accepted main. Finalize-004
 then completed with exit 0 against that exact accepted selector/package-input
 pair. Its preparation.json binds all four emitted products. The prepared
@@ -129,8 +132,10 @@ and missing installed lockfile dependency), two finalizer process runs (exit
 137 and SIGKILL), and finalize-003's retirement-guard failure; no failed
 attempt is treated as success. The supported-inputs-001 invocation returned
 exit 137 after writing a hash-bound preparation receipt and is not described
-as a normal-exit success; the later selector-bound supported-inputs-002
-invocation exited 0. Focused local controls passed (48
+as a normal-exit success. For selector-bound supported-inputs-002, the
+complete stdout and hash-bound preparation outputs are retained, but no
+separate process-status record is available; this packet therefore does not
+claim its exit code. Focused local controls passed (48
 final-bank-finalizer and 22 delivery-handoff tests). Full current-base
 stock integration/build/emitted controls remain separate, and no credit is
 asserted here.
