@@ -26,7 +26,7 @@
     "owner_changes": 0,
     "native_holds_removed": 0,
     "accepted_credit_claimed": 0,
-    "scope_recommendation": "26 ACT-contained foreign-contact keys are an exact-scope source-relative candidate for positive preparation, not yet source-adopted or repaired; 30 LUX-only representation disagreements are proposed documented exceptions. Root alone determines source adoption and acceptance."
+    "scope_recommendation": "Root has adopted the official ACT current administrative pays layer as a bounded source-relative provider for the exact 26 ACT-contained foreign-contact keys. Scoped physical/native qualification and constructor preparation are recorded below; no current-bank delivery, owner change, accepted repair credit, or legal-boundary conclusion is claimed. The separate 30 LUX-only representation disagreements remain documented exception candidates; root alone determines acceptance and accounting."
   },
   "exact_key_partition": {
     "representation": "Expand each pinned interval run to tuples (y, x, owner_index); sort numerically by (y, x, owner_index); serialize each tuple as decimal `y,x,owner_index` plus LF; SHA-256 the bytes.",
@@ -53,8 +53,7 @@
       "56_plus_568_equals_original624": true
     }
   },
-  "source_free": true,
-  "no_geometry_or_science_replay": true,
+  "source_free": false,
   "evidence_pins": [
     {
       "role": "original queue contract",
@@ -172,7 +171,60 @@
     "ACT update date does not establish observation date, positional accuracy, or universal current legal adoption.",
     "The specifically cited ACT archival Belgium segment LB190-LB202 was not georeferenced to these cells; it remains an optional future source-fit opportunity.",
     "The exact Belgian data transfer attempt is stopped/uncertain and was not retried or routed around.",
-    "No raw geometry is included; source-family rights and source roles remain separately attributable.",
-    "This packet does not replace original receipts, accepted 568 record, or global root ledger; root alone makes acceptance/accounting decision."
-  ]
+    "This packet does not replace original receipts, accepted 568 record, or global root ledger; root alone makes acceptance/accounting decision.",
+    "The ACT one-feature extract is included and separately hash-pinned; it is not the full ACT source body. The ACT source-use role is limited to the exact 26-key scoped candidate.",
+    "The physical/native/constructor work above qualifies only the scoped candidate. The resulting constructor is not a current-startup bank write, full selected-output comparison, root acceptance, or repair-credit event."
+  ],
+  "work_performed": {
+    "description": "Bounded work was performed for the exact 26-key adopted-provider candidate; this was not a replay of the full 624-cell source/geometry analysis.",
+    "physical": {
+      "run": "physical-act-pays-002",
+      "scope": "one bounded target / 26 candidate cells",
+      "execution_receipt": {
+        "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-002/execution-receipt.json",
+        "bytes": 58342,
+        "sha256": "3b1ce34f07a32d8081a83e33427b0cb7c9affb5f0cb0ef16f9df8a75b3463ac4"
+      },
+      "result": {
+        "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/physical-act-pays-002/whole-target-support.json",
+        "bytes": 89802,
+        "sha256": "f9d8f81ae273c71e95dc29a0099b82bd0c9ef19ab521f7c07beeaaf7fc98e1ff"
+      }
+    },
+    "native_diagnostic": {
+      "run": "native-diagnostic-008",
+      "scope": "exact 26-key candidate; 26 supported / 0 held",
+      "receipt": {
+        "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/source-application-26/native-diagnostic-008/preparation.json",
+        "bytes": 266,
+        "sha256": "97b24ad886bc9706665ccfcc8eae727d1d7775b255cea2c17c2d9a9a9bdd2faa"
+      },
+      "result": {
+        "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/source-application-26/native-diagnostic-008/native-diagnostic.json",
+        "bytes": 38389,
+        "sha256": "bcb0291f018865c8da377e7d18609bc24ce990a4528b084fc76997914d34a15d"
+      }
+    },
+    "native_authority_constructor": {
+      "run": "native-authority-001",
+      "scope": "exact 26-key candidate; constructor qualified_cells=26; not bank delivery or acceptance",
+      "preparation": {
+        "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/source-application-26/native-authority-001/preparation.json",
+        "bytes": 501,
+        "sha256": "393fd848ca6bf9770363247efdb7a86156de437d31c89e4e5a6462b992fa5044"
+      },
+      "result": {
+        "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/source-application-26/native-authority-001/constructor-result.json",
+        "bytes": 27319,
+        "sha256": "7968b2630fff227e91409a0191b4c5914db60a135e817960789229743672cbc4"
+      }
+    },
+    "act_extract": {
+      "path": "coordination/engineering/lux-original-repair-20261021/adopted-provider-20261026/act-pays-one-feature.geojson",
+      "bytes": 72507,
+      "sha256": "3214565ebebbf461936c56f5b709b0235e0736f354cc3b1a94253eb14d47e0a3",
+      "source_payload_sha256": "6c3128de3763704397d9a7c44ea04d952fd467fc88a368e2d188c236cbfbae83",
+      "license": "CC0, as documented for ACT source"
+    }
+  }
 }
