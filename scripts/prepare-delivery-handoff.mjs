@@ -1626,7 +1626,12 @@ async function supportedFinalInputs(config, reader) {
   const bank = await readPreparedFinalOwnership({indexRaw, manifest, manifestSha: native.sha256,
     selected: {finalBank: selection.prepared_bank, base: index.preparedOwnership?.base_reference,
       reference_release: selection.reference, referenceMetadata}, ownerCount: index.preparedOwnership?.owners,
+    stableBufferReader: true,
     read: pin => read({...pin, path: path.posix.join(path.posix.dirname(selection.prepared_bank.path), pin.path)})});
+  // The bank loader has authenticated and parsed the complete accepted startup
+  // roster. Drop the pinReader's cached encoded bodies before continuing to
+  // source/patch partitioning; later reads remain pinned and are revalidated.
+  reader.discardBodyCache?.();
   return partitionSupportedInputs(original, reader, {selector, manifest, inventory, ...bank});
 }
 

@@ -14,7 +14,7 @@ Use `node --test` with the test files selected by the trusted profile. For alloc
 
 For final-bank retirement changes, cover both files already listed by the prior startup index and old files authenticated only by a committed finalization receipt. Check exact-byte reuse, unknown/edited/symlink rejection, sparse and resume behavior, and that publication leaves no unindexed tracked output outside the new roster. A successful local finalizer is preparation, not the trusted old/new bank-conservation or emitted-package result.
 
-For prepared-bank readers, verify defensive `Buffer` copying remains the default and that any finalizer-only stable-buffer opt-in still checks the complete byte length and digest. Exercise non-`Buffer` byte sources through their ordinary conversion path.
+For prepared-bank readers, verify defensive `Buffer` copying remains the default and that private stable-buffer opt-ins still check the complete byte length and digest. Exercise non-`Buffer` byte sources through their ordinary conversion path. If the accepted pin-reader body cache is discarded after bank validation, verify subsequent exact-pin reads still reacquire and revalidate the full body.
 
 ## Evidence review
 
