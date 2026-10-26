@@ -14,13 +14,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3822,
-      "sha256": "8f58eef4169e7fe0c52c65fb46c487a048e2c81075f25bd043f81746294dd04a"
+      "bytes": 4468,
+      "sha256": "9b7b0fe58dcbf1963a5ded4d5b2c9f6d25692894eb4cca66845491d825152850"
     },
     {
       "path": "source-role-decision.json",
       "bytes": 6199,
       "sha256": "1d8d6c5f632dd86cf87c2e0fa6e8e6b1e5dd3cdf93d13a0ad302d3634d05744a"
+    },
+    {
+      "path": "quinh38-physical-issue-application.json",
+      "bytes": 6664,
+      "sha256": "6b88b20292a8b96b1b64b6272eca0148d20d1b8f744efe8bed127e0658925d57"
     }
   ],
   "scope_total": 214,
@@ -139,5 +144,49 @@
         "sha256": "8c6f91eea7ade354906e29b2ebe65bb806fefcdf2ec31978a3c15211bc42c1b2"
       }
     ]
+  },
+  "bounded_quinh_issue_application": {
+    "path": "research/geography/gnb214-source-relative-positive-preparation-20261026/quinh38-physical-issue-application.json",
+    "bytes": 6664,
+    "sha256": "6b88b20292a8b96b1b64b6272eca0148d20d1b8f744efe8bed127e0658925d57",
+    "receipt_path": "research/geography/gnb214-source-relative-positive-preparation-20261026/quinh38-physical-issue-application.json",
+    "method": "native-linear-evenodd-first-owner-v1",
+    "scope_cells": 38,
+    "issue_geometries": 2,
+    "interior": 0,
+    "boundary": 0,
+    "outside_each": 38,
+    "scope_limit": "Exact center vs retained witness polygons only; no full-cell or whole-target clearance."
+  },
+  "finalization": {
+    "path": "coordination/engineering/gnb214-source-relative-positive-preparation-20261026/finalization-214",
+    "phase": "finalize",
+    "config_sha256": "8cb0ff970bfb9405430198e0ba06615ba22f5c7f95f8246226a2de4626d0035b",
+    "phase_stdout_bytes": 782,
+    "stdout_emitted_after": "publishFinalizedDelivery",
+    "original_exit_status": "unavailable",
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2286,
+        "sha256": "89187ec273cec3a79f174db0ade448b9f7fe407493e6be5217629a3da6051be8"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "preparation.json": {
+        "bytes": 1156,
+        "sha256": "540a65fc59f49630dcb83ed074886b5efaa41e267dbbc4358eaf33c22b5f3805"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "87f143d69825ac63cbbbbd822961e19c1ca1d7bcd63d321611b6d9ce34d15332"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "6e8e0939fad408881b1bbb66c7b66dd28592a6e7af4b16d363470a876645b3a2"
+      }
+    },
+    "transition_check": "pending trusted stock geography and selected-bank consumers"
   }
 }
