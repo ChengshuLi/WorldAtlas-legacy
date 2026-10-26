@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "commit": "8fe0499ba2b2b7e7d442b941287d50a0c13ccb05",
+    "mode": "100644",
+    "git_blob_oid": "cfa79b9688f73d38b24056da9cebaba84003eda0",
+    "bytes": 2286,
+    "sha256": "89187ec273cec3a79f174db0ade448b9f7fe407493e6be5217629a3da6051be8"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "path": "coordination/engineering/seychelles-repair-delivery-20261026/native-authority-001/original-rule-preimage.json",
+        "commit": "12ae856f55f8e2f5a876eb4637092d2398480530",
+        "mode": "100644",
+        "git_blob_oid": "1695ae42aefcd67e2fae3e85b87d0acf29339f23",
+        "bytes": 759,
+        "sha256": "0b5f281a07b9658576a40a9a459f02d631fe75179a60b8d53be56dbdf785c56e"
+      },
+      "source_authority": {
+        "path": "coordination/engineering/seychelles-repair-delivery-20261026/native-authority-001/authority-binding.json",
+        "commit": "12ae856f55f8e2f5a876eb4637092d2398480530",
+        "mode": "100644",
+        "git_blob_oid": "51f1b308f78170266ae59e20d47ba34797162713",
+        "bytes": 762,
+        "sha256": "a417ac5e1181bfbbe4eb7fce5ebc8bd035180e07969d96ba0bfcfbfdc2cf41fb"
+      },
+      "ledger": {
+        "path": "coordination/engineering/seychelles-repair-delivery-20261026/native-authority-001/constructor-result.json",
+        "commit": "12ae856f55f8e2f5a876eb4637092d2398480530",
+        "mode": "100644",
+        "git_blob_oid": "5c5a18bcd23da01c0ca058bf47efc74c3e40e5cc",
+        "bytes": 38934,
+        "sha256": "2ddc99808548c8c8160466b7a7e961f5f1a89a3eca4f8f2f752d3a104abc4ae0"
+      },
+      "native_patch": {
+        "bytes": 28171,
+        "commit": "ebab209f8e9cd6240a87a94c7f60be787542e341",
+        "git_blob_oid": "f9892166fab2974a0f13eaf904d1c48fa1ff1713",
+        "mode": "100644",
+        "path": "coordination/engineering/seychelles-repair-delivery-20261026/native-diagnostic-001/input/original-native-request.json",
+        "sha256": "19cc87156a3de2acff24ac1d74252f9243c44cc57dec1f979f8271dcaf0bf1f8"
+      }
+    }
+  ]
+}
