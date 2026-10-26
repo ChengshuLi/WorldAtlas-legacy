@@ -223,11 +223,15 @@ export async function prepareSelectedStartupOwnership({selectionBytes,manifest,p
 export async function prepareFinalBankStartupOwnership({manifest,manifestSha,previous,ownership,features,baseReference,referenceMetadata,destination}) {
   need([2,3].includes(previous?.version)&&Array.isArray(previous.files),'Authenticated accepted final bank required');
   const nativePixelMap=previous.preparedOwnership.native_pixel_map,compatibility=previous.compatibility_files;
+  const runWords=ownership.runs instanceof Uint32Array?ownership.runs.length:ownership.runWords;
   validatePreparedNativeStartup({manifest,manifestSha,nativePixelMap,files:previous.files});
   need(previous.native_manifest_sha256===manifestSha&&Array.isArray(compatibility)&&compatibility.length>0
     &&new Set(compatibility.map(p=>p.path)).size===compatibility.length
     &&compatibility.every(pin=>previous.files.some(old=>isDeepStrictEqual(pin,old))), 'Finished bank cannot change original native or compatibility custody');
   need(Array.isArray(features)&&features.length===previous.preparedOwnership.owners
+    &&Number.isSafeInteger(runWords)&&runWords>0&&runWords%2===0
+    &&(ownership.runs instanceof Uint32Array&&ownership.runs.length===runWords
+      ||!(ownership.runs instanceof Uint32Array)&&typeof ownership.runSegments==='function')
     &&ownership.reference_owner_sha256===previous.preparedOwnership.reference_owner_sha256
     &&isDeepStrictEqual(ownership.native_latitudes,nativePixelMap.native_latitudes), 'Finished bank changed complete original owner or physical domain');
   const footprints=finishedReleaseFootprintDigest(baseReference,features);
