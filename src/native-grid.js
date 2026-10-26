@@ -975,6 +975,136 @@ export function canonicalValue(value) {
   return value;
 }
 
+const canonicalArrayMap = Array.prototype.map;
+const canonicalArrayMapDescriptor = Object.getOwnPropertyDescriptor(Array.prototype, 'map');
+const canonicalArraySpeciesDescriptor = Object.getOwnPropertyDescriptor(Array, Symbol.species);
+const sameDescriptor = (actual, expected) => actual?.value === expected?.value && actual?.get === expected?.get
+  && actual?.set === expected?.set && actual?.writable === expected?.writable
+  && actual?.enumerable === expected?.enumerable && actual?.configurable === expected?.configurable;
+function canonicalNeedsLegacySerialization(value, active = new WeakSet()) {
+  if (!value || typeof value !== 'object') return false;
+  if (active.has(value)) return true;
+  active.add(value);
+  let legacy = false;
+  if (Array.isArray(value)) {
+    const prototype = Object.getPrototypeOf(value);
+    const ownMap = Object.getOwnPropertyDescriptor(value, 'map');
+    legacy = prototype !== Array.prototype || Object.hasOwn(value, 'constructor')
+      || ownMap?.get || ownMap?.set || ownMap && ownMap.value !== canonicalArrayMap
+      || !sameDescriptor(Object.getOwnPropertyDescriptor(Array.prototype, 'map'), canonicalArrayMapDescriptor)
+      || !sameDescriptor(Object.getOwnPropertyDescriptor(Array, Symbol.species), canonicalArraySpeciesDescriptor)
+      || Boolean(prototype && 'toJSON' in prototype);
+    if (!legacy) for (let index = 0; index < value.length; index++) if (index in value) {
+      if (!Object.hasOwn(value, index) || Object.getOwnPropertyDescriptor(value, String(index))?.get
+        || canonicalNeedsLegacySerialization(value[index], active)) { legacy = true; break; }
+    }
+  } else {
+    for (const key of Object.keys(value)) {
+      const descriptor = Object.getOwnPropertyDescriptor(value, key);
+      if (descriptor?.get || key === 'toJSON' && typeof descriptor?.value === 'function'
+        || canonicalNeedsLegacySerialization(value[key], active)) { legacy = true; break; }
+    }
+  }
+  active.delete(value);
+  return Boolean(legacy);
+}
+
+function* canonicalFootprintJsonChunksFast(value) {
+  if (Array.isArray(value)) {
+    yield '[';
+    for (let index = 0; index < value.length; index++) {
+      if (index) yield ',';
+      // Array#map used by canonicalValue visits inherited numeric properties.
+      if (!(index in value)) { yield 'null'; continue; }
+      const item = value[index];
+      require(item !== undefined && (typeof item !== 'number' || Number.isFinite(item)), 'Nonfinite or missing footprint value');
+      if (typeof item === 'function' || typeof item === 'symbol') yield 'null';
+      else yield* canonicalFootprintJsonChunksFast(item);
+    }
+    yield ']';
+    return;
+  }
+  if (value && typeof value === 'object') {
+    const keys = Object.keys(value).sort(), integerKeys = [], otherKeys = [];
+    for (const key of keys) {
+      if (key === '0') integerKeys.push(key);
+      else if (/^[1-9][0-9]*$/.test(key)) {
+        const number = Number(key);
+        if (Number.isSafeInteger(number) && number <= 0xfffffffe && String(number) === key) integerKeys.push(key);
+        else otherKeys.push(key);
+      } else otherKeys.push(key);
+    }
+    integerKeys.sort((left, right) => Number(left) - Number(right));
+    yield '{';
+    let emitted = 0;
+    for (const key of [...integerKeys, ...otherKeys]) {
+      const item = value[key];
+      require(item !== undefined && (typeof item !== 'number' || Number.isFinite(item)), 'Nonfinite or missing footprint value');
+      if (typeof item === 'function' || typeof item === 'symbol') continue;
+      if (emitted++) yield ',';
+      yield JSON.stringify(key);
+      yield ':';
+      yield* canonicalFootprintJsonChunksFast(item);
+    }
+    yield '}';
+    return;
+  }
+  require(value !== undefined && (typeof value !== 'number' || Number.isFinite(value)), 'Nonfinite or missing footprint value');
+  const encoded = JSON.stringify(value);
+  yield encoded === undefined ? 'undefined' : encoded;
+}
+
+export function* canonicalFootprintJsonChunks(value) {
+  if (canonicalNeedsLegacySerialization(value)) {
+    const encoded = JSON.stringify(canonicalValue(value));
+    yield encoded === undefined ? 'undefined' : encoded;
+    return;
+  }
+  yield* canonicalFootprintJsonChunksFast(value);
+}
+
+// Exact equality for ordinary JSON values without retaining two canonical
+// clones/serialized documents. Exotic/accessor inputs use the legacy whole-value
+// path so left-then-right evaluation order and serialization hooks are preserved.
+export function canonicalFootprintValueEqual(left, right) {
+  if (canonicalNeedsLegacySerialization(left) || canonicalNeedsLegacySerialization(right)) {
+    return JSON.stringify(canonicalValue(left)) === JSON.stringify(canonicalValue(right));
+  }
+  const leftParts = canonicalFootprintJsonChunks(left), rightParts = canonicalFootprintJsonChunks(right);
+  const leftState = {part:'', offset:0, done:false}, rightState = {part:'', offset:0, done:false};
+  let equal = true;
+  const fill = (iterator, side) => {
+    while (side.part === '' || side.offset === side.part.length) {
+      const next = iterator.next();
+      if (next.done) { side.done = true; side.part = ''; side.offset = 0; return; }
+      side.part = next.value; side.offset = 0;
+      if (side.part !== '') return;
+    }
+  };
+  while (true) {
+    if (!leftState.done && (leftState.part === '' || leftState.offset === leftState.part.length)) fill(leftParts, leftState);
+    if (!rightState.done && (rightState.part === '' || rightState.offset === rightState.part.length)) fill(rightParts, rightState);
+    if (leftState.done && rightState.done) return equal;
+    if (leftState.done || rightState.done) {
+      // Drain the longer tail as validation: the old eager canonicalization
+      // visited both complete operands before the boolean comparison returned.
+      const iterator = leftState.done ? rightParts : leftParts;
+      const remaining = leftState.done ? rightState : leftState;
+      while (!remaining.done) {
+        if (remaining.part === '' || remaining.offset === remaining.part.length) fill(iterator, remaining);
+        else remaining.offset = remaining.part.length;
+      }
+      return false;
+    }
+    const count = Math.min(leftState.part.length - leftState.offset, rightState.part.length - rightState.offset);
+    for (let index = 0; index < count; index++) {
+      if (leftState.part.charCodeAt(leftState.offset + index) !== rightState.part.charCodeAt(rightState.offset + index)) equal = false;
+    }
+    leftState.offset += count; rightState.offset += count;
+  }
+}
+
+
 export function finishedPrimitiveGeometries(feature,hashValue) {
   require(typeof hashValue==='function','Explicit canonical footprint hash required');
   require(feature && typeof feature.id === 'string' && feature.id
