@@ -27,7 +27,7 @@ The polygons below are modified/derived source-relative support outputs made fro
 
 ## Geometry-bearing files in this package
 
-This inventory covers all 17 geometry-bearing JSON files currently identified in the package, including the current-main revalidation copies/configuration. Revalidation source-evidence and constructor outputs embed the same pinned source/display geometry used by the earlier evidence; their inclusion does not represent a new source or geometry analysis. SHA-256 and byte counts below identify the committed file contents. “Administrative/display-derived” rows embed or carry geoBoundaries-derived source geometry and/or selected WorldAtlas display geometry; physical output rows contain derived GSHHG support geometry.
+This inventory covers all 19 geometry-bearing JSON files currently identified in the package, including the current-main revalidation copies/configuration. Revalidation source-evidence and constructor outputs embed the same pinned source/display geometry used by the earlier evidence; their inclusion does not represent a new source or geometry analysis. SHA-256 and byte counts below identify the committed file contents. “Administrative/display-derived” rows embed or carry geoBoundaries-derived source geometry and/or selected WorldAtlas display geometry; physical output rows contain derived GSHHG support geometry.
 
 | Repository path | Bytes | SHA-256 | Geometry provenance |
 |---|---:|---|---|
@@ -48,5 +48,7 @@ This inventory covers all 17 geometry-bearing JSON files currently identified in
 | `bridge-revalidation-source-evidence-001/source-evidence.json` | 27,097 | `517f92c0078bb350603456f2a27208def8b7a09619f62bd77c8de52e97bcb1a6` | Embedded administrative/display source geometry; nine original targets, byte-identical to the listed full-nine source-evidence product |
 | `bridge-revalidation-supported-inputs-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Embedded administrative/display source geometry; two candidate targets, byte-identical to the listed supported-input source-evidence product |
 | `bridge-revalidation-native-authority-001/constructor-result.json` | 7,670 | `fe200cd6cece59a9c31eb213724d3dd7a6a89cc3ef331eb08f55c679c80f71e2` | Constructor output embeds the same two pinned administrative/display target geometries; source lineage and limits are as described above |
+| `syc-bridge-revalidation-supported-inputs-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Embedded administrative/display source geometry; two candidate targets, byte-identical to the earlier supported-input source-evidence product |
+| `syc-bridge-revalidation-native-authority-001/constructor-result.json` | 7,679 | `13c3d4792b10f38d7c0ec6650b691b8a650544999bf7b0cf6adcf54d16f48e9f` | Constructor output embeds the same two pinned administrative/display target geometries; source lineage and limits are as described above |
 
 Paths in the table are relative to `coordination/engineering/btn-36-source-role-prep-20261026/`. The source geometry may be separately licensed by its provider; this notice does not change upstream terms. No status, credit, or acceptance is implied by inclusion of these artifacts.
