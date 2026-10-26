@@ -72,3 +72,40 @@ geometry and receipt; these are not owner-wide clearances or denials. Native
 qualification must project the actual witnesses to the full original cell
 request using the existing native route. Physical, native, and selected-owner
 checks remain separate; no acceptance or credit is implied.
+
+## Source-relative qualification and prepared final bank
+
+The original 2,458-cell request is preserved with its 882 interval identities;
+its separate 504 execution rows and 776 native runs are not a replacement
+denominator. The source-evidence stage binds all eight exact 2020 ADM2 target
+IDs to the full original request. The native diagnostic reports 2,458
+supported and zero held for that source-relative candidate, and the existing
+native constructor emits 2,458 assigned cells across the original eight
+owners. The 2018 ADM1 family remains historical context only. Five physical
+reconstruction issues remain documented; their five pointsets do not hit the
+2,458 original native centers, which does not clear whole-target geometry or
+certify the unmatched remote islands.
+
+The full original candidate and current accepted selector were then passed
+through the supported current-owner projection and final-map writer. The
+selector-bound finalizer used current main `a356c120cf689881bf228796c44daef783a8c74d`.
+Its `finalize-002/output/preparation.json` binds all four emitted products;
+`startup-ownership.json` is 49,610 bytes, SHA-256
+`6c1d5a714461b057d3953cf7a547a5b415abbde42441270e8a07a8632b716776`, and
+indexes 79 files (15 current pixel-map parts, 34 context parts, 30 unchanged
+compatibility bodies). The output's effective-reference identifier is
+`geography:final:83f8e9527d9d76874c55150627fce20605678a8aba7fdda29f8160918365c79e`.
+This is a prepared bank, not independent acceptance or science credit.
+
+To keep the accepted writer within available memory, after all preparation
+and output identities are complete it discards its reader's cached Git bodies;
+subsequent preflight reads continue to resolve exact committed blobs and
+validate whole-file hashes without retaining a second copy of the bank. No
+qualification predicate, output, or writer guard is skipped. The successful finalizer invocation exited 0. Four earlier finalizer attempts
+created no canonical output: one config preflight error, one missing locked
+dependency, one exit 137, and one SIGKILL. None is treated as success. The
+separate supported-inputs invocation also returned exit 137 after writing its
+complete hash-bound preparation receipt; its outputs are preserved, but the
+command is not described as a normal-exit success. Focused local controls pass
+(48 final-bank-finalizer tests and 22 delivery-handoff tests); the build and
+stock integration remain separate controls. No credit is asserted here.
