@@ -37,6 +37,7 @@ const environment = () => ({...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLA
 export function pinReader(root, {loadTree = githubTree,
   execute = deliveryAcquisitionExecute()} = {}) {
   const cache = new Map(), descriptors = new Map(), declared = new Map();
+  let cacheBodies = true;
   let acquisition;
   async function acquire(pins) {
     need(Array.isArray(pins), 'Explicit composition input pins required');
@@ -67,7 +68,7 @@ export function pinReader(root, {loadTree = githubTree,
       need(raw.length === row.bytes && digest(raw) === pin.sha256
         && createHash('sha1').update(`blob ${raw.length}\0`).update(raw).digest('hex') === row.oid,
       'Whole composition body hash differs');
-      cache.set(row.oid, raw);
+      if (cacheBodies) cache.set(row.oid, raw);
       // The existing origin resolver authenticated the exact native commit and
       // path trees. Keep that proof private; do not import a partial history.
       descriptors.set(pin.commit + ':' + pin.path, {path: pin.path, commit: pin.commit,
@@ -101,7 +102,9 @@ export function pinReader(root, {loadTree = githubTree,
     if (!cache.has(actual.git_blob_oid)) {
       const raw = git('cat-file', 'blob', actual.git_blob_oid);
       need(raw.length === actual.bytes, 'Whole body length changed');
-      cache.set(actual.git_blob_oid, raw);
+      if (cacheBodies) cache.set(actual.git_blob_oid, raw);
+      need(digest(raw) === pin.sha256, 'Whole body hash differs: ' + pin.path);
+      return raw;
     }
     const raw = cache.get(actual.git_blob_oid);
     need(digest(raw) === pin.sha256, 'Whole body hash differs: ' + pin.path);
@@ -113,8 +116,10 @@ export function pinReader(root, {loadTree = githubTree,
       return git('ls-tree', '-z', commit, '--', name).length > 0;
     },
     pin(commit, name) { const p = descriptor(commit, name);
-      if (!cache.has(p.git_blob_oid)) { cache.set(p.git_blob_oid, git('cat-file', 'blob', p.git_blob_oid)); }
-      return {...p, sha256: digest(cache.get(p.git_blob_oid))}; }};
+      let raw = cache.get(p.git_blob_oid);
+      if (!raw) { raw = git('cat-file', 'blob', p.git_blob_oid); if (cacheBodies) cache.set(p.git_blob_oid, raw); }
+      return {...p, sha256: digest(raw)}; },
+    discardBodyCache() { cache.clear(); cacheBodies = false; }};
 }
 
 function ordinary(root, relative) {
@@ -812,6 +817,7 @@ export async function prepareFinalizedStartupOwnership(outputs) {
     plan.outputs['startup-ownership.json'] = visitProduct(indexBytes);
     const selector = adoption.get(plan.selector.path); adoption.delete(plan.selector.path); adoption.set(plan.selector.path, selector);
     plan.adoption = [...adoption.values()]; plan.startupPrepared = true;
+    reader.discardBodyCache();
   } finally { fs.rmSync(temporary, {recursive: true, force: true}); }
 }
 

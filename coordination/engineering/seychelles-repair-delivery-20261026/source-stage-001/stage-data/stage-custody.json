@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "kind": "SYC exact source/current identity stage; no source-relative or physical decision",
+  "current_commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+  "original_queue_commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+  "original_contract": {
+    "package_id": "gb-SYC-ADM2--repair-evaluation",
+    "original_cells": 2458,
+    "original_land_cells": 2458,
+    "original_inland_water_cells": 0,
+    "original_intervals": 882,
+    "original_owners": [
+      41018,
+      41019,
+      41020,
+      41021,
+      41022,
+      41023,
+      41024,
+      41025
+    ],
+    "original_source_families": [
+      313,
+      314
+    ],
+    "source_features": [
+      56978,
+      56979,
+      56980,
+      56981,
+      56982,
+      56983,
+      56984,
+      56985,
+      56986,
+      56987,
+      56989,
+      56990,
+      56992,
+      56997,
+      56999,
+      57000,
+      57001,
+      57003,
+      57004,
+      57005,
+      57006,
+      57007,
+      57008,
+      57009,
+      57010,
+      57011
+    ]
+  },
+  "direct_source": {
+    "source_id": "gb:SYC:ADM2",
+    "represented_year": "2020",
+    "canonical": "Regions",
+    "source": "Seychelles National Bureau of Statistics, OCHA ROSEA",
+    "source_url": "data.humdata.org/dataset/seychelles-subnational-administrative-boundaries",
+    "consumed_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SYC/ADM2/geoBoundaries-SYC-ADM2_simplified.geojson",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "license_source": "data.humdata.org/dataset/seychelles-subnational-administrative-boundaries",
+    "license_conflict": "The retained 2020 metadata records CC BY 4.0; archived HDX image records Attribution 3.0 IGO. Both records are preserved; this stage relies on the actual pinned geoBoundaries consumed product and includes its attribution notice."
+  },
+  "source_families": {
+    "direct_current": {
+      "key": "gb:SYC:ADM2",
+      "count": 8,
+      "parts": [
+        {
+          "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SYC-ADM2-000.bin.gz",
+          "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+          "mode": "100644",
+          "git_blob_oid": "ab473c5776fbbe86083427f22845b9c8c6e11346",
+          "bytes": 32242,
+          "sha256": "bca899ea7f2fa4960cec25b112e040c21fe4ec9bc0ccee77b7f6154b85ba652d",
+          "decoded_bytes": 87773,
+          "decoded_sha256": "e983cdf22b6cd39ae3d9b31681fde43739e1bcf8634e77fca9bff0d19686cac5"
+        }
+      ],
+      "whole_original_bytes": 87773,
+      "whole_original_sha256": "e983cdf22b6cd39ae3d9b31681fde43739e1bcf8634e77fca9bff0d19686cac5"
+    },
+    "historical_context_only": {
+      "key": "gb:SYC:ADM1",
+      "feature_count": 26,
+      "role": "historical/map context only; not a current owner family or territorial negative"
+    }
+  },
+  "current_pins": {
+    "world_index": {
+      "path": "data/world-index.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "d4ca1f07f7f504484461007919f90af5c5732b61",
+      "bytes": 944,
+      "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+    },
+    "selector": {
+      "path": "data/ownership-selection.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "9dce7089f8138014fdf257fcf081e03978091b6c",
+      "bytes": 2310,
+      "sha256": "1f2ba152430affa49b3900c80695b872c9334284791d636e8872b439e83f6ee5"
+    },
+    "semantic_lineage": {
+      "path": "data/semantic-report.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "db3e1ec83d764bc8183caa4779a94b3ad1db0456",
+      "bytes": 6091596,
+      "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+    },
+    "selected_geography_part": {
+      "path": "data/geography/part-23.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "371e95033d9c542bbf07c42afe7111074e35f246",
+      "bytes": 4962410,
+      "sha256": "d61082ccd69b319723fadc4cad582b8d5c8a8ced3e50b4f90f00b4eb17e6a9c2"
+    },
+    "source_metadata": {
+      "path": "data/administrative-sources.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "2747b845f0c5654765da3b951c9074e52f220077",
+      "bytes": 661416,
+      "sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633"
+    },
+    "geoBoundaries_attribution": {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/CITATION-AND-USE-geoBoundaries-original.txt",
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "mode": "100644",
+      "git_blob_oid": "7f16c1c4aa7d11ddf25c6a6434630272a4c45459",
+      "bytes": 4316,
+      "sha256": "f6ea7572bea6036c4cdcacf8c0ca7bf09098d4e600d19546d7432533e9a290d5"
+    }
+  },
+  "inputs": [
+    {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json",
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "mode": "100644",
+      "git_blob_oid": "9c9a9bc83627afd3e8435ff4009e39530543bf54",
+      "bytes": 1754890,
+      "sha256": "78007430b6f9faedb188ef0619b7ff0a7a2cc7fff2ec9f1c41ee69936ec4ebd8"
+    },
+    {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-feature-roster.json.gz",
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "mode": "100644",
+      "git_blob_oid": "e6e380ec13cd4bcc1d24399a76bfa85ca5805b26",
+      "bytes": 1844315,
+      "sha256": "87f2d47e104b3af640351e747d8300d0068a1be23caab9e80558c3f8914eb4aa"
+    },
+    {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "mode": "100644",
+      "git_blob_oid": "09afab19371f0814da61e79e5f310c5fb2405b6d",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SYC-ADM2-000.bin.gz",
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "mode": "100644",
+      "git_blob_oid": "ab473c5776fbbe86083427f22845b9c8c6e11346",
+      "bytes": 32242,
+      "sha256": "bca899ea7f2fa4960cec25b112e040c21fe4ec9bc0ccee77b7f6154b85ba652d"
+    },
+    {
+      "path": "data/geography/part-23.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "371e95033d9c542bbf07c42afe7111074e35f246",
+      "bytes": 4962410,
+      "sha256": "d61082ccd69b319723fadc4cad582b8d5c8a8ced3e50b4f90f00b4eb17e6a9c2"
+    },
+    {
+      "path": "data/administrative-sources.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "2747b845f0c5654765da3b951c9074e52f220077",
+      "bytes": 661416,
+      "sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633"
+    },
+    {
+      "path": "data/world-index.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "d4ca1f07f7f504484461007919f90af5c5732b61",
+      "bytes": 944,
+      "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+    },
+    {
+      "path": "data/ownership-selection.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "9dce7089f8138014fdf257fcf081e03978091b6c",
+      "bytes": 2310,
+      "sha256": "1f2ba152430affa49b3900c80695b872c9334284791d636e8872b439e83f6ee5"
+    },
+    {
+      "path": "data/semantic-report.json",
+      "commit": "bc905c2d294706a200d9501a314d36ee50b48f6f",
+      "mode": "100644",
+      "git_blob_oid": "db3e1ec83d764bc8183caa4779a94b3ad1db0456",
+      "bytes": 6091596,
+      "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+    },
+    {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/CITATION-AND-USE-geoBoundaries-original.txt",
+      "commit": "2d1fc6f430e756498908bf2c4e267356a13f5cc7",
+      "mode": "100644",
+      "git_blob_oid": "7f16c1c4aa7d11ddf25c6a6434630272a4c45459",
+      "bytes": 4316,
+      "sha256": "f6ea7572bea6036c4cdcacf8c0ca7bf09098d4e600d19546d7432533e9a290d5"
+    }
+  ],
+  "outputs": {
+    "original_stage_inputs": {
+      "path": "coordination/engineering/seychelles-repair-delivery-20261026/source-stage-001/stage-data/original-stage-inputs.json",
+      "bytes": 99682,
+      "sha256": "c6ebdbd69ebf4185913d168e84a34acdaf17513a93efbca34103b1bcf5b8c3bd"
+    },
+    "source_target_membership": {
+      "path": "coordination/engineering/seychelles-repair-delivery-20261026/source-stage-001/stage-data/source-target-membership.json",
+      "bytes": 1778,
+      "sha256": "5bf93dd37a15dea1b2f9bad3c8dbe60819515eba492a8ea898a202afb5aeb7f0"
+    }
+  },
+  "limits": [
+    "Identity join only; no geometry repair, overlay, native qualification, whole-source completeness, legal boundary, or credit.",
+    "Eight direct original region source features are joined to eight same-ID current selected features and original owner indices.",
+    "Full original source bodies and other captured source families/physical/native operands remain separately pinned and unchanged."
+  ]
+}
