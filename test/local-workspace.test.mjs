@@ -76,6 +76,30 @@ test('allocator CLI binds its helper Git store, never an unrelated or missing cw
   assert.ok(!fs.existsSync(ambient.manager.report().registry));
 });
 
+test('CLI entrypoint detection canonicalizes macOS /var and /private/var paths', async t => {
+  const {repo, manager} = fixture(t);
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const requestedPath = path.resolve(helper);
+  const canonicalPath = fs.realpathSync(helper);
+  if (!requestedPath.startsWith('/var/') || !canonicalPath.startsWith('/private/var/')) {
+    t.skip('requires the macOS /var to /private/var temporary-path alias');
+    return;
+  }
+  assert.notEqual(requestedPath, canonicalPath);
+
+  const result = spawnSync(process.execPath, [requestedPath, 'report'], {
+    cwd: repo, encoding: 'utf8'
+  });
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(JSON.parse(result.stdout).registry, manager.report().registry);
+  assert.equal(result.stderr, '');
+
+  const imported = spawnSync(process.execPath, ['--input-type=module', '-e',
+    `import(${JSON.stringify(pathToFileURL(helper).href)});`], {encoding: 'utf8'});
+  assert.equal(imported.status, 0, imported.stderr);
+  assert.equal(imported.stdout, '', 'importing the CLI module does not invoke its command handler');
+});
+
 test('ordinary branch names need only Git validity and fresh isolated ownership', async t => {
   const {manager}=fixture(t);
   const entry=await manager.allocate({worker:'worker-one',branch:'feature/Map.Errors_2026'});
