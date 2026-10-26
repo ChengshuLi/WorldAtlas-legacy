@@ -24,7 +24,8 @@
       "date": "December 2024",
       "selected_shp_sha256": "051af94bd3d8115f5c3a6cfac3b3e9f56dbf1659aaab558122c4955772c26c6e",
       "url": "https://ipi.eprostor.gov.si/jgp-service-api/display-views/groups/117/files/493",
-      "zip_sha256": "7431813a817940391060c092f60cdc2cdf86c89d9939010dccff7061894c3ffd"
+      "zip_sha256": "7431813a817940391060c092f60cdc2cdf86c89d9939010dccff7061894c3ffd",
+      "distance_comparison_features": "Only the three SOSED=Hrvaška features (FIDs 1, 2 and 5) were included; FID 5 was nearest for all 129 points."
     },
     "native_latitudes": {
       "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
@@ -2595,7 +2596,7 @@
     }
   },
   "source_role_summary": {
-    "application": "Exact129 cell-center-to-Hrvaška segment FID5 line distances: 14 <=25m; 55 >25m and <=100m; 60 >100m and <=325m. All129 nearest to FID5; distances range 0.066-324.931m. Descriptive only; no side-of-line classification or acceptance threshold.",
+    "application": "Exact129 cell-center-to-Hrvaška segment FID5 line distances: 14 <=25m; 55 >25m and <=100m; 60 >100m and <=325m. All129 nearest among the three SOSED=Hrvaška features (FIDs1,2,5) to FID5; distances range 0.066-324.931m. Descriptive only; no side-of-line classification or acceptance threshold.",
     "expected_dgu_context": "All129 exact centers strictly matched unique expected-name+county DGU 3rdOrder local-unit memberships in the existing 2025/26 application. The DGU GML export completeness caveat and rights discrepancy remain disclosed; no new DGU application was performed.",
     "gurs_boundary_context": "GURS 2024 National border line provides official Slovenian state-border context. Linked GURS 2017 explanation says the line follows tribunal description plus prior official records, was approved by Slovenian Government and entered in border record; field demarcation/geodetic survey still pending. It is not treated as bilateral acceptance or final demarcation.",
     "original_competitor": "geoBoundaries SVN ADM1 NUTS2 macroregions (2021 catalogue/source role: statistical cohesion-region grouping, not local-government municipality). Exact contact source IDs are preserved above; no contact is waived.",
