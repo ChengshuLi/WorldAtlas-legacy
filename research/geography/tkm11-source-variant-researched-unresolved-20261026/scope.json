@@ -1,0 +1,355 @@
+{
+  "kind": "worldatlas.source-free-researched-unresolved-proposal.v1",
+  "title": "TKM exact 11 source-variant-sensitive researched-unresolved proposal",
+  "status": "proposal-only; no root acceptance, assignment, positive credit or package completion claimed",
+  "summary": {
+    "package_id": "gb-TKM-ADM2--repair-evaluation",
+    "original_denominator": 1759,
+    "original_intervals": 1001,
+    "original_owners": 45,
+    "prior_accepted_positive_repairs": 0,
+    "prior_accepted_researched_unresolved": 0,
+    "proposed_researched_unresolved": 11,
+    "positive_claims": 0,
+    "denominator_removals": 0,
+    "completion_claimed": false,
+    "proposed_key_classes": {
+      "land": 8,
+      "inland_water": 3
+    },
+    "all_other_original_keys_remain_pending": 1748
+  },
+  "key_schema": [
+    "owner",
+    "y",
+    "x"
+  ],
+  "keyset_sha256": "4bec1c73877ec22b8a15c0f56de1ecc194b780fb1faaef835d7bbddf7e1a12f2",
+  "keyset_sha256_method": "SHA-256 of UTF-8 compact JSON encoding of exact [owner,y,x] tuples sorted ascending by owner,y,x.",
+  "keys": [
+    [
+      42136,
+      101090,
+      170271
+    ],
+    [
+      42141,
+      97221,
+      172778
+    ],
+    [
+      42144,
+      101159,
+      174922
+    ],
+    [
+      42144,
+      101186,
+      174969
+    ],
+    [
+      42146,
+      98628,
+      176300
+    ],
+    [
+      42146,
+      98655,
+      176308
+    ],
+    [
+      42146,
+      98682,
+      176316
+    ],
+    [
+      42146,
+      98709,
+      176324
+    ],
+    [
+      42159,
+      99614,
+      169993
+    ],
+    [
+      42159,
+      99625,
+      169948
+    ],
+    [
+      42159,
+      99626,
+      169944
+    ]
+  ],
+  "per_key_source_variant_evidence": [
+    {
+      "owner": 42136,
+      "y": 101090,
+      "x": 170271,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B85944744725550",
+        "gb:TKM:ADM2:10190150B33098588070062"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B33098588070062"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B33098588070062"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42141,
+      "y": 97221,
+      "x": 172778,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM2:10190150B43921321162948"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B43921321162948"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B43921321162948"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42144,
+      "y": 101159,
+      "x": 174922,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B63269087941453",
+        "gb:TKM:ADM2:10190150B49022220136906"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B49022220136906"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B49022220136906"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42144,
+      "y": 101186,
+      "x": 174969,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B63269087941453",
+        "gb:TKM:ADM2:10190150B49022220136906"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B49022220136906"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B49022220136906"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42146,
+      "y": 98628,
+      "x": 176300,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B29988598794089",
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42146,
+      "y": 98655,
+      "x": 176308,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B29988598794089",
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42146,
+      "y": 98682,
+      "x": 176316,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B29988598794089",
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42146,
+      "y": 98709,
+      "x": 176324,
+      "physical_mask": "land",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B29988598794089",
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B50164786179090"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42159,
+      "y": 99614,
+      "x": 169993,
+      "physical_mask": "inland-water",
+      "candidate_source_ids": [
+        "gb:TKM:ADM1:27578892B85944744725550",
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42159,
+      "y": 99625,
+      "x": 169948,
+      "physical_mask": "inland-water",
+      "candidate_source_ids": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    },
+    {
+      "owner": 42159,
+      "y": 99626,
+      "x": 169944,
+      "physical_mask": "inland-water",
+      "candidate_source_ids": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "direct_tkm_adm2_ids": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "full_2009_source_center_matches": [],
+      "simplified_2009_source_center_matches": [
+        "gb:TKM:ADM2:10190150B7816159308361"
+      ],
+      "comparison": "simplified-only",
+      "full_boundary_tie": false,
+      "simplified_boundary_tie": false
+    }
+  ],
+  "original_scope_reconciliation": {
+    "original_exact_keyset_sha256_owner_y_x_newline": "2f3ce5270fbc50de6ce12de5106f2721adcbfad7b151b11fe10ccc930be3cb63",
+    "application_rows": 1759,
+    "same_unique_full_and_simplified_feature_id": 1748,
+    "simplified_only": 11,
+    "full_only": 0,
+    "ties": 0,
+    "multi_hits": 0,
+    "partition": "11 proposed unresolved are a unique subset of the original 1,759; 1,748 other keys remain pending; no original key is removed."
+  },
+  "source_application": {
+    "application_path_private": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/.private/full-simplified-exact-center-application.json",
+    "application_sha256": "433980ea0cba1bf6c40298cc50908e3e41517faa8640df4b58ab6346a8bfc19c",
+    "aggregate_receipt_path": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/full-simplified-source-application-custody-v1.json",
+    "aggregate_receipt_sha256": "f60634ad589b404673f1e214321144e62d9773a062d10e5cc478f11901e96e56",
+    "method": "native-linear-evenodd-first-owner-v1 at exact canonical-grid centers; same 59-feature 2009 full source and 59-feature simplified derivative compared for every one of 1,759 original keys.",
+    "source_2009_full": {
+      "creation_commit": "f203ec291162e2f90d146a8047a6347714d10293",
+      "path": "research/geography/turkmenistan32-source-fit-20261010/full-2009-source.geojson",
+      "blob": "ba95488d39c1344227d89b4d1bba07461a0ada58",
+      "bytes": 271437,
+      "sha256": "0d0b3745e275bfadb1d0137fbca014b56f2ed72cb83b0a98dd0e2f0632e7c507"
+    },
+    "source_2009_simplified": {
+      "release_commit": "9469f09",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TKM-ADM2-000.bin.gz",
+      "compressed_bytes": 80771,
+      "compressed_sha256": "2d90c64e364eded8e91e27490d45022dd0eca55ffbccf2e7d5399039dca0b9d2",
+      "decoded_bytes": 259969,
+      "decoded_sha256": "af6d0ea1274198ae5579ef23c9da9c2a45bb1fcc4e77fa5532e18c47c778d27d",
+      "feature_count": 59,
+      "advertised_feature_count": 66
+    },
+    "source_attribution": {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/individual-source-attribution.json",
+      "blob": "d84c203f19506d0552ca3cad1efcf9a8b8a5cfde",
+      "sha256": "7d8a3baf61f32e6e4398f24bec0d15bce32eafcd4309655edc2b12a2c33256bd",
+      "underlying_attribution": "CIESIN GRUMPv1 population-density Map 7",
+      "recorded_license": "CC BY-SA 3.0",
+      "limitations": "Underlying source authority and effective applicability are unverified; derivative geoBoundaries CC BY 4.0 does not reapprove upstream material."
+    }
+  },
+  "limits": [
+    "The source-variant mismatch is the specific qualification failure: for each of these exact 11 original keys, the simplified geometry yields a unique direct TKM ADM2 center hit while the paired full geometry yields no hit. This is not a positive acceptance, nor proof the full geometry is necessarily correct; it leaves a material unresolved source-version/representation conflict.",
+    "Keep 8 land and 3 inland-water keys distinct. The physical-mask labels are inherited from the original candidate record, not a new independent physical producer. Water is not converted into land or political ownership.",
+    "The per-key candidate_source_ids retain all recorded TKM ADM1/ADM2 contacts. These exact 11 have no AFG/KAZ/UZB contact in the retained per-key candidate list, but all 30 foreign contacts elsewhere in the original 1,759 remain pending and unchanged.",
+    "All 1,759 keys remain in the original package denominator. This proposal leaves 1,748 pending, including the separate 915 source-relative candidates, 30 foreign-contact keys, 643 2025 predecessor-name context keys, 56 unnamed features, and other held strata; no finding here clears them.",
+    "No raw source geometry, raw source bodies, geographic coordinates, native patch, owner assignment, current-bank mutation or credit is included. Owner/y/x are generated project-grid identity metadata only.",
+    "Source-variant comparison establishes the stated method/result only, not official/legal boundaries, whole-cell containment, source authority, current territory, or historical lineage beyond the recorded source IDs."
+  ]
+}
