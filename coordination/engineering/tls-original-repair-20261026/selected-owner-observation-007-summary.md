@@ -27,3 +27,7 @@ This result reports only selected-owner conservation for the frozen query set. I
 - Private observation manifest: 1,780 bytes; SHA-256 `91fc9879d235e6a755ab665d1d5c10901a4ae40f06587a3b96da4c55493d696c`.
 
 The row-level observation and its supporting files remain in the private task handoff; this summary publishes no keys, coordinates, or geometry.
+
+## Later finalize-012 observation
+
+The statement above describes only the historical finalize-007 row-level handoff. A later selected-owner observation is separately published at `coordination/engineering/tls-original-repair-20261026/finalize-012/observation.json` (158,202 bytes; SHA-256 `975311a616673c238eb75b946239a47970154ddf7c7d7d1e46bbd5d48f7c7645`). It is bound to candidate bank commit `3328633a9697a891579b7e3dcac53a14044370f1` and records `scientific_qualification: false`. The finalize-007 pins above remain historical and unchanged.
