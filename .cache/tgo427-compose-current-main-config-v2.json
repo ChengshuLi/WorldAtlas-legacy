@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "0fed0be792e6507f3a7265ebdbecbc9664641298",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+    "bytes": 2291,
+    "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "0fed0be792e6507f3a7265ebdbecbc9664641298",
+        "path": ".cache/delivery-handoff/tgo427-native-authority-current-main-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "29dc2ebd8a38d0c27c470ec620c8457c4134913c",
+        "bytes": 708,
+        "sha256": "3d78619185d7590f009a87d64d75d924499fdf473d8aa2888134b683b580eeed"
+      },
+      "source_authority": {
+        "commit": "0fed0be792e6507f3a7265ebdbecbc9664641298",
+        "path": ".cache/delivery-handoff/tgo427-native-authority-current-main-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "c2aae6e2cf8765b337a20a99b952b64cad3b47e0",
+        "bytes": 711,
+        "sha256": "d8545de5996a3f54873bbc6de3f25c940d073e2fca27a4b4c18b4bada05617ec"
+      },
+      "ledger": {
+        "commit": "0fed0be792e6507f3a7265ebdbecbc9664641298",
+        "path": ".cache/delivery-handoff/tgo427-native-authority-current-main-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "e6ed9e690fc029f1c52045730a3c8c0bd33b29e3",
+        "bytes": 45039,
+        "sha256": "a3ad7a15f4c5a3a432926af87a34b4e0547fe74d1b860bb5c1d3eb74a69cc241"
+      },
+      "native_patch": {
+        "commit": "860f5594b371f85acedb7f669278a9399b81e178",
+        "path": ".cache/delivery-handoff/tgo427-supported-inputs-current-main-002/native-patch.json",
+        "mode": "100644",
+        "git_blob_oid": "3f441d22826471730c8232e27b316beb6f1cfb2b",
+        "bytes": 10109,
+        "sha256": "e64015c5190e1937011b896b17857db366a98ae119c64a0b4ba2998f51952011"
+      }
+    }
+  ]
+}
