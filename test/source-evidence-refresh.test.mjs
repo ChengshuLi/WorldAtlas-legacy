@@ -124,6 +124,27 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
   'The prepared startup bank must remain byte-identical');
 });
 
+test('source-evidence refresh rejects a missing accepted bank body before preserving it',async()=>{
+ const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
+ const registry=reader.json(reader.pin(latest,registryPath)),priorRegistryValue=reader.json(reader.pin(latest,priorRegistryPath));
+ const priorRegistry=reader.pin(latest,priorRegistryPath),selected=reader.pin(latest,'data/ownership-selection.json');
+ const priorReader=withPriorSelector(reader,latest,{...reader.json(selected),change_evidence:priorRegistry},
+  currentTreeAliases(reader,latest,priorRegistryValue,registry));
+ const guardedReader=new Proxy(priorReader,{get(target,key,receiver){
+  if(key==='read')return pin=>{
+   if(pin.path.startsWith('data/canonical-grid/current-startup/')&&!pin.path.endsWith('/index.json'))
+    throw Error('fixture accepted bank body unavailable');
+   return target.read(pin);
+  };
+  return Reflect.get(target,key,receiver);
+ }});
+ const config={version:2,selector:{commit:latest,path:selected.path},
+  package_inputs:{commit:latest,path:'.github/package-inputs.json'},
+  source_evidence_refresh:{commit:latest,path:registryPath}};
+ const outputs=await finalizeDelivery(config,guardedReader);
+ await assert.rejects(prepareFinalizedStartupOwnership(outputs,root),/fixture accepted bank body unavailable/);
+});
+
 test('finalizeDelivery awaits source membership acquisition before rejecting a missing target',async()=>{
  const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
  const registry=reader.json(reader.pin(latest,registryPath)),priorRegistryValue=reader.json(reader.pin(latest,priorRegistryPath));

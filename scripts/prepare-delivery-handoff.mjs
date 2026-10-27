@@ -882,9 +882,10 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
       &&same(proposed.prepared_bank,selection.prepared_bank)
       &&same(proposed.reference,selection.reference),
     'Source-evidence refresh changed selected bank/native/reference state');
-    const index=await prepareFinalBankStartupOwnership({manifest,manifestSha:native.sha256,previous,
-      ownership:before.ownership,features:before.features,
-      baseReference:before.index.preparedOwnership.base_reference,referenceMetadata,destination});
+    // This operation changes only the evidence pointer. `before` has already
+    // authenticated and decoded the complete selected bank; re-encoding it
+    // would make a no-op depend on platform-specific gzip output bytes.
+    const index=previous;
     plan.proposedSelection=proposed;
     plan.sourceEvidenceRefresh=true;
     return index;
@@ -1019,7 +1020,11 @@ export async function prepareFinalizedStartupOwnership(outputs, root) {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'worldatlas-final-startup-'));
   try {
     const index=await prepareProposedFinalBank({plan,selection,manifest,previous,originalIndex,originalBodies,readPin,destination:temporary});
-    const bodies = new Map(index.compatibility_files.filter(pin => !retained.has(pin.path)).map(pin => [pin.path, originalBodies.get(pin.path)]));
+    const bodies = plan.sourceEvidenceRefresh
+      ? new Map(index.files.filter(pin => !retained.has(pin.path)).map(pin => [pin.path, originalBodies.get(pin.path)]))
+      : new Map(index.compatibility_files.filter(pin => !retained.has(pin.path)).map(pin => [pin.path, originalBodies.get(pin.path)]));
+    if (plan.sourceEvidenceRefresh) need([...bodies.values()].every(Buffer.isBuffer),
+      'Authenticated source-refresh bank body is unavailable');
     const collect = (directory, relative = '') => {
       for (const entry of fs.readdirSync(directory, {withFileTypes: true})) {
         const name = relative + entry.name, full = path.join(directory, entry.name);
@@ -1031,7 +1036,7 @@ export async function prepareFinalizedStartupOwnership(outputs, root) {
         }
       }
     };
-    collect(temporary);
+    if (!plan.sourceEvidenceRefresh) collect(temporary);
     need([...retained.keys()].every(name => !bodies.has(name)), 'Generated output overlaps retained compatibility');
     index.files = [...retained.values(), ...[...bodies].map(([name, bytes]) => ({path: name, ...visitProduct(bytes)}))].sort((a, b) => a.path.localeCompare(b.path));
     if(plan.sourceEvidenceRefresh){
