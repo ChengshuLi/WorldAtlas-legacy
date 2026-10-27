@@ -1,0 +1,23 @@
+{
+  "phase": "native-authority",
+  "attempt": 1,
+  "argv": [
+    "node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-authority",
+    "coordination/engineering/tkm-mary143-native-001/config/native-inputs-002/native-diagnostic-config.json",
+    "coordination/engineering/tkm-mary143-native-001/native-authority-001"
+  ],
+  "cwd": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/8a7188389791c016a73ea614187e673fb1038d61bf2fe758eb2e695cf4d07768/work",
+  "environment_delta": {
+    "unset": [
+      "NODE_PATH"
+    ]
+  },
+  "exit_code": 0,
+  "signal": null,
+  "stdout_bytes": 457,
+  "stderr_bytes": 0,
+  "stdout": "{\"destination\":\"coordination/engineering/tkm-mary143-native-001/native-authority-001\",\"resumed\":false,\"binding\":{\"phase\":\"native-authority\",\"config_sha256\":\"9a5cecdfcddac30e96e7576338002876f861026c85751fe8dc30174b90b94ccb\"},\"observation\":{\"elapsed_seconds\":7.985662087,\"qualified_cells\":143,\"limits\":[\"Original source/physical producers are not replayed.\",\"Constructor qualification is not actual current-owner-zero or final selected-output acceptance.\"]}}\n",
+  "note": "Existing native-authority path wrote the original rule preimage, authority binding, and constructor result. No final-bank composition or selected-bank mutation occurred."
+}

@@ -1,6 +1,6 @@
 {
   "kind": "TKM Mary143 physical-stage input custody",
-  "status": "physical execution completed; native qualification pending",
+  "status": "physical stage complete; source-evidence, native diagnostic, and constructor candidate complete; selected-bank conservation/root acceptance pending",
   "scope": {
     "package": "gb-TKM-ADM2--repair-evaluation",
     "owner_index": 42143,
@@ -129,5 +129,20 @@
       "file_bytes": 85931707,
       "complete_records_sha256": "20aac8bff5dffceb75b9a205fabfde41bc31ba6695818f1e4dc52a5cf3df4d64"
     }
+  },
+  "native_qualification": {
+    "accepted_current_main": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "owner_zero_receipt": "/workspace/shared/worldatlas-TKM-Mary143-current-owner-check-20261027.json",
+    "owner_zero_receipt_sha256": "01aa48469ef79664de03aba961264aeda5b2e4dc26eb1fd9265bf4a6ba23baef",
+    "native_diagnostic": "coordination/engineering/tkm-mary143-native-001/native-diagnostic-001/native-diagnostic.json",
+    "native_diagnostic_sha256": "8b34de6fc62bca6d2977a21963fa4c667459c4f94ddd0ac1d2dd77c10b47cfdb",
+    "native_authority_constructor": "coordination/engineering/tkm-mary143-native-001/native-authority-001/constructor-result.json",
+    "native_authority_constructor_sha256": "a579c417346dce6a18a563c5aeada662c7f6686b573dce6abc600adb521c80fa",
+    "native_requested": 143,
+    "native_supported": 143,
+    "native_held": 0,
+    "constructor_disposition": "assigned",
+    "selected_owner_delta": "not yet composed or globally conserved; exact accepted owner-zero observation is separate",
+    "scope_limit": "Candidate-only supported source-native result, not selected-bank acceptance/credit."
   }
 }
