@@ -1,6 +1,6 @@
 {
   "kind": "hrv-180-zadar-arta-leveraka-candidate-preparation-v1",
-  "status": "two disjoint source/native groups prepared and composed into a two-entry authority registry; no finalized bank, conservation, delivery, or acceptance",
+  "status": "Historical composition/source-native preparation snapshot only. The 180-key candidate was later finalized against accepted bank snapshot a484514ac5b2e234eb682f92ee6a065ac1e4d298 in combined-180 attempt 011 and locally compared; it is not hosted-delivered or scientifically accepted.",
   "original_package": "gb-HRV-ADM2--repair-evaluation",
   "original_denominator": 35738,
   "accepted_prior_count": 32928,
@@ -12,7 +12,7 @@
       "count": 77,
       "tuple_sha256": "500c91a940de99531899cf26ce0e2f004d7d98b0ded5556dd5a88933140c5fd8",
       "source_role": "separate prepared source-target group",
-      "current_owner_projection_sha256": "ce5e013ec7ed99a08b5e9fd132e5a7284fa6fd1a7afc33d55ed9118f83656441"
+      "historical_owner_projection_29e4_sha256": "ce5e013ec7ed99a08b5e9fd132e5a7284fa6fd1a7afc33d55ed9118f83656441"
     },
     {
       "name": "ArtaVela53",
@@ -29,15 +29,6 @@
   ],
   "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae",
   "disjointness_verified": true,
-  "current_owner": {
-    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
-    "selected_reference": "geography:final:6a94d9be13155b6d896cb1e98aef444ef602576c7f47c7da78193253f8faadcd",
-    "full_observation_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
-    "full_query_count": 35738,
-    "current_startup_index_sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165",
-    "all180_effective_selected_owner_zero": true,
-    "scientific_qualification": false
-  },
   "arta_leveraka_native": {
     "diagnostic": "103 requested; 103 supported; 0 held",
     "constructor_cells": 103,
@@ -49,7 +40,8 @@
     "Zadar77 and Arta/Leveraka remain separate authority/source-role groups.",
     "Leveraka is not equated with Act-listed Levrnaka.",
     "Source/physical/native constructor results are not role acceptance or bank acceptance.",
-    "Authority groups are composed only; no final bank, comparator, delivery, or root scientific acceptance is claimed."
+    "The historical 29e4 owner observation and composition selector are not current; the latest recorded full-package owner observation is the 74b9 observation referenced above.",
+    "The combined-180 attempt 011 finalizer and local conservation comparison are recorded in ../combined-180/README.md; no hosted delivery or root scientific acceptance is claimed."
   ],
   "composed_authority_registry": {
     "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/authority-registry.json",
@@ -57,5 +49,25 @@
     "sha256": "35db9f90d6798c094485922d5a23d83517eb96353862c0c13cec7e19fe698e97",
     "entry_count": 2,
     "selector_commit": "29e4d7c2d4215345f76cef695db93b4120e48114"
+  },
+  "historical_owner_observation_29e4": {
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "selected_reference": "geography:final:6a94d9be13155b6d896cb1e98aef444ef602576c7f47c7da78193253f8faadcd",
+    "full_observation_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
+    "full_query_count": 35738,
+    "current_startup_index_sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165",
+    "all180_effective_selected_owner_zero": true,
+    "scientific_qualification": false,
+    "label": "Historical observation at accepted main 29e4d7c2d4215345f76cef695db93b4120e48114; superseded as a current-owner view by the later 74b9 full-package observation."
+  },
+  "latest_owner_observation": {
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-owner-observation-74b9-180.json",
+    "sha256": "0f55aa479921140f4976e8b21dfe34d183e593c36a10f65f872865cd45d4f8e9",
+    "snapshot_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "full_query_count": 35738,
+    "candidate_key_count": 180,
+    "all180_effective_selected_owner_zero": true,
+    "scientific_qualification": false,
+    "current_through_a484": "The accepted a484 selector/startup/package inputs are documented as unchanged from the 74b9 observation; this is an input-equivalence bridge, not a fresh a484 owner query."
   }
 }
