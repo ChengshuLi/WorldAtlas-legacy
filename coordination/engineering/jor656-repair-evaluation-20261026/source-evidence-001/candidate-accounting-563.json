@@ -53,18 +53,39 @@
       "path": "full-simplified-source-application.json",
       "sha256": "d33aa167fe79c3c5fdf4dfdafc87ca8a746152fd5373de733b516d3878312ab1"
     },
-    "simplified_foreign_application": {
-      "path": "full-foreign-application.json",
-      "sha256": "50563eedf0be448b345962315aae75b8e8fccb915d27440a2137d6ac8bf733a8"
-    },
     "simplified_physical_result_commit": "19012ac89bda3437fb8b7280915181d770c1274c",
     "simplified_physical_result_sha256": "5c7e4a5fab9bae42f0016661d553a8030de5dd5a456bdae9978a44d684081113",
     "limitations": [
       "Full-product misses/different-member observations remain adverse for all 32 rows, including the 29 separately assessed under the original simplified-product contract.",
-      "All 93 original simplified ISR/SAU contact incidences remain held and are not erased by the separate full-geometry zero-hit comparison.",
+      "All 93 original ISR/SAU contact keys remain held under the recorded source roles. The bounded actual full-versus-simplified native comparison finds per-key hits in both products (72 ISR / 21 SAU); the prior zero-hit application is contradicted and its cause is unestablished.",
       "Whole-target physical issue records and bounded center checks are not whole-cell or whole-target clearance.",
       "All 25 original inland-water cells remain classified as inland water."
-    ]
+    ],
+    "contradicted_historical_zero_hit_application": {
+      "path": "full-foreign-application.json",
+      "sha256": "50563eedf0be448b345962315aae75b8e8fccb915d27440a2137d6ac8bf733a8",
+      "status": "contradicted historical evidence; not a verified full-resolution application",
+      "reason": "Its ISR/SAU input hashes identify the simplified source products despite a full-resolution label. The cause of its zero-hit result is unestablished; do not use it to clear or erase contacts."
+    },
+    "verified_full_simplified_native_comparison": {
+      "path": "full-foreign-native-application-002/full-vs-simplified-native-comparison.json",
+      "bytes": 105159,
+      "sha256": "9d4800a440b45849d34bf4cf12079598811ef7b6012803602890b4de4b8bc51d",
+      "method": "native-linear-evenodd-first-owner-v1",
+      "release_commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
+      "original_contact_keys": 93,
+      "full_product_feature_hits": 93,
+      "simplified_product_feature_hits": 93,
+      "per_key_full_simplified_hit_sets_match": 93,
+      "source_partition": {
+        "ISR": 72,
+        "SAU": 21,
+        "full_JOR_same_member": 90,
+        "full_JOR_member_miss": 3
+      },
+      "ties": 0,
+      "disposition": "All 93 remain held; this comparison does not replace their recorded simplified-source role or establish source authority, legal status, whole-cell clearance, or acceptance."
+    }
   },
   "bank_candidate": {
     "baseline_commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
