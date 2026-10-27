@@ -61,3 +61,20 @@ physical clearance or a legal/source-role determination. The separate 144
 physical-interpretation cells and one XKX conflict remain outside this package.
 No source download, source/physical producer replay, reassignment, or status
 change is performed by this preparation.
+
+The recorded native-authority output is preparation for 1,333 candidate cells
+(15 assigned constructor components); the three original Albania-contact cells
+remain held. The finalizer-001 stage binds that evidence to the current accepted
+7aaa0a9 selector and package inputs and prepared a candidate startup bank. Its
+receipt at `finalize-001/finalization-receipt.json` records exact inputs, outputs,
+prior no-output validation failures, and roster comparison. The candidate index
+has 79 body paths plus its index; all 30 compatibility paths are in the existing
+79-path roster. Compared with the 7aaa current index, 68 paths are byte-identical,
+11 index-declared prior paths are retired and 11 new content-addressed paths are
+added. The entire candidate roster has no missing, extra, or hash/size-mismatched
+materialized files. This is deterministic preparation only: no current-owner
+acceptance, publication, root scientific acceptance, or credit is claimed. The
+2017 source consumed remains the simplified 23-feature family, not a
+full-resolution source product. The whole-target physical issues and their
+zero-center-effect result remain as originally reported; neither is erased or
+recast as blanket physical clearance.
