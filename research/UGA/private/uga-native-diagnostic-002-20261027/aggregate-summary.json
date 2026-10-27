@@ -1,0 +1,44 @@
+{
+  "schema": "uga-native-diagnostic-aggregate-v1",
+  "run": "native-diagnostic-002",
+  "config_sha256": "b218578da7daba84fe9cd95206cfdaf7a3ee37e7af447fa93dcd53e9f01971f6",
+  "source_evidence": {
+    "commit": "ba7763a1f4a4a69502f013d9326e2ed63e1daa5c",
+    "path": "research/UGA/private/uga-source-evidence-003-20261027/source-evidence.json",
+    "sha256": "aa6038cc77f8a6cf9b4b599c19039f321ead353b201e9d1b83370011a949053d"
+  },
+  "native_patch": {
+    "commit": "b5502d156c9ad7ada43b0c189ecfdc66ec2f7b8e",
+    "path": "research/UGA/private/uga-native-diagnostic-001-20261027/native-patch.json",
+    "sha256": "efa29d66b3cb36a12d2ac4608cbb6fd6ed6eb947dc074bdb74c2ead1fe4d517b"
+  },
+  "requested_cells": 715,
+  "supported_cells": 708,
+  "held_cells": 7,
+  "decision_reason_counts": {
+    "assigned_cells": 708,
+    "territorial_exclusion_cells": 7
+  },
+  "held_attribution": {
+    "family_cells": {
+      "gb:TZA:ADM1": 6,
+      "gb:COD:ADM1": 1
+    },
+    "unique_active_feature_counts": {
+      "gb:TZA:ADM1": 1,
+      "gb:COD:ADM1": 1
+    },
+    "overlap_sets": {
+      "gb:TZA:ADM1": 6,
+      "gb:COD:ADM1": 1
+    },
+    "owner_count": 2
+  },
+  "physical_witness_kind_rows": 0,
+  "first_failure_predicate": "unique-source-target-coverage",
+  "scientific_qualification": false,
+  "limitations": [
+    "Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.",
+    "All original source, physical, query, witness and territorial limits remain retained."
+  ]
+}

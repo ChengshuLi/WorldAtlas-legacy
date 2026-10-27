@@ -1,0 +1,32 @@
+{
+  "schema": "uga-native-diagnostic-002-postrun-review-v1",
+  "config_sha256": "b218578da7daba84fe9cd95206cfdaf7a3ee37e7af447fa93dcd53e9f01971f6",
+  "source_evidence_commit": "ba7763a1f4a4a69502f013d9326e2ed63e1daa5c",
+  "native_patch_commit": "b5502d156c9ad7ada43b0c189ecfdc66ec2f7b8e",
+  "files": [
+    {
+      "path": "native-diagnostic-config-002.json",
+      "bytes": 365,
+      "sha256": "b218578da7daba84fe9cd95206cfdaf7a3ee37e7af447fa93dcd53e9f01971f6",
+      "mode": "0600"
+    },
+    {
+      "path": "native-diagnostic.json",
+      "bytes": 194312,
+      "sha256": "39b1b4b91d3b079ee82fe93e729fdd09707137233e152ad278b8320e7b5b6fc6",
+      "mode": "0600"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 267,
+      "sha256": "1a86a9df1096e939dee6bacb6a2dc82c90bf1a4ea38a85e16b5732b8a50a96e0",
+      "mode": "0600"
+    },
+    {
+      "path": "aggregate-summary.json",
+      "bytes": 1520,
+      "sha256": "ff654bcefb22db3ff1cb9f8b8214979d4269ae2c7a5a8369a97ba82c44048f4a",
+      "mode": "0600"
+    }
+  ]
+}
