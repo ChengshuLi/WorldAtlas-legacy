@@ -6,7 +6,7 @@ import {pinReader,finalizeDelivery,prepareFinalizedStartupOwnership} from '../sc
 const registryPath='coordination/engineering/tls-original-repair-20261026/compose-003/authority-registry.json';
 const priorRegistryPath='coordination/engineering/tls-original-repair-20261026/compose-002/authority-registry.json';
 
-function withPriorSelector(reader,commit,selection,historicalPins=[]){
+function withPriorSelector(reader,commit,selection,historicalPins=[],acquisitionRecord={}){
  const path='data/ownership-selection.json',raw=Buffer.from(JSON.stringify(selection)+'\n');
  const oid=createHash('sha1').update(`blob ${raw.length}\0`).update(raw).digest('hex');
  const pin={commit,path,mode:'100644',git_blob_oid:oid,bytes:raw.length,
@@ -29,6 +29,29 @@ function withPriorSelector(reader,commit,selection,historicalPins=[]){
    return target.read(value);
   };
   if(key==='json')return value=>JSON.parse(overlay.read(value).toString());
+  if(key==='acquire')return async pins=>{
+   acquisitionRecord.calls=(acquisitionRecord.calls??0)+1;
+   const verified=[];
+   for(const pin of pins){
+    if(pin.commit!==commit){
+     const declared=historical.get(`${pin.commit}\0${pin.path}`);
+     assert(declared,`test acquisition must use a declared historical source-evidence pin: ${pin.path}`);
+     assert.deepEqual({mode:pin.mode,git_blob_oid:pin.git_blob_oid,bytes:pin.bytes,sha256:pin.sha256},
+      {mode:declared.mode,git_blob_oid:declared.git_blob_oid,bytes:declared.bytes,sha256:declared.sha256},
+      `test acquisition pin identity for ${pin.path}`);
+    }
+    const current=target.pin(commit,pin.path);
+    assert.deepEqual({mode:current.mode,git_blob_oid:current.git_blob_oid,bytes:current.bytes,sha256:current.sha256},
+     {mode:pin.mode,git_blob_oid:pin.git_blob_oid,bytes:pin.bytes,sha256:pin.sha256},
+     `test acquisition requires byte-identical declared current-tree fixture for ${pin.path}`);
+    target.read(current);
+    verified.push({path:pin.path,mode:current.mode,git_blob_oid:current.git_blob_oid,
+     bytes:current.bytes,sha256:current.sha256});
+   }
+   acquisitionRecord.verifiedCalls??=[];
+   acquisitionRecord.verifiedCalls.push(verified);
+   return {scope:'test-local-byte-verified-pins',verifiedPins:pins.length,remoteFetches:0};
+  };
   const value=target[key];return typeof value==='function'?value.bind(target):value;
  }});
  return overlay;
@@ -74,7 +97,9 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
   sha256:authorityPin.sha256},{mode:'100644',git_blob_oid:'ca94368b92d6aa883c03b5c1acbf8b3df5d7bea3',
   bytes:730,sha256:'61ff1ea871cb5612930fb27af0495b108357c71084ccfdfca94fb2d6297cbc41'},
   'the current authority-binding fixture must equal the accepted historical pin');
- const priorReader=withPriorSelector(reader,latest,oldSelection,currentTreeAliases(reader,latest,priorRegistryValue,registry));
+ const acquisitionRecord={calls:0,verified:[]};
+ const priorReader=withPriorSelector(reader,latest,oldSelection,
+  currentTreeAliases(reader,latest,priorRegistryValue,registry),acquisitionRecord);
  assert.equal(registry.entries.length,1);
  const binding=priorReader.json(registry.entries[0].source_authority),evidence=priorReader.json(binding.source_evidence);
  assert.equal(evidence.targets.length,20);
@@ -82,6 +107,13 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
   package_inputs:{commit:latest,path:'.github/package-inputs.json'},
   source_evidence_refresh:{commit:latest,path:registryPath}};
  const outputs=await finalizeDelivery(config,priorReader);
+ assert(acquisitionRecord.calls>=1,'source membership must pass through the local declared-pin fixture boundary');
+ const requestedMembershipPins=[evidence.source_membership.index,evidence.source_membership.lineage,
+  ...evidence.source_membership.parts];
+ assert(acquisitionRecord.verifiedCalls.some(call=>requestedMembershipPins.every(pin=>
+  call.some(value=>value.path===pin.path&&value.git_blob_oid===pin.git_blob_oid
+   &&value.bytes===pin.bytes&&value.sha256===pin.sha256))),
+  'source-membership acquisition must verify every declared exact pin locally');
  await prepareFinalizedStartupOwnership(outputs,root);
  const next=JSON.parse(outputs['ownership-selection.json']),startup=JSON.parse(outputs['startup-ownership.json']);
  const expected={...oldSelection,change_evidence:refresh};
