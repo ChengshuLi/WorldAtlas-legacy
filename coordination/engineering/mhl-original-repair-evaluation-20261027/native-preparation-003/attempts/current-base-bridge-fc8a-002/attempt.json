@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "kind": "mhl-current-main-bridge-attempt-v1",
+  "candidate_before": "653466ccf4d69f36feff597590986654ab072819",
+  "accepted_main": "fc8a0a85bf1d40dd86e1a1097b775d442474468a",
+  "command": "git merge --no-edit refs/remotes/origin/main",
+  "exit_code": 128,
+  "stdout_sha256": "3932df71ce6b1a5831ef19ca12435553ca183f6a79d507a66511b5e43f1bb3ba",
+  "stderr_sha256": "c5517b36d677dd151728160600f0b931a5bdda41f0d5a6448d174915667b83de",
+  "stderr_observation": "Merge made by ort, then warning that lazy fetching was disabled and fatal could not fetch missing promisor object 2573356820fd386d380da1d26bcaa01a1999394a.",
+  "postcondition": {
+    "merge_commit": "75d8b986e0e1618319aa7e3166c0ccb38b75754c",
+    "parents": [
+      "653466ccf4d69f36feff597590986654ab072819",
+      "fc8a0a85bf1d40dd86e1a1097b775d442474468a"
+    ],
+    "tree": "87fa1ec320de21beb21e9cf677653c92378ea2d7",
+    "startup_index_blob": "5bd24233e397d03b85dd211a169eb4f01b738902",
+    "selector_blob": "b2fbe42de988f703cf75e89fcf2f1ed87525c676",
+    "package_inputs_blob": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+    "unmerged_entries": 0,
+    "tracked_index_matches_HEAD": true,
+    "no_staged_or_worktree_delta": true,
+    "stale_merge_head_before_quit": "fc8a0a85bf1d40dd86e1a1097b775d442474468a",
+    "cleanup": "git merge --quit after confirming HEAD already had both parents, exact tree/index unchanged, no unmerged entries; afterward HEAD/tree/index unchanged and MERGE_HEAD absent"
+  },
+  "limits": [
+    "Do not infer which path used missing promisor object; it is not asserted to be needed by the final tree.",
+    "Current-bank and selector blobs are exactly the finalized candidate parent; fc8a contributes only accepted documentation.",
+    "No tests/build/geography/emitted controls or acceptance claimed."
+  ]
+}

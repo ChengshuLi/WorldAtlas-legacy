@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "mhl-bounded-current-main-fetch-v1",
+  "attempts": [
+    {
+      "command": "git -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules --no-auto-maintenance origin main",
+      "exit_code": 128,
+      "result": "No state change; this owned sparse repo has no remote.origin.url configured."
+    },
+    {
+      "command": "git -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules --no-auto-maintenance https://github.com/ChengshuLi/WorldAtlas.git main:refs/remotes/origin/main",
+      "exit_code": 0,
+      "result": "refs/remotes/origin/main resolved to accepted public fc8a0a85bf1d40dd86e1a1097b775d442474468a"
+    }
+  ],
+  "limits": [
+    "Only the accepted public main ref was fetched; no tags, submodules, broad history hydration or auto-maintenance. Credential values are not included."
+  ]
+}
