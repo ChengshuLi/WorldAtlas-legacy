@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "kind": "hrv-3305-current-bank-comparison-run-v1",
+  "baseline_commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+  "candidate_commit": "06d4445a2aeed3cde8aee05df0b34f49f1a96e2b",
+  "method": "existing compareAcceptedFinalBank core",
+  "candidate_code_executed": false,
+  "code_identity": "all 18 JOINT_CODE files and selected-bootstrap execution files byte-identical to baseline",
+  "runner_path": "/workspace/scratch/127991fc8b8e/.hrv-private/selected-joint-3305-current-51d-001/compare.mjs",
+  "runner_sha256": "1c8442f5b0d49d79359ea112ae53c5fb76bbcc841f4ef56a2b68d1594ae7ec89",
+  "report_path": "coordination/engineering/hrv-dgu-native-qualification-20261026/candidate-3305/current-bank-conservation-001/report.json",
+  "report_bytes": 177318,
+  "report_sha256": "5ac8a18c14201ac7fedf22f6d4c689297af3c15099ec612dc469f5adfd99965a",
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "compared_rows": 262166,
+  "added_cells": 3305,
+  "removed_cells": 0,
+  "reassigned_cells": 0,
+  "lost_or_reassigned_cells": 0,
+  "affected_rows": 552,
+  "affected_owner_ids": 9,
+  "status": "no-new-native-loss",
+  "limitations": [
+    "Local native-map comparison only",
+    "No hosted geography/build/emitted-package controls claimed",
+    "No source-role, jurisdiction or scientific acceptance implied"
+  ]
+}
