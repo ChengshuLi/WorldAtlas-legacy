@@ -1,0 +1,81 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "d13ef9359af2b031bc0461700c2453dbcb861461",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "946e8198cc43d95ad0c2f90fc643e06b7d774c30",
+    "bytes": 2305,
+    "sha256": "a14af2f78d9967acf51ddb78be3e07c327036bd919db99c66bd8a2adfad3d553"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "3efd6393a3c746fa1dd7b9091441910288d240c2",
+        "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "1ce09be7513419909bae3ff934f58b8c7e1edf56",
+        "bytes": 715,
+        "sha256": "5f4b73feb7ad89e812a7ae4bc97c9f462bb588d6a06b17541d832e62b24fc269"
+      },
+      "source_authority": {
+        "commit": "3efd6393a3c746fa1dd7b9091441910288d240c2",
+        "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "db1fe6209266cabf57d04c75b40a71fecf4bc595",
+        "bytes": 718,
+        "sha256": "b87379615fdd42f519715e5696c689b77c3cfbad38a7c6017873462d7316376c"
+      },
+      "ledger": {
+        "commit": "3efd6393a3c746fa1dd7b9091441910288d240c2",
+        "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "76d265b739a0b88af057197fdf19a66989e051d9",
+        "bytes": 10044,
+        "sha256": "990184bbf682618908afb698f54426617649ed5cf81d1961bae9b695772e32be"
+      },
+      "native_patch": {
+        "bytes": 4104,
+        "commit": "10950bee05888515f8b34a17bde36433dadbf768",
+        "git_blob_oid": "3a58e4bb25cf96a4a0117172db296ae79cdbe7fc",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-akbugday103-physical-001/native-patch-candidate.json",
+        "sha256": "07e045c0335ab2eeb3089a33f18cdc6394d911cae4a77274ef981f04dc116737"
+      }
+    },
+    {
+      "rule_preimage": {
+        "commit": "51f813e39b39ecafe15fe828510315d91dfbc45f",
+        "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "0861cd5b583b9f3b59da4fc6be657bb8b08f2ca7",
+        "bytes": 777,
+        "sha256": "7635c6c3d923582d4fbb28600a24585fbc7b2090df54a5c5628df26a71e58f16"
+      },
+      "source_authority": {
+        "commit": "51f813e39b39ecafe15fe828510315d91dfbc45f",
+        "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "de4ac2d2b0e6e2d8e947567a381d47dd9594b3a9",
+        "bytes": 780,
+        "sha256": "a79275fed3053405dce7c24bbc4d93df12b660c01891fdeb81ca032875f0c676"
+      },
+      "ledger": {
+        "commit": "51f813e39b39ecafe15fe828510315d91dfbc45f",
+        "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "e796c1dd368e68211e9653eb88bc4c54a9e4a9d7",
+        "bytes": 13751,
+        "sha256": "39517f42752587aad2d3be6a54725b30c60c1af85de74b7188e6c1164b5bdef1"
+      },
+      "native_patch": {
+        "bytes": 6472,
+        "commit": "c41a4592217ef361a9a66dfef45f9493d8f999fa",
+        "git_blob_oid": "cb0f8b79367c6dbf3a2dccda67900aa83f5aef4e",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-patch-input.json",
+        "sha256": "0c0b6ada72620be76f56155a6dade1fba4ccd551080a6d436a7e821da9116211"
+      }
+    }
+  ]
+}
