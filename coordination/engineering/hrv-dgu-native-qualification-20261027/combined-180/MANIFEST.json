@@ -27,35 +27,63 @@
     }
   },
   "current_refresh": {
-    "accepted_main": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "accepted_main": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
     "bank_baseline": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
-    "candidate_refresh": "attempt010 invoked; exec session lost without exit/terminal; output destination absent; outcome uncertain; no retry",
-    "finalizer_config": {
-      "bytes": 1591,
-      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
-      "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9"
+    "finalizer_attempt_011": {
+      "status": "exit 0; local candidate only; no hosted delivery or acceptance",
+      "candidate_commit": "9756c0c6d1e49bc65f61e0d69a4f817a7ca39106",
+      "terminal_receipt": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalizer-attempt-011/terminal-receipt.json",
+      "config_sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9"
     },
-    "hosted_controls": "not run",
-    "owner_observation": {
-      "candidate_count": 180,
-      "effective_selected_owner_nonzero": 0,
-      "effective_selected_owner_zero": 180,
-      "full_report_sha256": "a9b93af1d96c42ff014a22c2d3b6d7e4ebc413dcf60db531bd11cbc9962c52ed",
-      "scientific_qualification": false,
-      "snapshot_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
-      "status": "completed; literal owner-state only",
-      "summary_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-owner-observation-74b9-180.json",
-      "summary_sha256": "0f55aa479921140f4976e8b21dfe34d183e593c36a10f65f872865cd45d4f8e9"
+    "finalizer_output": {
+      "index_sha256": "d2818c4737f2ddd14bacef130f63409361a89e3d60953307ed158409ec8abe24",
+      "selector_sha256": "205b492a9155a5aa9f231e364e14a237706e30c1fcfe79d5b2a4691426dc063e",
+      "indexed_files": 79,
+      "indexed_bytes": 160943215,
+      "compatibility_pins": 30,
+      "tree_closure": "verified exactly index.json + 79 indexed bodies, zero extras/missing",
+      "all79_size_sha_pins_match": true,
+      "49_materialized_bodies_verified_locally": true,
+      "30_sparse_compatibility_objects_verified_from_git_index_object_bytes": true
     },
-    "package_inputs_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
-    "prior_finalization": {
-      "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
-      "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001/",
-      "preparation_sha256": "c2f23b2a32cece930e97e68deadd1da07a2d67b6fb8b26547b2054d80b5eddaa",
-      "startup_ownership_sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+    "comparison": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-bank-conservation-a484-9756-001/selected-joint-comparison.json",
+      "sha256": "2a6f3b0aa82066247c405817bcce577c798500aaac1039ca6818c159aa62e624",
+      "bytes": 69751,
+      "method": "selected-native-owner-conservation-v1",
+      "status": "no-new-native-loss",
+      "compared_rows": 262166,
+      "added_cells": 180,
+      "removed_cells": 0,
+      "reassigned_cells": 0,
+      "lost_or_reassigned_cells": 0,
+      "affected_rows": 97,
+      "changed_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765",
+        "gb:HRV:ADM2:41942358B80055452851488",
+        "gb:HRV:ADM2:41942358B91057379265139"
+      ],
+      "candidate_code_executed": false,
+      "code_identity": "all JOINT_CODE and selectedBootstrap execution files byte-equal to accepted baseline"
     },
-    "scientific_acceptance": "not claimed",
-    "selector_blob_oid": "537f7b42322a9dbadfbe68da68d20c0d7e71b41c"
+    "plan": {
+      "path": "/workspace/shared/worldatlas-HRV180-reviewed-plan-a484-9756-20261027.json",
+      "sha256": "671db0de83b73c7eaaa0bec3e841372f03ea4a44bf02deabbaac56d669aedb38",
+      "profile": "full",
+      "tests": 7,
+      "build": true,
+      "inputs": 15,
+      "checkout_patterns": 74,
+      "geography_required": true,
+      "geography_software": false,
+      "selected_data_candidate": true,
+      "selected_data_selection": "not established"
+    },
+    "limits": [
+      "Local candidate and conservation comparison only.",
+      "No hosted tests, build, geography job, stock delivery, public acceptance, or scientific acceptance is claimed.",
+      "Attempt010 remains preserved as outcome-uncertain/interrupted and is not converted to failure/success."
+    ]
   },
   "finalizer_config": {
     "bytes": 1591,
@@ -63,7 +91,7 @@
     "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
     "selector_and_package_inputs_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
     "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9",
-    "status": "attempt010 invoked; current-bank output not established; outcome uncertain; no retry"
+    "status": "attempt011 completed exit0; candidate committed locally at 9756c0c; not delivered; attempt010 remains uncertain historical"
   },
   "group_summary": {
     "bytes": 2839,
