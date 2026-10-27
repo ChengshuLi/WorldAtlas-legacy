@@ -1,0 +1,85 @@
+{
+  "disposition": {
+    "credit": 0,
+    "qualification_or_status_change": false,
+    "status": "read-only source-free membership reconciliation"
+  },
+  "inputs": [
+    {
+      "bytes": 7984,
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task-3/transfers/caf149/materialized/worldatlas-CAF149-current-held-149-keys-20261026.json",
+      "role": "original-149 held key ledger",
+      "sha256": "a105ad39ce44650e47000c673e819180f466995a9a2aeb3dcf1ab35307d86b11"
+    },
+    {
+      "bytes": 351687,
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task-3/transfers/caf149/materialized/worldatlas-CAF149-USCB-LSIB-63-machine-receipt-20261026.json",
+      "role": "149-key USCB partition receipt used only to subtract accepted39",
+      "sha256": "1bd9d004ed32d8843548ab5ba4511d3ecf15ed688323cbdfec02f40f97ab8019"
+    },
+    {
+      "bytes": 277509,
+      "coverage_row_runs": 1227,
+      "expanded_coverage_cells": 2130,
+      "path": "/tmp/caf-full-source-evidence.json",
+      "pinned_physical_evidence": {
+        "bytes": 311103,
+        "commit": "1f655c379e938d7ecf0f044f2f01da0a49b21b4b",
+        "git_blob_oid": "28c87655ce6bc27ba8b53ec0d0c19552e0e7e25d",
+        "mode": "100644",
+        "path": "coordination/engineering/central-african-republic-original-repair-20261018-worker4/physical-001/whole-target-support.json",
+        "sha256": "686d41e172c55480b5c1192fafb6a82c4bce4feefce906e003acffa8b2ac9ce8"
+      },
+      "role": "original target-bound coverage RLE source evidence",
+      "sha256": "80e4af2b6eaa22ed4785e5db42e771488a3ec6fd4dfbb19c50e0418cc47d6b8a",
+      "target_count": 46
+    }
+  ],
+  "kind": "caf110-source-free-rle-membership-reconciliation-v1",
+  "method": {
+    "interval_semantics": "half-open start/end, as confirmed by accepted row-run count semantics (run cell count=end-start)",
+    "join": "For each exact held key [owner,y,x], select the unique source-evidence target with pixelIndex=owner; find the unique coverage_rows entry with y; expand each run [start,end,class] as half-open x in [start,end); record the run class. No geometry was opened or computed.",
+    "owner_binding": "source-evidence target.pixelIndex equals held-ledger owner",
+    "provenance_limit": "This receipt reports exact membership in retained source-evidence RLEs only. The source evidence pins physical_evidence to a whole-target support receipt, not an independent per-key physical measurement; do not treat RLE membership as a new physical run or independent physical witness."
+  },
+  "result": {
+    "class_counts": {
+      "mapped_land_support": 110
+    },
+    "coverage_membership_sha256": "9fd45ce1fc98489ca26ad209cce35e022b526ed5630d3df7c66fc0c224ff85f8",
+    "duplicate_or_conflicting_cell_bindings": 0,
+    "mapped_inland_water_support": 0,
+    "matched": 110,
+    "missing": 0,
+    "owner_counts": {
+      "10504": 12,
+      "10519": 1,
+      "10521": 8,
+      "10532": 1,
+      "10538": 1,
+      "10542": 3,
+      "10559": 3,
+      "10567": 20,
+      "10573": 8,
+      "10594": 3,
+      "10600": 1,
+      "10602": 1,
+      "10610": 19,
+      "10633": 3,
+      "10635": 2,
+      "10639": 7,
+      "10668": 17
+    },
+    "requested": 110
+  },
+  "scope": {
+    "disjoint_from_accepted_CAF39": true,
+    "key_count": 110,
+    "key_order": "[owner,y,x] in source ledger; canonical hash uses sorted [y,x,owner] compact JSON",
+    "key_sha256": "f0fc5a89df5b31735aaab7a711d470c0a691743b0fb6fefdbb99f8d60c6fea14",
+    "partition_counts": {
+      "USCB-national-inside-63": 63,
+      "USCB-national-outside-86": 47
+    }
+  }
+}
