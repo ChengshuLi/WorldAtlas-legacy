@@ -33,7 +33,7 @@ bounds_meta=manifest['original_assets']['bounds']; bz,_=pin(bounds_meta['commit'
 # Pin exact rows for current source membership and retained metadata lineage.
 idx=pin(BASE,'data/world-index.json')[0]; lineage=pin(BASE,'data/semantic-report.json')[0]
 # Candidate family parts are the one complete retained original simplified payload.
-family=[sp]
+family=[{**sp,'decoded_bytes':20566,'decoded_sha256':'834d5c1f8bcaf9cb3733b5faed95a238e9efe6f4986b6197642aea094c6e4ef2'}]
 targets=[]
 for (owner,source_id), rows in sorted(by.items()):
  assert source_id in features and source_id.endswith(bounds[owner-1]['id']) and bounds[owner-1]['index']==owner
@@ -50,5 +50,5 @@ source_evidence={'version':1,'kind':'source-target-native-evidence-v1','owner_ro
  'physical_evidence':phys_pin,'physical_input':physin_pin,'physical_reproduction':pin(BASE,'scripts/qualify-source-cohort.py')[0],
  'source_membership':{'index':idx,'lineage':lineage,'parts':[partpin]},'targets':targets}
 config={'version':1,'selector':{'commit':BASE,'path':'data/ownership-selection.json'},'source_evidence':source_evidence}
-out=ROOT/(P+'/source-evidence-001-config.json'); assert not out.exists(); raw=(json.dumps(config,separators=(',',':'),sort_keys=True)+'\n').encode();out.write_bytes(raw)
+out=ROOT/(P+'/source-evidence-002-config.json'); assert not out.exists(); raw=(json.dumps(config,separators=(',',':'),sort_keys=True)+'\n').encode();out.write_bytes(raw)
 print(json.dumps({'path':out.relative_to(ROOT).as_posix(),'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'source_payload':sp,'catalogue':cat,'physical_evidence':phys_pin,'physical_input':physin_pin,'targets':len(targets),'cells':850,'source_membership_part':partpin},sort_keys=True))
