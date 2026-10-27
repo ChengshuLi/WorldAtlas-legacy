@@ -1,6 +1,6 @@
 # Zadar77 original-source native diagnostic inputs
 
-This packet is a first native qualification diagnostic for the exact 77 original HRV native keys already isolated in `HRV-Zadar77-physical-center-application-20261027.json`. It is not a proposed accepted patch, root acceptance, current-owner-zero observation, bank conservation, or delivery credit.
+This packet records a first native qualification diagnostic and constructor for the exact 77 original HRV native keys isolated in `HRV-Zadar77-physical-center-application-20261027.json`, plus the separate literal current-owner observation in `current-owner-001/owner-observation-77.json`. It is not a proposed accepted patch, root acceptance, bank conservation, or delivery credit.
 
 ## Exact source and owner binding
 
@@ -17,3 +17,7 @@ The physical evidence is derived from the retained GSHHG full-resolution shoreli
 ## Next step and status boundary
 
 `native-patch-input.json` expresses exactly these 77 original tuples as owner-indexed intervals, with per-key `mapped_land_support` rows. The stock native diagnostic completed on the pinned evidence/patch: 77 requested, 77 supported, 0 held, no first failure; the 77 supported tuples exactly match the retained center-application keyset (SHA-256 above). The validator evaluated the complete original simplified source family, canonical member identity, native lattice and same-family competitors. The diagnostic records no per-key physical witness rows, which means no listed residual witness intersected these requested centers; it is not a whole-target physical clearance. The existing stock constructor then emitted one assigned ledger row for owner 22429 with 77 native cells; its intervals exactly equal the diagnostic support rows. Component ID `source-target:3dbab72e77ae47553575ff294d4d1728895519d6609e3d0915a8a437d01a02c8`, rule SHA-256 `c0777011d4017ec924435652b75139ae0e5460746bb32a1898fafde66c622611`. This remains technical constructor qualification only, not source-role adjudication, selected-owner-zero, root acceptance, bank conservation, or delivery. Attempt 001 was a preserved failed preflight (incomplete physical pin metadata), corrected before this run; see the failure and success receipts.
+
+## Current selected-owner observation (separate from qualification)
+
+A fresh literal selected-owner observation was run against accepted main `d28ed3a4022616218f33639c50b8fcfffbeb8418`, after checking its observation code dependencies are byte-identical to the pinned executor code. The complete original queue package observation (`gb-HRV-ADM2--repair-evaluation`, 35,738 query cells) was joined by `(x,y)` to the exact Zadar77 keyset: 77/77 unique keys, each `effective_selected_owner=0` and no owner ID. The subset output retains the final-bank selected reference, selector/index/manifest/row pins and hash of the full private observation. This establishes current selected-bank owner-zero observation only for these 77 keys at that commit; it is not source-role acceptance, physical clearance, bank conservation, root acceptance, or delivery.
