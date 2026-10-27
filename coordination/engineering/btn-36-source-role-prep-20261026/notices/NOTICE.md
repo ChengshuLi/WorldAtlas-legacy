@@ -4,7 +4,7 @@ This notice covers the supported-input preparation outputs in this directory. It
 
 ## Administrative source geometry
 
-The geometry-bearing outputs listed below contain the same two `base_geometry` features from the simplified geoBoundaries gbOpen Bhutan ADM1 product. The source corpus records reference year 2010 and the item-specific license as Creative Commons Attribution 3.0 (CC BY 3.0). It records the source as “geoBoundaries, Wikimedia Commons; credit to author ‘Babbage’,” with `commons.wikimedia.org/wiki/File` as the license source; the exact individual Wikimedia file page is not recorded in the retained metadata.
+The two `source-evidence.json` outputs listed below contain the same two `base_geometry` features from the simplified geoBoundaries gbOpen Bhutan ADM1 product. The current constructor result is derived native-cell assignment evidence for those source features; it does not embed the source polygon bodies. The source corpus records reference year 2010 and the item-specific license as Creative Commons Attribution 3.0 (CC BY 3.0). It records the source as “geoBoundaries, Wikimedia Commons; credit to author ‘Babbage’,” with `commons.wikimedia.org/wiki/File` as the license source; the exact individual Wikimedia file page is not recorded in the retained metadata.
 
 - Simplified source: https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BTN/ADM1/geoBoundaries-BTN-ADM1_simplified.geojson
 - geoBoundaries project: https://www.geoboundaries.org/
@@ -26,6 +26,7 @@ The accompanying GSHHG license/readme files are byte-for-byte retained source te
 |---|---:|---|---|
 | `supported-inputs-current-main-f8c5-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Two embedded geoBoundaries-derived base geometries |
 | `supported-inputs-current-4828-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Same two embedded geoBoundaries-derived base geometries; byte-identical to prior source-evidence body, with current selector binding recorded in its preparation receipt |
+| `native-authority-current-4828-001/constructor-result.json` | 7,657 | `445962d02ad82dee89f0fd3f30d21ab4337b0721c6b6bf931a9e7df768998da6` | Derived native-cell assignment rows and bounds for the same two source features; source polygon bodies are not embedded |
 | `native-authority-current-4810-001/constructor-result.json` | 7,667 | `1928930134b789fa7d659298ae82908c052986ed88324976e17144058edf5dc7` | Two constructor rows embed the same geoBoundaries-derived base geometries; output is native-authority construction evidence, not a legal boundary or acceptance |
 
 No status, credit, source-year acceptance, or legal-boundary claim is implied by these artifacts.
