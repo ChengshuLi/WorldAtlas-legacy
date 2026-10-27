@@ -1,0 +1,39 @@
+{
+  "change_evidence": {
+    "bytes": 1376,
+    "commit": "6cf478c7e6f67077c556c280b4ba58ad44ab5924",
+    "git_blob_oid": "a09162c06dc018323cea19d6a79da869b67fe425",
+    "mode": "100644",
+    "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-current-delta-001/authority-registry.json",
+    "sha256": "afd21f1e93a567674d15833d644fb2a11f0663e5c3a99e949ac8bf349ff45d2c"
+  },
+  "package_inputs": {
+    "commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+    "path": ".github/package-inputs.json"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "bytes": 1156,
+        "commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+        "git_blob_oid": "6e8063fd0aa4da8c6ba583befe8f0709897c995d",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-411-combined-20261027/finalize-009/output-001/preparation.json",
+        "sha256": "e766363c384411dc5a5810120c7cc53ba0d2720a4ba55fc49554d381400ce99e"
+      },
+      "startup_ownership": {
+        "bytes": 49610,
+        "commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+        "git_blob_oid": "b34e0576aff6288dfa3e8eb607886b10695f9d2b",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-411-combined-20261027/finalize-009/output-001/startup-ownership.json",
+        "sha256": "d5261bddf199a789796bd79f9c67eebc2d9871539f5a4288c350de050f3a7957"
+      }
+    }
+  ],
+  "selector": {
+    "commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+    "path": "data/ownership-selection.json"
+  },
+  "version": 2
+}
