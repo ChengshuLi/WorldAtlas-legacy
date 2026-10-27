@@ -1,0 +1,178 @@
+{
+  "schema": "worldatlas-tkm-506-candidate-manifest-v1",
+  "status": "candidate-only; no accepted-bank finalization or root credit",
+  "original_package_cells": 1759,
+  "previously_accounted_excluded": {
+    "total": 297,
+    "positive": 240,
+    "unresolved": 57,
+    "recounted": false
+  },
+  "candidate_cells": 506,
+  "remaining_pending_cells": 956,
+  "candidate_tuples": {
+    "ordering": "sorted [owner,y,x]",
+    "compact_json_sha256": "c37398bc8b0382ad75efba5697f505228a455bd50579cfe722ac9122e7fae2f3",
+    "tsv_sha256": "6a4c5c3f8b62f54253054b6793e83409e422dda0a773db51280c666288560e6c",
+    "pairwise_overlap": 0,
+    "sum_equals_union": true
+  },
+  "current_selector": {
+    "commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+    "bytes": 2291,
+    "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+  },
+  "composition_config": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/composition-003/config.json",
+    "bytes": 7105,
+    "sha256": "0069ab815336e1883f9d32f66841436493a11b64f2cdb47416b5eb2d48ae4393"
+  },
+  "composition_preparation": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/composition-003-output/preparation.json",
+    "bytes": 256,
+    "sha256": "d09ed39000fba2b7181a624f9be33bf7eafb7b33cc852f3a8b0e604dfa27147b"
+  },
+  "authority_registry": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/composition-003-output/authority-registry.json",
+    "bytes": 5235,
+    "sha256": "0998b90e61996e67736b1cb73387d2a1a2af070977e76d9a9190a8c36d858146"
+  },
+  "components": [
+    {
+      "target_id": "gb:TKM:ADM2:10190150B64529450546528",
+      "cells": 101,
+      "constructor": {
+        "bytes": 7264,
+        "commit": "4783d1a387d522627a1f90ee2640efc0bb6a77b3",
+        "git_blob_oid": "c649f36d620bd667d6d3aa8ec5c4d20384a9d2b9",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-koytendag127-native-001/native-authority-001/constructor-result.json",
+        "sha256": "576e44f7870c585cc1080da3c97d5fbd051c2d8071da440e219546138b8259d7"
+      },
+      "authority_sha256": "2852ce4a820f30f0d721913add13882052718ef7770106efac6a76230c68abe2",
+      "rule_sha256": "d228ca5164ae89168cbf168e0be99bd545e39b492d813ad1bb635d66f51f330b"
+    },
+    {
+      "target_id": "gb:TKM:ADM2:10190150B31923585689840",
+      "cells": 103,
+      "constructor": {
+        "bytes": 10044,
+        "commit": "3efd6393a3c746fa1dd7b9091441910288d240c2",
+        "git_blob_oid": "76d265b739a0b88af057197fdf19a66989e051d9",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/constructor-result.json",
+        "sha256": "990184bbf682618908afb698f54426617649ed5cf81d1961bae9b695772e32be"
+      },
+      "authority_sha256": "5fcae72b5f7cb2c139ac998e49b381092fb3290553a09752208fc8719a45bf1c",
+      "rule_sha256": "5f4b73feb7ad89e812a7ae4bc97c9f462bb588d6a06b17541d832e62b24fc269"
+    },
+    {
+      "target_id": "gb:TKM:ADM2:10190150B7816159308361",
+      "cells": 95,
+      "constructor": {
+        "bytes": 2743,
+        "commit": "0e3f001f5add2b595a8db9c189b6c1fd476c954a",
+        "git_blob_oid": "ae51c9682dea1f8edd04b947a3bebc5aff0a796f",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-hazar95-native-001/native-authority-001/constructor-result.json",
+        "sha256": "aa67ff987de1c054b1a81cda49c5169811d7df70771cb34164f89929ffdf48d5"
+      },
+      "authority_sha256": "b91dd9836d004c655deb7611915fd40d9029729bb859d533b1e7ddce4292a72a",
+      "rule_sha256": "f817fd5cf301541694b41177c05adfb8ff3f1b15df419a9a903ae6020ddf5aba"
+    },
+    {
+      "target_id": "gb:TKM:ADM2:10190150B49022220136906",
+      "cells": 207,
+      "constructor": {
+        "bytes": 13751,
+        "commit": "51f813e39b39ecafe15fe828510315d91dfbc45f",
+        "git_blob_oid": "e796c1dd368e68211e9653eb88bc4c54a9e4a9d7",
+        "mode": "100644",
+        "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/constructor-result.json",
+        "sha256": "39517f42752587aad2d3be6a54725b30c60c1af85de74b7188e6c1164b5bdef1"
+      },
+      "authority_sha256": "f0e613cd32a6589cb55abac23caf66868700410721d99a6ec7adbcf4700794e5",
+      "rule_sha256": "7635c6c3d923582d4fbb28600a24585fbc7b2090df54a5c5628df26a71e58f16"
+    }
+  ],
+  "hazar_evidence": {
+    "readme": {
+      "path": "coordination/engineering/tkm-hazar95-native-001/README.md",
+      "bytes": 6326,
+      "sha256": "267397eb486d98589a1f180a03158d2b455729c335f6fda09fcc0079a226103e"
+    },
+    "source_evidence": {
+      "path": "coordination/engineering/tkm-hazar95-native-001/source-evidence-001/source-evidence.json",
+      "bytes": 18196,
+      "sha256": "e19ac215386469bd71b0c6516d05bf3cb108067f35610d58e91a6f874cdd6295"
+    },
+    "territorial_exclusion_provenance": {
+      "path": "coordination/engineering/tkm-hazar95-native-001/source-evidence-001/territorial-exclusion-provenance.json",
+      "bytes": 6132,
+      "sha256": "53a293a67726fe8c76ea35df5549f24168b226eb7fef610082818cd52d938190"
+    },
+    "whole_target_physical": {
+      "path": "coordination/engineering/tkm-hazar95-physical-001/result-001/whole-target-support.json",
+      "bytes": 96046,
+      "sha256": "0ad0bb877d0e86be1ee52e35dfdbfaddd4243922dfb3f71fde907aba7d0e428c"
+    },
+    "physical_execution_receipt": {
+      "path": "coordination/engineering/tkm-hazar95-physical-001/result-001/execution-receipt.json",
+      "bytes": 54549,
+      "sha256": "9743ec57e163a13c67bc2de6ac69ddc5a8e7b1e6113dd6494bad01794d7424e1"
+    },
+    "physical_center_application": {
+      "path": "coordination/engineering/tkm-hazar95-native-001/physical-center-application-002.json",
+      "bytes": 76689,
+      "sha256": "7a016c11af150a5ad198ab37707d11e00368fbf08ce37a5b6985cc526df8eb0b"
+    },
+    "native_diagnostic": {
+      "path": "coordination/engineering/tkm-hazar95-native-001/native-diagnostic-001/native-diagnostic.json",
+      "bytes": 5116,
+      "sha256": "c2ba1a369bd7a51bf15f1d512ff09a59d7509faaeceac23b5635f3d143685276"
+    },
+    "constructor": {
+      "path": "coordination/engineering/tkm-hazar95-native-001/native-authority-001/constructor-result.json",
+      "bytes": 2743,
+      "sha256": "aa67ff987de1c054b1a81cda49c5169811d7df70771cb34164f89929ffdf48d5"
+    }
+  },
+  "hazar_context": {
+    "original_scope": "95 residual cells: 67 land + 28 inland water, after 3 previously accepted water keys excluded",
+    "source_family": "59 features present vs 66 advertised; no claim about 7 absent features",
+    "role": "2022 Mejlis resolution \u00a73(2)(b), \u00a714(1)(b) preserved as adverse context; Annex 3 assignment not spatially resolved for exact 95; no exact center contradiction established; no universal modern certificate imposed",
+    "physical": "whole-target issues contradictory_land_water_support and L2-outside-L1 retained; center hits do not clear whole cell/polygon",
+    "native": "95 requested,95 supported,0 held; candidate only",
+    "tuple_digests": {
+      "ordering": "sorted [owner,y,x]",
+      "tsv_sha256": "090243c71c4036d8687393b2e57d30e77e196221b8930a7da17f156df3ae007a",
+      "compact_json_sha256": "5c2a8dcaef4d9505897da728e171076c27cd13b7a22dd1fd22ff733450396d37"
+    },
+    "selected_current_target_file": {
+      "commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
+      "path": "data/geography/part-23.json",
+      "mode": "100644",
+      "git_blob_oid": "371e95033d9c542bbf07c42afe7111074e35f246",
+      "bytes": 4962410,
+      "sha256": "d61082ccd69b319723fadc4cad582b8d5c8a8ced3e50b4f90f00b4eb17e6a9c2"
+    },
+    "selected_current_target_geometry_sha256": "3455c7e4d39c8640b4e87e8b59bd2bda7f08b76ea6c50fb3589308cc236deeea"
+  },
+  "no_replay": [
+    "No source re-download or physical/native rerun for the unchanged 411 component",
+    "No bank finalizer or full-bank comparison for the 506 candidate yet"
+  ],
+  "readme": {
+    "path": "coordination/engineering/tkm-506-candidate-20261027/README.md",
+    "bytes": 4375,
+    "sha256": "88869500a6271309ad3b46216424971c23a3b004e143e4349aa6cbdbf48ab0b4"
+  },
+  "composition_first_attempt_failure": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/composition-003/attempt-001-failure.json",
+    "bytes": 680,
+    "sha256": "25c097f7d3efbe586d9cc281bf3ca28e324b21b6f71f1b6eaad5b641d7bb5525"
+  }
+}
