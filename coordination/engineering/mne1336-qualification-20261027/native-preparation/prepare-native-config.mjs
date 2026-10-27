@@ -64,10 +64,10 @@ for (const [y, start, end, owners, sids, klass] of original.rows) {
   const owner = owners[0], run = [start, end, owner], prior = patchRuns.get(y) ?? [];
   prior.push(run);
   patchRuns.set(y, prior); sourceCells += end - start;
-  const kinds = classes.get(owner) ?? new Map(), rr = kinds.get(y) ?? [];
   const type = klass === 'land' ? 'mapped_land_support' : 'mapped_inland_water_support';
+  const kinds = classes.get(owner) ?? new Map(), byY = kinds.get(type) ?? new Map(), rr = byY.get(y) ?? [];
   rr.push([start, end, type]);
-  kinds.set(y, rr); classes.set(owner, kinds);
+  byY.set(y, rr); kinds.set(type, byY); classes.set(owner, kinds);
 }
 need(sourceCells === 1336, 'Original source row denominator differs');
 for (const [y, runs] of patchRuns) {
@@ -80,7 +80,7 @@ for (const [y, runs] of patchRuns) {
   }
   patchRuns.set(y,merged);
 }
-for (const kinds of classes.values()) for (const [y, runs] of kinds) {
+for (const kinds of classes.values()) for (const byY of kinds.values()) for (const [y, runs] of byY) {
   runs.sort((a,b)=>a[0]-b[0] || a[1]-b[1] || a[2].localeCompare(b[2]));
   const merged=[];
   for(const run of runs){
@@ -88,7 +88,7 @@ for (const kinds of classes.values()) for (const [y, runs] of kinds) {
     const last=merged.at(-1);
     if(last&&last[1]===run[0]&&last[2]===run[2])last[1]=run[1];else merged.push([...run]);
   }
-  kinds.set(y,merged);
+  byY.set(y,merged);
 }
 const nativePatch = {rows: [...patchRuns].sort((a,b)=>a[0]-b[0]).map(([y,runs])=>({y,runs}))};
 const targets = stage.map(item => {
