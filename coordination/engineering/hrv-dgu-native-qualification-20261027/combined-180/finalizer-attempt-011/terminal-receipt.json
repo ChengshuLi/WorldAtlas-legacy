@@ -1,0 +1,78 @@
+{
+  "kind": "hrv-180-current-finalizer-attempt-v1",
+  "attempt": 11,
+  "status": "completed-local-candidate-not-delivered",
+  "exit_code": 0,
+  "accepted_main": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+  "bank_baseline": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+  "config": {
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
+    "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9"
+  },
+  "selector_and_package_inputs_locator_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+  "prior_finalization": {
+    "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "preparation_sha256": "c2f23b2a32cece930e97e68deadd1da07a2d67b6fb8b26547b2054d80b5eddaa",
+    "startup_ownership_sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+  },
+  "destination": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalized-combined-180-current-74b9-002",
+  "candidate_commit": "9756c0c6d1e49bc65f61e0d69a4f817a7ca39106",
+  "finalizer_output": {
+    "index_sha256": "d2818c4737f2ddd14bacef130f63409361a89e3d60953307ed158409ec8abe24",
+    "selector_sha256": "205b492a9155a5aa9f231e364e14a237706e30c1fcfe79d5b2a4691426dc063e",
+    "indexed_files": 79,
+    "indexed_bytes": 160943215,
+    "compatibility_pins": 30,
+    "tree_closure": "verified exactly index.json + 79 indexed bodies, zero extras/missing",
+    "all79_size_sha_pins_match": true,
+    "49_materialized_bodies_verified_locally": true,
+    "30_sparse_compatibility_objects_verified_from_git_index_object_bytes": true
+  },
+  "private_attempt_receipts": {
+    "preflight": {
+      "path": "private:/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-74b9-011/preflight.json",
+      "bytes": 1718,
+      "sha256": "fc755f9851d41b623937670203886f8ac59fb811bf64fe6b463927888f225d94"
+    },
+    "stdout": {
+      "path": "private:/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-74b9-011/stdout.log",
+      "bytes": 803,
+      "sha256": "e655c317df76847e3b66c1a54f95e6df28ad3a3edf2796ef45dab3a79887c92d"
+    },
+    "stderr": {
+      "path": "private:/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-74b9-011/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exit_file": {
+      "path": "private:/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-74b9-011/exit_code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  },
+  "comparison": {
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-bank-conservation-a484-9756-001/selected-joint-comparison.json",
+    "sha256": "2a6f3b0aa82066247c405817bcce577c798500aaac1039ca6818c159aa62e624",
+    "bytes": 69751,
+    "method": "selected-native-owner-conservation-v1",
+    "status": "no-new-native-loss",
+    "compared_rows": 262166,
+    "added_cells": 180,
+    "removed_cells": 0,
+    "reassigned_cells": 0,
+    "lost_or_reassigned_cells": 0,
+    "affected_rows": 97,
+    "changed_ids": [
+      "gb:HRV:ADM2:41942358B19390085170765",
+      "gb:HRV:ADM2:41942358B80055452851488",
+      "gb:HRV:ADM2:41942358B91057379265139"
+    ],
+    "candidate_code_executed": false,
+    "code_identity": "all JOINT_CODE and selectedBootstrap execution files byte-equal to accepted baseline"
+  },
+  "limits": [
+    "Local candidate and conservation comparison only.",
+    "No hosted tests, build, geography job, stock delivery, public acceptance, or scientific acceptance is claimed.",
+    "Attempt010 remains preserved as outcome-uncertain/interrupted and is not converted to failure/success."
+  ]
+}
