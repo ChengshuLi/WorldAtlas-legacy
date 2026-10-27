@@ -1,0 +1,1 @@
+node --input-type=module -e "import {inspectSelectedAcquired} from \\\"./scripts/check-effective-geographic-regression.mjs\\\";const x=await inspectSelectedAcquired(process.cwd(),\\\"4828b25d3499d131a477654931156505889e3e35\\\",\\\"d32d77a9d86fc18c32a8534b39902d3100483eb0\\\");console.log(JSON.stringify(x));"
