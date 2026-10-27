@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "supported-native-diagnostic-attempt-failure",
+  "phase": "native-diagnostic",
+  "attempted_at_utc": "2026-10-27T00:28:23Z",
+  "config_path": "coordination/engineering/tkm-baherden53-source-fit-20261026/config/native-inputs-003/native-diagnostic-config.json",
+  "config_sha256": "cd92b32ca9442db6ca4bf684783ffba81722f0e1117f36a2dd0a778879e7e21b",
+  "command": "env -u NODE_OPTIONS -u NODE_PATH /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/prepare-delivery-handoff.mjs native-diagnostic coordination/engineering/tkm-baherden53-source-fit-20261026/config/native-inputs-003/native-diagnostic-config.json coordination/engineering/tkm-baherden53-source-fit-20261026/native-diagnostic-004",
+  "exit_code": 1,
+  "error": "Supply an exact commit/path locator, without handwritten derived descriptors",
+  "scientific_output_created": false,
+  "interpretation": "The diagnostic locator schema accepts only exact commit/path pairs. The first config supplied full materialized pin objects; no diagnostic or scientific evaluation ran. Corrected config uses the helper's exact commit/path locator schema and separately verifies full pins before writing."
+}
