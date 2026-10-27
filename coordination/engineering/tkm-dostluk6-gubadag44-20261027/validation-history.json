@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "kind": "tkm-gubadag44-validation-history-v1",
+  "candidate_commit": "cfc55e8d13cb852b60ff9932198cf6949ce2fbed",
+  "accepted_input_base": "f2c44658278b1ebbbca37bc659b05a3885b2e2e7",
+  "supported_finalizer": {
+    "status": "exit 0",
+    "attempt": "native-inputs-001/finalize-attempt-001",
+    "config_sha256": "d9bb7c67b783d13c2334ecb556359b01d6b7c59863d64eec6bd20010bf462afc"
+  },
+  "reviewed_plan_artifact": {
+    "path": "/workspace/shared/worldatlas-TKM-Dostluk6-Gubadag44-reviewed-plan-20261027.json",
+    "sha256": "7c5f7adb1f22b8d5cc57319e2fe9bf7c7ac3037a628814ebd89184b7a35e8aa5",
+    "request_head": "13f0b6f3c6844494844e0f51eb71aa15f35b127d",
+    "note": "Plan must be freshly rederived for the final documentation head before review or dispatch."
+  },
+  "full_plan_local_attempt": {
+    "command": "env -u NODE_OPTIONS -u NODE_PATH node --test --test-concurrency=2 test/final-bank-finalizer.test.mjs test/final-bank-checkpoint.test.mjs test/selected-owner-observation.test.mjs test/selected-delivery-smoke.test.mjs test/map-cell-diagnosis.test.mjs test/compact-ownership.test.mjs test/prepared-parity.test.mjs",
+    "exit_status": 1,
+    "tests": 146,
+    "passed": 83,
+    "failed": 61,
+    "failure_environment": [
+      "test/compact-ownership.test.mjs could not import missing vite package; dependency set was intentionally not reinstalled locally.",
+      "test/selected-owner-observation.test.mjs and related cases initially lacked the exact declared sparse checkout operand coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz (1,851,757 bytes; SHA-256 ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147)."
+    ],
+    "log": {
+      "path": "/workspace/shared/worldatlas-TKM-Dostluk6-Gubadag44-reviewed-tests-20261027.log",
+      "sha256": "e8c14244e4577aa08e35696cade2d6c2c69156b15568548095f6deeb7abae086"
+    }
+  },
+  "core_tests_after_exact_operand_materialization": {
+    "command": "env -u NODE_OPTIONS -u NODE_PATH node --test --test-concurrency=2 test/final-bank-finalizer.test.mjs test/final-bank-checkpoint.test.mjs test/selected-owner-observation.test.mjs test/selected-delivery-smoke.test.mjs test/map-cell-diagnosis.test.mjs",
+    "exit_status": 0,
+    "tests": 213,
+    "passed": 213,
+    "failed": 0,
+    "log": {
+      "path": "/workspace/shared/worldatlas-TKM-Dostluk6-Gubadag44-core-tests-20261027.log",
+      "sha256": "7ebe545d2522df4b8f0b2a99230f4f91ae24574ff3e1dc7eb0dadcb08b8c6933"
+    }
+  },
+  "trusted_full_bank_comparison": {
+    "baseline": "f2c44658278b1ebbbca37bc659b05a3885b2e2e7",
+    "candidate": "cfc55e8d13cb852b60ff9932198cf6949ce2fbed",
+    "attempts": [
+      {
+        "exit_status": 1,
+        "reason": "trusted-checkout guard required HEAD to equal exact executing baseline code commit; no bank rows read."
+      },
+      {
+        "exit_status": 130,
+        "reason": "Same owned worktree detached at accepted baseline; exact 18 tracked JOINT_CODE contents matched baseline. First stages completed, then process was interrupted at operator instruction before complete bank-row report.",
+        "checkout_modes_restored_to_git_tree": 18
+      }
+    ],
+    "output_path": "/workspace/shared/worldatlas-TKM-Gubadag44-full-bank-comparison-001.json",
+    "output_created": false,
+    "result": "pending; no global owner conservation claim"
+  },
+  "hosted_controls": "Full plan/build/geography/emitted controls remain required; no hosted request or acceptance is recorded."
+}
