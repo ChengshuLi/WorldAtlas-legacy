@@ -1,91 +1,127 @@
 {
-  "version": 1,
-  "kind": "hrv-180-authority-composition-preparation-v1",
-  "status": "composed only; no final bank, comparator, hosted controls, acceptance, or delivery",
-  "original_denominator": 35738,
   "accepted_prior_count": 32928,
-  "candidate_count": 180,
-  "strict_adverse_excluded_count": 6,
-  "groups": [
-    {
-      "name": "Zadar77",
-      "count": 77,
-      "tuple_sha256": "500c91a940de99531899cf26ce0e2f004d7d98b0ded5556dd5a88933140c5fd8",
-      "constructor_sha256": "0bb38e24a2609d4cfe2a9e2b71255287ab9a6574998951275185c1eb4bdd2acb"
-    },
-    {
-      "name": "ArtaVela53+Leveraka50",
-      "count": 103,
-      "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da",
-      "constructor_sha256": "2910dcfb9d16f2a5deb5fa3cde0bd3018de18524e471283d27be1db608881eda"
-    }
-  ],
-  "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae",
   "accepted_selector": {
+    "bytes": 2291,
     "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
     "path": "data/ownership-selection.json",
-    "bytes": 2291,
+    "role": "composition-time snapshot; historical after accepted MDV850 bank advance",
     "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
   },
-  "owner_observation": {
-    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
-    "full_report_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
-    "all_180_effective_selected_owner_zero": true,
-    "scientific_qualification": false
-  },
+  "candidate_count": 180,
   "composition": {
-    "helper": "scripts/prepare-delivery-handoff.mjs compose",
     "config": {
       "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-config-001.json",
       "sha256": "f405d9abaf41d8ca56b6118c7b0422781ec2e98aa98d5b2f26efb8ecc216aca8"
     },
-    "registry": {
-      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/authority-registry.json",
-      "bytes": 2769,
-      "sha256": "35db9f90d6798c094485922d5a23d83517eb96353862c0c13cec7e19fe698e97",
-      "entries": 2
-    },
+    "helper": "scripts/prepare-delivery-handoff.mjs compose",
     "preparation": {
-      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/preparation.json",
       "bytes": 256,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/preparation.json",
       "sha256": "89b6281550187548ff9c8b5b9541ee0be8dfb17552063c0128f79887dc52e488"
+    },
+    "registry": {
+      "bytes": 2769,
+      "entries": 2,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/authority-registry.json",
+      "sha256": "35db9f90d6798c094485922d5a23d83517eb96353862c0c13cec7e19fe698e97"
     }
   },
-  "limits": [
-    "The groups remain distinct authority/source-role cohorts.",
-    "Owner observation is exact to the accepted 29e4 selector and is not scientific acceptance.",
-    "No final bank, full-bank conservation, current-main refresh, build/emitted controls, or delivery is claimed.",
-    "Source-role ambiguities, original contacts, physical issue contexts, rights/attribution limits and prior evidence remain preserved in group packets."
-  ],
-  "finalizer_config": {
-    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-002-29e4.json",
-    "bytes": 596,
-    "sha256": "2ac537a79b78bdfbddaeed5f3b6fff8a46f05cbb8a13e82ed6ed92686086f008",
-    "status": "corrected config prepared only; finalizer not yet invoked",
-    "selector_and_package_inputs_commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
-    "change_evidence_commit": "515ce42248bd8334fc6f1391187fc7089e55283f"
+  "current_refresh": {
+    "accepted_main": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "bank_baseline": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "candidate_refresh": "not yet run",
+    "finalizer_config": {
+      "bytes": 1591,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
+      "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9"
+    },
+    "hosted_controls": "not run",
+    "owner_observation": "pending; original 29e4 observation is historical and not reused as current",
+    "package_inputs_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+    "prior_finalization": {
+      "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+      "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001/",
+      "preparation_sha256": "c2f23b2a32cece930e97e68deadd1da07a2d67b6fb8b26547b2054d80b5eddaa",
+      "startup_ownership_sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+    },
+    "scientific_acceptance": "not claimed",
+    "selector_blob_oid": "537f7b42322a9dbadfbe68da68d20c0d7e71b41c"
   },
-  "readme": {
-    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/README.md",
-    "bytes": 3966,
-    "sha256": "972fe3ff6cfa834d066a60e2938ef34cef22bbcddeba7e366a339274a403cb4b"
+  "finalizer_config": {
+    "bytes": 1591,
+    "change_evidence_commit": "534c880f91d1856c6c58b40ec68e21ec36f5b2cf",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
+    "selector_and_package_inputs_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9",
+    "status": "current accepted baseline config prepared; not yet invoked"
   },
   "group_summary": {
-    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/arta-vela-leveraka-103/candidate-180-preparation-summary.json",
     "bytes": 2839,
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/arta-vela-leveraka-103/candidate-180-preparation-summary.json",
     "sha256": "6ba19f8d83e9e8b41401d695be3bc2d9d4f8bd87912da9ad53d6b3cabbe79f3d"
+  },
+  "groups": [
+    {
+      "constructor_sha256": "0bb38e24a2609d4cfe2a9e2b71255287ab9a6574998951275185c1eb4bdd2acb",
+      "count": 77,
+      "name": "Zadar77",
+      "tuple_sha256": "500c91a940de99531899cf26ce0e2f004d7d98b0ded5556dd5a88933140c5fd8"
+    },
+    {
+      "constructor_sha256": "2910dcfb9d16f2a5deb5fa3cde0bd3018de18524e471283d27be1db608881eda",
+      "count": 103,
+      "name": "ArtaVela53+Leveraka50",
+      "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da"
+    }
+  ],
+  "historical_successful_finalizer_attempt": {
+    "baseline_commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+    "candidate_commit": "94701f0393f26f8a51f641a6f5cf3a6b144a9a23",
+    "config_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-006-253b.json",
+    "config_sha256": "b880dd69bfadfb960d64f83937a06a142ab26afccc702951311f69f625e86188",
+    "exit_code": 0,
+    "ordinal": 9,
+    "output_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalized-combined-180-current-253b-003/",
+    "status": "successful local candidate only; superseded by accepted MDV850 bank at a8a5; not current-delivered",
+    "terminal_sha256": "c48102c19dea50b4deb7a3861cfea3f7acf1082ce1fb8814aaa81979c0629765"
+  },
+  "kind": "hrv-180-authority-composition-preparation-v1",
+  "limits": [
+    "The groups remain distinct authority/source-role cohorts.",
+    "The original 29e4 owner observation is historical and is not scientific acceptance.",
+    "No current-bank finalizer output, full-bank conservation, hosted controls, or delivery is claimed; attempt009 is a historical local candidate superseded by MDV850.",
+    "Source-role ambiguities, original contacts, physical issue contexts, rights/attribution limits and prior evidence remain preserved in group packets.",
+    "The 29e4 owner observation and 253b candidate are historical; a8a5 MDV850 is the current accepted bank baseline and is bound by the refreshed config.",
+    "No current-owner observation, current candidate finalizer result, conservation comparison, hosted control or scientific acceptance is claimed yet."
+  ],
+  "original_denominator": 35738,
+  "owner_observation": {
+    "all_180_effective_selected_owner_zero": true,
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "full_report_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
+    "scientific_qualification": false,
+    "status": "historical exact 29e4 snapshot; not reused as current after MDV850 advance"
   },
   "prior_finalizer_attempts": [
     {
-      "ordinal": 1,
       "config_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-001-29e4.json",
       "config_sha256": "6f2c8552c6afef827df245cb32d5585a6aa5cd3f30669d3ad4c2402c2ece2f3d",
-      "private_receipt_path": "/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-29e4-001/",
-      "exit_code": 1,
-      "stderr": "Supply an exact commit/path locator, without handwritten derived descriptors",
       "destination_created": false,
-      "stdout_bytes": 0,
-      "source_or_bank_mutation": false
+      "exit_code": 1,
+      "ordinal": 1,
+      "private_receipt_path": "/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-29e4-001/",
+      "source_or_bank_mutation": false,
+      "stderr": "Supply an exact commit/path locator, without handwritten derived descriptors",
+      "stdout_bytes": 0
     }
-  ]
+  ],
+  "readme": {
+    "bytes": 4826,
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/README.md",
+    "sha256": "cd5eff6bf47f198cd1a4f69f17146a523aa5999c8e7b4ceeec1bd64707d3ff7a"
+  },
+  "status": "composed; prior 253b local candidate preserved but superseded by accepted MDV850 bank; current-main refresh config prepared, no current candidate delivery, hosted controls, or scientific acceptance",
+  "strict_adverse_excluded_count": 6,
+  "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae",
+  "version": 1
 }
