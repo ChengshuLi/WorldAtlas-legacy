@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+    "bytes": 2291,
+    "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "f31f1a9b2f658795eeae5830422aef93c8b5ad25",
+        "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-authority-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "ce92b856fb523bce86fc88af7c95718b211c90f6",
+        "bytes": 762,
+        "sha256": "9b007eea91889ae275bea25605c97b840db8ce1a212eea889cf86a6e777679be"
+      },
+      "source_authority": {
+        "commit": "f31f1a9b2f658795eeae5830422aef93c8b5ad25",
+        "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-authority-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "26c9bfeacd654df6f77d40be7916e498a955f066",
+        "bytes": 765,
+        "sha256": "7df5e47e4a75e211c942cc840fa6a67e28c87c7e1c57019410f2c278b9fe4d36"
+      },
+      "ledger": {
+        "commit": "f31f1a9b2f658795eeae5830422aef93c8b5ad25",
+        "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-authority-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "897ba8af45768a5dcb6b115415e8514fea2968ec",
+        "bytes": 34035,
+        "sha256": "fcee204d1d4447c35ca4a172cb15f98d6fc7249d25ed9e48b0cf241b404ddb49"
+      },
+      "native_patch": {
+        "bytes": 18469,
+        "commit": "c670f338a35cd0a6aee15218cc6af0e808dd474f",
+        "git_blob_oid": "3ee8233780069976fc5d49680f690a50118e9a64",
+        "mode": "100644",
+        "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/physical-preparation-002/original-native-patch.json",
+        "sha256": "ec56f00d295499be668f8f2ec29fe747165877cc98793b380ad435cff2dc4f22"
+      }
+    }
+  ]
+}
