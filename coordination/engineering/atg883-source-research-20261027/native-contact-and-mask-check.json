@@ -177,6 +177,12 @@
     "exact_candidate_run_bounds_match_proposal": 883,
     "retained_land_mask_contacts": 883,
     "retained_inland_water_contacts": 0,
+    "reverse_selected_feature_candidate_union_cells": 1010,
+    "reverse_land_supported_candidate_cells": 883,
+    "reverse_inland_water_supported_candidate_cells": 0,
+    "reverse_neither_land_nor_water_candidate_cells": 127,
+    "reverse_land_water_mask_overlap_cells": 0,
+    "reverse_land_supported_set_equals_original_key_set": true,
     "source_geometry_contacts_by_native_rule": 883,
     "source_geometry_mismatches": 0,
     "exact_native_boundary_contacts": 0,
@@ -209,6 +215,7 @@
   "qualification_limits": [
     "The retained GeoJSON/native-grid check establishes geometry contacts for the exact original keys only; it does not establish source authority, effective legal applicability, rights, current physical classification, or source-date currency.",
     "Candidate and physical-support runs are retained raster/mask evidence, not a new physical adjudication.",
+    "The reverse-scanned selected-feature candidates outside both retained masks remain outside the 883 land-only package and are not physically reclassified here.",
     "The historical owner observation is a literal selected-product observation at its pinned commit and different additive-selection state from the queue ownership binding; it is not current-main acceptance.",
     "Full/simplified files linked by newer API metadata were not obtained; this does not imply that the pinned original payload or masks are missing.",
     "Redonda remains outside the original repair selector; no companion physical-interpretation scope is counted or modified."

@@ -111,6 +111,37 @@ for (const row of intervals) {
   }
 }
 
+const selectedFeatures = new Set(scope.source_features);
+const selectedCandidateKeys = new Set();
+const selectedLandCandidateKeys = new Set();
+const selectedWaterCandidateKeys = new Set();
+const selectedOffMaskCandidateKeys = new Set();
+const selectedPhysicalOverlapKeys = new Set();
+for (const row of candidateRows) {
+  for (const run of row.runs) {
+    if (!run[3].some(feature => selectedFeatures.has(feature))) continue;
+    for (let x = run[0]; x < run[1]; x++) {
+      const key = row.y + ',' + x;
+      check(!selectedCandidateKeys.has(key), 'Duplicate selected-feature candidate key: ' + key);
+      selectedCandidateKeys.add(key);
+      const landRun = containing(landByY.get(row.y), x);
+      const waterRun = containing(waterByY.get(row.y), x);
+      if (landRun) selectedLandCandidateKeys.add(key);
+      if (waterRun) selectedWaterCandidateKeys.add(key);
+      if (landRun && waterRun) selectedPhysicalOverlapKeys.add(key);
+      if (!landRun && !waterRun) selectedOffMaskCandidateKeys.add(key);
+    }
+  }
+}
+check(selectedPhysicalOverlapKeys.size === 0, 'Selected-feature candidates overlap retained land and water masks');
+check(selectedCandidateKeys.size === selectedLandCandidateKeys.size
+  + selectedWaterCandidateKeys.size + selectedOffMaskCandidateKeys.size,
+  'Selected candidate mask categories do not partition the candidate union');
+check(selectedLandCandidateKeys.size === exactKeySet.size
+  && [...selectedLandCandidateKeys].every(key => exactKeySet.has(key))
+  && [...exactKeySet].every(key => selectedLandCandidateKeys.has(key)),
+  'Selected-feature land-supported candidate set differs from the exact original 883 keys');
+
 const sourcePin = queuePins.get('coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ATG-ADM1-000.bin.gz');
 check(sourcePin, 'Missing retained source payload pin');
 const sourceBlob = gitShow(sourcePin[1], sourcePin[0]);
@@ -247,6 +278,12 @@ process.stdout.write(JSON.stringify({
     exact_candidate_run_bounds_match_proposal: candidateMatches,
     retained_land_mask_contacts: landMatches,
     retained_inland_water_contacts: waterOverlaps,
+    reverse_selected_feature_candidate_union_cells: selectedCandidateKeys.size,
+    reverse_land_supported_candidate_cells: selectedLandCandidateKeys.size,
+    reverse_inland_water_supported_candidate_cells: selectedWaterCandidateKeys.size,
+    reverse_neither_land_nor_water_candidate_cells: selectedOffMaskCandidateKeys.size,
+    reverse_land_water_mask_overlap_cells: selectedPhysicalOverlapKeys.size,
+    reverse_land_supported_set_equals_original_key_set: true,
     source_geometry_contacts_by_native_rule: geometryMatches,
     source_geometry_mismatches: geometryMismatches.length,
     exact_native_boundary_contacts: nativeBoundaryContacts,
@@ -271,6 +308,7 @@ process.stdout.write(JSON.stringify({
   qualification_limits: [
     'The retained GeoJSON/native-grid check establishes geometry contacts for the exact original keys only; it does not establish source authority, effective legal applicability, rights, current physical classification, or source-date currency.',
     'Candidate and physical-support runs are retained raster/mask evidence, not a new physical adjudication.',
+    'The reverse-scanned selected-feature candidates outside both retained masks remain outside the 883 land-only package and are not physically reclassified here.',
     'The historical owner observation is a literal selected-product observation at its pinned commit and different additive-selection state from the queue ownership binding; it is not current-main acceptance.',
     'Full/simplified files linked by newer API metadata were not obtained; this does not imply that the pinned original payload or masks are missing.',
     'Redonda remains outside the original repair selector; no companion physical-interpretation scope is counted or modified.'
