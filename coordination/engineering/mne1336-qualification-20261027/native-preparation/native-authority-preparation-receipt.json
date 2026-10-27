@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "kind": "mne1336-native-authority-preparation-receipt",
+  "as_of": "2026-10-27",
+  "status": "existing consumer preparation; not accepted bank output or credit",
+  "current_main": "7aaa0a9feeeb8f9bbbf8a01d1eea44103d689acf",
+  "current_bank": {
+    "selector_sha256": "f47a34c5d4e0eda841b2af18c55b7f096773756879f1a83e0059c45f93bad72b",
+    "startup_index_sha256": "8609ac63850ad4683bd5d73d0969c2b9bddf6ed8bf16af1e145caeb167a3a1ca",
+    "package_inputs_sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+  },
+  "current_owner_observation": {
+    "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/current-owner-observation-001.json",
+    "bytes": 286801,
+    "sha256": "65b1bbc7255eea1132c56570f412af47c711bb6c36fc0d4c135e54bcfa0a217b",
+    "commit": "7aaa0a9feeeb8f9bbbf8a01d1eea44103d689acf",
+    "query_count": 1336,
+    "effective_owner_zero_count": 1336,
+    "selected_owner_observation_only": true
+  },
+  "supported_inputs": {
+    "config": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/supported-inputs-config.json",
+      "bytes": 455,
+      "sha256": "69c24b20c45fbd7f9b20f24b59e5955d970bdff26c931c25cd121a3af6b4fab3"
+    },
+    "outputs": {
+      "source_evidence": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/supported-candidate-001/source-evidence.json",
+        "bytes": 65444,
+        "sha256": "b37f8fd2ef8cb8d07de7c04cbfda6de8cc18bbc5f9ba48b613d7f60b3da96f75"
+      },
+      "native_patch": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/supported-candidate-001/native-patch.json",
+        "bytes": 23539,
+        "sha256": "7b80bbf191b571ec0a704403a4538638f9431690737d27cfc8a8ff9bd0eddc71"
+      },
+      "held_original": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/supported-candidate-001/held-original.json",
+        "bytes": 230,
+        "sha256": "45b6168c0aaeb4b77262e1dc13b984708719c772163c8fbe7299c486c4b65a09"
+      },
+      "partition": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/supported-candidate-001/original-scope-partition.json",
+        "bytes": 3075,
+        "sha256": "a04bd9e5ea30601bfb37997c78c4e1f039c0f48b9ef911c7c954fa8f2d5024a5"
+      },
+      "preparation": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/supported-candidate-001/preparation.json",
+        "bytes": 609,
+        "sha256": "ad2786cbce9c3d025eb42616d75668b93f767bd8ecd3b4b35d5f623fb80305cc"
+      }
+    },
+    "partition": {
+      "original": 1336,
+      "supported": 1333,
+      "held": 3,
+      "supported_patch_cells": 1333,
+      "supported_classes": {
+        "land": 1332,
+        "inland_water": 1
+      },
+      "held_classes": {
+        "land": 3
+      },
+      "held_matches_albania_adverse_exactly": true
+    }
+  },
+  "constructor": {
+    "config": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-config.json",
+      "bytes": 453,
+      "sha256": "d884f341e63c87a904cc1f93a919c0d94eed51cf092efc1ac6ce4be5bcad6a43"
+    },
+    "outputs": {
+      "authority_binding": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-001/authority-binding.json",
+        "bytes": 779,
+        "sha256": "4734071e5f9236bbb4d530773304b28c789fd511053cffdde83bc239a7c7b997"
+      },
+      "constructor_result": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-001/constructor-result.json",
+        "bytes": 54865,
+        "sha256": "14433f3cfdebf602c580e9ebb57999a4d9d1cf96e7359eeda00bb0a8ae2c6646"
+      },
+      "rule_preimage": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-001/original-rule-preimage.json",
+        "bytes": 776,
+        "sha256": "df91dcee7502ba8d58e7261e8b784ef30db10662c5ff3079cfb8058db87e6974"
+      },
+      "preparation": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-001/preparation.json",
+        "bytes": 501,
+        "sha256": "0c9353bfcc26cbf16ae6bb9cbe4c0a5b6a3d5844d815053c27ef3b472c6b0057"
+      }
+    },
+    "assigned_components": 15,
+    "assigned_cells": 1333,
+    "all_components_disposition_assigned": true,
+    "source_physical_receipt_sha256": "a124be59376988b338f4f527b5860acd0e78918157566307354d56861ce7dfe2",
+    "no_source_or_physical_replay": true
+  },
+  "physical": {
+    "whole_target_report_sha256": "a124be59376988b338f4f527b5860acd0e78918157566307354d56861ce7dfe2",
+    "issue_operands": 4,
+    "exact_center_effects": 0,
+    "interpretation": "retained whole-target findings remain; zero center contacts are not clearance or blanket veto"
+  },
+  "limits": [
+    "The 3 Albania-contact land cells remain held and unchanged.",
+    "The original Bar water class remains distinct and is retained as mapped inland-water support.",
+    "Constructor output is a preparation result, not current-bank assignment, final emitted owner comparison, protected-main delivery, scientific acceptance, or credit.",
+    "Do not promote any part of this receipt to an accepted ledger without root disposition.",
+    "Separate 144 physical-interpretation cells and one XKX conflict remain outside this scope."
+  ]
+}
