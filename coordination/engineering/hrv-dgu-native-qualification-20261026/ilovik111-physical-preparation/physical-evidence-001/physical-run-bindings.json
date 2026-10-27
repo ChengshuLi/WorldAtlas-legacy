@@ -1,0 +1,70 @@
+{
+  "configuration": {
+    "bytes": 10608,
+    "commit": "7a653174f0d2639911b3642d10cac1143407aaf7",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/ilovik111-physical-preparation/physical.json",
+    "sha256": "fb5c92d13e41c293b6d8df744d95545003b15d249ab34d50ff9c83169e557f9d"
+  },
+  "outputs": [
+    {
+      "bytes": 19800,
+      "path": "whole-target-support.json",
+      "sha256": "2b1f6a6e476a99731428e107ae3ab46daa738df4b55de4d2f68c7b9f7ec7f0d1"
+    },
+    {
+      "bytes": 2134,
+      "path": "execution-summary.json",
+      "sha256": "19cf35b984f3158f6d984401b9ddfef3d0a362ff29dbd47fdd3779d2ee2cb04f"
+    }
+  ],
+  "private_execution_receipt": {
+    "bytes": 55537,
+    "contains_machine_local_runtime_inventory_paths": true,
+    "published": false,
+    "sha256": "824995d0e2055b0601de629c33a6ff6bf328ad6e33dea0c6e31e6727b9bed455"
+  },
+  "result_summary": {
+    "all_queries_checked": true,
+    "candidate_covers_source": false,
+    "physical_authority_limit": "A source-relative geometric comparison; does not establish modern physical truth or cell-level clearance.",
+    "query_relation_counts": {
+      "disjoint": 2,
+      "intersects": 1
+    },
+    "reported_issues": 0,
+    "source_covers_candidate": false,
+    "targets": 1
+  },
+  "runner": {
+    "elapsed_seconds": 15.095498570008203,
+    "exit_status": 0,
+    "node_path": "unset",
+    "path": "scripts/qualify-source-cohort.py",
+    "runtime": {
+      "geos": "3.13.1",
+      "shapely": "2.1.2"
+    },
+    "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18",
+    "stderr_bytes": 0,
+    "stdout": "One target; output complete; repaired_credit=0."
+  },
+  "scope": "Diagnostic original GSHHG source-relative support for one complete consumed target; not per-cell qualification, current physical truth, source-role determination, current-owner observation, acceptance, or credit.",
+  "source": {
+    "dataset": "GSHHG 2.3.7, distributed 2017-06-15; heterogeneous underlying WVS/WDBII observation dates unresolved.",
+    "source_ids_queried": [
+      0,
+      7558,
+      18308
+    ],
+    "terms": "Exact retained LICENSE.TXT states LGPLv3-or-later; exact README.TXT says v3 or earlier; both notices and COPYING.LESSERv3 are retained. The original archive lacks referenced COPYINGv3; no conflict is silently resolved. See gshhg-notice/NOTICE.md.",
+    "url": "https://www.soest.hawaii.edu/pwessel/gshhg/gshhg-bin-2.3.7.zip"
+  },
+  "stage": {
+    "bytes": 1559,
+    "commit": "4c895a76f3488f0cc2450e4d38ce6bffe75fef9a",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/ilovik111-physical-preparation/original-stage-inputs.json",
+    "sha256": "8c8cd3ccdda4b49b73c4c5862ab101c34c6f55dad53208a5454ff274ce296ede"
+  },
+  "target_id": "gb:HRV:ADM2:41942358B43003846347774",
+  "version": 1
+}
