@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "atg883-supported-delivery-route-assessment-v1",
-  "status": "source-target-native-candidate-composed; accepted-main-812 owner-and-block observed; full-bank-finalization-and-emitted-controls-pending",
+  "status": "candidate-final-bank-emitted-at-accepted-main-812; strict-seven-retirement-closure-passed; stale-after-MNE-main-advance; bounded-refresh-and-candidate-key-observation-pending",
   "package_id": "gb-ATG-ADM1--repair-evaluation",
   "original_denominator": {
     "land_cells": 883,
@@ -96,7 +96,7 @@
   "delivery_state": {
     "production_patch_created": false,
     "owner_selection_changed": false,
-    "finalized_native_bank_emitted": false,
+    "finalized_native_bank_emitted": true,
     "hosted_attempt_dispatched": false,
     "root_acceptance": false,
     "credit": false,
@@ -107,10 +107,14 @@
     "current_block_28_virtual_conservation_at_accepted_main_8128072": true,
     "whole_selected_bank_conservation": false,
     "finalizer_attempted_at_accepted_main_8128072": true,
-    "finalizer_output_created": false,
+    "finalizer_output_created": true,
     "finalizer_blocked_on_missing_locked_runtime_dependency": false,
     "retirement_index_guard_reached": false,
-    "finalizer_runtime_dependency_restored": true
+    "finalizer_runtime_dependency_restored": true,
+    "current_owner_observation_of_finalized_candidate": false,
+    "accepted_main_advanced_after_candidate": true,
+    "current_main_refresh_required_before_delivery": true,
+    "full_selected_bank_conservation": false
   },
   "limits": [
     "The original 883 land-cell/288-interval denominator is unchanged; 127 selected-feature contacts and 3 Redonda contacts outside the land/water masks remain excluded.",
@@ -225,14 +229,30 @@
   },
   "finalizer_attempt_8128072": {
     "path": "native-preparation/finalizer-attempt-812.json",
-    "branch_head": "f3c0263b086429277e2184e3deb52832a99fce93",
+    "branch_head": "b62c279f4c168d58b0dc65dc2ded234f1ce96477",
     "config_sha256": "891e55fe02ec88669ebf9f3790fe4f4242b7064315664547211956939e26689e",
     "helper_sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6",
-    "error_class": "ERR_MODULE_NOT_FOUND",
-    "missing_dependency": "@noble/hashes@2.0.1",
     "package_lock_integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
-    "finalizer_output_created": false,
-    "retirement_index_guard_reached": false
+    "finalizer_output_created": true,
+    "retirement_index_guard_reached": false,
+    "exit_status": 0,
+    "candidate_startup_index_sha256": "5fe005eeea32a673393da55620c57463478e353c6ff1bc89741f5c4f1e91c957",
+    "candidate_output_closure_path": "native-preparation/finalizer-output-closure-812.json",
+    "candidate_output_closure_sha256": "52df7e39317e97728a054d3a9a06ff82ba3818aef076add0f29a562ddbe98325",
+    "retired_generated_bodies": 7,
+    "new_generated_replacements": 7,
+    "whole_bank_conservation": false,
+    "candidate_key_observation_pending": true,
+    "candidate_is_stale_after_mne_main_advance": true,
+    "retirement_validation_passed": true,
+    "finalizer_retry_completed": true,
+    "current_owner_observation_of_finalized_candidate": false,
+    "current_main_advance_commit": "5fffbde0888e3b79d10387b2687aa281ea3ac354",
+    "current_main_advance_terminal": "6433745326",
+    "current_main_advance_run": "40448694227",
+    "bounded_current_main_bridge_and_final_bank_refresh_pending": true,
+    "full_bank_conservation_pending": true,
+    "emitted_controls_pending": true
   },
   "runtime_dependency_recovery": {
     "path": "native-preparation/runtime-dependency-812.json",
@@ -241,5 +261,28 @@
     "worktree_tree_exactly_matches_verified_tarball": true,
     "full_npm_install": false,
     "finalizer_retry_completed": false
+  },
+  "publication_bridge_812_c1e": {
+    "path": "native-preparation/current-main-bridge-812-c1e.json",
+    "sha256": "8478b5dd668dcb1f404af3b74e72353af96502ed76373a31f8d16ad807b15422",
+    "merge_commit": "b62c279f4c168d58b0dc65dc2ded234f1ce96477",
+    "current_main_at_merge": "c1e40fcd770cd85e15a95550578132f7059cfa4f",
+    "newer_mne_bank_advance_refresh_pending": true,
+    "followup_accepted_main_advance": "5fffbde0888e3b79d10387b2687aa281ea3ac354",
+    "followup_terminal": "6433745326",
+    "followup_run": "40448694227",
+    "refresh_required": true,
+    "refresh_status": "pending"
+  },
+  "finalizer_output_closure": {
+    "path": "native-preparation/finalizer-output-closure-812.json",
+    "sha256": "52df7e39317e97728a054d3a9a06ff82ba3818aef076add0f29a562ddbe98325",
+    "index_files": 79,
+    "compatibility_files": 30,
+    "materialized_generated_files_hashed": 49,
+    "generated_bytes_hashed": 64397083,
+    "retired_bodies_verified_restorable": 7,
+    "replacement_ranges_exact": true,
+    "full_bank_conservation": false
   }
 }

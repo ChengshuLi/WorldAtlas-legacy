@@ -35,12 +35,13 @@
       "production_bank_changed": false,
       "science_or_acceptance_implication": "none; this is a local runtime dependency failure only"
     },
-    "retry_policy": "Preserve this failed attempt. One retry only after acquiring the exact lockfile-pinned package through a supported bounded route and verifying tarball SRI and capacity; do not install the full dependency graph, use NODE_PATH, weaken checks, or treat this as a source denial."
+    "retry_policy": "Preserve this failed attempt. One retry only after acquiring the exact lockfile-pinned package through a supported bounded route and verifying tarball SRI and capacity; do not install the full dependency graph, use NODE_PATH, weaken checks, or treat this as a source denial.",
+    "attempt_role": "first corrected attempt; failed before output due missing locked dependency"
   },
   "limitations": [
     "A previous full-pin config failed preflight; the corrected exact-locator attempt is recorded above. No source inputs or output were changed by the malformed-config invocation.",
-    "The finalizer stopped before sparse-retirement validation, so there is no retirement-guard result to report.",
-    "The failure is local runtime dependency availability, not evidence of source absence, legal uncertainty, or failed source qualification."
+    "The failure is local runtime dependency availability, not evidence of source absence, legal uncertainty, or failed source qualification.",
+    "The initial corrected invocation stopped before sparse-retirement validation due the missing locked runtime dependency. After the exact lockfile-pinned dependency was restored, the single safe retry passed the strict retirement validation, emitted a candidate at accepted data commit 8128072, and replaced seven exact generated-body ranges. The candidate is stale after the accepted MNE bank advance and still needs bounded refresh, candidate-key observation, full selected-bank conservation and emitted controls."
   ],
   "preflight_attempts": [
     {
@@ -52,6 +53,57 @@
       "cause": "selector and package_inputs used full body pins; accepted helper contract requires exact commit/path locators",
       "finalizer_started": false,
       "output_created": false
+    }
+  ],
+  "retry_attempts": [
+    {
+      "phase": "finalize",
+      "branch_head": "b62c279f4c168d58b0dc65dc2ded234f1ce96477",
+      "accepted_data_commit": "81280722133858cbb26249210fed17b031d11d3d",
+      "current_main_at_attempt": "c1e40fcd770cd85e15a95550578132f7059cfa4f",
+      "main_delta": "unrelated added GBR source-relative note only",
+      "config_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config.json",
+      "config_sha256": "891e55fe02ec88669ebf9f3790fe4f4242b7064315664547211956939e26689e",
+      "input_equivalence_verified": {
+        "ownership_selector": "data/ownership-selection.json",
+        "ownership_selector_git_blob_oid": "6cf14f7fd5b4ad1e0a2afa876561195feee46b18",
+        "package_inputs": ".github/package-inputs.json",
+        "package_inputs_git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "canonical_target": "data/geography/part-28.json",
+        "canonical_target_git_blob_oid": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+        "accepted812_equals_current_main_c1e": true
+      },
+      "helper_sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6",
+      "node_version": "v24.19.0",
+      "node_path_unset": true,
+      "package": "@noble/hashes@2.0.1",
+      "package_sri_verified": true,
+      "exit_status": 0,
+      "resumed": false,
+      "destination": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-812",
+      "destination_preparation_sha256": "e946f6b2bd5276861c723396dd76a7644981eb4bc7bdfe6c882d5ecf05f22599",
+      "candidate_selector_sha256": "0ba9629e760227f839a534444163091ec10e1a60a00bce4252cf00f1dcefb989",
+      "candidate_startup_index_sha256": "5fe005eeea32a673393da55620c57463478e353c6ff1bc89741f5c4f1e91c957",
+      "candidate_output_closure_receipt": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-output-closure-812.json",
+      "candidate_output_closure_receipt_sha256": "52df7e39317e97728a054d3a9a06ff82ba3818aef076add0f29a562ddbe98325",
+      "git_index_sha256_before": "ee6e41676b0dd897daaf38bd44e4f58c1a10306b9f076dda57c805b74505afa4",
+      "git_index_sha256_after": "93f4b3739ec594bdfc5b1b9023cffb4cc4be5314b8d5057e45c31f974a22c1c9",
+      "staged_retirement_count": 7,
+      "matching_new_replacement_count": 7,
+      "index_retirement_guard_reached": false,
+      "worktree_free_bytes_before": 107372544,
+      "worktree_free_bytes_after": 42201088,
+      "final_bank_is_candidate_only": true,
+      "whole_selected_bank_conservation_emitted": false,
+      "science_accounting_acceptance": false,
+      "hosted_attempt_dispatched": false,
+      "result_limit": "The finalizer produced an exact current-startup candidate at accepted data commit812; full selected-bank conservation, emitted controls, post-finalizer original-key observation, and root acceptance remain pending. A later MNE accepted-main bank advance requires bounded refresh before current delivery.",
+      "retirement_validation_passed": true,
+      "retirement_validation_note": "Strict accepted guard passed. Seven previously indexed generated bodies were retired and replaced by seven exact covering generated ranges; no guard relaxation was made.",
+      "candidate_is_stale_after_mne_main_advance": true,
+      "post_advance_refresh_required": "Accepted main advanced with MNE2944 to 5fffbde0888e3b79d10387b2687aa281ea3ac354 (terminal6433745326/run40448694227); do a bounded current-main bridge and affected final-bank refresh before current delivery.",
+      "current_candidate_key_observation_pending": true,
+      "current_full_bank_conservation_pending": true
     }
   ]
 }
