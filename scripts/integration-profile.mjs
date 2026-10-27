@@ -76,8 +76,13 @@ export function integrationProfile(branch, files, reservation = {}, authoredEntr
     name.startsWith('docs/') && /\.(md|txt)$/.test(name);
   if (files.every(file => {
     if ([file.filename, ...(file.previous_filename ? [file.previous_filename] : [])].every(control)) return true;
+    const authoredLicenseEntry = inertLicenseNotice(file.filename) && authoredEntries instanceof Map
+      ? authoredEntries.get(file.filename) : null;
+    const authenticatedLicenseLeaf = !inertLicenseNotice(file.filename) ||
+      ordinary(authoredLicenseEntry) && authoredLicenseEntry.mode === '100644' &&
+      (file.mode === undefined || file.mode === authoredLicenseEntry.mode);
     if (file.previous_filename || !packetPath(file.filename) ||
-        inertLicenseNotice(file.filename) && file.mode !== '100644' ||
+        !authenticatedLicenseLeaf ||
         file.mode !== undefined && !['100644', '100755'].includes(file.mode) ||
         packagePathRequired(file.filename, definition)) return false;
     return file.status === 'added' && packet(file.filename) ||
@@ -93,6 +98,7 @@ export function inertEvidenceAdditions(files, entries, definition) {
     file.status === 'added' && !file.previous_filename &&
     (packetPath(file.filename) || sourcePacketPath(file.filename)) && packet(file.filename) &&
     !packagePathRequired(file.filename, definition) && ordinary(entries.get(file.filename)) &&
+    (file.mode === undefined || file.mode === entries.get(file.filename).mode) &&
     file.filename.split('/').slice(0,-1).every((_, index, parts) => {
       const parent = entries.get(parts.slice(0,index+1).join('/'));
       return parent?.type === 'tree' && parent.mode === '040000';

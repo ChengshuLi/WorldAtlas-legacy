@@ -315,6 +315,35 @@ test('extensionless license and notice leaves stay inert evidence without wideni
   assert.equal(inertEvidenceAdditions([renamed],entries,definition),false,'renamed license file');
 });
 
+test('BTN notice mode is sourced from the authenticated integrated tree',()=>{
+  const f=packetFixture(), pathName='coordination/engineering/btn-36-source-role-prep-20261026/notices/GSHHG-COPYING.LESSERv3';
+  const baseline=new Map(f.integrated.map(row=>[row.path,row]));
+  const integrated=new Map(baseline);
+  const parts=pathName.split('/');
+  for(let i=1;i<parts.length;i++){
+    const parent=parts.slice(0,i).join('/');
+    if(!integrated.has(parent))integrated.set(parent,{path:parent,sha:sha('d'),mode:'040000',type:'tree'});
+  }
+  integrated.set(pathName,{path:pathName,sha:'b14ca0a552d7e97012befc8f4949173e6ace87c9',mode:'100644',type:'blob',size:7816});
+  const [derived]=integrationChanges(baseline,integrated);
+  assert.deepEqual(derived,{filename:pathName,status:'added',mode:'100644'});
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[derived],{},integrated),'evidence');
+  assert(inertEvidenceAdditions([derived],integrated,f.packageInputs));
+
+  const apiWithoutMode={filename:pathName,status:'added'};
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},integrated),'evidence');
+  assert(inertEvidenceAdditions([apiWithoutMode],integrated,f.packageInputs));
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',
+    [{...apiWithoutMode,mode:'100755'}],{},integrated),'full','conflicting API mode');
+  assert.equal(inertEvidenceAdditions([{...apiWithoutMode,mode:'100755'}],integrated,f.packageInputs),false,'conflicting API mode');
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},baseline),'full','missing authenticated tree entry');
+
+  const executable=new Map(integrated);
+  executable.set(pathName,{...executable.get(pathName),mode:'100755'});
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},executable),'full','authenticated executable entry');
+  assert.equal(inertEvidenceAdditions([apiWithoutMode],executable,f.packageInputs),false,'authenticated executable entry');
+});
+
 test('default mixed changes retain broad routing and missing packet consumers cannot be silently omitted',async()=>{
  for(const format of ['json','json.gz']){
   for(const filename of ['scripts/merge-integration.mjs','test/evidence-quality.test.mjs','.github/package-inputs.json','src/effective-footprint.js','data/ownership-selection.json']){
