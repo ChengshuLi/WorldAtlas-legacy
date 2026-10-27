@@ -20,6 +20,8 @@ The Arta Vela/Leveraka 103 group retains source, physical, native diagnostic and
 
 The composed authority registry has two entries, one per group. The original authority preimages, source bindings and completed constructor ledgers remain independently pinned; composition does not merge the source-role claims or turn either into accepted ownership.
 
+A finalizer config was prepared but not invoked: `finalize-config-001-29e4.json` (SHA-256 `6f2c8552c6afef827df245cb32d5585a6aa5cd3f30669d3ad4c2402c2ece2f3d`). It binds selector and package-input pins at accepted main `29e4d7c2d4215345f76cef695db93b4120e48114` and the composed registry at commit `515ce42248bd8334fc6f1391187fc7089e55283f`. If accepted selector/package inputs advance, regenerate and verify the exact config against the actual current main before use. The composition and config hashes are recorded in `MANIFEST.json`.
+
 ## Required next controls
 
 Before any candidate is delivered, rerun the bounded finalizer against the actual then-current accepted bank, verify exact roster and bidirectional tree/index equality, run the full native conservation comparator and applicable build/emitted controls, and obtain current-pair review. Do not reuse the 29e4 owner observation if main advances with an affected selector/bank. Preserve the prior accepted bank and all source/physical/native evidence. Root scientific acceptance is separate.
