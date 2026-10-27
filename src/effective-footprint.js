@@ -1,4 +1,4 @@
-import {canonicalValue,canonicalFootprintJsonChunks,canonicalFootprintValueEqual,mergeUnassignedNativeIntervals,finishedPrimitiveGeometries as finishedPrimitiveGeometriesPure,finishEffectiveFootprint as finishEffectiveFootprintPure,extendFinishedNativeFootprint as extendFinishedNativeFootprintPure,finishedReleaseFootprintDigest as finishedReleaseFootprintDigestPure,effectivePrimitiveGeometries as effectivePrimitiveGeometriesPure,effectiveFootprintValue as effectiveFootprintValuePure,versionedPrimitiveGeometries as versionedPrimitiveGeometriesPure,additiveReleaseFootprintDigest as additiveReleaseFootprintDigestPure,versionedReleaseFootprintDigest as versionedReleaseFootprintDigestPure} from './native-grid.js';
+import {canonicalValue,canonicalFootprintJsonChunks,canonicalFootprintValueEqual,mergeUnassignedNativeIntervals,mergeUnassignedNativeIntervalStream,finishedPrimitiveGeometries as finishedPrimitiveGeometriesPure,finishEffectiveFootprint as finishEffectiveFootprintPure,extendFinishedNativeFootprint as extendFinishedNativeFootprintPure,finishedReleaseFootprintDigest as finishedReleaseFootprintDigestPure,effectivePrimitiveGeometries as effectivePrimitiveGeometriesPure,effectiveFootprintValue as effectiveFootprintValuePure,versionedPrimitiveGeometries as versionedPrimitiveGeometriesPure,additiveReleaseFootprintDigest as additiveReleaseFootprintDigestPure,versionedReleaseFootprintDigest as versionedReleaseFootprintDigestPure} from './native-grid.js';
 import {finalBankReference as finalBankReferencePure,additiveBaseReference as additiveBaseReferencePure,nativeReferenceForData as nativeReferenceForDataPure,bindPreparedNativeFeatures as bindPreparedNativeFeaturesPure} from './reference-metadata.js';
 import {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND} from './native-grid.js';
 export {EFFECTIVE_FOOTPRINT_KIND,FINISHED_FOOTPRINT_KIND,canonicalFootprintJsonChunks,canonicalFootprintValueEqual};
@@ -548,7 +548,7 @@ function verifyVersionedLedgerSelection(ledger,features,patch) {
 // Physical water is deliberately not a territorial exclusion: callers pass only
 // independently supported territorial exclusions (for example retained holes).
 
-export {canonicalValue,mergeUnassignedNativeIntervals};
+export {canonicalValue,mergeUnassignedNativeIntervals,mergeUnassignedNativeIntervalStream};
 export function finishedPrimitiveGeometries(...args){return finishedPrimitiveGeometriesPure(...args,footprintValueSha256);}
 export function finishEffectiveFootprint(...args){return finishEffectiveFootprintPure(...args,footprintValueSha256);}
 export function extendFinishedNativeFootprint(...args){return extendFinishedNativeFootprintPure(...args,footprintValueSha256);}
