@@ -1,0 +1,216 @@
+{
+  "kind": "atg883-retained-source-contact-and-mask-check-v1",
+  "status": "research-only-not-acceptance",
+  "original_scope": {
+    "package_id": "gb-ATG-ADM1--repair-evaluation",
+    "primary_source": "gb:ATG:ADM1",
+    "owner_indices": [
+      7110
+    ],
+    "source_feature_indices": [
+      1274,
+      1275,
+      1276,
+      1277,
+      1278,
+      1279,
+      1280
+    ],
+    "source_family_index": 12,
+    "native_block": 28,
+    "land_cells": 883,
+    "inland_water_cells": 0,
+    "source_relative_cells": 0,
+    "interval_segments": 288,
+    "source_feature_count": 7,
+    "location_count": 1,
+    "locality_count": 1,
+    "provinces": [
+      "framework:province:antigua-and-barbuda:f0b1983e7530"
+    ],
+    "selected_features_are_separate_owners": false,
+    "redonda_feature_1273_in_repair_selector": false
+  },
+  "exact_inputs": {
+    "original_queue_copy": {
+      "path": "coordination/engineering/atg883-source-research-20261027/original-queue-record.json",
+      "sha256": "a8699fd1c2fdc12a97aa592ac711c5674f232daf58ac86fba41aea0fcb2968f9"
+    },
+    "retained_proposal": {
+      "path": "coordination/engineering/atg-original-repair-20261021/factual-disposition-proposal.json",
+      "sha256": "132e2e5162dd37b223b9533eb2182acef7aa17828122690d81381dc344d6a91e"
+    },
+    "retained_owner_observation": {
+      "path": "coordination/engineering/atg-original-repair-20261021/current-selected-owner-observation.json",
+      "sha256": "4d520f8484608398659c54789cc65bee82fad45a3bf02fff77f24c7d70dec120",
+      "commit": "ea099024c1d175842e4d323db752b49d9f7a5825"
+    },
+    "source_payload": {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ATG-ADM1-000.bin.gz",
+      "commit": "ea099024c1d175842e4d323db752b49d9f7a5825",
+      "git_blob_oid": "bf88e47697be35d7f948e42e942e2521a81470a9",
+      "bytes": 9157,
+      "sha256": "28c9286241b38663e4c2c3f24c21810e60e54b7c645569840805f6fd0b8be8e5",
+      "decoded_bytes": 26215,
+      "decoded_sha256": "021f6ca73869807bcb04d3b71ea1f26d630eb11707522ff1a0db5f3d86e40c8d"
+    },
+    "native_grid_code": {
+      "commit": "ea099024c1d175842e4d323db752b49d9f7a5825",
+      "path": "src/native-grid.js",
+      "git_blob_oid": "add4cef02bb5a790f22a9078fdf9bd51679059d3",
+      "method": "native-linear-evenodd-first-owner-v1"
+    },
+    "native_latitudes": {
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "bytes": 1851757,
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "grid_size": 262166
+    },
+    "candidate_block": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-028.json.gz",
+      "commit": "ea099024c1d175842e4d323db752b49d9f7a5825",
+      "git_blob_oid": "242c191e5cb4822c969247f4d4af99b56a5ec160",
+      "bytes": 476733,
+      "sha256": "2000877ef3d698ee43b6e1ae0d7bb0cb8cf505a94b21255076691311fb5c3ba4"
+    },
+    "physical_land_block": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-028.json.gz",
+      "commit": "ea099024c1d175842e4d323db752b49d9f7a5825",
+      "git_blob_oid": "320ee1a5fda2706aa446e8872a7180ca66ae76a6",
+      "bytes": 436795,
+      "sha256": "2d3327eb79a3ef3d56ec58e1400f8394754881183d2937747c303aeef9098cd5"
+    },
+    "inland_water_block": {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/inland-water-support-block-028.json.gz",
+      "commit": "ea099024c1d175842e4d323db752b49d9f7a5825",
+      "git_blob_oid": "ce25d850997ac8d56bb82778a7527b290edc7edd",
+      "bytes": 2094,
+      "sha256": "a878b7eab8260dfc4ab3b1db67e39ef4667047bc8980d779c645b0598f60d234"
+    }
+  },
+  "source_feature_crosswalk": {
+    "1274": {
+      "source_id": "gb:ATG:ADM1:74100532B52002127383103",
+      "name": "Saint Philip",
+      "recorded_owner_indices": [
+        7110
+      ],
+      "lineage_owner_indices": [
+        7110
+      ],
+      "exact_key_contacts": 110
+    },
+    "1275": {
+      "source_id": "gb:ATG:ADM1:74100532B54588500691901",
+      "name": "Saint John",
+      "recorded_owner_indices": [
+        7110
+      ],
+      "lineage_owner_indices": [
+        7110
+      ],
+      "exact_key_contacts": 67
+    },
+    "1276": {
+      "source_id": "gb:ATG:ADM1:74100532B56248932917605",
+      "name": "Barbuda",
+      "recorded_owner_indices": [
+        7110
+      ],
+      "lineage_owner_indices": [
+        7110
+      ],
+      "exact_key_contacts": 237
+    },
+    "1277": {
+      "source_id": "gb:ATG:ADM1:74100532B19516932260818",
+      "name": "Saint Mary",
+      "recorded_owner_indices": [
+        7110
+      ],
+      "lineage_owner_indices": [
+        7110
+      ],
+      "exact_key_contacts": 146
+    },
+    "1278": {
+      "source_id": "gb:ATG:ADM1:74100532B93709990123087",
+      "name": "Saint Paul",
+      "recorded_owner_indices": [
+        7110
+      ],
+      "lineage_owner_indices": [
+        7110
+      ],
+      "exact_key_contacts": 134
+    },
+    "1279": {
+      "source_id": "gb:ATG:ADM1:74100532B3675352926720",
+      "name": "Saint Peter",
+      "recorded_owner_indices": [
+        7110
+      ],
+      "lineage_owner_indices": [
+        7110
+      ],
+      "exact_key_contacts": 112
+    },
+    "1280": {
+      "source_id": "gb:ATG:ADM1:74100532B88993889644511",
+      "name": "Saint George",
+      "recorded_owner_indices": [
+        7110
+      ],
+      "lineage_owner_indices": [
+        7110
+      ],
+      "exact_key_contacts": 77
+    }
+  },
+  "checks": {
+    "exact_original_keys": 883,
+    "exact_original_interval_segments": 288,
+    "proposal_intervals_cover_cells": 883,
+    "candidate_owner_and_source_feature_contacts": 883,
+    "exact_candidate_run_bounds_match_proposal": 883,
+    "retained_land_mask_contacts": 883,
+    "retained_inland_water_contacts": 0,
+    "source_geometry_contacts_by_native_rule": 883,
+    "source_geometry_mismatches": 0,
+    "exact_native_boundary_contacts": 0,
+    "cell_contacts_per_source_feature": {
+      "1274": 110,
+      "1275": 67,
+      "1276": 237,
+      "1277": 146,
+      "1278": 134,
+      "1279": 112,
+      "1280": 77
+    },
+    "historical_selected_owner_observation": {
+      "commit": "ea099024c1d175842e4d323db752b49d9f7a5825",
+      "scientific_qualification": false,
+      "base_owner_zero": 883,
+      "accepted_additive_owner_zero": 883,
+      "effective_selected_owner_zero": 883,
+      "no_existing_product_overlap": 883,
+      "not_current_main_reobservation": true
+    },
+    "owner_selection_distinction": {
+      "original_queue_binding_sha256": "b952192475435c8fbc74a84627994aff4f4e073c36c479d369554fc75251bc89",
+      "original_queue_additive_patch_path": "coordination/engineering/nor-grc-congo-delivery-20261011/slb-source000-trial-20261013/assembly-001/patch.json",
+      "observer_selector_path": "data/ownership-selection.json",
+      "observer_additive_patch_path": "coordination/engineering/brunei-original-repair-20261019/composition-002/patch.json",
+      "same_selection_claimed": false
+    }
+  },
+  "qualification_limits": [
+    "The retained GeoJSON/native-grid check establishes geometry contacts for the exact original keys only; it does not establish source authority, effective legal applicability, rights, current physical classification, or source-date currency.",
+    "Candidate and physical-support runs are retained raster/mask evidence, not a new physical adjudication.",
+    "The historical owner observation is a literal selected-product observation at its pinned commit and different additive-selection state from the queue ownership binding; it is not current-main acceptance.",
+    "Full/simplified files linked by newer API metadata were not obtained; this does not imply that the pinned original payload or masks are missing.",
+    "Redonda remains outside the original repair selector; no companion physical-interpretation scope is counted or modified."
+  ]
+}
