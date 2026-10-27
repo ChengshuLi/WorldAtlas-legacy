@@ -51,6 +51,26 @@ function fixture(t, negatives = []) {
 }
 const output='coordination/engineering/fixture/diagnostic';
 const read=(f,name)=>JSON.parse(fs.readFileSync(path.join(f.root,output,name)));
+test('native-diagnostic refuses Git without no-lazy-fetch before reading diagnostic inputs or writing output',t=>{
+  const f=fixture(t), prefix=path.join(f.root,'git-without-no-lazy-fetch'), bin=path.join(prefix,'bin');
+  const helpers=path.join(prefix,'libexec','git-core'), calls=path.join(prefix,'calls.txt');
+  fs.mkdirSync(helpers,{recursive:true});
+  const executable=path.join(bin,'git');fs.mkdirSync(bin,{recursive:true});
+  fs.writeFileSync(executable,`#!/bin/sh\nprintf '%s\\n' "$*" >> '${calls}'\nif [ "$1" = "--exec-path" ]; then printf '%s\\n' '${helpers}'; exit 0; fi\nif [ "$1" = "--no-lazy-fetch" ] && [ "$2" = "--version" ]; then echo 'unknown option --no-lazy-fetch' >&2; exit 129; fi\necho 'unexpected Git invocation' >&2; exit 88\n`,{mode:0o755});
+  f.save('config.json',jsonBytes(f.config));
+  const destination='coordination/engineering/fixture/legacy-git-refused';
+  const run=spawnSync(process.execPath,[script,'native-diagnostic','config.json',destination],{
+    cwd:f.root,encoding:'utf8',timeout:30000,
+    env:{...process.env,PATH:bin+path.delimiter+process.env.PATH,NODE_OPTIONS:'',NODE_PATH:'',
+      GIT_NO_LAZY_FETCH:'1',GIT_NO_REPLACE_OBJECTS:'1'},
+  });
+  assert.ifError(run.error);assert.equal(run.signal,null);assert.notEqual(run.status,0);
+  assert.match(run.stderr,/Use a Git implementation supporting --no-lazy-fetch/);
+  assert.deepEqual(fs.readFileSync(calls,'utf8').trim().split('\n'),[
+    '--exec-path','--no-lazy-fetch --version',
+  ],'Capability check must fail before any Git object/input reads');
+  assert.equal(fs.existsSync(path.join(f.root,destination)),false,'Failed preflight must not create output');
+});
 test('native-diagnostic CLI publishes an exact mixed partition and cannot substitute for source evidence',t=>{
   const f=fixture(t);
   f.save('patch.json','mutable checkout cannot retarget immutable input');

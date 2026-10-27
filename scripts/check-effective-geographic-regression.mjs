@@ -99,12 +99,26 @@ export function runtimeIdentity(executable=process.execPath) {
 }
 const NS='coordination/engineering/eastern-two-gap-repair-native-20261007/canonical-products';
 const STOCK_INDEX='b82b195d94530d9b1f48153f7e47616f8b841cb1438ddf59994ba4869a1d7876';
+function isMissingCommitError(error, version) {
+  const stderr = Buffer.isBuffer(error?.stderr) ? error.stderr.toString('utf8') : String(error?.stderr ?? '');
+  return error?.status === 128
+    && stderr.trimEnd() === `fatal: Not a valid object name ${version}^{commit}`;
+}
+function hasCommit(reader, version) {
+  try {
+    reader.git('--no-lazy-fetch', 'cat-file', '-e', version + '^{commit}');
+    return true;
+  } catch (error) {
+    if (isMissingCommitError(error, version)) return false;
+    throw error;
+  }
+}
 
 export class ImmutableReader {
   #trees = new Map();
   #originDescriptors = new Map();
   pinnedVersion(pin) {
-    try{this.git('--no-lazy-fetch','cat-file','-e',pin.commit+'^{commit}');return pin.commit;}catch{}
+    if (hasCommit(this, pin.commit)) return pin.commit;
     return this.#originDescriptors.has(pin.commit+':'+pin.path)?pin.commit:this.version;
   }
   // Transport supplies exact bytes and private native origin proof, never a
@@ -113,14 +127,14 @@ export class ImmutableReader {
     demand(pin&&commit(pin.commit)&&safe(pin.path)&&['100644','100755'].includes(pin.mode)
       &&commit(pin.git_blob_oid)&&Number.isSafeInteger(pin.bytes)&&pin.bytes>=0&&hash(pin.sha256),
       'Incomplete immutable acquisition pin');
-    let known=true;try{this.git('--no-lazy-fetch','cat-file','-e',pin.commit+'^{commit}');}catch{known=false;}
+    const known = hasCommit(this, pin.commit);
     const version=this.pinnedVersion(pin);
     let failure;
     try{const d=this.descriptor(pin.path,version);
       demand(d.mode===pin.mode&&d.git_blob_oid===pin.git_blob_oid&&d.bytes===pin.bytes,'Source-target whole identity differs');return;
     }catch(error){failure=error;}
     const expected=`${pin.mode} blob ${pin.git_blob_oid}\t${pin.path}\0`;
-    let matching=false;try{matching=this.git('ls-tree','-z',known?pin.commit:this.version,'--',pin.path).toString()===expected;}catch{}
+    const matching = this.git('ls-tree','-z',known?pin.commit:this.version,'--',pin.path).toString()===expected;
     if(known&&!matching)throw failure; // A known original never falls back.
     const session=await this.#acquisition({execute}),a=session.acquisition;
     const original=!known&&!matching;
@@ -159,7 +173,7 @@ export class ImmutableReader {
     for(const p of pins){
       demand(p&&commit(p.commit)&&safe(p.path)&&Number.isSafeInteger(p.bytes)&&p.bytes>=0&&hash(p.sha256),
         'Incomplete original path identity');
-      let known=true;try{this.git('--no-lazy-fetch','cat-file','-e',p.commit+'^{commit}');}catch{known=false;}
+      const known = hasCommit(this, p.commit);
       if(known||this.#originDescriptors.has(p.commit+':'+p.path)){
         // A known original with an absent/wrong tree never uses current bytes.
         const d=this.descriptor(p.path,p.commit);demand(d.bytes===p.bytes,'Original path whole size differs');
@@ -310,7 +324,7 @@ export class ImmutableReader {
     demand(safe(name)&&commit(version),'Unsafe immutable path/commit');
     const key=version+':'+name,original=this.#originDescriptors.get(key);
     if(original){
-      let present=true;try{this.git('--no-lazy-fetch','cat-file','-e',version+'^{commit}');}catch{present=false;}
+      const present = hasCommit(this, version);
       if(!present){const pin=this.inventory.get(key);
         if(pin&&['commit','path','mode','git_blob_oid','bytes'].every(field=>pin[field]===original[field]))return pin;
         const copy={...original};this.inventory.set(key,copy);return copy;}
@@ -579,7 +593,7 @@ export class SelectedGeometrySources {
     this.checkPin(p);let version=p.commit;
     // Squash retention is allowed ONLY for the exact same original ordinary
     // path/mode/Git blob/full SHA. Actual consumed provenance remains explicit.
-    try{this.reader.git('--no-lazy-fetch','cat-file','-e',version+'^{commit}');}catch{version=this.reader.version;}
+    if (!hasCommit(this.reader, version)) version=this.reader.version;
     const actual=this.reader.descriptor(p.path,version);
     demand(actual.mode===p.mode&&actual.git_blob_oid===p.git_blob_oid&&actual.bytes===p.bytes,'Selected source original mode/OID/body differs');
     const raw=this.reader.read(p.path,{version,expected:p.sha256});
@@ -810,7 +824,7 @@ function loadBaseSelection(reader) {
   // Squash merges may omit the original producer commit from a clean clone.
   // Its independently registered WHOLE byte hash still binds the exact retained
   // same-path copy; consumed provenance never pretends to be the original commit.
-  try{reader.git('--no-lazy-fetch','cat-file','-e',proof.commit+'^{commit}');}catch{proofVersion=reader.version;}
+  if (!hasCommit(reader, proof.commit)) proofVersion=reader.version;
   const receipt=reader.json(proof.path,{version:proofVersion,expected:proof.sha256});
   const receiptProvenance={registered_origin:{commit:proof.commit,path:proof.path,sha256:proof.sha256},consumed:{...reader.inventory.get(proofVersion+':'+proof.path)},whole_body_alias:proofVersion!==proof.commit};
   demand(receipt.method===manifest.method&&receipt.baseline_commit===manifest.provenance?.baseline_commit&&receipt.preparation_commit===manifest.provenance?.evaluation_commit&&receipt.owned_cells===manifest.accounting?.owned_cells&&receipt.owners===manifest.accounting?.owners&&receipt.checked_rows===manifest.size&&receipt.checked_cells===manifest.size**2&&receipt.unchecked_cells===0&&receipt.checked_runs*2===manifest.runWords&&receipt.installation_ready===false,'Native registered comparison differs');

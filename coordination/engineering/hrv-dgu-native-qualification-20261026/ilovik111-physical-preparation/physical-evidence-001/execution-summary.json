@@ -1,0 +1,57 @@
+{
+  "execution": {
+    "complete": true,
+    "elapsed_seconds": 15.095914316014387,
+    "exit_status": 0,
+    "stderr_bytes": 0,
+    "stdout_summary": "One target; output complete; repaired_credit=0."
+  },
+  "inputs": {
+    "configuration": {
+      "bytes": 10608,
+      "commit": "7a653174f0d2639911b3642d10cac1143407aaf7",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/ilovik111-physical-preparation/physical.json",
+      "sha256": "fb5c92d13e41c293b6d8df744d95545003b15d249ab34d50ff9c83169e557f9d"
+    },
+    "stage": {
+      "bytes": 1559,
+      "commit": "4c895a76f3488f0cc2450e4d38ce6bffe75fef9a",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/ilovik111-physical-preparation/original-stage-inputs.json",
+      "sha256": "8c8cd3ccdda4b49b73c4c5862ab101c34c6f55dad53208a5454ff274ce296ede"
+    }
+  },
+  "kind": "public-execution-summary",
+  "limits": [
+    "Diagnostic source-relative whole-target comparison only.",
+    "Not a per-cell/native qualification, modern physical truth, current ownership, source-role adjudication, acceptance, or credit."
+  ],
+  "note": "Sanitized public summary of the exact private execution receipt. Local absolute runtime inventory paths are omitted; full receipt remains privately retained and hash-bound below.",
+  "private_receipt": {
+    "availability": "retained in the owner private evidence directory",
+    "bytes": 55537,
+    "sha256": "824995d0e2055b0601de629c33a6ff6bf328ad6e33dea0c6e31e6727b9bed455"
+  },
+  "program": {
+    "path": "scripts/qualify-source-cohort.py",
+    "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+  },
+  "result": {
+    "all_three_queries_checked": true,
+    "disjoint_relations": 2,
+    "explicit_issue_rows": 0,
+    "intersections": 1,
+    "mutual_containment": false,
+    "source_ids": [
+      0,
+      7558,
+      18308
+    ],
+    "whole_target_support_sha256": "2b1f6a6e476a99731428e107ae3ab46daa738df4b55de4d2f68c7b9f7ec7f0d1"
+  },
+  "runtime": {
+    "geos": "3.13.1",
+    "shapely": "2.1.2"
+  },
+  "target": "gb:HRV:ADM2:41942358B43003846347774",
+  "version": 1
+}

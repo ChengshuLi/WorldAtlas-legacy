@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "kind": "mne1336-source-native-diagnostic-preparation-receipt",
+  "as_of": "2026-10-27",
+  "status": "prepared diagnostic only; not accepted authority, owner mutation, or credit",
+  "scope": {
+    "package_id": "gb-MNE-ADM1--repair-evaluation",
+    "original_cells": 1336,
+    "original_intervals": 599,
+    "target_owners": 16,
+    "source_features": 23,
+    "classes": {
+      "land": 1335,
+      "inland_water": 1
+    },
+    "exact_original_scope_keyset_sha256": "59444e56656e0c794933ab917524fc2428eee1481c0efa91624b4661775ac8ff",
+    "private_original_keyfile_sha256": "476f673b2adc2500ec0c8e94ba8f17636063bc81e55a2cacae1408e4af9f2059",
+    "requested_keyset_exactly_equals_original": true
+  },
+  "source": {
+    "source_id": "gb:MNE:ADM1",
+    "vintage": 2017,
+    "raw_sha256": "c9afe5300b402f75cf13b5d65341d849afd631af32b220be3f74c883cab36833",
+    "compressed_git_blob": "d67beeaf19e4b6d1b829d27bbd2a9da1815f0235",
+    "recorded_license": "ODbL 1.0",
+    "bound_to_current_canonical_part15": true,
+    "all_16_original_targets_joined_by_exact_source_id": true,
+    "source_evidence": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/source-evidence-003/source-evidence.json",
+      "bytes": 67728,
+      "sha256": "fd5b17e228b789faeb878a3439ced71f7e04882ff4d270e88fb9d05626c3843b"
+    },
+    "territorial_exclusion_provenance": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/source-evidence-003/territorial-exclusion-provenance.json",
+      "bytes": 13501,
+      "sha256": "32f4c04874f033d21a212853a00f31a42be0fe23a30f5f8eee28c7e0fcaf0926"
+    }
+  },
+  "physical": {
+    "whole_target_report": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/physical-001/whole-target-support.json",
+      "bytes": 263575,
+      "sha256": "a124be59376988b338f4f527b5860acd0e78918157566307354d56861ce7dfe2"
+    },
+    "all_16_targets_checked": true,
+    "whole_target_issues": 4,
+    "issue_center_intersection_summary": {
+      "path": "/workspace/shared/worldatlas-MNE1336-physical-issue-center-intersections-20261027.json",
+      "bytes": 3403,
+      "sha256": "44b583a2c167720a793b8ba3dda12ace626669bc019e6e013430592792a9b04f"
+    },
+    "exact_requested_centers_intersecting_issue_geometry": 0,
+    "interpretation": "zero exact-center intersections do not clear the four retained whole-target issue findings"
+  },
+  "native": {
+    "method": "native-linear-evenodd-first-owner-v1",
+    "native_latitude_table_index_sha256": "a7729024f8e443e6b8c0b59e9bcdadf3744d531f670a541c53f5557231ad975b",
+    "requested_rows": 496,
+    "requested_cells": 1336,
+    "supported_cells": 1333,
+    "held_cells": 3,
+    "class_partition": {
+      "supported": {
+        "mapped_land_support": 1332,
+        "mapped_inland_water_support": 1
+      },
+      "held": {
+        "mapped_land_support": 3
+      }
+    },
+    "held_exactly_equals_albania_adverse_set": true,
+    "albania_adverse_set_sha256": "c8ccaed8e8d00fb57d6437a3f9fff6b185983f394470e70c1ad1bed5c46ce489",
+    "candidate_no_captured_albania_keys": 1333,
+    "candidate_canonical_keyset_sha256": "9fbb7d9bc12a3fc168f612250d2086b42b7e74a92398a2c46d9094ddebf79e17",
+    "diagnostic_output": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-diagnostic-002/native-diagnostic.json",
+      "bytes": 186956,
+      "sha256": "37ac9e6fae24980f6752dcc933b7f19ea62a3e2840078d002cc7321918ea2646"
+    },
+    "diagnostic_preparation": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-diagnostic-002/preparation.json",
+      "bytes": 267,
+      "sha256": "031bd017447ac92add181ff6b98e4da286a978ec1520dc7bf590e7b33a0488d6"
+    },
+    "diagnostic_rule_sha256": "6130602bbfef9c518f81742d7b031dd6ec3fd8a4e7cd3c261f9d23720cbd4086",
+    "held_keys_owner_y_x": [
+      [
+        30407,
+        96873,
+        145302
+      ],
+      [
+        30414,
+        96804,
+        145656
+      ],
+      [
+        30414,
+        96805,
+        145656
+      ]
+    ],
+    "requested_patch": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-request-003/native-requested-patch.json",
+      "bytes": 23605,
+      "sha256": "d3d4551a75fa360990e7d0a444edeb2881caf40a1d4b015e7b0769e22213b288"
+    },
+    "input_stage": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/original-native-inputs.json",
+      "bytes": 72276,
+      "sha256": "750a30aadbd4c8c60dcc6d8163ab3af11b0d3fae7e82c94336ae6c4027992412"
+    },
+    "accounting": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-request-003/native-request-accounting.json",
+      "bytes": 2371,
+      "sha256": "5396c030d160a11c6113e15f229eceac105da30188308f056a49e4eee36adab7"
+    }
+  },
+  "invocations": {
+    "source_evidence": {
+      "exit_code": 0,
+      "config_sha256": "edebaebf6e00b88af276cf4a127d9b9d4e3e0938ebc711f7a90a6cec3f98b424",
+      "config": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-request-003/source-evidence-config.json",
+        "bytes": 64507,
+        "sha256": "edebaebf6e00b88af276cf4a127d9b9d4e3e0938ebc711f7a90a6cec3f98b424"
+      }
+    },
+    "native_diagnostic": {
+      "exit_code": 0,
+      "config_sha256": "ec2d6316aae4fa57aa88e3483161f64f73c6d2c3e47424118b09a96868c4e73a",
+      "elapsed_seconds": 5.226274962,
+      "config": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-diagnostic-config.json",
+        "bytes": 454,
+        "sha256": "ec2d6316aae4fa57aa88e3483161f64f73c6d2c3e47424118b09a96868c4e73a"
+      }
+    },
+    "focused_tests": {
+      "command": "NODE_PATH= NODE_OPTIONS= node --test test/source-target-native-delivery.test.mjs test/source-target-native-diagnostic.test.mjs",
+      "tests": 83,
+      "pass": 83,
+      "fail": 0,
+      "log": {
+        "path": "/workspace/shared/worldatlas-MNE1336-native-focused-tests-20261027.log",
+        "bytes": 6716,
+        "sha256": "a6949d1a8d327360050dfe51038b08a45e30f0b4888e1c9d2cca2ea1ccdcb653"
+      },
+      "dependency": "exact lockfile @noble/hashes 2.0.1 restored from retained lock-SRI-matching package tarball; no network install"
+    }
+  },
+  "limits": [
+    "The 3 Albania-contact keys remain held as adverse foreign-contact evidence; they are not reassigned.",
+    "1333 supported cells are a diagnostic screen only, not final authority or scientific acceptance.",
+    "The whole-target physical issues remain pinned even though the 4 issue geometries have no exact requested-center intersection.",
+    "The one original inland-water cell remains mapped_inland_water_support and retains its original Bar owner.",
+    "Current-owner observation, selected bank conservation, rights review and root acceptance remain distinct stages.",
+    "Separate 144 physical-interpretation cells and one XKX-queue exclusion remain outside this package."
+  ],
+  "provenance": {
+    "baseline": "22a772fc40496fe1161bf4ad6f912684e7fedf7a",
+    "preparation_head": "9fa991e2efde49c104c81c06c068713a611c9208",
+    "physical_commit": "1ae31cd47448cbf1c5838bb9c02fb0335675a44a",
+    "failed_setup_attempts": [
+      {
+        "directory": "superseded-setup-attempts/attempt-001",
+        "source_phase_exit": 1,
+        "stderr": "Final-profile source preparation requires its genuine original owner pin",
+        "generated_config_sha256": "7d7ab7154c32096d372e6deca8a74b6cd751f1020a3c6ff9f54c9f12312ab762",
+        "source_phase_outputs_created": false
+      },
+      {
+        "directory": "superseded-setup-attempts/attempt-002",
+        "source_phase_exit": 1,
+        "stderr": "Complete bounded delivery original owner decoding required",
+        "generated_config_sha256": "a0d7a26558f94cebef3b2ba968a7a47884257015f9066fb60bf2e04a82f04e92",
+        "source_phase_outputs_created": false
+      }
+    ],
+    "corrective_basis": "Selector manifest pins original bounds bytes SHA b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f; decoded exact bytes=11096191, SHA a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428."
+  }
+}

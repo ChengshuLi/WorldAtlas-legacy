@@ -1,0 +1,53 @@
+{
+  "schema": "uga-source-role-context-supplement-v1",
+  "purpose": "source-role context only; not consumed by the native evaluator as a positive or negative predicate",
+  "role_matrix": {
+    "positive_source_family": "gb:UGA:ADM3",
+    "foreign_competitor_negative_families": [
+      "gb:COD:ADM1",
+      "gb:TZA:ADM1"
+    ],
+    "hierarchy_context_families": [
+      "gb:UGA:ADM1",
+      "gb:UGA:ADM2"
+    ],
+    "complete_original_family_indices": [
+      69,
+      338,
+      340,
+      341,
+      342
+    ],
+    "features": 57,
+    "contact_rows": 715,
+    "contact_edges": 2025,
+    "owner_target_crosswalk_rows": 28,
+    "water_context_contact_count": 7
+  },
+  "files": [
+    {
+      "path": "research/UGA/private/uga-source-role-context-003-20261027/source-role-companion.md",
+      "bytes": 6598,
+      "sha256": "9c2fbd6542d33abc79b5ab9930cdb6acc76933d7cc969f2ca7455f91dffa3d4d",
+      "working_copy_mode": "0600"
+    },
+    {
+      "path": "research/UGA/private/uga-source-role-context-003-20261027/complete-contact-matrix.jsonl",
+      "bytes": 260239,
+      "sha256": "36b568d1a4dad32a69ef384707ec8ac4b89ebed6fc8c4fe502789d8de4b78c3b",
+      "working_copy_mode": "0600"
+    },
+    {
+      "path": "research/UGA/private/uga-source-role-context-003-20261027/owner-target-crosswalk.json",
+      "bytes": 46657,
+      "sha256": "a569b6bf3ad29cb86737719038af3442d8201f9c9101efa9699cd12616213eb5",
+      "working_copy_mode": "0600"
+    },
+    {
+      "path": "research/UGA/private/uga-source-role-context-003-20261027/water-context-note.md",
+      "bytes": 3932,
+      "sha256": "cb49323731b41893da4b60ab94b012f0b77271ddc0f4a3078301fb60c90f1433",
+      "working_copy_mode": "0600"
+    }
+  ]
+}

@@ -223,6 +223,40 @@ test('default actual preparation derives the inert packet consumers without an o
   });
 });
 
+test('evidence-only preparation composes current main without changing the reviewed head',async()=>{
+  const f=packetFixture();
+  const authoredBase=sha('0');
+  f.pr.base.sha=authoredBase;
+  const reviewedHead=f.pr.head.sha;
+  const prepared=await prepareIntegration({...f.options(),reviewedTests:'auto'});
+
+  assert.equal(prepared.pr.base.sha,authoredBase,'The authored PR base may be stale after main advances');
+  assert.equal(prepared.pr.head.sha,reviewedHead,'Preparation retains the independently reviewed PR head');
+  assert.deepEqual(prepared.current_pair,{base:f.base,head:reviewedHead},'The execution plan binds fresh main and the unchanged head');
+  assert.deepEqual(prepared.plan_request,{base:f.base,head:reviewedHead,files:PACKET_TESTS});
+  assert.deepEqual(prepared.test_files,PACKET_TESTS);
+  assert.equal(prepared.profile,'evidence');
+  assert.equal(prepared.geography_required,true,'The normal geography gate is still derived for the combined candidate');
+  assert.equal(f.pr.base.sha,authoredBase,'No authored-branch update or base bridge is made');
+  assert.equal(f.pr.head.sha,reviewedHead);
+  assert.equal(f.writes.length,0,'Preparation does not merge or update the PR');
+});
+
+test('automatic churn shortcut remains evidence-only and does not weaken code or selected-data controls',async()=>{
+  const code=fixture();
+  await assert.rejects(prepareIntegration({...code.options(),reviewedTests:'auto'}),/Automatic test scope is unavailable/);
+  assert.equal(code.refs.size,0,'Unsupported code scope cleans its disposable candidate');
+  assert.equal(code.writes.length,0);
+
+  const bankFile={filename:'data/ownership-selection.json',status:'modified'};
+  assert.equal(integrationProfile('engineering/selected-data', [bankFile], {}, new Map()),'full');
+  assert.equal(geographyRequired('engineering/selected-data', [bankFile], {}, new Map()),true);
+  assert.equal(validatedPlanForRoute(null,{test_selection:'selected-data'},true),null,
+    'Selected-data auto still delegates to its bound mandatory route');
+  assert.throws(()=>validatedPlanForRoute({request:{base:sha('b'),head:sha('a'),files:PACKET_TESTS}},
+    {test_selection:'selected-data'},false),/mandatory native and emitted execution path/);
+});
+
 test('actual automatic packet roster runs without installed dependencies or external executables',async()=>{
   const f=packetFixture('json.gz'),prepared=await prepareIntegration(f.options());
   const directory=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-packet-runtime-'));
@@ -270,6 +304,86 @@ test('automatic packet boundary reuses inert names and refuses executable, redir
   }
   assert.equal(inertEvidenceAdditions([],entries,f.packageInputs),false);
  }
+});
+test('extensionless license and notice leaves stay inert evidence without widening other paths',()=>{
+  const f=packetFixture(), entries=new Map(f.integrated.map(row=>[row.path,row]));
+  const root='coordination/engineering/license-packet-20261027/notices/';
+  const add=(filename,mode='100644')=>{
+    entries.set(filename,{path:filename,sha:sha('f'),mode,type:'blob',size:128});
+    const parts=filename.split('/');
+    for(let i=1;i<parts.length;i++){
+      const parent=parts.slice(0,i).join('/');
+      if(!entries.has(parent))entries.set(parent,{path:parent,sha:sha('d'),mode:'040000',type:'tree'});
+    }
+    return {filename,status:'added',mode};
+  };
+  const definition=f.packageInputs;
+  for(const leaf of ['GSHHG-COPYING.LESSERv3','COPYING.LESSERv3','LICENSE','NOTICE']){
+    const file=add(root+leaf);
+    assert.equal(integrationProfile('engineering/license-packet',[file],{},entries),'evidence',leaf);
+    assert(inertEvidenceAdditions([file],entries,definition),leaf);
+    for(const category of ['inputs','verification_paths']){
+      const declared={...definition,[category]:[...definition[category],file.filename]};
+      assert.equal(inertEvidenceAdditions([file],entries,declared),false,`${leaf} declared as ${category}`);
+    }
+  }
+  for(const name of [
+    'coordination/engineering/license-packet-20261027/dist/NOTICE',
+    'coordination/engineering/license-packet-20261027/generated/COPYING.LESSERv3',
+    'coordination/engineering/license-packet-20261027/.cache/LICENSE',
+    'coordination/engineering/license-packet-20261027/notices/UNRELATED.BIN',
+    'coordination/engineering/license-packet-20261027/notices/NOT-AN-EXECUTABLE.mjs',
+    'data/canonical-grid/current-startup/GSHHG-COPYING.LESSERv3'
+  ]){
+    const file=add(name);
+    assert.equal(inertEvidenceAdditions([file],entries,definition),false,name);
+    assert.equal(integrationProfile('engineering/license-packet',[file],{},entries),'full',name);
+  }
+  const executable=add(root+'GSHHG-COPYING.LESSERv3','100755');
+  entries.set(executable.filename,{...entries.get(executable.filename),mode:'100755'});
+  assert.equal(inertEvidenceAdditions([executable],entries,definition),false,'executable license file');
+  assert.equal(integrationProfile('engineering/license-packet',[executable],{},entries),'full','executable license file');
+  const packageControl=add('.github/package-inputs.json');
+  assert.equal(inertEvidenceAdditions([packageControl],entries,definition),false,'package inputs remain outside inert license rule');
+  const renamed={filename:root+'GSHHG-COPYING.LESSERv3',previous_filename:'old-license'};
+  assert.equal(inertEvidenceAdditions([renamed],entries,definition),false,'renamed license file');
+});
+
+test('BTN notice mode is sourced from the authenticated integrated tree',()=>{
+  const f=packetFixture(), pathName='coordination/engineering/btn-36-source-role-prep-20261026/notices/GSHHG-COPYING.LESSERv3';
+  const baseline=new Map(f.integrated.map(row=>[row.path,row]));
+  const integrated=new Map(baseline);
+  for(const [name,oid] of [
+    ['coordination','be77643293518e7aff9315ae2ee00bb60b5453ca'],
+    ['coordination/engineering','d466465bdaa73790b0ca76fd7aa4dc4da6b5f907'],
+    ['coordination/engineering/btn-36-source-role-prep-20261026','10a1fc00e54e58fde88886f5c79e8a2edb15d323'],
+    ['coordination/engineering/btn-36-source-role-prep-20261026/notices','559260f20ec5b8f09160ca204de790e104801e49']
+  ]) integrated.set(name,{path:name,sha:oid,mode:'040000',type:'tree'});
+  for(const [leaf,oid,size] of [
+    ['GSHHG-COPYING.LESSERv3','b14ca0a552d7e97012befc8f4949173e6ace87c9',7816],
+    ['GSHHG-LICENSE.TXT','b10c0f3ba1e836eaeedbcb2f2e731ead69975582',1375],
+    ['GSHHG-README.TXT','4df1a4ac69f38f0c302b87732b1aa1ae6ddfecb4',15350],
+    ['NOTICE.md','bceba1f4edfd24678b4dce64c81fc119d094a4a2',9022]
+  ]) integrated.set(pathName.replace('GSHHG-COPYING.LESSERv3',leaf),
+    {path:pathName.replace('GSHHG-COPYING.LESSERv3',leaf),sha:oid,mode:'100644',type:'blob',size});
+  const actualFiles=integrationChanges(baseline,integrated);
+  assert.equal(actualFiles.length,4);
+  assert(actualFiles.every(file=>file.status==='added'&&file.mode==='100644'));
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',actualFiles,{},integrated),'evidence');
+  assert(inertEvidenceAdditions(actualFiles,integrated,f.packageInputs));
+
+  const apiWithoutMode={filename:pathName,status:'added'};
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},integrated),'evidence');
+  assert(inertEvidenceAdditions([apiWithoutMode],integrated,f.packageInputs));
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',
+    [{...apiWithoutMode,mode:'100755'}],{},integrated),'full','conflicting API mode');
+  assert.equal(inertEvidenceAdditions([{...apiWithoutMode,mode:'100755'}],integrated,f.packageInputs),false,'conflicting API mode');
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},baseline),'full','missing authenticated tree entry');
+
+  const executable=new Map(integrated);
+  executable.set(pathName,{...executable.get(pathName),mode:'100755'});
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},executable),'full','authenticated executable entry');
+  assert.equal(inertEvidenceAdditions([apiWithoutMode],executable,f.packageInputs),false,'authenticated executable entry');
 });
 
 test('default mixed changes retain broad routing and missing packet consumers cannot be silently omitted',async()=>{
@@ -1810,6 +1924,116 @@ test('successful original build archive is retained before later tests without r
  assert.match(yaml,/GEOGRAPHY_RESULT: \$\{\{ needs\.geography\.result \}\}/);
 });
 
+
+test('Playwright apt setup verifies bounds and uses a fail-closed privileged apt wrapper',()=>{
+ const yaml=fs.readFileSync(new URL('../.github/workflows/worker-merge.yml',import.meta.url),'utf8');
+ const integration=yaml.split('\n  integration:\n')[1].split('\n  merge:\n')[0];
+ const steps=integration.split(/\n(?=      - )/).slice(1);
+ const browser=steps.find(step=>step.startsWith('      - name: Install browser dependencies only for tests that use Playwright\n'));
+ assert.ok(browser);
+ const run=browser.split('\n        run: |\n')[1];
+ assert.ok(run);
+ const wrapper=run.indexOf('apt_wrapper=/usr/local/bin/apt-get');
+ const install=run.indexOf('npx playwright install --with-deps chromium');
+ assert(wrapper>=0&&wrapper<install,'temporary wrapper is installed before Playwright invokes apt');
+ assert.ok(run.indexOf('zzzz-worldatlas-ci-acquire-timeouts')>run.indexOf('apt.conf.d/'),'APT override sorts after runner image config');
+ assert.match(run,/temporary paths exist only on this disposable hosted runner/);
+ assert.match(run,/never on a developer Mac or shared workspace/);
+ assert.match(run,/Keep TLS, repository[\s\S]*signature verification and authentication checks enabled/);
+ for(const line of [
+  "'Acquire::Retries \"1\";'",
+  "'Acquire::http::Timeout \"10\";'",
+  "'Acquire::https::Timeout \"10\";'"
+ ])assert(run.includes(line),line);
+ for(const effective of [
+  "Acquire::Retries \"1\";",
+  "Acquire::http::Timeout \"10\";",
+  "Acquire::https::Timeout \"10\";"
+ ])assert(run.includes(`grep -Fx '${effective}'`),`effective APT assertion: ${effective}`);
+ assert.match(run,/original_apt="\$\(sudo sh -c 'command -v apt-get'\)"/);
+ assert.match(run,/if sudo test -e "\$apt_wrapper" \|\| sudo test -L "\$apt_wrapper" \|\|/);
+ assert.match(run,/sudo test -e "\$apt_config_file" \|\| sudo test -L "\$apt_config_file"; then/);
+ assert.match(run,/trap cleanup_apt_setup EXIT/);
+ assert.match(run,/apt_wrapper_created=1/);
+ assert.match(run,/apt_config_created=1/);
+ assert.match(run,/\/usr\/bin\/timeout --signal=TERM --kill-after=30s 4m \/usr\/bin\/apt-get/);
+ assert.match(run,/\[ "\$phase" = update \] .*retrying once/s);
+ assert.ok(run.includes("'case \"$phase\" in'"));
+ assert.ok(run.includes("'  update|install) ;;'"));
+ assert.match(run,/resolved_apt="\$\(sudo sh -c 'command -v apt-get'\)"/);
+ assert.match(run,/npx playwright install --with-deps chromium/);
+ assert.doesNotMatch(run,/AllowInsecure|AllowUnauthenticated|Check-Valid-Until|continue-on-error|\|\|\s*true/);
+ assert.doesNotMatch(browser,/continue-on-error:/);
+});
+
+test('bounded apt wrapper retries only timed-out updates and cleans only owned fixture paths',()=>{
+ const yaml=fs.readFileSync('.github/workflows/worker-merge.yml','utf8');
+ const integration=yaml.split('\n  integration:\n')[1].split('\n  merge:\n')[0];
+ const steps=integration.split(/\n(?=      - )/).slice(1);
+ const browser=steps.find(step=>step.startsWith('      - name: Install browser dependencies only for tests that use Playwright\n'));
+ assert.ok(browser);
+ const run=browser.split('\n        run: |\n')[1];assert.ok(run);
+ const templateStart=run.indexOf("              '#!/bin/sh'");
+ const templateEnd=run.indexOf('              sudo tee "$apt_wrapper" >/dev/null',templateStart);
+ assert(templateStart>=0&&templateEnd>templateStart,'workflow contains the generated apt wrapper template');
+ const template=run.slice(templateStart,templateEnd);
+ const wrapperLines=[...template.matchAll(/^\s*'([^']*)'(?:\s*\\|\s*\|)?\s*$/gm)].map(match=>match[1]);
+ assert(wrapperLines.length>=15,'extract every literal line of the actual workflow wrapper');
+ const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'worldatlas-apt-wrapper-'));
+ try{
+  const timeoutStub=path.join(temporary,'timeout'),aptStub=path.join(temporary,'apt-get'),wrapper=path.join(temporary,'wrapper.sh');
+  fs.writeFileSync(timeoutStub,'#!/bin/sh\n[ "$1" = "--signal=TERM" ] || exit 90\n[ "$2" = "--kill-after=30s" ] || exit 91\n[ "$3" = "4m" ] || exit 92\nshift 3\n[ "$1" = "$APT_STUB" ] || exit 93\nexec "$@"\n',{mode:0o755});
+  fs.writeFileSync(aptStub,'#!/bin/sh\ncount=0\n[ ! -f "$APT_CALL_LOG" ] || count=$(( $(wc -l < "$APT_CALL_LOG") + 0 ))\nprintf "%s %s\\n" "$1" "$*" >> "$APT_CALL_LOG"\ncase "$APT_MODE:$1:$count" in\n  timeout-once:update:0) exit 124 ;;\n  timeout-install:install:0) exit 124 ;;\n  non-timeout:update:0) exit 42 ;;\n  update:*) exit 0 ;;\n  *) exit 0 ;;\nesac\n',{mode:0o755});
+  const body=wrapperLines.join('\n')+'\n';
+  fs.writeFileSync(wrapper,body.replaceAll('/usr/bin/timeout',timeoutStub).replaceAll('/usr/bin/apt-get',aptStub),{mode:0o755});
+  const log=path.join(temporary,'apt-calls.log');
+  const invoke=(phase,mode)=>spawnSync('/bin/sh',[wrapper,phase],{encoding:'utf8',env:{...process.env,APT_STUB:aptStub,APT_CALL_LOG:log,APT_MODE:mode}});
+  const callLines=()=>fs.existsSync(log)?fs.readFileSync(log,'utf8').trim().split('\n').filter(Boolean):[];
+
+  fs.writeFileSync(log,'');
+  const update=invoke('update','timeout-once');
+  assert.equal(update.status,0,update.stderr);assert.equal(callLines().length,2,JSON.stringify({message:'a timed-out update is retried exactly once',calls:callLines(),stderr:update.stderr,stdout:update.stdout}));
+  assert.match(update.stderr,/update timed out; retrying once/);
+
+  fs.writeFileSync(log,'');
+  const install=invoke('install','timeout-install');
+  assert.equal(install.status,124,install.stderr);assert.equal(callLines().length,1,'an interrupted install is never retried');
+  assert.doesNotMatch(install.stderr,/retrying once/);
+
+  fs.writeFileSync(log,'');
+  const marker=path.join(temporary,'tests-ran');
+  const failClosed=spawnSync('/bin/bash',['-c','set -e; "$1" update; printf reached > "$2"','apt-step',wrapper,marker],{
+   encoding:'utf8',env:{...process.env,APT_STUB:aptStub,APT_CALL_LOG:log,APT_MODE:'non-timeout'}
+  });
+  assert.equal(failClosed.status,42,failClosed.stderr);assert.equal(callLines().length,1);
+  assert.equal(fs.existsSync(marker),false,'a non-timeout apt failure stops subsequent test commands');
+
+  const guard=(run.match(/if sudo test -e "\$apt_wrapper" \|\| sudo test -L "\$apt_wrapper" \|\|[\s\S]*?\n\s*fi/)??[])[0];
+  assert.ok(guard,'workflow has an explicit existing-path/symlink collision guard');
+  const localGuard=guard.replaceAll('sudo test','test');
+  const collisionDir=path.join(temporary,'collision');fs.mkdirSync(collisionDir);
+  const dangling=path.join(collisionDir,'dangling-link'),configPath=path.join(collisionDir,'config');
+  fs.symlinkSync(path.join(collisionDir,'missing-target'),dangling);fs.writeFileSync(configPath,'keep');
+  const refused=spawnSync('/bin/bash',['-c',`apt_wrapper="$1"; apt_config_file="$2"; ${localGuard}`,'collision',dangling,configPath],{encoding:'utf8'});
+  assert.equal(refused.status,1);assert.match(refused.stderr,/Refusing to overwrite/);
+  assert.equal(fs.readFileSync(configPath,'utf8'),'keep');
+
+  const cleanup=(run.match(/cleanup_apt_setup\(\) \{[\s\S]*?\n\s*\}/)??[])[0];
+  assert.ok(cleanup,'workflow has the invocation-owned cleanup function');
+  const localCleanup=cleanup.replaceAll('sudo rm -f','rm -f');
+  const ownWrapper=path.join(collisionDir,'owned-wrapper'),ownedConfig=path.join(collisionDir,'owned-config'),sentinel=path.join(collisionDir,'unowned');
+  for(const file of [ownWrapper,ownedConfig,sentinel])fs.writeFileSync(file,'fixture');
+  const cleanupRun=spawnSync('/bin/bash',['-c',`apt_wrapper="$1"; apt_config_file="$2"; apt_wrapper_created=1; apt_config_created=0; ${localCleanup}; cleanup_apt_setup`,'cleanup',ownWrapper,ownedConfig],{encoding:'utf8'});
+  assert.equal(cleanupRun.status,0,cleanupRun.stderr);assert.equal(fs.existsSync(ownWrapper),false);
+  assert.equal(fs.existsSync(ownedConfig),true,'pre-existing config is preserved because this invocation did not create it');
+  assert.equal(fs.existsSync(sentinel),true,'cleanup leaves unrelated files untouched');
+  const ownedConfig2=path.join(collisionDir,'owned-config-2');fs.writeFileSync(ownedConfig2,'fixture');
+  const cleanupBoth=spawnSync('/bin/bash',['-c',`apt_wrapper="$1"; apt_config_file="$2"; apt_wrapper_created=1; apt_config_created=1; ${localCleanup}; cleanup_apt_setup`,'cleanup-both',ownWrapper,ownedConfig2],{encoding:'utf8'});
+  assert.equal(cleanupBoth.status,0,cleanupBoth.stderr);
+  assert.equal(fs.existsSync(ownWrapper),false);assert.equal(fs.existsSync(ownedConfig2),false,'cleanup removes each path created by this invocation');
+  assert.equal(fs.existsSync(sentinel),true,'cleanup still leaves unrelated files untouched');
+ }finally{fs.rmSync(temporary,{recursive:true,force:true});}
+});
 
 test('actual preparation completes a truncated candidate tree and refuses incomplete child metadata before scope selection',async()=>{
   for(const incomplete of [false,true]){
