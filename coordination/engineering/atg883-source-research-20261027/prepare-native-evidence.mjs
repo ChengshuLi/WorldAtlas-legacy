@@ -15,6 +15,7 @@ const sourceId = 'gb:ATG:ADM1';
 const targetId = 'atlas:territory:ATG';
 const owner = 7110;
 const queueSha = 'a8699fd1c2fdc12a97aa592ac711c5674f232daf58ac86fba41aea0fcb2968f9';
+const priorEvidenceConfigSha = 'ef31d37c4866588a6e91f4ca644402712f81dd327d2b5d4ddb660d9d21e6d813';
 const proposalPath = `${base}/proposed-additive-delta-v1.json`;
 const observationPath = `${base}/current-selected-owner-observation-001b1f9.json`;
 const sourceStagePath = `${base}/physical-preparation/original-stage-inputs.json`;
@@ -99,6 +100,10 @@ need(manifestPin.sha256 === selected.sha256 && nativeManifest.size === 262166,
 const ownerRosterPin = pin(nativeManifest.original_assets.bounds.commit, nativeManifest.original_assets.bounds.path);
 need(ownerRosterPin.sha256 === nativeManifest.original_assets.bounds.sha256,
   'Exact selected native owner roster differs');
+const ownerRosterRaw = reader.read(ownerRosterPin);
+const ownerRosterDecoded = (await import('node:zlib')).gunzipSync(ownerRosterRaw);
+ownerRosterPin.decoded_bytes = ownerRosterDecoded.length;
+ownerRosterPin.decoded_sha256 = digest(ownerRosterDecoded);
 
 const targetPartPin = pin(acceptedMain, 'data/geography/part-28.json');
 const targetPart = readJson(targetPartPin);
@@ -161,8 +166,21 @@ const preparationConfig = {version:1,selector:{commit:acceptedMain,path:'data/ow
 fs.mkdirSync(path.join(root,output),{recursive:true});
 for (const [name,value] of [['native-patch-v1.json',nativePatch],['source-evidence-config.json',preparationConfig]]) {
   const body = jsonBytes(value), destination = path.join(root,output,name);
-  if (fs.existsSync(destination)) need(fs.readFileSync(destination).equals(body), `Existing generated body differs: ${name}`);
-  else fs.writeFileSync(destination,body,{flag:'wx'});
+  if (fs.existsSync(destination)) {
+    const prior = fs.readFileSync(destination);
+    if (!prior.equals(body)) {
+      need(name === 'source-evidence-config.json' && digest(prior) === priorEvidenceConfigSha,
+        `Existing generated body differs: ${name}`);
+      const priorConfig = JSON.parse(prior), revised = JSON.parse(body);
+      const stripped = structuredClone(revised);
+      delete stripped.source_evidence.owner_roster.decoded_bytes;
+      delete stripped.source_evidence.owner_roster.decoded_sha256;
+      need(same(priorConfig, stripped) && ownerRosterPin.decoded_bytes === 11096191
+        && ownerRosterPin.decoded_sha256 === 'a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428',
+        'Prior config is not the exact bounded-roster upgrade target');
+      fs.writeFileSync(destination, body);
+    }
+  } else fs.writeFileSync(destination,body,{flag:'wx'});
 }
 console.log(JSON.stringify({accepted_main:acceptedMain,source_family:sourceId,source_features:targets.length,
   source_family_members:sourceProduct.features.length,redonda_context_members:1,native_patch_rows:nativePatch.rows.length,
