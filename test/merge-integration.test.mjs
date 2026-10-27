@@ -223,6 +223,40 @@ test('default actual preparation derives the inert packet consumers without an o
   });
 });
 
+test('evidence-only preparation composes current main without changing the reviewed head',async()=>{
+  const f=packetFixture();
+  const authoredBase=sha('0');
+  f.pr.base.sha=authoredBase;
+  const reviewedHead=f.pr.head.sha;
+  const prepared=await prepareIntegration({...f.options(),reviewedTests:'auto'});
+
+  assert.equal(prepared.pr.base.sha,authoredBase,'The authored PR base may be stale after main advances');
+  assert.equal(prepared.pr.head.sha,reviewedHead,'Preparation retains the independently reviewed PR head');
+  assert.deepEqual(prepared.current_pair,{base:f.base,head:reviewedHead},'The execution plan binds fresh main and the unchanged head');
+  assert.deepEqual(prepared.plan_request,{base:f.base,head:reviewedHead,files:PACKET_TESTS});
+  assert.deepEqual(prepared.test_files,PACKET_TESTS);
+  assert.equal(prepared.profile,'evidence');
+  assert.equal(prepared.geography_required,true,'The normal geography gate is still derived for the combined candidate');
+  assert.equal(f.pr.base.sha,authoredBase,'No authored-branch update or base bridge is made');
+  assert.equal(f.pr.head.sha,reviewedHead);
+  assert.equal(f.writes.length,0,'Preparation does not merge or update the PR');
+});
+
+test('automatic churn shortcut remains evidence-only and does not weaken code or selected-data controls',async()=>{
+  const code=fixture();
+  await assert.rejects(prepareIntegration({...code.options(),reviewedTests:'auto'}),/Automatic test scope is unavailable/);
+  assert.equal(code.refs.size,0,'Unsupported code scope cleans its disposable candidate');
+  assert.equal(code.writes.length,0);
+
+  const bankFile={filename:'data/ownership-selection.json',status:'modified'};
+  assert.equal(integrationProfile('engineering/selected-data', [bankFile], {}, new Map()),'full');
+  assert.equal(geographyRequired('engineering/selected-data', [bankFile], {}, new Map()),true);
+  assert.equal(validatedPlanForRoute(null,{test_selection:'selected-data'},true),null,
+    'Selected-data auto still delegates to its bound mandatory route');
+  assert.throws(()=>validatedPlanForRoute({request:{base:sha('b'),head:sha('a'),files:PACKET_TESTS}},
+    {test_selection:'selected-data'},false),/mandatory native and emitted execution path/);
+});
+
 test('actual automatic packet roster runs without installed dependencies or external executables',async()=>{
   const f=packetFixture('json.gz'),prepared=await prepareIntegration(f.options());
   const directory=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-packet-runtime-'));

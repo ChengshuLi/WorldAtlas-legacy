@@ -10,7 +10,7 @@ on:
         type: string
         required: true
       reviewed_tests:
-        description: 'Exact plan.request JSON, auto for proven automatic routing, or complete for the full suite'
+        description: 'Use auto for eligible evidence/current-main composition or selected-data routing; otherwise exact plan.request JSON or complete'
         type: string
         required: true
       request_id:
