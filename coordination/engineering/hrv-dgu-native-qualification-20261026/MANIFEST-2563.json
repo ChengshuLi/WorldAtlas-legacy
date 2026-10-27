@@ -1,0 +1,808 @@
+{
+  "candidate_output_roster": {
+    "compatibility_members": 30,
+    "index_path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-004/startup-ownership.json",
+    "index_sha256": "20b7a4d4cd09a372d35b817241c9eb29b0bba39bed53d44e74458247770ad875",
+    "indexed_member_rows_in_manifest": 79,
+    "indexed_members": 79,
+    "new_candidate_only_bodies": 11,
+    "old_only_bodies_removed_by_finalizer": 11,
+    "sparse_omitted_bodies_verified_against_base": 30,
+    "whole_tree_old_new_conservation": "deferred to trusted selected-bank comparator/hosted controls; no claim made"
+  },
+  "current_main_equivalence": {
+    "current_main": "256801c05f6c25dfabb7accf65dffb1652de3f48",
+    "relevant_selector_index_package_inputs_unchanged_from_4828": true,
+    "upstream_diff": "VUT/CAF evidence-only; no candidate input changes",
+    "verification": "GitHub compare says local origin/main 256801c is identical to public main; 4828..256801c compares only VUT Tanna and CAF110 evidence paths"
+  },
+  "external_pins": [
+    {
+      "bytes": 7972274,
+      "path": "/workspace/shared/worldatlas-HRV-ADM2-owner-observation-4828-20261027.json",
+      "role": "current accepted selector owner-zero observation used for exact 2,563 tuple join; full 35,738 HRV query, not reproduced here",
+      "sha256": "1a42c771a2cf0cb3ba4b1a4d3f403c0c41212328fe723b64f6ff5cb7d6e29424"
+    }
+  ],
+  "files": [
+    {
+      "bytes": 38421,
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "path": ".github/package-inputs.json",
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3",
+      "source": "unchanged accepted base package-input pin"
+    },
+    {
+      "bytes": 7323,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/README.md",
+      "sha256": "fadf43f63c57bf4a984a6d88a8c91481734d9ed45d0674ec7a76cc3c92117531",
+      "source": "owned worktree evidence file to commit"
+    },
+    {
+      "bytes": 2680,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "51f80b789e2fd51a4dc729284f1cf3dec9d02fb0",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/authority-registry-composed-002/authority-registry.json",
+      "sha256": "c0850a6f02e7bf17b26b81430b37ee11b4aab27df675ba4e2aff92ebaba1aca3",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 256,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "994391d663974952974fafa5302e3a8342536255",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/authority-registry-composed-002/preparation.json",
+      "sha256": "3bed44ab6ab82d42b922c7761d744129eddafcae892b37bc0de5296589ebfe1a",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 15015,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/candidate-audit-2563-4828/current-owner-zero-and-roster.json",
+      "sha256": "fb3ec6386134cb87fda6927923e12fcf603c6095b5992084d3ae22df964539f7",
+      "source": "owned worktree evidence file; to be committed"
+    },
+    {
+      "bytes": 3758,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "9e3bc994c52d2b10e690e3dc18c99d6ef16d5f1f",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/config/compose-002.json",
+      "sha256": "834a81554309c45e798f62458e05abf8fb6fb2706fea9ba7abaaca1e0bfcbbd7",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 675,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "733916f35ab3e26baa8e8dbd054032a5ff82c9b8",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/config/finalize-current-4828.json",
+      "sha256": "9a96b57aa13c568918c1dfa698a02da965ad6ecca0f3d779866052e744c9970b",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 2291,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-004/ownership-selection.json",
+      "sha256": "212ea0c7886cb27cdd3a736ec1d8204c6abf3eec7dcbc96969db1a3c744b3ee7",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 38421,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-004/package-inputs.json",
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 1156,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-004/preparation.json",
+      "sha256": "75edc393a98d1e25e8b3e2d28f8483d74877e8b3ad970e97aaa26108cf5e9375",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 485,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-004/selected-delivery-expectations.json",
+      "sha256": "d07d349da3c52104b520534f55da7a036b8dba7e7e82434e0032b3cebe636356",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 49610,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-004/startup-ownership.json",
+      "sha256": "20b7a4d4cd09a372d35b817241c9eb29b0bba39bed53d44e74458247770ad875",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 2,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalizer-attempts-2563-4828/attempt-001.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 219,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalizer-attempts-2563-4828/attempt-001.stderr.log",
+      "sha256": "a0f858a0fb8cc16957d5fad11452e5e96e4c32d56cc1cdfaa2806131ee1511f1",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 0,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalizer-attempts-2563-4828/attempt-001.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 2,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalizer-attempts-2563-4828/attempt-002.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 0,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalizer-attempts-2563-4828/attempt-002.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 769,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalizer-attempts-2563-4828/attempt-002.stdout.log",
+      "sha256": "da9ff83f1defe5503dc9d817671d5e356a19f24724acc4c3a39e501b3749db99",
+      "source": "owned worktree output"
+    },
+    {
+      "bytes": 744,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "dac5a9703c6d8aac9b7cbe4d0ee8ebe4956fc033",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-003/authority-binding.json",
+      "sha256": "6cd17b74da2282313762f4095bd3a8354a4e8dc41e0e36a30bbe57589a38e05f",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 27656,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "259a5cf4bf20f0fd8e2cef6ce628b366a4c571aa",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-003/constructor-result.json",
+      "sha256": "7903d8101d3dc2287143d5c62d8d4b9a56d3718118ec60c5376c184707d9d143",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 741,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "d0100a01ffb3ac65541f088e0d07bd8b261f4f47",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-003/original-rule-preimage.json",
+      "sha256": "9f78fa6a478fd5e8641ea0cb2a64a811df77b4946ce553b271c203df8215444d",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 1655,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "cf000b3e753c20e147e31ca5fbd6578e009c98a3",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-004/README.md",
+      "sha256": "937dc87f3819ce3d18f033b157ffba56c5c0137bc8081969e596e23be9435080",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 742,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "85d7fe41ebe9233aa362a32fd7cded247536bb1f",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-004/authority-binding-274.json",
+      "sha256": "486f380a4801a6ced620d045379abbe8602dc9285c0eb2659e2faed52c8b2b6f",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 5389,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "907926d4d722dec7aa2d7a8cbac0c3b55b3685fc",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-004/constructor-result-274.json",
+      "sha256": "a6dd91902b212963260b6c2f6e4fb98ec4aa47a1a4b69b8c7f8ebd58b6c31c7c",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 739,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "9b9aeb0cd4d2d40fca52df8cb5fa80e2df2b3329",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-004/original-rule-preimage-274.json",
+      "sha256": "115a58605fb466118915411728c330498c02686e54e09acb47cd2a1661fbd2be",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 4120,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "68d6426667015d8fe72e6ecaf81e0482a627802c",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-004/source-role-geometry-binding.json",
+      "sha256": "8e83a17af895dc006a1100fb987e5ae60c3159768ac1991efb2c0fea1e46a0fc",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 99110,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "1f5d72c1d7c749d3b7e7508eaca1ee453a39d4c3",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-diagnostic-005/native-diagnostic.json",
+      "sha256": "9242b40c3c83dcaa2ba1b155d338e0ef6a885815be635a73c2220464ad529845",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 21092,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "4945f4872cefd672cfc6dc01d012090b2f6f20d5",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-patch-003/native-patch.json",
+      "sha256": "5282e41fb4d4713df0b8fc75f519711703f69d71a3c20de1db53af17d07118db",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 21035,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "63cd17fbf9539b2e3b957aa765f576d4adf7b936",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/physical-002/physical-center-application.json",
+      "sha256": "3d2638e51df36da4c2a1854a7f30b31d3fbacc174d93aa7b3a45e665cc0380c8",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 11413,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "b5801c398f61c832f2dc17abf15873de6f183a11",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/source-evidence-006/source-evidence.json",
+      "sha256": "f83ac50593bd4fc5d9913680f20eb82f9c9c0ff1c6da34039c57e0f06c35ab82",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 2873,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "76bf104ad0db39d5a5bb814f7964f4e22b14c902",
+      "path": "coordination/engineering/hrv-zecca-unije-native-preparation-812807-20261027/native-patch.json",
+      "sha256": "b147a607b88d158304fe63cd86406ea111898945146d2b082c22eb17812ca2db",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 7929,
+      "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+      "git_blob_oid": "b745744ddc484fb5871ef24123bfdaa6c5c9f0fa",
+      "path": "coordination/engineering/hrv-zecca-unije-native-preparation-812807-20261027/source-evidence-current812.json",
+      "sha256": "9c2a2df689babc6556e2a139722c36ba2662075af7ac1e20be243f2ef2f0ced8",
+      "source": "HEAD Git blob"
+    },
+    {
+      "bytes": 892136,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-0207afc58b89fc153818fb1995986006bf8792d2e0e7332de439e0e1b3a16af6.json.gz",
+      "sha256": "0207afc58b89fc153818fb1995986006bf8792d2e0e7332de439e0e1b3a16af6",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 387380,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-22fd7ad81d2a4a3f2bc313d86c497cee061667ebb6754bd729fa887d8e63efa4.json.gz",
+      "sha256": "22fd7ad81d2a4a3f2bc313d86c497cee061667ebb6754bd729fa887d8e63efa4",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 920384,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-3567be29061f77c68d35e954b508b0ddb7bf5d727108138d3aaed193c3c544f3.json.gz",
+      "sha256": "3567be29061f77c68d35e954b508b0ddb7bf5d727108138d3aaed193c3c544f3",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 874246,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-3e19b577fe92afee3f876850429f0606d857f6163204903dcd4c06559f1e4a30.json.gz",
+      "sha256": "3e19b577fe92afee3f876850429f0606d857f6163204903dcd4c06559f1e4a30",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 298230,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-401850d4bedf8c6536b17a4af0a2664be6873522e6cb7acc356818d638d1a3d3.json.gz",
+      "sha256": "401850d4bedf8c6536b17a4af0a2664be6873522e6cb7acc356818d638d1a3d3",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 260711,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-43fa5fbc711e1b0a805c4eb69e058d339bf61bccdab2a158f3b14a141ee84ee7.json.gz",
+      "sha256": "43fa5fbc711e1b0a805c4eb69e058d339bf61bccdab2a158f3b14a141ee84ee7",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 596927,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-44230bfa3d7585a998af8a18e799632baa41ee4a53c3f9c4790a615af1e6b21a.json.gz",
+      "sha256": "44230bfa3d7585a998af8a18e799632baa41ee4a53c3f9c4790a615af1e6b21a",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 443384,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-47f6dfcfc778c1583aed5fd1f4f868ccc8e168859613f02e771cae210634db1f.json.gz",
+      "sha256": "47f6dfcfc778c1583aed5fd1f4f868ccc8e168859613f02e771cae210634db1f",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 180769,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-5480d5a76f55009c1b430145e14774ef967adb2f85dfb7c4648ea4ffbebf9741.json.gz",
+      "sha256": "5480d5a76f55009c1b430145e14774ef967adb2f85dfb7c4648ea4ffbebf9741",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 549790,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-6ccf56c72ba3f9b8d1a0a6146892355ec21ce3d6f46c2a9bc664db7dbf6727fd.json.gz",
+      "sha256": "6ccf56c72ba3f9b8d1a0a6146892355ec21ce3d6f46c2a9bc664db7dbf6727fd",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 38833,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-7095f930a97c561505adebecbebc5a21604c71aaffddba9a0e0a4bd9e8a4c9f9.json.gz",
+      "sha256": "7095f930a97c561505adebecbebc5a21604c71aaffddba9a0e0a4bd9e8a4c9f9",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 539011,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-755709f4d0c4d3e598f87b524f8482a0fa59e375c9ceb57cd77e8d18773c52f9.json.gz",
+      "sha256": "755709f4d0c4d3e598f87b524f8482a0fa59e375c9ceb57cd77e8d18773c52f9",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 404667,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-792ebc29e3f6bfffc9a3d118ada5ff4b6d99b94f96f1191024ea435b9a236a98.json.gz",
+      "sha256": "792ebc29e3f6bfffc9a3d118ada5ff4b6d99b94f96f1191024ea435b9a236a98",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 92272,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-91df629dfdf1597fd4f79d9e039fc5b403d287c7a882b9f5f9687b0f444aba56.json.gz",
+      "sha256": "91df629dfdf1597fd4f79d9e039fc5b403d287c7a882b9f5f9687b0f444aba56",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 308434,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-986945464d141913ce75c4da0751968ed18b9cf6da2561ce0e8a67eb927a88c7.json.gz",
+      "sha256": "986945464d141913ce75c4da0751968ed18b9cf6da2561ce0e8a67eb927a88c7",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 193463,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-99ab45789e5ddfb2283d799be117ad5d977b200ac7c28846a32ea0502e2a63ab.json.gz",
+      "sha256": "99ab45789e5ddfb2283d799be117ad5d977b200ac7c28846a32ea0502e2a63ab",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 241774,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-a3e17eb7a22e30fc62d3ee8f7a37995194ab654191dea02a15ef6e9b2225715d.json.gz",
+      "sha256": "a3e17eb7a22e30fc62d3ee8f7a37995194ab654191dea02a15ef6e9b2225715d",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 304627,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-a5d812dc74de5ad0772c967f075255c779ae3d0d55e5a29a5ff2e3a9fb8e1bae.json.gz",
+      "sha256": "a5d812dc74de5ad0772c967f075255c779ae3d0d55e5a29a5ff2e3a9fb8e1bae",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 504348,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-a8abbb83d576408ba122518f9c29530b91640294b7ad9162419602b8b893b7d5.json.gz",
+      "sha256": "a8abbb83d576408ba122518f9c29530b91640294b7ad9162419602b8b893b7d5",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 1489269,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-b29c0702b8d7d6fc34359e2f31371421d689de6908da5ff3a64e308e821ddbf3.json.gz",
+      "sha256": "b29c0702b8d7d6fc34359e2f31371421d689de6908da5ff3a64e308e821ddbf3",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 748360,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-b2e49d43eee2b73afb8b875c5d21e395d04ac204aa715e5061579822757b52ba.json.gz",
+      "sha256": "b2e49d43eee2b73afb8b875c5d21e395d04ac204aa715e5061579822757b52ba",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 102904,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-b86a633badef4692435866cd021c9f1c3027b843b22c5f53af36114200bba982.json.gz",
+      "sha256": "b86a633badef4692435866cd021c9f1c3027b843b22c5f53af36114200bba982",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 311961,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-c56d8012b5a0a132098c5fe14723139db9b7ca11256aa58431ad50e861aaface.json.gz",
+      "sha256": "c56d8012b5a0a132098c5fe14723139db9b7ca11256aa58431ad50e861aaface",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 351285,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-c77ce6738c025ef6ec7b865bdf54c930c85807cbf25a0808d9a27c58c006d090.json.gz",
+      "sha256": "c77ce6738c025ef6ec7b865bdf54c930c85807cbf25a0808d9a27c58c006d090",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 819365,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-c7c720ddda99c912b542dfff9e1ab014680a7f54441c874ae5ed0871ea73465d.json.gz",
+      "sha256": "c7c720ddda99c912b542dfff9e1ab014680a7f54441c874ae5ed0871ea73465d",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 1029278,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880.json.gz",
+      "sha256": "cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 962516,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-d108b1e517b8a3cdacb3f3c248818a51e7ffea4f58e208949952dea6b07eb030.json.gz",
+      "sha256": "d108b1e517b8a3cdacb3f3c248818a51e7ffea4f58e208949952dea6b07eb030",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 140327,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-d1d53de4e5f6dd2cff0e7222527549d2b33e0f9410960fdfc5ee782f989fdfbf.json.gz",
+      "sha256": "d1d53de4e5f6dd2cff0e7222527549d2b33e0f9410960fdfc5ee782f989fdfbf",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 387805,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-d1eb7e2827dd9f0ced28ab59d3aab8360e59ae18cd9847239bb92dbd09391135.json.gz",
+      "sha256": "d1eb7e2827dd9f0ced28ab59d3aab8360e59ae18cd9847239bb92dbd09391135",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 325052,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-dbdb4c01d1e5d27eef55cf617688e67fc6106d89f160b658dbe4759deeefecde.json.gz",
+      "sha256": "dbdb4c01d1e5d27eef55cf617688e67fc6106d89f160b658dbe4759deeefecde",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 335877,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-ddacf8512f5d5eb243e11f9a0c3c4b3122f510bcbec384ddee21d7c08f8d1602.json.gz",
+      "sha256": "ddacf8512f5d5eb243e11f9a0c3c4b3122f510bcbec384ddee21d7c08f8d1602",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 92791,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-dfe8783d7fae5c04edaf67b9b8159b12d4f2a1c6e1f936686af2e82f68925153.json.gz",
+      "sha256": "dfe8783d7fae5c04edaf67b9b8159b12d4f2a1c6e1f936686af2e82f68925153",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 141304,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-f706b0e87cd0558b571ce8cc57d1cc4027645878861f81ce9db5b023c253b6b0.json.gz",
+      "sha256": "f706b0e87cd0558b571ce8cc57d1cc4027645878861f81ce9db5b023c253b6b0",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 450587,
+      "path": "data/canonical-grid/current-startup/geography/effective-context-fb05e8a141157fffa68a2432beae630f82e422ca2fbb998f2886fb69a30c6a82.json.gz",
+      "sha256": "fb05e8a141157fffa68a2432beae630f82e422ca2fbb998f2886fb69a30c6a82",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 49610,
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "20b7a4d4cd09a372d35b817241c9eb29b0bba39bed53d44e74458247770ad875",
+      "source": "owned finalizer output; candidate preparation"
+    },
+    {
+      "bytes": 1851757,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "de6905e162dc031b1b93248fae91190c39c4ad53",
+      "path": "data/canonical-grid/current-startup/native-v1/native-row-latitudes.f64le.gz",
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 306620,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "5d8aa5e0341ae0a24f3553d67e1b8581d36c7d1b",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/rows-0.bin.gz",
+      "sha256": "89ed3564db641f992746bf4f6f01c1eed89cb470520734ac1b85ee95e9a70ba0",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3854101,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "bd4b48c5888c7749a6db1e1c1437bd8309ab81b1",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-0.bin.gz",
+      "sha256": "3d551738a3454d2028e1d9adc352b7446d7c0f25c8d42044704cf1efb6f64b6b",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3478667,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "d986eb10382f668e5ff9cd9cb1c10b0c511023cc",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-12582912.bin.gz",
+      "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3289324,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "b9b90e91f69e56585ff49bc46dbfcc0035116d75",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-16777216.bin.gz",
+      "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3146696,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "7595351d14cad31f792b184c4dfffe1224b43e64",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3272873,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "1c750fc517ab808f25479c50c2ac16aa0c2c3ae6",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3296575,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "0eeec052bfcc759bc6fd564e93bdca953b29474b",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3521891,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "0c11ab143e831013f045f768b4e33f9c0d1d09bd",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3497645,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "11c065922281b70564febafadf8121215b095661",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3428397,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "4cd3369d268f958db6cba804cc987931aeeaad14",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-4194304.bin.gz",
+      "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3534601,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "c62ad1dd1fecefa59753aa86c16af2dc08690f71",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3556931,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "2363585a7d5c3a533a09923f089f5bd37fe55fc7",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3397952,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "880bc9137a47daf314a70ef03ffcd30d2ac80e9f",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 2460609,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "61e7d50e1d74c22f4f1e4adf75044ff9fd60ea72",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3423683,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "19622b43c11bdd3e328dca4687b0e5fc376508cf",
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-8388608.bin.gz",
+      "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3510331,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/08ef9b61e0c2e7f65c6d84078d28265a190e902ad3d0a5e27a88b5494244d15d/native-v1/ownership/startup-runs-4194304.bin.gz",
+      "sha256": "08ef9b61e0c2e7f65c6d84078d28265a190e902ad3d0a5e27a88b5494244d15d",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3484806,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/0991052dd36e5595145c91d1d63a3085675881605138be8ff1e0e9ee498348b6/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "sha256": "0991052dd36e5595145c91d1d63a3085675881605138be8ff1e0e9ee498348b6",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3292384,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/1a0fb96df8b8c90558ebad842150c2ad1a16b0342bc8393bc6f97669e7e08846/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "sha256": "1a0fb96df8b8c90558ebad842150c2ad1a16b0342bc8393bc6f97669e7e08846",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3939024,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/2387e91ae885b6c57d38b1d688703f5497ce7a56a992867cb01049dca9c82cde/native-v1/ownership/startup-runs-0.bin.gz",
+      "sha256": "2387e91ae885b6c57d38b1d688703f5497ce7a56a992867cb01049dca9c82cde",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3518059,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/2adeab09a2814a30f6c2e0d3623493a7fdb9e059a8625203ca0c5852909eb126/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "sha256": "2adeab09a2814a30f6c2e0d3623493a7fdb9e059a8625203ca0c5852909eb126",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3472031,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/4a5db432baa6eaef8bdfff924e07933deb43e9f34ff69751c14cf2d8312760f5/native-v1/ownership/startup-runs-8388608.bin.gz",
+      "sha256": "4a5db432baa6eaef8bdfff924e07933deb43e9f34ff69751c14cf2d8312760f5",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3620195,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/8a04dc93e63534ab3d9fdd0ae62c39a6df9392bcb26727c9f49b3c47586b7767/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "sha256": "8a04dc93e63534ab3d9fdd0ae62c39a6df9392bcb26727c9f49b3c47586b7767",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3572273,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/8c80849064dd766c448f8bd99da18b5a952db16bb6e6e1c79aeaffbe87439d94/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "sha256": "8c80849064dd766c448f8bd99da18b5a952db16bb6e6e1c79aeaffbe87439d94",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3274332,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/98d8236b9d823069ee6306458d8cab3e9a9eee6341cfddda3c29b16f5e76fc85/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "sha256": "98d8236b9d823069ee6306458d8cab3e9a9eee6341cfddda3c29b16f5e76fc85",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3504947,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/a6ee95272631dec611334c060be26a8283e570d89cefa7793cc4fe329dfe0242/native-v1/ownership/startup-runs-12582912.bin.gz",
+      "sha256": "a6ee95272631dec611334c060be26a8283e570d89cefa7793cc4fe329dfe0242",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3542961,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/a7609f78490f9e99cb20ba9714cec2ca7b43963d439120acad784fe935f48c81/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "sha256": "a7609f78490f9e99cb20ba9714cec2ca7b43963d439120acad784fe935f48c81",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3103491,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/cb1596f1601ccf64db5b322230d497b02d8ff91e0051d75c03d3e2e39bf41a03/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "sha256": "cb1596f1601ccf64db5b322230d497b02d8ff91e0051d75c03d3e2e39bf41a03",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3346259,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/cd7deb46de558174037349bf94245ea9c12d8b320bf1a4f1954d678f749fcf84/native-v1/ownership/startup-runs-16777216.bin.gz",
+      "sha256": "cd7deb46de558174037349bf94245ea9c12d8b320bf1a4f1954d678f749fcf84",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 3854096,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "45946db81b65ae3709fa9c51c84007ba42738853",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+      "sha256": "5e73bd6ee306f3be021c7f89bf336c590ae3c02021df1c436d22088ed4284171",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3478667,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "d986eb10382f668e5ff9cd9cb1c10b0c511023cc",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+      "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3289324,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "b9b90e91f69e56585ff49bc46dbfcc0035116d75",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+      "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3146696,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "7595351d14cad31f792b184c4dfffe1224b43e64",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3272873,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "1c750fc517ab808f25479c50c2ac16aa0c2c3ae6",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3296575,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "0eeec052bfcc759bc6fd564e93bdca953b29474b",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3521891,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "0c11ab143e831013f045f768b4e33f9c0d1d09bd",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3497645,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "11c065922281b70564febafadf8121215b095661",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3428397,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "4cd3369d268f958db6cba804cc987931aeeaad14",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+      "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3534601,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "c62ad1dd1fecefa59753aa86c16af2dc08690f71",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3556931,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "2363585a7d5c3a533a09923f089f5bd37fe55fc7",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3397952,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "880bc9137a47daf314a70ef03ffcd30d2ac80e9f",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 2460609,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "61e7d50e1d74c22f4f1e4adf75044ff9fd60ea72",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3423683,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "19622b43c11bdd3e328dca4687b0e5fc376508cf",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz",
+      "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a",
+      "source": "sparse-omitted unchanged body authenticated from accepted base tree"
+    },
+    {
+      "bytes": 3194020,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/ef7e6e17f0ccefecef2724420c90b69a3768438049bc228bded84efbf52d43de/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "sha256": "ef7e6e17f0ccefecef2724420c90b69a3768438049bc228bded84efbf52d43de",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 317261,
+      "path": "data/canonical-grid/current-startup/ownership-vintages/f13f332e3a513c2755b818556f2ef33d472f0f939f5b3d7c8cf0842ae8e7145a/native-v1/ownership/rows-0.bin.gz",
+      "sha256": "f13f332e3a513c2755b818556f2ef33d472f0f939f5b3d7c8cf0842ae8e7145a",
+      "source": "candidate worktree; matches finalized index"
+    },
+    {
+      "bytes": 2291,
+      "path": "data/ownership-selection.json",
+      "sha256": "212ea0c7886cb27cdd3a736ec1d8204c6abf3eec7dcbc96969db1a3c744b3ee7",
+      "source": "owned finalizer output; candidate preparation"
+    }
+  ],
+  "kind": "hrv-2563-technical-candidate-preparation-manifest-v1",
+  "status": "candidate-preparation-only; not scientific acceptance or delivery",
+  "verified_manifest_head": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+  "version": 1
+}
