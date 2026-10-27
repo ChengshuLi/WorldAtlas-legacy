@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "supported-native-diagnostic-attempt-failure",
+  "phase": "native-diagnostic",
+  "attempted_at_utc": "2026-10-27T00:29:21Z",
+  "config_path": "coordination/engineering/tkm-baherden53-source-fit-20261026/config/native-inputs-003/native-diagnostic-config-002.json",
+  "config_sha256": "c3c620ecde6da9de38f125537db048482e127d1ff96de90bca55ef707e24d3e4",
+  "command": "env -u NODE_OPTIONS -u NODE_PATH /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/prepare-delivery-handoff.mjs native-diagnostic coordination/engineering/tkm-baherden53-source-fit-20261026/config/native-inputs-003/native-diagnostic-config-002.json coordination/engineering/tkm-baherden53-source-fit-20261026/native-diagnostic-005",
+  "exit_code": 1,
+  "error": "Missing qualified physical source interpretation",
+  "scientific_output_created": false,
+  "interpretation": "The selected physical evidence body is the recomputed accepted-geometry result (SHA-256 078e0c0b5c0e6b78af9e84e4f8684f623be832845fedb822a7bcfb1aa88f4385), but the target's embedded source_receipt_sha256 retained the prior physical-002 hash. The evaluator refused the stale receipt binding before native classification; no native diagnostic result was emitted. Corrected input updates only that exact cross-pin."
+}
