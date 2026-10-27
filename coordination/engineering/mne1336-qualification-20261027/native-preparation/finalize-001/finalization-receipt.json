@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "kind": "mne1336-final-bank-preparation-receipt",
+  "status": "prepared-not-accepted",
+  "execution": {
+    "command": "env -u NODE_PATH -u NODE_OPTIONS node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-config.json coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001",
+    "exit_code": 0,
+    "resumed": false,
+    "stdout": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/finalizer.stdout.log",
+      "bytes": 775,
+      "sha256": "7ed9b1dea149fd33104a946949f1de707679f52424c1134029ca4bc4a8148607"
+    },
+    "stderr": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/finalizer.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "prior_attempts": [
+      {
+        "id": "001a",
+        "exit_code": 1,
+        "stdout": {
+          "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/attempt-001a.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/attempt-001a.stderr.log",
+          "bytes": 77,
+          "sha256": "1b816cf1837f05b5119d410836be03119135530d7ada19bd553f1a99b8adc6b9"
+        },
+        "reason": "Rejected caller-authored descriptor objects; no destination output."
+      },
+      {
+        "id": "001b",
+        "exit_code": 1,
+        "stdout": {
+          "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/attempt-001b.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/attempt-001b.stderr.log",
+          "bytes": 41,
+          "sha256": "456623a8064543838a69ef72f59aee43f68b0c991f4641d83031408ace368920"
+        },
+        "reason": "Selectors/packages were changed to exact commit/path locators; change_evidence still lacked required complete issued input pin; no destination output."
+      }
+    ]
+  },
+  "inputs": {
+    "selector": {
+      "commit": "7aaa0a9feeeb8f9bbbf8a01d1eea44103d689acf",
+      "path": "data/ownership-selection.json"
+    },
+    "package_inputs": {
+      "commit": "7aaa0a9feeeb8f9bbbf8a01d1eea44103d689acf",
+      "path": ".github/package-inputs.json"
+    },
+    "change_evidence": {
+      "commit": "fb31bd7171896bce8fdf432dc7b39cae78dd7f0a",
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/composition-001/authority-registry.json",
+      "mode": "100644",
+      "git_blob_oid": "1802e8fe0e29a1c027bb05d1388638be27f9ebfe",
+      "bytes": 1406,
+      "sha256": "a308665a821389af8366cff9e02166771dbe03f3bb67119bedeb6fc275b2d89b"
+    },
+    "config": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-config.json",
+      "bytes": 700,
+      "sha256": "0ffba6e89c97d9392222392bc471e4ef40c1db2404f7335d0acd54cf38beb59f"
+    }
+  },
+  "scope": {
+    "original_cells": 1336,
+    "supported_cells": 1333,
+    "held_cells": 3,
+    "native_supported_cells": 1333,
+    "native_held_cells": 3,
+    "qualified_constructor_components": 15,
+    "constructor_ledger_rows": 15,
+    "constructor_assigned_cells": 1333,
+    "held_alb_keys_remain_held": true,
+    "water_class_retained": true,
+    "whole_target_physical_issue_operands_retained": true
+  },
+  "outputs": {
+    "ownership-selection.json": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/ownership-selection.json",
+      "bytes": 2287,
+      "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9"
+    },
+    "package-inputs.json": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "preparation.json": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/preparation.json",
+      "bytes": 1156,
+      "sha256": "e95f498a9d84dc8eb12e88bedff0ecd16f9dd3586fbddafa8e76b0bd4365e436"
+    },
+    "selected-delivery-expectations.json": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/selected-delivery-expectations.json",
+      "bytes": 485,
+      "sha256": "24da721271b7de2376ce8024484cc124d88fb2258cd8d2cbf407be43114acc11"
+    },
+    "startup-ownership.json": {
+      "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/finalize-001/startup-ownership.json",
+      "bytes": 49610,
+      "sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9"
+    }
+  },
+  "bank": {
+    "index_version": 3,
+    "index_files": 79,
+    "ownership_manifest_files": 79,
+    "compatibility_files": 30,
+    "compatibility_files_overlap_manifest": true,
+    "roster_sha256": "db1d19a7ef3f104cd446046cd8fdf3baa071de622c3502861bbe561ed31c9eaa",
+    "generated_changes_staged_by_supported_finalizer": true,
+    "retirement_deletions": 11,
+    "full_candidate_roster_check": {
+      "actual_materialized_files": 80,
+      "expected_files_plus_index": 80,
+      "missing": 0,
+      "extras": 0,
+      "size_or_sha_mismatch": 0
+    },
+    "candidate_meaning": "Deterministic preparation only; not current-owner acceptance, published delivery, root scientific acceptance or credit.",
+    "added_index_paths": [
+      "geography/effective-context-47f6dfcfc778c1583aed5fd1f4f868ccc8e168859613f02e771cae210634db1f.json.gz",
+      "ownership-vintages/509572ef28896cf4ce0c65e4418dff40e0fe280fd98392af514c298b4374f349/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "ownership-vintages/5d8c1e738a0339a80b7b67fdad1d20284c1a1c9a63994470740de9d7131a3e27/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "ownership-vintages/8439a2fc2f33a8b3935b1efe7b1c3a52611b36de4d1a8067bd6dd74200ffdd4f/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "ownership-vintages/b174e2e6a32e1f27c4d7ac3ac94a2fea82b12d8bf91f59929747240a252817c6/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "ownership-vintages/c0ebb714ee9a09c365cdef15b1633280fcc3144dd11be1f5900d4ac9de5cd8ff/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "ownership-vintages/c56085c70600f0c3ec155910f5b702075f841fe6ea3746cc62862349106e8ee5/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "ownership-vintages/d22f9153c3da060db67899bf1ca7efe9e8179bfb24a2c0c2d8f2607257b53d59/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "ownership-vintages/d44b2b12020887328415a72e9b861488c5b405d916ad736da009cb791ce96230/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "ownership-vintages/f6095605c56e38054e2dac24436f282e0ecc28aa67fac287186aaf3dbe06aa18/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "ownership-vintages/fd6bfecfcffe83cad559ec858010f796c9d3f20945fc5e625eaee8e357cf7d11/native-v1/ownership/rows-0.bin.gz"
+    ],
+    "retired_index_paths": [
+      "geography/effective-context-f19aaa8b365c025731d0f35c1b6a4869058911cc6934d9c1646464daac5efe97.json.gz",
+      "ownership-vintages/0146117669a4a96182b70d5a761cbac2db9ba46132ef4d86c3769f57cd0ae1ae/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "ownership-vintages/3f33c2dcd55b969188c22c5690ed454f95c33239a3dc5e6af50f4731571368c1/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "ownership-vintages/4c74e9240212f619573ef517dd09979d3e5dde7f4168ef03b1cdd90810a28434/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "ownership-vintages/5b03999edaafef05b4b606075c861d3fe5a0b4179ba9b97b56c41bdb633456a8/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "ownership-vintages/6b15dd32f9bbcb5999e33cd3771b80af5a2aa93a15f0d37c801b588678dc6044/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "ownership-vintages/8138f0e4f1d5cc53f1122a7bcbadfa698a22f44b68f7b92c8ec7be717de26700/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "ownership-vintages/c18d9ad004636fae2201f74d060a0115a257cc2ddd7fdf9c7a3327d34a6b9bfb/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "ownership-vintages/c8213a168a8c5044e26468e4ab671e3b3f50c8f5a4c6b60e9eca8d0d7eede064/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "ownership-vintages/ce91fd6f5498f41ab3a9387d0a2a3bb32e50f0cc809f41a1e6d435d0fa4211d8/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "ownership-vintages/d8127e4ab8a94059949cf0050c9a89eee96fb2ee58b32d356a52217dc620c86c/native-v1/ownership/rows-0.bin.gz"
+    ],
+    "unchanged_index_paths": 68,
+    "old_index_sha256": "8609ac63850ad4683bd5d73d0969c2b9bddf6ed8bf16af1e145caeb167a3a1ca",
+    "new_index_sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9"
+  }
+}
