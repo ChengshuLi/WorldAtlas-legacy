@@ -1,0 +1,97 @@
+{
+  "accepted_base": "a033102eeca2c7a3648039ba4a5ae42e644f5915",
+  "attempts": [
+    {
+      "cause": "inherited NODE_PATH was set; no artifact generated.",
+      "exit_code": 1,
+      "ordinal": 1,
+      "result": "failed before finalizer execution",
+      "stderr": "Plain Node launch required"
+    },
+    {
+      "argv": [
+        "env",
+        "-u",
+        "NODE_OPTIONS",
+        "-u",
+        "NODE_PATH",
+        "node",
+        "scripts/prepare-delivery-handoff.mjs",
+        "finalize",
+        "coordination/engineering/hrv-dgu-native-qualification-20261026/config/finalize-combined-3674-current-a033.json",
+        "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-a033-001",
+        "--resume"
+      ],
+      "destination": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-a033-001",
+      "exit_code": 0,
+      "ordinal": 2,
+      "resumed": false,
+      "session_id": 47982
+    }
+  ],
+  "candidate": {
+    "keys": 3674,
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/candidate-3674/combined-candidate.json",
+    "sha256": "86bc0018d93e6da9e141f60a2b1ba4a5bc5a6ecaeb2be649adce2becb5e27395",
+    "tuple_sha256": "b880d07988db03fd1dfdb8bccb07eecbc576e4cd195455f04e92c2ceb1e096ca"
+  },
+  "control_limits": [
+    "Local finalizer only; no hosted workflow/tests/build/emitted controls or acceptance claimed.",
+    "Full-bank conservation comparator not yet run against a033.",
+    "The prior 51d selected-owner observation is not current-owner evidence after this accepted bank advance."
+  ],
+  "finalizer_config": {
+    "package_inputs_blob": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/config/finalize-combined-3674-current-a033.json",
+    "selector_blob": "9eb6d6659d246d74e93b81f68a08f14dd9a4c582",
+    "sha256": "90918c9b6da47ba757ee5d3a595f3e6cfd82f5aa5a87bd50d9a1a718ca27e5e1"
+  },
+  "kind": "hrv-combined-3674-current-a033-finalizer-receipt-v1",
+  "outputs": {
+    "ownership-selection.json": {
+      "bytes": 2291,
+      "sha256": "943997229c85de2fef2c1e8f8ef794787294e31abbfb085d102285ce5a7d7289"
+    },
+    "package-inputs.json": {
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "preparation.json": {
+      "bytes": 1156,
+      "sha256": "1c90ddb1ac569a9a4a6b72e0a7f33f8c9bd7b3dabad3401873d8a588e3ff2877"
+    },
+    "selected-delivery-expectations.json": {
+      "bytes": 485,
+      "sha256": "e7ff55e6804c030f5b86d3db4c1dbb23014cd2bb5792c346e7f9b768691fdee3"
+    },
+    "startup-ownership.json": {
+      "bytes": 49610,
+      "sha256": "1b287249c3a4e4d2854ccf099577e83aefe85adf99e25ce1e48b5d4f9ad4fb94"
+    }
+  },
+  "selection_output": {
+    "bytes": 2291,
+    "sha256": "943997229c85de2fef2c1e8f8ef794787294e31abbfb085d102285ce5a7d7289"
+  },
+  "startup_index": {
+    "against_accepted_base": {
+      "added_path_list_sha256": "5cf7b72f6e5d39d655e50eed2cc004a668dc17c333f3faf8198ba60f9ea61d73",
+      "added_paths": 49,
+      "retired_path_list_sha256": "54140b4a7f1fe9a44b3f4f5b3a7e5188b245e3f0d93df12128eb2372bd23dc5b",
+      "retired_paths": 49
+    },
+    "all_index_pins_match_git_index_blobs": true,
+    "bytes": 49610,
+    "compatibility_files": 30,
+    "files": 79,
+    "path": "data/canonical-grid/current-startup/index.json",
+    "sha256": "1b287249c3a4e4d2854ccf099577e83aefe85adf99e25ce1e48b5d4f9ad4fb94",
+    "strict_git_tree_roster": {
+      "actual_files": 80,
+      "expected_files": 80,
+      "extra": 0,
+      "missing": 0
+    },
+    "verified_index_or_compatibility_pins": 109
+  }
+}

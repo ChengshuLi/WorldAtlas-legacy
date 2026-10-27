@@ -1,0 +1,52 @@
+{
+  "baseline": "a033102eeca2c7a3648039ba4a5ae42e644f5915",
+  "candidate": "f811a1227251998371c034ef35fb45bf71162bde",
+  "execution": {
+    "command": "env -u NODE_OPTIONS -u NODE_PATH node <runner>",
+    "exit_code": 0,
+    "exit_file_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 202342,
+    "stdout_sha256": "883b2cd0fafaa65bc48f8cd4a83628214f073525347cd83cb9ce9cffa47c3226"
+  },
+  "kind": "hrv-3674-current-a033-conservation-run-v1",
+  "report": {
+    "added_cells": 3674,
+    "affected_rows": 653,
+    "candidate_code_executed": false,
+    "changed_source_ids": [
+      "gb:HRV:ADM2:41942358B16456685047732",
+      "gb:HRV:ADM2:41942358B23081288637883",
+      "gb:HRV:ADM2:41942358B37606323031941",
+      "gb:HRV:ADM2:41942358B43003846347774",
+      "gb:HRV:ADM2:41942358B45790635822188",
+      "gb:HRV:ADM2:41942358B56064565121242",
+      "gb:HRV:ADM2:41942358B56822315108776",
+      "gb:HRV:ADM2:41942358B67510256757416",
+      "gb:HRV:ADM2:41942358B70775371213679",
+      "gb:HRV:ADM2:41942358B73644152682265",
+      "gb:HRV:ADM2:41942358B7537413290566",
+      "gb:HRV:ADM2:41942358B78092292850209",
+      "gb:HRV:ADM2:41942358B86068104638384"
+    ],
+    "compared_rows": 262166,
+    "input_inventory_entries": 142,
+    "lost_or_reassigned_cells": 0,
+    "method": "selected-native-owner-conservation-v1",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/candidate-3674/current-bank-conservation-a033-001/report.json",
+    "reassigned_cells": 0,
+    "removed_cells": 0,
+    "sha256": "883b2cd0fafaa65bc48f8cd4a83628214f073525347cd83cb9ce9cffa47c3226",
+    "status": "no-new-native-loss"
+  },
+  "runner": {
+    "path": "/workspace/scratch/127991fc8b8e/.hrv-private/selected-joint-3674-current-a033-001/compare.mjs",
+    "sha256": "4849c24c3c4b0dc28a69a6bef72d0223f00187da0e78389be8413f28e8dcbbdb"
+  },
+  "scope_limits": [
+    "Direct existing compareAcceptedFinalBank checkpoint core; full selected-bank conservation, not sub-cell geometry/authority approval.",
+    "Candidate execution code and selectedBootstrap execution code were byte-identical to accepted a033.",
+    "No hosted workflow, stock controls, source approval, root acceptance, or scientific credit implied."
+  ]
+}

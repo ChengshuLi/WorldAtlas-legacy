@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "kind": "hrv-zecha-unije-source-to-current-member-geometry-binding-v1",
+  "geometry_hash_encoding": "SHA-256 of compact UTF-8 JSON with recursively sorted object keys; coordinates are not emitted. Equality is structural exact parsed-object equality.",
+  "source_body_feature_count": 560,
+  "records": [
+    {
+      "candidate": "Zeca116",
+      "owner_index": 21958,
+      "original_source_feature_id": "41942358B16456685047732",
+      "source_feature_index": 35408,
+      "source_feature_name": "Otok Zeca",
+      "full_family_body": {
+        "commit": "23318dd9d70680495138297b9cc1a7533a466200",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-HRV-ADM2-000.bin.gz",
+        "compressed_bytes": 653059,
+        "compressed_sha256": "fc283b5a556235296978e11d88ed00bbd1d8fdf0955863656bceaa93179503da",
+        "decoded_bytes": 2196969,
+        "decoded_sha256": "bfcda6087b26678f026c2a1ac5c4fe903bd67ad24a7c9761519f7929b3915d16",
+        "feature_count": 560,
+        "recorded_product": "geoBoundaries-HRV-ADM2_simplified.geojson",
+        "year": "2021"
+      },
+      "producer_consumed_geometry": {
+        "geometry_sha256_compact_sorted_json": "90d6660cb761a114ef58f911b64b1b658275808122e1c368ad193f36821749fd",
+        "ring_vertices": [
+          16
+        ],
+        "exact_equal_to_full_family_feature": true
+      },
+      "current_selected_feature": {
+        "commit": "81280722133858cbb26249210fed17b031d11d3d",
+        "path": "data/geography/part-10.json",
+        "feature_id": "gb:HRV:ADM2:41942358B16456685047732",
+        "feature_name": "Otok Zeca",
+        "source_role": "Municipality / town",
+        "geometry_sha256_compact_sorted_json": "d396d4f7fbb8cf1258d604b87ab61632710e91c851eca99c2ea475bbc1628800",
+        "ring_vertices": [
+          4
+        ],
+        "exact_equal_to_source_consumed_geometry": false
+      },
+      "identity_conclusion": "Exact stable source ID/name link; consumed producer geometry equals the pinned source feature. Current selected canonical geometry is a different/simplified representation under same member ID. Neither geometry label resolves member jurisdiction/contract scope."
+    },
+    {
+      "candidate": "Unije158",
+      "owner_index": 22083,
+      "original_source_feature_id": "41942358B37606323031941",
+      "source_feature_index": 35407,
+      "source_feature_name": "Otok Unije",
+      "full_family_body": {
+        "commit": "23318dd9d70680495138297b9cc1a7533a466200",
+        "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-HRV-ADM2-000.bin.gz",
+        "compressed_bytes": 653059,
+        "compressed_sha256": "fc283b5a556235296978e11d88ed00bbd1d8fdf0955863656bceaa93179503da",
+        "decoded_bytes": 2196969,
+        "decoded_sha256": "bfcda6087b26678f026c2a1ac5c4fe903bd67ad24a7c9761519f7929b3915d16",
+        "feature_count": 560,
+        "recorded_product": "geoBoundaries-HRV-ADM2_simplified.geojson",
+        "year": "2021"
+      },
+      "producer_consumed_geometry": {
+        "geometry_sha256_compact_sorted_json": "7d33c24f70e881c03bf03cae876a5f4fbc7c092648e6b46c32419a9072bd229b",
+        "ring_vertices": [
+          60
+        ],
+        "exact_equal_to_full_family_feature": true
+      },
+      "current_selected_feature": {
+        "commit": "81280722133858cbb26249210fed17b031d11d3d",
+        "path": "data/geography/part-10.json",
+        "feature_id": "gb:HRV:ADM2:41942358B37606323031941",
+        "feature_name": "Otok Unije",
+        "source_role": "Municipality / town",
+        "geometry_sha256_compact_sorted_json": "4cdc9f7fc4cff9bca92b97063bc49ba36f7e5fcfc7a302f94d1bbce6bffaed6c",
+        "ring_vertices": [
+          10
+        ],
+        "exact_equal_to_source_consumed_geometry": false
+      },
+      "identity_conclusion": "Exact stable source ID/name link; consumed producer geometry equals the pinned source feature. Current selected canonical geometry is a different/simplified representation under same member ID. Neither geometry label resolves member jurisdiction/contract scope."
+    }
+  ]
+}
