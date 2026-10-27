@@ -29,3 +29,20 @@ Some original operands have independent retained locators: the full native patch
 The original producer or custodian should supply either (a) the immutable run/artifact identifier and exact artifact path that yields the diagnostic and configuration bytes, or (b) a public commit/blob locator for each. The recovered diagnostic must match the cited 15,170,590-byte length and SHA-256 above; the configuration must match its cited blob and SHA-256. A producer identity or execution record should identify which run/config produced the output. If the bytes differ, preserve them separately and reconcile the pins; do not substitute the 551-incidence artifact or rerun a different diagnostic as if it were the cited one.
 
 Until that handoff is available, the addendum remains a record of previously reviewed claims with an explicit custody gap. This note neither rejects nor independently confirms its reported detailed counts, and it makes no qualification, acceptance, ownership, status, or credit change.
+
+## Separate fresh diagnostic run
+
+On 2026-10-27, a new full-package native diagnostic was run from the retained original 24,525-cell patch using a newly prepared source-evidence output and the accepted producer at main commit `d473d1767343795ae8302747b3694332fd5e2433` at run time. This is a separate execution; it does not recover or reproduce the historical v7 output or its cited configuration above.
+
+The new diagnostic reports **24,525 requested = 24,078 supported + 447 held**. It reports all 447 held cells as `territorial_exclusion_cells`. A private exact join against the retained original interval roster matched all 447 keys uniquely by `(owner, y, x)`: 424 are in the previously reviewed overlay and 23 in its complement. All 424 and all 23 remain held; none is newly supported. This run records 10,452 territorial operand incidences across those 447 rows. The earlier 2,863 key-to-negative-tuple count remains a claim about the separately cited historical v7 output; the two totals are run-specific and are not combined or treated as the same measure.
+
+The fresh output emitted zero physical-witness-kind rows. That means the diagnostic contains no such witness rows; it does not establish that physical contact is absent. The run is source/territorial diagnostic evidence only and does not bind the prior ARG/PER comparator decision, establish current owner selection, or qualify, accept, clear, or change any cell, status, ownership, or credit.
+
+Fresh-run pins:
+
+- New native diagnostic: 15,170,613 bytes; SHA-256 `9385309960f9e498af37b22669ff1604a2026b2e52cd7236cbfb06f9f5ed8398`.
+- New diagnostic configuration: 406 bytes; SHA-256 `0314a3ede93e533001c5ad2e04554a4b1c8ff0a014ed2c2e700949895f88b5e0`.
+- New source-evidence output: 9,558,496 bytes; SHA-256 `d585834fc2d67ed99272488792ae679684d4ebf1f34d479f18f0525a4b664b2d`; local commit `6667ef884fb0168e9836beb92608ee9ecb8715a2`, path `coordination/engineering/bra447-diagnostic-custody-limited-20261027/source-evidence-prep-001/output-rebound/source-evidence.json`, blob `37c4d1d5e5a296c2156d22ff6c642b25a091eefd`.
+- The new diagnostic configuration pins this freshly prepared source-evidence output at the local commit/path above. The underlying source-evidence body and its historical provenance were not independently verified; this new run does not repair that custody gap.
+
+The new diagnostic and detailed join remain private and are not included in this PR. The historical v7 artifact/config retrieval gap remains open. The new run is recorded here to distinguish it from those prior claims, not as a replacement or qualification decision.
