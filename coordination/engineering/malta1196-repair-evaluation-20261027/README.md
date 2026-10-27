@@ -14,7 +14,7 @@ The source metadata says `Public Domain` and records “Obtained email clarifica
 
 - `source-qualification-001/result.json` binds the exact 1,196 queue tuples to the simplified 68-member product: one matching member hit per tuple, no wrong-source, multiple, or miss; all are land-class. This is a source-relative observation only.
 - `source-comparison-002.json` records exact member-list, canonical-target, candidate-subset, and rights/vintage bindings, and compares the consumed simplified family with the separate full geoBoundaries comparator pinned at commit `9469f09592ced973a3448cf66b6100b741b64c0d` (313,611 bytes; SHA-256 `7d7f4853b270c3afbbef522b54fc3ea1bcedf27e3912a33574024b5cdd304fe3`). In that separate full product, 1,135 tuples hit once; 61 have no hit, with no multiple or wrong-source hits. Those 61 are not erased by the simplified result: the two product versions remain distinct evidence.
-- The current owner observation reports zero selected-owner presence for all 1,196 tuples. It is not a source or physical qualification.
+- The retained owner-observation-001 is a historical observation pinned to candidate commit c61bfd2e (not the current 2d baseline); it reports zero selected-owner presence for all 1,196 tuples in that earlier snapshot. It is not a 2d current-owner observation, source qualification, or physical qualification.
 
 ## Whole-target physical diagnostic and native target binding
 
