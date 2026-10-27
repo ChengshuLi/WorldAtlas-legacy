@@ -20,7 +20,9 @@ does not claim that the physical producer consumed a different input.
 normal diagnostic patch and exact land/inland-water class rows, binds the full
 23-feature original MNE source family and complete Albania negative family,
 then writes configuration for the existing `source-evidence`/`native-diagnostic`
-workflow. It preserves the full 1,336 denominator: the three Albania-contact
+workflow. The consumed 2017 source body is the catalogued **simplified**
+23-feature product; “complete family” below means all 23 features in that body,
+not a full-resolution product. It preserves the full 1,336 denominator: the three Albania-contact
 keys remain adverse, while the other 1,333 are only the no-captured-Albania
 candidate subset. The one water-class cell remains Bar's original owner.
 
@@ -42,6 +44,16 @@ are supported; all three withheld keys are land and match the retained Albania
 adverse keyset exactly. The complete original request, source family, physical
 report, and territorial negative evidence remain in the bound diagnostic. This
 partition is not bank application, current owner-zero acceptance, or credit.
+
+After independent review of the source/physical/native preparation, the normal
+`supported-inputs` consumer narrowed only the positive rows while preserving
+the three held original rows and full negative/physical source evidence. The
+existing `native-authority` consumer then produced 15 assigned constructor
+components / 1,333 cells. Its outputs and the exact 7aaa current-owner
+observation are pinned in `native-authority-preparation-receipt.json`. This is
+still preparation: the finalizer must bind it to the current selected bank,
+and emitted-bank old/new conservation, downstream checks, root review, and
+acceptance remain separate.
 
 The four target-level physical issue geometries remain pinned; their exact
 requested-center comparison found zero center effects. This is not whole-target
