@@ -319,16 +319,24 @@ test('BTN notice mode is sourced from the authenticated integrated tree',()=>{
   const f=packetFixture(), pathName='coordination/engineering/btn-36-source-role-prep-20261026/notices/GSHHG-COPYING.LESSERv3';
   const baseline=new Map(f.integrated.map(row=>[row.path,row]));
   const integrated=new Map(baseline);
-  const parts=pathName.split('/');
-  for(let i=1;i<parts.length;i++){
-    const parent=parts.slice(0,i).join('/');
-    if(!integrated.has(parent))integrated.set(parent,{path:parent,sha:sha('d'),mode:'040000',type:'tree'});
-  }
-  integrated.set(pathName,{path:pathName,sha:'b14ca0a552d7e97012befc8f4949173e6ace87c9',mode:'100644',type:'blob',size:7816});
-  const [derived]=integrationChanges(baseline,integrated);
-  assert.deepEqual(derived,{filename:pathName,status:'added',mode:'100644'});
-  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[derived],{},integrated),'evidence');
-  assert(inertEvidenceAdditions([derived],integrated,f.packageInputs));
+  for(const [name,oid] of [
+    ['coordination','be77643293518e7aff9315ae2ee00bb60b5453ca'],
+    ['coordination/engineering','d466465bdaa73790b0ca76fd7aa4dc4da6b5f907'],
+    ['coordination/engineering/btn-36-source-role-prep-20261026','10a1fc00e54e58fde88886f5c79e8a2edb15d323'],
+    ['coordination/engineering/btn-36-source-role-prep-20261026/notices','559260f20ec5b8f09160ca204de790e104801e49']
+  ]) integrated.set(name,{path:name,sha:oid,mode:'040000',type:'tree'});
+  for(const [leaf,oid,size] of [
+    ['GSHHG-COPYING.LESSERv3','b14ca0a552d7e97012befc8f4949173e6ace87c9',7816],
+    ['GSHHG-LICENSE.TXT','b10c0f3ba1e836eaeedbcb2f2e731ead69975582',1375],
+    ['GSHHG-README.TXT','4df1a4ac69f38f0c302b87732b1aa1ae6ddfecb4',15350],
+    ['NOTICE.md','bceba1f4edfd24678b4dce64c81fc119d094a4a2',9022]
+  ]) integrated.set(pathName.replace('GSHHG-COPYING.LESSERv3',leaf),
+    {path:pathName.replace('GSHHG-COPYING.LESSERv3',leaf),sha:oid,mode:'100644',type:'blob',size});
+  const actualFiles=integrationChanges(baseline,integrated);
+  assert.equal(actualFiles.length,4);
+  assert(actualFiles.every(file=>file.status==='added'&&file.mode==='100644'));
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',actualFiles,{},integrated),'evidence');
+  assert(inertEvidenceAdditions(actualFiles,integrated,f.packageInputs));
 
   const apiWithoutMode={filename:pathName,status:'added'};
   assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},integrated),'evidence');
