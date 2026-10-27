@@ -770,7 +770,7 @@ function verifyPriorStartupReconciliation(root, plan, index, head) {
 // Final-profile preparation is deterministic current-bank editing, not a second
 // qualifier. The ordinary accepted-code transition independently admits the new
 // authority scope and compares every before/after word and context value.
-function finalizeFinalBankDelivery(config, reader) {
+async function finalizeFinalBankDelivery(config, reader) {
   need(config.version===2 && Object.keys(config).every(key=>['version','selector','package_inputs','change_evidence','reference_projection','proposed_selector','prior_finalizations','source_evidence_refresh'].includes(key)),
     'Exact final-bank preparation config required');
   const selector=locate(reader,config.selector),packageInputs=locate(reader,config.package_inputs);
@@ -784,7 +784,7 @@ function finalizeFinalBankDelivery(config, reader) {
       'Source-evidence refresh is exclusive with additive, reference and selector changes');
     const refreshPin=locate(reader,config.source_evidence_refresh);
     const manifest=JSON.parse(reader.read(reader.pin(selector.commit,native.manifest_path)));
-    validateSourceEvidenceRefresh(selection.change_evidence,refreshPin,reader,selection,manifest);
+    await validateSourceEvidenceRefresh(selection.change_evidence,refreshPin,reader,selection,manifest);
     config={...config,source_evidence_refresh:refreshPin};
   }
   if(config.proposed_selector){
@@ -950,9 +950,9 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
 }
 
 
-export function finalizeDelivery(config, reader) {
+export async function finalizeDelivery(config, reader) {
   need(config.version===2,'Current finalization requires final-map version 2');
-  return finalizeFinalBankDelivery(config,reader);
+  return await finalizeFinalBankDelivery(config,reader);
 }
 
 // The existing asynchronous finalization boundary prepares the finished map
@@ -2170,7 +2170,7 @@ async function main(args) {
   if (phase === 'retain') outputs = retainProducts(config, root, reader);
   if (phase === 'compose') outputs = await composeAuthorities(config, reader);
   if (phase === 'finalize') {
-    outputs=finalizeDelivery(config,reader);
+    outputs=await finalizeDelivery(config,reader);
     await prepareFinalizedStartupOwnership(outputs, root);
     const publication = publishFinalizedDelivery(root, destination, outputs, binding, flags.includes('--resume'));
     console.log(JSON.stringify(publication)); return;

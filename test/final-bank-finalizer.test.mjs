@@ -23,7 +23,7 @@ async function prepare(t,options={}){
 }
 async function finalize(f,commit,extra={},destination='coordination/engineering/final-bank-test/finalized'){
  const reader=pinReader(f.root),config={version:2,selector:{commit,path:'data/ownership-selection.json'},package_inputs:{commit,path:'.github/package-inputs.json'},...extra};
- const outputs=finalizeDelivery(config,reader);await prepareFinalizedStartupOwnership(outputs,f.root);
+ const outputs=await finalizeDelivery(config,reader);await prepareFinalizedStartupOwnership(outputs,f.root);
  publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize',fixture:true});
  return {outputs,selection:JSON.parse(outputs['ownership-selection.json']),index:JSON.parse(outputs['startup-ownership.json'])};
 }
@@ -308,7 +308,7 @@ test('final-to-final preparation retains cold sparse compatibility bodies and ex
  try {
   const normal=pinReader(f.root,{execute(command,args,options){assert(!args.includes('fetch'),'Unchanged compatibility body must not be acquired');return execFileSync(command,args,options);}});
   const read=normal.read,reader={...normal,read(pin){assert.notEqual(pin.path,name,'Unchanged compatibility body must not be read');return read(pin);}};
-  const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
+  const outputs=await finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
   await prepareFinalizedStartupOwnership(outputs,f.root);
   const destination='coordination/engineering/final-bank-test/cold-finalized';
   publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
@@ -334,7 +334,7 @@ test('retained final compatibility keeps canonical preflight, committed identity
  const {f,before}=await prepare(t),migration=await finalize(f,f.bankCommit),at=f.commit();
  const fixed=migration.index.compatibility_files.find(p=>p.path.endsWith('startup-runs-999.bin.gz'));assert(fixed);
  const name=bank+fixed.path,file=path.join(f.root,name),original=fs.readFileSync(file),reader=pinReader(f.root);
- const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
+ const outputs=await finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
  await prepareFinalizedStartupOwnership(outputs,f.root);
  const destination='coordination/engineering/final-bank-test/retained-guards';
  const publish=()=>publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
@@ -393,14 +393,14 @@ test('authenticated prior finalization receipt retires only its exact unindexed 
  const reader=pinReader(f.root),config={version:2,
    selector:{commit:candidate,path:'data/ownership-selection.json'},
    package_inputs:{commit:candidate,path:'.github/package-inputs.json'}};
- const unauthorized=finalizeDelivery(config,reader);
+ const unauthorized=await finalizeDelivery(config,reader);
  await assert.rejects(prepareFinalizedStartupOwnership(unauthorized,f.root),/unauthenticated extra/);
  const staleFile=path.join(f.root,bank,stale.path),staleBody=fs.readFileSync(staleFile);
  fs.writeFileSync(staleFile,Buffer.from('edited historical generated output'));
- const edited=finalizeDelivery({...config,prior_finalizations},reader);
+ const edited=await finalizeDelivery({...config,prior_finalizations},reader);
  await assert.rejects(prepareFinalizedStartupOwnership(edited,f.root),/differs in worktree/);
  fs.writeFileSync(staleFile,staleBody);
- const outputs=finalizeDelivery({...config,prior_finalizations},reader);
+ const outputs=await finalizeDelivery({...config,prior_finalizations},reader);
  await prepareFinalizedStartupOwnership(outputs,f.root);
  const destination='coordination/engineering/final-bank-test/prior-auth-next';
  publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
@@ -417,7 +417,7 @@ test('compatibility roles that also serve current E retain complete body acquisi
  const raw=Buffer.from(JSON.stringify(migration.index)),selection={...migration.selection,prepared_bank:{...migration.selection.prepared_bank,bytes:raw.length,sha256:createHash('sha256').update(raw).digest('hex')}};
  f.save(bank+'index.json',raw);f.save('data/ownership-selection.json',selection);const at=f.commit(),normal=pinReader(f.root),acquire=normal.acquire;
  const reader={...normal,async acquire(pins){if(pins.some(p=>p.path===bank+part.path))throw Error('required current-E member acquired');return acquire(pins);}};
- const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
+ const outputs=await finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'}},reader);
  await assert.rejects(prepareFinalizedStartupOwnership(outputs,f.root),/required current-E member acquired/);
 });
 
@@ -434,7 +434,7 @@ test('finalizer retires exact sparse current-bank preimages through normal stagi
  execFileSync('git',['sparse-checkout','set','--no-cone','--stdin'],{cwd:f.root,input:`/*\n${[...retired,fixed].map(p=>'!/'+p).join('\n')}\n`,stdio:'pipe'});
  for(const name of [...retired,fixed]){assert(!fs.existsSync(path.join(f.root,name)));assert.equal(f.git('ls-files','-v','--',name).toString(),'S '+name+'\n');}
  const originalIndex=f.git('ls-files','--stage','-v','-z').toString().split('\0').filter(Boolean);
- const reader=pinReader(f.root),outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
+ const reader=pinReader(f.root),outputs=await finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
  await prepareFinalizedStartupOwnership(outputs,f.root);
  const index=JSON.parse(outputs['startup-ownership.json']);
  for(const name of retired)assert(!index.files.some(p=>bank+p.path===name),'The control must actually retire this old current part');
@@ -482,7 +482,7 @@ test('retiring current-bank paths refuse non-sparse loss, staged replacements an
   return normal.git(...args);
  }};
  const badOid=f.git('hash-object','-w','--stdin').toString().trim();
- const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
+ const outputs=await finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
  await prepareFinalizedStartupOwnership(outputs,f.root);assert(!JSON.parse(outputs['startup-ownership.json']).files.some(p=>bank+p.path===name));
  const destination='coordination/engineering/final-bank-test/retirement-guards',publish=(resume=false,target=destination)=>publishFinalizedDelivery(f.root,target,outputs,{phase:'finalize'},resume);
  const pristine=()=>{f.git('update-index','--no-assume-unchanged','--no-skip-worktree','--',name);fs.writeFileSync(file,original,{mode:0o644});fs.chmodSync(file,0o644);f.git('add','--',name);};
@@ -562,7 +562,7 @@ test('finalizer derives complete sparse output preimages without a caller input 
  }
  const initial=f.git('ls-files','--stage','-v','-z').toString().split('\0').filter(Boolean),normal=pinReader(f.root),calls=[];
  const reader={...normal,git(...args){if(args[0]==='sparse-checkout')calls.push(args);return normal.git(...args);}};
- const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
+ const outputs=await finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
  await prepareFinalizedStartupOwnership(outputs,f.root);const index=JSON.parse(outputs['startup-ownership.json']);
  const destination='coordination/engineering/final-bank-test/automatic-preimages';
  publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'});
@@ -590,7 +590,7 @@ test('automatic sparse preimages refuse deleted, staged, edited and racing canon
  const normal=pinReader(f.root),calls=[];let duringMaterialization=false;
  const reader={...normal,git(...args){if(args[0]==='sparse-checkout')calls.push(args);const result=normal.git(...args);
   if(duringMaterialization&&args[0]==='sparse-checkout')f.git('update-index','--add','--cacheinfo',`100644,${bad},${name}`);return result;}};
- const outputs=finalizeDelivery({version:2,selector:{commit:f.bankCommit,path:'data/ownership-selection.json'},package_inputs:{commit:f.bankCommit,path:'.github/package-inputs.json'}},reader);
+ const outputs=await finalizeDelivery({version:2,selector:{commit:f.bankCommit,path:'data/ownership-selection.json'},package_inputs:{commit:f.bankCommit,path:'.github/package-inputs.json'}},reader);
  await prepareFinalizedStartupOwnership(outputs,f.root);
  const name='data/ownership-selection.json',file=path.join(f.root,name),original=f.git('show',f.bankCommit+':'+name),oid=f.git('rev-parse',f.bankCommit+':'+name).toString().trim();
  execFileSync('git',['sparse-checkout','set','--no-cone','--stdin'],{cwd:f.root,input:'/*\n!/data/\n!/.github/package-inputs.json\n',stdio:'pipe'});
@@ -659,12 +659,12 @@ test('actual finalizer CLI adopts a proposed withdrawal bank through the ordinar
  assert.equal(report.repair_visibility.new_components,0);
  assert(!report.input_inventory.some(p=>p.path.startsWith('withdrawal-source/')),'Withdrawal never reopens the positive source constructor');
  const source=pinReader(f.root);
- assert.throws(()=>finalizeDelivery({...config,change_evidence:hook},source),/already carries its complete/);
+ await assert.rejects(finalizeDelivery({...config,change_evidence:hook},source),/already carries its complete/);
 });
 
 test('retired version-1 finalization and composition refuse before reading any operand',async()=>{
  const reader=new Proxy({}, {get(){throw Error('Retired route read an operand');}});
- assert.throws(()=>finalizeDelivery({version:1},reader),/requires final-map version 2/);
+ await assert.rejects(finalizeDelivery({version:1},reader),/requires final-map version 2/);
  await assert.rejects(composeAuthorities({version:1},reader),/requires final-map version 2/);
 });
 

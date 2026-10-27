@@ -44,7 +44,7 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
  const config={version:2,selector:{commit:latest,path:selected.path},
   package_inputs:{commit:latest,path:'.github/package-inputs.json'},
   source_evidence_refresh:{commit:latest,path:registryPath}};
- const outputs=finalizeDelivery(config,priorReader);
+ const outputs=await finalizeDelivery(config,priorReader);
  await prepareFinalizedStartupOwnership(outputs,root);
  const next=JSON.parse(outputs['ownership-selection.json']),startup=JSON.parse(outputs['startup-ownership.json']);
  const expected={...oldSelection,change_evidence:refresh};
@@ -55,7 +55,60 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
   'The prepared startup bank must remain byte-identical');
 });
 
-test('source-evidence refresh cannot be combined with additive or unrelated selector changes',()=>{
+test('finalizeDelivery awaits source membership acquisition before rejecting a missing target',async()=>{
+ const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
+ const registry=reader.json(reader.pin(latest,registryPath));
+ const binding=reader.json(registry.entries[0].source_authority);
+ const evidence=reader.json(binding.source_evidence),membership=evidence.source_membership;
+ assert(membership?.parts?.length>0);
+ const sourceEvidencePin=binding.source_evidence,sourcePartPin=membership.parts[0];
+ const originalPart=reader.json(sourcePartPin),missingId=evidence.targets[0].target_id??evidence.targets[0].id;
+ const alteredRaw=Buffer.from(JSON.stringify({...originalPart,
+  features:originalPart.features.filter(feature=>(feature?.properties?.id??feature?.id)!==missingId)})+'\n');
+ const alteredPartPin={...sourcePartPin,bytes:alteredRaw.length,
+  git_blob_oid:createHash('sha1').update(`blob ${alteredRaw.length}\0`).update(alteredRaw).digest('hex'),
+  sha256:createHash('sha256').update(alteredRaw).digest('hex')};
+ const priorRegistry=reader.pin(latest,priorRegistryPath),selected=reader.pin(latest,'data/ownership-selection.json');
+ const priorReader=withPriorSelector(reader,latest,{...reader.json(selected),change_evidence:priorRegistry});
+ assert.equal(registry.entries.length,1);
+ let markAcquire;
+ const acquireEntered=new Promise(resolve=>{markAcquire=resolve;});
+ let releaseAcquire;
+ const acquireGate=new Promise(resolve=>{releaseAcquire=resolve;});
+ const gatedReader=new Proxy(priorReader,{get(target,key,receiver){
+  if(key==='acquire')return async pins=>{
+   assert(pins.some(pin=>pin.path===sourcePartPin.path),
+    'the delayed acquisition must cover the exact source-membership parts');
+   markAcquire();
+   await acquireGate;
+   return {acquired: pins.length};
+  };
+  if(key==='json')return pin=>{
+   if(pin.commit===sourceEvidencePin.commit&&pin.path===sourceEvidencePin.path){
+    const value=target.json(pin);
+    return {...value,source_membership:{...value.source_membership,
+     parts:value.source_membership.parts.map(part=>part.path===sourcePartPin.path?alteredPartPin:part)}};
+   }
+   if(pin.commit===alteredPartPin.commit&&pin.path===alteredPartPin.path)return JSON.parse(alteredRaw.toString());
+   return target.json(pin);
+  };
+  return Reflect.get(target,key,receiver);
+ }});
+ const config={version:2,selector:{commit:latest,path:selected.path},
+  package_inputs:{commit:latest,path:'.github/package-inputs.json'},
+  source_evidence_refresh:{commit:latest,path:registryPath}};
+ let settled=false,returned;
+ const pending=finalizeDelivery(config,gatedReader).then(value=>{settled=true;returned=value;return value;},error=>{settled=true;throw error;});
+ await acquireEntered;
+ assert.equal(settled,false,'finalizeDelivery must remain pending while membership pins are being acquired');
+ assert.equal(returned,undefined,'no finalization outputs may escape before source validation settles');
+ releaseAcquire();
+ await assert.rejects(pending,/Source membership does not contain every exact candidate target/);
+ assert.equal(settled,true);
+ assert.equal(returned,undefined,'a rejected membership acquisition must produce no adoptable outputs');
+});
+
+test('source-evidence refresh cannot be combined with additive or unrelated selector changes',async()=>{
  const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
  const base={version:2,selector:{commit:latest,path:'data/ownership-selection.json'},
   package_inputs:{commit:latest,path:'.github/package-inputs.json'},source_evidence_refresh:{commit:latest,path:registryPath}};
@@ -63,5 +116,5 @@ test('source-evidence refresh cannot be combined with additive or unrelated sele
   {change_evidence:{commit:latest,path:registryPath}},
   {reference_projection:{commit:latest,path:registryPath}},
   {proposed_selector:{commit:latest,path:'data/ownership-selection.json'}}
- ])assert.throws(()=>finalizeDelivery({...base,...extra},reader),/exclusive with additive, reference and selector changes/);
+ ])await assert.rejects(finalizeDelivery({...base,...extra},reader),/exclusive with additive, reference and selector changes/);
 });
