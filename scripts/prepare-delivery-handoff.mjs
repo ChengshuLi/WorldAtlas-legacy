@@ -776,7 +776,7 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
   const reader=plan.reader,native=scientificNativeSelection(selection),config=plan.finalProfile;
   const {readPreparedFinalOwnership}=await import('./package-startup-ownership.mjs');
   const {prepareFinalBankStartupOwnership}=await import('./prepare-startup-ownership.mjs');
-  const {finishEffectiveFootprint,extendFinishedNativeFootprint,mergeUnassignedNativeIntervals}=await import('../src/effective-footprint.js');
+  const {finishEffectiveFootprint,extendFinishedNativeFootprint,mergeUnassignedNativeIntervalStream}=await import('../src/effective-footprint.js');
   let selected;
   const current=pointer=>{const pin=reader.pin(plan.selector.commit,pointer.path);need(pin.bytes===pointer.bytes&&pin.sha256===pointer.sha256,'Selected finalizer input whole identity differs');return reader.read(pin);};
   const projectionPointer=selection.reference_projection;
@@ -841,8 +841,9 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
   });
   need(byOwner.size===0,'Proposed final authority names a foreign owner');
   const rows=mergeCompletedNativePatches(added.patches,manifest.size),owners=new Set(features.map(f=>f.pixelIndex));
-  const words=mergeUnassignedNativeIntervals(before.ownership,rows,{owners,allowed:owners});
-  const ownership={...before.ownership,...words,runWords:words.runs.length};
+  const words=mergeUnassignedNativeIntervalStream(before.ownership,rows,{owners,allowed:owners});
+  const ownership={...before.ownership,...words,runWords:words.runWords};
+  delete ownership.runs;
   const index=await prepareFinalBankStartupOwnership({manifest,manifestSha:native.sha256,previous,ownership,features,baseReference:reference,referenceMetadata,destination});
   plan.proposedSelection={version:2,kind:'selected-final-native-bank-v2',native_selection:native,
     ...(config.reference_projection?{reference_projection:{path:config.reference_projection.path,bytes:config.reference_projection.bytes,sha256:config.reference_projection.sha256}}:
