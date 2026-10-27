@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "kind": "tkm-gubadag44-validation-history-v1",
+  "candidate_commit": "cfc55e8d13cb852b60ff9932198cf6949ce2fbed",
+  "accepted_input_base": "f2c44658278b1ebbbca37bc659b05a3885b2e2e7",
+  "supported_finalizer": {
+    "status": "exit 0",
+    "attempt": "native-inputs-001/finalize-attempt-001",
+    "config_sha256": "d9bb7c67b783d13c2334ecb556359b01d6b7c59863d64eec6bd20010bf462afc"
+  },
+  "reviewed_plan_artifact": {
+    "path": "/workspace/shared/worldatlas-TKM-Dostluk6-Gubadag44-reviewed-plan-20261027.json",
+    "sha256": "7c5f7adb1f22b8d5cc57319e2fe9bf7c7ac3037a628814ebd89184b7a35e8aa5",
+    "request_head": "13f0b6f3c6844494844e0f51eb71aa15f35b127d",
+    "note": "Plan must be freshly rederived for the final documentation head before review or dispatch."
+  },
+  "full_plan_local_attempt": {
+    "command": "env -u NODE_OPTIONS -u NODE_PATH node --test --test-concurrency=2 test/final-bank-finalizer.test.mjs test/final-bank-checkpoint.test.mjs test/selected-owner-observation.test.mjs test/selected-delivery-smoke.test.mjs test/map-cell-diagnosis.test.mjs test/compact-ownership.test.mjs test/prepared-parity.test.mjs",
+    "exit_status": 1,
+    "tests": 146,
+    "passed": 83,
+    "failed": 61,
+    "failure_environment": [
+      "test/compact-ownership.test.mjs could not import missing vite package; dependency set was intentionally not reinstalled locally.",
+      "test/selected-owner-observation.test.mjs and related cases initially lacked the exact declared sparse checkout operand coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz (1,851,757 bytes; SHA-256 ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147)."
+    ],
+    "log": {
+      "path": "/workspace/shared/worldatlas-TKM-Dostluk6-Gubadag44-reviewed-tests-20261027.log",
+      "sha256": "e8c14244e4577aa08e35696cade2d6c2c69156b15568548095f6deeb7abae086"
+    }
+  },
+  "core_tests_after_exact_operand_materialization": {
+    "command": "env -u NODE_OPTIONS -u NODE_PATH node --test --test-concurrency=2 test/final-bank-finalizer.test.mjs test/final-bank-checkpoint.test.mjs test/selected-owner-observation.test.mjs test/selected-delivery-smoke.test.mjs test/map-cell-diagnosis.test.mjs",
+    "exit_status": 0,
+    "tests": 213,
+    "passed": 213,
+    "failed": 0,
+    "log": {
+      "path": "/workspace/shared/worldatlas-TKM-Dostluk6-Gubadag44-core-tests-20261027.log",
+      "sha256": "7ebe545d2522df4b8f0b2a99230f4f91ae24574ff3e1dc7eb0dadcb08b8c6933"
+    }
+  },
+  "trusted_full_bank_comparison": {
+    "baseline": "f2c44658278b1ebbbca37bc659b05a3885b2e2e7",
+    "candidate": "cfc55e8d13cb852b60ff9932198cf6949ce2fbed",
+    "attempts": [
+      {
+        "exit_status": 1,
+        "reason": "trusted-checkout guard required HEAD to equal exact executing baseline code commit; no bank rows read."
+      },
+      {
+        "exit_status": 130,
+        "reason": "Same owned worktree detached at accepted baseline; exact 18 tracked JOINT_CODE contents matched baseline. First stages completed, then process was interrupted at operator instruction before complete bank-row report.",
+        "checkout_modes_restored_to_git_tree": 18
+      }
+    ],
+    "output_path": "/workspace/shared/worldatlas-TKM-Gubadag44-full-bank-comparison-001.json",
+    "output_created": false,
+    "result": "pending; no global owner conservation claim"
+  },
+  "hosted_controls": "Full plan/build/geography/emitted controls remain required; no hosted request or acceptance is recorded.",
+  "current_main_refresh": {
+    "accepted_baseline": "4828b25d3499d131a477654931156505889e3e35",
+    "normal_merge": "7d5f98d20a810a8e4d2910dd9dede3c4a7985ec4",
+    "generated_baseline_restoration": "4cefd4192f7394f0cca95b1443306da39756e7de",
+    "candidate": "d32d77a9d86fc18c32a8534b39902d3100483eb0",
+    "finalizer_config": {
+      "path": "native-inputs-002/finalize-config-corrected.json",
+      "bytes": 610,
+      "sha256": "95355f3ee5a863d116f613dcf8f0b6b69a235f4babfae04e6065f0bfa916dd5e"
+    },
+    "attempt_history": [
+      {
+        "attempt": "001",
+        "exit_status": 127,
+        "result": "/usr/bin/time missing; supported finalizer not invoked."
+      },
+      {
+        "attempt": "002",
+        "exit_status": 1,
+        "result": "Locator descriptor schema rejected before outputs."
+      },
+      {
+        "attempt": "003",
+        "exit_status": 1,
+        "result": "Indexed final-bank retirement differs; no successful adoption."
+      },
+      {
+        "attempt": "004",
+        "exit_status": 1,
+        "result": "Completed output bundle written, then retirement index changed before adoption; exact pre/post phase not captured; cause unproven."
+      },
+      {
+        "attempt": "005",
+        "exit_status": 0,
+        "mode": "documented --resume",
+        "result": "resumed=true after strict output/config/baseline preflight; candidate outputs adopted."
+      },
+      {
+        "attempt": "006",
+        "exit_status": 0,
+        "mode": "documented --resume",
+        "result": "accidental redundant identical strict resume; no output bytes changed; preserved transparently."
+      }
+    ],
+    "trusted_full_bank_comparison": {
+      "path": "native-inputs-002/full-bank-comparison-001/stdout.json",
+      "bytes": 60744,
+      "sha256": "b81c8fadc5b04195de71a3bc93b3b5d3bc75b785ea347478196a5e9afa33d64a",
+      "method": "selected-native-owner-conservation-v1",
+      "status": "no-new-native-loss",
+      "baseline": "4828b25d3499d131a477654931156505889e3e35",
+      "candidate": "d32d77a9d86fc18c32a8534b39902d3100483eb0",
+      "compared_rows": 262166,
+      "added_cells": 44,
+      "removed_cells": 0,
+      "reassigned_cells": 0,
+      "lost_or_reassigned_cells": 0,
+      "changed_owner_id": "gb:TKM:ADM2:10190150B74382957458545",
+      "owner_index": 42157,
+      "representation_migration": false,
+      "candidate_code_executed": true,
+      "trusted_code_invariance": {
+        "path": "native-inputs-002/full-bank-comparison-001/trusted-code-invariance.json",
+        "bytes": 5725,
+        "sha256": "b7e662b546289db3b5eafe0117c7e5a5c7abd72313ae1e965695ccb05bab8077",
+        "files": 18,
+        "all_identical": true
+      }
+    },
+    "hosted_controls": "pending; candidate finalization/comparison are not build/emitted controls or scientific acceptance."
+  }
+}
