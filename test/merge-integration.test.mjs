@@ -1914,7 +1914,8 @@ test('Playwright apt setup verifies bounds and uses a fail-closed privileged apt
   "Acquire::https::Timeout \"10\";"
  ])assert(run.includes(`grep -Fx '${effective}'`),`effective APT assertion: ${effective}`);
  assert.match(run,/original_apt="\$\(sudo sh -c 'command -v apt-get'\)"/);
- assert.match(run,/if sudo test -e "\$apt_wrapper" \|\| sudo test -e "\$apt_config_file"; then/);
+ assert.match(run,/if sudo test -e "\$apt_wrapper" \|\| sudo test -L "\$apt_wrapper" \|\|/);
+ assert.match(run,/sudo test -e "\$apt_config_file" \|\| sudo test -L "\$apt_config_file"; then/);
  assert.match(run,/trap cleanup_apt_setup EXIT/);
  assert.match(run,/apt_wrapper_created=1/);
  assert.match(run,/apt_config_created=1/);

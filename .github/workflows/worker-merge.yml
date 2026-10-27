@@ -364,7 +364,8 @@ jobs:
               echo "Unexpected apt-get/timeout tools: $original_apt" >&2
               exit 1
             fi
-            if sudo test -e "$apt_wrapper" || sudo test -e "$apt_config_file"; then
+            if sudo test -e "$apt_wrapper" || sudo test -L "$apt_wrapper" || \
+              sudo test -e "$apt_config_file" || sudo test -L "$apt_config_file"; then
               echo "Refusing to overwrite an existing temporary APT path" >&2
               exit 1
             fi
