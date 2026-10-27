@@ -36,7 +36,17 @@
       "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9"
     },
     "hosted_controls": "not run",
-    "owner_observation": "pending; original 29e4 observation is historical and not reused as current",
+    "owner_observation": {
+      "candidate_count": 180,
+      "effective_selected_owner_nonzero": 0,
+      "effective_selected_owner_zero": 180,
+      "full_report_sha256": "a9b93af1d96c42ff014a22c2d3b6d7e4ebc413dcf60db531bd11cbc9962c52ed",
+      "scientific_qualification": false,
+      "snapshot_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+      "status": "completed; literal owner-state only",
+      "summary_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-owner-observation-74b9-180.json",
+      "summary_sha256": "0f55aa479921140f4976e8b21dfe34d183e593c36a10f65f872865cd45d4f8e9"
+    },
     "package_inputs_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
     "prior_finalization": {
       "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
@@ -74,6 +84,13 @@
       "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da"
     }
   ],
+  "historical_owner_observation_29e4": {
+    "all_180_effective_selected_owner_zero": true,
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "full_report_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
+    "scientific_qualification": false,
+    "status": "historical exact 29e4 snapshot; not reused as current after MDV850 advance"
+  },
   "historical_successful_finalizer_attempt": {
     "baseline_commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
     "candidate_commit": "94701f0393f26f8a51f641a6f5cf3a6b144a9a23",
@@ -92,15 +109,26 @@
     "No current-bank finalizer output, full-bank conservation, hosted controls, or delivery is claimed; attempt009 is a historical local candidate superseded by MDV850.",
     "Source-role ambiguities, original contacts, physical issue contexts, rights/attribution limits and prior evidence remain preserved in group packets.",
     "The 29e4 owner observation and 253b candidate are historical; a8a5 MDV850 is the current accepted bank baseline and is bound by the refreshed config.",
-    "No current-owner observation, current candidate finalizer result, conservation comparison, hosted control or scientific acceptance is claimed yet."
+    "No refreshed current-bank candidate, conservation comparison, hosted control, delivery or scientific acceptance is claimed yet."
   ],
   "original_denominator": 35738,
   "owner_observation": {
-    "all_180_effective_selected_owner_zero": true,
-    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
-    "full_report_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
+    "candidate_count": 180,
+    "effective_selected_owner_nonzero": 0,
+    "effective_selected_owner_zero": 180,
+    "exact_key_match": true,
+    "full_report_bytes": 8108103,
+    "full_report_private_path": "private:/workspace/scratch/127991fc8b8e/.hrv-private/current-owner-35738-74b9-001.json",
+    "full_report_sha256": "a9b93af1d96c42ff014a22c2d3b6d7e4ebc413dcf60db531bd11cbc9962c52ed",
+    "original_intervals_sha256": "ff749bacd5058b91ddd7051402a04e65e79b1b016bab5e6c1366bbc47b7b6c6a",
+    "query_count": 35738,
+    "query_sha256": "afcd19cb52bc067fabd6f0cfb152281837d76da2ad4474cfd323c4f37d5696eb",
     "scientific_qualification": false,
-    "status": "historical exact 29e4 snapshot; not reused as current after MDV850 advance"
+    "snapshot_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "summary_bytes": 43962,
+    "summary_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-owner-observation-74b9-180.json",
+    "summary_sha256": "0f55aa479921140f4976e8b21dfe34d183e593c36a10f65f872865cd45d4f8e9",
+    "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae"
   },
   "prior_finalizer_attempts": [
     {
@@ -116,9 +144,9 @@
     }
   ],
   "readme": {
-    "bytes": 4826,
+    "bytes": 5372,
     "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/README.md",
-    "sha256": "cd5eff6bf47f198cd1a4f69f17146a523aa5999c8e7b4ceeec1bd64707d3ff7a"
+    "sha256": "8730f462255d036f8b2089fc0ed559184186c919d3b483fae320be1eadfcb9fc"
   },
   "status": "composed; prior 253b local candidate preserved but superseded by accepted MDV850 bank; current-main refresh config prepared, no current candidate delivery, hosted controls, or scientific acceptance",
   "strict_adverse_excluded_count": 6,
