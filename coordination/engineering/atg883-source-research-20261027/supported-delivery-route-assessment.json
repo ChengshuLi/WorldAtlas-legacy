@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "atg883-supported-delivery-route-assessment-v1",
-  "status": "candidate-final-bank-emitted-at-accepted-main-812; strict-seven-retirement-closure-passed; stale-after-MNE-main-advance; bounded-refresh-and-candidate-key-observation-pending",
+  "status": "ATG883 candidate closure committed at data812; accepted-MNE baseline observer all883 owner0; exact current-main ATG composition prepared at5ff; normal bridge and affected final-bank refresh pending",
   "package_id": "gb-ATG-ADM1--repair-evaluation",
   "original_denominator": {
     "land_cells": 883,
@@ -314,5 +314,21 @@
     "full_bank_conservation": false,
     "candidate_observation": false
   },
-  "latest_accepted_baseline_owner_observation": "coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-5fffbde.json"
+  "latest_accepted_baseline_owner_observation": "coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-5fffbde.json",
+  "current_main_composition_5fffbde": {
+    "config_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-config-5fffbde.json",
+    "config_sha256": "0b55f00842833497df4c7394be058656ef5b21f4a5a3d0168b5733c3bd8818ba",
+    "selector_commit": "5fffbde0888e3b79d10387b2687aa281ea3ac354",
+    "selector_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+    "selector_sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9",
+    "registry_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-5fffbde/authority-registry.json",
+    "registry_sha256": "bda7dcfeb9555018dfb610086282a85065ba7c2afd7c1a3ea6037ed18f5f6512",
+    "registry_bytes": 1409,
+    "registry_entries": 1,
+    "source_physical_native_inputs_reused": true,
+    "candidate_only": true,
+    "current_main_merge_pending": true,
+    "final_bank_refresh_pending": true,
+    "attempts_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-attempts-5fffbde.json"
+  }
 }
