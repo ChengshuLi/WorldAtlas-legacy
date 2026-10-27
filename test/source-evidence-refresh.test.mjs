@@ -6,14 +6,16 @@ import {pinReader,finalizeDelivery,prepareFinalizedStartupOwnership} from '../sc
 const registryPath='coordination/engineering/tls-original-repair-20261026/compose-003/authority-registry.json';
 const priorRegistryPath='coordination/engineering/tls-original-repair-20261026/compose-002/authority-registry.json';
 
-function withPriorSelector(reader,commit,selection){
+function withPriorSelector(reader,commit,selection,historicalPins=[]){
  const path='data/ownership-selection.json',raw=Buffer.from(JSON.stringify(selection)+'\n');
  const oid=createHash('sha1').update(`blob ${raw.length}\0`).update(raw).digest('hex');
  const pin={commit,path,mode:'100644',git_blob_oid:oid,bytes:raw.length,
   sha256:createHash('sha256').update(raw).digest('hex')};
+ const historical=new Map(historicalPins.map(value=>[`${value.commit}\0${value.path}`,value]));
  let overlay;
  overlay=new Proxy(reader,{get(target,key){
-  if(key==='pin')return (at,name)=>at===commit&&name===path?pin:target.pin(at,name);
+  if(key==='pin')return (at,name)=>at===commit&&name===path?pin:
+   historical.get(`${at}\0${name}`)??target.pin(at,name);
   if(key==='read')return value=>{
    if(value===pin)return raw;
    if(value?.commit&&value.commit!==commit){
@@ -37,7 +39,14 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
  const registry=reader.json(reader.pin(latest,registryPath)),refresh=reader.pin(latest,registryPath);
  const priorRegistry=reader.pin(latest,priorRegistryPath),selected=reader.pin(latest,'data/ownership-selection.json');
  const oldSelection={...reader.json(selected),change_evidence:priorRegistry};
- const priorReader=withPriorSelector(reader,latest,oldSelection);
+ const authorityPin=reader.pin(latest,registry.entries[0].source_authority.path);
+ assert.deepEqual({mode:authorityPin.mode,git_blob_oid:authorityPin.git_blob_oid,bytes:authorityPin.bytes,
+  sha256:authorityPin.sha256},{mode:'100644',git_blob_oid:'ca94368b92d6aa883c03b5c1acbf8b3df5d7bea3',
+  bytes:730,sha256:'61ff1ea871cb5612930fb27af0495b108357c71084ccfdfca94fb2d6297cbc41'},
+  'the current authority-binding fixture must equal the accepted historical pin');
+ const authority=registry.entries[0].source_authority;
+ const priorReader=withPriorSelector(reader,latest,oldSelection,[{...authorityPin,
+  commit:authority.commit,path:authority.path}]);
  assert.equal(registry.entries.length,1);
  const binding=reader.json(registry.entries[0].source_authority),evidence=reader.json(binding.source_evidence);
  assert.equal(evidence.targets.length,20);
@@ -69,7 +78,13 @@ test('finalizeDelivery awaits source membership acquisition before rejecting a m
   git_blob_oid:createHash('sha1').update(`blob ${alteredRaw.length}\0`).update(alteredRaw).digest('hex'),
   sha256:createHash('sha256').update(alteredRaw).digest('hex')};
  const priorRegistry=reader.pin(latest,priorRegistryPath),selected=reader.pin(latest,'data/ownership-selection.json');
- const priorReader=withPriorSelector(reader,latest,{...reader.json(selected),change_evidence:priorRegistry});
+ const authority=registry.entries[0].source_authority,authorityPin=reader.pin(latest,authority.path);
+ assert.deepEqual({mode:authorityPin.mode,git_blob_oid:authorityPin.git_blob_oid,bytes:authorityPin.bytes,
+  sha256:authorityPin.sha256},{mode:'100644',git_blob_oid:'ca94368b92d6aa883c03b5c1acbf8b3df5d7bea3',
+  bytes:730,sha256:'61ff1ea871cb5612930fb27af0495b108357c71084ccfdfca94fb2d6297cbc41'},
+  'the current authority-binding fixture must equal the accepted historical pin');
+ const priorReader=withPriorSelector(reader,latest,{...reader.json(selected),change_evidence:priorRegistry},
+  [{...authorityPin,commit:authority.commit,path:authority.path}]);
  assert.equal(registry.entries.length,1);
  let markAcquire;
  const acquireEntered=new Promise(resolve=>{markAcquire=resolve;});
