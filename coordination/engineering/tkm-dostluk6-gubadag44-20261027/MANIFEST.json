@@ -185,16 +185,16 @@
     "physical-raw-full-corroboration-001/whole-target-support.json": "8a5452a3cbe9b690e164afbb089575cfb545685fedcd5676782c84943b6633c1",
     "validation-history.json": "c7f6559f0cb3f09ec7ba5ed4740580a777573495b992c509cc096138fb10b7e1"
   },
-  "status": "current-main finalizer candidate and trusted 262166-row comparison prepared; root scientific decision and hosted build/emitted controls pending",
+  "status": "Combined 187-cell current-main finalizer candidate prepared and trusted full-bank comparison complete; hosted tests/build/emitted controls and root science/accounting decision pending",
   "finalizer_refresh": {
-    "baseline": "4828b25d3499d131a477654931156505889e3e35",
-    "candidate": "d32d77a9d86fc18c32a8534b39902d3100483eb0",
-    "config": "native-inputs-002/finalize-config-corrected.json",
-    "config_sha256": "95355f3ee5a863d116f613dcf8f0b6b69a235f4babfae04e6065f0bfa916dd5e",
-    "output_index_sha256": "808a263ef7ef84c0005b53ee3b7440011b05ba70b6a896701596466dce74e031",
-    "comparison_report": "native-inputs-002/full-bank-comparison-001/stdout.json",
-    "comparison_sha256": "b81c8fadc5b04195de71a3bc93b3b5d3bc75b785ea347478196a5e9afa33d64a",
-    "comparison_status": "no-new-native-loss; 262166 rows; +44/-0/reassigned0; candidate only"
+    "baseline": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "candidate": "2e5547b3c5ec6d3009c366c80045b3bad24390da",
+    "config": "native-inputs-003/finalize-config-gubadag44-mary143.json",
+    "config_sha256": "66079fa7a3ffe71cf061ccbf14bd1f7750d923fb67e114f493692e11a8846e3f",
+    "output_index_sha256": "fb232fc6b9e20e625ad8dd351dda61398360eed73fe3a40436b4a1b7601b81e2",
+    "comparison_report": "native-inputs-003/full-bank-comparison-001/stdout.json",
+    "comparison_sha256": "52c4a0d27ad600b4c26c9d7df79a053a8269f0411fb2ebcb4efe07e02b22ccc6",
+    "comparison_status": "no-new-native-loss; 262166 rows; +187/-0/reassigned0/lost0; candidate only"
   },
   "candidate_composition": {
     "status": "candidate-only; no acceptance or credit",
@@ -213,5 +213,15 @@
         "label": "direct Mary"
       }
     ]
+  },
+  "historical_gubadag44_finalizer_refresh": {
+    "baseline": "4828b25d3499d131a477654931156505889e3e35",
+    "candidate": "d32d77a9d86fc18c32a8534b39902d3100483eb0",
+    "config": "native-inputs-002/finalize-config-corrected.json",
+    "config_sha256": "95355f3ee5a863d116f613dcf8f0b6b69a235f4babfae04e6065f0bfa916dd5e",
+    "output_index_sha256": "808a263ef7ef84c0005b53ee3b7440011b05ba70b6a896701596466dce74e031",
+    "comparison_report": "native-inputs-002/full-bank-comparison-001/stdout.json",
+    "comparison_sha256": "b81c8fadc5b04195de71a3bc93b3b5d3bc75b785ea347478196a5e9afa33d64a",
+    "comparison_status": "no-new-native-loss; 262166 rows; +44/-0/reassigned0; candidate only"
   }
 }
