@@ -1891,6 +1891,43 @@ test('successful original build archive is retained before later tests without r
 });
 
 
+test('Playwright apt setup verifies bounds and uses a fail-closed privileged apt wrapper',()=>{
+ const yaml=fs.readFileSync(new URL('../.github/workflows/worker-merge.yml',import.meta.url),'utf8');
+ const integration=yaml.split('\n  integration:\n')[1].split('\n  merge:\n')[0];
+ const steps=integration.split(/\n(?=      - )/).slice(1);
+ const browser=steps.find(step=>step.startsWith('      - name: Install browser dependencies only for tests that use Playwright\n'));
+ assert.ok(browser);
+ const run=browser.split('\n        run: |\n')[1];
+ assert.ok(run);
+ const wrapper=run.indexOf('apt_wrapper=/usr/local/bin/apt-get');
+ const install=run.indexOf('npx playwright install --with-deps chromium');
+ assert(wrapper>=0&&wrapper<install,'temporary wrapper is installed before Playwright invokes apt');
+ assert.ok(run.indexOf('zzzz-worldatlas-ci-acquire-timeouts')>run.indexOf('apt.conf.d/'),'APT override sorts after runner image config');
+ for(const line of [
+  "'Acquire::Retries \"1\";'",
+  "'Acquire::http::Timeout \"10\";'",
+  "'Acquire::https::Timeout \"10\";'"
+ ])assert(run.includes(line),line);
+ for(const effective of [
+  "Acquire::Retries \"1\";",
+  "Acquire::http::Timeout \"10\";",
+  "Acquire::https::Timeout \"10\";"
+ ])assert(run.includes(`grep -Fx '${effective}'`),`effective APT assertion: ${effective}`);
+ assert.match(run,/original_apt="\$\(sudo sh -c 'command -v apt-get'\)"/);
+ assert.match(run,/if sudo test -e "\$apt_wrapper" \|\| sudo test -e "\$apt_config_file"; then/);
+ assert.match(run,/trap cleanup_apt_setup EXIT/);
+ assert.match(run,/apt_wrapper_created=1/);
+ assert.match(run,/apt_config_created=1/);
+ assert.match(run,/\/usr\/bin\/timeout --signal=TERM --kill-after=30s 4m \/usr\/bin\/apt-get/);
+ assert.match(run,/\[ "\$phase" = update \] .*retrying once/s);
+ assert.ok(run.includes("'case \"$phase\" in'"));
+ assert.ok(run.includes("'  update|install) ;;'"));
+ assert.match(run,/resolved_apt="\$\(sudo sh -c 'command -v apt-get'\)"/);
+ assert.match(run,/npx playwright install --with-deps chromium/);
+ assert.doesNotMatch(run,/AllowInsecure|AllowUnauthenticated|Check-Valid-Until|continue-on-error|\|\|\s*true/);
+ assert.doesNotMatch(browser,/continue-on-error:/);
+});
+
 test('actual preparation completes a truncated candidate tree and refuses incomplete child metadata before scope selection',async()=>{
   for(const incomplete of [false,true]){
     const f=fixture(),original=f.api,root=sha('e'),directory=sha('d'),calls=[];
