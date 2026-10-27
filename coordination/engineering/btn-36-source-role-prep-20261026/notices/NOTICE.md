@@ -26,7 +26,18 @@ The accompanying GSHHG license/readme files are byte-for-byte retained source te
 |---|---:|---|---|
 | `supported-inputs-current-main-f8c5-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Two embedded geoBoundaries-derived base geometries |
 | `supported-inputs-current-4828-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Same two embedded geoBoundaries-derived base geometries; byte-identical to prior source-evidence body, with current selector binding recorded in its preparation receipt |
+| `territorial-exclusions-current-f8c5-001/source-evidence.json` | 14,936 | `6fb1a91775b6faeefb9c3b94a0433a2cd8066fb3beb00b27fda69bd29b940841` | Same two embedded geoBoundaries-derived BTN base geometries; negative families are compact source-ID/ordinal/hash references, not embedded negative geometries |
 | `native-authority-current-4828-001/constructor-result.json` | 7,657 | `445962d02ad82dee89f0fd3f30d21ab4337b0721c6b6bf931a9e7df768998da6` | Derived native-cell assignment rows and bounds for the same two source features; source polygon bodies are not embedded |
 | `native-authority-current-4810-001/constructor-result.json` | 7,667 | `1928930134b789fa7d659298ae82908c052986ed88324976e17144058edf5dc7` | Two constructor rows embed the same geoBoundaries-derived base geometries; output is native-authority construction evidence, not a legal boundary or acceptance |
+
+## Compact territorial source references
+
+`territorial-exclusions-current-f8c5-001/source-evidence.json` and its `territorial-exclusion-provenance.json` companion record compact member identifiers, ordinals, and geometry hashes for complete source families. They do not embed the negative family geometry. Source-family metadata is read from the retained catalogue at commit `e7aa5c46baa083697b662de51e177c7bf89f9014`; recorded represented years and item terms are: CHN ADM1 (2019, Public Domain), IND ADM1 (2011, CC BY 2.5 India), and IND ADM3 (2018, ODbL 1.0). The recorded source products are geoBoundaries release commit `9469f09` at:
+
+- `https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHN/ADM1/geoBoundaries-CHN-ADM1_simplified.geojson`
+- `https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM1/geoBoundaries-IND-ADM1_simplified.geojson`
+- `https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM3/geoBoundaries-IND-ADM3_simplified.geojson`
+
+The original catalogue records 6,822 actual IND ADM3 features versus 6,836 advertised; the preparation validated the complete pinned 6,822-feature body across both parts. Its bounds-based prefilter is not an exact contact finding, legal territorial applicability, or proof of clearance. Preserve each recorded source-family license if redistributing source-derived references.
 
 No status, credit, source-year acceptance, or legal-boundary claim is implied by these artifacts.
