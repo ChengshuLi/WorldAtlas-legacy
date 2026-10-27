@@ -5,6 +5,7 @@ This stage contains one complete original source feature only: `gb:HRV:ADM2:4194
 ## Source and rights
 
 Source: geoBoundaries 2021 HRV ADM2 family, 560 features, preserved in the original source corpus at commit `23318dd9d70680495138297b9cc1a7533a466200`, path `coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-HRV-ADM2-000.bin.gz`. Encoded body: 653,059 bytes, SHA-256 `fc283b5a556235296978e11d88ed00bbd1d8fdf0955863656bceaa93179503da`; decoded body: 2,196,969 bytes, SHA-256 `bfcda6087b26678f026c2a1ac5c4fe903bd67ad24a7c9761519f7929b3915d16`. The recorded license is Creative Commons Attribution-ShareAlike 2.0; preserve attribution and the source license notice with this bounded derived feature. The family metadata describes an ADM2 administrative dataset; this member’s `shapeName` is `Otok Ilovik`. Neither label alone establishes the original owner's legal/semantic intent.
+The original 35,738-key source application joins all 111 tuples to exactly two source-feature contacts: `gb:HRV:ADM1:27960609B11106490836175` (family index 146, source index 35391, ordinal 15) and the ADM2 target above (family index 147, source index 35402, ordinal 5). All 111 rows carry the original application’s `land` label and no HUN/SVN foreign-contact flag. These are preserved source-contact facts, not a physical mask result or semantic adjudication.
 
 ## Boundaries of this preparation
 
