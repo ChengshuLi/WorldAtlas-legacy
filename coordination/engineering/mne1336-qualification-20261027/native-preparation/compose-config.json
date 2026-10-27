@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "commit": "7aaa0a9feeeb8f9bbbf8a01d1eea44103d689acf",
+    "mode": "100644",
+    "git_blob_oid": "6cf14f7fd5b4ad1e0a2afa876561195feee46b18",
+    "bytes": 2272,
+    "sha256": "f47a34c5d4e0eda841b2af18c55b7f096773756879f1a83e0059c45f93bad72b"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-001/original-rule-preimage.json",
+        "commit": "111d13eaa4bee3084eeac66e260e064d517b5e8d",
+        "mode": "100644",
+        "git_blob_oid": "21b77596508156dd71b1c4e5555ee0fe8f24c39b",
+        "bytes": 776,
+        "sha256": "df91dcee7502ba8d58e7261e8b784ef30db10662c5ff3079cfb8058db87e6974"
+      },
+      "source_authority": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-001/authority-binding.json",
+        "commit": "111d13eaa4bee3084eeac66e260e064d517b5e8d",
+        "mode": "100644",
+        "git_blob_oid": "6a4723b3fa2524dd94d3981396ec0c4ba4146985",
+        "bytes": 779,
+        "sha256": "4734071e5f9236bbb4d530773304b28c789fd511053cffdde83bc239a7c7b997"
+      },
+      "ledger": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/native-authority-001/constructor-result.json",
+        "commit": "111d13eaa4bee3084eeac66e260e064d517b5e8d",
+        "mode": "100644",
+        "git_blob_oid": "011ff63876189f044dd3f389c87125a854bb0dbb",
+        "bytes": 54865,
+        "sha256": "14433f3cfdebf602c580e9ebb57999a4d9d1cf96e7359eeda00bb0a8ae2c6646"
+      },
+      "native_patch": {
+        "path": "coordination/engineering/mne1336-qualification-20261027/native-preparation/supported-candidate-001/native-patch.json",
+        "commit": "f14bf675984c8bac50acbd0dcc649b0d038cd2ba",
+        "mode": "100644",
+        "git_blob_oid": "4c5493ae1eabba60e1c43961304f49390a030e76",
+        "bytes": 23539,
+        "sha256": "7b80bbf191b571ec0a704403a4538638f9431690737d27cfc8a8ff9bd0eddc71"
+      }
+    }
+  ]
+}
