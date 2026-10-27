@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "a033102eeca2c7a3648039ba4a5ae42e644f5915",
+  "candidate_code_executed": true,
+  "candidate_commit": "a826f8e2080e53ed5d7d6cf703b718e03bd7bc1a",
+  "command_sha256": "f8e04cb5bfea9e75a8846d98bc1eba2a9fc254af9f5ee543dbcbc927522e222e",
+  "elapsed_seconds": 164.277,
+  "exit_code": 0,
+  "gate_status": "passed",
+  "report": "coordination/engineering/malta1196-repair-evaluation-20261027/native-inputs-001/trusted-current-bank-check-a033-001/report.json",
+  "report_bytes": 100654,
+  "report_sha256": "00302e06cb27ded50e11aabf4eda0e56c91ff072ad9a07efae8c162da2b3f680",
+  "resource_usage": "Not sampled",
+  "runner_log_sha256": "a8871581dea22c5e61e5a6c120ff4a7392c09c7c8f8079f520a12f4d3139f849",
+  "selected_native": {
+    "added_cells": 1196,
+    "affected_rows": 210,
+    "intervals": 310,
+    "lost_or_reassigned_cells": 0,
+    "reassigned_cells": 0,
+    "removed_cells": 0
+  },
+  "source_approval": false,
+  "status": "no-new-native-loss",
+  "trusted_code_commit": "a826f8e2080e53ed5d7d6cf703b718e03bd7bc1a",
+  "version": 1
+}
