@@ -131,7 +131,7 @@
       }
     ]
   },
-  "post_finalizer_original_883_key_observation": false,
+  "post_finalizer_original_883_key_observation": true,
   "full_selected_bank_conservation": false,
   "production_acceptance_or_write": false,
   "root_science_accounting_acceptance": false,
@@ -140,5 +140,73 @@
     "Exact output/index closure only; this is a branch candidate, not full selected-bank conservation, production write, emitted-control result, accepted repair, or accepted-cell credit.",
     "All seven original feature-lineage members still map to one canonical territory owner; Redonda remains context-only and the original 883-cell/288-interval denominator is unchanged.",
     "No compatibility bodies or world-wide inputs were hydrated."
+  ],
+  "candidate_key_observation": {
+    "receipt": {
+      "path": "coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-candidate-828e362.json",
+      "bytes": 208171,
+      "sha256": "cfd24b55dd60f1498766d57012bab584e3d1b0d02c3856570bfe93f70d748042"
+    },
+    "commit": "828e3620dd3883981f3dd7a9a4c58da23b618972",
+    "code_commit": "828e3620dd3883981f3dd7a9a4c58da23b618972",
+    "query_count": 883,
+    "query_sha256": "d71f43c6a9093a303e8761edd703185e3ec144a820448060bcc8ecb1b181c5ac",
+    "original_interval_count": 288,
+    "original_keys_equal_to_immutable_proposal": true,
+    "original_intervals_equal_to_immutable_proposal": true,
+    "effective_owner_counts": {
+      "7110": 883
+    },
+    "owner_id_counts": {
+      "atlas:territory:ATG": 883
+    },
+    "historical_base_additive_overlap_columns_null": true,
+    "final_bank_index_sha256": "f86f62fb27ada4ad44cf1b3c8855e788b4f2dbff7ae50c6402a24c01133a96d4",
+    "reference": {
+      "footprints_sha256": "14b667214fdb80fe60752191ee4fcf5761f216ed962d0734d260f361b155d81d",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:bbf26cbb55038cffd6e9ecbdbada86f12439ea8e189bf08e75d3aa59602a5444"
+    },
+    "acquisition": {
+      "unique_objects": 20,
+      "declared_bytes": 18845258,
+      "fetch_batches": 0,
+      "fetched_objects": 0,
+      "fetched_bytes": 0,
+      "complete_scientific_closure": false
+    },
+    "limits": [
+      "Candidate-only literal effective-owner observation; source qualification, scientific closure, full-bank conservation, acceptance and credit are not inferred."
+    ]
+  },
+  "test_results": [
+    {
+      "name": "test/selected-owner-observation.test.mjs",
+      "status": "passed",
+      "tests": 32,
+      "pass": 32,
+      "fail": 0,
+      "log": {
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/selected-owner-test-828e362.log",
+        "bytes": 3845,
+        "sha256": "29078e4e192f1fbf12f310d7ddc359f8af058b04e802e30ca31f68c652ba38e1"
+      }
+    },
+    {
+      "name": "bounded multi-module exploratory suite",
+      "status": "not_passed_resource_and_sparse-input-failures",
+      "tests": 136,
+      "pass": 114,
+      "fail": 22,
+      "log": {
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/test-run-828e362.log",
+        "bytes": 66941,
+        "sha256": "eefc15a3aa505738396e28f59018ff7b0719548a27da311afeada905338be5f1"
+      },
+      "failure_classes": {
+        "ENOSPC_final-bank-fixture_cases": 20,
+        "ENOENT_unrelated_sparse_Arctic_manifest_cases": 2
+      }
+    }
   ]
 }
