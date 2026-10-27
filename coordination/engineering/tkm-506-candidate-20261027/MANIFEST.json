@@ -17,14 +17,6 @@
     "pairwise_overlap": 0,
     "sum_equals_union": true
   },
-  "current_selector": {
-    "commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
-    "path": "data/ownership-selection.json",
-    "mode": "100644",
-    "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
-    "bytes": 2291,
-    "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
-  },
   "composition_config": {
     "path": "coordination/engineering/tkm-411-combined-20261027/composition-003/config.json",
     "bytes": 7105,
@@ -143,7 +135,7 @@
   "hazar_context": {
     "original_scope": "95 residual cells: 67 land + 28 inland water, after 3 previously accepted water keys excluded",
     "source_family": "59 features present vs 66 advertised; no claim about 7 absent features",
-    "role": "2022 Mejlis resolution \u00a73(2)(b), \u00a714(1)(b) preserved as adverse context; Annex 3 assignment not spatially resolved for exact 95; no exact center contradiction established; no universal modern certificate imposed",
+    "role": "2022 Mejlis resolution §3(2)(b), §14(1)(b) preserved as adverse context; Annex 3 assignment not spatially resolved for exact 95; no exact center contradiction established; no universal modern certificate imposed",
     "physical": "whole-target issues contradictory_land_water_support and L2-outside-L1 retained; center hits do not clear whole cell/polygon",
     "native": "95 requested,95 supported,0 held; candidate only",
     "tuple_digests": {
@@ -167,12 +159,53 @@
   ],
   "readme": {
     "path": "coordination/engineering/tkm-506-candidate-20261027/README.md",
-    "bytes": 4375,
-    "sha256": "88869500a6271309ad3b46216424971c23a3b004e143e4349aa6cbdbf48ab0b4"
+    "bytes": 5052,
+    "sha256": "35adca7fff07e09f3cc2fc8a9fb673bbb575c1161a0bb1c833cd5e94a1f8db55"
   },
   "composition_first_attempt_failure": {
     "path": "coordination/engineering/tkm-411-combined-20261027/composition-003/attempt-001-failure.json",
     "bytes": 680,
     "sha256": "25c097f7d3efbe586d9cc281bf3ca28e324b21b6f71f1b6eaad5b641d7bb5525"
+  },
+  "composition_selector": {
+    "commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+    "bytes": 2291,
+    "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+  },
+  "current_selector": {
+    "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "537f7b42322a9dbadfbe68da68d20c0d7e71b41c",
+    "bytes": 2293,
+    "sha256": "832f8bd84d79e61628137d20f9da006c678e21bd8e642d6e0452e95bf822396d"
+  },
+  "current_bank_baseline": {
+    "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "index": {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "mode": "100644",
+      "git_blob_oid": "3bbed59f4ead5a123667b76bc9679361420a0bf8",
+      "bytes": 49610,
+      "sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+    },
+    "unique_files": 79,
+    "compatibility_files": 30,
+    "compatibility_are_subset_of_files": true,
+    "comparison": "Current MDV accepted index; live main 74b9 adds unrelated AREF evidence only, with no bank change."
+  },
+  "finalizer_preparation": {
+    "status": "prepared-only; finalizer not run; no refreshed bank/comparator/hosted controls/acceptance",
+    "config": {
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-008/config.json",
+      "bytes": 1558,
+      "sha256": "22a6ac2be3c04495bb537df45b88562e97173073e0d3752239145752ddb595b1"
+    },
+    "selector_and_package_inputs_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "change_evidence_commit": "3eaf8fb7370e655c2a3a54ad0f6aec5135460885",
+    "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644"
   }
 }
