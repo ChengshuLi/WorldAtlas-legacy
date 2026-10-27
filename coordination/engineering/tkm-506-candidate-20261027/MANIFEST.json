@@ -155,13 +155,13 @@
   },
   "no_replay": [
     "No source re-download or physical/native rerun for unchanged candidate components",
-    "No hosted tests/build/geography/emitted controls or root scientific acceptance are claimed",
-    "Full-bank conservation comparison is pending for the finalizer-008 candidate"
+    "Full-bank conservation passed locally; candidate hosted tests/build/geography/emitted controls and root scientific acceptance are not claimed",
+    "Candidate remains unaccepted and uncredited pending exact-head review, hosted delivery/controls, and root scientific/accounting decision"
   ],
   "readme": {
     "path": "coordination/engineering/tkm-506-candidate-20261027/README.md",
-    "bytes": 5428,
-    "sha256": "1f33b9e33a62c1031c9ae3ea202388b0d20e5303d21cb86454414736fb739759"
+    "bytes": 5885,
+    "sha256": "5be9dce26b69d9e3a50094e4967913c8fd1d891bda797912b04a0041d023b758"
   },
   "composition_first_attempt_failure": {
     "path": "coordination/engineering/tkm-411-combined-20261027/composition-003/attempt-001-failure.json",
@@ -199,7 +199,7 @@
     "comparison": "Current MDV accepted index; live main 74b9 adds unrelated AREF evidence only, with no bank change."
   },
   "finalizer_preparation": {
-    "status": "prepared-only; finalizer not run; no refreshed bank/comparator/hosted controls/acceptance",
+    "status": "finalizer completed candidate-only; trusted full-bank comparator passed; hosted controls and root acceptance pending",
     "config": {
       "path": "coordination/engineering/tkm-411-combined-20261027/finalize-008/config.json",
       "bytes": 1558,
@@ -210,7 +210,7 @@
     "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644"
   },
   "candidate_final_bank": {
-    "status": "finalizer completed candidate-only; full-bank comparison and hosted controls pending",
+    "status": "finalizer and trusted full-bank comparison completed candidate-only; hosted controls and root acceptance pending",
     "baseline_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
     "candidate_selector": {
       "path": "data/ownership-selection.json",
@@ -271,6 +271,75 @@
       "added_paths": 11,
       "candidate_only": true
     },
-    "full_bank_comparison": "pending; no global conservation claim yet"
-  }
+    "full_bank_comparison": {
+      "status": "completed; no-new-native-loss",
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/report.json",
+      "bytes": 92326,
+      "sha256": "5faa1ffe7caf47b9eacaa0314db4d0d73b09ef45df1676b85e1d1271cb244635",
+      "method": "selected-native-owner-conservation-v1",
+      "baseline_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+      "candidate_commit": "c2359ccfe1b57910dcef6c7e4aeb34ef0e97304f",
+      "accepted_baseline_index_sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408",
+      "candidate_index_sha256": "78d61d3b79e880abb927f4921f467e8827eda38644667aa80d5d37a8e2eb26f3",
+      "compared_rows": 262166,
+      "added_cells": 506,
+      "removed_cells": 0,
+      "reassigned_cells": 0,
+      "lost_or_reassigned_cells": 0,
+      "candidate_code_executed": false,
+      "trusted_code_paths_checked": 18,
+      "successful_attempt": {
+        "directory": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/",
+        "start_utc": "2026-10-27T21:45:00Z",
+        "end_utc": "2026-10-27T21:47:57Z",
+        "exit_code": 0,
+        "stdout_bytes": 550,
+        "stderr_bytes": 0
+      },
+      "preserved_duplicate_attempt_004": {
+        "directory": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/attempt-004/",
+        "start_utc": "2026-10-27T21:46:07Z",
+        "end_utc": "2026-10-27T21:48:22Z",
+        "exit_code": 1,
+        "reason": "EEXIST opening the existing report.json with wx; no report overwritten"
+      }
+    }
+  },
+  "full_bank_comparison_artifacts": [
+    {
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/compare.mjs",
+      "bytes": 3374,
+      "sha256": "3d6119c96cd5cf27267f402c147a6f0bae04c2159294ff6e03e9542edcd54808"
+    },
+    {
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/report.json",
+      "bytes": 92326,
+      "sha256": "5faa1ffe7caf47b9eacaa0314db4d0d73b09ef45df1676b85e1d1271cb244635"
+    },
+    {
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/stdout.log",
+      "bytes": 550,
+      "sha256": "851f4f565e5038c4e6776f23577ba2cf73938593f975dabe5782140fd1750f48"
+    },
+    {
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/attempt-004/exit-code.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/attempt-004/stderr.log",
+      "bytes": 775,
+      "sha256": "cf443ce1f17880114332bd4d091aeb2e63eff3a9ac5e5be679d9e0c17a2d4531"
+    }
+  ]
 }
