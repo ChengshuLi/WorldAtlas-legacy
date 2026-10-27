@@ -1,0 +1,8 @@
+{
+  "phase": "source-evidence",
+  "argv": ["node", "scripts/prepare-delivery-handoff.mjs", "source-evidence", "coordination/engineering/tkm-mary143-native-001/config/native-inputs-001/source-evidence-config.json", "coordination/engineering/tkm-mary143-native-001/source-evidence-001"],
+  "environment_delta": {"unset": ["NODE_PATH"]},
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "stdout": "{\"destination\":\"coordination/engineering/tkm-mary143-native-001/source-evidence-001\",\"resumed\":false,\"binding\":{\"phase\":\"source-evidence\",\"config_sha256\":\"8d73cc017a248f70b0688633425865dc57c1b525f144c7b25d6cb76934e403bc\"}}"
+}

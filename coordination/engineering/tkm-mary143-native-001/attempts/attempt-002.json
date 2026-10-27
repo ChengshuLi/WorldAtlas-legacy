@@ -1,0 +1,23 @@
+{
+  "attempt": 2,
+  "phase": "native-diagnostic",
+  "argv": [
+    "node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "native-diagnostic",
+    "coordination/engineering/tkm-mary143-native-001/config/native-inputs-002/native-diagnostic-config.json",
+    "coordination/engineering/tkm-mary143-native-001/native-diagnostic-001"
+  ],
+  "cwd": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/8a7188389791c016a73ea614187e673fb1038d61bf2fe758eb2e695cf4d07768/work",
+  "environment_delta": {
+    "unset": [
+      "NODE_PATH"
+    ]
+  },
+  "exit_code": 0,
+  "signal": null,
+  "stdout_bytes": 494,
+  "stderr_bytes": 0,
+  "stdout": "{\"destination\":\"coordination/engineering/tkm-mary143-native-001/native-diagnostic-001\",\"resumed\":false,\"binding\":{\"phase\":\"native-diagnostic\",\"config_sha256\":\"9a5cecdfcddac30e96e7576338002876f861026c85751fe8dc30174b90b94ccb\"},\"observation\":{\"elapsed_seconds\":6.052955776,\"requested_cells\":143,\"supported_cells\":143,\"held_cells\":0,\"limits\":[\"Original source/physical producers are not replayed.\",\"Diagnostic screening produces no authority, current-owner-zero or selected-output acceptance.\"]}}\n",
+  "note": "Supported diagnostic phase completed. No authority is emitted by this phase."
+}
