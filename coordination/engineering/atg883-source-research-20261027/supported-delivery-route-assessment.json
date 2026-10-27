@@ -284,5 +284,35 @@
     "retired_bodies_verified_restorable": 7,
     "replacement_ranges_exact": true,
     "full_bank_conservation": false
-  }
+  },
+  "current_owner_observation_5fffbde": {
+    "path": "coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-5fffbde.json",
+    "sha256": "205f2a608caf35957c1480cd58240a388a35e7eb9c1807d6b52f591001906ccc",
+    "data_commit": "5fffbde0888e3b79d10387b2687aa281ea3ac354",
+    "kind": "literal-selected-owner-observation-v2",
+    "query_count": 883,
+    "effective_owner_counts": {
+      "0": 883
+    },
+    "all_original_keys_effective_owner_zero": true,
+    "acquisition": {
+      "complete_scientific_closure": false,
+      "declarations": 20,
+      "declared_bytes": 18844874,
+      "fetch_batches": 0,
+      "fetch_ms": 0,
+      "fetched_bytes": 0,
+      "fetched_objects": 0,
+      "origin_metadata_bytes": 0,
+      "origin_metadata_fetches": 0,
+      "origin_metadata_imports": 0,
+      "origin_metadata_objects": 0,
+      "scope": "original-package-and-selected-native-observation",
+      "tree_metadata_ms": 0,
+      "unique_objects": 20
+    },
+    "full_bank_conservation": false,
+    "candidate_observation": false
+  },
+  "latest_accepted_baseline_owner_observation": "coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-5fffbde.json"
 }
