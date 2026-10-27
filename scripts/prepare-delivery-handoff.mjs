@@ -1161,20 +1161,53 @@ export function publishFinalizedDelivery(root, destination, outputs, binding, re
   for (const row of rows.filter(row => row.retained)) need(retainedSparse(row) === row.allowMissing,
     'Retained compatibility index changed before adoption: ' + row.path);
   const retired = rows.filter(row => row.kind === 'retired');
-  const recheckRetirements = () => {
-    for (const row of retired) need(indexed(row) === row.retirementIndex,
-      'Final-bank retirement index changed before adoption: ' + row.path);
+  const describeIndex = entry => {
+    const lines = entry.split('\0').filter(Boolean);
+    if (!lines.length) return {entry: '', tag: null, mode: null, oid: null, stage: null, path: null,
+      skip_worktree: false, assume_unchanged: false};
+    const line = lines.length === 1 ? lines[0] : null;
+    if (!line) return {entry: entry.replace(/\0$/, ''), tag: null, mode: null, oid: null, stage: null, path: null,
+      skip_worktree: null, assume_unchanged: null};
+    const match = /^([A-Za-z?]) (\d{6}) ([0-9a-f]+) ([0-3])\t(.+)$/.exec(line);
+    return match ? {entry: line, tag: match[1], mode: match[2], oid: match[3], stage: Number(match[4]), path: match[5],
+      skip_worktree: match[1].toUpperCase() === 'S', assume_unchanged: match[1] !== match[1].toUpperCase()}
+      : {entry: line, tag: null, mode: null, oid: null, stage: null, path: null,
+        skip_worktree: null, assume_unchanged: null};
   };
-  recheckRetirements();
+  const checkRetirementMaterialization = (row, state, phase) => {
+    need(state.mode === '100644' && state.oid === row.git_blob_oid && state.stage === 0
+      && state.path === row.path && ['H', 'S'].includes(state.tag),
+    `Final-bank retirement identity changed during ${phase}: ${row.path}; ` + JSON.stringify({current: state}));
+    const filename = path.join(root, row.path), stat = fs.lstatSync(filename, {throwIfNoEntry: false});
+    if (state.tag === 'S') need(!stat, `Sparse final-bank retirement was materialized during ${phase}: ${row.path}`);
+    else {
+      need(stat?.isFile() && !stat.isSymbolicLink(), `Materialized final-bank retirement is nonordinary during ${phase}: ${row.path}`);
+      need(same(visitProduct(fs.readFileSync(filename)), row.previous), `Materialized final-bank retirement body changed during ${phase}: ${row.path}`);
+    }
+  };
+  const recheckRetirements = phase => {
+    for (const row of retired) {
+      const current = indexed(row);
+      need(current === row.retirementIndex, `Final-bank retirement index changed during ${phase}: ${row.path}; `
+        + JSON.stringify({expected: describeIndex(row.retirementIndex), current: describeIndex(current)}));
+      if (row.retirementIndex && phase !== 'before-sparse-retirement-staging')
+        checkRetirementMaterialization(row, describeIndex(current), phase);
+    }
+  };
+  recheckRetirements('after-publication-before-materialization');
   for (const row of writes) need(indexed(row) === row.writeIndex, 'Canonical output index changed before materialization: ' + row.path);
   if (sparse) {
+    const retirementBeforeSparseAdd = new Map(retired.map(row => [row.path, indexed(row)]));
+    for (const row of retired) need(retirementBeforeSparseAdd.get(row.path) === row.retirementIndex,
+      `Final-bank retirement index changed immediately before sparse materialization: ${row.path}; `
+        + JSON.stringify({expected: describeIndex(row.retirementIndex), current: describeIndex(retirementBeforeSparseAdd.get(row.path))}));
     reader.git('sparse-checkout', 'add', '--', ...writes.map(row => '/' + row.path));
     need(reader.git('rev-parse', 'HEAD').toString().trim() === head, 'Finalization HEAD changed during materialization');
     for (const row of writes) {
       const expected = row.writeIndex.replace(/^S /, 'H ');
       need(indexed(row) === expected, 'Canonical output index changed during materialization: ' + row.path);
     }
-    recheckRetirements();
+    recheckRetirements('after-sparse-materialization');
     for (const row of rows.filter(row => row.retained)) need(retainedSparse(row) === row.allowMissing,
       'Retained compatibility index changed during materialization: ' + row.path);
   }
@@ -1187,15 +1220,18 @@ export function publishFinalizedDelivery(root, destination, outputs, binding, re
   // skip-worktree bit. Retire only these exact, now-absent indexed preimages.
   const sparseRetirements = retired.filter(row => row.sparseRetirement);
   if (sparseRetirements.length) {
-    recheckRetirements();
+    recheckRetirements('before-sparse-retirement-staging');
     for (const row of sparseRetirements) need(!fs.lstatSync(path.join(root, row.path), {throwIfNoEntry: false}),
       'Retired sparse output reappeared before staging: ' + row.path);
     reader.git('update-index', '--force-remove', '--', ...sparseRetirements.map(row => row.path));
     for (const row of sparseRetirements) need(indexed(row) === '', 'Sparse retirement was not staged: ' + row.path);
   }
   const indexedRetirements = retired.filter(row => row.retirementIndex && !row.sparseRetirement);
-  for (const row of indexedRetirements) need(indexed(row) === row.retirementIndex,
-    'Final-bank retirement index changed before staging: ' + row.path);
+  for (const row of indexedRetirements) {
+    need(indexed(row) === row.retirementIndex, 'Final-bank retirement index changed before staging: ' + row.path);
+    need(!fs.lstatSync(path.join(root, row.path), {throwIfNoEntry: false}),
+      'Materialized final-bank retirement remained before staging: ' + row.path);
+  }
   if (indexedRetirements.length) {
     reader.git('update-index', '--force-remove', '--', ...indexedRetirements.map(row => row.path));
     for (const row of indexedRetirements) need(indexed(row) === '',

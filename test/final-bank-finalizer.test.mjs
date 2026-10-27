@@ -461,9 +461,30 @@ test('retiring current-bank paths refuse non-sparse loss, staged replacements an
  f.save('data/ownership-selection.json',migration.selection);f.save('coordination/engineering/retirement-guards/registry.json',{version:1,kind:'retained-rule-authority-registry-v1',entries:[added.entry]});
  const source=f.commit(),hook=f.pin('coordination/engineering/retirement-guards/registry.json',source);
  const name=bank+migration.index.preparedOwnership.context_parts[0].path,file=path.join(f.root,name),original=fs.readFileSync(file),oid=f.git('rev-parse',source+':'+name).toString().trim();
- const reader=pinReader(f.root),outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
+ const normal=pinReader(f.root),sparseRetirementSnapshots=[];let sparseRetirementMutation=null;
+ const reader={...normal,git(...args){
+  if(args[0]==='sparse-checkout'&&args[1]==='add'){
+   const before=normal.git('ls-files','--stage','-v','-z','--',name).toString(),result=normal.git(...args);
+   if(sparseRetirementMutation==='bad-oid'){
+    f.git('update-index','--add','--cacheinfo',`100644,${badOid},${name}`);fs.writeFileSync(file,original);fs.chmodSync(file,0o644);
+   }
+   if(sparseRetirementMutation==='bad-mode')f.git('update-index','--chmod=+x','--',name);
+   if(sparseRetirementMutation==='bad-stage'){
+    f.git('update-index','--force-remove','--',name);
+    execFileSync('git',['-C',f.root,'update-index','--index-info'],{input:`100644 ${oid} 1\t${name}\n`,stdio:['pipe','ignore','pipe']});
+   }
+   if(sparseRetirementMutation==='bad-body'){
+    fs.writeFileSync(file,Buffer.from('wrong materialized body'));fs.chmodSync(file,0o644);
+   }
+   const after=normal.git('ls-files','--stage','-v','-z','--',name).toString();
+   sparseRetirementSnapshots.push({before,after});return result;
+  }
+  return normal.git(...args);
+ }};
+ const badOid=f.git('hash-object','-w','--stdin').toString().trim();
+ const outputs=finalizeDelivery({version:2,selector:{commit:at,path:'data/ownership-selection.json'},package_inputs:{commit:at,path:'.github/package-inputs.json'},change_evidence:hook},reader);
  await prepareFinalizedStartupOwnership(outputs,f.root);assert(!JSON.parse(outputs['startup-ownership.json']).files.some(p=>bank+p.path===name));
- const destination='coordination/engineering/final-bank-test/retirement-guards',publish=(resume=false)=>publishFinalizedDelivery(f.root,destination,outputs,{phase:'finalize'},resume);
+ const destination='coordination/engineering/final-bank-test/retirement-guards',publish=(resume=false,target=destination)=>publishFinalizedDelivery(f.root,target,outputs,{phase:'finalize'},resume);
  const pristine=()=>{f.git('update-index','--no-assume-unchanged','--no-skip-worktree','--',name);fs.writeFileSync(file,original,{mode:0o644});fs.chmodSync(file,0o644);f.git('add','--',name);};
  for(const mutation of ['missing','deleted-index','staged-bytes','staged-mode','assume-unchanged']){
   if(mutation==='missing')fs.unlinkSync(file);
@@ -488,10 +509,41 @@ test('retiring current-bank paths refuse non-sparse loss, staged replacements an
  const selector=fs.readFileSync(path.join(f.root,'data/ownership-selection.json')),write=fs.writeFileSync;let changed=false;
  fs.writeFileSync=function(filename,...args){const result=write.call(this,filename,...args);
   if(!changed&&typeof filename==='string'&&filename.includes(destination)){changed=true;f.git('update-index','--force-remove','--',name);}return result;};
- try{assert.throws(()=>publish(),/retirement index changed before adoption/);assert(changed);}finally{fs.writeFileSync=write;}
+ try{
+  let error;try{publish();}catch(caught){error=caught;}assert(error instanceof Error);assert.match(error.message,/retirement index changed during after-publication-before-materialization: /);assert(changed);
+  assert.match(error.message,/"expected":\{"entry":"S 100644 [0-9a-f]{40} 0\\t[^"\\]+","tag":"S","mode":"100644","oid":"[0-9a-f]{40}","stage":0,"path":"[^"]+","skip_worktree":true,"assume_unchanged":false\}/);
+  assert.match(error.message,/"current":\{"entry":"","tag":null,"mode":null,"oid":null,"stage":null,"path":null,"skip_worktree":false,"assume_unchanged":false\}/);
+ }finally{fs.writeFileSync=write;}
  assert.deepEqual(fs.readFileSync(path.join(f.root,'data/ownership-selection.json')),selector,'Staging-time index changes refuse before selector adoption');
  f.git('update-index','--add','--cacheinfo',`100644,${oid},${name}`);f.git('update-index','--skip-worktree','--',name);
- publish(true);assert.equal(f.git('ls-files','--stage','--',name).length,0);
+ for(const mutation of ['bad-oid','bad-mode','bad-stage','bad-body']){
+  sparseRetirementMutation=mutation;
+  assert.throws(()=>publish(true),/(Final-bank retirement index changed during after-sparse-materialization|Sparse final-bank retirement was materialized during after-sparse-materialization)/,mutation);
+  const snapshot=sparseRetirementSnapshots.at(-1);
+  assert.match(snapshot.before,/^S 100644 [0-9a-f]{40} 0\t/);
+  assert.notEqual(snapshot.before,snapshot.after,`${mutation} is injected after sparse-checkout add`);
+  if(mutation==='bad-oid')assert.notEqual(snapshot.before.match(/[0-9a-f]{40}/)?.[0],snapshot.after.match(/[0-9a-f]{40}/)?.[0]);
+  if(mutation==='bad-mode')assert.match(snapshot.after,/ 100755 /);
+  if(mutation==='bad-stage')assert.match(snapshot.after,/ [1-3]\t/);
+  if(mutation==='bad-body')assert.match(snapshot.after,/^H 100644 [0-9a-f]{40} 0\t/,
+   'Materializing a wrong body under an excluded path is rejected when Git clears its skip-worktree marker');
+  if(fs.existsSync(file))fs.unlinkSync(file);
+  f.git('update-index','--force-remove','--',name);
+  f.git('update-index','--add','--cacheinfo',`100644,${oid},${name}`);
+  f.git('update-index','--skip-worktree','--',name);
+ }
+ sparseRetirementMutation=null;
+ const freshDestination='coordination/engineering/final-bank-test/retirement-guards-fresh';
+ publish(false,freshDestination);assert.equal(f.git('ls-files','--stage','--',name).length,0);
+ assert.equal(sparseRetirementSnapshots.length,5,'Four invalid transitions and the successful sparse adoption each materialize once');
+ const validSnapshot=sparseRetirementSnapshots.at(-1);
+ assert.equal(validSnapshot.before,validSnapshot.after,
+  'The real sparse-checkout add preserves the retired file index entry');
+ assert.match(validSnapshot.before,/^S 100644 [0-9a-f]{40} 0\t/);
+ assert.match(validSnapshot.after,/^S 100644 [0-9a-f]{40} 0\t/);
+ assert(!fs.existsSync(file),'The verified materialized retirement is removed before index staging');
+ assert(f.git('ls-files','--stage','--',name).length===0,'Fresh publication stages removal of the exact materialized retirement');
+ assert(fs.existsSync(path.join(f.root,freshDestination,'preparation.json')),'The fresh S-to-H publication completes');
 });
 
 
