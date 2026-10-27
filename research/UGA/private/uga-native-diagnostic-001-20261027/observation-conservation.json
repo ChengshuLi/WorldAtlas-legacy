@@ -1,0 +1,36 @@
+{
+  "schema": "uga-native-patch-observation-conservation-v1",
+  "diagnostic_only": true,
+  "scientific_qualification": false,
+  "patch": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task-6/.worldatlas-workspaces/900136ec0e0339cb/a90ab2c86901f61f6fb41310f52f89d061db61dacc1dbae8f8b6d47cac002478/work/.cache/delivery-handoff/uga-native-patch-001/native-patch.json",
+    "bytes": 19613,
+    "sha256": "efa29d66b3cb36a12d2ac4608cbb6fd6ed6eb947dc074bdb74c2ead1fe4d517b",
+    "expanded_cells": 715,
+    "rows": 430,
+    "assignment_digest_sha256": "07d6a63113286532c0fd2cf31a30cae8bb0d1aad61f693b49012fe87e8ba351d"
+  },
+  "derivation_receipt": {
+    "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task-6/.worldatlas-workspaces/900136ec0e0339cb/a90ab2c86901f61f6fb41310f52f89d061db61dacc1dbae8f8b6d47cac002478/work/.cache/delivery-handoff/uga-native-patch-001/derivation-receipt.json",
+    "bytes": 3996,
+    "sha256": "63f356e3e672d3457b52e5282392dd76f5c7628a06f2280470f0be1c6db131c5"
+  },
+  "current_observation": {
+    "path": "/private/tmp/uga-owner-observation-a0b1-20261027.json",
+    "bytes": 178703,
+    "sha256": "dc755b70a3f8d6756de22c718224884d6e4d498bd44bba2014b1671c9d8f02e5",
+    "commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "query_count": 715,
+    "query_sha256": "bb9f288ff9b3122e63b49d378076756b339857e7972ef5f67dde4705bfb55ff2",
+    "query_digest_reproduced": "bb9f288ff9b3122e63b49d378076756b339857e7972ef5f67dde4705bfb55ff2",
+    "selection_sha256": "6648f01e62fb851b2b426977578d4899465212e54d02f002706b340ca0efa883",
+    "native_manifest_sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba"
+  },
+  "conservation": {
+    "patch_keys_equal_observation_query": true,
+    "patch_unique_cells": 715,
+    "query_unique_cells": 715,
+    "omissions": 0,
+    "extras": 0
+  }
+}
