@@ -237,16 +237,29 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     const stats = fs.statfsSync(common);
     return freeBytes ? freeBytes() : stats.bavail * stats.bsize;
   };
-  const report = () => {
+  const report = ({worker = process.env.CODEX_THREAD_ID || undefined} = {}) => {
+    // Reports are a per-worker view, never a registry dump. The worker selector
+    // is bound to this process identity; callers cannot inspect another slot by
+    // supplying an arbitrary owner ID. Capability tokens are intentionally not
+    // part of the report schema.
+    if (worker !== undefined && (!id(worker) || worker !== process.env.CODEX_THREAD_ID)) {
+      throw Error('Workspace report is limited to the current CODEX_THREAD_ID');
+    }
     const value = state();
     const inventory = worktrees();
-    let checkoutBytes = 0;
     for (const item of inventory) {
       const entry = value.entries.find(entry => entry.path === item.path);
-      checkoutBytes += item.bytes;
       item.managed = Boolean(entry);
     }
-    return {root, registry, freeBytes: availableBytes(), checkoutBytes, entries: value.entries, worktrees: inventory};
+    const entries = worker ? value.entries.filter(entry => entry.worker === worker).map(entry => ({
+      worker: entry.worker, slot: entry.slot, path: entry.path, head: entry.head, branch: entry.branch,
+      profile: entry.profile, include: entry.include, reservation: entry.reservation,
+      status: entry.status, createdAt: entry.createdAt
+    })) : [];
+    const ownedPaths = new Set(entries.map(entry => entry.path));
+    const ownedWorktrees = inventory.filter(item => ownedPaths.has(item.path));
+    const checkoutBytes = ownedWorktrees.reduce((sum, item) => sum + item.bytes, 0);
+    return {root, registry, freeBytes: availableBytes(), checkoutBytes, entries, worktrees: ownedWorktrees};
   };
   const inputInventory = (head, profile, include) => {
     requireCommit(head);
@@ -682,6 +695,15 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
       }
     }
     if (['allocate', 'resume'].includes(action) && (options.slot ?? 'work') === 'work') assertAuthorWorkerIdentity(options.worker);
+    if (action === 'report') {
+      if (options.token !== undefined || options.capabilityFile !== undefined || options.slot !== undefined ||
+          options.branch !== undefined || options.commit !== undefined || options.profile !== undefined ||
+          options.include.length || options.expectedPath !== undefined || options.expectedBranch !== undefined ||
+          options.expectedHead !== undefined) {
+        throw Error('Report accepts only --repo and the current --worker identity');
+      }
+      if (options.worker !== undefined) assertAuthorWorkerIdentity(options.worker);
+    }
     if (action === 'recover-lost-capability' && (!process.env.CODEX_THREAD_ID || options.worker !== process.env.CODEX_THREAD_ID)) {
       throw Error('Lost-capability recovery requires this author’s exact CODEX_THREAD_ID');
     }
@@ -700,7 +722,7 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
     });
     const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action;
     if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume, recover-lost-capability or release with documented --key value arguments');
-    const result = await manager[method](options);
+    const result = action === 'report' ? await manager.report({worker: options.worker}) : await manager[method](options);
     console.log(JSON.stringify(result, null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
