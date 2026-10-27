@@ -57,12 +57,13 @@ Paths in the table are relative to `coordination/engineering/btn-36-source-role-
 
 ## Additional current-preparation geometry-bearing files
 
-The following nine files extend the 19-file inventory above. The current administrative evidence contains a selected, serialized subset of two simplified geoBoundaries BTN ADM1 source features. It is not the complete source product. The constructor rows are derived native-cell assignment evidence. Compact negative-family references identify source members, ordinals, and geometry hashes; they do not embed the negative family geometries. The current supported-input source files do not embed GSHHG geometry.
+The following ten files extend the 19-file inventory above. The current administrative evidence contains a selected, serialized subset of two simplified geoBoundaries BTN ADM1 source features. It is not the complete source product. The constructor rows are derived native-cell assignment evidence. Compact negative-family references identify source members, ordinals, and geometry hashes; they do not embed the negative family geometries. The current supported-input source files do not embed GSHHG geometry.
 
 | Repository path | Bytes | SHA-256 | Contents |
 |---|---:|---|---|
 | `supported-inputs-current-main-f8c5-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Two embedded geoBoundaries-derived BTN base geometries |
 | `supported-inputs-current-main-a033-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Byte-identical two embedded geoBoundaries-derived BTN base geometries, bound by the a033 current-selector partition |
+| `supported-inputs-current-main-a0b1-territorial-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Byte-identical two embedded geoBoundaries-derived BTN base geometries, emitted with the a0b1 current-selector partition |
 | `supported-inputs-current-4828-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Same two base geometries; current-selector binding is in its preparation receipt |
 | `territorial-exclusions-current-f8c5-001/source-evidence.json` | 14,936 | `6fb1a91775b6faeefb9c3b94a0433a2cd8066fb3beb00b27fda69bd29b940841` | Same two BTN base geometries plus compact source-member references for negative families |
 | `source-evidence-current-a033-territorial-config.json` | 26,320 | `a59e8dda6b5de1590e132c5acc297b6a3f4c4abf3a508f23bbfa7d853b19042c` | Two BTN base geometries; pins the a033 selector and complete negative-family inputs, without embedding negative-family geometries |
