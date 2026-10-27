@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "kind": "supported-final-bank-finalizer-run",
+  "phase": "finalize",
+  "base": "29e4d7c2d4215345f76cef695db93b4120e48114",
+  "merge_commit": "67edafc3ea600514045b167c00f079db23f7fcbe",
+  "config": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalize-preflight-current-29e4-exact.json",
+  "config_sha256": "928fa734cb81c47de77d168f9c1165607f9c065656fec1cab476437f38efab65",
+  "destination": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001",
+  "command": "env -u NODE_PATH -u NODE_OPTIONS GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1 node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/mdv-original-repair-evaluation-20261021/finalize-preflight-current-29e4-exact.json coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001",
+  "exit_code": 0,
+  "resumed": false,
+  "stdout": {"path":"coordination/engineering/mdv-original-repair-evaluation-20261021/finalizer-current-29e4-cli-stdout.json","bytes":779,"sha256":"73db770cf3fdf7152f1f68da1e1f6a7ddda8dfcf02409110d640a9bda221e836"},
+  "stderr": {"bytes":0,"sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+  "candidate_code_executed": false,
+  "limits": ["Finalizer preparation is not a trusted current-bank conservation result.", "No exact-current-pair tests, build, hosted controls, emitted-consumer checks, or science acceptance are claimed."]
+}
