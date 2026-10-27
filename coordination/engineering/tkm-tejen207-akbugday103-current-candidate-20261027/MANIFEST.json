@@ -3,6 +3,7 @@
     "accepted_positive": 240,
     "accepted_researched_unresolved": 57,
     "accepted_total": 297,
+    "label": "historical snapshot before this 411-cell candidate; not current global ledger",
     "path": "/workspace/shared/worldatlas-root-acceptance-after-TKM187-2946-20261027.json",
     "pending_before_candidate": 1462,
     "sha256": "d94a86153e80d615a5cbc4f8ab5bea41d1311d024afe1155878086a0eecc1ecf"
@@ -471,11 +472,41 @@
       "path": "data/ownership-selection.json",
       "sha256": "23836b9f7dce4ec1086b1080395e35ed67212a681aa36746fe7c8e95364b8ae8",
       "state": "present"
+    },
+    {
+      "bytes": 683,
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-007/config.json",
+      "sha256": "ea20fe44c9c34f06081a1435273bb6ce6837d18f2c1163d0a6de8752f5989725",
+      "state": "present"
+    },
+    {
+      "bytes": 1156,
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-007-output/preparation.json",
+      "sha256": "4dd81dd8c8c38f0912f86821317dac12f710638dc83afb0385dfa7fe564c9e8d",
+      "state": "present"
+    },
+    {
+      "bytes": 49610,
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-007-output/startup-ownership.json",
+      "sha256": "5aee1cb64cb07fc034a724ee4fc7208a36f38d1c7cf85a88c0bc859847511b79",
+      "state": "present"
+    },
+    {
+      "bytes": 115552,
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/raw-report.json",
+      "sha256": "ee9d6e6849ac1a6de74075065de26c8f56f75de22631fd6244743c2781b7c5f2",
+      "state": "present"
+    },
+    {
+      "bytes": 2089,
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/comparison-receipt.json",
+      "sha256": "47ef519e1d878eb2e360660a7a1abbc7984b1228f3c92aee25ef3c11bd0ff08c",
+      "state": "present"
     }
   ],
   "candidate": {
-    "base_commit": "f35dcd66352a441937c3cb9e894d28f247f63c4c",
-    "cells": 310,
+    "base_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "cells": 411,
     "cohorts": [
       {
         "cells": 207,
@@ -488,44 +519,60 @@
         "name": "Ak Bugday",
         "owner_index": 42135,
         "target_id": "gb:TKM:ADM2:10190150B31923585689840"
+      },
+      {
+        "cells": 101,
+        "name": "Koytendag",
+        "owner_index": 42138,
+        "target_id": "gb:TKM:ADM2:10190150B64529450546528"
       }
     ],
     "current_owner_zero_basis": "derived from original d221 observation plus exact disjoint accepted additions; not a fresh literal query",
     "disjoint_from_previously_accepted_297": true,
-    "expected_owner_y_x_sha256": "0091052ccdde8824e8bb08b13f89e91f58256ad518570b44b925786038ac0bca",
-    "head_before_packet_commit": "ce0c53e395cbfcbb2249c6eccdc21c12229e85f1",
+    "head_before_packet_commit": "c713f245f7cd9513fec955de347cf68bd6867f62",
+    "held_koytendag_cells": 26,
+    "held_reason": "retained exact AFG foreign-source contacts; not candidate additions",
     "overlap_between_cohorts": 0
   },
   "finalizer": {
-    "config_path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/finalize-003/config.json",
-    "config_sha256": "052127f74958a3c4dd880892583074a207917bd7fd6a3c318d850acee298ed39",
-    "elapsed_seconds": 136.627,
-    "ended_utc": "2026-10-27T10:17:07Z",
+    "config_path": "coordination/engineering/tkm-411-combined-20261027/finalize-007/config.json",
+    "config_sha256": "ea20fe44c9c34f06081a1435273bb6ce6837d18f2c1163d0a6de8752f5989725",
+    "elapsed_seconds": 150,
+    "ended_utc": "2026-10-27T12:24:45Z",
     "exit_code": 0,
     "failed_attempts_preserved": true,
-    "maxrss_kib": 1267456,
     "output_startup_bytes": 49610,
     "output_startup_path": "data/canonical-grid/current-startup/startup-ownership.json",
-    "output_startup_sha256": "881e069afa31c2bb7e618eaec31486de58e201ad6caa61a16506996cd489cbdf",
-    "started_utc": "2026-10-27T10:14:51Z"
+    "output_startup_sha256": "5aee1cb64cb07fc034a724ee4fc7208a36f38d1c7cf85a88c0bc859847511b79",
+    "started_utc": "2026-10-27T12:22:15Z",
+    "trusted_baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f"
   },
   "full_bank_comparison": {
-    "added": 310,
-    "affected_rows": 178,
-    "bytes": 83118,
-    "candidate_code_executed": false,
-    "candidate_commit": "c5acbfbb3a48f0cf52083a2f43b90ebfef02a129",
+    "added": 411,
+    "affected_rows": 0,
+    "bytes": 115552,
+    "candidate_code_executed": "metadata flag reflects differing checkout HEAD; trusted execution-code inventory unchanged",
+    "candidate_commit": "291a6a77aa9ef6109556419d166adeff4d496ab0",
     "compared_rows": 262166,
-    "path": "coordination/engineering/tkm-tejen207-akbugday103-current-candidate-20261027/full-bank-comparison-001.json",
+    "execution_code_changes": 0,
+    "lost": 0,
+    "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/raw-report.json",
     "reassigned": 0,
-    "receipt_path": "/workspace/shared/worldatlas-TKM-tejen-ak310-finalization-20261027/receipt.json",
-    "receipt_sha256": "39300ebe2b2f3733de83b7d6467c5522853b515413315312240a12f2b1b33ba9",
+    "receipt_path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/comparison-receipt.json",
+    "receipt_sha256": "47ef519e1d878eb2e360660a7a1abbc7984b1228f3c92aee25ef3c11bd0ff08c",
     "removed": 0,
-    "sha256": "ff5219a21f3f631a07bf9fdd5e3c92591fcc1f7bfc3cad8ff9224ba519d4ffb2",
+    "sha256": "ee9d6e6849ac1a6de74075065de26c8f56f75de22631fd6244743c2781b7c5f2",
     "status": "no-new-native-loss",
-    "trusted_baseline_commit": "d13ef9359af2b031bc0461700c2453dbcb861461"
+    "trusted_baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f"
   },
-  "kind": "tkm-tejen207-akbugday103-candidate-manifest",
+  "historical_310_candidate": {
+    "base_commit": "f35dcd66352a441937c3cb9e894d28f247f63c4c",
+    "candidate_commit": "c5acbfbb3a48f0cf52083a2f43b90ebfef02a129",
+    "cells": 310,
+    "comparison_report_sha256": "ff5219a21f3f631a07bf9fdd5e3c92591fcc1f7bfc3cad8ff9224ba519d4ffb2",
+    "status": "superseded historical candidate/comparison; not current bank base/result"
+  },
+  "kind": "tkm-tejen207-akbugday103-koytendag101-current-candidate-manifest",
   "original_package": {
     "cells": 1759,
     "id": "gb-TKM-ADM2--repair-evaluation",
@@ -536,6 +583,26 @@
     "queue_commit": "23318dd9d70680495138297b9cc1a7533a466200",
     "queue_file": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json",
     "queue_file_sha256": "78007430b6f9faedb188ef0619b7ff0a7a2cc7fff2ec9f1c41ee69936ec4ebd8"
+  },
+  "reviewed_test_plan": {
+    "base": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "build_required": true,
+    "checkout_patterns": 74,
+    "execution_inputs": 15,
+    "execution_status": "plan only; hosted workflow not yet run",
+    "geography_required": true,
+    "geography_software": false,
+    "head": "c713f245f7cd9513fec955de347cf68bd6867f62",
+    "profile": "full",
+    "tests": [
+      "test/final-bank-finalizer.test.mjs",
+      "test/final-bank-checkpoint.test.mjs",
+      "test/selected-owner-observation.test.mjs",
+      "test/selected-delivery-smoke.test.mjs",
+      "test/map-cell-diagnosis.test.mjs",
+      "test/compact-ownership.test.mjs",
+      "test/prepared-parity.test.mjs"
+    ]
   },
   "schema_version": 1,
   "status": "candidate-only; not root acceptance or hosted delivery"
