@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "kind": "supported-physical-attempt-failure",
+  "phase": "physical",
+  "attempted_at_utc": "2026-10-27T00:22:45Z",
+  "config_path": "coordination/engineering/tkm-baherden53-source-fit-20261026/config/physical-003.json",
+  "config_sha256": "1b3a66d66c34c227b2aa69d0c3c4bb15d439b6e6703daaa2c4d8e611988fa563",
+  "command": "env -u NODE_OPTIONS -u NODE_PATH /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/prepare-delivery-handoff.mjs physical coordination/engineering/tkm-baherden53-source-fit-20261026/config/physical-003.json coordination/engineering/tkm-baherden53-source-fit-20261026/physical-003/result-001",
+  "exit_code": 1,
+  "error": "ENOENT: no such file or directory, lstat '/tmp/tkm-runtime-inventory.py'",
+  "scientific_output_created": false,
+  "interpretation": "The prior runtime inventory listed a missing temporary inventory-emitter script as an extra runtime file. The supported outer preparer failed while authenticating runtime files; no source or geometry producer ran. A new helper-derived inventory omits this absent nonloaded extra and preserves all other verified prior runtime entries.",
+  "recovery": {
+    "runtime_inventory_path": "/workspace/shared/worldatlas-TKM-Baherden53-runtime-inventory-004-20261027.json",
+    "runtime_inventory_bytes": 43295,
+    "runtime_inventory_sha256": "ff634c8f358f0fcc513fc578c4503d92b747add7b6992ac9b8f015d33cb4444e",
+    "missing_old_extra_not_loaded": "/tmp/tkm-runtime-inventory.py",
+    "old_inventory": "/workspace/shared/worldatlas-TKM-Baherden53-runtime-inventory-002-20261026.json"
+  }
+}
