@@ -20,7 +20,7 @@ The Arta Vela/Leveraka 103 group retains source, physical, native diagnostic and
 
 The composed authority registry has two entries, one per group. The original authority preimages, source bindings and completed constructor ledgers remain independently pinned; composition does not merge the source-role claims or turn either into accepted ownership.
 
-A finalizer config was prepared but not invoked: `finalize-config-001-29e4.json` (SHA-256 `6f2c8552c6afef827df245cb32d5585a6aa5cd3f30669d3ad4c2402c2ece2f3d`). It binds selector and package-input pins at accepted main `29e4d7c2d4215345f76cef695db93b4120e48114` and the composed registry at commit `515ce42248bd8334fc6f1391187fc7089e55283f`. If accepted selector/package inputs advance, regenerate and verify the exact config against the actual current main before use. The composition and config hashes are recorded in `MANIFEST.json`.
+A corrected finalizer config is prepared but has not yet been invoked: `finalize-config-002-29e4.json` (SHA-256 `2ac537a79b78bdfbddaeed5f3b6fff8a46f05cbb8a13e82ed6ed92686086f008`). It uses exact `{commit,path}` locators for selector and package inputs at accepted main `29e4d7c2d4215345f76cef695db93b4120e48114`, and the composed registry pin at commit `515ce42248bd8334fc6f1391187fc7089e55283f`. Attempt 001 is preserved as a preflight schema failure (exit 1, no destination/output or bank mutation); its private receipt is recorded in `MANIFEST.json`. If accepted selector/package inputs advance, regenerate and verify the exact config against the actual current main before use. The composition and config hashes are recorded in `MANIFEST.json`.
 
 ## Required next controls
 
