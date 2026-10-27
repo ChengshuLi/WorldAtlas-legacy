@@ -1,1 +1,126 @@
-{"version":1,"kind":"hrv-3674-current-bank-finalizer-run-v1","status":"technical candidate preparation; comparator and stock controls pending; no acceptance/credit","baseline_commit":"f35dcd66352a441937c3cb9e894d28f247f63c4c","data_selector_commit":"f35dcd66352a441937c3cb9e894d28f247f63c4c","selector_blob_oid":"946e8198cc43d95ad0c2f90fc643e06b7d774c30","startup_index_blob_oid":"b8a296a45b90da1652b34741242a03d896dfc3d2","package_inputs_blob_oid":"845fe07d30052ae4e6982faea86a4d5137cd5fa2","candidate_count":3674,"candidate_tuple_sha256":"b880d07988db03fd1dfdb8bccb07eecbc576e4cd195455f04e92c2ceb1e096ca","finalizer_config":{"commit":"34be6aabbf9dc0c19ea97dcbc289270af99700fc","path":"coordination/engineering/hrv-dgu-native-qualification-20261026/config/finalize-combined-3674-current-f35.json","mode":"100644","git_blob_oid":"c8e9f31e1826f4a45f8adf10bafa01f255ab5729","bytes":589,"sha256":"a47cd879949b697df05b6d487ab9d5dedd0df6f420ac51ce9686b8cb4f580f04"},"command":"env -u NODE_PATH -u NODE_OPTIONS node scripts/prepare-delivery-handoff.mjs finalize CONFIG DESTINATION --resume","destination":"coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001","terminal":{"exit_code":0,"resumed":true,"stdout":{"bytes":789,"sha256":"ca5dc2245865b9a341d3eee1b34ae417700f62ff5ee53eac66195f4d33eb5a04"},"stderr":{"bytes":0,"sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}},"outputs":{"ownership-selection.json":{"path":"coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/ownership-selection.json","bytes":2291,"sha256":"c1bd640afe91e79790e45e5e5667e65b051ef3a2dbcec75b5f6c70d3d8a847a1"},"package-inputs.json":{"path":"coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/package-inputs.json","bytes":38421,"sha256":"e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"},"preparation.json":{"path":"coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/preparation.json","bytes":1156,"sha256":"aec6bf512845a67a15e84ded321ff4338292846d167b9068a31cca8e1fea380c"},"selected-delivery-expectations.json":{"path":"coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/selected-delivery-expectations.json","bytes":485,"sha256":"59302b970658ab6d2bbf5042c97a6bb392aa8e121d28d385639ce85a03b97049"},"startup-ownership.json":{"path":"coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/startup-ownership.json","bytes":49610,"sha256":"cd3d19df328886559a5a4396a570a4f64052d6a3c394f9e988c429bf3e4001cd"}},"startup_roster":{"indexed_body_files":79,"compatibility_files":30,"actual_materialized_files":50,"sparse_omitted_bodies_verified_by_exact_head_blob":30,"exact_roster":true,"all_indexed_bodies_sha256_and_size_verified":true},"preserved_failed_attempts":[{"attempt":"finalize-3674-current-f35-001","exit_code":1,"stdout_bytes":0,"stderr_bytes":41,"stderr_sha256":"456623a8064543838a69ef72f59aee43f68b0c991f4641d83031408ace368920","reason":"Incomplete change-evidence pin; stopped before destination creation."},{"attempt":"finalize-3674-current-f35-002","exit_code":1,"stdout_bytes":0,"stderr_bytes":225,"stderr_sha256":"7217051dfd2086e8b0851de94dd8b7de15ef0cb99b1ddb5e1051eeba10700c88","reason":"Unindexed candidate-3305 generated context output required accepted generated-preimage restoration."},{"attempt":"finalize-3674-current-f35-003","exit_code":1,"stdout_bytes":0,"stderr_bytes":190,"stderr_sha256":"8437084d5fea5696afcbc31c0a7d122df59ac108c27cf93e616012764328191d","reason":"Sparse skip-bit changed on indexed retirement while writer materialized exact output set; exact --resume after supported sparse reapply succeeded."}],"notes":["Restored only exact generated startup and selector preimages to accepted f35 in normal commits e00b366603ae4d0f7dd5324a5158233767edfbfc and 2e624e8fc58fe726f9d82d9cb31668b82d04991e; former candidate commit history remains unchanged.","No source, physical, native, rights, or science artifact was removed or regenerated.","This run is local technical finalization only. Full-bank comparator, tests/build, emitted browser/package controls, review, and hosted delivery are not yet attested."],"roster_audit":{"path":"coordination/engineering/hrv-dgu-native-qualification-20261026/candidate-3674/current-startup-roster-audit.json","bytes":24048,"sha256":"bfcd493d98159bc27f5599d1f785a87a9c38a8106b331f8b3f22a44c351e42be"}}
+{
+  "version": 1,
+  "kind": "hrv-3674-current-bank-finalizer-run-v1",
+  "status": "technical candidate preparation; full-bank comparator passed; tests/build/emitted controls, independent final-head review, and hosted delivery pending; no acceptance/credit",
+  "baseline_commit": "f35dcd66352a441937c3cb9e894d28f247f63c4c",
+  "data_selector_commit": "f35dcd66352a441937c3cb9e894d28f247f63c4c",
+  "selector_blob_oid": "946e8198cc43d95ad0c2f90fc643e06b7d774c30",
+  "startup_index_blob_oid": "b8a296a45b90da1652b34741242a03d896dfc3d2",
+  "package_inputs_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+  "candidate_count": 3674,
+  "candidate_tuple_sha256": "b880d07988db03fd1dfdb8bccb07eecbc576e4cd195455f04e92c2ceb1e096ca",
+  "finalizer_config": {
+    "commit": "34be6aabbf9dc0c19ea97dcbc289270af99700fc",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/config/finalize-combined-3674-current-f35.json",
+    "mode": "100644",
+    "git_blob_oid": "c8e9f31e1826f4a45f8adf10bafa01f255ab5729",
+    "bytes": 589,
+    "sha256": "a47cd879949b697df05b6d487ab9d5dedd0df6f420ac51ce9686b8cb4f580f04"
+  },
+  "command": "env -u NODE_PATH -u NODE_OPTIONS node scripts/prepare-delivery-handoff.mjs finalize CONFIG DESTINATION --resume",
+  "destination": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001",
+  "terminal": {
+    "exit_code": 0,
+    "resumed": true,
+    "stdout": {
+      "bytes": 789,
+      "sha256": "ca5dc2245865b9a341d3eee1b34ae417700f62ff5ee53eac66195f4d33eb5a04"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "outputs": {
+    "ownership-selection.json": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/ownership-selection.json",
+      "bytes": 2291,
+      "sha256": "c1bd640afe91e79790e45e5e5667e65b051ef3a2dbcec75b5f6c70d3d8a847a1"
+    },
+    "package-inputs.json": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "preparation.json": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/preparation.json",
+      "bytes": 1156,
+      "sha256": "aec6bf512845a67a15e84ded321ff4338292846d167b9068a31cca8e1fea380c"
+    },
+    "selected-delivery-expectations.json": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/selected-delivery-expectations.json",
+      "bytes": 485,
+      "sha256": "59302b970658ab6d2bbf5042c97a6bb392aa8e121d28d385639ce85a03b97049"
+    },
+    "startup-ownership.json": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-combined-3674-current-f35-001/startup-ownership.json",
+      "bytes": 49610,
+      "sha256": "cd3d19df328886559a5a4396a570a4f64052d6a3c394f9e988c429bf3e4001cd"
+    }
+  },
+  "startup_roster": {
+    "indexed_body_files": 79,
+    "compatibility_files": 30,
+    "actual_materialized_files": 50,
+    "sparse_omitted_bodies_verified_by_exact_head_blob": 30,
+    "exact_roster": true,
+    "all_indexed_bodies_sha256_and_size_verified": true
+  },
+  "preserved_failed_attempts": [
+    {
+      "attempt": "finalize-3674-current-f35-001",
+      "exit_code": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 41,
+      "stderr_sha256": "456623a8064543838a69ef72f59aee43f68b0c991f4641d83031408ace368920",
+      "reason": "Incomplete change-evidence pin; stopped before destination creation."
+    },
+    {
+      "attempt": "finalize-3674-current-f35-002",
+      "exit_code": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 225,
+      "stderr_sha256": "7217051dfd2086e8b0851de94dd8b7de15ef0cb99b1ddb5e1051eeba10700c88",
+      "reason": "Unindexed candidate-3305 generated context output required accepted generated-preimage restoration."
+    },
+    {
+      "attempt": "finalize-3674-current-f35-003",
+      "exit_code": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 190,
+      "stderr_sha256": "8437084d5fea5696afcbc31c0a7d122df59ac108c27cf93e616012764328191d",
+      "reason": "Sparse skip-bit changed on indexed retirement while writer materialized exact output set; exact --resume after supported sparse reapply succeeded."
+    }
+  ],
+  "notes": [
+    "Restored only exact generated startup and selector preimages to accepted f35 in normal commits e00b366603ae4d0f7dd5324a5158233767edfbfc and 2e624e8fc58fe726f9d82d9cb31668b82d04991e; former candidate commit history remains unchanged.",
+    "No source, physical, native, rights, or science artifact was removed or regenerated.",
+    "This run is local technical finalization only. Full-bank comparator, tests/build, emitted browser/package controls, review, and hosted delivery are not yet attested."
+  ],
+  "roster_audit": {
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/candidate-3674/current-startup-roster-audit.json",
+    "bytes": 24048,
+    "sha256": "bfcd493d98159bc27f5599d1f785a87a9c38a8106b331f8b3f22a44c351e42be"
+  },
+  "full_bank_comparator": {
+    "status": "no-new-native-loss",
+    "gate_status": "passed",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/candidate-3674/full-bank-comparison.json",
+    "bytes": 215439,
+    "sha256": "d7d4ce949c504ff439c638db971d9ee0a688022f21fd4bf8fd3a5c714a2e6344",
+    "baseline_commit": "f35dcd66352a441937c3cb9e894d28f247f63c4c",
+    "candidate_commit": "91ccfe83fc0754799d20adb9869a971efa7c6564",
+    "method": "selected-native-owner-conservation-v1",
+    "compared_rows": 262166,
+    "added_cells": 3674,
+    "removed_cells": 0,
+    "reassigned_cells": 0,
+    "lost_or_reassigned_cells": 0,
+    "affected_rows": 653,
+    "candidate_code_executed": true,
+    "limits": [
+      "Trusted local comparator only; not hosted geography/test/build/emitted control.",
+      "No scientific acceptance or credit."
+    ]
+  }
+}
