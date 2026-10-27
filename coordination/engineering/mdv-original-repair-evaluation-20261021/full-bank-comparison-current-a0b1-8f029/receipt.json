@@ -1,0 +1,50 @@
+{
+  "baseline": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+  "candidate": "8f02909d2f1b32906a90c245a9e34ecacc630313",
+  "candidate_code_executed": false,
+  "command": [
+    "node",
+    "coordination/engineering/selected-geography-effective-prevention-20261009/selected-joint-entry.mjs",
+    "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/169ad824de76cb02e8960c4a36ca1a570434a9aa5c4a3b25f25fcea1ae8b90be/work",
+    "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "8f02909d2f1b32906a90c245a9e34ecacc630313",
+    "/tmp/mdv-selected-joint-a0b1-8f029"
+  ],
+  "exit_code": 0,
+  "exit_marker": {
+    "bytes": 2,
+    "path": "exit.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "kind": "selected-joint-execution-receipt",
+  "method": "accepted selectedJointStage",
+  "phases_ms": {
+    "native-comparison": 138064,
+    "trusted-startup": 4758
+  },
+  "preflight": {
+    "bytes": 641,
+    "path": "checkout-preflight.json",
+    "sha256": "a3c7b81e4a55044a30049bf1051b555bd2bf2f7f548556844aa0bc7f572d3f71"
+  },
+  "report": {
+    "bytes": 88294,
+    "path": "report.json",
+    "sha256": "400e3246926e1b0baf2a3dc03aa36412eb43e84e761ac190ddb42ab8f427862d"
+  },
+  "restoration": {
+    "branch": "research/mdv-original-repair-qualification-20261027-01",
+    "head": "8f02909d2f1b32906a90c245a9e34ecacc630313",
+    "index_tree": "9f6a1dd577a1df43c0d5b3a38ad8ffd9d1b0a0e9",
+    "worktree_clean": true
+  },
+  "runtime_version": "v24.19.0",
+  "stderr": {
+    "bytes": 126,
+    "path": "stderr.log",
+    "sha256": "f828f2eb415ac7edc8c59b5e9b09ea1c1a6efa3555d10da0078a7ef281ff2517"
+  },
+  "trusted_code_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+  "version": 1
+}
