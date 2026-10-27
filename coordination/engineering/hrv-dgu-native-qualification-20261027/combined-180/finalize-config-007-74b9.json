@@ -1,0 +1,39 @@
+{
+  "change_evidence": {
+    "bytes": 2790,
+    "commit": "534c880f91d1856c6c58b40ec68e21ec36f5b2cf",
+    "git_blob_oid": "17f72108c06b4798e21e776e9edd80d362a2b102",
+    "mode": "100644",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-003-29e4/authority-registry.json",
+    "sha256": "f6a56c6920f6a7a93d404a39bed4270e460af53a367b064d49a89987a75dd6e9"
+  },
+  "package_inputs": {
+    "commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "path": ".github/package-inputs.json"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "bytes": 1156,
+        "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "git_blob_oid": "187cde635bef1683b07d45f1d7ceb48ea5f8771a",
+        "mode": "100644",
+        "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001/preparation.json",
+        "sha256": "c2f23b2a32cece930e97e68deadd1da07a2d67b6fb8b26547b2054d80b5eddaa"
+      },
+      "startup_ownership": {
+        "bytes": 49610,
+        "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "git_blob_oid": "3bbed59f4ead5a123667b76bc9679361420a0bf8",
+        "mode": "100644",
+        "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001/startup-ownership.json",
+        "sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+      }
+    }
+  ],
+  "selector": {
+    "commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "path": "data/ownership-selection.json"
+  },
+  "version": 2
+}
