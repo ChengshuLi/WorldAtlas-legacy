@@ -88,6 +88,29 @@
     }
   },
   "bank_candidate": {
+    "baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "candidate_commit": "6fa79bdbc5e6085748fbf5849e9bed5a050a1dd1",
+    "finalizer_attempt": "../finalizer-run-019/terminal.json",
+    "finalizer_exit": 0,
+    "startup_index_sha256": "da9bcae0bd335143d140fdbf3a8a3d581978183b6348d713b5e99459c3f07cd0",
+    "comparison_report": "../finalize-instrumented-019/current-full-bank-comparison.json",
+    "comparison_sha256": "fd1cdb1a704673945eff13673010f6b07e9753c4a7e2800715444027f305656c",
+    "method": "selected-native-owner-conservation-v1",
+    "status": "no-new-native-loss",
+    "compared_rows": 262166,
+    "added": 563,
+    "removed": 0,
+    "reassigned": 0,
+    "lost_or_reassigned": 0,
+    "affected_rows": 314,
+    "candidate_code_executed": false,
+    "trusted_code_paths_checked": 18
+  },
+  "limitations": [
+    "Candidate only; local finalizer and local comparison core are not hosted stock controls.",
+    "No hosted integration tests/build/geography/emitted package/current-owner-zero result or root acceptance/credit is claimed."
+  ],
+  "historical_bank_candidate_attempt018": {
     "baseline_commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
     "candidate_commit": "d8880c579a2f4c9ff8804bc44286ddc3e5703de7",
     "finalizer_attempt": "../finalize-instrumented-018/attempt-018-result.json",
@@ -104,9 +127,5 @@
     "lost_or_reassigned": 0,
     "affected_rows": 314,
     "candidate_code_executed": false
-  },
-  "limitations": [
-    "Candidate only; local finalizer and local comparison core are not hosted stock controls.",
-    "No hosted integration tests/build/geography/emitted package/current-owner-zero result or root acceptance/credit is claimed."
-  ]
+  }
 }
