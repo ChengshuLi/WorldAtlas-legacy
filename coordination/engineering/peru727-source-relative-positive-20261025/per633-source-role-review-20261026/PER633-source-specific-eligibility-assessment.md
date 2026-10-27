@@ -1,6 +1,6 @@
 # PER633 source-specific eligibility assessment
 
-**Scope and disposition.** This source-free assessment compares the retained evidence with the original `gb-PER-ADM2--repair-evaluation` issue contract. It does not accept, adopt, or change ownership, status, or credit. It includes no coordinates, raw geometry, or per-key rows; no geometry producer was rerun. The 44-key adverse set and the separate outside-parent 50 remain held; the other 722 issue residuals are outside this review.
+**Scope and disposition.** This source-free assessment compares the retained evidence with the original `gb-PER-ADM2--repair-evaluation` issue contract. It does not accept, adopt, or change ownership, status, or credit. This memo itself contains no coordinates, raw geometry, or per-key rows; the PR separately includes a companion roster of exactly 633 sorted `[owner,y,x]` identities (33,466 B; SHA-256 `4fc669d4b57130e50540c5366a913b8eada3e5725c206d8219c634bf6acf2052`; set SHA-256 `abb508c3ab40ee43a7df168aba88dca644fa00abc933062c80e5fb6faa3515b7`). No geometry producer was rerun. The 44-key adverse set and the separate outside-parent 50 remain held; the other 722 issue residuals are outside this review.
 
 ## Exact disjoint populations
 
