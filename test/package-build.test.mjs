@@ -122,6 +122,9 @@ test('package publication preserves local imports and exports only its generated
 });
 
 test('normal guarded release consumes only the unchanged database issued by the actual package builder', async t => {
+  const priorWorker = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = 'generated-db';
+  t.after(() => { if (priorWorker === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = priorWorker; });
   const {root, definition} = await fixture(t, {program: `
     import fs from 'node:fs';
     import {DatabaseSync} from 'node:sqlite';
@@ -153,7 +156,9 @@ test('normal guarded release consumes only the unchanged database issued by the 
     git_blob_oid:createHash('sha1').update(`blob ${originalDatabase.length}\0`).update(originalDatabase).digest('hex')});
   assert.throws(() => git('cat-file', '-e', descriptor.git_blob_oid), 'Hashing must not add the database to shared Git');
   const assertRetained = async () => {
-    assert.equal(manager.report().entries.find(row => row.token === entry.token)?.path, entry.path);
+    const reported = manager.report().entries.find(row => row.worker === entry.worker && row.slot === entry.slot);
+    assert.equal(reported?.path, entry.path);
+    assert.equal(Object.hasOwn(reported ?? {}, 'token'), false, 'Per-worker reports never expose capabilities');
     assert.equal(await fs.readFile(path.join(entry.path, 'src/value.json'), 'utf8'), '42');
     assert.throws(() => git('rev-parse', '--verify', `refs/worldatlas-local-recovery/${entry.token}`));
   };
