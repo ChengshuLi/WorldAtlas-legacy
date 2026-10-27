@@ -29,7 +29,7 @@ The polygons below are modified/derived source-relative support outputs made fro
 
 ## Geometry-bearing files in this package
 
-The table below inventories 19 geometry-bearing JSON files from the earlier BTN evidence outputs. A later section adds eight current-preparation geometry-bearing files, for 27 inventoried files in this directory. Revalidation source-evidence and constructor outputs embed the same pinned source/display geometry used by the earlier evidence; their inclusion does not represent a new source or geometry analysis. SHA-256 and byte counts below identify the committed file contents. “Administrative/display-derived” rows embed or carry geoBoundaries-derived source geometry and/or selected WorldAtlas display geometry; physical output rows contain derived GSHHG support geometry.
+The table below inventories 19 geometry-bearing JSON files from the earlier BTN evidence outputs. A later section adds nine current-preparation geometry-bearing files, for 28 inventoried files in this directory. Revalidation source-evidence and constructor outputs embed the same pinned source/display geometry used by the earlier evidence; their inclusion does not represent a new source or geometry analysis. SHA-256 and byte counts below identify the committed file contents. “Administrative/display-derived” rows embed or carry geoBoundaries-derived source geometry and/or selected WorldAtlas display geometry; physical output rows contain derived GSHHG support geometry.
 
 | Repository path | Bytes | SHA-256 | Geometry provenance |
 |---|---:|---|---|
@@ -57,7 +57,7 @@ Paths in the table are relative to `coordination/engineering/btn-36-source-role-
 
 ## Additional current-preparation geometry-bearing files
 
-The following eight files extend the 19-file inventory above. The current administrative evidence contains a selected, serialized subset of two simplified geoBoundaries BTN ADM1 source features. It is not the complete source product. The constructor rows are derived native-cell assignment evidence. Compact negative-family references identify source members, ordinals, and geometry hashes; they do not embed the negative family geometries. The current supported-input source files do not embed GSHHG geometry.
+The following nine files extend the 19-file inventory above. The current administrative evidence contains a selected, serialized subset of two simplified geoBoundaries BTN ADM1 source features. It is not the complete source product. The constructor rows are derived native-cell assignment evidence. Compact negative-family references identify source members, ordinals, and geometry hashes; they do not embed the negative family geometries. The current supported-input source files do not embed GSHHG geometry.
 
 | Repository path | Bytes | SHA-256 | Contents |
 |---|---:|---|---|
@@ -67,6 +67,7 @@ The following eight files extend the 19-file inventory above. The current admini
 | `territorial-exclusions-current-f8c5-001/source-evidence.json` | 14,936 | `6fb1a91775b6faeefb9c3b94a0433a2cd8066fb3beb00b27fda69bd29b940841` | Same two BTN base geometries plus compact source-member references for negative families |
 | `source-evidence-current-a033-territorial-config.json` | 26,320 | `a59e8dda6b5de1590e132c5acc297b6a3f4c4abf3a508f23bbfa7d853b19042c` | Two BTN base geometries; pins the a033 selector and complete negative-family inputs, without embedding negative-family geometries |
 | `source-evidence-current-a033-territorial-001/source-evidence.json` | 14,939 | `748b3af9ba79223df4977d077ae9b8cb54d58307d01d0dcb14807346f035c91c` | Two BTN base geometries plus compact CHN/IND source-member references; no negative-family geometry bodies |
+| `native-authority-current-a033-territorial-001/constructor-result.json` | 7,673 | `819f3758b570468e6741d7096eb6c76c319d169821c96bca992df1b2a54b7904` | Two BTN base geometries with derived 36-cell assignments; consumes the compact complete-family negative references and includes no foreign source geometry |
 | `native-authority-current-4828-001/constructor-result.json` | 7,657 | `445962d02ad82dee89f0fd3f30d21ab4337b0721c6b6bf931a9e7df768998da6` | Derived native-cell assignment rows and bounds; no source polygon bodies |
 | `native-authority-current-4810-001/constructor-result.json` | 7,667 | `1928930134b789fa7d659298ae82908c052986ed88324976e17144058edf5dc7` | Derived native-cell assignment rows for the same source features |
 
