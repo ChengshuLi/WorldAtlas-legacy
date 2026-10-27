@@ -126,7 +126,11 @@ const physicalMethod = pin(baseline,'scripts/qualify-source-cohort.py');
 const sourceEvidence = {version:1,kind:'source-target-native-evidence-v1',catalogue:pin(baseline,cataloguePath),
   families:[{source_id:'gb:MNE:ADM1',parts:sourceParts}],physical_evidence:physicalPin,
   physical_input:physicalInput,physical_reproduction:physicalMethod,
-  source_membership:{index:worldIndex,lineage,parts:[canonicalPart]},targets};
+  source_membership:{index:worldIndex,lineage,parts:[canonicalPart]},targets,
+  // The selector's v2 native manifest binds this exact original identity/parent
+  // context object. Pass the same pin under the consumer's required owner_roster
+  // role rather than substituting a newly synthesized owner list.
+  owner_roster:pin('913db0624b8aa79b188ff17a7f5c4ae0c0f63965','data/canonical-grid/bounds.json.gz')};
 const config = {version:1,selector:{commit:baseline,path:'data/ownership-selection.json'},source_evidence:sourceEvidence,
   compact_territorial_exclusions:true,territorial_exclusion_families:['gb:ALB:ADM1']};
 const account = {version:1,kind:'mne1336-exact-native-diagnostic-preparation',baseline,stage_commit:stageCommit,
