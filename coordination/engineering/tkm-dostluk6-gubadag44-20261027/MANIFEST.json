@@ -138,11 +138,21 @@
     "native-inputs-003/compose-execution.json": "e21d8eed5641c38aea9070910166ec852514a3d10e2a7fc2548925c14198eaa2",
     "native-inputs-003/composition-gubadag44-mary143-002/authority-registry.json": "c1d958d38e1c2d4ad7ca22564651479865f22253c9a2a1ffdf70e7c55cc2a8ba",
     "native-inputs-003/composition-gubadag44-mary143-002/preparation.json": "c435c747f6419dd8aecb6fe4631cc91500ed5043a74f1c91fc9fdf1ff8d897ba",
+    "native-inputs-003/current-owner-observation-001/attempt-001/command.txt": "cc7adea5f9ed14583891e5168e2fa4118b9bd425c2587b8ef5378c5671e4523f",
+    "native-inputs-003/current-owner-observation-001/attempt-001/exit-status.txt": "743c7850cccfba5e53a9002663ec1ddd1079315a98bdbfdde10e6044f56abefe",
+    "native-inputs-003/current-owner-observation-001/attempt-001/stderr.log": "73cf56472d9d199f10bd9d86b2657bfdcfbf24baed358f829cabade03325cc11",
+    "native-inputs-003/current-owner-observation-001/attempt-001/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-inputs-003/current-owner-observation-001/attempt-002/command.txt": "9129abfa05eb201ad6ec7dfb5c093640a64c4afd1b331a85a58ccaa15d66e9b0",
+    "native-inputs-003/current-owner-observation-001/attempt-002/exit-status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "native-inputs-003/current-owner-observation-001/attempt-002/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-inputs-003/current-owner-observation-001/attempt-002/stdout.log": "a2f02246f1a36d23e75667895a8d699a00b389a4c7da9413c33300a47d5380da",
+    "native-inputs-003/current-owner-observation-001/full-package-observation.json": "3939071083affa383e8b93fbc18e595a9834a131b12100d63f5f4fc0bfa2a5c0",
+    "native-inputs-003/current-owner-observation-001/summary.json": "16194607ca55b0a71ef45a04dd6e8b3a769b9ff32d7b3dab568f581f3380f54c",
     "physical-consumed-simplified-001/original-stage-inputs.json": "1770319006a28be7f7be6c28278f3f0be8fea0508293fb94188b87309f38987b",
     "physical-consumed-simplified-001/whole-target-support.json": "91dac6f69782323249b281cc73d3f06a8ae535cfb40a1aa985004e0323641923",
     "physical-raw-full-corroboration-001/original-stage-inputs.json": "2957464775b6a14b0e3aec7af0d07866363827ce6924df994788714f73cdff60",
     "physical-raw-full-corroboration-001/whole-target-support.json": "8a5452a3cbe9b690e164afbb089575cfb545685fedcd5676782c84943b6633c1",
-    "README.md": "c06d7b730ccfcf08464cb12a09de971e9249c9c35376061162e5b333c1865508",
+    "README.md": "c71420c2b1a76ea64a0e221970f492f29585547c4fd7f5d168348e055732c066",
     "validation-history.json": "c7f6559f0cb3f09ec7ba5ed4740580a777573495b992c509cc096138fb10b7e1"
   },
   "status": "current-main finalizer candidate and trusted 262166-row comparison prepared; root scientific decision and hosted build/emitted controls pending",
@@ -178,6 +188,15 @@
       "path": "native-inputs-003/composition-gubadag44-mary143-002/authority-registry.json",
       "bytes": 2658,
       "sha256": "c1d958d38e1c2d4ad7ca22564651479865f22253c9a2a1ffdf70e7c55cc2a8ba"
+    },
+    "current_owner_observation": {
+      "summary_path": "native-inputs-003/current-owner-observation-001/summary.json",
+      "summary_sha256": "16194607ca55b0a71ef45a04dd6e8b3a769b9ff32d7b3dab568f581f3380f54c",
+      "full_observation_path": "native-inputs-003/current-owner-observation-001/full-package-observation.json",
+      "full_observation_sha256": "3939071083affa383e8b93fbc18e595a9834a131b12100d63f5f4fc0bfa2a5c0",
+      "original_package_query_count": 1759,
+      "observed_candidate_cells": 187,
+      "owner_zero_cells": 187
     }
   }
 }

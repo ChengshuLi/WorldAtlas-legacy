@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "kind": "tkm-combined-candidate-current-owner-observation-summary-v1",
+  "status": "literal current selected-bank observation only; no qualification or acceptance",
+  "baseline": {
+    "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "code_commit": "7aad752e3e2c47862073a9aec0bb5f11995c168e",
+    "query_count": 1759,
+    "query_sha256": "7d09b68dd9702df430bdeb1e3c3ce957c22194d3929390883ff524b985c36f1c",
+    "original_intervals_sha256": "9b8ab7f9912d7dab92419f639b10ab33ca8dd37bbc0d6beca7c009f81bef4423",
+    "selector_pin": {
+      "bytes": 2287,
+      "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+      "git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+      "mode": "100644",
+      "path": "data/ownership-selection.json",
+      "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9",
+      "whole_body_consumed": true
+    },
+    "final_bank_pin": {
+      "bytes": 49610,
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9"
+    },
+    "native_manifest_sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba",
+    "selected_reference": {
+      "footprints_sha256": "5f3a1f74bf911e9c4507dd760fbc6b87b08b8853feab1b1bfed22ba94d49ad9a",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:576f49a534d00aaa6cbfbb855dbb89af6c7e8ad6d6c3c7af56247a71ee446348"
+    },
+    "acquisition": {
+      "complete_scientific_closure": false,
+      "declarations": 27,
+      "declared_bytes": 24361450,
+      "fetch_batches": 0,
+      "fetch_ms": 0,
+      "fetched_bytes": 0,
+      "fetched_objects": 0,
+      "origin_metadata_bytes": 0,
+      "origin_metadata_fetches": 0,
+      "origin_metadata_imports": 0,
+      "origin_metadata_objects": 0,
+      "scope": "original-package-and-selected-native-observation",
+      "tree_metadata_ms": 0,
+      "unique_objects": 27
+    }
+  },
+  "source_key_groups": [
+    {
+      "owner_index": 42157,
+      "count": 44,
+      "tuple_sha256": "77679a15ca30728c3b9638a6b7b023b8adb800f4765150e2c3e5f91e4d434ac4",
+      "observed_count": 44,
+      "owner_zero_count": 44,
+      "states": [
+        {
+          "state": [
+            null,
+            null,
+            0,
+            null,
+            null
+          ],
+          "count": 44
+        }
+      ]
+    },
+    {
+      "owner_index": 42143,
+      "count": 143,
+      "tuple_sha256": "56bf20f91b3e2a1c08065469f180b2907b21d7661a995854eb8666ce2daa3ad8",
+      "observed_count": 143,
+      "owner_zero_count": 143,
+      "states": [
+        {
+          "state": [
+            null,
+            null,
+            0,
+            null,
+            null
+          ],
+          "count": 143
+        }
+      ]
+    }
+  ],
+  "full_observation": {
+    "path": "native-inputs-003/current-owner-observation-001/full-package-observation.json",
+    "bytes": 393000,
+    "sha256": "3939071083affa383e8b93fbc18e595a9834a131b12100d63f5f4fc0bfa2a5c0"
+  },
+  "limits": [
+    "This is a literal current-bank owner observation only.",
+    "It does not qualify source membership, prove physical/semantic fit, mutate the bank or establish root acceptance/credit.",
+    "The full-package observation declares complete_scientific_closure=false; no source/science closure is implied."
+  ]
+}
