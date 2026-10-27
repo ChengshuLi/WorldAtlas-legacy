@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "TKM Mary143 exact accepted-owner inspection",
+  "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+  "selector_git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+  "selector_sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9",
+  "prepared_bank": {
+    "bytes": 49610,
+    "path": "data/canonical-grid/current-startup/index.json",
+    "sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9"
+  },
+  "prepared_index_sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9",
+  "native_manifest_sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba",
+  "owner_count": 49625,
+  "target": {
+    "id": "gb:TKM:ADM2:10190150B47066979897930",
+    "pixelIndex": 42143
+  },
+  "sibling": {
+    "id": "gb:TKM:ADM2:10190150B21853413573592",
+    "pixelIndex": 42130
+  },
+  "scope": {
+    "keys": 143,
+    "owner_y_x_sorted_sha256": "56bf20f91b3e2a1c08065469f180b2907b21d7661a995854eb8666ce2daa3ad8"
+  },
+  "current_owner_counts": {
+    "zero": 143,
+    "same_owner": 0,
+    "other_owner": 0
+  },
+  "other_owner_examples": [],
+  "limits": [
+    "Loaded complete accepted current startup ownership/context through readPreparedFinalOwnership at the exact pinned main commit.",
+    "No authority was emitted. Owner-zero check is limited to Mary143 exact tuples."
+  ]
+}

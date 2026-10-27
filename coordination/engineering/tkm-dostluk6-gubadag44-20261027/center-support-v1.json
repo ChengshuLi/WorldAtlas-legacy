@@ -1,0 +1,936 @@
+{
+  "inputs": {
+    "custody_receipt": {
+      "path": "/workspace/shared/worldatlas-TKM-Gubadag44-source-custody-root-audit-20261026.json",
+      "sha256": "4d6dec3f0a5c4490ac9aafa7c395b9603791dd378c22cb016b0da834568e85ef"
+    },
+    "full_source_sha256": "0d0b3745e275bfadb1d0137fbca014b56f2ed72cb83b0a98dd0e2f0632e7c507",
+    "selected_part23_sha256": "d61082ccd69b319723fadc4cad582b8d5c8a8ced3e50b4f90f00b4eb17e6a9c2",
+    "simplified_family_sha256": "af6d0ea1274198ae5579ef23c9da9c2a45bb1fcc4e77fa5532e18c47c778d27d"
+  },
+  "kind": "TKM-Gubadag44-source-native-center-physical-overlay-v1",
+  "limits": [
+    "Center point support is not whole-cell containment.",
+    "Physical candidates are source-relative to the pinned original GSHHG hierarchy, not present-day/legal land authority.",
+    "No foreign contact is removed; the complete original foreign and parent predicates remain for native diagnostic.",
+    "No native authority or selected-bank mutation is produced."
+  ],
+  "method": {
+    "grid_size": 262166,
+    "native_grid_method": "native-linear-evenodd-first-owner-v1",
+    "physical_predicate": "Shapely covers(point) against physical whole-target mapped_land_support geometry; center only, not whole cell",
+    "x_center": "-180 + (x+0.5)*360/262166",
+    "y_center": "atan(sinh(pi*(1-2*(y+0.5)/262166))) converted to degrees"
+  },
+  "per_key": [
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.96630069826027,
+      "longitude": 57.17011359215155,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172716,
+      "y": 97353
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.96527968135953,
+      "longitude": 57.2030698107306,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172740,
+      "y": 97354
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.953026202267864,
+      "longitude": 58.89894189177849,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 173975,
+      "y": 97366
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.86411802230581,
+      "longitude": 56.99983979615968,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172592,
+      "y": 97453
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.84263887719118,
+      "longitude": 56.99709344461144,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172590,
+      "y": 97474
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.82115251942093,
+      "longitude": 56.99434709306317,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172588,
+      "y": 97495
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.799658949595724,
+      "longitude": 56.99160074151493,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172586,
+      "y": 97516
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.78123014999696,
+      "longitude": 56.99022756574078,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172585,
+      "y": 97534
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.626424401024494,
+      "longitude": 56.99022756574078,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172585,
+      "y": 97685
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.30125459882232,
+      "longitude": 57.07948399105911,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172650,
+      "y": 98001
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.2672029846002,
+      "longitude": 57.05202047557654,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172630,
+      "y": 98034
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.25275147724815,
+      "longitude": 56.552184493794016,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172266,
+      "y": 98048
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 41.17217740582573,
+      "longitude": 56.58239436082482,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172288,
+      "y": 98126
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.66686382812998,
+      "longitude": 57.492809899071574,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172951,
+      "y": 98613
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.665822250598644,
+      "longitude": 57.491436723297454,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172950,
+      "y": 98614
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.66478065680021,
+      "longitude": 57.491436723297454,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172950,
+      "y": 98615
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.66373904673476,
+      "longitude": 57.490063547523334,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172949,
+      "y": 98616
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.66269742040239,
+      "longitude": 57.490063547523334,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172949,
+      "y": 98617
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.66165577780318,
+      "longitude": 57.488690371749186,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172948,
+      "y": 98618
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.66061411893723,
+      "longitude": 57.487317195975066,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172947,
+      "y": 98619
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.65957244380464,
+      "longitude": 57.487317195975066,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172947,
+      "y": 98620
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.65853075240548,
+      "longitude": 57.48594402020095,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172946,
+      "y": 98621
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.65748904473983,
+      "longitude": 57.48594402020095,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172946,
+      "y": 98622
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.656447320807814,
+      "longitude": 57.48457084442683,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172945,
+      "y": 98623
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.6554055806095,
+      "longitude": 57.48319766865268,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172944,
+      "y": 98624
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.65436382414498,
+      "longitude": 57.48319766865268,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172944,
+      "y": 98625
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.65332205141434,
+      "longitude": 57.48182449287856,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172943,
+      "y": 98626
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.65123845715512,
+      "longitude": 57.48045131710444,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172942,
+      "y": 98628
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.64915479783252,
+      "longitude": 57.47907814133029,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172941,
+      "y": 98630
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.648112943772695,
+      "longitude": 57.47770496555617,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172940,
+      "y": 98631
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.646029186856424,
+      "longitude": 57.47633178978205,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172939,
+      "y": 98633
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.6439453648786,
+      "longitude": 57.47495861400793,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172938,
+      "y": 98635
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.64290342949184,
+      "longitude": 57.47358543823378,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172937,
+      "y": 98636
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.64081950992304,
+      "longitude": 57.472212262459664,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172936,
+      "y": 98638
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.637693508583084,
+      "longitude": 57.469465910911396,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172934,
+      "y": 98641
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.63560942636632,
+      "longitude": 57.468092735137276,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172933,
+      "y": 98643
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.63248318105781,
+      "longitude": 57.465346383589036,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172931,
+      "y": 98646
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.630398936197615,
+      "longitude": 57.46397320781489,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172930,
+      "y": 98648
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.627272446927336,
+      "longitude": 57.46122685626665,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172928,
+      "y": 98651
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.62518803942824,
+      "longitude": 57.4598536804925,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172927,
+      "y": 98653
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.52923498267158,
+      "longitude": 57.01082520235272,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172600,
+      "y": 98745
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.48747334465869,
+      "longitude": 57.042408245157645,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172623,
+      "y": 98785
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.46553807533198,
+      "longitude": 57.058886354447196,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172635,
+      "y": 98806
+    },
+    {
+      "full_vs_simplified": "identical",
+      "latitude": 40.3745870584182,
+      "longitude": 57.29507258759716,
+      "mapped_land_support_center": true,
+      "owner": 42157,
+      "physical_class": "land",
+      "source_center_hits_full": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "source_center_hits_simplified": [
+        "gb:TKM:ADM2:10190150B74382957458545"
+      ],
+      "ties": {
+        "full": false,
+        "simplified": false
+      },
+      "x": 172807,
+      "y": 98893
+    }
+  ],
+  "scope": {
+    "key_count": 44,
+    "original_physical_class": "land",
+    "owner_index": 42157,
+    "owner_y_x_sha256": "77679a15ca30728c3b9638a6b7b023b8adb800f4765150e2c3e5f91e4d434ac4",
+    "package": "gb-TKM-ADM2--repair-evaluation",
+    "source_id": "gb:TKM:ADM2:10190150B74382957458545"
+  },
+  "summary": {
+    "full_and_simplified_source_center_hits_all_44": true,
+    "not_inside_mapped_land_support": 0,
+    "physical_mapped_land_support_hits": 44,
+    "ties": 0
+  },
+  "variants": {
+    "consumed-simplified": {
+      "inside_mapped_land_support_count": 44,
+      "requested": 44,
+      "support_geometry_file": "/workspace/scratch/127991fc8b8e/.worldatlas-private/tkm-dostluk6-gubadag44-20261027/gubadag44-physical-002/whole-target-support.json",
+      "support_geometry_sha256": "91dac6f69782323249b281cc73d3f06a8ae535cfb40a1aa985004e0323641923"
+    },
+    "raw-full-corroboration": {
+      "inside_mapped_land_support_count": 44,
+      "requested": 44,
+      "support_geometry_file": "/workspace/scratch/127991fc8b8e/.worldatlas-private/tkm-dostluk6-gubadag44-20261027/gubadag44-full-source-physical-002/whole-target-support.json",
+      "support_geometry_sha256": "8a5452a3cbe9b690e164afbb089575cfb545685fedcd5676782c84943b6633c1"
+    }
+  },
+  "version": 1
+}
