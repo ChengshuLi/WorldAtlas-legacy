@@ -356,6 +356,9 @@ jobs:
         run: |
           if node --input-type=module -e "import {integrationNeedsBrowser} from './scripts/run-integration-tests.mjs'; process.exit(integrationNeedsBrowser(process.env.INTEGRATION_PROFILE, Number(process.env.INTEGRATION_SHARD), process.env.INTEGRATION_TEST_SELECTION || 'complete') ? 0 : 1)"; then
             # Playwright combines apt-get update and install in a sudo shell.
+            # These temporary paths exist only on this disposable hosted runner,
+            # never on a developer Mac or shared workspace. Keep TLS, repository
+            # signature verification and authentication checks enabled.
             # Put acquisition bounds after the runner image's zz-retries config.
             apt_wrapper=/usr/local/bin/apt-get
             apt_config_file=/etc/apt/apt.conf.d/zzzz-worldatlas-ci-acquire-timeouts
