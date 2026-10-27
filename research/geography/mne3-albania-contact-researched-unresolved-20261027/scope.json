@@ -1,0 +1,118 @@
+{
+  "kind": "worldatlas.source-free-researched-unresolved-proposal.v1",
+  "title": "MNE exact Albania-contact 3 source-role researched-unresolved proposal",
+  "status": "proposal-only; root acceptance pending; no positive assignment, owner change or package completion claimed",
+  "summary": {
+    "package_id": "gb-MNE-ADM1--repair-evaluation",
+    "original_denominator": 1336,
+    "original_intervals": 599,
+    "original_owners": 16,
+    "original_source_features": 18,
+    "previously_root_accepted_positive_repairs": 1333,
+    "previously_root_accepted_researched_unresolved": 0,
+    "proposed_researched_unresolved": 3,
+    "positive_claims": 0,
+    "denominator_removals": 0,
+    "completion_claimed": false,
+    "proposed_key_classes": {
+      "land": 3,
+      "inland_water": 0
+    },
+    "other_original_keys_pending_after_prior_acceptance_and_this_proposal_if_accepted": 0,
+    "separate_outside_scope": {
+      "MNE_XKX_source_conflict_cells": 1,
+      "MNE_physical_interpretation_cells": 144
+    }
+  },
+  "key_schema": [
+    "owner",
+    "y",
+    "x"
+  ],
+  "keyset_sha256": "704e84732563575dd0ecba8c7a951dbd0c24eda1bebaf92ac215d27b916d7a3b",
+  "keyset_sha256_method": "SHA-256 of UTF-8 compact JSON encoding of exact [owner,y,x] tuples sorted ascending by owner,y,x.",
+  "keys": [
+    [
+      30407,
+      96873,
+      145302
+    ],
+    [
+      30414,
+      96804,
+      145656
+    ],
+    [
+      30414,
+      96805,
+      145656
+    ]
+  ],
+  "source_specific_assessment": {
+    "mne_source_id": "gb:MNE:ADM1",
+    "mne_consumed_simplified_2017_decoded_sha256": "c9afe5300b402f75cf13b5d65341d849afd631af32b220be3f74c883cab36833",
+    "mne_full_2017_comparator_sha256": "9674292fbc0a50c68c6584a2ae23fae768e76cc796bdb7e3e009c0197aec6ae3",
+    "alb_competitor_source_id": "gb:ALB:ADM1",
+    "alb_simplified_2021_decoded_sha256": "ee7cbce6662ab4e55836fc84c28c162e731943bbd6a338e098edf2f3b110bdf8",
+    "method": "Exact three native cell centers only; all 23 simplified MNE + all 12 Albania source features and matching full MNE features tested at native size 262166; exact normative latitude table used. No raster or native patch rerun.",
+    "results": [
+      {
+        "key_label": "Plav-A",
+        "owner": 30414,
+        "mne_full": "inside",
+        "mne_simplified": "inside",
+        "alb_kukes": "inside",
+        "edge_distances_km_approx": [
+          0.02286953,
+          0.019871251,
+          0.44950272
+        ]
+      },
+      {
+        "key_label": "Plav-B",
+        "owner": 30414,
+        "mne_full": "inside",
+        "mne_simplified": "inside",
+        "alb_kukes": "inside",
+        "edge_distances_km_approx": [
+          0.018241971,
+          0.02734804,
+          0.481365822
+        ]
+      },
+      {
+        "key_label": "Podgorica",
+        "owner": 30407,
+        "mne_full": "outside",
+        "mne_simplified": "inside",
+        "alb_shkoder": "inside",
+        "edge_distances_km_approx": [
+          0.041762645,
+          0.000273461,
+          0.150113979
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "private_source_check_sha256": "bdc655fbdfa96b8d7697e9969394ca8fa08fa0d9ff776d86847663e63f1fd9d7",
+    "private_full_receipt_sha256": "df86bcba96c791f845a72257b76de4c9b738b3950b3b8174f1f7183910b8291d",
+    "native_latitude_table_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+    "official_primary_context": [
+      "MNE-hosted TAIEX Jan 2021 report Annex p18; MNE MUP joint notices 2024-03-26 and 2025-07-04; Albanian Embassy 2009 boundary-marker agreement listing"
+    ],
+    "rights": [
+      "MNE ODbL 1.0 source-derived data attribution/share-alike obligations remain; no raw source bodies/geometry republished.",
+      "ALB source metadata records Public Domain; no independent rights clearance made."
+    ],
+    "limitations": [
+      "Areas and near-edge distances descriptive only; not thresholds or legal decisions.",
+      "Source metadata/vintages are claims, not legal authority.",
+      "No sovereignty determination; no current border status inferred from 2024/2025 notices.",
+      "No positive assignment/credit or acceptance; root decides."
+    ],
+    "retained_source_check_memo_sha256": "bdc655fbdfa96b8d7697e9969394ca8fa08fa0d9ff776d86847663e63f1fd9d7",
+    "retained_exact_source_check_receipt_sha256": "df86bcba96c791f845a72257b76de4c9b738b3950b3b8174f1f7183910b8291d"
+  },
+  "disposition": "Finite source-specific researched-unresolved proposal for exactly 3; accepted 1333 remain untouched; all other scope/limits retained."
+}
