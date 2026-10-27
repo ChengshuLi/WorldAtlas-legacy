@@ -23,10 +23,11 @@
     "redonda_feature_1273": "context-only-excluded"
   },
   "review_pair": {
-    "base": "4828b25d3499d131a477654931156505889e3e35",
+    "base": "b587ea75a2699c8d8e6f00615bcf06c306f7519a",
     "candidate_data_commit": "828e3620dd3883981f3dd7a9a4c58da23b618972",
+    "integrated_candidate_commit": "b8a1fcaa98ec2f7b31a7af80d597c1bdade98989",
     "branch": "geography/atg883-source-research-20261027",
-    "notes": "The final public PR head will be supplied with the request; this candidate data commit is the complete code/data state whose only subsequent branch changes are review plan/test evidence and README status."
+    "notes": "The final public PR head is the plan/evidence-only follow-up commit on integrated candidate b8a1fcaa98ec2f7b31a7af80d597c1bdade98989; its exact full SHA is supplied with the review request. Candidate code/data/observer state is commit828e3620dd3883981f3dd7a9a4c58da23b618972."
   },
   "candidate_pins": {
     "finalizer_closure": {
@@ -102,5 +103,43 @@
     "No full selected-bank conservation, build, emitted-control, production write, science/accounting acceptance or credit is claimed by these local results.",
     "Review source-native physical evidence against the exact target contract; seven lineage features are one owner, and Redonda remains excluded.",
     "Preserve LOC403 and refused unsafe redirect as access limitations; do not bypass either."
-  ]
+  ],
+  "latest_main_bridge": {
+    "commit": "b587ea75a2699c8d8e6f00615bcf06c306f7519a",
+    "parent_candidate_main": "4828b25d3499d131a477654931156505889e3e35",
+    "merge_commit": "b8a1fcaa98ec2f7b31a7af80d597c1bdade98989",
+    "changed_paths": "Nine CAF110 source-evidence/report artifacts only; no ATG/code/selector/bank changes.",
+    "equivalent_tree_inputs": {
+      ".github/package-inputs.json": {
+        "commit_4828": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "commit_b587": "845fe07d30052ae4e6982faea86a4d5137cd5fa2"
+      },
+      "data/ownership-selection.json": {
+        "commit_4828": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+        "commit_b587": "7e857c38e8c581fc058d40e592a95c6f053d72bf"
+      },
+      "data/canonical-grid/current-startup/index.json": {
+        "commit_4828": "8ec6b7b58e4e9b475d4a7b9d22f5f3e1f9dd32be",
+        "commit_b587": "8ec6b7b58e4e9b475d4a7b9d22f5f3e1f9dd32be"
+      },
+      "data/geography/part-28.json": {
+        "commit_4828": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+        "commit_b587": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9"
+      },
+      "scripts/prepare-delivery-handoff.mjs": {
+        "commit_4828": "c6ffe7e58dc3240667fec0be09d1144a66d3d12d",
+        "commit_b587": "c6ffe7e58dc3240667fec0be09d1144a66d3d12d"
+      },
+      "src/native-grid.js": {
+        "commit_4828": "b80ba88c97629ad5754d37d22c0d24e68e6d1780",
+        "commit_b587": "b80ba88c97629ad5754d37d22c0d24e68e6d1780"
+      },
+      "src/effective-footprint.js": {
+        "commit_4828": "267005d8dc8d1068b13385cc5ee35b556ef3bb61",
+        "commit_b587": "267005d8dc8d1068b13385cc5ee35b556ef3bb61"
+      }
+    },
+    "finalizer_replay_required": false,
+    "reason": "selector, current startup index, package-inputs, part-28 target and finalizer helper identities remain identical across 4828 and b587."
+  }
 }
