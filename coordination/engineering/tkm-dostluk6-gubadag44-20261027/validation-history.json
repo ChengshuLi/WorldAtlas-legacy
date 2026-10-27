@@ -58,5 +58,76 @@
     "output_created": false,
     "result": "pending; no global owner conservation claim"
   },
-  "hosted_controls": "Full plan/build/geography/emitted controls remain required; no hosted request or acceptance is recorded."
+  "hosted_controls": "Full plan/build/geography/emitted controls remain required; no hosted request or acceptance is recorded.",
+  "current_main_refresh": {
+    "accepted_baseline": "4828b25d3499d131a477654931156505889e3e35",
+    "normal_merge": "7d5f98d20a810a8e4d2910dd9dede3c4a7985ec4",
+    "generated_baseline_restoration": "4cefd4192f7394f0cca95b1443306da39756e7de",
+    "candidate": "d32d77a9d86fc18c32a8534b39902d3100483eb0",
+    "finalizer_config": {
+      "path": "native-inputs-002/finalize-config-corrected.json",
+      "bytes": 610,
+      "sha256": "95355f3ee5a863d116f613dcf8f0b6b69a235f4babfae04e6065f0bfa916dd5e"
+    },
+    "attempt_history": [
+      {
+        "attempt": "001",
+        "exit_status": 127,
+        "result": "/usr/bin/time missing; supported finalizer not invoked."
+      },
+      {
+        "attempt": "002",
+        "exit_status": 1,
+        "result": "Locator descriptor schema rejected before outputs."
+      },
+      {
+        "attempt": "003",
+        "exit_status": 1,
+        "result": "Indexed final-bank retirement differs; no successful adoption."
+      },
+      {
+        "attempt": "004",
+        "exit_status": 1,
+        "result": "Completed output bundle written, then retirement index changed before adoption; exact pre/post phase not captured; cause unproven."
+      },
+      {
+        "attempt": "005",
+        "exit_status": 0,
+        "mode": "documented --resume",
+        "result": "resumed=true after strict output/config/baseline preflight; candidate outputs adopted."
+      },
+      {
+        "attempt": "006",
+        "exit_status": 0,
+        "mode": "documented --resume",
+        "result": "accidental redundant identical strict resume; no output bytes changed; preserved transparently."
+      }
+    ],
+    "trusted_full_bank_comparison": {
+      "path": "native-inputs-002/full-bank-comparison-001/stdout.json",
+      "bytes": 60744,
+      "sha256": "b81c8fadc5b04195de71a3bc93b3b5d3bc75b785ea347478196a5e9afa33d64a",
+      "method": "selected-native-owner-conservation-v1",
+      "status": "no-new-native-loss",
+      "baseline": "4828b25d3499d131a477654931156505889e3e35",
+      "candidate": "d32d77a9d86fc18c32a8534b39902d3100483eb0",
+      "compared_rows": 262166,
+      "added_cells": 44,
+      "removed_cells": 0,
+      "reassigned_cells": 0,
+      "lost_or_reassigned_cells": 0,
+      "changed_owner_id": "gb:TKM:ADM2:10190150B74382957458545",
+      "owner_index": 42157,
+      "representation_migration": false,
+      "candidate_code_executed": true,
+      "trusted_code_invariance": {
+        "path": "native-inputs-002/full-bank-comparison-001/trusted-code-invariance.json",
+        "bytes": 5725,
+        "sha256": "b7e662b546289db3b5eafe0117c7e5a5c7abd72313ae1e965695ccb05bab8077",
+        "files": 18,
+        "all_identical": true
+      }
+    },
+    "hosted_controls": "pending; candidate finalization/comparison are not build/emitted controls or scientific acceptance."
+  }
 }
