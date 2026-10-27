@@ -10,7 +10,7 @@ on:
         type: string
         required: true
       reviewed_tests:
-        description: 'Exact plan.request JSON, auto for proven automatic routing, or complete for the full suite'
+        description: 'Use auto for eligible evidence/current-main composition or selected-data routing; otherwise exact plan.request JSON or complete'
         type: string
         required: true
       request_id:
@@ -355,6 +355,70 @@ jobs:
           SELECTED_EXPECTATIONS_PATH: ${{ needs.prepare.outputs.expectations_path }}
         run: |
           if node --input-type=module -e "import {integrationNeedsBrowser} from './scripts/run-integration-tests.mjs'; process.exit(integrationNeedsBrowser(process.env.INTEGRATION_PROFILE, Number(process.env.INTEGRATION_SHARD), process.env.INTEGRATION_TEST_SELECTION || 'complete') ? 0 : 1)"; then
+            # Playwright combines apt-get update and install in a sudo shell.
+            # These temporary paths exist only on this disposable hosted runner,
+            # never on a developer Mac or shared workspace. Keep TLS, repository
+            # signature verification and authentication checks enabled.
+            # Put acquisition bounds after the runner image's zz-retries config.
+            apt_wrapper=/usr/local/bin/apt-get
+            apt_config_file=/etc/apt/apt.conf.d/zzzz-worldatlas-ci-acquire-timeouts
+            original_apt="$(sudo sh -c 'command -v apt-get')"
+            if [ "$original_apt" != /usr/bin/apt-get ] || ! sudo test -x /usr/bin/timeout; then
+              echo "Unexpected apt-get/timeout tools: $original_apt" >&2
+              exit 1
+            fi
+            if sudo test -e "$apt_wrapper" || sudo test -L "$apt_wrapper" || \
+              sudo test -e "$apt_config_file" || sudo test -L "$apt_config_file"; then
+              echo "Refusing to overwrite an existing temporary APT path" >&2
+              exit 1
+            fi
+            apt_config_created=0
+            apt_wrapper_created=0
+            cleanup_apt_setup() {
+              if [ "$apt_wrapper_created" -eq 1 ]; then sudo rm -f "$apt_wrapper"; fi
+              if [ "$apt_config_created" -eq 1 ]; then sudo rm -f "$apt_config_file"; fi
+            }
+            trap cleanup_apt_setup EXIT
+            apt_config_created=1
+            printf '%s\n' \
+              'Acquire::Retries "1";' \
+              'Acquire::http::Timeout "10";' \
+              'Acquire::https::Timeout "10";' |
+              sudo tee "$apt_config_file" >/dev/null
+            apt_config="$(sudo apt-config dump)"
+            printf '%s\n' "$apt_config" | grep -Fx 'Acquire::Retries "1";'
+            printf '%s\n' "$apt_config" | grep -Fx 'Acquire::http::Timeout "10";'
+            printf '%s\n' "$apt_config" | grep -Fx 'Acquire::https::Timeout "10";'
+
+            # The temporary apt-get wrapper runs timeout as root, labels each
+            # phase, and bounds the real binary. Only a timed-out update retries.
+            apt_wrapper_created=1
+            printf '%s\n' \
+              '#!/bin/sh' \
+              'phase="${1:-}"' \
+              'case "$phase" in' \
+              '  update|install) ;;' \
+              '  *) echo "Unexpected apt-get phase: $phase" >&2; exit 64 ;;' \
+              'esac' \
+              'run_apt() {' \
+              '  /usr/bin/timeout --signal=TERM --kill-after=30s 4m /usr/bin/apt-get "$@"' \
+              '}' \
+              'printf "[bounded apt] %s start\n" "$phase" >&2' \
+              'if run_apt "$@"; then status=0; else status=$?; fi' \
+              'printf "[bounded apt] %s exit=%s\n" "$phase" "$status" >&2' \
+              'if [ "$phase" = update ] && { [ "$status" -eq 124 ] || [ "$status" -eq 137 ]; }; then' \
+              '  echo "[bounded apt] update timed out; retrying once" >&2' \
+              '  if run_apt "$@"; then status=0; else status=$?; fi' \
+              '  printf "[bounded apt] update retry exit=%s\n" "$status" >&2' \
+              'fi' \
+              'exit "$status"' |
+              sudo tee "$apt_wrapper" >/dev/null
+            sudo chmod 0755 "$apt_wrapper"
+            resolved_apt="$(sudo sh -c 'command -v apt-get')"
+            if [ "$resolved_apt" != "$apt_wrapper" ]; then
+              echo "Temporary apt-get wrapper is not selected by sudo secure_path: $resolved_apt" >&2
+              exit 1
+            fi
             npx playwright install --with-deps chromium
           fi
       - name: Test applicable combined-tree invariants without publishing or live imports

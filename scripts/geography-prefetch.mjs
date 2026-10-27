@@ -38,9 +38,9 @@ export function createGitHubTokenProvider({readToken = () => execFileSync('gh', 
 
 // Git object and metadata requests share the same invocation-local auth source.
 export function deliveryAcquisitionExecute({execute = execFileSync, getToken,
-  readToken} = {}) {
+  readToken, selectedGit: initialGit} = {}) {
   const tokenForRequest = getToken ?? createGitHubTokenProvider({...(readToken ? {readToken} : {})});
-  let selectedGit;
+  let selectedGit = initialGit;
   return (command, args, options) => {
     if (command === 'git' && args.includes('fetch')) {
       requireValue(args.includes('https://github.com/ChengshuLi/WorldAtlas.git'), 'Unexpected acquisition repository');
