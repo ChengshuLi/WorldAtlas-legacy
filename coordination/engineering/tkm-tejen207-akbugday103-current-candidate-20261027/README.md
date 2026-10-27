@@ -8,7 +8,7 @@ The original queue record is `coordination/engineering/global-current-cell-work-
 
 * **Tejen:** 207 land cells, owner index 42144, target `gb:TKM:ADM2:10190150B49022220136906`.
 * **Ak Bugday:** 103 land cells, owner index 42135, target `gb:TKM:ADM2:10190150B31923585689840`.
-* **Koytendag:** 101 proposed land cells; 26 additional contacts remain held due to exact AFG foreign-source contacts. The 101 candidate keys are not a clearance of the remaining Koytendag contacts.
+* **Koytendag:** 101 proposed land cells, owner index 42152, target `gb:TKM:ADM2:10190150B64529450546528`; 26 additional contacts remain held due to exact AFG foreign-source contacts. The 101 candidate keys are not a clearance of the remaining Koytendag contacts.
 * No water cells are included in the 411. Distinct unresolved Dostluk6 remains separate; other residual keys remain pending. No other owner reassignment is proposed beyond the stated targets.
 
 ## Source, contact, physical, and native evidence
