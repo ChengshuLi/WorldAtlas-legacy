@@ -1202,17 +1202,43 @@ export function publishFinalizedDelivery(root, destination, outputs, binding, re
   recheckRetirements('after-publication-before-materialization');
   for (const row of writes) need(indexed(row) === row.writeIndex, 'Canonical output index changed before materialization: ' + row.path);
   if (sparse) {
-    const retirementBeforeSparseAdd = new Map(retired.map(row => [row.path, indexed(row)]));
-    for (const row of retired) need(retirementBeforeSparseAdd.get(row.path) === row.retirementIndex,
-      `Final-bank retirement index changed immediately before sparse materialization: ${row.path}; `
-        + JSON.stringify({phase: 'immediately-before-sparse-materialization', expected: describeIndex(row.retirementIndex),
-          current: describeIndex(retirementBeforeSparseAdd.get(row.path)), expected_raw: describeRawIndex(row.retirementIndex),
-          current_raw: describeRawIndex(retirementBeforeSparseAdd.get(row.path))}));
+    const retirementBeforeSparseAdd = new Map();
+    for (const row of retired) {
+      const entry = indexed(row);
+      need(entry === row.retirementIndex,
+        `Final-bank retirement index changed immediately before sparse materialization: ${row.path}; `
+          + JSON.stringify({phase: 'immediately-before-sparse-materialization', expected: describeIndex(row.retirementIndex),
+            current: describeIndex(entry), expected_raw: describeRawIndex(row.retirementIndex),
+            current_raw: describeRawIndex(entry)}));
+      const state = describeIndex(entry);
+      if (entry) checkRetirementMaterialization(row, state, 'immediately-before-sparse-materialization');
+      retirementBeforeSparseAdd.set(row.path, {entry, state});
+    }
     reader.git('sparse-checkout', 'add', '--', ...writes.map(row => '/' + row.path));
     need(reader.git('rev-parse', 'HEAD').toString().trim() === head, 'Finalization HEAD changed during materialization');
     for (const row of writes) {
       const expected = row.writeIndex.replace(/^S /, 'H ');
       need(indexed(row) === expected, 'Canonical output index changed during materialization: ' + row.path);
+    }
+    for (const row of retired) {
+      const before = retirementBeforeSparseAdd.get(row.path), current = indexed(row);
+      if (current === row.retirementIndex) continue;
+      const after = describeIndex(current), identity = state => state.mode === '100644'
+        && state.oid === row.git_blob_oid && state.stage === 0 && state.path === row.path;
+      const materializedBefore = before.entry === row.retirementIndex && before.state.tag === 'H'
+        && !before.state.skip_worktree && !before.state.assume_unchanged && identity(before.state);
+      const sparseAfter = after.tag === 'S' && after.skip_worktree && !after.assume_unchanged && identity(after);
+      const absentAfter = !fs.lstatSync(path.join(root, row.path), {throwIfNoEntry: false});
+      need(sparse && materializedBefore && sparseAfter && absentAfter,
+        `Final-bank retirement index changed during after-sparse-materialization: ${row.path}; `
+          + JSON.stringify({phase: 'after-sparse-materialization', expected: describeIndex(row.retirementIndex), current: after,
+            expected_raw: describeRawIndex(row.retirementIndex), current_raw: describeRawIndex(current)}));
+      // Only the real sparse-checkout transition can change H to S. The exact
+      // H entry and its body were checked immediately before the command; now
+      // the same stage-0 blob is excluded and absent, so retire that exact row.
+      row.retirementIndex = current;
+      row.sparseRetirement = true;
+      row.allowMissing = true;
     }
     recheckRetirements('after-sparse-materialization');
     for (const row of rows.filter(row => row.retained)) need(retainedSparse(row) === row.allowMissing,

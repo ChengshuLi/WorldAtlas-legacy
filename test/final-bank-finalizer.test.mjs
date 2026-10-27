@@ -538,13 +538,19 @@ test('retiring current-bank paths refuse non-sparse loss, staged replacements an
  }
  sparseRetirementMutation=null;
  const freshDestination='coordination/engineering/final-bank-test/retirement-guards-fresh';
+ f.git('update-index','--no-skip-worktree','--',name);fs.writeFileSync(file,original,{mode:0o644});fs.chmodSync(file,0o644);
+ f.git('update-index','--refresh','--',name);
+ const materializedEntry=f.git('ls-files','--stage','-v','-z','--',name).toString();
+ assert.match(materializedEntry,/^H 100644 [0-9a-f]{40} 0\t/,'The exact retired preimage starts materialized before sparse add');
+ assert.deepEqual(fs.readFileSync(file),original,'The materialized H preimage has the exact authenticated body');
  publish(false,freshDestination);assert.equal(f.git('ls-files','--stage','--',name).length,0);
  assert.equal(sparseRetirementSnapshots.length,5,'Four invalid transitions and the successful sparse adoption each materialize once');
  const validSnapshot=sparseRetirementSnapshots.at(-1);
- assert.equal(validSnapshot.before,validSnapshot.after,
-  'The real sparse-checkout add preserves the retired file index entry');
- assert.match(validSnapshot.before,/^S 100644 [0-9a-f]{40} 0\t/);
- assert.match(validSnapshot.after,/^S 100644 [0-9a-f]{40} 0\t/);
+ assert.match(validSnapshot.before,/^H 100644 [0-9a-f]{40} 0\t/);
+ assert.match(validSnapshot.after,/^S 100644 [0-9a-f]{40} 0\t/,
+  'The real sparse-checkout add changes only the skip-worktree marker for the excluded retirement');
+ assert.equal(validSnapshot.before.replace(/^H /,'S '),validSnapshot.after,
+  'The real transition preserves the exact stage-0 mode, blob OID and path');
  assert(!fs.existsSync(file),'The verified materialized retirement is removed before index staging');
  assert(f.git('ls-files','--stage','--',name).length===0,'Fresh publication stages removal of the exact materialized retirement');
  assert(fs.existsSync(path.join(f.root,freshDestination,'preparation.json')),'The fresh S-to-H publication completes');
