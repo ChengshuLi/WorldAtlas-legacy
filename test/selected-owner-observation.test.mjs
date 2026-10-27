@@ -27,6 +27,24 @@ const gitHelperArgv = [
 const exactGitHelper = args =>
   gitHelperArgv.some(expected => JSON.stringify(args) === JSON.stringify(expected)) ||
   (args.length === 5 && args[0] === 'index-pack' && args[1] === '--stdin' && args[2] === '--fix-thin' && args[3] === '--promisor' && /^--pack_header=2,[1-9][0-9]*$/.test(args[4]));
+const helperArgvDiagnostic = launches => 'expected helper argv: ' + JSON.stringify(gitHelperArgv) +
+  ' or index-pack [--stdin,--fix-thin,--promisor,--pack_header=2,N]; captured launcher/helper records: ' + JSON.stringify(launches);
+
+test('selected Git helper argv rejects unknown, contradictory and reordered arguments', () => {
+  const indexPack = ['index-pack', '--stdin', '--fix-thin', '--promisor', '--pack_header=2,1'];
+  assert.equal(exactGitHelper(gitHelperArgv[0]), true);
+  assert.equal(exactGitHelper(gitHelperArgv[1]), true);
+  assert.equal(exactGitHelper(indexPack), true);
+  for (const args of [
+    [...gitHelperArgv[0], '--unexpected'],
+    ['pack-objects', '--revs', '--no-thin', '--stdout', '--delta-base-offset'],
+    ['pack-objects', '--thin', '--revs', '--stdout', '--delta-base-offset'],
+    [...gitHelperArgv[1], '--unexpected'],
+    ['rev-list', '--stdin', '--objects', '--not', '--exclude-hidden=fetch', '--all', '--quiet', '--alternate-refs'],
+    ['index-pack', '--stdin', '--promisor', '--fix-thin', '--pack_header=2,1'],
+    ['index-pack', '--stdin', '--fix-thin', '--promisor', '--pack_header=2,1', '--unexpected'],
+  ]) assert.equal(exactGitHelper(args), false, JSON.stringify(args));
+});
 function fixture({missingOrigins = false, changeManifest, changePatch, changeSide, changeOwners, changeArrays, changeQueue, changeOriginalGrid, splitCandidates = false, multiBlock = false} = {}) {
   const repo = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'owner-observation-')));
   const git = (...args) => execFileSync('git', ['-C', repo, ...args], {stdio: ['ignore', 'pipe', 'pipe']}).toString().trim();
@@ -661,7 +679,7 @@ for (const splitCandidates of [false, true]) test('one cold ' + (splitCandidates
     assert.deepEqual(f.launches().filter(args => args.length === 1 && args[0] === '--exec-path'), [['--exec-path']], 'cold bootstrap resolves the implementation once');
     const helpers = f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path'));
     assert(helpers.length > 0, 'cold fetch exercises internal Git helpers');
-    assert(helpers.every(exactGitHelper), 'only exact supported Git helper argv is passed through');
+    assert(helpers.every(exactGitHelper), 'only exact supported Git helper argv is passed through; ' + helperArgvDiagnostic(f.launches()));
     const coldHelperCalls = [...helpers];
     assert.equal(r.status, 0, r.stderr);
     assert.equal(r.report.query_count, 5); assert.deepEqual(r.report.keys.map(({x,y}) => ({x,y})), keys);
@@ -718,14 +736,16 @@ test('a partial acquisition failure leaves no receipt and an ordinary retry reus
     const failed = f.run({env: {OBSERVATION_TEST_FAIL_FETCH:'2'}});
     assert.notEqual(failed.status, 0); assert.match(failed.stderr, /Geography object acquisition failed/);
     assert.deepEqual(f.launches().filter(args => args.length === 1 && args[0] === '--exec-path'), [['--exec-path']], 'partial run resolves the implementation once');
-    assert(f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path')).every(exactGitHelper), 'partial run rejects launcher drift');
+    const partialHelpers = f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path'));
+    assert(partialHelpers.every(exactGitHelper), 'partial run rejects launcher drift; ' + helperArgvDiagnostic(f.launches()));
     assert.equal(f.batches().length, 2, 'the second transport attempt is the injected failure');
     assert.equal(fs.existsSync(failed.output), false);
     const retained = f.inventory().filter(([oid,kind]) => kind === 'blob' && !f.codeOids.has(oid)).map(([oid]) => oid);
     assert.deepEqual(retained, [f.git('rev-parse', f.head + ':data/ownership-selection.json')]);
     const prior = f.batches().length, resumed = f.run(); assert.equal(resumed.status, 0, resumed.stderr);
     assert.deepEqual(f.launches().filter(args => args.length === 1 && args[0] === '--exec-path'), [['--exec-path'], ['--exec-path']], 'retry reuses the resolved implementation');
-    assert(f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path')).every(exactGitHelper), 'retry keeps rejecting launcher drift');
+    const retryHelpers = f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path'));
+    assert(retryHelpers.every(exactGitHelper), 'retry keeps rejecting launcher drift; ' + helperArgvDiagnostic(f.launches()));
     assert.equal(resumed.report.query_count, 5);
     assert(!f.batches().slice(prior).flat().some(oid => retained.includes(oid)));
     assert.equal(resumed.report.acquisition.fetched_objects,

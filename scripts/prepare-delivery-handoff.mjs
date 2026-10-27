@@ -11,7 +11,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {gunzipSync} from 'node:zlib';
 import {locate, deliveryAcquisitionExecute} from './delivery-handoff-advance.mjs';
-import {createAcquisition, githubTree} from './geography-prefetch.mjs';
+import {createAcquisition, githubTree, selectInstalledGit} from './geography-prefetch.mjs';
 import {admitCanonicalOutputs} from './delivery-checkpoint-finalization.mjs';
 import {repairComponentKey, compareRepairComponents, nativeOnlyComponent} from '../src/native-grid.js';
 import {finalBankSelection,scientificNativeSelection,originalNativeReference,validateReferenceMetadataHeader} from '../src/reference-metadata.js';
@@ -34,8 +34,17 @@ const safe = name => typeof name === 'string' && /^[a-zA-Z0-9_./-]+$/.test(name)
 const unique = values => Array.isArray(values) && values.length > 0 && values.every(v => typeof v === 'string' && v) && new Set(values).size === values.length;
 const environment = () => ({...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLACE_OBJECTS: '1', GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_GLOBAL: '/dev/null', GIT_TERMINAL_PROMPT: '0'});
 
-export function pinReader(root, {loadTree = githubTree,
-  execute = deliveryAcquisitionExecute()} = {}) {
+export function pinReader(root, {loadTree = githubTree, execute} = {}) {
+  const selectedGit = selectInstalledGit();
+  try {
+    execFileSync(selectedGit.gitExecutable, ['--no-lazy-fetch', '--version'], {
+      cwd: root, env: {...environment(), GIT_EXEC_PATH: selectedGit.gitExecPath},
+      stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8',
+    });
+  } catch {
+    throw Error('Use a Git implementation supporting --no-lazy-fetch; no compatibility fallback is allowed');
+  }
+  const acquisitionExecute = execute ?? deliveryAcquisitionExecute({selectedGit});
   const cache = new Map(), descriptors = new Map(), declared = new Map();
   let cacheBodies = true;
   let acquisition;
@@ -50,7 +59,7 @@ export function pinReader(root, {loadTree = githubTree,
         'Conflicting composition input identities');
       declared.set(key, pin);
     }
-    acquisition ??= createAcquisition({repo: root, execute, token: '', loadTree,
+    acquisition ??= createAcquisition({repo: root, execute: acquisitionExecute, token: '', loadTree,
       loadDescriptor: async (commit, name) => {
         const pin = declared.get(commit + ':' + name);
         need(pin, 'Undeclared composition input');
@@ -77,9 +86,9 @@ export function pinReader(root, {loadTree = githubTree,
     return {...acquisition.stats};
   }
   const git = (...args) => {
-    const options={cwd:root,env:environment(),maxBuffer:Infinity};
+    const options={cwd:root,env:{...environment(),GIT_EXEC_PATH:selectedGit.gitExecPath},maxBuffer:Infinity};
     if(args[0]==='cat-file'&&args[1]==='blob') options.maxBuffer=Number(git('cat-file','-s',args[2]))+1;
-    return execFileSync('git',args,options);
+    return execFileSync(selectedGit.gitExecutable,args,options);
   };
   function descriptor(commit, name) {
     need(hex(commit, 40) && safe(name), 'Exact commit and safe whole-file path required');
