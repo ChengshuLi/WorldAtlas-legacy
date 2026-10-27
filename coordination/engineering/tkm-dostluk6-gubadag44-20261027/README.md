@@ -16,7 +16,7 @@ This folder reports physical evidence only. The supported native diagnostic comp
 
 ## Native diagnostic preparation
 
-The supported source-evidence preparer authenticated the accepted selector/base, original TKM ADM2 consumed family, selected part-23 lineage, GSHHG stage/result, and complete AFG/KAZ/UZB territorial-exclusion source families. Its output preserves the exact 44-cell request and mapped-land class rows. The `native-patch.json` is a request derived from the original 44 tuples, not authority; the supported native diagnostic remains a separate next step. The prepared source-evidence output alone is not a native or ownership finding.
+The supported source-evidence preparer authenticated the accepted selector/base, original TKM ADM2 consumed family, selected part-23 lineage, GSHHG stage/result, and complete AFG/KAZ/UZB territorial-exclusion source families. Its output preserves the exact 44-cell request and mapped-land class rows. The `native-patch.json` is a request derived from the original 44 tuples, not authority. The diagnostic and constructor results are separately described below; neither the source-evidence output nor the native supported count alone establishes actual current-owner-zero or accepted ownership.
 
 ## Native screen and constructor candidate
 
