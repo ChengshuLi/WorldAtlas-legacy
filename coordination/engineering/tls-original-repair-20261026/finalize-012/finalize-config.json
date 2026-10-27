@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "b95f3274eeb9abbf809070c9cd2d4c9a8f863d27",
+    "path": "data/ownership-selection.json"
+  },
+  "package_inputs": {
+    "commit": "b95f3274eeb9abbf809070c9cd2d4c9a8f863d27",
+    "path": ".github/package-inputs.json"
+  },
+  "change_evidence": {
+    "commit": "2df0c87f65a8c5b34fd467742768e37bff1ad849",
+    "path": "coordination/engineering/tls-original-repair-20261026/compose-004/authority-registry.json",
+    "mode": "100644",
+    "git_blob_oid": "82c07a5037a3a1fc2129ee8534d126fcea604d3f",
+    "bytes": 1343,
+    "sha256": "6a615906733f822abaf5dff36cbbd727610f1a4af5edacd65cd463ff19ff415f"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "commit": "e04237480b781b4a862fb01c91ad44549dc7a77d",
+        "path": "coordination/engineering/tls-original-repair-20261026/finalize-005/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "277e93875c92c40fb33fb2d19a98862a2ca7d2fc",
+        "bytes": 1156,
+        "sha256": "e971406b3f67ea963b3319079038b98d50415bf466d5cecc024457955b94dfee"
+      },
+      "startup_ownership": {
+        "commit": "e04237480b781b4a862fb01c91ad44549dc7a77d",
+        "path": "coordination/engineering/tls-original-repair-20261026/finalize-005/startup-ownership.json",
+        "mode": "100644",
+        "git_blob_oid": "d986151a09d7b67b7842d1c0121c397a3bc925e8",
+        "bytes": 49610,
+        "sha256": "8155b3d9daa385fc8fc27ff72bb815a9fbf058bd5e2518f65e02115a5455eead"
+      }
+    },
+    {
+      "preparation": {
+        "commit": "1b152566019d7c13aacfc82f6c3fb2aae4410bd7",
+        "path": "coordination/engineering/tls-original-repair-20261026/finalize-007/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "3b2ac84c9b039672bd9ac2dd55c4a9a2e37c1f2e",
+        "bytes": 1156,
+        "sha256": "817cab4d6c048a32b7761306635945a2d596ba09375494138cbc3efcb4a8c916"
+      },
+      "startup_ownership": {
+        "commit": "1b152566019d7c13aacfc82f6c3fb2aae4410bd7",
+        "path": "coordination/engineering/tls-original-repair-20261026/finalize-007/startup-ownership.json",
+        "mode": "100644",
+        "git_blob_oid": "381f471fdab53e30cbd7d2775b180921867a5aa6",
+        "bytes": 49610,
+        "sha256": "2877c86af916a2a82a3a279c70dcddd8dfa579ef88137e660bd2715728dfe5a2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "kind": "mlt-original-candidate-keyset-reencoding-v1",
+  "source": "physical-001/result-members-001/physical-center-application.json",
+  "candidate_rows": 1196,
+  "distinct_y_rows": 210,
+  "intervals": 310,
+  "owner_index": 7124,
+  "tuple_encoding": "owner:y:x newline, sort lexicographic tuple",
+  "reconstructed_equals_exact_center_application": true,
+  "original_package_tuple_set_sha256": "2bc8864deb2464003e7cb910dece64b50a709141095c76823025e735848989c9",
+  "original_tuple_encoding": "[x,y,source_feature_index] from source-comparison-002.json; owner-index 7124 and source-feature mapping are retained in physical-center-application.json",
+  "constructed_native_patch_tuple_encoding": "owner:y:x",
+  "constructed_native_patch_tuple_set_sha256": "e6217f9febe37f200c2e9b53aad2078b4f31d9ede129c5f3ebdb22d7a7437c5a",
+  "exact_coordinate_owner_reconstruction_matches_all_1196_application_rows": true
+}

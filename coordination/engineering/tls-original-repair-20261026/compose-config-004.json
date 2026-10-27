@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "7aaa0a9feeeb8f9bbbf8a01d1eea44103d689acf",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "6cf14f7fd5b4ad1e0a2afa876561195feee46b18",
+    "bytes": 2272,
+    "sha256": "f47a34c5d4e0eda841b2af18c55b7f096773756879f1a83e0059c45f93bad72b"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "a46a0c5a53dfd4640756614fa2a0bc0b7aefe341",
+        "path": "coordination/engineering/tls-original-repair-20261026/native-authority-002/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "b6139d3ee815d8fc0cc72f82ad13044a5ffe2388",
+        "bytes": 727,
+        "sha256": "8d3e95562fb1bc61b46dc483eca46ead1c3e05ed1700f2bb693e84ec7eed4ae7"
+      },
+      "source_authority": {
+        "commit": "a46a0c5a53dfd4640756614fa2a0bc0b7aefe341",
+        "path": "coordination/engineering/tls-original-repair-20261026/native-authority-002/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "ca94368b92d6aa883c03b5c1acbf8b3df5d7bea3",
+        "bytes": 730,
+        "sha256": "61ff1ea871cb5612930fb27af0495b108357c71084ccfdfca94fb2d6297cbc41"
+      },
+      "ledger": {
+        "commit": "a46a0c5a53dfd4640756614fa2a0bc0b7aefe341",
+        "path": "coordination/engineering/tls-original-repair-20261026/native-authority-002/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "9962934fe903b66a66f78d11e2e3268650faba2b",
+        "bytes": 42733,
+        "sha256": "8327e1dc18b203f615eb314b1d0dd3f19ad64993b72eedcd77c4787fd446b65f"
+      },
+      "native_patch": {
+        "commit": "34b7f1fe1abd09ee59ff7c7564304b00a04071ab",
+        "path": "coordination/engineering/tls-original-repair-20261026/supported-inputs-001/native-patch.json",
+        "mode": "100644",
+        "git_blob_oid": "40c0a36869435bfcc2590df896d08e3266d2ee93",
+        "bytes": 11165,
+        "sha256": "2e4df1a57db10db91d551761e1ce364287f7f5d5ff851e4004a31516f7e904e9"
+      }
+    }
+  ]
+}
