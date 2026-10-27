@@ -1,4 +1,4 @@
-# TGO ADM2 attribution and license notice
+# TGO and adjacent ADM1 attribution and license notice
 
 This notice records the license and attribution fields for the Togo ADM2 source polygons embedded in the TGO candidate constructor result. It is source metadata, not a legal-boundary or upstream-source certification.
 
@@ -14,7 +14,17 @@ This notice records the license and attribution fields for the Togo ADM2 source 
 
 ## Attribution for the candidate output
 
-The pinned constructor result `.cache/delivery-handoff/tgo427-native-authority-001/constructor-result.json` (SHA-256 `2e8bca578a566ea131d9f999d0e5c6ad20b8aad8b55ea3a10e75da06ddfa1900`, 46,397 bytes) contains 18 `ledger_rows[*].base_geometry` polygons keyed by `target_id=gb:TGO:ADM2:<shapeID>`. The retained source-evidence join verifies these geometries against the corresponding TGO ADM2 source features. They are source-feature polygons, not native grid-cell geometries. The same 18 TGO source polygons are also carried in `.cache/tgo-private-source-evidence-427-adjacent-v1.json` (50,851 bytes; SHA-256 `df32677f12a0d5b4096b35c610ae6fa9b065b643f0f690b253b6431c453bfa2`), in its target `base_geometry` fields. That JSON also records source and physical/native bindings plus references to the separate BEN/BFA/GHA source parts; it does not embed those neighboring source geometries.
+The pinned constructor result `.cache/delivery-handoff/tgo427-native-authority-001/constructor-result.json` (SHA-256 `2e8bca578a566ea131d9f999d0e5c6ad20b8aad8b55ea3a10e75da06ddfa1900`, 46,397 bytes) contains 18 `ledger_rows[*].base_geometry` polygons keyed by `target_id=gb:TGO:ADM2:<shapeID>`. The retained source-evidence join verifies these geometries against the corresponding TGO ADM2 source features. They are source-feature polygons, not native grid-cell geometries. The same 18 TGO source polygons are also carried in `.cache/tgo-private-source-evidence-427-adjacent-v1.json` (50,851 bytes; SHA-256 `df32677f12a0d5b4096b35c610ae6fa9b065b643f0f690b253b6431c453bfa2`), in its target `base_geometry` fields.
+
+The 397/112 supported-input evidence at `.cache/delivery-handoff/tgo427-supported-inputs-397-v112-d13-v1/source-evidence.json` (50,059 bytes; SHA-256 `67ef56c920943d514e0feb678df39ace991cf92167e60863e16f6ee1c1b27166`) contains 17 TGO target `base_geometry` polygons and 33 whole-feature geometries attached as conservative bounding-box candidate exclusions from the complete BEN/BFA/GHA ADM1 products. These are screening operands, not asserted contacts or legal exclusions. The exact recorded catalogue products are:
+
+| Family and asset | Represented year | Recorded source and license | Recorded product URL |
+| --- | --- | --- | --- |
+| `gb:BEN:ADM1`, `BEN-ADM1-11314189` | 2012 | geoBoundaries/Wikimedia Commons; Public Domain | <https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BEN/ADM1/geoBoundaries-BEN-ADM1_simplified.geojson> |
+| `gb:BFA:ADM1`, `BFA-ADM1-92566538` | 2017 | World Bank; CC BY 4.0 | <https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BFA/ADM1/geoBoundaries-BFA-ADM1_simplified.geojson> |
+| `gb:GHA:ADM1`, `GHA-ADM1-69750345` | 2021 | OpenStreetMap; CC BY-SA 2.0 | <https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GHA/ADM1/geoBoundaries-GHA-ADM1_simplified.geojson> |
+
+The catalogue records the respective license sources as Wikimedia Commons, the World Bank's CC BY license page, and OpenStreetMap copyright. Preserve those recorded attributions and license terms when redistributing the embedded product geometries; apply the stated share-alike terms to adapted material where required. These fields are catalogue metadata, not independent source certification. The evidence records complete product pins, but the original metadata does not provide asset-level `sourceDataURL` or `licenseDetail` for these products.
 
 Attribution for those embedded polygons: **Togo ADM2 prefecture boundaries, geoBoundaries record TGO-ADM2-56601680, source OpenStreetMap/Wambacher, represented 2017; geoBoundaries metadata states CC BY-SA 2.0.** Preserve this attribution and the recorded license link when redistributing the polygons. If the polygons are adapted, identify the changes and apply the recorded share-alike terms to the adapted geometry as required by the license. This notice does not assert that unrelated WorldAtlas code or native-grid assignment data are derivatives of the TGO polygons.
 
