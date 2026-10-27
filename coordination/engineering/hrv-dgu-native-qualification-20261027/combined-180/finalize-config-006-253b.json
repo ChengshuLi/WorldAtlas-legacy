@@ -1,0 +1,39 @@
+{
+  "change_evidence": {
+    "bytes": 2790,
+    "commit": "534c880f91d1856c6c58b40ec68e21ec36f5b2cf",
+    "git_blob_oid": "17f72108c06b4798e21e776e9edd80d362a2b102",
+    "mode": "100644",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-003-29e4/authority-registry.json",
+    "sha256": "f6a56c6920f6a7a93d404a39bed4270e460af53a367b064d49a89987a75dd6e9"
+  },
+  "package_inputs": {
+    "commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+    "path": ".github/package-inputs.json"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "bytes": 1156,
+        "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+        "git_blob_oid": "4c6ed9449a6ebe8108edc0a21f3d455736651827",
+        "mode": "100644",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/finalize-current-d28-territorial-001/preparation.json",
+        "sha256": "679d333e98baff72806ede592770cfb26c16af3b41a4160b1537788477e57085"
+      },
+      "startup_ownership": {
+        "bytes": 49610,
+        "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+        "git_blob_oid": "ff7df3bb02504e9a52de1bffe0f1afe44ea7a268",
+        "mode": "100644",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/finalize-current-d28-territorial-001/startup-ownership.json",
+        "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+      }
+    }
+  ],
+  "selector": {
+    "commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+    "path": "data/ownership-selection.json"
+  },
+  "version": 2
+}
