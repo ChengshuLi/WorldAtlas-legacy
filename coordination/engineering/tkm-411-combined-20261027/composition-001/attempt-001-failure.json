@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "kind": "native-composition-attempt-failure",
+  "phase": "compose",
+  "start_utc": "2026-10-27T11:13:09Z",
+  "end_utc": "2026-10-27T11:13:22Z",
+  "elapsed_seconds": 13.0,
+  "exit_code": 1,
+  "command": "env -u NODE_PATH -u NODE_OPTIONS GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1 node scripts/prepare-delivery-handoff.mjs compose coordination/engineering/tkm-411-combined-20261027/composition-001/config.json coordination/engineering/tkm-411-combined-20261027/composition-001-output",
+  "cwd": "owned TKM worktree",
+  "config_sha256": "3b68c41aa3c91834385c0d82b2f4dc77bdbf101e1df096d45e206a9c9b16ba3b",
+  "stdout_bytes": 0,
+  "stderr": "New-only native patch differs from its issued binding",
+  "output_created": false,
+  "meaning": "Composition input-locator validation failure only; no source/physical/native qualification failure. Corrected in composition-002 by using the patch commit bound by the authority receipt."
+}
