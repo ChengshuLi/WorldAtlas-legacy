@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "kind": "atg883-native-finalizer-attempt-v1",
+  "package_id": "gb-ATG-ADM1--repair-evaluation",
+  "original_queue_record_sha256": "a8699fd1c2fdc12a97aa592ac711c5674f232daf58ac86fba41aea0fcb2968f9",
+  "attempt": {
+    "phase": "finalize",
+    "branch_head": "f3c0263b086429277e2184e3deb52832a99fce93",
+    "accepted_data_commit": "81280722133858cbb26249210fed17b031d11d3d",
+    "config_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config.json",
+    "config_sha256": "891e55fe02ec88669ebf9f3790fe4f4242b7064315664547211956939e26689e",
+    "helper_path": "scripts/prepare-delivery-handoff.mjs",
+    "helper_blob_oid": "c6ffe7e58dc3240667fec0be09d1144a66d3d12d",
+    "helper_sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6",
+    "node_version": "v24.19.0",
+    "destination": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-812",
+    "exit_status": 1,
+    "error_class": "ERR_MODULE_NOT_FOUND",
+    "error_message": "Cannot find package '@noble/hashes' imported from src/effective-footprint.js",
+    "missing_dependency": {
+      "name": "@noble/hashes",
+      "locked_version": "2.0.1",
+      "package_lock_integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
+      "package_lock_entry_present": true,
+      "installed_in_worktree": false,
+      "installed_in_checked_runtime_paths": false
+    },
+    "outcome": {
+      "finalizer_output_created": false,
+      "current_startup_output_created": false,
+      "worktree_clean_after_attempt": true,
+      "sparse_index_remained_unchanged": true,
+      "retirement_index_guard_reached": false,
+      "whole_bank_conservation_emitted": false,
+      "production_bank_changed": false,
+      "science_or_acceptance_implication": "none; this is a local runtime dependency failure only"
+    },
+    "retry_policy": "Preserve this failed attempt. One retry only after acquiring the exact lockfile-pinned package through a supported bounded route and verifying tarball SRI and capacity; do not install the full dependency graph, use NODE_PATH, weaken checks, or treat this as a source denial."
+  },
+  "limitations": [
+    "A previous full-pin config failed preflight; the corrected exact-locator attempt is recorded above. No source inputs or output were changed by the malformed-config invocation.",
+    "The finalizer stopped before sparse-retirement validation, so there is no retirement-guard result to report.",
+    "The failure is local runtime dependency availability, not evidence of source absence, legal uncertainty, or failed source qualification."
+  ],
+  "preflight_attempts": [
+    {
+      "phase": "finalize",
+      "branch_head": "47e3c274a0112b8c645b011f26f2a836386b02a2",
+      "config_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config.json",
+      "config_sha256": "d4defd3c516514f2f657af0f3f0a55dfa0d2e76033c9bec9e0258e5800c0d0ab",
+      "outcome": "schema-preflight-failure-before-output",
+      "cause": "selector and package_inputs used full body pins; accepted helper contract requires exact commit/path locators",
+      "finalizer_started": false,
+      "output_created": false
+    }
+  ]
+}

@@ -105,7 +105,12 @@
     "source_target_native_constructor_emitted": true,
     "authority_registry_composed": true,
     "current_block_28_virtual_conservation_at_accepted_main_8128072": true,
-    "whole_selected_bank_conservation": false
+    "whole_selected_bank_conservation": false,
+    "finalizer_attempted_at_accepted_main_8128072": true,
+    "finalizer_output_created": false,
+    "finalizer_blocked_on_missing_locked_runtime_dependency": false,
+    "retirement_index_guard_reached": false,
+    "finalizer_runtime_dependency_restored": true
   },
   "limits": [
     "The original 883 land-cell/288-interval denominator is unchanged; 127 selected-feature contacts and 3 Redonda contacts outside the land/water masks remain excluded.",
@@ -217,5 +222,24 @@
     "unowned": 1013,
     "other_owner": 0,
     "scope": "block 28 only; virtual overlay; not full selected-bank comparison or production patch"
+  },
+  "finalizer_attempt_8128072": {
+    "path": "native-preparation/finalizer-attempt-812.json",
+    "branch_head": "f3c0263b086429277e2184e3deb52832a99fce93",
+    "config_sha256": "891e55fe02ec88669ebf9f3790fe4f4242b7064315664547211956939e26689e",
+    "helper_sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6",
+    "error_class": "ERR_MODULE_NOT_FOUND",
+    "missing_dependency": "@noble/hashes@2.0.1",
+    "package_lock_integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
+    "finalizer_output_created": false,
+    "retirement_index_guard_reached": false
+  },
+  "runtime_dependency_recovery": {
+    "path": "native-preparation/runtime-dependency-812.json",
+    "package": "@noble/hashes@2.0.1",
+    "tarball_sri_verified_against_lockfile": true,
+    "worktree_tree_exactly_matches_verified_tarball": true,
+    "full_npm_install": false,
+    "finalizer_retry_completed": false
   }
 }
