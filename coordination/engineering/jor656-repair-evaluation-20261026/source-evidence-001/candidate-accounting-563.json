@@ -88,13 +88,13 @@
     }
   },
   "bank_candidate": {
-    "baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
-    "candidate_commit": "6fa79bdbc5e6085748fbf5849e9bed5a050a1dd1",
-    "finalizer_attempt": "../finalizer-run-019/terminal.json",
+    "baseline_commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "candidate_commit": "39616954aa21d417508bb0a3d59305d8b59680eb",
+    "finalizer_attempt": "../finalize-instrumented-021/finalizer-run-021/terminal.json",
     "finalizer_exit": 0,
-    "startup_index_sha256": "da9bcae0bd335143d140fdbf3a8a3d581978183b6348d713b5e99459c3f07cd0",
-    "comparison_report": "../finalize-instrumented-019/current-full-bank-comparison.json",
-    "comparison_sha256": "fd1cdb1a704673945eff13673010f6b07e9753c4a7e2800715444027f305656c",
+    "startup_index_sha256": "5c2282ed2c8cd010364cfc6d484112a3a15e16d16fef133afd144de320bfc597",
+    "comparison_report": "../finalize-instrumented-021/current-full-bank-comparison.json",
+    "comparison_sha256": "7312168a8ad1a68298215b0898a951f3e3b2a202c0d5e7095b6238e8bcea07a9",
     "method": "selected-native-owner-conservation-v1",
     "status": "no-new-native-loss",
     "compared_rows": 262166,
@@ -104,7 +104,8 @@
     "lost_or_reassigned": 0,
     "affected_rows": 314,
     "candidate_code_executed": false,
-    "trusted_code_paths_checked": 18
+    "trusted_code_paths_checked": 18,
+    "scope": "Local direct comparison core only; not hosted stock controls or acceptance."
   },
   "limitations": [
     "Candidate only; local finalizer and local comparison core are not hosted stock controls.",
@@ -127,5 +128,35 @@
     "lost_or_reassigned": 0,
     "affected_rows": 314,
     "candidate_code_executed": false
+  },
+  "historical_bank_candidate_attempt019": {
+    "baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "candidate_commit": "6fa79bdbc5e6085748fbf5849e9bed5a050a1dd1",
+    "finalizer_attempt": "../finalizer-run-019/terminal.json",
+    "finalizer_exit": 0,
+    "startup_index_sha256": "da9bcae0bd335143d140fdbf3a8a3d581978183b6348d713b5e99459c3f07cd0",
+    "comparison_report": "../finalize-instrumented-019/current-full-bank-comparison.json",
+    "comparison_sha256": "fd1cdb1a704673945eff13673010f6b07e9753c4a7e2800715444027f305656c",
+    "method": "selected-native-owner-conservation-v1",
+    "status": "historical-attempt-019-superseded-by-attempt-021",
+    "compared_rows": 262166,
+    "added": 563,
+    "removed": 0,
+    "reassigned": 0,
+    "lost_or_reassigned": 0,
+    "affected_rows": 314,
+    "candidate_code_executed": false,
+    "trusted_code_paths_checked": 18
+  },
+  "historical_bank_candidate_attempt020_failure": {
+    "baseline_commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "attempt": "020",
+    "exit": 1,
+    "error": "Unindexed current-startup output was not present in an authenticated prior finalization (startup-runs-46137344.bin.gz).",
+    "cause": "Nine stale attempt-019 candidate-only generated paths survived in the merged tree despite not appearing in the accepted d28 index; this was a generated-preimage defect, not a source/science result.",
+    "correction_commit": "c2624261d45a26215eceb84e55485f17a05c03dc",
+    "corrected_paths": 9,
+    "corrected_bytes": 24968184,
+    "historical_blobs_preserved": true
   }
 }

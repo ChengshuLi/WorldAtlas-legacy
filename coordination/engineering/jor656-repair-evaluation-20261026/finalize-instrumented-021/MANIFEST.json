@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "kind": "jor656-finalizer-021-current-bank-candidate-manifest",
+  "baseline": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+  "candidate": "39616954aa21d417508bb0a3d59305d8b59680eb",
+  "accepted_native_registry": "95dba6ca68188649d6c53497416c2f2e5c7ecb42",
+  "original_scope": {
+    "keys": 656,
+    "land": 631,
+    "inland_water": 25,
+    "intervals": 399,
+    "owners": 16
+  },
+  "candidate_scope": {
+    "cells": 563,
+    "prior_full_jor_same_member": 534,
+    "simplified_jor_contract": 29,
+    "held_contact_keys": 93,
+    "water_keys_retained": 25
+  },
+  "finalizer": {
+    "config_sha256": "28219a431a5aa9edc67fcba565e43a6d8d0d90ba3bd10e4dd25143b5e34aea4d",
+    "preflight_sha256": "e378d1d4e1e3784f6a78729300dd11c8fa66ca9033c0af4478e70030d32c5eaf",
+    "exit_code": 0,
+    "elapsed_seconds": 146.198,
+    "wait4_child_max_rss_kib": 1249568,
+    "stdout_sha256": "f3efd546c2996fbd0213fcac684eeb98c0083be80e6102520b688148294d181b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4f8996fb92427ae41e4649b934ca495991b7852b855",
+    "output_index_sha256": "5c2282ed2c8cd010364cfc6d484112a3a15e16d16fef133afd144de320bfc597"
+  },
+  "comparison": {
+    "report_sha256": "7312168a8ad1a68298215b0898a951f3e3b2a202c0d5e7095b6238e8bcea07a9",
+    "method": "selected-native-owner-conservation-v1",
+    "status": "no-new-native-loss",
+    "rows_compared": 262166,
+    "added_cells": 563,
+    "removed_cells": 0,
+    "reassigned_cells": 0,
+    "lost_or_reassigned_cells": 0,
+    "affected_rows": 314,
+    "changed_ids": 15,
+    "trusted_code_paths_checked": 18,
+    "candidate_code_executed": false,
+    "scope_limit": "Local direct selectedBootstrap + compareAcceptedFinalBank result; not hosted stock checks, build, geography workflow, emitted-consumer smoke, current-owner observation, or acceptance."
+  },
+  "files": [
+    {
+      "path": "current-full-bank-comparison.json",
+      "bytes": 103425,
+      "sha256": "7312168a8ad1a68298215b0898a951f3e3b2a202c0d5e7095b6238e8bcea07a9"
+    },
+    {
+      "path": "finalizer-run-021/config.json",
+      "bytes": 661,
+      "sha256": "28219a431a5aa9edc67fcba565e43a6d8d0d90ba3bd10e4dd25143b5e34aea4d"
+    },
+    {
+      "path": "finalizer-run-021/preflight.json",
+      "bytes": 76422,
+      "sha256": "e378d1d4e1e3784f6a78729300dd11c8fa66ca9033c0af4478e70030d32c5eaf"
+    },
+    {
+      "path": "finalizer-run-021/rss-samples.jsonl",
+      "bytes": 12569,
+      "sha256": "6510aec6b7e6deef38f19a3440026a1804ff629d3ec15add0de538a7679e1719"
+    },
+    {
+      "path": "finalizer-run-021/runner-prelaunch-sanitized.json",
+      "bytes": 2271,
+      "sha256": "58ecd67d31bfe7c55b63bc14d7c03467d6c3cd05724c3fc0c0f1476d86b12627"
+    },
+    {
+      "path": "finalizer-run-021/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "finalizer-run-021/stdout.log",
+      "bytes": 772,
+      "sha256": "f3efd546c2996fbd0213fcac684eeb98c0083be80e6102520b688148294d181b"
+    },
+    {
+      "path": "finalizer-run-021/terminal.json",
+      "bytes": 3836,
+      "sha256": "6d9d0a0d08f074c0ab15ba47ad70b9166541f028ef0c9c9d7cc709a86a5c422e"
+    },
+    {
+      "path": "full-bank-comparison-invocation.mjs",
+      "bytes": 3312,
+      "sha256": "54b0c7843f8cbecb480543528aa9f3a1cce54c441cdff70ebf73cf9c25dac4b4"
+    },
+    {
+      "path": "full-bank-comparison.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "full-bank-comparison.stdout.log",
+      "bytes": 507,
+      "sha256": "77334876ca7ab06fd8df99c317ed6196ac156cd6bdfc083df2ac98f8a5b9244e"
+    },
+    {
+      "path": "ownership-selection.json",
+      "bytes": 2277,
+      "sha256": "b206d465ad5e72ff0627b2fc33f8a9636ab3228ffbb7b4af5925da545574c3fd"
+    },
+    {
+      "path": "package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 1156,
+      "sha256": "78d3a937daed3d30e833ed769602a95dc6e55cd23ca83218e807caefb8fd9032"
+    },
+    {
+      "path": "selected-delivery-expectations.json",
+      "bytes": 485,
+      "sha256": "42f25cf5d3249687945c66e38b9903e492133d65aaba47d0545cc15fdcf64f8c"
+    },
+    {
+      "path": "startup-ownership.json",
+      "bytes": 49610,
+      "sha256": "5c2282ed2c8cd010364cfc6d484112a3a15e16d16fef133afd144de320bfc597"
+    }
+  ]
+}
