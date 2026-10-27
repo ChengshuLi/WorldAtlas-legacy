@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "kind": "hrv-180-authority-composition-preparation-v1",
+  "status": "composed only; no final bank, comparator, hosted controls, acceptance, or delivery",
+  "original_denominator": 35738,
+  "accepted_prior_count": 32928,
+  "candidate_count": 180,
+  "strict_adverse_excluded_count": 6,
+  "groups": [
+    {"name": "Zadar77", "count": 77, "tuple_sha256": "81a66ec0028b0fa0b4505aa49d7bc15ce19f448c1f32a548d95495c40e819928", "constructor_sha256": "0bb38e24a2609d4cfe2a9e2b71255287ab9a6574998951275185c1eb4bdd2acb"},
+    {"name": "ArtaVela53+Leveraka50", "count": 103, "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da", "constructor_sha256": "2910dcfb9d16f2a5deb5fa3cde0bd3018de18524e471283d27be1db608881eda"}
+  ],
+  "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae",
+  "accepted_selector": {"commit": "29e4d7c2d4215345f76cef695db93b4120e48114", "path": "data/ownership-selection.json", "bytes": 2291, "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"},
+  "owner_observation": {"commit": "29e4d7c2d4215345f76cef695db93b4120e48114", "full_report_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98", "all_180_effective_selected_owner_zero": true, "scientific_qualification": false},
+  "composition": {
+    "helper": "scripts/prepare-delivery-handoff.mjs compose",
+    "config": {"path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-config-001.json", "sha256": "f405d9abaf41d8ca56b6118c7b0422781ec2e98aa98d5b2f26efb8ecc216aca8"},
+    "registry": {"path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/authority-registry.json", "bytes": 2769, "sha256": "35db9f90d6798c094485922d5a23d83517eb96353862c0c13cec7e19fe698e97", "entries": 2},
+    "preparation": {"path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/preparation.json", "bytes": 256, "sha256": "89b6281550187548ff9c8b5b9541ee0be8dfb17552063c0128f79887dc52e488"}
+  },
+  "limits": [
+    "The groups remain distinct authority/source-role cohorts.",
+    "Owner observation is exact to the accepted 29e4 selector and is not scientific acceptance.",
+    "No final bank, full-bank conservation, current-main refresh, build/emitted controls, or delivery is claimed.",
+    "Source-role ambiguities, original contacts, physical issue contexts, rights/attribution limits and prior evidence remain preserved in group packets."
+  ]
+}
