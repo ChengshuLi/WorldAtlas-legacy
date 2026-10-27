@@ -1,0 +1,4977 @@
+{
+  "kind": "hrv-arta-vela-leveraka-103-physical-issue-center-application-v2",
+  "status": "bounded source-relative whole-target physical comparison applied to exact original key centers; no acceptance/clearance inference",
+  "scope": {
+    "original_package": "gb-HRV-ADM2--repair-evaluation",
+    "original_total": 35738,
+    "already_accepted_excluded": 32928,
+    "remaining_outside_zadar": 2733,
+    "excluded_zadar77": true,
+    "excluded_six_adverse": true,
+    "count": 103,
+    "tuple_encoding": "JSON.stringify(sorted [[owner_index,y,x],...]) with no trailing LF",
+    "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da",
+    "owners": [
+      {
+        "owner": 21978,
+        "id": "gb:HRV:ADM2:41942358B19390085170765",
+        "name": "Otok Arta Vela",
+        "original_source_family": "HRV ADM2",
+        "family_feature_ordinal": 22,
+        "source_feature_index": 35419,
+        "count": 53
+      },
+      {
+        "owner": 22360,
+        "id": "gb:HRV:ADM2:41942358B80055452851488",
+        "name": "Otok Leveraka",
+        "original_source_family": "HRV ADM2",
+        "family_feature_ordinal": 20,
+        "source_feature_index": 35417,
+        "count": 50
+      }
+    ]
+  },
+  "inputs": {
+    "whole_target_support": {
+      "path": "/workspace/scratch/127991fc8b8e/.hrv-private/HRV-ArtaVela53-Leveraka50-physical-001/whole-target-support.json",
+      "bytes": 24135,
+      "sha256": "85ca6cdc9b60348a47f2b4253dffc8958ddf02b1c642ec7b912111327fa24bcd",
+      "execution_receipt_sha256": "dbdd6092cebc9c02bb4e8cbfa7444f0c93bc500d7e9758c1f3eda58126f1ace6"
+    },
+    "original_source_native_application": {
+      "path": "/workspace/scratch/127991fc8b8e/.hrv-private/HRV-ArtaVela53-Leveraka50-original-source-native-center-application-20261027.json",
+      "bytes": 89467,
+      "sha256": "311b6ce3560feb8844dbd43eddcf6b1db413ef7d90451d66ab9641485a52ae6e"
+    },
+    "native_row_latitudes": {
+      "path": "test/fixtures/native-row-latitudes.f64le.gz",
+      "compressed_bytes": 1851757,
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "coordinate_rule": "lon=(x+0.5)*360/262166-180; lat=decoded little-endian binary64 row y"
+    },
+    "physical_runtime": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "shapely": "2.1.2",
+      "geos": "3.13.1"
+    }
+  },
+  "counts": {
+    "exact_keys": 103,
+    "target_physical_issue_geometries": 0,
+    "issue_geometries_with_center_hits": 0,
+    "centers_with_outside_L1_context": 0,
+    "centers_in_mapped_land": 103,
+    "centers_in_mapped_water": 0
+  },
+  "by_target": {
+    "gb:HRV:ADM2:41942358B19390085170765": {
+      "target_issue_count": 0,
+      "query_count": 4,
+      "query_status_witness_counts": {
+        "checked/disjoint-after-explicit-predicate": 3,
+        "checked/complete-operation-pointset": 1
+      },
+      "source_ids_queried": [
+        0,
+        17507,
+        133973,
+        183591
+      ],
+      "support_geometry_planar_area_sq_deg": {
+        "mapped_land_support": 0.00013244304759802645,
+        "mapped_inland_water_support": 0.0,
+        "outside_mapped_L1_context": 2.8800695104444737e-06,
+        "missing_reconstruction": 0.0,
+        "extra_reconstruction": 0.0,
+        "contradictory_land_water_support": 0.0
+      },
+      "hierarchy_disagreement_area_sq_deg": {
+        "L2-outside-L1": 0.0,
+        "L3-outside-L2": 0.0,
+        "L4-outside-L3": 0.0
+      },
+      "issue_reasons": []
+    },
+    "gb:HRV:ADM2:41942358B80055452851488": {
+      "target_issue_count": 0,
+      "query_count": 6,
+      "query_status_witness_counts": {
+        "checked/disjoint-after-explicit-predicate": 5,
+        "checked/complete-operation-pointset": 1
+      },
+      "source_ids_queried": [
+        0,
+        2763,
+        4266,
+        14498,
+        74705,
+        95464
+      ],
+      "support_geometry_planar_area_sq_deg": {
+        "mapped_land_support": 0.0001881721664665119,
+        "mapped_inland_water_support": 0.0,
+        "outside_mapped_L1_context": 1.5021811180024323e-05,
+        "missing_reconstruction": 0.0,
+        "extra_reconstruction": 0.0,
+        "contradictory_land_water_support": 0.0
+      },
+      "hierarchy_disagreement_area_sq_deg": {
+        "L2-outside-L1": 0.0,
+        "L3-outside-L2": 0.0,
+        "L4-outside-L3": 0.0
+      },
+      "issue_reasons": []
+    }
+  },
+  "keys": [
+    {
+      "key": [
+        21978,
+        95466,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.534050944821217,
+        43.86375382073941
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95466,
+        142398
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.538170472143605,
+        43.86375382073941
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95467,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.534050944821217,
+        43.86276376703331
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95467,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.535424120595337,
+        43.86276376703331
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95468,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.534050944821217,
+        43.861773696885095
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95468,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.535424120595337,
+        43.861773696885095
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95469,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.534050944821217,
+        43.86078361029481
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95469,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.535424120595337,
+        43.86078361029481
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95469,
+        142397
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.536797296369485,
+        43.86078361029481
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95470,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.535424120595337,
+        43.85979350726246
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95470,
+        142397
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.536797296369485,
+        43.85979350726246
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95471,
+        142397
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.536797296369485,
+        43.85880338778808
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95471,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.85880338778808
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95472,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.85781325187168
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95472,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.85781325187168
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95473,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.85682309951329
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95473,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.85682309951329
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95473,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.85682309951329
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.855832930712936
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.855832930712936
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.855832930712936
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.550529054110768,
+        43.855832930712936
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.545036351014232,
+        43.85484274547064
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.85484274547064
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.85484274547064
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.85484274547064
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.550529054110768,
+        43.85484274547064
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142402
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.543663175240113,
+        43.85385254378641
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.545036351014232,
+        43.85385254378641
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.85385254378641
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.85385254378641
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.85385254378641
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.550529054110768,
+        43.85385254378641
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142401
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.542289999465993,
+        43.8528623256603
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142402
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.543663175240113,
+        43.8528623256603
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.545036351014232,
+        43.8528623256603
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.8528623256603
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.8528623256603
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.8528623256603
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.550529054110768,
+        43.8528623256603
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142401
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.542289999465993,
+        43.851872091092304
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142402
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.543663175240113,
+        43.851872091092304
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.545036351014232,
+        43.851872091092304
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.851872091092304
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.851872091092304
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.851872091092304
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.550529054110768,
+        43.851872091092304
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.545036351014232,
+        43.85088184008246
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.85088184008246
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.85088184008246
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54915587833662,
+        43.85088184008246
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95480,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.54640952678838,
+        43.849891572630774
+      ]
+    },
+    {
+      "key": [
+        21978,
+        95480,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.5477827025625,
+        43.849891572630774
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95504,
+        142188
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.249803559576748,
+        43.826120221301025
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95505,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.256669438447403,
+        43.82512954281106
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95506,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.256669438447403,
+        43.824138847879865
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95506,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.258042614221523,
+        43.824138847879865
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95506,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.259415789995643,
+        43.824138847879865
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.251176735350896,
+        43.823148136507456
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.258042614221523,
+        43.823148136507456
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.259415789995643,
+        43.823148136507456
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.260788965769791,
+        43.823148136507456
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26216214154391,
+        43.823148136507456
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.251176735350896,
+        43.822157408693855
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.258042614221523,
+        43.822157408693855
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.259415789995643,
+        43.822157408693855
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.260788965769791,
+        43.822157408693855
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26216214154391,
+        43.822157408693855
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142198
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26353531731803,
+        43.822157408693855
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.251176735350896,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.252549911125016,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.253923086899135,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.256669438447403,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.258042614221523,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.259415789995643,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.260788965769791,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26216214154391,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142198
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26353531731803,
+        43.82116666443911
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.251176735350896,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.252549911125016,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.253923086899135,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.255296262673255,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.256669438447403,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.258042614221523,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.259415789995643,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.260788965769791,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26216214154391,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142198
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26353531731803,
+        43.82017590374322
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.252549911125016,
+        43.81918512660622
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.253923086899135,
+        43.81918512660622
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.255296262673255,
+        43.81918512660622
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.258042614221523,
+        43.81918512660622
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.259415789995643,
+        43.81918512660622
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.260788965769791,
+        43.81918512660622
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.26216214154391,
+        43.81918512660622
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95512,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.252549911125016,
+        43.81819433302813
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95512,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.253923086899135,
+        43.81819433302813
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95512,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.255296262673255,
+        43.81819433302813
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95513,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.252549911125016,
+        43.81720352300897
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95513,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.253923086899135,
+        43.81720352300897
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95513,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.255296262673255,
+        43.81720352300897
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95514,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.252549911125016,
+        43.81621269654877
+      ]
+    },
+    {
+      "key": [
+        22360,
+        95514,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "source_center_relation": "inside",
+      "all_same_level_interior_source_ids": [
+        "gb:HRV:ADM2:41942358B80055452851488"
+      ],
+      "all_same_level_boundary_source_ids": [],
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "physical_issue_count_for_target": 0,
+      "physical_issue_hits_at_center": [],
+      "support_center_relations": {
+        "mapped_land_support": "interior",
+        "mapped_inland_water_support": "outside",
+        "outside_mapped_L1_context": "outside",
+        "missing_reconstruction": "outside",
+        "extra_reconstruction": "outside",
+        "contradictory_land_water_support": "outside"
+      },
+      "hierarchy_disagreement_center_relations": {
+        "L2-outside-L1": "outside",
+        "L3-outside-L2": "outside",
+        "L4-outside-L3": "outside"
+      },
+      "native_center_lonlat": [
+        15.253923086899135,
+        43.81621269654877
+      ]
+    }
+  ],
+  "limits": [
+    "Whole-target issue list and support masks are the actual generic comparison output for each original consumed 2021 simplified HRV ADM2 target; nonempty outside_mapped_L1_context is retained as a distinct contextual footprint, not an auto-failure.",
+    "Issue masks and support classifications are applied at exact cell centers only; no full-cell/whole-source clearance or current-owner/selected-bank/acceptance claim.",
+    "Original source contacts, original physical labels, unproven Leveraka/Levrnaka name identity, and DGU comparator remain separate. GSHHG evidence is historical and heterogeneous by source/date."
+  ]
+}

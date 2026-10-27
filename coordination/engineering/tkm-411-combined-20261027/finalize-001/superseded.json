@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "kind": "finalizer-config-superseded-before-execution",
+  "config_path": "coordination/engineering/tkm-411-combined-20261027/finalize-001/config.json",
+  "config_bytes": 1058,
+  "config_sha256": "8bb4664d7b37ec92901795a6530bd44371921d5d835a6b98a99ba5350d4566b2",
+  "bound_selector_commit": "a033102eeca2c7a3648039ba4a5ae42e644f5915",
+  "superseded_by_current_accepted_main": "2d76737905fb0ccdbb5743cb6ebec4a54afb3682",
+  "reason": "HRV accepted-bank transition changed selected ownership; stale a033 config was never executed. New config rebinds only selector/package input commit and exact selection blob. Composition authority registry remains the same source/native evidence."
+}
