@@ -271,6 +271,86 @@ test('automatic packet boundary reuses inert names and refuses executable, redir
   assert.equal(inertEvidenceAdditions([],entries,f.packageInputs),false);
  }
 });
+test('extensionless license and notice leaves stay inert evidence without widening other paths',()=>{
+  const f=packetFixture(), entries=new Map(f.integrated.map(row=>[row.path,row]));
+  const root='coordination/engineering/license-packet-20261027/notices/';
+  const add=(filename,mode='100644')=>{
+    entries.set(filename,{path:filename,sha:sha('f'),mode,type:'blob',size:128});
+    const parts=filename.split('/');
+    for(let i=1;i<parts.length;i++){
+      const parent=parts.slice(0,i).join('/');
+      if(!entries.has(parent))entries.set(parent,{path:parent,sha:sha('d'),mode:'040000',type:'tree'});
+    }
+    return {filename,status:'added',mode};
+  };
+  const definition=f.packageInputs;
+  for(const leaf of ['GSHHG-COPYING.LESSERv3','COPYING.LESSERv3','LICENSE','NOTICE']){
+    const file=add(root+leaf);
+    assert.equal(integrationProfile('engineering/license-packet',[file],{},entries),'evidence',leaf);
+    assert(inertEvidenceAdditions([file],entries,definition),leaf);
+    for(const category of ['inputs','verification_paths']){
+      const declared={...definition,[category]:[...definition[category],file.filename]};
+      assert.equal(inertEvidenceAdditions([file],entries,declared),false,`${leaf} declared as ${category}`);
+    }
+  }
+  for(const name of [
+    'coordination/engineering/license-packet-20261027/dist/NOTICE',
+    'coordination/engineering/license-packet-20261027/generated/COPYING.LESSERv3',
+    'coordination/engineering/license-packet-20261027/.cache/LICENSE',
+    'coordination/engineering/license-packet-20261027/notices/UNRELATED.BIN',
+    'coordination/engineering/license-packet-20261027/notices/NOT-AN-EXECUTABLE.mjs',
+    'data/canonical-grid/current-startup/GSHHG-COPYING.LESSERv3'
+  ]){
+    const file=add(name);
+    assert.equal(inertEvidenceAdditions([file],entries,definition),false,name);
+    assert.equal(integrationProfile('engineering/license-packet',[file],{},entries),'full',name);
+  }
+  const executable=add(root+'GSHHG-COPYING.LESSERv3','100755');
+  entries.set(executable.filename,{...entries.get(executable.filename),mode:'100755'});
+  assert.equal(inertEvidenceAdditions([executable],entries,definition),false,'executable license file');
+  assert.equal(integrationProfile('engineering/license-packet',[executable],{},entries),'full','executable license file');
+  const packageControl=add('.github/package-inputs.json');
+  assert.equal(inertEvidenceAdditions([packageControl],entries,definition),false,'package inputs remain outside inert license rule');
+  const renamed={filename:root+'GSHHG-COPYING.LESSERv3',previous_filename:'old-license'};
+  assert.equal(inertEvidenceAdditions([renamed],entries,definition),false,'renamed license file');
+});
+
+test('BTN notice mode is sourced from the authenticated integrated tree',()=>{
+  const f=packetFixture(), pathName='coordination/engineering/btn-36-source-role-prep-20261026/notices/GSHHG-COPYING.LESSERv3';
+  const baseline=new Map(f.integrated.map(row=>[row.path,row]));
+  const integrated=new Map(baseline);
+  for(const [name,oid] of [
+    ['coordination','be77643293518e7aff9315ae2ee00bb60b5453ca'],
+    ['coordination/engineering','d466465bdaa73790b0ca76fd7aa4dc4da6b5f907'],
+    ['coordination/engineering/btn-36-source-role-prep-20261026','10a1fc00e54e58fde88886f5c79e8a2edb15d323'],
+    ['coordination/engineering/btn-36-source-role-prep-20261026/notices','559260f20ec5b8f09160ca204de790e104801e49']
+  ]) integrated.set(name,{path:name,sha:oid,mode:'040000',type:'tree'});
+  for(const [leaf,oid,size] of [
+    ['GSHHG-COPYING.LESSERv3','b14ca0a552d7e97012befc8f4949173e6ace87c9',7816],
+    ['GSHHG-LICENSE.TXT','b10c0f3ba1e836eaeedbcb2f2e731ead69975582',1375],
+    ['GSHHG-README.TXT','4df1a4ac69f38f0c302b87732b1aa1ae6ddfecb4',15350],
+    ['NOTICE.md','bceba1f4edfd24678b4dce64c81fc119d094a4a2',9022]
+  ]) integrated.set(pathName.replace('GSHHG-COPYING.LESSERv3',leaf),
+    {path:pathName.replace('GSHHG-COPYING.LESSERv3',leaf),sha:oid,mode:'100644',type:'blob',size});
+  const actualFiles=integrationChanges(baseline,integrated);
+  assert.equal(actualFiles.length,4);
+  assert(actualFiles.every(file=>file.status==='added'&&file.mode==='100644'));
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',actualFiles,{},integrated),'evidence');
+  assert(inertEvidenceAdditions(actualFiles,integrated,f.packageInputs));
+
+  const apiWithoutMode={filename:pathName,status:'added'};
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},integrated),'evidence');
+  assert(inertEvidenceAdditions([apiWithoutMode],integrated,f.packageInputs));
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',
+    [{...apiWithoutMode,mode:'100755'}],{},integrated),'full','conflicting API mode');
+  assert.equal(inertEvidenceAdditions([{...apiWithoutMode,mode:'100755'}],integrated,f.packageInputs),false,'conflicting API mode');
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},baseline),'full','missing authenticated tree entry');
+
+  const executable=new Map(integrated);
+  executable.set(pathName,{...executable.get(pathName),mode:'100755'});
+  assert.equal(integrationProfile('engineering/btn-36-source-role-prep-20261026',[apiWithoutMode],{},executable),'full','authenticated executable entry');
+  assert.equal(inertEvidenceAdditions([apiWithoutMode],executable,f.packageInputs),false,'authenticated executable entry');
+});
 
 test('default mixed changes retain broad routing and missing packet consumers cannot be silently omitted',async()=>{
  for(const format of ['json','json.gz']){
