@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "bytes": 2292,
+    "sha256": "6648f01e62fb851b2b426977578d4899465212e54d02f002706b340ca0efa883",
+    "git_blob_oid": "5758862046a78b8df974b7bc71fae9d8437a7e42"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "62100903520ec8b743581890829e934e717e8488",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-authority-current-a033-territorial-001/original-rule-preimage.json",
+        "mode": "100644",
+        "bytes": 776,
+        "sha256": "9ac4414c138ce085c2baa459bdd2e089043f672794c2eef2b59c7e305f533a53",
+        "git_blob_oid": "1f6d96211fce0c2246975c4ab0aa128dde93838b"
+      },
+      "source_authority": {
+        "commit": "62100903520ec8b743581890829e934e717e8488",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-authority-current-a033-territorial-001/authority-binding.json",
+        "mode": "100644",
+        "bytes": 779,
+        "sha256": "5503df986e9a4506bf24485cde73671258aa2c8ba3aa3f519e57149a6cce34ef",
+        "git_blob_oid": "0e7ee3554d12ea3ff8bb42e90042503eb6ea5071"
+      },
+      "ledger": {
+        "commit": "62100903520ec8b743581890829e934e717e8488",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-authority-current-a033-territorial-001/constructor-result.json",
+        "mode": "100644",
+        "bytes": 7673,
+        "sha256": "819f3758b570468e6741d7096eb6c76c319d169821c96bca992df1b2a54b7904",
+        "git_blob_oid": "768740bde535ac8766ed5f847c8e3e6064cd0903"
+      },
+      "native_patch": {
+        "commit": "2b471877086497f790c789c240a4fd94ebc7a92a",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/supported-inputs-current-main-a033-001/native-patch.json",
+        "mode": "100644",
+        "bytes": 627,
+        "sha256": "9b442245dee46e0b2ea63c456656be7636e39b8b33af8ef3d3bb03ac49c70875",
+        "git_blob_oid": "967d6b190ecab433e9a36e837daf9d7f68647414"
+      }
+    }
+  ]
+}
