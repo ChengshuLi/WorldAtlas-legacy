@@ -34,7 +34,13 @@ export const COORDINATION_PATHS = new Set([
   '.github/workflows/worker-merge.yml',
   '.github/evidence-policy.json'
 ]);
-const packet = name => /\.(?:md|txt|jsonl?(?:\.gz)?|log|stdout|stderr|csv|tsv)$/i.test(name) &&
+const inertLicenseNotice = name => {
+  if (!safePackagePath(name)) return false;
+  const parts = name.split('/'), leaf = parts.at(-1);
+  if (parts.some(part => /^(?:dist|build|generated|cache|node_modules)$/i.test(part))) return false;
+  return /^(?:[A-Z0-9][A-Z0-9_-]*-)?(?:LICENSE|LICENCE|COPYING|NOTICE)(?:\.(?:TXT|MD|LESSERv3))?$/i.test(leaf);
+};
+const packet = name => (/\.(?:md|txt|jsonl?(?:\.gz)?|log|stdout|stderr|csv|tsv)$/i.test(name) || inertLicenseNotice(name)) &&
   !/^(?:package(?:-lock)?\.json|npm-shrinkwrap\.json|(?:requirements|constraints)(?:[.-].*)?\.txt|pyproject\.toml|setup\.(?:py|cfg)|__init__\.py|(?:site|user)customize\.py|(?:js|ts)config(?:\.[^.]+)?\.json|import[-_.]?map\.json)$/i.test(name.split('/').at(-1));
 const sourcePacketPath = name => safePackagePath(name) && /^(?:research\/(?:campaigns|geography)|data\/regional-review)\/[^/]+\//.test(name);
 
@@ -71,6 +77,7 @@ export function integrationProfile(branch, files, reservation = {}, authoredEntr
   if (files.every(file => {
     if ([file.filename, ...(file.previous_filename ? [file.previous_filename] : [])].every(control)) return true;
     if (file.previous_filename || !packetPath(file.filename) ||
+        inertLicenseNotice(file.filename) && file.mode !== '100644' ||
         file.mode !== undefined && !['100644', '100755'].includes(file.mode) ||
         packagePathRequired(file.filename, definition)) return false;
     return file.status === 'added' && packet(file.filename) ||
