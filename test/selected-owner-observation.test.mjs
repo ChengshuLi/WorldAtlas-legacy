@@ -24,19 +24,29 @@ const gitHelperArgv = [
   ['pack-objects', '--revs', '--thin', '--stdout', '--delta-base-offset'],
   ['rev-list', '--objects', '--stdin', '--not', '--exclude-hidden=fetch', '--all', '--quiet', '--alternate-refs'],
 ];
-const exactGitHelper = args =>
-  gitHelperArgv.some(expected => JSON.stringify(args) === JSON.stringify(expected)) ||
-  (args.length === 5 && args[0] === 'index-pack' && args[1] === '--stdin' && args[2] === '--fix-thin' && args[3] === '--promisor' && /^--pack_header=2,[1-9][0-9]*$/.test(args[4]));
+const exactGitHelper = args => {
+  const packObjects = gitHelperArgv[0];
+  const exactPackObjects = JSON.stringify(args) === JSON.stringify(packObjects) ||
+    (args.length === packObjects.length + 1 && args.at(-1) === '--quiet' &&
+      JSON.stringify(args.slice(0, -1)) === JSON.stringify(packObjects));
+  return exactPackObjects || JSON.stringify(args) === JSON.stringify(gitHelperArgv[1]) ||
+    (args.length === 5 && args[0] === 'index-pack' && args[1] === '--stdin' && args[2] === '--fix-thin' && args[3] === '--promisor' && /^--pack_header=2,[1-9][0-9]*$/.test(args[4]));
+};
 const helperArgvDiagnostic = launches => 'expected helper argv: ' + JSON.stringify(gitHelperArgv) +
-  ' or index-pack [--stdin,--fix-thin,--promisor,--pack_header=2,N]; captured launcher/helper records: ' + JSON.stringify(launches);
+  ' or pack-objects base argv with one terminal --quiet or index-pack [--stdin,--fix-thin,--promisor,--pack_header=2,N]; captured launcher/helper records: ' + JSON.stringify(launches);
 
 test('selected Git helper argv rejects unknown, contradictory and reordered arguments', () => {
   const indexPack = ['index-pack', '--stdin', '--fix-thin', '--promisor', '--pack_header=2,1'];
   assert.equal(exactGitHelper(gitHelperArgv[0]), true);
+  assert.equal(exactGitHelper([...gitHelperArgv[0], '--quiet']), true, 'Git may append one terminal quiet flag to pack-objects');
   assert.equal(exactGitHelper(gitHelperArgv[1]), true);
   assert.equal(exactGitHelper(indexPack), true);
   for (const args of [
     [...gitHelperArgv[0], '--unexpected'],
+    ['--quiet', ...gitHelperArgv[0]],
+    [...gitHelperArgv[0], '--quiet', '--stdout'],
+    [...gitHelperArgv[0], '--quiet', '--quiet'],
+    [...gitHelperArgv[1], '--quiet'],
     ['pack-objects', '--revs', '--no-thin', '--stdout', '--delta-base-offset'],
     ['pack-objects', '--thin', '--revs', '--stdout', '--delta-base-offset'],
     [...gitHelperArgv[1], '--unexpected'],

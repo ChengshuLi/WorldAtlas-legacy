@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "kind": "mdv-whole-target-physical-input-preparation",
+  "base": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+  "selected_geography_release": "geography:review:dbb133d7b123bacd1d38253c467891bff656d011000a9f11d369ac9262302bfb",
+  "selected_part_path": "data/geography/part-13.json",
+  "selected_part_commit": "ffa32416fd946ac89da621d02b554ca27733e688",
+  "selected_part_blob": "44f886df47aa3e313f0c2ce98faea045e2eba8ed",
+  "selected_part_sha256": "90b032861ecae8a4df9a8b5386eccfb20a7243c264dbf79994b54c5297e6f6c1",
+  "original_source_commit": "7fc7fae5d0caa4153dad87537097591249193117",
+  "original_source_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-MDV-ADM1-000.bin.gz",
+  "original_source_sha256": "abdabbb643f6b8acf1df4c85083a4f77bdb471e1caad65030446584d6e8b713c",
+  "stage_path": "coordination/engineering/mdv-original-repair-evaluation-20261021/source-canonical-centers-001/physical-stage-inputs.json",
+  "stage_bytes": 21927,
+  "stage_sha256": "2163d82ec48a81040317a2eed2fb75a935adf1bc057f3338a46c6b6628005ec5",
+  "targets": [
+    {
+      "id": "gb:MDV:ADM1:51498476B19903504900827",
+      "owner_id": 27463,
+      "source_geometry_type": "MultiPolygon",
+      "selected_geometry_type": "Polygon",
+      "source_name": "Haa Dhaalu",
+      "selected_parent": "framework:province:haa-dhaalu:6ea243d6e9d6",
+      "selected_role": "Named local administrative territory",
+      "selected_semantic_status": "open"
+    },
+    {
+      "id": "gb:MDV:ADM1:51498476B22432837509574",
+      "owner_id": 27464,
+      "source_geometry_type": "MultiPolygon",
+      "selected_geometry_type": "Polygon",
+      "source_name": "Addu",
+      "selected_parent": "framework:province:addu:ecde1c498a5e",
+      "selected_role": "Named local administrative territory",
+      "selected_semantic_status": "open"
+    },
+    {
+      "id": "gb:MDV:ADM1:51498476B37587528585643",
+      "owner_id": 27465,
+      "source_geometry_type": "Polygon",
+      "selected_geometry_type": "Polygon",
+      "source_name": "Alif Alif",
+      "selected_parent": "framework:province:alif-alif:9eb5e9f13750",
+      "selected_role": "Named local administrative territory",
+      "selected_semantic_status": "open"
+    },
+    {
+      "id": "gb:MDV:ADM1:51498476B54405642022214",
+      "owner_id": 27472,
+      "source_geometry_type": "MultiPolygon",
+      "selected_geometry_type": "Polygon",
+      "source_name": "Shaviyani",
+      "selected_parent": "framework:province:shaviyani:1f03a3d946a4",
+      "selected_role": "Named local administrative territory",
+      "selected_semantic_status": "open"
+    },
+    {
+      "id": "gb:MDV:ADM1:51498476B81939708930954",
+      "owner_id": 27476,
+      "source_geometry_type": "Polygon",
+      "selected_geometry_type": "Polygon",
+      "source_name": "Baa",
+      "selected_parent": "framework:province:baa:be9e35b0745d",
+      "selected_role": "Named local administrative territory",
+      "selected_semantic_status": "open"
+    },
+    {
+      "id": "gb:MDV:ADM1:51498476B98791116592748",
+      "owner_id": 27478,
+      "source_geometry_type": "MultiPolygon",
+      "selected_geometry_type": "Polygon",
+      "source_name": "Haa Alif",
+      "selected_parent": "framework:province:haa-alif:143abb80b753",
+      "selected_role": "Named local administrative territory",
+      "selected_semantic_status": "open"
+    }
+  ]
+}
