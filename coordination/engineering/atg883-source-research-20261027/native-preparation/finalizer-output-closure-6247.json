@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "kind": "atg883-finalizer-output-closure-v2",
+  "branch_head_at_finalize": "6247e42ddda56bf7492698eb058b03ebb57a34ab",
+  "accepted_main_base": "4828b25d3499d131a477654931156505889e3e35",
+  "accepted_data_commit": "4828b25d3499d131a477654931156505889e3e35",
+  "finalizer_input_commit": "6247e42ddda56bf7492698eb058b03ebb57a34ab",
+  "finalizer_config": {
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-6247.json",
+    "sha256": "b074aff7b97c137b4c5c986bef5cb35708053320b9a750a1c24cc93ba1edcefc"
+  },
+  "finalizer_helper": {
+    "commit": "6247e42ddda56bf7492698eb058b03ebb57a34ab",
+    "path": "scripts/prepare-delivery-handoff.mjs",
+    "sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6"
+  },
+  "finalizer_exit_status": 0,
+  "finalizer_resume_verified": true,
+  "output_directory": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-6247",
+  "outputs": {
+    "ownership-selection.json": {
+      "bytes": 2300,
+      "sha256": "d04b5c7fa954650a51c645d4c7743be2e206e6f51d709c642dbdb0600363a54e"
+    },
+    "package-inputs.json": {
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "selected-delivery-expectations.json": {
+      "bytes": 485,
+      "sha256": "2bb8adf22e6e5d1fa25ab9040e806854b0b72a338d449d5ed92edfdb7ba8ff88"
+    },
+    "startup-ownership.json": {
+      "bytes": 49610,
+      "sha256": "f86f62fb27ada4ad44cf1b3c8855e788b4f2dbff7ae50c6402a24c01133a96d4"
+    }
+  },
+  "final_selector": {
+    "path": "data/ownership-selection.json",
+    "bytes": 2300,
+    "sha256": "d04b5c7fa954650a51c645d4c7743be2e206e6f51d709c642dbdb0600363a54e"
+  },
+  "startup_index": {
+    "path": "data/canonical-grid/current-startup/index.json",
+    "bytes": 49610,
+    "sha256": "f86f62fb27ada4ad44cf1b3c8855e788b4f2dbff7ae50c6402a24c01133a96d4",
+    "startup_ownership_sha256": "f86f62fb27ada4ad44cf1b3c8855e788b4f2dbff7ae50c6402a24c01133a96d4",
+    "startup_ownership_matches_index": true
+  },
+  "candidate_bank": {
+    "release_id": "geography:final:bbf26cbb55038cffd6e9ecbdbada86f12439ea8e189bf08e75d3aa59602a5444",
+    "owner_count": 49625,
+    "rows_sha256": "8d1845ccf7c6668fa23e647c9ac3f840d500975fb0e8524efc7e17bb627dae3a",
+    "run_word_stream_sha256": "643fe316cdf4d993d37b0b388a9e55a20f294b47d839b950823be33b54f643f7",
+    "candidate_original_cells": 883,
+    "candidate_owner_index": 7110,
+    "candidate_target": "atlas:territory:ATG"
+  },
+  "closure": {
+    "indexed_files": 79,
+    "compatibility_files": 30,
+    "materialized_generated_files_hashed": 49,
+    "materialized_generated_bytes_hashed": 64409244,
+    "materialized_startup_files_including_index": 50,
+    "materialized_startup_tree_exact": true,
+    "compatibility_roster_identical_to_accepted_baseline": true,
+    "compatibility_bodies_remain_sparse_unmaterialized": true
+  },
+  "retirement": {
+    "previous_index_sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9",
+    "retired_body_count": 7,
+    "replacement_body_count": 7,
+    "staged_deletions_exact_previous_generated_index_retirements": true,
+    "retired_body_objects_preserved_and_hash_verified_in_baseline": true,
+    "retired_bodies": [
+      {
+        "retired_path": "data/canonical-grid/current-startup/geography/effective-context-cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880.json.gz",
+        "retired_bytes": 1029278,
+        "retired_sha256": "cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880",
+        "replacement_path": "data/canonical-grid/current-startup/geography/effective-context-db849b09f9d7384c87376441d5c6e8120445c023fbc52fd172ceba1118807576.json.gz",
+        "replacement_bytes": 1031312,
+        "replacement_sha256": "db849b09f9d7384c87376441d5c6e8120445c023fbc52fd172ceba1118807576"
+      },
+      {
+        "retired_path": "data/canonical-grid/current-startup/ownership-vintages/509572ef28896cf4ce0c65e4418dff40e0fe280fd98392af514c298b4374f349/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "retired_bytes": 3103308,
+        "retired_sha256": "509572ef28896cf4ce0c65e4418dff40e0fe280fd98392af514c298b4374f349",
+        "replacement_path": "data/canonical-grid/current-startup/ownership-vintages/e428eda9b715628e83a2da5aae56c8cf1719633eaf0b134a284c305024b4bed7/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "replacement_bytes": 3103429,
+        "replacement_sha256": "e428eda9b715628e83a2da5aae56c8cf1719633eaf0b134a284c305024b4bed7"
+      },
+      {
+        "retired_path": "data/canonical-grid/current-startup/ownership-vintages/5d8c1e738a0339a80b7b67fdad1d20284c1a1c9a63994470740de9d7131a3e27/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "retired_bytes": 3620193,
+        "retired_sha256": "5d8c1e738a0339a80b7b67fdad1d20284c1a1c9a63994470740de9d7131a3e27",
+        "replacement_path": "data/canonical-grid/current-startup/ownership-vintages/c2193537997966585769a7f453a81ca5b9bace3e83fd5b95b86e7274c2726e36/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "replacement_bytes": 3620238,
+        "replacement_sha256": "c2193537997966585769a7f453a81ca5b9bace3e83fd5b95b86e7274c2726e36"
+      },
+      {
+        "retired_path": "data/canonical-grid/current-startup/ownership-vintages/8439a2fc2f33a8b3935b1efe7b1c3a52611b36de4d1a8067bd6dd74200ffdd4f/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "retired_bytes": 3484812,
+        "retired_sha256": "8439a2fc2f33a8b3935b1efe7b1c3a52611b36de4d1a8067bd6dd74200ffdd4f",
+        "replacement_path": "data/canonical-grid/current-startup/ownership-vintages/2e207b6009fad00c38f10390b1c247c93dd05921f4d6c3d8db18fac7056fc47b/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "replacement_bytes": 3484793,
+        "replacement_sha256": "2e207b6009fad00c38f10390b1c247c93dd05921f4d6c3d8db18fac7056fc47b"
+      },
+      {
+        "retired_path": "data/canonical-grid/current-startup/ownership-vintages/c0ebb714ee9a09c365cdef15b1633280fcc3144dd11be1f5900d4ac9de5cd8ff/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "retired_bytes": 3572309,
+        "retired_sha256": "c0ebb714ee9a09c365cdef15b1633280fcc3144dd11be1f5900d4ac9de5cd8ff",
+        "replacement_path": "data/canonical-grid/current-startup/ownership-vintages/8dc1ee24d61648837fa3c81308840ac1bd99b84e8999a6a9f8c70eae0378d6f0/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "replacement_bytes": 3572279,
+        "replacement_sha256": "8dc1ee24d61648837fa3c81308840ac1bd99b84e8999a6a9f8c70eae0378d6f0"
+      },
+      {
+        "retired_path": "data/canonical-grid/current-startup/ownership-vintages/d44b2b12020887328415a72e9b861488c5b405d916ad736da009cb791ce96230/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "retired_bytes": 3518133,
+        "retired_sha256": "d44b2b12020887328415a72e9b861488c5b405d916ad736da009cb791ce96230",
+        "replacement_path": "data/canonical-grid/current-startup/ownership-vintages/fdfa346a0d674c9b74d858cef54d257f77e928880e6a95258784898025f27c56/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "replacement_bytes": 3518338,
+        "replacement_sha256": "fdfa346a0d674c9b74d858cef54d257f77e928880e6a95258784898025f27c56"
+      },
+      {
+        "retired_path": "data/canonical-grid/current-startup/ownership-vintages/fd6bfecfcffe83cad559ec858010f796c9d3f20945fc5e625eaee8e357cf7d11/native-v1/ownership/rows-0.bin.gz",
+        "retired_bytes": 317336,
+        "retired_sha256": "fd6bfecfcffe83cad559ec858010f796c9d3f20945fc5e625eaee8e357cf7d11",
+        "replacement_path": "data/canonical-grid/current-startup/ownership-vintages/ae8330ff58ff7aae0cac73f43ca3db34198daacfcd33c947e1aa7c44a1ebfcb1/native-v1/ownership/rows-0.bin.gz",
+        "replacement_bytes": 317502,
+        "replacement_sha256": "ae8330ff58ff7aae0cac73f43ca3db34198daacfcd33c947e1aa7c44a1ebfcb1"
+      }
+    ]
+  },
+  "post_finalizer_original_883_key_observation": false,
+  "full_selected_bank_conservation": false,
+  "production_acceptance_or_write": false,
+  "root_science_accounting_acceptance": false,
+  "credit": false,
+  "limits": [
+    "Exact output/index closure only; this is a branch candidate, not full selected-bank conservation, production write, emitted-control result, accepted repair, or accepted-cell credit.",
+    "All seven original feature-lineage members still map to one canonical territory owner; Redonda remains context-only and the original 883-cell/288-interval denominator is unchanged.",
+    "No compatibility bodies or world-wide inputs were hydrated."
+  ]
+}
