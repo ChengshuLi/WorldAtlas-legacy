@@ -29,7 +29,7 @@
   "current_refresh": {
     "accepted_main": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
     "bank_baseline": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
-    "candidate_refresh": "not yet run",
+    "candidate_refresh": "attempt010 invoked; exec session lost without exit/terminal; output destination absent; outcome uncertain; no retry",
     "finalizer_config": {
       "bytes": 1591,
       "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
@@ -63,7 +63,7 @@
     "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
     "selector_and_package_inputs_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
     "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9",
-    "status": "current accepted baseline config prepared; not yet invoked"
+    "status": "attempt010 invoked; current-bank output not established; outcome uncertain; no retry"
   },
   "group_summary": {
     "bytes": 2839,
@@ -84,6 +84,26 @@
       "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da"
     }
   ],
+  "historical_attempt_010": {
+    "baseline_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "config_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
+    "config_sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9",
+    "destination_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalized-combined-180-current-74b9-001/",
+    "destination_present": false,
+    "exit_file_present": false,
+    "invocation_session_id": 18058,
+    "ordinal": 10,
+    "preflight_bytes": 1486,
+    "preflight_sha256": "1e2216fdd4e2a9ffc60c5688e31005776cff29b4d010190c82b4fd7e91f19236",
+    "private_receipt_dir": "/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-74b9-010/",
+    "process_check": "no matching producer process observed at 2026-10-27T20:54:57Z",
+    "status": "outcome-uncertain/interrupted; not labeled failed or successful; no retry",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "terminal_or_postflight_present": false
+  },
   "historical_owner_observation_29e4": {
     "all_180_effective_selected_owner_zero": true,
     "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
@@ -109,7 +129,8 @@
     "No current-bank finalizer output, full-bank conservation, hosted controls, or delivery is claimed; attempt009 is a historical local candidate superseded by MDV850.",
     "Source-role ambiguities, original contacts, physical issue contexts, rights/attribution limits and prior evidence remain preserved in group packets.",
     "The 29e4 owner observation and 253b candidate are historical; a8a5 MDV850 is the current accepted bank baseline and is bound by the refreshed config.",
-    "No refreshed current-bank candidate, conservation comparison, hosted control, delivery or scientific acceptance is claimed yet."
+    "No refreshed current-bank candidate, conservation comparison, hosted control, delivery or scientific acceptance is claimed yet.",
+    "Attempt010 has no established exit or output; preserve as outcome-uncertain and do not count it as a candidate refresh."
   ],
   "original_denominator": 35738,
   "owner_observation": {
@@ -144,11 +165,11 @@
     }
   ],
   "readme": {
-    "bytes": 5372,
+    "bytes": 5822,
     "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/README.md",
-    "sha256": "8730f462255d036f8b2089fc0ed559184186c919d3b483fae320be1eadfcb9fc"
+    "sha256": "d6e6de20e567b54ef422d58dcf78d93686e54839afb6f0762fbb97ffd25d3d1d"
   },
-  "status": "composed; prior 253b local candidate preserved but superseded by accepted MDV850 bank; current-main refresh config prepared, no current candidate delivery, hosted controls, or scientific acceptance",
+  "status": "composed; attempt010 current-bank finalizer outcome uncertain/interrupted; no refreshed candidate output, conservation comparison, hosted controls, delivery, or scientific acceptance claimed",
   "strict_adverse_excluded_count": 6,
   "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae",
   "version": 1
