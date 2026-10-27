@@ -1,0 +1,112 @@
+{
+  "schema": "uga-source-evidence-variant-review-v1",
+  "scope": {
+    "requested_keys": 715,
+    "land": 692,
+    "water": 23,
+    "positive_family": "gb:UGA:ADM3",
+    "negative_families": [
+      "gb:COD:ADM1",
+      "gb:TZA:ADM1"
+    ],
+    "context_only_families": [
+      "gb:UGA:ADM1",
+      "gb:UGA:ADM2"
+    ],
+    "features": 57,
+    "families": 5,
+    "contact_edges": 2025,
+    "owner_target_rows": 28,
+    "water_context_contacts": 7
+  },
+  "variant": {
+    "config_sha256": "5881876d6009a504814cb9798c7fdc8e8c7d0c50943be93517129a8902c8919b",
+    "config_path": ".cache/delivery-handoff/uga-source-evidence-004/source-evidence-config-004.json",
+    "output_destination": ".cache/delivery-handoff/uga-source-evidence-output-003",
+    "files": [
+      {
+        "path": "config-004.json",
+        "bytes": 313061,
+        "sha256": "5881876d6009a504814cb9798c7fdc8e8c7d0c50943be93517129a8902c8919b",
+        "mode": "0600"
+      },
+      {
+        "path": "source-evidence.json",
+        "bytes": 101379,
+        "sha256": "aa6038cc77f8a6cf9b4b599c19039f321ead353b201e9d1b83370011a949053d",
+        "mode": "0600"
+      },
+      {
+        "path": "territorial-exclusion-provenance.json",
+        "bytes": 70880,
+        "sha256": "fbbd0bea9a972ac51018de8451b348ea920e5ea01b63ee05432f26ad5a74a77e",
+        "mode": "0600"
+      },
+      {
+        "path": "preparation.json",
+        "bytes": 395,
+        "sha256": "6b2ea8aac73110febc7b2f14307ce036e06376651792b9cbf7a79e581dc112b2",
+        "mode": "0600"
+      }
+    ]
+  },
+  "context_commit": "f99238b8811aab1f0b3b900a7d354f3cd202446f",
+  "context_files": [
+    {
+      "path": "context/context-manifest.json",
+      "bytes": 1701,
+      "sha256": "f82f512dce62accd39401447a2ebf61dfadd20a2194e42f53958b52d83964d42"
+    },
+    {
+      "path": "context/source-role-companion.md",
+      "bytes": 6598,
+      "sha256": "9c2fbd6542d33abc79b5ab9930cdb6acc76933d7cc969f2ca7455f91dffa3d4d"
+    },
+    {
+      "path": "context/complete-contact-matrix.jsonl",
+      "bytes": 260239,
+      "sha256": "36b568d1a4dad32a69ef384707ec8ac4b89ebed6fc8c4fe502789d8de4b78c3b"
+    },
+    {
+      "path": "context/owner-target-crosswalk.json",
+      "bytes": 46657,
+      "sha256": "a569b6bf3ad29cb86737719038af3442d8201f9c9101efa9699cd12616213eb5"
+    },
+    {
+      "path": "context/water-context-note.md",
+      "bytes": 3932,
+      "sha256": "cb49323731b41893da4b60ab94b012f0b77271ddc0f4a3078301fb60c90f1433"
+    }
+  ],
+  "prior_diagnostic_history": {
+    "commit": "b5502d156c9ad7ada43b0c189ecfdc66ec2f7b8e",
+    "source_evidence": {
+      "path": "research/UGA/private/uga-native-diagnostic-001-20261027/source-evidence.json",
+      "bytes": 141691,
+      "sha256": "18d47d4be41fd0507b6300a358f07181915e76a41996b8c990107e31283120fc"
+    },
+    "native_patch": {
+      "path": "research/UGA/private/uga-native-diagnostic-001-20261027/native-patch.json",
+      "bytes": 19613,
+      "sha256": "efa29d66b3cb36a12d2ac4608cbb6fd6ed6eb947dc074bdb74c2ead1fe4d517b"
+    },
+    "diagnostic_output": {
+      "path": ".cache/delivery-handoff/uga-native-diagnostic-output-001/native-diagnostic.json",
+      "bytes": 1578452,
+      "sha256": "2d83cb1e604eac285a979e093de424910d8b292797a5129980c6acfecd7314dd"
+    },
+    "partition": {
+      "requested": 715,
+      "supported": 16,
+      "held": 699,
+      "reason_supported": "assigned_cells",
+      "reason_held": "territorial_exclusion_cells",
+      "scientific_qualification": false
+    }
+  },
+  "limits": [
+    "Context supplement is not consumed as native positive/negative semantics.",
+    "Source imagery/item/revision-to-feature lineage and applicable license lineage remain unresolved.",
+    "This is source-evidence preparation only; it does not establish scientific qualification, acceptance, or credit."
+  ]
+}

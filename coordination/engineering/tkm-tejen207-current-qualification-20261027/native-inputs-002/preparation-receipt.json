@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "kind": "TKM Tejen207 native-input preparation; not diagnostic/authority/credit",
+  "accepted_commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+    "mode": "100644",
+    "git_blob_oid": "946e8198cc43d95ad0c2f90fc643e06b7d774c30",
+    "bytes": 2305,
+    "sha256": "a14af2f78d9967acf51ddb78be3e07c327036bd919db99c66bd8a2adfad3d553"
+  },
+  "prepared_index": {
+    "path": "data/canonical-grid/current-startup/index.json",
+    "commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+    "mode": "100644",
+    "git_blob_oid": "b8a296a45b90da1652b34741242a03d896dfc3d2",
+    "bytes": 49610,
+    "sha256": "fb232fc6b9e20e625ad8dd351dda61398360eed73fe3a40436b4a1b7601b81e2"
+  },
+  "native_manifest": {
+    "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json",
+    "commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+    "mode": "100644",
+    "git_blob_oid": "31d970d0fe2bf8c899f020aad09a3826ea451790",
+    "bytes": 252447,
+    "sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba"
+  },
+  "current_owner": {
+    "owner_index": 42144,
+    "id": "gb:TKM:ADM2:10190150B49022220136906",
+    "pixelIndex": 42144,
+    "observation_path": "/workspace/shared/worldatlas-TKM-Tejen207-current-owner-observation-20261027.json",
+    "observation_sha256": "6eb0d2e45156d34b25b079498d854059e0c575c30d3431145000560177738333",
+    "effective_selected_owner": 0
+  },
+  "source": {
+    "family": "gb:TKM:ADM2",
+    "catalogue": {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+      "mode": "100644",
+      "git_blob_oid": "09afab19371f0814da61e79e5f310c5fb2405b6d",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    "catalogue_source_sha256": "af6d0ea1274198ae5579ef23c9da9c2a45bb1fcc4e77fa5532e18c47c778d27d",
+    "full_simplified_application_sha256": "e7b49e43f8df1427e8ec03e669302e9f988d90cb4139d9f4f1016afd5527c09c",
+    "exact_owner_keys": 209,
+    "candidate_count": 207,
+    "candidate_keyset_sha256": "aef025110caec17fedeb84f9dc6142d363d5f0fb0c195b4f0d32432e1ad4ee2d",
+    "simplified_only_count": 2,
+    "foreign_families": [
+      "gb:AFG:ADM1",
+      "gb:KAZ:ADM1",
+      "gb:UZB:ADM1"
+    ],
+    "retained_foreign_contact_context": "all original TKM contacts remain in source-candidate receipt; this Tejen cohort had no captured foreign center contacts"
+  },
+  "physical": {
+    "stage": {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-002/original-stage-inputs.json",
+      "commit": "111f29b763dbbbcd3a334a8dd87cf1641772cd60",
+      "mode": "100644",
+      "git_blob_oid": "b3d82cbabcee37fa4cb482878a3c53ea10067e8e",
+      "bytes": 41322,
+      "sha256": "d4572d9eee1522c5a7d652856bffa6cfb40861ceb68afeeba3d3135e5adb6454"
+    },
+    "evidence": {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-002/result-001/whole-target-support.json",
+      "commit": "753569300e7a90169297f0c5c1e0859c82200958",
+      "mode": "100644",
+      "git_blob_oid": "022a85804dd89246f67ffdf9f78d9fc6c2acb0a0",
+      "bytes": 36805,
+      "sha256": "bc2d79f27d1ff99606ddd1e44af9bc6c40fcca0d9c8f1a84061049c2a1094003"
+    },
+    "issue_count": 1,
+    "issue_reason": "contradictory_land_water_support",
+    "limits": [
+      "GSHHG issue retained; no positive physical/owner/legal conclusion.",
+      "Full-source physical-001 (271 vertices) is preserved separately; this source-evidence uses the original consumed simplified feature (269 vertices)."
+    ]
+  },
+  "coverage_rows": 88,
+  "patch_cell_count": 207,
+  "outputs": {
+    "source-evidence-config.json": {
+      "bytes": 30743,
+      "sha256": "3c726dbbc0f2510ccc82b3739779bcdfd2ecfbc6fbd2817e37816c22e89536ad"
+    },
+    "native-patch-input.json": {
+      "bytes": 6472,
+      "sha256": "0c0b6ada72620be76f56155a6dade1fba4ccd551080a6d436a7e821da9116211"
+    }
+  }
+}

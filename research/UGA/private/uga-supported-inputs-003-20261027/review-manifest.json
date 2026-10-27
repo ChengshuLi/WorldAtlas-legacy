@@ -1,0 +1,75 @@
+{
+  "schema": "uga-supported-inputs-003-review-v1",
+  "source": "accepted supported-inputs phase output",
+  "config_pin": {
+    "commit": "109c19b5a1d566a991802db24a7e136bccddc57a",
+    "path": "research/UGA/private/uga-native-diagnostic-002-20261027/native-diagnostic.json",
+    "sha256": "39b1b4b91d3b079ee82fe93e729fdd09707137233e152ad278b8320e7b5b6fc6"
+  },
+  "original_input_pins": {
+    "source_evidence": {
+      "commit": "ba7763a1f4a4a69502f013d9326e2ed63e1daa5c",
+      "path": "research/UGA/private/uga-source-evidence-003-20261027/source-evidence.json",
+      "sha256": "aa6038cc77f8a6cf9b4b599c19039f321ead353b201e9d1b83370011a949053d"
+    },
+    "native_patch": {
+      "commit": "b5502d156c9ad7ada43b0c189ecfdc66ec2f7b8e",
+      "path": "research/UGA/private/uga-native-diagnostic-001-20261027/native-patch.json",
+      "sha256": "efa29d66b3cb36a12d2ac4608cbb6fd6ed6eb947dc074bdb74c2ead1fe4d517b"
+    }
+  },
+  "counts": {
+    "requested": 715,
+    "supported": 708,
+    "held": 7,
+    "owners": 28,
+    "water_keys": 23,
+    "source_features": 57,
+    "families": 5,
+    "contact_edges": 2025
+  },
+  "files": [
+    {
+      "path": "supported-inputs-config-003.json",
+      "bytes": 193,
+      "sha256": "20e8782eda07f22c112da6d6ed6bb12596ae8fe02eb631a3920958f86d3eef56",
+      "mode": "0600"
+    },
+    {
+      "path": "source-evidence.json",
+      "bytes": 101183,
+      "sha256": "2316a4a0cf0c0c2cf97788ed175e16eeb6af816cf715d0ab176e05d6e4ea4295",
+      "mode": "0600"
+    },
+    {
+      "path": "native-patch.json",
+      "bytes": 19481,
+      "sha256": "5fbbc3bbf54438c8f25d95ca5cd9b2510fb4b137ecedfa1f05905df6c89ae211",
+      "mode": "0600"
+    },
+    {
+      "path": "held-original.json",
+      "bytes": 233,
+      "sha256": "8e1d29409f494266ffc5b7e71993e8174b4a37e39d41787d483adb514ff6172e",
+      "mode": "0600"
+    },
+    {
+      "path": "original-scope-partition.json",
+      "bytes": 3739,
+      "sha256": "647acb2789fe959ee4eb3143a0b7f7c7b696422ae98527923945c6fa0fe0eda1",
+      "mode": "0600"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 610,
+      "sha256": "db43ff256de3a955549f4b42879f8b1b23acd4948fa6b71f3e04df5aec5b152b",
+      "mode": "0600"
+    },
+    {
+      "path": "aggregate-summary.json",
+      "bytes": 1219,
+      "sha256": "83967548f51a9143a7a54cdff3dfac49406b381b97b99ba0983670be09642506",
+      "mode": "0600"
+    }
+  ]
+}

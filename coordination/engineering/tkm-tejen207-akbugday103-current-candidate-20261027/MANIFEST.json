@@ -1,0 +1,960 @@
+{
+  "accounting_snapshot": {
+    "accepted_positive": 240,
+    "accepted_researched_unresolved": 57,
+    "accepted_total": 297,
+    "label": "historical snapshot before this 411-cell candidate; not current global ledger",
+    "path": "/workspace/shared/worldatlas-root-acceptance-after-TKM187-2946-20261027.json",
+    "pending_before_candidate": 1462,
+    "sha256": "d94a86153e80d615a5cbc4f8ab5bea41d1311d024afe1155878086a0eecc1ecf"
+  },
+  "artifacts": [
+    {
+      "bytes": 1156,
+      "git_blob_oid": "4f1c6485676d9abad66a138ce946bd209d0ed2a2",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-007-output/preparation.json",
+      "sha256": "4dd81dd8c8c38f0912f86821317dac12f710638dc83afb0385dfa7fe564c9e8d",
+      "state": "present"
+    },
+    {
+      "bytes": 49610,
+      "git_blob_oid": "71c6454bc60a7f52a2ab167e1601cb5d015b205a",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-007-output/startup-ownership.json",
+      "sha256": "5aee1cb64cb07fc034a724ee4fc7208a36f38d1c7cf85a88c0bc859847511b79",
+      "state": "present"
+    },
+    {
+      "bytes": 683,
+      "git_blob_oid": "8e1dadecc98d004c7f94d064148b2f5b622e4bd1",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-007/config.json",
+      "sha256": "ea20fe44c9c34f06081a1435273bb6ce6837d18f2c1163d0a6de8752f5989725",
+      "state": "present"
+    },
+    {
+      "bytes": 2089,
+      "git_blob_oid": "090b553a043303d0c3102cc0dbbbd8fe868b36fb",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/comparison-receipt.json",
+      "sha256": "47ef519e1d878eb2e360660a7a1abbc7984b1228f3c92aee25ef3c11bd0ff08c",
+      "state": "present"
+    },
+    {
+      "bytes": 115552,
+      "git_blob_oid": "d437db282ea603ec519c1ca5818a830db2556e67",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/raw-report.json",
+      "sha256": "ee9d6e6849ac1a6de74075065de26c8f56f75de22631fd6244743c2781b7c5f2",
+      "state": "present"
+    },
+    {
+      "bytes": 718,
+      "git_blob_oid": "db1fe6209266cabf57d04c75b40a71fecf4bc595",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/authority-binding.json",
+      "sha256": "b87379615fdd42f519715e5696c689b77c3cfbad38a7c6017873462d7316376c",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 10044,
+      "git_blob_oid": "76d265b739a0b88af057197fdf19a66989e051d9",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/constructor-result.json",
+      "sha256": "990184bbf682618908afb698f54426617649ed5cf81d1961bae9b695772e32be",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 715,
+      "git_blob_oid": "1ce09be7513419909bae3ff934f58b8c7e1edf56",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/original-rule-preimage.json",
+      "sha256": "5f4b73feb7ad89e812a7ae4bc97c9f462bb588d6a06b17541d832e62b24fc269",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 501,
+      "git_blob_oid": "fbe916cdc54a2da1087ffcdcbbb2bbc241eaa200",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-authority-001/preparation.json",
+      "sha256": "eb741d33cd523c8caa3336a26bacc450613bf79c683fa3384fb58b4f7ffac1f2",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 20866,
+      "git_blob_oid": "c6fe2a4cf1d9fdad5b4d90887583dc2864251e18",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-diagnostic-001/native-diagnostic.json",
+      "sha256": "37ef77a7496436c481d0b144b5276930487928912d70b7070490e0f5887d7f70",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 266,
+      "git_blob_oid": "64ccb796d37fece0cf82154bb38ac86e92cfe4e6",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-diagnostic-001/preparation.json",
+      "sha256": "97a5e0c6b80da1a92442846915c6efd78b38d0b0aaa9255677dab63f1074a699",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 350,
+      "git_blob_oid": "50f16becf8189798152480c903261b03088adbec",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-diagnostic-config.json",
+      "sha256": "c0c8489ea336ce833e3c82700e8c3bcfef2037fb0f2e882762ec944e6156b8e8",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 4104,
+      "git_blob_oid": "3a58e4bb25cf96a4a0117172db296ae79cdbe7fc",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/native-patch-candidate.json",
+      "sha256": "07e045c0335ab2eeb3089a33f18cdc6394d911cae4a77274ef981f04dc116737",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 12089,
+      "git_blob_oid": "ea3f38047c28a9bdeb0e94afbd50f40bd9b9931f",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/original-stage-inputs.json",
+      "sha256": "40ca8cbd1f5659d66e756853a24ae4b6df8a139bb407c115f9c209621347f2a9",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 54558,
+      "git_blob_oid": "31a8f178455b3b1d5431d5d174b4203edf136192",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/result-005/execution-receipt.json",
+      "sha256": "ad74eea4a479be3c88e991d0a11a803588461b94ec62190e7cda572ebea4c685",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 543,
+      "git_blob_oid": "a4308e8b6f1d0099052d4e554a5ae1846f60d337",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/result-005/preparation.json",
+      "sha256": "8da22cc5cc943b5da406ed1eab69e0db890f6ea2543bdb74e5d67ebdfa51c0ed",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 20151,
+      "git_blob_oid": "14c5b019a0a4c89573d3164d755a950f39f7f4e8",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/result-005/whole-target-support.json",
+      "sha256": "0d1797116b0353d40a479bb8b7aa43c3f0c17c989fd255d874dacc2f247776eb",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 393,
+      "git_blob_oid": "1c11fb0776192ff2782bb144f59bc8d18f7950c2",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/source-evidence-002/preparation.json",
+      "sha256": "930f12b37ac7d078384321f3eb4f33f58513019d826f0ae7a3db8c60cd875bb0",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 26633,
+      "git_blob_oid": "e533137acd699ed38b2a8ac461b95a8b898b2c42",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/source-evidence-002/source-evidence.json",
+      "sha256": "fcc73d928b65256679f5a6b5b704a4d9e8fed70e34a8965fed0156523d3ee5e9",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 6139,
+      "git_blob_oid": "856b0dab065c6acaa905392f95fac8fe18ebd0e1",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/source-evidence-002/territorial-exclusion-provenance.json",
+      "sha256": "a8e8194e96b7a44ee1cb67a3f2c8a39de48c2f5a757b04b48d4cff6f9baa5949",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 23554,
+      "git_blob_oid": "406a85afcfad71ee85e1633b38ed91645498b2a8",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-akbugday103-physical-001/source-evidence-config.json",
+      "sha256": "3dcc7500777b7874233ed581c94f8a29963d5cda03b56ec64925b37d469c3967",
+      "state": "present-not-materialized"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-current-candidate-20261027/README.md",
+      "mode": "100644",
+      "git_blob_oid": "384f5544803ca4183e525e697b1c24035718c268",
+      "bytes": 6617,
+      "sha256": "9ec1908a761ef802e8081c4c65dfffd9b1d4b3c8d85346c459acce47ef5f3e78",
+      "state": "present"
+    },
+    {
+      "bytes": 83118,
+      "git_blob_oid": "058269bf2294b4fafc7eb270315beb9620d35fdd",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-current-candidate-20261027/full-bank-comparison-001.json",
+      "sha256": "ff5219a21f3f631a07bf9fdd5e3c92591fcc1f7bfc3cad8ff9224ba519d4ffb2",
+      "state": "present"
+    },
+    {
+      "bytes": 2288,
+      "git_blob_oid": "ff3d6205f850e487311399de0151a43c3e734ce5",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/final-bank-003/ownership-selection.json",
+      "sha256": "23836b9f7dce4ec1086b1080395e35ed67212a681aa36746fe7c8e95364b8ae8",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 38421,
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/final-bank-003/package-inputs.json",
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 1156,
+      "git_blob_oid": "82f59b4d3a4be7698cf68659a678e4f93fb36eda",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/final-bank-003/preparation.json",
+      "sha256": "60fadd425d4b96df0c266a9b90f6b8489304365c4a758f791c29f6fa47040544",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 485,
+      "git_blob_oid": "e6e2f46431b0b9b7e312ed0d0b1b92f1f1c24477",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/final-bank-003/selected-delivery-expectations.json",
+      "sha256": "9a5e965e5bbb1d5ee8b6ff0b3ad7e81e2efb56207308a51bfc31c8c4b86b230f",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 49610,
+      "git_blob_oid": "d6c608e4479f203eaffedcfc9a16b9fb464b4b79",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/final-bank-003/startup-ownership.json",
+      "sha256": "881e069afa31c2bb7e618eaec31486de58e201ad6caa61a16506996cd489cbdf",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 514,
+      "git_blob_oid": "998bf11d51ed4ee322a55a54a9e9462eb21e43a4",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/finalize-002/config.json",
+      "sha256": "5363b2954b06e82787f31c4ca2fa577c0aff8c6e6735feda1e90116ac511412f",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 701,
+      "git_blob_oid": "8b7f8aec28983905a906dd5972accbefcb0f679f",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/finalize-003/config.json",
+      "sha256": "052127f74958a3c4dd880892583074a207917bd7fd6a3c318d850acee298ed39",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 1076,
+      "git_blob_oid": "146d197f5a42ddd45fa1061e744df9788828d5ad",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/finalize-config.json",
+      "sha256": "84d0d7579d766cec09cf13d7b568a9f0efbd3615094604e2e5ea514fe03a7405",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 2714,
+      "git_blob_oid": "66e96d668fef7fdd92e77ac34584676660f9f152",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/composition-001-output/authority-registry.json",
+      "sha256": "6a19fcb2cbc0f89fc3239910818666ed95396e766553410c2e7e0efc096aa7a3",
+      "state": "present"
+    },
+    {
+      "bytes": 256,
+      "git_blob_oid": "f7de8314246cad52ec89cea9ec01f78aff1d7297",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/composition-001-output/preparation.json",
+      "sha256": "2082831b4f1f7b804e600070bb7e450c29c06497d9d139c0f1752c79bd9806cf",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 3792,
+      "git_blob_oid": "03877844f7252e82d5ee4500a53a3672ef721881",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/composition-001/config.json",
+      "sha256": "062a6b678656280443d923789ca64e07809767b6e98528c3fa6708c97fd6aee4",
+      "state": "present-not-materialized"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/config/native-diagnostic-001.json",
+      "mode": "100644",
+      "git_blob_oid": "af540ff680e587bde8fff799cef071cf20c84243",
+      "bytes": 412,
+      "sha256": "a811b0e236bb36442086a20071f3391da9f882d425411a608eee511bd117f930",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/config/native-diagnostic-002.json",
+      "mode": "100644",
+      "git_blob_oid": "d9d383ebda720f35ee6a841893cfec7e088c0235",
+      "bytes": 412,
+      "sha256": "3af38e0ba992529ef4982fcf5dd83055cba66ff232dca07c4e57d1b060641c47",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/config/physical-001.json",
+      "mode": "100644",
+      "git_blob_oid": "10c3ff63b1889c8d5308fed7058ea5bd1b4582d6",
+      "bytes": 64424,
+      "sha256": "b313b58131119dff3016c1d64de56bc137157210b1ee308013b9e15553df432c",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/config/physical-002.json",
+      "mode": "100644",
+      "git_blob_oid": "518fe2ea42dc0cbcfd9c01d55eb60f9d567e61af",
+      "bytes": 64424,
+      "sha256": "c01f81e94c9cbefc2aecd3e803c6a8162da77bc096ed612d92e76af8871b8643",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-001/native-patch-input.json",
+      "mode": "100644",
+      "git_blob_oid": "cb0f8b79367c6dbf3a2dccda67900aa83f5aef4e",
+      "bytes": 6472,
+      "sha256": "0c0b6ada72620be76f56155a6dade1fba4ccd551080a6d436a7e821da9116211",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-001/preparation-receipt.json",
+      "mode": "100644",
+      "git_blob_oid": "33d66f497f04fd03965d29fddd9ee80b91142397",
+      "bytes": 4184,
+      "sha256": "4d3cd0cd209eaaf5238d9a9666a78adb30b5f960cf8e18870ff76556c87c1ac2",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-001/source-evidence-001/preparation.json",
+      "mode": "100644",
+      "git_blob_oid": "74fcd43931a9d7616c2fbc6aa95277035ee99b61",
+      "bytes": 393,
+      "sha256": "ccb7e4af27c27bfe28d7fa9fd9c0df344f3f3c4057ceacb2b2f665f2ba2cc390",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-001/source-evidence-001/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "a55f61c5ad8fadd629365475f54efa59fb51088a",
+      "bytes": 30185,
+      "sha256": "dd67377114ce20664f4ade48f950cd4f7704e4da7b0051fcfdd9f2ce77437011",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-001/source-evidence-001/territorial-exclusion-provenance.json",
+      "mode": "100644",
+      "git_blob_oid": "4c7b3d7bdd2c0867c57aac54f5843609010adaec",
+      "bytes": 6167,
+      "sha256": "5ddca224a34b4129631f263251171b61b07f2f0c4ad85ade0877081d7ba76b63",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-001/source-evidence-config.json",
+      "mode": "100644",
+      "git_blob_oid": "66f8df94d83c742fdde3dd0fc2bbf3b798910e71",
+      "bytes": 27106,
+      "sha256": "d2cc29a3345e9e643226dbb5b92dab6514655a0a2a529e46b55c21a3651a22c7",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-002/native-patch-input.json",
+      "mode": "100644",
+      "git_blob_oid": "cb0f8b79367c6dbf3a2dccda67900aa83f5aef4e",
+      "bytes": 6472,
+      "sha256": "0c0b6ada72620be76f56155a6dade1fba4ccd551080a6d436a7e821da9116211",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-002/preparation-receipt.json",
+      "mode": "100644",
+      "git_blob_oid": "6101d6d7de2ce07dc3030a3a7e4800d4f31a80ec",
+      "bytes": 4184,
+      "sha256": "f3f6a691cb1f45edba816658a3c6cf77f2c57ea8779f5d4d1f2d35d2fc8bdba7",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-002/source-evidence-001/preparation.json",
+      "mode": "100644",
+      "git_blob_oid": "c81766fa6798dafe5a049f6847040e0e94a21901",
+      "bytes": 393,
+      "sha256": "c21b381d938ef1a4317294945da570c0a3e44e28c3ecd583e114eca836bdc00e",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-002/source-evidence-001/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "b02b0f6bd80197c15f76e0eabf0cdea5b90476ea",
+      "bytes": 33822,
+      "sha256": "3b3f9cdff40cffe7c39b86c72265ba0af52ea8e048797e50c32227fb270ed408",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-002/source-evidence-001/territorial-exclusion-provenance.json",
+      "mode": "100644",
+      "git_blob_oid": "4c7b3d7bdd2c0867c57aac54f5843609010adaec",
+      "bytes": 6167,
+      "sha256": "5ddca224a34b4129631f263251171b61b07f2f0c4ad85ade0877081d7ba76b63",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-002/source-evidence-config.json",
+      "mode": "100644",
+      "git_blob_oid": "e426b9c918fe16fed562584d7fe5baad74544b0f",
+      "bytes": 30743,
+      "sha256": "3c726dbbc0f2510ccc82b3739779bcdfd2ecfbc6fbd2817e37816c22e89536ad",
+      "state": "present"
+    },
+    {
+      "bytes": 780,
+      "git_blob_oid": "de4ac2d2b0e6e2d8e947567a381d47dd9594b3a9",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/authority-binding.json",
+      "sha256": "a79275fed3053405dce7c24bbc4d93df12b660c01891fdeb81ca032875f0c676",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 13751,
+      "git_blob_oid": "e796c1dd368e68211e9653eb88bc4c54a9e4a9d7",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/constructor-result.json",
+      "sha256": "39517f42752587aad2d3be6a54725b30c60c1af85de74b7188e6c1164b5bdef1",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 777,
+      "git_blob_oid": "0861cd5b583b9f3b59da4fc6be657bb8b08f2ca7",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/original-rule-preimage.json",
+      "sha256": "7635c6c3d923582d4fbb28600a24585fbc7b2090df54a5c5628df26a71e58f16",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 501,
+      "git_blob_oid": "02694bc8e1fccf26c238662152c67ea6360697de",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-authority-001/preparation.json",
+      "sha256": "64277949cbc67446c2ba20723272a89fb6ca0c0f2c4086231328af4aafc4138a",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 84399,
+      "git_blob_oid": "0b4d0decb9bc799e1e29d670a6ce8f4755295eff",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-diagnostic-002/native-diagnostic.json",
+      "sha256": "f10e7527d73e0dbf36066882c03552b20fe83c1e3f9c32eb3018b824f717db16",
+      "state": "present-not-materialized"
+    },
+    {
+      "bytes": 266,
+      "git_blob_oid": "1ca9a6403d52d40082fe92a25df30a8f12baa8ba",
+      "mode": "100644",
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-diagnostic-002/preparation.json",
+      "sha256": "2b2fd529f434d0b5d35096002f883a05ae441a4df9b18f1031a5c02b8df6c156",
+      "state": "present-not-materialized"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/native-patch-input.json",
+      "mode": "100644",
+      "git_blob_oid": "cb0f8b79367c6dbf3a2dccda67900aa83f5aef4e",
+      "bytes": 6472,
+      "sha256": "0c0b6ada72620be76f56155a6dade1fba4ccd551080a6d436a7e821da9116211",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/preparation-receipt.json",
+      "mode": "100644",
+      "git_blob_oid": "8ea16e1310392001a7fa29e2d5eb4483538501ba",
+      "bytes": 4226,
+      "sha256": "1af02ce6218e567b233b50198f01d2bf75df9793e0140587edd7f325e6f3ae8e",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/source-evidence-001/preparation.json",
+      "mode": "100644",
+      "git_blob_oid": "262de775d12fb9dc5f7ed3fa2e7678adf28fc9a6",
+      "bytes": 393,
+      "sha256": "007872d9543d9ae3c3aaf4449a5d121c88dab35b9f53837a8a4f6fcfee5d9539",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/source-evidence-001/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "01bd401032c67b58e97fdd85b914c6b97e94a38e",
+      "bytes": 34080,
+      "sha256": "fc6a65e19ec00cf4d3d92117017bcf9c0ad17d9864ea8a1b842c969bb4073bb4",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/source-evidence-001/territorial-exclusion-provenance.json",
+      "mode": "100644",
+      "git_blob_oid": "4c7b3d7bdd2c0867c57aac54f5843609010adaec",
+      "bytes": 6167,
+      "sha256": "5ddca224a34b4129631f263251171b61b07f2f0c4ad85ade0877081d7ba76b63",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/source-evidence-config.json",
+      "mode": "100644",
+      "git_blob_oid": "36718b0eae735de9ee2387aba8e2ecec616f227d",
+      "bytes": 31001,
+      "sha256": "5ae6225fc7d298c72c25ea9b868b9bf0b7c2cf4bbb43be5a849fa2c674586f31",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-001/original-stage-inputs.json",
+      "mode": "100644",
+      "git_blob_oid": "701cca2e37442187b56cf7aad8e2ca9cb42e7cd2",
+      "bytes": 41512,
+      "sha256": "055524621c2f5489fa265c525cf6a80e2245741e175cb49349ba1b811eb21188",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-001/result-001/execution-receipt.json",
+      "mode": "100644",
+      "git_blob_oid": "604917cab4518a5da7e1884cd6960ed021f3e34e",
+      "bytes": 54614,
+      "sha256": "539eb9dba8505aba6d241b7b33edb7c3c0601824a54e25687278286a6fbc2a02",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-001/result-001/preparation.json",
+      "mode": "100644",
+      "git_blob_oid": "c56f3ce807fddc068996be0c44b99802aab96272",
+      "bytes": 543,
+      "sha256": "b35110e36a63bb9203fa76da70904fe77c93425e544b2d27240171a20df5e9f2",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-001/result-001/whole-target-support.json",
+      "mode": "100644",
+      "git_blob_oid": "408025acc91c872a4cbb1cbeea32c1556ec8783b",
+      "bytes": 36887,
+      "sha256": "599ccef885ecb94560f0c6d4d466affbb5a6fe9e1f35ffdd9eff861144a9f71b",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-002/original-stage-inputs.json",
+      "mode": "100644",
+      "git_blob_oid": "b3d82cbabcee37fa4cb482878a3c53ea10067e8e",
+      "bytes": 41322,
+      "sha256": "d4572d9eee1522c5a7d652856bffa6cfb40861ceb68afeeba3d3135e5adb6454",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-002/result-001/execution-receipt.json",
+      "mode": "100644",
+      "git_blob_oid": "bfbb2d2bd567a434955e96539236fc011f6dfc82",
+      "bytes": 54614,
+      "sha256": "f69e261a50d85033bec6e63ec99958f9bed278bbfbd47ee6beb9e05aabd05754",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-002/result-001/preparation.json",
+      "mode": "100644",
+      "git_blob_oid": "9bbe84f16188b5d6f46d29e884e6447543d82ff1",
+      "bytes": 543,
+      "sha256": "1dd4abd3399ab99674d2434dd786ab2bdb59ed0bdfee73349d802b251e621218",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/physical-002/result-001/whole-target-support.json",
+      "mode": "100644",
+      "git_blob_oid": "022a85804dd89246f67ffdf9f78d9fc6c2acb0a0",
+      "bytes": 36805,
+      "sha256": "bc2d79f27d1ff99606ddd1e44af9bc6c40fcca0d9c8f1a84061049c2a1094003",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-native-diagnostic-config-001.mjs",
+      "mode": "100644",
+      "git_blob_oid": "ad63d433644b9b6a24745b62b926a1378ddfaddb",
+      "bytes": 1877,
+      "sha256": "5db9716d69754978db7012ff6443221fa76faedf314fb1f7718cbe3a60a2142a",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-native-diagnostic-config-002.mjs",
+      "mode": "100644",
+      "git_blob_oid": "e0895c7c77c589911cd795a4a02e8ebfab7efb23",
+      "bytes": 1877,
+      "sha256": "0e90bfc6ab6d6609f8b9b2d788c9f3e1e6ad459369346d8299d1075a56f1c65d",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-native-inputs-001.mjs",
+      "mode": "100644",
+      "git_blob_oid": "92c69c712c29b4d3972a4d3b3fc8c6a9fc9cbaac",
+      "bytes": 9404,
+      "sha256": "8239784a9c67969205c9531bbeee250ee466d77c13afd667ff2ca946b9477f03",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-native-inputs-002.mjs",
+      "mode": "100644",
+      "git_blob_oid": "a1bcac14ad762bfab903db9e63924afc281d980f",
+      "bytes": 9530,
+      "sha256": "68bfab835423884272943ac033d2f774df51248ebab7b7cfe73d8fd95c951216",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-native-inputs-003.mjs",
+      "mode": "100644",
+      "git_blob_oid": "b224562af325726e4446043dee95a3a5a709e734",
+      "bytes": 10415,
+      "sha256": "28b87366435bb00053e429f1c75723a835c2ad2b516157fd8b3909052c1887c2",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-physical-config-002.mjs",
+      "mode": "100644",
+      "git_blob_oid": "588fb676c322269d3c9c19a436aad99df98f6908",
+      "bytes": 2544,
+      "sha256": "d7338007e8bddb9f0fb033ddddd4200548442aecca2d26584f992cd56c15b20e",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-physical-config.mjs",
+      "mode": "100644",
+      "git_blob_oid": "544784fd627d55888ab83c2bbb3493791880424b",
+      "bytes": 3271,
+      "sha256": "972eae19e35b2e9c9233869801e2d4214d5646fb5084b9efb40d457c4c651076",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-physical-stage-002.mjs",
+      "mode": "100644",
+      "git_blob_oid": "a9f92f2dfbf6c5f2a8cbc7ed6a4eb521077f99a0",
+      "bytes": 4352,
+      "sha256": "83acc9c7d36c473e036016ff25048ca654347794a3610c6f8f5576fa6baacfaa",
+      "state": "present"
+    },
+    {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/probes/prepare-physical-stage.mjs",
+      "mode": "100644",
+      "git_blob_oid": "afc1175a6cf8d40dd8ccbed01b6e404989d6df7c",
+      "bytes": 2861,
+      "sha256": "c94fa78e5622b013618411feedf6f3399c86ebb22d9ece3bf3ecfd3d65d15d64",
+      "state": "present"
+    },
+    {
+      "bytes": 147727,
+      "git_blob_oid": "289c42a3fc0ced2c6e3b6c8a2d3f67d284c30fe1",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/geography/effective-context-2ae68b9e1e7accee8b85529a38c30e3410d7d8fc9ed533af50fd8ab201c85b1a.json.gz",
+      "sha256": "2ae68b9e1e7accee8b85529a38c30e3410d7d8fc9ed533af50fd8ab201c85b1a",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 143133,
+      "git_blob_oid": "14b4c9c9c0261e3c5b121b593a0b74e2dd784239",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/geography/effective-context-62b038035bba02326296be2e03f1f0692a8a1559e4db45fbf853965dcf967b93.json.gz",
+      "sha256": "62b038035bba02326296be2e03f1f0692a8a1559e4db45fbf853965dcf967b93",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 49610,
+      "git_blob_oid": "71c6454bc60a7f52a2ab167e1601cb5d015b205a",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "5aee1cb64cb07fc034a724ee4fc7208a36f38d1c7cf85a88c0bc859847511b79",
+      "state": "present"
+    },
+    {
+      "bytes": 3572298,
+      "git_blob_oid": "356d3b13d97b1b5d14934dd53615bf7f0ebb03a8",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/16a39adb2dc745a5ca7996e09ec5264eb598ad19e95595572719d8761479a0e3/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "sha256": "16a39adb2dc745a5ca7996e09ec5264eb598ad19e95595572719d8761479a0e3",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 317310,
+      "git_blob_oid": "4a978e87b02bd0b876447cc35576e6900106459c",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/268ef730869b1877f66028f869e64975ea3bb4c3acaf8efa11efd63abafcba86/native-v1/ownership/rows-0.bin.gz",
+      "sha256": "268ef730869b1877f66028f869e64975ea3bb4c3acaf8efa11efd63abafcba86",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3543007,
+      "git_blob_oid": "43d0dbbc0acd61b6b04172319f9b08c888f5744c",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/39e4d0667a75f6826a8ac8ff4f0e4749a2c1b6e1a24bc388f0911ec0183463d0/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "sha256": "39e4d0667a75f6826a8ac8ff4f0e4749a2c1b6e1a24bc388f0911ec0183463d0",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3572301,
+      "git_blob_oid": "1d35f99d7653330c64c2d35b63e9195a492c9418",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/45320e8cb1d3ca7ed9d8627ea35906c877124e034682caacfdff13c8a5c37165/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "sha256": "45320e8cb1d3ca7ed9d8627ea35906c877124e034682caacfdff13c8a5c37165",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3543017,
+      "git_blob_oid": "5560c9bbe42839845dfd09532ec8d831bc9be12f",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/46a672685ac326de8e148fcc6def369cd4f161a928a1138ceb38b572f446db2e/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "sha256": "46a672685ac326de8e148fcc6def369cd4f161a928a1138ceb38b572f446db2e",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3292318,
+      "git_blob_oid": "48c46b0c12dfa4793e02858f6b9f9b8d48ad52bb",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/5afce553591efd37311f0fafc70f1a6750562fd1945445bbd8a3c3929ea14533/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "sha256": "5afce553591efd37311f0fafc70f1a6750562fd1945445bbd8a3c3929ea14533",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3103311,
+      "git_blob_oid": "763a331e8853f83427320127e6d36a6967e957f8",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/6520b21c36457e8e9cfcd4dff8eaaf7554bc3458350973318fa01d72abce067b/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "sha256": "6520b21c36457e8e9cfcd4dff8eaaf7554bc3458350973318fa01d72abce067b",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3484813,
+      "git_blob_oid": "8deae4f9b0c11ff3adc2319fa7abb994d3729381",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/67b7162673448b01b923e2523f1a5a15b0c02c1dfd72dd98805a3ffb4c9a6b34/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "sha256": "67b7162673448b01b923e2523f1a5a15b0c02c1dfd72dd98805a3ffb4c9a6b34",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3484816,
+      "git_blob_oid": "4ebde88fcbdd233509ac0197598349059a823f40",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/7a4fd673d0d2962660b4fe88dc502f4f7ab47427b7d84930ed6609150202824d/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "sha256": "7a4fd673d0d2962660b4fe88dc502f4f7ab47427b7d84930ed6609150202824d",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 317377,
+      "git_blob_oid": "96c07e165370f1c8313598654d487e2a74125ed1",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/a55968427535ae828769fbbf331450f242ec81f1c4e278bd5f7512e6cf9cb950/native-v1/ownership/rows-0.bin.gz",
+      "sha256": "a55968427535ae828769fbbf331450f242ec81f1c4e278bd5f7512e6cf9cb950",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3518152,
+      "git_blob_oid": "94d1b3e63c6bab404469697e756ae5b24fd885b4",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/a7ff1f23154c1f653d23ef603c50bd82055117cbb9cc42b53bc0a5e667ef5588/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "sha256": "a7ff1f23154c1f653d23ef603c50bd82055117cbb9cc42b53bc0a5e667ef5588",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3620180,
+      "git_blob_oid": "e7e3a026154dc10c80908051dc27b94fcc2ffaf3",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/ab6aa091a37399dbf7cd8f0069ed51f331395ab7ecd505003c8ecf578574b7ef/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "sha256": "ab6aa091a37399dbf7cd8f0069ed51f331395ab7ecd505003c8ecf578574b7ef",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3193515,
+      "git_blob_oid": "42df229d65c63d48163179a395497fe4039f4fe4",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/bc488495d1ebcda0e9d510d3815f5e2c23996888a79fb3067d16c406a03b5223/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "sha256": "bc488495d1ebcda0e9d510d3815f5e2c23996888a79fb3067d16c406a03b5223",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3274458,
+      "git_blob_oid": "e95b4e577b3c5148e488432b51505f209169f78c",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/bd2372069f30603da94875e82e55cdb472f423726c7e1265fc6c82d063358a97/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "sha256": "bd2372069f30603da94875e82e55cdb472f423726c7e1265fc6c82d063358a97",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3620196,
+      "git_blob_oid": "df40dc635067e36f1b73ef7e531a7a604a937c84",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/be1c9fdb3a2e0463b2b6dd238a3c090d6c1f63f6cfa719fe62a77bc7d0be027f/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "sha256": "be1c9fdb3a2e0463b2b6dd238a3c090d6c1f63f6cfa719fe62a77bc7d0be027f",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3103311,
+      "git_blob_oid": "d187ceae99f74e5a82eed29e9391c0305367b0c4",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/e27277d5c19dc6d0ec28b81901762a3d610b2f202ecd6d3f7d76ba1ffb8bce8a/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "sha256": "e27277d5c19dc6d0ec28b81901762a3d610b2f202ecd6d3f7d76ba1ffb8bce8a",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3518143,
+      "git_blob_oid": "5f73679e2e01cb3bd4e6dc7ff0ea15a7e04c8c41",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/e3b2b19b8a7aa4a9097a4818581db0fbe28c7a03fee326773eb8d30ca1b47a5d/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "sha256": "e3b2b19b8a7aa4a9097a4818581db0fbe28c7a03fee326773eb8d30ca1b47a5d",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3274451,
+      "git_blob_oid": "9144c3e21aa6488560da94cad1863e708a779fac",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/fa527742f59b1110c3ad72823739b0d3083d4990a871f21af4ac9678527f3601/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "sha256": "fa527742f59b1110c3ad72823739b0d3083d4990a871f21af4ac9678527f3601",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 3292302,
+      "git_blob_oid": "3d231da6504dc2eb139deb22ad9851e311b927d3",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/fb62512a87c1c0692eb5485794234097c13b0da6c21c7055c1aef7735a9fa898/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "sha256": "fb62512a87c1c0692eb5485794234097c13b0da6c21c7055c1aef7735a9fa898",
+      "state": "deleted-in-candidate"
+    },
+    {
+      "bytes": 2270,
+      "git_blob_oid": "08a07341d88475011c130fb8cd0716987bd48976",
+      "mode": "100644",
+      "path": "data/ownership-selection.json",
+      "sha256": "17cd09359fa611407c9121b0b87d491be2a1178bfee1ce4fd3dd5fc9e7a7a61f",
+      "state": "present"
+    }
+  ],
+  "candidate": {
+    "base_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "cells": 411,
+    "cohorts": [
+      {
+        "cells": 207,
+        "name": "Tejen",
+        "owner_index": 42144,
+        "target_id": "gb:TKM:ADM2:10190150B49022220136906"
+      },
+      {
+        "cells": 103,
+        "name": "Ak Bugday",
+        "owner_index": 42135,
+        "target_id": "gb:TKM:ADM2:10190150B31923585689840"
+      },
+      {
+        "cells": 101,
+        "name": "Koytendag",
+        "owner_index": 42152,
+        "target_id": "gb:TKM:ADM2:10190150B64529450546528"
+      }
+    ],
+    "current_owner_zero_basis": "derived from original d221 observation plus exact disjoint accepted additions; not a fresh literal query",
+    "disjoint_from_previously_accepted_297": true,
+    "head_before_packet_commit": "c713f245f7cd9513fec955de347cf68bd6867f62",
+    "held_koytendag_cells": 26,
+    "held_reason": "retained exact AFG foreign-source contacts; not candidate additions",
+    "overlap_between_cohorts": 0
+  },
+  "current_selector": {
+    "bytes": 2270,
+    "git_blob_oid": "08a07341d88475011c130fb8cd0716987bd48976",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "17cd09359fa611407c9121b0b87d491be2a1178bfee1ce4fd3dd5fc9e7a7a61f",
+    "state": "present"
+  },
+  "current_startup_index": {
+    "bytes": 49610,
+    "git_blob_oid": "71c6454bc60a7f52a2ab167e1601cb5d015b205a",
+    "mode": "100644",
+    "path": "data/canonical-grid/current-startup/index.json",
+    "sha256": "5aee1cb64cb07fc034a724ee4fc7208a36f38d1c7cf85a88c0bc859847511b79",
+    "state": "present"
+  },
+  "finalizer": {
+    "config_path": "coordination/engineering/tkm-411-combined-20261027/finalize-007/config.json",
+    "config_sha256": "ea20fe44c9c34f06081a1435273bb6ce6837d18f2c1163d0a6de8752f5989725",
+    "elapsed_seconds": 150,
+    "ended_utc": "2026-10-27T12:24:45Z",
+    "exit_code": 0,
+    "failed_attempts_preserved": true,
+    "output_startup_bytes": 49610,
+    "output_startup_path": "data/canonical-grid/current-startup/index.json",
+    "output_startup_sha256": "5aee1cb64cb07fc034a724ee4fc7208a36f38d1c7cf85a88c0bc859847511b79",
+    "started_utc": "2026-10-27T12:22:15Z",
+    "trusted_baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f"
+  },
+  "full_bank_comparison": {
+    "added": 411,
+    "affected_rows": 235,
+    "bytes": 115552,
+    "candidate_code_executed": "true in helper metadata because HEAD differed from baseline; trusted execution-code inventory was unchanged",
+    "candidate_commit": "291a6a77aa9ef6109556419d166adeff4d496ab0",
+    "compared_rows": 262166,
+    "execution_code_changes": 0,
+    "lost": 0,
+    "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/raw-report.json",
+    "reassigned": 0,
+    "receipt_path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/comparison-receipt.json",
+    "receipt_sha256": "47ef519e1d878eb2e360660a7a1abbc7984b1228f3c92aee25ef3c11bd0ff08c",
+    "removed": 0,
+    "sha256": "ee9d6e6849ac1a6de74075065de26c8f56f75de22631fd6244743c2781b7c5f2",
+    "status": "no-new-native-loss",
+    "trusted_baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f"
+  },
+  "historical_310_candidate": {
+    "base_commit": "f35dcd66352a441937c3cb9e894d28f247f63c4c",
+    "candidate_commit": "c5acbfbb3a48f0cf52083a2f43b90ebfef02a129",
+    "cells": 310,
+    "comparison_report_sha256": "ff5219a21f3f631a07bf9fdd5e3c92591fcc1f7bfc3cad8ff9224ba519d4ffb2",
+    "status": "superseded historical candidate/comparison; not current bank base/result"
+  },
+  "kind": "tkm-tejen207-akbugday103-koytendag101-current-candidate-manifest",
+  "original_package": {
+    "cells": 1759,
+    "id": "gb-TKM-ADM2--repair-evaluation",
+    "inland_water": 137,
+    "intervals": 1001,
+    "land": 1622,
+    "owners": 45,
+    "queue_commit": "23318dd9d70680495138297b9cc1a7533a466200",
+    "queue_file": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json",
+    "queue_file_sha256": "78007430b6f9faedb188ef0619b7ff0a7a2cc7fff2ec9f1c41ee69936ec4ebd8"
+  },
+  "reviewed_test_plan": {
+    "base": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "build_required": true,
+    "checkout_patterns": 74,
+    "execution_inputs": 15,
+    "execution_status": "superseded historical plan for the pre-c41 candidate; current exact-pair plan must be freshly derived after the custody merge",
+    "geography_required": true,
+    "geography_software": false,
+    "head": "c713f245f7cd9513fec955de347cf68bd6867f62",
+    "profile": "full",
+    "tests": [
+      "test/final-bank-finalizer.test.mjs",
+      "test/final-bank-checkpoint.test.mjs",
+      "test/selected-owner-observation.test.mjs",
+      "test/selected-delivery-smoke.test.mjs",
+      "test/map-cell-diagnosis.test.mjs",
+      "test/compact-ownership.test.mjs",
+      "test/prepared-parity.test.mjs"
+    ]
+  },
+  "schema_version": 1,
+  "status": "candidate-only; not root acceptance or hosted delivery",
+  "source_custody_merge": {
+    "source_commit": "c41a4592217ef361a9a66dfef45f9493d8f999fa",
+    "public_evidence_ref": "refs/heads/evidence/tkm-tejen207-source-closure-c41a459",
+    "merge_commit": "852bcd2e0e06e7c59606135955008007d6fdcbd0",
+    "source_evidence": {
+      "path": "coordination/engineering/tkm-tejen207-current-qualification-20261027/native-inputs-003/source-evidence-001/source-evidence.json",
+      "mode": "100644",
+      "git_blob_oid": "01bd401032c67b58e97fdd85b914c6b97e94a38e",
+      "bytes": 34080,
+      "sha256": "fc6a65e19ec00cf4d3d92117017bcf9c0ad17d9864ea8a1b842c969bb4073bb4"
+    },
+    "prior_attempt": "tkm2958-411-a0-20261027-1253z / run 40507331323: canceled after geography failed on the missing historical source-evidence path; no completed tests/build/emitted controls or merge claimed"
+  }
+}

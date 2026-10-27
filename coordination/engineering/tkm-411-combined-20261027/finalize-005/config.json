@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "2d76737905fb0ccdbb5743cb6ebec4a54afb3682",
+    "path": "data/ownership-selection.json"
+  },
+  "package_inputs": {
+    "commit": "2d76737905fb0ccdbb5743cb6ebec4a54afb3682",
+    "path": ".github/package-inputs.json"
+  },
+  "change_evidence": {
+    "commit": "f9d28437a8c7f0c1b8f4d2931b1c7ecb56fb13c5",
+    "path": "coordination/engineering/tkm-411-combined-20261027/composition-002-output/authority-registry.json",
+    "mode": "100644",
+    "git_blob_oid": "12ee6c3a8a6748b58a72fcc837fb213fccbb256c",
+    "bytes": 3982,
+    "sha256": "f30095ac41e4f69fc9ec702f49baa8e6265d84153435c7e4a92b04f6c4b0ebea"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "commit": "4783d1a387d522627a1f90ee2640efc0bb6a77b3",
+        "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/final-bank-003/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "82f59b4d3a4be7698cf68659a678e4f93fb36eda",
+        "bytes": 1156,
+        "sha256": "60fadd425d4b96df0c266a9b90f6b8489304365c4a758f791c29f6fa47040544"
+      },
+      "startup_ownership": {
+        "commit": "4783d1a387d522627a1f90ee2640efc0bb6a77b3",
+        "path": "coordination/engineering/tkm-tejen207-akbugday103-final-001/final-bank-003/startup-ownership.json",
+        "mode": "100644",
+        "git_blob_oid": "d6c608e4479f203eaffedcfc9a16b9fb464b4b79",
+        "bytes": 49610,
+        "sha256": "881e069afa31c2bb7e618eaec31486de58e201ad6caa61a16506996cd489cbdf"
+      }
+    }
+  ]
+}

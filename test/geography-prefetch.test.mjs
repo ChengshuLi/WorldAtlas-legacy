@@ -822,6 +822,15 @@ test('cold immutable reader authenticates absent original paths without importin
  }finally{f.close();if(lazy===undefined)delete process.env.GIT_NO_LAZY_FETCH;else process.env.GIT_NO_LAZY_FETCH=lazy;}
 });
 
+test('immutable reader does not treat unsupported no-lazy-fetch as an absent commit',t=>{
+ const f=originFixture();t.after(()=>f.close());
+ const oldGit=path.join(f.directory,'git-without-no-lazy-fetch');
+ fs.writeFileSync(oldGit,"#!/bin/sh\nprintf 'unknown option --no-lazy-fetch\\n' >&2\nexit 129\n",{mode:0o755});
+ const reader=new ImmutableReader(f.remote,f.baseline,{gitExecutable:oldGit});
+ assert.throws(()=>reader.pinnedVersion({commit:'a'.repeat(40),path:'scripts/physical.py'}),error=>
+  error.status===129&&error.stderr?.toString().includes('unknown option --no-lazy-fetch'));
+});
+
 test('immutable sync, batch and stream reads ignore replacements without ambient guards',async()=>{
  const replace=process.env.GIT_NO_REPLACE_OBJECTS;delete process.env.GIT_NO_REPLACE_OBJECTS;
  const f=fixture();try{
