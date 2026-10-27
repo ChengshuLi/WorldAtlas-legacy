@@ -1,0 +1,266 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 1,
+      "exit_file_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "status": "failed before producer execution: missing @noble/hashes import under plain Node (NODE_PATH intentionally unset by helper contract)",
+      "stderr_bytes": 219,
+      "stderr_sha256": "a0f858a0fb8cc16957d5fad11452e5e96e4c32d56cc1cdfaa2806131ee1511f1",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "attempt": 2,
+      "exit_code": 0,
+      "exit_file_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "status": "finalizer completed and published five local preparation artifacts; no source/geometry rerun",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 769,
+      "stdout_sha256": "da9ff83f1defe5503dc9d817671d5e356a19f24724acc4c3a39e501b3749db99"
+    }
+  ],
+  "combined": {
+    "all_rows_have_original_owner_ids": true,
+    "overlap_tuples": 0,
+    "strict_source_center_outside_excluded": 6,
+    "tuple_count": 2563,
+    "tuple_set_sha256_sorted_y_x_owner_compact_json": "8ac74c4898ea8cc5ef70680acd3dd5f80e463734d0f0e034cf8763695c3e0c1a"
+  },
+  "current_main_equivalence": {
+    "comparison_since_4828": "11 additive/modified evidence paths only (two VUT Tanna notes and CAF110 evidence); no selector/index/package-input changes",
+    "current_main": "256801c05f6c25dfabb7accf65dffb1652de3f48",
+    "same_bank_inputs": [
+      {
+        "bytes": 49610,
+        "git_blob_oid": "8ec6b7b58e4e9b475d4a7b9d22f5f3e1f9dd32be",
+        "path": "data/canonical-grid/current-startup/index.json",
+        "sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9"
+      },
+      {
+        "bytes": 2287,
+        "git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+        "path": "data/ownership-selection.json",
+        "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9"
+      },
+      {
+        "bytes": 38421,
+        "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "path": ".github/package-inputs.json",
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      }
+    ],
+    "scope": "same input equivalence only; no source/native replay or delivery controls implied",
+    "verified_github_main_matches_origin_main": true
+  },
+  "current_owner_zero": {
+    "bytes": 7972274,
+    "candidate_current_owner": "0 for all 2,563 tuples; owner_id null",
+    "candidate_tuples_missing": 0,
+    "candidate_tuples_nonzero_or_assigned": 0,
+    "commit": "4828b25d3499d131a477654931156505889e3e35",
+    "observation_path_private": "/workspace/shared/worldatlas-HRV-ADM2-owner-observation-4828-20261027.json",
+    "query_count": 35738,
+    "query_sha256": "afcd19cb52bc067fabd6f0cfb152281837d76da2ad4474cfd323c4f37d5696eb",
+    "selected_reference": {
+      "footprints_sha256": "5f3a1f74bf911e9c4507dd760fbc6b87b08b8853feab1b1bfed22ba94d49ad9a",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:576f49a534d00aaa6cbfbb855dbb89af6c7e8ad6d6c3c7af56247a71ee446348"
+    },
+    "selector_pin": {
+      "bytes": 2287,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+      "mode": "100644",
+      "path": "data/ownership-selection.json",
+      "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9",
+      "whole_body_consumed": true
+    },
+    "sha256": "1a42c771a2cf0cb3ba4b1a4d3f403c0c41212328fe723b64f6ff5cb7d6e29424"
+  },
+  "exact_scopes": [
+    {
+      "constructor": {
+        "bytes": 27656,
+        "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+        "git_blob_oid": "259a5cf4bf20f0fd8e2cef6ce628b366a4c571aa",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-003/constructor-result.json",
+        "sha256": "7903d8101d3dc2287143d5c62d8d4b9a56d3718118ec60c5376c184707d9d143"
+      },
+      "diagnostic_sha256": "9242b40c3c83dcaa2ba1b155d338e0ef6a885815be635a73c2220464ad529845",
+      "name": "Krk/Žut/Kornat/Murter original-source simplified-family group",
+      "native_patch": {
+        "bytes": 21092,
+        "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+        "git_blob_oid": "4945f4872cefd672cfc6dc01d012090b2f6f20d5",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-patch-003/native-patch.json",
+        "sha256": "5282e41fb4d4713df0b8fc75f519711703f69d71a3c20de1db53af17d07118db"
+      },
+      "physical_center_application_sha256": "3d2638e51df36da4c2a1854a7f30b31d3fbacc174d93aa7b3a45e665cc0380c8",
+      "source_evidence": {
+        "bytes": 11413,
+        "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+        "git_blob_oid": "b5801c398f61c832f2dc17abf15873de6f183a11",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/source-evidence-006/source-evidence.json",
+        "sha256": "f83ac50593bd4fc5d9913680f20eb82f9c9c0ff1c6da34039c57e0f06c35ab82"
+      },
+      "source_role": "complete 560-feature 2021 simplified product; source/member role remains under root review; original issues preserved",
+      "tuple_count": 2289,
+      "tuple_set_sha256_sorted_y_x_owner_compact_json": "e8d99d28264471c6b5776a165291556d367c5ac83d085568c868dc62325e77a6"
+    },
+    {
+      "constructor": {
+        "bytes": 5389,
+        "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+        "git_blob_oid": "907926d4d722dec7aa2d7a8cbac0c3b55b3685fc",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-004/constructor-result-274.json",
+        "sha256": "a6dd91902b212963260b6c2f6e4fb98ec4aa47a1a4b69b8c7f8ebd58b6c31c7c"
+      },
+      "name": "Zeča/Unije conditional group",
+      "native_patch": {
+        "bytes": 2873,
+        "commit": "c3dcc5bf13e75ac1a246bc449edcfd098640d034",
+        "git_blob_oid": "76bf104ad0db39d5a5bb814f7964f4e22b14c902",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-zecca-unije-native-preparation-812807-20261027/native-patch.json",
+        "sha256": "b147a607b88d158304fe63cd86406ea111898945146d2b082c22eb17812ca2db"
+      },
+      "source_evidence": {
+        "bytes": 7929,
+        "commit": "c3dcc5bf13e75ac1a246bc449edcfd098640d034",
+        "git_blob_oid": "b745744ddc484fb5871ef24123bfdaa6c5c9f0fa",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-zecca-unije-native-preparation-812807-20261027/source-evidence-current812.json",
+        "sha256": "9c2a2df689babc6556e2a139722c36ba2662075af7ac1e20be243f2ef2f0ced8"
+      },
+      "source_role": "conditional; municipality/town member assertion vs island context unresolved, no boundary/perimeter adjudication; no DGU substitution",
+      "source_role_binding": {
+        "bytes": 4120,
+        "commit": "8df5ec8a5f82831cf77b446017c679d21f1742d1",
+        "git_blob_oid": "68d6426667015d8fe72e6ecaf81e0482a627802c",
+        "mode": "100644",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/native-authority-004/source-role-geometry-binding.json",
+        "sha256": "8e83a17af895dc006a1100fb987e5ae60c3159768ac1991efb2c0fea1e46a0fc"
+      },
+      "tuple_count": 274,
+      "tuple_set_sha256_sorted_y_x_owner_compact_json": "093b6ad47847cbf033916b150e8aa37f54b319d5ea7034460939cd242015973c"
+    }
+  ],
+  "finalizer": {
+    "change_evidence": {
+      "bytes": 2680,
+      "commit": "5843f5cd9fe045fbeacdee9041920d0df65d8939",
+      "git_blob_oid": "51f80b789e2fd51a4dc729284f1cf3dec9d02fb0",
+      "mode": "100644",
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261026/authority-registry-composed-002/authority-registry.json",
+      "sha256": "c0850a6f02e7bf17b26b81430b37ee11b4aab27df675ba4e2aff92ebaba1aca3"
+    },
+    "command": "env -u NODE_PATH node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/hrv-dgu-native-qualification-20261026/config/finalize-current-4828.json coordination/engineering/hrv-dgu-native-qualification-20261026/finalized-bank-004",
+    "config_sha256": "9a96b57aa13c568918c1dfa698a02da965ad6ecca0f3d779866052e744c9970b",
+    "exit_code": 0,
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2291,
+        "sha256": "212ea0c7886cb27cdd3a736ec1d8204c6abf3eec7dcbc96969db1a3c744b3ee7"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "preparation.json": {
+        "bytes": 1156,
+        "sha256": "75edc393a98d1e25e8b3e2d28f8483d74877e8b3ad970e97aaa26108cf5e9375"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "d07d349da3c52104b520534f55da7a036b8dba7e7e82434e0032b3cebe636356"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "20b7a4d4cd09a372d35b817241c9eb29b0bba39bed53d44e74458247770ad875"
+      }
+    },
+    "package_inputs": {
+      "bytes": 38421,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "mode": "100644",
+      "path": ".github/package-inputs.json",
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "selector": {
+      "bytes": 2287,
+      "commit": "4828b25d3499d131a477654931156505889e3e35",
+      "git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+      "mode": "100644",
+      "path": "data/ownership-selection.json",
+      "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9"
+    },
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "da9ff83f1defe5503dc9d817671d5e356a19f24724acc4c3a39e501b3749db99"
+  },
+  "kind": "hrv-combined-2563-current-owner-and-startup-roster-reconciliation-v1",
+  "roster": {
+    "actual_unindexed_extras": 0,
+    "base_indexed_bodies": 79,
+    "base_only_bodies_absent": 11,
+    "base_only_bodies_retired_by_finalizer": [
+      "geography/effective-context-873fcb8e603cf0b7827d52f39313c221ea63d548feb0ac131a15ba214f2e01ce.json.gz",
+      "ownership-vintages/509572ef28896cf4ce0c65e4418dff40e0fe280fd98392af514c298b4374f349/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "ownership-vintages/5d8c1e738a0339a80b7b67fdad1d20284c1a1c9a63994470740de9d7131a3e27/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "ownership-vintages/8439a2fc2f33a8b3935b1efe7b1c3a52611b36de4d1a8067bd6dd74200ffdd4f/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "ownership-vintages/b174e2e6a32e1f27c4d7ac3ac94a2fea82b12d8bf91f59929747240a252817c6/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "ownership-vintages/c0ebb714ee9a09c365cdef15b1633280fcc3144dd11be1f5900d4ac9de5cd8ff/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "ownership-vintages/c56085c70600f0c3ec155910f5b702075f841fe6ea3746cc62862349106e8ee5/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "ownership-vintages/d22f9153c3da060db67899bf1ca7efe9e8179bfb24a2c0c2d8f2607257b53d59/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "ownership-vintages/d44b2b12020887328415a72e9b861488c5b405d916ad736da009cb791ce96230/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "ownership-vintages/f6095605c56e38054e2dac24436f282e0ecc28aa67fac287186aaf3dbe06aa18/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "ownership-vintages/fd6bfecfcffe83cad559ec858010f796c9d3f20945fc5e625eaee8e357cf7d11/native-v1/ownership/rows-0.bin.gz"
+    ],
+    "candidate_index_bytes": 49610,
+    "candidate_index_sha256": "20b7a4d4cd09a372d35b817241c9eb29b0bba39bed53d44e74458247770ad875",
+    "candidate_only_bodies_created_by_finalizer": [
+      "geography/effective-context-44230bfa3d7585a998af8a18e799632baa41ee4a53c3f9c4790a615af1e6b21a.json.gz",
+      "ownership-vintages/0991052dd36e5595145c91d1d63a3085675881605138be8ff1e0e9ee498348b6/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "ownership-vintages/1a0fb96df8b8c90558ebad842150c2ad1a16b0342bc8393bc6f97669e7e08846/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "ownership-vintages/2adeab09a2814a30f6c2e0d3623493a7fdb9e059a8625203ca0c5852909eb126/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "ownership-vintages/8a04dc93e63534ab3d9fdd0ae62c39a6df9392bcb26727c9f49b3c47586b7767/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "ownership-vintages/8c80849064dd766c448f8bd99da18b5a952db16bb6e6e1c79aeaffbe87439d94/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "ownership-vintages/98d8236b9d823069ee6306458d8cab3e9a9eee6341cfddda3c29b16f5e76fc85/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "ownership-vintages/a7609f78490f9e99cb20ba9714cec2ca7b43963d439120acad784fe935f48c81/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "ownership-vintages/cb1596f1601ccf64db5b322230d497b02d8ff91e0051d75c03d3e2e39bf41a03/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "ownership-vintages/ef7e6e17f0ccefecef2724420c90b69a3768438049bc228bded84efbf52d43de/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "ownership-vintages/f13f332e3a513c2755b818556f2ef33d472f0f939f5b3d7c8cf0842ae8e7145a/native-v1/ownership/rows-0.bin.gz"
+    ],
+    "candidate_only_bodies_verified": 11,
+    "compatibility_bodies": 30,
+    "compatibility_subset_of_indexed": true,
+    "expected_total_paths_including_index": 80,
+    "indexed_bodies": 79,
+    "indexed_body_hash_mismatches": 0,
+    "materialized_sparse_files": 50,
+    "sparse_omitted_bodies": 30,
+    "sparse_omitted_verified_from_unchanged_base_blobs": 30,
+    "whole_tree_old_new_conservation": "not asserted; deferred to required trusted selected-bank comparator/hosted delivery"
+  },
+  "runtime_dependency": {
+    "extracted_bytes": 670013,
+    "extracted_files": 98,
+    "installed_only_in_owned_worktree": "node_modules/@noble/hashes; untracked/ignored; no shared/global install",
+    "name": "@noble/hashes",
+    "package_lock_integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
+    "package_lock_resolved": "https://registry.npmjs.org/@noble/hashes/-/hashes-2.0.1.tgz",
+    "tarball_bytes": 135794,
+    "tarball_sha1": "fc1a928061d1232b0a52bb754393c37a5216c89e",
+    "tarball_sha512_base64": "XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
+    "version": "2.0.1"
+  },
+  "status": "technical-candidate-preparation-only; no source-role acceptance, positive scientific acceptance, final comparator or hosted emitted-control claim",
+  "version": 1
+}

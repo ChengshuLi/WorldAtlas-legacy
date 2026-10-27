@@ -1,0 +1,497 @@
+{
+  "kind": "hrv-2289-original-gshhg-physical-center-application-v1",
+  "status": "first-time bounded per-key center comparison; not whole-cell physical clearance, acceptance, assignment or credit",
+  "scope": {
+    "count": 2289,
+    "cohorts": {
+      "krk1026": 1026,
+      "zut634": 634,
+      "kornat400": 400,
+      "murter229": 229
+    },
+    "combined_tuple_sha256": "f6052d4cf8d31a8d494e4489663e0dfa8bea1aa6026c0eee25e1a28b554cf14a",
+    "encoding": "sorted compact JSON [owner_index,y,x], UTF-8, no newline",
+    "excluded_same_county6": 6,
+    "excluded_other_outside_or_unmatched": 1751
+  },
+  "inputs": {
+    "custody_manifest": {
+      "path": "/tmp/hrv2295-custody-review.json",
+      "bytes": 3564916,
+      "sha256": "0fdbffce18b997954e3e286a025a4eb7a3d1687fd3e27192a50b20986d912487"
+    },
+    "physical_whole_target_support": {
+      "path": "/workspace/scratch/127991fc8b8e/.hrv-private/HRV-2289-physical-001/whole-target-support.json",
+      "bytes": 216819,
+      "sha256": "9fbeadb4d382579b03383a809d344b8d8238b807c675ebf4522fcb7e1cc292d4",
+      "producer_receipt_sha256": "7ad3a4c2391431fa31453c2d479229aa2f3bd838b5a89547c93b353ca20f504c"
+    },
+    "latitude_table": {
+      "path": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/94babef283a50308ceb3d17503b0c65e1d097d543ce812bb57f030aab9673307/work/test/fixtures/native-row-latitudes.f64le.gz",
+      "compressed_bytes": 1851757,
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"
+    },
+    "method": "native-grid center lon=(x+0.5)*360/262166-180; latitude from pinned normative little-endian row table; Shapely OGC:CRS84 contains/covers against exact retained GSHHG-derived physical support components"
+  },
+  "runtime": {
+    "shapely": "2.1.2",
+    "geos": "3.13.1"
+  },
+  "cohorts": {
+    "krk1026": {
+      "count": 1026,
+      "owner_indices": [
+        22136
+      ],
+      "source_target": "gb:HRV:ADM2:41942358B45790635822188",
+      "source_center_application": {
+        "inside": 1026
+      },
+      "original_mask_labels": {
+        "land": 1026
+      },
+      "original_foreign_contact_count": 0,
+      "original_source_contact_pointer_count": 2039,
+      "target_whole_physical_issue_count": 0,
+      "target_whole_physical_issue_reasons": [],
+      "physical_center_support_counts": {
+        "mapped_land_support": {
+          "interior": 1026,
+          "boundary": 0,
+          "outside": 0
+        },
+        "mapped_inland_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        },
+        "outside_mapped_L1_context": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        },
+        "missing_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        },
+        "extra_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        },
+        "contradictory_land_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 1026
+        }
+      },
+      "keyset_sha256_by_relation": {
+        "mapped_land_support": {
+          "interior": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "mapped_inland_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        },
+        "outside_mapped_L1_context": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        },
+        "missing_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        },
+        "extra_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        },
+        "contradictory_land_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "21ea3476866b6b2806aa7b499d270e44d7d5b15ed5aff5dd2dc551e773e587e9"
+        }
+      }
+    },
+    "zut634": {
+      "count": 634,
+      "owner_indices": [
+        22349
+      ],
+      "source_target": "gb:HRV:ADM2:41942358B78092292850209",
+      "source_center_application": {
+        "inside": 634
+      },
+      "original_mask_labels": {
+        "land": 634
+      },
+      "original_foreign_contact_count": 0,
+      "original_source_contact_pointer_count": 1263,
+      "target_whole_physical_issue_count": 2,
+      "target_whole_physical_issue_reasons": [
+        "extra_reconstruction",
+        "missing_reconstruction"
+      ],
+      "physical_center_support_counts": {
+        "mapped_land_support": {
+          "interior": 634,
+          "boundary": 0,
+          "outside": 0
+        },
+        "mapped_inland_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        },
+        "outside_mapped_L1_context": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        },
+        "missing_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        },
+        "extra_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        },
+        "contradictory_land_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 634
+        }
+      },
+      "keyset_sha256_by_relation": {
+        "mapped_land_support": {
+          "interior": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "mapped_inland_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        },
+        "outside_mapped_L1_context": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        },
+        "missing_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        },
+        "extra_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        },
+        "contradictory_land_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "a1e4c27982d10fc2d8171a3cac33c6a2c771ca885540ceed335d4e7b2d4989b9"
+        }
+      }
+    },
+    "kornat400": {
+      "count": 400,
+      "owner_indices": [
+        22321
+      ],
+      "source_target": "gb:HRV:ADM2:41942358B73644152682265",
+      "source_center_application": {
+        "inside": 400
+      },
+      "original_mask_labels": {
+        "land": 400
+      },
+      "original_foreign_contact_count": 0,
+      "original_source_contact_pointer_count": 795,
+      "target_whole_physical_issue_count": 0,
+      "target_whole_physical_issue_reasons": [],
+      "physical_center_support_counts": {
+        "mapped_land_support": {
+          "interior": 400,
+          "boundary": 0,
+          "outside": 0
+        },
+        "mapped_inland_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        },
+        "outside_mapped_L1_context": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        },
+        "missing_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        },
+        "extra_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        },
+        "contradictory_land_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 400
+        }
+      },
+      "keyset_sha256_by_relation": {
+        "mapped_land_support": {
+          "interior": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "mapped_inland_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        },
+        "outside_mapped_L1_context": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        },
+        "missing_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        },
+        "extra_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        },
+        "contradictory_land_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ca16a016f5c69deac3148e66e2ce7fa748219c26d336ef035075e7cd91d28110"
+        }
+      }
+    },
+    "murter229": {
+      "count": 229,
+      "owner_indices": [
+        22399
+      ],
+      "source_target": "gb:HRV:ADM2:41942358B86068104638384",
+      "source_center_application": {
+        "inside": 229
+      },
+      "original_mask_labels": {
+        "land": 229
+      },
+      "original_foreign_contact_count": 0,
+      "original_source_contact_pointer_count": 452,
+      "target_whole_physical_issue_count": 0,
+      "target_whole_physical_issue_reasons": [],
+      "physical_center_support_counts": {
+        "mapped_land_support": {
+          "interior": 229,
+          "boundary": 0,
+          "outside": 0
+        },
+        "mapped_inland_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        },
+        "outside_mapped_L1_context": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        },
+        "missing_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        },
+        "extra_reconstruction": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        },
+        "contradictory_land_water_support": {
+          "interior": 0,
+          "boundary": 0,
+          "outside": 229
+        }
+      },
+      "keyset_sha256_by_relation": {
+        "mapped_land_support": {
+          "interior": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "mapped_inland_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        },
+        "outside_mapped_L1_context": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        },
+        "hierarchy_disagreements:L2-outside-L1": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        },
+        "hierarchy_disagreements:L3-outside-L2": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        },
+        "hierarchy_disagreements:L4-outside-L3": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        },
+        "missing_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        },
+        "extra_reconstruction": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        },
+        "contradictory_land_water_support": {
+          "interior": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "boundary": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "outside": "ed8f912bfcdb6c2205f0654a7881fdf45e747d6614a6bbb396c7502031aecfed"
+        }
+      }
+    }
+  },
+  "limits": [
+    "Target support and target issue arrays remain separate whole-target evidence; per-key center relation does not clear target-level issues or establish full-cell support.",
+    "Original simplified 2021 geoBoundaries feature is the target; no current DGU geometry substitution.",
+    "No land/water class is inferred from center relation; original mask labels remain inherited.",
+    "Island-member role/extent ambiguity remains open; this result only records physical-center support context."
+  ]
+}
