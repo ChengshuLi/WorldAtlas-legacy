@@ -1,0 +1,40 @@
+{
+  "kind": "worldatlas.source-free-proposal-manifest.v1",
+  "proposal_id": "hrv172-county-discordance-researched-unresolved-20261026",
+  "scope_total": 172,
+  "no_source_geometry_or_raw_source_bodies": true,
+  "assessment_pins": [
+    {
+      "path": "scope.json",
+      "sha256": "452b46611fc638a73cb0798d0ebb18be128d35675fe6f056fed6a84df2be6583",
+      "keyset_sha256": "f9e56538814bdde62171b36240c61b658a60b870e83bf7d2a33fabeb12c6a56d",
+      "parent_audit_tuple_array_sha256": "b48dccf3d933cc77e7b98eee93582cb4d9899697ff67a7d984fdad1a10feb169"
+    }
+  ],
+  "contents": [
+    {
+      "path": "README.md",
+      "bytes": 13889,
+      "sha256": "c3d527adfb9f8d9462fc210c1b05a7d281d667c750efa866bfa2c802abc0d4f5"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 231702,
+      "sha256": "452b46611fc638a73cb0798d0ebb18be128d35675fe6f056fed6a84df2be6583"
+    }
+  ],
+  "private_review_references": [
+    {
+      "path": "/workspace/shared/worldatlas-HRV172-county-discordance-source-role-assessment-20261026.v2.md",
+      "sha256": "8fe01a99750ea691ad8d67ceca0c6c77d31fb1bf2368589cfe1ec4fb442e2876"
+    },
+    {
+      "path": "/workspace/shared/worldatlas-HRV172-Kolan-official-lineage-supplement-20261026.v2.md",
+      "sha256": "ff0a52e7d83b373648c32a412c193964184823368d0907835453d394abf59f8e"
+    },
+    {
+      "path": "/workspace/shared/worldatlas-HRV8-small-discordance-primary-framework-20261026.md",
+      "sha256": "66484737a2b1efd65b1a3adb056c73d19819bf0d0fdf2b6309ddab1563b37fc3"
+    }
+  ]
+}
