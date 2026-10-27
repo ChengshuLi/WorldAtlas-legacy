@@ -154,13 +154,14 @@
     "selected_current_target_geometry_sha256": "3455c7e4d39c8640b4e87e8b59bd2bda7f08b76ea6c50fb3589308cc236deeea"
   },
   "no_replay": [
-    "No source re-download or physical/native rerun for the unchanged 411 component",
-    "No bank finalizer or full-bank comparison for the 506 candidate yet"
+    "No source re-download or physical/native rerun for unchanged candidate components",
+    "No hosted tests/build/geography/emitted controls or root scientific acceptance are claimed",
+    "Full-bank conservation comparison is pending for the finalizer-008 candidate"
   ],
   "readme": {
     "path": "coordination/engineering/tkm-506-candidate-20261027/README.md",
-    "bytes": 5052,
-    "sha256": "35adca7fff07e09f3cc2fc8a9fb673bbb575c1161a0bb1c833cd5e94a1f8db55"
+    "bytes": 5428,
+    "sha256": "1f33b9e33a62c1031c9ae3ea202388b0d20e5303d21cb86454414736fb739759"
   },
   "composition_first_attempt_failure": {
     "path": "coordination/engineering/tkm-411-combined-20261027/composition-003/attempt-001-failure.json",
@@ -207,5 +208,69 @@
     "selector_and_package_inputs_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
     "change_evidence_commit": "3eaf8fb7370e655c2a3a54ad0f6aec5135460885",
     "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644"
+  },
+  "candidate_final_bank": {
+    "status": "finalizer completed candidate-only; full-bank comparison and hosted controls pending",
+    "baseline_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "candidate_selector": {
+      "path": "data/ownership-selection.json",
+      "bytes": 2270,
+      "sha256": "5d0f0c2aa9e23d56141cff2ee5ef86b85e35a443d6d8ac4088f2dada5e388ccd"
+    },
+    "finalizer_config": {
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-008/config.json",
+      "bytes": 1558,
+      "sha256": "22a6ac2be3c04495bb537df45b88562e97173073e0d3752239145752ddb595b1"
+    },
+    "attempt_001": {
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-008/attempt-001/",
+      "status": "exit1 before output; stderr `Plain Node launch required`; NODE_PATH inherited; no output destination created"
+    },
+    "attempt_002": {
+      "path": "coordination/engineering/tkm-411-combined-20261027/finalize-008/attempt-002/",
+      "status": "exit0",
+      "start_utc": "2026-10-27T21:40:01Z",
+      "end_utc": "2026-10-27T21:42:27Z",
+      "invocation": "plain Node, NODE_PATH and NODE_OPTIONS unset; GIT_NO_LAZY_FETCH=1; GIT_NO_REPLACE_OBJECTS=1",
+      "output_path": "coordination/engineering/tkm-411-combined-20261027/finalize-008/output-001/"
+    },
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2270,
+        "sha256": "5d0f0c2aa9e23d56141cff2ee5ef86b85e35a443d6d8ac4088f2dada5e388ccd"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "preparation.json": {
+        "bytes": 1156,
+        "sha256": "c3bd442876aaebc1a13c1e261296a12190a390eb12017c0e7ecf1270cfa7de05"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "20bfe6f8c3d47e07d9b75fe1c2623e1eb477eaefc5d7ba0923c30c10f8f31a5e"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "78d61d3b79e880abb927f4921f467e8827eda38644667aa80d5d37a8e2eb26f3"
+      }
+    },
+    "startup_index": {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "bytes": 49610,
+      "sha256": "78d61d3b79e880abb927f4921f467e8827eda38644667aa80d5d37a8e2eb26f3",
+      "unique_files": 79,
+      "compatibility_files": 30,
+      "compatibility_subset": true
+    },
+    "baseline_to_candidate_index_path_delta": {
+      "baseline_unique_files": 79,
+      "candidate_unique_files": 79,
+      "retired_paths": 11,
+      "added_paths": 11,
+      "candidate_only": true
+    },
+    "full_bank_comparison": "pending; no global conservation claim yet"
   }
 }
