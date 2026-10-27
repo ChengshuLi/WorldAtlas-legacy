@@ -1,0 +1,3862 @@
+{
+  "diagnostic_context": {
+    "decision_rows_all_territorial_exclusion_cells": true,
+    "decision_rows_count": 110,
+    "first_failure": "unique-source-target-coverage",
+    "held": 110,
+    "limits": "candidate diagnostic is not current owner selection or accepted qualification; all110 retain original hold",
+    "requested": 110,
+    "supported": 0
+  },
+  "incidence_accounting": {
+    "actual_interior_negative_incidences": 111,
+    "by_source_family": {
+      "gb:CMR:ADM1": 41,
+      "gb:CMR:ADM2": 13,
+      "gb:COD:ADM1": 23,
+      "gb:COG:ADM1": 5,
+      "gb:TCD:ADM1": 29
+    },
+    "canonical_hash_role": "This roster’s computed canonical hash is the reproducible incidence-set digest for the exact records in this file.",
+    "computed_canonical_incidence_hash": "53dada1b4fc94cef829a1b30cba5aefe87c48838f3222ad905ddd5bf9c1d9373",
+    "computed_hash_method": "SHA-256 of compact UTF-8 JSON for sorted incidence records with object keys sorted; record order is canonical [y,x,owner] key order then source-family/source-feature/negative ordinal",
+    "parent_hash_source_limit": "No retained canonical input or serialization rule for this supplied digest was found; the 111-row roster is independently bound to the retained CAF461 contact comparison and saved diagnostic.",
+    "parent_hash_status": "Unverified parent-supplied reference only; not a must-match and not used as a validation or decision gate.",
+    "parent_hash_verification": "not independently verifiable from the retained receipt because it supplies the expected digest but no canonical serialization specification",
+    "parent_supplied_incidence_hash": "349aa4853b6aa816d181027636f371ed2b12bcf27f7ca4feb68dba82b9fee431",
+    "per_key_incidence_multiplicity": {
+      "1": 109,
+      "2": 1
+    },
+    "unique_keys": 110
+  },
+  "incidences": [
+    {
+      "key_y_x_owner": [
+        123071,
+        147713,
+        10635
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "40de82dfbf24cf028214ce90b16b5fac267661e147a8f4744c18d701504b01e3",
+        "negative_ordinal": 5,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B78936858597948",
+        "source_feature_name": "Sila"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B84569563404367",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B84569563404367"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        123071,
+        147714,
+        10635
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "40de82dfbf24cf028214ce90b16b5fac267661e147a8f4744c18d701504b01e3",
+        "negative_ordinal": 5,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B78936858597948",
+        "source_feature_name": "Sila"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B84569563404367",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B84569563404367"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124430,
+        145638,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124505,
+        144952,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124517,
+        144916,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124517,
+        144917,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124517,
+        144918,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124517,
+        144919,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124618,
+        144830,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124645,
+        144867,
+        10521
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B2286145520715",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B2286145520715"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124850,
+        144934,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124850,
+        144935,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124851,
+        144930,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124851,
+        144931,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124851,
+        144932,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124851,
+        144933,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124852,
+        144930,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124852,
+        144931,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124853,
+        144926,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124853,
+        144927,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124853,
+        144928,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124853,
+        144929,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124854,
+        144925,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124854,
+        144926,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124855,
+        144924,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124855,
+        144925,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124856,
+        144922,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        124856,
+        144923,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        125050,
+        144764,
+        10610
+      ],
+      "negative_operand": {
+        "feature_ordinal": 19,
+        "geometry_sha256": "5ff2f2fc61833b2d3c9d491de769482b93fb317e71ac3c4c17b370cc381a5782",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+        "source_document_bytes": 33587,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:TCD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+        "source_document_sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+        "source_family": "gb:TCD:ADM1",
+        "source_feature_id": "gb:TCD:ADM1:23847190B97640124965572",
+        "source_feature_name": "Moyen-Chari"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B74333479476310",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B74333479476310"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        125596,
+        142367,
+        10519
+      ],
+      "negative_operand": {
+        "feature_ordinal": 33,
+        "geometry_sha256": "9534a4b8a60552acb883241541792e6cfb5b261e50114615ec43ce44041090a7",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B45774164265008",
+        "source_feature_name": "Mayo-Rey"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B21565212342700",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B21565212342700"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        125795,
+        142171,
+        10602
+      ],
+      "negative_operand": {
+        "feature_ordinal": 33,
+        "geometry_sha256": "9534a4b8a60552acb883241541792e6cfb5b261e50114615ec43ce44041090a7",
+        "negative_ordinal": 3,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B45774164265008",
+        "source_feature_name": "Mayo-Rey"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B68266089784761",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B68266089784761"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        126680,
+        141585,
+        10633
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B8260276568756",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B8260276568756"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        126681,
+        141585,
+        10633
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B8260276568756",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B8260276568756"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        126759,
+        141635,
+        10633
+      ],
+      "negative_operand": {
+        "feature_ordinal": 18,
+        "geometry_sha256": "84c7292c9841ad339d334c4e62dca30dbd341a4055d221ecb3962eca315ec9e0",
+        "negative_ordinal": 3,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B76674513300734",
+        "source_feature_name": "Lom-Et-Djerem"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B8260276568756",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B8260276568756"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127011,
+        141712,
+        10542
+      ],
+      "negative_operand": {
+        "feature_ordinal": 18,
+        "geometry_sha256": "84c7292c9841ad339d334c4e62dca30dbd341a4055d221ecb3962eca315ec9e0",
+        "negative_ordinal": 4,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B76674513300734",
+        "source_feature_name": "Lom-Et-Djerem"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B33074004162122",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B33074004162122"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127303,
+        150879,
+        10600
+      ],
+      "negative_operand": {
+        "feature_ordinal": 0,
+        "geometry_sha256": "6dafb10ae7e946a1822a734b78a8a87a788917708b9ed93dfeb787eb1fa83dd6",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B55881681467015",
+        "source_feature_name": "Upper Uele"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B67617163165287",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B67617163165287"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127377,
+        141773,
+        10542
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B33074004162122",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B33074004162122"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127378,
+        141773,
+        10542
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B33074004162122",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B33074004162122"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127445,
+        141772,
+        10538
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B30715690483256",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B30715690483256"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127631,
+        144908,
+        10559
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B49227657461354",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B49227657461354"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127650,
+        141803,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127651,
+        141802,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127651,
+        141803,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127652,
+        141803,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127652,
+        141804,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127653,
+        141804,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127654,
+        141805,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127655,
+        141805,
+        10573
+      ],
+      "negative_operand": {
+        "feature_ordinal": 17,
+        "geometry_sha256": "0c723902e1802b51c856b9b75783ea2a9b8028e0bf570cc4c29dea2c8356feb3",
+        "negative_ordinal": 2,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B29047919086815",
+        "source_feature_name": "Kadei"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B56175823548729",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B56175823548729"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127675,
+        144874,
+        10559
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B49227657461354",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B49227657461354"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        127740,
+        144811,
+        10559
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B49227657461354",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B49227657461354"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128068,
+        144649,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128070,
+        144650,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128071,
+        144651,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128072,
+        144651,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128074,
+        144652,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128075,
+        144652,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128077,
+        144653,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128079,
+        144654,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128084,
+        144656,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128102,
+        144661,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128117,
+        144663,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128241,
+        144630,
+        10504
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B14361696899500",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B14361696899500"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128331,
+        144622,
+        10639
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B86682569461435"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128408,
+        144630,
+        10639
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B86682569461435"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128413,
+        144631,
+        10639
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B86682569461435"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128418,
+        144632,
+        10639
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B86682569461435"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128422,
+        144633,
+        10639
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B86682569461435"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128427,
+        144634,
+        10639
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B86682569461435"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128432,
+        144635,
+        10639
+      ],
+      "negative_operand": {
+        "feature_ordinal": 13,
+        "geometry_sha256": "c20b374d77e6012887d0583d3cf91b28af997630c09830f084f4d1964f672398",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+        "source_document_bytes": 378900,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COD:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+        "source_document_sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+        "source_family": "gb:COD:ADM1",
+        "source_feature_id": "gb:COD:ADM1:28894549B79448475719999",
+        "source_feature_name": "Sud-Ubangi"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B86682569461435",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B86682569461435"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128466,
+        143644,
+        10594
+      ],
+      "negative_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "c778c13f89d1f0b1f51e50043a1d76b440a7a0de",
+        "source_document_bytes": 54037,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COG:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+        "source_document_sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b",
+        "source_family": "gb:COG:ADM1",
+        "source_feature_id": "gb:COG:ADM1:67827341B88704799146201",
+        "source_feature_name": "Likouala"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B65052605957591",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B65052605957591"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128467,
+        143644,
+        10594
+      ],
+      "negative_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "c778c13f89d1f0b1f51e50043a1d76b440a7a0de",
+        "source_document_bytes": 54037,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COG:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+        "source_document_sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b",
+        "source_family": "gb:COG:ADM1",
+        "source_feature_id": "gb:COG:ADM1:67827341B88704799146201",
+        "source_feature_name": "Likouala"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B65052605957591",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B65052605957591"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128468,
+        143644,
+        10594
+      ],
+      "negative_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "c778c13f89d1f0b1f51e50043a1d76b440a7a0de",
+        "source_document_bytes": 54037,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COG:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+        "source_document_sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b",
+        "source_family": "gb:COG:ADM1",
+        "source_feature_id": "gb:COG:ADM1:67827341B88704799146201",
+        "source_feature_name": "Likouala"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B65052605957591",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B65052605957591"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128535,
+        143178,
+        10532
+      ],
+      "negative_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+        "negative_ordinal": 3,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "c778c13f89d1f0b1f51e50043a1d76b440a7a0de",
+        "source_document_bytes": 54037,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COG:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+        "source_document_sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b",
+        "source_family": "gb:COG:ADM1",
+        "source_feature_id": "gb:COG:ADM1:67827341B88704799146201",
+        "source_feature_name": "Likouala"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B27659488729720",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B27659488729720"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128583,
+        143161,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 4,
+        "geometry_sha256": "87cdd75ecd99b913dd104604452d9fcace3439b5a4618cf3e410421865ea1760",
+        "negative_ordinal": 5,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "c778c13f89d1f0b1f51e50043a1d76b440a7a0de",
+        "source_document_bytes": 54037,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:COG:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+        "source_document_sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b",
+        "source_family": "gb:COG:ADM1",
+        "source_feature_id": "gb:COG:ADM1:67827341B88704799146201",
+        "source_feature_name": "Likouala"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128973,
+        142789,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128974,
+        142789,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128976,
+        142790,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128977,
+        142790,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128979,
+        142791,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128980,
+        142791,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128982,
+        142792,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128983,
+        142792,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128984,
+        142793,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128985,
+        142793,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128986,
+        142793,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128986,
+        142793,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 15,
+        "geometry_sha256": "7b4c77a55745435f8e43fa7b15b2b0d7fe4d94f0eb6b072c70c34e56df96865f",
+        "negative_ordinal": 1,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+        "source_document_bytes": 55495,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM2",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+        "source_document_sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+        "source_family": "gb:CMR:ADM2",
+        "source_feature_id": "gb:CMR:ADM2:32672807B40314964499081",
+        "source_feature_name": "Boumba-Et-Ngoko"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128988,
+        142794,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128991,
+        142795,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        128994,
+        142796,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129001,
+        142798,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129002,
+        142798,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129003,
+        142798,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129004,
+        142798,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129005,
+        142798,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129006,
+        142798,
+        10567
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B53216405573620",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B53216405573620"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129232,
+        142786,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129233,
+        142786,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129234,
+        142786,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129236,
+        142785,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129237,
+        142785,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129238,
+        142785,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129239,
+        142785,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129240,
+        142784,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129240,
+        142785,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129241,
+        142784,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129241,
+        142785,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129242,
+        142784,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129243,
+        142784,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129244,
+        142784,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129245,
+        142784,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    },
+    {
+      "key_y_x_owner": [
+        129246,
+        142784,
+        10668
+      ],
+      "negative_operand": {
+        "feature_ordinal": 5,
+        "geometry_sha256": "906fad80db92160e7686b0140865e24805f32e2d1190a465adcbfedc73673818",
+        "negative_ordinal": 0,
+        "role": "declared foreign negative; strict-interior contact",
+        "source_document_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+        "source_document_bytes": 53122,
+        "source_document_commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+        "source_document_id": "gb:CMR:ADM1",
+        "source_document_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+        "source_document_sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+        "source_family": "gb:CMR:ADM1",
+        "source_feature_id": "gb:CMR:ADM1:27767025B81519146961984",
+        "source_feature_name": "East"
+      },
+      "positive_target": {
+        "source_family": "gb:CAF:ADM3",
+        "source_id": "gb:CAF:ADM3:52401652B99363571212605",
+        "source_role": "original CAF ADM3 positive target",
+        "target_id": "gb:CAF:ADM3:52401652B99363571212605"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 7984,
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task-3/transfers/caf149/materialized/worldatlas-CAF149-current-held-149-keys-20261026.json",
+      "role": "original held-key ledger",
+      "sha256": "a105ad39ce44650e47000c673e819180f466995a9a2aeb3dcf1ab35307d86b11"
+    },
+    {
+      "bytes": 932437,
+      "path": "/Users/chengshuli/Documents/Codex/2026-10-24/task-3/transfers/caf149/materialized/worldatlas-CAF461-effort-research-20261021/CAF461-exact-source-contact-comparison.json",
+      "role": "exact original source-contact comparison",
+      "sha256": "0b4afb8980cb36fe1bad9ce1a132dda0c8e2767727ebdc81df6905563c0c49d2"
+    },
+    {
+      "bytes": 4015,
+      "path": "/private/tmp/CAF110-native-diagnostic-candidate/native-patch-110-request.json",
+      "role": "private CAF110 native patch proposal",
+      "sha256": "bf60f7d0a53c847d6e9c08c96692e242ba52b626e2f61dc26052a7fb1af96de7"
+    },
+    {
+      "bytes": 207573,
+      "path": "/private/tmp/CAF110-native-diagnostic-candidate/source-evidence-110-projection.json",
+      "role": "private CAF110 source-evidence projection",
+      "sha256": "f1a2e6e0abdd210c1a284a1b4afc64d3883edd2909b93cbdc377c3f591704ae0"
+    },
+    {
+      "bytes": 248901,
+      "path": "/private/tmp/CAF110-native-diagnostic-custody-739d6e91/diagnostic/native-diagnostic.json",
+      "role": "saved candidate native diagnostic only",
+      "sha256": "63de671cf0fd9caace452fd94bc82976ced83153299d7864a562b0642b68e690"
+    },
+    {
+      "bytes": 3568,
+      "path": "/tmp/CAF110-source-evidence-RLE-membership-receipt.json",
+      "role": "CAF110 RLE membership receipt",
+      "sha256": "a46f79c84c207c830ef71ac516a04490c5994bc3e0f04aa2378dcf5e2d70903b"
+    }
+  ],
+  "keys_y_x_owner": [
+    [
+      123071,
+      147713,
+      10635
+    ],
+    [
+      123071,
+      147714,
+      10635
+    ],
+    [
+      124430,
+      145638,
+      10521
+    ],
+    [
+      124505,
+      144952,
+      10521
+    ],
+    [
+      124517,
+      144916,
+      10521
+    ],
+    [
+      124517,
+      144917,
+      10521
+    ],
+    [
+      124517,
+      144918,
+      10521
+    ],
+    [
+      124517,
+      144919,
+      10521
+    ],
+    [
+      124618,
+      144830,
+      10521
+    ],
+    [
+      124645,
+      144867,
+      10521
+    ],
+    [
+      124850,
+      144934,
+      10610
+    ],
+    [
+      124850,
+      144935,
+      10610
+    ],
+    [
+      124851,
+      144930,
+      10610
+    ],
+    [
+      124851,
+      144931,
+      10610
+    ],
+    [
+      124851,
+      144932,
+      10610
+    ],
+    [
+      124851,
+      144933,
+      10610
+    ],
+    [
+      124852,
+      144930,
+      10610
+    ],
+    [
+      124852,
+      144931,
+      10610
+    ],
+    [
+      124853,
+      144926,
+      10610
+    ],
+    [
+      124853,
+      144927,
+      10610
+    ],
+    [
+      124853,
+      144928,
+      10610
+    ],
+    [
+      124853,
+      144929,
+      10610
+    ],
+    [
+      124854,
+      144925,
+      10610
+    ],
+    [
+      124854,
+      144926,
+      10610
+    ],
+    [
+      124855,
+      144924,
+      10610
+    ],
+    [
+      124855,
+      144925,
+      10610
+    ],
+    [
+      124856,
+      144922,
+      10610
+    ],
+    [
+      124856,
+      144923,
+      10610
+    ],
+    [
+      125050,
+      144764,
+      10610
+    ],
+    [
+      125596,
+      142367,
+      10519
+    ],
+    [
+      125795,
+      142171,
+      10602
+    ],
+    [
+      126680,
+      141585,
+      10633
+    ],
+    [
+      126681,
+      141585,
+      10633
+    ],
+    [
+      126759,
+      141635,
+      10633
+    ],
+    [
+      127011,
+      141712,
+      10542
+    ],
+    [
+      127303,
+      150879,
+      10600
+    ],
+    [
+      127377,
+      141773,
+      10542
+    ],
+    [
+      127378,
+      141773,
+      10542
+    ],
+    [
+      127445,
+      141772,
+      10538
+    ],
+    [
+      127631,
+      144908,
+      10559
+    ],
+    [
+      127650,
+      141803,
+      10573
+    ],
+    [
+      127651,
+      141802,
+      10573
+    ],
+    [
+      127651,
+      141803,
+      10573
+    ],
+    [
+      127652,
+      141803,
+      10573
+    ],
+    [
+      127652,
+      141804,
+      10573
+    ],
+    [
+      127653,
+      141804,
+      10573
+    ],
+    [
+      127654,
+      141805,
+      10573
+    ],
+    [
+      127655,
+      141805,
+      10573
+    ],
+    [
+      127675,
+      144874,
+      10559
+    ],
+    [
+      127740,
+      144811,
+      10559
+    ],
+    [
+      128068,
+      144649,
+      10504
+    ],
+    [
+      128070,
+      144650,
+      10504
+    ],
+    [
+      128071,
+      144651,
+      10504
+    ],
+    [
+      128072,
+      144651,
+      10504
+    ],
+    [
+      128074,
+      144652,
+      10504
+    ],
+    [
+      128075,
+      144652,
+      10504
+    ],
+    [
+      128077,
+      144653,
+      10504
+    ],
+    [
+      128079,
+      144654,
+      10504
+    ],
+    [
+      128084,
+      144656,
+      10504
+    ],
+    [
+      128102,
+      144661,
+      10504
+    ],
+    [
+      128117,
+      144663,
+      10504
+    ],
+    [
+      128241,
+      144630,
+      10504
+    ],
+    [
+      128331,
+      144622,
+      10639
+    ],
+    [
+      128408,
+      144630,
+      10639
+    ],
+    [
+      128413,
+      144631,
+      10639
+    ],
+    [
+      128418,
+      144632,
+      10639
+    ],
+    [
+      128422,
+      144633,
+      10639
+    ],
+    [
+      128427,
+      144634,
+      10639
+    ],
+    [
+      128432,
+      144635,
+      10639
+    ],
+    [
+      128466,
+      143644,
+      10594
+    ],
+    [
+      128467,
+      143644,
+      10594
+    ],
+    [
+      128468,
+      143644,
+      10594
+    ],
+    [
+      128535,
+      143178,
+      10532
+    ],
+    [
+      128583,
+      143161,
+      10668
+    ],
+    [
+      128973,
+      142789,
+      10567
+    ],
+    [
+      128974,
+      142789,
+      10567
+    ],
+    [
+      128976,
+      142790,
+      10567
+    ],
+    [
+      128977,
+      142790,
+      10567
+    ],
+    [
+      128979,
+      142791,
+      10567
+    ],
+    [
+      128980,
+      142791,
+      10567
+    ],
+    [
+      128982,
+      142792,
+      10567
+    ],
+    [
+      128983,
+      142792,
+      10567
+    ],
+    [
+      128984,
+      142793,
+      10567
+    ],
+    [
+      128985,
+      142793,
+      10567
+    ],
+    [
+      128986,
+      142793,
+      10567
+    ],
+    [
+      128988,
+      142794,
+      10567
+    ],
+    [
+      128991,
+      142795,
+      10567
+    ],
+    [
+      128994,
+      142796,
+      10567
+    ],
+    [
+      129001,
+      142798,
+      10567
+    ],
+    [
+      129002,
+      142798,
+      10567
+    ],
+    [
+      129003,
+      142798,
+      10567
+    ],
+    [
+      129004,
+      142798,
+      10567
+    ],
+    [
+      129005,
+      142798,
+      10567
+    ],
+    [
+      129006,
+      142798,
+      10567
+    ],
+    [
+      129232,
+      142786,
+      10668
+    ],
+    [
+      129233,
+      142786,
+      10668
+    ],
+    [
+      129234,
+      142786,
+      10668
+    ],
+    [
+      129236,
+      142785,
+      10668
+    ],
+    [
+      129237,
+      142785,
+      10668
+    ],
+    [
+      129238,
+      142785,
+      10668
+    ],
+    [
+      129239,
+      142785,
+      10668
+    ],
+    [
+      129240,
+      142784,
+      10668
+    ],
+    [
+      129240,
+      142785,
+      10668
+    ],
+    [
+      129241,
+      142784,
+      10668
+    ],
+    [
+      129241,
+      142785,
+      10668
+    ],
+    [
+      129242,
+      142784,
+      10668
+    ],
+    [
+      129243,
+      142784,
+      10668
+    ],
+    [
+      129244,
+      142784,
+      10668
+    ],
+    [
+      129245,
+      142784,
+      10668
+    ],
+    [
+      129246,
+      142784,
+      10668
+    ]
+  ],
+  "kind": "caf110-source-contact-decision-roster-v1",
+  "limitations": [
+    "Foreign incidence records are source-relative to the retained 2017 consumed geometry and original CAF contact comparison; no legal boundary applicability or source replacement is inferred.",
+    "Original CAF target-positive identity and foreign negative identities are bound as recorded; this roster does not change either operand or held state.",
+    "Original issue body is not present in the local sparse slot; custody audit supplies the residual scope/held-grain summary.",
+    "No geometry, key class, or source overlay was recomputed.",
+    "The parent-supplied incidence digest 349aa4853b6aa816d181027636f371ed2b12bcf27f7ca4feb68dba82b9fee431 is an unverified reference only; it is not a required match and does not override the reproducible roster hash."
+  ],
+  "physical_class_context": {
+    "mapped_land_support_membership_count": 110,
+    "rle_receipt_role": "deterministic membership in retained source-evidence coverage_rows only; not an independent per-key physical measurement",
+    "water_membership_count": 0
+  },
+  "scope": {
+    "accepted_CAF39_excluded_key_sha256": "d933df217e2e4cade2d1500fdc9e4ae4c3e3a10ea5baffa26884237d2169f26f",
+    "accepted_CAF39_excluded_keys": 39,
+    "canonical_key_order": "[y,x,owner] sorted lexicographically; compact JSON array SHA-256",
+    "key_sha256": "f0fc5a89df5b31735aaab7a711d470c0a691743b0fb6fefdbb99f8d60c6fea14",
+    "keys": 110,
+    "original_CAF149_key_count": 149,
+    "reconciles_as": "CAF149 149 = CAF39 39 + CAF110 110; disjoint exact key sets"
+  },
+  "source_document_index": {
+    "gb:CMR:ADM1": {
+      "bytes": 53122,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "503fbafadf9464417f1b10f3d815292e59e2a0a3",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM1-000.bin.gz",
+      "sha256": "8e53160cc0c1526534dbd7b243b6cffa329a8c5971dbbd7fe7342b9b546b0160",
+      "source_family": "gb:CMR:ADM1"
+    },
+    "gb:CMR:ADM2": {
+      "bytes": 55495,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "5ceb31a02b8f2faffddf10a1ef2f74e70d6ec43d",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM2-000.bin.gz",
+      "sha256": "64d07feb58bba743bf2c04e2551ce4d1dc7b63d2079f1a877e45a6f1575bc77f",
+      "source_family": "gb:CMR:ADM2"
+    },
+    "gb:CMR:ADM3": {
+      "bytes": 487165,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "86468c8dc3cf7e2c8d9a1ff9239db92b18f0d2fd",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-CMR-ADM3-000.bin.gz",
+      "sha256": "27940ed46b46673a8b8593d3d246ddf747f17708860f1f866bd1e7c5101b9625",
+      "source_family": "gb:CMR:ADM3"
+    },
+    "gb:COD:ADM1": {
+      "bytes": 378900,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "9c044aab8159821ba629020dee2e787388d20b52",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM1-000.bin.gz",
+      "sha256": "a2e524c39c94b065d6ae76ca335730ef716d6378c050f1d11c15a1a40fe8b584",
+      "source_family": "gb:COD:ADM1"
+    },
+    "gb:COD:ADM2": {
+      "bytes": 1074327,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "dc4f2926dc0945eef1f35fa34c506a270b6239b2",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COD-ADM2-000.bin.gz",
+      "sha256": "a75f184d075817469627f2b9eff892ff043597fefccdb9d61d2503f31a8486db",
+      "source_family": "gb:COD:ADM2"
+    },
+    "gb:COG:ADM1": {
+      "bytes": 54037,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "c778c13f89d1f0b1f51e50043a1d76b440a7a0de",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM1-000.bin.gz",
+      "sha256": "a4ecf3129d317d13214efef5fd461203443ef88f0d18be11800edb461dc0198b",
+      "source_family": "gb:COG:ADM1"
+    },
+    "gb:COG:ADM2": {
+      "bytes": 95986,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "2c0b2d12d91391c90b7b13fd3bc6eeafcef9a151",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-COG-ADM2-000.bin.gz",
+      "sha256": "d16ed36ca657850044d6abe618958e16a36601ed687246761e44c5d964c8ac51",
+      "source_family": "gb:COG:ADM2"
+    },
+    "gb:SDN:ADM1": {
+      "bytes": 87101,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "290bdbdac58c9f5bc062d2d5b2cfbca9d3ce8ef0",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SDN-ADM1-000.bin.gz",
+      "sha256": "0f63d3ec03df824fd702ea58d3e242e8b0006dc06a708ec9b5265ff41e444001",
+      "source_family": "gb:SDN:ADM1"
+    },
+    "gb:SDN:ADM2": {
+      "bytes": 233399,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "a1f46df8852a3993834997b7426299607c0c13ea",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SDN-ADM2-000.bin.gz",
+      "sha256": "9adf7ad9563d1446aedc5f802ab22a22cc760a18a47fe80b2648f6fcbb7cfebf",
+      "source_family": "gb:SDN:ADM2"
+    },
+    "gb:SSD:ADM1": {
+      "bytes": 66722,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "16bd5961bdb7fad971c8b35eac87a6528583e8c8",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SSD-ADM1-000.bin.gz",
+      "sha256": "dd3f6d493e13c5f7f03ee7b9a9a3b1d17141690bdae288ccb0d919ffa75720bc",
+      "source_family": "gb:SSD:ADM1"
+    },
+    "gb:SSD:ADM2": {
+      "bytes": 84873,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "cf428b617b41849c3534349b080175e1e9db90f3",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SSD-ADM2-000.bin.gz",
+      "sha256": "185cc3302ad30874cf1e5f2fb13f059a509b9bb517db062a233f7b554b028ff9",
+      "source_family": "gb:SSD:ADM2"
+    },
+    "gb:TCD:ADM1": {
+      "bytes": 33587,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "31a486ad80235863feb24188b975a2ffbdaa6a45",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM1-000.bin.gz",
+      "sha256": "c948cb873bfd84584334a48d31b2072d109aaf6b6c13e3ad6fc890a6929a925d",
+      "source_family": "gb:TCD:ADM1"
+    },
+    "gb:TCD:ADM2": {
+      "bytes": 48773,
+      "commit": "21984e9ec4ec7370bc807e2da23cea2228747698",
+      "git_blob_oid": "c49be5fae13c91832112794eef079b6cbd13fb18",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-TCD-ADM2-000.bin.gz",
+      "sha256": "84148a4a89c34988e06b523773e35bf466b29e6ab67c9f797f4970b29841c28e",
+      "source_family": "gb:TCD:ADM2"
+    }
+  },
+  "status": "source-free decision input; all110 remain held; no adoption, qualification, owner, bank, status, or credit change"
+}
