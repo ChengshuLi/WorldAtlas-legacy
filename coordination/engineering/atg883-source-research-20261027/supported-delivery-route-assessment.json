@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "kind": "atg883-supported-delivery-route-assessment-v1",
+  "status": "source-relative-candidate-with-stock-physical-result; native-authority-and-current-bank-validation-pending",
+  "package_id": "gb-ATG-ADM1--repair-evaluation",
+  "original_denominator": {
+    "land_cells": 883,
+    "inland_water_cells": 0,
+    "source_relative_cells": 0,
+    "interval_segments": 288,
+    "target_owner_index": 7110,
+    "source_features": [
+      1274,
+      1275,
+      1276,
+      1277,
+      1278,
+      1279,
+      1280
+    ],
+    "excluded_redonda_feature": 1273,
+    "native_block": 28
+  },
+  "pins": {
+    "accepted_main": "81280722133858cbb26249210fed17b031d11d3d",
+    "execution_code_commit": "81280722133858cbb26249210fed17b031d11d3d",
+    "original_queue_record_sha256": "a8699fd1c2fdc12a97aa592ac711c5674f232daf58ac86fba41aea0fcb2968f9",
+    "candidate_sha256": "51eee386d904a572ef2b71c31dc534fcab5d1a48da4790add2c988b5b15a428a",
+    "physical_native_witness_sha256": "dc47e2cb1f44190a2e9c76bc168096e2874752ed754ac99caed41f6da47fb2c0",
+    "current_block_virtual_addition_sha256": "13e6d1e765ce1d219fb6db46a872bc73014573e59638be3d3fc80dc17593649e",
+    "current_owner_observation_sha256": "308460f462bb9855734f2e2c4624dd46df836d5a57408c4ea070ff98111f58e1"
+  },
+  "route_checks": [
+    {
+      "route": "scripts/additive-gap-repair.mjs current-baseline administrative source path",
+      "code_sha256": "0bd47a5c39b8431a869577149fc771f3f613c9fd181670f3b517c6d404c81c25",
+      "requirements_observed": [
+        "immutable source-premise request and complete input roster",
+        "completed source facts/publication and qualified operating receipt",
+        "current selected-bank reconciliation",
+        "retained-consumed-administrative-source profile and exact registered/accepted handoff"
+      ],
+      "atg_source_request_or_operating_receipt_in_packet": false,
+      "qualification_or_patch_emitted": false
+    },
+    {
+      "route": "scripts/prepare-delivery-handoff.mjs native-authority",
+      "code_sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6",
+      "consumer_code_sha256": "d292398014b5694411a8504a7e6426ecf4b8ef014bff068f6d7bff3ba30e9f2a",
+      "requirements_observed": [
+        "committed source-target-native-evidence and exact native patch",
+        "complete retained source family and selected target/owner joins",
+        "whole per-target physical evidence with original inputs, support and residual witnesses",
+        "emitted constructor result, authority binding and later current-bank/release checks"
+      ],
+      "physical_record_available_in_packet": true,
+      "candidate_block_masks_are_whole_target_support": false,
+      "qualification_or_authority_emitted": false,
+      "physical_record": "physical_result.result_path",
+      "physical_run_verified_by": "physical-preparation/verify-atg-physical-result.mjs"
+    },
+    {
+      "route": "scripts/native-ownership/require-verified-selection.mjs",
+      "code_sha256": "a7b0c60aeb705b39e650112cb9a968d5536eec5872493057d6f71a60ebccbfc1",
+      "receipt_registry_sha256": "080a481b71383bd6ba3388ad9b26138b25fced628a61830c3bb02a933562e40a",
+      "use": "whole native-bank comparison registration, not an additive ATG patch route",
+      "atg_candidate_receipt_present": false
+    }
+  ],
+  "current_physical_native_application": {
+    "witness": "whole-atg-source-physical-native-witness.json",
+    "finding": "Source member raw geometries and owner-zero mask contacts are separate; the stock GSHHG producer now has a complete physical result for each of the eight retained source members, each bound to selected canonical atlas:territory:ATG geometry.",
+    "mask_scope": "owner-zero gap candidates only",
+    "whole_target_physical_result": true,
+    "whole_target_physical_authority": false,
+    "native_block_28_virtual_conservation": true,
+    "whole_selected_bank_conservation": false,
+    "physical_result_sha256": "79e29a1c57df93a42a318119f34ca60c8ed000e946c12424fcb5f879109983a9"
+  },
+  "delivery_state": {
+    "production_patch_created": false,
+    "owner_selection_changed": false,
+    "finalized_native_bank_emitted": false,
+    "hosted_attempt_dispatched": false,
+    "root_acceptance": false,
+    "credit": false,
+    "native_authority_emitted": false,
+    "current_owner_observation_at_accepted_main_8128072": false
+  },
+  "limits": [
+    "The original 883 land-cell/288-interval denominator is unchanged; 127 selected-feature contacts and 3 Redonda contacts outside the land/water masks remain excluded.",
+    "The 130-cell/103-interval physical-interpretation companion remains out of scope.",
+    "The actual per-member GSHHG result contains retained extra/missing reconstruction issues for Redonda context and Saint Peter; support is diagnostic, not legal/ownership approval.",
+    "A source-evidence preparation config and candidate native patch are prepared, but the stock source-evidence/native-authority constructors have not yet emitted authority.",
+    "The 001b1f9 owner observation is historical; a fresh owner observation against accepted main 8128072 and complete selected-bank conservation have not yet been produced.",
+    "Finalized native bank, emitted controls, hosted attempt and root science/accounting acceptance remain unperformed."
+  ],
+  "physical_result": {
+    "stage_commit": "89ade469de81ae9676ebb3564ef25c7a0d6f08bb",
+    "stage_sha256": "233bf1b48c74fbe4b9392c24272f66f65a0fbbe8b6e4b6ccfc36aff830c3556e",
+    "config_sha256": "a221ee9bc47d81b221952a24a46e5352c4e1d9709ae3bbabf59306837689d620",
+    "result_commit": "8a1ebac563c994cc1242616d563a76dad6ad079a",
+    "result_path": "coordination/engineering/atg883-source-research-20261027/physical-preparation/atg-whole-target-physical-20261027/whole-target-support.json",
+    "result_sha256": "79e29a1c57df93a42a318119f34ca60c8ed000e946c12424fcb5f879109983a9",
+    "execution_receipt_sha256": "0e62777446a28aa0d63d822776869561546901cf63b9216d38efafac3a65ef92",
+    "source_members": 8,
+    "positive_source_members": 7,
+    "redonda_context_members": 1,
+    "source_queries": 33,
+    "checked_queries": 33,
+    "issue_counts": {
+      "1273:extra_reconstruction": 1,
+      "1279:extra_reconstruction": 1,
+      "1279:missing_reconstruction": 1
+    },
+    "elapsed_seconds": 10.630292443092912,
+    "output_bytes": 221651,
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "shapely": "2.1.2",
+      "geos": "3.13.1"
+    },
+    "runtime_files": 209,
+    "input_records": 25,
+    "input_bytes": 86034164,
+    "limits": [
+      "Diagnostic source-relative GSHHG support only; no native ownership, factual approval, accepted patch, import authority or credit.",
+      "GSHHG 2.3.7 license texts conflict (LGPL v3 or later vs v3 or earlier); observation dates and shoreline/authority limits remain unresolved."
+    ]
+  }
+}
