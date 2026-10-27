@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "kind": "tkm-gubadag44-native-constructor-candidate-execution-v1",
+  "command": "env -u NODE_OPTIONS -u NODE_PATH node scripts/prepare-delivery-handoff.mjs native-authority coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/native-diagnostic-config.json coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/native-authority-001",
+  "terminal": {
+    "exit_status": 0,
+    "stderr_bytes": 0,
+    "elapsed_seconds": 7.743702593,
+    "qualified_candidate_cells": 44
+  },
+  "config_sha256": "74309ca943a3c10afdd9eb369facba6e9c274b7f50f8545df81669d3771cad79",
+  "outputs": {
+    "authority-binding.json": "2d2feae6a48cbdbe9aa0d544ea0e15e96827cfb92ab75fa36c44f5ca389ab437",
+    "constructor-result.json": "b2c6bac0757dcbdccf768ecfdd8d9084a44f6111afab02defe5ff41bce949429",
+    "original-rule-preimage.json": "d165ea599c162f63c8f5ad586b1fa8755cda5a019d5412a4821a36b26f84c657",
+    "preparation.json": "96349aa1b63bf7d33b5874c9e09532f47b94e21c234ead286a98d5bdf62d71fa"
+  },
+  "scope": {
+    "source_id": "gb:TKM:ADM2:10190150B74382957458545",
+    "owner_index": 42157,
+    "requested_cells": 44,
+    "native_diagnostic_supported": 44,
+    "native_diagnostic_held": 0,
+    "current_owner_zero_checked": false,
+    "selected_output_acceptance": false
+  },
+  "limits": [
+    "Constructor candidate only; no current-owner-zero or selected output acceptance.",
+    "Not root scientific acceptance or credit.",
+    "Original source-role and physical/hierarchy issue caveats remain."
+  ]
+}

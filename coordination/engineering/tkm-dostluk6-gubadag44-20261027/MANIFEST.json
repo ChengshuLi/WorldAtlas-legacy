@@ -10,7 +10,7 @@
     "physical_class": "land"
   },
   "files": {
-    "README.md": "973116d9097027b46a20316fcd4f4e63c065e3c57c76634f4c33a7f0ce0f1908",
+    "README.md": "3575f036b3f3577202e73a8732163e4d3a1122832aeaa84120ad391718ee9fd9",
     "center-support-v1.json": "1211ce8150eba5b6ef26f8439a7d3cd1ebb190541d8b11bcdbf7e4901c0bdec6",
     "physical-consumed-simplified-001/original-stage-inputs.json": "1770319006a28be7f7be6c28278f3f0be8fea0508293fb94188b87309f38987b",
     "physical-consumed-simplified-001/whole-target-support.json": "91dac6f69782323249b281cc73d3f06a8ae535cfb40a1aa985004e0323641923",
@@ -21,7 +21,25 @@
     "native-inputs-001/source-evidence-output-001/territorial-exclusion-provenance.json": "2d18679f1857252865daf6449170c06ed0bd938a374311843131983259850dcf",
     "native-inputs-001/source-evidence-output-001/native-patch.json": "132cb8db8350a74430937e3c9964d853f65a4a5958592925874b850f8292bfaa",
     "native-inputs-001/source-evidence-config.json": "e2d4b3d327c0ae5a0e2527e3579ccebea2765b8bd11b2cffd70f80135f326aab",
-    "native-inputs-001/source-evidence-execution.json": "9ca0f2b9849f177adf924f2b34a14f676cc2c8cfe7a5eca3ca104d13c0f1aeb5"
+    "native-inputs-001/source-evidence-execution.json": "4d1e62198fdce0a62c0e4d326377a987f4e41d63e5da95c432b4183a7a74ed1d",
+    "native-inputs-001/native-authority-execution.json": "3546433d0fb832d71f0f04fb2b7c83d877f730d4c3c7ac62362e385f03f27685",
+    "native-inputs-001/native-authority-001/authority-binding.json": "2d2feae6a48cbdbe9aa0d544ea0e15e96827cfb92ab75fa36c44f5ca389ab437",
+    "native-inputs-001/native-authority-001/constructor-result.json": "b2c6bac0757dcbdccf768ecfdd8d9084a44f6111afab02defe5ff41bce949429",
+    "native-inputs-001/native-authority-001/original-rule-preimage.json": "d165ea599c162f63c8f5ad586b1fa8755cda5a019d5412a4821a36b26f84c657",
+    "native-inputs-001/native-authority-001/preparation.json": "96349aa1b63bf7d33b5874c9e09532f47b94e21c234ead286a98d5bdf62d71fa",
+    "native-inputs-001/native-diagnostic-config.json": "74309ca943a3c10afdd9eb369facba6e9c274b7f50f8545df81669d3771cad79",
+    "native-inputs-001/native-diagnostic-001/native-diagnostic.json": "27bd3b2c3daf1fe2d3ee0dade1385252b42df84730aaa107bc9808f4823e3479",
+    "native-inputs-001/native-diagnostic-001/preparation.json": "5ebfa8f48afe111ba0075f8bc9b591fe65efab9df4a9f797c51c07bfd6446b93",
+    "native-inputs-001/native-diagnostic-execution.json": "4513001a84626da86e72b3f84761b0deaec4ff314bc54f6a26b62fd2d26b7e79",
+    "native-inputs-001/diagnostic-attempt-001/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-inputs-001/diagnostic-attempt-001/stdout.log": "0b8b2a6dfec88b0ce18b475f890c87fa07e20d11d7c8804fbbf8a9c248b77ad7",
+    "native-inputs-001/diagnostic-attempt-001/exit-status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "native-inputs-001/attempt-003/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-inputs-001/attempt-003/stdout.log": "92d83c269ed5ce93e6441945a89da217bbec30cdf0c4e1c6c5377971e14a37a4",
+    "native-inputs-001/attempt-003/exit-status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "native-inputs-001/authority-attempt-001/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-inputs-001/authority-attempt-001/stdout.log": "c12c7e15232a3f815f95acb8def86b1f5349248f8dbd421164cdaedee6cfe99f",
+    "native-inputs-001/authority-attempt-001/exit-status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
   },
-  "status": "physical center evidence complete; source evidence prepared with complete AFG/KAZ/UZB exclusions; native diagnostic pending"
+  "status": "physical and native constructor candidate prepared; no current selected-bank mutation or root acceptance"
 }
