@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "kind": "tkm-gubadag44-mary143-composition-execution-v1",
+  "status": "candidate authority composition only; no selected-bank mutation",
+  "accepted_selector": {
+    "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "path": "data/ownership-selection.json",
+    "blob": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+    "bytes": 2287,
+    "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9"
+  },
+  "groups": [
+    { "scope": "Gubadag", "owner_index": 42157, "cells": 44, "constructor_sha256": "b2c6bac0757dcbdccf768ecfdd8d9084a44f6111afab02defe5ff41bce949429" },
+    { "scope": "Mary", "owner_index": 42143, "cells": 143, "constructor_sha256": "a579c417346dce6a18a563c5aeada662c7f6686b573dce6abc600adb521c80fa" }
+  ],
+  "constructor_cells_total": 187,
+  "helper_overlap_check": "passed; two retained-rule authority components accepted by existing compose phase",
+  "composition_config": { "path": "native-inputs-003/compose-config-gubadag44-mary143-v2.json", "bytes": 3085, "sha256": "5907ae76af2cb1bc96988ef99f53bf3fab6a67a535852b104a42d73857a6ebfc" },
+  "attempts": [
+    { "path": "native-inputs-003/compose-attempt-001/", "exit_status": 1, "diagnostic": "New-only native patch differs from its issued binding; no outputs produced. Provisional config used a non-identical commit locator for the same Mary patch bytes; preserved unchanged." },
+    { "path": "native-inputs-003/compose-attempt-002/", "exit_status": 0, "diagnostic": "Supported compose completed; no resume." }
+  ],
+  "output": {
+    "registry_path": "native-inputs-003/composition-gubadag44-mary143-002/authority-registry.json",
+    "registry_bytes": 2658,
+    "registry_sha256": "c1d958d38e1c2d4ad7ca22564651479865f22253c9a2a1ffdf70e7c55cc2a8ba",
+    "preparation_sha256": "c435c747f6419dd8aecb6fe4631cc91500ed5043a74f1c91fc9fdf1ff8d897ba"
+  },
+  "limits": [
+    "This compose result is not a current-owner-zero observation for the combined groups.",
+    "No final-bank outputs, global conservation comparison, build/emitted controls, root acceptance or credit are claimed.",
+    "Finalizer inputs must be rebound after the active TGO handoff to the actual current accepted main; do not use the c61 selector as a stale finalization baseline."
+  ]
+}

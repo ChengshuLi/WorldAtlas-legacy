@@ -66,14 +66,18 @@ test('allocator CLI binds its helper Git store, never an unrelated or missing cw
     }
   }
   const helper = cliHelper(intended.repo);
+  const inheritedIdentity = 'parent-review-coordinator';
   const allocate = spawnSync(process.execPath, [helper, 'allocate', '--repo', intended.repo, '--worker', 'independent-fixture-review',
-    '--slot', 'review', '--commit', intended.head], {cwd: ambient.repo, encoding: 'utf8'});
+    '--slot', 'review', '--commit', intended.head], {cwd: ambient.repo, env: {...process.env, CODEX_THREAD_ID: inheritedIdentity}, encoding: 'utf8'});
   assert.equal(allocate.status, 0, allocate.stderr);
   const entry = JSON.parse(allocate.stdout);
   assert.equal(entry.head, intended.head);
   assert.ok(entry.path.startsWith(intended.manager.report().root + path.sep));
+  assert.ok(entry.capabilityFile);
+  assert.equal(Object.hasOwn(entry, 'token'), false);
+  assert.doesNotMatch(allocate.stdout, /\"token\"\s*:/);
   const released = JSON.parse(execFileSync(process.execPath, [helper, 'release', '--repo', intended.repo, '--worker', entry.worker,
-    '--slot', entry.slot, '--token', entry.token], {cwd: ambient.repo, encoding: 'utf8'}));
+    '--slot', entry.slot, '--capability-file', entry.capabilityFile], {cwd: ambient.repo, encoding: 'utf8'}));
   assert.equal(released.released, true);
   assert.equal(intended.git('rev-parse', released.preservedRef).trim(), intended.head);
   // A relocated executable outside a Git store must refuse, not fall back to cwd.
@@ -379,6 +383,7 @@ test('report CLI is current-worker scoped and never serializes capabilities', as
   assert.ok(report.worktrees.every(row => row.path === mine.path));
   assert.equal(result.stdout.includes(mine.token), false);
   assert.equal(result.stdout.includes(other.token), false);
+  assert.doesNotMatch(result.stdout, /\"token\"\s*:/);
   const foreign = run('other-owner');
   assert.equal(foreign.status, 1);
   assert.match(foreign.stderr, /Worker identity mismatch/);
@@ -393,6 +398,109 @@ test('report CLI is current-worker scoped and never serializes capabilities', as
   assert.deepEqual(JSON.parse(noIdentity.stdout).entries, []);
   manager.release({worker: 'other-owner', slot: 'review', token: other.token});
   manager.release({worker: 'report-owner', slot: 'review', token: mine.token});
+});
+
+test('workspace CLI allocation prints safe metadata but keeps the token private in storage', async t => {
+  const {repo, manager, head, git} = fixture(t);
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const result = spawnSync(process.execPath, [helper, 'allocate', '--repo', repo, '--worker', 'cli-allocation-owner',
+    '--slot', 'review', '--commit', head], {cwd: repo, env: {...process.env, CODEX_THREAD_ID: 'inherited-review-coordinator'}, encoding: 'utf8'});
+  assert.equal(result.status, 0, result.stderr);
+  const metadata = JSON.parse(result.stdout);
+  assert.equal(Object.hasOwn(metadata, 'token'), false);
+  assert.equal(metadata.worker, 'cli-allocation-owner');
+  assert.equal(metadata.head, head);
+  assert.ok(metadata.capabilityFile);
+  const stored = registryEntries(manager).find(entry => entry.worker === metadata.worker && entry.slot === metadata.slot);
+  assert.ok(stored?.token, 'allocation capability remains stored for guarded lifecycle operations');
+  assert.equal(fs.statSync(metadata.capabilityFile).mode & 0o777, 0o600);
+  assert.equal(result.stdout.includes(stored.token), false);
+  assert.doesNotMatch(result.stdout, /\"token\"\s*:/);
+  const released = manager.release({worker: stored.worker, slot: stored.slot, capabilityFile: metadata.capabilityFile});
+  assert.equal(released.released, true);
+  assert.equal(released.capability_file_removed, true);
+  assert.equal(git('rev-parse', released.preservedRef).trim(), head);
+  assert.deepEqual(registryEntries(manager), []);
+});
+
+test('interrupted CLI allocation resumes its preparing slot through the owner capability file', async t => {
+  const {repo, manager, head, git} = fixture(t);
+  const worker = 'cli-interrupted-owner';
+  const branch = 'engineering/cli-interrupted-owner';
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const realGit = execFileSync('which', ['git'], {encoding: 'utf8'}).trim();
+  const wrapperDir = path.join(repo, '.git', 'cli-interruption-bin');
+  fs.mkdirSync(wrapperDir);
+  const wrapper = path.join(wrapperDir, 'git');
+  fs.writeFileSync(wrapper, `#!/bin/sh\nprevious=''\nfor argument do\n  if [ "$previous" = read-tree ] && [ "$argument" = -mu ]; then\n    echo 'injected allocation materialization interruption' >&2\n    exit 73\n  fi\n  previous="$argument"\ndone\nexec ${JSON.stringify(realGit)} "$@"\n`, {mode: 0o755});
+  fs.chmodSync(wrapper, 0o755);
+  const interrupted = spawnSync(process.execPath, [helper, 'allocate', '--repo', repo, '--worker', worker,
+    '--branch', branch], {cwd: repo, encoding: 'utf8', timeout: 10000,
+    env: {...process.env, CODEX_THREAD_ID: worker, PATH: `${wrapperDir}${path.delimiter}${process.env.PATH}`}});
+  assert.equal(interrupted.status, 1, interrupted.stderr);
+  assert.match(interrupted.stderr, /injected allocation materialization interruption/);
+  assert.equal(interrupted.stdout, '');
+  assert.doesNotMatch(interrupted.stderr, /\"token\"\s*:/);
+  const [preparing] = registryEntries(manager).filter(entry => entry.worker === worker && entry.slot === 'work');
+  assert.equal(preparing.status, 'preparing');
+  assert.equal(fs.existsSync(path.join(manager.report().registry, 'lock')), false, 'the caught interruption releases the allocator lock');
+  const capabilityFile = manager.capabilityFilePath({worker, slot: 'work'});
+  assert.equal(fs.statSync(capabilityFile).mode & 0o777, 0o600);
+  const capability = fs.readFileSync(capabilityFile, 'utf8');
+  assert.ok(capability.includes(preparing.token), 'the private file is bound to the preparing reservation');
+
+  const resumed = spawnSync(process.execPath, [helper, 'resume', '--repo', repo, '--worker', worker, '--slot', 'work'], {
+    cwd: repo, encoding: 'utf8', env: {...process.env, CODEX_THREAD_ID: worker}
+  });
+  assert.equal(resumed.status, 0, resumed.stderr);
+  const metadata = JSON.parse(resumed.stdout);
+  assert.equal(Object.hasOwn(metadata, 'token'), false);
+  assert.equal(metadata.status, 'ready');
+  assert.equal(metadata.capabilityFile, capabilityFile);
+  assert.equal(resumed.stdout.includes(preparing.token), false);
+  assert.doesNotMatch(resumed.stdout, /\"token\"\s*:/);
+  assert.equal(registryEntries(manager).find(entry => entry.worker === worker).token, preparing.token);
+
+  const released = spawnSync(process.execPath, [helper, 'release', '--repo', repo, '--worker', worker,
+    '--slot', 'work', '--capability-file', capabilityFile], {cwd: repo, encoding: 'utf8'});
+  assert.equal(released.status, 0, released.stderr);
+  assert.equal(JSON.parse(released.stdout).capability_file_removed, true);
+  assert.ok(!fs.existsSync(capabilityFile));
+  assert.equal(git('rev-parse', `refs/heads/${branch}`).trim(), head);
+  assert.deepEqual(registryEntries(manager), []);
+});
+
+test('workspace CLI resume prints safe metadata while preserving the stored capability', async t => {
+  const {repo, manager, head, git} = fixture(t);
+  const worker = 'cli-resume-owner';
+  const branch = 'engineering/cli-resume-owner';
+  const entry = await manager.allocate({worker, branch});
+  const capabilityFile = manager.ensureCapabilityFile({worker, slot: 'work'});
+  execFileSync('git', ['-C', entry.path, 'read-tree', '--empty']);
+  for (const name of fs.readdirSync(entry.path)) {
+    if (name !== '.git') fs.rmSync(path.join(entry.path, name), {recursive: true, force: true});
+  }
+  const stateFile = path.join(manager.report().registry, 'state.json');
+  const state = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
+  state.entries[0].status = 'preparing';
+  fs.writeFileSync(stateFile, JSON.stringify(state, null, 2) + '\n');
+
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const result = spawnSync(process.execPath, [helper, 'resume', '--repo', repo, '--worker', worker, '--slot', 'work',
+    '--capability-file', capabilityFile], {cwd: repo, env: {...process.env, CODEX_THREAD_ID: worker}, encoding: 'utf8'});
+  assert.equal(result.status, 0, result.stderr);
+  const metadata = JSON.parse(result.stdout);
+  assert.equal(Object.hasOwn(metadata, 'token'), false);
+  assert.equal(metadata.worker, worker);
+  assert.equal(metadata.head, head);
+  assert.equal(metadata.capabilityFile, capabilityFile);
+  assert.equal(result.stdout.includes(entry.token), false);
+  assert.doesNotMatch(result.stdout, /\"token\"\s*:/);
+  assert.equal(registryEntries(manager)[0].token, entry.token);
+  assert.equal(registryEntries(manager)[0].status, 'ready');
+  const released = manager.release({worker, slot: 'work', capabilityFile});
+  assert.equal(git('rev-parse', released.preservedRef).trim(), head);
+  assert.deepEqual(registryEntries(manager), []);
 });
 
 test('disk write failure propagates and preserves interrupted allocation and other workers', async t => {
@@ -601,9 +709,12 @@ test('workspace CLI recovery and token-file release never print the capability',
   assert.equal(accepted.status, 0, accepted.stderr);
   const recovered = JSON.parse(accepted.stdout);
   assert.equal(recovered.recovered, true);
+  assert.equal(Object.hasOwn(recovered, 'token'), false);
+  assert.ok(recovered.capabilityFile, 'safe capability-file locator remains available for guarded release');
   const newToken = registryEntries(manager)[0].token;
   assert.notEqual(newToken, entry.token);
   assert.ok(!accepted.stdout.includes(newToken));
+  assert.doesNotMatch(accepted.stdout, /\"token\"\s*:/);
   const release = spawnSync(process.execPath, [helper, 'release', '--repo', repo, '--worker', worker,
     '--slot', 'work', '--capability-file', recovered.capabilityFile], {cwd: repo, encoding: 'utf8'});
   assert.equal(release.status, 0, release.stderr);
@@ -808,14 +919,15 @@ test('CLI keeps stdout as one allocation JSON object and presents exact pinned A
   });
   assert.equal(result.status, 0, result.stderr);
   const entry = JSON.parse(result.stdout);
-  assert.equal(Object.keys(entry).sort().join(','), 'branch,createdAt,head,include,path,profile,reservation,slot,status,token,worker');
+  assert.equal(Object.keys(entry).sort().join(','), 'branch,capabilityFile,createdAt,head,include,path,profile,reservation,slot,status,worker');
+  assert.doesNotMatch(result.stdout, /\"token\"\s*:/);
   const agents = git('show', `${entry.head}:AGENTS.md`);
   assert.match(result.stderr, new RegExp(`Verified current-main startup instructions \\(${entry.head}\\)`));
   assert.match(result.stderr, /AGENTS\.md Git blob [a-f0-9]{40}; SHA-256 [a-f0-9]{64}/);
   assert.match(result.stderr, /Domain guides: docs\/DEVELOPMENT\.md/);
   assert.ok(result.stderr.includes(agents), 'stderr presents the exact immutable instruction body');
   assert.doesNotMatch(result.stdout, /Verified current-main startup instructions/);
-  manager.release({worker: entry.worker, token: entry.token});
+  manager.release({worker: entry.worker, capabilityFile: entry.capabilityFile});
 });
 
 test('actual scripts-directory CLI reads root AGENTS from freshly fetched main and validates its exact blob', async t => {
@@ -857,7 +969,7 @@ test('actual scripts-directory CLI reads root AGENTS from freshly fetched main a
   assert.equal(fs.readFileSync(path.join(entry.path, 'AGENTS.md'), 'utf8'), latestAgents);
 
   const manager = workspaceManager(repo);
-  manager.release({worker: entry.worker, token: entry.token});
+  manager.release({worker: entry.worker, capabilityFile: entry.capabilityFile});
 });
 
 test('missing fetched-main AGENTS fails before reservation, branch or worktree creation', async t => {
@@ -1739,7 +1851,7 @@ test('documented cold bootstrap allocates from a linked partial clone with exact
   for (const [name, bytes] of before.files) assert.deepEqual(fs.readFileSync(path.join(primary,name)), bytes);
   assert.deepEqual(fs.readFileSync(primaryFetchHead), before.fetchHead, 'common metadata refresh leaves linked-primary FETCH_HEAD untouched');
   assert.ok(!fs.readdirSync(path.join(repo, '.git')).some(name => name.startsWith('worldatlas-helper-')));
-  manager.release({worker: entry.worker, token: entry.token});
+  manager.release({worker: entry.worker, capabilityFile: entry.capabilityFile});
   assert.deepEqual(registryEntries(manager), []);
 });
 
