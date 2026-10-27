@@ -1363,7 +1363,7 @@ export function versionedReleaseFootprintDigest(baseReference,features,hashValue
     components:[...components.values()].sort(compareRepairComponents)});
 }
 
-export function mergeUnassignedNativeIntervals(base,additions,{owners,allowed}={}) {
+function planUnassignedNativeIntervals(base,additions,{owners,allowed}={}) {
   require(base?.version===2&&base.method==='native-linear-evenodd-first-owner-v1'&&base.size===262166&&base.coordinateBits===19
     &&base.rows instanceof Uint32Array&&base.rows.length===base.size*2&&base.runs instanceof Uint32Array&&base.runs.length%2===0,
     'Native interval merge requires complete ownership words');
@@ -1406,16 +1406,39 @@ export function mergeUnassignedNativeIntervals(base,additions,{owners,allowed}={
   }
   const count=base.runs.length/2+[...replacements].reduce((n,[y,runs])=>n+runs.length/2-base.rows[y*2+1],0);
   require(Number.isSafeInteger(count)&&count>=0,'Invalid native additive output count');
-  const rows=new Uint32Array(base.rows.length),runs=new Uint32Array(count*2);let cursor=0;
+  const rows=new Uint32Array(base.rows.length);let cursor=0;
   for(let y=0;y<base.size;y++) {
     const offset=base.rows[y*2],length=base.rows[y*2+1];
     require(offset===(y?base.rows[(y-1)*2]+base.rows[(y-1)*2+1]:0)&&offset+length<=base.runs.length/2,'Incomplete/unreferenced base ownership');
     rows[y*2]=cursor;
-    if(replacements.has(y)) {
-      const replacement=replacements.get(y);rows[y*2+1]=replacement.length/2;
-      runs.set(replacement,cursor*2);cursor+=replacement.length/2;
-    }else{rows[y*2+1]=length;runs.set(base.runs.subarray(offset*2,(offset+length)*2),cursor*2);cursor+=length;}
+    const replacement=replacements.get(y),outputLength=replacement?replacement.length/2:length;
+    rows[y*2+1]=outputLength;cursor+=outputLength;
   }
   require(base.rows.at(-2)+base.rows.at(-1)===base.runs.length/2&&cursor===count,'Unreferenced native base/output runs');
-  return {rows,runs,addedCells};
+  function* runSegments(){
+    for(let y=0;y<base.size;y++){
+      const offset=base.rows[y*2],length=base.rows[y*2+1],replacement=replacements.get(y);
+      const words=replacement??base.runs.subarray(offset*2,(offset+length)*2);
+      if(words.length)yield words;
+    }
+  }
+  return {rows,runWords:count*2,addedCells,runSegments};
+}
+
+// Stream the complete merged run word sequence without allocating a second
+// full-grid Uint32Array. The accepted base and every patch operand are still
+// fully validated; consumers must exhaust and count the segment iterator.
+export function mergeUnassignedNativeIntervalStream(base,additions,{owners,allowed}={}) {
+  return planUnassignedNativeIntervals(base,additions,{owners,allowed});
+}
+
+// Compatibility API for callers that explicitly require materialized output.
+export function mergeUnassignedNativeIntervals(base,additions,{owners,allowed}={}) {
+  const planned=planUnassignedNativeIntervals(base,additions,{owners,allowed});
+  const runs=new Uint32Array(planned.runWords);let offset=0;
+  for(const words of planned.runSegments()){
+    runs.set(words,offset);offset+=words.length;
+  }
+  require(offset===runs.length,'Merged native run stream length differs');
+  return {rows:planned.rows,runs,addedCells:planned.addedCells};
 }
