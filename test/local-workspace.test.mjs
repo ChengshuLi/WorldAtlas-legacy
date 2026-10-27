@@ -404,6 +404,159 @@ test('large sparse indexes release only clean owned work and preserve recovery',
   assert.ok(!fs.existsSync(entry.path));
 });
 
+test('lost-capability recovery rotates only the exact clean author slot and releases through its private file', async t => {
+  const {git, manager, head} = fixture(t);
+  const worker = 'recovery-author';
+  const branch = 'engineering/recovery-author';
+  const entry = await manager.allocate({worker, branch});
+  const oldToken = entry.token;
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+
+  const result = manager.recoverLostCapability({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: branch, expectedHead: head});
+  assert.deepEqual(Object.keys(result).sort(), ['branch','capabilityFile','head','path','previousTokenInvalidated','recovered','slot','worker'].sort());
+  assert.equal(result.recovered, true);
+  assert.equal(result.previousTokenInvalidated, true);
+  assert.equal(result.path, entry.path);
+  assert.equal(result.branch, branch);
+  assert.equal(result.head, head);
+  assert.ok(!JSON.stringify(result).includes(oldToken));
+  assert.ok(fs.statSync(path.dirname(result.capabilityFile)).mode & 0o700);
+  assert.equal(fs.statSync(path.dirname(result.capabilityFile)).mode & 0o077, 0);
+  assert.equal(fs.statSync(result.capabilityFile).mode & 0o777, 0o600);
+  const active = manager.report().entries[0];
+  assert.notEqual(active.token, oldToken);
+  assert.throws(() => manager.release({worker, token: oldToken}), /ownership/);
+  assert.throws(() => manager.recoverLostCapability({worker, expectedPath: entry.path,
+    expectedBranch: branch, expectedHead: head}), /capability already exists/);
+  assert.equal(fs.readFileSync(path.join(entry.path, 'README.md'), 'utf8'), 'root');
+  assert.equal(git('rev-parse', 'HEAD').trim(), head);
+  const released = manager.release({worker, slot: 'work', capabilityFile: result.capabilityFile});
+  assert.equal(released.released, true);
+  assert.equal(released.capability_file_removed, true);
+  assert.ok(!fs.existsSync(result.capabilityFile));
+  assert.equal(git('rev-parse', released.preservedRef).trim(), head);
+  assert.deepEqual(manager.report().entries, []);
+  assert.ok(!fs.existsSync(entry.path));
+});
+
+test('lost-capability recovery fails closed for identity, binding, dirty state and unknown private files', async t => {
+  const {manager, head} = fixture(t);
+  const worker = 'recovery-guarded';
+  const branch = 'engineering/recovery-guarded';
+  const entry = await manager.allocate({worker, branch});
+  const oldToken = entry.token;
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  const request = overrides => manager.recoverLostCapability({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: branch, expectedHead: head, ...overrides});
+
+  process.env.CODEX_THREAD_ID = 'different-author';
+  assert.throws(() => request({}), /exact CODEX_THREAD_ID/);
+  process.env.CODEX_THREAD_ID = worker;
+  assert.throws(() => request({expectedPath: `${entry.path}-other`}), /exact existing owner work slot/);
+  assert.throws(() => request({expectedBranch: 'engineering/other'}), /exact existing owner work slot/);
+  assert.throws(() => request({expectedHead: '0'.repeat(40)}), /branch, HEAD or registration changed/);
+  assert.equal(manager.report().entries[0].token, oldToken);
+
+  const gitDirectory = execFileSync('git', ['-C', entry.path, 'rev-parse', '--absolute-git-dir'], {encoding: 'utf8'}).trim();
+  const indexLock = path.join(gitDirectory, 'index.lock');
+  fs.writeFileSync(indexLock, 'preserve active lock');
+  assert.throws(() => request({}), /Git writer lock exists/);
+  assert.equal(fs.readFileSync(indexLock, 'utf8'), 'preserve active lock');
+  fs.unlinkSync(indexLock);
+
+  execFileSync('git', ['-C', entry.path, 'update-index', '--assume-unchanged', 'README.md']);
+  assert.throws(() => request({}), /Index trust flags can hide edits/);
+  execFileSync('git', ['-C', entry.path, 'update-index', '--no-assume-unchanged', 'README.md']);
+  assert.equal(manager.report().entries[0].token, oldToken);
+
+  fs.writeFileSync(path.join(entry.path, 'untracked.txt'), 'keep me');
+  assert.throws(() => request({}), /dirty or contains ignored/);
+  assert.equal(fs.readFileSync(path.join(entry.path, 'untracked.txt'), 'utf8'), 'keep me');
+  assert.equal(manager.report().entries[0].token, oldToken);
+  fs.unlinkSync(path.join(entry.path, 'untracked.txt'));
+
+  const capabilityDirectory = path.join(manager.report().registry, 'capabilities');
+  fs.mkdirSync(capabilityDirectory, {mode: 0o700});
+  const capabilityPath = path.join(capabilityDirectory, `${createHash('sha256').update(worker).digest('hex')}-work.json`);
+  const unknown = Buffer.from('preserve unknown file\n');
+  fs.writeFileSync(capabilityPath, unknown, {mode: 0o600});
+  assert.throws(() => request({}), /malformed/);
+  assert.deepEqual(fs.readFileSync(capabilityPath), unknown);
+  fs.unlinkSync(capabilityPath);
+  const capabilityTarget = `${capabilityPath}.target`;
+  fs.writeFileSync(capabilityTarget, unknown, {mode: 0o600});
+  fs.symlinkSync(capabilityTarget, capabilityPath);
+  assert.throws(() => request({}), /Symlink directory refused/);
+  assert.deepEqual(fs.readFileSync(capabilityTarget), unknown);
+  assert.equal(manager.report().entries[0].token, oldToken);
+});
+
+test('interrupted private-token recovery resumes only its bound pending replacement', async t => {
+  const {manager, head} = fixture(t);
+  const worker = 'recovery-interruption';
+  const branch = 'engineering/recovery-interruption';
+  const entry = await manager.allocate({worker, branch});
+  const oldToken = entry.token;
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  const recovery = {worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head};
+  const stateFile = path.join(manager.report().registry, 'state.json');
+  const originalRename = fs.renameSync;
+  t.mock.method(fs, 'renameSync', (source, target) => {
+    if (target === stateFile) throw Object.assign(new Error('injected registry persistence failure'), {code: 'EIO'});
+    return originalRename(source, target);
+  });
+  assert.throws(() => manager.recoverLostCapability(recovery), {code: 'EIO'});
+  assert.equal(manager.report().entries[0].token, oldToken);
+  const capabilityFile = path.join(manager.report().registry, 'capabilities', `${createHash('sha256').update(worker).digest('hex')}-work.json`);
+  const pending = JSON.parse(fs.readFileSync(capabilityFile, 'utf8'));
+  assert.notEqual(pending.token, oldToken);
+  assert.equal(pending.observed_head, head);
+  assert.equal(fs.readdirSync(manager.report().registry).some(name => name.endsWith('.tmp')), false);
+  t.mock.restoreAll();
+
+  const result = manager.recoverLostCapability(recovery);
+  assert.equal(result.capabilityFile, capabilityFile);
+  assert.equal(manager.report().entries[0].token, pending.token);
+  assert.throws(() => manager.release({worker, token: oldToken}), /ownership/);
+});
+
+test('workspace CLI recovery and token-file release never print the capability', async t => {
+  const {repo, manager, head} = fixture(t);
+  const worker = 'recovery-cli-owner';
+  const branch = 'engineering/recovery-cli-owner';
+  const entry = await manager.allocate({worker, branch});
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const args = ['recover-lost-capability', '--repo', repo, '--worker', worker, '--slot', 'work',
+    '--expected-path', entry.path, '--expected-branch', branch, '--expected-head', head];
+  const denied = spawnSync(process.execPath, [helper, ...args], {cwd: repo, encoding: 'utf8',
+    env: {...process.env, CODEX_THREAD_ID: 'other-worker'}});
+  assert.notEqual(denied.status, 0);
+  assert.equal(denied.stdout, '');
+  assert.match(denied.stderr, /exact CODEX_THREAD_ID/);
+  assert.equal(manager.report().entries[0].token, entry.token);
+
+  const accepted = spawnSync(process.execPath, [helper, ...args], {cwd: repo, encoding: 'utf8',
+    env: {...process.env, CODEX_THREAD_ID: worker}});
+  assert.equal(accepted.status, 0, accepted.stderr);
+  const recovered = JSON.parse(accepted.stdout);
+  assert.equal(recovered.recovered, true);
+  const newToken = manager.report().entries[0].token;
+  assert.notEqual(newToken, entry.token);
+  assert.ok(!accepted.stdout.includes(newToken));
+  const release = spawnSync(process.execPath, [helper, 'release', '--repo', repo, '--worker', worker,
+    '--slot', 'work', '--capability-file', recovered.capabilityFile], {cwd: repo, encoding: 'utf8'});
+  assert.equal(release.status, 0, release.stderr);
+  assert.equal(JSON.parse(release.stdout).capability_file_removed, true);
+  assert.ok(!release.stdout.includes(newToken));
+  assert.deepEqual(manager.report().entries, []);
+});
+
 test('invalid scopes and identities are rejected', async t => {
   const {manager} = fixture(t);
   for (const include of ['data/../outside', '/tmp', 'data/*', 'data//two', 'data']) {
