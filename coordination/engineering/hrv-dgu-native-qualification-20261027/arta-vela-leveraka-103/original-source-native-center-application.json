@@ -1,0 +1,3001 @@
+{
+  "version": 1,
+  "kind": "HRV exact Arta Vela + Leveraka source-relative native-center application against complete same-level family; no coordinates emitted",
+  "status": "technical source-center diagnostic only; no physical/native-owner authorization, assignment, candidate patch, acceptance or credit",
+  "generated_utc": "2026-10-27T17:58:44.164Z",
+  "scope": {
+    "original_package": "gb-HRV-ADM2--repair-evaluation",
+    "original_total": 35738,
+    "already_accepted_excluded": 32928,
+    "remaining_outside_zadar": 2733,
+    "excluded_zadar77": true,
+    "excluded_six_adverse": true,
+    "count": 103,
+    "tuple_encoding": "JSON.stringify(sorted [[owner_index,y,x],...]) with no trailing LF",
+    "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da",
+    "owners": [
+      {
+        "owner": 21978,
+        "id": "gb:HRV:ADM2:41942358B19390085170765",
+        "name": "Otok Arta Vela",
+        "original_source_family": "HRV ADM2",
+        "family_feature_ordinal": 22,
+        "source_feature_index": 35419,
+        "count": 53
+      },
+      {
+        "owner": 22360,
+        "id": "gb:HRV:ADM2:41942358B80055452851488",
+        "name": "Otok Leveraka",
+        "original_source_family": "HRV ADM2",
+        "family_feature_ordinal": 20,
+        "source_feature_index": 35417,
+        "count": 50
+      }
+    ]
+  },
+  "inputs": {
+    "original_source": {
+      "commit": "23318dd9d70680495138297b9cc1a7533a466200",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-HRV-ADM2-000.bin.gz",
+      "compressed_bytes": 653059,
+      "compressed_sha256": "fc283b5a556235296978e11d88ed00bbd1d8fdf0955863656bceaa93179503da",
+      "decoded_bytes": 2196969,
+      "decoded_sha256": "bfcda6087b26678f026c2a1ac5c4fe903bd67ad24a7c9761519f7929b3915d16",
+      "complete_source_feature_count": 560,
+      "feature_level_fields": [
+        "shapeName",
+        "shapeID",
+        "shapeGroup",
+        "shapeType"
+      ]
+    },
+    "original_application": {
+      "path": "/workspace/scratch/127991fc8b8e/.hrv-private/HRV-DGU-35738-native-application-20261026.json",
+      "bytes": 15844270,
+      "sha256": "40c4db1199d60ba9163a0bdcf49449d7e604259e1817ca1344964379553052bf",
+      "original_application_sha256": "f569676a316639857f0bf01d5f37728bfe8e02c0eab68e93858e70add1b2af2d"
+    },
+    "native_method": {
+      "path": "src/native-grid.js",
+      "commit": "23318dd9d70680495138297b9cc1a7533a466200",
+      "sha256": "6e3dc58ba290eb04a0781289ffda064ce3299b089a9c69ffacda977064172dc9",
+      "algorithm": "native-linear-evenodd-first-owner-v1"
+    },
+    "native_latitudes": {
+      "path": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/94babef283a50308ceb3d17503b0c65e1d097d543ce812bb57f030aab9673307/work/test/fixtures/native-row-latitudes.f64le.gz",
+      "compressed_bytes": 1851757,
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"
+    }
+  },
+  "results": {
+    "counts": {
+      "inside": 103,
+      "outside": 0,
+      "boundary": 0,
+      "with_competing_interior": 0,
+      "with_any_boundary_tie": 0
+    },
+    "by_owner": {
+      "Otok Arta Vela": {
+        "count": 53,
+        "tuple_sha256": "c245731c2a14b0998949ef97eeec26241e80c853d494722733e39c1fba1953af",
+        "center": {
+          "inside": 53,
+          "outside": 0
+        },
+        "any_competing_interior": 0,
+        "boundary": 0
+      },
+      "Otok Leveraka": {
+        "count": 50,
+        "tuple_sha256": "7cbc2ba75229bb26496424bcadac9d547940a8228be99d4665d31ce1edbc1946",
+        "center": {
+          "inside": 50,
+          "outside": 0
+        },
+        "any_competing_interior": 0,
+        "boundary": 0
+      }
+    },
+    "keys": [
+      {
+        "key": [
+          21978,
+          95466,
+          142395
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95466,
+          142398
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95467,
+          142395
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95467,
+          142396
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95468,
+          142395
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95468,
+          142396
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95469,
+          142395
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95469,
+          142396
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95469,
+          142397
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95470,
+          142396
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95470,
+          142397
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95471,
+          142397
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95471,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95472,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95472,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95473,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95473,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95473,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95474,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95474,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95474,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95474,
+          142407
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95475,
+          142403
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95475,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95475,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95475,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95475,
+          142407
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95476,
+          142402
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95476,
+          142403
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95476,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95476,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95476,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95476,
+          142407
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95477,
+          142401
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95477,
+          142402
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95477,
+          142403
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95477,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95477,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95477,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95477,
+          142407
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95478,
+          142401
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95478,
+          142402
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95478,
+          142403
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95478,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95478,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95478,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95478,
+          142407
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95479,
+          142403
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95479,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95479,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95479,
+          142406
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95480,
+          142404
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          21978,
+          95480,
+          142405
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B19390085170765"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+            "family_index": 147,
+            "ordinal": 22,
+            "source_index": 35419
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95504,
+          142188
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95505,
+          142193
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95506,
+          142193
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95506,
+          142194
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95506,
+          142195
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95507,
+          142189
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95507,
+          142194
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95507,
+          142195
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95507,
+          142196
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95507,
+          142197
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95508,
+          142189
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95508,
+          142194
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95508,
+          142195
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95508,
+          142196
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95508,
+          142197
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95508,
+          142198
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142189
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142190
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142191
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142193
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142194
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142195
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142196
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142197
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95509,
+          142198
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142189
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142190
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142191
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142192
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142193
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142194
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142195
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142196
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142197
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95510,
+          142198
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95511,
+          142190
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95511,
+          142191
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95511,
+          142192
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95511,
+          142194
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95511,
+          142195
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95511,
+          142196
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95511,
+          142197
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95512,
+          142190
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95512,
+          142191
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95512,
+          142192
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95513,
+          142190
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95513,
+          142191
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95513,
+          142192
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95514,
+          142190
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      },
+      {
+        "key": [
+          22360,
+          95514,
+          142191
+        ],
+        "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+        "target_center": "inside",
+        "all_same_level_interior_source_ids": [
+          "gb:HRV:ADM2:41942358B80055452851488"
+        ],
+        "all_same_level_boundary_source_ids": [],
+        "original_source_contacts": [
+          {
+            "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+            "family_index": 146,
+            "ordinal": 18,
+            "source_index": 35394
+          },
+          {
+            "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+            "family_index": 147,
+            "ordinal": 20,
+            "source_index": 35417
+          }
+        ],
+        "original_physical_mask_label": "land"
+      }
+    ]
+  },
+  "primary_source_role_context": {
+    "official_act_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2018_12_116_2287.html",
+    "source_read": "2018 Islands Act list classifies ARTA VELA as otok, lists area 1,279,995 m² and Općina Murter-Kornati; it separately lists LEVRNAKA (1,833,883 m², Murter-Kornati / Kornati National Park), not the exact source spelling LEVERAKA.",
+    "interpretation": "The Act supports a geographic-island interpretation for Arta Vela and a possible spelling/identity lead for Leveraka, but does not bind the original 2021 source geometries to the Act polygons or establish that “Leveraka” is the listed “Levrnaka.” It provides island and municipality context, not a current boundary crosswalk or source-feature lineage."
+  },
+  "limits": [
+    "Complete 560-feature same-level original HRV ADM2 source family was used for direct source-center and competing-source-center membership. This diagnostic does not evaluate ADM1 family features, physical support, complete-cell support, issue-mask contact, current selected owner, source assignment or rights beyond recorded source metadata.",
+    "Original DGU membership is retained separately as comparator only; 97 of these keys are in other same-county DGU units and six have no DGU unit.",
+    "All source IDs/ordinals and original contact incidence records are preserved per key; all 103 original physical labels are land, no HUN/SVN contacts.",
+    "No source-role assumption follows solely from the feature string or statute; no legal boundary adjudication or modern certificate requirement is asserted."
+  ]
+}
