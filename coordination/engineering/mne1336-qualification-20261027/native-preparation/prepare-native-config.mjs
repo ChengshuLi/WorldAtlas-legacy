@@ -130,7 +130,8 @@ const sourceEvidence = {version:1,kind:'source-target-native-evidence-v1',catalo
   // The selector's v2 native manifest binds this exact original identity/parent
   // context object. Pass the same pin under the consumer's required owner_roster
   // role rather than substituting a newly synthesized owner list.
-  owner_roster:pin('913db0624b8aa79b188ff17a7f5c4ae0c0f63965','data/canonical-grid/bounds.json.gz')};
+  owner_roster:{...pin('913db0624b8aa79b188ff17a7f5c4ae0c0f63965','data/canonical-grid/bounds.json.gz'),
+    decoded_bytes:11096191,decoded_sha256:'a8086008b7a072dd86483720a2a166785229753422769dbbe0749497d870f428'}};
 const config = {version:1,selector:{commit:baseline,path:'data/ownership-selection.json'},source_evidence:sourceEvidence,
   compact_territorial_exclusions:true,territorial_exclusion_families:['gb:ALB:ADM1']};
 const account = {version:1,kind:'mne1336-exact-native-diagnostic-preparation',baseline,stage_commit:stageCommit,
