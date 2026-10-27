@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "phase": "resume-preflight",
+  "timestamp_utc": "2026-10-27T04:55:08.811873+00:00",
+  "head": "4cefd4192f7394f0cca95b1443306da39756e7de",
+  "base": "4828b25d3499d131a477654931156505889e3e35",
+  "config": {
+    "path": "coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-002/finalize-config-corrected.json",
+    "bytes": 610,
+    "sha256": "95355f3ee5a863d116f613dcf8f0b6b69a235f4babfae04e6065f0bfa916dd5e"
+  },
+  "destination": {
+    "path": "coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-002/final-bank-002",
+    "files": [
+      "ownership-selection.json",
+      "package-inputs.json",
+      "preparation.json",
+      "selected-delivery-expectations.json",
+      "startup-ownership.json"
+    ],
+    "preparation_sha256": "f9aa4f99ba607b2c26d6d99542c388d53935c2fbceb37fcfc2ff396f35a2d5c5",
+    "binding": {
+      "config_sha256": "95355f3ee5a863d116f613dcf8f0b6b69a235f4babfae04e6065f0bfa916dd5e",
+      "package_inputs": {
+        "bytes": 38421,
+        "commit": "4828b25d3499d131a477654931156505889e3e35",
+        "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "mode": "100644",
+        "path": ".github/package-inputs.json",
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "phase": "finalize",
+      "selector": {
+        "bytes": 2287,
+        "commit": "4828b25d3499d131a477654931156505889e3e35",
+        "git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+        "mode": "100644",
+        "path": "data/ownership-selection.json",
+        "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9"
+      }
+    },
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2287,
+        "sha256": "70cf42853a795c9c2d2729b9013ada0c8e036aa6807737d64fd318ba8ce6c713"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "586ce05f70738f5946eac3b2cd4f017dcdb82471369acf5dde3776fdc4782cdd"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "808a263ef7ef84c0005b53ee3b7440011b05ba70b6a896701596466dce74e031"
+      }
+    }
+  },
+  "retirement": {
+    "path": "data/canonical-grid/current-startup/geography/effective-context-f706b0e87cd0558b571ce8cc57d1cc4027645878861f81ce9db5b023c253b6b0.json.gz",
+    "raw_index_hex": "53203130303634342039653331313539333635336534366537643238623263346665386539323637616136373761653932203009646174612f63616e6f6e6963616c2d677269642f63757272656e742d737461727475702f67656f6772617068792f6566666563746976652d636f6e746578742d663730366230653837636430353538623537316365386363353764316363343032373634353837383836316638316365396462356230323363323533623662302e6a736f6e2e677a00",
+    "raw_index_utf8": "S 100644 9e311593653e46e7d28b2c4fe8e9267aa677ae92 0\tdata/canonical-grid/current-startup/geography/effective-context-f706b0e87cd0558b571ce8cc57d1cc4027645878861f81ce9db5b023c253b6b0.json.gz\u0000",
+    "base_tree_hex": "31303036343420626c6f62203965333131353933363533653436653764323862326334666538653932363761613637376165393209646174612f63616e6f6e6963616c2d677269642f63757272656e742d737461727475702f67656f6772617068792f6566666563746976652d636f6e746578742d663730366230653837636430353538623537316365386363353764316363343032373634353837383836316638316365396462356230323363323533623662302e6a736f6e2e677a00",
+    "head_tree_hex": "31303036343420626c6f62203965333131353933363533653436653764323862326334666538653932363761613637376165393209646174612f63616e6f6e6963616c2d677269642f63757272656e742d737461727475702f67656f6772617068792f6566666563746976652d636f6e746578742d663730366230653837636430353538623537316365386363353764316363343032373634353837383836316638316365396462356230323363323533623662302e6a736f6e2e677a00",
+    "worktree_file_present": false
+  },
+  "git": {
+    "index_path": "/workspace/scratch/127991fc8b8e/worldatlas-primary/.git/worktrees/work12/index",
+    "index_sha256": "b6a711eba476e9acc26df2db320a54c9500dd9c365305904c47de270311163fd",
+    "sparse_path": "/workspace/scratch/127991fc8b8e/worldatlas-primary/.git/worktrees/work12/info/sparse-checkout",
+    "sparse_sha256": "d824cf8eaa0e6018ded2e76f7b07a5238fb3c9519ad6b4d147ed687bf2bdfc6d"
+  },
+  "prior_attempt": {
+    "exit": "1",
+    "stderr": "Final-bank retirement index changed before adoption: data/canonical-grid/current-startup/geography/effective-context-f706b0e87cd0558b571ce8cc57d1cc4027645878861f81ce9db5b023c253b6b0.json.gz\n"
+  }
+}
