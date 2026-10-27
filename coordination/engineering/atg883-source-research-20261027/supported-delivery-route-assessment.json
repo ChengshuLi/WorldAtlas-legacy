@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "atg883-supported-delivery-route-assessment-v1",
-  "status": "source-relative-candidate-with-stock-physical-result; native-authority-and-current-bank-validation-pending",
+  "status": "source-target-native-constructor-qualified-883-candidate; accepted-main-812-owner-observed-zero; composition-and-final-bank-conservation-pending",
   "package_id": "gb-ATG-ADM1--repair-evaluation",
   "original_denominator": {
     "land_cells": 883,
@@ -28,7 +28,12 @@
     "candidate_sha256": "51eee386d904a572ef2b71c31dc534fcab5d1a48da4790add2c988b5b15a428a",
     "physical_native_witness_sha256": "dc47e2cb1f44190a2e9c76bc168096e2874752ed754ac99caed41f6da47fb2c0",
     "current_block_virtual_addition_sha256": "13e6d1e765ce1d219fb6db46a872bc73014573e59638be3d3fc80dc17593649e",
-    "current_owner_observation_sha256": "308460f462bb9855734f2e2c4624dd46df836d5a57408c4ea070ff98111f58e1"
+    "current_owner_observation_sha256": "308460f462bb9855734f2e2c4624dd46df836d5a57408c4ea070ff98111f58e1",
+    "source_evidence_config_sha256": "9f65792520859adf6e4e1edbf3f74b412e34f14adc996fec3fce639103a8d1de",
+    "source_evidence_output_sha256": "483fc361c6de27450124946a55ed06be41dea7102067b57de38df7d2942a2051",
+    "native_authority_config_sha256": "7f5f4d93d6100db82dbb6692e5ec2bdf07062dc0a77d6a9379299bbf3e522e21",
+    "constructor_result_sha256": "8fa31c5fcdf5804cd7a57e7335bfd380c46303c6aa1829a63dedd7d3b4a338ad",
+    "current_owner_observation_8128072_sha256": "f2b26ec5732af6a45b95c7a30dc51fd2dfd94a0852ab4addcedfb528cd23207d"
   },
   "route_checks": [
     {
@@ -55,9 +60,15 @@
       ],
       "physical_record_available_in_packet": true,
       "candidate_block_masks_are_whole_target_support": false,
-      "qualification_or_authority_emitted": false,
+      "qualification_or_authority_emitted": true,
       "physical_record": "physical_result.result_path",
-      "physical_run_verified_by": "physical-preparation/verify-atg-physical-result.mjs"
+      "physical_run_verified_by": "physical-preparation/verify-atg-physical-result.mjs",
+      "candidate_qualified_cells": 883,
+      "constructor_result_path": "native-preparation/native-authority-812/constructor-result.json",
+      "constructor_result_sha256": "8fa31c5fcdf5804cd7a57e7335bfd380c46303c6aa1829a63dedd7d3b4a338ad",
+      "registered_or_accepted_authority": false,
+      "actual_current_owner_zero_or_final_output_acceptance": false,
+      "candidate_ledger_components": 1
     },
     {
       "route": "scripts/native-ownership/require-verified-selection.mjs",
@@ -85,14 +96,16 @@
     "root_acceptance": false,
     "credit": false,
     "native_authority_emitted": false,
-    "current_owner_observation_at_accepted_main_8128072": false
+    "current_owner_observation_at_accepted_main_8128072": true,
+    "source_target_native_constructor_emitted": true
   },
   "limits": [
     "The original 883 land-cell/288-interval denominator is unchanged; 127 selected-feature contacts and 3 Redonda contacts outside the land/water masks remain excluded.",
     "The 130-cell/103-interval physical-interpretation companion remains out of scope.",
     "The actual per-member GSHHG result contains retained extra/missing reconstruction issues for Redonda context and Saint Peter; support is diagnostic, not legal/ownership approval.",
-    "A source-evidence preparation config and candidate native patch are prepared, but the stock source-evidence/native-authority constructors have not yet emitted authority.",
-    "The 001b1f9 owner observation is historical; a fresh owner observation against accepted main 8128072 and complete selected-bank conservation have not yet been produced.",
+    "Stock source-evidence preparation and native-authority constructor outputs now bind seven positive source members to one accepted atlas:territory:ATG target; the constructor qualified an 883-cell candidate only.",
+    "A fresh literal observation at accepted data main 8128072 reports effective selected owner zero on all 883 keys, with base/additive/overlap fields null; it is not qualification or full selected-bank conservation.",
+    "Authority registry composition, complete selected-bank before/after conservation, finalization/emitted controls, hosted attempt and root science/accounting acceptance remain unperformed.",
     "Finalized native bank, emitted controls, hosted attempt and root science/accounting acceptance remain unperformed."
   ],
   "physical_result": {
@@ -128,5 +141,45 @@
       "Diagnostic source-relative GSHHG support only; no native ownership, factual approval, accepted patch, import authority or credit.",
       "GSHHG 2.3.7 license texts conflict (LGPL v3 or later vs v3 or earlier); observation dates and shoreline/authority limits remain unresolved."
     ]
+  },
+  "source_evidence_preparation": {
+    "config_path": "native-preparation/source-evidence-config.json",
+    "config_sha256": "9f65792520859adf6e4e1edbf3f74b412e34f14adc996fec3fce639103a8d1de",
+    "output_commit": "e4ffc840db65f83a885c8ca80ae11cb9d47da749",
+    "output_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/source-evidence-812/source-evidence.json",
+    "output_sha256": "483fc361c6de27450124946a55ed06be41dea7102067b57de38df7d2942a2051",
+    "positive_members": 7,
+    "context_only_redonda": 1,
+    "canonical_target": "atlas:territory:ATG",
+    "owner_index": 7110,
+    "accepted_main_pin": "81280722133858cbb26249210fed17b031d11d3d",
+    "source_evidence_only_not_acceptance": true
+  },
+  "native_authority_candidate": {
+    "config_sha256": "7f5f4d93d6100db82dbb6692e5ec2bdf07062dc0a77d6a9379299bbf3e522e21",
+    "output_commit": "a6ad4378b20ea2f66669c79d99ae8e364986a719",
+    "output_directory": "coordination/engineering/atg883-source-research-20261027/native-preparation/native-authority-812",
+    "constructor_result_sha256": "8fa31c5fcdf5804cd7a57e7335bfd380c46303c6aa1829a63dedd7d3b4a338ad",
+    "authority_binding_sha256": "0842f6d53604c84681e62d6053fd06d07174388819fe6ff5c6aee2e961299f53",
+    "ledger_components": 1,
+    "target_id": "atlas:territory:ATG",
+    "target_owner_index": 7110,
+    "candidate_cells": 883,
+    "candidate_rows": 175,
+    "physical_context_hits": 0,
+    "split_source_competitors": 0,
+    "territorial_contacts": 0,
+    "not_registered_or_accepted_authority": true
+  },
+  "current_owner_observation_8128072": {
+    "path": "coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-8128072.json",
+    "sha256": "f2b26ec5732af6a45b95c7a30dc51fd2dfd94a0852ab4addcedfb528cd23207d",
+    "data_commit": "81280722133858cbb26249210fed17b031d11d3d",
+    "code_commit": "a6ad4378b20ea2f66669c79d99ae8e364986a719",
+    "queries": 883,
+    "effective_owner_zero": 883,
+    "base_additive_overlap_fields_null": true,
+    "full_selected_bank_conservation": false,
+    "scientific_qualification": false
   }
 }
