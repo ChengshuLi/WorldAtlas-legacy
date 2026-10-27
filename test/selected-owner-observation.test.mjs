@@ -20,13 +20,22 @@ const queueRoot = 'coordination/engineering/global-current-cell-work-queue-20261
 const packageId = 'gb-TST-ADM2--repair-evaluation';
 const sources = staticModuleClosure(process.cwd(), [command]);
 const keys = [{x: 0, y: 0}, {x: 2, y: 0}, {x: 3, y: 0}, {x: 1, y: 1}, {x: 1, y: 2}];
-const gitHelperArgv = [
-  ['pack-objects', '--revs', '--thin', '--stdout', '--delta-base-offset'],
-  ['rev-list', '--objects', '--stdin', '--not', '--exclude-hidden=fetch', '--all', '--quiet', '--alternate-refs'],
-];
-const exactGitHelper = args =>
-  gitHelperArgv.some(expected => JSON.stringify(args) === JSON.stringify(expected)) ||
-  (args.length === 5 && args[0] === 'index-pack' && args[1] === '--stdin' && args[2] === '--fix-thin' && args[3] === '--promisor' && /^--pack_header=2,[1-9][0-9]*$/.test(args[4]));
+const requiredGitHelperFlags = {
+  'pack-objects': ['--revs', '--thin', '--stdout', '--delta-base-offset'],
+  'rev-list': ['--objects', '--stdin', '--not', '--exclude-hidden=fetch', '--all', '--quiet', '--alternate-refs'],
+  'index-pack': ['--stdin', '--fix-thin', '--promisor'],
+};
+const exactGitHelper = args => {
+  if (!Array.isArray(args) || !args.every(arg => typeof arg === 'string')) return false;
+  const required = requiredGitHelperFlags[args[0]];
+  if (!required || !required.every(flag => args.includes(flag))) return false;
+  if (args[0] === 'index-pack') {
+    const headers = args.filter(arg => /^--pack_header=/.test(arg));
+    return headers.length === 1 && /^--pack_header=2,[1-9][0-9]*$/.test(headers[0]);
+  }
+  return true;
+};
+const helperArgvDiagnostic = args => 'actual helper argv: ' + JSON.stringify(args);
 function fixture({missingOrigins = false, changeManifest, changePatch, changeSide, changeOwners, changeArrays, changeQueue, changeOriginalGrid, splitCandidates = false, multiBlock = false} = {}) {
   const repo = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'owner-observation-')));
   const git = (...args) => execFileSync('git', ['-C', repo, ...args], {stdio: ['ignore', 'pipe', 'pipe']}).toString().trim();
@@ -526,7 +535,7 @@ function coldFixture({splitCandidates = false, gitFilenameAlias = false, helperE
 import fs from 'node:fs';
 import {spawnSync} from 'node:child_process';
 const command = ${JSON.stringify(command)}, args = process.argv.slice(2), invocation = [command, ...args];
-const gitHelperArgv = ${JSON.stringify(gitHelperArgv)};
+const requiredGitHelperFlags = ${JSON.stringify(requiredGitHelperFlags)};
 const exactGitHelper = ${exactGitHelper.toString()};
 fs.appendFileSync(${JSON.stringify(launchLog)}, JSON.stringify(invocation) + '\\n');
 if (!exactGitHelper(invocation)) throw Error('Unexpected Git helper invocation: ' + JSON.stringify(invocation));
@@ -555,7 +564,7 @@ process.exit(r.status ?? 1);
 import fs from 'node:fs';
 import {spawnSync} from 'node:child_process';
 const args = process.argv.slice(2);
-const gitHelperArgv = ${JSON.stringify(gitHelperArgv)};
+const requiredGitHelperFlags = ${JSON.stringify(requiredGitHelperFlags)};
 const exactGitHelper = ${exactGitHelper.toString()};
 fs.appendFileSync(${JSON.stringify(launchLog)}, JSON.stringify(args) + '\\n');
 if (args.length === 1 && args[0] === '--exec-path') {
@@ -661,7 +670,7 @@ for (const splitCandidates of [false, true]) test('one cold ' + (splitCandidates
     assert.deepEqual(f.launches().filter(args => args.length === 1 && args[0] === '--exec-path'), [['--exec-path']], 'cold bootstrap resolves the implementation once');
     const helpers = f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path'));
     assert(helpers.length > 0, 'cold fetch exercises internal Git helpers');
-    assert(helpers.every(exactGitHelper), 'only exact supported Git helper argv is passed through');
+    assert(helpers.every(exactGitHelper), 'only supported Git helpers with required safety flags are passed through; ' + helperArgvDiagnostic(helpers));
     const coldHelperCalls = [...helpers];
     assert.equal(r.status, 0, r.stderr);
     assert.equal(r.report.query_count, 5); assert.deepEqual(r.report.keys.map(({x,y}) => ({x,y})), keys);
@@ -718,14 +727,16 @@ test('a partial acquisition failure leaves no receipt and an ordinary retry reus
     const failed = f.run({env: {OBSERVATION_TEST_FAIL_FETCH:'2'}});
     assert.notEqual(failed.status, 0); assert.match(failed.stderr, /Geography object acquisition failed/);
     assert.deepEqual(f.launches().filter(args => args.length === 1 && args[0] === '--exec-path'), [['--exec-path']], 'partial run resolves the implementation once');
-    assert(f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path')).every(exactGitHelper), 'partial run rejects launcher drift');
+    const partialHelpers = f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path'));
+    assert(partialHelpers.every(exactGitHelper), 'partial run rejects unsupported helpers or missing safety flags; ' + helperArgvDiagnostic(partialHelpers));
     assert.equal(f.batches().length, 2, 'the second transport attempt is the injected failure');
     assert.equal(fs.existsSync(failed.output), false);
     const retained = f.inventory().filter(([oid,kind]) => kind === 'blob' && !f.codeOids.has(oid)).map(([oid]) => oid);
     assert.deepEqual(retained, [f.git('rev-parse', f.head + ':data/ownership-selection.json')]);
     const prior = f.batches().length, resumed = f.run(); assert.equal(resumed.status, 0, resumed.stderr);
     assert.deepEqual(f.launches().filter(args => args.length === 1 && args[0] === '--exec-path'), [['--exec-path'], ['--exec-path']], 'retry reuses the resolved implementation');
-    assert(f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path')).every(exactGitHelper), 'retry keeps rejecting launcher drift');
+    const retryHelpers = f.launches().filter(args => !(args.length === 1 && args[0] === '--exec-path'));
+    assert(retryHelpers.every(exactGitHelper), 'retry rejects unsupported helpers or missing safety flags; ' + helperArgvDiagnostic(retryHelpers));
     assert.equal(resumed.report.query_count, 5);
     assert(!f.batches().slice(prior).flat().some(oid => retained.includes(oid)));
     assert.equal(resumed.report.acquisition.fetched_objects,
