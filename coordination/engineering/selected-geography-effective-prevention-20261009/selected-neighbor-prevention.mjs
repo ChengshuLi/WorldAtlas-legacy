@@ -1296,11 +1296,15 @@ function* evaluateSourceTargetNativeAuthority(reader, preimage, binding, diagnos
   for (const change of changes) {
    const accepted = canonicalOwners.get(change.id), properties = accepted?.properties;
    const metadata = properties?.metadata;
+   // The full source-member key and semantic replaces edge are the identity
+   // binding. original_id is a redundant source shapeID cross-check when a
+   // producer supplies it; its omission does not erase the exact full-ID join.
    demand(typeof change.id === 'string' && !descendants.has(change.id)
     && semanticOwners.get(change.id)?.length === 1 && semanticOwners.get(change.id)[0] === change
     && same(change.replaces, [id]) && accepted && owners.has(change.id)
     && properties.id === change.id && same(metadata?.source_member_ids, [id])
-    && metadata.original_id === original?.properties?.shapeID,
+    && original && (metadata.original_id === undefined
+     || metadata.original_id === original.properties?.shapeID),
    'Incomplete or ambiguous accepted split-source descendant');
    demand(typeof properties.parent_id === 'string' && properties.parent_id
     && roster[owners.get(change.id)-1]?.province_id === properties.parent_id

@@ -437,6 +437,15 @@ test('complete split original stays a veto-only competitor across distinct accep
   assert.deepEqual(diagnostic.split_source_competitors,proof.split_source_competitors);
   assert.deepEqual(fixture.state.physical.results.map(row=>row.target),[c]);
 });
+test('exact singleton source-member and semantic lineage bind a split original when redundant shape ID metadata is absent',()=>{
+  const fixture=splitCompetitorFixture(state=>{
+    for(const feature of state.accepted.features)delete feature.properties.metadata.original_id;
+  });
+  const proof=fixture.run(),diagnostic=fixture.diagnose();
+  assert.deepEqual(diagnostic.split_source_competitors,proof.split_source_competitors);
+  assert.deepEqual(proof.split_source_competitors[0].descendants.map(row=>row.target_id).sort(),['city','other-city']);
+  assert.equal(proof.ledger_rows.some(row=>row.target_id===a),false);
+});
 for(const [name,change,pattern]of [
   ['missing membership',s=>s.membership=false,/accepted source membership/],
   ['omitted semantic descendant',s=>s.lineage.changes.pop(),/split-source descendant inventory/],
