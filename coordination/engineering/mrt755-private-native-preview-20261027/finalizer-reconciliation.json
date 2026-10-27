@@ -1,0 +1,100 @@
+{
+  "schema": "mrt755-finalizer-reconciliation-v1",
+  "scope": "Source-evidence membership refresh for the 292-cell candidate; no geometry, physical, or native-patch replay.",
+  "pre_output_failures": [
+    {
+      "attempt_config": {
+        "path": ".cache/delivery-handoff/mrt755-source-membership-20261027/finalize-config-v2.json",
+        "bytes": 1654,
+        "sha256": "72c3335bc6f7f4bf8f886284a674445c6b98a2cb06f8927dc5e13100a0b6fb89"
+      },
+      "classification": "The first finalizer attempt was rejected by the strict locator-schema validation before writing output.",
+      "output_written": false
+    },
+    {
+      "attempt_config": {
+        "path": ".cache/delivery-handoff/mrt755-source-membership-20261027/finalize-config-v3.json",
+        "bytes": 1327,
+        "sha256": "3f70724236450e7e0b2e0541f3885b9ad289672a15518de2859f165dfd4a9839"
+      },
+      "classification": "After locator-shape correction, the ordinary full-finalize path was rejected by the prior-finalization ancestry guard: the selected a0 commit did not contain the retained prior-finalization receipt commit.",
+      "output_written": false
+    }
+  ],
+  "successful_supported_refresh": {
+    "mode": "source_evidence_refresh",
+    "selector_commit": "92759b32342f1ff8aaab316fd1915e87a9da4c09",
+    "config": {
+      "path": ".cache/delivery-handoff/mrt755-source-membership-20261027/finalize-source-refresh-config.json",
+      "bytes": 1172,
+      "sha256": "4f23044cf3e69594d684f2cb1d985b77aa8d0b4d182a9aea67e22f79775a02a9"
+    },
+    "old_evidence": {
+      "commit": "836c8e2fdcc310da5420cc4ace489e6a4f224105",
+      "path": "coordination/engineering/mrt755-private-native-preview-20261027/generated-source-evidence-v2/source-evidence.json",
+      "blob": "43f0e4583670866939e6deacc8df227a9c75b620",
+      "bytes": 48607,
+      "sha256": "62c70f5243d542798c9e4a267101630694a60d4c042e70982858367488c2c831"
+    },
+    "new_evidence": {
+      "commit": "62b6afb3a2f8cee7fc3f1b93d1fb24619584df58",
+      "path": "coordination/engineering/mrt755-private-native-preview-20261027/generated-source-evidence-v3/source-evidence.json",
+      "blob": "0ff530d4925778dde217a6f2324a0b8f0676d553",
+      "bytes": 49416,
+      "sha256": "f2a608eeeb286f17a7fe876bfa672a343b370263bd96a67a68e6ae309e361370"
+    },
+    "old_registry": {
+      "commit": "3e1295a425225c6dbf19e765e4f7129ccb7c79e1",
+      "path": "coordination/engineering/mrt755-private-native-preview-20261027/authority-registry.json",
+      "blob": "c26924cdbb7a574488bab106a13afcd94ab30709",
+      "bytes": 1310,
+      "sha256": "69b9f6193e8216f13623b6779176caeff67faf3312465988c8eb59228f51058a"
+    },
+    "new_registry": {
+      "commit": "92759b32342f1ff8aaab316fd1915e87a9da4c09",
+      "path": "coordination/engineering/mrt755-private-native-preview-20261027/source-membership-refresh-v1/authority-registry-v2.json",
+      "blob": "ec2d2c6be1e8ac0c56f8fd0c9f83a51557f34a04",
+      "bytes": 1397,
+      "sha256": "4558f8e56f607d2539c5506c07fd1e19377c2f4cd8f9f1269806760409b857fc"
+    },
+    "prior_finalization_receipts": [
+      {
+        "commit": "836899d6dcbc6979d0f08cc44a2c37ddba90dfba",
+        "path": "coordination/engineering/mrt755-private-native-preview-20261027/prior-finalization-20261027/preparation.json",
+        "blob": "0ecc047215989c524731f216033f401ca2d1bb81",
+        "bytes": 1156,
+        "sha256": "dbf11e71b15ca904a99f1479afa96de2519589fc95f65dd4fa8a6d7e6a2ac398"
+      },
+      {
+        "commit": "836899d6dcbc6979d0f08cc44a2c37ddba90dfba",
+        "path": "coordination/engineering/mrt755-private-native-preview-20261027/prior-finalization-20261027/startup-ownership.json",
+        "blob": "b906c5ad85639172794273715ba95e1b19c8ce42",
+        "bytes": 49610,
+        "sha256": "1aa83970ac311855451dc27ce7002bca9997fc6cb7933cccccc6d3e9c2131070"
+      }
+    ],
+    "output_directory": ".cache/delivery-handoff/mrt755-finalize-membership-v3",
+    "outputs": [
+      {"path":"ownership-selection.json","bytes":2292,"sha256":"4eed76bf4223e651b3cf318eb7c86cb625fa33e3067cf1387aff9419b9eebc2b"},
+      {"path":"package-inputs.json","bytes":38421,"sha256":"e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"},
+      {"path":"preparation.json","bytes":1156,"sha256":"87272cfca9bcf9e3fa252b63fba04f9714bc996650c49191ac1051d836a26d4a"},
+      {"path":"selected-delivery-expectations.json","bytes":485,"sha256":"5fba6b6943b8b3e82243138a41721446ba52c0ee50295ccf56c55be6fd7bb643"},
+      {"path":"startup-ownership.json","bytes":49610,"sha256":"1aa83970ac311855451dc27ce7002bca9997fc6cb7933cccccc6d3e9c2131070"}
+    ],
+    "write_scope": "Only data/ownership-selection.json changed in the candidate; package-inputs and startup ownership/index bytes were unchanged.",
+    "source_approval": false,
+    "published": false
+  },
+  "trusted_checker": {
+    "baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "candidate_commit": "023b02363e94b2aaba5c9c5e6e0f1513f059ccde",
+    "trusted_code_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "report_path": ".cache/mrt755-geographic-check-20261027/report-source-refresh.json",
+    "report_bytes": 98521,
+    "report_sha256": "50ae70e5cb13c128ea4453b8d108bb52786d871509695c8a02d5697f7d869ef3",
+    "status": "no-new-native-loss",
+    "regressions": 0,
+    "source_approval": false,
+    "published": false
+  }
+}
