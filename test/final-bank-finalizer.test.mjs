@@ -513,6 +513,10 @@ test('retiring current-bank paths refuse non-sparse loss, staged replacements an
   let error;try{publish();}catch(caught){error=caught;}assert(error instanceof Error);assert.match(error.message,/retirement index changed during after-publication-before-materialization: /);assert(changed);
   assert.match(error.message,/"expected":\{"entry":"S 100644 [0-9a-f]{40} 0\\t[^"\\]+","tag":"S","mode":"100644","oid":"[0-9a-f]{40}","stage":0,"path":"[^"]+","skip_worktree":true,"assume_unchanged":false\}/);
   assert.match(error.message,/"current":\{"entry":"","tag":null,"mode":null,"oid":null,"stage":null,"path":null,"skip_worktree":false,"assume_unchanged":false\}/);
+  const detail=JSON.parse(error.message.slice(error.message.indexOf('; ')+2)),expectedRaw=Buffer.from(`S 100644 ${oid} 0\t${name}\0`);
+  assert.equal(detail.phase,'after-publication-before-materialization');
+  assert.deepEqual(detail.expected_raw,{bytes:expectedRaw.length,sha256:createHash('sha256').update(expectedRaw).digest('hex')});
+  assert.deepEqual(detail.current_raw,{bytes:0,sha256:createHash('sha256').update(Buffer.alloc(0)).digest('hex')});
  }finally{fs.writeFileSync=write;}
  assert.deepEqual(fs.readFileSync(path.join(f.root,'data/ownership-selection.json')),selector,'Staging-time index changes refuse before selector adoption');
  f.git('update-index','--add','--cacheinfo',`100644,${oid},${name}`);f.git('update-index','--skip-worktree','--',name);
