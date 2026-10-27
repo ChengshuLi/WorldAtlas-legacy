@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "kind": "tkm-gubadag44-candidate-authority-composition-v1",
+  "command": "env -u NODE_OPTIONS -u NODE_PATH node scripts/prepare-delivery-handoff.mjs compose coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/compose-config.json coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/composition-001",
+  "terminal": {
+    "exit_status": 0,
+    "stderr_bytes": 0
+  },
+  "config_sha256": "329643c57fe3cb24e5bd09ab3d44ed3765b02cd5f3fa247b61e33283cedcd5e7",
+  "outputs": {
+    "authority-registry.json": "68979c10328303eb7317255c74427b815a867a40b75bb5682b3f40c1bf6f421c",
+    "preparation.json": "b316e0d824770738518b7088ee3d4e3ad14b0223cb9b324afdc483d4a6eb440f"
+  },
+  "authority_entries": 1,
+  "constructor_cells": 44,
+  "candidate_only": true,
+  "limits": [
+    "Compose preparation does not mutate the accepted current bank or establish owner-zero.",
+    "Source role, temporal, parent and whole-target issue caveats retained; root acceptance pending."
+  ]
+}

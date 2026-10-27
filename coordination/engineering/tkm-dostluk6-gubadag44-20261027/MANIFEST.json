@@ -10,7 +10,7 @@
     "physical_class": "land"
   },
   "files": {
-    "README.md": "3575f036b3f3577202e73a8732163e4d3a1122832aeaa84120ad391718ee9fd9",
+    "README.md": "0420899c7b5f2dda97b7dd1ba64da74ddda11396f21e36870ed5da4f9e505c93",
     "center-support-v1.json": "1211ce8150eba5b6ef26f8439a7d3cd1ebb190541d8b11bcdbf7e4901c0bdec6",
     "physical-consumed-simplified-001/original-stage-inputs.json": "1770319006a28be7f7be6c28278f3f0be8fea0508293fb94188b87309f38987b",
     "physical-consumed-simplified-001/whole-target-support.json": "91dac6f69782323249b281cc73d3f06a8ae535cfb40a1aa985004e0323641923",
@@ -40,7 +40,13 @@
     "native-inputs-001/authority-attempt-001/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "native-inputs-001/authority-attempt-001/stdout.log": "c12c7e15232a3f815f95acb8def86b1f5349248f8dbd421164cdaedee6cfe99f",
     "native-inputs-001/authority-attempt-001/exit-status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
-    "native-inputs-001/compose-config.json": "329643c57fe3cb24e5bd09ab3d44ed3765b02cd5f3fa247b61e33283cedcd5e7"
+    "native-inputs-001/compose-config.json": "329643c57fe3cb24e5bd09ab3d44ed3765b02cd5f3fa247b61e33283cedcd5e7",
+    "native-inputs-001/compose-execution.json": "57171e4ee086a25b05e4c3be129217759b8dc1af34bed0ab201d83d8a5e77dfd",
+    "native-inputs-001/composition-001/preparation.json": "b316e0d824770738518b7088ee3d4e3ad14b0223cb9b324afdc483d4a6eb440f",
+    "native-inputs-001/composition-001/authority-registry.json": "68979c10328303eb7317255c74427b815a867a40b75bb5682b3f40c1bf6f421c",
+    "native-inputs-001/compose-attempt-001/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-inputs-001/compose-attempt-001/stdout.log": "441c39a6a2347f55afc5ef41853e3e8e6e3ca5076258a3a027446657f60f5e78",
+    "native-inputs-001/compose-attempt-001/exit-status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
   },
-  "status": "physical and native constructor candidate prepared; no current selected-bank mutation or root acceptance"
+  "status": "physical, native constructor candidate and authority composition completed; final-bank candidate preparation pending; no current accepted bank mutation/credit"
 }
