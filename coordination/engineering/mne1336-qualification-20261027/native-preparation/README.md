@@ -24,6 +24,25 @@ workflow. It preserves the full 1,336 denominator: the three Albania-contact
 keys remain adverse, while the other 1,333 are only the no-captured-Albania
 candidate subset. The one water-class cell remains Bar's original owner.
 
+The completed source-evidence output is in `source-evidence-003/` and the
+native diagnostic output in `native-diagnostic-002/`; the exact invocation pins,
+partition, hashes, and focused test result are recorded in
+`qualification-preparation-receipt.json`. Native request configurations
+`superseded-setup-attempts/attempt-001/` and `superseded-setup-attempts/attempt-002/` are superseded setup attempts:
+the source-evidence phase failed closed before producing output because the
+first lacked the selector's original owner-context pin and the second lacked
+its verified decoded-size/hash bounds. Only request 003 ran the source-evidence
+phase successfully. The first test invocation also stopped at module loading
+because the exact lockfile dependency was absent; after restoring the retained
+lock-SRI-verified tarball, the same two focused test files passed 83/83.
+
+The diagnostic partition is exactly 1,336 requested = 1,333 supported + 3
+withheld. By original class, 1,332 land cells and the one Bar inland-water cell
+are supported; all three withheld keys are land and match the retained Albania
+adverse keyset exactly. The complete original request, source family, physical
+report, and territorial negative evidence remain in the bound diagnostic. This
+partition is not bank application, current owner-zero acceptance, or credit.
+
 The four target-level physical issue geometries remain pinned; their exact
 requested-center comparison found zero center effects. This is not whole-target
 physical clearance or a legal/source-role determination. The separate 144
