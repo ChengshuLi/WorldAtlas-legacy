@@ -1,6 +1,6 @@
 # HRV 2,295-key finite researched-unresolved proposal (draft for review)
 
-**Status:** source-free draft for review only. Not published, root-accepted, a repair, assignment, native-bank change, or credit. Exact membership and original per-key contact/source/physical-context joins are bound in the companion manifest. This draft does not repeat the accepted 28,885, HRV129/HUN68 foreign-contact, prior HRV172, or Cres983 work.
+**Status:** source-body-free proposal for review only (no raw source geometries or latitude/longitude pairs). The companion manifest preserves exact membership, per-key original source contacts, source-family/feature IDs, represented vintage, rights/license pins, physical labels and native-center context. Not root-accepted, a repair, assignment, native-bank change, or credit. This draft does not repeat the accepted 28,885, HRV129/HUN68 foreign-contact, prior HRV172, or Cres983 work.
 
 ## Exact scope and conservation
 
@@ -17,7 +17,7 @@ This proposal combines only five already-researched, disjoint strata inside the 
 | Six same-county expected/observed unit mismatches | 6 | Omiš 1, Petrijanec 1, Janjina 4 | `5df1235cc7b848b0e2f4fdeff229497693a99c8ba0d294f9bce90065bb3f7352` |
 | **Combined** | **2,295** | Five mutually disjoint subsets of the 4,905 parent | **`572373d77e9ddca1ef199c292d0f336328ba9f225f07153bf6b586c70d1b6ebc`** |
 
-The companion JSON manifest `custody-manifest.json` (3,564,038 bytes; SHA-256 `c6539f9bb480bc48c3818c90b37f027aa70224138f022afacd22357866d3a2ad`) carries the full 2,295 exact `[owner_index,y,x]` tuples, all corresponding original per-key source-contact pointers, original physical-mask labels, foreign-contact flags, expected county/current-DGU observations, and source-native center results where already applied. It is an index/custody artifact, not raw geographic coordinates or source geometry.
+The companion JSON manifest `custody-manifest.json` (manifest byte size and hash are pinned in the PR body and exact review record) carries the full 2,295 exact `[owner_index,y,x]` tuples, all corresponding original per-key source-contact pointers, original physical-mask labels, foreign-contact flags, expected county/current-DGU observations, and source-native center results where already applied. It is an index/custody artifact, not raw geographic coordinates or source geometry.
 
 Independent set checks against the retained exact original 35,738 partition establish: all 2,295 are unique; all are within the 4,905 parent and original denominator; all five subsets are mutually disjoint; zero intersect accepted-positive 28,885, previously accepted researched-unresolved 172, the separately preserved 197 HUN/SVN foreign-contact cohort (containing HRV129 + HUN68), or outside/unmatched 1,751. Parent partition is exactly `35,738 = 28,885 + 197 + 4,905 + 1,751`, with disjoint sets. Current root ledger pin: `/workspace/shared/worldatlas-root-acceptance-after-HRV172-2925-20261026.json`, SHA-256 `66fa64b2454cfef1ae69cb317ce8879b5346c49e8a2e6f84a7e75a388a14ec95`; it records 28,885 positive + 369 researched-unresolved + 6,484 pending. This proposal adds no ledger accounting by itself.
 

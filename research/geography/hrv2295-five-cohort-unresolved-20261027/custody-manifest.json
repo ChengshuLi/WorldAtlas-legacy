@@ -102324,7 +102324,7 @@
       "owner_has_unique_expected_name_county_link": false
     }
   ],
-  "generated_utc": "2026-10-27T00:52:00Z",
+  "generated_utc": "2026-10-27T00:54:30Z",
   "kind": "HRV finite source-relative researched-unresolved proposal preparation",
   "method_and_limits": [
     "All keys are exact native tuples [owner_index,y,x]; source-feature family index/source_index is kept as a separate field and is never substituted for native owner_index.",
@@ -102476,7 +102476,12 @@
         "interpretation": "these are not island alias cases; native-center-outside evidence remains adverse",
         "scope": "same-county city/municipality mismatch members"
       }
-    ]
+    ],
+    "publication_boundary": {
+      "included": "Exact original native key tuples; source-family/feature IDs and indices; per-key ADM1/ADM2 source contacts; represented source year; family and member role assertions; source license/attribution statements; current DGU source context; physical labels and native-center outcomes.",
+      "excluded": "Raw source geometries, raw upstream map bodies, latitude/longitude coordinate pairs, and any claim of full-cell/physical clearance or legal boundary adjudication.",
+      "rights": "Original geoBoundaries/OSM-derived 2021 simplified HRV ADM2 retains CC BY-SA 2.0 attribution/role pins. DGU appears only as distinct contextual current-unit evidence; its terms are not applied to or substituted for geoBoundaries."
+    }
   },
   "source_pins": [
     {
@@ -102620,6 +102625,6 @@
       "sha256": "5662d2bd09aedf4d8c33fa6c358e34309bbe049b8a95e857a20765c502908ed3"
     }
   ],
-  "status": "source-free exact-custody manifest prepared for independent review; no acceptance, assignment, repair, bank change, or credit",
-  "version": 2
+  "status": "source-body-free exact-custody manifest for independent review; it preserves source IDs, represented vintage, license/rights notes and per-key source contacts; no acceptance, assignment, repair, bank change, or credit",
+  "version": 3
 }
