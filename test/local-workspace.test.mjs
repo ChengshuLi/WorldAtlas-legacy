@@ -9,6 +9,16 @@ import childProcess, {execFileSync, spawn, spawnSync} from 'node:child_process';
 import {syncBuiltinESMExports} from 'node:module';
 import {workspaceManager} from '../scripts/local-workspace.mjs';
 
+// Tests that need allocator internals read the fixture registry directly. The
+// public report intentionally exposes only the current worker's safe metadata.
+function registryEntries(manager) {
+  const report = manager.report();
+  const statePath = path.join(report.registry, 'state.json');
+  if (!fs.existsSync(statePath)) return [];
+  const state = JSON.parse(fs.readFileSync(statePath, 'utf8'));
+  return state.entries;
+}
+
 function fixture(t, overrides = {}) {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'atlas-storage-test-'));
   t.after(() => fs.rmSync(temporary, {recursive: true, force: true}));
@@ -73,7 +83,7 @@ test('allocator CLI binds its helper Git store, never an unrelated or missing cw
   assert.match(refused.stderr, /not a git repository/);
   assert.equal(refused.stdout, '');
   assert.equal(ambient.git('show-ref'), before);
-  assert.deepEqual(intended.manager.report().entries, []);
+  assert.deepEqual(registryEntries(intended.manager), []);
   assert.ok(!fs.existsSync(ambient.manager.report().registry));
 });
 
@@ -108,7 +118,7 @@ test('ordinary branch names need only Git validity and fresh isolated ownership'
   manager.release({worker:'worker-one',slot:'work',token:entry.token});
   for(const branch of ['bad..name','../escape','x:bad','bad name','-option'])
     await assert.rejects(()=>manager.allocate({worker:'worker-two',branch}));
-  assert.equal(manager.report().entries.length,0);
+  assert.equal(registryEntries(manager).length,0);
 });
 
 test('sparse work is isolated and contains required directories and individual inputs only', async t => {
@@ -234,7 +244,7 @@ test('automatic engineering code rejects unsafe sparse patterns and nonordinary 
     await assert.rejects(() => manager.allocate({worker: 'unsafe-code', branch: 'engineering/unsafe-code'}), /ordinary file and safe literal path/);
     assert.equal(git('worktree', 'list', '--porcelain'), before);
     assert.throws(() => git('rev-parse', '--verify', 'engineering/unsafe-code'));
-    assert.deepEqual(manager.report().entries, []);
+    assert.deepEqual(registryEntries(manager), []);
     assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
   }
 });
@@ -251,7 +261,7 @@ test('small work and review checkouts need no fixed free-space floor or reservat
     const released = manager.release({worker: entry.worker, slot: entry.slot, token: entry.token});
     assert.equal(git('rev-parse', released.preservedRef).trim(), head);
   }
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
 });
 
 test('removed reserve CLI option is rejected before any slot or branch mutation', async t => {
@@ -261,12 +271,15 @@ test('removed reserve CLI option is rejected before any slot or branch mutation'
   {cwd: repo, encoding: 'utf8'});
   assert.equal(result.status, 1);
   assert.match(result.stderr, /documented --repo\/--key value arguments/);
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.equal(git('worktree', 'list', '--porcelain').match(/^worktree /gm).length, 1);
 });
 
 test('legacy reservations neither inflate measured usage nor require registry migration', async t => {
   const {manager, head} = fixture(t);
+  const priorWorker = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = 'legacy';
+  t.after(() => { if (priorWorker === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = priorWorker; });
   const legacy = await manager.allocate({worker: 'legacy', slot: 'review', commit: head});
   const stateFile = path.join(manager.report().registry, 'state.json');
   const state = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
@@ -278,13 +291,17 @@ test('legacy reservations neither inflate measured usage nor require registry mi
   assert.equal(report.checkoutBytes, report.worktrees.reduce((sum, row) => sum + row.bytes, 0));
   assert.ok(report.checkoutBytes < state.entries[0].reservation);
   const next = await manager.allocate({worker: 'new', slot: 'review', commit: head});
-  assert.deepEqual(manager.report().entries[0], state.entries[0], 'another allocation leaves legacy metadata intact');
+  assert.deepEqual(manager.report().entries[0], {
+    worker: 'legacy', slot: 'review', path: state.entries[0].path, head: state.entries[0].head,
+    branch: state.entries[0].branch, profile: state.entries[0].profile, include: state.entries[0].include,
+    reservation: state.entries[0].reservation, status: state.entries[0].status, createdAt: state.entries[0].createdAt
+  }, 'report exposes safe metadata for this worker only');
   manager.release({worker: 'new', slot: 'review', token: next.token});
-  assert.deepEqual(manager.report().entries, state.entries);
+  assert.deepEqual(registryEntries(manager), state.entries);
   manager.release({worker: 'legacy', slot: 'review', token: legacy.token});
 });
 
-test('allocation and free-space checks skip legacy usage traversals while report retains live diagnostics', async t => {
+test('allocation and free-space checks skip legacy usage traversals while report scopes live diagnostics to owner', async t => {
   let available = 128 * 1024;
   const {manager, git, head, temporary} = fixture(t, {freeBytes: () => available});
   for (let index = 0; index < 16; index++) {
@@ -312,9 +329,9 @@ test('allocation and free-space checks skip legacy usage traversals while report
   };
   const reported = await observe(() => manager.report());
   assert.deepEqual(reported.operations, {du: 17, worktreeList: 1});
-  assert.equal(reported.result.worktrees.length, 17);
-  assert.ok(reported.result.worktrees.every(row => !row.managed && Number.isSafeInteger(row.bytes) && row.bytes >= 0));
-  assert.equal(reported.result.checkoutBytes, reported.result.worktrees.reduce((sum, row) => sum + row.bytes, 0));
+  assert.deepEqual(reported.result.entries, []);
+  assert.deepEqual(reported.result.worktrees, []);
+  assert.equal(reported.result.checkoutBytes, 0, 'no identity yields no cross-worker checkout totals');
   const checked = await observe(() => manager.check());
   assert.deepEqual(checked.operations, {du: 0, worktreeList: 0});
   assert.deepEqual(checked.result, {freeBytes: available});
@@ -324,10 +341,17 @@ test('allocation and free-space checks skip legacy usage traversals while report
   assert.deepEqual(allocated.operations, {du: 0, worktreeList: 0});
   assert.equal(allocated.result.head, head);
   assert.equal(fs.readFileSync(path.join(allocated.result.path, 'README.md'), 'utf8'), 'root');
+  const priorWorker = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = 'one';
+  t.after(() => { if (priorWorker === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = priorWorker; });
   const after = await observe(() => manager.report());
   assert.deepEqual(after.operations, {du: 18, worktreeList: 1});
   assert.equal(after.result.freeBytes, available);
-  assert.deepEqual(after.result.entries, [allocated.result]);
+  assert.equal(after.result.entries.length, 1);
+  assert.equal(after.result.entries[0].worker, 'one');
+  assert.equal(Object.hasOwn(after.result.entries[0], 'token'), false);
+  assert.equal(JSON.stringify(after.result).includes(allocated.result.token), false);
+  assert.equal(after.result.worktrees.length, 1);
   assert.equal(after.result.worktrees.find(row => row.path === allocated.result.path).managed, true);
   assert.equal(after.result.checkoutBytes, after.result.worktrees.reduce((sum, row) =>
     sum + row.bytes, 0));
@@ -338,6 +362,37 @@ test('allocation and free-space checks skip legacy usage traversals while report
   const empty = await observe(() => manager.check());
   assert.deepEqual(empty.operations, {du: 0, worktreeList: 0});
   assert.equal(empty.result.freeBytes, 0, 'check reports actual capacity without imposing a policy');
+});
+
+test('report CLI is current-worker scoped and never serializes capabilities', async t => {
+  const {repo, manager, head} = fixture(t);
+  const mine = await manager.allocate({worker: 'report-owner', slot: 'review', commit: head});
+  const other = await manager.allocate({worker: 'other-owner', slot: 'review', commit: head});
+  const helper = cliHelper(repo);
+  const run = (worker, extra = []) => spawnSync(process.execPath,
+    [helper, 'report', '--repo', repo, ...(worker ? ['--worker', worker] : []), ...extra],
+    {cwd: repo, env: {...process.env, CODEX_THREAD_ID: 'report-owner'}, encoding: 'utf8'});
+  const result = run('report-owner');
+  assert.equal(result.status, 0, result.stderr);
+  const report = JSON.parse(result.stdout);
+  assert.deepEqual(report.entries.map(({worker, slot}) => ({worker, slot})), [{worker: 'report-owner', slot: 'review'}]);
+  assert.ok(report.worktrees.every(row => row.path === mine.path));
+  assert.equal(result.stdout.includes(mine.token), false);
+  assert.equal(result.stdout.includes(other.token), false);
+  const foreign = run('other-owner');
+  assert.equal(foreign.status, 1);
+  assert.match(foreign.stderr, /Worker identity mismatch/);
+  assert.equal(foreign.stdout, '');
+  const capabilityArg = run('report-owner', ['--token', mine.token]);
+  assert.equal(capabilityArg.status, 1);
+  assert.match(capabilityArg.stderr, /Report accepts only/);
+  assert.equal(capabilityArg.stdout, '');
+  const noIdentity = spawnSync(process.execPath, [helper, 'report', '--repo', repo],
+    {cwd: repo, env: {...process.env, CODEX_THREAD_ID: ''}, encoding: 'utf8'});
+  assert.equal(noIdentity.status, 0, noIdentity.stderr);
+  assert.deepEqual(JSON.parse(noIdentity.stdout).entries, []);
+  manager.release({worker: 'other-owner', slot: 'review', token: other.token});
+  manager.release({worker: 'report-owner', slot: 'review', token: mine.token});
 });
 
 test('disk write failure propagates and preserves interrupted allocation and other workers', async t => {
@@ -354,8 +409,8 @@ test('disk write failure propagates and preserves interrupted allocation and oth
   t.after(() => { t.mock.restoreAll(); syncBuiltinESMExports(); });
   await assert.rejects(() => manager.allocate({worker: 'interrupted', slot: 'review', commit: head}), {code: 'ENOSPC'});
   const report = manager.report();
-  assert.deepEqual(report.entries[0], existing);
-  const interrupted = report.entries[1];
+  assert.deepEqual(registryEntries(manager)[0], existing);
+  const interrupted = registryEntries(manager)[1];
   assert.equal(interrupted.status, 'preparing');
   assert.ok(fs.existsSync(interrupted.path));
   assert.throws(() => manager.release({worker: 'interrupted', slot: 'review', token: interrupted.token}), /inspection/);
@@ -426,7 +481,7 @@ test('lost-capability recovery rotates only the exact clean author slot and rele
   assert.ok(fs.statSync(path.dirname(result.capabilityFile)).mode & 0o700);
   assert.equal(fs.statSync(path.dirname(result.capabilityFile)).mode & 0o077, 0);
   assert.equal(fs.statSync(result.capabilityFile).mode & 0o777, 0o600);
-  const active = manager.report().entries[0];
+  const active = registryEntries(manager)[0];
   assert.notEqual(active.token, oldToken);
   assert.throws(() => manager.release({worker, token: oldToken}), /ownership/);
   assert.throws(() => manager.recoverLostCapability({worker, expectedPath: entry.path,
@@ -438,7 +493,7 @@ test('lost-capability recovery rotates only the exact clean author slot and rele
   assert.equal(released.capability_file_removed, true);
   assert.ok(!fs.existsSync(result.capabilityFile));
   assert.equal(git('rev-parse', released.preservedRef).trim(), head);
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.ok(!fs.existsSync(entry.path));
 });
 
@@ -459,7 +514,7 @@ test('lost-capability recovery fails closed for identity, binding, dirty state a
   assert.throws(() => request({expectedPath: `${entry.path}-other`}), /exact existing owner work slot/);
   assert.throws(() => request({expectedBranch: 'engineering/other'}), /exact existing owner work slot/);
   assert.throws(() => request({expectedHead: '0'.repeat(40)}), /branch, HEAD or registration changed/);
-  assert.equal(manager.report().entries[0].token, oldToken);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
 
   const gitDirectory = execFileSync('git', ['-C', entry.path, 'rev-parse', '--absolute-git-dir'], {encoding: 'utf8'}).trim();
   const indexLock = path.join(gitDirectory, 'index.lock');
@@ -471,12 +526,12 @@ test('lost-capability recovery fails closed for identity, binding, dirty state a
   execFileSync('git', ['-C', entry.path, 'update-index', '--assume-unchanged', 'README.md']);
   assert.throws(() => request({}), /Index trust flags can hide edits/);
   execFileSync('git', ['-C', entry.path, 'update-index', '--no-assume-unchanged', 'README.md']);
-  assert.equal(manager.report().entries[0].token, oldToken);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
 
   fs.writeFileSync(path.join(entry.path, 'untracked.txt'), 'keep me');
   assert.throws(() => request({}), /dirty or contains ignored/);
   assert.equal(fs.readFileSync(path.join(entry.path, 'untracked.txt'), 'utf8'), 'keep me');
-  assert.equal(manager.report().entries[0].token, oldToken);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
   fs.unlinkSync(path.join(entry.path, 'untracked.txt'));
 
   const capabilityDirectory = path.join(manager.report().registry, 'capabilities');
@@ -492,7 +547,7 @@ test('lost-capability recovery fails closed for identity, binding, dirty state a
   fs.symlinkSync(capabilityTarget, capabilityPath);
   assert.throws(() => request({}), /Symlink directory refused/);
   assert.deepEqual(fs.readFileSync(capabilityTarget), unknown);
-  assert.equal(manager.report().entries[0].token, oldToken);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
 });
 
 test('interrupted private-token recovery resumes only its bound pending replacement', async t => {
@@ -512,7 +567,7 @@ test('interrupted private-token recovery resumes only its bound pending replacem
     return originalRename(source, target);
   });
   assert.throws(() => manager.recoverLostCapability(recovery), {code: 'EIO'});
-  assert.equal(manager.report().entries[0].token, oldToken);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
   const capabilityFile = path.join(manager.report().registry, 'capabilities', `${createHash('sha256').update(worker).digest('hex')}-work.json`);
   const pending = JSON.parse(fs.readFileSync(capabilityFile, 'utf8'));
   assert.notEqual(pending.token, oldToken);
@@ -522,7 +577,7 @@ test('interrupted private-token recovery resumes only its bound pending replacem
 
   const result = manager.recoverLostCapability(recovery);
   assert.equal(result.capabilityFile, capabilityFile);
-  assert.equal(manager.report().entries[0].token, pending.token);
+  assert.equal(registryEntries(manager)[0].token, pending.token);
   assert.throws(() => manager.release({worker, token: oldToken}), /ownership/);
 });
 
@@ -539,14 +594,14 @@ test('workspace CLI recovery and token-file release never print the capability',
   assert.notEqual(denied.status, 0);
   assert.equal(denied.stdout, '');
   assert.match(denied.stderr, /exact CODEX_THREAD_ID/);
-  assert.equal(manager.report().entries[0].token, entry.token);
+  assert.equal(registryEntries(manager)[0].token, entry.token);
 
   const accepted = spawnSync(process.execPath, [helper, ...args], {cwd: repo, encoding: 'utf8',
     env: {...process.env, CODEX_THREAD_ID: worker}});
   assert.equal(accepted.status, 0, accepted.stderr);
   const recovered = JSON.parse(accepted.stdout);
   assert.equal(recovered.recovered, true);
-  const newToken = manager.report().entries[0].token;
+  const newToken = registryEntries(manager)[0].token;
   assert.notEqual(newToken, entry.token);
   assert.ok(!accepted.stdout.includes(newToken));
   const release = spawnSync(process.execPath, [helper, 'release', '--repo', repo, '--worker', worker,
@@ -554,7 +609,7 @@ test('workspace CLI recovery and token-file release never print the capability',
   assert.equal(release.status, 0, release.stderr);
   assert.equal(JSON.parse(release.stdout).capability_file_removed, true);
   assert.ok(!release.stdout.includes(newToken));
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
 });
 
 test('invalid scopes and identities are rejected', async t => {
@@ -574,7 +629,7 @@ test('an existing branch fails before fetching or reserving and preserves its hi
   git('remote', 'set-url', 'origin', path.join(repo, 'unavailable'));
   await assert.rejects(() => manager.allocate({worker: 'one', branch: 'engineering/already-exists'}), /already exists/);
   assert.equal(git('rev-parse', 'engineering/already-exists').trim(), head);
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.ok(!fs.existsSync(manager.report().registry));
   git('remote', 'set-url', 'origin', repo);
   const entry = await manager.allocate({worker: 'one', branch: 'engineering/new'});
@@ -629,7 +684,7 @@ test('author refresh does not acquire new excluded blobs in a conventional clone
   assert.equal(git('rev-parse', 'origin/main').trim(), latest);
   assert.equal(fs.readFileSync(path.join(recovered.path, 'README.md'), 'utf8'), 'changed selected input');
   assert.deepEqual(manager.inspect({commit: latest}).missing, []);
-  assert.deepEqual(manager.report().entries, [recovered]);
+  assert.deepEqual(registryEntries(manager), [recovered]);
   assert.equal(git('rev-parse', 'refs/heads/engineering/missing-selected').trim(), latest);
   manager.release({worker: 'conventional', token: recovered.token});
 });
@@ -816,7 +871,7 @@ test('missing fetched-main AGENTS fails before reservation, branch or worktree c
     /Verified origin\/main .* has no root AGENTS\.md/);
   assert.equal(git('worktree', 'list', '--porcelain'), beforeWorktrees);
   assert.equal(git('for-each-ref', '--format=%(refname)', 'refs/heads/engineering/missing-guidance'), '');
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
 });
 
@@ -867,7 +922,7 @@ test('failed fetch never acquires a registry lock and keeps other workers intact
   await assert.rejects(() => manager.allocate({worker: 'one', branch: 'engineering/fetch-failure'}), /interrupted fetch/);
   assert.equal(guidance, undefined, 'failed fetch must not present stale or unverified instructions');
   assert.ok(fs.readFileSync(path.join(registry, 'state.json')).equals(before));
-  assert.deepEqual(manager.report().entries, [existing]);
+  assert.deepEqual(registryEntries(manager), [existing]);
   assert.ok(!fs.existsSync(path.join(registry, 'lock')));
 });
 
@@ -887,7 +942,7 @@ test('hard process interruption during fetch leaves no allocator lock or reserva
   assert.equal(result.signal, 'SIGTERM');
   assert.equal(fs.readFileSync(path.join(repo, 'fetch-started'), 'utf8'), 'started');
   assert.ok(!fs.existsSync(manager.report().registry));
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.equal(git('rev-parse', 'HEAD').trim(), head);
 });
 
@@ -1029,8 +1084,8 @@ test('two simultaneous allocation processes cannot acquire the same worker slot'
   });
   const exits = await Promise.all([run('engineering/parallel-one'), run('engineering/parallel-two')]);
   assert.deepEqual(exits.sort(), [0, 1]);
-  assert.equal(manager.report().entries.length, 1);
-  assert.equal(manager.report().entries[0].status, 'ready');
+  assert.equal(registryEntries(manager).length, 1);
+  assert.equal(registryEntries(manager)[0].status, 'ready');
 });
 
 test('assume-unchanged cannot hide unique tracked bytes from cleanup', async t => {
@@ -1173,7 +1228,7 @@ test('actual promisor clone acquires selected root, support and explicit blobs b
       input: excluded + '\n', encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '1'}
     });
     assert.equal(spawnSync('git', ['-C', repo, 'cat-file', '-e', excluded], {env: {...process.env, GIT_NO_LAZY_FETCH: '1'}}).status, 1, 'excluded body remains missing after the exact selected acquisition');
-    assert.equal(manager.report().entries.length, 1);
+    assert.equal(registryEntries(manager).length, 1);
     manager.release({worker: 'partial', slot: 'review', token: entry.token});
     checkUnfetched(false, true);
   }
@@ -1252,7 +1307,7 @@ test('selected submodules remain refused while excluded submodule metadata is ha
   for (const options of [{include: ['data/vendor']}, {profile: 'full'}]) {
     assert.throws(() => manager.inspect({commit, ...options}), /Submodule/);
     await assert.rejects(() => manager.allocate({worker: 'selected', slot: 'review', commit, ...options}), /Submodule/);
-    assert.deepEqual(manager.report().entries, []);
+    assert.deepEqual(registryEntries(manager), []);
   }
 });
 
@@ -1556,7 +1611,7 @@ test('tree descriptor mismatches and failed or denied exact fetches leave no slo
     else await assert.rejects(() => run({include: ['data/one.json']}), /object acquisition failed/);
     assert.equal(git('show-ref'), refs);
     assert.ok(!fs.existsSync(path.join(repo, '.git/FETCH_HEAD')));
-    assert.deepEqual(manager.report().entries, []);
+    assert.deepEqual(registryEntries(manager), []);
     assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
     if (failure === 'wrong-size') {
       assert.deepEqual(manager.inspect({commit: git('rev-parse', 'HEAD').trim(), include: ['data/one.json']}).missing, []);
@@ -1685,7 +1740,7 @@ test('documented cold bootstrap allocates from a linked partial clone with exact
   assert.deepEqual(fs.readFileSync(primaryFetchHead), before.fetchHead, 'common metadata refresh leaves linked-primary FETCH_HEAD untouched');
   assert.ok(!fs.readdirSync(path.join(repo, '.git')).some(name => name.startsWith('worldatlas-helper-')));
   manager.release({worker: entry.worker, token: entry.token});
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
 });
 
 test('inspection and allocation share every support prefix without suppressing an existing allocation lock', async t => {

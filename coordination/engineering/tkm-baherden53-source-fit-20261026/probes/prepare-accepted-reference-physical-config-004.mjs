@@ -1,0 +1,37 @@
+/* Build a current physical config from exact template/stage/runtime pins. */
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+const root=fs.realpathSync(process.cwd());
+const TEMPLATE_COMMIT='547de322e44015f4a7639e8570c7dccb0b1a882b';
+const TEMPLATE_PATH='coordination/engineering/tkm-baherden53-source-fit-20261026/config/physical-002.json';
+const STAGE_COMMIT='547de322e44015f4a7639e8570c7dccb0b1a882b';
+const STAGE_PATH='coordination/engineering/tkm-baherden53-source-fit-20261026/physical-003/original-stage-inputs.json';
+const RUNTIME_PATH='/workspace/shared/worldatlas-TKM-Baherden53-runtime-inventory-004-20261027.json';
+const DEST='coordination/engineering/tkm-baherden53-source-fit-20261026/config/physical-004.json';
+const {pinReader}=await import(pathToFileURL(path.join(root,'scripts/prepare-delivery-handoff.mjs')));
+const reader=pinReader(root), need=(ok,msg)=>{if(!ok) throw Error(msg);};
+const templatePin=reader.pin(TEMPLATE_COMMIT,TEMPLATE_PATH),template=JSON.parse(reader.read(templatePin));
+need(template.version===1&&template.physical.version===1&&template.physical.inputs.length===25,'Accepted complete physical template differs');
+const stagePin=reader.pin(STAGE_COMMIT,STAGE_PATH);
+need(stagePin.bytes===19876&&stagePin.sha256==='c8a44f1e14a21a7320f15e3bda4e9bd038d6e74371b8283a95955019bc9a7078','New authenticated stage input differs');
+const stages=JSON.parse(reader.read(stagePin));
+need(stages.length===1&&stages[0].consumed.geometry.coordinates[0].length===119&&stages[0].selected.geometry.coordinates[0].length===106,'Dual source/accepted-target roles changed');
+const runtimeRaw=fs.readFileSync(RUNTIME_PATH),runtime=JSON.parse(runtimeRaw);
+need(runtime.files.length===207&&runtime.method?.runtime_path_function==='runtime_paths','Current helper-derived runtime inventory differs');
+need(runtime.files.every(pin=>pin.path!=='/tmp/tkm-runtime-inventory.py'),'Stale missing inventory emitter path remains');
+for(const pin of runtime.files){const raw=fs.readFileSync(pin.path);need(raw.length===pin.bytes&&createHash('sha256').update(raw).digest('hex')===pin.sha256,'Runtime file identity changed: '+pin.path);}
+need(runtime.files.some(pin=>pin.path===runtime.python.path&&pin.bytes===runtime.python.bytes&&pin.sha256===runtime.python.sha256),'Runtime executable pin missing');
+const physical=structuredClone(template.physical),oldStage=physical.roles.stages;
+const inputs=new Map(physical.inputs.map(pin=>[pin.path,pin]));
+need(inputs.has(oldStage),'Original complete physical stage pin missing');
+inputs.delete(oldStage);inputs.set(STAGE_PATH,stagePin);
+physical.inputs=[...inputs.values()].sort((a,b)=>a.path.localeCompare(b.path));physical.roles.stages=STAGE_PATH;
+need(physical.inputs.length===25&&physical.inputs.filter(pin=>pin.path===STAGE_PATH).length===1,'Physical input inventory changed outside intended stage binding');
+physical.runtime={python:runtime.version,numpy:runtime.numpy,shapely:runtime.shapely,geos:runtime.geos};
+const runtimeInventory={python:runtime.python,files:runtime.files};
+const config={version:1,physical,runtime_inventory:runtimeInventory};
+need(!fs.existsSync(path.join(root,DEST)),'Physical config destination is not fresh');
+const body=Buffer.from(JSON.stringify(config,null,2)+'\n');fs.writeFileSync(path.join(root,DEST),body,{flag:'wx'});
+console.log(JSON.stringify({path:DEST,bytes:body.length,sha256:createHash('sha256').update(body).digest('hex'),template:{commit:TEMPLATE_COMMIT,path:TEMPLATE_PATH,sha256:templatePin.sha256},stage:stagePin,runtime:{path:RUNTIME_PATH,bytes:runtimeRaw.length,sha256:createHash('sha256').update(runtimeRaw).digest('hex'),files:runtime.files.length},physical_inputs:physical.inputs.length}));
