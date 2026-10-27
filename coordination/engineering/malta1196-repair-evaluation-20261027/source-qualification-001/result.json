@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "package_id": "gb-MLT-ADM1--repair-evaluation",
+  "data_commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+  "method": "retained simplified geoBoundaries MLT ADM1 features individually rasterized with exact accepted src/pixel-grid.js createGridIndex/rasterize; compare every exact selected-owner observation key to original queue source_feature_index",
+  "inputs": [
+    {
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-MLT-ADM1-000.bin.gz",
+      "bytes": 17102,
+      "sha256": "76d01c165a5242fbc6c7bb628617d65b9c40d06549aefece2ea60d8eb7803c02",
+      "decoded_bytes": 76373,
+      "decoded_sha256": "8989bbf2cd7685358c2abe4391dc7f9a67a38fea431c00ed1940e51b2190dfd6",
+      "role": "retained simplified 2022 represented-year source product"
+    },
+    {
+      "path": "coordination/engineering/malta1196-repair-evaluation-20261027/owner-observation-001/owner-observation.json",
+      "bytes": 249151,
+      "sha256": "0cc0981dfce9c5cc2c86946bc657f506e1cca2b94d4fd48ebebde1b38c3ca331",
+      "role": "exact 1,196-key selected-owner observation"
+    },
+    {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-feature-roster.json.gz",
+      "git_blob_oid": "e6e380ec13cd4bcc1d24399a76bfa85ca5805b26",
+      "bytes": 1844315,
+      "sha256": "87f2d47e104b3af640351e747d8300d0068a1be23caab9e80558c3f8914eb4aa",
+      "role": "authenticated family/source-index roster"
+    },
+    {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-unassigned-summary.json",
+      "git_blob_oid": "0c934cdaf4b007a741e66d4a080890154bdae53c",
+      "bytes": 154672,
+      "sha256": "a82c56c1d92ff52c0b0e52c9bf329905a05bace4b6a27c12771509d419888501",
+      "role": "physical-input inventory and stated limitations"
+    },
+    {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/physical-support-block-025.json.gz",
+      "git_blob_oid": "7549ff877ffa8b9fad68d2e72beded008b5ad0fa",
+      "bytes": 401770,
+      "sha256": "28caabab2857b01a6191637b690e2b0d128bac8b3e2ba45aaae0e5ee44072b44",
+      "decoded_sha256": "505a4feee9ae726db0334f6cb6e6b26cf749668de30ecc31f9dfca99a501148f",
+      "role": "GSHHG-derived complete land-support interval mask, block 25"
+    },
+    {
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/inland-water-support-block-025.json.gz",
+      "git_blob_oid": "1bd541342b150ae6a945557e37fbc2ec9ad35276",
+      "bytes": 258,
+      "sha256": "6c0ec3db20bf6278b142e7df333e1f864b7d4850810cf6cad8eaef832ec38aec",
+      "decoded_sha256": "81e61e62d48e929dca3506db5222bfd085bdc459183b09ab5a1a5e86662fadfb",
+      "role": "separate inland-water interval mask, block 25"
+    },
+    {
+      "path": "src/pixel-grid.js",
+      "git_blob_oid": "008aaf69e65105029e64e09317b8f9aa4df1f352",
+      "role": "accepted native projection/rasterization implementation"
+    }
+  ],
+  "source_scope": {
+    "features": 68,
+    "source_index_range": [
+      44815,
+      44882
+    ],
+    "owner_rows": 68,
+    "owner_index": 7124,
+    "crs": "OGC:CRS84"
+  },
+  "result": {
+    "query_keys": 1196,
+    "unique_query_keys": 1196,
+    "feature_center_hit_multiplicity": {
+      "1": 1196
+    },
+    "queue_source_index_matches": 1196,
+    "features_with_center_hits": 31,
+    "counts_by_source_index": {
+      "44815": 53,
+      "44816": 31,
+      "44817": 69,
+      "44818": 23,
+      "44820": 48,
+      "44822": 42,
+      "44825": 3,
+      "44826": 62,
+      "44828": 15,
+      "44829": 9,
+      "44830": 350,
+      "44831": 13,
+      "44832": 61,
+      "44833": 2,
+      "44834": 29,
+      "44836": 12,
+      "44837": 7,
+      "44838": 69,
+      "44842": 9,
+      "44843": 5,
+      "44855": 24,
+      "44856": 26,
+      "44858": 3,
+      "44859": 53,
+      "44860": 3,
+      "44863": 4,
+      "44864": 40,
+      "44867": 30,
+      "44872": 12,
+      "44879": 13,
+      "44882": 76
+    },
+    "selected_center_physical_membership": {
+      "gshhg_land_support": 1196,
+      "inland_water_support": 0,
+      "neither": 0,
+      "both": 0
+    }
+  },
+  "limits": [
+    "This validates sampled native-center membership against the retained simplified source only; no full-resolution geoJSON was rasterized or compared.",
+    "GSHHG support is retained source-relative physical evidence with heterogeneous observation times, not contemporary perfect ground truth; membership supports are not whole-target issue masks and no issue-center clearance is inferred.",
+    "Source metadata records geoBoundaries CC-BY-4.0 derivative terms and underlying d-maps.com Public Domain metadata/email clarification; this computation does not resolve source authority, effective applicability, role, or political/legal interpretation.",
+    "No repair patch, ownership change, acceptance, or publication decision is asserted."
+  ]
+}
