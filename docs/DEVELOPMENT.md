@@ -4,11 +4,15 @@ Use this guide after the repo-level [entrypoint](../AGENTS.md) for an assigned t
 
 ## Start and own the work
 
-Use the accepted `scripts/local-workspace.mjs` allocator for managed author and exact-head review checkouts. It fetches `main` with the explicit remote-tracking refspec, verifies `FETCH_HEAD` matches `origin/main`, and freezes that commit for a new author branch. Before reserving an author slot it reads the root `AGENTS.md` from that exact commit, verifies the ordinary blob and SHA-256, and prints the pinned text; resolution is repository-root-relative even though the CLI itself lives under `scripts/`. A review slot is detached at the requested commit. Read the helper's current CLI and implementation for arguments and guards; do not maintain a second option specification here.
+Use the accepted `scripts/local-workspace.mjs` allocator for managed author and exact-head review checkouts. It fetches `main` with the explicit remote-tracking refspec through the shared Git directory, verifies common `FETCH_HEAD` matches `origin/main`, and freezes that commit for a new author branch. This keeps remote metadata refresh out of a linked primary checkout's worktree-specific administrative state. Before reserving an author slot it reads the root `AGENTS.md` from that exact commit, verifies the ordinary blob and SHA-256, and prints the pinned text; resolution is repository-root-relative even though the CLI itself lives under `scripts/`. A review slot is detached at the requested commit. Read the helper's current CLI and implementation for arguments and guards; do not maintain a second option specification here.
 
 Use the task/environment's supported Node and Git executables, not ambient `PATH` assumptions; verify the selected versions with `node --version` and `git --version`. Meet the Node requirement declared by `package.json` and use Git with the capabilities required by the documented helper. Do not copy private executable paths into guides. Preserve approved authentication configuration when isolating Git commands; clear only repository-routing variables invocation-locally as below.
 
+The allocator's ordinary `report` command is a current-worker diagnostic, not a registry browser. It requires the current `CODEX_THREAD_ID` when requesting a worker view, returns only that worker's non-secret slot metadata and matching worktree rows, and never emits capability tokens. Without a current identity, it returns no owner rows or owner checkout totals. Do not add a full-registry report mode or pass capability-bearing options to `report`; use `check` for the shared free-space diagnostic and `inspect` for an exact commit's selected-input status.
+
 The allocator binds each slot to a worker identity, path, branch/head, selected inputs and private ownership token. Keep the returned token private and use it only for your own slot. `resume` recovers only an interrupted empty `preparing` allocation; it does not reload instructions, refresh a conversation, rebase active work, or repair an uncertain checkout. Inspect actual state and preserve uncertain or dirty work. Sparse selection is a storage optimization, not permission to omit scientific or execution inputs. Use the supported selected-input path; do not hydrate unrelated history or mutate the shared allocator registry, refs, or another owner's checkout.
+
+If an author genuinely loses the capability for their existing ready work slot, `recover-lost-capability` is a same-owner recovery—not an allocation, resume, reset, or administrative override. It requires the current `CODEX_THREAD_ID` to match the exact worker, and requires the supplied path/branch to match that registered slot and the supplied current HEAD to match both its linked worktree and branch ref (the branch may have advanced normally from its recorded start head). It refuses dirty, ignored, trust-flagged, nonordinary, missing, ambiguous or in-progress checkouts and Git lock files. The replacement token is never printed: it is written as an owner-only file under the allocator's private capability directory before the registry token is atomically replaced. A correctly bound interrupted replacement may be resumed; an unknown file is preserved and refused. Use the exact returned capability-file path with the ordinary guarded `release --capability-file` operation. Do not copy, print, move or hand-edit the file; do not recover another worker's slot. If any identity or state check is uncertain, preserve the workspace and ask its owner to inspect.
 
 Preserve the primary checkout and shared Git store. Do not force-reset, clean, prune or delete shared content to solve a stale checkout, disk, or object problem. Remove a generated duplicate only after comparing its path, mode and bytes against its protected source and confirming no unique evidence depends on it. Release a completed slot only through the helper with its exact owner capability.
 
@@ -25,6 +29,8 @@ Keep each PR coherent, push normally, and obtain a substantive review of the exa
 Use the trusted `worker-merge.yml` workflow and `scripts/merge-integration.mjs` for current-base validation, request preparation, dispatch and terminal reconciliation. Its automatic selected-data route is a strict eligibility optimization, not a judgment of review sufficiency. Select `auto`, an exact reviewed plan, or the complete suite using the criteria in [VALIDATION](VALIDATION.md). Revalidate exact base/head immediately before a request. Use the stock route; do not directly merge or fabricate a terminal result. Read the canonical terminal receipt and resulting accepted `main`, then report checks actually run, failures, unrun work and remaining limits.
 
 For a final-bank update, use the finalizer's complete `current-startup` roster as the output boundary. It may retire an old generated file only when the current accepted index or an authenticated committed finalization receipt pins the exact prior body; pass exact committed `preparation.json` and `startup-ownership.json` pins through `prior_finalizations` when needed. Unknown, edited, nonordinary, or roster-changing extras fail closed. Exact retirement paths are staged as deletions only after byte and index rechecks; inspect the complete staged file set against the new index before commit. Other prepared output changes remain ordinary worktree edits.
+
+`readPreparedFinalOwnership` copies reader-supplied `Buffer` values by default. A private final-bank reader may explicitly opt into reusing a `Buffer` only when it returns already-authenticated bytes that remain immutable for the full call; whole-byte length and SHA-256 checks still apply. The accepted final-bank/supported-input paths may discard their pin-reader body cache after complete bank validation; subsequent reads remain pinned and revalidated. Keep generic callbacks on the defensive-copy path.
 
 For routine read-only observation, use bounded provider reads and avoid rapid polling:
 
@@ -60,14 +66,26 @@ condition fails closed. Do not hand-copy OIDs, issue ad hoc Git fetches, disable
 no-lazy-fetch, or hydrate excluded bodies. Interrupted `preparing` reservations
 remain operator-inspection-only; this selected acquisition is not a resume bypass.
 
-The following code-only bootstrap loads both allocator modules from one exact
-locally available main commit. It uses an exclusive temporary directory inside
+The following code-only bootstrap loads the allocator, its identity guard, and
+the one direct lightweight acquisition module from one exact locally available
+main commit. This module contains only the selected-object acquisition adapter
+and Node built-ins; it does not import the scientific delivery workflow. It
+uses an exclusive temporary directory inside
 the task repository's shared Git store and removes only its generated helper copies
 afterward. Git reads and helper execution do not depend on the shell's cwd. A failed main refresh or
-commit lookup stops without using a cached older pin. Missing helper source blobs
-stop this bootstrap before execution; do not hand-fetch OIDs, hydrate unrelated
-objects, or execute a cached older helper. Use the accepted helper only when its
-source bodies are already locally available, with Node 24.
+commit lookup stops without using a cached older pin. If any pinned helper blob is
+missing, the bootstrap tree-binds all three helper paths to that exact commit and
+requests only the missing blob OIDs through Git's bounded `fetch --stdin` path.
+It verifies each returned object against the pinned OID and ordinary-blob type
+before copying any helper to the temporary directory. A failed fetch or
+verification stops before helper execution. Do not fetch other OIDs, hydrate
+unrelated objects, or execute a cached older helper. Use Node 24.
+
+During selected-object acquisition, immutable GitHub tree metadata reads and
+the bounded Git fetch share one invocation-local authentication resolver. It
+uses `GH_TOKEN` when supplied; otherwise it reads the existing `gh auth token`
+for that invocation, respecting `GH_CONFIG_DIR`. The token is neither logged
+nor persisted, and callers do not need to export a second token variable.
 
 ```sh
 (
@@ -77,10 +95,11 @@ for key in GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR GIT_OBJECT_DIRECT
   unset "$key"
 done
 export GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1
-git -C "$TASK_REPO" -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules \
+common=$(git -C "$TASK_REPO" rev-parse --path-format=absolute --git-common-dir) || exit
+git --git-dir="$common" -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules \
   --no-auto-maintenance --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main || exit
-fetched=$(git -C "$TASK_REPO" rev-parse --verify 'FETCH_HEAD^{commit}') || exit
-tracked=$(git -C "$TASK_REPO" rev-parse --verify 'origin/main^{commit}') || exit
+fetched=$(git --git-dir="$common" rev-parse --verify 'FETCH_HEAD^{commit}') || exit
+tracked=$(git --git-dir="$common" rev-parse --verify 'refs/remotes/origin/main^{commit}') || exit
 [ "$fetched" = "$tracked" ] || { echo 'Fetched main does not match origin/main' >&2; exit 1; }
 base=$tracked
 python3 - "$TASK_REPO" "$base" inspect --commit "$base" \
@@ -97,30 +116,50 @@ env = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1')
 for key in ('GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR',
             'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES'):
     env.pop(key, None)
+common = Path(subprocess.check_output(['git', '-C', repo, 'rev-parse',
+    '--path-format=absolute', '--git-common-dir'], env=env).decode().strip()).resolve(strict=True)
 def git(*args, **kwargs):
-    return subprocess.check_output(['git', '-C', repo, '--no-replace-objects', *args], env=env, **kwargs)
-common = Path(git('rev-parse', '--path-format=absolute', '--git-common-dir').decode().strip()).resolve(strict=True)
-sources = {}
-for name in ('local-workspace.mjs', 'worker-identity.mjs'):
+    return subprocess.check_output(['git', '--git-dir', str(common), '--no-replace-objects', *args], env=env, **kwargs)
+pins = {}
+missing = []
+for name in ('local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'):
     row = git('ls-tree', '-z', base, '--', 'scripts/' + name).rstrip(b'\0')
     metadata, member = row.split(b'\t')
     mode, kind, oid = metadata.decode().split()
     if mode not in ('100644', '100755') or kind != 'blob' or member != ('scripts/' + name).encode():
         raise SystemExit('Ordinary pinned helper required')
+    pins[name] = oid
     present = git('-c', 'core.commitGraph=false', 'rev-list', '--objects', '--filter=tree:0',
                   '--missing=print', '--ignore-missing', '--no-walk=unsorted', '--no-object-names',
                   '--stdin', input=oid.encode() + b'\n').decode().strip()
     if present != oid:
-        raise SystemExit('Pinned helper missing; stop and use the accepted helper workflow when its source bodies are available')
+        missing.append(oid)
+    else:
+        status = git('cat-file', '--batch-check=%(objectname) %(objecttype) %(objectsize)', input=oid.encode() + b'\n').decode().split()
+        if len(status) != 3 or status[0] != oid or status[1] != 'blob' or not status[2].isdigit():
+            raise SystemExit('Pinned helper has an invalid local object; stop')
+if missing:
+    result = subprocess.run(['git', '--git-dir', str(common), '-c', 'fetch.negotiationAlgorithm=noop',
+        'fetch', '--no-tags', '--no-write-fetch-head', '--recurse-submodules=no',
+        '--filter=blob:none', '--stdin', 'origin'], input=(''.join(oid + '\n' for oid in missing)).encode(),
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=env)
+    if result.returncode:
+        raise SystemExit('Exact pinned helper fetch failed: ' + result.stderr.decode('utf-8', 'replace').strip())
+sources = {}
+for name, oid in pins.items():
     status = git('cat-file', '--batch-check=%(objectname) %(objecttype) %(objectsize)', input=oid.encode() + b'\n').decode().split()
     if len(status) != 3 or status[0] != oid or status[1] != 'blob' or not status[2].isdigit():
-        raise SystemExit('Pinned helper missing; stop and use the accepted helper workflow when its source bodies are available')
-    sources[name] = git('cat-file', 'blob', oid)
+        raise SystemExit('Pinned helper unavailable or invalid after exact-object acquisition; stop')
+    body = git('cat-file', 'blob', oid)
+    if len(body) != int(status[2]) or git('hash-object', '--stdin', input=body).decode().strip() != oid:
+        raise SystemExit('Pinned helper body failed object verification; stop')
+    sources[name] = body
 with tempfile.TemporaryDirectory(prefix='worldatlas-helper-', dir=common) as directory:
     for name, body in sources.items():
         with (Path(directory) / name).open('xb') as output:
             output.write(body)
-    result = subprocess.call(['node', str(Path(directory) / 'local-workspace.mjs'), *args], env=env)
+    result = subprocess.call(['node', str(Path(directory) / 'local-workspace.mjs'),
+        *args, '--repo', repo], env=env)
 sys.exit(result)
 PYTHON
 )

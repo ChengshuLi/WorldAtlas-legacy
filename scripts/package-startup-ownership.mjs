@@ -18,6 +18,30 @@ const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const validHash = value => /^[a-f0-9]{64}$/.test(value ?? '');
 const WORDS_PER_PART = 4194304; // At most16MiB of decoded GPU words per new part.
 
+function* fixedWordChunks(source,totalWords) {
+  if(source instanceof Uint32Array){
+    if(source.length!==totalWords)throw Error('Complete ownership word stream required');
+    for(let offset=0;offset<source.length;offset+=WORDS_PER_PART)
+      yield source.subarray(offset,Math.min(offset+WORDS_PER_PART,source.length));
+    return;
+  }
+  if(typeof source!=='function'||!Number.isSafeInteger(totalWords)||totalWords<0)throw Error('Complete ownership word stream required');
+  let chunk=new Uint32Array(Math.min(WORDS_PER_PART,totalWords)),used=0,seen=0;
+  for(const segment of source()){
+    if(!(segment instanceof Uint32Array)||segment.length%2!==0)throw Error('Invalid streamed ownership run segment');
+    if(seen>=totalWords&&segment.length)throw Error('Streamed ownership word count exceeds declaration');
+    let offset=0;
+    while(offset<segment.length){
+      const count=Math.min(chunk.length-used,segment.length-offset);
+      if(count<=0)throw Error('Streamed ownership word count exceeds declaration');
+      chunk.set(segment.subarray(offset,offset+count),used);used+=count;offset+=count;seen+=count;
+      if(used===chunk.length){yield chunk;used=0;if(seen<totalWords)chunk=new Uint32Array(Math.min(WORDS_PER_PART,totalWords-seen));}
+    }
+  }
+  if(used)yield chunk.subarray(0,used);
+  if(seen!==totalWords)throw Error('Streamed ownership word count differs');
+}
+
 function encodeWords(words) {
   const encoded = shuffleOwnershipBytes(words);
   if (encoded.length > 32 * 1024 * 1024) throw Error('Ownership transport exceeds decoded byte limit');
@@ -83,25 +107,34 @@ export async function encodeFinalOwnershipWords({ownership,destination,previousP
   const metadata=Object.fromEntries(['version','coordinateBits','size','runWords','method','native_latitudes','reference_owner_sha256'].filter(key=>Object.hasOwn(ownership,key)).map(key=>[key,ownership[key]]));
   if(metadata.version!==2||metadata.method!=='native-linear-evenodd-first-owner-v1'||metadata.size!==262166||metadata.coordinateBits!==19
     ||!(ownership.rows instanceof Uint32Array)||ownership.rows.length!==metadata.size*2
-    ||!(ownership.runs instanceof Uint32Array)||ownership.runs.length!==metadata.runWords||metadata.runWords%2!==0)
+    ||(!(ownership.runs instanceof Uint32Array)&&typeof ownership.runSegments!=='function')
+    ||(ownership.runs instanceof Uint32Array&&ownership.runs.length!==metadata.runWords)
+    ||(typeof ownership.runSegments==='function'&&!(Number.isSafeInteger(metadata.runWords)&&metadata.runWords>=0))
+    ||metadata.runWords%2!==0)
     throw Error('Complete final ownership words required');
   const parts=[],outputs=[];
-  for(const kind of ['rows','runs'])for(let offset=0;offset<ownership[kind].length;offset+=WORDS_PER_PART){
-    const words=ownership[kind].subarray(offset,offset+WORDS_PER_PART);
-    const {bytes,decodedBytes}=encodeWords(words),sha256=digest(bytes),decoded_sha256=digest(decodedBytes);
-    const prior=previousParts.find(p=>p.kind===kind&&p.offset===offset&&p.words===words.length
-      &&p.encoding==='byte-shuffle'&&p.sha256===sha256&&p.decoded_sha256===decoded_sha256);
-    const relative=prior?.path??`ownership-vintages/${sha256}/native-v1/ownership/${kind==='rows'?'rows':'startup-runs'}-${offset}.bin.gz`;
-    if(!/^(?:ownership-vintages\/[a-f0-9]{64}\/)?native-v1\/ownership\/(?:rows|startup-runs)-[0-9]+\.bin\.gz$/.test(relative))
-      throw Error('Unsafe final ownership part');
-    await fs.mkdir(path.dirname(path.join(destination,relative)),{recursive:true});
-    await fs.writeFile(path.join(destination,relative),bytes,{flag:'wx'});
-    parts.push({kind,path:relative,offset,words:words.length,encoding:'byte-shuffle',sha256,decoded_sha256});
-    outputs.push({path:relative,bytes:bytes.length,sha256});
+  const runWordHash=createHash('sha256');
+  for(const kind of ['rows','runs']){
+    const source=kind==='rows'?ownership.rows:(ownership.runs instanceof Uint32Array?ownership.runs:ownership.runSegments);
+    const totalWords=kind==='rows'?ownership.rows.length:metadata.runWords;let offset=0;
+    for(const words of fixedWordChunks(source,totalWords)){
+      const {bytes,decodedBytes}=encodeWords(words),sha256=digest(bytes),decoded_sha256=digest(decodedBytes);
+      const prior=previousParts.find(p=>p.kind===kind&&p.offset===offset&&p.words===words.length
+        &&p.encoding==='byte-shuffle'&&p.sha256===sha256&&p.decoded_sha256===decoded_sha256);
+      const relative=prior?.path??`ownership-vintages/${sha256}/native-v1/ownership/${kind==='rows'?'rows':'startup-runs'}-${offset}.bin.gz`;
+      if(!/^(?:ownership-vintages\/[a-f0-9]{64}\/)?native-v1\/ownership\/(?:rows|startup-runs)-[0-9]+\.bin\.gz$/.test(relative))
+        throw Error('Unsafe final ownership part');
+      await fs.mkdir(path.dirname(path.join(destination,relative)),{recursive:true});
+      await fs.writeFile(path.join(destination,relative),bytes,{flag:'wx'});
+      if(kind==='runs')runWordHash.update(Buffer.from(words.buffer,words.byteOffset,words.byteLength));
+      parts.push({kind,path:relative,offset,words:words.length,encoding:'byte-shuffle',sha256,decoded_sha256});
+      outputs.push({path:relative,bytes:bytes.length,sha256});offset+=words.length;
+    }
+    if(offset!==totalWords)throw Error('Incomplete final ownership word stream');
   }
   return {pixelMap:{...metadata,parts},outputs,
     rows_sha256:digest(Buffer.from(ownership.rows.buffer,ownership.rows.byteOffset,ownership.rows.byteLength)),
-    runs_word_stream_sha256:digest(Buffer.from(ownership.runs.buffer,ownership.runs.byteOffset,ownership.runs.byteLength))};
+    runs_word_stream_sha256:runWordHash.digest('hex')};
 }
 
 // Shared original-N binding for final preparation and ordinary copying.
@@ -256,7 +289,7 @@ export async function packagePreparedStartupOwnership({manifest,manifestSha,sour
 
 // Load exactly the selected finished bank for preparation/conservation. This
 // authenticates transport and words, not acceptance of a caller's selection.
-export async function readPreparedFinalOwnership({indexRaw,manifest,manifestSha,selected,features,ownerCount=features?.length,read}) {
+export async function readPreparedFinalOwnership({indexRaw,manifest,manifestSha,selected,features,ownerCount=features?.length,read,stableBufferReader=false}) {
   const index=JSON.parse(indexRaw);
   if(![2,3].includes(index.version))throw Error('A complete prepared final bank is required');
   if(!Number.isSafeInteger(ownerCount)||ownerCount<1)throw Error('Complete final owner denominator required');
@@ -265,7 +298,13 @@ export async function readPreparedFinalOwnership({indexRaw,manifest,manifestSha,
   async function whole(name){
     const pin=pins.get(name);if(!pin)throw Error('Final ownership input outside the complete prepared roster');
     if(!bodies.has(name)){
-      const raw=Buffer.from(await read(pin));
+      const input=await read(pin);
+      // By default, take ownership of a private copy: callers may retain or
+      // mutate the bytes returned by their reader. The finalizer may opt in only
+      // when its reader returns a Buffer whose lifetime is stable for this call
+      // (authenticated Git-object bodies held privately by the finalizer).
+      // Non-Buffer byte sources retain Buffer.from's normal conversion path.
+      const raw=stableBufferReader===true&&Buffer.isBuffer(input)?input:Buffer.from(input);
       if(raw.length!==pin.bytes||digest(raw)!==pin.sha256)throw Error('Prepared final input whole identity differs: '+name);
       bodies.set(name,raw);
     }

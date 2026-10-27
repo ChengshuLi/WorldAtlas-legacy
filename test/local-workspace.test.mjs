@@ -9,6 +9,16 @@ import childProcess, {execFileSync, spawn, spawnSync} from 'node:child_process';
 import {syncBuiltinESMExports} from 'node:module';
 import {workspaceManager} from '../scripts/local-workspace.mjs';
 
+// Tests that need allocator internals read the fixture registry directly. The
+// public report intentionally exposes only the current worker's safe metadata.
+function registryEntries(manager) {
+  const report = manager.report();
+  const statePath = path.join(report.registry, 'state.json');
+  if (!fs.existsSync(statePath)) return [];
+  const state = JSON.parse(fs.readFileSync(statePath, 'utf8'));
+  return state.entries;
+}
+
 function fixture(t, overrides = {}) {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'atlas-storage-test-'));
   t.after(() => fs.rmSync(temporary, {recursive: true, force: true}));
@@ -33,7 +43,7 @@ function fixture(t, overrides = {}) {
 
 function cliHelper(repo, directory = path.join(repo, '.git', 'worldatlas-helper-test')) {
   fs.mkdirSync(directory, {recursive: true});
-  for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+  for (const name of ['local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'])
     fs.writeFileSync(path.join(directory, name), fs.readFileSync(new URL('../scripts/' + name, import.meta.url)));
   return path.join(directory, 'local-workspace.mjs');
 }
@@ -48,20 +58,21 @@ test('allocator CLI binds its helper Git store, never an unrelated or missing cw
   for (const directory of [path.join(intended.repo, 'scripts'), path.join(intended.repo, '.git', 'worldatlas-helper-test')]) {
     const helper = cliHelper(intended.repo, directory);
     for (const cwd of [ambient.repo, ambient.temporary]) {
-      const run = (...args) => JSON.parse(execFileSync(process.execPath, [helper, ...args], {cwd, encoding: 'utf8'}));
+      const run = (...args) => JSON.parse(execFileSync(process.execPath,
+        [helper, args[0], '--repo', intended.repo, ...args.slice(1)], {cwd, encoding: 'utf8'}));
       assert.equal(run('report').registry, registry);
       assert.ok(Number.isFinite(run('check').freeBytes));
       assert.deepEqual(run('inspect', '--commit', intended.head), intended.manager.inspect({commit: intended.head}));
     }
   }
   const helper = cliHelper(intended.repo);
-  const allocate = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'independent-fixture-review',
+  const allocate = spawnSync(process.execPath, [helper, 'allocate', '--repo', intended.repo, '--worker', 'independent-fixture-review',
     '--slot', 'review', '--commit', intended.head], {cwd: ambient.repo, encoding: 'utf8'});
   assert.equal(allocate.status, 0, allocate.stderr);
   const entry = JSON.parse(allocate.stdout);
   assert.equal(entry.head, intended.head);
   assert.ok(entry.path.startsWith(intended.manager.report().root + path.sep));
-  const released = JSON.parse(execFileSync(process.execPath, [helper, 'release', '--worker', entry.worker,
+  const released = JSON.parse(execFileSync(process.execPath, [helper, 'release', '--repo', intended.repo, '--worker', entry.worker,
     '--slot', entry.slot, '--token', entry.token], {cwd: ambient.repo, encoding: 'utf8'}));
   assert.equal(released.released, true);
   assert.equal(intended.git('rev-parse', released.preservedRef).trim(), intended.head);
@@ -72,7 +83,7 @@ test('allocator CLI binds its helper Git store, never an unrelated or missing cw
   assert.match(refused.stderr, /not a git repository/);
   assert.equal(refused.stdout, '');
   assert.equal(ambient.git('show-ref'), before);
-  assert.deepEqual(intended.manager.report().entries, []);
+  assert.deepEqual(registryEntries(intended.manager), []);
   assert.ok(!fs.existsSync(ambient.manager.report().registry));
 });
 
@@ -107,7 +118,7 @@ test('ordinary branch names need only Git validity and fresh isolated ownership'
   manager.release({worker:'worker-one',slot:'work',token:entry.token});
   for(const branch of ['bad..name','../escape','x:bad','bad name','-option'])
     await assert.rejects(()=>manager.allocate({worker:'worker-two',branch}));
-  assert.equal(manager.report().entries.length,0);
+  assert.equal(registryEntries(manager).length,0);
 });
 
 test('sparse work is isolated and contains required directories and individual inputs only', async t => {
@@ -233,7 +244,7 @@ test('automatic engineering code rejects unsafe sparse patterns and nonordinary 
     await assert.rejects(() => manager.allocate({worker: 'unsafe-code', branch: 'engineering/unsafe-code'}), /ordinary file and safe literal path/);
     assert.equal(git('worktree', 'list', '--porcelain'), before);
     assert.throws(() => git('rev-parse', '--verify', 'engineering/unsafe-code'));
-    assert.deepEqual(manager.report().entries, []);
+    assert.deepEqual(registryEntries(manager), []);
     assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
   }
 });
@@ -250,22 +261,25 @@ test('small work and review checkouts need no fixed free-space floor or reservat
     const released = manager.release({worker: entry.worker, slot: entry.slot, token: entry.token});
     assert.equal(git('rev-parse', released.preservedRef).trim(), head);
   }
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
 });
 
 test('removed reserve CLI option is rejected before any slot or branch mutation', async t => {
   const {repo, git, manager, head} = fixture(t);
   const result = spawnSync(process.execPath, [cliHelper(repo),
-    'allocate', '--worker', 'legacy-options', '--slot', 'review', '--commit', head, '--reserve-gib', '1'],
+    'allocate', '--repo', repo, '--worker', 'legacy-options', '--slot', 'review', '--commit', head, '--reserve-gib', '1'],
   {cwd: repo, encoding: 'utf8'});
   assert.equal(result.status, 1);
-  assert.match(result.stderr, /documented --key value arguments/);
-  assert.deepEqual(manager.report().entries, []);
+  assert.match(result.stderr, /documented --repo\/--key value arguments/);
+  assert.deepEqual(registryEntries(manager), []);
   assert.equal(git('worktree', 'list', '--porcelain').match(/^worktree /gm).length, 1);
 });
 
 test('legacy reservations neither inflate measured usage nor require registry migration', async t => {
   const {manager, head} = fixture(t);
+  const priorWorker = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = 'legacy';
+  t.after(() => { if (priorWorker === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = priorWorker; });
   const legacy = await manager.allocate({worker: 'legacy', slot: 'review', commit: head});
   const stateFile = path.join(manager.report().registry, 'state.json');
   const state = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
@@ -277,13 +291,17 @@ test('legacy reservations neither inflate measured usage nor require registry mi
   assert.equal(report.checkoutBytes, report.worktrees.reduce((sum, row) => sum + row.bytes, 0));
   assert.ok(report.checkoutBytes < state.entries[0].reservation);
   const next = await manager.allocate({worker: 'new', slot: 'review', commit: head});
-  assert.deepEqual(manager.report().entries[0], state.entries[0], 'another allocation leaves legacy metadata intact');
+  assert.deepEqual(manager.report().entries[0], {
+    worker: 'legacy', slot: 'review', path: state.entries[0].path, head: state.entries[0].head,
+    branch: state.entries[0].branch, profile: state.entries[0].profile, include: state.entries[0].include,
+    reservation: state.entries[0].reservation, status: state.entries[0].status, createdAt: state.entries[0].createdAt
+  }, 'report exposes safe metadata for this worker only');
   manager.release({worker: 'new', slot: 'review', token: next.token});
-  assert.deepEqual(manager.report().entries, state.entries);
+  assert.deepEqual(registryEntries(manager), state.entries);
   manager.release({worker: 'legacy', slot: 'review', token: legacy.token});
 });
 
-test('allocation and free-space checks skip legacy usage traversals while report retains live diagnostics', async t => {
+test('allocation and free-space checks skip legacy usage traversals while report scopes live diagnostics to owner', async t => {
   let available = 128 * 1024;
   const {manager, git, head, temporary} = fixture(t, {freeBytes: () => available});
   for (let index = 0; index < 16; index++) {
@@ -311,9 +329,9 @@ test('allocation and free-space checks skip legacy usage traversals while report
   };
   const reported = await observe(() => manager.report());
   assert.deepEqual(reported.operations, {du: 17, worktreeList: 1});
-  assert.equal(reported.result.worktrees.length, 17);
-  assert.ok(reported.result.worktrees.every(row => !row.managed && Number.isSafeInteger(row.bytes) && row.bytes >= 0));
-  assert.equal(reported.result.checkoutBytes, reported.result.worktrees.reduce((sum, row) => sum + row.bytes, 0));
+  assert.deepEqual(reported.result.entries, []);
+  assert.deepEqual(reported.result.worktrees, []);
+  assert.equal(reported.result.checkoutBytes, 0, 'no identity yields no cross-worker checkout totals');
   const checked = await observe(() => manager.check());
   assert.deepEqual(checked.operations, {du: 0, worktreeList: 0});
   assert.deepEqual(checked.result, {freeBytes: available});
@@ -323,10 +341,17 @@ test('allocation and free-space checks skip legacy usage traversals while report
   assert.deepEqual(allocated.operations, {du: 0, worktreeList: 0});
   assert.equal(allocated.result.head, head);
   assert.equal(fs.readFileSync(path.join(allocated.result.path, 'README.md'), 'utf8'), 'root');
+  const priorWorker = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = 'one';
+  t.after(() => { if (priorWorker === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = priorWorker; });
   const after = await observe(() => manager.report());
   assert.deepEqual(after.operations, {du: 18, worktreeList: 1});
   assert.equal(after.result.freeBytes, available);
-  assert.deepEqual(after.result.entries, [allocated.result]);
+  assert.equal(after.result.entries.length, 1);
+  assert.equal(after.result.entries[0].worker, 'one');
+  assert.equal(Object.hasOwn(after.result.entries[0], 'token'), false);
+  assert.equal(JSON.stringify(after.result).includes(allocated.result.token), false);
+  assert.equal(after.result.worktrees.length, 1);
   assert.equal(after.result.worktrees.find(row => row.path === allocated.result.path).managed, true);
   assert.equal(after.result.checkoutBytes, after.result.worktrees.reduce((sum, row) =>
     sum + row.bytes, 0));
@@ -337,6 +362,37 @@ test('allocation and free-space checks skip legacy usage traversals while report
   const empty = await observe(() => manager.check());
   assert.deepEqual(empty.operations, {du: 0, worktreeList: 0});
   assert.equal(empty.result.freeBytes, 0, 'check reports actual capacity without imposing a policy');
+});
+
+test('report CLI is current-worker scoped and never serializes capabilities', async t => {
+  const {repo, manager, head} = fixture(t);
+  const mine = await manager.allocate({worker: 'report-owner', slot: 'review', commit: head});
+  const other = await manager.allocate({worker: 'other-owner', slot: 'review', commit: head});
+  const helper = cliHelper(repo);
+  const run = (worker, extra = []) => spawnSync(process.execPath,
+    [helper, 'report', '--repo', repo, ...(worker ? ['--worker', worker] : []), ...extra],
+    {cwd: repo, env: {...process.env, CODEX_THREAD_ID: 'report-owner'}, encoding: 'utf8'});
+  const result = run('report-owner');
+  assert.equal(result.status, 0, result.stderr);
+  const report = JSON.parse(result.stdout);
+  assert.deepEqual(report.entries.map(({worker, slot}) => ({worker, slot})), [{worker: 'report-owner', slot: 'review'}]);
+  assert.ok(report.worktrees.every(row => row.path === mine.path));
+  assert.equal(result.stdout.includes(mine.token), false);
+  assert.equal(result.stdout.includes(other.token), false);
+  const foreign = run('other-owner');
+  assert.equal(foreign.status, 1);
+  assert.match(foreign.stderr, /Worker identity mismatch/);
+  assert.equal(foreign.stdout, '');
+  const capabilityArg = run('report-owner', ['--token', mine.token]);
+  assert.equal(capabilityArg.status, 1);
+  assert.match(capabilityArg.stderr, /Report accepts only/);
+  assert.equal(capabilityArg.stdout, '');
+  const noIdentity = spawnSync(process.execPath, [helper, 'report', '--repo', repo],
+    {cwd: repo, env: {...process.env, CODEX_THREAD_ID: ''}, encoding: 'utf8'});
+  assert.equal(noIdentity.status, 0, noIdentity.stderr);
+  assert.deepEqual(JSON.parse(noIdentity.stdout).entries, []);
+  manager.release({worker: 'other-owner', slot: 'review', token: other.token});
+  manager.release({worker: 'report-owner', slot: 'review', token: mine.token});
 });
 
 test('disk write failure propagates and preserves interrupted allocation and other workers', async t => {
@@ -353,8 +409,8 @@ test('disk write failure propagates and preserves interrupted allocation and oth
   t.after(() => { t.mock.restoreAll(); syncBuiltinESMExports(); });
   await assert.rejects(() => manager.allocate({worker: 'interrupted', slot: 'review', commit: head}), {code: 'ENOSPC'});
   const report = manager.report();
-  assert.deepEqual(report.entries[0], existing);
-  const interrupted = report.entries[1];
+  assert.deepEqual(registryEntries(manager)[0], existing);
+  const interrupted = registryEntries(manager)[1];
   assert.equal(interrupted.status, 'preparing');
   assert.ok(fs.existsSync(interrupted.path));
   assert.throws(() => manager.release({worker: 'interrupted', slot: 'review', token: interrupted.token}), /inspection/);
@@ -403,6 +459,159 @@ test('large sparse indexes release only clean owned work and preserve recovery',
   assert.ok(!fs.existsSync(entry.path));
 });
 
+test('lost-capability recovery rotates only the exact clean author slot and releases through its private file', async t => {
+  const {git, manager, head} = fixture(t);
+  const worker = 'recovery-author';
+  const branch = 'engineering/recovery-author';
+  const entry = await manager.allocate({worker, branch});
+  const oldToken = entry.token;
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+
+  const result = manager.recoverLostCapability({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: branch, expectedHead: head});
+  assert.deepEqual(Object.keys(result).sort(), ['branch','capabilityFile','head','path','previousTokenInvalidated','recovered','slot','worker'].sort());
+  assert.equal(result.recovered, true);
+  assert.equal(result.previousTokenInvalidated, true);
+  assert.equal(result.path, entry.path);
+  assert.equal(result.branch, branch);
+  assert.equal(result.head, head);
+  assert.ok(!JSON.stringify(result).includes(oldToken));
+  assert.ok(fs.statSync(path.dirname(result.capabilityFile)).mode & 0o700);
+  assert.equal(fs.statSync(path.dirname(result.capabilityFile)).mode & 0o077, 0);
+  assert.equal(fs.statSync(result.capabilityFile).mode & 0o777, 0o600);
+  const active = registryEntries(manager)[0];
+  assert.notEqual(active.token, oldToken);
+  assert.throws(() => manager.release({worker, token: oldToken}), /ownership/);
+  assert.throws(() => manager.recoverLostCapability({worker, expectedPath: entry.path,
+    expectedBranch: branch, expectedHead: head}), /capability already exists/);
+  assert.equal(fs.readFileSync(path.join(entry.path, 'README.md'), 'utf8'), 'root');
+  assert.equal(git('rev-parse', 'HEAD').trim(), head);
+  const released = manager.release({worker, slot: 'work', capabilityFile: result.capabilityFile});
+  assert.equal(released.released, true);
+  assert.equal(released.capability_file_removed, true);
+  assert.ok(!fs.existsSync(result.capabilityFile));
+  assert.equal(git('rev-parse', released.preservedRef).trim(), head);
+  assert.deepEqual(registryEntries(manager), []);
+  assert.ok(!fs.existsSync(entry.path));
+});
+
+test('lost-capability recovery fails closed for identity, binding, dirty state and unknown private files', async t => {
+  const {manager, head} = fixture(t);
+  const worker = 'recovery-guarded';
+  const branch = 'engineering/recovery-guarded';
+  const entry = await manager.allocate({worker, branch});
+  const oldToken = entry.token;
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  const request = overrides => manager.recoverLostCapability({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: branch, expectedHead: head, ...overrides});
+
+  process.env.CODEX_THREAD_ID = 'different-author';
+  assert.throws(() => request({}), /exact CODEX_THREAD_ID/);
+  process.env.CODEX_THREAD_ID = worker;
+  assert.throws(() => request({expectedPath: `${entry.path}-other`}), /exact existing owner work slot/);
+  assert.throws(() => request({expectedBranch: 'engineering/other'}), /exact existing owner work slot/);
+  assert.throws(() => request({expectedHead: '0'.repeat(40)}), /branch, HEAD or registration changed/);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
+
+  const gitDirectory = execFileSync('git', ['-C', entry.path, 'rev-parse', '--absolute-git-dir'], {encoding: 'utf8'}).trim();
+  const indexLock = path.join(gitDirectory, 'index.lock');
+  fs.writeFileSync(indexLock, 'preserve active lock');
+  assert.throws(() => request({}), /Git writer lock exists/);
+  assert.equal(fs.readFileSync(indexLock, 'utf8'), 'preserve active lock');
+  fs.unlinkSync(indexLock);
+
+  execFileSync('git', ['-C', entry.path, 'update-index', '--assume-unchanged', 'README.md']);
+  assert.throws(() => request({}), /Index trust flags can hide edits/);
+  execFileSync('git', ['-C', entry.path, 'update-index', '--no-assume-unchanged', 'README.md']);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
+
+  fs.writeFileSync(path.join(entry.path, 'untracked.txt'), 'keep me');
+  assert.throws(() => request({}), /dirty or contains ignored/);
+  assert.equal(fs.readFileSync(path.join(entry.path, 'untracked.txt'), 'utf8'), 'keep me');
+  assert.equal(registryEntries(manager)[0].token, oldToken);
+  fs.unlinkSync(path.join(entry.path, 'untracked.txt'));
+
+  const capabilityDirectory = path.join(manager.report().registry, 'capabilities');
+  fs.mkdirSync(capabilityDirectory, {mode: 0o700});
+  const capabilityPath = path.join(capabilityDirectory, `${createHash('sha256').update(worker).digest('hex')}-work.json`);
+  const unknown = Buffer.from('preserve unknown file\n');
+  fs.writeFileSync(capabilityPath, unknown, {mode: 0o600});
+  assert.throws(() => request({}), /malformed/);
+  assert.deepEqual(fs.readFileSync(capabilityPath), unknown);
+  fs.unlinkSync(capabilityPath);
+  const capabilityTarget = `${capabilityPath}.target`;
+  fs.writeFileSync(capabilityTarget, unknown, {mode: 0o600});
+  fs.symlinkSync(capabilityTarget, capabilityPath);
+  assert.throws(() => request({}), /Symlink directory refused/);
+  assert.deepEqual(fs.readFileSync(capabilityTarget), unknown);
+  assert.equal(registryEntries(manager)[0].token, oldToken);
+});
+
+test('interrupted private-token recovery resumes only its bound pending replacement', async t => {
+  const {manager, head} = fixture(t);
+  const worker = 'recovery-interruption';
+  const branch = 'engineering/recovery-interruption';
+  const entry = await manager.allocate({worker, branch});
+  const oldToken = entry.token;
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  const recovery = {worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head};
+  const stateFile = path.join(manager.report().registry, 'state.json');
+  const originalRename = fs.renameSync;
+  t.mock.method(fs, 'renameSync', (source, target) => {
+    if (target === stateFile) throw Object.assign(new Error('injected registry persistence failure'), {code: 'EIO'});
+    return originalRename(source, target);
+  });
+  assert.throws(() => manager.recoverLostCapability(recovery), {code: 'EIO'});
+  assert.equal(registryEntries(manager)[0].token, oldToken);
+  const capabilityFile = path.join(manager.report().registry, 'capabilities', `${createHash('sha256').update(worker).digest('hex')}-work.json`);
+  const pending = JSON.parse(fs.readFileSync(capabilityFile, 'utf8'));
+  assert.notEqual(pending.token, oldToken);
+  assert.equal(pending.observed_head, head);
+  assert.equal(fs.readdirSync(manager.report().registry).some(name => name.endsWith('.tmp')), false);
+  t.mock.restoreAll();
+
+  const result = manager.recoverLostCapability(recovery);
+  assert.equal(result.capabilityFile, capabilityFile);
+  assert.equal(registryEntries(manager)[0].token, pending.token);
+  assert.throws(() => manager.release({worker, token: oldToken}), /ownership/);
+});
+
+test('workspace CLI recovery and token-file release never print the capability', async t => {
+  const {repo, manager, head} = fixture(t);
+  const worker = 'recovery-cli-owner';
+  const branch = 'engineering/recovery-cli-owner';
+  const entry = await manager.allocate({worker, branch});
+  const helper = cliHelper(repo, path.join(repo, 'scripts'));
+  const args = ['recover-lost-capability', '--repo', repo, '--worker', worker, '--slot', 'work',
+    '--expected-path', entry.path, '--expected-branch', branch, '--expected-head', head];
+  const denied = spawnSync(process.execPath, [helper, ...args], {cwd: repo, encoding: 'utf8',
+    env: {...process.env, CODEX_THREAD_ID: 'other-worker'}});
+  assert.notEqual(denied.status, 0);
+  assert.equal(denied.stdout, '');
+  assert.match(denied.stderr, /exact CODEX_THREAD_ID/);
+  assert.equal(registryEntries(manager)[0].token, entry.token);
+
+  const accepted = spawnSync(process.execPath, [helper, ...args], {cwd: repo, encoding: 'utf8',
+    env: {...process.env, CODEX_THREAD_ID: worker}});
+  assert.equal(accepted.status, 0, accepted.stderr);
+  const recovered = JSON.parse(accepted.stdout);
+  assert.equal(recovered.recovered, true);
+  const newToken = registryEntries(manager)[0].token;
+  assert.notEqual(newToken, entry.token);
+  assert.ok(!accepted.stdout.includes(newToken));
+  const release = spawnSync(process.execPath, [helper, 'release', '--repo', repo, '--worker', worker,
+    '--slot', 'work', '--capability-file', recovered.capabilityFile], {cwd: repo, encoding: 'utf8'});
+  assert.equal(release.status, 0, release.stderr);
+  assert.equal(JSON.parse(release.stdout).capability_file_removed, true);
+  assert.ok(!release.stdout.includes(newToken));
+  assert.deepEqual(registryEntries(manager), []);
+});
+
 test('invalid scopes and identities are rejected', async t => {
   const {manager} = fixture(t);
   for (const include of ['data/../outside', '/tmp', 'data/*', 'data//two', 'data']) {
@@ -420,7 +629,7 @@ test('an existing branch fails before fetching or reserving and preserves its hi
   git('remote', 'set-url', 'origin', path.join(repo, 'unavailable'));
   await assert.rejects(() => manager.allocate({worker: 'one', branch: 'engineering/already-exists'}), /already exists/);
   assert.equal(git('rev-parse', 'engineering/already-exists').trim(), head);
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.ok(!fs.existsSync(manager.report().registry));
   git('remote', 'set-url', 'origin', repo);
   const entry = await manager.allocate({worker: 'one', branch: 'engineering/new'});
@@ -475,7 +684,7 @@ test('author refresh does not acquire new excluded blobs in a conventional clone
   assert.equal(git('rev-parse', 'origin/main').trim(), latest);
   assert.equal(fs.readFileSync(path.join(recovered.path, 'README.md'), 'utf8'), 'changed selected input');
   assert.deepEqual(manager.inspect({commit: latest}).missing, []);
-  assert.deepEqual(manager.report().entries, [recovered]);
+  assert.deepEqual(registryEntries(manager), [recovered]);
   assert.equal(git('rev-parse', 'refs/heads/engineering/missing-selected').trim(), latest);
   manager.release({worker: 'conventional', token: recovered.token});
 });
@@ -546,10 +755,54 @@ test('author startup guidance is bound to freshly fetched main and never reads a
   manager.release({worker: 'fresh-guidance', token: entry.token});
 });
 
+test('allocation refreshes shared fetch metadata without changing linked-worktree state', async t => {
+  const source = fixture(t);
+  source.git('config', 'uploadpack.allowFilter', 'true');
+  const remote = path.join(source.temporary, 'remote.git');
+  const repo = path.join(source.temporary, 'client');
+  execFileSync('git', ['clone', '--bare', source.repo, remote], {stdio: 'pipe'});
+  execFileSync('git', ['clone', '--no-checkout', remote, repo], {stdio: 'pipe'});
+  const git = (...args) => execFileSync('git', ['-C', repo, ...args], {encoding: 'utf8', stdio: 'pipe'}).trim();
+  const linked = path.join(source.temporary, 'linked');
+  git('worktree', 'add', '-b', 'primary/linked', linked);
+  const linkedGit = (...args) => execFileSync('git', ['-C', linked, ...args], {encoding: 'utf8', stdio: 'pipe'}).trim();
+  const localFetchHead = linkedGit('rev-parse', '--git-path', 'FETCH_HEAD');
+  const localIndex = linkedGit('rev-parse', '--git-path', 'index');
+  fs.writeFileSync(localFetchHead, 'primary checkout sentinel\n');
+  fs.writeFileSync(path.join(linked, 'README.md'), 'staged and unstaged primary bytes');
+  linkedGit('add', 'README.md');
+  fs.writeFileSync(path.join(linked, 'README.md'), 'staged and unstaged primary bytes plus unstaged edit');
+  const beforeHead = linkedGit('rev-parse', 'HEAD');
+  const beforeBranch = linkedGit('symbolic-ref', 'HEAD');
+  const beforeIndex = fs.readFileSync(localIndex);
+  const beforeStatus = linkedGit('status', '--porcelain=v2');
+  const beforeFetchHead = fs.readFileSync(localFetchHead);
+
+  fs.writeFileSync(path.join(source.repo, 'AGENTS.md'), '# Linked checkout refresh\n');
+  source.git('add', 'AGENTS.md'); source.git('commit', '-m', 'advance linked checkout main');
+  const latest = source.git('rev-parse', 'HEAD').trim();
+  source.git('push', remote, 'main');
+
+  const common = git('rev-parse', '--path-format=absolute', '--git-common-dir');
+  const commonFetchHead = path.join(common, 'FETCH_HEAD');
+  const manager = workspaceManager(linked);
+  const entry = await manager.allocate({worker: 'linked-refresh', branch: 'engineering/linked-refresh'});
+  assert.equal(entry.head, latest);
+  assert.equal(execFileSync('git', ['--git-dir', common, 'rev-parse', '--verify', 'FETCH_HEAD^{commit}'], {encoding: 'utf8'}).trim(), latest);
+  assert.equal(linkedGit('rev-parse', 'HEAD'), beforeHead);
+  assert.equal(linkedGit('symbolic-ref', 'HEAD'), beforeBranch);
+  assert.deepEqual(fs.readFileSync(localIndex), beforeIndex);
+  assert.equal(linkedGit('status', '--porcelain=v2'), beforeStatus);
+  assert.deepEqual(fs.readFileSync(localFetchHead), beforeFetchHead);
+  assert.ok(fs.existsSync(commonFetchHead), 'the shared Git directory carries the allocator fetch result');
+  assert.equal(fs.readFileSync(path.join(linked, 'README.md'), 'utf8'), 'staged and unstaged primary bytes plus unstaged edit');
+  manager.release({worker: 'linked-refresh', token: entry.token});
+});
+
 test('CLI keeps stdout as one allocation JSON object and presents exact pinned AGENTS on stderr', async t => {
   const {repo, git, manager} = fixture(t);
   const helper = cliHelper(repo);
-  const result = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'cli-guidance',
+  const result = spawnSync(process.execPath, [helper, 'allocate', '--repo', repo, '--worker', 'cli-guidance',
     '--branch', 'engineering/cli-guidance'], {
     cwd: repo, encoding: 'utf8', env: {...process.env, CODEX_THREAD_ID: 'cli-guidance'}
   });
@@ -586,7 +839,7 @@ test('actual scripts-directory CLI reads root AGENTS from freshly fetched main a
   assert.notEqual(latestMain, staleMain);
 
   const helper = cliHelper(repo, path.join(repo, 'scripts'));
-  const result = spawnSync(process.execPath, [helper, 'allocate', '--worker', 'scripts-guidance',
+  const result = spawnSync(process.execPath, [helper, 'allocate', '--repo', repo, '--worker', 'scripts-guidance',
     '--branch', 'engineering/scripts-guidance'], {
     cwd: source.temporary, encoding: 'utf8', env: {...process.env, CODEX_THREAD_ID: 'scripts-guidance'}
   });
@@ -618,7 +871,7 @@ test('missing fetched-main AGENTS fails before reservation, branch or worktree c
     /Verified origin\/main .* has no root AGENTS\.md/);
   assert.equal(git('worktree', 'list', '--porcelain'), beforeWorktrees);
   assert.equal(git('for-each-ref', '--format=%(refname)', 'refs/heads/engineering/missing-guidance'), '');
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
 });
 
@@ -669,7 +922,7 @@ test('failed fetch never acquires a registry lock and keeps other workers intact
   await assert.rejects(() => manager.allocate({worker: 'one', branch: 'engineering/fetch-failure'}), /interrupted fetch/);
   assert.equal(guidance, undefined, 'failed fetch must not present stale or unverified instructions');
   assert.ok(fs.readFileSync(path.join(registry, 'state.json')).equals(before));
-  assert.deepEqual(manager.report().entries, [existing]);
+  assert.deepEqual(registryEntries(manager), [existing]);
   assert.ok(!fs.existsSync(path.join(registry, 'lock')));
 });
 
@@ -689,7 +942,7 @@ test('hard process interruption during fetch leaves no allocator lock or reserva
   assert.equal(result.signal, 'SIGTERM');
   assert.equal(fs.readFileSync(path.join(repo, 'fetch-started'), 'utf8'), 'started');
   assert.ok(!fs.existsSync(manager.report().registry));
-  assert.deepEqual(manager.report().entries, []);
+  assert.deepEqual(registryEntries(manager), []);
   assert.equal(git('rev-parse', 'HEAD').trim(), head);
 });
 
@@ -831,8 +1084,8 @@ test('two simultaneous allocation processes cannot acquire the same worker slot'
   });
   const exits = await Promise.all([run('engineering/parallel-one'), run('engineering/parallel-two')]);
   assert.deepEqual(exits.sort(), [0, 1]);
-  assert.equal(manager.report().entries.length, 1);
-  assert.equal(manager.report().entries[0].status, 'ready');
+  assert.equal(registryEntries(manager).length, 1);
+  assert.equal(registryEntries(manager)[0].status, 'ready');
 });
 
 test('assume-unchanged cannot hide unique tracked bytes from cleanup', async t => {
@@ -975,7 +1228,7 @@ test('actual promisor clone acquires selected root, support and explicit blobs b
       input: excluded + '\n', encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '1'}
     });
     assert.equal(spawnSync('git', ['-C', repo, 'cat-file', '-e', excluded], {env: {...process.env, GIT_NO_LAZY_FETCH: '1'}}).status, 1, 'excluded body remains missing after the exact selected acquisition');
-    assert.equal(manager.report().entries.length, 1);
+    assert.equal(registryEntries(manager).length, 1);
     manager.release({worker: 'partial', slot: 'review', token: entry.token});
     checkUnfetched(false, true);
   }
@@ -1054,7 +1307,7 @@ test('selected submodules remain refused while excluded submodule metadata is ha
   for (const options of [{include: ['data/vendor']}, {profile: 'full'}]) {
     assert.throws(() => manager.inspect({commit, ...options}), /Submodule/);
     await assert.rejects(() => manager.allocate({worker: 'selected', slot: 'review', commit, ...options}), /Submodule/);
-    assert.deepEqual(manager.report().entries, []);
+    assert.deepEqual(registryEntries(manager), []);
   }
 });
 
@@ -1110,7 +1363,7 @@ test('full promisor inspection includes excluded missing inputs and CLI exposes 
   assert.equal(result.selectedBytes, null);
   assert.deepEqual(result.missing.flatMap(row => row.paths), ['data/other/large.json']);
   const cli = execFileSync(process.execPath, [cliHelper(repo),
-    'inspect', '--commit', head, '--profile', 'full'], {
+    'inspect', '--repo', repo, '--commit', head, '--profile', 'full'], {
     cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0'}
   });
   assert.deepEqual(JSON.parse(cli), result);
@@ -1200,7 +1453,7 @@ test('unavailable exact commit fails without fetching or claiming a complete sel
   const trace = path.join(repo, 'commit-inspection.trace');
   const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
   const result = spawnSync(process.execPath, [cliHelper(repo),
-    'inspect', '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
+    'inspect', '--repo', repo, '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
   assert.equal(result.status, 1);
   assert.equal(result.stdout, '');
   assert.match(result.stderr, new RegExp(`Exact commit unavailable locally: ${head}`));
@@ -1251,7 +1504,7 @@ test('missing root and descendant tree metadata are classified before any blob s
     const refs = git('show-ref');
     const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
     const result = spawnSync(process.execPath, [cliHelper(repo),
-      'inspect', '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
+      'inspect', '--repo', repo, '--commit', head], {cwd: repo, encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}});
     assert.equal(result.status, 1);
     assert.equal(result.stdout, '');
     assert.match(result.stderr, new RegExp(`Missing tree metadata:.*${oid}`));
@@ -1358,7 +1611,7 @@ test('tree descriptor mismatches and failed or denied exact fetches leave no slo
     else await assert.rejects(() => run({include: ['data/one.json']}), /object acquisition failed/);
     assert.equal(git('show-ref'), refs);
     assert.ok(!fs.existsSync(path.join(repo, '.git/FETCH_HEAD')));
-    assert.deepEqual(manager.report().entries, []);
+    assert.deepEqual(registryEntries(manager), []);
     assert.ok(!fs.existsSync(path.join(manager.report().registry, 'state.json')));
     if (failure === 'wrong-size') {
       assert.deepEqual(manager.inspect({commit: git('rev-parse', 'HEAD').trim(), include: ['data/one.json']}).missing, []);
@@ -1378,8 +1631,10 @@ test('documented pinned bootstrap binds its task repository and preserves stale 
   const ambient = fixture(t);
   const helper = fs.readFileSync(new URL('../scripts/local-workspace.mjs', import.meta.url));
   const identity = fs.readFileSync(new URL('../scripts/worker-identity.mjs', import.meta.url));
+  const prefetch = fs.readFileSync(new URL('../scripts/geography-prefetch.mjs', import.meta.url));
   fs.writeFileSync(path.join(repo, 'scripts/local-workspace.mjs'), helper);
   fs.writeFileSync(path.join(repo, 'scripts/worker-identity.mjs'), identity);
+  fs.writeFileSync(path.join(repo, 'scripts/geography-prefetch.mjs'), prefetch);
   git('add', 'scripts'); git('commit', '-m', 'accepted helpers');
   const head = git('rev-parse', 'HEAD').trim();
   git('repack', '-ad');
@@ -1403,31 +1658,89 @@ test('documented pinned bootstrap binds its task repository and preserves stale 
   assert.ok(!fs.existsSync(manager.report().registry));
 });
 
-test('documented bootstrap refuses an absent promisor helper without an old-Git lazy-fetch fatal', async t => {
-  const {repo, git, head, trace, manager} = partialFixture(t, ['scripts/worker-identity.mjs', 'data/other/large.json'], {
+test('documented cold bootstrap allocates from a linked partial clone with exact selected acquisition', async t => {
+  const {repo, sourceRepo, git, head, trace, manager} = partialFixture(t, [
+    'scripts/local-workspace.mjs', 'scripts/geography-prefetch.mjs', 'data/needed/input.json', 'data/other/large.json'
+  ], {
     configureSource: ({repo, git}) => {
-      for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+      for (const name of ['local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'])
         fs.writeFileSync(path.join(repo, 'scripts', name), fs.readFileSync(new URL('../scripts/' + name, import.meta.url)));
       git('add', 'scripts'); git('commit', '-m', 'accepted promisor helpers');
     }
   });
+  const sourceGit = (...args) => execFileSync('git', ['-C', sourceRepo, ...args], {encoding:'utf8',stdio:'pipe'}).trim();
+  const primary = path.join(path.dirname(repo), 'linked-primary');
+  git('worktree', 'add', '--detach', '--no-checkout', primary, head);
+  const primaryGit = (...args) => execFileSync('git', ['-C', primary, ...args], {
+    encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH:'1', GIT_NO_REPLACE_OBJECTS:'1'}
+  }).trim();
+  primaryGit('sparse-checkout', 'init', '--no-cone');
+  primaryGit('sparse-checkout', 'set', '--no-cone', '/AGENTS.md', '/README.md');
+  primaryGit('read-tree', '-mu', 'HEAD');
+  assert.equal(primaryGit('status', '--porcelain'), '', 'linked primary starts clean');
+  const primaryIndex = primaryGit('rev-parse', '--path-format=absolute', '--git-path', 'index');
+  const primaryFetchHead = primaryGit('rev-parse', '--path-format=absolute', '--git-path', 'FETCH_HEAD');
+  fs.writeFileSync(primaryFetchHead, 'primary-worktree-fetch-head-sentinel\n');
+  const before = {
+    head: primaryGit('rev-parse', 'HEAD'), refs: primaryGit('show-ref'),
+    status: primaryGit('status', '--porcelain=v2'), index: fs.readFileSync(primaryIndex),
+    files: ['AGENTS.md','README.md'].map(name => [name, fs.readFileSync(path.join(primary,name))]),
+    fetchHead: fs.readFileSync(primaryFetchHead)
+  };
+  const rootTree = sourceGit('rev-parse', `${head}^{tree}`);
+  const treeRows = sourceGit('ls-tree', '-r', '-t', '-z', head).split('\0').filter(Boolean).map(line => {
+    const [metadata, name] = line.split('\t'), [mode, type, sha] = metadata.split(' ');
+    return {path:name, mode, type, sha, ...(type === 'blob' ? {size:Number(sourceGit('cat-file','-s',sha))} : {})};
+  });
+  const mockTree = path.join(path.dirname(repo), 'github-tree.json');
+  fs.writeFileSync(mockTree, JSON.stringify({sha:rootTree,truncated:false,tree:treeRows}));
+  const preload = path.join(path.dirname(repo), 'mock-github-tree.mjs');
+  fs.writeFileSync(preload, `import fs from 'node:fs';\nconst originalFetch=globalThis.fetch;\nglobalThis.fetch=async(input,init)=>{\n const url=String(input);\n if(url.startsWith('https://api.github.com/repos/ChengshuLi/WorldAtlas/git/trees/')){\n  const value=JSON.parse(fs.readFileSync(process.env.WA_TEST_TREE,'utf8'));\n  if(!url.includes('/'+value.sha)) throw Error('unexpected fixture tree request');\n  return new Response(JSON.stringify(value),{status:200,headers:{'content-type':'application/json'}});\n }\n return originalFetch(input,init);\n};\n`);
+  const fakeBin = path.join(path.dirname(repo), 'fake-bin'); fs.mkdirSync(fakeBin);
+  const fakeGh = path.join(fakeBin, 'gh');
+  fs.writeFileSync(fakeGh, '#!/bin/sh\n[ "$1" = auth ] && [ "$2" = token ] || exit 2\nprintf fixture-token\n', {mode:0o755});
+  fs.chmodSync(fakeGh, 0o755);
+  git('config', '--add', `url.${pathToFileURL(sourceRepo).href}.insteadOf`, 'https://github.com/ChengshuLi/WorldAtlas.git');
   const docs = fs.readFileSync(new URL('../docs/DEVELOPMENT.md', import.meta.url), 'utf8');
   const bootstrap = docs.split("<<'PYTHON'\n")[1].split('\nPYTHON')[0];
-  const refs = git('show-ref');
-  const before = fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort();
-  assert.throws(() => execFileSync('python3', ['-', repo, head, 'inspect', '--commit', head], {
-    cwd: repo, input: bootstrap, encoding: 'utf8', stdio: 'pipe', env: {...process.env, GIT_NO_LAZY_FETCH: '0', GIT_TRACE: trace}
-  }), error => {
-    assert.equal(error.stdout, '');
-    assert.match(error.stderr, /Pinned helper missing/);
-    assert.doesNotMatch(error.stderr, /could not fetch|lazy fetching disabled/);
-    return true;
+  const refs = git('for-each-ref', '--format=%(refname) %(objectname)', 'refs/heads', 'refs/tags', 'refs/remotes').split('\n').filter(Boolean);
+  const workspaceOid = git('rev-parse', `${head}:scripts/local-workspace.mjs`).trim();
+  const workerOid = git('rev-parse', `${head}:scripts/worker-identity.mjs`).trim();
+  const prefetchOid = git('rev-parse', `${head}:scripts/geography-prefetch.mjs`).trim();
+  const selectedOid = git('rev-parse', `${head}:data/needed/input.json`).trim();
+  const unrelatedOid = git('rev-parse', `${head}:data/other/large.json`).trim();
+  const result = execFileSync('python3', ['-', primary, head, 'allocate', '--worker', 'bootstrap-author',
+    '--branch', 'engineering/cold-bootstrap-fixture', '--profile', 'sparse', '--include', 'data/needed'], {
+    cwd: path.dirname(repo), input: bootstrap, encoding: 'utf8', stdio: 'pipe',
+    env: {...process.env, TASK_REPO:primary, CODEX_THREAD_ID:'bootstrap-author',
+      PATH:`${fakeBin}:${path.dirname(process.execPath)}:${process.env.PATH}`,
+      NODE_OPTIONS:`--import=${pathToFileURL(preload).href}`, WA_TEST_TREE:mockTree,
+      GIT_NO_LAZY_FETCH:'1', GIT_NO_REPLACE_OBJECTS:'1', GIT_TRACE:trace}
   });
-  assert.doesNotMatch(fs.readFileSync(trace, 'utf8'), /(?:built-in: git|run_command:) .*fetch/);
-  assert.deepEqual(fs.readdirSync(path.join(repo, '.git/objects'), {recursive: true}).sort(), before);
-  assert.equal(git('show-ref'), refs);
+  const entry = JSON.parse(result);
+  assert.equal(entry.head, head);
+  assert.equal(entry.worker, 'bootstrap-author');
+  assert.equal(fs.readFileSync(path.join(entry.path, 'data/needed/input.json'), 'utf8'), 'input');
+  for (const oid of [workspaceOid, workerOid, prefetchOid, selectedOid]) {
+    assert.equal(git('cat-file', '-t', oid).trim(), 'blob');
+    assert.doesNotThrow(() => git('cat-file', '-e', oid));
+  }
+  const unrelated = spawnSync('git', ['-C', repo, 'cat-file', '-e', unrelatedOid], {
+    encoding: 'utf8', env: {...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLACE_OBJECTS: '1'}
+  });
+  assert.notEqual(unrelated.status, 0, 'the unrelated promised body remains unavailable');
+  assert.equal(primaryGit('rev-parse', 'HEAD'), before.head);
+  assert.equal(primaryGit('rev-parse', 'refs/heads/main'), head, 'the primary branch ref remains unchanged');
+  const afterRefs = primaryGit('for-each-ref', '--format=%(refname) %(objectname)', 'refs/heads', 'refs/tags', 'refs/remotes');
+  assert.deepEqual(afterRefs.split('\n').filter(Boolean).filter(row => !row.startsWith('refs/heads/engineering/cold-bootstrap-fixture ')),
+    refs, 'all pre-existing refs remain unchanged; only the expected allocator branch is added');
+  assert.equal(primaryGit('status', '--porcelain=v2'), before.status);
+  assert.deepEqual(fs.readFileSync(primaryIndex), before.index);
+  for (const [name, bytes] of before.files) assert.deepEqual(fs.readFileSync(path.join(primary,name)), bytes);
+  assert.deepEqual(fs.readFileSync(primaryFetchHead), before.fetchHead, 'common metadata refresh leaves linked-primary FETCH_HEAD untouched');
   assert.ok(!fs.readdirSync(path.join(repo, '.git')).some(name => name.startsWith('worldatlas-helper-')));
-  assert.ok(!fs.existsSync(manager.report().registry));
+  manager.release({worker: entry.worker, token: entry.token});
+  assert.deepEqual(registryEntries(manager), []);
 });
 
 test('inspection and allocation share every support prefix without suppressing an existing allocation lock', async t => {
@@ -1458,7 +1771,7 @@ test('inspection and allocation share every support prefix without suppressing a
 
 test('complete documented shell bootstrap refuses failed refresh instead of executing cached main', async t => {
   const {repo, git} = fixture(t);
-  for (const name of ['local-workspace.mjs', 'worker-identity.mjs'])
+  for (const name of ['local-workspace.mjs', 'worker-identity.mjs', 'geography-prefetch.mjs'])
     fs.writeFileSync(path.join(repo, 'scripts', name), fs.readFileSync(new URL('../scripts/' + name, import.meta.url)));
   git('add', 'scripts'); git('commit', '-m', 'cached accepted helpers');
   const head = git('rev-parse', 'HEAD').trim();
@@ -1471,7 +1784,7 @@ test('complete documented shell bootstrap refuses failed refresh instead of exec
     .replace('data/YOUR-REQUIRED-PATH', 'data/one.json');
   assert.throws(() => execFileSync('bash', ['-c', block], {cwd: repo, encoding: 'utf8', stdio: 'pipe', env: {...process.env, TASK_REPO: repo}}), error => {
     assert.doesNotMatch(error.stdout, /inputCount|selectedBytes/);
-    assert.match(error.stderr, /does not appear to be a git repository/);
+    assert.match(error.stderr, /unavailable-origin|not a git repository|repository .* does not exist/);
     return error.status !== 0;
   });
   assert.equal(git('show-ref'), refs);

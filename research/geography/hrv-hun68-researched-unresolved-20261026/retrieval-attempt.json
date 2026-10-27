@@ -1,0 +1,54 @@
+{
+  "kind": "worldatlas.public-source-retrieval-attempt.v1",
+  "scope": "The exact Annex IV Pula supplement and Annex II B/C map atlases linked by the same official Hungarian Act; no unrelated source family or protected route.",
+  "source_listing": {
+    "url": "https://njt.jog.gov.hu/jogszabaly/2009-12-00-00",
+    "retrieved_via": "web.open",
+    "observed": "200 OK HTML; Annex IV at lines 1098-1102 lists the Pula 2000 supplement, 42 pages, attached file MK_09_040_047.pdf; link id 67"
+  },
+  "exact_attachment": "https://njt.jog.gov.hu/document/6d/6d0220090000000012_47.PDF",
+  "attempts": [
+    {
+      "time_utc": "2026-10-26T17:00:16Z",
+      "method": "web.click on official statute page link id 67",
+      "result": "Failed to fetch exact PDF: Cache miss",
+      "interpretation": "tool retrieval failure only; no HTTP status/access denial inferred"
+    },
+    {
+      "time_utc": "2026-10-26T17:00:34Z",
+      "method": "supported cloud Chrome (CDP) direct navigation to exact official URL; followed by one same-URL reload at 2026-10-26T17:01:22Z",
+      "result": "PDF viewer stayed blank with a loading progress bar; exact URL/title remained visible. No attachment bytes or page text became available. No login, challenge, warning, or provider denial was shown. Console had only an unrelated browser-extension metadata error.",
+      "diagnostic_limit": "PDF viewer tab's page context did not expose the Performance API, so request status/transfer size could not be read."
+    },
+    {
+      "method": "ordinary direct HTTPS GET of the exact official Annex IV attachment URL after the prior connector/cache and cloud-viewer failures",
+      "result": "Complete 42-page PDF body acquired; 6,356,879 bytes; SHA-256 9df56ccc0cf659638d73564fc4f4722667245c039b1033c1115ff12ff9080609. Scanned tables and associated map references inspected. Earlier failed attempts remain above, not overwritten.",
+      "interpretation": "successful ordinary public retrieval; no login, warning, provider denial, or access-control bypass",
+      "date_utc": "2026-10-26",
+      "acquisition_pin_note": "Exact acquisition time was not retained; do not infer a timestamp from this date."
+    }
+  ],
+  "result": {
+    "bytes_acquired": true,
+    "pula_sha256": "9df56ccc0cf659638d73564fc4f4722667245c039b1033c1115ff12ff9080609",
+    "document_contents_assessed": true,
+    "related_B_C_atlases_acquired": true,
+    "map_to_exact_68_key_registration_established": false,
+    "provider_denial": false,
+    "access_controls_bypassed": false,
+    "alternate_endpoint_or_route_attempted": false,
+    "status": "official Pula supplement and linked B/C map atlases publicly acquired and assessed; exact map-to-cell registration remains unvalidated, with bounded reasons recorded in map-application.md"
+  },
+  "related_annex_ii_map_atlases": [
+    {
+      "url": "https://njt.jog.gov.hu/document/10/102920090000000012_32.PDF",
+      "section": "B",
+      "result": "HTTP 200 plus one ETag-matched same-URL range completion after a transfer timeout; complete 88-page PDF verified. 34,693,687 bytes; SHA-256 f0080efb66b5dbc33e71ac27815f6c400cf1f5d6bd00812d4380f105ea7af1ca. Local body retained privately; no raw body included in proposal."
+    },
+    {
+      "url": "https://njt.jog.gov.hu/document/6a/6a6020090000000012_34.PDF",
+      "section": "C",
+      "result": "HTTP 200; complete 43-page PDF verified. 14,936,590 bytes; SHA-256 dc62d46399bacef6a04544bbea057481da5d6b2bbca45190f9888df76e6fc7fb. Local body retained privately; no raw body included in proposal."
+    }
+  ]
+}

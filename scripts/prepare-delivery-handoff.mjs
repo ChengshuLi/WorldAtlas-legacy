@@ -776,7 +776,7 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
   const reader=plan.reader,native=scientificNativeSelection(selection),config=plan.finalProfile;
   const {readPreparedFinalOwnership}=await import('./package-startup-ownership.mjs');
   const {prepareFinalBankStartupOwnership}=await import('./prepare-startup-ownership.mjs');
-  const {finishEffectiveFootprint,extendFinishedNativeFootprint,mergeUnassignedNativeIntervals}=await import('../src/effective-footprint.js');
+  const {finishEffectiveFootprint,extendFinishedNativeFootprint,mergeUnassignedNativeIntervalStream}=await import('../src/effective-footprint.js');
   let selected;
   const current=pointer=>{const pin=reader.pin(plan.selector.commit,pointer.path);need(pin.bytes===pointer.bytes&&pin.sha256===pointer.sha256,'Selected finalizer input whole identity differs');return reader.read(pin);};
   const projectionPointer=selection.reference_projection;
@@ -790,7 +790,8 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
   selected={selection,selectionBytes:reader.read(plan.selector),finalBank:selection.prepared_bank,
     reference_release:selection.reference,base:previous.preparedOwnership.base_reference,referenceMetadata};
   const before=await readPreparedFinalOwnership({indexRaw:originalIndex,manifest,manifestSha:native.sha256,selected,
-    ownerCount:previous.preparedOwnership.owners,read:pin=>{need(originalBodies.has(pin.path),'Missing accepted final body');return originalBodies.get(pin.path);}});
+    ownerCount:previous.preparedOwnership.owners,stableBufferReader:true,
+    read:pin=>{need(originalBodies.has(pin.path),'Missing accepted final body');return originalBodies.get(pin.path);}});
   // Adopt an already prepared current-state proposal through the same writer.
   // The queue compares the complete before/after maps; preparation does not
   // grant scientific authority or reconstruct a correction from old repairs.
@@ -812,7 +813,7 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
     const proposedBank=await readPreparedFinalOwnership({indexRaw,manifest,manifestSha:native.sha256,
       selected:{finalBank:proposed.prepared_bank,base:before.index.preparedOwnership.base_reference,
         reference_release:proposed.reference,referenceMetadata},ownerCount:before.features.length,
-      read:p=>read({...p,path:root+'/'+p.path})});
+      stableBufferReader:true,read:p=>read({...p,path:root+'/'+p.path})});
     const prepared=await prepareFinalBankStartupOwnership({manifest,manifestSha:native.sha256,previous,
       ownership:proposedBank.ownership,features:proposedBank.features,
       baseReference:before.index.preparedOwnership.base_reference,referenceMetadata,destination});
@@ -840,8 +841,9 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
   });
   need(byOwner.size===0,'Proposed final authority names a foreign owner');
   const rows=mergeCompletedNativePatches(added.patches,manifest.size),owners=new Set(features.map(f=>f.pixelIndex));
-  const words=mergeUnassignedNativeIntervals(before.ownership,rows,{owners,allowed:owners});
-  const ownership={...before.ownership,...words,runWords:words.runs.length};
+  const words=mergeUnassignedNativeIntervalStream(before.ownership,rows,{owners,allowed:owners});
+  const ownership={...before.ownership,...words,runWords:words.runWords};
+  delete ownership.runs;
   const index=await prepareFinalBankStartupOwnership({manifest,manifestSha:native.sha256,previous,ownership,features,baseReference:reference,referenceMetadata,destination});
   plan.proposedSelection={version:2,kind:'selected-final-native-bank-v2',native_selection:native,
     ...(config.reference_projection?{reference_projection:{path:config.reference_projection.path,bytes:config.reference_projection.bytes,sha256:config.reference_projection.sha256}}:
@@ -1625,7 +1627,12 @@ async function supportedFinalInputs(config, reader) {
   const bank = await readPreparedFinalOwnership({indexRaw, manifest, manifestSha: native.sha256,
     selected: {finalBank: selection.prepared_bank, base: index.preparedOwnership?.base_reference,
       reference_release: selection.reference, referenceMetadata}, ownerCount: index.preparedOwnership?.owners,
+    stableBufferReader: true,
     read: pin => read({...pin, path: path.posix.join(path.posix.dirname(selection.prepared_bank.path), pin.path)})});
+  // The bank loader has authenticated and parsed the complete accepted startup
+  // roster. Drop the pinReader's cached encoded bodies before continuing to
+  // source/patch partitioning; later reads remain pinned and are revalidated.
+  reader.discardBodyCache?.();
   return partitionSupportedInputs(original, reader, {selector, manifest, inventory, ...bank});
 }
 

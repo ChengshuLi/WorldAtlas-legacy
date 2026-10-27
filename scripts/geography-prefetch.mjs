@@ -12,6 +12,53 @@ const sha256 = body => createHash('sha256').update(body).digest('hex');
 const safe = value => typeof value === 'string' && value && !value.includes('\\') && !value.includes('\0') && !path.posix.isAbsolute(value) && value.split('/').every(p => p && p !== '.' && p !== '..');
 const requireValue = (value, message) => { if (!value) throw Error(message); };
 
+// Keep the allocator's cold-start acquisition adapter in this lightweight
+// module. The verified temporary bootstrap loads this file directly; it must
+// not import the scientific delivery workflow merely to obtain a Git token.
+export function selectInstalledGit() {
+  const selected=(process.env.PATH??'').split(path.delimiter).map(p=>path.join(p,'git')).find(p=>{try{return fs.statSync(p).isFile();}catch{return false;}});
+  requireValue(selected,'Missing installed Git');
+  const launchGit=fs.realpathSync(selected);
+  const gitExecPath=fs.realpathSync(execFileSync(launchGit,['--exec-path']).toString().trim());
+  const gitExecutable=fs.realpathSync(path.resolve(gitExecPath,'../../bin/git'));
+  requireValue(path.resolve(gitExecPath,'../../bin')===path.dirname(gitExecutable),'Selected Git helpers do not share the implementation installation');
+  return {launchGit,gitExecutable,gitExecPath};
+}
+
+// Resolve the already-authenticated gh account once for one selected-object
+// acquisition. The value remains in memory and is never persisted or logged.
+export function createGitHubTokenProvider({readToken = () => execFileSync('gh', ['auth', 'token'], {encoding: 'utf8', maxBuffer: 16384, timeout: 20_000}).trim()} = {}) {
+  let token;
+  return () => {
+    token ??= process.env.GH_TOKEN?.trim() || readToken();
+    requireValue(typeof token === 'string' && token.trim(), 'Existing gh login required for GitHub acquisition');
+    return token;
+  };
+}
+
+// Git object and metadata requests share the same invocation-local auth source.
+export function deliveryAcquisitionExecute({execute = execFileSync, getToken,
+  readToken} = {}) {
+  const tokenForRequest = getToken ?? createGitHubTokenProvider({...(readToken ? {readToken} : {})});
+  let selectedGit;
+  return (command, args, options) => {
+    if (command === 'git' && args.includes('fetch')) {
+      requireValue(args.includes('https://github.com/ChengshuLi/WorldAtlas.git'), 'Unexpected acquisition repository');
+      const token = tokenForRequest();
+      const env = {...options.env, GIT_CONFIG_COUNT: '3',
+        GIT_CONFIG_KEY_2: 'http.https://github.com/.extraheader',
+        GIT_CONFIG_VALUE_2: 'AUTHORIZATION: basic ' + Buffer.from('x-access-token:' + token).toString('base64')};
+      options = {...options, env};
+    }
+    if (command === 'git') {
+      selectedGit ??= selectInstalledGit();
+      command = selectedGit.gitExecutable;
+      options = {...options, env: {...options.env, GIT_EXEC_PATH: selectedGit.gitExecPath}};
+    }
+    return execute(command, args, options);
+  };
+}
+
 export function createAcquisition({repo, loadTree, loadDescriptor, execute = execFileSync, token = process.env.GH_TOKEN}) {
   const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !key.startsWith('GIT_')));
   let command = 'git';
@@ -167,7 +214,7 @@ export function createAcquisition({repo, loadTree, loadDescriptor, execute = exe
       mismatch({type: 'blob', mode: original.mode, git_blob_oid: original.git_blob_oid}));
     else {
       const expectedTreeRow = `${row.mode} blob ${row.sha}\t${name}\0`;
-      const actualTreeRow = git(['ls-tree', '-z', version, '--', name], undefined, Buffer.byteLength(expectedTreeRow)).toString();
+      const actualTreeRow = git(['ls-tree', '--full-tree', '-z', version, '--', name], undefined, Buffer.byteLength(expectedTreeRow)).toString();
       if (actualTreeRow !== expectedTreeRow) {
         const match = actualTreeRow.match(/^(100644|100755|120000|040000|160000) (blob|tree|commit) ([a-f0-9]{40})\t/);
         const actual = match && actualTreeRow === `${match[0]}${name}\0`
@@ -242,15 +289,15 @@ export function createAcquisition({repo, loadTree, loadDescriptor, execute = exe
   return {tree, descriptor, pin, acquire, body, json, resolvePath, stats};
 }
 
-export async function githubTree(version, recursive = true) {
-  const value = await githubMetadata(`trees/${version}${recursive ? '?recursive=1' : ''}`);
+export async function githubTree(version, recursive = true, {getToken} = {}) {
+  const value = await githubMetadata(`trees/${version}${recursive ? '?recursive=1' : ''}`, getToken);
   if (!recursive || value?.truncated !== true) return value;
-  return completeTruncatedTree(version, value);
+  return completeTruncatedTree(version, value, getToken);
 }
 
 // GitHub caps recursive tree responses. Discard a truncated response's partial
 // rows, then rebuild the exact complete inventory from direct child trees.
-async function completeTruncatedTree(root, initial) {
+async function completeTruncatedTree(root, initial, getToken) {
   const inventories = new Map(), oid = value => /^[a-f0-9]{40}$/.test(value ?? '');
   const need = (condition, message) => { if (!condition) throw Error(message); };
   const checkedRows = (response, sha, recursive) => {
@@ -283,7 +330,7 @@ async function completeTruncatedTree(root, initial) {
       for (const row of cached.values()) if (row.type === 'tree') need(!ancestors.has(row.sha), 'Cyclic immutable tree inventory');
       return cached;
     }
-    response ??= await githubMetadata(`trees/${sha}?recursive=1`);
+    response ??= await githubMetadata(`trees/${sha}?recursive=1`, getToken);
     need(response?.sha === sha && typeof response.truncated === 'boolean' && Array.isArray(response.tree),
       'Invalid immutable tree response identity');
     let rows;
@@ -293,7 +340,7 @@ async function completeTruncatedTree(root, initial) {
         need(!ancestors.has(row.sha), 'Cyclic immutable tree inventory');
     }
     else {
-      const direct = await githubMetadata(`trees/${sha}`);
+      const direct = await githubMetadata(`trees/${sha}`, getToken);
       need(direct?.truncated === false, 'Incomplete direct immutable tree inventory');
       rows = checkedRows(direct, sha, false);
       const next = new Set([...ancestors, sha]);
@@ -312,9 +359,10 @@ async function completeTruncatedTree(root, initial) {
   return {...initial, tree: [...entries.values()].sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0), truncated: false};
 }
 
-async function githubMetadata(locator) {
+async function githubMetadata(locator, getToken) {
   const headers = {'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'};
-  if (process.env.GH_TOKEN) headers.Authorization = 'Bearer ' + process.env.GH_TOKEN;
+  const token = getToken ? getToken() : process.env.GH_TOKEN;
+  if (token) headers.Authorization = 'Bearer ' + token;
   // Retry only an interrupted read of this same immutable metadata object.
   // A response, parse refusal or any other transport error remains terminal.
   for (let attempt = 0; attempt < 2; attempt++) {
