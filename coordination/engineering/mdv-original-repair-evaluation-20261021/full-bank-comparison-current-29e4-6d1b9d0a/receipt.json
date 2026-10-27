@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "kind": "selected-joint-execution-receipt",
+  "method": "accepted selectedJointStage",
+  "baseline": "29e4d7c2d4215345f76cef695db93b4120e48114",
+  "trusted_code_commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+  "candidate": "6d1b9d0a0c0c608d09dc3863d820c57ed0f00aa8",
+  "branch": "research/mdv-original-repair-qualification-20261027-01",
+  "candidate_code_executed": false,
+  "exit_code": 0,
+  "exit_marker": {"path":"exit.txt","bytes":2,"sha256":"9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"},
+  "report": {"path":"report.json","bytes":88347,"sha256":"49c9d9043341ec84a5ccbf4f88ae1afc61805a3225cc8b598cba41aa42ddc64e"},
+  "stderr": {"path":"stderr.log","bytes":126,"sha256":"3436a94535e093c6744e5d33f3d46f5a67609d9417bc44c6c4bc0eb5cff231a7"},
+  "runtime_version": "v24.19.0",
+  "git_version": "2.53.0",
+  "command": ["node","coordination/engineering/selected-geography-effective-prevention-20261009/selected-joint-entry.mjs","/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/169ad824de76cb02e8960c4a36ca1a570434a9aa5c4a3b25f25fcea1ae8b90be/work","29e4d7c2d4215345f76cef695db93b4120e48114","29e4d7c2d4215345f76cef695db93b4120e48114","6d1b9d0a0c0c608d09dc3863d820c57ed0f00aa8","/tmp/mdv-selected-joint-29e4-6d1b9d0a"],
+  "environment_controls": ["NODE_PATH unset","NODE_OPTIONS unset","GIT_NO_LAZY_FETCH=1","GIT_NO_REPLACE_OBJECTS=1"],
+  "comparison": {"status":"no-new-native-loss","proof":"complete-accepted-final-bank-and-qualified-new-intervals","compared_rows":262166,"changed_rows":207,"changed_interval_records":228,"added_cells":850,"removed_cells":0,"reassigned_cells":0,"lost_or_reassigned_cells":0,"all_change_records_previous_owner_null":true,"execution_code_inventory_count":18},
+  "checkout_restoration": {"baseline_checkout":"29e4d7c2d4215345f76cef695db93b4120e48114","branch_restored":"research/mdv-original-repair-qualification-20261027-01","restored_head":"6d1b9d0a0c0c608d09dc3863d820c57ed0f00aa8","clean_after":true},
+  "limits": ["Candidate code was not executed; accepted 29e4 code compared immutable 29e4/candidate final-bank inputs.","This is technical conservation evidence only, not source acceptance, selected-output approval, legal/rights determination, or science credit.","Exact-current-pair tests/build, hosted controls and emitted-consumer evidence remain pending."]
+}
