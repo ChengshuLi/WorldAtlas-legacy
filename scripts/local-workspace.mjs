@@ -58,6 +58,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   const root = path.resolve(common, '../../.worldatlas-workspaces', createHash('sha256').update(common).digest('hex').slice(0, 16));
   const stateFile = path.join(registry, 'state.json');
   const lock = path.join(registry, 'lock');
+  const capabilityDirectory = path.join(registry, 'capabilities');
   const state = () => {
     if (!fs.existsSync(stateFile)) return {version: 1, entries: []};
     if (!fs.lstatSync(stateFile).isFile() || fs.lstatSync(stateFile).isSymbolicLink()) throw Error('Registry must be an ordinary file');
@@ -72,14 +73,141 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   };
   const save = value => {
     const temporary = `${stateFile}.${randomUUID()}.tmp`;
-    fs.writeFileSync(temporary, JSON.stringify(value, null, 2) + '\n', {flag: 'wx'});
-    fs.renameSync(temporary, stateFile);
+    let descriptor;
+    let created = false;
+    try {
+      descriptor = fs.openSync(temporary, 'wx');
+      created = true;
+      fs.writeFileSync(descriptor, JSON.stringify(value, null, 2) + '\n');
+      fs.closeSync(descriptor); descriptor = undefined;
+      fs.renameSync(temporary, stateFile);
+    } catch (error) {
+      // The random temporary name was created exclusively by this operation;
+      // remove only that exact incomplete file and preserve the prior registry.
+      if (descriptor !== undefined) fs.closeSync(descriptor);
+      if (created && fs.lstatSync(temporary, {throwIfNoEntry: false})) fs.unlinkSync(temporary);
+      throw error;
+    }
   };
   const slotPath = (worker, slot) => path.join(root, createHash('sha256').update(worker).digest('hex'), slot);
+  const capabilityPath = (worker, slot) => path.join(capabilityDirectory,
+    `${createHash('sha256').update(worker).digest('hex')}-${slot}.json`);
   const ordinaryDirectory = directory => {
     for (let current = directory; current !== path.dirname(current); current = path.dirname(current)) {
       if (fs.existsSync(current) && fs.lstatSync(current).isSymbolicLink()) throw Error(`Symlink directory refused: ${current}`);
     }
+  };
+  const privateCapabilityDirectory = ({create = false} = {}) => {
+    ordinaryDirectory(capabilityDirectory);
+    if (create && !fs.existsSync(capabilityDirectory)) fs.mkdirSync(capabilityDirectory, {mode: 0o700});
+    const stat = fs.lstatSync(capabilityDirectory);
+    if (!stat.isDirectory() || stat.isSymbolicLink() || (stat.mode & 0o077) !== 0 ||
+      typeof process.getuid === 'function' && stat.uid !== process.getuid()) {
+      throw Error('Private capability directory is not owner-only; inspect manually');
+    }
+    return stat;
+  };
+  const readCapability = ({worker, slot, entry, requestedPath}) => {
+    const expectedPath = capabilityPath(worker, slot);
+    if (requestedPath !== undefined && path.resolve(requestedPath) !== expectedPath) {
+      throw Error('Capability file must be the exact private file for this owner and slot');
+    }
+    privateCapabilityDirectory();
+    ordinaryDirectory(expectedPath);
+    const before = fs.lstatSync(expectedPath);
+    if (!before.isFile() || before.isSymbolicLink() || (before.mode & 0o077) !== 0 || (before.mode & 0o600) !== 0o600 ||
+      typeof process.getuid === 'function' && before.uid !== process.getuid()) {
+      throw Error('Capability file is not a private ordinary owner file; inspect manually');
+    }
+    const bytes = fs.readFileSync(expectedPath);
+    let record;
+    try { record = JSON.parse(bytes); } catch { throw Error('Capability file is malformed; inspect manually'); }
+    const keys = ['branch','head','observed_head','path','slot','token','version','worker'];
+    if (!record || Object.keys(record).sort().join(',') !== keys.join(',') || record.version !== 1 ||
+      record.worker !== worker || record.slot !== slot || record.path !== entry.path ||
+      record.branch !== entry.branch || record.head !== entry.head ||
+      !/^[a-f0-9]{40}$/.test(record.observed_head ?? '') || !id(record.token)) {
+      throw Error('Capability file does not match the exact registered workspace; inspect manually');
+    }
+    const after = fs.lstatSync(expectedPath);
+    if (['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => before[key] !== after[key]) ||
+      !bytes.equals(fs.readFileSync(expectedPath))) {
+      throw Error('Capability file changed while being checked; inspect manually');
+    }
+    return {path: expectedPath, token: record.token, bytes, stat: after, record};
+  };
+  const persistCapability = (record, expectedPath, previous) => {
+    privateCapabilityDirectory({create: true});
+    const temporary = `${expectedPath}.${randomUUID()}.tmp`;
+    const bytes = Buffer.from(JSON.stringify(record, null, 2) + '\n');
+    let descriptor;
+    let created = false;
+    try {
+      descriptor = fs.openSync(temporary, 'wx', 0o600);
+      created = true;
+      fs.writeFileSync(descriptor, bytes);
+      fs.fsyncSync(descriptor);
+      fs.closeSync(descriptor); descriptor = undefined;
+      // A prior file is replaced only after it was validated as the registered
+      // current capability or a bound interrupted replacement.
+      if (previous) {
+        const before = fs.lstatSync(expectedPath);
+        const current = fs.readFileSync(expectedPath);
+        if (['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => previous.stat[key] !== before[key]) ||
+          !previous.bytes.equals(current)) throw Error('Capability file changed before atomic replacement; inspect manually');
+      } else if (fs.lstatSync(expectedPath, {throwIfNoEntry: false})) {
+        throw Error('An unknown capability file appeared; inspect manually');
+      }
+      fs.renameSync(temporary, expectedPath);
+      const directoryDescriptor = fs.openSync(capabilityDirectory, 'r');
+      try { fs.fsyncSync(directoryDescriptor); } finally { fs.closeSync(directoryDescriptor); }
+    } catch (error) {
+      if (descriptor !== undefined) fs.closeSync(descriptor);
+      if (created && fs.lstatSync(temporary, {throwIfNoEntry: false})) fs.unlinkSync(temporary);
+      throw error;
+    }
+  };
+  const recoverySnapshot = (worker, slot, entry, expectedPath, expectedBranch, expectedHead) => {
+    if (!id(worker) || slot !== 'work' || entry.worker !== worker || entry.slot !== slot ||
+      entry.status !== 'ready' || expectedPath !== slotPath(worker, slot) || entry.path !== expectedPath ||
+      !expectedBranch || expectedBranch !== entry.branch || expectedBranch === 'main' ||
+      !/^[a-f0-9]{40}$/.test(expectedHead ?? '')) {
+      throw Error('Lost-capability recovery requires the exact existing owner work slot and path/branch/head');
+    }
+    ordinaryDirectory(entry.path);
+    const directory = fs.lstatSync(entry.path);
+    if (!directory.isDirectory() || directory.isSymbolicLink()) throw Error('Owned checkout path is not an ordinary directory');
+    const localGit = (...args) => execFileSync('git', ['-C', entry.path, ...args],
+      {encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, env: noLazyFetch});
+    if (fs.realpathSync(localGit('rev-parse', '--show-toplevel').trim()) !== fs.realpathSync(entry.path) ||
+      fs.realpathSync(localGit('rev-parse', '--path-format=absolute', '--git-common-dir').trim()) !== common ||
+      localGit('rev-parse', 'HEAD').trim() !== expectedHead ||
+      localGit('symbolic-ref', '--quiet', 'HEAD').trim() !== `refs/heads/${expectedBranch}` ||
+      git(`rev-parse`, '--verify', `refs/heads/${expectedBranch}`).trim() !== expectedHead ||
+      !worktrees(false).some(item => item.path === entry.path)) {
+      throw Error('Owned checkout Git identity, branch, HEAD or registration changed; inspect manually');
+    }
+    const gitDirectory = path.resolve(localGit('rev-parse', '--absolute-git-dir').trim());
+    const lockPaths = [path.join(gitDirectory, 'index.lock'), path.join(gitDirectory, 'HEAD.lock'),
+      path.join(common, 'packed-refs.lock'), path.join(common, 'config.lock'),
+      `${path.join(common, 'refs', 'heads', expectedBranch)}.lock`];
+    if (lockPaths.some(file => fs.lstatSync(file, {throwIfNoEntry: false}))) {
+      throw Error('Git writer lock exists for the owned checkout; preserve it for inspection');
+    }
+    const inProgress = ['MERGE_HEAD','CHERRY_PICK_HEAD','REVERT_HEAD','BISECT_LOG','rebase-apply','rebase-merge']
+      .map(name => path.join(gitDirectory, name));
+    if (inProgress.some(file => fs.lstatSync(file, {throwIfNoEntry: false}))) {
+      throw Error('Git operation is in progress for the owned checkout; preserve it for inspection');
+    }
+    for (const row of localGit('ls-files', '-vz').split('\0').filter(Boolean)) {
+      if (/[a-z]/.test(row[0]) || row[0] === 'S' && fs.lstatSync(path.join(entry.path, row.slice(2)), {throwIfNoEntry: false})) {
+        throw Error('Index trust flags can hide edits; inspect materialized files before recovery');
+      }
+    }
+    if (localGit('status', '--porcelain', '--untracked-files=all', '--ignored')) {
+      throw Error('Owned checkout is dirty or contains ignored files; preserve it for inspection');
+    }
+    return {entry, localGit};
   };
   const locked = operation => {
     ordinaryDirectory(registry);
@@ -410,9 +538,62 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     return entry;
   });
 
-  const release = ({worker, slot = 'work', token}) => locked(() => {
+  const recoverLostCapability = ({worker, slot = 'work', expectedPath, expectedBranch, expectedHead}) => locked(() => {
+    // Unlike an ordinary bearer-token release, this exact-owner recovery cannot
+    // be invoked without the current author's worker identity in the process.
+    if (!process.env.CODEX_THREAD_ID || process.env.CODEX_THREAD_ID !== worker) {
+      throw Error('Lost-capability recovery requires this author’s exact CODEX_THREAD_ID');
+    }
+    const value = state();
+    const matches = value.entries.filter(item => item.worker === worker && item.slot === slot);
+    if (matches.length !== 1) throw Error('Exact existing owner work slot is unavailable or ambiguous');
+    const entry = matches[0];
+    recoverySnapshot(worker, slot, entry, expectedPath, expectedBranch, expectedHead);
+    const file = capabilityPath(worker, slot);
+    let prior;
+    let token;
+    if (fs.lstatSync(file, {throwIfNoEntry: false})) {
+      prior = readCapability({worker, slot, entry, requestedPath: file});
+      if (prior.token === entry.token) {
+        throw Error('A current private capability already exists; use it rather than rotating again');
+      }
+      if (prior.record.observed_head !== expectedHead) {
+        throw Error('Interrupted capability replacement is bound to a different HEAD; inspect manually');
+      }
+      // A private, correctly-bound replacement written before a process
+      // interruption can be committed idempotently after repeating every guard.
+      token = prior.token;
+    } else {
+      token = randomUUID();
+      const record = {version: 1, worker, slot, path: entry.path, branch: entry.branch,
+        head: entry.head, observed_head: expectedHead, token};
+      persistCapability(record, file);
+      prior = readCapability({worker, slot, entry, requestedPath: file});
+    }
+    // Recheck Git ownership and byte-stable private capability immediately
+    // before the one atomic registry replacement. If this fails, the old token
+    // remains current and a valid private recovery record can be safely resumed.
+    recoverySnapshot(worker, slot, entry, expectedPath, expectedBranch, expectedHead);
+    const current = readCapability({worker, slot, entry, requestedPath: file});
+    if (current.token !== token || current.record.observed_head !== expectedHead) {
+      throw Error('Private replacement capability changed before registry update; inspect manually');
+    }
+    entry.token = token;
+    save(value);
+    return {recovered: true, worker, slot, path: entry.path, branch: entry.branch,
+      head: expectedHead, capabilityFile: file, previousTokenInvalidated: true};
+  });
+
+  const release = ({worker, slot = 'work', token, capabilityFile}) => locked(() => {
     const value = state();
     const entry = value.entries.find(entry => entry.worker === worker && entry.slot === slot);
+    let savedCapability;
+    if (capabilityFile !== undefined) {
+      if (token !== undefined) throw Error('Use either an owner token or its private capability file, not both');
+      if (!entry) throw Error('Exact current slot ownership token required');
+      savedCapability = readCapability({worker, slot, entry, requestedPath: capabilityFile});
+      token = savedCapability.token;
+    }
     if (!entry || entry.token !== token) throw Error('Exact current slot ownership token required');
     if (entry.status !== 'ready') throw Error('Interrupted workspace needs operator inspection; automatic release refused');
     ordinaryDirectory(entry.path);
@@ -449,16 +630,32 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       if (oid !== pin.git_blob_oid || ['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => before[key] !== after[key] || receiptBefore[key] !== receiptAfter[key]) || !raw.equals(fs.readFileSync(receiptFile))) refuse();
       generatedDatabase = {...pin, producer_head: head, build_receipt_sha256: createHash('sha256').update(raw).digest('hex'), input_definition_sha256: receipt.input_definition_sha256};
     }
-    const preservedRef = `refs/worldatlas-local-recovery/${entry.token}`;
+    // A release receipt returns this ref name. Never encode a live bearer token
+    // in a value that is routinely printed or logged.
+    const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
     git('update-ref', preservedRef, head);
     // Git's own dirty/in-use worktree guards remain enabled; no --force.
     git('worktree', 'remove', entry.path);
     value.entries = value.entries.filter(item => item !== entry);
     save(value);
-    return {released: true, path: entry.path, preservedRef, head, ...(generatedDatabase ? {removed_generated_database: generatedDatabase} : {})};
+    let capabilityFileRemoved;
+    if (savedCapability) {
+      const current = fs.lstatSync(savedCapability.path, {throwIfNoEntry: false});
+      const currentBytes = current?.isFile() && !current.isSymbolicLink() ? fs.readFileSync(savedCapability.path) : null;
+      if (current && currentBytes && !['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => savedCapability.stat[key] !== current[key]) &&
+        savedCapability.bytes.equals(currentBytes)) {
+        fs.unlinkSync(savedCapability.path);
+        const directoryDescriptor = fs.openSync(capabilityDirectory, 'r');
+        try { fs.fsyncSync(directoryDescriptor); } finally { fs.closeSync(directoryDescriptor); }
+        capabilityFileRemoved = true;
+      } else capabilityFileRemoved = false;
+    }
+    return {released: true, path: entry.path, preservedRef, head,
+      ...(savedCapability ? {capability_file_removed: capabilityFileRemoved} : {}),
+      ...(generatedDatabase ? {removed_generated_database: generatedDatabase} : {})};
   });
   const check = () => ({freeBytes: availableBytes()});
-  return {report, check, inspect, allocate, resume, release};
+  return {report, check, inspect, allocate, resume, recoverLostCapability, release};
 }
 
 function isCliEntrypoint(argvPath, moduleUrl) {
@@ -476,12 +673,18 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
     const options = {include: []};
     for (let index = 0; index < args.length; index += 2) {
       const key = args[index]?.replace(/^--/, '');
-      if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume or release with documented --repo/--key value arguments');
+      if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token', 'capability-file', 'expected-path', 'expected-branch', 'expected-head'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume, recover-lost-capability or release with documented --repo/--key value arguments');
       if (key === 'include') options.include.push(args[index + 1]);
-      else if (Object.hasOwn(options, key)) throw Error(`Duplicate ${key}`);
-      else options[key] = args[index + 1];
+      else {
+        const option = key.replace(/-([a-z])/g, (_match, letter) => letter.toUpperCase());
+        if (Object.hasOwn(options, option)) throw Error(`Duplicate ${key}`);
+        options[option] = args[index + 1];
+      }
     }
     if (['allocate', 'resume'].includes(action) && (options.slot ?? 'work') === 'work') assertAuthorWorkerIdentity(options.worker);
+    if (action === 'recover-lost-capability' && (!process.env.CODEX_THREAD_ID || options.worker !== process.env.CODEX_THREAD_ID)) {
+      throw Error('Lost-capability recovery requires this author’s exact CODEX_THREAD_ID');
+    }
     const repo = options.repo === undefined ? path.dirname(fileURLToPath(import.meta.url)) : options.repo;
     if (options.repo !== undefined && (!path.isAbsolute(repo) || !fs.statSync(repo).isDirectory())) {
       throw Error('Explicit --repo must be an absolute existing repository directory');
@@ -495,7 +698,9 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
         process.stderr.write(`--- begin ${instructionPath} ---\n${text}${text.endsWith('\n') ? '' : '\n'}--- end ${instructionPath} ---\n`);
       }
     });
-    if (!['report', 'check', 'inspect', 'allocate', 'resume', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume or release with documented --key value arguments');
-    console.log(JSON.stringify(await manager[action](options), null, 2));
+    const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action;
+    if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume, recover-lost-capability or release with documented --key value arguments');
+    const result = await manager[method](options);
+    console.log(JSON.stringify(result, null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
