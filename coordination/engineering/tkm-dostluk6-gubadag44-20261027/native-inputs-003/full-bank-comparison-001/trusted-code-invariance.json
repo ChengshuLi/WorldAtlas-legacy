@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "kind": "tkm-current-comparator-code-invariance-v1",
+  "baseline": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+  "candidate": "2e5547b3c5ec6d3009c366c80045b3bad24390da",
+  "rows": [
+    {
+      "path": "scripts/run-geographic-check.py",
+      "baseline_sha256": "414f5b3dd7f0ef6f22f1ec4601f747e35a105b4876cde8cd6c9e60dce0226373",
+      "candidate_sha256": "414f5b3dd7f0ef6f22f1ec4601f747e35a105b4876cde8cd6c9e60dce0226373",
+      "bytes": 26767,
+      "identical": true
+    },
+    {
+      "path": "scripts/geography-prefetch.mjs",
+      "baseline_sha256": "b4063c3d87f15f3cb8103f6d4ac3fde398f16d6646910cb57e344557f6d74ea4",
+      "candidate_sha256": "b4063c3d87f15f3cb8103f6d4ac3fde398f16d6646910cb57e344557f6d74ea4",
+      "bytes": 23731,
+      "identical": true
+    },
+    {
+      "path": "scripts/geography-routing-metadata.mjs",
+      "baseline_sha256": "d3e287e5a1e87bf6d596ebba3e6c9a836fa8d2bb7aa7a8907d5ba7b15ef4db57",
+      "candidate_sha256": "d3e287e5a1e87bf6d596ebba3e6c9a836fa8d2bb7aa7a8907d5ba7b15ef4db57",
+      "bytes": 4985,
+      "identical": true
+    },
+    {
+      "path": "scripts/package-startup-ownership.mjs",
+      "baseline_sha256": "1beed3e6ca805dc55f6c04dd27fc76d83aad53676b62f4154cfd7d369d47bb16",
+      "candidate_sha256": "1beed3e6ca805dc55f6c04dd27fc76d83aad53676b62f4154cfd7d369d47bb16",
+      "bytes": 24341,
+      "identical": true
+    },
+    {
+      "path": "src/ownership-assets.js",
+      "baseline_sha256": "7bc1938dbc3b1215a2c1a378c1bc4f85ee191a9d5c6779db91549e3d2b34dcba",
+      "candidate_sha256": "7bc1938dbc3b1215a2c1a378c1bc4f85ee191a9d5c6779db91549e3d2b34dcba",
+      "bytes": 4437,
+      "identical": true
+    },
+    {
+      "path": "src/ownership-method.js",
+      "baseline_sha256": "33fe99f50cbe2e763d4b4ce476db42ef39512840422d7a7fe917bc0d4c96cbec",
+      "candidate_sha256": "33fe99f50cbe2e763d4b4ce476db42ef39512840422d7a7fe917bc0d4c96cbec",
+      "bytes": 3089,
+      "identical": true
+    },
+    {
+      "path": "scripts/native-word-store.mjs",
+      "baseline_sha256": "199425e178b7cb2ac62538d428581f17517c201f524a0cf3307d16d9a79840bd",
+      "candidate_sha256": "199425e178b7cb2ac62538d428581f17517c201f524a0cf3307d16d9a79840bd",
+      "bytes": 3389,
+      "identical": true
+    },
+    {
+      "path": "scripts/native-patch-store.mjs",
+      "baseline_sha256": "05175fe3b3b5b747c1d825ff10e713cd555185a269cf08914acebf347534c495",
+      "candidate_sha256": "05175fe3b3b5b747c1d825ff10e713cd555185a269cf08914acebf347534c495",
+      "bytes": 42142,
+      "identical": true
+    },
+    {
+      "path": "scripts/check-effective-geographic-regression.mjs",
+      "baseline_sha256": "9ac7c0114f80e4f4a5f98e67d739699b64d2cf4539983ebb1b391ac771222e58",
+      "candidate_sha256": "9ac7c0114f80e4f4a5f98e67d739699b64d2cf4539983ebb1b391ac771222e58",
+      "bytes": 97542,
+      "identical": true
+    },
+    {
+      "path": "src/native-grid.js",
+      "baseline_sha256": "0c35dbef6f88050970429ab08b22738d0aaac0afaa5f8d5e05b4e1cbefe41c91",
+      "candidate_sha256": "0c35dbef6f88050970429ab08b22738d0aaac0afaa5f8d5e05b4e1cbefe41c91",
+      "bytes": 87843,
+      "identical": true
+    },
+    {
+      "path": "src/ownership-codec.js",
+      "baseline_sha256": "64630f340a2815d5c86706cc4456718054990083d1026e0b420dd8f9f02f593d",
+      "candidate_sha256": "64630f340a2815d5c86706cc4456718054990083d1026e0b420dd8f9f02f593d",
+      "bytes": 2948,
+      "identical": true
+    },
+    {
+      "path": "coordination/engineering/selected-geography-effective-prevention-20261009/selected-neighbor-prevention.mjs",
+      "baseline_sha256": "d292398014b5694411a8504a7e6426ecf4b8ef014bff068f6d7bff3ba30e9f2a",
+      "candidate_sha256": "d292398014b5694411a8504a7e6426ecf4b8ef014bff068f6d7bff3ba30e9f2a",
+      "bytes": 271721,
+      "identical": true
+    },
+    {
+      "path": "coordination/engineering/selected-geography-effective-prevention-20261009/selected-checkpoint.mjs",
+      "baseline_sha256": "5111c0c1302a46d1d029812bbffe1ce113240e1c4bbe6256fbb36d4b717a69a7",
+      "candidate_sha256": "5111c0c1302a46d1d029812bbffe1ce113240e1c4bbe6256fbb36d4b717a69a7",
+      "bytes": 44968,
+      "identical": true
+    },
+    {
+      "path": "coordination/engineering/selected-geography-effective-prevention-20261009/selected-joint-entry.mjs",
+      "baseline_sha256": "ebb1744e485d48915ddbe56d90fa514a836c90c327f7625155e6e34b19f79d53",
+      "candidate_sha256": "ebb1744e485d48915ddbe56d90fa514a836c90c327f7625155e6e34b19f79d53",
+      "bytes": 9577,
+      "identical": true
+    },
+    {
+      "path": "scripts/research-import-gate.mjs",
+      "baseline_sha256": "0079ee16f5cf1068a09be8d5b416ed6a22e33c33b0605b203cc213f4f6198905",
+      "candidate_sha256": "0079ee16f5cf1068a09be8d5b416ed6a22e33c33b0605b203cc213f4f6198905",
+      "bytes": 335,
+      "identical": true
+    },
+    {
+      "path": "src/regional-import-gate.js",
+      "baseline_sha256": "83215f326c85b6f95c21f5560c7f0477c581b1e37a1a4f52de4ef39741dabf7d",
+      "candidate_sha256": "83215f326c85b6f95c21f5560c7f0477c581b1e37a1a4f52de4ef39741dabf7d",
+      "bytes": 7292,
+      "identical": true
+    },
+    {
+      "path": "scripts/selected-reference-metadata.mjs",
+      "baseline_sha256": "c8f8448134d5caa436935d655be675e7bf20228b0010f8856c7eb500d3d8fb9d",
+      "candidate_sha256": "c8f8448134d5caa436935d655be675e7bf20228b0010f8856c7eb500d3d8fb9d",
+      "bytes": 10527,
+      "identical": true
+    },
+    {
+      "path": "src/reference-metadata.js",
+      "baseline_sha256": "61c88435612ec0554f92e1d28500921f9e2b4b0c8128d6b725b2a72802a9259f",
+      "candidate_sha256": "61c88435612ec0554f92e1d28500921f9e2b4b0c8128d6b725b2a72802a9259f",
+      "bytes": 43928,
+      "identical": true
+    }
+  ],
+  "all_identical": true
+}
