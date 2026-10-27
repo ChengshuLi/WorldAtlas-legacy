@@ -48,7 +48,7 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
  const priorReader=withPriorSelector(reader,latest,oldSelection,[{...authorityPin,
   commit:authority.commit,path:authority.path}]);
  assert.equal(registry.entries.length,1);
- const binding=reader.json(registry.entries[0].source_authority),evidence=reader.json(binding.source_evidence);
+ const binding=priorReader.json(registry.entries[0].source_authority),evidence=priorReader.json(binding.source_evidence);
  assert.equal(evidence.targets.length,20);
  const config={version:2,selector:{commit:latest,path:selected.path},
   package_inputs:{commit:latest,path:'.github/package-inputs.json'},
@@ -67,16 +67,6 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
 test('finalizeDelivery awaits source membership acquisition before rejecting a missing target',async()=>{
  const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
  const registry=reader.json(reader.pin(latest,registryPath));
- const binding=reader.json(registry.entries[0].source_authority);
- const evidence=reader.json(binding.source_evidence),membership=evidence.source_membership;
- assert(membership?.parts?.length>0);
- const sourceEvidencePin=binding.source_evidence,sourcePartPin=membership.parts[0];
- const originalPart=reader.json(sourcePartPin),missingId=evidence.targets[0].target_id??evidence.targets[0].id;
- const alteredRaw=Buffer.from(JSON.stringify({...originalPart,
-  features:originalPart.features.filter(feature=>(feature?.properties?.id??feature?.id)!==missingId)})+'\n');
- const alteredPartPin={...sourcePartPin,bytes:alteredRaw.length,
-  git_blob_oid:createHash('sha1').update(`blob ${alteredRaw.length}\0`).update(alteredRaw).digest('hex'),
-  sha256:createHash('sha256').update(alteredRaw).digest('hex')};
  const priorRegistry=reader.pin(latest,priorRegistryPath),selected=reader.pin(latest,'data/ownership-selection.json');
  const authority=registry.entries[0].source_authority,authorityPin=reader.pin(latest,authority.path);
  assert.deepEqual({mode:authorityPin.mode,git_blob_oid:authorityPin.git_blob_oid,bytes:authorityPin.bytes,
@@ -86,6 +76,16 @@ test('finalizeDelivery awaits source membership acquisition before rejecting a m
  const priorReader=withPriorSelector(reader,latest,{...reader.json(selected),change_evidence:priorRegistry},
   [{...authorityPin,commit:authority.commit,path:authority.path}]);
  assert.equal(registry.entries.length,1);
+ const binding=priorReader.json(authority);
+ const evidence=priorReader.json(binding.source_evidence),membership=evidence.source_membership;
+ assert(membership?.parts?.length>0);
+ const sourceEvidencePin=binding.source_evidence,sourcePartPin=membership.parts[0];
+ const originalPart=priorReader.json(sourcePartPin),missingId=evidence.targets[0].target_id??evidence.targets[0].id;
+ const alteredRaw=Buffer.from(JSON.stringify({...originalPart,
+  features:originalPart.features.filter(feature=>(feature?.properties?.id??feature?.id)!==missingId)})+'\n');
+ const alteredPartPin={...sourcePartPin,bytes:alteredRaw.length,
+  git_blob_oid:createHash('sha1').update(`blob ${alteredRaw.length}\0`).update(alteredRaw).digest('hex'),
+  sha256:createHash('sha256').update(alteredRaw).digest('hex')};
  let markAcquire;
  const acquireEntered=new Promise(resolve=>{markAcquire=resolve;});
  let releaseAcquire;
