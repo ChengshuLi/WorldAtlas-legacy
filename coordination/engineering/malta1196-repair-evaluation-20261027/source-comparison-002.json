@@ -1,0 +1,691 @@
+{
+  "version": 1,
+  "package_id": "gb-MLT-ADM1--repair-evaluation",
+  "data_commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+  "target_contract": {
+    "owner_index": 7124,
+    "owner_scope": "Malta country-level target; the exact package declares locality_count=1 and location_count=1",
+    "requested_cells": 1196,
+    "original_candidate_source_features": 31,
+    "source_feature_list_is_not_31_owners": true
+  },
+  "canonical_aggregation": {
+    "feature_id": "atlas:territory:MLT",
+    "reference_owner": "Malta",
+    "source_member_count": 68,
+    "source_members_are_exactly_all_68_consumed_geoBoundaries_adm1_features": true,
+    "candidate_source_member_count": 31,
+    "candidate_source_members_subset_of_canonical_68": true,
+    "sorted_source_member_ids_sha256": "c2fc43395f22ff3b746fb0e74d0581b8f6579022fed53d269505f141c07176c6",
+    "sorted_candidate_source_member_ids_sha256": "fb52a08d455918e833f180ae1cc8643a94742bd08226de7c360977afb0370014",
+    "interpretation": "One country-level owner with an explicit 68-member source aggregation; 31 candidate-side local-council features are components, not 31 owners or separate council adjudications."
+  },
+  "product_identity": {
+    "same_68_shape_ids_and_order": true,
+    "full_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09592ced973a3448cf66b6100b741b64c0d/releaseData/gbOpen/MLT/ADM1/geoBoundaries-MLT-ADM1.geojson",
+    "full_lfs_bytes": 313611,
+    "full_lfs_sha256": "7d7f4853b270c3afbbef522b54fc3ea1bcedf27e3912a33574024b5cdd304fe3",
+    "simplified_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-MLT-ADM1-000.bin.gz",
+    "simplified_compressed_sha256": "76d01c165a5242fbc6c7bb628617d65b9c40d06549aefece2ea60d8eb7803c02",
+    "simplified_bytes": 76373,
+    "simplified_sha256": "8989bbf2cd7685358c2abe4391dc7f9a67a38fea431c00ed1940e51b2190dfd6"
+  },
+  "input_pins": {
+    "observation_path": "coordination/engineering/malta1196-repair-evaluation-20261027/owner-observation-001/owner-observation.json",
+    "observation_sha256": "0cc0981dfce9c5cc2c86946bc657f506e1cca2b94d4fd48ebebde1b38c3ca331",
+    "candidate_block_path": "coordination/engineering/global-current-cell-work-queue-20261014/source-candidates-block-025.json.gz",
+    "candidate_block_blob": "778c6a09c3eb47686c21ed993d3b10d8f875bec9",
+    "candidate_block_compressed_bytes": 463017,
+    "candidate_block_compressed_sha256": "3949a150d960a3bb0591f2d76d1752532f0dd5e5001909748ad2a58322efa76e",
+    "candidate_block_decoded_bytes": 3239363,
+    "candidate_block_decoded_sha256": "b548fbad4cfca8501ea11bab96897a0941411fc04e60575bab38e25ba13f2b48",
+    "administrative_sources_path": "data/administrative-sources.json",
+    "administrative_sources_blob": "2747b845f0c5654765da3b951c9074e52f220077",
+    "administrative_sources_bytes": 661416,
+    "administrative_sources_file_sha256": "ed0051d2956271c72f8917e7da0c6f53e5dfb595bee5920cac489a65a747d633",
+    "source_metadata_sha256": "8989bbf2cd7685358c2abe4391dc7f9a67a38fea431c00ed1940e51b2190dfd6",
+    "boundary_id": "MLT-ADM1-83640313",
+    "represented_year_claim": "2022",
+    "source_data_update_date": "Thu Jan 19 07:31:04 2023",
+    "build_date": "Dec 12, 2023",
+    "boundary_canonical": "Local Council",
+    "boundary_license": "Public Domain",
+    "license_detail": "Obtained email clarification for public domain license (see License PNG).",
+    "geoboundaries_citation_path": "coordination/engineering/original-geography-source-corpus-20261006/CITATION-AND-USE-geoBoundaries-original.txt",
+    "geoboundaries_citation_blob": "7f16c1c4aa7d11ddf25c6a6434630272a4c45459",
+    "geoboundaries_citation_bytes": 4316,
+    "geoboundaries_citation_sha256": "f6ea7572bea6036c4cdcacf8c0ca7bf09098d4e600d19546d7432533e9a290d5"
+  },
+  "queue_candidate_result": {
+    "keys": 1196,
+    "singleton_candidate_owner_histogram": {
+      "7124": 1196
+    },
+    "singleton_source_feature_histogram": {
+      "44815": 53,
+      "44816": 31,
+      "44817": 69,
+      "44818": 23,
+      "44820": 48,
+      "44822": 42,
+      "44825": 3,
+      "44826": 62,
+      "44828": 15,
+      "44829": 9,
+      "44830": 350,
+      "44831": 13,
+      "44832": 61,
+      "44833": 2,
+      "44834": 29,
+      "44836": 12,
+      "44837": 7,
+      "44838": 69,
+      "44842": 9,
+      "44843": 5,
+      "44855": 24,
+      "44856": 26,
+      "44858": 3,
+      "44859": 53,
+      "44860": 3,
+      "44863": 4,
+      "44864": 40,
+      "44867": 30,
+      "44872": 12,
+      "44879": 13,
+      "44882": 76
+    },
+    "competitors_outside_frozen_candidate_block_not_tested": true
+  },
+  "selected_center_application": {
+    "tuple_format": "[x,y,source_feature_index]",
+    "tuple_count": 1196,
+    "tuple_set_sha256": "2bc8864deb2464003e7cb910dece64b50a709141095c76823025e735848989c9",
+    "simplified": {
+      "histogram": {
+        "1": 1196
+      },
+      "featuresHit": 31,
+      "perSource": {
+        "44815": {
+          "name": "Ghajnsielem",
+          "shapeID": "83640313B32595760925513",
+          "total": 53,
+          "hitOnce": 53,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44816": {
+          "name": "Qala",
+          "shapeID": "83640313B18243789580420",
+          "total": 31,
+          "hitOnce": 31,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44817": {
+          "name": "Saint Lawerence",
+          "shapeID": "83640313B37542325651352",
+          "total": 69,
+          "hitOnce": 69,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44818": {
+          "name": "Gharb",
+          "shapeID": "83640313B59834490853323",
+          "total": 23,
+          "hitOnce": 23,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44820": {
+          "name": "Żebbuġ Gozo",
+          "shapeID": "83640313B66469281314411",
+          "total": 48,
+          "hitOnce": 48,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44822": {
+          "name": "Munxar",
+          "shapeID": "83640313B34539485231325",
+          "total": 42,
+          "hitOnce": 42,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44825": {
+          "name": "Xgħajra",
+          "shapeID": "83640313B35952736247105",
+          "total": 3,
+          "hitOnce": 3,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44826": {
+          "name": "Sannat",
+          "shapeID": "83640313B46213837211089",
+          "total": 62,
+          "hitOnce": 62,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44828": {
+          "name": "Nadur",
+          "shapeID": "83640313B83418789682728",
+          "total": 15,
+          "hitOnce": 15,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44829": {
+          "name": "Marsaskala",
+          "shapeID": "83640313B46811785336007",
+          "total": 9,
+          "hitOnce": 9,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44830": {
+          "name": "Mellieħa",
+          "shapeID": "83640313B7434934757616",
+          "total": 350,
+          "hitOnce": 350,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44831": {
+          "name": "Gżira",
+          "shapeID": "83640313B93972734358441",
+          "total": 13,
+          "hitOnce": 13,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44832": {
+          "name": "Mġarr",
+          "shapeID": "83640313B45218014578174",
+          "total": 61,
+          "hitOnce": 61,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44833": {
+          "name": "Saint Paul's Bay",
+          "shapeID": "83640313B70016887726547",
+          "total": 2,
+          "hitOnce": 2,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44834": {
+          "name": "Naxxar",
+          "shapeID": "83640313B55702430610648",
+          "total": 29,
+          "hitOnce": 29,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44836": {
+          "name": "Pembroke",
+          "shapeID": "83640313B96609834677200",
+          "total": 12,
+          "hitOnce": 12,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44837": {
+          "name": "Saint Julian's",
+          "shapeID": "83640313B85420480605860",
+          "total": 7,
+          "hitOnce": 7,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44838": {
+          "name": "Sliema",
+          "shapeID": "83640313B14575143196718",
+          "total": 69,
+          "hitOnce": 69,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44842": {
+          "name": "Valletta",
+          "shapeID": "83640313B86571698528234",
+          "total": 9,
+          "hitOnce": 9,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44843": {
+          "name": "Ta' Xbiex",
+          "shapeID": "83640313B6781586030718",
+          "total": 5,
+          "hitOnce": 5,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44855": {
+          "name": "Rabat Malta",
+          "shapeID": "83640313B41251532632205",
+          "total": 24,
+          "hitOnce": 24,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44856": {
+          "name": "Dingli",
+          "shapeID": "83640313B57354980514439",
+          "total": 26,
+          "hitOnce": 26,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44858": {
+          "name": "Xagħra",
+          "shapeID": "83640313B83261609786955",
+          "total": 3,
+          "hitOnce": 3,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44859": {
+          "name": "Kalkara",
+          "shapeID": "83640313B96832712848193",
+          "total": 53,
+          "hitOnce": 53,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44860": {
+          "name": "Birgu",
+          "shapeID": "83640313B14397888835877",
+          "total": 3,
+          "hitOnce": 3,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44863": {
+          "name": "Isla",
+          "shapeID": "83640313B28463401337071",
+          "total": 4,
+          "hitOnce": 4,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44864": {
+          "name": "Siġġiewi",
+          "shapeID": "83640313B83137316861428",
+          "total": 40,
+          "hitOnce": 40,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44867": {
+          "name": "Qrendi",
+          "shapeID": "83640313B82959541944820",
+          "total": 30,
+          "hitOnce": 30,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44872": {
+          "name": "Paola",
+          "shapeID": "83640313B27023824805393",
+          "total": 12,
+          "hitOnce": 12,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44879": {
+          "name": "Birżebbuġa",
+          "shapeID": "83640313B26944319289369",
+          "total": 13,
+          "hitOnce": 13,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44882": {
+          "name": "Marsaxlokk",
+          "shapeID": "83640313B51941763183850",
+          "total": 76,
+          "hitOnce": 76,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        }
+      },
+      "wrongSourceHits": []
+    },
+    "full": {
+      "histogram": {
+        "0": 61,
+        "1": 1135
+      },
+      "featuresHit": 31,
+      "perSource": {
+        "44815": {
+          "name": "Ghajnsielem",
+          "shapeID": "83640313B32595760925513",
+          "total": 53,
+          "hitOnce": 47,
+          "miss": 6,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44816": {
+          "name": "Qala",
+          "shapeID": "83640313B18243789580420",
+          "total": 31,
+          "hitOnce": 29,
+          "miss": 2,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44817": {
+          "name": "Saint Lawerence",
+          "shapeID": "83640313B37542325651352",
+          "total": 69,
+          "hitOnce": 66,
+          "miss": 3,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44818": {
+          "name": "Gharb",
+          "shapeID": "83640313B59834490853323",
+          "total": 23,
+          "hitOnce": 20,
+          "miss": 3,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44820": {
+          "name": "Żebbuġ Gozo",
+          "shapeID": "83640313B66469281314411",
+          "total": 48,
+          "hitOnce": 47,
+          "miss": 1,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44822": {
+          "name": "Munxar",
+          "shapeID": "83640313B34539485231325",
+          "total": 42,
+          "hitOnce": 39,
+          "miss": 3,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44825": {
+          "name": "Xgħajra",
+          "shapeID": "83640313B35952736247105",
+          "total": 3,
+          "hitOnce": 3,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44826": {
+          "name": "Sannat",
+          "shapeID": "83640313B46213837211089",
+          "total": 62,
+          "hitOnce": 58,
+          "miss": 4,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44828": {
+          "name": "Nadur",
+          "shapeID": "83640313B83418789682728",
+          "total": 15,
+          "hitOnce": 12,
+          "miss": 3,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44829": {
+          "name": "Marsaskala",
+          "shapeID": "83640313B46811785336007",
+          "total": 9,
+          "hitOnce": 8,
+          "miss": 1,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44830": {
+          "name": "Mellieħa",
+          "shapeID": "83640313B7434934757616",
+          "total": 350,
+          "hitOnce": 339,
+          "miss": 11,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44831": {
+          "name": "Gżira",
+          "shapeID": "83640313B93972734358441",
+          "total": 13,
+          "hitOnce": 13,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44832": {
+          "name": "Mġarr",
+          "shapeID": "83640313B45218014578174",
+          "total": 61,
+          "hitOnce": 55,
+          "miss": 6,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44833": {
+          "name": "Saint Paul's Bay",
+          "shapeID": "83640313B70016887726547",
+          "total": 2,
+          "hitOnce": 2,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44834": {
+          "name": "Naxxar",
+          "shapeID": "83640313B55702430610648",
+          "total": 29,
+          "hitOnce": 27,
+          "miss": 2,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44836": {
+          "name": "Pembroke",
+          "shapeID": "83640313B96609834677200",
+          "total": 12,
+          "hitOnce": 10,
+          "miss": 2,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44837": {
+          "name": "Saint Julian's",
+          "shapeID": "83640313B85420480605860",
+          "total": 7,
+          "hitOnce": 7,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44838": {
+          "name": "Sliema",
+          "shapeID": "83640313B14575143196718",
+          "total": 69,
+          "hitOnce": 68,
+          "miss": 1,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44842": {
+          "name": "Valletta",
+          "shapeID": "83640313B86571698528234",
+          "total": 9,
+          "hitOnce": 9,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44843": {
+          "name": "Ta' Xbiex",
+          "shapeID": "83640313B6781586030718",
+          "total": 5,
+          "hitOnce": 5,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44855": {
+          "name": "Rabat Malta",
+          "shapeID": "83640313B41251532632205",
+          "total": 24,
+          "hitOnce": 23,
+          "miss": 1,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44856": {
+          "name": "Dingli",
+          "shapeID": "83640313B57354980514439",
+          "total": 26,
+          "hitOnce": 23,
+          "miss": 3,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44858": {
+          "name": "Xagħra",
+          "shapeID": "83640313B83261609786955",
+          "total": 3,
+          "hitOnce": 3,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44859": {
+          "name": "Kalkara",
+          "shapeID": "83640313B96832712848193",
+          "total": 53,
+          "hitOnce": 52,
+          "miss": 1,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44860": {
+          "name": "Birgu",
+          "shapeID": "83640313B14397888835877",
+          "total": 3,
+          "hitOnce": 3,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44863": {
+          "name": "Isla",
+          "shapeID": "83640313B28463401337071",
+          "total": 4,
+          "hitOnce": 2,
+          "miss": 2,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44864": {
+          "name": "Siġġiewi",
+          "shapeID": "83640313B83137316861428",
+          "total": 40,
+          "hitOnce": 37,
+          "miss": 3,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44867": {
+          "name": "Qrendi",
+          "shapeID": "83640313B82959541944820",
+          "total": 30,
+          "hitOnce": 29,
+          "miss": 1,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44872": {
+          "name": "Paola",
+          "shapeID": "83640313B27023824805393",
+          "total": 12,
+          "hitOnce": 12,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44879": {
+          "name": "Birżebbuġa",
+          "shapeID": "83640313B26944319289369",
+          "total": 13,
+          "hitOnce": 13,
+          "miss": 0,
+          "multiple": 0,
+          "wrongSource": 0
+        },
+        "44882": {
+          "name": "Marsaxlokk",
+          "shapeID": "83640313B51941763183850",
+          "total": 76,
+          "hitOnce": 74,
+          "miss": 2,
+          "multiple": 0,
+          "wrongSource": 0
+        }
+      },
+      "wrongSourceHits": []
+    },
+    "full_miss_count": 61,
+    "full_miss_tuple_set_sha256": "249159c5e2e5241daeef3ee9c531b50a30cae23647e13c739d3278934b90de9e"
+  },
+  "source_status_limits": [
+    "The package source contract is one Malta country-level target/owner 7124. The canonical atlas:territory:MLT source_member_ids enumerate exactly all 68 consumed ADM1 features; the 31 candidate-side local-council features are members/components, not 31 owners or separate council adjudications.",
+    "All 1,196 cells match the exact retained simplified-product raster and the frozen global source-candidate block. The separately downloaded full product has identical feature IDs/order but misses 61 selected centers; this is preserved as a version-specific adverse comparator, not overwritten with a full-resolution result.",
+    "The frozen queue candidate block establishes singleton candidate owner/source IDs only within that pinned queue’s candidate-generation universe; no independent full-world all-source competitor search is claimed.",
+    "No full-resolution product was added to the public repository. The compared body is privately retained by hash at /workspace/shared/worldatlas-MLT-ADM1-full-9469f09-comparator-20261027.geojson.",
+    "The per-product administrative metadata reports Public Domain based on an email clarification and refers to a License PNG; neither the exact email nor a Malta-specific License PNG is retained here, so the receipt preserves the metadata claim but does not independently verify its basis. The pinned geoBoundaries citation/use notice says geoBoundaries computer code and derivative works are CC BY 4.0 with required attribution and asks users of individual boundary files to cite source metadata. The d-maps conditions page, checked 2026-10-27, says its maps are copyrighted, modifiable/free (including commercial) subject to exact-source-URL attribution and a 10-map cap per publication, and disclaims official recognition/acceptance and precision for some scientific uses. These statements have distinct product, source, and temporal scopes; this work does not reconcile them, infer unrestricted redistribution, override the recorded clarification, or create a new obligation.",
+    "This comparison does not resolve effective date, official role/authority, legal boundary status, physical issue masks, native qualification, repair, or acceptance."
+  ]
+}
