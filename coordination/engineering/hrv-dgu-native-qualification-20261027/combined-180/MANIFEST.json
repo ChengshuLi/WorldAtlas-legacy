@@ -58,10 +58,10 @@
     "Source-role ambiguities, original contacts, physical issue contexts, rights/attribution limits and prior evidence remain preserved in group packets."
   ],
   "finalizer_config": {
-    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-001-29e4.json",
-    "bytes": 923,
-    "sha256": "6f2c8552c6afef827df245cb32d5585a6aa5cd3f30669d3ad4c2402c2ece2f3d",
-    "status": "prepared only; finalizer not invoked",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-002-29e4.json",
+    "bytes": 596,
+    "sha256": "2ac537a79b78bdfbddaeed5f3b6fff8a46f05cbb8a13e82ed6ed92686086f008",
+    "status": "corrected config prepared only; finalizer not yet invoked",
     "selector_and_package_inputs_commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
     "change_evidence_commit": "515ce42248bd8334fc6f1391187fc7089e55283f"
   },
@@ -74,5 +74,18 @@
     "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/arta-vela-leveraka-103/candidate-180-preparation-summary.json",
     "bytes": 2839,
     "sha256": "6ba19f8d83e9e8b41401d695be3bc2d9d4f8bd87912da9ad53d6b3cabbe79f3d"
-  }
+  },
+  "prior_finalizer_attempts": [
+    {
+      "ordinal": 1,
+      "config_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-001-29e4.json",
+      "config_sha256": "6f2c8552c6afef827df245cb32d5585a6aa5cd3f30669d3ad4c2402c2ece2f3d",
+      "private_receipt_path": "/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-29e4-001/",
+      "exit_code": 1,
+      "stderr": "Supply an exact commit/path locator, without handwritten derived descriptors",
+      "destination_created": false,
+      "stdout_bytes": 0,
+      "source_or_bank_mutation": false
+    }
+  ]
 }
