@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "kind": "TKM Mary143 native diagnostic input preparation",
+  "accepted_commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "mode": "100644",
+    "git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+    "bytes": 2287,
+    "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9"
+  },
+  "prepared_index": {
+    "path": "data/canonical-grid/current-startup/index.json",
+    "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "mode": "100644",
+    "git_blob_oid": "8ec6b7b58e4e9b475d4a7b9d22f5f3e1f9dd32be",
+    "bytes": 49610,
+    "sha256": "5bebd9634f1d4bb2e876043e3b14d19c58e00ac73638604b5a3a98fc5a7f7ad9"
+  },
+  "native_manifest": {
+    "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json",
+    "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "mode": "100644",
+    "git_blob_oid": "31d970d0fe2bf8c899f020aad09a3826ea451790",
+    "bytes": 252447,
+    "sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba"
+  },
+  "target": {
+    "id": "gb:TKM:ADM2:10190150B47066979897930",
+    "pixelIndex": 42143,
+    "accepted_geometry_points": 26,
+    "sibling_id": "gb:TKM:ADM2:10190150B21853413573592",
+    "sibling_pixelIndex": 42130
+  },
+  "source": {
+    "source_family": "gb:TKM:ADM2",
+    "full_original_stage_points": 33,
+    "simplified_complete_feature_count": 59,
+    "full_simplified_exact_center_application_sha256": "e7b49e43f8df1427e8ec03e669302e9f988d90cb4139d9f4f1016afd5527c09c",
+    "exact_keys": 143,
+    "keyset_sha256": "56bf20f91b3e2a1c08065469f180b2907b21d7661a995854eb8666ce2daa3ad8",
+    "coverage_rows": 12
+  },
+  "physical": {
+    "pin": {
+      "path": "coordination/engineering/tkm-mary143-physical-001/result-001/whole-target-support.json",
+      "commit": "6bd16a304b06ebbfbca943604066b0667cdad539",
+      "mode": "100644",
+      "git_blob_oid": "f5a1ce7f85b2363e0a0934b1aac041c64050be86",
+      "bytes": 13762,
+      "sha256": "1666431f7dd3ee62cee99290b0036e39342c5689410b48af3da26e11ab33fce5"
+    },
+    "issues": 0
+  },
+  "foreign_families": [
+    "gb:AFG:ADM1",
+    "gb:KAZ:ADM1",
+    "gb:UZB:ADM1"
+  ],
+  "outputs": {
+    "source-evidence-config.json": {
+      "bytes": 19748,
+      "sha256": "8d73cc017a248f70b0688633425865dc57c1b525f144c7b25d6cb76934e403bc"
+    },
+    "native-patch-input.json": {
+      "bytes": 3421,
+      "sha256": "73abe620db1596777a60849b10fe26b1ed3c3d4e5051a55f8e5c9a20fe05fb35"
+    },
+    "native-diagnostic-config.json": {
+      "bytes": 360,
+      "sha256": "67b52a338ffbda503039befdd9e08fc30401b0b430d03f26106c2d70cd219fee"
+    }
+  },
+  "limits": [
+    "Input patch is a request generated from original exact candidate tuples, not authority or an additive published bank.",
+    "Physical execution and original center application remain separate evidence inputs; the native diagnostic still determines per-cell support and hold state.",
+    "The source stage preserves raw original consumed geometry and exact accepted current target selected geometry as separate roles."
+  ]
+}

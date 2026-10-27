@@ -167,6 +167,20 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       throw error;
     }
   };
+  const removeUnregisteredCapability = saved => {
+    if (state().entries.some(entry => entry.worker === saved.record.worker && entry.slot === saved.record.slot)) return false;
+    const current = fs.lstatSync(saved.path, {throwIfNoEntry: false});
+    if (!current) return true;
+    if (!current.isFile() || current.isSymbolicLink()) return false;
+    const bytes = fs.readFileSync(saved.path);
+    const after = fs.lstatSync(saved.path);
+    if (['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => saved.stat[key] !== after[key]) ||
+      !saved.bytes.equals(bytes) || !bytes.equals(fs.readFileSync(saved.path))) return false;
+    fs.unlinkSync(saved.path);
+    const directoryDescriptor = fs.openSync(capabilityDirectory, 'r');
+    try { fs.fsyncSync(directoryDescriptor); } finally { fs.closeSync(directoryDescriptor); }
+    return true;
+  };
   const recoverySnapshot = (worker, slot, entry, expectedPath, expectedBranch, expectedHead) => {
     if (!id(worker) || slot !== 'work' || entry.worker !== worker || entry.slot !== slot ||
       entry.status !== 'ready' || expectedPath !== slotPath(worker, slot) || entry.path !== expectedPath ||
@@ -421,7 +435,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     return {commit, path: 'AGENTS.md', gitBlobOid: oid,
       sha256: createHash('sha256').update(result.stdout).digest('hex'), text, guides};
   };
-  const allocate = async ({worker, slot = 'work', branch, commit, profile = 'sparse', include = []}) => {
+  const allocate = async ({worker, slot = 'work', branch, commit, profile = 'sparse', include = [], createCapabilityFile = false}) => {
     if (!id(worker) || !['work', 'review'].includes(slot)) throw Error('Supply a safe unique worker ID and work/review slot');
     if (!['sparse', 'full'].includes(profile) || !Array.isArray(include) || !include.every(safeInclude)) throw Error('Use sparse/full profile and literal data/research/coordination paths without traversal or globs');
     if (slot === 'work' && (typeof branch !== 'string' || !branch || branch.startsWith('-') || branch === 'main' || commit)) throw Error('Work needs a fresh branch; main is fetched by the allocator');
@@ -467,13 +481,36 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       const destination = slotPath(worker, slot);
       ordinaryDirectory(destination);
       if (fs.lstatSync(destination, {throwIfNoEntry: false})) throw Error('Unregistered checkout directory exists; inspect instead of overwriting');
+      const capability = createCapabilityFile ? capabilityPath(worker, slot) : undefined;
+      if (capability && fs.lstatSync(capability, {throwIfNoEntry: false})) {
+        throw Error('An unregistered private capability file exists; preserve it for operator inspection');
+      }
       const {sparsePatterns, missing, estimated} = inputInventory(head, profile, include);
       if (missing.length) throw Error(`Unknown input size; selected blobs must be available locally. Run inspect --commit ${head} with this same profile/include scope to list missing paths/OIDs.`);
       if (availableBytes() < estimated) throw Error('Insufficient free space for selected workspace checkout');
       const entry = {worker, slot, path: destination, token: randomUUID(), head, branch: branch ?? null,
         profile, include, reservation: 0, status: 'preparing', createdAt: new Date().toISOString()};
-      value.entries.push(entry);
-      save(value);
+      let savedCapability;
+      try {
+        if (capability) {
+          persistCapability({version: 1, worker, slot, path: entry.path, branch: entry.branch,
+            head: entry.head, observed_head: head, token: entry.token}, capability);
+          savedCapability = readCapability({worker, slot, entry, requestedPath: capability});
+        }
+        value.entries.push(entry);
+        save(value);
+      } catch (error) {
+        if (savedCapability) {
+          try {
+            if (!removeUnregisteredCapability(savedCapability)) {
+              throw Error('Allocation reservation failed and its exact capability file could not be safely removed; preserve for inspection');
+            }
+          } catch (inspectionError) {
+            throw new AggregateError([error, inspectionError], 'Allocation reservation failed; capability cleanup requires operator inspection');
+          }
+        }
+        throw error;
+      }
       try {
         fs.mkdirSync(path.dirname(destination), {recursive: true});
         git('worktree', 'add', '--no-checkout', ...(slot === 'work' ? ['-b', branch] : ['--detach']), destination, head);
@@ -485,6 +522,9 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
           if (!fs.lstatSync(destination, {throwIfNoEntry: false}) && !worktrees(false).some(item => item.path === destination)) {
             value.entries = value.entries.filter(item => item !== entry);
             save(value);
+            if (savedCapability && !removeUnregisteredCapability(savedCapability)) {
+              throw Error('Allocation rollback left an unbound capability file; preserve it for operator inspection');
+            }
           }
         } catch (inspectionError) {
           throw new AggregateError([error, inspectionError], 'Allocation failed; reservation recovery requires operator inspection');
@@ -500,12 +540,46 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     return entry;
   };
 
+  const ensureCapabilityFile = ({worker, slot = 'work'}) => locked(() => {
+    const value = state();
+    const matches = value.entries.filter(item => item.worker === worker && item.slot === slot);
+    if (matches.length !== 1 || matches[0].status !== 'ready') {
+      throw Error('Capability-file output requires the exact ready owner slot');
+    }
+    const entry = matches[0];
+    const file = capabilityPath(worker, slot);
+    if (fs.lstatSync(file, {throwIfNoEntry: false})) {
+      const current = readCapability({worker, slot, entry, requestedPath: file});
+      if (current.token !== entry.token || current.record.observed_head !== entry.head) {
+        throw Error('Current private capability does not match the exact ready owner slot; inspect manually');
+      }
+      return file;
+    }
+    const record = {version: 1, worker, slot, path: entry.path, branch: entry.branch,
+      head: entry.head, observed_head: entry.head, token: entry.token};
+    persistCapability(record, file);
+    const saved = readCapability({worker, slot, entry, requestedPath: file});
+    if (saved.token !== entry.token || saved.record.observed_head !== entry.head) {
+      throw Error('Created capability file does not match the exact ready owner slot; inspect manually');
+    }
+    return file;
+  });
+  const capabilityFilePath = ({worker, slot = 'work'}) => {
+    if (!id(worker) || !['work', 'review'].includes(slot)) throw Error('Supply an exact owner and work/review slot');
+    return capabilityPath(worker, slot);
+  };
+
   // Resume only an exact interrupted reservation. This deliberately refuses any
   // materialized/unknown state; a failed materialization is preserved for review.
-  const resume = ({worker, slot = 'work', token}) => locked(() => {
-    if (!id(worker) || slot !== 'work' || !id(token)) throw Error('Resume requires an exact work-slot owner and token');
+  const resume = ({worker, slot = 'work', token, capabilityFile}) => locked(() => {
+    if (token !== undefined && capabilityFile !== undefined) throw Error('Use either an owner token or its private capability file, not both');
     const value = state();
     const entry = value.entries.find(item => item.worker === worker && item.slot === slot);
+    if (capabilityFile !== undefined) {
+      if (!entry) throw Error('Exact current slot ownership token required');
+      token = readCapability({worker, slot, entry, requestedPath: capabilityFile}).token;
+    }
+    if (!id(worker) || slot !== 'work' || !id(token)) throw Error('Resume requires an exact work-slot owner and token or capability file');
     if (!entry || entry.token !== token) throw Error('Exact current slot ownership token required');
     if (entry.status !== 'preparing') throw Error('Only an interrupted preparing workspace can be resumed');
     if (entry.path !== slotPath(worker, slot) || !entry.branch || entry.branch === 'main' || entry.branch.startsWith('-')
@@ -668,7 +742,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       ...(generatedDatabase ? {removed_generated_database: generatedDatabase} : {})};
   });
   const check = () => ({freeBytes: availableBytes()});
-  return {report, check, inspect, allocate, resume, recoverLostCapability, release};
+  return {report, check, inspect, allocate, ensureCapabilityFile, capabilityFilePath, resume, recoverLostCapability, release};
 }
 
 function isCliEntrypoint(argvPath, moduleUrl) {
@@ -678,6 +752,27 @@ function isCliEntrypoint(argvPath, moduleUrl) {
   } catch {
     return false;
   }
+}
+
+function cliSafeResult(action, value, capabilityFile) {
+  const pick = (object, fields) => Object.fromEntries(fields
+    .filter(field => Object.hasOwn(object, field))
+    .map(field => [field, object[field]]));
+  const slotFields = ['worker', 'slot', 'path', 'head', 'branch', 'profile', 'include', 'reservation', 'status', 'createdAt'];
+  if (action === 'allocate' || action === 'resume') {
+    return {...pick(value, slotFields), capabilityFile};
+  }
+  if (action === 'recover-lost-capability') {
+    return pick(value, ['recovered', 'worker', 'slot', 'path', 'branch', 'head', 'capabilityFile', 'previousTokenInvalidated']);
+  }
+  if (action === 'report') {
+    return {
+      ...pick(value, ['root', 'registry', 'freeBytes', 'checkoutBytes']),
+      entries: (value.entries ?? []).map(entry => pick(entry, slotFields)),
+      worktrees: (value.worktrees ?? []).map(worktree => pick(worktree, ['path', 'bytes', 'managed']))
+    };
+  }
+  return value;
 }
 
 if (isCliEntrypoint(process.argv[1], import.meta.url)) {
@@ -722,7 +817,15 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
     });
     const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action;
     if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume, recover-lost-capability or release with documented --key value arguments');
-    const result = action === 'report' ? await manager.report({worker: options.worker}) : await manager[method](options);
-    console.log(JSON.stringify(result, null, 2));
+    if (action === 'resume' && options.token === undefined && options.capabilityFile === undefined) {
+      options.capabilityFile = manager.capabilityFilePath({worker: options.worker, slot: options.slot ?? 'work'});
+    }
+    const result = action === 'report' ? await manager.report({worker: options.worker})
+      : action === 'allocate' ? await manager.allocate({...options, createCapabilityFile: true})
+        : await manager[method](options);
+    const capabilityFile = ['allocate', 'resume'].includes(action)
+      ? manager.ensureCapabilityFile({worker: result.worker, slot: result.slot})
+      : undefined;
+    console.log(JSON.stringify(cliSafeResult(action, result, capabilityFile), null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

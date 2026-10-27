@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "kind": "tkm-gubadag44-supported-source-evidence-preparation-v1",
+  "command": "env -u NODE_OPTIONS -u NODE_PATH node scripts/prepare-delivery-handoff.mjs source-evidence coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/source-evidence-config.json coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/source-evidence-output-001",
+  "cwd": "WorldAtlas worktree root",
+  "terminal": {
+    "exit_status": 0,
+    "stderr_bytes": 0,
+    "stdout_binding": {
+      "destination": "coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/source-evidence-output-001",
+      "resumed": false,
+      "binding": {
+        "phase": "source-evidence",
+        "config_sha256": "e2d4b3d327c0ae5a0e2527e3579ccebea2765b8bd11b2cffd70f80135f326aab"
+      }
+    }
+  },
+  "config_sha256": "e2d4b3d327c0ae5a0e2527e3579ccebea2765b8bd11b2cffd70f80135f326aab",
+  "preparation_sha256": "566159c68b16630ce5e5658f4d41575fd431bfe5699084f27ab0b1968090c156",
+  "scope": {
+    "owner_index": 42157,
+    "source_feature": "gb:TKM:ADM2:10190150B74382957458545",
+    "requested_cells": 44,
+    "native_patch_rows": 44,
+    "territorial_negative_families": [
+      "gb:AFG:ADM1",
+      "gb:KAZ:ADM1",
+      "gb:UZB:ADM1"
+    ],
+    "complete_source_family_descriptors": 4
+  },
+  "preserved_prior_invocations": [
+    {
+      "attempt": "001",
+      "exit": 1,
+      "reason": "Plain Node launch required; inherited NODE_PATH was set; no source work/result."
+    },
+    {
+      "attempt": "002",
+      "exit": 1,
+      "reason": "Rejected destination was outside the helper\u2019s permitted owned-preparation prefixes; no source work/result."
+    }
+  ],
+  "limits": [
+    "Preparation only; source-evidence and exact request rows are not native authority or positive qualification.",
+    "All complete AFG/KAZ/UZB negative source families are retained.",
+    "Original 44 denominator, parent contacts and physical issue evidence remain separate."
+  ],
+  "prepared_outputs": {
+    "source-evidence.json": "3a328cd068d929ad0a2063724023418381b09fd4b2c5b782753a9e512045fe37",
+    "territorial-exclusion-provenance.json": "2d18679f1857252865daf6449170c06ed0bd938a374311843131983259850dcf"
+  },
+  "exact_native_request": {
+    "path": "native-inputs-001/source-evidence-output-001/native-patch.json",
+    "sha256": "132cb8db8350a74430937e3c9964d853f65a4a5958592925874b850f8292bfaa",
+    "provenance": "Exact 44 tuples from original custody root audit, checked equal to source-evidence target coverage rows; request only, no authority."
+  }
+}

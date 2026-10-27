@@ -1,0 +1,135 @@
+{
+  "kind": "worldatlas.source-free-proposal-scope.v1",
+  "proposal_id": "tkm-dostluk6-researched-unresolved-20261027",
+  "package": "gb-TKM-ADM2--repair-evaluation",
+  "status": "proposal-only-pending-independent-review-and-root-acceptance",
+  "denominator": {
+    "original_keys": 1759,
+    "intervals": 1001,
+    "owners": 45,
+    "original_land": 1622,
+    "original_inland_water": 137
+  },
+  "preexisting_root_accounting": {
+    "accepted_unresolved": 57,
+    "accepted_positive": 53,
+    "other_keys_remain_prior_state": true,
+    "root_decision_snapshot": "/workspace/shared/worldatlas-root-acceptance-after-TKMpositive53-2921-20261027.json",
+    "root_snapshot_sha256": "8c11e1badce1486d9a2114d0ffbd425bcd19960a9a6a2ff8fbaf5c9427909ade"
+  },
+  "scope": {
+    "count": 6,
+    "owner_index": 42124,
+    "interval_block": 24,
+    "sorted_owner_y_x": [
+      [
+        42124,
+        101134,
+        178574
+      ],
+      [
+        42124,
+        101204,
+        178676
+      ],
+      [
+        42124,
+        101205,
+        178676
+      ],
+      [
+        42124,
+        101729,
+        178883
+      ],
+      [
+        42124,
+        101803,
+        177921
+      ],
+      [
+        42124,
+        102053,
+        177955
+      ]
+    ],
+    "tuple_serialization": "owner<TAB>y<TAB>x<LF>",
+    "tuple_sha256": "b5a97d90f41b9cf71ee20f9ac8e72bb1ac4a7a3045aa8accd3b22c5c7e049037",
+    "land_mask": 6,
+    "inland_water_mask": 0,
+    "overlap_with_prior_accepted_unresolved": 0,
+    "source_contacts": {
+      "TKM_ADM1_Lebap": 6,
+      "AFG_ADM1_Jowzjan": 1
+    },
+    "center_application": {
+      "full_unique_hits": 6,
+      "simplified_unique_hits": 6,
+      "ties": 0,
+      "multiple_hits": 0,
+      "source_feature_id": "gb:TKM:ADM2:10190150B13703090222147",
+      "source_feature_name": "Dostluk",
+      "source_feature_type": "ADM2",
+      "distinct_sibling_feature_id": "gb:TKM:ADM2:10190150B78263811448824",
+      "distinct_sibling_name": "S.A. Nyyazow",
+      "sibling_contact_count": 59
+    }
+  },
+  "source_role": {
+    "source_body": {
+      "path": ".private/full-2009-source.geojson",
+      "bytes": 271437,
+      "sha256": "0d0b3745e275bfadb1d0137fbca014b56f2ed72cb83b0a98dd0e2f0632e7c507"
+    },
+    "metadata_source": "CIESIN GRUMPv1 population-density Map 7",
+    "claimed_vintage": 2009,
+    "claimed_license": "CC BY-SA 3.0",
+    "advertised_feature_count": 66,
+    "present_feature_count": 59,
+    "primary_role_question": "Whether this exact ADM2 feature represents the historical renamed etrap, a statistical unit, or another source-defined unit."
+  },
+  "qualification": {
+    "whole_target_physical_producer_completed": false,
+    "native_qualification_completed": false,
+    "constructor_or_bank_patch": false,
+    "root_acceptance": false
+  },
+  "evidence_pins": {
+    "custody_json": {
+      "path": "/workspace/shared/worldatlas-TKM-Dostluk6-source-role-custody-20261027.json",
+      "bytes": 7104,
+      "sha256": "2fa1d923a774606a6acd291b400a6410bfaf3e65a1b1992991a2d2e1312527bf"
+    },
+    "primary_assessment": {
+      "path": "/workspace/shared/worldatlas-TKM-Dostluk6-primary-lineage-assessment-20261027.md",
+      "bytes": 6189,
+      "sha256": "86a90829881b853fa214b86cb4a96173449ca8a65f7e95beaca794a3d48a0a7a"
+    },
+    "center_application": {
+      "path": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/.private/full-simplified-exact-center-application-v2.json",
+      "bytes": 990213,
+      "sha256": "e7b49e43f8df1427e8ec03e669302e9f988d90cb4139d9f4f1016afd5527c09c"
+    },
+    "source_physical_join": {
+      "path": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/source-candidate-physical-join-summary-v1.json",
+      "bytes": 23409,
+      "sha256": "f7c204fb68e3103099e487da178477ad64f6d7130cdf7b3a0d973766ad6cfae9"
+    },
+    "source_physical_hierarchy": {
+      "path": "/workspace/shared/worldatlas-TKM1759-qualification-20261026/source-candidate-physical-hierarchy-status-v2.json",
+      "bytes": 7378,
+      "sha256": "e1b44ae136f2d8a25a55a19884d33a4fe3e0bb65131212ffdeb4845712e7d1d5"
+    },
+    "original_queue": {
+      "commit": "9b1f8fc6dfebb38406337c292b7002d54447cbd3",
+      "path": "coordination/engineering/global-current-cell-work-queue-20261014/source-package-queue.json",
+      "sha256": "78007430b6f9faedb188ef0619b7ff0a7a2cc7fff2ec9f1c41ee69936ec4ebd8"
+    }
+  },
+  "notes": [
+    "No raw geometry or latitude/longitude included.",
+    "Original AFG adverse contact and source variant differences remain.",
+    "Technical HTTP 503 for exact SEDAC/Map-7 route is preserved as failure, not denial or source absence.",
+    "Proposal recommendation is source-role-specific only; later reorganization alone is not treated as veto."
+  ]
+}

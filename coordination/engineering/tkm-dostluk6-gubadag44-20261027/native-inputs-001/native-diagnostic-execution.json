@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "kind": "tkm-gubadag44-native-diagnostic-execution-v1",
+  "command": "env -u NODE_OPTIONS -u NODE_PATH node scripts/prepare-delivery-handoff.mjs native-diagnostic coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/native-diagnostic-config.json coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/native-diagnostic-001",
+  "terminal": {
+    "exit_status": 0,
+    "stderr_bytes": 0,
+    "elapsed_seconds": 5.899909526,
+    "requested_cells": 44,
+    "supported_cells": 44,
+    "held_cells": 0,
+    "first_failure": null
+  },
+  "config_sha256": "74309ca943a3c10afdd9eb369facba6e9c274b7f50f8545df81669d3771cad79",
+  "outputs": {
+    "native-diagnostic.json": "27bd3b2c3daf1fe2d3ee0dade1385252b42df84730aaa107bc9808f4823e3479",
+    "preparation.json": "5ebfa8f48afe111ba0075f8bc9b591fe65efab9df4a9f797c51c07bfd6446b93"
+  },
+  "rule_sha256": "d165ea599c162f63c8f5ad586b1fa8755cda5a019d5412a4821a36b26f84c657",
+  "source_evidence": {
+    "bytes": 12765,
+    "commit": "e9f4c213bc517b84b5783510f0f9167f470f0f2d",
+    "git_blob_oid": "c0479739f431ac7394471eb1aad510dfc919ff73",
+    "mode": "100644",
+    "path": "coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/source-evidence-output-001/source-evidence.json",
+    "sha256": "3a328cd068d929ad0a2063724023418381b09fd4b2c5b782753a9e512045fe37"
+  },
+  "native_patch": {
+    "bytes": 1903,
+    "commit": "e9f4c213bc517b84b5783510f0f9167f470f0f2d",
+    "git_blob_oid": "621eb162a67f4831e7278bf6eff6304c626908f8",
+    "mode": "100644",
+    "path": "coordination/engineering/tkm-dostluk6-gubadag44-20261027/native-inputs-001/source-evidence-output-001/native-patch.json",
+    "sha256": "132cb8db8350a74430937e3c9964d853f65a4a5958592925874b850f8292bfaa"
+  },
+  "limits": [
+    "Diagnostic screening only; no authority or current-owner-zero finding.",
+    "No source/physical producer was replayed by diagnostic."
+  ]
+}
