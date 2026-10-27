@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "kind": "jor656-combined563-candidate-accounting",
+  "status": "local-candidate-only",
+  "original_scope": {
+    "keys": 656,
+    "land": 631,
+    "inland_water": 25,
+    "intervals": 399,
+    "owners": 16
+  },
+  "source_partition": {
+    "full_selected_member_hits": 624,
+    "full_selected_member_misses": 32,
+    "candidate_from_full_member_hit_no_simplified_foreign_contact": 534,
+    "held_full_member_hits_with_simplified_foreign_contact": 90,
+    "full_member_miss_subset_evaluated_under_original_simplified_contract": 29,
+    "held_full_member_misses_with_simplified_ISR_contact": 3,
+    "simplified_foreign_contact_keys": 93,
+    "simplified_foreign_contact_incidences": 93,
+    "candidate_keys": 563,
+    "held_keys": 93,
+    "candidate_land": 538,
+    "candidate_inland_water": 25
+  },
+  "predicates": {
+    "candidate_534": {
+      "diagnostic": "coordination/engineering/jor656-repair-evaluation-20261026/source-evidence-001/native-diagnostic-001.json",
+      "sha256": "1f4bcca2d9168df594ccc915f8a57e77081da22e110972029bc09cca58afad6c",
+      "supported": 534,
+      "held": 90
+    },
+    "residual_29": {
+      "diagnostic_commit": "97c8186f5d6728675a065bda0f545a280e5f243e",
+      "path": "coordination/engineering/jor656-residual029-native-001/native-diagnostic-002/native-diagnostic.json",
+      "bytes": 19293,
+      "sha256": "995a4f3b2a722920d6e6ad9821e50d59931f3dbd7302fd03b5e13e4463f6281c",
+      "requested": 29,
+      "supported": 29,
+      "held": 0,
+      "tuple_sha256": "2225e04cfc0f6427288b58b741e7d6d6aab55f676edfa542bf20ac6282a8c54f"
+    },
+    "composed_authority_registry": {
+      "commit": "95dba6ca68188649d6c53497416c2f2e5c7ecb42",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/authority-compose-003/authority-registry.json",
+      "bytes": 2633,
+      "sha256": "24deb144b661f75759f268cb6869b8787aad5de8b512bf81945013cb8f2291d7",
+      "entries": 2
+    }
+  },
+  "source_and_physical": {
+    "full_simplified_application": {
+      "path": "full-simplified-source-application.json",
+      "sha256": "d33aa167fe79c3c5fdf4dfdafc87ca8a746152fd5373de733b516d3878312ab1"
+    },
+    "simplified_foreign_application": {
+      "path": "full-foreign-application.json",
+      "sha256": "50563eedf0be448b345962315aae75b8e8fccb915d27440a2137d6ac8bf733a8"
+    },
+    "simplified_physical_result_commit": "19012ac89bda3437fb8b7280915181d770c1274c",
+    "simplified_physical_result_sha256": "5c7e4a5fab9bae42f0016661d553a8030de5dd5a456bdae9978a44d684081113",
+    "limitations": [
+      "Full-product misses/different-member observations remain adverse for all 32 rows, including the 29 separately assessed under the original simplified-product contract.",
+      "All 93 original simplified ISR/SAU contact incidences remain held and are not erased by the separate full-geometry zero-hit comparison.",
+      "Whole-target physical issue records and bounded center checks are not whole-cell or whole-target clearance.",
+      "All 25 original inland-water cells remain classified as inland water."
+    ]
+  },
+  "bank_candidate": {
+    "baseline_commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+    "candidate_commit": "d8880c579a2f4c9ff8804bc44286ddc3e5703de7",
+    "finalizer_attempt": "../finalize-instrumented-018/attempt-018-result.json",
+    "finalizer_exit": 0,
+    "startup_index_sha256": "3af68d4fc501f973f88a0c131e7568a6d067b6c70bc0522a0cbd6c2326103550",
+    "comparison_report": "../finalize-instrumented-018/current-full-bank-comparison.json",
+    "comparison_sha256": "967a708f6d3b02a897a9c4c37f093dd76dbca188364c577f67499b852b6d05c6",
+    "method": "selected-native-owner-conservation-v1",
+    "status": "no-new-native-loss",
+    "compared_rows": 262166,
+    "added": 563,
+    "removed": 0,
+    "reassigned": 0,
+    "lost_or_reassigned": 0,
+    "affected_rows": 314,
+    "candidate_code_executed": false
+  },
+  "limitations": [
+    "Candidate only; local finalizer and local comparison core are not hosted stock controls.",
+    "No hosted integration tests/build/geography/emitted package/current-owner-zero result or root acceptance/credit is claimed."
+  ]
+}
