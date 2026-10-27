@@ -1,0 +1,38 @@
+/* Rebind the full original source/owner evidence config to accepted-target
+ * physical evidence, preserving every other source/competitor predicate. */
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+const root=fs.realpathSync(process.cwd()),need=(ok,msg)=>{if(!ok)throw Error(msg);};
+const {pinReader}=await import(pathToFileURL(path.join(root,'scripts/prepare-delivery-handoff.mjs')));
+const reader=pinReader(root);
+const BASE_COMMIT='c84f5b503dcb6d3fb67d2231ef23c4bd2e665712';
+const BASE_PATH='coordination/engineering/tkm-baherden53-source-fit-20261026/config/native-inputs-002/source-evidence-config.json';
+const PHYSICAL_COMMIT='c84f5b503dcb6d3fb67d2231ef23c4bd2e665712';
+const PHYSICAL_PATH='coordination/engineering/tkm-baherden53-source-fit-20261026/physical-004/result-001/whole-target-support.json';
+const STAGE_COMMIT='547de322e44015f4a7639e8570c7dccb0b1a882b';
+const STAGE_PATH='coordination/engineering/tkm-baherden53-source-fit-20261026/physical-003/original-stage-inputs.json';
+const ACCEPTED_COMMIT='d221c3054cef656efd4256626841651636c810b9';
+const ACCEPTED_PATH='data/geography/part-23.json';
+const TARGET='gb:TKM:ADM2:10190150B40000077655635';
+const DEST='coordination/engineering/tkm-baherden53-source-fit-20261026/config/native-inputs-003/source-evidence-config.json';
+const basePin=reader.pin(BASE_COMMIT,BASE_PATH),config=JSON.parse(reader.read(basePin));
+const physicalPin=reader.pin(PHYSICAL_COMMIT,PHYSICAL_PATH),stagePin=reader.pin(STAGE_COMMIT,STAGE_PATH);
+const acceptedPin=reader.pin(ACCEPTED_COMMIT,ACCEPTED_PATH),accepted=JSON.parse(reader.read(acceptedPin));
+const feature=accepted.features.find(row=>row.properties?.id===TARGET);
+need(feature&&feature.properties.metadata?.topology_reconciled===true,'Accepted topology-reconciled feature missing');
+const source=config.source_evidence;
+need(source.targets.length===1&&source.targets[0].id===TARGET,'Exact original source-target scope changed');
+need(JSON.stringify(source.targets[0].base_geometry)===JSON.stringify(feature.geometry),'Current config target geometry does not match accepted current feature');
+need(stagePin.bytes===19876&&stagePin.sha256==='c8a44f1e14a21a7320f15e3bda4e9bd038d6e74371b8283a95955019bc9a7078','Dual-role stage pin changed');
+const stage=JSON.parse(reader.read(stagePin))[0];
+need(stage.target===TARGET&&stage.consumed.geometry.coordinates[0].length===119&&stage.selected.geometry.coordinates[0].length===106,'Physical stage source/accepted-target roles changed');
+const result=JSON.parse(reader.read(physicalPin));
+need(result.results.length===1&&result.results[0].target===TARGET&&result.results[0].issues.length===0,'Accepted-reference physical result is not complete/clear for target');
+source.physical_evidence=physicalPin;
+source.physical_input=stagePin;
+need(source.physical_reproduction?.sha256==='abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18','Physical/source helper pin changed');
+const dest=path.join(root,DEST);fs.mkdirSync(path.dirname(dest),{recursive:true});need(!fs.existsSync(dest),'Config destination not fresh');
+const body=Buffer.from(JSON.stringify(config)+'\n');fs.writeFileSync(dest,body,{flag:'wx'});
+console.log(JSON.stringify({path:DEST,bytes:body.length,sha256:createHash('sha256').update(body).digest('hex'),base_config:basePin,physical:physicalPin,stage:stagePin,accepted:{commit:ACCEPTED_COMMIT,path:ACCEPTED_PATH,bytes:acceptedPin.bytes,sha256:acceptedPin.sha256,target:TARGET,points:feature.geometry.coordinates[0].length},unchanged_source_scope:true}));
