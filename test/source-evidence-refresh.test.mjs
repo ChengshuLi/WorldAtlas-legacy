@@ -34,9 +34,39 @@ function withPriorSelector(reader,commit,selection,historicalPins=[]){
  return overlay;
 }
 
+function currentTreeAliases(reader,currentCommit,...roots){
+ const pending=[],seen=new Set(),aliases=new Map();
+ const collect=value=>{
+  if(Array.isArray(value)){value.forEach(collect);return;}
+  if(!value||typeof value!=='object')return;
+  if(/^[a-f0-9]{40}$/.test(value.commit??'')&&typeof value.path==='string'
+   &&value.mode==='100644'&&/^[a-f0-9]{40}$/.test(value.git_blob_oid??'')
+   &&Number.isSafeInteger(value.bytes)&&/^[a-f0-9]{64}$/.test(value.sha256??'')){
+   const key=`${value.commit}\0${value.path}`;
+   if(!seen.has(key)){seen.add(key);pending.push(value);}
+  }
+  for(const child of Object.values(value))collect(child);
+ };
+ roots.forEach(collect);
+ while(pending.length){
+  const declared=pending.shift(),current=reader.pin(currentCommit,declared.path);
+  assert.deepEqual({mode:current.mode,git_blob_oid:current.git_blob_oid,bytes:current.bytes,
+   sha256:current.sha256},{mode:declared.mode,git_blob_oid:declared.git_blob_oid,bytes:declared.bytes,
+   sha256:declared.sha256},`shallow fixture historical pin must match ${declared.path}`);
+  if(declared.commit!==currentCommit)aliases.set(`${declared.commit}\0${declared.path}`,
+   {...current,commit:declared.commit,path:declared.path});
+  if(declared.path.endsWith('.json')){
+   try{collect(JSON.parse(reader.read(current).toString()));}catch(error){
+    assert.fail(`shallow fixture cannot inspect declared JSON pin ${declared.path}: ${error.message}`);
+   }
+  }
+ }
+ return [...aliases.values()];
+}
+
 test('source-evidence refresh prepares the exact 20 TLS members without changing the selected bank',async()=>{
  const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
- const registry=reader.json(reader.pin(latest,registryPath)),refresh=reader.pin(latest,registryPath);
+ const registry=reader.json(reader.pin(latest,registryPath)),priorRegistryValue=reader.json(reader.pin(latest,priorRegistryPath)),refresh=reader.pin(latest,registryPath);
  const priorRegistry=reader.pin(latest,priorRegistryPath),selected=reader.pin(latest,'data/ownership-selection.json');
  const oldSelection={...reader.json(selected),change_evidence:priorRegistry};
  const authorityPin=reader.pin(latest,registry.entries[0].source_authority.path);
@@ -44,9 +74,7 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
   sha256:authorityPin.sha256},{mode:'100644',git_blob_oid:'ca94368b92d6aa883c03b5c1acbf8b3df5d7bea3',
   bytes:730,sha256:'61ff1ea871cb5612930fb27af0495b108357c71084ccfdfca94fb2d6297cbc41'},
   'the current authority-binding fixture must equal the accepted historical pin');
- const authority=registry.entries[0].source_authority;
- const priorReader=withPriorSelector(reader,latest,oldSelection,[{...authorityPin,
-  commit:authority.commit,path:authority.path}]);
+ const priorReader=withPriorSelector(reader,latest,oldSelection,currentTreeAliases(reader,latest,priorRegistryValue,registry));
  assert.equal(registry.entries.length,1);
  const binding=priorReader.json(registry.entries[0].source_authority),evidence=priorReader.json(binding.source_evidence);
  assert.equal(evidence.targets.length,20);
@@ -66,7 +94,7 @@ test('source-evidence refresh prepares the exact 20 TLS members without changing
 
 test('finalizeDelivery awaits source membership acquisition before rejecting a missing target',async()=>{
  const root=process.cwd(),reader=pinReader(root),latest=reader.git('rev-parse','HEAD').toString().trim();
- const registry=reader.json(reader.pin(latest,registryPath));
+ const registry=reader.json(reader.pin(latest,registryPath)),priorRegistryValue=reader.json(reader.pin(latest,priorRegistryPath));
  const priorRegistry=reader.pin(latest,priorRegistryPath),selected=reader.pin(latest,'data/ownership-selection.json');
  const authority=registry.entries[0].source_authority,authorityPin=reader.pin(latest,authority.path);
  assert.deepEqual({mode:authorityPin.mode,git_blob_oid:authorityPin.git_blob_oid,bytes:authorityPin.bytes,
@@ -74,7 +102,7 @@ test('finalizeDelivery awaits source membership acquisition before rejecting a m
   bytes:730,sha256:'61ff1ea871cb5612930fb27af0495b108357c71084ccfdfca94fb2d6297cbc41'},
   'the current authority-binding fixture must equal the accepted historical pin');
  const priorReader=withPriorSelector(reader,latest,{...reader.json(selected),change_evidence:priorRegistry},
-  [{...authorityPin,commit:authority.commit,path:authority.path}]);
+  currentTreeAliases(reader,latest,priorRegistryValue,registry));
  assert.equal(registry.entries.length,1);
  const binding=priorReader.json(authority);
  const evidence=priorReader.json(binding.source_evidence),membership=evidence.source_membership;
