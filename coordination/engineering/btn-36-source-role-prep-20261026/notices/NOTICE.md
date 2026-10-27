@@ -29,7 +29,7 @@ The polygons below are modified/derived source-relative support outputs made fro
 
 ## Geometry-bearing files in this package
 
-The table below inventories 19 geometry-bearing JSON files from the earlier BTN evidence outputs. A later section adds five current-preparation geometry-bearing files, for 24 inventoried files in this directory. Revalidation source-evidence and constructor outputs embed the same pinned source/display geometry used by the earlier evidence; their inclusion does not represent a new source or geometry analysis. SHA-256 and byte counts below identify the committed file contents. “Administrative/display-derived” rows embed or carry geoBoundaries-derived source geometry and/or selected WorldAtlas display geometry; physical output rows contain derived GSHHG support geometry.
+The table below inventories 19 geometry-bearing JSON files from the earlier BTN evidence outputs. A later section adds six current-preparation geometry-bearing files, for 25 inventoried files in this directory. Revalidation source-evidence and constructor outputs embed the same pinned source/display geometry used by the earlier evidence; their inclusion does not represent a new source or geometry analysis. SHA-256 and byte counts below identify the committed file contents. “Administrative/display-derived” rows embed or carry geoBoundaries-derived source geometry and/or selected WorldAtlas display geometry; physical output rows contain derived GSHHG support geometry.
 
 | Repository path | Bytes | SHA-256 | Geometry provenance |
 |---|---:|---|---|
@@ -57,11 +57,12 @@ Paths in the table are relative to `coordination/engineering/btn-36-source-role-
 
 ## Additional current-preparation geometry-bearing files
 
-The following five files extend the 19-file inventory above. The current administrative evidence contains a selected, serialized subset of two simplified geoBoundaries BTN ADM1 source features. It is not the complete source product. The constructor rows are derived native-cell assignment evidence. Compact negative-family references identify source members, ordinals, and geometry hashes; they do not embed the negative family geometries. The current supported-input source files do not embed GSHHG geometry.
+The following six files extend the 19-file inventory above. The current administrative evidence contains a selected, serialized subset of two simplified geoBoundaries BTN ADM1 source features. It is not the complete source product. The constructor rows are derived native-cell assignment evidence. Compact negative-family references identify source members, ordinals, and geometry hashes; they do not embed the negative family geometries. The current supported-input source files do not embed GSHHG geometry.
 
 | Repository path | Bytes | SHA-256 | Contents |
 |---|---:|---|---|
 | `supported-inputs-current-main-f8c5-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Two embedded geoBoundaries-derived BTN base geometries |
+| `supported-inputs-current-main-a033-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Byte-identical two embedded geoBoundaries-derived BTN base geometries, bound by the a033 current-selector partition |
 | `supported-inputs-current-4828-001/source-evidence.json` | 10,314 | `a5ee07fd7ab0380c03d6b936332f81f5fede845289a7fcd0d257b10c09afdd60` | Same two base geometries; current-selector binding is in its preparation receipt |
 | `territorial-exclusions-current-f8c5-001/source-evidence.json` | 14,936 | `6fb1a91775b6faeefb9c3b94a0433a2cd8066fb3beb00b27fda69bd29b940841` | Same two BTN base geometries plus compact source-member references for negative families |
 | `native-authority-current-4828-001/constructor-result.json` | 7,657 | `445962d02ad82dee89f0fd3f30d21ab4337b0721c6b6bf931a9e7df768998da6` | Derived native-cell assignment rows and bounds; no source polygon bodies |
