@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "exact-lockfile-package-recovery-v1",
+  "package": "@noble/hashes",
+  "version_pinned": "2.0.1",
+  "lockfile": {
+    "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+    "path": "package-lock.json",
+    "git_blob_oid": "89612d7cd22a887c5657bc140cba33f10fbb63ae",
+    "bytes": 246591,
+    "sha256": "471d035f92567ea447f221661db5fa8febfc7afc32af8ac975506ce9e0303255",
+    "lockfile_version": 3,
+    "entry": {
+      "resolved": "https://registry.npmjs.org/@noble/hashes/-/hashes-2.0.1.tgz",
+      "integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw=="
+    }
+  },
+  "acquisition": {
+    "method": "targeted npm pack --ignore-scripts --json @noble/hashes@2.0.1",
+    "npm_version": "11.9.0",
+    "tarball_bytes": 135794,
+    "sha1": "fc1a928061d1232b0a52bb754393c37a5216c89e",
+    "sha512_integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
+    "lock_integrity_match": true
+  },
+  "archive_check": {
+    "regular_files": 98,
+    "directories": 0,
+    "unsafe_members": 0,
+    "symlinks": 0
+  },
+  "restoration": {
+    "path": "node_modules/@noble/hashes",
+    "package_manifest_sha256": "ceb30ba96a14786c419db53f2b8d3d59ece7ac5221c198ac03def462cf96ef23",
+    "package_manifest_version": "2.0.1",
+    "extracted_files": 98,
+    "required_imports_test": "@noble/hashes/hmac.js, @noble/hashes/sha2.js, ./src/effective-footprint.js",
+    "result": "pass"
+  },
+  "scope": {
+    "package_lock_changed": false,
+    "package_json_changed": false,
+    "global_runtime_changed": false,
+    "network_or_security_settings_changed": false,
+    "full_npm_install": false
+  }
+}
