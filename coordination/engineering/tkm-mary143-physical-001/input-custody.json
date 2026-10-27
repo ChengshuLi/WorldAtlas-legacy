@@ -1,6 +1,6 @@
 {
   "kind": "TKM Mary143 physical-stage input custody",
-  "status": "candidate input; physical execution pending",
+  "status": "physical execution completed; native qualification pending",
   "scope": {
     "package": "gb-TKM-ADM2--repair-evaluation",
     "owner_index": 42143,
@@ -70,6 +70,64 @@
     "Source/selected geometry hashes differ; this is preserved as a vintage/geometry distinction, not itself a conflict.",
     "Same-name sibling remains a different source/target ID and is not used as owner 42143 target.",
     "The per-key original candidate runs separately bind all 143 keys only to source feature indices 58294 and 58332; see Mary143 interval verification receipt.",
-    "No Annex 5 geometry was used; 2022 transfer text remains context only."
-  ]
+    "No Annex 5 geometry was used; 2022 transfer text remains context only.",
+    "The physical output is source-relative GSHHG support only. It is not native ownership, a positive patch, an owner-zero delta, source adoption, a legal boundary resolution, or root acceptance. The target being inside the 2009 source but not vice versa is retained as a geometry difference; no transfer-area inference is made."
+  ],
+  "physical_execution": {
+    "attempt_001": {
+      "path": "attempts/attempt-001.json",
+      "result": "exit 1 before execution: guard message `Plain Node launch required` because inherited NODE_PATH was present; preserved, no output generated"
+    },
+    "attempt_002": {
+      "path": "attempts/attempt-002.json",
+      "result": "exit 0; invocation-local NODE_PATH removal only to satisfy plain-Node guard; no global setting changed"
+    },
+    "physical_program_sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18",
+    "config": {
+      "path": "config/physical-001.json",
+      "bytes": 64359,
+      "sha256": "51d84be800e8aa8a486f025ea9af9082eef025a99109f3995d9b3faf16c41a64"
+    },
+    "prep": {
+      "path": "result-001/preparation.json",
+      "bytes": 543,
+      "sha256": "28b7cd7c0190885b4efaba5b50d3998aaa1bd8af23b97396dd32c22f904969aa"
+    },
+    "whole_target_support": {
+      "path": "result-001/whole-target-support.json",
+      "bytes": 13762,
+      "sha256": "1666431f7dd3ee62cee99290b0036e39342c5689410b48af3da26e11ab33fce5"
+    },
+    "execution_receipt": {
+      "path": "result-001/execution-receipt.json",
+      "bytes": 54548,
+      "sha256": "cf4c756ce92195b13501779a2656e4e0ca7a961c9fefbe966d0e1859e3943deb"
+    },
+    "target_result": {
+      "id": "gb:TKM:ADM2:10190150B47066979897930",
+      "issues": 0,
+      "mapped_land_support": "33-point Polygon",
+      "mapped_inland_water_geometries": 0,
+      "contradictory_land_water_geometries": 0,
+      "missing_reconstruction_points": 0,
+      "extra_reconstruction_points": 0,
+      "source_covers_candidate": true,
+      "candidate_covers_source": false
+    },
+    "source_member": {
+      "record_count": 188612,
+      "member_bytes": 95809336,
+      "member_sha256": "af9215d58ebc525b2d09654a89959829f09e6edc457f3666759cded37be4ecf6"
+    },
+    "runtime": {
+      "records": 207,
+      "file_bytes": 84114181,
+      "runtime_inventory_sha256": "8c3c69edad0523d7bbc72e295df7ad3aa005cd2b01d9d88c1874b338df749eb0"
+    },
+    "physical_input_inventory": {
+      "records": 25,
+      "file_bytes": 85931707,
+      "complete_records_sha256": "20aac8bff5dffceb75b9a205fabfde41bc31ba6695818f1e4dc52a5cf3df4d64"
+    }
+  }
 }
