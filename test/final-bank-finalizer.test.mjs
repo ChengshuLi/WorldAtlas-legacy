@@ -720,6 +720,30 @@ test('accepted final map partitions full support into exact novel/already-presen
  });
 });
 
+test('accepted supported-input reader reuses authenticated bank buffers then rereads strictly uncached',async t=>{
+ const f=await acceptedFixture(t),seen=[],byIdentity=new Set();let readerRef;
+ const originalFrom=Buffer.from;let copies=0;
+ Buffer.from=function(value,...args){if(byIdentity.has(value))copies++;return originalFrom.call(this,value,...args);};
+ try{
+  await f.run({mutateReader(reader){
+   readerRef=reader;const read=reader.read;
+   reader.read=pin=>{
+    const value=read(pin);
+    if(pin.path.startsWith('data/canonical-grid/current-startup/')&&!pin.path.endsWith('/index.json')){
+     seen.push({pin:{...pin},value});byIdentity.add(value);
+    }
+    return value;
+   };
+  }});
+  assert(seen.length>0,'accepted current-bank inputs were read');
+  assert.equal(copies,0,'the trusted supported-input path did not clone cached Buffer bodies');
+  const {pin,value}=seen[0];
+  const reread=readerRef.read(pin);
+  assert.notStrictEqual(reread,value,'cache was discarded after bank validation; later read obtains fresh authenticated bytes');
+  assert.deepEqual(reread,value,'uncached reread preserves the exact validated body');
+ }finally{Buffer.from=originalFrom;}
+});
+
 test('accepted support uses the optional target identity without rewriting original source',async t=>{
  const f=await acceptedFixture(t);
  for(const [name,mutateSource]of [
