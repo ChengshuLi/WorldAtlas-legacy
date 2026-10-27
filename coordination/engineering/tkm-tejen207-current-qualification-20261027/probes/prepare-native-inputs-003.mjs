@@ -1,0 +1,53 @@
+/* Bind exact Tejen207 original contract rows to the accepted target and existing
+ * physical output. This creates source-evidence/native-diagnostic inputs only. */
+import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';import {gunzipSync} from 'node:zlib';import {pathToFileURL} from 'node:url';
+const root=fs.realpathSync(process.cwd()),need=(v,m)=>{if(!v)throw Error(m)},sha=b=>createHash('sha256').update(b).digest('hex');
+const ACCEPTED='51d480361e22ac39fff4c2e20191002ebdae9d63',STAGE_COMMIT='111f29b763dbbbcd3a334a8dd87cf1641772cd60',PHYSICAL_COMMIT='753569300e7a90169297f0c5c1e0859c82200958';
+const PKG='coordination/engineering/tkm-tejen207-current-qualification-20261027',BASE=PKG+'/physical-002',OUT=PKG+'/native-inputs-003';
+const OWNER=42144,SOURCE='gb:TKM:ADM2:10190150B49022220136906',FAMILY='gb:TKM:ADM2';
+const APP='/workspace/shared/worldatlas-TKM1759-qualification-20261026/.private/full-simplified-exact-center-application-v2.json';
+const {pinReader}=await import(pathToFileURL(path.join(root,'scripts/prepare-delivery-handoff.mjs')));const reader=pinReader(root);
+const pin=(commit,p)=>reader.pin(commit,p),json=(commit,p)=>JSON.parse(reader.read(pin(commit,p)));
+need(!fs.existsSync(path.join(root,OUT)),'Native input destination must be fresh');fs.mkdirSync(path.join(root,OUT),{recursive:true});
+const selectorPin=pin(ACCEPTED,'data/ownership-selection.json'),selector=JSON.parse(reader.read(selectorPin));
+const indexPin=pin(ACCEPTED,selector.prepared_bank.path),index=JSON.parse(reader.read(indexPin));
+need(selector.native_selection.sha256==='d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba'&&index.native_manifest_sha256===selector.native_selection.sha256&&index.preparedOwnership.owners===49625,'Accepted current native baseline differs');
+const manifestPin=pin(ACCEPTED,selector.native_selection.manifest_path),manifest=JSON.parse(reader.read(manifestPin));
+const ownerPin=reader.pin(manifest.original_assets.bounds.commit,manifest.original_assets.bounds.path),ownerRaw=reader.read(ownerPin),ownerDecoded=gunzipSync(ownerRaw);
+need(sha(ownerRaw)===manifest.original_assets.bounds.sha256,'Original encoded owner roster pin differs');
+const ownerRoster={...ownerPin,encoding:'gzip',decoded_bytes:ownerDecoded.length,decoded_sha256:sha(ownerDecoded)};
+const ownerPart=index.preparedOwnership.context_parts.find(p=>OWNER-1>=p.offset&&OWNER-1<p.offset+p.features);need(ownerPart,'Accepted selected owner context absent');
+const contextPath='data/canonical-grid/current-startup/'+ownerPart.path,contextPin=pin(ACCEPTED,contextPath),contextDecoded=gunzipSync(reader.read(contextPin),{maxOutputLength:ownerPart.decoded_bytes});
+need(contextDecoded.length===ownerPart.decoded_bytes&&sha(contextDecoded)===ownerPart.decoded_sha256,'Current accepted owner context pin differs');
+const context=JSON.parse(contextDecoded.toString('utf8'))[OWNER-1-ownerPart.offset];need(context?.id===SOURCE&&context.pixelIndex===OWNER,'Tejen selected current owner identity differs');
+const partPin=pin(ACCEPTED,'data/geography/part-23.json'),part=JSON.parse(reader.read(partPin)),targetFeature=part.features.find(f=>f.properties?.id===SOURCE);
+const canonicalPins=[partPin,pin(ACCEPTED,'data/geography/part-29.json')];
+const canonicalFeatures=canonicalPins.flatMap(p=>JSON.parse(reader.read(p)).features.filter(f=>f.properties?.reference_owner==='Turkmenistan'));
+need(canonicalFeatures.length===63&&new Set(canonicalFeatures.map(f=>f.id)).size===63,'Exact Turkmenistan canonical owner-part closure differs');
+need(targetFeature&&targetFeature.properties?.name==='Tejen','Exact current Tejen reference target absent');
+const stagePin=pin(STAGE_COMMIT,BASE+'/original-stage-inputs.json'),stages=JSON.parse(reader.read(stagePin));
+need(stages.length===1&&stages[0].target===SOURCE&&stages[0].consumed?.properties?.shapeID===SOURCE.slice((FAMILY+':').length)&&stages[0].selected.id===SOURCE&&JSON.stringify(stages[0].selected.geometry)===JSON.stringify(targetFeature.geometry),'Consumed simplified/accepted target stage binding differs');
+const physicalPath=BASE+'/result-001/whole-target-support.json',physicalPin=pin(PHYSICAL_COMMIT,physicalPath),physical=JSON.parse(reader.read(physicalPin));
+need(physical.results.length===1&&physical.results[0].target===SOURCE&&physical.results[0].issues.length===1&&physical.results[0].issues[0].reason==='contradictory_land_water_support','Tejen consumed-source physical result/issue changed');
+const appRaw=fs.readFileSync(APP);need(appRaw.length===990213&&sha(appRaw)==='e7b49e43f8df1427e8ec03e669302e9f988d90cb4139d9f4f1016afd5527c09c','Retained original full/simplified source application changed');
+const app=JSON.parse(appRaw),all=app.per_key.filter(r=>r.owner===OWNER);need(all.length===209,'Original Tejen per-key source roster changed');
+const candidate=all.filter(r=>r.physical==='land'&&r.full?.length===1&&r.simplified?.length===1&&r.full[0]===SOURCE&&r.simplified[0]===SOURCE&&r.source_tkm?.includes(SOURCE)&&!r.full_boundary_tie&&!r.simplified_boundary_tie).sort((a,b)=>a.y-b.y||a.x-b.x);
+const simplifiedOnly=all.filter(r=>r.physical==='land'&&r.full?.length===0&&r.simplified?.length===1&&r.simplified[0]===SOURCE&&!r.simplified_boundary_tie);
+need(candidate.length===207&&simplifiedOnly.length===2&&all.every(r=>r.physical==='land'),'Exact original Tejen 207/2 strata differ');
+const tuple=Buffer.from(candidate.map(r=>`${OWNER}\t${r.y}\t${r.x}\n`).join(''));const keyset=sha(tuple);
+need(keyset==='aef025110caec17fedeb84f9dc6142d363d5f0fb0c195b4f0d32432e1ad4ee2d','Exact Tejen207 owner/y/x keyset differs');
+const byY=new Map();for(const r of candidate){const row=byY.get(r.y)??[];row.push([r.x,r.x+1,'mapped_land_support']);byY.set(r.y,row)}
+const requested=[...byY].sort((a,b)=>a[0]-b[0]).map(([y,runs])=>({y,runs}));
+const patchRows=requested.map(({y,runs})=>({y,runs:runs.map(([a,b])=>[a,b,OWNER])}));
+const catalogPath='coordination/engineering/original-geography-source-corpus-20261006/catalogue.json',catalogPin=pin(ACCEPTED,catalogPath),catalog=JSON.parse(reader.read(catalogPin));
+const product=catalog.products.find(p=>p.key===FAMILY);need(product?.feature_count===59&&product.parts.length===1,'Complete original consumed TKM family absent');
+const familyParts=product.parts.map(p=>({...pin(ACCEPTED,p.path),decoded_bytes:p.uncompressed_bytes,decoded_sha256:p.uncompressed_sha256}));
+const world=pin(ACCEPTED,'data/world-index.json'),lineage=pin(ACCEPTED,'data/semantic-report.json'),projectionPath='data/macro-foundation/world-review-projection.json',projectionPin=pin(ACCEPTED,projectionPath),projection=JSON.parse(reader.read(projectionPin));
+const cohortParts=projection.location_parts.map(p=>{const part=pin(ACCEPTED,'data/'+p),decoded=gunzipSync(reader.read(part));return {...part,decoded_bytes:decoded.length,decoded_sha256:sha(decoded)};});
+const projectedTurkmenistan=[];for(const p of cohortParts){const rows=JSON.parse(gunzipSync(reader.read(p)));for(const row of rows)if(row.owner==='Turkmenistan')projectedTurkmenistan.push(row.id)}
+need(projectedTurkmenistan.length===63&&new Set(projectedTurkmenistan).size===63&&JSON.stringify(projectedTurkmenistan.sort())===JSON.stringify(canonicalFeatures.map(f=>f.id).sort()),'Selected canonical source parts do not exactly cover projected Turkmenistan owner cohort');
+const target={id:SOURCE,target_id:SOURCE,pixelIndex:OWNER,base_geometry:targetFeature.geometry,source_family:FAMILY,source_receipt_sha256:physicalPin.sha256,coverage_classes:['mapped_land_support'],coverage_rows:requested,territorial_exclusions:[]};
+const sourceConfig={version:1,compact_territorial_exclusions:true,territorial_exclusion_families:['gb:AFG:ADM1','gb:KAZ:ADM1','gb:UZB:ADM1'],selector:{commit:ACCEPTED,path:'data/ownership-selection.json'},source_evidence:{version:1,kind:'source-target-native-evidence-v1',owner_roster:ownerRoster,catalogue:catalogPin,families:[{source_id:FAMILY,parts:familyParts}],physical_evidence:physicalPin,physical_input:stagePin,physical_reproduction:pin(ACCEPTED,'scripts/qualify-source-cohort.py'),source_membership:{index:world,lineage,parts:canonicalPins,cohort_inventory:{index:projectionPin,parts:cohortParts}},targets:[target]}};
+const files={'source-evidence-config.json':Buffer.from(JSON.stringify(sourceConfig)+'\n'),'native-patch-input.json':Buffer.from(JSON.stringify({rows:patchRows})+'\n')};for(const [name,body] of Object.entries(files))fs.writeFileSync(path.join(root,OUT,name),body,{flag:'wx'});
+const prep={version:1,kind:'TKM Tejen207 native-input preparation; exact 63-feature canonical owner closure; not diagnostic/authority/credit',accepted_commit:ACCEPTED,selector:selectorPin,prepared_index:indexPin,native_manifest:manifestPin,current_owner:{owner_index:OWNER,id:context.id,pixelIndex:context.pixelIndex,observation_path:'/workspace/shared/worldatlas-TKM-Tejen207-current-owner-observation-20261027.json',observation_sha256:'6eb0d2e45156d34b25b079498d854059e0c575c30d3431145000560177738333',effective_selected_owner:0},source:{family:FAMILY,catalogue:catalogPin,catalogue_source_sha256:product.original_sha256,full_simplified_application_sha256:sha(appRaw),exact_owner_keys:all.length,candidate_count:candidate.length,candidate_keyset_sha256:keyset,simplified_only_count:simplifiedOnly.length,foreign_families:sourceConfig.territorial_exclusion_families,retained_foreign_contact_context:'all original TKM contacts remain in source-candidate receipt; this Tejen cohort had no captured foreign center contacts'},physical:{stage:stagePin,evidence:physicalPin,issue_count:1,issue_reason:'contradictory_land_water_support',limits:['GSHHG issue retained; no positive physical/owner/legal conclusion.','Full-source physical-001 (271 vertices) is preserved separately; this source-evidence uses the original consumed simplified feature (269 vertices).']},coverage_rows:requested.length,patch_cell_count:candidate.length,outputs:Object.fromEntries(Object.entries(files).map(([n,b])=>[n,{bytes:b.length,sha256:sha(b)}]))};
+fs.writeFileSync(path.join(root,OUT,'preparation-receipt.json'),JSON.stringify(prep,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({out:OUT,key_count:candidate.length,keyset_sha256:keyset,simplified_only:simplifiedOnly.length,coverage_rows:requested.length,source_config:sha(files['source-evidence-config.json']),patch:sha(files['native-patch-input.json']),physical_issue_count:1}));

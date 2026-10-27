@@ -1,0 +1,87 @@
+{
+  "kind": "uga-physical-009-water-center-application-v1",
+  "scientific_qualification": false,
+  "scope": {
+    "owner": 43877,
+    "target_id": "gb:UGA:ADM3:73843447B4000080097508",
+    "held_key_count": 6
+  },
+  "inputs": {
+    "physical_output": {
+      "path": "research/UGA/private/uga-physical-009-20261027/whole-target-support.json",
+      "bytes": 844915,
+      "sha256": "374843ca82fe94bf41f37b65736be2aa056e2a7cb9206337384190af32f8ce85"
+    },
+    "native_latitudes": {
+      "path": "research/shared/native-row-latitudes.f64le.gz",
+      "compressed_bytes": 1851757,
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23"
+    },
+    "application_script": {
+      "path": "research/UGA/private/uga-lake-victoria-water-centers-physical-009.py",
+      "sha256": "85bfc32205bd94fe96e02b67c8f63afd22a780a041d5d62fad6b765d8bd9441f"
+    },
+    "predicate": "Exact-rational native longitude (360*x+180-180*size)/size and pinned binary64 latitude at y; exact even-odd polygon membership with holes; exact on-segment boundary excluded from interior; no epsilon."
+  },
+  "rows": [
+    {
+      "source_id": "gb:UGA:ADM3:73843447B4000080097508",
+      "pixelIndex": 43877,
+      "y": 131811,
+      "x": 155628,
+      "coverage_class": "mapped_inland_water_support",
+      "center_relation": "interior"
+    },
+    {
+      "source_id": "gb:UGA:ADM3:73843447B4000080097508",
+      "pixelIndex": 43877,
+      "y": 131811,
+      "x": 155629,
+      "coverage_class": "mapped_inland_water_support",
+      "center_relation": "interior"
+    },
+    {
+      "source_id": "gb:UGA:ADM3:73843447B4000080097508",
+      "pixelIndex": 43877,
+      "y": 131811,
+      "x": 155630,
+      "coverage_class": "mapped_inland_water_support",
+      "center_relation": "interior"
+    },
+    {
+      "source_id": "gb:UGA:ADM3:73843447B4000080097508",
+      "pixelIndex": 43877,
+      "y": 131812,
+      "x": 155753,
+      "coverage_class": "mapped_inland_water_support",
+      "center_relation": "interior"
+    },
+    {
+      "source_id": "gb:UGA:ADM3:73843447B4000080097508",
+      "pixelIndex": 43877,
+      "y": 131812,
+      "x": 155754,
+      "coverage_class": "mapped_inland_water_support",
+      "center_relation": "interior"
+    },
+    {
+      "source_id": "gb:UGA:ADM3:73843447B4000080097508",
+      "pixelIndex": 43877,
+      "y": 131812,
+      "x": 155755,
+      "coverage_class": "mapped_inland_water_support",
+      "center_relation": "interior"
+    }
+  ],
+  "retained_whole_target_issues": [
+    "missing_reconstruction",
+    "contradictory_land_water_support"
+  ],
+  "limits": [
+    "Per-key center membership in physical-009 mapped_inland_water_support only; not source qualification, owner acceptance or credit.",
+    "TZA ADM1 Mara territorial contact remains a separate unresolved exclusion; no negative contact removed.",
+    "Whole-target physical issue flags are retained unchanged."
+  ]
+}

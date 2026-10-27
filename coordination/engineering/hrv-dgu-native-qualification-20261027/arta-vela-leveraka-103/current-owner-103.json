@@ -1,0 +1,3178 @@
+{
+  "kind": "hrv-arta-vela-leveraka-103-current-selected-owner-observation-v1",
+  "status": "literal current selected-owner observation; no source/physical qualification, acceptance or credit",
+  "scope": {
+    "original_package": "gb-HRV-ADM2--repair-evaluation",
+    "original_total": 35738,
+    "accepted_excluded": 32928,
+    "remaining_outside_zadar": 2733,
+    "tuple_count": 103,
+    "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da",
+    "owners": [
+      21978,
+      22360
+    ]
+  },
+  "accepted_current_main": "29e4d7c2d4215345f76cef695db93b4120e48114",
+  "ownership_profile": "selected-final-native-bank-v2",
+  "selected_reference": {
+    "footprints_sha256": "98824b3a3f433d1d83e2afc0d849457a141d13b741e5675aa68946fad07f30dd",
+    "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+    "id": "geography:final:6a94d9be13155b6d896cb1e98aef444ef602576c7f47c7da78193253f8faadcd"
+  },
+  "selector_pin": {
+    "bytes": 2291,
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+    "mode": "100644",
+    "path": "data/ownership-selection.json",
+    "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd",
+    "whole_body_consumed": true
+  },
+  "final_bank_index_pin": {
+    "bytes": 49610,
+    "path": "data/canonical-grid/current-startup/index.json",
+    "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+  },
+  "native_manifest_sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba",
+  "original_interval_sha256": "ff749bacd5058b91ddd7051402a04e65e79b1b016bab5e6c1366bbc47b7b6c6a",
+  "full_observation": {
+    "path": "full-observation.json",
+    "bytes": 8108103,
+    "sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
+    "kind": "literal-selected-owner-observation-v2",
+    "query_count": 35738,
+    "acquisition": {
+      "complete_scientific_closure": false,
+      "declarations": 24,
+      "declared_bytes": 23820606,
+      "fetch_batches": 0,
+      "fetch_ms": 0,
+      "fetched_bytes": 0,
+      "fetched_objects": 0,
+      "origin_metadata_bytes": 0,
+      "origin_metadata_fetches": 0,
+      "origin_metadata_imports": 0,
+      "origin_metadata_objects": 0,
+      "scope": "original-package-and-selected-native-observation",
+      "tree_metadata_ms": 0,
+      "unique_objects": 24
+    },
+    "scientific_qualification": false
+  },
+  "qualification_input_pins": {
+    "source_center_application": {
+      "path": "/workspace/scratch/127991fc8b8e/.hrv-private/HRV-ArtaVela53-Leveraka50-original-source-native-center-application-20261027.json",
+      "bytes": 89467,
+      "sha256": "311b6ce3560feb8844dbd43eddcf6b1db413ef7d90451d66ab9641485a52ae6e"
+    },
+    "physical_issue_center_application": {
+      "path": "/workspace/scratch/127991fc8b8e/.hrv-private/HRV-ArtaVela53-Leveraka50-physical-issue-center-application-002.json",
+      "bytes": 154015,
+      "sha256": "2f37543459a952e5bce75bf24b8bc5807400d05b8c0ebe374feb6e91a9661abf"
+    }
+  },
+  "counts": {
+    "exact_keys": 103,
+    "effective_selected_owner_zero": 103,
+    "effective_selected_owner_nonzero": 0,
+    "selected_owner_ids": []
+  },
+  "keys": [
+    {
+      "key": [
+        21978,
+        95466,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.86375382073941,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95466,
+        142398
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.86375382073941,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95467,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.86276376703331,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95467,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.86276376703331,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95468,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.861773696885095,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95468,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.861773696885095,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95469,
+        142395
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.86078361029481,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95469,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.86078361029481,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95469,
+        142397
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.86078361029481,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95470,
+        142396
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85979350726246,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95470,
+        142397
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85979350726246,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95471,
+        142397
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85880338778808,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95471,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85880338778808,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95472,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85781325187168,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95472,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85781325187168,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95473,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85682309951329,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95473,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85682309951329,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95473,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85682309951329,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.855832930712936,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.855832930712936,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.855832930712936,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95474,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.855832930712936,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85484274547064,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85484274547064,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85484274547064,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85484274547064,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95475,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85484274547064,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142402
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85385254378641,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85385254378641,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85385254378641,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85385254378641,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85385254378641,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95476,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85385254378641,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142401
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.8528623256603,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142402
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.8528623256603,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.8528623256603,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.8528623256603,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.8528623256603,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.8528623256603,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95477,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.8528623256603,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142401
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.851872091092304,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142402
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.851872091092304,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.851872091092304,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.851872091092304,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.851872091092304,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.851872091092304,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95478,
+        142407
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.851872091092304,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142403
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85088184008246,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85088184008246,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85088184008246,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95479,
+        142406
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.85088184008246,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95480,
+        142404
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.849891572630774,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        21978,
+        95480,
+        142405
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B19390085170765",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B19390085170765",
+          "family_index": 147,
+          "ordinal": 22,
+          "source_index": 35419
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.849891572630774,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95504,
+        142188
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.826120221301025,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95505,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82512954281106,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95506,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.824138847879865,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95506,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.824138847879865,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95506,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.824138847879865,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.823148136507456,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.823148136507456,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.823148136507456,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.823148136507456,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95507,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.823148136507456,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.822157408693855,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.822157408693855,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.822157408693855,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.822157408693855,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.822157408693855,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95508,
+        142198
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.822157408693855,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95509,
+        142198
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82116666443911,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142189
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142193
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95510,
+        142198
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.82017590374322,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81918512660622,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81918512660622,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81918512660622,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142194
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81918512660622,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142195
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81918512660622,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142196
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81918512660622,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95511,
+        142197
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81918512660622,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95512,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81819433302813,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95512,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81819433302813,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95512,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81819433302813,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95513,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81720352300897,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95513,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81720352300897,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95513,
+        142192
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81720352300897,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95514,
+        142190
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81621269654877,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    },
+    {
+      "key": [
+        22360,
+        95514,
+        142191
+      ],
+      "target_source_id": "gb:HRV:ADM2:41942358B80055452851488",
+      "original_source_contacts": [
+        {
+          "source_id": "gb:HRV:ADM1:27960609B2739070191620",
+          "family_index": 146,
+          "ordinal": 18,
+          "source_index": 35394
+        },
+        {
+          "source_id": "gb:HRV:ADM2:41942358B80055452851488",
+          "family_index": 147,
+          "ordinal": 20,
+          "source_index": 35417
+        }
+      ],
+      "original_physical_mask_label": "land",
+      "target_center_relation": "inside",
+      "latitude": 43.81621269654877,
+      "effective_selected_owner": 0,
+      "selected_owner_id": null,
+      "base_owner": null,
+      "accepted_additive_owner": null,
+      "existing_product_overlap": null
+    }
+  ],
+  "limits": [
+    "Final bank observation reads E directly; null base/additive/overlap are not reconstructed or zero.",
+    "All 103 exact tuples join the original package literal observation by unique grid coordinate. This is a selected-owner state only, not source assignment, physical qualification or approval.",
+    "The full reader queried the 35,738-key original queue because the accepted helper has no arbitrary-subset CLI; only the exact requested 103-row projection is retained in this derivative."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "attempt": 1,
+  "command": "env -u NODE_PATH -u NODE_OPTIONS GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1 node --input-type=module -e <inspectSelectedAcquired, baseline 2d76737905fb0ccdbb5743cb6ebec4a54afb3682, candidate 6426bbf7c44dc9f3be3ff216e3c023a4c6e1196d>",
+  "session_id": 27026,
+  "started_utc": "2026-10-27T12:05:46Z",
+  "observed_after_about_2m": {
+    "report_bytes": 0,
+    "stderr_bytes": 0,
+    "process_visible": false,
+    "exit_code_file_present": false,
+    "end_time_file_present": false
+  },
+  "end": "interrupted by operator via Ctrl-C after unreconciled session state; write_stdin returned exit 130",
+  "result": "incomplete/unknown; not a comparator failure or result"
+}
