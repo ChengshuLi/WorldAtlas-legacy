@@ -5,10 +5,14 @@ This is not a geometry/source replay and makes no qualification or credit claim.
 The source-relative candidate is the intersection of the frozen simplified
 membership roster with retained full-2017 selected-feature interior receipts.
 """
-from collections import Counter, defaultdict
+from collections import Counter
 import hashlib
 import json
 from pathlib import Path
+
+from vut1028_native_serializer_core import (
+    canonical_native_patch, validate_partition, verify_bytes,
+)
 
 ROOT = Path(__file__).parent / 'vut-1116-private-evidence-handoff-20261028'
 OUT = Path(__file__).parent
@@ -64,7 +68,7 @@ loaded = {}
 for name, path in FILES.items():
     data, digest = raw(path)
     expect_sha, expect_bytes = EXPECTED[name]
-    assert len(data) == expect_bytes and digest == expect_sha, (name, len(data), digest)
+    verify_bytes(name, data, expect_sha, expect_bytes)
     loaded[name] = json.loads(data)
 
 roster_doc = loaded['remaining_roster']
@@ -169,34 +173,23 @@ miss_intervals = interval_tuples(misses)
 all_intervals = interval_tuples(remaining_set)
 assert candidate_intervals | miss_intervals == all_intervals
 
-# Emit canonical WorldAtlas native patch rows: sorted y rows and sorted,
-# non-overlapping half-open x runs carrying their exact pixelIndex.
-cells = defaultdict(list)
-for owner, y, x in candidate:
-    cells[(y, owner)].append(x)
-rows_by_y = defaultdict(list)
-for (y, owner), xs in sorted(cells.items()):
-    xs = sorted(xs)
-    start = prior = xs[0]
-    for x in xs[1:]:
-        if x == prior + 1:
-            prior = x
-        else:
-            rows_by_y[y].append([start, prior + 1, owner])
-            start = prior = x
-    rows_by_y[y].append([start, prior + 1, owner])
-patch = {'rows': [{'y': y, 'runs': sorted(runs)} for y, runs in sorted(rows_by_y.items())]}
-reconstructed = set()
-for row in patch['rows']:
-    assert row['runs'] == sorted(row['runs'])
-    for start, end, owner in row['runs']:
-        assert start < end and owner in (48791, 48793, 48794)
-        for x in range(start, end):
-            key = (owner, row['y'], x)
-            assert key not in reconstructed
-            reconstructed.add(key)
+# The shared pure core is also exercised by the synthetic regression test.
+# Keep production assertions on the exact retained partition and native bytes.
+validate_partition(
+    [list(k) for k in vut_candidate], [list(k) for k in vut_miss],
+    [list(k) for k in (vut_candidate | vut_miss)],
+    {48791: 504, 48794: 322}, {48791: 26, 48794: 38},
+)
+validate_partition(
+    [list(k) for k in candidate], [list(k) for k in misses],
+    [list(k) for k in remaining_set],
+    {48791: 504, 48793: 202, 48794: 322},
+    {48791: 26, 48793: 24, 48794: 38},
+)
+patch, patch_bytes, reconstructed = canonical_native_patch(
+    [list(k) for k in candidate], {48791, 48793, 48794}
+)
 assert reconstructed == candidate and len(reconstructed) == 1028
-patch_bytes = (json.dumps(patch, ensure_ascii=False, sort_keys=True, separators=(',', ':')) + '\n').encode()
 patch_sha = hashlib.sha256(patch_bytes).hexdigest()
 patch_path = OUT / 'vut1028-source-relative-native-patch.private.json'
 patch_path.write_bytes(patch_bytes)
@@ -207,7 +200,7 @@ serializer_sha = hashlib.sha256(serializer_bytes).hexdigest()
 provenance = {
     'artifact_kind': 'private.worldatlas.vut1028-source-relative-native-patch.v1',
     'disposition': 'source-relative candidate preparation only; not authority, acceptance, status, or credit',
-    'serializer': {'path': Path(__file__).name, 'sha256': serializer_sha, 'method': 'exact joins; interior-only source comparator selection; sorted compact JSON owner/y/x keys; coalesce contiguous x into half-open native runs'},
+    'serializer': {'path': Path(__file__).name, 'sha256': serializer_sha, 'core_path': 'vut1028_native_serializer_core.py', 'core_sha256': hashlib.sha256(Path(__file__).with_name('vut1028_native_serializer_core.py').read_bytes()).hexdigest(), 'method': 'exact joins; interior-only source comparator selection; shared validated partition and canonical owner/y/x half-open native-run serialization'},
     'patch': {'path': patch_path.name, 'bytes': len(patch_bytes), 'sha256': patch_sha, 'row_count': len(patch['rows']), 'run_count': sum(len(r['runs']) for r in patch['rows']), 'cell_count': len(reconstructed), 'schema': {'rows': [{'y': 'integer grid row', 'runs': [['x_start_inclusive', 'x_end_exclusive', 'pixelIndex']]}]}},
     'scope': {
         'package_id': 'gb-VUT-ADM1--repair-evaluation', 'original_denominator': 4366,

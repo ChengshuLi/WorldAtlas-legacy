@@ -1,5 +1,12 @@
 {
   "artifact_kind": "private.worldatlas.vut1028-source-relative-native-patch.v1",
+  "derived_artifact_rights_and_modification": {
+    "license_record": "ODbL 1.0 per pinned per-boundary metadata; cite https://www.openstreetmap.org/copyright and https://opendatacommons.org/licenses/odbl/1-0/",
+    "modification_summary": "Deterministic derived target-grid patch: exact join of retained application/roster rows, selection of source-version-concordant interior candidates, sort by owner/y/x, and coalesce adjacent x cells into half-open native runs. No source geometries or lon/lat coordinates are included in the patch.",
+    "publication_state": "Private pending explicit attribution/share-alike compliance review; no public raw geometry or keyed patch redistribution.",
+    "required_source_credit": "OpenStreetMap contributors; geoBoundaries; source noted as Wambacher",
+    "share_alike_limit": "If the keyed rows are a database derivative/produced work subject to ODbL, attribution and share-alike obligations apply. This manifest records the source metadata claim and needed review; it does not classify the derivative or assert legal compliance."
+  },
   "disposition": "source-relative candidate preparation only; not authority, acceptance, status, or credit",
   "limits": [
     "Patch is a private deterministic source-relative candidate derived from retained exact input rows; no source/geometry was replayed.",
@@ -89,9 +96,11 @@
     }
   },
   "serializer": {
-    "method": "exact joins; interior-only source comparator selection; sorted compact JSON owner/y/x keys; coalesce contiguous x into half-open native runs",
+    "core_path": "vut1028_native_serializer_core.py",
+    "core_sha256": "1263aeb777eed36b1807d33077e5a4372796c1aa930606b5172a0d1f7b03aac1",
+    "method": "exact joins; interior-only source comparator selection; shared validated partition and canonical owner/y/x half-open native-run serialization",
     "path": "vut-1028-candidate-serialize.py",
-    "sha256": "bdcec250b542537bd86cf07ecfd4809b30fa22ad14d1e961d3d7e0099b7f7cb4"
+    "sha256": "6fa74d90b87db9b6cb38f20b6df55514003aa9c525706c931099a8e1874ac027"
   },
   "source_bindings": {
     "frozen_simplified_product": {
@@ -108,6 +117,27 @@
       "commit": "80dd96c04ccdb33b5be4b1a80cfb27cc934f76db",
       "path": "coordination/engineering/vanuatu-native-repair-evaluation-20261016/source-evidence.json",
       "sha256": "e470ba8c709c6d82a690a2a3b1a33e2f2da56e635c80b9486674e052a10ebb5e"
+    },
+    "full_resolution_boundary_metadata": {
+      "boundaryID": "VUT-ADM1-32282491",
+      "boundaryISO": "VUT",
+      "boundaryLicense": "Open Data Commons Open Database License 1.0",
+      "boundarySource": "OpenStreetMap, Wambacher",
+      "boundarySourceURL_as_recorded": "https//wambachers-osm.website/boundaries/",
+      "boundaryType": "ADM1",
+      "buildDate": "Dec 12, 2023",
+      "canonical_license_source_url": "https://www.openstreetmap.org/copyright",
+      "canonical_odbl_1_0_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "claim_limit": "Catalog source/license claim; not independent verification of upstream source extraction lineage or legal adjudication.",
+      "lfs_object_bytes": 851,
+      "lfs_object_sha256": "a66ec067f87d2326da5e5401a0742811ca68f54f12d139aa47082288fbb12248",
+      "licenseDetail": "Open Data Commons Open Database License 1.0",
+      "licenseSource_as_recorded": "https//www.openstreetmap.org/copyright",
+      "path": "releaseData/gbOpen/VUT/ADM1/geoBoundaries-VUT-ADM1-metaData.json",
+      "release_commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
+      "retrieval": "public Git LFS batch route; HTTP 200; bytes and SHA-256 verified before parsing",
+      "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+      "variant_scope": "single boundary-level record in the release directory; release documents full HPSC and simplified SSC exports of the boundary and identifies SSC as simplified from HPSCU"
     },
     "remaining_roster": {
       "bytes": 343157,
@@ -145,34 +175,6 @@
       "other_full_feature_interior_or_boundary": 0,
       "sha256": "d92e5b3b84773691895b16c46e66a4c7520157c51fd9d17d728f0127cdc8c802",
       "simplified_original_exact_match": 890
-    },
-    "full_resolution_boundary_metadata": {
-      "release_commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
-      "path": "releaseData/gbOpen/VUT/ADM1/geoBoundaries-VUT-ADM1-metaData.json",
-      "lfs_object_sha256": "a66ec067f87d2326da5e5401a0742811ca68f54f12d139aa47082288fbb12248",
-      "lfs_object_bytes": 851,
-      "retrieval": "public Git LFS batch route; HTTP 200; bytes and SHA-256 verified before parsing",
-      "boundaryID": "VUT-ADM1-32282491",
-      "boundaryISO": "VUT",
-      "boundaryType": "ADM1",
-      "boundarySource": "OpenStreetMap, Wambacher",
-      "boundarySourceURL_as_recorded": "https//wambachers-osm.website/boundaries/",
-      "boundaryLicense": "Open Data Commons Open Database License 1.0",
-      "licenseDetail": "Open Data Commons Open Database License 1.0",
-      "licenseSource_as_recorded": "https//www.openstreetmap.org/copyright",
-      "canonical_license_source_url": "https://www.openstreetmap.org/copyright",
-      "canonical_odbl_1_0_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
-      "buildDate": "Dec 12, 2023",
-      "variant_scope": "single boundary-level record in the release directory; release documents full HPSC and simplified SSC exports of the boundary and identifies SSC as simplified from HPSCU",
-      "claim_limit": "Catalog source/license claim; not independent verification of upstream source extraction lineage or legal adjudication."
     }
-  },
-  "derived_artifact_rights_and_modification": {
-    "required_source_credit": "OpenStreetMap contributors; geoBoundaries; source noted as Wambacher",
-    "license_record": "ODbL 1.0 per pinned per-boundary metadata; cite https://www.openstreetmap.org/copyright and https://opendatacommons.org/licenses/odbl/1-0/",
-    "modification_summary": "Deterministic derived target-grid patch: exact join of retained application/roster rows, selection of source-version-concordant interior candidates, sort by owner/y/x, and coalesce adjacent x cells into half-open native runs. No source geometries or lon/lat coordinates are included in the patch.",
-    "share_alike_limit": "If the keyed rows are a database derivative/produced work subject to ODbL, attribution and share-alike obligations apply. This manifest records the source metadata claim and needed review; it does not classify the derivative or assert legal compliance.",
-    "publication_state": "Private pending explicit attribution/share-alike compliance review; no public raw geometry or keyed patch redistribution."
   }
 }
