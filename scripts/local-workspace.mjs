@@ -11,6 +11,7 @@ const engineeringCode = name => name.startsWith('coordination/engineering/') && 
 const id = value => typeof value === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,127}$/.test(value);
 const operatorReleaseAuthorization = 'team3-bra-tgo-orphaned-slots';
 const partialRemovalBranch = 'geography/tls-original-repair-20261028-finalize021';
+const partialRemovalOperatorAuthorization = 'team2-tls-finalize021-orphaned-owner';
 const safeInclude = value => typeof value === 'string' && /^(data|research|coordination)\/[a-zA-Z0-9_./-]+$/.test(value)
   && value.split('/').every(part => part && part !== '.' && part !== '..');
 
@@ -1112,14 +1113,20 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
         throw Error('Partial-removal audit contains an unknown nonordinary receipt');
       }
       const receipt = JSON.parse(fs.readFileSync(file, 'utf8'));
-      if (receipt.version !== 1 || receipt.operation !== 'partial-removal-reconcile' || receipt.id !== name.slice(0, -5)
+      const operatorRecovery = receipt.operation === 'partial-removal-operator-reconcile';
+      if (receipt.version !== 1 || !['partial-removal-reconcile', 'partial-removal-operator-reconcile'].includes(receipt.operation)
+        || receipt.id !== name.slice(0, -5)
         || !['pending', 'failed', 'reconciled'].includes(receipt.status) || !id(receipt.worker)
+        || operatorRecovery && (receipt.authorizationRef !== partialRemovalOperatorAuthorization || !id(receipt.operator)
+          || !id(receipt.reviewer) || receipt.operator === receipt.worker || receipt.operator === receipt.reviewer
+          || receipt.worker === receipt.reviewer || receipt.capabilitySha256 !== null)
+        || !operatorRecovery && !/^[a-f0-9]{64}$/.test(receipt.capabilitySha256 ?? '')
         || receipt.slot !== 'work' || receipt.path !== slotPath(receipt.worker, receipt.slot)
         || receipt.branch !== partialRemovalBranch || !/^[a-f0-9]{40}$/.test(receipt.startHead ?? '')
         || !/^[a-f0-9]{40}$/.test(receipt.head ?? '')
         || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(receipt.preservedRef ?? '')
         || receipt.preservedPath !== partialArchivePath(receipt.worker, receipt.slot, receipt.head, receipt.manifestSha256)
-        || !/^[a-f0-9]{64}$/.test(receipt.manifestSha256 ?? '') || !/^[a-f0-9]{64}$/.test(receipt.capabilitySha256 ?? '')
+        || !/^[a-f0-9]{64}$/.test(receipt.manifestSha256 ?? '')
         || !/^[a-f0-9]{64}$/.test(receipt.reviewSha256 ?? '')
         || !Number.isSafeInteger(receipt.entryCount)
         || !Number.isSafeInteger(receipt.totalBytes) || !Number.isFinite(Date.parse(receipt.startedAt ?? ''))
@@ -1129,10 +1136,15 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       return receipt;
     });
   };
-  const inspectPartialRemoval = ({worker, slot = 'work', expectedPath, expectedBranch, expectedHead}) => {
-    if (!worker || process.env.CODEX_THREAD_ID !== worker || slot !== 'work' || expectedBranch !== partialRemovalBranch
+  const inspectPartialRemoval = ({worker, operator, authorizationRef, expectedPreservedRef,
+    slot = 'work', expectedPath, expectedBranch, expectedHead}) => {
+    const operatorRecovery = Boolean(operator);
+    if (!worker || (operatorRecovery
+      ? process.env.CODEX_THREAD_ID !== operator || operator === worker || authorizationRef !== partialRemovalOperatorAuthorization
+      : process.env.CODEX_THREAD_ID !== worker) || slot !== 'work' || expectedBranch !== partialRemovalBranch
       || !/^[a-f0-9]{40}$/.test(expectedHead ?? '')) {
-      throw Error('Partial-removal inspection is limited to the exact TLS work slot and current owner identity');
+      throw Error(operatorRecovery ? 'Partial-removal inspection requires the exact TLS operator authorization and identity'
+        : 'Partial-removal inspection is limited to the exact TLS work slot and current owner identity');
     }
     const value = state(), entry = value.entries.find(item => item.worker === worker && item.slot === slot);
     if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch
@@ -1154,8 +1166,12 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     if (git('rev-parse', '--verify', `refs/heads/${entry.branch}^{commit}`).trim() !== expectedHead) {
       throw Error('Preserved branch no longer points to the expected HEAD');
     }
-    const capability = readCapability({worker, slot, entry, requestedPath: capabilityPath(worker, slot)});
-    const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(capability.token).digest('hex')}`;
+    const capability = operatorRecovery ? null : readCapability({worker, slot, entry, requestedPath: capabilityPath(worker, slot)});
+    const preservedRef = operatorRecovery ? expectedPreservedRef
+      : `refs/worldatlas-local-recovery/${createHash('sha256').update(capability.token).digest('hex')}`;
+    if (!/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(preservedRef ?? '')) {
+      throw Error('Exact owner recovery ref is missing or malformed');
+    }
     if (git('rev-parse', '--verify', `${preservedRef}^{commit}`).trim() !== expectedHead) {
       throw Error('Exact owner recovery ref is missing or changed');
     }
@@ -1173,21 +1189,34 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     if (!Array.isArray(readers) || readers.length) throw Error('Partial checkout has active readers');
     const inventory = partialTreeInventory(entry.path);
     return {version: 1, result: 'PASS', operation: 'partial-removal-inventory', worker, slot,
+      ...(operatorRecovery ? {operator, authorizationRef} : {}),
       path: entry.path, branch: entry.branch, startHead: entry.head, head: expectedHead, gitAdminPath: adminPath,
       preservedRef, entryCount: inventory.entryCount, totalBytes: inventory.totalBytes,
       entries: inventory.entries, inventorySha256: inventory.sha256};
   };
-  const reconcilePartialRemoval = ({worker, slot = 'work', capabilityFile, expectedPath, expectedBranch,
-    expectedHead, inventoryManifest, reviewReceipt}) => locked(() => {
-    if (!worker || process.env.CODEX_THREAD_ID !== worker) throw Error('Partial-removal reconciliation requires the exact current owner identity');
+  const reconcilePartialRemoval = ({worker, operator, authorizationRef, slot = 'work', capabilityFile,
+    expectedPath, expectedBranch, expectedHead, inventoryManifest, reviewReceipt}) => locked(() => {
+    const operatorRecovery = Boolean(operator);
+    if (!worker || (operatorRecovery
+      ? process.env.CODEX_THREAD_ID !== operator || operator === worker || authorizationRef !== partialRemovalOperatorAuthorization
+      : process.env.CODEX_THREAD_ID !== worker)) {
+      throw Error(operatorRecovery ? 'Partial-removal reconciliation requires the exact TLS operator authorization and identity'
+        : 'Partial-removal reconciliation requires the exact current owner identity');
+    }
     if (slot !== 'work' || !/^[a-f0-9]{40}$/.test(expectedHead ?? '') || expectedPath !== slotPath(worker, slot)
-      || expectedBranch !== partialRemovalBranch || !capabilityFile || capabilityFile !== capabilityPath(worker, slot)) {
-      throw Error('Partial-removal reconciliation requires the exact owner work-slot binding');
+      || expectedBranch !== partialRemovalBranch || (operatorRecovery
+        ? capabilityFile !== undefined
+        : !capabilityFile || capabilityFile !== capabilityPath(worker, slot))) {
+      throw Error(operatorRecovery ? 'Partial-removal reconciliation requires the exact TLS operator work-slot binding'
+        : 'Partial-removal reconciliation requires the exact owner work-slot binding');
     }
     const inventory = inventoryManifest;
     if (!inventory || inventory.version !== 1 || inventory.result !== 'PASS' || inventory.operation !== 'partial-removal-inventory'
       || inventory.worker !== worker || inventory.slot !== slot || inventory.path !== expectedPath
       || inventory.branch !== expectedBranch || inventory.head !== expectedHead
+      || Boolean(inventory.operator) !== operatorRecovery
+      || operatorRecovery && (inventory.operator !== operator || inventory.authorizationRef !== authorizationRef
+        || inventory.preservedRef !== inventoryManifest.preservedRef)
       || !/^[a-f0-9]{40}$/.test(inventory.startHead ?? '') || !Array.isArray(inventory.entries)
       || typeof inventory.gitAdminPath !== 'string' || !path.isAbsolute(inventory.gitAdminPath)
       || typeof inventory.preservedRef !== 'string' || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(inventory.preservedRef)
@@ -1200,10 +1229,14 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     try { git('merge-base', '--is-ancestor', inventory.startHead, expectedHead); }
     catch { throw Error('Candidate HEAD is not a descendant of the registered owner slot start; preserve partial checkout'); }
     const reviewer = reviewReceipt;
-    if (!reviewer || reviewer.result !== 'PASS' || reviewer.operation !== 'partial-removal-review'
+    if (!reviewer || reviewer.result !== 'PASS'
+      || reviewer.operation !== (operatorRecovery ? 'partial-removal-operator-review' : 'partial-removal-review')
       || !id(reviewer.reviewer) || reviewer.reviewer === worker || reviewer.worker !== worker || reviewer.slot !== slot
       || reviewer.path !== expectedPath || reviewer.branch !== expectedBranch || reviewer.startHead !== inventory.startHead
       || reviewer.head !== expectedHead
+      || Boolean(reviewer.operator) !== operatorRecovery
+      || operatorRecovery && (reviewer.operator !== operator || reviewer.authorizationRef !== authorizationRef
+        || reviewer.reviewer === operator)
       || reviewer.gitAdminPath !== inventory.gitAdminPath || reviewer.preservedRef !== inventory.preservedRef
       || reviewer.entryCount !== inventory.entryCount || reviewer.totalBytes !== inventory.totalBytes
       || reviewer.inventorySha256 !== inventory.inventorySha256 || !/^[a-f0-9]{64}$/.test(reviewer.sha256 ?? '')
@@ -1211,6 +1244,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     const pendingMatches = readPartialReceipts().filter(receipt => receipt.worker === worker && receipt.slot === slot
       && receipt.path === expectedPath && receipt.branch === expectedBranch && receipt.startHead === inventory.startHead
       && receipt.head === expectedHead
+      && receipt.operation === (operatorRecovery ? 'partial-removal-operator-reconcile' : 'partial-removal-reconcile')
+      && (!operatorRecovery || receipt.operator === operator && receipt.authorizationRef === authorizationRef)
       && receipt.manifestSha256 === inventory.inventorySha256 && receipt.status === 'pending');
     if (pendingMatches.length > 1) throw Error('Multiple pending partial-removal receipts match; inspect before retry');
     const pendingReceipt = pendingMatches[0];
@@ -1250,7 +1285,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
         })();
         if (!Array.isArray(archivedReaders) || archivedReaders.length) throw Error('Preserved partial checkout has active readers');
         let capabilityFileRemoved = false;
-        if (liveEntry) {
+        if (liveEntry && !operatorRecovery) {
           const cap = readCapability({worker, slot, entry: liveEntry, requestedPath: capabilityFile});
           if (createHash('sha256').update(cap.bytes).digest('hex') !== pendingReceipt.capabilitySha256) {
             throw Error('Pending receipt capability binding changed; preserve for inspection');
@@ -1260,7 +1295,10 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
           const currentCap = fs.lstatSync(capabilityFile, {throwIfNoEntry: false});
           if (currentCap?.isFile() && !currentCap.isSymbolicLink() && currentCap.size === cap.bytes.length
             && fs.readFileSync(capabilityFile).equals(cap.bytes)) { fs.unlinkSync(capabilityFile); capabilityFileRemoved = true; }
-        } else {
+        } else if (liveEntry) {
+          liveState.entries = liveState.entries.filter(item => item !== liveEntry);
+          save(liveState);
+        } else if (!operatorRecovery) {
           const currentCap = fs.lstatSync(capabilityFile, {throwIfNoEntry: false});
           if (currentCap?.isFile() && !currentCap.isSymbolicLink()) {
             const bytes = fs.readFileSync(capabilityFile);
@@ -1284,9 +1322,10 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       || entry.head !== inventory.startHead) {
       throw Error('Exact existing ready owner slot changed; preserve partial checkout');
     }
-    const cap = readCapability({worker, slot, entry, requestedPath: capabilityFile});
-    const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(cap.token).digest('hex')}`;
-    if (inventory.preservedRef !== preservedRef) throw Error('Reviewed recovery ref does not match the exact owner capability');
+    const cap = operatorRecovery ? null : readCapability({worker, slot, entry, requestedPath: capabilityFile});
+    const preservedRef = operatorRecovery ? inventory.preservedRef
+      : `refs/worldatlas-local-recovery/${createHash('sha256').update(cap.token).digest('hex')}`;
+    if (!operatorRecovery && inventory.preservedRef !== preservedRef) throw Error('Reviewed recovery ref does not match the exact owner capability');
     const recoveryHead = git('rev-parse', '--verify', `${preservedRef}^{commit}`).trim();
     if (recoveryHead !== expectedHead || git('rev-parse', '--verify', `refs/heads/${expectedBranch}^{commit}`).trim() !== expectedHead) {
       throw Error('Candidate branch or owner recovery ref changed; preserve the slot');
@@ -1319,14 +1358,23 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     }
     const prior = readPartialReceipts().filter(receipt => receipt.worker === worker && receipt.path === entry.path
       && receipt.branch === entry.branch && receipt.startHead === entry.head && receipt.head === expectedHead
+      && receipt.operation === (operatorRecovery ? 'partial-removal-operator-reconcile' : 'partial-removal-reconcile')
+      && (!operatorRecovery || receipt.operator === operator && receipt.authorizationRef === authorizationRef)
       && receipt.manifestSha256 === inventory.inventorySha256
       && receipt.status === 'pending');
+    if (operatorRecovery && readPartialReceipts().some(receipt => receipt.operation === 'partial-removal-operator-reconcile'
+      && receipt.worker === worker && receipt.branch === expectedBranch && receipt.status === 'reconciled')) {
+      throw Error('The TLS partial-removal operator authorization is already used for this owner slot');
+    }
     if (prior.length > 1) throw Error('Multiple pending partial-removal receipts match; inspect before retry');
-    const receipt = prior[0] ?? {version: 1, operation: 'partial-removal-reconcile', status: 'pending', id: randomUUID(),
+    const receipt = prior[0] ?? {version: 1,
+      operation: operatorRecovery ? 'partial-removal-operator-reconcile' : 'partial-removal-reconcile',
+      status: 'pending', id: randomUUID(), ...(operatorRecovery ? {operator, authorizationRef} : {}),
+      ...(operatorRecovery ? {reviewer: reviewer.reviewer} : {}),
       worker, slot, path: entry.path, branch: entry.branch, startHead: entry.head, head: expectedHead, preservedRef,
       preservedPath: partialArchivePath(worker, slot, expectedHead, inventory.inventorySha256),
       manifestSha256: inventory.inventorySha256, entryCount: current.entryCount, totalBytes: current.totalBytes,
-      capabilitySha256: createHash('sha256').update(cap.bytes).digest('hex'),
+      capabilitySha256: operatorRecovery ? null : createHash('sha256').update(cap.bytes).digest('hex'),
       reviewSha256: reviewer.sha256, startedAt: new Date().toISOString()};
     if (receipt.reviewSha256 !== reviewer.sha256) throw Error('Pending recovery receipt is bound to a different independent review');
     if (!receipt.sha256) { receipt.sha256 = partialReceiptDigest(receipt); writePartialReceipt(receipt); }
@@ -1371,11 +1419,13 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     currentValue.entries = currentValue.entries.filter(item => item !== currentEntry);
     save(currentValue);
     let capabilityFileRemoved = false;
-    const capabilityNow = fs.lstatSync(capabilityFile, {throwIfNoEntry: false});
-    if (capabilityNow?.isFile() && !capabilityNow.isSymbolicLink() && capabilityNow.size === cap.bytes.length
-      && fs.readFileSync(capabilityFile).equals(cap.bytes)) {
-      fs.unlinkSync(capabilityFile);
-      capabilityFileRemoved = true;
+    if (!operatorRecovery) {
+      const capabilityNow = fs.lstatSync(capabilityFile, {throwIfNoEntry: false});
+      if (capabilityNow?.isFile() && !capabilityNow.isSymbolicLink() && capabilityNow.size === cap.bytes.length
+        && fs.readFileSync(capabilityFile).equals(cap.bytes)) {
+        fs.unlinkSync(capabilityFile);
+        capabilityFileRemoved = true;
+      }
     }
     const terminal = {...receipt, status: 'reconciled', completedAt: new Date().toISOString(), capabilityFileRemoved};
     terminal.sha256 = partialReceiptDigest(terminal);
@@ -1447,7 +1497,8 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
     for (let index = 0; index < args.length; index += 2) {
       const key = args[index]?.replace(/^--/, '');
       if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token', 'capability-file', 'expected-path', 'expected-branch', 'expected-head',
-        'operator', 'scope', 'authorization-ref', 'review-receipt', 'keeper-manifest', 'inventory-manifest'].includes(key) || !args[index + 1]) throw Error('Use a supported workspace action with documented --repo/--key value arguments');
+        'operator', 'scope', 'authorization-ref', 'review-receipt', 'keeper-manifest', 'inventory-manifest',
+        'expected-preserved-ref'].includes(key) || !args[index + 1]) throw Error('Use a supported workspace action with documented --repo/--key value arguments');
       if (key === 'include') options.include.push(args[index + 1]);
       else {
         const option = key.replace(/-([a-z])/g, (_match, letter) => letter.toUpperCase());
@@ -1482,16 +1533,21 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
       }
     });
     const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action === 'operator-release' ? 'operatorRelease'
-      : action === 'inspect-partial-removal' ? 'inspectPartialRemoval'
-        : action === 'reconcile-partial-removal' ? 'reconcilePartialRemoval' : action;
+      : ['inspect-partial-removal', 'inspect-operator-partial-removal'].includes(action) ? 'inspectPartialRemoval'
+        : ['reconcile-partial-removal', 'reconcile-operator-partial-removal'].includes(action) ? 'reconcilePartialRemoval' : action;
     if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release', 'operator-release',
-      'inspect-partial-removal', 'reconcile-partial-removal'].includes(action)) throw Error('Choose a supported workspace action with documented --key value arguments');
+      'inspect-partial-removal', 'reconcile-partial-removal', 'inspect-operator-partial-removal',
+      'reconcile-operator-partial-removal'].includes(action)) throw Error('Choose a supported workspace action with documented --key value arguments');
     if (action === 'operator-release') {
       if (!options.operator || options.operator !== process.env.CODEX_THREAD_ID) throw Error('Operator release requires this coordinator’s exact CODEX_THREAD_ID');
       options.reviewReceipt = readOperatorReceipt(options.reviewReceipt);
       options.keeperManifest = readOperatorReceipt(options.keeperManifest);
     }
-    if (action === 'reconcile-partial-removal') {
+    if (['inspect-operator-partial-removal', 'reconcile-operator-partial-removal'].includes(action)
+      && (!options.operator || options.operator !== process.env.CODEX_THREAD_ID)) {
+      throw Error('Partial-removal operator requires this coordinator’s exact CODEX_THREAD_ID');
+    }
+    if (['reconcile-partial-removal', 'reconcile-operator-partial-removal'].includes(action)) {
       options.reviewReceipt = readOperatorReceipt(options.reviewReceipt);
       options.inventoryManifest = readOperatorReceipt(options.inventoryManifest);
     }
