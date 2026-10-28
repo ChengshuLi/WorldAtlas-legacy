@@ -658,6 +658,213 @@ test('lost-capability recovery fails closed for identity, binding, dirty state a
   assert.equal(registryEntries(manager)[0].token, oldToken);
 });
 
+function sealOperatorReceipt(value) {
+  const body = Object.fromEntries(Object.entries(value).filter(([key]) => key !== 'sha256').sort(([a], [b]) => a.localeCompare(b)));
+  return {...body, sha256: createHash('sha256').update(JSON.stringify(body)).digest('hex')};
+}
+
+test('audited operator release binds approval, independent review, keeper bytes and the live slot', async t => {
+  const {repo, manager, head, temporary} = fixture(t, {inspectReaders: () => []});
+  const worker = 'brazil-orphan', operator = 'team-three-coordinator', reviewer = 'team-three-reviewer';
+  const branch = 'engineering/brazil-orphan';
+  const entry = await manager.allocate({worker, branch});
+  const source = path.join(entry.path, '.scratch/unique.txt');
+  fs.mkdirSync(path.dirname(source), {recursive: true});
+  fs.writeFileSync(source, 'unique evidence\n', {mode: 0o600});
+  const bytes = fs.readFileSync(source), mode = fs.statSync(source).mode & 0o777;
+  const sha256 = createHash('sha256').update(bytes).digest('hex');
+  const keeperPath = path.join(temporary, 'keeper', 'unique.txt');
+  const restorationPath = path.join(temporary, 'restored', 'unique.txt');
+  fs.mkdirSync(path.dirname(keeperPath), {recursive: true});
+  fs.mkdirSync(path.dirname(restorationPath), {recursive: true});
+  fs.writeFileSync(keeperPath, bytes, {mode});
+  fs.writeFileSync(restorationPath, bytes, {mode});
+  let reviewReceipt = sealOperatorReceipt({result: 'PASS', worker: reviewer, scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head});
+  const keeperManifest = sealOperatorReceipt({result: 'PASS', scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head,
+    files: [{path: '.scratch/unique.txt', keeperPath, restorationPath, bytes: bytes.length, mode, sha256}]});
+  reviewReceipt = sealOperatorReceipt({...reviewReceipt, authorizationRef: 'team3-bra-tgo-orphaned-slots', keeperManifestSha256: keeperManifest.sha256});
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = operator;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+
+  const result = manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
+    reviewReceipt, keeperManifest});
+  assert.equal(result.released, true);
+  assert.equal(fs.existsSync(entry.path), false);
+  assert.equal(fs.readFileSync(keeperPath, 'utf8'), 'unique evidence\n');
+  assert.equal(fs.readFileSync(restorationPath, 'utf8'), 'unique evidence\n');
+  assert.deepEqual(registryEntries(manager), []);
+  const audit = JSON.parse(fs.readFileSync(result.auditReceipt, 'utf8'));
+  assert.equal(audit.status, 'released');
+  assert.equal(audit.worker, worker);
+  assert.equal(audit.head, head);
+  assert.equal(audit.keepers[0].sha256, sha256);
+  assert.equal(Object.hasOwn(audit, 'token'), false);
+  assert.ok(!JSON.stringify(result).includes(entry.token));
+  assert.throws(() => manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
+    reviewReceipt, keeperManifest}), /already used/);
+});
+
+test('audited operator release refuses stale identity, dirty work, open readers and changed keeper data', async t => {
+  let readers = [];
+  const {manager, head, temporary} = fixture(t, {inspectReaders: () => readers});
+  const worker = 'togo-orphan', operator = 'team-three-coordinator', reviewer = 'team-three-reviewer';
+  const branch = 'engineering/togo-orphan';
+  const entry = await manager.allocate({worker, branch});
+  const source = path.join(entry.path, '.scratch/unique.txt');
+  fs.mkdirSync(path.dirname(source), {recursive: true});
+  fs.writeFileSync(source, 'unique evidence\n', {mode: 0o600});
+  const bytes = fs.readFileSync(source), mode = fs.statSync(source).mode & 0o777;
+  const sha256 = createHash('sha256').update(bytes).digest('hex');
+  const keeperPath = path.join(temporary, 'keeper', 'unique.txt');
+  const restorationPath = path.join(temporary, 'restored', 'unique.txt');
+  fs.mkdirSync(path.dirname(keeperPath), {recursive: true});
+  fs.mkdirSync(path.dirname(restorationPath), {recursive: true});
+  fs.writeFileSync(keeperPath, bytes, {mode}); fs.writeFileSync(restorationPath, bytes, {mode});
+  let reviewReceipt = sealOperatorReceipt({result: 'PASS', worker: reviewer, scope: 'TGO', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head});
+  const keeperManifest = sealOperatorReceipt({result: 'PASS', scope: 'TGO', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head,
+    files: [{path: '.scratch/unique.txt', keeperPath, restorationPath, bytes: bytes.length, mode, sha256}]});
+  reviewReceipt = sealOperatorReceipt({...reviewReceipt, authorizationRef: 'team3-bra-tgo-orphaned-slots', keeperManifestSha256: keeperManifest.sha256});
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = operator;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  const request = overrides => manager.operatorRelease({operator, scope: 'TGO', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
+    reviewReceipt, keeperManifest, ...overrides});
+
+  assert.throws(() => request({authorizationRef: 'unapproved-reference'}), /approved BRA\/TGO scope/);
+  assert.throws(() => request({slot: 'review'}), /approved BRA\/TGO scope/);
+  assert.throws(() => request({operator: 'different-coordinator'}), /exact CODEX_THREAD_ID/);
+  assert.throws(() => request({worker: operator}), /exact CODEX_THREAD_ID/);
+  assert.throws(() => request({reviewReceipt: undefined}), /Independent review receipt is missing, stale/);
+  assert.throws(() => request({reviewReceipt: sealOperatorReceipt({...reviewReceipt, keeperManifestSha256: '0'.repeat(64)})}),
+    /did not attest the exact keeper/);
+  assert.throws(() => request({expectedHead: '0'.repeat(40)}), /Independent review receipt is missing, stale/);
+  assert.equal(registryEntries(manager)[0].head, head);
+  const auditDirectory = path.join(manager.report().registry, 'audit');
+  fs.mkdirSync(auditDirectory, {mode: 0o700});
+  const pendingId = '11111111-1111-4111-8111-111111111111';
+  const pendingReceipt = {version: 1, operation: 'operator-release', status: 'pending', id: pendingId,
+    scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots', operator, reviewer, worker, slot: 'work',
+    path: entry.path, branch, head, reviewSha256: reviewReceipt.sha256, keeperManifestSha256: keeperManifest.sha256,
+    keepers: [], preservedRef: `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`,
+    startedAt: new Date().toISOString()};
+  const pendingFile = path.join(auditDirectory, `${pendingId}.json`);
+  fs.writeFileSync(pendingFile, JSON.stringify(pendingReceipt), {mode: 0o600});
+  assert.throws(() => request({}), /pending receipt/);
+  fs.unlinkSync(pendingFile);
+  const malformedFile = path.join(auditDirectory, 'malformed.json');
+  fs.writeFileSync(malformedFile, '{}', {mode: 0o600});
+  assert.throws(() => request({}), /unrecognized receipt/);
+  fs.unlinkSync(malformedFile);
+  fs.rmdirSync(auditDirectory);
+  fs.writeFileSync(source, 'source changed');
+  assert.throws(() => request({}), /Keeper\/restoration file metadata mismatch/);
+  fs.writeFileSync(source, bytes, {mode}); fs.chmodSync(source, mode);
+  fs.writeFileSync(path.join(entry.path, 'README.md'), 'changed tracked content');
+  assert.throws(() => request({}), /Tracked modifications or untracked/);
+  fs.writeFileSync(path.join(entry.path, 'README.md'), 'root');
+  const dependent = await manager.allocate({worker: 'dependent-slot', slot: 'review', commit: head});
+  const registryFile = path.join(manager.report().registry, 'state.json'), originalRegistry = fs.readFileSync(registryFile, 'utf8');
+  const registryState = JSON.parse(originalRegistry);
+  registryState.entries.find(item => item.worker === dependent.worker).dependencies = [worker];
+  fs.writeFileSync(registryFile, JSON.stringify(registryState, null, 2) + '\n');
+  assert.throws(() => request({}), /depends on this workspace/);
+  fs.writeFileSync(registryFile, originalRegistry);
+  manager.release({worker: dependent.worker, slot: 'review', token: dependent.token});
+  readers = ['999'];
+  assert.throws(() => request({}), /active readers/);
+  readers = [];
+  fs.writeFileSync(keeperPath, 'changed backup');
+  assert.throws(() => request({}), /Keeper\/restoration/);
+  assert.equal(fs.readFileSync(source, 'utf8'), 'unique evidence\n');
+  assert.equal(registryEntries(manager)[0].head, head);
+});
+
+test('operator-release CLI releases the exact authorized slot and prints no capability', async t => {
+  const {repo, manager, head, temporary} = fixture(t);
+  const worker = 'brazil-cli-orphan', operator = 'team-three-coordinator', reviewer = 'team-three-reviewer';
+  const branch = 'engineering/brazil-cli-orphan';
+  const entry = await manager.allocate({worker, branch});
+  let reviewReceipt = sealOperatorReceipt({result: 'PASS', worker: reviewer, scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head});
+  const keeperManifest = sealOperatorReceipt({result: 'PASS', scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head, files: []});
+  reviewReceipt = sealOperatorReceipt({...reviewReceipt, authorizationRef: 'team3-bra-tgo-orphaned-slots', keeperManifestSha256: keeperManifest.sha256});
+  const reviewFile = path.join(temporary, 'review.json'), keeperFile = path.join(temporary, 'keeper.json');
+  fs.writeFileSync(reviewFile, JSON.stringify(reviewReceipt));
+  fs.writeFileSync(keeperFile, JSON.stringify(keeperManifest));
+  const helper = cliHelper(repo, path.join(repo, '.git', 'operator-helper'));
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = operator;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  const run = spawnSync(process.execPath, [helper, 'operator-release', '--repo', repo, '--operator', operator,
+    '--scope', 'BRA', '--authorization-ref', 'team3-bra-tgo-orphaned-slots', '--worker', worker, '--slot', 'work',
+    '--expected-path', entry.path, '--expected-branch', branch, '--expected-head', head,
+    '--review-receipt', reviewFile, '--keeper-manifest', keeperFile], {cwd: repo, encoding: 'utf8'});
+  assert.equal(run.status, 0, run.stderr);
+  assert.doesNotMatch(run.stdout, /"token"\s*:/);
+  assert.ok(!run.stdout.includes(entry.token));
+  const result = JSON.parse(run.stdout);
+  assert.equal(result.released, true);
+  assert.equal(fs.existsSync(entry.path), false);
+  const audit = JSON.parse(fs.readFileSync(result.auditReceipt, 'utf8'));
+  assert.equal(audit.status, 'released');
+  assert.equal(audit.worker, worker);
+  assert.ok(!JSON.stringify(audit).includes(entry.token));
+});
+
+test('operator release restores keeper-backed source files when ordinary Git removal refuses', async t => {
+  const {repo, manager, head, temporary, git} = fixture(t, {inspectReaders: () => []});
+  const worker = 'togo-preserved-orphan', operator = 'team-three-coordinator', reviewer = 'team-three-reviewer';
+  const branch = 'engineering/togo-preserved-orphan';
+  const entry = await manager.allocate({worker, branch});
+  const source = path.join(entry.path, '.scratch/unique.txt'), bytes = Buffer.from('preserve after refusal\n'), mode = 0o600;
+  fs.mkdirSync(path.dirname(source), {recursive: true}); fs.writeFileSync(source, bytes, {mode});
+  const sha256 = createHash('sha256').update(bytes).digest('hex');
+  const keeperPath = path.join(temporary, 'keeper-refusal', 'unique.txt');
+  const restorationPath = path.join(temporary, 'restored-refusal', 'unique.txt');
+  fs.mkdirSync(path.dirname(keeperPath), {recursive: true}); fs.mkdirSync(path.dirname(restorationPath), {recursive: true});
+  fs.writeFileSync(keeperPath, bytes, {mode}); fs.writeFileSync(restorationPath, bytes, {mode});
+  let reviewReceipt = sealOperatorReceipt({result: 'PASS', worker: reviewer, scope: 'TGO', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head});
+  const keeperManifest = sealOperatorReceipt({result: 'PASS', scope: 'TGO', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head,
+    files: [{path: '.scratch/unique.txt', keeperPath, restorationPath, bytes: bytes.length, mode, sha256}]});
+  reviewReceipt = sealOperatorReceipt({...reviewReceipt, authorizationRef: 'team3-bra-tgo-orphaned-slots', keeperManifestSha256: keeperManifest.sha256});
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = operator;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  const execute = childProcess.execFileSync;
+  t.mock.method(childProcess, 'execFileSync', (command, args, ...options) => {
+    if (command === 'git' && args[args.indexOf('worktree') + 1] === 'remove') {
+      throw new Error('injected ordinary worktree removal refusal');
+    }
+    return execute(command, args, ...options);
+  });
+  syncBuiltinESMExports();
+  t.after(() => { t.mock.restoreAll(); syncBuiltinESMExports(); });
+  assert.throws(() => manager.operatorRelease({operator, scope: 'TGO', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
+    reviewReceipt, keeperManifest}), /injected ordinary worktree removal refusal/);
+  assert.equal(fs.readFileSync(source, 'utf8'), 'preserve after refusal\n');
+  assert.equal(fs.statSync(source).mode & 0o777, mode);
+  assert.equal(registryEntries(manager)[0].path, entry.path);
+  assert.equal(git('rev-parse', `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`).trim(), head);
+  const receipts = fs.readdirSync(path.join(manager.report().registry, 'audit'));
+  assert.equal(receipts.length, 1);
+  const audit = JSON.parse(fs.readFileSync(path.join(manager.report().registry, 'audit', receipts[0]), 'utf8'));
+  assert.equal(audit.status, 'failed');
+  assert.ok(audit.preservedRef);
+  assert.ok(!JSON.stringify(audit).includes(entry.token));
+});
+
 test('interrupted private-token recovery resumes only its bound pending replacement', async t => {
   const {manager, head} = fixture(t);
   const worker = 'recovery-interruption';
