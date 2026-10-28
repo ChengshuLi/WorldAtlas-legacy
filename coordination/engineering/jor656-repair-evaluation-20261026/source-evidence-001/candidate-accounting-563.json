@@ -88,13 +88,13 @@
     }
   },
   "bank_candidate": {
-    "baseline_commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
-    "candidate_commit": "39616954aa21d417508bb0a3d59305d8b59680eb",
-    "finalizer_attempt": "../finalize-instrumented-021/finalizer-run-021/terminal.json",
+    "baseline_commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+    "candidate_commit": "a62254cea5ecabd90a4b4a0bf36e5e32e9edc06d",
+    "finalizer_attempt": "../attempts/finalize-current-8eff-002/terminal.json",
     "finalizer_exit": 0,
-    "startup_index_sha256": "5c2282ed2c8cd010364cfc6d484112a3a15e16d16fef133afd144de320bfc597",
-    "comparison_report": "../finalize-instrumented-021/current-full-bank-comparison.json",
-    "comparison_sha256": "7312168a8ad1a68298215b0898a951f3e3b2a202c0d5e7095b6238e8bcea07a9",
+    "startup_index_sha256": "77d68e33a57c8db8e62b726c2b35d71b9eae9420bb287ba8631702554962f009",
+    "comparison_report": "../attempts/finalize-current-8eff-002/selected-joint-comparison.json",
+    "comparison_sha256": "7e6d6044a9d5ba53ef328b9051c579569bf6724ec27d6f7a63c4ad9f0ca5e8d8",
     "method": "selected-native-owner-conservation-v1",
     "status": "no-new-native-loss",
     "compared_rows": 262166,
@@ -105,7 +105,7 @@
     "affected_rows": 314,
     "candidate_code_executed": false,
     "trusted_code_paths_checked": 18,
-    "scope": "Local direct comparison core only; not hosted stock controls or acceptance."
+    "scope": "Local direct comparison core only; not hosted stock controls, production build, emitted controls, current-owner observation or acceptance."
   },
   "limitations": [
     "Candidate only; local finalizer and local comparison core are not hosted stock controls.",
@@ -158,5 +158,25 @@
     "corrected_paths": 9,
     "corrected_bytes": 24968184,
     "historical_blobs_preserved": true
+  },
+  "historical_bank_candidate_attempt021": {
+    "baseline_commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "candidate_commit": "39616954aa21d417508bb0a3d59305d8b59680eb",
+    "finalizer_attempt": "../finalize-instrumented-021/finalizer-run-021/terminal.json",
+    "finalizer_exit": 0,
+    "startup_index_sha256": "5c2282ed2c8cd010364cfc6d484112a3a15e16d16fef133afd144de320bfc597",
+    "comparison_report": "../finalize-instrumented-021/current-full-bank-comparison.json",
+    "comparison_sha256": "7312168a8ad1a68298215b0898a951f3e3b2a202c0d5e7095b6238e8bcea07a9",
+    "method": "selected-native-owner-conservation-v1",
+    "status": "historical-attempt-021-superseded-by-current-8eff-002",
+    "compared_rows": 262166,
+    "added": 563,
+    "removed": 0,
+    "reassigned": 0,
+    "lost_or_reassigned": 0,
+    "affected_rows": 314,
+    "candidate_code_executed": false,
+    "trusted_code_paths_checked": 18,
+    "scope": "Local direct comparison core only; not hosted stock controls or acceptance."
   }
 }

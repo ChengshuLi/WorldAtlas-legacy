@@ -1,6 +1,6 @@
-# JOR656 combined 563-cell candidate — attempt 021 (local evidence)
+# JOR656 combined 563-cell candidate — attempt 021 (historical, superseded bank baseline)
 
-This packet records the supported finalizer against the exact accepted `d28ed3a4022616218f33639c50b8fcfffbeb8418` baseline using the existing composed registry `95dba6ca68188649d6c53497416c2f2e5c7ecb42`. It is candidate evidence only: no root scientific acceptance or credit, hosted stock tests, package build, geography workflow, emitted-consumer smoke, or current-owner-zero observation is claimed.
+This packet records the supported finalizer against the then-accepted `d28ed3a4022616218f33639c50b8fcfffbeb8418` baseline using the existing composed registry `95dba6ca68188649d6c53497416c2f2e5c7ecb42`. It is preserved as historical local candidate evidence and is superseded as the current bank baseline by `../finalized-current-8eff-002/` (baseline 8eff, candidate `a62254cea5ecabd90a4b4a0bf36e5e32e9edc06d`); the 021 result remains valid only for its stated historical pair. It is candidate evidence only: no root scientific acceptance or credit, hosted stock tests, package build, geography workflow, emitted-consumer smoke, or current-owner-zero observation is claimed.
 
 ## Scope and preserved limits
 
