@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "kind": "jor656-exact-3-contact-native-diagnostic-manifest-v1",
+  "input_commit": "1d8e5d1794eeeed49cd074c15ca8edb2ea2f418e",
+  "source_evidence_sha256": "b7f05978996f8f42c9460d502490fb7525ca333a5f8dce7a62b0b56bee5cbd56",
+  "requested_native_patch_sha256": "756cb6c339f3cea5794fc09243afcc5dac4427e9fc6739ce89701100176e86e2",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1409,
+      "sha256": "050e53ab5796b3e39e96ca03afa9e84ea60c9736d3b5704c20dd00b5ca728ecd"
+    },
+    {
+      "path": "exit-status.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "native-diagnostic-config.json",
+      "bytes": 380,
+      "sha256": "6781f904d506866056dcb969786a5b737e844173175ffc3f4fea845c60380a23"
+    },
+    {
+      "path": "native-diagnostic.json",
+      "bytes": 5448,
+      "sha256": "40160085000c97ad88e886e46393302bd83129cfe516650224b381a52d8c95d6"
+    },
+    {
+      "path": "preparation.json",
+      "bytes": 265,
+      "sha256": "be736cb8a6fa9c662d35f22ef7f77a41b05bfcc653b7e413779ee015c5841d29"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stdout.log",
+      "bytes": 501,
+      "sha256": "3dd9ab230317e9f28683e3885d87a2a0ed8764a3ffc6aa14029a431e59d1a260"
+    }
+  ]
+}

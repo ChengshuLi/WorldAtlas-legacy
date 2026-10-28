@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+    "path": "data/ownership-selection.json"
+  },
+  "package_inputs": {
+    "commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+    "path": ".github/package-inputs.json"
+  },
+  "change_evidence": {
+    "commit": "95dba6ca68188649d6c53497416c2f2e5c7ecb42",
+    "path": "coordination/engineering/jor656-repair-evaluation-20261026/authority-compose-003/authority-registry.json",
+    "mode": "100644",
+    "git_blob_oid": "69aadc198834505d3a62a30d6d99febf20c5a09b",
+    "bytes": 2633,
+    "sha256": "24deb144b661f75759f268cb6869b8787aad5de8b512bf81945013cb8f2291d7"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+        "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalized-current-0fc-001/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "cea965d300434b604fb570ef002bb8506d4a9ef9",
+        "bytes": 1156,
+        "sha256": "c66340c2f6bb3108f56bc2f0b562c945102f9c6324ae5bbd1251ef1e2a11c67f"
+      },
+      "startup_ownership": {
+        "commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+        "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalized-current-0fc-001/startup-ownership.json",
+        "mode": "100644",
+        "git_blob_oid": "5bd24233e397d03b85dd211a169eb4f01b738902",
+        "bytes": 49610,
+        "sha256": "c2177db2b231107a071ca236c991d2290a844869ee58f37c5740c1e00c573723"
+      }
+    }
+  ]
+}
