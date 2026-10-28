@@ -926,6 +926,51 @@ test('owner reconciliation preserves a finite partial-removal checkout after Git
   assert.equal(audit.totalBytes, manifest.totalBytes);
 });
 
+test('partial-removal inspection refuses an old .git pointer aliased to another active worktree', async t => {
+  const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
+  const worker = 'partial-removal-alias-owner';
+  const activeWorker = 'partial-removal-alias-active';
+  const previousIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
+  const stalePointer = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
+  const adminPath = /^gitdir: (.+)\n?$/.exec(stalePointer)?.[1];
+  assert.ok(adminPath && fs.existsSync(adminPath));
+
+  // Simulate the observed partial-remove/reuse state: Git removes the original
+  // checkout and admin record, then a new active checkout reuses the same admin
+  // directory name while the old checkout's retained bytes and pointer survive.
+  git('worktree', 'remove', entry.path);
+  assert.ok(!fs.existsSync(adminPath));
+  fs.mkdirSync(entry.path, {recursive: true});
+  fs.writeFileSync(path.join(entry.path, '.git'), stalePointer);
+  fs.mkdirSync(path.join(entry.path, 'research'), {recursive: true});
+  fs.writeFileSync(path.join(entry.path, 'research', 'retained-evidence.json'), '{"retained":true}\n');
+
+  process.env.CODEX_THREAD_ID = activeWorker;
+  const active = await manager.allocate({worker: activeWorker, branch: 'engineering/active-admin-alias'});
+  const reusedAdminPath = path.resolve(repo, git('rev-parse', '--git-common-dir').trim());
+  const actualAdminPath = execFileSync('git', ['-C', active.path, 'rev-parse', '--path-format=absolute', '--git-dir'], {encoding: 'utf8'}).trim();
+  assert.equal(fs.realpathSync(actualAdminPath), fs.realpathSync(path.join(reusedAdminPath, 'worktrees', path.basename(active.path))));
+  assert.equal(fs.realpathSync(path.resolve(adminPath)), fs.realpathSync(actualAdminPath));
+  const adminBackpointer = fs.readFileSync(path.join(actualAdminPath, 'gitdir'), 'utf8');
+  assert.equal(fs.realpathSync(path.resolve(adminBackpointer.trim())), fs.realpathSync(path.join(active.path, '.git')));
+
+  const originalPointer = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
+  const evidence = fs.readFileSync(path.join(entry.path, 'research', 'retained-evidence.json'), 'utf8');
+  const stateBefore = JSON.stringify(registryEntries(manager));
+  const activeHead = execFileSync('git', ['-C', active.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  process.env.CODEX_THREAD_ID = worker;
+  assert.throws(() => manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: entry.head}), /Git admin directory still exists/);
+  assert.equal(fs.readFileSync(path.join(entry.path, '.git'), 'utf8'), originalPointer);
+  assert.equal(fs.readFileSync(path.join(entry.path, 'research', 'retained-evidence.json'), 'utf8'), evidence);
+  assert.equal(fs.readFileSync(path.join(actualAdminPath, 'gitdir'), 'utf8'), adminBackpointer);
+  assert.equal(execFileSync('git', ['-C', active.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim(), activeHead);
+  assert.equal(JSON.stringify(registryEntries(manager)), stateBefore);
+});
+
 test('partial-removal reconciliation refuses changed inventory, active readers and wrong reviewers', async t => {
   const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
   const worker = 'partial-removal-guard';
