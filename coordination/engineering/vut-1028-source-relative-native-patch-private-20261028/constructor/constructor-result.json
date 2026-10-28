@@ -1,0 +1,51 @@
+{
+  "kind": "vut1028-constructor-coordinate-free-summary-v1",
+  "scope": {
+    "candidate_cells": 1028,
+    "components": 3,
+    "constructor_stage_disposition": "assigned/prepared; not accepted",
+    "counts_by_owner": {
+      "48791": 504,
+      "48793": 202,
+      "48794": 322
+    },
+    "full_resolution_variant_misses_held_separately": 88,
+    "original_denominator": 4366,
+    "prior_accepted_positive": 3163,
+    "prior_accepted_researched_unresolved": 87
+  },
+  "inputs": {
+    "native_patch": {
+      "bytes": 18975,
+      "commit": "62e872c7b3f104f90848598054418aff43222cf7",
+      "git_blob_oid": "6d364a4bd571ea67565a7789f5dc85130d7446ae",
+      "mode": "100644",
+      "path": "coordination/engineering/vut-890-native-patch-v1/native-patch-1028.json",
+      "sha256": "d2389bde9f34824b9669bb172dd8da00ee07fe13526cbf69def716e184a7ed0a"
+    },
+    "source_evidence": {
+      "bytes": 23565,
+      "commit": "80dd96c04ccdb33b5be4b1a80cfb27cc934f76db",
+      "git_blob_oid": "aed551fd6649ed0c513543d5b4b1cd027e027756",
+      "mode": "100644",
+      "path": "coordination/engineering/vanuatu-native-repair-evaluation-20261016/source-evidence.json",
+      "sha256": "e470ba8c709c6d82a690a2a3b1a33e2f2da56e635c80b9486674e052a10ebb5"
+    },
+    "physical_evidence_sha256": "b3ed749f8e4fabe98e92c0493a285bf0459e5426cb347fb66212ce543471fea7",
+    "physical_input_sha256": "cdf040c4b12f875f0a03eb367e410e206736673d82edc6117b3f234b43c89491"
+  },
+  "constructor_receipt": {
+    "bytes": 30767,
+    "kind": "existing-source-target-native-constructor-result",
+    "private_original_path": "task-5/vut1028-root-review-private-20261028/constructor-result.json",
+    "rule_sha256": "b2971445c4cbe24d97fb2904f0238ac03524f2890df2d9ddaebf0b52110bbf01",
+    "sha256": "962da4f12b72d1b017d79f7a423de35cb85c9f2bd1619fde6cfa6f3eb96202d3",
+    "withheld_reason": "The original receipt contains geometry-coordinate payloads; those bytes remain private and are not reproduced here."
+  },
+  "limits": [
+    "This summary binds the reported receipt hash and input pins; the original geometry-bearing receipt was not independently geometry-inspected by this summary.",
+    "Constructor-stage prepared/assigned rows are not a selector update, authority adoption, finalizer result, acceptance, qualification, status change, or credit claim.",
+    "Physical, municipal, source lineage/vintage, and ODbL derivative-treatment limitations remain as recorded in the accompanying provenance and attribution notice."
+  ],
+  "version": 1
+}

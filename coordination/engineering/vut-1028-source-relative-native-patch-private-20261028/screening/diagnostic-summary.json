@@ -1,0 +1,97 @@
+{
+  "branch": "vut-890-native-diagnostic-prep-20261027",
+  "config": {
+    "bytes": 333,
+    "path": "coordination/engineering/vut-890-native-patch-v1/native-diagnostic-config-1028.json",
+    "preparation_config_sha256": "1252b73d5253499cc0d072c2ce097addaf7af7614a84c235616b5870f18aaeb2",
+    "sha256": "1252b73d5253499cc0d072c2ce097addaf7af7614a84c235616b5870f18aaeb2"
+  },
+  "head": "62e872c7b3f104f90848598054418aff43222cf7",
+  "kind": "private.vut1028-native-diagnostic-result.v1",
+  "native_diagnostic": {
+    "bytes": 87716,
+    "first_failure": null,
+    "held_cells": 0,
+    "limitations": [
+      "Native diagnostic screening only; no authority products, current-owner-zero, acceptance or whole-source clearance.",
+      "All original source, physical, query, witness and territorial limits remain retained."
+    ],
+    "path": "coordination/engineering/vut-890-native-patch-v1/native-diagnostic-run-003/native-diagnostic.json",
+    "preparation_bytes": 266,
+    "preparation_path": "coordination/engineering/vut-890-native-patch-v1/native-diagnostic-run-003/preparation.json",
+    "preparation_sha256": "35313b680d99cc80e34700155c5f51eb4977713a24341c50e582c813f3e98fb6",
+    "requested_cells": 1028,
+    "rule_sha256": "b2971445c4cbe24d97fb2904f0238ac03524f2890df2d9ddaebf0b52110bbf01",
+    "sha256": "6294195b0e941f6f63c9cc5b3be42d29199f858f7a939d34cc7fe685157012ba",
+    "supported_cells": 1028
+  },
+  "patch": {
+    "bytes": 18975,
+    "git_blob": "6d364a4bd571ea67565a7789f5dc85130d7446ae",
+    "path": "coordination/engineering/vut-890-native-patch-v1/native-patch-1028.json",
+    "sha256": "d2389bde9f34824b9669bb172dd8da00ee07fe13526cbf69def716e184a7ed0a"
+  },
+  "predicates_and_limits": [
+    "Run-003 is native screening only: 1,028 requested, 1,028 supported, 0 held under the declared mapped-land/adverse-mask diagnostic. It is not authority/constructor output, selected-owner-zero, acceptance or credit.",
+    "VUT candidates are part of the original 890 simplified-source exact matches; selected full-variant interiors identify 826 concordant keys. The remaining 64 are preserved separately as variant misses.",
+    "Tanna all-feature source screen gives 202 selected-feature interiors and 24 outside; other five features show no interior/boundary hits. The 24 are not assigned to another feature.",
+    "Retained physical relations are target-level; no per-key physical clearance is inferred. Target-topology/reconstruction and foreign-contact questions remain distinct.",
+    "Specific municipal exclusion instruments/maps remain unlocated for Efate/Shefa and Santo/Sanma; current legal/municipal status is not inferred from map contexts.",
+    "No source/geometry replay, selector/bank mutation, status/credit change, current-owner claim, or legal boundary conclusion. Raw patch remains private and is not pushed."
+  ],
+  "provenance": {
+    "bytes": 6982,
+    "path": "coordination/engineering/vut-890-native-patch-v1/provenance-1028.json",
+    "serializer_sha256": "bdcec250b542537bd86cf07ecfd4809b30fa22ad14d1e961d3d7e0099b7f7cb4",
+    "sha256": "fcbc1da44025c5bda3bdb1e84f6523259bdf04faf7d315b6c0428f1a80e1ee98"
+  },
+  "scope": {
+    "accounting": "4,366 = 3,250 accepted (3,163 positive + 87 researched-unresolved) + 1,116 remaining; 1,116 = 1,028 candidate + 88 variant misses. Accepted 87 is excluded from this patch.",
+    "candidate_1028": {
+      "distinct_original_intervals": 464,
+      "interval_commitment_owner_y_start_end": "0f7af4603a1c0c1e207c735aec9665ae1171ecda07cc6819b191128b0e87d168",
+      "key_commitment_owner_y_x": "6a9e3d116c194a1dabd3177d3b3bfbb7e0b6a43df487fe0256329b83fb398b9b",
+      "owners": {
+        "48791": 504,
+        "48793": 202,
+        "48794": 322
+      }
+    },
+    "remaining_1116": {
+      "distinct_intervals": 519,
+      "interval_commitment_owner_y_start_end": "74a315a90f01bcbcf7024b24755a068835881e542ccedb6993134e6284c3cc35",
+      "key_commitment_owner_y_x": "85080e94cde6be5a1d0358ed65df9d988fcf1574a5c44d9637f93a5735f7b806",
+      "roster_file_sha256": "7950960096b3bc0bc50004eb97233a28427d943d4aee536845a6b9ddaf53ee64"
+    },
+    "variant_misses_88": {
+      "distinct_original_intervals": 84,
+      "interval_commitment_owner_y_start_end": "870dfc3a6048de9814fd0cfc708cfac24cc6cf4cf7d0a756bed646c4435d0ca9",
+      "owners": {
+        "48791": 26,
+        "48793": 24,
+        "48794": 38
+      },
+      "shared_intervals_with_candidate": 29
+    }
+  },
+  "source_role": {
+    "contract_commit": "a5f0214a899db981c5e5c0a6974aa8d3a76e1b41",
+    "contract_path": "coordination/engineering/vanuatu-native-repair-evaluation-20261016/evidence/source-scope-review.md",
+    "contract_sha256": "909bcab55d78dceebda5a5856454eb31e707556e5103f015ca294f0b561e1e72",
+    "full_variant_comparator": "VUT 826 selected-source interiors +64 misses; Tanna 202 selected-feature interiors +24 misses; this is separate comparator evidence, not a universal veto or automatic reassignment.",
+    "original_simplified_product": {
+      "blob": "b04cddf49b80b6e3d0458ba3dac5005e85acdc99",
+      "bytes": 39881,
+      "commit": "c7fa96a44f39310e0d070ca883c5c3593c8dfdfc",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-VUT-ADM1-000.bin.gz",
+      "sha256": "d889dc7af3e004f12ad4bb9a49de443d09a4bfe34beaba4af999fb6a8dc13258"
+    },
+    "outer_source_evidence": {
+      "blob": "aed551fd6649ed0c513543d5b4b1cd027e027756",
+      "bytes": 23565,
+      "commit": "80dd96c04ccdb33b5be4b1a80cfb27cc934f76db",
+      "path": "coordination/engineering/vanuatu-native-repair-evaluation-20261016/source-evidence.json",
+      "sha256": "e470ba8c709c6d82a690a2a3b1a33e2f2da56e635c80b9486674e052a10ebb5e"
+    }
+  }
+}
