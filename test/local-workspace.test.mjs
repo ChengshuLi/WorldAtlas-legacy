@@ -668,6 +668,10 @@ test('audited operator release binds approval, independent review, keeper bytes 
   const worker = 'brazil-orphan', operator = 'team-three-coordinator', reviewer = 'team-three-reviewer';
   const branch = 'engineering/brazil-orphan';
   const entry = await manager.allocate({worker, branch});
+  execFileSync('git', ['-C', entry.path, 'commit', '--allow-empty', '-m', 'owner advanced the live slot']);
+  const liveHead = execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  assert.notEqual(liveHead, entry.head);
+  assert.equal(execFileSync('git', ['-C', entry.path, 'merge-base', '--is-ancestor', entry.head, liveHead]).toString(), '');
   const source = path.join(entry.path, '.scratch/unique.txt');
   fs.mkdirSync(path.dirname(source), {recursive: true});
   fs.writeFileSync(source, 'unique evidence\n', {mode: 0o600});
@@ -680,9 +684,9 @@ test('audited operator release binds approval, independent review, keeper bytes 
   fs.writeFileSync(keeperPath, bytes, {mode});
   fs.writeFileSync(restorationPath, bytes, {mode});
   let reviewReceipt = sealOperatorReceipt({result: 'PASS', worker: reviewer, scope: 'BRA', worker_id: worker,
-    slot: 'work', path: entry.path, branch, head});
+    slot: 'work', path: entry.path, branch, head: liveHead});
   const keeperManifest = sealOperatorReceipt({result: 'PASS', scope: 'BRA', worker_id: worker,
-    slot: 'work', path: entry.path, branch, head,
+    slot: 'work', path: entry.path, branch, head: liveHead,
     files: [{path: '.scratch/unique.txt', keeperPath, restorationPath, bytes: bytes.length, mode, sha256}]});
   reviewReceipt = sealOperatorReceipt({...reviewReceipt, authorizationRef: 'team3-bra-tgo-orphaned-slots', keeperManifestSha256: keeperManifest.sha256});
   const oldIdentity = process.env.CODEX_THREAD_ID;
@@ -690,7 +694,7 @@ test('audited operator release binds approval, independent review, keeper bytes 
   t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
 
   const result = manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
-    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
+    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: liveHead,
     reviewReceipt, keeperManifest});
   assert.equal(result.released, true);
   assert.equal(fs.existsSync(entry.path), false);
@@ -700,12 +704,13 @@ test('audited operator release binds approval, independent review, keeper bytes 
   const audit = JSON.parse(fs.readFileSync(result.auditReceipt, 'utf8'));
   assert.equal(audit.status, 'released');
   assert.equal(audit.worker, worker);
-  assert.equal(audit.head, head);
+  assert.equal(audit.head, liveHead);
+  assert.equal(execFileSync('git', ['-C', repo, 'rev-parse', result.preservedRef], {encoding: 'utf8'}).trim(), liveHead);
   assert.equal(audit.keepers[0].sha256, sha256);
   assert.equal(Object.hasOwn(audit, 'token'), false);
   assert.ok(!JSON.stringify(result).includes(entry.token));
   assert.throws(() => manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
-    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
+    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: liveHead,
     reviewReceipt, keeperManifest}), /already used/);
 });
 

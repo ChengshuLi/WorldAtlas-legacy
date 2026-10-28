@@ -811,7 +811,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     }
     const value = state();
     const entry = value.entries.find(item => item.worker === worker && item.slot === slot);
-    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch || entry.head !== expectedHead) {
+    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch
+      || !/^[a-f0-9]{40}$/.test(entry.head ?? '')) {
       throw Error('Exact existing ready slot changed; operator release refused');
     }
     if (process.env.CODEX_THREAD_ID !== operatorIdentity) throw Error('Operator identity changed during release');
@@ -836,6 +837,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       throw Error('Independent reviewer did not attest the exact keeper/restoration manifest');
     }
     const localGit = (...args) => execFileSync('git', ['-C', entry.path, ...args], {encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, env: noLazyFetch});
+    try { localGit('merge-base', '--is-ancestor', entry.head, expectedHead); }
+    catch { throw Error('Exact live HEAD is not a descendant of the registered slot start; operator release refused'); }
     if (localGit('rev-parse', 'HEAD').trim() !== expectedHead
       || localGit('symbolic-ref', '--quiet', 'HEAD').trim() !== `refs/heads/${expectedBranch}`
       || fs.realpathSync(localGit('rev-parse', '--show-toplevel').trim()) !== fs.realpathSync(entry.path)) {
