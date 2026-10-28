@@ -1,0 +1,159 @@
+{
+  "acquisition": {
+    "complete_scientific_closure": false,
+    "declarations": 28,
+    "declared_bytes": 28393704,
+    "fetch_batches": 0,
+    "fetch_ms": 0,
+    "fetched_bytes": 0,
+    "fetched_objects": 0,
+    "origin_metadata_bytes": 0,
+    "origin_metadata_fetches": 0,
+    "origin_metadata_imports": 0,
+    "origin_metadata_objects": 0,
+    "scope": "original-package-and-selected-native-observation",
+    "tree_metadata_ms": 0,
+    "unique_objects": 28
+  },
+  "consumed_inputs": {
+    "count": 45,
+    "whole_body_consumed": true
+  },
+  "data_commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+  "executing_code_commit": "93f96c2840e9296225086cbea27e8b473b46582d",
+  "execution": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/observe-selected-owners.mjs",
+      "--repo",
+      "/tmp/mhl-evidence-e4c8",
+      "--commit",
+      "0fc69997de05473dfbebd3f888657db85b752bd9",
+      "--package",
+      "gb-MHL-ADM1--repair-evaluation",
+      "--out",
+      "coordination/engineering/mhl-original-repair-evaluation-20261027/physical-preparation-002/owner-observation-current-0fc.json"
+    ],
+    "environment": [
+      "GIT_NO_LAZY_FETCH=1",
+      "GIT_NO_REPLACE_OBJECTS=1"
+    ],
+    "exit_code": 0,
+    "output": {
+      "bytes": 228962,
+      "path": "owner-observation-current-0fc.json",
+      "sha256": "67830ad9128dea47239a9450af3fa1b763459243cd0903d3220027ee4b4aa54c"
+    },
+    "status_file": {
+      "bytes": 2,
+      "path": "status.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "stderr": {
+      "bytes": 0,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 279,
+      "path": "stdout.json",
+      "sha256": "cb7fed77dbb87e0535442a06195c13d6e9d606b87d4520a83d2b1c619acab430"
+    }
+  },
+  "kind": "mhl1019-current-selected-owner-observation-receipt-v1",
+  "limits": [
+    "Exact complete frozen 1,019-key queue package only; no arbitrary subset.",
+    "No current physical land/water classification, source applicability, geometry overlay, repair acceptance, or publication approval asserted.",
+    "Current E is read directly; historical base/additive/overlap columns remain null, not reconstructed or zero.",
+    "The acquisition declares 28 exact objects / 28,393,704 bytes and fetched zero bytes/objects; complete_scientific_closure=false.",
+    "No source/native evidence was changed or replayed."
+  ],
+  "original_query": {
+    "count": 1019,
+    "exact_keyset_matches_74b9_observation": true,
+    "extra_vs_74b9": 0,
+    "missing_vs_74b9": 0,
+    "original_intervals_sha256": "cb7955ee827b914e36da60f00b94b2efdc6ab7834aa4a7e1da0f354b923cc10b",
+    "query_sha256": "d4efa615625ad4ec05e2d45eea7baf76bc573ff8e359fb9726cf5cac80ad44ef",
+    "unique_keys": 1019
+  },
+  "package_id": "gb-MHL-ADM1--repair-evaluation",
+  "result": {
+    "accepted_additive_owner": null,
+    "base_owner": null,
+    "effective_selected_owner_counts": {
+      "0": 1019
+    },
+    "existing_product_overlap": null,
+    "kind": "literal-selected-owner-observation-v2",
+    "owner_id_counts": {
+      "None": 1019
+    },
+    "scientific_qualification": false
+  },
+  "selected_inputs": {
+    "current_startup_index": {
+      "bytes": 49610,
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "d5261bddf199a789796bd79f9c67eebc2d9871539f5a4288c350de050f3a7957"
+    },
+    "native_manifest_sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba",
+    "row_member": {
+      "bytes": 317002,
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "549ce3b9e4305143702f4f5981e36e531333279e0c62b6ea6ff49d99f9619603",
+      "encoding": "byte-shuffle",
+      "kind": "rows",
+      "offset": 0,
+      "path": "ownership-vintages/4390193fdbb31e0f0d707f863735f368a8cd6482a8596a65038221f732a6d444/native-v1/ownership/rows-0.bin.gz",
+      "sha256": "4390193fdbb31e0f0d707f863735f368a8cd6482a8596a65038221f732a6d444",
+      "words": 524332
+    },
+    "run_members": [
+      {
+        "bytes": 3518011,
+        "decoded_bytes": 16777216,
+        "decoded_sha256": "652badb1dd1e4c183aa675fcc220942f4937deaba07d2c48e20789f2b568382d",
+        "encoding": "byte-shuffle",
+        "kind": "runs",
+        "offset": 37748736,
+        "path": "ownership-vintages/da4a1ad46e44b7232978bde3947c43b55a5cd5184d27b670f03947f848c1aa3c/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "da4a1ad46e44b7232978bde3947c43b55a5cd5184d27b670f03947f848c1aa3c",
+        "words": 4194304
+      },
+      {
+        "bytes": 3572647,
+        "decoded_bytes": 16777216,
+        "decoded_sha256": "d4bd680227ae5526c473258d49bca5d171d916f7476432f9645bba51a404b399",
+        "encoding": "byte-shuffle",
+        "kind": "runs",
+        "offset": 41943040,
+        "path": "ownership-vintages/51f39ca9ba6bbbb95625b107f953114ba97db336c4c3bd7108102f69bc124056/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "51f39ca9ba6bbbb95625b107f953114ba97db336c4c3bd7108102f69bc124056",
+        "words": 4194304
+      },
+      {
+        "bytes": 3620477,
+        "decoded_bytes": 16777216,
+        "decoded_sha256": "a3a0b952b509d9784376c6a81a04fa51914ed590f56ad96b1face7e90ecb2790",
+        "encoding": "byte-shuffle",
+        "kind": "runs",
+        "offset": 46137344,
+        "path": "ownership-vintages/48c79419b131913459854ee942872ef78e3df74be03860436aeb2c55e2605f1e/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "48c79419b131913459854ee942872ef78e3df74be03860436aeb2c55e2605f1e",
+        "words": 4194304
+      }
+    ],
+    "selector": {
+      "bytes": 2270,
+      "commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+      "git_blob_oid": "ccd48abf5ddad3c11309e6a94ffd3ff9c0a334d0",
+      "mode": "100644",
+      "path": "data/ownership-selection.json",
+      "sha256": "a309d1904f056b229a50939da964c162efcc4fc1f8f7c6e4f15af3701886b950",
+      "whole_body_consumed": true
+    }
+  },
+  "status": "completed literal selected-product observation; not source/physical qualification, repair acceptance, publication approval, or credit",
+  "version": 1
+}

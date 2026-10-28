@@ -1,0 +1,656 @@
+{
+  "base_commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+  "baseline": {
+    "compatibility_files": 30,
+    "owners": 49625,
+    "selection_change_evidence": {
+      "bytes": 1376,
+      "commit": "6cf478c7e6f67077c556c280b4ba58ad44ab5924",
+      "git_blob_oid": "a09162c06dc018323cea19d6a79da869b67fe425",
+      "mode": "100644",
+      "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-current-delta-001/authority-registry.json",
+      "sha256": "afd21f1e93a567674d15833d644fb2a11f0663e5c3a99e949ac8bf349ff45d2c"
+    },
+    "startup_files": 79
+  },
+  "body_transition": {
+    "generated_or_replaced": [
+      {
+        "bytes": 1042603,
+        "git_blob_oid": "9609442ad97e1229b4302fff719c5975cfe150b1",
+        "indexed_mode": "100644",
+        "path": "geography/effective-context-70ffd38b49ad074a783b40c1038bba1a61c785405d8ceb93bf9a1b203c19673a.json.gz",
+        "sha256": "70ffd38b49ad074a783b40c1038bba1a61c785405d8ceb93bf9a1b203c19673a",
+        "stage": 0
+      },
+      {
+        "bytes": 3484915,
+        "git_blob_oid": "010a39c7cab2d33a1120173b1d700cafa91fa345",
+        "indexed_mode": "100644",
+        "path": "ownership-vintages/069e76005d20cd28426f6f2f7b7bb79956d8695a9cec4ff6817a004df8d430ea/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "069e76005d20cd28426f6f2f7b7bb79956d8695a9cec4ff6817a004df8d430ea",
+        "stage": 0
+      },
+      {
+        "bytes": 3518254,
+        "git_blob_oid": "b4c0d8f17edc54847fd9fda487b12455aff7b9ee",
+        "indexed_mode": "100644",
+        "path": "ownership-vintages/26bd0c552967e162652e203d76f60e0aac878d5fd7d054ed192a615ec14aa046/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "26bd0c552967e162652e203d76f60e0aac878d5fd7d054ed192a615ec14aa046",
+        "stage": 0
+      },
+      {
+        "bytes": 3620447,
+        "git_blob_oid": "eeff8d18ca37d737018554525c6aa1b223f0233a",
+        "indexed_mode": "100644",
+        "path": "ownership-vintages/2c76f025874ed2db39e903e7caa1a075b86593d81b9c4841be02033f5a3f9791/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "2c76f025874ed2db39e903e7caa1a075b86593d81b9c4841be02033f5a3f9791",
+        "stage": 0
+      },
+      {
+        "bytes": 3573994,
+        "git_blob_oid": "5f7dc318226bdbead1cbfb15cc03f60a7822712f",
+        "indexed_mode": "100644",
+        "path": "ownership-vintages/69b7c4eedca51b8ac902046f15cb4240bfda6c5324a4188175d756317074ce74/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "69b7c4eedca51b8ac902046f15cb4240bfda6c5324a4188175d756317074ce74",
+        "stage": 0
+      },
+      {
+        "bytes": 3104120,
+        "git_blob_oid": "a225ae81f5f160f896e073c897f301f46860acaa",
+        "indexed_mode": "100644",
+        "path": "ownership-vintages/7a162b41c05610062fcf1b24328e2bc4ba00d5cae4211948f6b0c3c3cdc6bd63/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "7a162b41c05610062fcf1b24328e2bc4ba00d5cae4211948f6b0c3c3cdc6bd63",
+        "stage": 0
+      },
+      {
+        "bytes": 317044,
+        "git_blob_oid": "d2d60c8207a33c1eb67b17ee88dfacbe2e908bfe",
+        "indexed_mode": "100644",
+        "path": "ownership-vintages/8f1803c7c7475ff6353567d59f896b0e41c49f4c516cb0069ce8e10f79316a01/native-v1/ownership/rows-0.bin.gz",
+        "sha256": "8f1803c7c7475ff6353567d59f896b0e41c49f4c516cb0069ce8e10f79316a01",
+        "stage": 0
+      }
+    ],
+    "generated_or_replaced_count": 7,
+    "preserved_count": 72,
+    "preserved_git_tree_pins": [
+      {
+        "bytes": 892136,
+        "git_blob_oid": "33ca7c3b7f6b6e7761680333fcaaffb3d8b5df85",
+        "path": "geography/effective-context-0207afc58b89fc153818fb1995986006bf8792d2e0e7332de439e0e1b3a16af6.json.gz",
+        "sha256": "0207afc58b89fc153818fb1995986006bf8792d2e0e7332de439e0e1b3a16af6"
+      },
+      {
+        "bytes": 600755,
+        "git_blob_oid": "5139a3e52486f418c0e8268064287b7c2c44254d",
+        "path": "geography/effective-context-1773c7c1879a5e18c9fdbb7b660be5e6d3db334af4a653ecbcce52adc223ace1.json.gz",
+        "sha256": "1773c7c1879a5e18c9fdbb7b660be5e6d3db334af4a653ecbcce52adc223ace1"
+      },
+      {
+        "bytes": 387380,
+        "git_blob_oid": "fa2a80616b50eb9646df61634912b4595cf7229a",
+        "path": "geography/effective-context-22fd7ad81d2a4a3f2bc313d86c497cee061667ebb6754bd729fa887d8e63efa4.json.gz",
+        "sha256": "22fd7ad81d2a4a3f2bc313d86c497cee061667ebb6754bd729fa887d8e63efa4"
+      },
+      {
+        "bytes": 306782,
+        "git_blob_oid": "f2a69d45aab4b7a0a1aee1c441da92ba57870dcb",
+        "path": "geography/effective-context-3417bd2a38665f014fc7bdb09b20f79b16f70561ebd97179c7a924a8113fcd65.json.gz",
+        "sha256": "3417bd2a38665f014fc7bdb09b20f79b16f70561ebd97179c7a924a8113fcd65"
+      },
+      {
+        "bytes": 920384,
+        "git_blob_oid": "33c1bf8e71a31e4dc909f07b0ddd063635526c60",
+        "path": "geography/effective-context-3567be29061f77c68d35e954b508b0ddb7bf5d727108138d3aaed193c3c544f3.json.gz",
+        "sha256": "3567be29061f77c68d35e954b508b0ddb7bf5d727108138d3aaed193c3c544f3"
+      },
+      {
+        "bytes": 874246,
+        "git_blob_oid": "959998bd398856f4ffcc44d0068cadb4cf15cd71",
+        "path": "geography/effective-context-3e19b577fe92afee3f876850429f0606d857f6163204903dcd4c06559f1e4a30.json.gz",
+        "sha256": "3e19b577fe92afee3f876850429f0606d857f6163204903dcd4c06559f1e4a30"
+      },
+      {
+        "bytes": 260711,
+        "git_blob_oid": "449d1b9691c56af0785fcd37aeaeda3e46f5e866",
+        "path": "geography/effective-context-43fa5fbc711e1b0a805c4eb69e058d339bf61bccdab2a158f3b14a141ee84ee7.json.gz",
+        "sha256": "43fa5fbc711e1b0a805c4eb69e058d339bf61bccdab2a158f3b14a141ee84ee7"
+      },
+      {
+        "bytes": 443384,
+        "git_blob_oid": "f505a62eb6a90337e1581703349e1b922f413a43",
+        "path": "geography/effective-context-47f6dfcfc778c1583aed5fd1f4f868ccc8e168859613f02e771cae210634db1f.json.gz",
+        "sha256": "47f6dfcfc778c1583aed5fd1f4f868ccc8e168859613f02e771cae210634db1f"
+      },
+      {
+        "bytes": 549790,
+        "git_blob_oid": "e4d0715e8488a66e7bdcaccb3a1aa077f447bbf8",
+        "path": "geography/effective-context-6ccf56c72ba3f9b8d1a0a6146892355ec21ce3d6f46c2a9bc664db7dbf6727fd.json.gz",
+        "sha256": "6ccf56c72ba3f9b8d1a0a6146892355ec21ce3d6f46c2a9bc664db7dbf6727fd"
+      },
+      {
+        "bytes": 38833,
+        "git_blob_oid": "f396698286d7e5ec45d831cad98b4fccbc99d343",
+        "path": "geography/effective-context-7095f930a97c561505adebecbebc5a21604c71aaffddba9a0e0a4bd9e8a4c9f9.json.gz",
+        "sha256": "7095f930a97c561505adebecbebc5a21604c71aaffddba9a0e0a4bd9e8a4c9f9"
+      },
+      {
+        "bytes": 539011,
+        "git_blob_oid": "d07181e66f53bb74f830b8047d366732f22d026a",
+        "path": "geography/effective-context-755709f4d0c4d3e598f87b524f8482a0fa59e375c9ceb57cd77e8d18773c52f9.json.gz",
+        "sha256": "755709f4d0c4d3e598f87b524f8482a0fa59e375c9ceb57cd77e8d18773c52f9"
+      },
+      {
+        "bytes": 404667,
+        "git_blob_oid": "06f8bedd2e8e13d30a56d7c74344ef881e621ee7",
+        "path": "geography/effective-context-792ebc29e3f6bfffc9a3d118ada5ff4b6d99b94f96f1191024ea435b9a236a98.json.gz",
+        "sha256": "792ebc29e3f6bfffc9a3d118ada5ff4b6d99b94f96f1191024ea435b9a236a98"
+      },
+      {
+        "bytes": 300214,
+        "git_blob_oid": "3f66d20a6898cb9a9f9a9e15d53633e930558da1",
+        "path": "geography/effective-context-7d93d01c64e3056e5af159ac99cdb590eefed3009a28bb67d83b7af9ef885b19.json.gz",
+        "sha256": "7d93d01c64e3056e5af159ac99cdb590eefed3009a28bb67d83b7af9ef885b19"
+      },
+      {
+        "bytes": 92272,
+        "git_blob_oid": "32237acd3454e4ed6b7c73db165df36ce2b5eb13",
+        "path": "geography/effective-context-91df629dfdf1597fd4f79d9e039fc5b403d287c7a882b9f5f9687b0f444aba56.json.gz",
+        "sha256": "91df629dfdf1597fd4f79d9e039fc5b403d287c7a882b9f5f9687b0f444aba56"
+      },
+      {
+        "bytes": 357457,
+        "git_blob_oid": "f43b288cb3fb3c723fb68f5fa854f07aa21c5c34",
+        "path": "geography/effective-context-932837f22e2a43f81147c3a7ef555090d44b157a1a59d3f1b50d05a79b86ae4a.json.gz",
+        "sha256": "932837f22e2a43f81147c3a7ef555090d44b157a1a59d3f1b50d05a79b86ae4a"
+      },
+      {
+        "bytes": 308434,
+        "git_blob_oid": "c9109432add5162b594e56206b81ca5b368c3d82",
+        "path": "geography/effective-context-986945464d141913ce75c4da0751968ed18b9cf6da2561ce0e8a67eb927a88c7.json.gz",
+        "sha256": "986945464d141913ce75c4da0751968ed18b9cf6da2561ce0e8a67eb927a88c7"
+      },
+      {
+        "bytes": 193463,
+        "git_blob_oid": "e021e6a4a78a20356e49a00082f91a6b2e8e75a3",
+        "path": "geography/effective-context-99ab45789e5ddfb2283d799be117ad5d977b200ac7c28846a32ea0502e2a63ab.json.gz",
+        "sha256": "99ab45789e5ddfb2283d799be117ad5d977b200ac7c28846a32ea0502e2a63ab"
+      },
+      {
+        "bytes": 186503,
+        "git_blob_oid": "982f7cbc139e44acfa1cdf72ab8bf9285c2f6f76",
+        "path": "geography/effective-context-9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261.json.gz",
+        "sha256": "9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261"
+      },
+      {
+        "bytes": 241774,
+        "git_blob_oid": "9e7ecd61945c4530038639e78c4a70f759735015",
+        "path": "geography/effective-context-a3e17eb7a22e30fc62d3ee8f7a37995194ab654191dea02a15ef6e9b2225715d.json.gz",
+        "sha256": "a3e17eb7a22e30fc62d3ee8f7a37995194ab654191dea02a15ef6e9b2225715d"
+      },
+      {
+        "bytes": 504348,
+        "git_blob_oid": "7d38c1d07c44c7c2961705192b9c4913427d44fd",
+        "path": "geography/effective-context-a8abbb83d576408ba122518f9c29530b91640294b7ad9162419602b8b893b7d5.json.gz",
+        "sha256": "a8abbb83d576408ba122518f9c29530b91640294b7ad9162419602b8b893b7d5"
+      },
+      {
+        "bytes": 1489269,
+        "git_blob_oid": "7dc2ad6dfe90003074eb8d933763456160dacfdf",
+        "path": "geography/effective-context-b29c0702b8d7d6fc34359e2f31371421d689de6908da5ff3a64e308e821ddbf3.json.gz",
+        "sha256": "b29c0702b8d7d6fc34359e2f31371421d689de6908da5ff3a64e308e821ddbf3"
+      },
+      {
+        "bytes": 748360,
+        "git_blob_oid": "b189c454b470723adce055223b40be44b4f65934",
+        "path": "geography/effective-context-b2e49d43eee2b73afb8b875c5d21e395d04ac204aa715e5061579822757b52ba.json.gz",
+        "sha256": "b2e49d43eee2b73afb8b875c5d21e395d04ac204aa715e5061579822757b52ba"
+      },
+      {
+        "bytes": 102904,
+        "git_blob_oid": "483f71a405e067b72ed6c45a29bc54fb91687495",
+        "path": "geography/effective-context-b86a633badef4692435866cd021c9f1c3027b843b22c5f53af36114200bba982.json.gz",
+        "sha256": "b86a633badef4692435866cd021c9f1c3027b843b22c5f53af36114200bba982"
+      },
+      {
+        "bytes": 311961,
+        "git_blob_oid": "6819ff1f186a20b7d024fa555d1bea6250a943e4",
+        "path": "geography/effective-context-c56d8012b5a0a132098c5fe14723139db9b7ca11256aa58431ad50e861aaface.json.gz",
+        "sha256": "c56d8012b5a0a132098c5fe14723139db9b7ca11256aa58431ad50e861aaface"
+      },
+      {
+        "bytes": 351285,
+        "git_blob_oid": "8974931247a6514e5a95550fa985583c911adfaa",
+        "path": "geography/effective-context-c77ce6738c025ef6ec7b865bdf54c930c85807cbf25a0808d9a27c58c006d090.json.gz",
+        "sha256": "c77ce6738c025ef6ec7b865bdf54c930c85807cbf25a0808d9a27c58c006d090"
+      },
+      {
+        "bytes": 819365,
+        "git_blob_oid": "d0575cbd2974a7f61830be1adec6ff03ddccb785",
+        "path": "geography/effective-context-c7c720ddda99c912b542dfff9e1ab014680a7f54441c874ae5ed0871ea73465d.json.gz",
+        "sha256": "c7c720ddda99c912b542dfff9e1ab014680a7f54441c874ae5ed0871ea73465d"
+      },
+      {
+        "bytes": 962516,
+        "git_blob_oid": "12b34bb3916045b4d72f531ea040a1bf89d1efa4",
+        "path": "geography/effective-context-d108b1e517b8a3cdacb3f3c248818a51e7ffea4f58e208949952dea6b07eb030.json.gz",
+        "sha256": "d108b1e517b8a3cdacb3f3c248818a51e7ffea4f58e208949952dea6b07eb030"
+      },
+      {
+        "bytes": 140327,
+        "git_blob_oid": "daff6760ddae386ffef18167cfdcd595c43cf36a",
+        "path": "geography/effective-context-d1d53de4e5f6dd2cff0e7222527549d2b33e0f9410960fdfc5ee782f989fdfbf.json.gz",
+        "sha256": "d1d53de4e5f6dd2cff0e7222527549d2b33e0f9410960fdfc5ee782f989fdfbf"
+      },
+      {
+        "bytes": 387805,
+        "git_blob_oid": "e382f03cf0c093b5a9ed756b06e0e6aaa88c24ec",
+        "path": "geography/effective-context-d1eb7e2827dd9f0ced28ab59d3aab8360e59ae18cd9847239bb92dbd09391135.json.gz",
+        "sha256": "d1eb7e2827dd9f0ced28ab59d3aab8360e59ae18cd9847239bb92dbd09391135"
+      },
+      {
+        "bytes": 325052,
+        "git_blob_oid": "ed3cbcb200789ca8bdf307875fa8eae5f8d873e9",
+        "path": "geography/effective-context-dbdb4c01d1e5d27eef55cf617688e67fc6106d89f160b658dbe4759deeefecde.json.gz",
+        "sha256": "dbdb4c01d1e5d27eef55cf617688e67fc6106d89f160b658dbe4759deeefecde"
+      },
+      {
+        "bytes": 92791,
+        "git_blob_oid": "fe1ddafa76347c8b97d503ee0c4487c4daf32bd1",
+        "path": "geography/effective-context-dfe8783d7fae5c04edaf67b9b8159b12d4f2a1c6e1f936686af2e82f68925153.json.gz",
+        "sha256": "dfe8783d7fae5c04edaf67b9b8159b12d4f2a1c6e1f936686af2e82f68925153"
+      },
+      {
+        "bytes": 158308,
+        "git_blob_oid": "4fb39992bf044bf5bcc8fc1c0ba7190c98c73e4d",
+        "path": "geography/effective-context-f8803deea534c243cbcaee14336672883cb7e94d9f391325097d3c13cf7d3ee5.json.gz",
+        "sha256": "f8803deea534c243cbcaee14336672883cb7e94d9f391325097d3c13cf7d3ee5"
+      },
+      {
+        "bytes": 450587,
+        "git_blob_oid": "6ec32451c0c7e0333309e3ac29b9deae3ac9f857",
+        "path": "geography/effective-context-fb05e8a141157fffa68a2432beae630f82e422ca2fbb998f2886fb69a30c6a82.json.gz",
+        "sha256": "fb05e8a141157fffa68a2432beae630f82e422ca2fbb998f2886fb69a30c6a82"
+      },
+      {
+        "bytes": 1851757,
+        "git_blob_oid": "de6905e162dc031b1b93248fae91190c39c4ad53",
+        "path": "native-v1/native-row-latitudes.f64le.gz",
+        "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+      },
+      {
+        "bytes": 306620,
+        "git_blob_oid": "5d8aa5e0341ae0a24f3553d67e1b8581d36c7d1b",
+        "path": "native-v1/ownership/rows-0.bin.gz",
+        "sha256": "89ed3564db641f992746bf4f6f01c1eed89cb470520734ac1b85ee95e9a70ba0"
+      },
+      {
+        "bytes": 3854101,
+        "git_blob_oid": "bd4b48c5888c7749a6db1e1c1437bd8309ab81b1",
+        "path": "native-v1/ownership/startup-runs-0.bin.gz",
+        "sha256": "3d551738a3454d2028e1d9adc352b7446d7c0f25c8d42044704cf1efb6f64b6b"
+      },
+      {
+        "bytes": 3478667,
+        "git_blob_oid": "d986eb10382f668e5ff9cd9cb1c10b0c511023cc",
+        "path": "native-v1/ownership/startup-runs-12582912.bin.gz",
+        "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+      },
+      {
+        "bytes": 3289324,
+        "git_blob_oid": "b9b90e91f69e56585ff49bc46dbfcc0035116d75",
+        "path": "native-v1/ownership/startup-runs-16777216.bin.gz",
+        "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+      },
+      {
+        "bytes": 3146696,
+        "git_blob_oid": "7595351d14cad31f792b184c4dfffe1224b43e64",
+        "path": "native-v1/ownership/startup-runs-20971520.bin.gz",
+        "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+      },
+      {
+        "bytes": 3272873,
+        "git_blob_oid": "1c750fc517ab808f25479c50c2ac16aa0c2c3ae6",
+        "path": "native-v1/ownership/startup-runs-25165824.bin.gz",
+        "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+      },
+      {
+        "bytes": 3296575,
+        "git_blob_oid": "0eeec052bfcc759bc6fd564e93bdca953b29474b",
+        "path": "native-v1/ownership/startup-runs-29360128.bin.gz",
+        "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+      },
+      {
+        "bytes": 3521891,
+        "git_blob_oid": "0c11ab143e831013f045f768b4e33f9c0d1d09bd",
+        "path": "native-v1/ownership/startup-runs-33554432.bin.gz",
+        "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+      },
+      {
+        "bytes": 3497645,
+        "git_blob_oid": "11c065922281b70564febafadf8121215b095661",
+        "path": "native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+      },
+      {
+        "bytes": 3428397,
+        "git_blob_oid": "4cd3369d268f958db6cba804cc987931aeeaad14",
+        "path": "native-v1/ownership/startup-runs-4194304.bin.gz",
+        "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+      },
+      {
+        "bytes": 3534601,
+        "git_blob_oid": "c62ad1dd1fecefa59753aa86c16af2dc08690f71",
+        "path": "native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+      },
+      {
+        "bytes": 3556931,
+        "git_blob_oid": "2363585a7d5c3a533a09923f089f5bd37fe55fc7",
+        "path": "native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+      },
+      {
+        "bytes": 3397952,
+        "git_blob_oid": "880bc9137a47daf314a70ef03ffcd30d2ac80e9f",
+        "path": "native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+      },
+      {
+        "bytes": 2460609,
+        "git_blob_oid": "61e7d50e1d74c22f4f1e4adf75044ff9fd60ea72",
+        "path": "native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+      },
+      {
+        "bytes": 3423683,
+        "git_blob_oid": "19622b43c11bdd3e328dca4687b0e5fc376508cf",
+        "path": "native-v1/ownership/startup-runs-8388608.bin.gz",
+        "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+      },
+      {
+        "bytes": 3510331,
+        "git_blob_oid": "f342abcd842903b256944077dd1d9a707195efb9",
+        "path": "ownership-vintages/08ef9b61e0c2e7f65c6d84078d28265a190e902ad3d0a5e27a88b5494244d15d/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "sha256": "08ef9b61e0c2e7f65c6d84078d28265a190e902ad3d0a5e27a88b5494244d15d"
+      },
+      {
+        "bytes": 3939024,
+        "git_blob_oid": "815cb7645755284e79d2fb135b6136924060ca68",
+        "path": "ownership-vintages/2387e91ae885b6c57d38b1d688703f5497ce7a56a992867cb01049dca9c82cde/native-v1/ownership/startup-runs-0.bin.gz",
+        "sha256": "2387e91ae885b6c57d38b1d688703f5497ce7a56a992867cb01049dca9c82cde"
+      },
+      {
+        "bytes": 3292368,
+        "git_blob_oid": "1a671a62caadc3c45092c660c648883adde78f4f",
+        "path": "ownership-vintages/23ea0815380d03608a16bd96b0f1bce222204b5c9ef5d571d423d3ea399c389e/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "sha256": "23ea0815380d03608a16bd96b0f1bce222204b5c9ef5d571d423d3ea399c389e"
+      },
+      {
+        "bytes": 3472031,
+        "git_blob_oid": "8b1f6bfcede325e3989ac06c7a7e4698933adfdb",
+        "path": "ownership-vintages/4a5db432baa6eaef8bdfff924e07933deb43e9f34ff69751c14cf2d8312760f5/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "sha256": "4a5db432baa6eaef8bdfff924e07933deb43e9f34ff69751c14cf2d8312760f5"
+      },
+      {
+        "bytes": 3542973,
+        "git_blob_oid": "b5709101e6660437d92598ff1bbed3e3dc682508",
+        "path": "ownership-vintages/4aa982c22cb908c6ee97a1ec82d570c6e820e8e7fca6b24a9d1ef629fa8b6201/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "sha256": "4aa982c22cb908c6ee97a1ec82d570c6e820e8e7fca6b24a9d1ef629fa8b6201"
+      },
+      {
+        "bytes": 3194163,
+        "git_blob_oid": "c80b7a722980793b9269f3477869c212d58bc578",
+        "path": "ownership-vintages/a0ac8b64e9f2d7b66607ce7d8b5f1e1d03793ecd106ba072213e7d386a5a75dd/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "sha256": "a0ac8b64e9f2d7b66607ce7d8b5f1e1d03793ecd106ba072213e7d386a5a75dd"
+      },
+      {
+        "bytes": 3504947,
+        "git_blob_oid": "72e3b4e12eed3f49c3c85024dce5f437056a191b",
+        "path": "ownership-vintages/a6ee95272631dec611334c060be26a8283e570d89cefa7793cc4fe329dfe0242/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "sha256": "a6ee95272631dec611334c060be26a8283e570d89cefa7793cc4fe329dfe0242"
+      },
+      {
+        "bytes": 3346259,
+        "git_blob_oid": "def1676ab2a8d900e38365877713a1632aa31469",
+        "path": "ownership-vintages/cd7deb46de558174037349bf94245ea9c12d8b320bf1a4f1954d678f749fcf84/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "sha256": "cd7deb46de558174037349bf94245ea9c12d8b320bf1a4f1954d678f749fcf84"
+      },
+      {
+        "bytes": 3854096,
+        "git_blob_oid": "45946db81b65ae3709fa9c51c84007ba42738853",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+        "sha256": "5e73bd6ee306f3be021c7f89bf336c590ae3c02021df1c436d22088ed4284171"
+      },
+      {
+        "bytes": 3478667,
+        "git_blob_oid": "d986eb10382f668e5ff9cd9cb1c10b0c511023cc",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+      },
+      {
+        "bytes": 3289324,
+        "git_blob_oid": "b9b90e91f69e56585ff49bc46dbfcc0035116d75",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+      },
+      {
+        "bytes": 3146696,
+        "git_blob_oid": "7595351d14cad31f792b184c4dfffe1224b43e64",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+      },
+      {
+        "bytes": 3272873,
+        "git_blob_oid": "1c750fc517ab808f25479c50c2ac16aa0c2c3ae6",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+      },
+      {
+        "bytes": 3296575,
+        "git_blob_oid": "0eeec052bfcc759bc6fd564e93bdca953b29474b",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+      },
+      {
+        "bytes": 3521891,
+        "git_blob_oid": "0c11ab143e831013f045f768b4e33f9c0d1d09bd",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+      },
+      {
+        "bytes": 3497645,
+        "git_blob_oid": "11c065922281b70564febafadf8121215b095661",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+      },
+      {
+        "bytes": 3428397,
+        "git_blob_oid": "4cd3369d268f958db6cba804cc987931aeeaad14",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+      },
+      {
+        "bytes": 3534601,
+        "git_blob_oid": "c62ad1dd1fecefa59753aa86c16af2dc08690f71",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+      },
+      {
+        "bytes": 3556931,
+        "git_blob_oid": "2363585a7d5c3a533a09923f089f5bd37fe55fc7",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+      },
+      {
+        "bytes": 3397952,
+        "git_blob_oid": "880bc9137a47daf314a70ef03ffcd30d2ac80e9f",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+      },
+      {
+        "bytes": 2460609,
+        "git_blob_oid": "61e7d50e1d74c22f4f1e4adf75044ff9fd60ea72",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+      },
+      {
+        "bytes": 3423683,
+        "git_blob_oid": "19622b43c11bdd3e328dca4687b0e5fc376508cf",
+        "path": "ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+      },
+      {
+        "bytes": 3274653,
+        "git_blob_oid": "5fb901989ce9fab291c3dee6fb4432460eb491a5",
+        "path": "ownership-vintages/dcf32d024b6325278934183a14bc0ac5c934209fd4ac81bc8590e21c52c2305e/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "sha256": "dcf32d024b6325278934183a14bc0ac5c934209fd4ac81bc8590e21c52c2305e"
+      }
+    ],
+    "retired": [
+      {
+        "bytes": 1040599,
+        "git_blob_oid": "5de832b18b2c2194f6c8e53a2ac4e7aa6b06c3a7",
+        "path": "geography/effective-context-5e3cfecfca7397e025342dfc8458a1a4c530e8c199fa638a0c5f7fda5e5050f4.json.gz",
+        "sha256": "5e3cfecfca7397e025342dfc8458a1a4c530e8c199fa638a0c5f7fda5e5050f4"
+      },
+      {
+        "bytes": 3573980,
+        "git_blob_oid": "16e2cac63412683e613195087f2a3f7df77b73d5",
+        "path": "ownership-vintages/161771c6c8f245c1dfdc8c12aa91ea6e16f0118d36f6355386c0defc67382cf6/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "161771c6c8f245c1dfdc8c12aa91ea6e16f0118d36f6355386c0defc67382cf6"
+      },
+      {
+        "bytes": 3484912,
+        "git_blob_oid": "24ed7d69c482e8c4c7ae0c1bb63de29bf4820ff7",
+        "path": "ownership-vintages/7e8568841e528064d8cc7ade0185c2ed3989e30ff9627b00e97c26bc2bcb1147/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "7e8568841e528064d8cc7ade0185c2ed3989e30ff9627b00e97c26bc2bcb1147"
+      },
+      {
+        "bytes": 3104045,
+        "git_blob_oid": "c1c31cbf29dac032776b35266c694301b23ccfc4",
+        "path": "ownership-vintages/a58752dd5ec3839530badce29d0d1b8027ce790f3ef13fa2ee688ea84151c7f5/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "a58752dd5ec3839530badce29d0d1b8027ce790f3ef13fa2ee688ea84151c7f5"
+      },
+      {
+        "bytes": 3620516,
+        "git_blob_oid": "79297bd62f311b75f889cfa07efd0fea3b7c3524",
+        "path": "ownership-vintages/ab8555aa416015910011cab5edcdf606d43221daff34c4dd6a190598dc178487/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "ab8555aa416015910011cab5edcdf606d43221daff34c4dd6a190598dc178487"
+      },
+      {
+        "bytes": 316993,
+        "git_blob_oid": "c70722f491a61ad8af1b16712091a4f36f22cb69",
+        "path": "ownership-vintages/de21ef289758bda55c37b6ff9d3e5866c05271bc64028519cbd1e289e9a976b3/native-v1/ownership/rows-0.bin.gz",
+        "sha256": "de21ef289758bda55c37b6ff9d3e5866c05271bc64028519cbd1e289e9a976b3"
+      },
+      {
+        "bytes": 3518016,
+        "git_blob_oid": "61edda1afa33fbb7f956a02707ceb7c43cb91583",
+        "path": "ownership-vintages/fe824fa1c6844b63c1ba3eda1eec39b72075061cf261e087bba29bc756e6b6e1/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "fe824fa1c6844b63c1ba3eda1eec39b72075061cf261e087bba29bc756e6b6e1"
+      }
+    ],
+    "retired_count": 7,
+    "same_path_changed_count": 0
+  },
+  "branch_preimage_commit": "808425b06c5236d282046e1b8cc0936dd0322a2c",
+  "candidate": {
+    "compatibility_files": 30,
+    "new_delta_registry_entries": 1,
+    "owners": 49625,
+    "selected_bank": {
+      "footprints_sha256": "d70aa2cdeaa03c8ff60082e919276905a67fb2e50c8d4e59ece1cff1ca888d66",
+      "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+      "id": "geography:final:9aa2590e5531f7fd2f49660b5afcc0993853a28c84f106d92ef7c0122c35fdd0"
+    },
+    "selector_change_evidence": {
+      "bytes": 1409,
+      "commit": "808425b06c5236d282046e1b8cc0936dd0322a2c",
+      "git_blob_oid": "35fc5dc64e3b8a519e46d7051efe209f64ba3db0",
+      "mode": "100644",
+      "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-8eff-001/authority-registry.json",
+      "sha256": "bda7dcfeb9555018dfb610086282a85065ba7c2afd7c1a3ea6037ed18f5f6512"
+    },
+    "startup_files": 79
+  },
+  "candidate_only": true,
+  "config": {
+    "bytes": 714,
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-8eff.json",
+    "sha256": "7c7f8e4e7c80752702fd93b3e640c0000396fad9590e128dbb696da7788bae87"
+  },
+  "helper": {
+    "path": "scripts/prepare-delivery-handoff.mjs",
+    "sha256": "2b76a852b93ea76a3ab64bc0634bffae030ba0ac3b84fba70598c3e466b1553d"
+  },
+  "kind": "atg883-current-bank-finalizer-output-closure-v1",
+  "limitations": [
+    "candidate only",
+    "no full-bank conservation/comparison, production build, emitted controls, hosted run, acceptance, credit, or production publication claimed"
+  ],
+  "preparation": {
+    "binding": {
+      "config_sha256": "7c7f8e4e7c80752702fd93b3e640c0000396fad9590e128dbb696da7788bae87",
+      "package_inputs": {
+        "bytes": 38421,
+        "commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+        "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "mode": "100644",
+        "path": ".github/package-inputs.json",
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "phase": "finalize",
+      "selector": {
+        "bytes": 2310,
+        "commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+        "git_blob_oid": "b2fbe42de988f703cf75e89fcf2f1ed87525c676",
+        "mode": "100644",
+        "path": "data/ownership-selection.json",
+        "sha256": "13a2c481addc605e96bb8c67df889f0d14d07ab582796e115d4f93ccd76041ee"
+      }
+    },
+    "bytes": 1156,
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2301,
+        "sha256": "cfdc821a7516da3c0e558449006de9578274810afcc795cf6d4484af10076606"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "903483a97e57385ec515a555a85e6653e78e3221b36c881984bd622034bfcccc"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "2fd976d7be83b1f57f02f20844752146f9650f87848b7527fc5d349f6b7860be"
+      }
+    },
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-8eff-001/preparation.json",
+    "sha256": "c1aeb9c6f04f79b7e4f3b14f6b30bf13cd30b55ffd069d70ac81d326882dad55"
+  },
+  "staged_generated": [
+    "data/canonical-grid/current-startup/geography/effective-context-70ffd38b49ad074a783b40c1038bba1a61c785405d8ceb93bf9a1b203c19673a.json.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/069e76005d20cd28426f6f2f7b7bb79956d8695a9cec4ff6817a004df8d430ea/native-v1/ownership/startup-runs-50331648.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/26bd0c552967e162652e203d76f60e0aac878d5fd7d054ed192a615ec14aa046/native-v1/ownership/startup-runs-37748736.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/2c76f025874ed2db39e903e7caa1a075b86593d81b9c4841be02033f5a3f9791/native-v1/ownership/startup-runs-46137344.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/69b7c4eedca51b8ac902046f15cb4240bfda6c5324a4188175d756317074ce74/native-v1/ownership/startup-runs-41943040.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/7a162b41c05610062fcf1b24328e2bc4ba00d5cae4211948f6b0c3c3cdc6bd63/native-v1/ownership/startup-runs-54525952.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/8f1803c7c7475ff6353567d59f896b0e41c49f4c516cb0069ce8e10f79316a01/native-v1/ownership/rows-0.bin.gz"
+  ],
+  "staged_output_index_identity_verified": true,
+  "staged_retirements": [
+    "data/canonical-grid/current-startup/geography/effective-context-5e3cfecfca7397e025342dfc8458a1a4c530e8c199fa638a0c5f7fda5e5050f4.json.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/161771c6c8f245c1dfdc8c12aa91ea6e16f0118d36f6355386c0defc67382cf6/native-v1/ownership/startup-runs-41943040.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/7e8568841e528064d8cc7ade0185c2ed3989e30ff9627b00e97c26bc2bcb1147/native-v1/ownership/startup-runs-50331648.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/a58752dd5ec3839530badce29d0d1b8027ce790f3ef13fa2ee688ea84151c7f5/native-v1/ownership/startup-runs-54525952.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/ab8555aa416015910011cab5edcdf606d43221daff34c4dd6a190598dc178487/native-v1/ownership/startup-runs-46137344.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/de21ef289758bda55c37b6ff9d3e5866c05271bc64028519cbd1e289e9a976b3/native-v1/ownership/rows-0.bin.gz",
+    "data/canonical-grid/current-startup/ownership-vintages/fe824fa1c6844b63c1ba3eda1eec39b72075061cf261e087bba29bc756e6b6e1/native-v1/ownership/startup-runs-37748736.bin.gz"
+  ],
+  "version": 1
+}

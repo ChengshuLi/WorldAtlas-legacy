@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "kind": "mhl1019-pre-finalization-preflight-v1",
+  "status": "read-only baseline binding and proposed new-delta composition only; no final-bank finalizer run and no selection/output mutation",
+  "accepted_baseline": {
+    "commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+    "owner_observation": {
+      "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/physical-preparation-002/owner-observation.json",
+      "bytes": 228962,
+      "sha256": "8571fc4c2bc7a3e65445300a69d7c41e1a373fb50394892ebb71ccced73c4c43",
+      "observed_data_commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
+      "query_count": 1019,
+      "query_sha256": "d4efa615625ad4ec05e2d45eea7baf76bc573ff8e359fb9726cf5cac80ad44ef",
+      "final_bank_index_pin": {
+        "bytes": 49610,
+        "path": "data/canonical-grid/current-startup/index.json",
+        "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+      },
+      "selector_pin": {
+        "bytes": 2291,
+        "commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
+        "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+        "mode": "100644",
+        "path": "data/ownership-selection.json",
+        "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd",
+        "whole_body_consumed": true
+      },
+      "effective_selected_owner_counts": {
+        "0_unassigned": 1019
+      },
+      "base_owner_null_count": 1019,
+      "accepted_additive_owner_null_count": 1019
+    },
+    "bank_inputs": [
+      {
+        "path": "data/ownership-selection.json",
+        "before": {
+          "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+          "bytes": 2291,
+          "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+        },
+        "accepted": {
+          "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+          "bytes": 2291,
+          "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+        },
+        "byte_identity_equal": true
+      },
+      {
+        "path": ".github/package-inputs.json",
+        "before": {
+          "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+          "bytes": 38421,
+          "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+        },
+        "accepted": {
+          "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+          "bytes": 38421,
+          "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+        },
+        "byte_identity_equal": true
+      },
+      {
+        "path": "data/canonical-grid/current-startup/index.json",
+        "before": {
+          "git_blob_oid": "ff7df3bb02504e9a52de1bffe0f1afe44ea7a268",
+          "bytes": 49610,
+          "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+        },
+        "accepted": {
+          "git_blob_oid": "ff7df3bb02504e9a52de1bffe0f1afe44ea7a268",
+          "bytes": 49610,
+          "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+        },
+        "byte_identity_equal": true
+      },
+      {
+        "path": "data/world-index.json",
+        "before": {
+          "git_blob_oid": "d4ca1f07f7f504484461007919f90af5c5732b61",
+          "bytes": 944,
+          "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+        },
+        "accepted": {
+          "git_blob_oid": "d4ca1f07f7f504484461007919f90af5c5732b61",
+          "bytes": 944,
+          "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+        },
+        "byte_identity_equal": true
+      },
+      {
+        "path": "data/semantic-report.json",
+        "before": {
+          "git_blob_oid": "db3e1ec83d764bc8183caa4779a94b3ad1db0456",
+          "bytes": 6091596,
+          "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+        },
+        "accepted": {
+          "git_blob_oid": "db3e1ec83d764bc8183caa4779a94b3ad1db0456",
+          "bytes": 6091596,
+          "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+        },
+        "byte_identity_equal": true
+      },
+      {
+        "path": "data/geography/part-15.json",
+        "before": {
+          "git_blob_oid": "4ef51307797f81b8cf7a647495f037a089f8b368",
+          "bytes": 5180426,
+          "sha256": "6f763059820d14a4eab78173a756a8869821dd810e94f77c20eb5510c6cfb1df"
+        },
+        "accepted": {
+          "git_blob_oid": "4ef51307797f81b8cf7a647495f037a089f8b368",
+          "bytes": 5180426,
+          "sha256": "6f763059820d14a4eab78173a756a8869821dd810e94f77c20eb5510c6cfb1df"
+        },
+        "byte_identity_equal": true
+      }
+    ],
+    "latest_accepted_startup_preimage": {
+      "index": {
+        "commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+        "path": "data/canonical-grid/current-startup/index.json",
+        "mode": "100644",
+        "git_blob_oid": "ff7df3bb02504e9a52de1bffe0f1afe44ea7a268",
+        "bytes": 49610,
+        "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+      },
+      "version": 3,
+      "files": 79,
+      "compatibility_files": 30,
+      "compatibility_overlap_count": 30,
+      "tree_entries": 80,
+      "indexed_member_missing_count": 0,
+      "unindexed_extra_count": 0,
+      "native_manifest_sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba"
+    }
+  },
+  "existing_accepted_delta": {
+    "change_evidence": {
+      "bytes": 1429,
+      "commit": "38ae840df9231c5bde5745c9dcf83439b4c01523",
+      "git_blob_oid": "c8e940930630e921a6c28ae40356f68e85263537",
+      "mode": "100644",
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/compose-current-a033-territorial-001/authority-registry.json",
+      "sha256": "314bdfe819277241c30ff89420f432def026044409573b1cb182221aaec98dfa"
+    },
+    "handling": "already embodied in accepted current E; do not reapply or recount it"
+  },
+  "mhl_new_delta_composition": {
+    "config_path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-mhl-delta-253b-config.json",
+    "config_bytes": 2077,
+    "config_sha256": "6866cee93929990959500a7cb98a2192cf2d91c4456882c1e56e77fcfe1c326e",
+    "config_binding": {
+      "config_sha256": "6866cee93929990959500a7cb98a2192cf2d91c4456882c1e56e77fcfe1c326e",
+      "phase": "compose"
+    },
+    "output_path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-current-delta-001/authority-registry.json",
+    "output_bytes": 1376,
+    "output_sha256": "afd21f1e93a567674d15833d644fb2a11f0663e5c3a99e949ac8bf349ff45d2c",
+    "output_prep_path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-current-delta-001/preparation.json",
+    "output_prep_sha256": "d4751e04b00b14f1d97692f6596793aa84cb95b3e1dba3edc4c9d9d70615d37c",
+    "registry_entries": 1,
+    "registry_only_new_mhl_authority": true,
+    "authority_sha256": "10fd18e32dc27d93305bb8c84ecc346f6dfff2dc9a760bbb68d3ad3d27ac3b33",
+    "constructor_cells": 1019,
+    "constructor_targets": 18
+  },
+  "next_inputs": {
+    "selector": {
+      "commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+      "path": "data/ownership-selection.json",
+      "mode": "100644",
+      "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+      "bytes": 2291,
+      "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+    },
+    "package_inputs": {
+      "commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+      "path": ".github/package-inputs.json",
+      "mode": "100644",
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "new_change_evidence": "The new registry must be committed to an immutable branch before a finalization config can pin it; its commit is not yet assigned.",
+    "change_evidence": {
+      "commit": "6cf478c7e6f67077c556c280b4ba58ad44ab5924",
+      "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-current-delta-001/authority-registry.json",
+      "mode": "100644",
+      "git_blob_oid": "a09162c06dc018323cea19d6a79da869b67fe425",
+      "bytes": 1376,
+      "sha256": "afd21f1e93a567674d15833d644fb2a11f0663e5c3a99e949ac8bf349ff45d2c"
+    },
+    "finalizer_config_template": {
+      "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalize-config-253b-template.json",
+      "bytes": 1098,
+      "sha256": "2d7ba8ce0fa384a9276e09e1e9ebd3be21603913f1dd7c20eded903d1b089569",
+      "status": "prepared but unexecuted; rederive against actual current main and capacity/handoff"
+    }
+  },
+  "preflight_comparisons": [
+    {
+      "path": "data/ownership-selection.json",
+      "before": {
+        "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+        "bytes": 2291,
+        "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+      },
+      "accepted": {
+        "git_blob_oid": "631bc3fafb716658d9e8189e3fd62205e47a15b8",
+        "bytes": 2291,
+        "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+      },
+      "byte_identity_equal": true
+    },
+    {
+      "path": ".github/package-inputs.json",
+      "before": {
+        "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "accepted": {
+        "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "byte_identity_equal": true
+    },
+    {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "before": {
+        "git_blob_oid": "ff7df3bb02504e9a52de1bffe0f1afe44ea7a268",
+        "bytes": 49610,
+        "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+      },
+      "accepted": {
+        "git_blob_oid": "ff7df3bb02504e9a52de1bffe0f1afe44ea7a268",
+        "bytes": 49610,
+        "sha256": "8b94419c91f49b9a79fb117d83429bf4b0c7202dfba489c1170ac253f48d3165"
+      },
+      "byte_identity_equal": true
+    },
+    {
+      "path": "data/world-index.json",
+      "before": {
+        "git_blob_oid": "d4ca1f07f7f504484461007919f90af5c5732b61",
+        "bytes": 944,
+        "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+      },
+      "accepted": {
+        "git_blob_oid": "d4ca1f07f7f504484461007919f90af5c5732b61",
+        "bytes": 944,
+        "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+      },
+      "byte_identity_equal": true
+    },
+    {
+      "path": "data/semantic-report.json",
+      "before": {
+        "git_blob_oid": "db3e1ec83d764bc8183caa4779a94b3ad1db0456",
+        "bytes": 6091596,
+        "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+      },
+      "accepted": {
+        "git_blob_oid": "db3e1ec83d764bc8183caa4779a94b3ad1db0456",
+        "bytes": 6091596,
+        "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+      },
+      "byte_identity_equal": true
+    },
+    {
+      "path": "data/geography/part-15.json",
+      "before": {
+        "git_blob_oid": "4ef51307797f81b8cf7a647495f037a089f8b368",
+        "bytes": 5180426,
+        "sha256": "6f763059820d14a4eab78173a756a8869821dd810e94f77c20eb5510c6cfb1df"
+      },
+      "accepted": {
+        "git_blob_oid": "4ef51307797f81b8cf7a647495f037a089f8b368",
+        "bytes": 5180426,
+        "sha256": "6f763059820d14a4eab78173a756a8869821dd810e94f77c20eb5510c6cfb1df"
+      },
+      "byte_identity_equal": true
+    }
+  ],
+  "limitations": [
+    "The owner observation is literal selected-owner evidence at e4c8; the current bank/selector/index and target source membership pins compare byte-identically through accepted main 253b. No observer rerun was done.",
+    "Source/physical/native qualification limitations in original-key-conservation.json remain; 14 whole-target GSHHG issues remain.",
+    "This preflight does not estimate finalizer peak resource needs, establish a current future main head, or constitute root acceptance. A fresh exact-current plan and capacity/handoff are still needed before finalization."
+  ]
+}

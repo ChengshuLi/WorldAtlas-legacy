@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "mhl-current-main-bridge-attempt-v1",
+  "candidate_before": "653466ccf4d69f36feff597590986654ab072819",
+  "accepted_main": "fc8a0a85bf1d40dd86e1a1097b775d442474468a",
+  "command": "git merge --no-edit refs/remotes/origin/main",
+  "exit_code": 128,
+  "stdout_sha256": "3932df71ce6b1a5831ef19ca12435553ca183f6a79d507a66511b5e43f1bb3ba",
+  "stderr_sha256": "c5517b36d677dd151728160600f0b931a5bdda41f0d5a6448d174915667b83de",
+  "stderr_observation": "At merge time Git had not resolved object 2573356820fd386d380da1d26bcaa01a1999394a. A later bounded exact-OID fetch identified it as the accepted GBR assessment.md blob and succeeded; see promisor-blob-recovery-257335-001/. The merge commit itself was complete before this follow-up.",
+  "postcondition": {
+    "merge_commit": "75d8b986e0e1618319aa7e3166c0ccb38b75754c",
+    "parents": [
+      "653466ccf4d69f36feff597590986654ab072819",
+      "fc8a0a85bf1d40dd86e1a1097b775d442474468a"
+    ],
+    "tree": "87fa1ec320de21beb21e9cf677653c92378ea2d7",
+    "startup_index_blob": "5bd24233e397d03b85dd211a169eb4f01b738902",
+    "selector_blob": "b2fbe42de988f703cf75e89fcf2f1ed87525c676",
+    "package_inputs_blob": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+    "unmerged_entries": 0,
+    "tracked_index_matches_HEAD": true,
+    "no_staged_or_worktree_delta": true,
+    "stale_merge_head_before_quit": "fc8a0a85bf1d40dd86e1a1097b775d442474468a",
+    "cleanup": "git merge --quit after confirming HEAD already had both parents, exact tree/index unchanged, no unmerged entries; afterward HEAD/tree/index unchanged and MERGE_HEAD absent"
+  },
+  "limits": [
+    "Merge returned 128 after creating its correct two-parent commit; stale metadata was cleared only after verifying exact parents/tree/index/no unmerged state.",
+    "No merge, finalizer, test, build, geography, emitted-control retry or acceptance claim."
+  ],
+  "follow_up_exact_fetch": {
+    "command": "git -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules --no-auto-maintenance https://github.com/ChengshuLi/WorldAtlas.git 2573356820fd386d380da1d26bcaa01a1999394a",
+    "exit_code": 0,
+    "path": "research/geography/gbr28-source-relative-20261026/assessment.md",
+    "commit": "fc8a0a85bf1d40dd86e1a1097b775d442474468a",
+    "blob_oid": "2573356820fd386d380da1d26bcaa01a1999394a",
+    "bytes": 6830,
+    "sha256": "dd3a0cafab0c1d910f353932891e54da64f06d103d7cc0968b6a71753fefd135",
+    "result": "exact immutable blob present after fetch; no branch ref mutation"
+  }
+}

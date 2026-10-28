@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "kind": "atg883-finalizer-output-closure-v1",
+  "branch_head_at_finalize": "b62c279f4c168d58b0dc65dc2ded234f1ce96477",
+  "accepted_data_commit": "81280722133858cbb26249210fed17b031d11d3d",
+  "current_main": "c1e40fcd770cd85e15a95550578132f7059cfa4f",
+  "finalizer_config_sha256": "891e55fe02ec88669ebf9f3790fe4f4242b7064315664547211956939e26689e",
+  "finalizer_helper_sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6",
+  "finalizer_exit_status": 0,
+  "output_directory": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-812",
+  "final_selector": {
+    "path": "data/ownership-selection.json",
+    "bytes": 2296,
+    "sha256": "0ba9629e760227f839a534444163091ec10e1a60a00bce4252cf00f1dcefb989"
+  },
+  "startup_index": {
+    "path": "data/canonical-grid/current-startup/index.json",
+    "bytes": 49610,
+    "sha256": "5fe005eeea32a673393da55620c57463478e353c6ff1bc89741f5c4f1e91c957",
+    "startup_ownership_sha256": "5fe005eeea32a673393da55620c57463478e353c6ff1bc89741f5c4f1e91c957",
+    "startup_ownership_matches_index": true
+  },
+  "closure": {
+    "indexed_files": 79,
+    "compatibility_files": 30,
+    "materialized_generated_files_hashed": 49,
+    "materialized_generated_bytes_hashed": 64397083,
+    "materialized_startup_files_including_index": 50,
+    "materialized_startup_tree_exact": true,
+    "compatibility_roster_identical_to_accepted812": true,
+    "compatibility_bodies_remain_sparse_unmaterialized": true
+  },
+  "retirement": {
+    "previous_index_path": "data/canonical-grid/current-startup/index.json",
+    "previous_index_sha256": "8609ac63850ad4683bd5d73d0969c2b9bddf6ed8bf16af1e145caeb167a3a1ca",
+    "retired_body_count": 7,
+    "replacement_body_count": 7,
+    "staged_deletions_exact_previous_generated_index_retirements": true,
+    "retired_body_objects_preserved_and_hash_verified_in_accepted812": true,
+    "retired_bodies": [
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880.json.gz",
+        "bytes": 1029278,
+        "sha256": "cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880",
+        "git_blob_oid": "2f35cc0f12fdfa49c1bfbfe58de05525a7cf31b6",
+        "replacement_ranges": [
+          {
+            "path": "geography/effective-context-db849b09f9d7384c87376441d5c6e8120445c023fbc52fd172ceba1118807576.json.gz",
+            "offset": 6000,
+            "features": 1500,
+            "sha256": "db849b09f9d7384c87376441d5c6e8120445c023fbc52fd172ceba1118807576"
+          }
+        ]
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/0146117669a4a96182b70d5a761cbac2db9ba46132ef4d86c3769f57cd0ae1ae/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "bytes": 3572319,
+        "sha256": "0146117669a4a96182b70d5a761cbac2db9ba46132ef4d86c3769f57cd0ae1ae",
+        "git_blob_oid": "7d1092b63d49f62c2ccd476f84fb9bfe8b813ce0",
+        "replacement_ranges": [
+          {
+            "path": "ownership-vintages/daf9dca1d709ee1f2ff291a72b352b9f2aeb8d1138a3ecce57822af11ac2c4ac/native-v1/ownership/startup-runs-41943040.bin.gz",
+            "offset": 41943040,
+            "words": 4194304,
+            "sha256": "daf9dca1d709ee1f2ff291a72b352b9f2aeb8d1138a3ecce57822af11ac2c4ac"
+          }
+        ]
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/3f33c2dcd55b969188c22c5690ed454f95c33239a3dc5e6af50f4731571368c1/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "bytes": 3484797,
+        "sha256": "3f33c2dcd55b969188c22c5690ed454f95c33239a3dc5e6af50f4731571368c1",
+        "git_blob_oid": "3b6204702f2af9936a6f9dad43d2c168021cb159",
+        "replacement_ranges": [
+          {
+            "path": "ownership-vintages/d76306c90e4885b58b68c4f6cdd860225a3f1b6abe45a6adea217ad73316718c/native-v1/ownership/startup-runs-50331648.bin.gz",
+            "offset": 50331648,
+            "words": 4194304,
+            "sha256": "d76306c90e4885b58b68c4f6cdd860225a3f1b6abe45a6adea217ad73316718c"
+          }
+        ]
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/5b03999edaafef05b4b606075c861d3fe5a0b4179ba9b97b56c41bdb633456a8/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "bytes": 3518103,
+        "sha256": "5b03999edaafef05b4b606075c861d3fe5a0b4179ba9b97b56c41bdb633456a8",
+        "git_blob_oid": "036adfccd848a8b79b704c7c7026f6195c12e863",
+        "replacement_ranges": [
+          {
+            "path": "ownership-vintages/1c2ec141754c118089a3e32a00ea36d220cf61be37aa075e2c8df1d63a4f467f/native-v1/ownership/startup-runs-37748736.bin.gz",
+            "offset": 37748736,
+            "words": 4194304,
+            "sha256": "1c2ec141754c118089a3e32a00ea36d220cf61be37aa075e2c8df1d63a4f467f"
+          }
+        ]
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/c18d9ad004636fae2201f74d060a0115a257cc2ddd7fdf9c7a3327d34a6b9bfb/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "bytes": 3103282,
+        "sha256": "c18d9ad004636fae2201f74d060a0115a257cc2ddd7fdf9c7a3327d34a6b9bfb",
+        "git_blob_oid": "48868dcf70704cf961e9ac5840ed4dda04b63a58",
+        "replacement_ranges": [
+          {
+            "path": "ownership-vintages/1cf770057541a09219ddbb1dc0a7f9370da593486c549d9740e06b1ba6e2b9aa/native-v1/ownership/startup-runs-54525952.bin.gz",
+            "offset": 54525952,
+            "words": 3816218,
+            "sha256": "1cf770057541a09219ddbb1dc0a7f9370da593486c549d9740e06b1ba6e2b9aa"
+          }
+        ]
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/ce91fd6f5498f41ab3a9387d0a2a3bb32e50f0cc809f41a1e6d435d0fa4211d8/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "bytes": 3620178,
+        "sha256": "ce91fd6f5498f41ab3a9387d0a2a3bb32e50f0cc809f41a1e6d435d0fa4211d8",
+        "git_blob_oid": "8691e7d9305b03419d27475af001e81a124d2345",
+        "replacement_ranges": [
+          {
+            "path": "ownership-vintages/d491e18c346cddd0574f7e9275ec19d969d31d48b752a6caaa0d565fe3d69b4d/native-v1/ownership/startup-runs-46137344.bin.gz",
+            "offset": 46137344,
+            "words": 4194304,
+            "sha256": "d491e18c346cddd0574f7e9275ec19d969d31d48b752a6caaa0d565fe3d69b4d"
+          }
+        ]
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d8127e4ab8a94059949cf0050c9a89eee96fb2ee58b32d356a52217dc620c86c/native-v1/ownership/rows-0.bin.gz",
+        "bytes": 317279,
+        "sha256": "d8127e4ab8a94059949cf0050c9a89eee96fb2ee58b32d356a52217dc620c86c",
+        "git_blob_oid": "5ccfadd6fe659510658769b1980d0a90ff23db99",
+        "replacement_ranges": [
+          {
+            "path": "ownership-vintages/00cbc48db7e7b2da3d1d2c428f6ee87cd184476cf86b5b7162dbec701922194b/native-v1/ownership/rows-0.bin.gz",
+            "offset": 0,
+            "words": 524332,
+            "sha256": "00cbc48db7e7b2da3d1d2c428f6ee87cd184476cf86b5b7162dbec701922194b"
+          }
+        ]
+      }
+    ]
+  },
+  "candidate_bank": {
+    "release_id": "geography:final:ee0164f4d154e9255f79b5fdde2bca8874230e91012191f7e079946e3ef3d1fb",
+    "owner_count": 49625,
+    "rows_sha256": "f5708e9543718764248583fdcf7eecd8ada66e033a01c4802061af5f866660a9",
+    "run_word_stream_sha256": "2596c2d85c777a0f5436dd90e522e4073b1b50a4b612be6b23d823cd4c97481c",
+    "candidate_original_cells": 883,
+    "candidate_owner_index": 7110,
+    "candidate_target": "atlas:territory:ATG"
+  },
+  "full_selected_bank_conservation": false,
+  "post_finalizer_original_883_key_observation": false,
+  "production_acceptance_or_write": false,
+  "root_science_accounting_acceptance": false,
+  "credit": false,
+  "limits": [
+    "Exact output/index closure only; not a full selected-bank comparison, production write, emitted-control suite, or science/accounting acceptance.",
+    "No compatibility bodies or world-wide inputs were hydrated."
+  ]
+}

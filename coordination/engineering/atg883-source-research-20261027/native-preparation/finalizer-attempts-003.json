@@ -1,0 +1,55 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "command": "env -u NODE_PATH -u NODE_OPTIONS /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-003.json coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-003-001",
+      "exit_code": 0,
+      "finished_at": "2026-10-28T01:58:29.252Z",
+      "outcome": "strict current003 finalizer succeeded; candidate only",
+      "outputs": {
+        "closure_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-output-closure-003.json",
+        "closure_sha256": "77c07f234edeacdcb73328a8f7617d960c267d41d8af4c35e8f172878976dbd8",
+        "generated_body_bytes": 18661281,
+        "generated_body_count": 7,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-003-001",
+        "preparation_sha256": "43a3d5a24cae2ba85d1e77171e160dd699afefb526dd3ef6ec0115377a817937",
+        "retired_body_bytes": 18659071,
+        "retired_body_count": 7,
+        "startup_ownership_sha256": "92de48bd1dae07ac5139143e09ad329c0bf7cb6f88ce10ae12afefa84df7a7f9"
+      },
+      "preflight": {
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-attempt-003-001/preflight.json",
+        "sha256": "0bd96cc45cdd531b48e08994351f786341303c8c48d65a6568778a0f0fe64bad"
+      },
+      "started_at": "2026-10-28T01:56:25.032Z",
+      "stderr": {
+        "bytes": 0,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-attempt-003-001/stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 780,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-attempt-003-001/stdout.json",
+        "sha256": "f198c55d36d5b7ce53025116bb635970026f03965bedb83a64a525db6d0e1fbe"
+      }
+    }
+  ],
+  "base_commit": "003ebdf00d4fc97edcc44a9e05e86ef7929afe11",
+  "branch_preimage_commit": "ab64935fe68588c54a3cd0252da7068870222adb",
+  "configuration": {
+    "bytes": 1577,
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-003.json",
+    "sha256": "fc5559468c62a6b00126688f9a7c9952e037d9f1462ccfbccca0687b51fbb914"
+  },
+  "earlier_preflight_diagnostic": {
+    "meaning": "non-executing immediate preflight guard false-positive matched wrapper; corrected check passed before attempt1; no finalizer output or retry occurred",
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-attempt-003-001/preflight-shell-check-001.json"
+  },
+  "kind": "atg883-current003-finalizer-attempts",
+  "limitations": [
+    "It is a local candidate finalizer, not selected-joint/full-bank conservation.",
+    "No full tests/build/geography/emitted consumer controls or hosted acceptance are claimed.",
+    "Original883 and seven-positive/Redonda-context distinction remains in pinned source evidence; no new source research or ownership claim here."
+  ],
+  "version": 1
+}

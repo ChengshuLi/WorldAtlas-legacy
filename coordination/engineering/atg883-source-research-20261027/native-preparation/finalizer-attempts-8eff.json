@@ -1,0 +1,127 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "command": "node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-8eff.json coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-8eff-001",
+      "config": {
+        "bytes": 1089,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-8eff-attempt001.json",
+        "sha256": "891efc9b544aecd66005b5bafd34b0ebe100de914986f2623600b4d935b7b6f6"
+      },
+      "exit_code": 1,
+      "observed_error": "Supply an exact commit/path locator, without handwritten derived descriptors",
+      "outcome": "helper rejected caller-derived selector/package locator fields before destination creation; no output emitted; preserved exact failed config and logs",
+      "start_utc": "2026-10-28T00:49:35Z",
+      "stderr": {
+        "bytes": 77,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-run-8eff-001.stderr.log",
+        "sha256": "1b816cf1837f05b5119d410836be03119135530d7ada19bd553f1a99b8adc6b9"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-run-8eff-001.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "attempt": 2,
+      "command": "env -u NODE_PATH -u NODE_OPTIONS node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-8eff.json coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-8eff-001",
+      "config": {
+        "bytes": 714,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-8eff.json",
+        "sha256": "7c7f8e4e7c80752702fd93b3e640c0000396fad9590e128dbb696da7788bae87"
+      },
+      "exit_code": 0,
+      "outcome": "strict finalizer completed; current baseline preserved and new ATG delta applied; candidate only",
+      "output_closure": {
+        "bytes": 34425,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-output-closure-8eff.json",
+        "sha256": "84546c9b32d9e325615b4aaa7bba34ab8c233748ac30403b519e2dfdf52102e1"
+      },
+      "preparation": {
+        "bytes": 1156,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-8eff-001/preparation.json",
+        "sha256": "c1aeb9c6f04f79b7e4f3b14f6b30bf13cd30b55ffd069d70ac81d326882dad55"
+      },
+      "resumed": false,
+      "start_utc": "2026-10-28T00:49:54Z",
+      "stderr": {
+        "bytes": 0,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-run-8eff-002.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 781,
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-run-8eff-002.stdout.log",
+        "sha256": "a783471e64bd7a28b155f6ff9aeaca5ace3b21b2849ac5395d5e32dada61bd84"
+      }
+    }
+  ],
+  "base_commit": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+  "branch_preimage_commit": "808425b06c5236d282046e1b8cc0936dd0322a2c",
+  "input_acquisition": {
+    "method": "accepted prepare-delivery-handoff pinReader + geography-prefetch bounded declared inputs",
+    "objects": [
+      {
+        "bytes": 186503,
+        "git_blob_oid": "982f7cbc139e44acfa1cdf72ab8bf9285c2f6f76",
+        "path": "data/canonical-grid/current-startup/geography/effective-context-9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261.json.gz",
+        "sha256": "9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261"
+      },
+      {
+        "bytes": 3573980,
+        "git_blob_oid": "16e2cac63412683e613195087f2a3f7df77b73d5",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/161771c6c8f245c1dfdc8c12aa91ea6e16f0118d36f6355386c0defc67382cf6/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "161771c6c8f245c1dfdc8c12aa91ea6e16f0118d36f6355386c0defc67382cf6"
+      },
+      {
+        "bytes": 3484912,
+        "git_blob_oid": "24ed7d69c482e8c4c7ae0c1bb63de29bf4820ff7",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/7e8568841e528064d8cc7ade0185c2ed3989e30ff9627b00e97c26bc2bcb1147/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "7e8568841e528064d8cc7ade0185c2ed3989e30ff9627b00e97c26bc2bcb1147"
+      },
+      {
+        "bytes": 3104045,
+        "git_blob_oid": "c1c31cbf29dac032776b35266c694301b23ccfc4",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/a58752dd5ec3839530badce29d0d1b8027ce790f3ef13fa2ee688ea84151c7f5/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "a58752dd5ec3839530badce29d0d1b8027ce790f3ef13fa2ee688ea84151c7f5"
+      },
+      {
+        "bytes": 3620516,
+        "git_blob_oid": "79297bd62f311b75f889cfa07efd0fea3b7c3524",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/ab8555aa416015910011cab5edcdf606d43221daff34c4dd6a190598dc178487/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "ab8555aa416015910011cab5edcdf606d43221daff34c4dd6a190598dc178487"
+      },
+      {
+        "bytes": 316993,
+        "git_blob_oid": "c70722f491a61ad8af1b16712091a4f36f22cb69",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/de21ef289758bda55c37b6ff9d3e5866c05271bc64028519cbd1e289e9a976b3/native-v1/ownership/rows-0.bin.gz",
+        "sha256": "de21ef289758bda55c37b6ff9d3e5866c05271bc64028519cbd1e289e9a976b3"
+      },
+      {
+        "bytes": 3518016,
+        "git_blob_oid": "61edda1afa33fbb7f956a02707ceb7c43cb91583",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/fe824fa1c6844b63c1ba3eda1eec39b72075061cf261e087bba29bc756e6b6e1/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "fe824fa1c6844b63c1ba3eda1eec39b72075061cf261e087bba29bc756e6b6e1"
+      }
+    ],
+    "scope": "7 objects explicitly listed by current accepted startup index; not world hydration",
+    "total_bytes": 17804965
+  },
+  "kind": "atg883-current-main-finalizer-attempts-v1",
+  "limitations": [
+    "no root science/accounting acceptance",
+    "no full-bank compare/conservation",
+    "no production build/emitted controls or hosted run",
+    "no accepted-cell credit or production publication"
+  ],
+  "preflight": {
+    "conservative_incremental_bound_bytes": 56145047,
+    "historical_generated_body_bytes": 18645236,
+    "memory_available_kib_before": 4702460,
+    "no_active_node_python_git_writer_observed": true,
+    "overlay_free_before": 274423808,
+    "tmp_free_before": 2751627264
+  },
+  "version": 1
+}

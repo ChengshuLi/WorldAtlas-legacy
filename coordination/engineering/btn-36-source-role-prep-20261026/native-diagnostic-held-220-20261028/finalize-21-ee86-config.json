@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "ee86a8909ef7dbbffee7c935c27b0c7a4a632818",
+    "path": "data/ownership-selection.json"
+  },
+  "package_inputs": {
+    "commit": "ee86a8909ef7dbbffee7c935c27b0c7a4a632818",
+    "path": ".github/package-inputs.json"
+  },
+  "change_evidence": {
+    "commit": "a22fc5233910d9529853c47417c67f4a67ece3b4",
+    "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/compose-final-21-9333-001/authority-registry.json",
+    "mode": "100644",
+    "git_blob_oid": "f806961c8f621676811cbd40f3be828ed236320f",
+    "bytes": 1499,
+    "sha256": "16972d44e3c71591610306d149f666091bb0108f8ce59583e9423e19089c1625"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "commit": "ee86a8909ef7dbbffee7c935c27b0c7a4a632818",
+        "path": "coordination/engineering/tgo-original-disposition-20261020/finalization-receipts/current-main-6f42-additive-q0330-001/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "a30711015048e1f19a59dc52091b5fb9d75339fa",
+        "bytes": 1156,
+        "sha256": "a2811b5a1ae25050a7ba95ce8c1450b370c48783620b70eb1e4ad8d749f51121"
+      },
+      "startup_ownership": {
+        "commit": "ee86a8909ef7dbbffee7c935c27b0c7a4a632818",
+        "path": "coordination/engineering/tgo-original-disposition-20261020/finalization-receipts/current-main-6f42-additive-q0330-001/startup-ownership.json",
+        "mode": "100644",
+        "git_blob_oid": "275f569de38b41d4c0b0811d3ad454d64a9da0de",
+        "bytes": 49611,
+        "sha256": "cde743bd847b05820adf2562fb1e469fbed41729863a38ce339aefc3b7080191"
+      }
+    }
+  ]
+}

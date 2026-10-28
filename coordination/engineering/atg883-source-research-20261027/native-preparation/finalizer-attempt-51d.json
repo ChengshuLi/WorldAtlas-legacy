@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "kind": "atg883-current-bank-finalizer-attempts-v1",
+  "package_id": "gb-ATG-ADM1--repair-evaluation",
+  "base_commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+  "branch_preimage_commit": "a42b5cf3ee673814d9ea2ca7dc41506b101fac97",
+  "config": {
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-51d.json",
+    "sha256": "44bee8cdbacac84ecfba2698a806e13f5c967bebb32ec23c178ce5059ee45b82"
+  },
+  "node_version": "v24.19.0",
+  "helper_sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6",
+  "attempts": [
+    {
+      "sequence": 1,
+      "command": [
+        "node",
+        "scripts/prepare-delivery-handoff.mjs",
+        "finalize",
+        "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-51d.json",
+        "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-51d"
+      ],
+      "node_path_unset": true,
+      "exit_status": 1,
+      "error": "Final-bank retirement index changed before adoption: data/canonical-grid/current-startup/geography/effective-context-cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880.json.gz",
+      "output_directory_complete": true,
+      "output_receipt_sha256": "60dd9162c77ddff47788aa1154aa584b53d73562f712364a5d2623b47d099f7d",
+      "index_sha256_after_failed_attempt": "845596171b6bb469cfecc9fffca096d45318f6b3d01af577031f44fad43414aa",
+      "retirement_paths_all_skip_worktree_after_failure": true,
+      "head_or_accepted_preimage_changed": false
+    },
+    {
+      "sequence": 2,
+      "command": [
+        "node",
+        "scripts/prepare-delivery-handoff.mjs",
+        "finalize",
+        "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-51d.json",
+        "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-51d",
+        "--resume"
+      ],
+      "node_path_unset": true,
+      "exit_status": 0,
+      "resumed": true,
+      "output_directory": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-51d",
+      "output_receipt_sha256": "60dd9162c77ddff47788aa1154aa584b53d73562f712364a5d2623b47d099f7d",
+      "index_sha256_after_resume": "548b74e541e0408fdd743d900a7d19d57e446d57cf0d885d060182d2520ff52d",
+      "retired_count": 7,
+      "generated_or_replaced_count": 7
+    }
+  ],
+  "preflight": {
+    "pre_run_free_overlay_kib": 353212,
+    "pre_resume_free_overlay_kib": 340468,
+    "post_resume_free_overlay_kib": 266808,
+    "post_resume_free_tmp_kib": 4578828,
+    "pre_resume_retired_index_flags": [
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880.json.gz",
+        "flag": "S",
+        "git_blob_oid": "2f35cc0f12fdfa49c1bfbfe58de05525a7cf31b6"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/45320e8cb1d3ca7ed9d8627ea35906c877124e034682caacfdff13c8a5c37165/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "flag": "S",
+        "git_blob_oid": "1d35f99d7653330c64c2d35b63e9195a492c9418"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/6520b21c36457e8e9cfcd4dff8eaaf7554bc3458350973318fa01d72abce067b/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "flag": "S",
+        "git_blob_oid": "763a331e8853f83427320127e6d36a6967e957f8"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/7a4fd673d0d2962660b4fe88dc502f4f7ab47427b7d84930ed6609150202824d/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "flag": "S",
+        "git_blob_oid": "4ebde88fcbdd233509ac0197598349059a823f40"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/a55968427535ae828769fbbf331450f242ec81f1c4e278bd5f7512e6cf9cb950/native-v1/ownership/rows-0.bin.gz",
+        "flag": "S",
+        "git_blob_oid": "96c07e165370f1c8313598654d487e2a74125ed1"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/a7ff1f23154c1f653d23ef603c50bd82055117cbb9cc42b53bc0a5e667ef5588/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "flag": "S",
+        "git_blob_oid": "94d1b3e63c6bab404469697e756ae5b24fd885b4"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/ab6aa091a37399dbf7cd8f0069ed51f331395ab7ecd505003c8ecf578574b7ef/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "flag": "S",
+        "git_blob_oid": "e7e3a026154dc10c80908051dc27b94fcc2ffaf3"
+      }
+    ],
+    "no_index_lock_before_resume": true,
+    "no_active_git_or_node_process_before_resume": true
+  },
+  "result": "strict finalizer candidate completed by exact-output --resume after preserving initial exit1; current candidate remains unaccepted",
+  "limitations": [
+    "No full-bank conservation, emitted controls, hosted result or scientific acceptance claimed.",
+    "No source/native/physical research replayed; retirement guard was not weakened."
+  ]
+}

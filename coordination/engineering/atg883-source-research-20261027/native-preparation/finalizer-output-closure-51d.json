@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "kind": "atg883-current-bank-finalizer-output-closure-v1",
+  "candidate_only": true,
+  "base_commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+  "branch_preimage_commit": "a42b5cf3ee673814d9ea2ca7dc41506b101fac97",
+  "config": {
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-config-51d.json",
+    "bytes": 709,
+    "sha256": "44bee8cdbacac84ecfba2698a806e13f5c967bebb32ec23c178ce5059ee45b82"
+  },
+  "helper": {
+    "path": "scripts/prepare-delivery-handoff.mjs",
+    "sha256": "303e82dfdf5dcdc69763cf12214837c7a694f1255239869c3d52a6b5568dbee6"
+  },
+  "preparation": {
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-51d/preparation.json",
+    "bytes": 1156,
+    "sha256": "60dd9162c77ddff47788aa1154aa584b53d73562f712364a5d2623b47d099f7d",
+    "binding": {
+      "config_sha256": "44bee8cdbacac84ecfba2698a806e13f5c967bebb32ec23c178ce5059ee45b82",
+      "package_inputs": {
+        "bytes": 38421,
+        "commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+        "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "mode": "100644",
+        "path": ".github/package-inputs.json",
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "phase": "finalize",
+      "selector": {
+        "bytes": 2305,
+        "commit": "51d480361e22ac39fff4c2e20191002ebdae9d63",
+        "git_blob_oid": "946e8198cc43d95ad0c2f90fc643e06b7d774c30",
+        "mode": "100644",
+        "path": "data/ownership-selection.json",
+        "sha256": "a14af2f78d9967acf51ddb78be3e07c327036bd919db99c66bd8a2adfad3d553"
+      }
+    },
+    "outputs": {
+      "ownership-selection.json": {
+        "bytes": 2296,
+        "sha256": "66af53842074cdf715197ec58ef1ba9b53a1140e8211af6ee8a2c9ef8bac2bde"
+      },
+      "package-inputs.json": {
+        "bytes": 38421,
+        "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+      },
+      "selected-delivery-expectations.json": {
+        "bytes": 485,
+        "sha256": "c514510954a5e586f2146bcfcc2e4edd6fe8d23184b2e1baf9cddd20a3f6c57b"
+      },
+      "startup-ownership.json": {
+        "bytes": 49610,
+        "sha256": "3b37db056f5395b9c69f82cdd459d89be35c9910fc60635e4d63678f58e8f467"
+      }
+    }
+  },
+  "final_outputs": {
+    "selected_ownership_selection": {
+      "path": "data/ownership-selection.json",
+      "bytes": 2296,
+      "sha256": "66af53842074cdf715197ec58ef1ba9b53a1140e8211af6ee8a2c9ef8bac2bde"
+    },
+    "startup_index": {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "bytes": 49610,
+      "sha256": "3b37db056f5395b9c69f82cdd459d89be35c9910fc60635e4d63678f58e8f467"
+    },
+    "selected_bank": {
+      "release_id": "geography:final:c192c23cbf19db76357360cc884c8fb166dcdbab52d2a9fcbf9ef9a44eb8de44",
+      "base_reference": {
+        "footprints_sha256": "2deeff1457ff9238cb3dbe599e9a858dcce29d8ba88e2a66abe2785ddec0aed9",
+        "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+        "id": "geography:review:211cb423e8c3bdcb3cbe88a4327fbd47eb10ccb61cd0ca4b884ed376564e7718"
+      },
+      "effective_reference": {
+        "footprints_sha256": "00775eb0ed1a031cb4a16489d1ac682fa6f0874a831444d785440479a38604b8",
+        "hierarchy_sha256": "e5ddbf3f2577f4dbb9e0ce16bdf758675ba665cba04cceff363b3b097943a144",
+        "id": "geography:final:c192c23cbf19db76357360cc884c8fb166dcdbab52d2a9fcbf9ef9a44eb8de44"
+      },
+      "files": 79,
+      "compatibility_files": 30,
+      "pixel_map_parts": 15,
+      "context_parts": 34,
+      "owner_count": 49625
+    }
+  },
+  "body_transition": {
+    "generated_or_replaced_count": 7,
+    "generated_or_replaced": [
+      {
+        "path": "geography/effective-context-db849b09f9d7384c87376441d5c6e8120445c023fbc52fd172ceba1118807576.json.gz",
+        "bytes": 1031312,
+        "sha256": "db849b09f9d7384c87376441d5c6e8120445c023fbc52fd172ceba1118807576"
+      },
+      {
+        "path": "ownership-vintages/4a0e0735b3cc8af79d0e7312f4f270f9a8f32a2ead2d38f05c3eedfa4b49e1c4/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "bytes": 3620232,
+        "sha256": "4a0e0735b3cc8af79d0e7312f4f270f9a8f32a2ead2d38f05c3eedfa4b49e1c4"
+      },
+      {
+        "path": "ownership-vintages/57024efeea579650a11e87f303ff3e0518bd781a8d2e52dfc044a50a06a98233/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "bytes": 3103422,
+        "sha256": "57024efeea579650a11e87f303ff3e0518bd781a8d2e52dfc044a50a06a98233"
+      },
+      {
+        "path": "ownership-vintages/7e468b50c8b8d90b55e799a7788ed0325d865340a5f97953596bdeb26ffb2fa2/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "bytes": 3518357,
+        "sha256": "7e468b50c8b8d90b55e799a7788ed0325d865340a5f97953596bdeb26ffb2fa2"
+      },
+      {
+        "path": "ownership-vintages/ae7523430700d10ce556c9b0a3eca3d4dc5cd7be4d2a813373a02ef7bfb0e65a/native-v1/ownership/rows-0.bin.gz",
+        "bytes": 317312,
+        "sha256": "ae7523430700d10ce556c9b0a3eca3d4dc5cd7be4d2a813373a02ef7bfb0e65a"
+      },
+      {
+        "path": "ownership-vintages/c18dce263a8a311059a0ae8c62b606da4259d405bcbf25a4d5a6d63e2d49e8a9/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "bytes": 3572289,
+        "sha256": "c18dce263a8a311059a0ae8c62b606da4259d405bcbf25a4d5a6d63e2d49e8a9"
+      },
+      {
+        "path": "ownership-vintages/fe0fb3be04ba901194bf2354a162acc55e4cda765ce43670361bbb7bcff98678/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "bytes": 3484790,
+        "sha256": "fe0fb3be04ba901194bf2354a162acc55e4cda765ce43670361bbb7bcff98678"
+      }
+    ],
+    "retired_count": 7,
+    "retired": [
+      {
+        "path": "geography/effective-context-cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880.json.gz",
+        "bytes": 1029278,
+        "sha256": "cd97f1066fad164f7b7723b3b87fc28f229262746f2eb06f118e17519c9bd880",
+        "git_blob_oid": "2f35cc0f12fdfa49c1bfbfe58de05525a7cf31b6"
+      },
+      {
+        "path": "ownership-vintages/45320e8cb1d3ca7ed9d8627ea35906c877124e034682caacfdff13c8a5c37165/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "bytes": 3572301,
+        "sha256": "45320e8cb1d3ca7ed9d8627ea35906c877124e034682caacfdff13c8a5c37165",
+        "git_blob_oid": "1d35f99d7653330c64c2d35b63e9195a492c9418"
+      },
+      {
+        "path": "ownership-vintages/6520b21c36457e8e9cfcd4dff8eaaf7554bc3458350973318fa01d72abce067b/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "bytes": 3103311,
+        "sha256": "6520b21c36457e8e9cfcd4dff8eaaf7554bc3458350973318fa01d72abce067b",
+        "git_blob_oid": "763a331e8853f83427320127e6d36a6967e957f8"
+      },
+      {
+        "path": "ownership-vintages/7a4fd673d0d2962660b4fe88dc502f4f7ab47427b7d84930ed6609150202824d/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "bytes": 3484816,
+        "sha256": "7a4fd673d0d2962660b4fe88dc502f4f7ab47427b7d84930ed6609150202824d",
+        "git_blob_oid": "4ebde88fcbdd233509ac0197598349059a823f40"
+      },
+      {
+        "path": "ownership-vintages/a55968427535ae828769fbbf331450f242ec81f1c4e278bd5f7512e6cf9cb950/native-v1/ownership/rows-0.bin.gz",
+        "bytes": 317377,
+        "sha256": "a55968427535ae828769fbbf331450f242ec81f1c4e278bd5f7512e6cf9cb950",
+        "git_blob_oid": "96c07e165370f1c8313598654d487e2a74125ed1"
+      },
+      {
+        "path": "ownership-vintages/a7ff1f23154c1f653d23ef603c50bd82055117cbb9cc42b53bc0a5e667ef5588/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "bytes": 3518152,
+        "sha256": "a7ff1f23154c1f653d23ef603c50bd82055117cbb9cc42b53bc0a5e667ef5588",
+        "git_blob_oid": "94d1b3e63c6bab404469697e756ae5b24fd885b4"
+      },
+      {
+        "path": "ownership-vintages/ab6aa091a37399dbf7cd8f0069ed51f331395ab7ecd505003c8ecf578574b7ef/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "bytes": 3620180,
+        "sha256": "ab6aa091a37399dbf7cd8f0069ed51f331395ab7ecd505003c8ecf578574b7ef",
+        "git_blob_oid": "e7e3a026154dc10c80908051dc27b94fcc2ffaf3"
+      }
+    ]
+  },
+  "original_scope": {
+    "package_id": "gb-ATG-ADM1--repair-evaluation",
+    "original_queue_record_sha256": "a8699fd1c2fdc12a97aa592ac711c5674f232daf58ac86fba41aea0fcb2968f9",
+    "land_cells": 883,
+    "intervals": 288,
+    "owner_pixel_index": 7110,
+    "positive_source_features": [
+      1274,
+      1275,
+      1276,
+      1277,
+      1278,
+      1279,
+      1280
+    ],
+    "redonda_feature": 1273
+  },
+  "limitations": [
+    "Finalizer output and native-bank transformation only; candidate-only, not root source/science/accounting acceptance.",
+    "No full-bank conservation or emitted trusted geographic controls claimed in this local closure.",
+    "Source/native/physical qualification inputs were retained and not rerun."
+  ]
+}

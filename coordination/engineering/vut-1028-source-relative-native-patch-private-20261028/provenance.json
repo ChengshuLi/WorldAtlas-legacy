@@ -1,0 +1,180 @@
+{
+  "artifact_kind": "private.worldatlas.vut1028-source-relative-native-patch.v1",
+  "derived_artifact_rights_and_modification": {
+    "license_record": "ODbL 1.0 per pinned per-boundary metadata; cite https://www.openstreetmap.org/copyright and https://opendatacommons.org/licenses/odbl/1-0/",
+    "modification_summary": "Deterministic derived target-grid patch: exact join of retained application/roster rows, selection of source-version-concordant interior candidates, sort by owner/y/x, and coalesce adjacent x cells into half-open native runs. No source geometries or lon/lat coordinates are included in the patch.",
+    "publication_state": "Private pending explicit attribution/share-alike compliance review; no public raw geometry or keyed patch redistribution.",
+    "required_source_credit": "OpenStreetMap contributors; geoBoundaries; source noted as Wambacher",
+    "share_alike_limit": "If the keyed rows are a database derivative/produced work subject to ODbL, attribution and share-alike obligations apply. This manifest records the source metadata claim and needed review; it does not classify the derivative or assert legal compliance."
+  },
+  "disposition": "source-relative candidate preparation only; not authority, acceptance, status, or credit",
+  "limits": [
+    "Patch is a private deterministic source-relative candidate derived from retained exact input rows; no source/geometry was replayed.",
+    "The original simplified 2017 product remains the frozen source-evidence baseline. Full-resolution results are comparator evidence and do not replace it.",
+    "The 88 full-source variant misses remain separate and are not reassigned or treated as an automatic veto on the concordant 1,028.",
+    "Prior diagnostics apply to their original declared cohorts and are not a new 1,028 diagnostic or physical clearance.",
+    "Physical relations are target-level; owner observations are historical snapshots with null/unknown base-owner/additive/overlap fields.",
+    "Scoped municipal/legal applicability remains unresolved where specific; no universal current-boundary certificate is required or inferred.",
+    "No current owner assignment, selected-output conservation, authority, status, acceptance, repaired credit, or package-completion claim is made.",
+    "Full-resolution VUT ADM1 metadata is now byte-verified: the pinned per-boundary record states OSM/Wambacher and ODbL 1.0 for this boundary. Attribution is OpenStreetMap contributors. The full body itself is not included, and upstream extraction lineage is not independently verified.",
+    "The keyed candidate remains private pending review of ODbL attribution and share-alike treatment as applicable to this derived database; no legal classification or compliance claim is made."
+  ],
+  "patch": {
+    "bytes": 18975,
+    "cell_count": 1028,
+    "path": "vut1028-source-relative-native-patch.private.json",
+    "row_count": 399,
+    "run_count": 463,
+    "schema": {
+      "rows": [
+        {
+          "runs": [
+            [
+              "x_start_inclusive",
+              "x_end_exclusive",
+              "pixelIndex"
+            ]
+          ],
+          "y": "integer grid row"
+        }
+      ]
+    },
+    "sha256": "d2389bde9f34824b9669bb172dd8da00ee07fe13526cbf69def716e184a7ed0a"
+  },
+  "scope": {
+    "accepted87_ledger_sha256": "cfc187547ba16e1cb381536e6107e215c1e7a6d5b7b76925ec1c6f97d3874125",
+    "accepted_positive": 3163,
+    "accepted_researched_unresolved": 87,
+    "all_remaining_key_commitment": "85080e94cde6be5a1d0358ed65df9d988fcf1574a5c44d9637f93a5735f7b806",
+    "candidate": 1028,
+    "candidate_distinct_original_intervals": 464,
+    "candidate_interval_sha256_owner_y_start_end": "0f7af4603a1c0c1e207c735aec9665ae1171ecda07cc6819b191128b0e87d168",
+    "candidate_key_sha256_owner_y_x": "6a9e3d116c194a1dabd3177d3b3bfbb7e0b6a43df487fe0256329b83fb398b9b",
+    "candidate_miss_shared_original_intervals": 29,
+    "candidate_owner_counts": {
+      "48791": 504,
+      "48793": 202,
+      "48794": 322
+    },
+    "miss_key_sha256_owner_y_x": "149190b3bf8114e2ba460dbe8cc67d77ac77f02d23c912df1f210790f15fffb5",
+    "miss_owner_counts": {
+      "48791": 26,
+      "48793": 24,
+      "48794": 38
+    },
+    "original_denominator": 4366,
+    "package_id": "gb-VUT-ADM1--repair-evaluation",
+    "partition_check": "candidate and variant-miss sets are disjoint and their exact key union equals the retained 1,116-row roster; accepted 87 and accepted 3,163 are not included",
+    "remaining": 1116,
+    "remaining_distinct_original_intervals": 519,
+    "remaining_interval_sha256_owner_y_start_end": "74a315a90f01bcbcf7024b24755a068835881e542ccedb6993134e6284c3cc35",
+    "variant_miss": 88,
+    "variant_miss_distinct_original_intervals": 84,
+    "variant_miss_interval_sha256_owner_y_start_end": "870dfc3a6048de9814fd0cfc708cfac24cc6cf4cf7d0a756bed646c4435d0ca9"
+  },
+  "screening_context": {
+    "physical_support": {
+      "bytes": 996365,
+      "scope": "target-level relations, not per-key clearance",
+      "sha256": "b3ed749f8e4fabe98e92c0493a285bf0459e5426cb347fb66212ce543471fea7"
+    },
+    "tanna226_prior_diagnostic": {
+      "bytes": 27360,
+      "held": 0,
+      "requested": 226,
+      "scope": "declared mapped-land/adverse-mask screen only",
+      "sha256": "33d3b6125aa6e0df7ecfc9774dfd307989682bc4b5d2ea40a35dc50cd7ab2eb5",
+      "supported": 226
+    },
+    "vut890_prior_diagnostic": {
+      "bytes": 72785,
+      "held": 0,
+      "requested": 890,
+      "scope": "declared mapped-land/adverse-mask screen only",
+      "sha256": "0ac82f6f799ca161e5bdc1ffc82372f9d89552d0c056a3541991391da021a691",
+      "supported": 890
+    }
+  },
+  "serializer": {
+    "core_path": "vut1028_native_serializer_core.py",
+    "core_sha256": "1263aeb777eed36b1807d33077e5a4372796c1aa930606b5172a0d1f7b03aac1",
+    "method": "exact joins; interior-only source comparator selection; shared validated partition and canonical owner/y/x half-open native-run serialization",
+    "path": "vut-1028-candidate-serialize.py",
+    "sha256": "6fa74d90b87db9b6cb38f20b6df55514003aa9c525706c931099a8e1874ac027"
+  },
+  "source_bindings": {
+    "frozen_simplified_product": {
+      "blob": "b04cddf49b80b6e3d0458ba3dac5005e85acdc99",
+      "bytes": 39881,
+      "commit": "c7fa96a44f39310e0d070ca883c5c3593c8dfdfc",
+      "decoded_sha256": "63e1878b1a484787aafa029e3f2a8cb063d9d720b38e9d17884a999d28cd10f8",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-VUT-ADM1-000.bin.gz",
+      "sha256": "d889dc7af3e004f12ad4bb9a49de443d09a4bfe34beaba4af999fb6a8dc13258"
+    },
+    "frozen_source_evidence": {
+      "blob": "aed551fd6649ed0c513543d5b4b1cd027e027756",
+      "bytes": 23565,
+      "commit": "80dd96c04ccdb33b5be4b1a80cfb27cc934f76db",
+      "path": "coordination/engineering/vanuatu-native-repair-evaluation-20261016/source-evidence.json",
+      "sha256": "e470ba8c709c6d82a690a2a3b1a33e2f2da56e635c80b9486674e052a10ebb5e"
+    },
+    "full_resolution_boundary_metadata": {
+      "boundaryID": "VUT-ADM1-32282491",
+      "boundaryISO": "VUT",
+      "boundaryLicense": "Open Data Commons Open Database License 1.0",
+      "boundarySource": "OpenStreetMap, Wambacher",
+      "boundarySourceURL_as_recorded": "https//wambachers-osm.website/boundaries/",
+      "boundaryType": "ADM1",
+      "buildDate": "Dec 12, 2023",
+      "canonical_license_source_url": "https://www.openstreetmap.org/copyright",
+      "canonical_odbl_1_0_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "claim_limit": "Catalog source/license claim; not independent verification of upstream source extraction lineage or legal adjudication.",
+      "lfs_object_bytes": 851,
+      "lfs_object_sha256": "a66ec067f87d2326da5e5401a0742811ca68f54f12d139aa47082288fbb12248",
+      "licenseDetail": "Open Data Commons Open Database License 1.0",
+      "licenseSource_as_recorded": "https//www.openstreetmap.org/copyright",
+      "path": "releaseData/gbOpen/VUT/ADM1/geoBoundaries-VUT-ADM1-metaData.json",
+      "release_commit": "9469f09592ced973a3448cf66b6100b741b64c0d",
+      "retrieval": "public Git LFS batch route; HTTP 200; bytes and SHA-256 verified before parsing",
+      "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+      "variant_scope": "single boundary-level record in the release directory; release documents full HPSC and simplified SSC exports of the boundary and identifies SSC as simplified from HPSCU"
+    },
+    "remaining_roster": {
+      "bytes": 343157,
+      "key_count": 1116,
+      "sha256": "7950960096b3bc0bc50004eb97233a28427d943d4aee536845a6b9ddaf53ee64"
+    },
+    "source_target_map": {
+      "48791": "gb:VUT:ADM1:32282491B17169683382430",
+      "48793": "gb:VUT:ADM1:32282491B61228346728599",
+      "48794": "gb:VUT:ADM1:32282491B7486560380604"
+    },
+    "tanna_all_feature_status": {
+      "bytes": 335098,
+      "features": 6,
+      "other_feature_interiors_or_boundaries": 0,
+      "sha256": "6aef1daed7e1b076dbc434a5c083435041029443e3ecdc028f74383ba12b43f2",
+      "tanna_interior": 202,
+      "tanna_outside": 24
+    },
+    "tanna_selected_application": {
+      "bytes": 23591,
+      "full_selected_interior": 202,
+      "full_selected_miss": 24,
+      "selected_feature": "gb:VUT:ADM1:32282491B61228346728599",
+      "sha256": "d4f15646ad1969938cae8ae0f4228f51df855b50d1eba6d8a4e97648523fd754"
+    },
+    "vut_application": {
+      "application_driver_sha256_recorded": "efc148063081a47f95d2d783348b4c2f56511b2607012145d927a3f9645944ae",
+      "bytes": 489690,
+      "full_selected_interior": 826,
+      "full_selected_miss": 64,
+      "full_source_sha256": "69f44b96d0690310c67a4a430488fb7a02d028bdec8bbc755436cdfb90962c8d",
+      "full_source_size": 1094439,
+      "method": "native-linear-evenodd-first-owner-v1",
+      "other_full_feature_interior_or_boundary": 0,
+      "sha256": "d92e5b3b84773691895b16c46e66a4c7520157c51fd9d17d728f0127cdc8c802",
+      "simplified_original_exact_match": 890
+    }
+  }
+}

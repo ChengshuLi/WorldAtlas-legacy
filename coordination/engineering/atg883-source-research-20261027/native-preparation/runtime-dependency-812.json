@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "kind": "atg883-bounded-runtime-dependency-recovery-v1",
+  "branch_head_at_attempt": "f3c0263b086429277e2184e3deb52832a99fce93",
+  "package": {
+    "name": "@noble/hashes",
+    "version": "2.0.1",
+    "license": "MIT",
+    "source_url": "https://registry.npmjs.org/@noble/hashes/-/hashes-2.0.1.tgz",
+    "lockfile_version": "3",
+    "lockfile_integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
+    "observed_tarball_integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==",
+    "tarball_bytes": 135794,
+    "tarball_sha256": "638ffb3053a7e7478c9e54a6e297f3601299ee570a41112e501af7050d086a0a",
+    "worktree_package_file_count": 98,
+    "worktree_package_unpacked_bytes": 670013,
+    "worktree_package_version_verified": true,
+    "isolated_npm_prefix_tree_matches_tarball": true,
+    "owned_worktree_tree_matches_tarball": true,
+    "worktree_package_has_symlinks": false
+  },
+  "method": {
+    "npm_version": "11.9.0",
+    "node_version": "v24.19.0",
+    "successful_acquisition": "npm pack @noble/hashes@2.0.1 --ignore-scripts --fetch-retries=0 --fetch-timeout=30000 --registry=https://registry.npmjs.org",
+    "isolated_install": "npm install --prefix <private-temp-prefix> --ignore-scripts --no-save --no-package-lock --no-audit --no-fund <SRI-verified-local-tarball>",
+    "global_dependency_install": false,
+    "full_npm_install": false,
+    "lifecycle_scripts_run": false,
+    "project_package_json_changed": false,
+    "project_package_lock_changed": false,
+    "installed_only_in_owned_worktree": true
+  },
+  "attempts": [
+    {
+      "sequence": 1,
+      "outcome": "failed-before-network-payload",
+      "reason": "npm rejected using /dev/null as both user and global config: double-loading config; stdout empty, no tarball created"
+    },
+    {
+      "sequence": 2,
+      "outcome": "success",
+      "config": "distinct empty temporary user/global config files; no credentials supplied; existing network environment unchanged; registry exactly the lockfile URL"
+    }
+  ],
+  "capacity_observed_bytes": {
+    "worktree_available_before_install": 108937216,
+    "worktree_available_after_install": 108032000,
+    "tmp_available_before_install": 5087600640,
+    "tmp_available_after_install": 5085667328
+  },
+  "limitations": [
+    "This restores only the declared package needed by the accepted finalizer helper; it does not complete or validate finalization.",
+    "The prior finalizer failure remains preserved separately; one safe retry remains pending after a fresh exact preflight."
+  ]
+}

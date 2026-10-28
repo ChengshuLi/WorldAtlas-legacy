@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "kind": "jor656-finalizer-instrumented-attempt-result",
+  "attempt": "021",
+  "preflight_path": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/21af6085c32e8414d1e2bc94a35082e055ca8b456dd4573ef619a001659c51ea/work/.jor-source-prep/finalize-instrumented-021-preflight.json",
+  "preflight_sha256": "e378d1d4e1e3784f6a78729300dd11c8fa66ca9033c0af4478e70030d32c5eaf",
+  "runner_prelaunch_path": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/21af6085c32e8414d1e2bc94a35082e055ca8b456dd4573ef619a001659c51ea/work/.jor-source-prep/finalize-instrumented-021-runner-prelaunch.json",
+  "runner_prelaunch_sha256": "b131f1424047381ea013cff00403eda45cf76d3088febc40a18ae5150a762961",
+  "started_utc": "2026-10-27T16:43:25.316Z",
+  "finished_utc": "2026-10-27T16:45:51.514Z",
+  "elapsed_seconds": 146.198,
+  "child_pid": 120,
+  "wait_status": 0,
+  "exit_code": 0,
+  "terminating_signal": null,
+  "wait4_child_max_rss_kib": 1249568,
+  "wait4_child_user_cpu_seconds": 80.641868,
+  "wait4_child_system_cpu_seconds": 72.933197,
+  "sampled_child_rss_max_kib": 1243220,
+  "child_rss_sample_count": 146,
+  "stdout": {
+    "path": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/21af6085c32e8414d1e2bc94a35082e055ca8b456dd4573ef619a001659c51ea/work/.jor-source-prep/finalize-instrumented-021.stdout",
+    "bytes": 772,
+    "sha256": "f3efd546c2996fbd0213fcac684eeb98c0083be80e6102520b688148294d181b"
+  },
+  "stderr": {
+    "path": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/21af6085c32e8414d1e2bc94a35082e055ca8b456dd4573ef619a001659c51ea/work/.jor-source-prep/finalize-instrumented-021.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "rss_samples": {
+    "path": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/21af6085c32e8414d1e2bc94a35082e055ca8b456dd4573ef619a001659c51ea/work/.jor-source-prep/finalize-instrumented-021.rss.jsonl",
+    "bytes": 12569,
+    "sha256": "6510aec6b7e6deef38f19a3440026a1804ff629d3ec15add0de538a7679e1719"
+  },
+  "disk_after_child_bytes": {
+    "total": 33770192896,
+    "used": 31962816512,
+    "free": 72613888
+  },
+  "destination_relative_path": "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021",
+  "destination_exists": true,
+  "destination_files": [
+    {
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021/ownership-selection.json",
+      "bytes": 2277,
+      "sha256": "b206d465ad5e72ff0627b2fc33f8a9636ab3228ffbb7b4af5925da545574c3fd"
+    },
+    {
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021/package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021/preparation.json",
+      "bytes": 1156,
+      "sha256": "78d3a937daed3d30e833ed769602a95dc6e55cd23ca83218e807caefb8fd9032"
+    },
+    {
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021/selected-delivery-expectations.json",
+      "bytes": 485,
+      "sha256": "42f25cf5d3249687945c66e38b9903e492133d65aaba47d0545cc15fdcf64f8c"
+    },
+    {
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021/startup-ownership.json",
+      "bytes": 49610,
+      "sha256": "5c2282ed2c8cd010364cfc6d484112a3a15e16d16fef133afd144de320bfc597"
+    }
+  ],
+  "interpretation": "The wait4 ru_maxrss value is for this direct child process; it does not by itself establish why an earlier or current signal/exit occurred. No cgroup counters are assumed."
+}

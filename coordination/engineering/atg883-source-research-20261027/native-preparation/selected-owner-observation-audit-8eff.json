@@ -1,0 +1,61 @@
+{
+  "candidate_commit": "9e3863f6e7a9e31b0c9f390f69c53b0399b2be9f",
+  "candidate_current_E": {
+    "accepted_additive_owner": null,
+    "base_owner": null,
+    "effective_selected_owner": 7110,
+    "existing_product_overlap": null,
+    "owner_id": "atlas:territory:ATG",
+    "rows": 883,
+    "scientific_qualification": false
+  },
+  "candidate_only": true,
+  "input_pins": {
+    "candidate_observation": {
+      "bytes": 208171,
+      "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/selected-owner-observation-8eff-candidate.json",
+      "sha256": "0b7ed3f683f2010fe62a8311045616f5df260f4f646e97d05a149d99c9931bc9"
+    },
+    "original_proposal": {
+      "bytes": 72339,
+      "path": "coordination/engineering/atg-original-repair-20261021/factual-disposition-proposal.json",
+      "sha256": "132e2e5162dd37b223b9533eb2182acef7aa17828122690d81381dc344d6a91e"
+    }
+  },
+  "intervals": {
+    "exact_ordered_match": true,
+    "observation_rows": 288,
+    "observation_sha256": "daf78d63a2ae10b7b9958db5147b036f99b796a6675fa2e3c02624c7c3af7742",
+    "proposal_rows": 288
+  },
+  "keyset": {
+    "exact_set_match": true,
+    "extra": 0,
+    "missing": 0,
+    "observation_query_sha256": "d71f43c6a9093a303e8761edd703185e3ec144a820448060bcc8ecb1b181c5ac",
+    "observation_unique_keys": 883,
+    "proposal_unique_keys": 883
+  },
+  "kind": "atg883-candidate-literal-owner-keyset-audit-v1",
+  "limits": [
+    "Candidate literal current-E observation only; no source qualification, full-bank conservation, emitted controls, acceptance, credit or production publication.",
+    "Original 883-land-cell/288-interval denominator remains unchanged; no seventh feature was treated as a new owner."
+  ],
+  "original_scope": {
+    "intervals": 288,
+    "land_cells": 883,
+    "owner_index": 7110,
+    "redonda_feature_1273_excluded": true,
+    "source_features": [
+      1274,
+      1275,
+      1276,
+      1277,
+      1278,
+      1279,
+      1280
+    ]
+  },
+  "package_id": "gb-ATG-ADM1--repair-evaluation",
+  "version": 1
+}

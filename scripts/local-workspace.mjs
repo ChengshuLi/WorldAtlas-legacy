@@ -8,12 +8,13 @@ import {fileURLToPath} from 'node:url';
 const support = ['docs', 'scripts', 'test', 'src', 'hosted', 'drizzle', '.github', '.agents', 'coordination/templates'];
 const engineeringCode = name => name.startsWith('coordination/engineering/') && /\.(?:mjs|js|cjs|py|sh)$/.test(name);
 const id = value => typeof value === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,127}$/.test(value);
+const operatorReleaseAuthorization = 'team3-bra-tgo-orphaned-slots';
 const safeInclude = value => typeof value === 'string' && /^(data|research|coordination)\/[a-zA-Z0-9_./-]+$/.test(value)
   && value.split('/').every(part => part && part !== '.' && part !== '..');
 
 // No shell, background mutations, timeout retries, or automatic lock breaking.
 export function workspaceManager(repo, {freeBytes, onStartupGuidance,
-  acquisitionExecute, loadTree} = {}) {
+  acquisitionExecute, loadTree, inspectReaders} = {}) {
   // Every Git command is explicitly rooted with `-C`; inherited repository/index
   // selectors would override that path and mutate an unrelated checkout. Keep the
   // sanitized environment invocation-local; never rewrite the parent process.
@@ -59,6 +60,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   const stateFile = path.join(registry, 'state.json');
   const lock = path.join(registry, 'lock');
   const capabilityDirectory = path.join(registry, 'capabilities');
+  const auditDirectory = path.join(registry, 'audit');
   const state = () => {
     if (!fs.existsSync(stateFile)) return {version: 1, entries: []};
     if (!fs.lstatSync(stateFile).isFile() || fs.lstatSync(stateFile).isSymbolicLink()) throw Error('Registry must be an ordinary file');
@@ -671,7 +673,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       head: expectedHead, capabilityFile: file, previousTokenInvalidated: true};
   });
 
-  const release = ({worker, slot = 'work', token, capabilityFile}) => locked(() => {
+  const releaseEntry = ({worker, slot = 'work', token, capabilityFile, operatorAuthorized = false}) => {
     const value = state();
     const entry = value.entries.find(entry => entry.worker === worker && entry.slot === slot);
     let savedCapability;
@@ -681,7 +683,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       savedCapability = readCapability({worker, slot, entry, requestedPath: capabilityFile});
       token = savedCapability.token;
     }
-    if (!entry || entry.token !== token) throw Error('Exact current slot ownership token required');
+    if (!entry || (!operatorAuthorized && entry.token !== token)) throw Error('Exact current slot ownership token required');
     if (entry.status !== 'ready') throw Error('Interrupted workspace needs operator inspection; automatic release refused');
     ordinaryDirectory(entry.path);
     const inventory = worktrees(false);
@@ -740,9 +742,192 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     return {released: true, path: entry.path, preservedRef, head,
       ...(savedCapability ? {capability_file_removed: capabilityFileRemoved} : {}),
       ...(generatedDatabase ? {removed_generated_database: generatedDatabase} : {})};
+  };
+  const release = args => locked(() => releaseEntry(args));
+
+  const writeAuditReceipt = (receipt, id) => {
+    fs.mkdirSync(auditDirectory, {recursive: true, mode: 0o700});
+    const dirStat = fs.lstatSync(auditDirectory);
+    if (!dirStat.isDirectory() || dirStat.isSymbolicLink()) throw Error('Audit directory must be ordinary');
+    fs.chmodSync(auditDirectory, 0o700);
+    const destination = path.join(auditDirectory, `${id}.json`);
+    const temporary = path.join(auditDirectory, `.${id}.${randomUUID()}.tmp`);
+    const bytes = Buffer.from(JSON.stringify(receipt, null, 2) + '\n');
+    const fd = fs.openSync(temporary, 'wx', 0o600);
+    try { fs.writeFileSync(fd, bytes); fs.fsyncSync(fd); } finally { fs.closeSync(fd); }
+    fs.renameSync(temporary, destination);
+    const dirFd = fs.openSync(auditDirectory, 'r');
+    try { fs.fsyncSync(dirFd); } finally { fs.closeSync(dirFd); }
+    return {path: destination, sha256: createHash('sha256').update(bytes).digest('hex')};
+  };
+  const receiptDigest = value => {
+    const body = Object.fromEntries(Object.entries(value).filter(([key]) => key !== 'sha256').sort(([a], [b]) => a.localeCompare(b)));
+    return createHash('sha256').update(JSON.stringify(body)).digest('hex');
+  };
+  const operatorRelease = ({operator, scope, authorizationRef, worker, slot = 'work', expectedPath,
+    expectedBranch, expectedHead, reviewReceipt, keeperManifest}) => locked(() => {
+    const operatorIdentity = process.env.CODEX_THREAD_ID;
+    if (!id(operator) || operatorIdentity !== operator || worker === operator) {
+      throw Error('Operator release requires this coordinator’s exact CODEX_THREAD_ID');
+    }
+    if (!['BRA', 'TGO'].includes(scope) || authorizationRef !== operatorReleaseAuthorization || !id(worker)
+      || !['work', 'review'].includes(slot) || !/^[a-f0-9]{40}$/.test(expectedHead ?? '')
+      || !expectedBranch || expectedPath !== slotPath(worker, slot)) {
+      throw Error('Operator release requires an approved BRA/TGO scope and exact slot/path/branch/HEAD binding');
+    }
+    if (fs.existsSync(auditDirectory)) {
+      ordinaryDirectory(auditDirectory);
+      for (const name of fs.readdirSync(auditDirectory)) {
+        if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\.json$/.test(name)) {
+          throw Error('Operator audit contains an unrecognized receipt or interrupted write; inspect before retry');
+        }
+        const file = path.join(auditDirectory, name), fileStat = fs.lstatSync(file);
+        if (!fileStat.isFile() || fileStat.isSymbolicLink() || fileStat.size > 256 * 1024) throw Error('Operator audit contains an unknown nonordinary receipt');
+        const previous = JSON.parse(fs.readFileSync(file, 'utf8'));
+        if (previous.version !== 1 || previous.operation !== 'operator-release' || previous.id !== name.slice(0, -5)
+          || !['pending', 'released', 'failed'].includes(previous.status) || !['BRA', 'TGO'].includes(previous.scope)
+          || previous.authorizationRef !== operatorReleaseAuthorization || !id(previous.operator) || !id(previous.reviewer)
+          || !id(previous.worker) || previous.operator === previous.worker || previous.operator === previous.reviewer
+          || previous.worker === previous.reviewer || !['work', 'review'].includes(previous.slot)
+          || previous.path !== slotPath(previous.worker, previous.slot) || typeof previous.branch !== 'string'
+          || !/^[a-f0-9]{40}$/.test(previous.head ?? '') || !/^[a-f0-9]{64}$/.test(previous.reviewSha256 ?? '')
+          || !/^[a-f0-9]{64}$/.test(previous.keeperManifestSha256 ?? '') || !Array.isArray(previous.keepers)
+          || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(previous.preservedRef ?? '')
+          || !Number.isFinite(Date.parse(previous.startedAt ?? ''))) {
+          throw Error('Operator audit contains a malformed receipt; inspect before retry');
+        }
+        if (previous.status === 'pending') throw Error('Operator audit has a pending receipt; inspect before retry');
+        if (previous.scope === scope && previous.status === 'released') {
+          throw Error(`The ${scope} operator release authorization is already used`);
+        }
+      }
+    }
+    if (!reviewReceipt || reviewReceipt.result !== 'PASS' || !id(reviewReceipt.worker) || reviewReceipt.worker === operator
+      || reviewReceipt.worker === worker || reviewReceipt.scope !== scope || reviewReceipt.worker_id !== worker
+      || reviewReceipt.authorizationRef !== authorizationRef || reviewReceipt.slot !== slot || reviewReceipt.path !== expectedPath || reviewReceipt.branch !== expectedBranch
+      || reviewReceipt.head !== expectedHead || !/^[a-f0-9]{64}$/.test(reviewReceipt.sha256 ?? '')
+      || receiptDigest(reviewReceipt) !== reviewReceipt.sha256) {
+      throw Error('Independent review receipt is missing, stale, or not bound to this exact slot');
+    }
+    const value = state();
+    const entry = value.entries.find(item => item.worker === worker && item.slot === slot);
+    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch || entry.head !== expectedHead) {
+      throw Error('Exact existing ready slot changed; operator release refused');
+    }
+    if (process.env.CODEX_THREAD_ID !== operatorIdentity) throw Error('Operator identity changed during release');
+    if (value.entries.some(item => item !== entry && (item.path === entry.path || item.branch === entry.branch
+      || item.dependencies?.some?.(dependency => dependency === entry.worker || dependency === entry.path || dependency === entry.branch)))) {
+      throw Error('Another managed slot depends on this workspace; operator release refused');
+    }
+    const readers = inspectReaders ? inspectReaders(entry.path) : (() => {
+      const probe = spawnSync('lsof', ['-t', '+D', entry.path], {encoding: 'utf8', env: noLazyFetch});
+      if (probe.error || ![0, 1].includes(probe.status)) throw Error('Unable to prove the workspace has no open readers');
+      return probe.stdout.trim().split(/\s+/).filter(Boolean);
+    })();
+    if (!Array.isArray(readers) || readers.length) throw Error('Workspace has active readers; operator release refused');
+    const keeper = keeperManifest;
+    if (!keeper || keeper.result !== 'PASS' || keeper.scope !== scope || keeper.worker_id !== worker
+      || keeper.slot !== slot || keeper.path !== expectedPath || keeper.branch !== expectedBranch || keeper.head !== expectedHead
+      || !Array.isArray(keeper.files) || !/^[a-f0-9]{64}$/.test(keeper.sha256 ?? '')
+      || receiptDigest(keeper) !== keeper.sha256) {
+      throw Error('Keeper/restoration manifest is missing, stale, or not bound to this exact slot');
+    }
+    if (reviewReceipt.keeperManifestSha256 !== keeper.sha256) {
+      throw Error('Independent reviewer did not attest the exact keeper/restoration manifest');
+    }
+    const localGit = (...args) => execFileSync('git', ['-C', entry.path, ...args], {encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, env: noLazyFetch});
+    if (localGit('rev-parse', 'HEAD').trim() !== expectedHead
+      || localGit('symbolic-ref', '--quiet', 'HEAD').trim() !== `refs/heads/${expectedBranch}`
+      || fs.realpathSync(localGit('rev-parse', '--show-toplevel').trim()) !== fs.realpathSync(entry.path)) {
+      throw Error('Operator release live Git binding changed; preserve workspace for inspection');
+    }
+    if (localGit('status', '--porcelain', '--untracked-files=all').trim()) {
+      throw Error('Tracked modifications or untracked non-ignored files need a verified keeper before release');
+    }
+    const ignored = localGit('ls-files', '--others', '--ignored', '--exclude-standard', '-z').split('\0').filter(Boolean).sort();
+    const listed = keeper.files.map(file => file.path).sort();
+    if (new Set(listed).size !== listed.length || ignored.join('\0') !== listed.join('\0')) {
+      throw Error('Keeper manifest must cover every and only ignored workspace file');
+    }
+    const verifiedFiles = [];
+    for (const file of keeper.files) {
+      if (typeof file.path !== 'string' || path.isAbsolute(file.path) || file.path.split(/[\\/]/).some(part => !part || part === '.' || part === '..')
+        || typeof file.keeperPath !== 'string' || !path.isAbsolute(file.keeperPath) || typeof file.restorationPath !== 'string'
+        || !path.isAbsolute(file.restorationPath) || !Number.isSafeInteger(file.bytes) || file.bytes < 0
+        || !/^[a-f0-9]{64}$/.test(file.sha256 ?? '') || !Number.isInteger(file.mode)) {
+        throw Error('Keeper file descriptor is invalid');
+      }
+      const source = path.join(entry.path, file.path);
+      ordinaryDirectory(path.dirname(source));
+      const sourceRoot = fs.realpathSync(entry.path);
+      for (const keeperPath of [file.keeperPath, file.restorationPath]) {
+        const resolved = fs.realpathSync(keeperPath), relative = path.relative(sourceRoot, resolved);
+        if (!relative || (!relative.startsWith(`..${path.sep}`) && relative !== '..' && !path.isAbsolute(relative))) {
+          throw Error('Keeper and restoration copies must be outside the workspace');
+        }
+      }
+      if (fs.realpathSync(file.keeperPath) === fs.realpathSync(file.restorationPath)) {
+        throw Error('Keeper and restoration copies must be independent files');
+      }
+      const sourceStat = fs.lstatSync(source), keeperStat = fs.lstatSync(file.keeperPath), restoredStat = fs.lstatSync(file.restorationPath);
+      const ordinary = stat => stat.isFile() && !stat.isSymbolicLink() && stat.size === file.bytes && (stat.mode & 0o777) === file.mode;
+      if (![sourceStat, keeperStat, restoredStat].every(ordinary)) throw Error('Keeper/restoration file metadata mismatch');
+      const digest = target => createHash('sha256').update(fs.readFileSync(target)).digest('hex');
+      if (![source, file.keeperPath, file.restorationPath].every(target => digest(target) === file.sha256)) {
+        throw Error('Keeper/restoration bytes do not match the ignored workspace file');
+      }
+      verifiedFiles.push({path: file.path, bytes: file.bytes, mode: file.mode, sha256: file.sha256,
+        keeperPath: file.keeperPath, restorationPath: file.restorationPath});
+    }
+    const auditId = randomUUID();
+    const pending = {version: 1, operation: 'operator-release', status: 'pending', id: auditId, scope, authorizationRef,
+      operator, reviewer: reviewReceipt.worker, worker, slot, path: expectedPath, branch: expectedBranch,
+      head: expectedHead, reviewSha256: reviewReceipt.sha256,
+      keeperManifestSha256: keeper.sha256, keepers: verifiedFiles,
+      preservedRef: `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`,
+      startedAt: new Date().toISOString()};
+    const receiptFile = writeAuditReceipt(pending, auditId);
+    let releaseResult;
+    try {
+      // Recheck all file bodies immediately before deletion; the existing ordinary release
+      // still supplies Git's non-forced in-use/dirty guard and preserved recovery ref.
+      for (const file of verifiedFiles) {
+        const target = path.join(entry.path, file.path);
+        if (createHash('sha256').update(fs.readFileSync(target)).digest('hex') !== file.sha256) {
+          throw Error('Keeper source changed after audit receipt creation');
+        }
+      }
+      for (const file of verifiedFiles) fs.unlinkSync(path.join(entry.path, file.path));
+      const capPath = capabilityPath(worker, slot);
+      const capStat = fs.lstatSync(capPath, {throwIfNoEntry: false});
+      releaseResult = releaseEntry({worker, slot, operatorAuthorized: true,
+        ...(capStat ? {capabilityFile: capPath} : {})});
+      const terminal = {...pending, status: 'released', completedAt: new Date().toISOString(), preservedRef: releaseResult.preservedRef};
+      const finalReceipt = writeAuditReceipt(terminal, auditId);
+      return {...releaseResult, auditReceipt: finalReceipt.path, auditSha256: finalReceipt.sha256};
+    } catch (error) {
+      if (releaseResult?.released) throw Error(`Workspace was released, but the terminal audit receipt update failed; the pending receipt remains at ${receiptFile.path}`);
+      // If Git refuses the ordinary non-forced removal, restore every removed
+      // source from its already-verified external keeper before returning.
+      for (const file of verifiedFiles) {
+        try {
+          const target = path.join(entry.path, file.path);
+          const current = fs.lstatSync(target, {throwIfNoEntry: false});
+          if (current) continue;
+          ordinaryDirectory(path.dirname(target));
+          const bytes = fs.readFileSync(file.keeperPath);
+          if (bytes.length !== file.bytes || createHash('sha256').update(bytes).digest('hex') !== file.sha256) continue;
+          fs.writeFileSync(target, bytes, {flag: 'wx', mode: file.mode});
+          fs.chmodSync(target, file.mode);
+        } catch { /* retain original failure and verified external keeper */ }
+      }
+      const failed = {...pending, status: 'failed', completedAt: new Date().toISOString(), failure: error.message};
+      try { writeAuditReceipt(failed, auditId); } catch { /* retain original failure and pending receipt */ }
+      throw error;
+    }
   });
   const check = () => ({freeBytes: availableBytes()});
-  return {report, check, inspect, allocate, ensureCapabilityFile, capabilityFilePath, resume, recoverLostCapability, release};
+  return {report, check, inspect, allocate, ensureCapabilityFile, capabilityFilePath, resume, recoverLostCapability, release, operatorRelease};
 }
 
 function isCliEntrypoint(argvPath, moduleUrl) {
@@ -775,13 +960,21 @@ function cliSafeResult(action, value, capabilityFile) {
   return value;
 }
 
+function readOperatorReceipt(file) {
+  if (!path.isAbsolute(file)) throw Error('Operator receipt paths must be absolute');
+  const stat = fs.lstatSync(file);
+  if (!stat.isFile() || stat.isSymbolicLink() || stat.size > 256 * 1024) throw Error('Operator receipt must be an ordinary file up to 256 KiB');
+  return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
+
 if (isCliEntrypoint(process.argv[1], import.meta.url)) {
   try {
     const [action, ...args] = process.argv.slice(2);
     const options = {include: []};
     for (let index = 0; index < args.length; index += 2) {
       const key = args[index]?.replace(/^--/, '');
-      if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token', 'capability-file', 'expected-path', 'expected-branch', 'expected-head'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume, recover-lost-capability or release with documented --repo/--key value arguments');
+      if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token', 'capability-file', 'expected-path', 'expected-branch', 'expected-head',
+        'operator', 'scope', 'authorization-ref', 'review-receipt', 'keeper-manifest'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume, recover-lost-capability, release or operator-release with documented --repo/--key value arguments');
       if (key === 'include') options.include.push(args[index + 1]);
       else {
         const option = key.replace(/-([a-z])/g, (_match, letter) => letter.toUpperCase());
@@ -815,8 +1008,13 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
         process.stderr.write(`--- begin ${instructionPath} ---\n${text}${text.endsWith('\n') ? '' : '\n'}--- end ${instructionPath} ---\n`);
       }
     });
-    const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action;
-    if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume, recover-lost-capability or release with documented --key value arguments');
+    const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action === 'operator-release' ? 'operatorRelease' : action;
+    if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release', 'operator-release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume, recover-lost-capability, release or operator-release with documented --key value arguments');
+    if (action === 'operator-release') {
+      if (!options.operator || options.operator !== process.env.CODEX_THREAD_ID) throw Error('Operator release requires this coordinator’s exact CODEX_THREAD_ID');
+      options.reviewReceipt = readOperatorReceipt(options.reviewReceipt);
+      options.keeperManifest = readOperatorReceipt(options.keeperManifest);
+    }
     if (action === 'resume' && options.token === undefined && options.capabilityFile === undefined) {
       options.capabilityFile = manager.capabilityFilePath({worker: options.worker, slot: options.slot ?? 'work'});
     }
