@@ -766,7 +766,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   };
   const operatorRelease = ({operator, scope, authorizationRef, worker, slot = 'work', expectedPath,
     expectedBranch, expectedHead, reviewReceipt, keeperManifest}) => locked(() => {
-    if (!id(operator) || process.env.CODEX_THREAD_ID !== operator) {
+    const operatorIdentity = process.env.CODEX_THREAD_ID;
+    if (!id(operator) || operatorIdentity !== operator || worker === operator) {
       throw Error('Operator release requires this coordinator’s exact CODEX_THREAD_ID');
     }
     if (!['BRA', 'TGO'].includes(scope) || authorizationRef !== operatorReleaseAuthorization || !id(worker)
@@ -776,13 +777,28 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     }
     if (fs.existsSync(auditDirectory)) {
       ordinaryDirectory(auditDirectory);
-      for (const name of fs.readdirSync(auditDirectory).filter(name => name.endsWith('.json'))) {
+      for (const name of fs.readdirSync(auditDirectory)) {
+        if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\.json$/.test(name)) {
+          throw Error('Operator audit contains an unrecognized receipt or interrupted write; inspect before retry');
+        }
         const file = path.join(auditDirectory, name), fileStat = fs.lstatSync(file);
-        if (!fileStat.isFile() || fileStat.isSymbolicLink()) throw Error('Operator audit contains an unknown nonordinary receipt');
+        if (!fileStat.isFile() || fileStat.isSymbolicLink() || fileStat.size > 256 * 1024) throw Error('Operator audit contains an unknown nonordinary receipt');
         const previous = JSON.parse(fs.readFileSync(file, 'utf8'));
-        if (previous.authorizationRef === authorizationRef && previous.scope === scope
-          && ['pending', 'released'].includes(previous.status)) {
-          throw Error(`The ${scope} operator release authorization is already pending or used`);
+        if (previous.version !== 1 || previous.operation !== 'operator-release' || previous.id !== name.slice(0, -5)
+          || !['pending', 'released', 'failed'].includes(previous.status) || !['BRA', 'TGO'].includes(previous.scope)
+          || previous.authorizationRef !== operatorReleaseAuthorization || !id(previous.operator) || !id(previous.reviewer)
+          || !id(previous.worker) || previous.operator === previous.worker || previous.operator === previous.reviewer
+          || previous.worker === previous.reviewer || !['work', 'review'].includes(previous.slot)
+          || previous.path !== slotPath(previous.worker, previous.slot) || typeof previous.branch !== 'string'
+          || !/^[a-f0-9]{40}$/.test(previous.head ?? '') || !/^[a-f0-9]{64}$/.test(previous.reviewSha256 ?? '')
+          || !/^[a-f0-9]{64}$/.test(previous.keeperManifestSha256 ?? '') || !Array.isArray(previous.keepers)
+          || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(previous.preservedRef ?? '')
+          || !Number.isFinite(Date.parse(previous.startedAt ?? ''))) {
+          throw Error('Operator audit contains a malformed receipt; inspect before retry');
+        }
+        if (previous.status === 'pending') throw Error('Operator audit has a pending receipt; inspect before retry');
+        if (previous.scope === scope && previous.status === 'released') {
+          throw Error(`The ${scope} operator release authorization is already used`);
         }
       }
     }
@@ -798,8 +814,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch || entry.head !== expectedHead) {
       throw Error('Exact existing ready slot changed; operator release refused');
     }
-    const expectedWorkerIdentity = process.env.CODEX_THREAD_ID;
-    if (expectedWorkerIdentity !== operator) throw Error('Operator identity changed during release');
+    if (process.env.CODEX_THREAD_ID !== operatorIdentity) throw Error('Operator identity changed during release');
     if (value.entries.some(item => item !== entry && (item.path === entry.path || item.branch === entry.branch
       || item.dependencies?.some?.(dependency => dependency === entry.worker || dependency === entry.path || dependency === entry.branch)))) {
       throw Error('Another managed slot depends on this workspace; operator release refused');

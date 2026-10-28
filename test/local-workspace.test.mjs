@@ -706,7 +706,7 @@ test('audited operator release binds approval, independent review, keeper bytes 
   assert.ok(!JSON.stringify(result).includes(entry.token));
   assert.throws(() => manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
     worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
-    reviewReceipt, keeperManifest}), /already pending or used/);
+    reviewReceipt, keeperManifest}), /already used/);
 });
 
 test('audited operator release refuses stale identity, dirty work, open readers and changed keeper data', async t => {
@@ -741,11 +741,29 @@ test('audited operator release refuses stale identity, dirty work, open readers 
   assert.throws(() => request({authorizationRef: 'unapproved-reference'}), /approved BRA\/TGO scope/);
   assert.throws(() => request({slot: 'review'}), /approved BRA\/TGO scope/);
   assert.throws(() => request({operator: 'different-coordinator'}), /exact CODEX_THREAD_ID/);
+  assert.throws(() => request({worker: operator}), /exact CODEX_THREAD_ID/);
   assert.throws(() => request({reviewReceipt: undefined}), /Independent review receipt is missing, stale/);
   assert.throws(() => request({reviewReceipt: sealOperatorReceipt({...reviewReceipt, keeperManifestSha256: '0'.repeat(64)})}),
     /did not attest the exact keeper/);
   assert.throws(() => request({expectedHead: '0'.repeat(40)}), /Independent review receipt is missing, stale/);
   assert.equal(registryEntries(manager)[0].head, head);
+  const auditDirectory = path.join(manager.report().registry, 'audit');
+  fs.mkdirSync(auditDirectory, {mode: 0o700});
+  const pendingId = '11111111-1111-4111-8111-111111111111';
+  const pendingReceipt = {version: 1, operation: 'operator-release', status: 'pending', id: pendingId,
+    scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots', operator, reviewer, worker, slot: 'work',
+    path: entry.path, branch, head, reviewSha256: reviewReceipt.sha256, keeperManifestSha256: keeperManifest.sha256,
+    keepers: [], preservedRef: `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`,
+    startedAt: new Date().toISOString()};
+  const pendingFile = path.join(auditDirectory, `${pendingId}.json`);
+  fs.writeFileSync(pendingFile, JSON.stringify(pendingReceipt), {mode: 0o600});
+  assert.throws(() => request({}), /pending receipt/);
+  fs.unlinkSync(pendingFile);
+  const malformedFile = path.join(auditDirectory, 'malformed.json');
+  fs.writeFileSync(malformedFile, '{}', {mode: 0o600});
+  assert.throws(() => request({}), /unrecognized receipt/);
+  fs.unlinkSync(malformedFile);
+  fs.rmdirSync(auditDirectory);
   fs.writeFileSync(source, 'source changed');
   assert.throws(() => request({}), /Keeper\/restoration file metadata mismatch/);
   fs.writeFileSync(source, bytes, {mode}); fs.chmodSync(source, mode);
