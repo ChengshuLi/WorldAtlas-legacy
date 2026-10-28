@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "9333be54523b2e1f8ff77e6ba92c2d723996da53",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "81a0a9fcbf338ea92931e992c2aba649e59523fd",
+    "bytes": 2252,
+    "sha256": "79704c7580c5736aca84cfd57beaa672078a3a9407c531d21273229ae555ba31"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "1fcd4ea483e7552d6ff6cb97ad9a0c57b4a5eaa0",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/native-authority-assigned-21-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "2d6f4c8f1c3dc0113cc21b11d7ebd34bb6c935dd",
+        "bytes": 814,
+        "sha256": "c1691cb0c2e897875deab1d008d526d365c681dec0189f5dd2c0c63c97ad09dd"
+      },
+      "source_authority": {
+        "commit": "1fcd4ea483e7552d6ff6cb97ad9a0c57b4a5eaa0",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/native-authority-assigned-21-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "8da212711510e52ec0834e054ae4bb408fe2a6c6",
+        "bytes": 817,
+        "sha256": "45870088785babe0e94922aa824047e93f0f3c92dafd90cc1c83c3a1c4904b7d"
+      },
+      "ledger": {
+        "commit": "1fcd4ea483e7552d6ff6cb97ad9a0c57b4a5eaa0",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/native-authority-assigned-21-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "da9ddffa6ab78027852ccfa280c641ecebd07036",
+        "bytes": 20907,
+        "sha256": "24254eb92b4f445002f04a5955728e500f39c0386acc39751c448dd01229bdc5"
+      },
+      "native_patch": {
+        "commit": "05054b31a629adc86df248ee669c9496495e4578",
+        "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/proposed-native-patch-assigned-21.json",
+        "mode": "100644",
+        "git_blob_oid": "9887a9d692626385280ed550e0f5e8103fc95be8",
+        "bytes": 671,
+        "sha256": "091390e4214e748de7e7e7d62d8d2873904fe6f02922a3f521d406e60c25b931"
+      }
+    }
+  ]
+}
