@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-28T01:56:25.003981+00:00",
+  "followup": "Use process-name-only `ps -C node` for a non-self-matching check.",
+  "observed_issue": "The first immediate preflight process matcher matched the sandbox wrapper and its own shell command text; the check stopped before writing started-at or invoking Node. No finalizer output or code operation ran.",
+  "operation_started": false,
+  "version": 1
+}
