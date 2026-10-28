@@ -9,6 +9,7 @@ const support = ['docs', 'scripts', 'test', 'src', 'hosted', 'drizzle', '.github
 const engineeringCode = name => name.startsWith('coordination/engineering/') && /\.(?:mjs|js|cjs|py|sh)$/.test(name);
 const id = value => typeof value === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,127}$/.test(value);
 const operatorReleaseAuthorization = 'team3-bra-tgo-orphaned-slots';
+const partialRemovalBranch = 'geography/tls-original-repair-20261026';
 const safeInclude = value => typeof value === 'string' && /^(data|research|coordination)\/[a-zA-Z0-9_./-]+$/.test(value)
   && value.split('/').every(part => part && part !== '.' && part !== '..');
 
@@ -61,6 +62,9 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
   const lock = path.join(registry, 'lock');
   const capabilityDirectory = path.join(registry, 'capabilities');
   const auditDirectory = path.join(registry, 'audit');
+  const partialRemovalAuditDirectory = path.join(registry, 'partial-removal-audit');
+  const partialArchivePath = (worker, slot, head, inventorySha256) => path.join(root, 'retained-partial-removals',
+    createHash('sha256').update(`${worker}\0${slot}\0${head}\0${inventorySha256}`).digest('hex'));
   const state = () => {
     if (!fs.existsSync(stateFile)) return {version: 1, entries: []};
     if (!fs.lstatSync(stateFile).isFile() || fs.lstatSync(stateFile).isSymbolicLink()) throw Error('Registry must be an ordinary file');
@@ -926,8 +930,353 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       throw error;
     }
   });
+
+  // Reconcile only the narrow state left when ordinary `git worktree remove`
+  // deleted the admin directory but could not remove the checkout directory.
+  // The remaining tree is preserved as a whole; this path never cleans or
+  // reconstructs Git metadata.
+  const partialTreeInventory = directory => {
+    const rows = [];
+    let totalBytes = 0;
+    const visit = (current, relative) => {
+      const stat = fs.lstatSync(current);
+      if (stat.isSymbolicLink() || (!stat.isDirectory() && !stat.isFile())) {
+        throw Error('Partial checkout contains a symlink or special file; preserve it for inspection');
+      }
+      const row = {path: relative || '.', type: stat.isDirectory() ? 'directory' : 'file', mode: stat.mode & 0o777};
+      if (stat.isDirectory()) {
+        rows.push(row);
+        const names = fs.readdirSync(current).sort();
+        for (const name of names) {
+          if (!name || name === '.' || name === '..' || name.includes('/') || name.includes('\\')) {
+            throw Error('Partial checkout has an unsafe path name');
+          }
+          visit(path.join(current, name), relative ? `${relative}/${name}` : name);
+        }
+        const after = fs.lstatSync(current);
+        if (!after.isDirectory() || after.isSymbolicLink()
+          || ['dev','ino','mode','mtimeMs','ctimeMs'].some(key => stat[key] !== after[key])) {
+          throw Error('Partial checkout directory changed during finite inventory; inspect before retry');
+        }
+      } else {
+        const before = fs.lstatSync(current);
+        if (!before.isFile() || before.isSymbolicLink() || !Number.isSafeInteger(before.size) || before.size < 0
+          || before.size > 20 * 1024 * 1024 * 1024 - totalBytes) {
+          throw Error('Partial checkout exceeds the bounded preservation inventory limit');
+        }
+        const fd = fs.openSync(current, 'r');
+        const digest = createHash('sha256'), buffer = Buffer.alloc(1024 * 1024);
+        let bytesRead = 0;
+        try {
+          while (true) {
+            const count = fs.readSync(fd, buffer, 0, buffer.length, null);
+            if (!count) break;
+            bytesRead += count;
+            digest.update(buffer.subarray(0, count));
+          }
+        } finally { fs.closeSync(fd); }
+        const after = fs.lstatSync(current);
+        if (bytesRead !== before.size || !after.isFile() || after.isSymbolicLink()
+          || ['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => before[key] !== after[key])) {
+          throw Error('Partial checkout changed during finite inventory; inspect before retry');
+        }
+        totalBytes += bytesRead;
+        rows.push({...row, bytes: bytesRead, sha256: digest.digest('hex')});
+      }
+      if (rows.length > 100_000) throw Error('Partial checkout exceeds the bounded preservation entry limit');
+    };
+    visit(directory, '');
+    rows.sort((a, b) => a.path.localeCompare(b.path));
+    const body = JSON.stringify(rows);
+    return {entries: rows, entryCount: rows.length, totalBytes,
+      sha256: createHash('sha256').update(body).digest('hex')};
+  };
+  const partialReceiptDigest = value => {
+    const body = Object.fromEntries(Object.entries(value).filter(([key]) => key !== 'sha256').sort(([a], [b]) => a.localeCompare(b)));
+    return createHash('sha256').update(JSON.stringify(body)).digest('hex');
+  };
+  const writePartialReceipt = receipt => {
+    ordinaryDirectory(partialRemovalAuditDirectory);
+    fs.mkdirSync(partialRemovalAuditDirectory, {recursive: true, mode: 0o700});
+    fs.chmodSync(partialRemovalAuditDirectory, 0o700);
+    const destination = path.join(partialRemovalAuditDirectory, `${receipt.id}.json`);
+    const temporary = `${destination}.${randomUUID()}.tmp`;
+    const bytes = Buffer.from(JSON.stringify(receipt, null, 2) + '\n');
+    const fd = fs.openSync(temporary, 'wx', 0o600);
+    try { fs.writeFileSync(fd, bytes); fs.fsyncSync(fd); } finally { fs.closeSync(fd); }
+    fs.renameSync(temporary, destination);
+    const dirFd = fs.openSync(partialRemovalAuditDirectory, 'r');
+    try { fs.fsyncSync(dirFd); } finally { fs.closeSync(dirFd); }
+    return {path: destination, sha256: createHash('sha256').update(bytes).digest('hex')};
+  };
+  const readPartialReceipts = () => {
+    if (!fs.existsSync(partialRemovalAuditDirectory)) return [];
+    ordinaryDirectory(partialRemovalAuditDirectory);
+    return fs.readdirSync(partialRemovalAuditDirectory).map(name => {
+      if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\.json$/.test(name)) {
+        throw Error('Partial-removal audit contains an unrecognized receipt; inspect before retry');
+      }
+      const file = path.join(partialRemovalAuditDirectory, name), stat = fs.lstatSync(file);
+      if (!stat.isFile() || stat.isSymbolicLink() || stat.size > 32 * 1024 * 1024 || (stat.mode & 0o077) !== 0
+        || typeof process.getuid === 'function' && stat.uid !== process.getuid()) {
+        throw Error('Partial-removal audit contains an unknown nonordinary receipt');
+      }
+      const receipt = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (receipt.version !== 1 || receipt.operation !== 'partial-removal-reconcile' || receipt.id !== name.slice(0, -5)
+        || !['pending', 'failed', 'reconciled'].includes(receipt.status) || !id(receipt.worker)
+        || receipt.slot !== 'work' || receipt.path !== slotPath(receipt.worker, receipt.slot)
+        || receipt.branch !== partialRemovalBranch || !/^[a-f0-9]{40}$/.test(receipt.head ?? '')
+        || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(receipt.preservedRef ?? '')
+        || receipt.preservedPath !== partialArchivePath(receipt.worker, receipt.slot, receipt.head, receipt.manifestSha256)
+        || !/^[a-f0-9]{64}$/.test(receipt.manifestSha256 ?? '') || !/^[a-f0-9]{64}$/.test(receipt.capabilitySha256 ?? '')
+        || !/^[a-f0-9]{64}$/.test(receipt.reviewSha256 ?? '')
+        || !Number.isSafeInteger(receipt.entryCount)
+        || !Number.isSafeInteger(receipt.totalBytes) || !Number.isFinite(Date.parse(receipt.startedAt ?? ''))
+        || !/^[a-f0-9]{64}$/.test(receipt.sha256 ?? '') || partialReceiptDigest(receipt) !== receipt.sha256) {
+        throw Error('Partial-removal audit contains a malformed receipt; inspect before retry');
+      }
+      return receipt;
+    });
+  };
+  const inspectPartialRemoval = ({worker, slot = 'work', expectedPath, expectedBranch, expectedHead}) => {
+    if (!worker || process.env.CODEX_THREAD_ID !== worker || slot !== 'work' || expectedBranch !== partialRemovalBranch) {
+      throw Error('Partial-removal inspection is limited to the exact TLS work slot and current owner identity');
+    }
+    const value = state(), entry = value.entries.find(item => item.worker === worker && item.slot === slot);
+    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch || entry.head !== expectedHead
+      || entry.branch !== partialRemovalBranch
+      || entry.path !== slotPath(worker, slot)) throw Error('Exact ready slot binding changed; preserve for inspection');
+    ordinaryDirectory(entry.path);
+    const dotGitPath = path.join(entry.path, '.git'), dotGitStat = fs.lstatSync(dotGitPath, {throwIfNoEntry: false});
+    if (!dotGitStat?.isFile() || dotGitStat.isSymbolicLink()) throw Error('Partial checkout has no ordinary Git link file');
+    const dotGit = fs.readFileSync(dotGitPath, 'utf8');
+    const match = /^gitdir: (.+)\n?$/.exec(dotGit);
+    if (!match || !path.isAbsolute(match[1])) throw Error('Partial checkout Git link is malformed; preserve for inspection');
+    const adminPath = path.resolve(match[1]);
+    const worktreesRoot = path.join(common, 'worktrees');
+    if (path.dirname(adminPath) !== worktreesRoot || fs.lstatSync(adminPath, {throwIfNoEntry: false})) {
+      throw Error('Git admin directory still exists or is outside the registered common worktrees directory');
+    }
+    if (worktrees(false).some(item => item.path === entry.path)) throw Error('Git still registers the partial checkout; use ordinary release');
+    if (git('rev-parse', '--verify', `refs/heads/${entry.branch}^{commit}`).trim() !== expectedHead) {
+      throw Error('Preserved branch no longer points to the expected HEAD');
+    }
+    const capability = readCapability({worker, slot, entry, requestedPath: capabilityPath(worker, slot)});
+    const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(capability.token).digest('hex')}`;
+    if (git('rev-parse', '--verify', `${preservedRef}^{commit}`).trim() !== expectedHead) {
+      throw Error('Exact owner recovery ref is missing or changed');
+    }
+    if (value.entries.some(item => item !== entry && (item.path === entry.path || item.branch === entry.branch
+      || item.dependencies?.some?.(dependency => dependency === worker || dependency === entry.path || dependency === entry.branch)))) {
+      throw Error('Another managed slot depends on this workspace');
+    }
+    const readers = inspectReaders ? inspectReaders(entry.path) : (() => {
+      const probe = spawnSync('lsof', ['-t', '+D', entry.path], {encoding: 'utf8', env: noLazyFetch});
+      if (probe.error || ![0, 1].includes(probe.status)) throw Error('Unable to prove the partial checkout has no open readers');
+      return probe.stdout.trim().split(/\s+/).filter(Boolean);
+    })();
+    if (!Array.isArray(readers) || readers.length) throw Error('Partial checkout has active readers');
+    const inventory = partialTreeInventory(entry.path);
+    return {version: 1, result: 'PASS', operation: 'partial-removal-inventory', worker, slot,
+      path: entry.path, branch: entry.branch, head: expectedHead, gitAdminPath: adminPath,
+      preservedRef, entryCount: inventory.entryCount, totalBytes: inventory.totalBytes,
+      entries: inventory.entries, inventorySha256: inventory.sha256};
+  };
+  const reconcilePartialRemoval = ({worker, slot = 'work', capabilityFile, expectedPath, expectedBranch,
+    expectedHead, inventoryManifest, reviewReceipt}) => locked(() => {
+    if (!worker || process.env.CODEX_THREAD_ID !== worker) throw Error('Partial-removal reconciliation requires the exact current owner identity');
+    if (slot !== 'work' || !/^[a-f0-9]{40}$/.test(expectedHead ?? '') || expectedPath !== slotPath(worker, slot)
+      || expectedBranch !== partialRemovalBranch || !capabilityFile || capabilityFile !== capabilityPath(worker, slot)) {
+      throw Error('Partial-removal reconciliation requires the exact owner work-slot binding');
+    }
+    const inventory = inventoryManifest;
+    if (!inventory || inventory.version !== 1 || inventory.result !== 'PASS' || inventory.operation !== 'partial-removal-inventory'
+      || inventory.worker !== worker || inventory.slot !== slot || inventory.path !== expectedPath
+      || inventory.branch !== expectedBranch || inventory.head !== expectedHead || !Array.isArray(inventory.entries)
+      || typeof inventory.gitAdminPath !== 'string' || !path.isAbsolute(inventory.gitAdminPath)
+      || typeof inventory.preservedRef !== 'string' || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(inventory.preservedRef)
+      || inventory.entries.length !== inventory.entryCount || !Number.isSafeInteger(inventory.entryCount) || inventory.entryCount < 1
+      || !Number.isSafeInteger(inventory.totalBytes) || inventory.totalBytes < 0 || !/^[a-f0-9]{64}$/.test(inventory.inventorySha256 ?? '')) {
+      throw Error('Finite partial-checkout inventory is missing or stale');
+    }
+    const inventoryBody = JSON.stringify(inventory.entries);
+    if (createHash('sha256').update(inventoryBody).digest('hex') !== inventory.inventorySha256) throw Error('Partial-checkout inventory digest mismatch');
+    const reviewer = reviewReceipt;
+    if (!reviewer || reviewer.result !== 'PASS' || reviewer.operation !== 'partial-removal-review'
+      || !id(reviewer.reviewer) || reviewer.reviewer === worker || reviewer.worker !== worker || reviewer.slot !== slot
+      || reviewer.path !== expectedPath || reviewer.branch !== expectedBranch || reviewer.head !== expectedHead
+      || reviewer.gitAdminPath !== inventory.gitAdminPath || reviewer.preservedRef !== inventory.preservedRef
+      || reviewer.entryCount !== inventory.entryCount || reviewer.totalBytes !== inventory.totalBytes
+      || reviewer.inventorySha256 !== inventory.inventorySha256 || !/^[a-f0-9]{64}$/.test(reviewer.sha256 ?? '')
+      || partialReceiptDigest(reviewer) !== reviewer.sha256) throw Error('Independent partial-checkout review is missing or stale');
+    const pendingMatches = readPartialReceipts().filter(receipt => receipt.worker === worker && receipt.slot === slot
+      && receipt.path === expectedPath && receipt.branch === expectedBranch && receipt.head === expectedHead
+      && receipt.manifestSha256 === inventory.inventorySha256 && receipt.status === 'pending');
+    if (pendingMatches.length > 1) throw Error('Multiple pending partial-removal receipts match; inspect before retry');
+    const pendingReceipt = pendingMatches[0];
+    if (pendingReceipt && pendingReceipt.reviewSha256 !== reviewer.sha256) {
+      throw Error('Pending partial-removal receipt is bound to a different independent review');
+    }
+    if (pendingReceipt && (pendingReceipt.preservedRef !== inventory.preservedRef
+      || pendingReceipt.entryCount !== inventory.entryCount || pendingReceipt.totalBytes !== inventory.totalBytes)) {
+      throw Error('Pending partial-removal receipt does not match the reviewed inventory metadata');
+    }
+    if (pendingReceipt) {
+      ordinaryDirectory(path.dirname(pendingReceipt.preservedPath));
+      const sourceExists = Boolean(fs.lstatSync(expectedPath, {throwIfNoEntry: false}));
+      const archiveExists = Boolean(fs.lstatSync(pendingReceipt.preservedPath, {throwIfNoEntry: false}));
+      if (!sourceExists && archiveExists) {
+        const archived = partialTreeInventory(pendingReceipt.preservedPath);
+        if (archived.sha256 !== inventory.inventorySha256 || archived.entryCount !== inventory.entryCount
+          || archived.totalBytes !== inventory.totalBytes) throw Error('Pending archive differs from the reviewed full inventory');
+        if (git('rev-parse', '--verify', `${expectedBranch}^{commit}`).trim() !== expectedHead
+          || git('rev-parse', '--verify', `${pendingReceipt.preservedRef}^{commit}`).trim() !== expectedHead
+          || worktrees(false).some(item => item.path === expectedPath)) throw Error('Pending archive no longer matches the live Git bindings');
+        const liveState = state(), liveEntry = liveState.entries.find(item => item.worker === worker && item.slot === slot);
+        if (liveEntry && (liveEntry.path !== expectedPath || liveEntry.branch !== expectedBranch || liveEntry.head !== expectedHead || liveEntry.status !== 'ready')) {
+          throw Error('Pending archive owner slot changed; preserve for inspection');
+        }
+        if (liveState.entries.some(item => item !== liveEntry && (item.path === expectedPath || item.branch === expectedBranch
+          || item.dependencies?.some?.(dependency => dependency === worker || dependency === expectedPath || dependency === expectedBranch)))) {
+          throw Error('Another managed slot depends on the pending archive');
+        }
+        const archivedReaders = inspectReaders ? inspectReaders(pendingReceipt.preservedPath) : (() => {
+          const probe = spawnSync('lsof', ['-t', '+D', pendingReceipt.preservedPath], {encoding: 'utf8', env: noLazyFetch});
+          if (probe.error || ![0, 1].includes(probe.status)) throw Error('Unable to prove the preserved archive has no open readers');
+          return probe.stdout.trim().split(/\s+/).filter(Boolean);
+        })();
+        if (!Array.isArray(archivedReaders) || archivedReaders.length) throw Error('Preserved partial checkout has active readers');
+        let capabilityFileRemoved = false;
+        if (liveEntry) {
+          const cap = readCapability({worker, slot, entry: liveEntry, requestedPath: capabilityFile});
+          if (createHash('sha256').update(cap.bytes).digest('hex') !== pendingReceipt.capabilitySha256) {
+            throw Error('Pending receipt capability binding changed; preserve for inspection');
+          }
+          liveState.entries = liveState.entries.filter(item => item !== liveEntry);
+          save(liveState);
+          const currentCap = fs.lstatSync(capabilityFile, {throwIfNoEntry: false});
+          if (currentCap?.isFile() && !currentCap.isSymbolicLink() && currentCap.size === cap.bytes.length
+            && fs.readFileSync(capabilityFile).equals(cap.bytes)) { fs.unlinkSync(capabilityFile); capabilityFileRemoved = true; }
+        } else {
+          const currentCap = fs.lstatSync(capabilityFile, {throwIfNoEntry: false});
+          if (currentCap?.isFile() && !currentCap.isSymbolicLink()) {
+            const bytes = fs.readFileSync(capabilityFile);
+            if (createHash('sha256').update(bytes).digest('hex') === pendingReceipt.capabilitySha256) {
+              fs.unlinkSync(capabilityFile); capabilityFileRemoved = true;
+            }
+          }
+        }
+        const terminal = {...pendingReceipt, status: 'reconciled', completedAt: new Date().toISOString(), capabilityFileRemoved};
+        terminal.sha256 = partialReceiptDigest(terminal);
+        const auditReceipt = writePartialReceipt(terminal);
+        return {reconciled: true, worker, slot, path: expectedPath, preservedPath: pendingReceipt.preservedPath,
+          preservedRef: pendingReceipt.preservedRef, head: expectedHead, entryCount: archived.entryCount,
+          totalBytes: archived.totalBytes, inventorySha256: archived.sha256,
+          auditReceipt: auditReceipt.path, auditSha256: auditReceipt.sha256, resumedPendingReceipt: true};
+      }
+      if (sourceExists === archiveExists) throw Error('Pending partial-removal receipt has ambiguous source/archive state; inspect without retry');
+    }
+    const value = state(), entry = value.entries.find(item => item.worker === worker && item.slot === slot);
+    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch || entry.head !== expectedHead) {
+      throw Error('Exact existing ready owner slot changed; preserve partial checkout');
+    }
+    const cap = readCapability({worker, slot, entry, requestedPath: capabilityFile});
+    const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(cap.token).digest('hex')}`;
+    if (inventory.preservedRef !== preservedRef) throw Error('Reviewed recovery ref does not match the exact owner capability');
+    const recoveryHead = git('rev-parse', '--verify', `${preservedRef}^{commit}`).trim();
+    if (recoveryHead !== expectedHead || git('rev-parse', '--verify', `refs/heads/${expectedBranch}^{commit}`).trim() !== expectedHead) {
+      throw Error('Candidate branch or owner recovery ref changed; preserve the slot');
+    }
+    if (value.entries.some(item => item !== entry && (item.path === entry.path || item.branch === entry.branch
+      || item.dependencies?.some?.(dependency => dependency === worker || dependency === entry.path || dependency === entry.branch)))) {
+      throw Error('Another managed slot depends on this partial checkout');
+    }
+    const readers = inspectReaders ? inspectReaders(entry.path) : (() => {
+      const probe = spawnSync('lsof', ['-t', '+D', entry.path], {encoding: 'utf8', env: noLazyFetch});
+      if (probe.error || ![0, 1].includes(probe.status)) throw Error('Unable to prove the partial checkout has no open readers');
+      return probe.stdout.trim().split(/\s+/).filter(Boolean);
+    })();
+    if (!Array.isArray(readers) || readers.length) throw Error('Partial checkout has active readers');
+    const dotGitPath = path.join(entry.path, '.git'), dotGitStat = fs.lstatSync(dotGitPath, {throwIfNoEntry: false});
+    if (!dotGitStat?.isFile() || dotGitStat.isSymbolicLink()) throw Error('Partial checkout Git link is missing or not ordinary');
+    const match = /^gitdir: (.+)\n?$/.exec(fs.readFileSync(dotGitPath, 'utf8'));
+    if (!match || !path.isAbsolute(match[1])) throw Error('Partial checkout Git link is malformed');
+    const adminPath = path.resolve(match[1]);
+    if (path.dirname(adminPath) !== path.join(common, 'worktrees') || fs.lstatSync(adminPath, {throwIfNoEntry: false})) {
+      throw Error('Git admin directory exists or is outside the common worktrees directory');
+    }
+    if (inventory.gitAdminPath !== adminPath) throw Error('Reviewed Git admin path differs from the dangling worktree link');
+    if (worktrees(false).some(item => item.path === entry.path)) throw Error('Git still registers the checkout; use ordinary release');
+    const current = partialTreeInventory(entry.path);
+    if (current.sha256 !== inventory.inventorySha256 || current.entryCount !== inventory.entryCount || current.totalBytes !== inventory.totalBytes) {
+      throw Error('Partial checkout changed after independent inventory review');
+    }
+    const prior = readPartialReceipts().filter(receipt => receipt.worker === worker && receipt.path === entry.path
+      && receipt.branch === entry.branch && receipt.head === expectedHead && receipt.manifestSha256 === inventory.inventorySha256
+      && receipt.status === 'pending');
+    if (prior.length > 1) throw Error('Multiple pending partial-removal receipts match; inspect before retry');
+    const receipt = prior[0] ?? {version: 1, operation: 'partial-removal-reconcile', status: 'pending', id: randomUUID(),
+      worker, slot, path: entry.path, branch: entry.branch, head: expectedHead, preservedRef,
+      preservedPath: partialArchivePath(worker, slot, expectedHead, inventory.inventorySha256),
+      manifestSha256: inventory.inventorySha256, entryCount: current.entryCount, totalBytes: current.totalBytes,
+      capabilitySha256: createHash('sha256').update(cap.bytes).digest('hex'),
+      reviewSha256: reviewer.sha256, startedAt: new Date().toISOString()};
+    if (receipt.reviewSha256 !== reviewer.sha256) throw Error('Pending recovery receipt is bound to a different independent review');
+    if (!receipt.sha256) { receipt.sha256 = partialReceiptDigest(receipt); writePartialReceipt(receipt); }
+    ordinaryDirectory(path.dirname(receipt.preservedPath));
+    fs.mkdirSync(path.dirname(receipt.preservedPath), {recursive: true, mode: 0o700});
+    if (fs.lstatSync(receipt.preservedPath, {throwIfNoEntry: false})) {
+      throw Error('Preserved partial-checkout destination already exists; inspect pending receipt');
+    }
+    // Recheck the byte-complete inventory immediately before the atomic move.
+    const beforeMove = partialTreeInventory(entry.path);
+    if (beforeMove.sha256 !== inventory.inventorySha256) throw Error('Partial checkout changed before preservation move');
+    if (worktrees(false).some(item => item.path === expectedPath)) throw Error('Git registered the checkout again before preservation move');
+    if (git('rev-parse', '--verify', `${expectedBranch}^{commit}`).trim() !== expectedHead
+      || git('rev-parse', '--verify', `${preservedRef}^{commit}`).trim() !== expectedHead) {
+      throw Error('Candidate branch or recovery ref changed before preservation move');
+    }
+    const finalReaders = inspectReaders ? inspectReaders(entry.path) : (() => {
+      const probe = spawnSync('lsof', ['-t', '+D', entry.path], {encoding: 'utf8', env: noLazyFetch});
+      if (probe.error || ![0, 1].includes(probe.status)) throw Error('Unable to prove the partial checkout has no open readers');
+      return probe.stdout.trim().split(/\s+/).filter(Boolean);
+    })();
+    if (!Array.isArray(finalReaders) || finalReaders.length) throw Error('Partial checkout gained active readers before preservation move');
+    fs.renameSync(entry.path, receipt.preservedPath);
+    const moved = partialTreeInventory(receipt.preservedPath);
+    if (moved.sha256 !== inventory.inventorySha256 || moved.entryCount !== inventory.entryCount || moved.totalBytes !== inventory.totalBytes) {
+      throw Error('Preserved directory did not match the independently reviewed inventory; pending receipt retained');
+    }
+    const archivedReaders = inspectReaders ? inspectReaders(receipt.preservedPath) : (() => {
+      const probe = spawnSync('lsof', ['-t', '+D', receipt.preservedPath], {encoding: 'utf8', env: noLazyFetch});
+      if (probe.error || ![0, 1].includes(probe.status)) throw Error('Unable to prove the preserved archive has no open readers');
+      return probe.stdout.trim().split(/\s+/).filter(Boolean);
+    })();
+    if (!Array.isArray(archivedReaders) || archivedReaders.length) throw Error('Preserved archive gained active readers');
+    const currentValue = state(), currentEntry = currentValue.entries.find(item => item.worker === worker && item.slot === slot);
+    if (!currentEntry || currentEntry.path !== expectedPath || currentEntry.branch !== expectedBranch || currentEntry.head !== expectedHead) {
+      throw Error('Owner slot changed after preservation; pending receipt retained');
+    }
+    currentValue.entries = currentValue.entries.filter(item => item !== currentEntry);
+    save(currentValue);
+    let capabilityFileRemoved = false;
+    const capabilityNow = fs.lstatSync(capabilityFile, {throwIfNoEntry: false});
+    if (capabilityNow?.isFile() && !capabilityNow.isSymbolicLink() && capabilityNow.size === cap.bytes.length
+      && fs.readFileSync(capabilityFile).equals(cap.bytes)) {
+      fs.unlinkSync(capabilityFile);
+      capabilityFileRemoved = true;
+    }
+    const terminal = {...receipt, status: 'reconciled', completedAt: new Date().toISOString(), capabilityFileRemoved};
+    terminal.sha256 = partialReceiptDigest(terminal);
+    const auditReceipt = writePartialReceipt(terminal);
+    return {reconciled: true, worker, slot, path: expectedPath, preservedPath: receipt.preservedPath,
+      preservedRef, head: expectedHead, entryCount: moved.entryCount, totalBytes: moved.totalBytes,
+      inventorySha256: moved.sha256, auditReceipt: auditReceipt.path, auditSha256: auditReceipt.sha256,
+      capabilityFileRemoved};
+  });
   const check = () => ({freeBytes: availableBytes()});
-  return {report, check, inspect, allocate, ensureCapabilityFile, capabilityFilePath, resume, recoverLostCapability, release, operatorRelease};
+  return {report, check, inspect, allocate, ensureCapabilityFile, capabilityFilePath, resume, recoverLostCapability,
+    release, operatorRelease, inspectPartialRemoval, reconcilePartialRemoval};
 }
 
 function isCliEntrypoint(argvPath, moduleUrl) {
@@ -963,7 +1312,7 @@ function cliSafeResult(action, value, capabilityFile) {
 function readOperatorReceipt(file) {
   if (!path.isAbsolute(file)) throw Error('Operator receipt paths must be absolute');
   const stat = fs.lstatSync(file);
-  if (!stat.isFile() || stat.isSymbolicLink() || stat.size > 256 * 1024) throw Error('Operator receipt must be an ordinary file up to 256 KiB');
+  if (!stat.isFile() || stat.isSymbolicLink() || stat.size > 32 * 1024 * 1024) throw Error('Receipt must be an ordinary file up to 32 MiB');
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
@@ -974,7 +1323,7 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
     for (let index = 0; index < args.length; index += 2) {
       const key = args[index]?.replace(/^--/, '');
       if (!['repo', 'worker', 'slot', 'branch', 'commit', 'profile', 'include', 'token', 'capability-file', 'expected-path', 'expected-branch', 'expected-head',
-        'operator', 'scope', 'authorization-ref', 'review-receipt', 'keeper-manifest'].includes(key) || !args[index + 1]) throw Error('Use report, inspect, allocate, resume, recover-lost-capability, release or operator-release with documented --repo/--key value arguments');
+        'operator', 'scope', 'authorization-ref', 'review-receipt', 'keeper-manifest', 'inventory-manifest'].includes(key) || !args[index + 1]) throw Error('Use a supported workspace action with documented --repo/--key value arguments');
       if (key === 'include') options.include.push(args[index + 1]);
       else {
         const option = key.replace(/-([a-z])/g, (_match, letter) => letter.toUpperCase());
@@ -1008,12 +1357,19 @@ if (isCliEntrypoint(process.argv[1], import.meta.url)) {
         process.stderr.write(`--- begin ${instructionPath} ---\n${text}${text.endsWith('\n') ? '' : '\n'}--- end ${instructionPath} ---\n`);
       }
     });
-    const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action === 'operator-release' ? 'operatorRelease' : action;
-    if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release', 'operator-release'].includes(action)) throw Error('Choose report, check, inspect, allocate, resume, recover-lost-capability, release or operator-release with documented --key value arguments');
+    const method = action === 'recover-lost-capability' ? 'recoverLostCapability' : action === 'operator-release' ? 'operatorRelease'
+      : action === 'inspect-partial-removal' ? 'inspectPartialRemoval'
+        : action === 'reconcile-partial-removal' ? 'reconcilePartialRemoval' : action;
+    if (!['report', 'check', 'inspect', 'allocate', 'resume', 'recover-lost-capability', 'release', 'operator-release',
+      'inspect-partial-removal', 'reconcile-partial-removal'].includes(action)) throw Error('Choose a supported workspace action with documented --key value arguments');
     if (action === 'operator-release') {
       if (!options.operator || options.operator !== process.env.CODEX_THREAD_ID) throw Error('Operator release requires this coordinator’s exact CODEX_THREAD_ID');
       options.reviewReceipt = readOperatorReceipt(options.reviewReceipt);
       options.keeperManifest = readOperatorReceipt(options.keeperManifest);
+    }
+    if (action === 'reconcile-partial-removal') {
+      options.reviewReceipt = readOperatorReceipt(options.reviewReceipt);
+      options.inventoryManifest = readOperatorReceipt(options.inventoryManifest);
     }
     if (action === 'resume' && options.token === undefined && options.capabilityFile === undefined) {
       options.capabilityFile = manager.capabilityFilePath({worker: options.worker, slot: options.slot ?? 'work'});
