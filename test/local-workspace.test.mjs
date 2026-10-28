@@ -693,7 +693,7 @@ test('audited operator release binds approval, independent review, keeper bytes 
   process.env.CODEX_THREAD_ID = operator;
   t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
 
-  const result = manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+  const result = await manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
     worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: liveHead,
     reviewReceipt, keeperManifest});
   assert.equal(result.released, true);
@@ -709,9 +709,88 @@ test('audited operator release binds approval, independent review, keeper bytes 
   assert.equal(audit.keepers[0].sha256, sha256);
   assert.equal(Object.hasOwn(audit, 'token'), false);
   assert.ok(!JSON.stringify(result).includes(entry.token));
-  assert.throws(() => manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+  await assert.rejects(() => manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
     worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: liveHead,
     reviewReceipt, keeperManifest}), /already used/);
+});
+
+test('audited operator release refuses an unrelated live head', async t => {
+  const {repo, head, temporary} = fixture(t, {inspectReaders: () => []});
+  const worker = 'unrelated-head-orphan', operator = 'team-three-coordinator', reviewer = 'team-three-reviewer';
+  const branch = 'engineering/unrelated-head-orphan';
+  const manager = workspaceManager(repo, {inspectReaders: () => []});
+  const entry = await manager.allocate({worker, branch});
+  const tree = execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD^{tree}'], {encoding: 'utf8'}).trim();
+  const unrelatedHead = execFileSync('git', ['-C', repo, 'commit-tree', tree, '-m', 'unrelated owner tip'], {encoding: 'utf8'}).trim();
+  execFileSync('git', ['-C', entry.path, 'reset', '--hard', unrelatedHead]);
+  assert.notEqual(spawnSync('git', ['-C', repo, 'merge-base', '--is-ancestor', entry.head, unrelatedHead]).status, 0);
+  assert.equal(execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim(), unrelatedHead);
+  const reviewReceipt = sealOperatorReceipt({result: 'PASS', worker: reviewer, scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head: unrelatedHead, authorizationRef: 'team3-bra-tgo-orphaned-slots',
+    keeperManifestSha256: '0'.repeat(64)});
+  const keeperManifest = sealOperatorReceipt({result: 'PASS', scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head: unrelatedHead, files: []});
+  const boundReview = sealOperatorReceipt({...reviewReceipt, keeperManifestSha256: keeperManifest.sha256});
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = operator;
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  await assert.rejects(manager.operatorRelease({operator, scope: 'BRA', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+    worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: unrelatedHead,
+    reviewReceipt: boundReview, keeperManifest}), /not a descendant/);
+  assert.ok(fs.existsSync(entry.path));
+  assert.equal(execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim(), unrelatedHead);
+  assert.deepEqual(registryEntries(manager).map(item => item.worker), [worker]);
+  assert.equal(fs.existsSync(path.join(manager.report().registry, 'audit')), false);
+  const recovery = spawnSync('git', ['-C', repo, 'show-ref', '--verify', '--hash',
+    `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`], {encoding: 'utf8'});
+  assert.notEqual(recovery.status, 0);
+  assert.equal(head, entry.head);
+});
+
+test('operator release refuses a tip advanced between review and ref locking', async t => {
+  const {repo, temporary} = fixture(t, {inspectReaders: () => []});
+  const realGit = execFileSync('which', ['git'], {encoding: 'utf8'}).trim();
+  const bin = path.join(temporary, 'race-bin'); fs.mkdirSync(bin);
+  const wrapper = path.join(bin, 'git');
+  const branch = 'engineering/raced-head-orphan', worker = 'raced-head-orphan';
+  const common = execFileSync('git', ['-C', repo, 'rev-parse', '--path-format=absolute', '--git-common-dir'], {encoding: 'utf8'}).trim();
+  const pathFile = path.join(temporary, 'race-worktree-path');
+  fs.writeFileSync(wrapper, `#!/bin/sh\nif [ "$1" = "--git-dir" ] && [ "$2" = "${common}" ] && [ "$3" = "update-ref" ] && [ "$4" = "--stdin" ]; then\n  race_worktree=$(cat "$WORLDATLAS_TEST_RACE_PATH_FILE")\n  "$WORLDATLAS_TEST_REAL_GIT" -C "$race_worktree" commit --allow-empty -m 'concurrent owner tip' >&2 || exit 91\nfi\nexec "$WORLDATLAS_TEST_REAL_GIT" "$@"\n`, {mode: 0o700});
+  const oldPath = process.env.PATH, oldRealGit = process.env.WORLDATLAS_TEST_REAL_GIT, oldPathFile = process.env.WORLDATLAS_TEST_RACE_PATH_FILE;
+  process.env.PATH = `${bin}:${oldPath}`; process.env.WORLDATLAS_TEST_REAL_GIT = realGit; process.env.WORLDATLAS_TEST_RACE_PATH_FILE = pathFile;
+  t.after(() => {
+    if (oldPath === undefined) delete process.env.PATH; else process.env.PATH = oldPath;
+    if (oldRealGit === undefined) delete process.env.WORLDATLAS_TEST_REAL_GIT; else process.env.WORLDATLAS_TEST_REAL_GIT = oldRealGit;
+    if (oldPathFile === undefined) delete process.env.WORLDATLAS_TEST_RACE_PATH_FILE; else process.env.WORLDATLAS_TEST_RACE_PATH_FILE = oldPathFile;
+  });
+  const manager = workspaceManager(repo, {inspectReaders: () => []});
+  const entry = await manager.allocate({worker, branch});
+  fs.writeFileSync(pathFile, entry.path);
+  execFileSync('git', ['-C', entry.path, 'commit', '--allow-empty', '-m', 'reviewed live tip']);
+  const reviewedHead = execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  const reviewReceipt = sealOperatorReceipt({result: 'PASS', worker: 'team-three-reviewer', scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head: reviewedHead, authorizationRef: 'team3-bra-tgo-orphaned-slots'});
+  const keeperManifest = sealOperatorReceipt({result: 'PASS', scope: 'BRA', worker_id: worker,
+    slot: 'work', path: entry.path, branch, head: reviewedHead, files: []});
+  const boundReview = sealOperatorReceipt({...reviewReceipt, keeperManifestSha256: keeperManifest.sha256});
+  const oldIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = 'team-three-coordinator';
+  t.after(() => oldIdentity === undefined ? delete process.env.CODEX_THREAD_ID : process.env.CODEX_THREAD_ID = oldIdentity);
+  await assert.rejects(manager.operatorRelease({operator: 'team-three-coordinator', scope: 'BRA',
+    authorizationRef: 'team3-bra-tgo-orphaned-slots', worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: branch, expectedHead: reviewedHead, reviewReceipt: boundReview, keeperManifest}),
+  /expected|changed while locking/);
+  const actualHead = execFileSync(realGit, ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  assert.notEqual(actualHead, reviewedHead);
+  assert.ok(fs.existsSync(entry.path));
+  assert.equal(registryEntries(manager)[0].path, entry.path);
+  const ref = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
+  assert.equal(execFileSync(realGit, ['-C', repo, 'rev-parse', ref], {encoding: 'utf8'}).trim(), reviewedHead);
+  const auditFile = fs.readdirSync(path.join(manager.report().registry, 'audit'))[0];
+  const audit = JSON.parse(fs.readFileSync(path.join(manager.report().registry, 'audit', auditFile), 'utf8'));
+  assert.equal(audit.status, 'failed');
+  assert.equal(audit.head, reviewedHead);
+  assert.equal(audit.preservedRef, ref);
 });
 
 test('audited operator release refuses stale identity, dirty work, open readers and changed keeper data', async t => {
@@ -743,14 +822,14 @@ test('audited operator release refuses stale identity, dirty work, open readers 
     worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
     reviewReceipt, keeperManifest, ...overrides});
 
-  assert.throws(() => request({authorizationRef: 'unapproved-reference'}), /approved BRA\/TGO scope/);
-  assert.throws(() => request({slot: 'review'}), /approved BRA\/TGO scope/);
-  assert.throws(() => request({operator: 'different-coordinator'}), /exact CODEX_THREAD_ID/);
-  assert.throws(() => request({worker: operator}), /exact CODEX_THREAD_ID/);
-  assert.throws(() => request({reviewReceipt: undefined}), /Independent review receipt is missing, stale/);
-  assert.throws(() => request({reviewReceipt: sealOperatorReceipt({...reviewReceipt, keeperManifestSha256: '0'.repeat(64)})}),
+  await assert.rejects(request({authorizationRef: 'unapproved-reference'}), /approved BRA\/TGO scope/);
+  await assert.rejects(request({slot: 'review'}), /approved BRA\/TGO scope/);
+  await assert.rejects(request({operator: 'different-coordinator'}), /exact CODEX_THREAD_ID/);
+  await assert.rejects(request({worker: operator}), /exact CODEX_THREAD_ID/);
+  await assert.rejects(request({reviewReceipt: undefined}), /Independent review receipt is missing, stale/);
+  await assert.rejects(request({reviewReceipt: sealOperatorReceipt({...reviewReceipt, keeperManifestSha256: '0'.repeat(64)})}),
     /did not attest the exact keeper/);
-  assert.throws(() => request({expectedHead: '0'.repeat(40)}), /Independent review receipt is missing, stale/);
+  await assert.rejects(request({expectedHead: '0'.repeat(40)}), /Independent review receipt is missing, stale/);
   assert.equal(registryEntries(manager)[0].head, head);
   const auditDirectory = path.join(manager.report().registry, 'audit');
   fs.mkdirSync(auditDirectory, {mode: 0o700});
@@ -762,32 +841,32 @@ test('audited operator release refuses stale identity, dirty work, open readers 
     startedAt: new Date().toISOString()};
   const pendingFile = path.join(auditDirectory, `${pendingId}.json`);
   fs.writeFileSync(pendingFile, JSON.stringify(pendingReceipt), {mode: 0o600});
-  assert.throws(() => request({}), /pending receipt/);
+  await assert.rejects(request({}), /pending receipt/);
   fs.unlinkSync(pendingFile);
   const malformedFile = path.join(auditDirectory, 'malformed.json');
   fs.writeFileSync(malformedFile, '{}', {mode: 0o600});
-  assert.throws(() => request({}), /unrecognized receipt/);
+  await assert.rejects(request({}), /unrecognized receipt/);
   fs.unlinkSync(malformedFile);
   fs.rmdirSync(auditDirectory);
   fs.writeFileSync(source, 'source changed');
-  assert.throws(() => request({}), /Keeper\/restoration file metadata mismatch/);
+  await assert.rejects(request({}), /Keeper\/restoration file metadata mismatch/);
   fs.writeFileSync(source, bytes, {mode}); fs.chmodSync(source, mode);
   fs.writeFileSync(path.join(entry.path, 'README.md'), 'changed tracked content');
-  assert.throws(() => request({}), /Tracked modifications or untracked/);
+  await assert.rejects(request({}), /Tracked modifications or untracked/);
   fs.writeFileSync(path.join(entry.path, 'README.md'), 'root');
   const dependent = await manager.allocate({worker: 'dependent-slot', slot: 'review', commit: head});
   const registryFile = path.join(manager.report().registry, 'state.json'), originalRegistry = fs.readFileSync(registryFile, 'utf8');
   const registryState = JSON.parse(originalRegistry);
   registryState.entries.find(item => item.worker === dependent.worker).dependencies = [worker];
   fs.writeFileSync(registryFile, JSON.stringify(registryState, null, 2) + '\n');
-  assert.throws(() => request({}), /depends on this workspace/);
+  await assert.rejects(request({}), /depends on this workspace/);
   fs.writeFileSync(registryFile, originalRegistry);
   manager.release({worker: dependent.worker, slot: 'review', token: dependent.token});
   readers = ['999'];
-  assert.throws(() => request({}), /active readers/);
+  await assert.rejects(request({}), /active readers/);
   readers = [];
   fs.writeFileSync(keeperPath, 'changed backup');
-  assert.throws(() => request({}), /Keeper\/restoration/);
+  await assert.rejects(request({}), /Keeper\/restoration/);
   assert.equal(fs.readFileSync(source, 'utf8'), 'unique evidence\n');
   assert.equal(registryEntries(manager)[0].head, head);
 });
@@ -855,7 +934,7 @@ test('operator release restores keeper-backed source files when ordinary Git rem
   });
   syncBuiltinESMExports();
   t.after(() => { t.mock.restoreAll(); syncBuiltinESMExports(); });
-  assert.throws(() => manager.operatorRelease({operator, scope: 'TGO', authorizationRef: 'team3-bra-tgo-orphaned-slots',
+  await assert.rejects(() => manager.operatorRelease({operator, scope: 'TGO', authorizationRef: 'team3-bra-tgo-orphaned-slots',
     worker, slot: 'work', expectedPath: entry.path, expectedBranch: branch, expectedHead: head,
     reviewReceipt, keeperManifest}), /injected ordinary worktree removal refusal/);
   assert.equal(fs.readFileSync(source, 'utf8'), 'preserve after refusal\n');

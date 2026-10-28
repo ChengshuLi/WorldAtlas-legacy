@@ -1,9 +1,10 @@
 import {assertAuthorWorkerIdentity} from './worker-identity.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
-import {execFileSync, spawnSync} from 'node:child_process';
+import {execFileSync, spawn, spawnSync} from 'node:child_process';
 import {createHash, randomUUID} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {createInterface} from 'node:readline';
 
 const support = ['docs', 'scripts', 'test', 'src', 'hosted', 'drizzle', '.github', '.agents', 'coordination/templates'];
 const engineeringCode = name => name.startsWith('coordination/engineering/') && /\.(?:mjs|js|cjs|py|sh)$/.test(name);
@@ -11,6 +12,75 @@ const id = value => typeof value === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,1
 const operatorReleaseAuthorization = 'team3-bra-tgo-orphaned-slots';
 const safeInclude = value => typeof value === 'string' && /^(data|research|coordination)\/[a-zA-Z0-9_./-]+$/.test(value)
   && value.split('/').every(part => part && part !== '.' && part !== '..');
+
+async function removeWorktreeAtExactHead({gitDirectory, worktreePath, branchRef, expectedHead, preservedRef, env}) {
+  if (!path.isAbsolute(gitDirectory) || !path.isAbsolute(worktreePath) ||
+      !/^refs\/heads\/[a-zA-Z0-9._/-]+$/.test(branchRef ?? '') ||
+      !/^[a-f0-9]{40}$/.test(expectedHead ?? '') ||
+      !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(preservedRef ?? '')) {
+    throw Error('Invalid exact-head Git release guard');
+  }
+  const child = spawn('git', ['--git-dir', gitDirectory, 'update-ref', '--stdin'],
+    {stdio: ['pipe', 'pipe', 'pipe'], env});
+  const lines = createInterface({input: child.stdout});
+  let stderr = '';
+  child.stderr.setEncoding('utf8').on('data', chunk => { stderr += chunk; });
+  const closed = new Promise((resolve, reject) => {
+    child.once('error', reject);
+    child.once('close', (code, signal) => resolve({code, signal}));
+  });
+  const output = lines[Symbol.asyncIterator]();
+  const next = async () => {
+    const row = await output.next();
+    if (row.done) {
+      const result = await closed;
+      throw Error(stderr.trim() || `Exact-head Git release guard exited (${result.code ?? result.signal})`);
+    }
+    return row.value;
+  };
+  const expect = async value => {
+    const line = await next();
+    if (line !== value) throw Error(stderr.trim() || `Exact-head Git release guard returned ${line}`);
+  };
+  let prepared = false, removed = false, completed = false;
+  try {
+    // Keep the reviewed tip recoverable even if Git refuses ordinary removal.
+    // Its immutable OID is fixed before the branch lock; a racing update can
+    // make the transaction fail, but can never redirect this recovery ref.
+    execFileSync('git', ['--git-dir', gitDirectory, 'update-ref', preservedRef, expectedHead], {encoding: 'utf8', env});
+    child.stdin.write('start\n');
+    await expect('start: ok');
+    // Updating the branch ref to the same expected value acquires its ref lock.
+    // The recovery ref and branch check are prepared in one transaction, so a
+    // concurrent owner commit cannot slip between the final check and removal.
+    child.stdin.write(`update ${branchRef} ${expectedHead} ${expectedHead}\n` +
+      `update ${preservedRef} ${expectedHead} ${expectedHead}\nprepare\n`);
+    await expect('prepare: ok');
+    prepared = true;
+    const tip = execFileSync('git', ['-C', worktreePath, 'rev-parse', 'HEAD'], {encoding: 'utf8', env}).trim();
+    const symbolic = execFileSync('git', ['-C', worktreePath, 'symbolic-ref', '--quiet', 'HEAD'], {encoding: 'utf8', env}).trim();
+    if (tip !== expectedHead || symbolic !== branchRef) throw Error('Live HEAD changed while locking the operator release; preserve workspace for inspection');
+    execFileSync('git', ['--git-dir', gitDirectory, 'worktree', 'remove', worktreePath], {encoding: 'utf8', env});
+    removed = true;
+    child.stdin.write('commit\n');
+    await expect('commit: ok');
+    child.stdin.end();
+    const result = await closed;
+    if (result.code !== 0) throw Error(stderr.trim() || 'Exact-head Git release transaction failed');
+    completed = true;
+  } finally {
+    if (!completed) {
+      try {
+        if (prepared && !removed && !child.stdin.destroyed) {
+          child.stdin.write('abort\n');
+          await expect('abort: ok');
+        }
+      } catch { /* retain the original release failure */ }
+      try { child.stdin.end(); } catch { /* child may already have exited */ }
+      try { await closed; } catch { /* retain the original release failure */ }
+    }
+  }
+}
 
 // No shell, background mutations, timeout retries, or automatic lock breaking.
 export function workspaceManager(repo, {freeBytes, onStartupGuidance,
@@ -232,7 +302,13 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       if (error.code === 'EEXIST') throw Error('Workspace allocation is locked; retry later. Never break a lock without operator inspection.');
       throw error;
     }
-    try { return operation(); } finally { fs.rmdirSync(lock); }
+    const unlock = () => fs.rmdirSync(lock);
+    try {
+      const result = operation();
+      if (result && typeof result.then === 'function') return result.finally(unlock);
+      unlock();
+      return result;
+    } catch (error) { unlock(); throw error; }
   };
   const worktrees = (measure = true) => {
     const output = git('worktree', 'list', '--porcelain', '-z');
@@ -673,7 +749,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       head: expectedHead, capabilityFile: file, previousTokenInvalidated: true};
   });
 
-  const releaseEntry = ({worker, slot = 'work', token, capabilityFile, operatorAuthorized = false}) => {
+  const releaseEntry = ({worker, slot = 'work', token, capabilityFile, operatorAuthorized = false, expectedHead}) => {
     const value = state();
     const entry = value.entries.find(entry => entry.worker === worker && entry.slot === slot);
     let savedCapability;
@@ -699,6 +775,9 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     }
     if (localGit('status', '--porcelain', '--untracked-files=all')) throw Error('Workspace contains uncommitted or untracked files; preserve unique work first');
     const head = localGit('rev-parse', 'HEAD').trim();
+    if (expectedHead !== undefined && head !== expectedHead) {
+      throw Error('Live HEAD changed before the reviewed recovery ref; preserve workspace for inspection');
+    }
     const ignored = localGit('ls-files', '--others', '--ignored', '--exclude-standard', '-z').split('\0').filter(Boolean);
     let generatedDatabase;
     if (ignored.length) {
@@ -722,26 +801,34 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     // A release receipt returns this ref name. Never encode a live bearer token
     // in a value that is routinely printed or logged.
     const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
+    const finish = () => {
+      value.entries = value.entries.filter(item => item !== entry);
+      save(value);
+      let capabilityFileRemoved;
+      if (savedCapability) {
+        const current = fs.lstatSync(savedCapability.path, {throwIfNoEntry: false});
+        const currentBytes = current?.isFile() && !current.isSymbolicLink() ? fs.readFileSync(savedCapability.path) : null;
+        if (current && currentBytes && !['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => savedCapability.stat[key] !== current[key]) &&
+          savedCapability.bytes.equals(currentBytes)) {
+          fs.unlinkSync(savedCapability.path);
+          const directoryDescriptor = fs.openSync(capabilityDirectory, 'r');
+          try { fs.fsyncSync(directoryDescriptor); } finally { fs.closeSync(directoryDescriptor); }
+          capabilityFileRemoved = true;
+        } else capabilityFileRemoved = false;
+      }
+      return {released: true, path: entry.path, preservedRef, head: expectedHead ?? head,
+        ...(savedCapability ? {capability_file_removed: capabilityFileRemoved} : {}),
+        ...(generatedDatabase ? {removed_generated_database: generatedDatabase} : {})};
+    };
+    if (expectedHead !== undefined) {
+      const branchRef = localGit('symbolic-ref', '--quiet', 'HEAD').trim();
+      return removeWorktreeAtExactHead({gitDirectory: common, worktreePath: entry.path, branchRef,
+        expectedHead, preservedRef, env: noLazyFetch}).then(finish);
+    }
     git('update-ref', preservedRef, head);
     // Git's own dirty/in-use worktree guards remain enabled; no --force.
     git('worktree', 'remove', entry.path);
-    value.entries = value.entries.filter(item => item !== entry);
-    save(value);
-    let capabilityFileRemoved;
-    if (savedCapability) {
-      const current = fs.lstatSync(savedCapability.path, {throwIfNoEntry: false});
-      const currentBytes = current?.isFile() && !current.isSymbolicLink() ? fs.readFileSync(savedCapability.path) : null;
-      if (current && currentBytes && !['dev','ino','size','mode','mtimeMs','ctimeMs'].some(key => savedCapability.stat[key] !== current[key]) &&
-        savedCapability.bytes.equals(currentBytes)) {
-        fs.unlinkSync(savedCapability.path);
-        const directoryDescriptor = fs.openSync(capabilityDirectory, 'r');
-        try { fs.fsyncSync(directoryDescriptor); } finally { fs.closeSync(directoryDescriptor); }
-        capabilityFileRemoved = true;
-      } else capabilityFileRemoved = false;
-    }
-    return {released: true, path: entry.path, preservedRef, head,
-      ...(savedCapability ? {capability_file_removed: capabilityFileRemoved} : {}),
-      ...(generatedDatabase ? {removed_generated_database: generatedDatabase} : {})};
+    return finish();
   };
   const release = args => locked(() => releaseEntry(args));
 
@@ -765,7 +852,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     return createHash('sha256').update(JSON.stringify(body)).digest('hex');
   };
   const operatorRelease = ({operator, scope, authorizationRef, worker, slot = 'work', expectedPath,
-    expectedBranch, expectedHead, reviewReceipt, keeperManifest}) => locked(() => {
+    expectedBranch, expectedHead, reviewReceipt, keeperManifest}) => locked(async () => {
     const operatorIdentity = process.env.CODEX_THREAD_ID;
     if (!id(operator) || operatorIdentity !== operator || worker === operator) {
       throw Error('Operator release requires this coordinator’s exact CODEX_THREAD_ID');
@@ -903,7 +990,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       for (const file of verifiedFiles) fs.unlinkSync(path.join(entry.path, file.path));
       const capPath = capabilityPath(worker, slot);
       const capStat = fs.lstatSync(capPath, {throwIfNoEntry: false});
-      releaseResult = releaseEntry({worker, slot, operatorAuthorized: true,
+      releaseResult = await releaseEntry({worker, slot, operatorAuthorized: true, expectedHead,
         ...(capStat ? {capabilityFile: capPath} : {})});
       const terminal = {...pending, status: 'released', completedAt: new Date().toISOString(), preservedRef: releaseResult.preservedRef};
       const finalReceipt = writeAuditReceipt(terminal, auditId);
