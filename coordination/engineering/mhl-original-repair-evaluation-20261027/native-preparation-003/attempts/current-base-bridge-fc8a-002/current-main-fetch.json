@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "kind": "mhl-bounded-current-main-fetch-v1",
+  "attempts": [
+    {
+      "command": "git -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules --no-auto-maintenance origin main",
+      "exit_code": 128,
+      "result": "No state change; this owned sparse repo has no remote.origin.url configured."
+    },
+    {
+      "command": "git -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules --no-auto-maintenance https://github.com/ChengshuLi/WorldAtlas.git main:refs/remotes/origin/main",
+      "exit_code": 0,
+      "result": "refs/remotes/origin/main resolved to accepted public fc8a0a85bf1d40dd86e1a1097b775d442474468a"
+    }
+  ],
+  "limits": [
+    "Only the accepted public main ref was fetched; no tags, submodules, broad history hydration or auto-maintenance. Credential values are not included."
+  ],
+  "exact_missing_object_followup": {
+    "command": "git -c fetch.negotiationAlgorithm=noop fetch --no-tags --no-recurse-submodules --no-auto-maintenance https://github.com/ChengshuLi/WorldAtlas.git 2573356820fd386d380da1d26bcaa01a1999394a",
+    "exit_code": 0,
+    "blob_oid": "2573356820fd386d380da1d26bcaa01a1999394a",
+    "path": "research/geography/gbr28-source-relative-20261026/assessment.md",
+    "commit": "fc8a0a85bf1d40dd86e1a1097b775d442474468a",
+    "bytes": 6830,
+    "sha256": "dd3a0cafab0c1d910f353932891e54da64f06d103d7cc0968b6a71753fefd135",
+    "verification": "git cat-file type=blob; exact size 6,830; accepted commit path resolves to same blob OID"
+  }
+}

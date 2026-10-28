@@ -1,0 +1,1468 @@
+{
+  "version": 1,
+  "kind": "jor656-finalizer-instrumented-attempt-preflight",
+  "attempt": "021",
+  "created_utc": "2026-10-27T16:43:08Z",
+  "cwd": "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/21af6085c32e8414d1e2bc94a35082e055ca8b456dd4573ef619a001659c51ea/work",
+  "branch": "jor656-full-current-20261026",
+  "head": "c2624261d45a26215eceb84e55485f17a05c03dc",
+  "fetched_origin_main": "299642f94b103de34eff08ec3ffbc52e8d623c86",
+  "phase": "finalize",
+  "config": {
+    "path": ".jor-source-prep/finalize-config-021.json",
+    "bytes": 661,
+    "sha256": "28219a431a5aa9edc67fcba565e43a6d8d0d90ba3bd10e4dd25143b5e34aea4d",
+    "version": 2
+  },
+  "destination_relative_path": "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021",
+  "destination_absent_prelaunch": true,
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "scripts/prepare-delivery-handoff.mjs",
+    "finalize",
+    ".jor-source-prep/finalize-config-021.json",
+    "coordination/engineering/jor656-repair-evaluation-20261026/finalize-instrumented-021"
+  ],
+  "env_handling": {
+    "NODE_PATH": "removed for child; matches prior helper-compatible invocation",
+    "NODE_OPTIONS": "verified unset",
+    "other inherited variables": "inherited unchanged; not serialized"
+  },
+  "runtime": {
+    "node_path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "node_version": "v24.19.0",
+    "node_sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12",
+    "helper_path": "scripts/prepare-delivery-handoff.mjs",
+    "helper_sha256": "a0688809df1bde68cdcf6eeb953023fbd4e43c04a3449a8a199ee170113dcc09",
+    "python_path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_version": "3.12.14",
+    "python_used_only_for_external_wait4/rusage/RSS sampling": true
+  },
+  "resource_limits_visible_to_preflight_shell": {
+    "RLIMIT_AS": [
+      -1,
+      -1
+    ],
+    "RLIMIT_DATA": [
+      -1,
+      -1
+    ],
+    "RLIMIT_RSS": [
+      -1,
+      -1
+    ]
+  },
+  "disk_prelaunch_bytes": {
+    "total": 33770192896,
+    "used": 31897841664,
+    "free": 137588736
+  },
+  "runtime_package": {
+    "name": "@noble/hashes",
+    "version": "2.0.1",
+    "provenance_path": "/workspace/shared/worldatlas-SYC2458-noble-runtime-provenance-20261026.json",
+    "provenance_sha256": "b7ceae38b72ffc941e229a92b06fa2b66c8af1fe063e6176784667f0378f7ffd",
+    "verified_files": 98,
+    "tarball_bytes": 135794,
+    "tarball_sha256": "638ffb3053a7e7478c9e54a6e297f3601299ee570a41112e501af7050d086a0a"
+  },
+  "explicit_config_inputs": [
+    {
+      "role": "selector",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "path": "data/ownership-selection.json",
+      "bytes": 2256,
+      "sha256": "fe9a566d76724d8009e9ebba90dfecc968fc90051b2be48c204310e88da29a82"
+    },
+    {
+      "role": "package_inputs",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "path": ".github/package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "role": "change_evidence",
+      "commit": "95dba6ca68188649d6c53497416c2f2e5c7ecb42",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/authority-compose-003/authority-registry.json",
+      "bytes": 2633,
+      "sha256": "24deb144b661f75759f268cb6869b8787aad5de8b512bf81945013cb8f2291d7"
+    }
+  ],
+  "accepted_native_manifest": {
+    "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/native-v9/manifest.json",
+    "bytes": 252447,
+    "sha256": "d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba"
+  },
+  "accepted_startup_inventory": {
+    "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "index_path": "data/canonical-grid/current-startup/index.json",
+    "index_bytes": 49610,
+    "index_sha256": "4857769556f3416d3aa41334ac5ae96ea9834bf36d26697aeec5c6f67fd31b63",
+    "indexed_member_count": 79,
+    "verified_member_count": 79,
+    "members": [
+      {
+        "path": "data/canonical-grid/current-startup/index.json",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 49610,
+        "sha256": "4857769556f3416d3aa41334ac5ae96ea9834bf36d26697aeec5c6f67fd31b63"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-01dda5434cf733782368934caa3b04d0c3cf3fc47b847771e240100f69b58d13.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 443384,
+        "sha256": "01dda5434cf733782368934caa3b04d0c3cf3fc47b847771e240100f69b58d13"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-037a1169f2f6aa152793c2d34ea322d41898b6b795351ba0c62d5de14a95bf2c.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 102904,
+        "sha256": "037a1169f2f6aa152793c2d34ea322d41898b6b795351ba0c62d5de14a95bf2c"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-07d1f7ee1700a9145394913d128643621cfa9ec9aaf8e3c324e45f02c5991eeb.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 600238,
+        "sha256": "07d1f7ee1700a9145394913d128643621cfa9ec9aaf8e3c324e45f02c5991eeb"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-0ff1bae61f7eff11430f9f8d1b9e4e26e69c41beb159e811d5899d948efaeb12.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 260711,
+        "sha256": "0ff1bae61f7eff11430f9f8d1b9e4e26e69c41beb159e811d5899d948efaeb12"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-1180e6b9bfab70b96be6e84c74996e6d7b40fd68123c0f9fbdc515de12895171.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 351285,
+        "sha256": "1180e6b9bfab70b96be6e84c74996e6d7b40fd68123c0f9fbdc515de12895171"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-1a850c615bd79b63c7fa3627541246f5e6c90b19c1babef544dae3f53ce6f9a3.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 1489269,
+        "sha256": "1a850c615bd79b63c7fa3627541246f5e6c90b19c1babef544dae3f53ce6f9a3"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-27d3cb885212265ac285e8ade40e7fa7225de4ee99ff2fa05d3b6784a54e432a.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 549790,
+        "sha256": "27d3cb885212265ac285e8ade40e7fa7225de4ee99ff2fa05d3b6784a54e432a"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-2c0a0451c53162c4b206a1e38f9716e91cb54eaca7e4fe8e928efe3e4c488f55.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 311961,
+        "sha256": "2c0a0451c53162c4b206a1e38f9716e91cb54eaca7e4fe8e928efe3e4c488f55"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-2daefb7d6dc848a58df1f508160a21b479a10225b5868cea675e40300a4f8289.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 241774,
+        "sha256": "2daefb7d6dc848a58df1f508160a21b479a10225b5868cea675e40300a4f8289"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-34011cd402daf991b1b86c9b62180772ecf3aef45d21d9144277f88e036c8596.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 140327,
+        "sha256": "34011cd402daf991b1b86c9b62180772ecf3aef45d21d9144277f88e036c8596"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-3a595635851fbaaca6943f1621e9652645abe431f09f5b24d122ce225c04235f.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 539011,
+        "sha256": "3a595635851fbaaca6943f1621e9652645abe431f09f5b24d122ce225c04235f"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-3b62f487904632ae5ea1a0b83c48d4d87fae020cc616407085d24d12b67bbd00.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 962516,
+        "sha256": "3b62f487904632ae5ea1a0b83c48d4d87fae020cc616407085d24d12b67bbd00"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-45d5a1448c684180e271941288f2a82aa4a25f8a27156f86a3286df85c4fd117.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 193463,
+        "sha256": "45d5a1448c684180e271941288f2a82aa4a25f8a27156f86a3286df85c4fd117"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-48be8370c9bd2f2a30f5ec78a25f43072532fc3ae656cc26425f387b7845bf05.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 92272,
+        "sha256": "48be8370c9bd2f2a30f5ec78a25f43072532fc3ae656cc26425f387b7845bf05"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-4a691e4b7403c84b301354b36e7dc64620f730d0dad67dc5d4d3ce1379ebf68c.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 920384,
+        "sha256": "4a691e4b7403c84b301354b36e7dc64620f730d0dad67dc5d4d3ce1379ebf68c"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-4ca7aa763eac71715f290914e2f68f504cc23c5a38adff98a5b176b041f535a7.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 298230,
+        "sha256": "4ca7aa763eac71715f290914e2f68f504cc23c5a38adff98a5b176b041f535a7"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-512075c7a4bcdc3126411b538b0aa5ed5040539872ddf6b44bf058bd2d6e3ab4.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 404667,
+        "sha256": "512075c7a4bcdc3126411b538b0aa5ed5040539872ddf6b44bf058bd2d6e3ab4"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-55ac15258dbde794367a7412d616708b9d1e90698f19079c57fafc34a7e3014c.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 504348,
+        "sha256": "55ac15258dbde794367a7412d616708b9d1e90698f19079c57fafc34a7e3014c"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-62de96fed91dc06dbab6232a8b66b689352ee4b38f3c6f96fae9f36d45827b14.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 819365,
+        "sha256": "62de96fed91dc06dbab6232a8b66b689352ee4b38f3c6f96fae9f36d45827b14"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-6721ac7351e21b309554e4f6a6127a9966b51bf3d9a98c2699d5bc983caf2a7b.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 892136,
+        "sha256": "6721ac7351e21b309554e4f6a6127a9966b51bf3d9a98c2699d5bc983caf2a7b"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-683e563687fddf1b757602c182e0339cf7fb37b31ee7ef017af3398df97afd05.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 151757,
+        "sha256": "683e563687fddf1b757602c182e0339cf7fb37b31ee7ef017af3398df97afd05"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-7b2700426d1ebe3d670d686662d11867e98d579901e0ccebc3cb4edba617d67f.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 748360,
+        "sha256": "7b2700426d1ebe3d670d686662d11867e98d579901e0ccebc3cb4edba617d67f"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-83cfac88198a311af375b0ef507368cd0f291718943d2da9e1b7adbe04aaca6f.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 38833,
+        "sha256": "83cfac88198a311af375b0ef507368cd0f291718943d2da9e1b7adbe04aaca6f"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-87c4e31e0d8b7b8277b7d1592ffd98cd89a2cf1d6db879e4b40110bad7473afc.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 304627,
+        "sha256": "87c4e31e0d8b7b8277b7d1592ffd98cd89a2cf1d6db879e4b40110bad7473afc"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-94cfaeac40351371b46c3403bd6babea7b017f207544f88813b4439ee0379fa3.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 387805,
+        "sha256": "94cfaeac40351371b46c3403bd6babea7b017f207544f88813b4439ee0379fa3"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-9d88fc40784b338d9f2befb8db7654f1be36986fc7cbe3c068f42dad5f3d847f.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 308434,
+        "sha256": "9d88fc40784b338d9f2befb8db7654f1be36986fc7cbe3c068f42dad5f3d847f"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-9e0d710e72c4f5b4a3900207d7bd06cbc7feb3d0715534b7d3dbc4634aaa572d.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 325052,
+        "sha256": "9e0d710e72c4f5b4a3900207d7bd06cbc7feb3d0715534b7d3dbc4634aaa572d"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-a1094299fb7297612a08cf2507802d0f4ccf2082b11ed35a994e2638f559163b.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 92791,
+        "sha256": "a1094299fb7297612a08cf2507802d0f4ccf2082b11ed35a994e2638f559163b"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-b1a0a892f7fabf136cf131a838d6afe56947da1d5d1e9a8e7bf9ca3e85ffb427.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 1040599,
+        "sha256": "b1a0a892f7fabf136cf131a838d6afe56947da1d5d1e9a8e7bf9ca3e85ffb427"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-c1bb336c1512c35b2c9e60b1a6f21464c821c604f2472e3d701d5a697c9f3265.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 450587,
+        "sha256": "c1bb336c1512c35b2c9e60b1a6f21464c821c604f2472e3d701d5a697c9f3265"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-c2bd4a014a355e8ca901edc6db480cd6c967b4541cbd7ec1f4cdea1b86f0c8da.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 180769,
+        "sha256": "c2bd4a014a355e8ca901edc6db480cd6c967b4541cbd7ec1f4cdea1b86f0c8da"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-c341c1b11883b1fca8a2eae8d98ebb0ab80f3455ba0504e6cef0b4d7f42300a1.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 387380,
+        "sha256": "c341c1b11883b1fca8a2eae8d98ebb0ab80f3455ba0504e6cef0b4d7f42300a1"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-cff0791bb389edd6868919a0d01df54d72a5b5779368ef8fea902f93f272c7cc.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 874246,
+        "sha256": "cff0791bb389edd6868919a0d01df54d72a5b5779368ef8fea902f93f272c7cc"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-fe6ae4a77bcf394b1f8a1c1c9f3c9b9d5eda5ad5d12ec87de702b1c3afa90c3c.json.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 357457,
+        "sha256": "fe6ae4a77bcf394b1f8a1c1c9f3c9b9d5eda5ad5d12ec87de702b1c3afa90c3c"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/native-row-latitudes.f64le.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 1851757,
+        "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/rows-0.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 306620,
+        "sha256": "89ed3564db641f992746bf4f6f01c1eed89cb470520734ac1b85ee95e9a70ba0"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-0.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3854101,
+        "sha256": "3d551738a3454d2028e1d9adc352b7446d7c0f25c8d42044704cf1efb6f64b6b"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3478667,
+        "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3289324,
+        "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3146696,
+        "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3272873,
+        "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3296575,
+        "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3521891,
+        "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3497645,
+        "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3428397,
+        "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3534601,
+        "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3556931,
+        "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3397952,
+        "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 2460609,
+        "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3423683,
+        "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/2b50c3460cd9242cb50470297510e2f09d91d80ed7c433d3e58e18152a615007/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3504947,
+        "sha256": "2b50c3460cd9242cb50470297510e2f09d91d80ed7c433d3e58e18152a615007"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/3fce0a76bfa56e85a29c02992d336e3e5d8f568c566fb136ac8545c73e5e0db0/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3472031,
+        "sha256": "3fce0a76bfa56e85a29c02992d336e3e5d8f568c566fb136ac8545c73e5e0db0"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/5c9a9cacc1df43e636463294b6e7c818862fc8a38ac457c45bc1a9483b086e2f/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3292383,
+        "sha256": "5c9a9cacc1df43e636463294b6e7c818862fc8a38ac457c45bc1a9483b086e2f"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/5e6507b2c67d4b6c5fbd800685d8602a53e33d9612d8da4284cad11e7655c2de/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3542969,
+        "sha256": "5e6507b2c67d4b6c5fbd800685d8602a53e33d9612d8da4284cad11e7655c2de"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/99202c758119dc658a5f9eda4b065df97b002de1005d6e72a05fc536ea4503f9/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3346259,
+        "sha256": "99202c758119dc658a5f9eda4b065df97b002de1005d6e72a05fc536ea4503f9"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/9a723d47822dd7f5a80f387b3270c176ac36140e795d5ade59082db8b11d14e7/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3518031,
+        "sha256": "9a723d47822dd7f5a80f387b3270c176ac36140e795d5ade59082db8b11d14e7"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/9bf96b52a03a776a7201033f77c8d0d6343d2a0764d3a72f94efd6dfde39c1f5/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3484970,
+        "sha256": "9bf96b52a03a776a7201033f77c8d0d6343d2a0764d3a72f94efd6dfde39c1f5"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/a214fa23696d8fca50c9d34a8dd01694c2dbb9c0c5a88468fa3ffb851361e5c9/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3572261,
+        "sha256": "a214fa23696d8fca50c9d34a8dd01694c2dbb9c0c5a88468fa3ffb851361e5c9"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/a71be68bfc927e667471e784daf965c2a9b603def71b1f08c6db484e09f69c70/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3274653,
+        "sha256": "a71be68bfc927e667471e784daf965c2a9b603def71b1f08c6db484e09f69c70"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3854096,
+        "sha256": "5e73bd6ee306f3be021c7f89bf336c590ae3c02021df1c436d22088ed4284171"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3478667,
+        "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3289324,
+        "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3146696,
+        "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3272873,
+        "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3296575,
+        "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3521891,
+        "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3497645,
+        "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3428397,
+        "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3534601,
+        "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3556931,
+        "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3397952,
+        "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 2460609,
+        "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3423683,
+        "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/db289c19f74e538deac6eef90255a202e722029ec14af1caf3adb44a9848f427/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3103635,
+        "sha256": "db289c19f74e538deac6eef90255a202e722029ec14af1caf3adb44a9848f427"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/db71f1a8858fb7d6d40890fb86cf626996546e5d76811e2dac07fda2df06b597/native-v1/ownership/startup-runs-20971520.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3194145,
+        "sha256": "db71f1a8858fb7d6d40890fb86cf626996546e5d76811e2dac07fda2df06b597"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/edd6b560e167bf1c7ec126cece748336b3c8733a0194e07b68d5ca1b8770cd44/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3620274,
+        "sha256": "edd6b560e167bf1c7ec126cece748336b3c8733a0194e07b68d5ca1b8770cd44"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/f1a2fc01b9fac85a90d56520ea227ea408909b9958e7c418d6927f2bcd7fa898/native-v1/ownership/startup-runs-4194304.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3510331,
+        "sha256": "f1a2fc01b9fac85a90d56520ea227ea408909b9958e7c418d6927f2bcd7fa898"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/f305fa23079a6570650fbf3844d93284f94e3560bb1402e4a9922a19d677a5b7/native-v1/ownership/rows-0.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 317030,
+        "sha256": "f305fa23079a6570650fbf3844d93284f94e3560bb1402e4a9922a19d677a5b7"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/f7ce24201bb40eb1c600b876673a35888255006fc9cf7477ccb241e12c457cff/native-v1/ownership/startup-runs-0.bin.gz",
+        "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+        "bytes": 3939024,
+        "sha256": "f7ce24201bb40eb1c600b876673a35888255006fc9cf7477ccb241e12c457cff"
+      }
+    ]
+  },
+  "authority_dependency_inventory_count": 31,
+  "authority_dependency_inputs": [
+    {
+      "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+      "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/authority-binding.json",
+      "bytes": 740,
+      "sha256": "c3cb1c2f7cdb50ec5bc18c30a3364c8b637ffa2767e85787b8a569aeff79eb89"
+    },
+    {
+      "commit": "c04ec16ff03d40a3c3bc5941bd32748bbbe53c02",
+      "path": "coordination/engineering/jor656-residual029-native-001/source-evidence-003/source-evidence.json",
+      "bytes": 26175,
+      "sha256": "ec6394c47a4f99bf936ed6702e828d87451900741d5a74ff4812a64a0b2c47f7"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SAU-ADM1-000.bin.gz",
+      "bytes": 142614,
+      "sha256": "7896c1305fa8747bc045ad367de8ae90d235b9ec3603c2cd0ca01e96b80f1e8a"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+      "bytes": 12533,
+      "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "data/geography/part-11.json",
+      "bytes": 5133018,
+      "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "data/semantic-report.json",
+      "bytes": 6091596,
+      "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "data/world-index.json",
+      "bytes": 944,
+      "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "scripts/qualify-source-cohort.py",
+      "bytes": 43642,
+      "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/physical-input-002/original-source-physical-inputs.json",
+      "bytes": 168213,
+      "sha256": "b5071ceae5627ae2f9d3681339d6cccfcbddcd77b6404ad74cac47edcb82e0e2"
+    },
+    {
+      "commit": "19012ac89bda3437fb8b7280915181d770c1274c",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/physical-002/whole-target-support.json",
+      "bytes": 323614,
+      "sha256": "5c7e4a5fab9bae42f0016661d553a8030de5dd5a456bdae9978a44d684081113"
+    },
+    {
+      "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+      "path": "data/canonical-grid/bounds.json.gz",
+      "bytes": 2663523,
+      "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f"
+    },
+    {
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "bytes": 1851757,
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+    },
+    {
+      "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+      "path": "data/canonical-grid/province-membership.bin.gz",
+      "bytes": 67912,
+      "sha256": "01f42b69ca969090d10c42d6a1311215a19ce436b0f3e720f7f873f4a18f90da"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM2-000.bin.gz",
+      "bytes": 133556,
+      "sha256": "835c08b7e50fbf131bbd664f3dab4bd740663db771e1245991287be0c7ba8444"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    {
+      "commit": "c04ec16ff03d40a3c3bc5941bd32748bbbe53c02",
+      "path": "coordination/engineering/jor656-residual029-native-001/source-evidence-003/requested-native-patch.json",
+      "bytes": 1243,
+      "sha256": "90788af4a2292d4d16aaa1e35027b1ada168a91b919bcff5d7ef54b7bc296983"
+    },
+    {
+      "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+      "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/original-rule-preimage.json",
+      "bytes": 737,
+      "sha256": "026e472c02657d68a8400ecf28cf722dac8bf57e0bfb7850eae382c18e157092"
+    },
+    {
+      "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+      "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/constructor-result.json",
+      "bytes": 21694,
+      "sha256": "3e9b5e8c92871f34e8c85e392a8dc4e5f3c7523f3c6bbe37933e620e59233d8e"
+    },
+    {
+      "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/authority-binding.json",
+      "bytes": 741,
+      "sha256": "5c360b9e4eb0a722dadb20fb7be3f2d31a5ec1078fb11b48bfa98b3ae24b09f9"
+    },
+    {
+      "commit": "884fd3e37ef5cab48541ffaa5902b15aa6cd6b66",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-supported-001/source-evidence.json",
+      "bytes": 54613,
+      "sha256": "88b40c45af3d9ff9d5cdd8c2efb4361b6be42e4806305eb9b43fbf83bf7bb5ae"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SAU-ADM1-000.bin.gz",
+      "bytes": 142614,
+      "sha256": "7896c1305fa8747bc045ad367de8ae90d235b9ec3603c2cd0ca01e96b80f1e8a"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+      "bytes": 12533,
+      "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "data/geography/part-11.json",
+      "bytes": 5133018,
+      "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "data/semantic-report.json",
+      "bytes": 6091596,
+      "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "data/world-index.json",
+      "bytes": 944,
+      "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "scripts/qualify-source-cohort.py",
+      "bytes": 43642,
+      "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM2-000.bin.gz",
+      "bytes": 133556,
+      "sha256": "835c08b7e50fbf131bbd664f3dab4bd740663db771e1245991287be0c7ba8444"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    {
+      "commit": "884fd3e37ef5cab48541ffaa5902b15aa6cd6b66",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-supported-001/native-patch.json",
+      "bytes": 13585,
+      "sha256": "b07dded60e6cf81b589f641d62113d8640922876b0d0306f3b02dce207b07217"
+    },
+    {
+      "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/original-rule-preimage.json",
+      "bytes": 738,
+      "sha256": "37f0a04d777643858c72b3f3c2d9afd6f74ca19cfafcff1ed9b28c2861feee90"
+    },
+    {
+      "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/constructor-result.json",
+      "bytes": 45923,
+      "sha256": "a68a6cec49d29c3cf37861a0a5c103ba2e8b5cf8e4caa1a800c71b26f0400bd7"
+    }
+  ],
+  "unique_pinned_input_count": 114,
+  "unique_pinned_inputs": [
+    {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 49610,
+      "sha256": "4857769556f3416d3aa41334ac5ae96ea9834bf36d26697aeec5c6f67fd31b63"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-01dda5434cf733782368934caa3b04d0c3cf3fc47b847771e240100f69b58d13.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 443384,
+      "sha256": "01dda5434cf733782368934caa3b04d0c3cf3fc47b847771e240100f69b58d13"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-037a1169f2f6aa152793c2d34ea322d41898b6b795351ba0c62d5de14a95bf2c.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 102904,
+      "sha256": "037a1169f2f6aa152793c2d34ea322d41898b6b795351ba0c62d5de14a95bf2c"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-07d1f7ee1700a9145394913d128643621cfa9ec9aaf8e3c324e45f02c5991eeb.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 600238,
+      "sha256": "07d1f7ee1700a9145394913d128643621cfa9ec9aaf8e3c324e45f02c5991eeb"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-0ff1bae61f7eff11430f9f8d1b9e4e26e69c41beb159e811d5899d948efaeb12.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 260711,
+      "sha256": "0ff1bae61f7eff11430f9f8d1b9e4e26e69c41beb159e811d5899d948efaeb12"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-1180e6b9bfab70b96be6e84c74996e6d7b40fd68123c0f9fbdc515de12895171.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 351285,
+      "sha256": "1180e6b9bfab70b96be6e84c74996e6d7b40fd68123c0f9fbdc515de12895171"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-1a850c615bd79b63c7fa3627541246f5e6c90b19c1babef544dae3f53ce6f9a3.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 1489269,
+      "sha256": "1a850c615bd79b63c7fa3627541246f5e6c90b19c1babef544dae3f53ce6f9a3"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-27d3cb885212265ac285e8ade40e7fa7225de4ee99ff2fa05d3b6784a54e432a.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 549790,
+      "sha256": "27d3cb885212265ac285e8ade40e7fa7225de4ee99ff2fa05d3b6784a54e432a"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-2c0a0451c53162c4b206a1e38f9716e91cb54eaca7e4fe8e928efe3e4c488f55.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 311961,
+      "sha256": "2c0a0451c53162c4b206a1e38f9716e91cb54eaca7e4fe8e928efe3e4c488f55"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-2daefb7d6dc848a58df1f508160a21b479a10225b5868cea675e40300a4f8289.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 241774,
+      "sha256": "2daefb7d6dc848a58df1f508160a21b479a10225b5868cea675e40300a4f8289"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-34011cd402daf991b1b86c9b62180772ecf3aef45d21d9144277f88e036c8596.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 140327,
+      "sha256": "34011cd402daf991b1b86c9b62180772ecf3aef45d21d9144277f88e036c8596"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-3a595635851fbaaca6943f1621e9652645abe431f09f5b24d122ce225c04235f.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 539011,
+      "sha256": "3a595635851fbaaca6943f1621e9652645abe431f09f5b24d122ce225c04235f"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-3b62f487904632ae5ea1a0b83c48d4d87fae020cc616407085d24d12b67bbd00.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 962516,
+      "sha256": "3b62f487904632ae5ea1a0b83c48d4d87fae020cc616407085d24d12b67bbd00"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-45d5a1448c684180e271941288f2a82aa4a25f8a27156f86a3286df85c4fd117.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 193463,
+      "sha256": "45d5a1448c684180e271941288f2a82aa4a25f8a27156f86a3286df85c4fd117"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-48be8370c9bd2f2a30f5ec78a25f43072532fc3ae656cc26425f387b7845bf05.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 92272,
+      "sha256": "48be8370c9bd2f2a30f5ec78a25f43072532fc3ae656cc26425f387b7845bf05"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-4a691e4b7403c84b301354b36e7dc64620f730d0dad67dc5d4d3ce1379ebf68c.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 920384,
+      "sha256": "4a691e4b7403c84b301354b36e7dc64620f730d0dad67dc5d4d3ce1379ebf68c"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-4ca7aa763eac71715f290914e2f68f504cc23c5a38adff98a5b176b041f535a7.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 298230,
+      "sha256": "4ca7aa763eac71715f290914e2f68f504cc23c5a38adff98a5b176b041f535a7"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-512075c7a4bcdc3126411b538b0aa5ed5040539872ddf6b44bf058bd2d6e3ab4.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 404667,
+      "sha256": "512075c7a4bcdc3126411b538b0aa5ed5040539872ddf6b44bf058bd2d6e3ab4"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-55ac15258dbde794367a7412d616708b9d1e90698f19079c57fafc34a7e3014c.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 504348,
+      "sha256": "55ac15258dbde794367a7412d616708b9d1e90698f19079c57fafc34a7e3014c"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-62de96fed91dc06dbab6232a8b66b689352ee4b38f3c6f96fae9f36d45827b14.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 819365,
+      "sha256": "62de96fed91dc06dbab6232a8b66b689352ee4b38f3c6f96fae9f36d45827b14"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-6721ac7351e21b309554e4f6a6127a9966b51bf3d9a98c2699d5bc983caf2a7b.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 892136,
+      "sha256": "6721ac7351e21b309554e4f6a6127a9966b51bf3d9a98c2699d5bc983caf2a7b"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-683e563687fddf1b757602c182e0339cf7fb37b31ee7ef017af3398df97afd05.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 151757,
+      "sha256": "683e563687fddf1b757602c182e0339cf7fb37b31ee7ef017af3398df97afd05"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-7b2700426d1ebe3d670d686662d11867e98d579901e0ccebc3cb4edba617d67f.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 748360,
+      "sha256": "7b2700426d1ebe3d670d686662d11867e98d579901e0ccebc3cb4edba617d67f"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-83cfac88198a311af375b0ef507368cd0f291718943d2da9e1b7adbe04aaca6f.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 38833,
+      "sha256": "83cfac88198a311af375b0ef507368cd0f291718943d2da9e1b7adbe04aaca6f"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-87c4e31e0d8b7b8277b7d1592ffd98cd89a2cf1d6db879e4b40110bad7473afc.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 304627,
+      "sha256": "87c4e31e0d8b7b8277b7d1592ffd98cd89a2cf1d6db879e4b40110bad7473afc"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-94cfaeac40351371b46c3403bd6babea7b017f207544f88813b4439ee0379fa3.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 387805,
+      "sha256": "94cfaeac40351371b46c3403bd6babea7b017f207544f88813b4439ee0379fa3"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-9d88fc40784b338d9f2befb8db7654f1be36986fc7cbe3c068f42dad5f3d847f.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 308434,
+      "sha256": "9d88fc40784b338d9f2befb8db7654f1be36986fc7cbe3c068f42dad5f3d847f"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-9e0d710e72c4f5b4a3900207d7bd06cbc7feb3d0715534b7d3dbc4634aaa572d.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 325052,
+      "sha256": "9e0d710e72c4f5b4a3900207d7bd06cbc7feb3d0715534b7d3dbc4634aaa572d"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-a1094299fb7297612a08cf2507802d0f4ccf2082b11ed35a994e2638f559163b.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 92791,
+      "sha256": "a1094299fb7297612a08cf2507802d0f4ccf2082b11ed35a994e2638f559163b"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-b1a0a892f7fabf136cf131a838d6afe56947da1d5d1e9a8e7bf9ca3e85ffb427.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 1040599,
+      "sha256": "b1a0a892f7fabf136cf131a838d6afe56947da1d5d1e9a8e7bf9ca3e85ffb427"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-c1bb336c1512c35b2c9e60b1a6f21464c821c604f2472e3d701d5a697c9f3265.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 450587,
+      "sha256": "c1bb336c1512c35b2c9e60b1a6f21464c821c604f2472e3d701d5a697c9f3265"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-c2bd4a014a355e8ca901edc6db480cd6c967b4541cbd7ec1f4cdea1b86f0c8da.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 180769,
+      "sha256": "c2bd4a014a355e8ca901edc6db480cd6c967b4541cbd7ec1f4cdea1b86f0c8da"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-c341c1b11883b1fca8a2eae8d98ebb0ab80f3455ba0504e6cef0b4d7f42300a1.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 387380,
+      "sha256": "c341c1b11883b1fca8a2eae8d98ebb0ab80f3455ba0504e6cef0b4d7f42300a1"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-cff0791bb389edd6868919a0d01df54d72a5b5779368ef8fea902f93f272c7cc.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 874246,
+      "sha256": "cff0791bb389edd6868919a0d01df54d72a5b5779368ef8fea902f93f272c7cc"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/geography/effective-context-fe6ae4a77bcf394b1f8a1c1c9f3c9b9d5eda5ad5d12ec87de702b1c3afa90c3c.json.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 357457,
+      "sha256": "fe6ae4a77bcf394b1f8a1c1c9f3c9b9d5eda5ad5d12ec87de702b1c3afa90c3c"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/native-row-latitudes.f64le.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 1851757,
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/rows-0.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 306620,
+      "sha256": "89ed3564db641f992746bf4f6f01c1eed89cb470520734ac1b85ee95e9a70ba0"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-0.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3854101,
+      "sha256": "3d551738a3454d2028e1d9adc352b7446d7c0f25c8d42044704cf1efb6f64b6b"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-12582912.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3478667,
+      "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-16777216.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3289324,
+      "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3146696,
+      "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3272873,
+      "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3296575,
+      "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3521891,
+      "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3497645,
+      "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-4194304.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3428397,
+      "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3534601,
+      "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3556931,
+      "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3397952,
+      "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 2460609,
+      "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/native-v1/ownership/startup-runs-8388608.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3423683,
+      "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/2b50c3460cd9242cb50470297510e2f09d91d80ed7c433d3e58e18152a615007/native-v1/ownership/startup-runs-12582912.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3504947,
+      "sha256": "2b50c3460cd9242cb50470297510e2f09d91d80ed7c433d3e58e18152a615007"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/3fce0a76bfa56e85a29c02992d336e3e5d8f568c566fb136ac8545c73e5e0db0/native-v1/ownership/startup-runs-8388608.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3472031,
+      "sha256": "3fce0a76bfa56e85a29c02992d336e3e5d8f568c566fb136ac8545c73e5e0db0"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/5c9a9cacc1df43e636463294b6e7c818862fc8a38ac457c45bc1a9483b086e2f/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3292383,
+      "sha256": "5c9a9cacc1df43e636463294b6e7c818862fc8a38ac457c45bc1a9483b086e2f"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/5e6507b2c67d4b6c5fbd800685d8602a53e33d9612d8da4284cad11e7655c2de/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3542969,
+      "sha256": "5e6507b2c67d4b6c5fbd800685d8602a53e33d9612d8da4284cad11e7655c2de"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/99202c758119dc658a5f9eda4b065df97b002de1005d6e72a05fc536ea4503f9/native-v1/ownership/startup-runs-16777216.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3346259,
+      "sha256": "99202c758119dc658a5f9eda4b065df97b002de1005d6e72a05fc536ea4503f9"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/9a723d47822dd7f5a80f387b3270c176ac36140e795d5ade59082db8b11d14e7/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3518031,
+      "sha256": "9a723d47822dd7f5a80f387b3270c176ac36140e795d5ade59082db8b11d14e7"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/9bf96b52a03a776a7201033f77c8d0d6343d2a0764d3a72f94efd6dfde39c1f5/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3484970,
+      "sha256": "9bf96b52a03a776a7201033f77c8d0d6343d2a0764d3a72f94efd6dfde39c1f5"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/a214fa23696d8fca50c9d34a8dd01694c2dbb9c0c5a88468fa3ffb851361e5c9/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3572261,
+      "sha256": "a214fa23696d8fca50c9d34a8dd01694c2dbb9c0c5a88468fa3ffb851361e5c9"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/a71be68bfc927e667471e784daf965c2a9b603def71b1f08c6db484e09f69c70/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3274653,
+      "sha256": "a71be68bfc927e667471e784daf965c2a9b603def71b1f08c6db484e09f69c70"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-0.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3854096,
+      "sha256": "5e73bd6ee306f3be021c7f89bf336c590ae3c02021df1c436d22088ed4284171"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-12582912.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3478667,
+      "sha256": "01012dd358291a9e4ee51888a1d2b618ab2003e06a6eebd3a236392ecdbbc015"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-16777216.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3289324,
+      "sha256": "d5ed4d7e1700fb60298a53cc37ad9943257f57f853e19cc786ef975ebc7f0cae"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3146696,
+      "sha256": "198daba78eaeed9f316f088a86f8a7c4cf8f7e868253fc09487870eceddaf58a"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-25165824.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3272873,
+      "sha256": "764a967753d010daa794b30ca597bee0503646e7cae6965b14df63f280b9c544"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-29360128.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3296575,
+      "sha256": "ff29a1956ae0dd99e4db155c9cdabf96c72155a1a772210910d5119845759cf8"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-33554432.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3521891,
+      "sha256": "826cffaf4b05286a68ae479bc6e6caba3b3b3993f7fa57eae08efe7f6089694b"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-37748736.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3497645,
+      "sha256": "18472136ceb94b95a17918acdfba32c56d13a2979043c66fb74cf615d81551ee"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-4194304.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3428397,
+      "sha256": "da6498fc3c898adca6231896e9b1f2c734153064d78431bc5a311fec768c18f9"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-41943040.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3534601,
+      "sha256": "f4e7f8de92e3d709db9675386961fac934a8a21652bf6f34f8d122ed71c73c44"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3556931,
+      "sha256": "bb9b1ba3ace6229a338eee6c903e1d5db637a765c46ed60f957ceb6e34346101"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-50331648.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3397952,
+      "sha256": "09aaf4d9a115dea6a85ed2a853532045c627ea2408f259513ce9de8e616ef55d"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 2460609,
+      "sha256": "91bfddd9aa632dc18ecc2f487a71673b504f971d2795e7c4af9c9298f4fe4fbc"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d9954fa51d18e4ce785679f920e4b6ac1ebd3cf07ce03fa7e7e674cb2a42faba/native-v1/ownership/startup-runs-8388608.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3423683,
+      "sha256": "244e3da13a412b4a4ccbc652191a080495a5611df5d0ee2207c8d08ac27b929a"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/db289c19f74e538deac6eef90255a202e722029ec14af1caf3adb44a9848f427/native-v1/ownership/startup-runs-54525952.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3103635,
+      "sha256": "db289c19f74e538deac6eef90255a202e722029ec14af1caf3adb44a9848f427"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/db71f1a8858fb7d6d40890fb86cf626996546e5d76811e2dac07fda2df06b597/native-v1/ownership/startup-runs-20971520.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3194145,
+      "sha256": "db71f1a8858fb7d6d40890fb86cf626996546e5d76811e2dac07fda2df06b597"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/edd6b560e167bf1c7ec126cece748336b3c8733a0194e07b68d5ca1b8770cd44/native-v1/ownership/startup-runs-46137344.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3620274,
+      "sha256": "edd6b560e167bf1c7ec126cece748336b3c8733a0194e07b68d5ca1b8770cd44"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/f1a2fc01b9fac85a90d56520ea227ea408909b9958e7c418d6927f2bcd7fa898/native-v1/ownership/startup-runs-4194304.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3510331,
+      "sha256": "f1a2fc01b9fac85a90d56520ea227ea408909b9958e7c418d6927f2bcd7fa898"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/f305fa23079a6570650fbf3844d93284f94e3560bb1402e4a9922a19d677a5b7/native-v1/ownership/rows-0.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 317030,
+      "sha256": "f305fa23079a6570650fbf3844d93284f94e3560bb1402e4a9922a19d677a5b7"
+    },
+    {
+      "path": "data/canonical-grid/current-startup/ownership-vintages/f7ce24201bb40eb1c600b876673a35888255006fc9cf7477ccb241e12c457cff/native-v1/ownership/startup-runs-0.bin.gz",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "bytes": 3939024,
+      "sha256": "f7ce24201bb40eb1c600b876673a35888255006fc9cf7477ccb241e12c457cff"
+    },
+    {
+      "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+      "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/authority-binding.json",
+      "bytes": 740,
+      "sha256": "c3cb1c2f7cdb50ec5bc18c30a3364c8b637ffa2767e85787b8a569aeff79eb89"
+    },
+    {
+      "commit": "c04ec16ff03d40a3c3bc5941bd32748bbbe53c02",
+      "path": "coordination/engineering/jor656-residual029-native-001/source-evidence-003/source-evidence.json",
+      "bytes": 26175,
+      "sha256": "ec6394c47a4f99bf936ed6702e828d87451900741d5a74ff4812a64a0b2c47f7"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SAU-ADM1-000.bin.gz",
+      "bytes": 142614,
+      "sha256": "7896c1305fa8747bc045ad367de8ae90d235b9ec3603c2cd0ca01e96b80f1e8a"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+      "bytes": 12533,
+      "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "data/geography/part-11.json",
+      "bytes": 5133018,
+      "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "data/semantic-report.json",
+      "bytes": 6091596,
+      "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "data/world-index.json",
+      "bytes": 944,
+      "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+    },
+    {
+      "commit": "3f8629d1c05c99f14662b300bda7891e1c3db505",
+      "path": "scripts/qualify-source-cohort.py",
+      "bytes": 43642,
+      "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/physical-input-002/original-source-physical-inputs.json",
+      "bytes": 168213,
+      "sha256": "b5071ceae5627ae2f9d3681339d6cccfcbddcd77b6404ad74cac47edcb82e0e2"
+    },
+    {
+      "commit": "19012ac89bda3437fb8b7280915181d770c1274c",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/physical-002/whole-target-support.json",
+      "bytes": 323614,
+      "sha256": "5c7e4a5fab9bae42f0016661d553a8030de5dd5a456bdae9978a44d684081113"
+    },
+    {
+      "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+      "path": "data/canonical-grid/bounds.json.gz",
+      "bytes": 2663523,
+      "sha256": "b33f44b882b4a0c9b89c79fb079b766505a18f2ba0089fe2945ac9b5120fb78f"
+    },
+    {
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz",
+      "bytes": 1851757,
+      "sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147"
+    },
+    {
+      "commit": "913db0624b8aa79b188ff17a7f5c4ae0c0f63965",
+      "path": "data/canonical-grid/province-membership.bin.gz",
+      "bytes": 67912,
+      "sha256": "01f42b69ca969090d10c42d6a1311215a19ce436b0f3e720f7f873f4a18f90da"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM2-000.bin.gz",
+      "bytes": 133556,
+      "sha256": "835c08b7e50fbf131bbd664f3dab4bd740663db771e1245991287be0c7ba8444"
+    },
+    {
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    {
+      "commit": "c04ec16ff03d40a3c3bc5941bd32748bbbe53c02",
+      "path": "coordination/engineering/jor656-residual029-native-001/source-evidence-003/requested-native-patch.json",
+      "bytes": 1243,
+      "sha256": "90788af4a2292d4d16aaa1e35027b1ada168a91b919bcff5d7ef54b7bc296983"
+    },
+    {
+      "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+      "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/original-rule-preimage.json",
+      "bytes": 737,
+      "sha256": "026e472c02657d68a8400ecf28cf722dac8bf57e0bfb7850eae382c18e157092"
+    },
+    {
+      "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+      "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/constructor-result.json",
+      "bytes": 21694,
+      "sha256": "3e9b5e8c92871f34e8c85e392a8dc4e5f3c7523f3c6bbe37933e620e59233d8e"
+    },
+    {
+      "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/authority-binding.json",
+      "bytes": 741,
+      "sha256": "5c360b9e4eb0a722dadb20fb7be3f2d31a5ec1078fb11b48bfa98b3ae24b09f9"
+    },
+    {
+      "commit": "884fd3e37ef5cab48541ffaa5902b15aa6cd6b66",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-supported-001/source-evidence.json",
+      "bytes": 54613,
+      "sha256": "88b40c45af3d9ff9d5cdd8c2efb4361b6be42e4806305eb9b43fbf83bf7bb5ae"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SAU-ADM1-000.bin.gz",
+      "bytes": 142614,
+      "sha256": "7896c1305fa8747bc045ad367de8ae90d235b9ec3603c2cd0ca01e96b80f1e8a"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+      "bytes": 12533,
+      "sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "data/geography/part-11.json",
+      "bytes": 5133018,
+      "sha256": "d1b2fb15c9427497de740eb33a529ef382b58cb319028f2aa38f5878de4c9b02"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "data/semantic-report.json",
+      "bytes": 6091596,
+      "sha256": "266c4f0f6e91381a26bfa6868d3c0df22b30140fa7f8551977be10b423295831"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "data/world-index.json",
+      "bytes": 944,
+      "sha256": "a62d4a74f0f969e228dfcdeb2797bb689ce9836c2498cadd31ed622ad2c38c03"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "scripts/qualify-source-cohort.py",
+      "bytes": 43642,
+      "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM2-000.bin.gz",
+      "bytes": 133556,
+      "sha256": "835c08b7e50fbf131bbd664f3dab4bd740663db771e1245991287be0c7ba8444"
+    },
+    {
+      "commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/catalogue.json",
+      "bytes": 403376,
+      "sha256": "d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9"
+    },
+    {
+      "commit": "884fd3e37ef5cab48541ffaa5902b15aa6cd6b66",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-supported-001/native-patch.json",
+      "bytes": 13585,
+      "sha256": "b07dded60e6cf81b589f641d62113d8640922876b0d0306f3b02dce207b07217"
+    },
+    {
+      "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/original-rule-preimage.json",
+      "bytes": 738,
+      "sha256": "37f0a04d777643858c72b3f3c2d9afd6f74ca19cfafcff1ed9b28c2861feee90"
+    },
+    {
+      "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/constructor-result.json",
+      "bytes": 45923,
+      "sha256": "a68a6cec49d29c3cf37861a0a5c103ba2e8b5cf8e4caa1a800c71b26f0400bd7"
+    },
+    {
+      "role": "selector",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "path": "data/ownership-selection.json",
+      "bytes": 2256,
+      "sha256": "fe9a566d76724d8009e9ebba90dfecc968fc90051b2be48c204310e88da29a82"
+    },
+    {
+      "role": "package_inputs",
+      "commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+      "path": ".github/package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "role": "change_evidence",
+      "commit": "95dba6ca68188649d6c53497416c2f2e5c7ecb42",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/authority-compose-003/authority-registry.json",
+      "bytes": 2633,
+      "sha256": "24deb144b661f75759f268cb6869b8787aad5de8b512bf81945013cb8f2291d7"
+    }
+  ],
+  "limitation": "Preflight validates committed input bytes and exact runtime; it does not attest process memory behavior or finalizer success."
+}

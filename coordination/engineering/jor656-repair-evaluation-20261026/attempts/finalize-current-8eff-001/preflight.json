@@ -1,0 +1,38 @@
+{
+  "kind": "jor563-current-bank-finalizer-preflight-v1",
+  "status": "ready-for-one-bounded-supported-finalizer",
+  "accepted_main": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+  "normal_merge_head": "b10db30e4548119a18775a60f24eb662355a272d",
+  "config_path": "coordination/engineering/jor656-repair-evaluation-20261026/current-baseline-8eff/finalize-config.json",
+  "config_sha256": "2b7ca67e9e43fd4ae11aa8784606fe268f05fb2919b0eaeb470ca6c1ce1c3bbe",
+  "selector_sha256": "13a2c481addc605e96bb8c67df889f0d14d07ab582796e115d4f93ccd76041ee",
+  "package_inputs_sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3",
+  "startup_index_sha256": "c2177db2b231107a071ca236c991d2290a844869ee58f37c5740c1e00c573723",
+  "jor_change_registry_sha256": "24deb144b661f75759f268cb6869b8787aad5de8b512bf81945013cb8f2291d7",
+  "prior_finalization": {
+    "preparation_sha256": "c66340c2f6bb3108f56bc2f0b562c945102f9c6324ae5bbd1251ef1e2a11c67f",
+    "startup_ownership_sha256": "c2177db2b231107a071ca236c991d2290a844869ee58f37c5740c1e00c573723",
+    "index_file_count": 79,
+    "compatibility_file_count": 30,
+    "compatibility_overlap": 30
+  },
+  "worktree_startup_closure": {
+    "indexed_bodies": 79,
+    "compatibility_entries": 30,
+    "unique_index_or_compat_paths": 79,
+    "materialized_bodies": 33,
+    "sparse_absent_bodies": 46,
+    "materialized_bytes": 31499355,
+    "bad_materialized_hashes": 0,
+    "extra_files": 0,
+    "all_sparse_absences_remain_pinned_in_current_git_tree": true
+  },
+  "capacity_before_launch_bytes": {
+    "overlay_available": 202964992,
+    "tmpfs_available": 2751623168
+  },
+  "active_related_writer_check": "no finalizer, bank, git merge/commit/push or final-bank process observed immediately before launch; ATG owner confirmed no remaining bank writer",
+  "node_version": "v24.19.0",
+  "source_native_physical_replay": false,
+  "authorization_scope": "existing JOR #2941 only; no new package or PR; no hosted dispatch"
+}

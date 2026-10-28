@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "kind": "verification-command-correction-v1",
+  "attempt": "finalize-current-a484-004",
+  "incident": "A verification shell command mistakenly used git hash-object -w --stdin when recomputing the already known exact blob OID for the restored 2,465-byte file.",
+  "object_oid": "73fa6ef08230944f6ba7562b1698e7512b98ae86",
+  "observed_exact_loose_path": "/tmp/mhl-observer-repo/.git/objects/73/fa6ef08230944f6ba7562b1698e7512b98ae86",
+  "exact_loose_path_after_check": "absent",
+  "read_only_check": "stat of exact loose-object path only; configured alternate was not modified; no pack scan or object cleanup performed",
+  "result": "No evidence of a new loose object; no shared/alternate Git object cleanup is needed. The exact file bytes/hash were verified independently with SHA-256."
+}

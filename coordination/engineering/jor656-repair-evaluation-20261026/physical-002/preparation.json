@@ -1,0 +1,177 @@
+{
+  "binding": {
+    "admission_sha256": "98b8bb8cca27bd87fce0c4e129ca35792cefeac806e385689c7a88f2131c7d20",
+    "config_sha256": "a9530c004c65d5bbfee420fa35af6254d5d0fe02b393b203a15aaff1766098de",
+    "phase": "physical",
+    "producer": {
+      "bytes": 43642,
+      "commit": "8e44066993491563dc069c5df9f0a6674a52b7bf",
+      "git_blob_oid": "f69180b425d665a022dd18290688864674dd20a5",
+      "mode": "100644",
+      "path": "scripts/qualify-source-cohort.py",
+      "sha256": "abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18"
+    },
+    "runtime": {
+      "geos": "3.13.1",
+      "numpy": "2.3.5",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "shapely": "2.1.2"
+    },
+    "runtime_inventory_sha256": "47137200d94c90dc7383240b611a58fb5e11e897ed504b346ff8a1666569114e"
+  },
+  "execution": {
+    "actual_exit_code": 0,
+    "exit_record": {
+      "bytes": 2,
+      "path": ".jor-physical-runtime/physical-simplified-attempt-002.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "failed_prior_attempt": {
+      "actual_exit_code": 1,
+      "path_prefix": ".jor-physical-runtime/physical-simplified-attempt-001",
+      "reason": "runtime admission inventory omitted bz2.py, lzma.py, and shutil.py loaded by the actual producer; failed before destination creation; no output emitted"
+    },
+    "status": "complete",
+    "stderr": {
+      "bytes": 0,
+      "path": ".jor-physical-runtime/physical-simplified-attempt-002.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 940,
+      "path": ".jor-physical-runtime/physical-simplified-attempt-002.stdout",
+      "sha256": "a7f0502dbdc4f10232e08980016779f4f8353c7c93d601f07cdfca0c686abc24"
+    }
+  },
+  "inputs": {
+    "complete_original_product": {
+      "bytes": 133556,
+      "commit": "e48581f92e523d64376a1b3a057751b764a80424",
+      "decoded_bytes": 454171,
+      "decoded_sha256": "a68a61fe1ee44e85560946b961fe4ea4867983e94d98eb85043ef43103cba571",
+      "family": "gb:JOR:ADM2",
+      "feature_count": 52,
+      "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-JOR-ADM2-000.bin.gz",
+      "sha256": "835c08b7e50fbf131bbd664f3dab4bd740663db771e1245991287be0c7ba8444"
+    },
+    "full_resolution_input_is_separate": "physical-input-001/original-stage-inputs.json",
+    "original_simplified_stage": {
+      "bytes": 168213,
+      "commit": "1657870e210107380d978ed7b008328b8c296510",
+      "git_blob_oid": "866276540603ca0b54cba8ba458841a85ecdba8b",
+      "mode": "100644",
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/physical-input-002/original-source-physical-inputs.json",
+      "sha256": "b5071ceae5627ae2f9d3681339d6cccfcbddcd77b6404ad74cac47edcb82e0e2"
+    }
+  },
+  "limits": [
+    "This is the physical phase on the original simplified gb:JOR:ADM2 catalogue source geometry, not the separate 2006 full-resolution comparator in physical-input-001.",
+    "The output is whole-target source-relative physical context. It does not itself qualify any individual original cell, establish current/legal administrative membership, classify land/water truth, discharge native predicates, or authorize credit.",
+    "All 25 original inland-water keys and all adverse foreign/source/native predicates remain unchanged."
+  ],
+  "measured": {
+    "elapsed_seconds": 11.962486552074552,
+    "issue_tallies": {
+      "contradictory_land_water_support": 4,
+      "extra_reconstruction": 3,
+      "missing_reconstruction": 1
+    },
+    "issue_targets": [
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B15546982005952"
+      },
+      {
+        "issues": [
+          "missing_reconstruction",
+          "extra_reconstruction"
+        ],
+        "target": "gb:JOR:ADM2:86222999B15878731234050"
+      },
+      {
+        "issues": [
+          "extra_reconstruction",
+          "contradictory_land_water_support"
+        ],
+        "target": "gb:JOR:ADM2:86222999B32399668533563"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B33973362353345"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B39795935139344"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B40529855036644"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B52255495566406"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B5587866835972"
+      },
+      {
+        "issues": [
+          "contradictory_land_water_support"
+        ],
+        "target": "gb:JOR:ADM2:86222999B56224922120093"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B57727576293089"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B61959892681036"
+      },
+      {
+        "issues": [
+          "extra_reconstruction",
+          "contradictory_land_water_support"
+        ],
+        "target": "gb:JOR:ADM2:86222999B63092752330130"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B7432817006575"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B75802458029993"
+      },
+      {
+        "issues": [],
+        "target": "gb:JOR:ADM2:86222999B81424774794690"
+      },
+      {
+        "issues": [
+          "contradictory_land_water_support"
+        ],
+        "target": "gb:JOR:ADM2:86222999B92273363321680"
+      }
+    ],
+    "metadata_receipts": 18,
+    "repaired_credit": 0,
+    "source_relations": 38,
+    "targets": 16,
+    "targets_without_reported_issue": 11
+  },
+  "outputs": {
+    "execution-receipt.json": {
+      "bytes": 60641,
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/physical-002/execution-receipt.json",
+      "sha256": "956e7232fc05a59701f2bbd4fe4c84ddfde2d6cf27e2e8526d7f01013a3ad880"
+    },
+    "whole-target-support.json": {
+      "bytes": 323614,
+      "path": "coordination/engineering/jor656-repair-evaluation-20261026/physical-002/whole-target-support.json",
+      "sha256": "5c7e4a5fab9bae42f0016661d553a8030de5dd5a456bdae9978a44d684081113"
+    }
+  },
+  "version": 1
+}
