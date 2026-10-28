@@ -871,7 +871,7 @@ test('owner reconciliation preserves a finite partial-removal checkout after Git
   const previousIdentity = process.env.CODEX_THREAD_ID;
   process.env.CODEX_THREAD_ID = worker;
   t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
-  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261026'});
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
   manager.ensureCapabilityFile({worker});
   const unique = path.join(entry.path, 'research', 'retained-evidence.json');
   fs.mkdirSync(path.dirname(unique), {recursive: true});
@@ -932,7 +932,7 @@ test('partial-removal reconciliation refuses changed inventory, active readers a
   const previousIdentity = process.env.CODEX_THREAD_ID;
   process.env.CODEX_THREAD_ID = worker;
   t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
-  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261026'});
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
   manager.ensureCapabilityFile({worker});
   const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
   git('update-ref', preservedRef, entry.head);
@@ -980,7 +980,7 @@ test('partial-removal CLI inspects and reconciles only the exact current TLS own
   const previousIdentity = process.env.CODEX_THREAD_ID;
   process.env.CODEX_THREAD_ID = worker;
   t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
-  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261026'});
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
   const capabilityFile = manager.ensureCapabilityFile({worker});
   const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
   git('update-ref', preservedRef, entry.head);

@@ -9,7 +9,7 @@ const support = ['docs', 'scripts', 'test', 'src', 'hosted', 'drizzle', '.github
 const engineeringCode = name => name.startsWith('coordination/engineering/') && /\.(?:mjs|js|cjs|py|sh)$/.test(name);
 const id = value => typeof value === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,127}$/.test(value);
 const operatorReleaseAuthorization = 'team3-bra-tgo-orphaned-slots';
-const partialRemovalBranch = 'geography/tls-original-repair-20261026';
+const partialRemovalBranch = 'geography/tls-original-repair-20261028-finalize021';
 const safeInclude = value => typeof value === 'string' && /^(data|research|coordination)\/[a-zA-Z0-9_./-]+$/.test(value)
   && value.split('/').every(part => part && part !== '.' && part !== '..');
 
