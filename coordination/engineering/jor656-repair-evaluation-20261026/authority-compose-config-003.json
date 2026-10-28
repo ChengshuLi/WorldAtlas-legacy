@@ -1,0 +1,81 @@
+{
+  "version": 2,
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "commit": "c61bfd2e6fda1eb6483f913b647a2808f6efcc5e",
+    "mode": "100644",
+    "git_blob_oid": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+    "bytes": 2287,
+    "sha256": "a9cb4a77bb4ef91e60d9e6ebb3755e81f78c282c5a176c8942c48a59885fa2a9"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/original-rule-preimage.json",
+        "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+        "mode": "100644",
+        "git_blob_oid": "01f74e8508d36be35d86125cfaae302de9edeee7",
+        "bytes": 738,
+        "sha256": "37f0a04d777643858c72b3f3c2d9afd6f74ca19cfafcff1ed9b28c2861feee90"
+      },
+      "source_authority": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/authority-binding.json",
+        "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+        "mode": "100644",
+        "git_blob_oid": "d7a3e5fac623a7872f0fac38d46305f4146801ea",
+        "bytes": 741,
+        "sha256": "5c360b9e4eb0a722dadb20fb7be3f2d31a5ec1078fb11b48bfa98b3ae24b09f9"
+      },
+      "ledger": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/constructor-result.json",
+        "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+        "mode": "100644",
+        "git_blob_oid": "f0741f34409262308725b40a4e0e00e7b5932548",
+        "bytes": 45923,
+        "sha256": "a68a6cec49d29c3cf37861a0a5c103ba2e8b5cf8e4caa1a800c71b26f0400bd7"
+      },
+      "native_patch": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-supported-001/native-patch.json",
+        "commit": "884fd3e37ef5cab48541ffaa5902b15aa6cd6b66",
+        "mode": "100644",
+        "git_blob_oid": "4b380ada2eb94228702a7d462aa8ba04ad9bbbc3",
+        "bytes": 13585,
+        "sha256": "b07dded60e6cf81b589f641d62113d8640922876b0d0306f3b02dce207b07217"
+      }
+    },
+    {
+      "rule_preimage": {
+        "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/original-rule-preimage.json",
+        "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+        "mode": "100644",
+        "git_blob_oid": "97708a7da38e6b411c93aa2483e594f4c8487c8d",
+        "bytes": 737,
+        "sha256": "026e472c02657d68a8400ecf28cf722dac8bf57e0bfb7850eae382c18e157092"
+      },
+      "source_authority": {
+        "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/authority-binding.json",
+        "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+        "mode": "100644",
+        "git_blob_oid": "b2dc0a756bfa90b86775047f65b46a32b81e6e9b",
+        "bytes": 740,
+        "sha256": "c3cb1c2f7cdb50ec5bc18c30a3364c8b637ffa2767e85787b8a569aeff79eb89"
+      },
+      "ledger": {
+        "path": "coordination/engineering/jor656-residual029-native-001/native-authority-001/constructor-result.json",
+        "commit": "7e524ddd76cfca73d5405e0f993b67e4662cc247",
+        "mode": "100644",
+        "git_blob_oid": "e8e2be25a75bcb5911cd5551c86928a86e9f367b",
+        "bytes": 21694,
+        "sha256": "3e9b5e8c92871f34e8c85e392a8dc4e5f3c7523f3c6bbe37933e620e59233d8e"
+      },
+      "native_patch": {
+        "path": "coordination/engineering/jor656-residual029-native-001/source-evidence-003/requested-native-patch.json",
+        "commit": "c04ec16ff03d40a3c3bc5941bd32748bbbe53c02",
+        "mode": "100644",
+        "git_blob_oid": "f8445e6dc0ac5e0afbee9e1556bcc17e10b2f973",
+        "bytes": 1243,
+        "sha256": "90788af4a2292d4d16aaa1e35027b1ada168a91b919bcff5d7ef54b7bc296983"
+      }
+    }
+  ]
+}

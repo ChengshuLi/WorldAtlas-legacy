@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+    "mode": "100644",
+    "git_blob_oid": "3ff9aa68dc662d8802a27f9614bde15246e6023a",
+    "bytes": 2291,
+    "sha256": "a6dfdc5018d123177b09d28f063055be8c038c88e4469d5f3371a311992bf957"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/original-rule-preimage.json",
+        "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+        "mode": "100644",
+        "git_blob_oid": "01f74e8508d36be35d86125cfaae302de9edeee7",
+        "bytes": 738,
+        "sha256": "37f0a04d777643858c72b3f3c2d9afd6f74ca19cfafcff1ed9b28c2861feee90"
+      },
+      "source_authority": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/authority-binding.json",
+        "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+        "mode": "100644",
+        "git_blob_oid": "d7a3e5fac623a7872f0fac38d46305f4146801ea",
+        "bytes": 741,
+        "sha256": "5c360b9e4eb0a722dadb20fb7be3f2d31a5ec1078fb11b48bfa98b3ae24b09f9"
+      },
+      "ledger": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-authority-001/constructor-result.json",
+        "commit": "87b6791b80a74ee26240101ea8276f71beb44110",
+        "mode": "100644",
+        "git_blob_oid": "f0741f34409262308725b40a4e0e00e7b5932548",
+        "bytes": 45923,
+        "sha256": "a68a6cec49d29c3cf37861a0a5c103ba2e8b5cf8e4caa1a800c71b26f0400bd7"
+      },
+      "native_patch": {
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/native-supported-001/native-patch.json",
+        "commit": "884fd3e37ef5cab48541ffaa5902b15aa6cd6b66",
+        "mode": "100644",
+        "git_blob_oid": "4b380ada2eb94228702a7d462aa8ba04ad9bbbc3",
+        "bytes": 13585,
+        "sha256": "b07dded60e6cf81b589f641d62113d8640922876b0d0306f3b02dce207b07217"
+      }
+    }
+  ]
+}
