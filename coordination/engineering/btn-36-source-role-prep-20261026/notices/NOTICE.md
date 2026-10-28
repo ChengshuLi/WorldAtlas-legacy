@@ -72,6 +72,20 @@ The following ten files extend the 19-file inventory above. The current administ
 | `native-authority-current-4828-001/constructor-result.json` | 7,657 | `445962d02ad82dee89f0fd3f30d21ab4337b0721c6b6bf931a9e7df768998da6` | Derived native-cell assignment rows and bounds; no source polygon bodies |
 | `native-authority-current-4810-001/constructor-result.json` | 7,667 | `1928930134b789fa7d659298ae82908c052986ed88324976e17144058edf5dc7` | Derived native-cell assignment rows for the same source features |
 
+### BTN220 re-audit additions
+
+The following current candidate outputs serialize the same recorded Bhutan ADM1 geographic reference source described above. They are source/modified geometry and derived assignment evidence, not legal boundaries or a finding of territorial applicability. The retained catalogue pin and CC BY 3.0 attribution remain applicable; negative-family competitor geometries are not embedded in these files.
+
+| Repository path | Bytes | SHA-256 | Contents and source role |
+|---|---:|---|---|
+| `native-diagnostic-held-220-20261028/source-evidence-held-220-001/source-evidence.json` | 39,246 | `d89eea480b516208a540cefb52b0fb7ce5c33877caa8333742bde7cf094cbf88` | Nine embedded BTN ADM1 target geometries and source-member references; geoBoundaries 2010 source lineage, CC BY 3.0 |
+| `native-diagnostic-held-220-20261028/source-evidence-held-220-002/source-evidence.json` | 39,246 | `d89eea480b516208a540cefb52b0fb7ce5c33877caa8333742bde7cf094cbf88` | Byte-identical source-evidence output |
+| `native-diagnostic-held-220-20261028/source-evidence-held-220-config.json` | 90,921 | `6ff85f26c4b1cdd041fdd0e1b52fb56be7133fcb5914e2b3960fd833cd9cc94a` | Producer config embeds the same nine BTN ADM1 target geometries; CC BY 3.0 source lineage |
+| `native-diagnostic-held-220-20261028/native-authority-assigned-21-001/constructor-result.json` | 20,907 | `24254eb92b4f445002f04a5955728e500f39c0386acc39751c448dd01229bdc5` | Derived native assignment result for the 21-cell candidate with embedded BTN target geometry; CC BY 3.0 source lineage |
+| `data/canonical-grid/current-startup/geography/effective-context-7fd2f9536dfc2952955167253151908559ce64e0a5c386418feddb35388d3add.json.gz` | 310,741 | `7fd2f9536dfc2952955167253151908559ce64e0a5c386418feddb35388d3add` | Current context asset; 1,500 records retained, with five changed geometry records all from gb:BTN:ADM1 relative to the prior context asset. Other source-family records are unchanged and retain their existing catalogue terms. |
+
+The territorial-exclusion provenance is an identity/count record without geometry arrays. It records member references and source-part pins for CHN ADM1, IND ADM1, and IND ADM3; the separate source-family terms above and in the retained catalogue apply. The 6,836 advertised versus 6,822 retained IND ADM3 count remains a metadata limitation, not a no-hit or clearance result.
+
 The retained source-corpus catalogue at commit `e7aa5c46baa083697b662de51e177c7bf89f9014`, path `coordination/engineering/original-geography-source-corpus-20261006/catalogue.json`, SHA-256 `d3da799558be1fcbe7f3ea90ba7033d312a65690984983cb008f2d72e32765f9`, records represented years and item terms for the negative source families: CHN ADM1 (2019, Public Domain), IND ADM1 (2011, CC BY 2.5 India), and IND ADM3 (2018, ODbL 1.0). Their source products are geoBoundaries release commit `9469f09`:
 
 - `https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHN/ADM1/geoBoundaries-CHN-ADM1_simplified.geojson`
