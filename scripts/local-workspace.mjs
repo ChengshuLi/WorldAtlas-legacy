@@ -1025,7 +1025,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       if (receipt.version !== 1 || receipt.operation !== 'partial-removal-reconcile' || receipt.id !== name.slice(0, -5)
         || !['pending', 'failed', 'reconciled'].includes(receipt.status) || !id(receipt.worker)
         || receipt.slot !== 'work' || receipt.path !== slotPath(receipt.worker, receipt.slot)
-        || receipt.branch !== partialRemovalBranch || !/^[a-f0-9]{40}$/.test(receipt.head ?? '')
+        || receipt.branch !== partialRemovalBranch || !/^[a-f0-9]{40}$/.test(receipt.startHead ?? '')
+        || !/^[a-f0-9]{40}$/.test(receipt.head ?? '')
         || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(receipt.preservedRef ?? '')
         || receipt.preservedPath !== partialArchivePath(receipt.worker, receipt.slot, receipt.head, receipt.manifestSha256)
         || !/^[a-f0-9]{64}$/.test(receipt.manifestSha256 ?? '') || !/^[a-f0-9]{64}$/.test(receipt.capabilitySha256 ?? '')
@@ -1039,11 +1040,13 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     });
   };
   const inspectPartialRemoval = ({worker, slot = 'work', expectedPath, expectedBranch, expectedHead}) => {
-    if (!worker || process.env.CODEX_THREAD_ID !== worker || slot !== 'work' || expectedBranch !== partialRemovalBranch) {
+    if (!worker || process.env.CODEX_THREAD_ID !== worker || slot !== 'work' || expectedBranch !== partialRemovalBranch
+      || !/^[a-f0-9]{40}$/.test(expectedHead ?? '')) {
       throw Error('Partial-removal inspection is limited to the exact TLS work slot and current owner identity');
     }
     const value = state(), entry = value.entries.find(item => item.worker === worker && item.slot === slot);
-    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch || entry.head !== expectedHead
+    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch
+      || !/^[a-f0-9]{40}$/.test(entry.head ?? '')
       || entry.branch !== partialRemovalBranch
       || entry.path !== slotPath(worker, slot)) throw Error('Exact ready slot binding changed; preserve for inspection');
     ordinaryDirectory(entry.path);
@@ -1078,7 +1081,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     if (!Array.isArray(readers) || readers.length) throw Error('Partial checkout has active readers');
     const inventory = partialTreeInventory(entry.path);
     return {version: 1, result: 'PASS', operation: 'partial-removal-inventory', worker, slot,
-      path: entry.path, branch: entry.branch, head: expectedHead, gitAdminPath: adminPath,
+      path: entry.path, branch: entry.branch, startHead: entry.head, head: expectedHead, gitAdminPath: adminPath,
       preservedRef, entryCount: inventory.entryCount, totalBytes: inventory.totalBytes,
       entries: inventory.entries, inventorySha256: inventory.sha256};
   };
@@ -1092,7 +1095,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     const inventory = inventoryManifest;
     if (!inventory || inventory.version !== 1 || inventory.result !== 'PASS' || inventory.operation !== 'partial-removal-inventory'
       || inventory.worker !== worker || inventory.slot !== slot || inventory.path !== expectedPath
-      || inventory.branch !== expectedBranch || inventory.head !== expectedHead || !Array.isArray(inventory.entries)
+      || inventory.branch !== expectedBranch || inventory.head !== expectedHead
+      || !/^[a-f0-9]{40}$/.test(inventory.startHead ?? '') || !Array.isArray(inventory.entries)
       || typeof inventory.gitAdminPath !== 'string' || !path.isAbsolute(inventory.gitAdminPath)
       || typeof inventory.preservedRef !== 'string' || !/^refs\/worldatlas-local-recovery\/[a-f0-9]{64}$/.test(inventory.preservedRef)
       || inventory.entries.length !== inventory.entryCount || !Number.isSafeInteger(inventory.entryCount) || inventory.entryCount < 1
@@ -1104,13 +1108,15 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     const reviewer = reviewReceipt;
     if (!reviewer || reviewer.result !== 'PASS' || reviewer.operation !== 'partial-removal-review'
       || !id(reviewer.reviewer) || reviewer.reviewer === worker || reviewer.worker !== worker || reviewer.slot !== slot
-      || reviewer.path !== expectedPath || reviewer.branch !== expectedBranch || reviewer.head !== expectedHead
+      || reviewer.path !== expectedPath || reviewer.branch !== expectedBranch || reviewer.startHead !== inventory.startHead
+      || reviewer.head !== expectedHead
       || reviewer.gitAdminPath !== inventory.gitAdminPath || reviewer.preservedRef !== inventory.preservedRef
       || reviewer.entryCount !== inventory.entryCount || reviewer.totalBytes !== inventory.totalBytes
       || reviewer.inventorySha256 !== inventory.inventorySha256 || !/^[a-f0-9]{64}$/.test(reviewer.sha256 ?? '')
       || partialReceiptDigest(reviewer) !== reviewer.sha256) throw Error('Independent partial-checkout review is missing or stale');
     const pendingMatches = readPartialReceipts().filter(receipt => receipt.worker === worker && receipt.slot === slot
-      && receipt.path === expectedPath && receipt.branch === expectedBranch && receipt.head === expectedHead
+      && receipt.path === expectedPath && receipt.branch === expectedBranch && receipt.startHead === inventory.startHead
+      && receipt.head === expectedHead
       && receipt.manifestSha256 === inventory.inventorySha256 && receipt.status === 'pending');
     if (pendingMatches.length > 1) throw Error('Multiple pending partial-removal receipts match; inspect before retry');
     const pendingReceipt = pendingMatches[0];
@@ -1133,7 +1139,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
           || git('rev-parse', '--verify', `${pendingReceipt.preservedRef}^{commit}`).trim() !== expectedHead
           || worktrees(false).some(item => item.path === expectedPath)) throw Error('Pending archive no longer matches the live Git bindings');
         const liveState = state(), liveEntry = liveState.entries.find(item => item.worker === worker && item.slot === slot);
-        if (liveEntry && (liveEntry.path !== expectedPath || liveEntry.branch !== expectedBranch || liveEntry.head !== expectedHead || liveEntry.status !== 'ready')) {
+        if (liveEntry && (liveEntry.path !== expectedPath || liveEntry.branch !== expectedBranch
+          || liveEntry.head !== pendingReceipt.startHead || liveEntry.status !== 'ready')) {
           throw Error('Pending archive owner slot changed; preserve for inspection');
         }
         if (liveState.entries.some(item => item !== liveEntry && (item.path === expectedPath || item.branch === expectedBranch
@@ -1177,7 +1184,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       if (sourceExists === archiveExists) throw Error('Pending partial-removal receipt has ambiguous source/archive state; inspect without retry');
     }
     const value = state(), entry = value.entries.find(item => item.worker === worker && item.slot === slot);
-    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch || entry.head !== expectedHead) {
+    if (!entry || entry.status !== 'ready' || entry.path !== expectedPath || entry.branch !== expectedBranch
+      || entry.head !== inventory.startHead) {
       throw Error('Exact existing ready owner slot changed; preserve partial checkout');
     }
     const cap = readCapability({worker, slot, entry, requestedPath: capabilityFile});
@@ -1212,11 +1220,12 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       throw Error('Partial checkout changed after independent inventory review');
     }
     const prior = readPartialReceipts().filter(receipt => receipt.worker === worker && receipt.path === entry.path
-      && receipt.branch === entry.branch && receipt.head === expectedHead && receipt.manifestSha256 === inventory.inventorySha256
+      && receipt.branch === entry.branch && receipt.startHead === entry.head && receipt.head === expectedHead
+      && receipt.manifestSha256 === inventory.inventorySha256
       && receipt.status === 'pending');
     if (prior.length > 1) throw Error('Multiple pending partial-removal receipts match; inspect before retry');
     const receipt = prior[0] ?? {version: 1, operation: 'partial-removal-reconcile', status: 'pending', id: randomUUID(),
-      worker, slot, path: entry.path, branch: entry.branch, head: expectedHead, preservedRef,
+      worker, slot, path: entry.path, branch: entry.branch, startHead: entry.head, head: expectedHead, preservedRef,
       preservedPath: partialArchivePath(worker, slot, expectedHead, inventory.inventorySha256),
       manifestSha256: inventory.inventorySha256, entryCount: current.entryCount, totalBytes: current.totalBytes,
       capabilitySha256: createHash('sha256').update(cap.bytes).digest('hex'),
@@ -1255,7 +1264,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     })();
     if (!Array.isArray(archivedReaders) || archivedReaders.length) throw Error('Preserved archive gained active readers');
     const currentValue = state(), currentEntry = currentValue.entries.find(item => item.worker === worker && item.slot === slot);
-    if (!currentEntry || currentEntry.path !== expectedPath || currentEntry.branch !== expectedBranch || currentEntry.head !== expectedHead) {
+    if (!currentEntry || currentEntry.path !== expectedPath || currentEntry.branch !== expectedBranch
+      || currentEntry.head !== receipt.startHead) {
       throw Error('Owner slot changed after preservation; pending receipt retained');
     }
     currentValue.entries = currentValue.entries.filter(item => item !== currentEntry);

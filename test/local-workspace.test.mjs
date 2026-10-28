@@ -873,11 +873,16 @@ test('owner reconciliation preserves a finite partial-removal checkout after Git
   t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
   const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
   manager.ensureCapabilityFile({worker});
+  fs.writeFileSync(path.join(entry.path, 'README.md'), 'candidate advanced from the allocated start head\n');
+  execFileSync('git', ['-C', entry.path, 'add', 'README.md']);
+  execFileSync('git', ['-C', entry.path, 'commit', '-m', 'advance retained candidate branch']);
+  const candidateHead = execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  assert.notEqual(candidateHead, entry.head, 'the allocated start head and current candidate head are distinct');
   const unique = path.join(entry.path, 'research', 'retained-evidence.json');
   fs.mkdirSync(path.dirname(unique), {recursive: true});
   fs.writeFileSync(unique, '{"retained":true}\n');
   const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
-  git('update-ref', preservedRef, entry.head);
+  git('update-ref', preservedRef, candidateHead);
   const dotGit = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
   const adminPath = /^gitdir: (.+)\n?$/.exec(dotGit)?.[1];
   assert.ok(adminPath && fs.existsSync(adminPath));
@@ -886,16 +891,18 @@ test('owner reconciliation preserves a finite partial-removal checkout after Git
   assert.ok(!fs.existsSync(adminPath), 'the worktree admin directory is gone');
 
   const manifest = manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
-    expectedBranch: entry.branch, expectedHead: entry.head});
+    expectedBranch: entry.branch, expectedHead: candidateHead});
   assert.ok(manifest.entryCount >= 5);
   assert.ok(manifest.totalBytes > 0);
   assert.equal(manifest.preservedRef, preservedRef);
+  assert.equal(manifest.startHead, entry.head);
+  assert.equal(manifest.head, candidateHead);
   const reviewReceipt = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
-    worker, slot: 'work', path: entry.path, branch: entry.branch, head: entry.head,
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: candidateHead,
     gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
     totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256});
   const args = {worker, slot: 'work', capabilityFile: manager.capabilityFilePath({worker}),
-    expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: entry.head,
+    expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: candidateHead,
     inventoryManifest: manifest, reviewReceipt};
   const stateFile = path.join(manager.report({worker}).registry, 'state.json');
   const originalRename = fs.renameSync;
@@ -908,6 +915,8 @@ test('owner reconciliation preserves a finite partial-removal checkout after Git
   const auditDirectory = path.join(manager.report({worker}).registry, 'partial-removal-audit');
   const pending = JSON.parse(fs.readFileSync(path.join(auditDirectory, fs.readdirSync(auditDirectory)[0]), 'utf8'));
   assert.equal(pending.status, 'pending');
+  assert.equal(pending.startHead, entry.head);
+  assert.equal(pending.head, candidateHead);
   assert.ok(!fs.existsSync(entry.path), 'the entire directory was atomically moved before the injected state-write failure');
   assert.ok(fs.existsSync(pending.preservedPath));
   const result = manager.reconcilePartialRemoval(args);
@@ -917,7 +926,7 @@ test('owner reconciliation preserves a finite partial-removal checkout after Git
   assert.equal(result.inventorySha256, manifest.inventorySha256);
   assert.equal(fs.readFileSync(path.join(result.preservedPath, 'research', 'retained-evidence.json'), 'utf8'), '{"retained":true}\n');
   assert.ok(fs.existsSync(path.join(result.preservedPath, '.git')), 'the original dangling Git link is retained as evidence');
-  assert.equal(git('rev-parse', preservedRef).trim(), entry.head);
+  assert.equal(git('rev-parse', preservedRef).trim(), candidateHead);
   assert.equal(manager.report({worker}).entries.length, 0);
   assert.equal(fs.existsSync(manager.capabilityFilePath({worker})), false);
   const audit = JSON.parse(fs.readFileSync(result.auditReceipt, 'utf8'));
@@ -985,7 +994,7 @@ test('partial-removal reconciliation refuses changed inventory, active readers a
   fs.rmSync(adminPath, {recursive: true});
   const manifest = manager.inspectPartialRemoval({worker, expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: entry.head});
   const review = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
-    worker, slot: 'work', path: entry.path, branch: entry.branch, head: entry.head,
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: entry.head,
     gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
     totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256});
   const args = {worker, capabilityFile: manager.capabilityFilePath({worker}), expectedPath: entry.path,
@@ -997,7 +1006,7 @@ test('partial-removal reconciliation refuses changed inventory, active readers a
   fs.unlinkSync(path.join(entry.path, 'research', 'changed-after-review.txt'));
   const freshManifest = manager.inspectPartialRemoval({worker, expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: entry.head});
   const freshReview = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
-    worker, slot: 'work', path: entry.path, branch: entry.branch, head: entry.head,
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: entry.head,
     gitAdminPath: freshManifest.gitAdminPath, preservedRef: freshManifest.preservedRef, entryCount: freshManifest.entryCount,
     totalBytes: freshManifest.totalBytes, inventorySha256: freshManifest.inventorySha256});
   const freshArgs = {...args, inventoryManifest: freshManifest, reviewReceipt: freshReview};
@@ -1043,7 +1052,8 @@ test('partial-removal CLI inspects and reconciles only the exact current TLS own
   const reviewFile = path.join(temporary, 'partial-review.json');
   fs.writeFileSync(inventoryFile, JSON.stringify(manifest));
   fs.writeFileSync(reviewFile, JSON.stringify(sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review',
-    reviewer: 'independent-cli-reviewer', worker, slot: 'work', path: entry.path, branch: entry.branch, head: entry.head,
+    reviewer: 'independent-cli-reviewer', worker, slot: 'work', path: entry.path, branch: entry.branch,
+    startHead: entry.head, head: entry.head,
     gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
     totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256})));
   const reconcile = spawnSync(process.execPath, [helper, 'reconcile-partial-removal', '--repo', repo, '--worker', worker,
