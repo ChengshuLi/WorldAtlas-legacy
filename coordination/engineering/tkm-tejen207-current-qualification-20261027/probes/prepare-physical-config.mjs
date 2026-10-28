@@ -1,0 +1,30 @@
+/* Prepare the existing accepted one-target GSHHG configuration for Tejen207.
+ * The base physical comparison and native-member pins are unchanged. */
+import fs from 'node:fs'; import path from 'node:path';
+import {createHash} from 'node:crypto'; import {pathToFileURL} from 'node:url';
+const root=fs.realpathSync(process.cwd());
+const BASE='51d480361e22ac39fff4c2e20191002ebdae9d63';
+const STAGE_COMMIT='acaac6757b01eaa8b23b9076592a77e79ac4da3e';
+const PKG='coordination/engineering/tkm-tejen207-current-qualification-20261027';
+const TEMPLATE='coordination/engineering/tkm-baherden53-source-fit-20261026/config/physical-004.json';
+const STAGE=PKG+'/physical-001/original-stage-inputs.json';
+const DEST=PKG+'/config/physical-001.json';
+const RUNTIME='/workspace/shared/worldatlas-TKM-Baherden53-runtime-inventory-004-20261027.json';
+const need=(ok,msg)=>{if(!ok)throw new Error(msg)};
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const {pinReader}=await import(pathToFileURL(path.join(root,'scripts/prepare-delivery-handoff.mjs')));
+const reader=pinReader(root), templatePin=reader.pin(BASE,TEMPLATE), template=JSON.parse(reader.read(templatePin));
+need(template.version===1&&template.physical?.version===1&&template.physical.inputs.length===25,'Accepted physical template differs');
+const stagePin=reader.pin(STAGE_COMMIT,STAGE); need(stagePin.bytes===41512&&stagePin.sha256==='055524621c2f5489fa265c525cf6a80e2245741e175cb49349ba1b811eb21188','Tejen stage pin differs');
+const previous=template.physical.roles.stages, inputs=new Map(template.physical.inputs.map(pin=>[pin.path,pin]));
+need(inputs.has(previous),'Template stage pin absent'); inputs.delete(previous); inputs.set(STAGE,stagePin);
+const physical=structuredClone(template.physical); physical.inputs=[...inputs.values()].sort((a,b)=>a.path.localeCompare(b.path)); physical.roles.stages=STAGE;
+need(physical.inputs.length===25&&physical.inputs.filter(pin=>pin.path===STAGE).length===1,'Input inventory changed beyond stage pin');
+const runtimeRaw=fs.readFileSync(RUNTIME), runtime=JSON.parse(runtimeRaw);
+need(runtime.files.length===207&&runtime.method?.helper_sha256==='abc801b9a35d20c9f0dfe3bbc9bb2cb7dc107f1758414970d9cde11380574a18','Pinned runtime inventory differs');
+need(runtime.files.some(pin=>pin.path===runtime.python.path&&pin.bytes===runtime.python.bytes&&pin.sha256===runtime.python.sha256),'Runtime executable pin absent');
+physical.runtime={python:runtime.version,numpy:runtime.numpy,shapely:runtime.shapely,geos:runtime.geos};
+const config={version:1,physical,runtime_inventory:{python:runtime.python,files:runtime.files}};
+const body=Buffer.from(JSON.stringify(config,null,2)+'\n'), dest=path.join(root,DEST);
+need(!fs.existsSync(dest),'Physical config destination is not fresh'); fs.mkdirSync(path.dirname(dest),{recursive:true}); fs.writeFileSync(dest,body,{flag:'wx'});
+console.log(JSON.stringify({path:DEST,bytes:body.length,sha256:sha(body),base:BASE,template:{path:TEMPLATE,pin:templatePin},stage:{commit:STAGE_COMMIT,pin:stagePin},physical_inputs:physical.inputs.length,runtime:{path:RUNTIME,bytes:runtimeRaw.length,sha256:sha(runtimeRaw),file_count:runtime.files.length},scope:'one Tejen target; accepted physical implementation/inputs unchanged except stage pin'}));
