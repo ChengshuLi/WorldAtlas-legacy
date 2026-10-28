@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "kind": "jor656-finalizer-current-8eff-002-candidate-manifest",
+  "baseline": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+  "candidate": "a62254cea5ecabd90a4b4a0bf36e5e32e9edc06d",
+  "registry_commit": "95dba6ca68188649d6c53497416c2f2e5c7ecb42",
+  "scope": {
+    "original_keys": 656,
+    "land": 631,
+    "inland_water": 25,
+    "intervals": 399,
+    "owners": 16,
+    "candidate_cells": 563,
+    "prior_full_JOR_same_member": 534,
+    "simplified_contract_subset": 29,
+    "held_foreign_contact_keys": 93
+  },
+  "finalizer": {
+    "config": "../current-baseline-8eff/finalize-config-002.json",
+    "config_sha256": "d5b436bc0e295d9e308a0f8785891ba17814c0e07b226dffcea039f663d89226",
+    "exit_code": 0,
+    "elapsed_seconds": 125.586,
+    "wait4_maxrss_bytes": 1270276096,
+    "sampled_peak_rss_bytes": 1267634176,
+    "stderr_bytes": 0,
+    "startup_index_sha256": "77d68e33a57c8db8e62b726c2b35d71b9eae9420bb287ba8631702554962f009"
+  },
+  "comparison": {
+    "report": "../attempts/finalize-current-8eff-002/selected-joint-comparison.json",
+    "sha256": "7e6d6044a9d5ba53ef328b9051c579569bf6724ec27d6f7a63c4ad9f0ca5e8d8",
+    "method": "selected-native-owner-conservation-v1",
+    "status": "no-new-native-loss",
+    "baseline": "8effade28dcb31f659ecc78b578793ed4c5bd84f",
+    "candidate": "a62254cea5ecabd90a4b4a0bf36e5e32e9edc06d",
+    "rows_compared": 262166,
+    "added": 563,
+    "removed": 0,
+    "reassigned": 0,
+    "lost_or_reassigned": 0,
+    "affected_rows": 314,
+    "trusted_code_paths_checked": 18,
+    "candidate_code_executed": false
+  },
+  "limitations": [
+    "Local finalizer and direct comparison-core evidence only; not hosted tests, build, geography workflow, emitted-consumer control, current-owner observation, root acceptance or credit.",
+    "Full 656-key source/foreign denominator and all 93 captured contacts remain in force; 93 held; no source/native/physical replay."
+  ],
+  "artifacts": [
+    {
+      "path": "finalized-current-8eff-002/ownership-selection.json",
+      "bytes": 2277,
+      "sha256": "f931589bca4c2facd1a8cceb23cee6cd2ce53b6543a850dfbed20fa2d8bb4c38"
+    },
+    {
+      "path": "finalized-current-8eff-002/package-inputs.json",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "path": "finalized-current-8eff-002/preparation.json",
+      "bytes": 1156,
+      "sha256": "d22f3a69375265d0418aa3a9b3da6d0438f11cf2798a1c5a5eeb99c72a865823"
+    },
+    {
+      "path": "finalized-current-8eff-002/selected-delivery-expectations.json",
+      "bytes": 485,
+      "sha256": "e9e6dca17482363821635d28bde4472b35290bed02abc88d18c7302fb876221d"
+    },
+    {
+      "path": "finalized-current-8eff-002/startup-ownership.json",
+      "bytes": 49610,
+      "sha256": "77d68e33a57c8db8e62b726c2b35d71b9eae9420bb287ba8631702554962f009"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/command.txt",
+      "bytes": 307,
+      "sha256": "78ab42685970b9eaa6e5d4a505fe2e4a3f9175a1a34f6b20ef1678fa5269d7c9"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/invocation.json",
+      "bytes": 802,
+      "sha256": "0132c448a02eb164ac3bdbc1b008a14d03a7c37f4fc9f49aa83d9246e9d92607"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/preflight.json",
+      "bytes": 2018,
+      "sha256": "97f9e73a2301a627284d7a9c6bd5b55ed4feaed74bf03bde64ac56925fccf5bd"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/stdout.json",
+      "bytes": 773,
+      "sha256": "dba739aa14756ce5fe9b160d1d810d033420d9186551f7caae5aa89e1db9e669"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/terminal.json",
+      "bytes": 290,
+      "sha256": "86e33c16c799131c33bdd6ffd2cc11a8fc755f7d61e100ac20ec02219b23b162"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/comparison-invocation.json",
+      "bytes": 966,
+      "sha256": "a1ba43ea435e7ec1813354a29f6521db0448ae530623a0941b44814b87b27b97"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/comparison-started-at.txt",
+      "bytes": 33,
+      "sha256": "aab23ff36a81412bece1d8a1779993b1295b951622cb5b9910f28687d86bd71a"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/comparison-finished-at.txt",
+      "bytes": 33,
+      "sha256": "4e26884adf015384de928922e55946d27bcab22e80a0606d6e5a5247eb9f482e"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/comparison-stdout.log",
+      "bytes": 620,
+      "sha256": "83c3a65b11733004c26f9f8a480fa94d4f5a1b16a19dd41c819a8b5b9128cd0f"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/comparison-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/comparison-terminal.json",
+      "bytes": 211,
+      "sha256": "8ab2c9a8dc7a53b37a178f336088c921a436c467bac090ae6bab5867d36896d6"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/selected-joint-comparison.json",
+      "bytes": 103479,
+      "sha256": "7e6d6044a9d5ba53ef328b9051c579569bf6724ec27d6f7a63c4ad9f0ca5e8d8"
+    },
+    {
+      "path": "attempts/finalize-current-8eff-002/full-bank-comparison-invocation.mjs",
+      "bytes": 3449,
+      "sha256": "1a5048d65f65f85d442cc570d38f8852e7e9549accd48336fb4a0726a6276f4b"
+    }
+  ]
+}

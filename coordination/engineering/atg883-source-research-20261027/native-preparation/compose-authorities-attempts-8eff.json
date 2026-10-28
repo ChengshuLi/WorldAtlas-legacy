@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "phase": "compose",
+  "config": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-config-8eff.json",
+  "attempts": [
+    {
+      "destination": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-8eff",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Occupied destination; use explicit --resume to verify an identical completed phase",
+      "outcome": "guard rejected before execution; destination was an empty directory created immediately before invocation; no products emitted"
+    }
+  ]
+}
