@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "kind": "atg883-current-main-bridge-v1",
+  "accepted_data_commit": "81280722133858cbb26249210fed17b031d11d3d",
+  "current_main": "c1e40fcd770cd85e15a95550578132f7059cfa4f",
+  "current_main_parent": "81280722133858cbb26249210fed17b031d11d3d",
+  "normal_merge_commit": "b62c279f4c168d58b0dc65dc2ded234f1ce96477",
+  "only_main_delta": {
+    "status": "A",
+    "path": "research/geography/source-relative-proposals-20261025/GBR28-Armagh-24-source-relative-decision-20261026.md",
+    "git_blob_oid": "559eabcc1338571bd91aa21ac28234ba44f12de5",
+    "bytes": 5352,
+    "sha256": "80e20f115e8607164e667ad50fea78bf0223b2c40a172479c8226b9aa3c1a7cd"
+  },
+  "bounded_fetch": {
+    "operation": "git fetch --stdin of one exact reachable blob",
+    "fetch_negotiation_algorithm": "noop",
+    "no_tags": true,
+    "no_write_fetch_head": true,
+    "no_submodules": true,
+    "no_auto_maintenance": true,
+    "filter": "blob:none",
+    "no_lazy_fetch": true,
+    "no_replace_objects": true
+  },
+  "unchanged_inputs": [
+    {
+      "commit": "81280722133858cbb26249210fed17b031d11d3d",
+      "path": "data/ownership-selection.json",
+      "git_blob_oid": "6cf14f7fd5b4ad1e0a2afa876561195feee46b18",
+      "bytes": 2272,
+      "sha256": "f47a34c5d4e0eda841b2af18c55b7f096773756879f1a83e0059c45f93bad72b"
+    },
+    {
+      "commit": "c1e40fcd770cd85e15a95550578132f7059cfa4f",
+      "path": "data/ownership-selection.json",
+      "git_blob_oid": "6cf14f7fd5b4ad1e0a2afa876561195feee46b18",
+      "bytes": 2272,
+      "sha256": "f47a34c5d4e0eda841b2af18c55b7f096773756879f1a83e0059c45f93bad72b"
+    },
+    {
+      "commit": "81280722133858cbb26249210fed17b031d11d3d",
+      "path": ".github/package-inputs.json",
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "commit": "c1e40fcd770cd85e15a95550578132f7059cfa4f",
+      "path": ".github/package-inputs.json",
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    {
+      "commit": "81280722133858cbb26249210fed17b031d11d3d",
+      "path": "data/geography/part-28.json",
+      "git_blob_oid": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+      "bytes": 6613963,
+      "sha256": "2aab2f36aeeb651ee8e6cc656e9541ad14e2ced2ea8160e8700ad4dc950c379d"
+    },
+    {
+      "commit": "c1e40fcd770cd85e15a95550578132f7059cfa4f",
+      "path": "data/geography/part-28.json",
+      "git_blob_oid": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+      "bytes": 6613963,
+      "sha256": "2aab2f36aeeb651ee8e6cc656e9541ad14e2ced2ea8160e8700ad4dc950c379d"
+    }
+  ],
+  "input_identity_equal_at_812_and_c1e": true,
+  "interpretation": "Memo-only main advance; original ATG scientific, selector, package-input and target pins remain unchanged. No ATG source or native replay required."
+}

@@ -1,0 +1,37 @@
+{
+  "baseline_commit": "2d76737905fb0ccdbb5743cb6ebec4a54afb3682",
+  "command": "env -u NODE_PATH -u NODE_OPTIONS GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1 node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/malta1196-repair-evaluation-20261027/native-inputs-001/finalize-current-2d.json coordination/engineering/malta1196-repair-evaluation-20261027/native-inputs-001/finalized-current-2d-001",
+  "config": "coordination/engineering/malta1196-repair-evaluation-20261027/native-inputs-001/finalize-current-2d.json",
+  "config_sha256": "432459a41f4acfcb8f3a24dd0523ce8ffcecedf45839cd2b9a3dfc118ffef8f2",
+  "destination": "coordination/engineering/malta1196-repair-evaluation-20261027/native-inputs-001/finalized-current-2d-001",
+  "elapsed_seconds": 130.158,
+  "exit_code": 0,
+  "outputs": {
+    "ownership-selection.json": {
+      "bytes": 2292,
+      "sha256": "6648f01e62fb851b2b426977578d4899465212e54d02f002706b340ca0efa883"
+    },
+    "package-inputs.json": {
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "preparation.json": {
+      "bytes": 1156,
+      "sha256": "befab733df9d47e3aa06eee792c22bbea17b5a2c96d3879177250880845fba3e"
+    },
+    "selected-delivery-expectations.json": {
+      "bytes": 485,
+      "sha256": "ec2a2c337b6b67a3a77b40df74acb696fdbf02f3eee8dfa3842d3fd0e5996b0c"
+    },
+    "startup-ownership.json": {
+      "bytes": 49610,
+      "sha256": "7dea95c07718bc8245ec39f867454ecd80c272f9b98a7e44e9ffb08f3130d845"
+    }
+  },
+  "phase": "finalize",
+  "resource_usage": "Not sampled",
+  "resumed": false,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "cbdd09928f278e58f2d487d6377f1a03dd1e4098cef1b1bd845125d7637ea4d6",
+  "version": 1
+}

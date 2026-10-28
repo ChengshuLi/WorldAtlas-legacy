@@ -1,0 +1,9 @@
+{
+  "phase": "compose",
+  "status": "failed",
+  "exit_code": 1,
+  "command": "node scripts/prepare-delivery-handoff.mjs compose coordination/engineering/tkm-411-combined-20261027/composition-003/config.json coordination/engineering/tkm-411-combined-20261027/composition-003-output",
+  "config_sha256": "c027192c2413d125dfbd89191527e2ee19cbfb0805cc980e132cd5e617da6629",
+  "stderr": "New-only native patch differs from its issued binding",
+  "finding": "The Hazar native_patch locator was pinned to output commit 0e3f... instead of issued binding commit e607...; no output was retained from the failed attempt. Corrected only the locator to the exact issued pin and reran once."
+}

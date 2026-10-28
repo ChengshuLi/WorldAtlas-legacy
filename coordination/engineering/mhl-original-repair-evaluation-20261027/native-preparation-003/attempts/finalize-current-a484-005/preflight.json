@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "kind": "mhl1019-finalizer-attempt-preflight-a484-v1",
+  "current_main": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+  "candidate_head": "75725e416fcba7898f3faa47f92d2cecbcb63d93",
+  "config_path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalize-config-current-a484.json",
+  "config_bytes": 1598,
+  "config_sha256": "f3090e1d9739a03bb2a175f09eae8636e29dc7c91de2bcb2d65f59b0efd6c547",
+  "target": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalized-current-a484-001",
+  "target_absent": true,
+  "free_tmp_bytes": 3688980480,
+  "free_ram_available_bytes": 5431410688,
+  "estimated_incremental_peak_bytes": 272629760,
+  "previous_guard_failures": [
+    "absolute destination argument rejected",
+    "selector/package locator extra descriptors rejected",
+    "exact locked @noble/hashes import missing before installation",
+    "one declared startup-vintage code module absent from sparse worktree"
+  ],
+  "dependency_recovery_receipt": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/attempts/finalize-current-a484-003/dependency-recovery-noble-hashes-2.0.1.json",
+  "restored_exact_input": {
+    "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+    "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/startup-vintage.mjs",
+    "blob": "73fa6ef08230944f6ba7562b1698e7512b98ae86",
+    "bytes": 2465,
+    "sha256": "710f7c342f98e275f077c50fc7028271166861551757437ad3564f9d3bbcf1f9"
+  },
+  "scope": "one bounded MHL finalizer; no source/native replay or world hydration; outputs/Git writes only under /tmp owned repo"
+}

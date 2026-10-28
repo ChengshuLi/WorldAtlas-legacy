@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "kind": "trusted-selected-full-bank-comparison-receipt",
+  "status": "completed-historical-baseline",
+  "method": "selected-native-owner-conservation-v1",
+  "baseline_commit": "2d76737905fb0ccdbb5743cb6ebec4a54afb3682",
+  "candidate_commit": "6426bbf7c44dc9f3be3ff216e3c023a4c6e1196d",
+  "exit_code": 0,
+  "start_utc": "2026-10-27T12:10:12Z",
+  "end_utc": "2026-10-27T12:12:50Z",
+  "session_id": 38686,
+  "wrapper_shell_pid_in_invocation_namespace": "2",
+  "report": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-001/report.json",
+    "bytes": 115552,
+    "sha256": "bef3eb800d0fae944c64f227644a164bea757c16010c0119d2b8d0a8b3b0be36"
+  },
+  "raw_stdout": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-001/attempt-003-report.json",
+    "bytes": 115553,
+    "sha256": "9d3373add670ab8337623c34803ce67ddaeffd28446e6e1f28ae84463c62ee5d"
+  },
+  "stderr": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-001/attempt-003-stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "summary": {
+    "compared_rows": 262166,
+    "added_cells": 411,
+    "removed_cells": 0,
+    "reassigned_cells": 0,
+    "lost_or_reassigned_cells": 0,
+    "changed_owner_ids": [
+      "gb:TKM:ADM2:10190150B31923585689840",
+      "gb:TKM:ADM2:10190150B49022220136906",
+      "gb:TKM:ADM2:10190150B64529450546528"
+    ],
+    "status": "no-new-native-loss"
+  },
+  "code_invariance": {
+    "trusted_joint_code_paths": "the 18 exact JOINT_CODE entries from selected-joint-entry.mjs",
+    "changed_paths_between_baseline_and_candidate": 0,
+    "candidate_commit_diff_contains_no_execution-code_changes": true
+  },
+  "caveats": [
+    "This is a historical comparison against main2d76737; main advanced to a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f while the comparison was running, so it is not the current-main delivery comparison.",
+    "The helper sets candidate_code_executed=true whenever checkout HEAD differs from baseline. Exact trusted JOINT_CODE inventory is identical at baseline and candidate; treat this field as conservative HEAD-difference metadata, not candidate-specific code execution.",
+    "Attempt-001 was interrupted with exit130 after orphaned/ambiguous session state; attempt-002 nohup launch did not persist. Both are preserved separately and are not comparator results.",
+    "Raw stdout has two trailing literal characters \\n due output redirection quoting; canonical report is the parsed byte-identical JSON with that framing artifact removed and one newline appended. Raw stdout is preserved."
+  ],
+  "relocation_manifest_path": ".tkm-private/koytendag127/untracked-startup-preservation-002/relocation-manifest.json",
+  "not_claimed": [
+    "current-main comparison after a0b1",
+    "hosted tests/build/emitted controls",
+    "scientific acceptance or key credit"
+  ]
+}

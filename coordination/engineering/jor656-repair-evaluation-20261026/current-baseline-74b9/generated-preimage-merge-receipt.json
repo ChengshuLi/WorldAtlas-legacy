@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "kind": "jor-generated-preimage-normal-merge-receipt-v1",
+  "status": "bounded generated-preimage reconciliation only; no producer run",
+  "merge_commit": "ee1fb15cc07275bfc36e8536395a1645cf284588",
+  "merge_parents": [
+    "b1aab79cfd68fafcd6fe28d7684aa4d5fdc88b20",
+    "74b9bd2dcd63fe6578d107a1e32495456bc3ac76"
+  ],
+  "merge_base": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+  "accepted_current_baseline": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+  "generated_paths": {
+    "scope": [
+      "data/canonical-grid/current-startup/**",
+      "data/ownership-selection.json"
+    ],
+    "accepted_entry_count": 81,
+    "merged_entry_count": 81,
+    "exact_tree_entry_equality": true,
+    "changed_path_count": 24,
+    "changed_path_details": [
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-3417bd2a38665f014fc7bdb09b20f79b16f70561ebd97179c7a924a8113fcd65.json.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "f2a69d45aab4b7a0a1aee1c441da92ba57870dcb",
+          "bytes": 306782
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-401850d4bedf8c6536b17a4af0a2664be6873522e6cb7acc356818d638d1a3d3.json.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "832ccb53280e9f804591cfab38366bcb500159ba",
+          "bytes": 298230
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-73afc243cebd00ccdb6f1b6db5039d559027b5af8d818d39845d8c37e86753de.json.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "84c717d5e8432544dfdd56b0ce5601a1e75648b9",
+          "bytes": 516589
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-7d93d01c64e3056e5af159ac99cdb590eefed3009a28bb67d83b7af9ef885b19.json.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "3f66d20a6898cb9a9f9a9e15d53633e930558da1",
+          "bytes": 300214
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-a5d812dc74de5ad0772c967f075255c779ae3d0d55e5a29a5ff2e3a9fb8e1bae.json.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "922318f541efe25a03ae2e8cba8737f94b73b77a",
+          "bytes": 304627
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/geography/effective-context-a8abbb83d576408ba122518f9c29530b91640294b7ad9162419602b8b893b7d5.json.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "7d38c1d07c44c7c2961705192b9c4913427d44fd",
+          "bytes": 504348
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/index.json",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "9e7c84c8a674fc854a325f5c1f2d9764271280a0",
+          "bytes": 49610
+        },
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "3bbed59f4ead5a123667b76bc9679361420a0bf8",
+          "bytes": 49610
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/04882405fbe34046fee04c41ab57825a14c4dd397e4af4c8272a1915aed636d0/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "8ac8e9fa70f712bf04f15dfc12acd3f1f5cd3078",
+          "bytes": 3518031
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/0aea917191a727fffef47764fb5a41408e0ca32c6baadb79479ea9e9f21e89e6/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "7ac11ab083d1c2b2bf587a871f0425a5ef3d7e0b",
+          "bytes": 3542965
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/13dc93c178e76e59da7645bfa9a578fe2d1810ef448ad43394857d56b5f089e4/native-v1/ownership/rows-0.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "dbbba5b684e487e5e6f0d183e61e5f80b619462b",
+          "bytes": 317030
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/1735b65d2b13d3ee3a99c8d1e36f091f5af885953da2cba8c5936e2c0919b3d3/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "21826c6099a278c3f9a4e4f71f7fffbc91412cb3",
+          "bytes": 3103657
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/1f9265b35d50ff9773d056fcb6ea339c27f0c75fbe56cb87b01c75c7f2edc710/native-v1/ownership/rows-0.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "5dc561f8378f06d5fa977afef7dd5e3f059025d7",
+          "bytes": 317106
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/2fb08992836bd2044fae2fb72eaf28ca0e33955aefeb31a35646b6dd46b539de/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "593f3657f420548a5f30ca2021ec1269d3d45cad",
+          "bytes": 3518034
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/5da14aced27876f0b7dfaef80425f07cc4698ec6dd86997af21698f59a2747c3/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "8f15b12b0f72a2a283c743a770e83b8aa6af4e26",
+          "bytes": 3103648
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/66bbf821a3f100f6bcc24d9538a9a020fe8d1532a3ec13b170b21f86e0aaab2e/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "ff5b426a080e48fb91a79e1ce94263baa7245956",
+          "bytes": 3572270
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/69af5c6d676e83b61f9a7ed38f58989290a37a9deb14da986dad7511481443c8/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "e47db03afbba7cdd4f101260314fb54ea07735ca",
+          "bytes": 3620289
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/6a5706a88adbc4f6d5a1472a955d2fd0aa53f6655615fc48f2d46d0d78a57488/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "c53dcc5b3b2b62e657c1bb45aecc0917c64f755e",
+          "bytes": 3484947
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/77b1f51796567561ad9b10df2ddcb54d3c6f2f1bddf2e87837361148365b1715/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "b44e45d212b7e3a00252d0271358f6d0d46f1748",
+          "bytes": 3542981
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/b47e1594af4e3bee3439eef7f7b53a27b595895dd6bc727ed52b9bf40ba275b8/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "8acd490dcfc3791a9bcda3dffb6636f7d0222480",
+          "bytes": 3572664
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/c66af7f681e9f3ef5fd5b27d3b067b14435268aa1e104049184c939a40290ca1/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "dfb5106c1eb4f987120f9a5500587bf38fd36f12",
+          "bytes": 3620494
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/c9135fb9df3ae3d3b715082a24b29c0a676c7f6db66462cacf974ec7bd630c26/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "ef1d7784c47440dc6188c74b38758dea34e0e3c9",
+          "bytes": 3292383
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/ce29452e1d093801954b75938dd0130c9eab223b342175477c9eacf7678c8bb5/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "prior_candidate_entry": null,
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "36d0bb339122960908ca3654bf4da90ec359647c",
+          "bytes": 3484966
+        },
+        "disposition": "accepted baseline restored"
+      },
+      {
+        "path": "data/canonical-grid/current-startup/ownership-vintages/cfcbcf83b106e495ba261a6a7aa786284ca7a2864a217273327b5d94e3532ede/native-v1/ownership/startup-runs-29360128.bin.gz",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "315d3f4fa6827bfdd05ab9992ed67841643187d4",
+          "bytes": 3292409
+        },
+        "accepted_baseline_entry": null,
+        "disposition": "candidate-only generated body removed; source blob retained in prior branch history"
+      },
+      {
+        "path": "data/ownership-selection.json",
+        "prior_candidate_entry": {
+          "mode": "100644",
+          "git_blob_oid": "7b954adbf1583599490625d45b125b9f1baa993b",
+          "bytes": 2277
+        },
+        "accepted_baseline_entry": {
+          "mode": "100644",
+          "git_blob_oid": "537f7b42322a9dbadfbe68da68d20c0d7e71b41c",
+          "bytes": 2293
+        },
+        "disposition": "accepted baseline restored"
+      }
+    ]
+  },
+  "preservation": "The prior candidate remains the merge first-parent commit; generated files removed/replaced in the merged tree remain recoverable from that immutable history. All JOR source/native/physical evidence and failed attempts remain unchanged."
+}

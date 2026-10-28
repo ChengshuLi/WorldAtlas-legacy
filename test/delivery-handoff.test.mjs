@@ -10,7 +10,7 @@ import path from 'node:path';
 
 import {fileURLToPath} from 'node:url';
 
-import childProcess, {execFileSync} from 'node:child_process';
+import {execFileSync} from 'node:child_process';
 
 import zlib, {gzipSync} from 'node:zlib';
 
@@ -217,49 +217,43 @@ function immutableReaderFixture(t) {
 }
 
 test('immutable Git input reader reuses exact descriptor queries without trusting returned copies or requested hashes', t => {
-  const {root, head} = immutableReaderFixture(t), r = pinReader(root);
-  const execute = childProcess.execFileSync, calls = [];
-  childProcess.execFileSync = (command, args, options) => {
-    if (command === 'git' && options?.cwd === root) calls.push(args);
-    return execute(command, args, options);
-  }; syncBuiltinESMExports();
-  try {
-    const pin = r.pin(head, 'input.json'), descriptor = r.descriptor(head, 'input.json');
-    descriptor.bytes++; descriptor.git_blob_oid = '0'.repeat(40);
-    assert.equal(r.descriptor(head, 'input.json').bytes, pin.bytes);
-    assert.equal(r.descriptor(head, 'input.json').git_blob_oid, pin.git_blob_oid);
-    assert.equal(r.json(pin).value, 1);
-    assert.deepEqual(r.pin(head, 'input.json'), pin);
-    for (const changed of [{...pin, bytes: pin.bytes + 1}, {...pin, mode: '100755'},
-      {...pin, git_blob_oid: '0'.repeat(40)}]) assert.throws(() => r.read(changed), /identity differs/);
-    assert.throws(() => r.read({...pin, sha256: '0'.repeat(64)}), /hash differs/);
-    const exposed = r.read(pin); exposed[0] ^= 1;
-    assert.throws(() => r.read(pin), /hash differs/);
-    assert.equal(calls.filter(args => args[0] === 'ls-tree').length, 1);
-    // One descriptor size query and the existing bounded body-read size query.
-    assert.equal(calls.filter(args => args[0] === 'cat-file' && args[1] === '-s').length, 2);
-    assert.equal(calls.filter(args => args[0] === 'cat-file' && args[1] === 'blob').length, 1);
-  } finally { childProcess.execFileSync = execute; syncBuiltinESMExports(); }
+  const {root, head} = immutableReaderFixture(t), calls = [];
+  const r = pinReader(root, {executeGit(command, args, options) {
+    if (options?.cwd === root) calls.push(args);
+    return execFileSync(command, args, options);
+  }});
+  const pin = r.pin(head, 'input.json'), descriptor = r.descriptor(head, 'input.json');
+  descriptor.bytes++; descriptor.git_blob_oid = '0'.repeat(40);
+  assert.equal(r.descriptor(head, 'input.json').bytes, pin.bytes);
+  assert.equal(r.descriptor(head, 'input.json').git_blob_oid, pin.git_blob_oid);
+  assert.equal(r.json(pin).value, 1);
+  assert.deepEqual(r.pin(head, 'input.json'), pin);
+  for (const changed of [{...pin, bytes: pin.bytes + 1}, {...pin, mode: '100755'},
+    {...pin, git_blob_oid: '0'.repeat(40)}]) assert.throws(() => r.read(changed), /identity differs/);
+  assert.throws(() => r.read({...pin, sha256: '0'.repeat(64)}), /hash differs/);
+  const exposed = r.read(pin); exposed[0] ^= 1;
+  assert.throws(() => r.read(pin), /hash differs/);
+  assert.equal(calls.filter(args => args[0] === 'ls-tree').length, 1);
+  // One descriptor size query and the existing bounded body-read size query.
+  assert.equal(calls.filter(args => args[0] === 'cat-file' && args[1] === '-s').length, 2);
+  assert.equal(calls.filter(args => args[0] === 'cat-file' && args[1] === 'blob').length, 1);
 });
 
 test('immutable Git input reader can discard body cache and retain strict re-read verification', t => {
-  const {root, head} = immutableReaderFixture(t), r = pinReader(root);
-  const execute = childProcess.execFileSync, bodies = [];
-  childProcess.execFileSync = (command, args, options) => {
-    if (command === 'git' && options?.cwd === root && args[0] === 'cat-file' && args[1] === 'blob') bodies.push(args[2]);
-    return execute(command, args, options);
-  }; syncBuiltinESMExports();
-  try {
-    const pin = r.pin(head, 'input.json');
-    assert.equal(r.json(pin).value, 1);
-    const initialReads = bodies.length;
-    assert.equal(initialReads, 1);
-    r.discardBodyCache();
-    assert.equal(r.json(pin).value, 1);
-    assert.equal(r.json(pin).value, 1);
-    assert.equal(bodies.length, initialReads + 2, 'post-release reads stay uncached and independently revalidated');
-    assert.equal(r.descriptor(head, 'input.json').git_blob_oid, pin.git_blob_oid);
-  } finally { childProcess.execFileSync = execute; syncBuiltinESMExports(); }
+  const {root, head} = immutableReaderFixture(t), bodies = [];
+  const r = pinReader(root, {executeGit(command, args, options) {
+    if (options?.cwd === root && args[0] === 'cat-file' && args[1] === 'blob') bodies.push(args[2]);
+    return execFileSync(command, args, options);
+  }});
+  const pin = r.pin(head, 'input.json');
+  assert.equal(r.json(pin).value, 1);
+  const initialReads = bodies.length;
+  assert.equal(initialReads, 1);
+  r.discardBodyCache();
+  assert.equal(r.json(pin).value, 1);
+  assert.equal(r.json(pin).value, 1);
+  assert.equal(bodies.length, initialReads + 2, 'post-release reads stay uncached and independently revalidated');
+  assert.equal(r.descriptor(head, 'input.json').git_blob_oid, pin.git_blob_oid);
 });
 
 test('immutable Git input reader separates exact paths, vintages and fresh readers', t => {
@@ -276,26 +270,24 @@ test('immutable Git input reader separates exact paths, vintages and fresh reade
 });
 
 test('immutable Git input reader validates before lookup and never caches missing or invalid metadata', t => {
-  const {root, git, head} = immutableReaderFixture(t), r = pinReader(root);
-  r.descriptor(head, 'input.json');
-  const execute = childProcess.execFileSync, calls = [];
-  let failSize = true;
-  childProcess.execFileSync = (command, args, options) => {
-    if (command === 'git' && options?.cwd === root) {
+  const {root, git, head} = immutableReaderFixture(t), calls = [];
+  let failSize = true, capture = false;
+  const r = pinReader(root, {executeGit(command, args, options) {
+    if (capture && options?.cwd === root) {
       calls.push(args);
       if (failSize && args[0] === 'cat-file' && args[1] === '-s') { failSize = false; return Buffer.from('NaN'); }
     }
-    return execute(command, args, options);
-  }; syncBuiltinESMExports();
-  try {
-    for (const [version, name] of [['main', 'input.json'], [head, '../input.json']])
-      assert.throws(() => r.descriptor(version, name), /Exact commit and safe/);
-    assert.equal(calls.length, 0);
-    for (let i = 0; i < 2; i++) assert.throws(() => r.descriptor(head, 'missing.json'), /Missing ordinary/);
-    assert.throws(() => r.descriptor(head, 'alias.json'), /Invalid whole body size/);
-    assert.equal(r.descriptor(head, 'alias.json').path, 'alias.json');
-    assert.equal(calls.filter(args => args[0] === 'ls-tree').length, 4);
-  } finally { childProcess.execFileSync = execute; syncBuiltinESMExports(); }
+    return execFileSync(command, args, options);
+  }});
+  r.descriptor(head, 'input.json');
+  capture = true;
+  for (const [version, name] of [['main', 'input.json'], [head, '../input.json']])
+    assert.throws(() => r.descriptor(version, name), /Exact commit and safe/);
+  assert.equal(calls.length, 0);
+  for (let i = 0; i < 2; i++) assert.throws(() => r.descriptor(head, 'missing.json'), /Missing ordinary/);
+  assert.throws(() => r.descriptor(head, 'alias.json'), /Invalid whole body size/);
+  assert.equal(r.descriptor(head, 'alias.json').path, 'alias.json');
+  assert.equal(calls.filter(args => args[0] === 'ls-tree').length, 4);
   fs.symlinkSync('input.json', path.join(root, 'link.json'));
   git('add', '.'); git('update-index', '--chmod=+x', 'input.json'); git('commit', '-m', 'Nonordinary');
   const changed = git('rev-parse', 'HEAD');

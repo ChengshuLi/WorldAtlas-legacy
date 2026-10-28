@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "issue": 2373,
+  "lane": "source-only",
+  "worker_id": "01a171cf-6c3a-701c-89b2-95dee796203d",
+  "subject_ids": [
+    "gb:ARG:ADM2:61730980B7053808465014"
+  ],
+  "subject_ids_sha256": "510a04fa1774eba38c74592aa986938557f972236071b7b5123e9f20337bb1c4",
+  "baseline": {
+    "commit": "31397c9b8810fcd8955b708577632ee5fdcd62af",
+    "files": [
+      {
+        "path": "schemas/evidence-quality-v1.schema.json",
+        "bytes": 7245,
+        "sha256": "fea4db4a91825222e3b2a19a2b61423ed3dbe8f69e165d9fe76a8236b86a322c",
+        "hash_kind": "file-bytes"
+      },
+      {
+        "path": "docs/GEOGRAPHY.md",
+        "bytes": 4477,
+        "sha256": "59e09abeda1e8a2a2de511408760347aeae89484b956ae60b8de08bc64d692b0",
+        "hash_kind": "file-bytes"
+      },
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/source-review/complete-scope-001/source-applicability.json",
+        "bytes": 109870,
+        "sha256": "748e91aab899df767f01925c27c52419686fa97da866c064903266e46c32e080",
+        "hash_kind": "file-bytes"
+      },
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/source-review/complete-scope-001/held-original-keys.json",
+        "bytes": 762814,
+        "sha256": "95b0b947a853f167f60bffaa44578a87f5301f661850a863d210c19f4dd5a604",
+        "hash_kind": "file-bytes"
+      },
+      {
+        "path": "coordination/engineering/argentina-repair-delivery-20261017/original-scope/original-intervals.json.gz",
+        "bytes": 60456,
+        "sha256": "138a1491d050ced863ade71a76a9bc1a972abc2bd3fbb6ce8de59f501495e44e",
+        "hash_kind": "file-bytes"
+      }
+    ],
+    "pins": {},
+    "version": 1
+  },
+  "sources": [
+    {
+      "id": "aref-tdf-departments-ley2017-feature-4035",
+      "role": "official AREF department-layer comparison; source-relative context only",
+      "url": "https://catastro.aref.gob.ar/arcgis/rest/services/publica/tdf_publica/MapServer/12/query?where=OBJECTID_12%3D4035&outFields=OBJECTID_12%2COBJECTID_1%2COBJECTID%2CDEPARTAMEN&returnGeometry=true&outSR=4326&f=json",
+      "retrieved_at": "2026-10-26T20:43:37Z",
+      "response_bytes": 313961,
+      "response_sha256": "faabe4ac33617ca603c6d66edafca7de9e4ad6abbff0659e70ac5163be8d6d89",
+      "private_local_capture": "/tmp/arg-aref-rio-grande-feature.json",
+      "service": {
+        "name": "catastrotdf.DBO.DEPARTAMENTOS_LEY2017",
+        "layer_id": 12,
+        "service_objectid_12": 4035,
+        "service_objectid_1": 1,
+        "service_objectid": 156,
+        "display_field": "DEPARTAMEN",
+        "label": "RÍO GRANDE",
+        "source_crs": "EPSG:5344",
+        "response_crs": "EPSG:4326",
+        "response_geometry_rings": 2
+      },
+      "vintage_status": "not established; title suffix LEY2017 is not a data-date or effective-date statement",
+      "terms_status": "no explicit license or use terms located in retained page/service metadata; geometry remains local and unredistributed",
+      "stable_id_status": "service object IDs only; no global ID field or stability policy",
+      "lineage_status": "no retained documented crosswalk to Law 1186 adopted-map lineage or the consumed 2020 geoBoundaries feature",
+      "license": {
+        "status": "unknown",
+        "terms": "No explicit applicable reuse license/terms were established in retained evidence; no geometry is redistributed."
+      },
+      "retention": "restoration-only",
+      "restoration": "Use only the already-retained local capture identified in this source record; do not treat this manifest as distributing source bytes.",
+      "verification": "verified",
+      "vintage": "Unknown; no date for this feature established. The layer title suffix LEY2017 is not a data-vintage statement.",
+      "temporal_status": "unknown",
+      "limit": "Service-scoped OBJECTIDs only; no stable/global ID policy, explicit license, effective date, or direct crosswalk to Law 1186 map or consumed geoBoundaries feature."
+    },
+    {
+      "id": "tdf-provincial-law-1186",
+      "role": "primary legal context identifying Río Grande among five departments and assigning AREF map preparation",
+      "url": "https://www.argentina.gob.ar/normativa/provincial/ley-1186-123456789-0abc-defg-186-1000vvorpyel/actualizacion",
+      "retrieved_at": "2026-10-17T04:44:01Z",
+      "sanction_date": "2017-10-27",
+      "official_publication_date": "2017-11-14",
+      "page_status": "Vigente, de alcance general",
+      "response_bytes": 38893,
+      "response_sha256": "8ee9ce825c12ea965dbb031527d401440c5203f39db917bfdfa6a8e00cdc5185",
+      "retained_capture": "/tmp/arg-source-review_tdf-law-001_official-law-1186.html",
+      "limits": "law text names units and assigns map work; no coordinate annex or feature crosswalk is retained",
+      "license": {
+        "status": "unknown",
+        "terms": "No explicit applicable reuse license/terms were established in retained evidence; no geometry is redistributed."
+      },
+      "retention": "restoration-only",
+      "restoration": "Use only the already-retained local capture identified in this source record; do not treat this manifest as distributing source bytes.",
+      "verification": "verified",
+      "vintage": "Law sanctioned 2017-10-27 and officially published 2017-11-14.",
+      "temporal_status": "historical",
+      "supported_interval": {
+        "from": 2017,
+        "to": 2018
+      },
+      "limit": "Names five departments and assigns AREF map preparation; no retained coordinate annex or feature/key crosswalk."
+    }
+  ],
+  "outputs": [
+    {
+      "path": "aref-output/arg-aref-rio-grande-607-application-v2.json",
+      "bytes": 153329,
+      "sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "hash_kind": "file-bytes"
+    },
+    {
+      "path": "aref-output/ARG-TDF-RioGrande-607-AREF-application-review.md",
+      "bytes": 5105,
+      "sha256": "a1515901acda000ba7e8b7c7f0bd9bedd0e04a493eced7410912f6575083a803",
+      "hash_kind": "file-bytes"
+    }
+  ],
+  "methods": [
+    {
+      "id": "aref-single-feature-native-center-application",
+      "kind": "source-application",
+      "description": "AREF REST returned one department feature with outSR=4326; compare only the exact retained original 607 center keys with pinned native polygon interval method. Key coordinates and returned geometry are not included in this manifest.",
+      "software": "Node24 v24.19.0",
+      "method_id": "native-linear-evenodd-first-owner-v1",
+      "helper_path": "/tmp/native-grid-pinned.mjs",
+      "helper_sha256": "66b453bbb2e001b9ff56bd754d55087f5919845dceeefd886016494cefa1d3e0",
+      "grid_size": 262166,
+      "latitude_table_path": "/tmp/arg-native-row-latitudes.f64le.gz",
+      "latitude_table_bytes": 1851757,
+      "latitude_table_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "latitude_table_decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "transform": "AREF layer declares EPSG:5344; ArcGIS output request specified outSR=4326 and response declares EPSG:4326; no cell centers were sent to service",
+      "boundary_rule": "exact scanner boundary ties classified separately with boundary precedence; no approximate snap/tolerance used",
+      "receipt_generation_script": "/tmp/arg-aref-rio-grande-607-apply.mjs",
+      "receipt_generation_script_bytes": 8259,
+      "receipt_generation_script_sha256": "eac322c736cf693f7e08d336d2232463aa7189e53e89df6c55d43cb58d33a3bb",
+      "units": "original grid center keys"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "aref_inside",
+      "value": 533,
+      "unit": "original held center keys",
+      "vintage": "baseline",
+      "input_sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "evaluation_commit": "31397c9b8810fcd8955b708577632ee5fdcd62af"
+    },
+    {
+      "id": "aref_outside",
+      "value": 74,
+      "unit": "original held center keys",
+      "vintage": "baseline",
+      "input_sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "evaluation_commit": "31397c9b8810fcd8955b708577632ee5fdcd62af"
+    },
+    {
+      "id": "aref_boundary",
+      "value": 0,
+      "unit": "original held center keys",
+      "vintage": "baseline",
+      "input_sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "evaluation_commit": "31397c9b8810fcd8955b708577632ee5fdcd62af"
+    },
+    {
+      "id": "aref_ties",
+      "value": 0,
+      "unit": "native-grid center ties",
+      "vintage": "baseline",
+      "input_sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "evaluation_commit": "31397c9b8810fcd8955b708577632ee5fdcd62af"
+    },
+    {
+      "id": "original_scope",
+      "value": 607,
+      "unit": "original held land keys",
+      "vintage": "baseline",
+      "input_sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "evaluation_commit": "31397c9b8810fcd8955b708577632ee5fdcd62af"
+    },
+    {
+      "id": "parent_contact_inside",
+      "value": 173,
+      "unit": "parent ADM1 index696 keys inside AREF feature",
+      "vintage": "baseline",
+      "input_sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "evaluation_commit": "31397c9b8810fcd8955b708577632ee5fdcd62af"
+    },
+    {
+      "id": "parent_contact_outside",
+      "value": 52,
+      "unit": "parent ADM1 index696 keys outside AREF feature",
+      "vintage": "baseline",
+      "input_sha256": "f19ba3d525b7618631c96a12b896133269bc2775b9a2cb7781e5041cf34b7ab0",
+      "evaluation_commit": "31397c9b8810fcd8955b708577632ee5fdcd62af"
+    }
+  ],
+  "summaries": [
+    {
+      "id": "aref-inside-result",
+      "metric_id": "aref_inside",
+      "value": 533,
+      "unit": "original held center keys"
+    },
+    {
+      "id": "aref-outside-result",
+      "metric_id": "aref_outside",
+      "value": 74,
+      "unit": "original held center keys"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "bounded-aref-application",
+      "status": "supported",
+      "source_ids": [
+        "aref-tdf-departments-ley2017-feature-4035"
+      ],
+      "text": "The retained AREF feature contains 533 of the exact 607 held original center keys under the recorded local method; 74 are outside. This is an AREF-relative application observation only."
+    },
+    {
+      "id": "remaining-source-limits",
+      "status": "unresolved",
+      "source_ids": [
+        "aref-tdf-departments-ley2017-feature-4035",
+        "tdf-provincial-law-1186"
+      ],
+      "text": "All 607 keys remain held. AREF feature vintage/effective date and explicit reuse terms are unknown; service-ID stability and lineage/crosswalk to the Law 1186 map or consumed 2020 feature are not established. Original contacts remain preserved as adverse context. No legal-boundary, qualification, acceptance or credit conclusion follows."
+    }
+  ],
+  "stages": {
+    "research": "partial",
+    "implementation": "not-proposed",
+    "geographic_approval": "not-requested"
+  },
+  "commands": [
+    "/Users/chengshuli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /tmp/arg-aref-rio-grande-607-apply.mjs > /tmp/arg-aref-rio-grande-607-application-v2.json",
+    "One bounded official AREF REST query for service layer 12 OBJECTID_12=4035, outSR=4326, followed by local-only application; no per-key coordinates were transmitted."
+  ],
+  "application": {
+    "original_scope_count": 607,
+    "original_scope_key_sha256": "51ad423446675b79696e40c7662395462cafdb8192bcd2dce3b1ce2ed97aa15f",
+    "original_contact_interval_digest": "a5a736e603540ec3d27b6a4e8345f74bb2b19b8bdb99b485e9646344fe9e069e",
+    "inside_keyset_sha256": "37f170f35470057e6a349863a5e4bfbaddfeec804cc60860f49d3d217b1baffb",
+    "outside_keyset_sha256": "ab62ec2083036135c381a0756fd277fb2f4942d68c3597b4c8933507e281a45b",
+    "boundary_keyset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "raw_aref_geometry_private_path": "/tmp/arg-aref-rio-grande-feature.json",
+    "raw_aref_geometry_redistribution": "not included; explicit terms not located",
+    "consumed_original_source": {
+      "source_id": "gb:ARG:ADM2:61730980B7053808465014",
+      "source_index": 786,
+      "local_feature_ordinal": 88,
+      "name": "Río Grande",
+      "represented_year_claim": 2020,
+      "product_license_record": "CC BY 3.0 IGO",
+      "compressed_payload_bytes": 2066007,
+      "compressed_payload_sha256": "9b033d8e86946b8f14d9491ec51098e3c5c0e59785707058966d1fc77521546d",
+      "retained_contact_counts": {
+        "target_adm2_contact_index_786": 607,
+        "parent_tierra_del_fuego_adm1_contact_index_696": 225,
+        "other_or_foreign_contacts": 0
+      },
+      "source_url": "not separately pinned in this manifest; original source identity is pinned by the baseline applicability/held-key evidence"
+    }
+  }
+}

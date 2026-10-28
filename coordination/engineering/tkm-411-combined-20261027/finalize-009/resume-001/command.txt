@@ -1,0 +1,1 @@
+env -u NODE_PATH -u NODE_OPTIONS GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1 node scripts/prepare-delivery-handoff.mjs finalize coordination/engineering/tkm-411-combined-20261027/finalize-009/config.json coordination/engineering/tkm-411-combined-20261027/finalize-009/output-001 --resume

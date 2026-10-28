@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "kind": "atg883-exact-canonical-target-lookup-v1",
+  "selected_at_commit": "f2c44658278b1ebbbca37bc659b05a3885b2e2e7",
+  "part_pin": {
+    "commit": "f2c44658278b1ebbbca37bc659b05a3885b2e2e7",
+    "path": "data/geography/part-28.json",
+    "mode": "100644",
+    "git_blob_oid": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+    "bytes": 6613963,
+    "sha256": "2aab2f36aeeb651ee8e6cc656e9541ad14e2ced2ea8160e8700ad4dc950c379d"
+  },
+  "target_id": "atlas:territory:ATG",
+  "target_feature_id": "atlas:territory:ATG",
+  "target_geometry_type": "MultiPolygon",
+  "target_geometry_sha256": "43930df3e72efea5b2fd6deba29f54629faa6ec3162cd382197ee98207f8fe5d",
+  "target_feature_properties_id": "atlas:territory:ATG",
+  "source_member_ids": [
+    "gb:ATG:ADM1:74100532B54294973205276",
+    "gb:ATG:ADM1:74100532B52002127383103",
+    "gb:ATG:ADM1:74100532B54588500691901",
+    "gb:ATG:ADM1:74100532B56248932917605",
+    "gb:ATG:ADM1:74100532B19516932260818",
+    "gb:ATG:ADM1:74100532B93709990123087",
+    "gb:ATG:ADM1:74100532B3675352926720",
+    "gb:ATG:ADM1:74100532B88993889644511"
+  ],
+  "source_member_count": 8,
+  "stage_rows": 8,
+  "stage_sha256": "233bf1b48c74fbe4b9392c24272f66f65a0fbbe8b6e4b6ccfc36aff830c3556e",
+  "staging_method": "Existing ImmutableReader.acquirePinned bounded exact-object reader; complete part SHA/size verified; only the exact unique target feature metadata/geometry was emitted to scoped stage rows."
+}

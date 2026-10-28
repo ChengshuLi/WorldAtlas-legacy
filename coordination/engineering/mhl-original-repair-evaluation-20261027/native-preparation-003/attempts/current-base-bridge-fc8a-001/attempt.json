@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "kind": "mhl-current-main-bridge-attempt-v1",
+  "candidate_head_before_attempt": "93f96c2840e9296225086cbea27e8b473b46582d",
+  "accepted_main": "fc8a0a85bf1d40dd86e1a1097b775d442474468a",
+  "command": "git merge --no-edit refs/remotes/origin/main",
+  "exit_code": 1,
+  "outcome": "merge refused before a merge state or conflict was created because seven generated current-startup paths had uncommitted finalizer retirements; no MERGE_HEAD, no unmerged index, HEAD unchanged, candidate outputs preserved",
+  "stderr_path": "stderr.txt",
+  "stdout_path": "stdout.txt",
+  "next_step": "commit the verified finalizer candidate, then normal merge the single documentation-only fc8a commit; no science or finalizer replay"
+}

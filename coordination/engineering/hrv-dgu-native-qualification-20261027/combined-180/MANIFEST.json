@@ -1,0 +1,204 @@
+{
+  "accepted_prior_count": 32928,
+  "accepted_selector": {
+    "bytes": 2291,
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "path": "data/ownership-selection.json",
+    "role": "composition-time snapshot; historical after accepted MDV850 bank advance",
+    "sha256": "524264e9b3e31ae09fbee2b5d8aafac7b8301109a7828fc3b57ef71228492dbd"
+  },
+  "candidate_count": 180,
+  "composition": {
+    "config": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-config-001.json",
+      "sha256": "f405d9abaf41d8ca56b6118c7b0422781ec2e98aa98d5b2f26efb8ecc216aca8"
+    },
+    "helper": "scripts/prepare-delivery-handoff.mjs compose",
+    "preparation": {
+      "bytes": 256,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/preparation.json",
+      "sha256": "89b6281550187548ff9c8b5b9541ee0be8dfb17552063c0128f79887dc52e488"
+    },
+    "registry": {
+      "bytes": 2769,
+      "entries": 2,
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-001/authority-registry.json",
+      "sha256": "35db9f90d6798c094485922d5a23d83517eb96353862c0c13cec7e19fe698e97"
+    }
+  },
+  "current_refresh": {
+    "accepted_main": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+    "bank_baseline": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "finalizer_attempt_011": {
+      "status": "exit 0; local candidate only; no hosted delivery or acceptance",
+      "candidate_commit": "9756c0c6d1e49bc65f61e0d69a4f817a7ca39106",
+      "terminal_receipt": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalizer-attempt-011/terminal-receipt.json",
+      "config_sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9"
+    },
+    "finalizer_output": {
+      "index_sha256": "d2818c4737f2ddd14bacef130f63409361a89e3d60953307ed158409ec8abe24",
+      "selector_sha256": "205b492a9155a5aa9f231e364e14a237706e30c1fcfe79d5b2a4691426dc063e",
+      "indexed_files": 79,
+      "indexed_bytes": 160943215,
+      "compatibility_pins": 30,
+      "tree_closure": "verified exactly index.json + 79 indexed bodies, zero extras/missing",
+      "all79_size_sha_pins_match": true,
+      "49_materialized_bodies_verified_locally": true,
+      "30_sparse_compatibility_objects_verified_from_git_index_object_bytes": true
+    },
+    "comparison": {
+      "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-bank-conservation-a484-9756-001/selected-joint-comparison.json",
+      "sha256": "2a6f3b0aa82066247c405817bcce577c798500aaac1039ca6818c159aa62e624",
+      "bytes": 69751,
+      "method": "selected-native-owner-conservation-v1",
+      "status": "no-new-native-loss",
+      "compared_rows": 262166,
+      "added_cells": 180,
+      "removed_cells": 0,
+      "reassigned_cells": 0,
+      "lost_or_reassigned_cells": 0,
+      "affected_rows": 97,
+      "changed_ids": [
+        "gb:HRV:ADM2:41942358B19390085170765",
+        "gb:HRV:ADM2:41942358B80055452851488",
+        "gb:HRV:ADM2:41942358B91057379265139"
+      ],
+      "candidate_code_executed": false,
+      "code_identity": "all JOINT_CODE and selectedBootstrap execution files byte-equal to accepted baseline"
+    },
+    "plan": {
+      "path": "/workspace/shared/worldatlas-HRV180-reviewed-plan-a484-9756-20261027.json",
+      "sha256": "671db0de83b73c7eaaa0bec3e841372f03ea4a44bf02deabbaac56d669aedb38",
+      "profile": "full",
+      "tests": 7,
+      "build": true,
+      "inputs": 15,
+      "checkout_patterns": 74,
+      "geography_required": true,
+      "geography_software": false,
+      "selected_data_candidate": true,
+      "selected_data_selection": "not established"
+    },
+    "limits": [
+      "Local candidate and conservation comparison only.",
+      "No hosted tests, build, geography job, stock delivery, public acceptance, or scientific acceptance is claimed.",
+      "Attempt010 remains preserved as outcome-uncertain/interrupted and is not converted to failure/success."
+    ]
+  },
+  "finalizer_config": {
+    "bytes": 1591,
+    "change_evidence_commit": "534c880f91d1856c6c58b40ec68e21ec36f5b2cf",
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
+    "selector_and_package_inputs_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9",
+    "status": "attempt011 completed exit0; candidate committed locally at 9756c0c; not delivered; attempt010 remains uncertain historical"
+  },
+  "group_summary": {
+    "bytes": 4090,
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/arta-vela-leveraka-103/candidate-180-preparation-summary.json",
+    "sha256": "d72ad7a335f7181c6596974d87f73302d1925c26ebf7b60fe14b140298de1080"
+  },
+  "groups": [
+    {
+      "constructor_sha256": "0bb38e24a2609d4cfe2a9e2b71255287ab9a6574998951275185c1eb4bdd2acb",
+      "count": 77,
+      "name": "Zadar77",
+      "tuple_sha256": "500c91a940de99531899cf26ce0e2f004d7d98b0ded5556dd5a88933140c5fd8"
+    },
+    {
+      "constructor_sha256": "2910dcfb9d16f2a5deb5fa3cde0bd3018de18524e471283d27be1db608881eda",
+      "count": 103,
+      "name": "ArtaVela53+Leveraka50",
+      "tuple_sha256": "2c89e77af04afdd21bf07e00a95a1eff9ad9a2a8cada26ce3dcf87e6c3cbb8da"
+    }
+  ],
+  "historical_attempt_010": {
+    "baseline_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "config_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-007-74b9.json",
+    "config_sha256": "af639d048231130cd6baf68751c7f73a39b3220e4bdd099ddececc937eaf0ef9",
+    "destination_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalized-combined-180-current-74b9-001/",
+    "destination_present": false,
+    "exit_file_present": false,
+    "invocation_session_id": 18058,
+    "ordinal": 10,
+    "preflight_bytes": 1486,
+    "preflight_sha256": "1e2216fdd4e2a9ffc60c5688e31005776cff29b4d010190c82b4fd7e91f19236",
+    "private_receipt_dir": "/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-74b9-010/",
+    "process_check": "no matching producer process observed at 2026-10-27T20:54:57Z",
+    "status": "outcome-uncertain/interrupted; not labeled failed or successful; no retry",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "terminal_or_postflight_present": false
+  },
+  "historical_owner_observation_29e4": {
+    "all_180_effective_selected_owner_zero": true,
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "full_report_sha256": "c03f6e463b8aac5e37e145bfb5d5f4a271f7641b1dad599a4986a47e251c5b98",
+    "scientific_qualification": false,
+    "status": "historical exact 29e4 snapshot; not reused as current after MDV850 advance"
+  },
+  "historical_successful_finalizer_attempt": {
+    "baseline_commit": "253b65b49aae9d04b57071a26a61cc46485e04e8",
+    "candidate_commit": "94701f0393f26f8a51f641a6f5cf3a6b144a9a23",
+    "config_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-006-253b.json",
+    "config_sha256": "b880dd69bfadfb960d64f83937a06a142ab26afccc702951311f69f625e86188",
+    "exit_code": 0,
+    "ordinal": 9,
+    "output_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalized-combined-180-current-253b-003/",
+    "status": "successful local candidate only; superseded by accepted MDV850 bank at a8a5; not current-delivered",
+    "terminal_sha256": "c48102c19dea50b4deb7a3861cfea3f7acf1082ce1fb8814aaa81979c0629765"
+  },
+  "kind": "hrv-180-authority-composition-preparation-v1",
+  "limits": [
+    "The groups remain distinct authority/source-role cohorts; composition does not merge their source-role claims.",
+    "The original denominator is 35,738, and the six strict-adverse keys remain excluded.",
+    "Owner-zero observation is bound to 74b9; accepted main a484 advanced only by evidence files with selector, startup index and package-input pins unchanged. The observation is not scientific qualification or acceptance.",
+    "Finalizer attempt011 completed exit0 against the accepted MDV850 baseline; the local candidate has exact tree/index closure and a trusted conservation comparison, but no hosted tests, build, geography/emitted controls or stock delivery are claimed.",
+    "The selected-bank comparison reports candidate_code_executed=false; it is not source approval, a hosted control, or root scientific acceptance.",
+    "Attempt010 remains preserved as outcome-uncertain/interrupted; it is not reclassified as failed or successful.",
+    "Source-role ambiguities, original contacts, physical issue contexts, rights/attribution limits and prior evidence remain preserved in group packets."
+  ],
+  "original_denominator": 35738,
+  "owner_observation": {
+    "candidate_count": 180,
+    "effective_selected_owner_nonzero": 0,
+    "effective_selected_owner_zero": 180,
+    "exact_key_match": true,
+    "full_report_bytes": 8108103,
+    "full_report_private_path": "private:/workspace/scratch/127991fc8b8e/.hrv-private/current-owner-35738-74b9-001.json",
+    "full_report_sha256": "a9b93af1d96c42ff014a22c2d3b6d7e4ebc413dcf60db531bd11cbc9962c52ed",
+    "original_intervals_sha256": "ff749bacd5058b91ddd7051402a04e65e79b1b016bab5e6c1366bbc47b7b6c6a",
+    "query_count": 35738,
+    "query_sha256": "afcd19cb52bc067fabd6f0cfb152281837d76da2ad4474cfd323c4f37d5696eb",
+    "scientific_qualification": false,
+    "snapshot_commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "summary_bytes": 43962,
+    "summary_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/current-owner-observation-74b9-180.json",
+    "summary_sha256": "0f55aa479921140f4976e8b21dfe34d183e593c36a10f65f872865cd45d4f8e9",
+    "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae"
+  },
+  "prior_finalizer_attempts": [
+    {
+      "config_path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalize-config-001-29e4.json",
+      "config_sha256": "6f2c8552c6afef827df245cb32d5585a6aa5cd3f30669d3ad4c2402c2ece2f3d",
+      "destination_created": false,
+      "exit_code": 1,
+      "ordinal": 1,
+      "private_receipt_path": "/workspace/scratch/127991fc8b8e/.hrv-private/finalize-180-29e4-001/",
+      "source_or_bank_mutation": false,
+      "stderr": "Supply an exact commit/path locator, without handwritten derived descriptors",
+      "stdout_bytes": 0
+    }
+  ],
+  "readme": {
+    "bytes": 7906,
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/README.md",
+    "sha256": "b75f2554decb2c9ce8691ec28c01dcf16a0341407b13307b639b11c2ce8b8b12"
+  },
+  "status": "candidate finalized against accepted MDV850 baseline and locally conservation-compared at attempt011; pending exact-head review, hosted controls, delivery and root scientific acceptance",
+  "strict_adverse_excluded_count": 6,
+  "tuple_union_sha256": "3a9708cdb72a1acb088e6d252a48cbbfe15851a74f0b36c183d36b6c35050bae",
+  "version": 1
+}

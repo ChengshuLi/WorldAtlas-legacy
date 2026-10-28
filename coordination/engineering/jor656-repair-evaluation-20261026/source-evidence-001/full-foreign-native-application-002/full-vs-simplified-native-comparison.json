@@ -1,0 +1,2764 @@
+{
+  "interpretation": "This first bounded full-resolution comparison reproduces all 93 originally captured simplified-product contacts: 72 ISR and 21 SAU. The 90 same-full-JOR-member contacts and the 3 JOR full-member-miss contacts are all full-product exact-feature hits at their original native cell centers too. It therefore does not clear or reduce those adverse contacts; the historical 0/93 claim remains contradicted and its cause is not explained by this comparison.",
+  "kind": "jor656-original93-full-vs-simplified-native-comparison-v1",
+  "limitations": [
+    "Full-resolution comparator is separate from the originally consumed simplified source role and does not substitute for it.",
+    "The actual comparison found exact original-feature hits for all 93 keys in the full and simplified products; this does not clear a contact or change its held status.",
+    "This comparison does not establish jurisdiction, source authority, or current legal status.",
+    "Contact keys represent exact native cell centers; center predicates are not whole-cell clearance.",
+    "The previously retained 0/93 artifact remains contradicted historical evidence; this comparison does not establish its cause."
+  ],
+  "method": {
+    "functions": [
+      "nativeRuntimeIndex",
+      "nativePolygonIntervals"
+    ],
+    "grid_size": 262166,
+    "latitudes": {
+      "commit": "5b32388df0501b013ac9a3ba97864932db493d59",
+      "compressed_bytes": 1851757,
+      "compressed_sha256": "ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147",
+      "decoded_bytes": 2097328,
+      "decoded_sha256": "66db3d02ede56a75e9c58426ad1388552be3bf7e5e4477476f198983b7436d23",
+      "path": "coordination/engineering/native-grid-fidelity-1010-20261005-local15/results-v1/native-row-latitudes.f64le.gz"
+    },
+    "module": "src/native-grid.js",
+    "module_sha256": "0c35dbef6f88050970429ab08b22738d0aaac0afaa5f8d5e05b4e1cbefe41c91",
+    "name": "native-linear-evenodd-first-owner-v1",
+    "per_feature_application": "Each of the 6 ISR and 13 SAU features was independently converted by the accepted nativeRuntimeIndex and evaluated through nativePolygonIntervals over the exact contact-row span; this preserves multiple sibling hits rather than allowing cross-feature first-owner masking. The per-key arrays map results back to immutable original gb:*:ADM1:<shapeID> identifiers.",
+    "row_window": [
+      106672,
+      108819
+    ]
+  },
+  "original_contact": {
+    "reconciliation_path": "coordination/engineering/jor656-repair-evaluation-20261026/source-evidence-001/simplified-foreign-contact-native-reconciliation-001.json",
+    "rows": [
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156604,
+        "y": 108333
+      },
+      {
+        "cohort": "full-member-miss-3",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "native-diagnostic-002/native-diagnostic.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156603,
+        "y": 108339
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156599,
+        "y": 108346
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156598,
+        "y": 108347
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156597,
+        "y": 108348
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156596,
+        "y": 108349
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156594,
+        "y": 108352
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156591,
+        "y": 108364
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156588,
+        "y": 108377
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156585,
+        "y": 108390
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24202,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B15878731234050",
+        "witness_kind": "interior",
+        "x": 156582,
+        "y": 108403
+      },
+      {
+        "cohort": "full-member-miss-3",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "native-diagnostic-002/native-diagnostic.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156845,
+        "y": 107381
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156843,
+        "y": 107382
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156841,
+        "y": 107383
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156842,
+        "y": 107383
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156840,
+        "y": 107384
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156841,
+        "y": 107384
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156839,
+        "y": 107385
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156840,
+        "y": 107385
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156838,
+        "y": 107386
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156839,
+        "y": 107386
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156837,
+        "y": 107387
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156838,
+        "y": 107387
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156836,
+        "y": 107388
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156837,
+        "y": 107388
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24206,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B32399668533563",
+        "witness_kind": "interior",
+        "x": 156836,
+        "y": 107389
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24208,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B33973362353345",
+        "witness_kind": "interior",
+        "x": 158122,
+        "y": 106864
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24208,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B33973362353345",
+        "witness_kind": "interior",
+        "x": 158112,
+        "y": 106867
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24208,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B33973362353345",
+        "witness_kind": "interior",
+        "x": 158102,
+        "y": 106870
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24208,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B33973362353345",
+        "witness_kind": "interior",
+        "x": 158092,
+        "y": 106873
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24208,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B33973362353345",
+        "witness_kind": "interior",
+        "x": 158082,
+        "y": 106876
+      },
+      {
+        "cohort": "full-member-miss-3",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "native-diagnostic-002/native-diagnostic.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156786,
+        "y": 107533
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156683,
+        "y": 108041
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156628,
+        "y": 108270
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156627,
+        "y": 108271
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156627,
+        "y": 108272
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156626,
+        "y": 108273
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156625,
+        "y": 108274
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156626,
+        "y": 108274
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156625,
+        "y": 108275
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156624,
+        "y": 108276
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156625,
+        "y": 108276
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156623,
+        "y": 108277
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156624,
+        "y": 108277
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156623,
+        "y": 108278
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156624,
+        "y": 108278
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156622,
+        "y": 108279
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156623,
+        "y": 108279
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156622,
+        "y": 108280
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156623,
+        "y": 108280
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156621,
+        "y": 108281
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156622,
+        "y": 108281
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156621,
+        "y": 108282
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156622,
+        "y": 108282
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156620,
+        "y": 108283
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156621,
+        "y": 108283
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156620,
+        "y": 108284
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156621,
+        "y": 108284
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156619,
+        "y": 108285
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156620,
+        "y": 108285
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156619,
+        "y": 108286
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156620,
+        "y": 108286
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156618,
+        "y": 108287
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156619,
+        "y": 108287
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156620,
+        "y": 108287
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156618,
+        "y": 108288
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156619,
+        "y": 108288
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156618,
+        "y": 108289
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156619,
+        "y": 108289
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156617,
+        "y": 108290
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156618,
+        "y": 108290
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156617,
+        "y": 108291
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156618,
+        "y": 108291
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156617,
+        "y": 108292
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156617,
+        "y": 108293
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156616,
+        "y": 108294
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Southern District",
+        "foreign_source_id": "gb:ISR:ADM1:19161824B24193204184747",
+        "full_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24221,
+        "simplified_same_group_hits": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B52255495566406",
+        "witness_kind": "interior",
+        "x": 156616,
+        "y": 108295
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Northern Borders Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B61333239611232",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B61333239611232"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24224,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B61333239611232"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B57727576293089",
+        "witness_kind": "interior",
+        "x": 158765,
+        "y": 106672
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24224,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B57727576293089",
+        "witness_kind": "interior",
+        "x": 158727,
+        "y": 106683
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24224,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B57727576293089",
+        "witness_kind": "interior",
+        "x": 158696,
+        "y": 106692
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 158127,
+        "y": 108217
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 158050,
+        "y": 108233
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157997,
+        "y": 108244
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157944,
+        "y": 108255
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157134,
+        "y": 108806
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157145,
+        "y": 108808
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157150,
+        "y": 108809
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157161,
+        "y": 108811
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157172,
+        "y": 108813
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157183,
+        "y": 108815
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157188,
+        "y": 108816
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Tabuk Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B21311317754967",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24229,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B61959892681036",
+        "witness_kind": "interior",
+        "x": 157199,
+        "y": 108818
+      },
+      {
+        "cohort": "same-full-member-90",
+        "foreign_feature_name": "Al Jawf Region",
+        "foreign_source_id": "gb:SAU:ADM1:25081817B5742042673291",
+        "full_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "full_same_group_ties": [],
+        "full_vs_simplified_exact_feature_set_equal": true,
+        "native_diagnostic": "source-evidence-001/native-diagnostic-001.json",
+        "original_recorded_feature_full_hit": true,
+        "original_recorded_feature_simplified_hit": true,
+        "owner": 24242,
+        "simplified_same_group_hits": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "simplified_same_group_ties": [],
+        "target_source_id": "gb:JOR:ADM2:86222999B81424774794690",
+        "witness_kind": "interior",
+        "x": 158196,
+        "y": 107081
+      }
+    ],
+    "sha256": "048db1158bebf895c51a2d9180654bc5fdc578c51383ec94a2958838757ff603"
+  },
+  "products": {
+    "ISR": {
+      "feature_count": 6,
+      "feature_ids": [
+        "gb:ISR:ADM1:19161824B12012272353046",
+        "gb:ISR:ADM1:19161824B24193204184747",
+        "gb:ISR:ADM1:19161824B470428506180",
+        "gb:ISR:ADM1:19161824B77983365125372",
+        "gb:ISR:ADM1:19161824B79530266069959",
+        "gb:ISR:ADM1:19161824B91089536365577"
+      ],
+      "full_hits": {
+        "24202,108333,156604": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108339,156603": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108346,156599": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108347,156598": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108348,156597": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108349,156596": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108352,156594": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108364,156591": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108377,156588": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108390,156585": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108403,156582": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107381,156845": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107382,156843": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107383,156841": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107383,156842": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107384,156840": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107384,156841": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107385,156839": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107385,156840": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107386,156838": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107386,156839": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107387,156837": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107387,156838": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107388,156836": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107388,156837": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107389,156836": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,107533,156786": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108041,156683": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108270,156628": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108271,156627": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108272,156627": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108273,156626": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108274,156625": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108274,156626": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108275,156625": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108276,156624": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108276,156625": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108277,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108277,156624": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108278,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108278,156624": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108279,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108279,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108280,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108280,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108281,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108281,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108282,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108282,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108283,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108283,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108284,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108284,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108285,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108285,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108286,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108286,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108287,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108287,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108287,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108288,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108288,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108289,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108289,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108290,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108290,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108291,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108291,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108292,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108293,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108294,156616": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108295,156616": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ]
+      },
+      "full_input": {
+        "bytes": 111139,
+        "lfs_oid_sha256": "1ddf8523ef2074d658fd4a696fbb7ff82b73b77a0d69e620ed564f9a1b8c85d3",
+        "repo_path": "releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1.geojson",
+        "rights": "Public Domain; retain geoBoundaries attribution",
+        "sha256": "1ddf8523ef2074d658fd4a696fbb7ff82b73b77a0d69e620ed564f9a1b8c85d3",
+        "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1.geojson"
+      },
+      "full_ties": {},
+      "simplified_hits": {
+        "24202,108333,156604": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108339,156603": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108346,156599": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108347,156598": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108348,156597": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108349,156596": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108352,156594": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108364,156591": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108377,156588": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108390,156585": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24202,108403,156582": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107381,156845": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107382,156843": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107383,156841": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107383,156842": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107384,156840": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107384,156841": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107385,156839": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107385,156840": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107386,156838": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107386,156839": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107387,156837": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107387,156838": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107388,156836": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107388,156837": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24206,107389,156836": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,107533,156786": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108041,156683": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108270,156628": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108271,156627": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108272,156627": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108273,156626": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108274,156625": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108274,156626": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108275,156625": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108276,156624": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108276,156625": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108277,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108277,156624": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108278,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108278,156624": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108279,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108279,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108280,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108280,156623": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108281,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108281,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108282,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108282,156622": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108283,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108283,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108284,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108284,156621": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108285,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108285,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108286,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108286,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108287,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108287,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108287,156620": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108288,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108288,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108289,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108289,156619": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108290,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108290,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108291,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108291,156618": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108292,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108293,156617": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108294,156616": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ],
+        "24221,108295,156616": [
+          "gb:ISR:ADM1:19161824B24193204184747"
+        ]
+      },
+      "simplified_input": {
+        "compressed_bytes": 12533,
+        "compressed_sha256": "4ef84358ff0c8885bf857611a3cf2d537f33d7e2ecf9d34155778ff4b4e44989",
+        "decoded_bytes": 44192,
+        "decoded_sha256": "28fe2d4b800046000a33ea66b473f5502a6b7a4ad9d587cd059d63d5a4ccc5dc",
+        "repo_commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+        "repo_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ISR-ADM1-000.bin.gz",
+        "rights": "Public Domain; retain geoBoundaries attribution"
+      },
+      "simplified_ties": {}
+    },
+    "SAU": {
+      "feature_count": 13,
+      "feature_ids": [
+        "gb:SAU:ADM1:25081817B13159281784364",
+        "gb:SAU:ADM1:25081817B21311317754967",
+        "gb:SAU:ADM1:25081817B30843703179747",
+        "gb:SAU:ADM1:25081817B34473806557189",
+        "gb:SAU:ADM1:25081817B5326875801694",
+        "gb:SAU:ADM1:25081817B54479367627811",
+        "gb:SAU:ADM1:25081817B56088895138556",
+        "gb:SAU:ADM1:25081817B5742042673291",
+        "gb:SAU:ADM1:25081817B61333239611232",
+        "gb:SAU:ADM1:25081817B72054791986965",
+        "gb:SAU:ADM1:25081817B79414847265706",
+        "gb:SAU:ADM1:25081817B90917209203250",
+        "gb:SAU:ADM1:25081817B98761102949945"
+      ],
+      "full_hits": {
+        "24208,106864,158122": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106867,158112": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106870,158102": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106873,158092": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106876,158082": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24224,106672,158765": [
+          "gb:SAU:ADM1:25081817B61333239611232"
+        ],
+        "24224,106683,158727": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24224,106692,158696": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24229,108217,158127": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108233,158050": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108244,157997": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108255,157944": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108806,157134": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108808,157145": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108809,157150": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108811,157161": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108813,157172": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108815,157183": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108816,157188": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108818,157199": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24242,107081,158196": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ]
+      },
+      "full_input": {
+        "bytes": 2434894,
+        "lfs_oid_sha256": "75abcfd5a61790e5e505974f04cbd1d869e58d81b6faba039b000987e659e840",
+        "repo_path": "releaseData/gbOpen/SAU/ADM1/geoBoundaries-SAU-ADM1.geojson",
+        "rights": "ODbL-1.0; preserve applicable attribution/share-alike terms",
+        "sha256": "75abcfd5a61790e5e505974f04cbd1d869e58d81b6faba039b000987e659e840",
+        "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/SAU/ADM1/geoBoundaries-SAU-ADM1.geojson"
+      },
+      "full_ties": {},
+      "simplified_hits": {
+        "24208,106864,158122": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106867,158112": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106870,158102": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106873,158092": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24208,106876,158082": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24224,106672,158765": [
+          "gb:SAU:ADM1:25081817B61333239611232"
+        ],
+        "24224,106683,158727": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24224,106692,158696": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ],
+        "24229,108217,158127": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108233,158050": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108244,157997": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108255,157944": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108806,157134": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108808,157145": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108809,157150": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108811,157161": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108813,157172": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108815,157183": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108816,157188": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24229,108818,157199": [
+          "gb:SAU:ADM1:25081817B21311317754967"
+        ],
+        "24242,107081,158196": [
+          "gb:SAU:ADM1:25081817B5742042673291"
+        ]
+      },
+      "simplified_input": {
+        "compressed_bytes": 142614,
+        "compressed_sha256": "7896c1305fa8747bc045ad367de8ae90d235b9ec3603c2cd0ca01e96b80f1e8a",
+        "decoded_bytes": 443440,
+        "decoded_sha256": "cf50a59ddcda0fc4539c12799c320b9936fd75f47c1b5562ef548436d9169e13",
+        "repo_commit": "8258affc1130b492df2209c2dfc9093d8c50b89e",
+        "repo_path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-SAU-ADM1-000.bin.gz",
+        "rights": "ODbL-1.0; preserve applicable attribution/share-alike terms"
+      },
+      "simplified_ties": {}
+    }
+  },
+  "source_release": {
+    "commit": "9469f09",
+    "feature_roster_crosscheck": "Full and simplified product feature-ID sets are equal for each family: six ISR and thirteen SAU. All 93 original recorded contacts hit the exact recorded source feature under both corresponding products; no family-level hit-set differences or native ties.",
+    "full_product_paths": "Exact GeoBoundaries release 9469f09 paths pinned above; remote Git LFS pointer object SHA equals downloaded body SHA for each full product.",
+    "repo": "wmgeolab/geoBoundaries"
+  },
+  "status": "candidate-source-comparison-only",
+  "summary": {
+    "exact_original_feature_hit": {
+      "full": 93,
+      "simplified": 93
+    },
+    "incidence_by_product": {
+      "full_same_group_hits": {
+        "incidences": 93,
+        "keys": 93
+      },
+      "full_same_group_ties": {
+        "incidences": 0,
+        "keys": 0
+      },
+      "simplified_same_group_hits": {
+        "incidences": 93,
+        "keys": 93
+      },
+      "simplified_same_group_ties": {
+        "incidences": 0,
+        "keys": 0
+      }
+    },
+    "keys_with_different_full_simplified_family_hit_sets": 0,
+    "keys_with_equal_full_simplified_family_hit_sets": 93,
+    "n": 93,
+    "original_cohorts": {
+      "full-member-miss-3": 3,
+      "same-full-member-90": 90
+    },
+    "source_groups": {
+      "ISR": 72,
+      "SAU": 21
+    },
+    "unique_keys": 93
+  }
+}

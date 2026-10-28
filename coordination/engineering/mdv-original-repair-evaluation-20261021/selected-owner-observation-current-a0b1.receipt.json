@@ -1,0 +1,34 @@
+{
+  "kind": "mdv-current-selected-owner-observation-run-receipt",
+  "version": 1,
+  "exit_code": 0,
+  "command": "GIT_NO_LAZY_FETCH=1 GIT_NO_REPLACE_OBJECTS=1 node scripts/observe-selected-owners.mjs --repo <owned-worktree> --commit a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f --package gb-MDV-ADM1--repair-evaluation --out selected-owner-observation-current-a0b1.json",
+  "data_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+  "code_commit": "6bf61961b018b1f94f31fd853c26e7f40600c676",
+  "query_count": 850,
+  "query_sha256": "cce95179d3202a28ce0dfef4ae63d903560b8e1092e4b7aec068a1ea3ae57501",
+  "selected_owner_histogram": {
+    "0": 850
+  },
+  "output": {
+    "path": "selected-owner-observation-current-a0b1.json",
+    "bytes": 187202,
+    "sha256": "b2b3f1fe0abb4b8f6f526cd72be95662fc56c380f316ef01eba19b9c61c4adb3"
+  },
+  "selector": {
+    "path": "data/ownership-selection.json",
+    "bytes": 2292,
+    "sha256": "6648f01e62fb851b2b426977578d4899465212e54d02f002706b340ca0efa883"
+  },
+  "current_startup_index": {
+    "path": "data/canonical-grid/current-startup/index.json",
+    "bytes": 49610,
+    "sha256": "7dea95c07718bc8245ec39f867454ecd80c272f9b98a7e44e9ffb08f3130d845"
+  },
+  "scientific_qualification": false,
+  "limitations": [
+    "Literal selected-E observation only; no source applicability or physical classification.",
+    "No historical base/additive/overlap reconstruction; null fields remain null.",
+    "Not acceptance, final package qualification, or full-bank conservation."
+  ]
+}

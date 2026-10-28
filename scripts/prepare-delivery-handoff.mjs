@@ -11,7 +11,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {gunzipSync} from 'node:zlib';
 import {locate, deliveryAcquisitionExecute} from './delivery-handoff-advance.mjs';
-import {createAcquisition, githubTree} from './geography-prefetch.mjs';
+import {createAcquisition, githubTree, selectInstalledGit} from './geography-prefetch.mjs';
 import {admitCanonicalOutputs} from './delivery-checkpoint-finalization.mjs';
 import {repairComponentKey, compareRepairComponents, nativeOnlyComponent} from '../src/native-grid.js';
 import {finalBankSelection,scientificNativeSelection,originalNativeReference,validateReferenceMetadataHeader} from '../src/reference-metadata.js';
@@ -34,8 +34,17 @@ const safe = name => typeof name === 'string' && /^[a-zA-Z0-9_./-]+$/.test(name)
 const unique = values => Array.isArray(values) && values.length > 0 && values.every(v => typeof v === 'string' && v) && new Set(values).size === values.length;
 const environment = () => ({...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLACE_OBJECTS: '1', GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_GLOBAL: '/dev/null', GIT_TERMINAL_PROMPT: '0'});
 
-export function pinReader(root, {loadTree = githubTree,
-  execute = deliveryAcquisitionExecute()} = {}) {
+export function pinReader(root, {loadTree = githubTree, execute, executeGit = execFileSync} = {}) {
+  const selectedGit = selectInstalledGit();
+  try {
+    execFileSync(selectedGit.gitExecutable, ['--no-lazy-fetch', '--version'], {
+      cwd: root, env: {...environment(), GIT_EXEC_PATH: selectedGit.gitExecPath},
+      stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8',
+    });
+  } catch {
+    throw Error('Use a Git implementation supporting --no-lazy-fetch; no compatibility fallback is allowed');
+  }
+  const acquisitionExecute = execute ?? deliveryAcquisitionExecute({selectedGit});
   const cache = new Map(), descriptors = new Map(), declared = new Map();
   let cacheBodies = true;
   let acquisition;
@@ -50,7 +59,7 @@ export function pinReader(root, {loadTree = githubTree,
         'Conflicting composition input identities');
       declared.set(key, pin);
     }
-    acquisition ??= createAcquisition({repo: root, execute, token: '', loadTree,
+    acquisition ??= createAcquisition({repo: root, execute: acquisitionExecute, token: '', loadTree,
       loadDescriptor: async (commit, name) => {
         const pin = declared.get(commit + ':' + name);
         need(pin, 'Undeclared composition input');
@@ -77,9 +86,9 @@ export function pinReader(root, {loadTree = githubTree,
     return {...acquisition.stats};
   }
   const git = (...args) => {
-    const options={cwd:root,env:environment(),maxBuffer:Infinity};
+    const options={cwd:root,env:{...environment(),GIT_EXEC_PATH:selectedGit.gitExecPath},maxBuffer:Infinity};
     if(args[0]==='cat-file'&&args[1]==='blob') options.maxBuffer=Number(git('cat-file','-s',args[2]))+1;
-    return execFileSync('git',args,options);
+    return executeGit(selectedGit.gitExecutable,args,options);
   };
   function descriptor(commit, name) {
     need(hex(commit, 40) && safe(name), 'Exact commit and safe whole-file path required');
@@ -618,6 +627,81 @@ function startupDiskFiles(root, prefix) {
   return files;
 }
 
+// A metadata-only refresh is allowed only when a previously prepared native
+// candidate is re-bound to newly authenticated source membership. It never
+// feeds the already-assigned patch back through the additive merge path.
+async function validateSourceEvidenceRefresh(oldRegistryPin, newRegistryPin, reader, selection, manifest) {
+  need(selection.version===2 && same(selection.change_evidence,oldRegistryPin)
+    && oldRegistryPin && newRegistryPin && !same(oldRegistryPin,newRegistryPin),
+  'Source-evidence refresh must bind the currently selected registry');
+  const oldRegistry=reader.json(oldRegistryPin),newRegistry=reader.json(newRegistryPin);
+  const oldEntries=[...authorityRegistry(oldRegistry).values()],newEntries=[...authorityRegistry(newRegistry).values()];
+  need(oldEntries.length===1&&newEntries.length===1,'Source-evidence refresh requires one exact retained authority');
+  const oldEntry=oldEntries[0],newEntry=newEntries[0];
+  const oldPreimage=reader.json(oldEntry.rule_preimage),newPreimage=reader.json(newEntry.rule_preimage);
+  const withoutEvidence=value=>{const copy=structuredClone(value);delete copy.source_evidence;return copy;};
+  need(oldEntry.policy_id===newEntry.policy_id&&oldEntry.policy_version===newEntry.policy_version
+    &&same(withoutEvidence(oldPreimage),withoutEvidence(newPreimage))
+    &&same(oldPreimage.native_patch,newPreimage.native_patch)
+    &&same(oldEntry.original_source_paths,newEntry.original_source_paths)
+    &&oldEntry.completed_constructor&&newEntry.completed_constructor,
+  'Source-evidence refresh changed authority scope or omitted completed custody');
+  const oldBinding=reader.json(oldEntry.source_authority),newBinding=reader.json(newEntry.source_authority);
+  need(same(Object.keys(oldBinding).sort(),['kind','native_patch','source_evidence','version'])
+    &&same(Object.keys(newBinding).sort(),['kind','native_patch','source_evidence','version'])
+    &&oldBinding.kind==='source-target-native-custody-v1'&&newBinding.kind===oldBinding.kind
+    &&same(oldBinding.native_patch,newBinding.native_patch)
+    &&same(oldPreimage.native_patch,oldBinding.native_patch)
+    &&same(newPreimage.native_patch,newBinding.native_patch)
+    &&same(oldPreimage.source_evidence,oldBinding.source_evidence)
+    &&same(newPreimage.source_evidence,newBinding.source_evidence),
+  'Source-evidence refresh changed the exact native patch binding');
+  const oldEvidence=reader.json(oldBinding.source_evidence),newEvidence=reader.json(newBinding.source_evidence);
+  const withoutMembership=value=>{const copy=structuredClone(value);delete copy.source_membership;return copy;};
+  need(oldEvidence.source_membership===undefined&&newEvidence.source_membership
+    &&same(withoutMembership(oldEvidence),withoutMembership(newEvidence)),
+  'Source-evidence refresh may add only source membership');
+  const membership=newEvidence.source_membership;
+  need(membership&&same(Object.keys(membership).sort(),['index','lineage','parts'])
+    &&Array.isArray(membership.parts)&&membership.parts.length>0,
+  'Complete accepted source-membership pins required');
+  const index=reader.json(membership.index);
+  need(index&&Array.isArray(index.parts)&&membership.parts.every(pin=>index.parts.includes(pin.path.replace(/^data\//,''))),
+    'Source membership part is outside its accepted world index');
+  await reader.acquire?.([membership.index,membership.lineage,...membership.parts]);
+  const targetIds=new Set(newEvidence.targets.map(target=>target.target_id??target.id));
+  need(targetIds.size===newEvidence.targets.length&&targetIds.size>0,'Unique exact source-target roster required');
+  const members=new Set();
+  for(const pin of membership.parts){
+    const body=reader.json(pin);
+    need(body?.type==='FeatureCollection'&&Array.isArray(body.features),'Source membership part must be a GeoJSON feature collection');
+    for(const feature of body.features){
+      const id=feature?.properties?.id??feature?.id;
+      if(typeof id==='string')members.add(id);
+    }
+  }
+  need([...targetIds].every(id=>members.has(id)),'Source membership does not contain every exact candidate target');
+  const patch=reader.read(oldBinding.native_patch);
+  need(patch.equals(reader.read(newBinding.native_patch)),'Source-evidence refresh changed candidate patch bytes');
+  const preimage=reader.json(oldEntry.rule_preimage);
+  const oldConstructed=reader.json(oldEntry.completed_constructor),newConstructed=reader.json(newEntry.completed_constructor);
+  const oldProof=verifyCompletedSourceTargetNativeAuthority({constructed:oldConstructed,binding:oldBinding,preimage,
+    evidence:oldEvidence,candidate:reader.json(oldBinding.native_patch)});
+  const newProof=verifyCompletedSourceTargetNativeAuthority({constructed:newConstructed,binding:newBinding,preimage:newPreimage,
+    evidence:newEvidence,candidate:reader.json(newBinding.native_patch)});
+  const rows=proof=>proof.original_ledger.rows.map(({component_id,...row})=>row)
+    .sort((a,b)=>a.target_id.localeCompare(b.target_id));
+  need(same(rows(oldProof),rows(newProof))&&same(oldProof.native_proof,newProof.native_proof)
+    &&same(oldProof.limitations,newProof.limitations),
+  'Source-evidence refresh changed candidate target/owner/pixel/native scope');
+  const native=scientificNativeSelection(selection),contract=Object.fromEntries(
+    ['size','coordinateBits','method','native_latitudes','hierarchy_sha256','original_assets'].map(key=>[key,manifest[key]]));
+  need(same(oldEvidence.native_contract,contract)&&same(newEvidence.native_contract,contract)
+    &&same(oldEvidence.base_reference,originalNativeReference(manifest)),
+  'Source-evidence refresh changed the accepted native/reference contract');
+  return {oldRegistryPin,newRegistryPin,native};
+}
+
 function currentStartupTree(reader, commit, prefix) {
   const rows = reader.git('ls-tree', '-r', '-l', '-z', commit, '--', prefix).toString().split('\0').filter(Boolean);
   const files = new Map();
@@ -695,8 +779,8 @@ function verifyPriorStartupReconciliation(root, plan, index, head) {
 // Final-profile preparation is deterministic current-bank editing, not a second
 // qualifier. The ordinary accepted-code transition independently admits the new
 // authority scope and compares every before/after word and context value.
-function finalizeFinalBankDelivery(config, reader) {
-  need(config.version===2 && Object.keys(config).every(key=>['version','selector','package_inputs','change_evidence','reference_projection','proposed_selector','prior_finalizations'].includes(key)),
+async function finalizeFinalBankDelivery(config, reader) {
+  need(config.version===2 && Object.keys(config).every(key=>['version','selector','package_inputs','change_evidence','reference_projection','proposed_selector','prior_finalizations','source_evidence_refresh'].includes(key)),
     'Exact final-bank preparation config required');
   const selector=locate(reader,config.selector),packageInputs=locate(reader,config.package_inputs);
   need(selector.path==='data/ownership-selection.json'&&packageInputs.path==='.github/package-inputs.json', 'Canonical final-bank inputs required');
@@ -704,6 +788,14 @@ function finalizeFinalBankDelivery(config, reader) {
   const raw=reader.read(selector),selection=JSON.parse(raw),native=scientificNativeSelection(selection);
   need(native.method==='native-linear-evenodd-first-owner-v1', 'Explicit native selection required');
   need(selection.version===2, 'Final preparation requires an existing accepted final bank');
+  if(config.source_evidence_refresh){
+    need(!config.change_evidence&&!config.reference_projection&&!config.proposed_selector,
+      'Source-evidence refresh is exclusive with additive, reference and selector changes');
+    const refreshPin=locate(reader,config.source_evidence_refresh);
+    const manifest=JSON.parse(reader.read(reader.pin(selector.commit,native.manifest_path)));
+    await validateSourceEvidenceRefresh(selection.change_evidence,refreshPin,reader,selection,manifest);
+    config={...config,source_evidence_refresh:refreshPin};
+  }
   if(config.proposed_selector){
     need(selection.version===2&&!config.change_evidence&&!config.reference_projection,
       'A proposed final bank already carries its complete change/reference selection');
@@ -716,7 +808,7 @@ function finalizeFinalBankDelivery(config, reader) {
     need(safe(name)&&Buffer.isBuffer(bytes)&&!adoption.has(name),'Distinct ordinary final-bank roles required');
     adoption.set(name,{path:name,bytes,expected:visitProduct(bytes),previous:previous?visitProduct(previous):undefined,kind});
   };
-  for(const pin of [config.change_evidence,config.reference_projection].filter(Boolean)) {
+  for(const pin of [config.change_evidence,config.reference_projection,config.source_evidence_refresh].filter(Boolean)) {
     need(pin.commit&&pin.mode==='100644'&&hex(pin.git_blob_oid,40),'Complete issued final input pin required');
     add(pin.path,reader.read(pin),reader.hasPath(selector.commit,pin.path)?reader.read(reader.pin(selector.commit,pin.path)):undefined,'input');
   }
@@ -792,6 +884,21 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
   const before=await readPreparedFinalOwnership({indexRaw:originalIndex,manifest,manifestSha:native.sha256,selected,
     ownerCount:previous.preparedOwnership.owners,stableBufferReader:true,
     read:pin=>{need(originalBodies.has(pin.path),'Missing accepted final body');return originalBodies.get(pin.path);}});
+  if(config.source_evidence_refresh){
+    const proposed={...selection,change_evidence:config.source_evidence_refresh};
+    need(finalBankSelection(proposed)&&same(scientificNativeSelection(proposed),native)
+      &&same(proposed.reference_projection,selection.reference_projection)
+      &&same(proposed.prepared_bank,selection.prepared_bank)
+      &&same(proposed.reference,selection.reference),
+    'Source-evidence refresh changed selected bank/native/reference state');
+    // This operation changes only the evidence pointer. `before` has already
+    // authenticated and decoded the complete selected bank; re-encoding it
+    // would make a no-op depend on platform-specific gzip output bytes.
+    const index=previous;
+    plan.proposedSelection=proposed;
+    plan.sourceEvidenceRefresh=true;
+    return index;
+  }
   // Adopt an already prepared current-state proposal through the same writer.
   // The queue compares the complete before/after maps; preparation does not
   // grant scientific authority or reconstruct a correction from old repairs.
@@ -853,9 +960,9 @@ async function prepareProposedFinalBank({plan,selection,manifest,previous,origin
 }
 
 
-export function finalizeDelivery(config, reader) {
+export async function finalizeDelivery(config, reader) {
   need(config.version===2,'Current finalization requires final-map version 2');
-  return finalizeFinalBankDelivery(config,reader);
+  return await finalizeFinalBankDelivery(config,reader);
 }
 
 // The existing asynchronous finalization boundary prepares the finished map
@@ -922,7 +1029,11 @@ export async function prepareFinalizedStartupOwnership(outputs, root) {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'worldatlas-final-startup-'));
   try {
     const index=await prepareProposedFinalBank({plan,selection,manifest,previous,originalIndex,originalBodies,readPin,destination:temporary});
-    const bodies = new Map(index.compatibility_files.filter(pin => !retained.has(pin.path)).map(pin => [pin.path, originalBodies.get(pin.path)]));
+    const bodies = plan.sourceEvidenceRefresh
+      ? new Map(index.files.filter(pin => !retained.has(pin.path)).map(pin => [pin.path, originalBodies.get(pin.path)]))
+      : new Map(index.compatibility_files.filter(pin => !retained.has(pin.path)).map(pin => [pin.path, originalBodies.get(pin.path)]));
+    if (plan.sourceEvidenceRefresh) need([...bodies.values()].every(Buffer.isBuffer),
+      'Authenticated source-refresh bank body is unavailable');
     const collect = (directory, relative = '') => {
       for (const entry of fs.readdirSync(directory, {withFileTypes: true})) {
         const name = relative + entry.name, full = path.join(directory, entry.name);
@@ -934,9 +1045,15 @@ export async function prepareFinalizedStartupOwnership(outputs, root) {
         }
       }
     };
-    collect(temporary);
+    if (!plan.sourceEvidenceRefresh) collect(temporary);
     need([...retained.keys()].every(name => !bodies.has(name)), 'Generated output overlaps retained compatibility');
     index.files = [...retained.values(), ...[...bodies].map(([name, bytes]) => ({path: name, ...visitProduct(bytes)}))].sort((a, b) => a.path.localeCompare(b.path));
+    if(plan.sourceEvidenceRefresh){
+      const accepted=JSON.parse(originalIndex),changed=Object.keys({...accepted,...index}).filter(key=>!same(accepted[key],index[key]));
+      const oldFiles=new Map(accepted.files.map(row=>[row.path,row.sha256])),newFiles=new Map(index.files.map(row=>[row.path,row.sha256]));
+      const fileChanges=[...new Set([...oldFiles.keys(),...newFiles.keys()])].filter(name=>oldFiles.get(name)!==newFiles.get(name));
+      need(jsonBytes(index).equals(originalIndex),'Source-evidence refresh would change the prepared bank: '+changed.join(',')+'; members '+fileChanges.slice(0,5).join(','));
+    }
     const indexBytes = jsonBytes(index), adoption = new Map(plan.adoption.map(row => [row.path, row]));
     for (const [name, pin] of retained) {
       const expected = {bytes: pin.bytes, sha256: pin.sha256};
@@ -1058,20 +1175,86 @@ export function publishFinalizedDelivery(root, destination, outputs, binding, re
   for (const row of rows.filter(row => row.retained)) need(retainedSparse(row) === row.allowMissing,
     'Retained compatibility index changed before adoption: ' + row.path);
   const retired = rows.filter(row => row.kind === 'retired');
-  const recheckRetirements = () => {
-    for (const row of retired) need(indexed(row) === row.retirementIndex,
-      'Final-bank retirement index changed before adoption: ' + row.path);
+  const describeIndex = entry => {
+    const lines = entry.split('\0').filter(Boolean);
+    if (!lines.length) return {entry: '', tag: null, mode: null, oid: null, stage: null, path: null,
+      skip_worktree: false, assume_unchanged: false};
+    const line = lines.length === 1 ? lines[0] : null;
+    if (!line) return {entry: entry.replace(/\0$/, ''), tag: null, mode: null, oid: null, stage: null, path: null,
+      skip_worktree: null, assume_unchanged: null};
+    const match = /^([A-Za-z?]) (\d{6}) ([0-9a-f]+) ([0-3])\t(.+)$/.exec(line);
+    return match ? {entry: line, tag: match[1], mode: match[2], oid: match[3], stage: Number(match[4]), path: match[5],
+      skip_worktree: match[1].toUpperCase() === 'S', assume_unchanged: match[1] !== match[1].toUpperCase()}
+      : {entry: line, tag: null, mode: null, oid: null, stage: null, path: null,
+        skip_worktree: null, assume_unchanged: null};
   };
-  recheckRetirements();
+  const describeRawIndex = entry => {
+    const bytes = Buffer.from(entry, 'utf8');
+    return {bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex')};
+  };
+  const checkRetirementMaterialization = (row, state, phase) => {
+    need(state.mode === '100644' && state.oid === row.git_blob_oid && state.stage === 0
+      && state.path === row.path && ['H', 'S'].includes(state.tag),
+    `Final-bank retirement identity changed during ${phase}: ${row.path}; ` + JSON.stringify({current: state}));
+    const filename = path.join(root, row.path), stat = fs.lstatSync(filename, {throwIfNoEntry: false});
+    if (state.tag === 'S') need(!stat, `Sparse final-bank retirement was materialized during ${phase}: ${row.path}`);
+    else {
+      need(stat?.isFile() && !stat.isSymbolicLink(), `Materialized final-bank retirement is nonordinary during ${phase}: ${row.path}`);
+      need(same(visitProduct(fs.readFileSync(filename)), row.previous), `Materialized final-bank retirement body changed during ${phase}: ${row.path}`);
+    }
+  };
+  const recheckRetirements = phase => {
+    for (const row of retired) {
+      const current = indexed(row);
+      need(current === row.retirementIndex, `Final-bank retirement index changed during ${phase}: ${row.path}; `
+        + JSON.stringify({phase, expected: describeIndex(row.retirementIndex), current: describeIndex(current),
+          expected_raw: describeRawIndex(row.retirementIndex), current_raw: describeRawIndex(current)}));
+      if (row.retirementIndex && phase !== 'before-sparse-retirement-staging')
+        checkRetirementMaterialization(row, describeIndex(current), phase);
+    }
+  };
+  recheckRetirements('after-publication-before-materialization');
   for (const row of writes) need(indexed(row) === row.writeIndex, 'Canonical output index changed before materialization: ' + row.path);
   if (sparse) {
+    const retirementBeforeSparseAdd = new Map();
+    for (const row of retired) {
+      const entry = indexed(row);
+      need(entry === row.retirementIndex,
+        `Final-bank retirement index changed immediately before sparse materialization: ${row.path}; `
+          + JSON.stringify({phase: 'immediately-before-sparse-materialization', expected: describeIndex(row.retirementIndex),
+            current: describeIndex(entry), expected_raw: describeRawIndex(row.retirementIndex),
+            current_raw: describeRawIndex(entry)}));
+      const state = describeIndex(entry);
+      if (entry) checkRetirementMaterialization(row, state, 'immediately-before-sparse-materialization');
+      retirementBeforeSparseAdd.set(row.path, {entry, state});
+    }
     reader.git('sparse-checkout', 'add', '--', ...writes.map(row => '/' + row.path));
     need(reader.git('rev-parse', 'HEAD').toString().trim() === head, 'Finalization HEAD changed during materialization');
     for (const row of writes) {
       const expected = row.writeIndex.replace(/^S /, 'H ');
       need(indexed(row) === expected, 'Canonical output index changed during materialization: ' + row.path);
     }
-    recheckRetirements();
+    for (const row of retired) {
+      const before = retirementBeforeSparseAdd.get(row.path), current = indexed(row);
+      if (current === row.retirementIndex) continue;
+      const after = describeIndex(current), identity = state => state.mode === '100644'
+        && state.oid === row.git_blob_oid && state.stage === 0 && state.path === row.path;
+      const materializedBefore = before.entry === row.retirementIndex && before.state.tag === 'H'
+        && !before.state.skip_worktree && !before.state.assume_unchanged && identity(before.state);
+      const sparseAfter = after.tag === 'S' && after.skip_worktree && !after.assume_unchanged && identity(after);
+      const absentAfter = !fs.lstatSync(path.join(root, row.path), {throwIfNoEntry: false});
+      need(sparse && materializedBefore && sparseAfter && absentAfter,
+        `Final-bank retirement index changed during after-sparse-materialization: ${row.path}; `
+          + JSON.stringify({phase: 'after-sparse-materialization', expected: describeIndex(row.retirementIndex), current: after,
+            expected_raw: describeRawIndex(row.retirementIndex), current_raw: describeRawIndex(current)}));
+      // Only the real sparse-checkout transition can change H to S. The exact
+      // H entry and its body were checked immediately before the command; now
+      // the same stage-0 blob is excluded and absent, so retire that exact row.
+      row.retirementIndex = current;
+      row.sparseRetirement = true;
+      row.allowMissing = true;
+    }
+    recheckRetirements('after-sparse-materialization');
     for (const row of rows.filter(row => row.retained)) need(retainedSparse(row) === row.allowMissing,
       'Retained compatibility index changed during materialization: ' + row.path);
   }
@@ -1084,15 +1267,21 @@ export function publishFinalizedDelivery(root, destination, outputs, binding, re
   // skip-worktree bit. Retire only these exact, now-absent indexed preimages.
   const sparseRetirements = retired.filter(row => row.sparseRetirement);
   if (sparseRetirements.length) {
-    recheckRetirements();
+    recheckRetirements('before-sparse-retirement-staging');
     for (const row of sparseRetirements) need(!fs.lstatSync(path.join(root, row.path), {throwIfNoEntry: false}),
       'Retired sparse output reappeared before staging: ' + row.path);
     reader.git('update-index', '--force-remove', '--', ...sparseRetirements.map(row => row.path));
     for (const row of sparseRetirements) need(indexed(row) === '', 'Sparse retirement was not staged: ' + row.path);
   }
   const indexedRetirements = retired.filter(row => row.retirementIndex && !row.sparseRetirement);
-  for (const row of indexedRetirements) need(indexed(row) === row.retirementIndex,
-    'Final-bank retirement index changed before staging: ' + row.path);
+  for (const row of indexedRetirements) {
+    const current = indexed(row);
+    need(current === row.retirementIndex, 'Final-bank retirement index changed before staging: ' + row.path + '; '
+      + JSON.stringify({phase: 'before-indexed-retirement-staging', expected: describeIndex(row.retirementIndex),
+        current: describeIndex(current), expected_raw: describeRawIndex(row.retirementIndex), current_raw: describeRawIndex(current)}));
+    need(!fs.lstatSync(path.join(root, row.path), {throwIfNoEntry: false}),
+      'Materialized final-bank retirement remained before staging: ' + row.path);
+  }
   if (indexedRetirements.length) {
     reader.git('update-index', '--force-remove', '--', ...indexedRetirements.map(row => row.path));
     for (const row of indexedRetirements) need(indexed(row) === '',
@@ -2021,7 +2210,7 @@ async function main(args) {
   if (phase === 'retain') outputs = retainProducts(config, root, reader);
   if (phase === 'compose') outputs = await composeAuthorities(config, reader);
   if (phase === 'finalize') {
-    outputs=finalizeDelivery(config,reader);
+    outputs=await finalizeDelivery(config,reader);
     await prepareFinalizedStartupOwnership(outputs, root);
     const publication = publishFinalizedDelivery(root, destination, outputs, binding, flags.includes('--resume'));
     console.log(JSON.stringify(publication)); return;

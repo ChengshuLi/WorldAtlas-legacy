@@ -1,0 +1,103 @@
+{
+  "current_inputs": {
+    "current_startup_index": {
+      "bytes": 49610,
+      "commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+      "git_blob_oid": "3bbed59f4ead5a123667b76bc9679361420a0bf8",
+      "mode": "100644",
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+    },
+    "package_inputs": {
+      "bytes": 38421,
+      "commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "mode": "100644",
+      "path": ".github/package-inputs.json",
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "selector": {
+      "bytes": 2293,
+      "commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+      "git_blob_oid": "537f7b42322a9dbadfbe68da68d20c0d7e71b41c",
+      "mode": "100644",
+      "path": "data/ownership-selection.json",
+      "sha256": "832f8bd84d79e61628137d20f9da006c678e21bd8e642d6e0452e95bf822396d"
+    }
+  },
+  "current_main": {
+    "change_since_parent": "five AREF source/evidence docs only; no selected-bank inputs or MHL paths",
+    "commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "parent": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644"
+  },
+  "historical_owner_observation": {
+    "bytes": 228962,
+    "current_applicability": "historical only; the current startup index changed at a8a5 and no current-zero assertion is made",
+    "observed_data_commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
+    "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/physical-preparation-002/owner-observation.json",
+    "query_count": 1019,
+    "query_sha256": "d4efa615625ad4ec05e2d45eea7baf76bc573ff8e359fb9726cf5cac80ad44ef",
+    "sha256": "8571fc4c2bc7a3e65445300a69d7c41e1a373fb50394892ebb71ccced73c4c43"
+  },
+  "kind": "mhl1019-current-baseline-binding-v1",
+  "mhl_registry": {
+    "bytes": 1376,
+    "commit": "6cf478c7e6f67077c556c280b4ba58ad44ab5924",
+    "git_blob_oid": "a09162c06dc018323cea19d6a79da869b67fe425",
+    "mode": "100644",
+    "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-current-delta-001/authority-registry.json",
+    "sha256": "afd21f1e93a567674d15833d644fb2a11f0663e5c3a99e949ac8bf349ff45d2c"
+  },
+  "owned_branch_merge": {
+    "commit": "171661a21e4c7a0f24202435fabc50956379e68f",
+    "parents": [
+      "6595b97ea986c929b725bbcf99457f4ce647434b",
+      "74b9bd2dcd63fe6578d107a1e32495456bc3ac76"
+    ],
+    "public_head": "171661a21e4c7a0f24202435fabc50956379e68f",
+    "public_pr": 2968
+  },
+  "prior_finalization": {
+    "accepted_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "checks": [
+      "paired paths share exact committed directory and commit",
+      "preparation output roster hash/bytes match startup-ownership receipt",
+      "startup-ownership bytes/hash equal current accepted startup index",
+      "accepted finalization commit is ancestor of current selector commit",
+      "not reapplied or recounted as MHL delta"
+    ],
+    "preparation": {
+      "bytes": 1156,
+      "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+      "git_blob_oid": "187cde635bef1683b07d45f1d7ceb48ea5f8771a",
+      "mode": "100644",
+      "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001/preparation.json",
+      "sha256": "c2f23b2a32cece930e97e68deadd1da07a2d67b6fb8b26547b2054d80b5eddaa"
+    },
+    "startup_ownership": {
+      "bytes": 49610,
+      "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+      "git_blob_oid": "3bbed59f4ead5a123667b76bc9679361420a0bf8",
+      "mode": "100644",
+      "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/finalized-current-29e4-001/startup-ownership.json",
+      "sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+    }
+  },
+  "scope": {
+    "companion_4110_excluded": true,
+    "context_features": 6,
+    "intervals": 456,
+    "land_cells": 1019,
+    "package_id": "gb-MHL-ADM1--repair-evaluation",
+    "positive_owners": 18,
+    "queue_commit": "23318dd9d70680495138297b9cc1a7533a466200",
+    "source_relative_cells": 0,
+    "water_cells": 0
+  },
+  "status": "read-only pin and prior-output authentication; template only; no finalizer execution, new selected-owner observation, tests/build/hosted controls, acceptance, or credit",
+  "template": {
+    "path": "finalize-config-current-74b9-template.json",
+    "status": "unexecuted; awaiting actual finalizer handoff/capacity; empty prior receipt roster from historical template is not carried forward"
+  },
+  "version": 1
+}

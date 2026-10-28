@@ -1,0 +1,35 @@
+{
+  "schema": "uga-supported-inputs-aggregate-v1",
+  "phase": "supported-inputs preparation only; not native authority/constructor",
+  "config_sha256": "20e8782eda07f22c112da6d6ed6bb12596ae8fe02eb631a3920958f86d3eef56",
+  "diagnostic_commit": "109c19b5a1d566a991802db24a7e136bccddc57a",
+  "source_evidence_commit": "ba7763a1f4a4a69502f013d9326e2ed63e1daa5c",
+  "native_patch_commit": "b5502d156c9ad7ada43b0c189ecfdc66ec2f7b8e",
+  "original_cells": 715,
+  "supported_cells": 708,
+  "held_cells": 7,
+  "native_requested_cells": 715,
+  "native_supported_cells": 708,
+  "native_held_cells": 7,
+  "narrowed_patch_row_count": 427,
+  "held_rle_row_count": 3,
+  "owner_accounting_rows": 28,
+  "supported_target_count": 28,
+  "positive_families": [
+    "gb:UGA:ADM3"
+  ],
+  "context_families": [
+    "gb:COD:ADM1",
+    "gb:TZA:ADM1",
+    "gb:UGA:ADM1",
+    "gb:UGA:ADM2",
+    "gb:UGA:ADM3"
+  ],
+  "context_edges": 2025,
+  "source_features": 57,
+  "limits": [
+    "The seven held rows remain excluded from the narrowed patch.",
+    "This preparation does not establish native authority, acceptance, or credit.",
+    "Source/image rights, lineage, Lamwo historical attribution and 14 whole-target issue limitations remain."
+  ]
+}
