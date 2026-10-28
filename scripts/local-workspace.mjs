@@ -1223,6 +1223,7 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       reviewSha256: reviewer.sha256, startedAt: new Date().toISOString()};
     if (receipt.reviewSha256 !== reviewer.sha256) throw Error('Pending recovery receipt is bound to a different independent review');
     if (!receipt.sha256) { receipt.sha256 = partialReceiptDigest(receipt); writePartialReceipt(receipt); }
+    try {
     ordinaryDirectory(path.dirname(receipt.preservedPath));
     fs.mkdirSync(path.dirname(receipt.preservedPath), {recursive: true, mode: 0o700});
     if (fs.lstatSync(receipt.preservedPath, {throwIfNoEntry: false})) {
@@ -1273,6 +1274,19 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       preservedRef, head: expectedHead, entryCount: moved.entryCount, totalBytes: moved.totalBytes,
       inventorySha256: moved.sha256, auditReceipt: auditReceipt.path, auditSha256: auditReceipt.sha256,
       capabilityFileRemoved};
+    } catch (error) {
+      const sourceStillPresent = Boolean(fs.lstatSync(expectedPath, {throwIfNoEntry: false}));
+      const archivePresent = Boolean(fs.lstatSync(receipt.preservedPath, {throwIfNoEntry: false}));
+      // A failure before the atomic move is a terminal failed attempt. Once the
+      // move may have happened, leave the receipt pending for exact-state resume.
+      if (sourceStillPresent && !archivePresent) {
+        const failed = {...receipt, status: 'failed', completedAt: new Date().toISOString(),
+          failure: String(error?.message ?? error).slice(0, 2048)};
+        failed.sha256 = partialReceiptDigest(failed);
+        try { writePartialReceipt(failed); } catch { /* retain the pending receipt if terminal write fails */ }
+      }
+      throw error;
+    }
   });
   const check = () => ({freeBytes: availableBytes()});
   return {report, check, inspect, allocate, ensureCapabilityFile, capabilityFilePath, resume, recoverLostCapability,

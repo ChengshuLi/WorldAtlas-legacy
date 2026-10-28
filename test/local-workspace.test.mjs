@@ -950,10 +950,27 @@ test('partial-removal reconciliation refuses changed inventory, active readers a
   assert.throws(() => manager.reconcilePartialRemoval(args), /changed after independent inventory review/);
   assert.ok(fs.existsSync(entry.path));
   fs.unlinkSync(path.join(entry.path, 'research', 'changed-after-review.txt'));
+  const freshManifest = manager.inspectPartialRemoval({worker, expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: entry.head});
+  const freshReview = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
+    worker, slot: 'work', path: entry.path, branch: entry.branch, head: entry.head,
+    gitAdminPath: freshManifest.gitAdminPath, preservedRef: freshManifest.preservedRef, entryCount: freshManifest.entryCount,
+    totalBytes: freshManifest.totalBytes, inventorySha256: freshManifest.inventorySha256});
+  const freshArgs = {...args, inventoryManifest: freshManifest, reviewReceipt: freshReview};
+  const originalRename = fs.renameSync;
+  fs.renameSync = function (source, destination) {
+    if (source === entry.path) throw new Error('injected archive move refusal');
+    return originalRename.call(fs, source, destination);
+  };
+  try { assert.throws(() => manager.reconcilePartialRemoval(freshArgs), /injected archive move refusal/); }
+  finally { fs.renameSync = originalRename; }
+  const auditDirectory = path.join(manager.report({worker}).registry, 'partial-removal-audit');
+  const auditRows = fs.readdirSync(auditDirectory).map(name => JSON.parse(fs.readFileSync(path.join(auditDirectory, name), 'utf8')));
+  assert.ok(auditRows.some(row => row.status === 'failed'), 'a pre-move failure is retained as a terminal audit receipt');
+  assert.ok(fs.existsSync(entry.path), 'failed preservation attempt leaves the original directory intact');
   const activeReadersManager = workspaceManager(repo, {inspectReaders: () => ['123']});
-  assert.throws(() => activeReadersManager.reconcilePartialRemoval(args), /active readers/);
-  const wrongReviewer = sealOperatorReceipt({...review, reviewer: worker});
-  assert.throws(() => manager.reconcilePartialRemoval({...args, reviewReceipt: wrongReviewer}), /Independent partial-checkout review/);
+  assert.throws(() => activeReadersManager.reconcilePartialRemoval(freshArgs), /active readers/);
+  const wrongReviewer = sealOperatorReceipt({...freshReview, reviewer: worker});
+  assert.throws(() => manager.reconcilePartialRemoval({...freshArgs, reviewReceipt: wrongReviewer}), /Independent partial-checkout review/);
   assert.ok(fs.existsSync(entry.path));
 });
 
