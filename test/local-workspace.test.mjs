@@ -949,6 +949,255 @@ test('operator release restores keeper-backed source files when ordinary Git rem
   assert.ok(!JSON.stringify(audit).includes(entry.token));
 });
 
+test('owner reconciliation preserves a finite partial-removal checkout after Git admin metadata is gone', async t => {
+  const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
+  const worker = 'partial-removal-owner';
+  const previousIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
+  manager.ensureCapabilityFile({worker});
+  fs.writeFileSync(path.join(entry.path, 'README.md'), 'candidate advanced from the allocated start head\n');
+  execFileSync('git', ['-C', entry.path, 'add', 'README.md']);
+  execFileSync('git', ['-C', entry.path, 'commit', '-m', 'advance retained candidate branch']);
+  const candidateHead = execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  assert.notEqual(candidateHead, entry.head, 'the allocated start head and current candidate head are distinct');
+  const unique = path.join(entry.path, 'research', 'retained-evidence.json');
+  fs.mkdirSync(path.dirname(unique), {recursive: true});
+  fs.writeFileSync(unique, '{"retained":true}\n');
+  const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
+  git('update-ref', preservedRef, candidateHead);
+  const dotGit = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
+  const adminPath = /^gitdir: (.+)\n?$/.exec(dotGit)?.[1];
+  assert.ok(adminPath && fs.existsSync(adminPath));
+  fs.rmSync(adminPath, {recursive: true});
+  assert.ok(fs.existsSync(entry.path), 'the partially removed checkout remains available');
+  assert.ok(!fs.existsSync(adminPath), 'the worktree admin directory is gone');
+
+  const manifest = manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: candidateHead});
+  assert.ok(manifest.entryCount >= 5);
+  assert.ok(manifest.totalBytes > 0);
+  assert.equal(manifest.preservedRef, preservedRef);
+  assert.equal(manifest.startHead, entry.head);
+  assert.equal(manifest.head, candidateHead);
+  const reviewReceipt = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: candidateHead,
+    gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
+    totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256});
+  const args = {worker, slot: 'work', capabilityFile: manager.capabilityFilePath({worker}),
+    expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: candidateHead,
+    inventoryManifest: manifest, reviewReceipt};
+  const stateFile = path.join(manager.report({worker}).registry, 'state.json');
+  const originalRename = fs.renameSync;
+  fs.renameSync = function (source, destination) {
+    if (destination === stateFile) throw new Error('injected allocator state replacement failure');
+    return originalRename.call(fs, source, destination);
+  };
+  try { assert.throws(() => manager.reconcilePartialRemoval(args), /injected allocator state replacement failure/); }
+  finally { fs.renameSync = originalRename; }
+  const auditDirectory = path.join(manager.report({worker}).registry, 'partial-removal-audit');
+  const pending = JSON.parse(fs.readFileSync(path.join(auditDirectory, fs.readdirSync(auditDirectory)[0]), 'utf8'));
+  assert.equal(pending.status, 'pending');
+  assert.equal(pending.startHead, entry.head);
+  assert.equal(pending.head, candidateHead);
+  assert.ok(!fs.existsSync(entry.path), 'the entire directory was atomically moved before the injected state-write failure');
+  assert.ok(fs.existsSync(pending.preservedPath));
+  const result = manager.reconcilePartialRemoval(args);
+  assert.equal(result.reconciled, true);
+  assert.equal(result.resumedPendingReceipt, true);
+  assert.equal(result.preservedRef, preservedRef);
+  assert.equal(result.inventorySha256, manifest.inventorySha256);
+  assert.equal(fs.readFileSync(path.join(result.preservedPath, 'research', 'retained-evidence.json'), 'utf8'), '{"retained":true}\n');
+  assert.ok(fs.existsSync(path.join(result.preservedPath, '.git')), 'the original dangling Git link is retained as evidence');
+  assert.equal(git('rev-parse', preservedRef).trim(), candidateHead);
+  assert.equal(manager.report({worker}).entries.length, 0);
+  assert.equal(fs.existsSync(manager.capabilityFilePath({worker})), false);
+  const audit = JSON.parse(fs.readFileSync(result.auditReceipt, 'utf8'));
+  assert.equal(audit.status, 'reconciled');
+  assert.equal(audit.entryCount, manifest.entryCount);
+  assert.equal(audit.totalBytes, manifest.totalBytes);
+});
+
+test('partial-removal inspection and reconciliation refuse an unrelated candidate head without changing evidence', async t => {
+  const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
+  const worker = 'partial-removal-unrelated-owner';
+  const previousIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
+  manager.ensureCapabilityFile({worker});
+  fs.writeFileSync(path.join(entry.path, 'README.md'), 'descendant candidate head\n');
+  execFileSync('git', ['-C', entry.path, 'add', 'README.md']);
+  execFileSync('git', ['-C', entry.path, 'commit', '-m', 'advance retained candidate branch']);
+  const descendantHead = execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
+  git('update-ref', preservedRef, descendantHead);
+  const dotGit = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
+  const adminPath = /^gitdir: (.+)\n?$/.exec(dotGit)?.[1];
+  assert.ok(adminPath && fs.existsSync(adminPath));
+  fs.rmSync(adminPath, {recursive: true});
+
+  const manifest = manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: descendantHead});
+  const unrelatedHead = git('commit-tree', `${entry.head}^{tree}`, '-m', 'unrelated candidate head').trim();
+  assert.throws(() => git('merge-base', '--is-ancestor', entry.head, unrelatedHead),
+    'the proposed candidate is not descended from the allocated start');
+  git('update-ref', `refs/heads/${entry.branch}`, unrelatedHead);
+  git('update-ref', preservedRef, unrelatedHead);
+
+  const reviewReceipt = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: unrelatedHead,
+    gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
+    totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256});
+  const unrelatedManifest = {...manifest, head: unrelatedHead};
+  const args = {worker, slot: 'work', capabilityFile: manager.capabilityFilePath({worker}),
+    expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: unrelatedHead,
+    inventoryManifest: unrelatedManifest, reviewReceipt};
+  const refsBefore = git('show-ref'), entriesBefore = JSON.stringify(registryEntries(manager));
+  assert.throws(() => manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: unrelatedHead}), /not a descendant/);
+  assert.throws(() => manager.reconcilePartialRemoval(args), /not a descendant/);
+  assert.equal(git('show-ref'), refsBefore, 'refusal leaves every ref unchanged');
+  assert.equal(JSON.stringify(registryEntries(manager)), entriesBefore, 'refusal leaves the owner slot unchanged');
+  assert.ok(fs.existsSync(entry.path), 'refusal retains the partial checkout');
+  assert.ok(fs.existsSync(manager.capabilityFilePath({worker})), 'refusal retains the owner capability');
+});
+
+test('partial-removal inspection refuses an old .git pointer aliased to another active worktree', async t => {
+  const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
+  const worker = 'partial-removal-alias-owner';
+  const activeWorker = 'partial-removal-alias-active';
+  const previousIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
+  const stalePointer = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
+  const adminPath = /^gitdir: (.+)\n?$/.exec(stalePointer)?.[1];
+  assert.ok(adminPath && fs.existsSync(adminPath));
+
+  // Simulate the observed partial-remove/reuse state: Git removes the original
+  // checkout and admin record, then a new active checkout reuses the same admin
+  // directory name while the old checkout's retained bytes and pointer survive.
+  git('worktree', 'remove', entry.path);
+  assert.ok(!fs.existsSync(adminPath));
+  fs.mkdirSync(entry.path, {recursive: true});
+  fs.writeFileSync(path.join(entry.path, '.git'), stalePointer);
+  fs.mkdirSync(path.join(entry.path, 'research'), {recursive: true});
+  fs.writeFileSync(path.join(entry.path, 'research', 'retained-evidence.json'), '{"retained":true}\n');
+
+  process.env.CODEX_THREAD_ID = activeWorker;
+  const active = await manager.allocate({worker: activeWorker, branch: 'engineering/active-admin-alias'});
+  const reusedAdminPath = path.resolve(repo, git('rev-parse', '--git-common-dir').trim());
+  const actualAdminPath = execFileSync('git', ['-C', active.path, 'rev-parse', '--path-format=absolute', '--git-dir'], {encoding: 'utf8'}).trim();
+  assert.equal(fs.realpathSync(actualAdminPath), fs.realpathSync(path.join(reusedAdminPath, 'worktrees', path.basename(active.path))));
+  assert.equal(fs.realpathSync(path.resolve(adminPath)), fs.realpathSync(actualAdminPath));
+  const adminBackpointer = fs.readFileSync(path.join(actualAdminPath, 'gitdir'), 'utf8');
+  assert.equal(fs.realpathSync(path.resolve(adminBackpointer.trim())), fs.realpathSync(path.join(active.path, '.git')));
+
+  const originalPointer = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
+  const evidence = fs.readFileSync(path.join(entry.path, 'research', 'retained-evidence.json'), 'utf8');
+  const stateBefore = JSON.stringify(registryEntries(manager));
+  const activeHead = execFileSync('git', ['-C', active.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  process.env.CODEX_THREAD_ID = worker;
+  assert.throws(() => manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: entry.head}), /Git admin directory still exists/);
+  assert.equal(fs.readFileSync(path.join(entry.path, '.git'), 'utf8'), originalPointer);
+  assert.equal(fs.readFileSync(path.join(entry.path, 'research', 'retained-evidence.json'), 'utf8'), evidence);
+  assert.equal(fs.readFileSync(path.join(actualAdminPath, 'gitdir'), 'utf8'), adminBackpointer);
+  assert.equal(execFileSync('git', ['-C', active.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim(), activeHead);
+  assert.equal(JSON.stringify(registryEntries(manager)), stateBefore);
+});
+
+test('partial-removal reconciliation refuses changed inventory, active readers and wrong reviewers', async t => {
+  const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
+  const worker = 'partial-removal-guard';
+  const previousIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
+  manager.ensureCapabilityFile({worker});
+  const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
+  git('update-ref', preservedRef, entry.head);
+  const adminPath = /^gitdir: (.+)\n?$/.exec(fs.readFileSync(path.join(entry.path, '.git'), 'utf8'))?.[1];
+  fs.rmSync(adminPath, {recursive: true});
+  const manifest = manager.inspectPartialRemoval({worker, expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: entry.head});
+  const review = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: entry.head,
+    gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
+    totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256});
+  const args = {worker, capabilityFile: manager.capabilityFilePath({worker}), expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: entry.head, inventoryManifest: manifest, reviewReceipt: review};
+  fs.mkdirSync(path.join(entry.path, 'research'), {recursive: true});
+  fs.writeFileSync(path.join(entry.path, 'research', 'changed-after-review.txt'), 'changed');
+  assert.throws(() => manager.reconcilePartialRemoval(args), /changed after independent inventory review/);
+  assert.ok(fs.existsSync(entry.path));
+  fs.unlinkSync(path.join(entry.path, 'research', 'changed-after-review.txt'));
+  const freshManifest = manager.inspectPartialRemoval({worker, expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: entry.head});
+  const freshReview = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: entry.head,
+    gitAdminPath: freshManifest.gitAdminPath, preservedRef: freshManifest.preservedRef, entryCount: freshManifest.entryCount,
+    totalBytes: freshManifest.totalBytes, inventorySha256: freshManifest.inventorySha256});
+  const freshArgs = {...args, inventoryManifest: freshManifest, reviewReceipt: freshReview};
+  const originalRename = fs.renameSync;
+  fs.renameSync = function (source, destination) {
+    if (source === entry.path) throw new Error('injected archive move refusal');
+    return originalRename.call(fs, source, destination);
+  };
+  try { assert.throws(() => manager.reconcilePartialRemoval(freshArgs), /injected archive move refusal/); }
+  finally { fs.renameSync = originalRename; }
+  const auditDirectory = path.join(manager.report({worker}).registry, 'partial-removal-audit');
+  const auditRows = fs.readdirSync(auditDirectory).map(name => JSON.parse(fs.readFileSync(path.join(auditDirectory, name), 'utf8')));
+  assert.ok(auditRows.some(row => row.status === 'failed'), 'a pre-move failure is retained as a terminal audit receipt');
+  assert.ok(fs.existsSync(entry.path), 'failed preservation attempt leaves the original directory intact');
+  const activeReadersManager = workspaceManager(repo, {inspectReaders: () => ['123']});
+  assert.throws(() => activeReadersManager.reconcilePartialRemoval(freshArgs), /active readers/);
+  const wrongReviewer = sealOperatorReceipt({...freshReview, reviewer: worker});
+  assert.throws(() => manager.reconcilePartialRemoval({...freshArgs, reviewReceipt: wrongReviewer}), /Independent partial-checkout review/);
+  assert.ok(fs.existsSync(entry.path));
+});
+
+test('partial-removal CLI inspects and reconciles only the exact current TLS owner slot', async t => {
+  const {repo, manager, git, temporary} = fixture(t, {inspectReaders: () => []});
+  const worker = 'partial-removal-cli-owner';
+  const previousIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
+  const capabilityFile = manager.ensureCapabilityFile({worker});
+  const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
+  git('update-ref', preservedRef, entry.head);
+  const adminPath = /^gitdir: (.+)\n?$/.exec(fs.readFileSync(path.join(entry.path, '.git'), 'utf8'))?.[1];
+  fs.rmSync(adminPath, {recursive: true});
+
+  const helper = cliHelper(repo);
+  const cliEnv = {...process.env, CODEX_THREAD_ID: worker};
+  const inspect = spawnSync(process.execPath, [helper, 'inspect-partial-removal', '--repo', repo, '--worker', worker,
+    '--slot', 'work', '--expected-path', entry.path, '--expected-branch', entry.branch, '--expected-head', entry.head],
+  {cwd: temporary, encoding: 'utf8', env: cliEnv});
+  assert.equal(inspect.status, 0, inspect.stderr);
+  const manifest = JSON.parse(inspect.stdout);
+  const inventoryFile = path.join(temporary, 'partial-inventory.json');
+  const reviewFile = path.join(temporary, 'partial-review.json');
+  fs.writeFileSync(inventoryFile, JSON.stringify(manifest));
+  fs.writeFileSync(reviewFile, JSON.stringify(sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review',
+    reviewer: 'independent-cli-reviewer', worker, slot: 'work', path: entry.path, branch: entry.branch,
+    startHead: entry.head, head: entry.head,
+    gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
+    totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256})));
+  const reconcile = spawnSync(process.execPath, [helper, 'reconcile-partial-removal', '--repo', repo, '--worker', worker,
+    '--slot', 'work', '--capability-file', capabilityFile, '--expected-path', entry.path, '--expected-branch', entry.branch,
+    '--expected-head', entry.head, '--inventory-manifest', inventoryFile, '--review-receipt', reviewFile],
+  {cwd: temporary, encoding: 'utf8', env: cliEnv});
+  assert.equal(reconcile.status, 0, reconcile.stderr);
+  assert.equal(reconcile.stderr, '');
+  assert.doesNotMatch(reconcile.stdout, new RegExp(entry.token));
+  const result = JSON.parse(reconcile.stdout);
+  assert.equal(result.reconciled, true);
+  assert.equal(result.preservedRef, preservedRef);
+  assert.ok(fs.existsSync(result.preservedPath));
+});
+
 test('interrupted private-token recovery resumes only its bound pending replacement', async t => {
   const {manager, head} = fixture(t);
   const worker = 'recovery-interruption';
