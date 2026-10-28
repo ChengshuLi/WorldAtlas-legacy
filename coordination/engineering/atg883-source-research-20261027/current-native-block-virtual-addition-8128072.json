@@ -1,0 +1,163 @@
+{
+  "kind": "atg883-current-native-block-virtual-addition-v1",
+  "status": "scoped evidence-only virtual comparison; not a production patch, not activated, no credit",
+  "pins": {
+    "current_selected_commit": "81280722133858cbb26249210fed17b031d11d3d",
+    "current_code_commit": "a6ad4378b20ea2f66669c79d99ae8e364986a719",
+    "current_selected_bank_index": {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "bytes": 49610,
+      "sha256": "8609ac63850ad4683bd5d73d0969c2b9bddf6ed8bf16af1e145caeb167a3a1ca"
+    },
+    "native_rows": {
+      "commit": "81280722133858cbb26249210fed17b031d11d3d",
+      "path": "data/canonical-grid/current-startup/ownership-vintages/d8127e4ab8a94059949cf0050c9a89eee96fb2ee58b32d356a52217dc620c86c/native-v1/ownership/rows-0.bin.gz",
+      "bytes": 317279,
+      "sha256": "d8127e4ab8a94059949cf0050c9a89eee96fb2ee58b32d356a52217dc620c86c",
+      "decoded_sha256": "28da42688bb4e829db0a46c0c2e5c8a416584a3c685caa7c0f18bd71cbfd9f0e"
+    },
+    "selected_run_members": [
+      {
+        "commit": "81280722133858cbb26249210fed17b031d11d3d",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/4c74e9240212f619573ef517dd09979d3e5dde7f4168ef03b1cdd90810a28434/native-v1/ownership/startup-runs-33554432.bin.gz",
+        "bytes": 3543026,
+        "sha256": "4c74e9240212f619573ef517dd09979d3e5dde7f4168ef03b1cdd90810a28434",
+        "decoded_sha256": "06f6ca1a0d6531f8e632512f137d6495458f2a284ba11882d1f21b54e263dae6"
+      },
+      {
+        "commit": "81280722133858cbb26249210fed17b031d11d3d",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/5b03999edaafef05b4b606075c861d3fe5a0b4179ba9b97b56c41bdb633456a8/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "bytes": 3518103,
+        "sha256": "5b03999edaafef05b4b606075c861d3fe5a0b4179ba9b97b56c41bdb633456a8",
+        "decoded_sha256": "85d71564bbb871ef346210de6324f88763ea2b520074d71d78256d3e1eb6c532"
+      }
+    ],
+    "whole_source_native_witness": {
+      "path": "coordination/engineering/atg883-source-research-20261027/whole-atg-source-physical-native-witness.json",
+      "bytes": 99380,
+      "sha256": "dc47e2cb1f44190a2e9c76bc168096e2874752ed754ac99caed41f6da47fb2c0"
+    },
+    "current_observation_sha256": "f2b26ec5732af6a45b95c7a30dc51fd2dfd94a0852ab4addcedfb528cd23207d",
+    "candidate_delta_sha256": "51eee386d904a572ef2b71c31dc534fcab5d1a48da4790add2c988b5b15a428a"
+  },
+  "scope": {
+    "native_block": 28,
+    "block_row_start": 114688,
+    "block_row_end_exclusive": 118784,
+    "complete_rows_in_block": 4096,
+    "original_owner_index": 7110,
+    "original_cell_count": 883,
+    "original_interval_count": 288
+  },
+  "checks": {
+    "current_selected_owner_zero_on_exact_candidate_keys": 883,
+    "candidate_delta_equals_original_288_intervals": true,
+    "source_feature_and_land_predicates_carried_from_original_queue": true,
+    "full_native_row_table_partition": true,
+    "selected_block_28_native_rows_read": 4096,
+    "selected_old_native_runs_read": 1484050,
+    "candidate_overlaps_existing_selected_owner_runs": 0,
+    "candidate_added_cells": 883,
+    "original_owner_cells_removed_or_reassigned": 0,
+    "other_owner_cell_counts_unchanged_in_block": true,
+    "target_owner_7110_additional_cells": 883,
+    "block28_before_sha256": "27377ccbaffb77d472057caad07decc29e6080f7e963b480b7aba2b007e9bc75",
+    "block28_after_virtual_addition_sha256": "007b5716b11fc4c475df1a1b8af932b61cb17594a7182f5c5d5a49855256a120",
+    "block28_virtual_run_count_after_addition": 1484152,
+    "whole_retained_source_native_geometry_cells": 19943,
+    "whole_source_geometry_current_selected_owner_cells": 18930,
+    "whole_source_geometry_current_selected_owner_zero_cells": 1013,
+    "whole_source_geometry_current_selected_other_owner_cells": 0,
+    "whole_source_geometry_other_owner_conflicts": 0,
+    "current_source_owner_counts_by_feature": {
+      "1273": {
+        "name": "Redonda",
+        "selector_member": false,
+        "full_source_geometry_cells": 23,
+        "owner0_candidate_cells": 3,
+        "current_selected_owner_cells": {
+          "0": 3,
+          "7110": 20
+        }
+      },
+      "1274": {
+        "name": "Saint Philip",
+        "selector_member": true,
+        "full_source_geometry_cells": 1953,
+        "owner0_candidate_cells": 116,
+        "current_selected_owner_cells": {
+          "0": 116,
+          "7110": 1837
+        }
+      },
+      "1275": {
+        "name": "Saint John",
+        "selector_member": true,
+        "full_source_geometry_cells": 3280,
+        "owner0_candidate_cells": 70,
+        "current_selected_owner_cells": {
+          "0": 70,
+          "7110": 3210
+        }
+      },
+      "1276": {
+        "name": "Barbuda",
+        "selector_member": true,
+        "full_source_geometry_cells": 6842,
+        "owner0_candidate_cells": 327,
+        "current_selected_owner_cells": {
+          "0": 327,
+          "7110": 6515
+        }
+      },
+      "1277": {
+        "name": "Saint Mary",
+        "selector_member": true,
+        "full_source_geometry_cells": 2956,
+        "owner0_candidate_cells": 155,
+        "current_selected_owner_cells": {
+          "0": 155,
+          "7110": 2801
+        }
+      },
+      "1278": {
+        "name": "Saint Paul",
+        "selector_member": true,
+        "full_source_geometry_cells": 2110,
+        "owner0_candidate_cells": 147,
+        "current_selected_owner_cells": {
+          "0": 147,
+          "7110": 1963
+        }
+      },
+      "1279": {
+        "name": "Saint Peter",
+        "selector_member": true,
+        "full_source_geometry_cells": 1576,
+        "owner0_candidate_cells": 114,
+        "current_selected_owner_cells": {
+          "0": 114,
+          "7110": 1462
+        }
+      },
+      "1280": {
+        "name": "Saint George",
+        "selector_member": true,
+        "full_source_geometry_cells": 1203,
+        "owner0_candidate_cells": 81,
+        "current_selected_owner_cells": {
+          "0": 81,
+          "7110": 1122
+        }
+      }
+    }
+  },
+  "limits": [
+    "Only block 28 complete old/new native rows are compared; no full world bank was hydrated or regenerated.",
+    "The addition is a temporary virtual overlay of the exact candidate intervals; no accepted additive asset or selected reference is changed.",
+    "Current selected-bank E was measured directly; historical base/additive/overlap columns are null in this v2 evidence and are not reconstructed.",
+    "This proves scoped numerical native non-overlap and conservation only, not source authority, rights, legal applicability, current physical adjudication, or science acceptance.",
+    "Whole retained source feature native intervals and unassigned candidate mask classification are separately pinned in whole-atg-source-physical-native-witness.json; masks are not interpreted for already-owned source cells.",
+    "This proves scoped numerical native non-overlap and conservation only, not source authority, rights, legal applicability, or science acceptance."
+  ]
+}

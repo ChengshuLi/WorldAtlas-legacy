@@ -34,7 +34,7 @@ const safe = name => typeof name === 'string' && /^[a-zA-Z0-9_./-]+$/.test(name)
 const unique = values => Array.isArray(values) && values.length > 0 && values.every(v => typeof v === 'string' && v) && new Set(values).size === values.length;
 const environment = () => ({...process.env, GIT_NO_LAZY_FETCH: '1', GIT_NO_REPLACE_OBJECTS: '1', GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_GLOBAL: '/dev/null', GIT_TERMINAL_PROMPT: '0'});
 
-export function pinReader(root, {loadTree = githubTree, execute} = {}) {
+export function pinReader(root, {loadTree = githubTree, execute, executeGit = execFileSync} = {}) {
   const selectedGit = selectInstalledGit();
   try {
     execFileSync(selectedGit.gitExecutable, ['--no-lazy-fetch', '--version'], {
@@ -88,7 +88,7 @@ export function pinReader(root, {loadTree = githubTree, execute} = {}) {
   const git = (...args) => {
     const options={cwd:root,env:{...environment(),GIT_EXEC_PATH:selectedGit.gitExecPath},maxBuffer:Infinity};
     if(args[0]==='cat-file'&&args[1]==='blob') options.maxBuffer=Number(git('cat-file','-s',args[2]))+1;
-    return execFileSync(selectedGit.gitExecutable,args,options);
+    return executeGit(selectedGit.gitExecutable,args,options);
   };
   function descriptor(commit, name) {
     need(hex(commit, 40) && safe(name), 'Exact commit and safe whole-file path required');

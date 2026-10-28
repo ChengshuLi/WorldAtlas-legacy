@@ -1,0 +1,39 @@
+{
+  "change_evidence": {
+    "bytes": 1409,
+    "commit": "808425b06c5236d282046e1b8cc0936dd0322a2c",
+    "git_blob_oid": "35fc5dc64e3b8a519e46d7051efe209f64ba3db0",
+    "mode": "100644",
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-8eff-001/authority-registry.json",
+    "sha256": "bda7dcfeb9555018dfb610086282a85065ba7c2afd7c1a3ea6037ed18f5f6512"
+  },
+  "package_inputs": {
+    "commit": "003ebdf00d4fc97edcc44a9e05e86ef7929afe11",
+    "path": ".github/package-inputs.json"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "bytes": 1156,
+        "commit": "003ebdf00d4fc97edcc44a9e05e86ef7929afe11",
+        "git_blob_oid": "abb14b6b22495df9bc6df9df3c3bb8a32e0d25e3",
+        "mode": "100644",
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/finalized-current-8eff-002/preparation.json",
+        "sha256": "d22f3a69375265d0418aa3a9b3da6d0438f11cf2798a1c5a5eeb99c72a865823"
+      },
+      "startup_ownership": {
+        "bytes": 49610,
+        "commit": "003ebdf00d4fc97edcc44a9e05e86ef7929afe11",
+        "git_blob_oid": "3c2966a2331a1df1dd2383c1cd4ca0757b132134",
+        "mode": "100644",
+        "path": "coordination/engineering/jor656-repair-evaluation-20261026/finalized-current-8eff-002/startup-ownership.json",
+        "sha256": "77d68e33a57c8db8e62b726c2b35d71b9eae9420bb287ba8631702554962f009"
+      }
+    }
+  ],
+  "selector": {
+    "commit": "003ebdf00d4fc97edcc44a9e05e86ef7929afe11",
+    "path": "data/ownership-selection.json"
+  },
+  "version": 2
+}

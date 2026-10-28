@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "kind": "atg883-original-source-stage-manifest-v2",
+  "source": {
+    "commit": "ea099024c1d175842e4d323db752b49d9f7a5825",
+    "path": "coordination/engineering/original-geography-source-corpus-20261006/payloads/gb-ATG-ADM1-000.bin.gz",
+    "encoded_bytes": 9157,
+    "encoded_sha256": "28c9286241b38663e4c2c3f24c21810e60e54b7c645569840805f6fd0b8be8e5",
+    "decoded_bytes": 26215,
+    "decoded_sha256": "021f6ca73869807bcb04d3b71ea1f26d630eb11707522ff1a0db5f3d86e40c8d"
+  },
+  "stage": {
+    "path": "coordination/engineering/atg883-source-research-20261027/physical-preparation/original-stage-inputs.json",
+    "bytes": 108127,
+    "sha256": "233bf1b48c74fbe4b9392c24272f66f65a0fbbe8b6e4b6ccfc36aff830c3556e"
+  },
+  "canonical_target": {
+    "id": "atlas:territory:ATG",
+    "feature_id": "atlas:territory:ATG",
+    "geometry_type": "MultiPolygon",
+    "geometry_sha256": "43930df3e72efea5b2fd6deba29f54629faa6ec3162cd382197ee98207f8fe5d",
+    "source_member_ids": [
+      "gb:ATG:ADM1:74100532B54294973205276",
+      "gb:ATG:ADM1:74100532B52002127383103",
+      "gb:ATG:ADM1:74100532B54588500691901",
+      "gb:ATG:ADM1:74100532B56248932917605",
+      "gb:ATG:ADM1:74100532B19516932260818",
+      "gb:ATG:ADM1:74100532B93709990123087",
+      "gb:ATG:ADM1:74100532B3675352926720",
+      "gb:ATG:ADM1:74100532B88993889644511"
+    ],
+    "feature_metadata": {
+      "name": "Antigua and Barbuda",
+      "reference_owner": "Antigua and Barbuda",
+      "location_basis": "Compact source country/territory",
+      "source_id": "atlas:territory:ATG",
+      "reference_year": "Undated modern reference"
+    }
+  },
+  "canonical_target_part": {
+    "commit": "f2c44658278b1ebbbca37bc659b05a3885b2e2e7",
+    "path": "data/geography/part-28.json",
+    "mode": "100644",
+    "git_blob_oid": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+    "bytes": 6613963,
+    "sha256": "2aab2f36aeeb651ee8e6cc656e9541ad14e2ced2ea8160e8700ad4dc950c379d"
+  },
+  "selected_geometry_rows": 8,
+  "selected_geometry_binding": "Every selected.geometry is copied from the single unique accepted canonical feature in the pinned part; every selected.id equals atlas:territory:ATG. The canonical source_member_ids inventory exactly equals all eight original ATG members.",
+  "features": [
+    {
+      "feature_ordinal": 0,
+      "source_feature_index": 1273,
+      "source_id": "gb:ATG:ADM1:74100532B54294973205276",
+      "shape_id": "74100532B54294973205276",
+      "name": "Redonda",
+      "geometry_sha256": "f5f57dbad09d140eba8ef74879de85f458593ca4b4e1df949155291631d6529f",
+      "role": "same-owner physical context only; excluded from positive repair"
+    },
+    {
+      "feature_ordinal": 1,
+      "source_feature_index": 1274,
+      "source_id": "gb:ATG:ADM1:74100532B52002127383103",
+      "shape_id": "74100532B52002127383103",
+      "name": "Saint Philip",
+      "geometry_sha256": "adbd1e608edca5c98b2679c0727ed67b0091d5566f6dc2b4b887878c7cbaf5b2",
+      "role": "positive source member for the frozen seven-feature repair slice"
+    },
+    {
+      "feature_ordinal": 2,
+      "source_feature_index": 1275,
+      "source_id": "gb:ATG:ADM1:74100532B54588500691901",
+      "shape_id": "74100532B54588500691901",
+      "name": "Saint John",
+      "geometry_sha256": "a149c09e40d9320317ac45b6b0abb393820eaec9e202c1e8ddb5384835b3754b",
+      "role": "positive source member for the frozen seven-feature repair slice"
+    },
+    {
+      "feature_ordinal": 3,
+      "source_feature_index": 1276,
+      "source_id": "gb:ATG:ADM1:74100532B56248932917605",
+      "shape_id": "74100532B56248932917605",
+      "name": "Barbuda",
+      "geometry_sha256": "84d84667815df6fa365d14227502d1297a57b2318fa08d6ab6a7ba95d012941a",
+      "role": "positive source member for the frozen seven-feature repair slice"
+    },
+    {
+      "feature_ordinal": 4,
+      "source_feature_index": 1277,
+      "source_id": "gb:ATG:ADM1:74100532B19516932260818",
+      "shape_id": "74100532B19516932260818",
+      "name": "Saint Mary",
+      "geometry_sha256": "512f964851778557f1d31160b5991ac32410212a73e715fa7fd5d0fbfbe5ce2c",
+      "role": "positive source member for the frozen seven-feature repair slice"
+    },
+    {
+      "feature_ordinal": 5,
+      "source_feature_index": 1278,
+      "source_id": "gb:ATG:ADM1:74100532B93709990123087",
+      "shape_id": "74100532B93709990123087",
+      "name": "Saint Paul",
+      "geometry_sha256": "0e41af0b2ccb65b6b52b877903ef98810b16a2017ada9b117cf9ae8df3803d75",
+      "role": "positive source member for the frozen seven-feature repair slice"
+    },
+    {
+      "feature_ordinal": 6,
+      "source_feature_index": 1279,
+      "source_id": "gb:ATG:ADM1:74100532B3675352926720",
+      "shape_id": "74100532B3675352926720",
+      "name": "Saint Peter",
+      "geometry_sha256": "5d7142cfb01c73d003e835d9805da9fb3033a464aec6bf10c18a6f33eafe1c36",
+      "role": "positive source member for the frozen seven-feature repair slice"
+    },
+    {
+      "feature_ordinal": 7,
+      "source_feature_index": 1280,
+      "source_id": "gb:ATG:ADM1:74100532B88993889644511",
+      "shape_id": "74100532B88993889644511",
+      "name": "Saint George",
+      "geometry_sha256": "670fb3997a0c061ed1440c31aea61e42d5d8a4bddb7b2560a208562e29aabb05",
+      "role": "positive source member for the frozen seven-feature repair slice"
+    }
+  ],
+  "scope": {
+    "package_id": "gb-ATG-ADM1--repair-evaluation",
+    "repair_cells": 883,
+    "intervals": 288,
+    "owner_index": 7110,
+    "positive_feature_indices": [
+      1274,
+      1275,
+      1276,
+      1277,
+      1278,
+      1279,
+      1280
+    ],
+    "context_sibling_feature_index": 1273,
+    "excluded_physical_interpretation_cells": 130
+  },
+  "method": "Each exact original source member is a unique physical producer stage; consumed Feature geometry is unchanged and selected geometry is the exact canonical atlas territory geometry. The physical stage labels do not imply separate atlas owners; owner/source joins remain checked by the existing native constructor."
+}
