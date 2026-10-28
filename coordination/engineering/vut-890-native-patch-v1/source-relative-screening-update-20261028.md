@@ -16,7 +16,7 @@ All 890 VUT keys retain exact membership in that frozen simplified baseline. A d
 
 ## Diagnostic receipt
 
-The private deterministic native patch has SHA-256 `d2389bde9f34824b9669bb172dd8da00ee07fe13526cbf69def716e184a7ed0a`. Its bounded accepted native-diagnostic output has SHA-256 `6294195b0e941f6f63c9cc5b3be42d29199f858f7a939d34cc7fe685157012ba`: 1,028 requested, 1,028 supported, 0 held under the declared mapped-land/adverse-mask diagnostic. Requested and supported rows matched the patch exactly. The diagnostic is a screening result only; it is not constructor authority, current-owner-zero, selected-output acceptance, or repair credit.
+The private deterministic native patch has SHA-256 `d2389bde9f34824b9669bb172dd8da00ee07fe13526cbf69def716e184a7ed0a`. Its bounded recorded/completed native-diagnostic output has SHA-256 `6294195b0e941f6f63c9cc5b3be42d29199f858f7a939d34cc7fe685157012ba`: 1,028 requested, 1,028 supported, 0 held under the declared mapped-land/adverse-mask diagnostic. Requested and supported rows matched the patch exactly. The diagnostic is a screening result only; it is not constructor authority, current-owner-zero, selected-output acceptance, or repair credit.
 
 ## Remaining limits
 
