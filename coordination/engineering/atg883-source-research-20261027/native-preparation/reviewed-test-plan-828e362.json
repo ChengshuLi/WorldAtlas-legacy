@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "kind": "atg883-reviewed-test-plan-v1",
+  "status": "candidate review packet; root science/accounting acceptance and hosted controls remain pending",
+  "package_id": "gb-ATG-ADM1--repair-evaluation",
+  "original_queue_sha256": "a8699fd1c2fdc12a97aa592ac711c5674f232daf58ac86fba41aea0fcb2968f9",
+  "original_denominator": {
+    "land_cells": 883,
+    "inland_water_cells": 0,
+    "source_relative_cells": 0,
+    "intervals": 288,
+    "owner_index": 7110,
+    "canonical_target": "atlas:territory:ATG",
+    "source_features": [
+      1274,
+      1275,
+      1276,
+      1277,
+      1278,
+      1279,
+      1280
+    ],
+    "redonda_feature_1273": "context-only-excluded"
+  },
+  "review_pair": {
+    "base": "b587ea75a2699c8d8e6f00615bcf06c306f7519a",
+    "candidate_data_commit": "828e3620dd3883981f3dd7a9a4c58da23b618972",
+    "integrated_candidate_commit": "b8a1fcaa98ec2f7b31a7af80d597c1bdade98989",
+    "branch": "geography/atg883-source-research-20261027",
+    "notes": "The final public PR head is the plan/evidence-only follow-up commit on integrated candidate b8a1fcaa98ec2f7b31a7af80d597c1bdade98989; its exact full SHA is supplied with the review request. Candidate code/data/observer state is commit828e3620dd3883981f3dd7a9a4c58da23b618972."
+  },
+  "candidate_pins": {
+    "finalizer_closure": {
+      "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalizer-output-closure-6247.json",
+      "sha256": "a72552b63d0ce9ac1e6ca057ba471be2b2f25e3c2540523476d455fadf9686a3"
+    },
+    "final_selector": {
+      "path": "data/ownership-selection.json",
+      "sha256": "d04b5c7fa954650a51c645d4c7743be2e206e6f51d709c642dbdb0600363a54e"
+    },
+    "startup_index": {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "sha256": "f86f62fb27ada4ad44cf1b3c8855e788b4f2dbff7ae50c6402a24c01133a96d4"
+    },
+    "current_candidate_observation": {
+      "path": "coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-candidate-828e362.json",
+      "sha256": "cfd24b55dd60f1498766d57012bab584e3d1b0d02c3856570bfe93f70d748042"
+    }
+  },
+  "local_controls": [
+    {
+      "id": "exact-current-candidate-owner-observation",
+      "command": "node scripts/observe-selected-owners.mjs --repo <owned-worktree> --commit 828e3620dd3883981f3dd7a9a4c58da23b618972 --package gb-ATG-ADM1--repair-evaluation --out coordination/engineering/atg883-source-research-20261027/current-selected-owner-observation-candidate-828e362.json",
+      "status": "passed",
+      "outcome": "883/883 exact original keys and 288/288 intervals match the immutable proposal; effective owner 7110 / atlas:territory:ATG for all 883. v2 historical base/additive/overlap columns remain null. 20 existing exact input objects; 0 fetched."
+    },
+    {
+      "id": "observer-unit-suite",
+      "command": "node --test --test-concurrency=2 test/selected-owner-observation.test.mjs",
+      "status": "passed",
+      "node": "24.19.0",
+      "tests": 32,
+      "passed": 32,
+      "failed": 0,
+      "log": {
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/selected-owner-test-828e362.log",
+        "bytes": 3845,
+        "sha256": "29078e4e192f1fbf12f310d7ddc359f8af058b04e802e30ca31f68c652ba38e1"
+      },
+      "fixture": "The sole normative latitude input was already materialized at its exact manifest pin: 1,851,757 bytes, SHA-256 ab0becdda100da3473d7bb5d34ccda6510aa1c0490c407082072c7201ad1e147, commit 5b32388df0501b013ac9a3ba97864932db493d59."
+    },
+    {
+      "id": "bounded-multi-module-exploratory-suite",
+      "status": "not_passed_not_claimed",
+      "command": "node --test --test-concurrency=2 test/effective-footprint.test.mjs test/native-grid.test.mjs test/package-startup-ownership.test.mjs test/prepare-startup-ownership.test.mjs test/prepared-startup-ownership.test.mjs test/delivery-handoff.test.mjs test/native-authority-entry.test.mjs test/native-authority-storage.test.mjs test/final-bank-finalizer.test.mjs test/selected-owner-observation.test.mjs",
+      "tests": 136,
+      "passed": 114,
+      "failed": 22,
+      "log": {
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/test-run-828e362.log",
+        "bytes": 66941,
+        "sha256": "eefc15a3aa505738396e28f59018ff7b0719548a27da311afeada905338be5f1"
+      },
+      "failure_classes": "20 final-bank fixture tests failed creating temp outputs with ENOSPC; 2 prepare-startup tests expected an unrelated sparse Arctic manifest absent from this worktree. No production test failure is claimed or concealed. The heavy suite was not retried locally after free space fell to ~20MB."
+    }
+  ],
+  "controls_required_before_root_decision": [
+    {
+      "id": "current-pair-final-bank-conservation",
+      "requirement": "Run the stock trusted control on the exact PR base/head pair and compare complete selected-bank E against accepted main; prove exact original 883 addition with no other owner-cell changes or regressions. Do not hydrate compatibility bodies or unrelated world inputs."
+    },
+    {
+      "id": "production-build-and-emitted-geography-controls",
+      "requirement": "Run the repository’s normal current-pair production build and emitted geography/consumer controls in a trusted hosted environment; pin exact head, plan, inputs, outputs and terminal result."
+    },
+    {
+      "id": "bank-change-finalizer-regressions",
+      "requirement": "Run relevant final-bank finalizer/startup regression tests in a capacity-adequate trusted runner, with only exact declared fixtures and no synthetic replacements or checker changes."
+    }
+  ],
+  "safety_and_scope": [
+    "Do not dispatch any hosted attempt without root’s actual hosted handoff.",
+    "No full selected-bank conservation, build, emitted-control, production write, science/accounting acceptance or credit is claimed by these local results.",
+    "Review source-native physical evidence against the exact target contract; seven lineage features are one owner, and Redonda remains excluded.",
+    "Preserve LOC403 and refused unsafe redirect as access limitations; do not bypass either."
+  ],
+  "latest_main_bridge": {
+    "commit": "b587ea75a2699c8d8e6f00615bcf06c306f7519a",
+    "parent_candidate_main": "4828b25d3499d131a477654931156505889e3e35",
+    "merge_commit": "b8a1fcaa98ec2f7b31a7af80d597c1bdade98989",
+    "changed_paths": "Nine CAF110 source-evidence/report artifacts only; no ATG/code/selector/bank changes.",
+    "equivalent_tree_inputs": {
+      ".github/package-inputs.json": {
+        "commit_4828": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+        "commit_b587": "845fe07d30052ae4e6982faea86a4d5137cd5fa2"
+      },
+      "data/ownership-selection.json": {
+        "commit_4828": "7e857c38e8c581fc058d40e592a95c6f053d72bf",
+        "commit_b587": "7e857c38e8c581fc058d40e592a95c6f053d72bf"
+      },
+      "data/canonical-grid/current-startup/index.json": {
+        "commit_4828": "8ec6b7b58e4e9b475d4a7b9d22f5f3e1f9dd32be",
+        "commit_b587": "8ec6b7b58e4e9b475d4a7b9d22f5f3e1f9dd32be"
+      },
+      "data/geography/part-28.json": {
+        "commit_4828": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9",
+        "commit_b587": "a9e03cb07194a73f643af85d1e6db94abe3b5fc9"
+      },
+      "scripts/prepare-delivery-handoff.mjs": {
+        "commit_4828": "c6ffe7e58dc3240667fec0be09d1144a66d3d12d",
+        "commit_b587": "c6ffe7e58dc3240667fec0be09d1144a66d3d12d"
+      },
+      "src/native-grid.js": {
+        "commit_4828": "b80ba88c97629ad5754d37d22c0d24e68e6d1780",
+        "commit_b587": "b80ba88c97629ad5754d37d22c0d24e68e6d1780"
+      },
+      "src/effective-footprint.js": {
+        "commit_4828": "267005d8dc8d1068b13385cc5ee35b556ef3bb61",
+        "commit_b587": "267005d8dc8d1068b13385cc5ee35b556ef3bb61"
+      }
+    },
+    "finalizer_replay_required": false,
+    "reason": "selector, current startup index, package-inputs, part-28 target and finalizer helper identities remain identical across 4828 and b587."
+  }
+}

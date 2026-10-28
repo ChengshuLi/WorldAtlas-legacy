@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "kind": "atg883-current-main-composition-attempts-v1",
+  "source_task": "gb-ATG-ADM1--repair-evaluation",
+  "current_selector_commit": "5fffbde0888e3b79d10387b2687aa281ea3ac354",
+  "attempts": [
+    {
+      "sequence": 1,
+      "phase": "compose",
+      "config_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-config-5fffbde.json",
+      "outcome": "blocked-before-composition",
+      "error": "Plain Node launch required",
+      "diagnosis": "Inherited NODE_PATH was set; stock helper refuses non-plain Node launch. No compose output was created.",
+      "retry": "one retry with process-local NODE_PATH and NODE_OPTIONS unset."
+    },
+    {
+      "sequence": 2,
+      "phase": "compose",
+      "config_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-config-5fffbde.json",
+      "config_sha256": "0b55f00842833497df4c7394be058656ef5b21f4a5a3d0168b5733c3bd8818ba",
+      "outcome": "success",
+      "destination": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-5fffbde",
+      "preparation_sha256": "451c20589ffee6fbd29edb87abe2e3c2a3d5832b6cb6cc4f53797e7a72a972e0",
+      "registry_path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-5fffbde/authority-registry.json",
+      "registry_bytes": 1409,
+      "registry_sha256": "bda7dcfeb9555018dfb610086282a85065ba7c2afd7c1a3ea6037ed18f5f6512",
+      "registry_kind": "retained-rule-authority-registry-v1",
+      "registry_entries": 1,
+      "plain_node": true,
+      "NODE_PATH_unset": true,
+      "NODE_OPTIONS_unset": true,
+      "candidate_only": true,
+      "science_or_acceptance_implication": "none"
+    }
+  ]
+}

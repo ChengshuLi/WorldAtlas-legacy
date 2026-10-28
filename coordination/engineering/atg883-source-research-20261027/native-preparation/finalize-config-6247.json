@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "6247e42ddda56bf7492698eb058b03ebb57a34ab",
+    "path": "data/ownership-selection.json"
+  },
+  "package_inputs": {
+    "commit": "6247e42ddda56bf7492698eb058b03ebb57a34ab",
+    "path": ".github/package-inputs.json"
+  },
+  "change_evidence": {
+    "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/compose-authorities-5fffbde/authority-registry.json",
+    "commit": "485eb4921864e4f6a0a11fe333a966345f4a2874",
+    "mode": "100644",
+    "git_blob_oid": "35fc5dc64e3b8a519e46d7051efe209f64ba3db0",
+    "bytes": 1409,
+    "sha256": "bda7dcfeb9555018dfb610086282a85065ba7c2afd7c1a3ea6037ed18f5f6512"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-812/preparation.json",
+        "commit": "2faf7656225789eeb1fecec53e32c64f939b1ee3",
+        "mode": "100644",
+        "git_blob_oid": "4162bc57ef4f8f7496ba23f5abfc1a2117f7b3ba",
+        "bytes": 1156,
+        "sha256": "e946f6b2bd5276861c723396dd76a7644981eb4bc7bdfe6c882d5ecf05f22599"
+      },
+      "startup_ownership": {
+        "path": "coordination/engineering/atg883-source-research-20261027/native-preparation/finalize-812/startup-ownership.json",
+        "commit": "2faf7656225789eeb1fecec53e32c64f939b1ee3",
+        "mode": "100644",
+        "git_blob_oid": "cfeb930d77f463f38e103515dc76d440e8f23f9d",
+        "bytes": 49610,
+        "sha256": "5fe005eeea32a673393da55620c57463478e353c6ff1bc89741f5c4f1e91c957"
+      }
+    }
+  ]
+}
