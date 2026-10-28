@@ -1,0 +1,49 @@
+{
+  "accepted_data_commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+  "candidate_full_roster": {
+    "all_body_git_objects_present": true,
+    "all_body_objects_rehashed_against_index": true,
+    "compatibility_all_overlap": true,
+    "compatibility_entries": 30,
+    "indexed_bodies": 79,
+    "indexed_body_bytes": 160957146,
+    "verified_body_count": 79
+  },
+  "candidate_precommit_head": "93f96c2840e9296225086cbea27e8b473b46582d",
+  "kind": "mhl1019-staged-current-startup-roster-audit-0fc-v1",
+  "limits": [
+    "No full-bank comparison/build/test or hosted/emitted controls claimed.",
+    "Finalizer candidate remains unaccepted; exact reviewed plan and required trusted controls remain."
+  ],
+  "output_index": {
+    "bytes": 49610,
+    "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalized-current-0fc-001/startup-ownership.json",
+    "sha256": "c2177db2b231107a071ca236c991d2290a844869ee58f37c5740c1e00c573723"
+  },
+  "retirements": {
+    "authenticated_against_prior_tkm_output": true,
+    "count": 7,
+    "staged_deletions_exactly_match_retirement_roster": true
+  },
+  "sparse_worktree": {
+    "broad_hydration": false,
+    "materialized_indexed_bodies": 49,
+    "unmaterialized_are_exact_local_git_objects": true,
+    "unmaterialized_indexed_bodies": 30
+  },
+  "staged_current_bank_delta": {
+    "added": 7,
+    "expected_and_actual_exact": true,
+    "index_modified": true,
+    "no_other_current_bank_paths": true,
+    "retired": 7,
+    "selector_modified": true
+  },
+  "staged_path_scope": {
+    "all_paths_within_mhl_evidence_or_current_bank": true,
+    "count": 47,
+    "untracked_project_paths": 0
+  },
+  "status": "staged generated bank delta exactly matches finalized output index; all referenced bodies are locally present as immutable Git blobs",
+  "version": 1
+}

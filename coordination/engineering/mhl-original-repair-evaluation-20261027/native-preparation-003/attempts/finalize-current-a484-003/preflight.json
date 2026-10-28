@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "mhl1019-finalizer-attempt-preflight-a484-v1",
+  "current_main": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+  "candidate_head": "75725e416fcba7898f3faa47f92d2cecbcb63d93",
+  "config_path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalize-config-current-a484.json",
+  "config_bytes": 1598,
+  "config_sha256": "f3090e1d9739a03bb2a175f09eae8636e29dc7c91de2bcb2d65f59b0efd6c547",
+  "target": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalized-current-a484-001",
+  "target_absent": true,
+  "prior_failures": [
+    "attempt001: absolute destination rejected before any output",
+    "attempt002: selector/package locators rejected for extra descriptor fields; no output; exact config preserved"
+  ],
+  "current_config_locators": {
+    "selector": {
+      "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+      "path": "data/ownership-selection.json"
+    },
+    "package_inputs": {
+      "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+      "path": ".github/package-inputs.json"
+    }
+  },
+  "runtime": "plain Node v24; NODE_PATH and NODE_OPTIONS unset",
+  "git_no_lazy_fetch": true,
+  "git_no_replace_objects": true,
+  "free_tmp_bytes": 3690471424,
+  "free_ram_available_bytes": 5416382464,
+  "estimated_incremental_peak_bytes": 272629760,
+  "output_and_git_write_root": "/tmp/mhl-evidence-e4c8",
+  "no_source_or_native_replay": true
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "kind": "mhl1019-current-base-bridge-attempt-v1",
+  "attempt": "normal git merge current main a484 into existing MHL branch",
+  "command": "git merge --no-ff --no-edit a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+  "git_version": "2.53.0",
+  "env": {
+    "GIT_NO_LAZY_FETCH": "1",
+    "GIT_NO_REPLACE_OBJECTS": "1",
+    "GIT_TERMINAL_PROMPT": "0"
+  },
+  "exit_status": 128,
+  "combined_output": "Merge made by the 'ort' strategy.\nwarning: lazy fetching disabled; some objects may not be available\nfatal: could not fetch 2d65d03ef8f8e442b505cc7e892ce858e7dde2f9 from promisor remote\n",
+  "observed_after": {
+    "head": "75725e416fcba7898f3faa47f92d2cecbcb63d93",
+    "tree": "6502427a26a47542c994ebedb6929831707a20d1",
+    "index": "6502427a26a47542c994ebedb6929831707a20d1",
+    "parents": [
+      "51b99d4f5829b06dd652e6be77d2120bdf8168b7",
+      "a484514ac5b2e234eb682f92ee6a065ac1e4d298"
+    ],
+    "unmerged_entries": 0,
+    "status_clean": true
+  },
+  "recovery": "After verifying HEAD, parents, tree/index equality, zero unmerged entries and no active writer, ran supported git merge --quit to clear stale MERGE_HEAD metadata. Verified HEAD/tree/index unchanged and MERGE_HEAD absent. No retry was made.",
+  "missing_blob": "2d65d03ef8f8e442b505cc7e892ce858e7dde2f9; identified read-only as research/TLS/big-nine-point-query-response-bodies-20261027.json in accepted a484 tree; exact blob readable via existing alternate; unrelated to MHL bank inputs.",
+  "status": "candidate bridge commit complete; error was an attempted promised-blob fetch for an out-of-sparse-path evidence file; no source or bank changes."
+}

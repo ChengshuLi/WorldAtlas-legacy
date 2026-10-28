@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "kind": "bounded-exact-input-recovery-v1",
+  "finalizer_attempt": "finalize-current-a484-004",
+  "observed_error": "Cannot find module /tmp/mhl-evidence-e4c8/coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/startup-vintage.mjs imported from /tmp/mhl-evidence-e4c8/scripts/prepare-startup-ownership.mjs",
+  "declared_import": "scripts/prepare-startup-ownership.mjs imports ../coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/startup-vintage.mjs",
+  "exact_pin": {
+    "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+    "path": "coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/startup-vintage.mjs",
+    "mode": "100644",
+    "git_blob_oid": "73fa6ef08230944f6ba7562b1698e7512b98ae86",
+    "bytes": 2465,
+    "sha256": "710f7c342f98e275f077c50fc7028271166861551757437ad3564f9d3bbcf1f9"
+  },
+  "candidate_tree_same_pin": true,
+  "initial_worktree_materialized": false,
+  "scope": "one exact 2,465-byte code dependency from accepted commit; not world geometry",
+  "planned_action": "git restore --ignore-skip-worktree-bits --worktree --source=HEAD -- coordination/engineering/arctic-three-retained-land-fit-repair-native-20261008/startup-vintage.mjs",
+  "global_settings_changed": false
+}

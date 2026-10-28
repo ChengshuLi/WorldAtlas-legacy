@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "kind": "mhl1019-original-key-conservation-v1",
+  "status": "preparation-only; constructor/diagnostic succeeded, no final-bank result, acceptance, or credit claimed",
+  "scope": {
+    "package_id": "gb-MHL-ADM1--repair-evaluation",
+    "original_queue_commit": "23318dd9d70680495138297b9cc1a7533a466200",
+    "source_family": "gb:MHL:ADM1",
+    "source_family_index": 210,
+    "native_cells": 1019,
+    "land_cells": 1019,
+    "inland_water_cells": 0,
+    "source_relative_cells": 0,
+    "interval_segments": 456,
+    "positive_owners": 18,
+    "positive_source_features": 18,
+    "native_blocks": [
+      29,
+      30,
+      31
+    ]
+  },
+  "original_key_set": {
+    "interval_count": 456,
+    "cell_count": 1019,
+    "unique_count": 1019,
+    "owner_x_y_tuple_sha256": "416ce7fc2eeaf7e4d8f3bd6e6f5554676708493d13a1a199757f68db4e2e9458"
+  },
+  "exact_conservation": {
+    "patch": {
+      "count": 1019,
+      "unique": 1019,
+      "sha256": "416ce7fc2eeaf7e4d8f3bd6e6f5554676708493d13a1a199757f68db4e2e9458",
+      "exactly_equals_original_owner_x_y": true
+    },
+    "literal_selected_owner_observation": {
+      "query_count": 1019,
+      "query_sha256": "d4efa615625ad4ec05e2d45eea7baf76bc573ff8e359fb9726cf5cac80ad44ef",
+      "coordinate_tuple_sha256": "f46cfbbf2c47ab77832448ad9f37f750b05371535f566d468c9373b0f8385c7b",
+      "exactly_equals_original_coordinate_set": true,
+      "effective_selected_owner_values": [
+        0
+      ],
+      "base_owner_values": [
+        null
+      ],
+      "accepted_additive_owner_values": [
+        null
+      ]
+    },
+    "native_diagnostic": {
+      "requested_cells": 1019,
+      "supported_cells": 1019,
+      "held_cells": 0,
+      "supported_tuple_sha256": "416ce7fc2eeaf7e4d8f3bd6e6f5554676708493d13a1a199757f68db4e2e9458",
+      "exactly_equals_original_owner_x_y": true
+    },
+    "native_constructor": {
+      "kind": "existing-source-target-native-constructor-result",
+      "targets": 18,
+      "native_cells": 1019,
+      "tuple_sha256": "416ce7fc2eeaf7e4d8f3bd6e6f5554676708493d13a1a199757f68db4e2e9458",
+      "exactly_equals_original_owner_x_y": true,
+      "target_bindings": [
+        {
+          "target_id": "gb:MHL:ADM1:77969171B37424980791701",
+          "pixelIndex": 29925,
+          "native_cells": 35
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B89836250003833",
+          "pixelIndex": 29942,
+          "native_cells": 38
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B78565267382439",
+          "pixelIndex": 29940,
+          "native_cells": 44
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B38536087618645",
+          "pixelIndex": 29926,
+          "native_cells": 336
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B54378659360174",
+          "pixelIndex": 29931,
+          "native_cells": 44
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B53385125256121",
+          "pixelIndex": 29930,
+          "native_cells": 8
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B38591821482466",
+          "pixelIndex": 29927,
+          "native_cells": 34
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B5098285569707",
+          "pixelIndex": 29929,
+          "native_cells": 32
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B34066116483983",
+          "pixelIndex": 29923,
+          "native_cells": 58
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B4211054760807",
+          "pixelIndex": 29928,
+          "native_cells": 78
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B77738089577037",
+          "pixelIndex": 29939,
+          "native_cells": 3
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B95504405890016",
+          "pixelIndex": 29943,
+          "native_cells": 39
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B60065562167569",
+          "pixelIndex": 29935,
+          "native_cells": 40
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B35666329157800",
+          "pixelIndex": 29924,
+          "native_cells": 15
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B58043664047812",
+          "pixelIndex": 29933,
+          "native_cells": 36
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B58637068818674",
+          "pixelIndex": 29934,
+          "native_cells": 94
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B80728608262829",
+          "pixelIndex": 29941,
+          "native_cells": 17
+        },
+        {
+          "target_id": "gb:MHL:ADM1:77969171B57525149952276",
+          "pixelIndex": 29932,
+          "native_cells": 68
+        }
+      ]
+    }
+  },
+  "source_family": {
+    "source_id": "gb:MHL:ADM1",
+    "complete_original_family_features": 24,
+    "positive_targets": 18,
+    "context_only_targets": [
+      "gb:MHL:ADM1:77969171B15122701338463",
+      "gb:MHL:ADM1:77969171B260410775552",
+      "gb:MHL:ADM1:77969171B26181209823953",
+      "gb:MHL:ADM1:77969171B60639821987115",
+      "gb:MHL:ADM1:77969171B69777139929553",
+      "gb:MHL:ADM1:77969171B75968789186626"
+    ],
+    "companion_physical_interpretation_cells": 4110,
+    "companion_included": false,
+    "current_selected_part": {
+      "commit": "e4c8c12d8aa93f15071f5a00c66542e9db586188",
+      "path": "data/geography/part-15.json",
+      "mode": "100644",
+      "git_blob_oid": "4ef51307797f81b8cf7a647495f037a089f8b368",
+      "bytes": 5180426,
+      "sha256": "6f763059820d14a4eab78173a756a8869821dd810e94f77c20eb5510c6cfb1df"
+    },
+    "source_current_geometry_differences": 24
+  },
+  "source_rights_and_evidence_limits": {
+    "source": "geoBoundaries MHL ADM1 simplified release; represented-year claim 2017 as recorded; source OpenStreetMap, Wambacher; canonical boundary Unknown; ODbL 1.0 attribution/license preserved",
+    "rights": "No independent rights-compliance certification; no outreach, settlement/population import, alternate gated source, or access-control bypass.",
+    "geometry": "2017 source geometries and selected current part-15 target geometries remain distinct. Source-to-owner joins are recorded lineage, not legal-boundary authentication.",
+    "physical": {
+      "whole_target_issues": 14,
+      "missing_issues": 5,
+      "extra_issues": 9,
+      "affected_targets": 9,
+      "exact_centers": 1019,
+      "center_contacts_with_recorded_issues": 0,
+      "center_support": "all original centers within corresponding source feature and mapped-land support; zero mapped-water/outside-L1/hierarchy/contradictory/issue-center contacts",
+      "qualification_limit": "Center contacts do not erase whole-target physical issues or establish whole-parent/current legal certification."
+    },
+    "native": "The existing source-target constructor is candidate preparation. Its result is not a final selected-bank patch or root acceptance."
+  },
+  "checks": {
+    "original_interval_expansion": true,
+    "original_patch_equality": true,
+    "observer_coordinate_equality": true,
+    "diagnostic_supported_equality": true,
+    "constructor_native_row_equality": true,
+    "one_to_one_positive_owner_source_target_binding": true,
+    "complete_24_feature_family_preserved": true
+  },
+  "inputs": {
+    "frozen_queue": {
+      "path": "physical-preparation-002/frozen-queue-record.json",
+      "bytes": 3124,
+      "sha256": "5820c72934a2d1997c403925f91c9e79a9b9bef1012341da7783273135df478d"
+    },
+    "assembly_audit": {
+      "path": "physical-preparation-002/input-assembly-audit.json",
+      "bytes": 6965,
+      "sha256": "70e9835510fc891c54bc8353c6944b98df085ee3fd01493bf4429875eac61889"
+    },
+    "original_intervals_owner_observation": {
+      "path": "physical-preparation-002/owner-observation.json",
+      "bytes": 228962,
+      "sha256": "8571fc4c2bc7a3e65445300a69d7c41e1a373fb50394892ebb71ccced73c4c43"
+    },
+    "original_patch": {
+      "path": "physical-preparation-002/original-native-patch.json",
+      "bytes": 18469,
+      "sha256": "ec56f00d295499be668f8f2ec29fe747165877cc98793b380ad435cff2dc4f22"
+    },
+    "source_targets": {
+      "path": "physical-preparation-002/source-targets.json",
+      "bytes": 34686,
+      "sha256": "5e63c9fdaeda3b9f1a39b55033c39f7b10260e73e4b87af93977d9bed31e7bdb"
+    },
+    "physical_whole_target": {
+      "path": "physical-preparation-002/whole-target-support.json",
+      "bytes": 383950,
+      "sha256": "8d9bfd14fac83a8dcf6229bfa5f1390ae5944ab2b8d2bd023d911f809d6b6743"
+    },
+    "physical_center_application": {
+      "path": "physical-preparation-002/center-physical-application.json",
+      "bytes": 428110,
+      "sha256": "117295a167041994ee1243ddc52986f9cd7b5d8c0c0e7094bf84e7a4964095c1"
+    },
+    "source_evidence": {
+      "path": "source-evidence-003/source-evidence.json",
+      "bytes": 39639,
+      "sha256": "91e57f38cbfc99926544c063a20230ebd4c5915a1cf9ca7a693e2476e4132579"
+    },
+    "source_evidence_config": {
+      "path": "source-evidence-003-config.json",
+      "bytes": 37893,
+      "sha256": "e05e1c9eacf4ea49297be3a59c3491a5df9c5ce15e57a2b39f379f159187596d"
+    },
+    "native_diagnostic": {
+      "path": "native-diagnostic-003/native-diagnostic.json",
+      "bytes": 85615,
+      "sha256": "d4f055b526490c33db567b69065e9702a044c91e4ac3017a500aaa8465177460"
+    },
+    "native_diagnostic_config": {
+      "path": "native-diagnostic-003-config.json",
+      "bytes": 396,
+      "sha256": "8a47930f223e70b98790e2fad01ad9100f8093bf05b1f846538ffc8f61f29714"
+    },
+    "native_constructor_result": {
+      "path": "native-authority-001/constructor-result.json",
+      "bytes": 34035,
+      "sha256": "fcee204d1d4447c35ca4a172cb15f98d6fc7249d25ed9e48b0cf241b404ddb49"
+    },
+    "native_authority_binding": {
+      "path": "native-authority-001/authority-binding.json",
+      "bytes": 765,
+      "sha256": "7df5e47e4a75e211c942cc840fa6a67e28c87c7e1c57019410f2c278b9fe4d36"
+    },
+    "native_rule_preimage": {
+      "path": "native-authority-001/original-rule-preimage.json",
+      "bytes": 762,
+      "sha256": "9b007eea91889ae275bea25605c97b840db8ce1a212eea889cf86a6e777679be"
+    },
+    "native_authority_config": {
+      "path": "native-authority-001-config.json",
+      "bytes": 396,
+      "sha256": "8a47930f223e70b98790e2fad01ad9100f8093bf05b1f846538ffc8f61f29714"
+    }
+  }
+}
