@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "kind": "trusted-selected-full-bank-comparison-receipt",
+  "baseline_commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+  "candidate_commit": "291a6a77aa9ef6109556419d166adeff4d496ab0",
+  "live_main_at_preflight": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+  "status": "no-new-native-loss",
+  "method": "selected-native-owner-conservation-v1",
+  "exit_code": 0,
+  "start_utc": "2026-10-27T12:26:44Z",
+  "end_utc": "2026-10-27T12:29:21Z",
+  "observer_session_id": 63058,
+  "wrapper_shell_pid_in_invocation_namespace": "2",
+  "report": {
+    "path": "coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-002/raw-report.json",
+    "bytes": 115552,
+    "sha256": "ee9d6e6849ac1a6de74075065de26c8f56f75de22631fd6244743c2781b7c5f2"
+  },
+  "summary": {
+    "compared_rows": 262166,
+    "added_cells": 411,
+    "removed_cells": 0,
+    "reassigned_cells": 0,
+    "lost_or_reassigned_cells": 0,
+    "changed_owner_ids": [
+      "gb:TKM:ADM2:10190150B31923585689840",
+      "gb:TKM:ADM2:10190150B49022220136906",
+      "gb:TKM:ADM2:10190150B64529450546528"
+    ],
+    "accepted_bank_index_sha256": "7dea95c07718bc8245ec39f867454ecd80c272f9b98a7e44e9ffb08f3130d845",
+    "candidate_bank_index_sha256": "5aee1cb64cb07fc034a724ee4fc7208a36f38d1c7cf85a88c0bc859847511b79"
+  },
+  "execution_code_invariance": {
+    "trusted_JOINT_CODE_diff_count": 0,
+    "candidate_code_executed_field": true,
+    "field_semantics": "inspectSelectedFinalBank currently sets this true whenever checkout HEAD differs from baseline; it is conservative head-difference metadata. The candidate/base changed paths contain no trusted execution-code changes; all 18 JOINT_CODE OIDs were unchanged."
+  },
+  "limits": [
+    "Local trusted comparison only; hosted tests/build/emitted controls pending.",
+    "No root scientific acceptance or key-credit claim.",
+    "Historical 2d comparison and all finalizer failures remain preserved; current comparison is a0-based."
+  ],
+  "relocation_manifest": ".tkm-private/koytendag127/untracked-startup-preservation-002/relocation-manifest.json"
+}

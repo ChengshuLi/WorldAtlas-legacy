@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "path": "data/ownership-selection.json"
+  },
+  "package_inputs": {
+    "commit": "29e4d7c2d4215345f76cef695db93b4120e48114",
+    "path": ".github/package-inputs.json"
+  },
+  "change_evidence": {
+    "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/authority-composition-003-29e4/authority-registry.json",
+    "commit": "534c880f91d1856c6c58b40ec68e21ec36f5b2cf",
+    "mode": "100644",
+    "git_blob_oid": "17f72108c06b4798e21e776e9edd80d362a2b102",
+    "bytes": 2790,
+    "sha256": "f6a56c6920f6a7a93d404a39bed4270e460af53a367b064d49a89987a75dd6e9"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+        "path": "coordination/engineering/malta1196-repair-evaluation-20261027/native-inputs-001/finalized-current-2d-001/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "8840cc00ba31804551dcf28419cebdcbfe28746e",
+        "bytes": 1156,
+        "sha256": "befab733df9d47e3aa06eee792c22bbea17b5a2c96d3879177250880845fba3e"
+      },
+      "startup_ownership": {
+        "commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+        "path": "coordination/engineering/malta1196-repair-evaluation-20261027/native-inputs-001/finalized-current-2d-001/startup-ownership.json",
+        "mode": "100644",
+        "git_blob_oid": "8a45a5d6a0abc5555ba77a7f0d363c511a0efca3",
+        "bytes": 49610,
+        "sha256": "7dea95c07718bc8245ec39f867454ecd80c272f9b98a7e44e9ffb08f3130d845"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+node:fs:622
+  return binding.open(
+                 ^
+
+Error: EEXIST: file already exists, open 'coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/report.json'
+    at Object.openSync (node:fs:622:18)
+    at Object.writeFileSync (node:fs:2497:35)
+    at file:///workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/8a7188389791c016a73ea614187e673fb1038d61bf2fe758eb2e695cf4d07768/work/coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/compare.mjs:23:4
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  errno: -17,
+  code: 'EEXIST',
+  syscall: 'open',
+  path: 'coordination/engineering/tkm-411-combined-20261027/full-bank-comparison-003/report.json'
+}
+
+Node.js v24.19.0

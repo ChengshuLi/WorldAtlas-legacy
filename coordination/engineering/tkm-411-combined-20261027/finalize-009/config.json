@@ -1,0 +1,39 @@
+{
+  "change_evidence": {
+    "bytes": 5235,
+    "commit": "3eaf8fb7370e655c2a3a54ad0f6aec5135460885",
+    "git_blob_oid": "ae10e5473db8d30c77b5fd728cfc26f5270d27d4",
+    "mode": "100644",
+    "path": "coordination/engineering/tkm-411-combined-20261027/composition-003-output/authority-registry.json",
+    "sha256": "0998b90e61996e67736b1cb73387d2a1a2af070977e76d9a9190a8c36d858146"
+  },
+  "package_inputs": {
+    "commit": "d473d1767343795ae8302747b3694332fd5e2433",
+    "path": ".github/package-inputs.json"
+  },
+  "prior_finalizations": [
+    {
+      "preparation": {
+        "commit": "d473d1767343795ae8302747b3694332fd5e2433",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalized-combined-180-current-74b9-002/preparation.json",
+        "mode": "100644",
+        "git_blob_oid": "0f3db1dc60dea7e408e9d1e068ed6156c5305737",
+        "bytes": 1156,
+        "sha256": "3b72f54ba6511146d4d79cf11b92f18fc52e7a90b39803c2422d9dcf2a8f9127"
+      },
+      "startup_ownership": {
+        "commit": "d473d1767343795ae8302747b3694332fd5e2433",
+        "path": "coordination/engineering/hrv-dgu-native-qualification-20261027/combined-180/finalized-combined-180-current-74b9-002/startup-ownership.json",
+        "mode": "100644",
+        "git_blob_oid": "95d276e67120d2eafb49f090f4f4a6f44d98849b",
+        "bytes": 49610,
+        "sha256": "d2818c4737f2ddd14bacef130f63409361a89e3d60953307ed158409ec8abe24"
+      }
+    }
+  ],
+  "selector": {
+    "commit": "d473d1767343795ae8302747b3694332fd5e2433",
+    "path": "data/ownership-selection.json"
+  },
+  "version": 2
+}

@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "selector": {
+    "commit": "a0b1d2d9164ffd61f9a8a20cb2eb7f259d47506f",
+    "path": "data/ownership-selection.json",
+    "mode": "100644",
+    "git_blob_oid": "5758862046a78b8df974b7bc71fae9d8437a7e42",
+    "bytes": 2292,
+    "sha256": "6648f01e62fb851b2b426977578d4899465212e54d02f002706b340ca0efa883"
+  },
+  "authorities": [
+    {
+      "rule_preimage": {
+        "commit": "2614d6ddb164ec70cc17cce2a57ab0a1c106bb79",
+        "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/native-authority-001/original-rule-preimage.json",
+        "mode": "100644",
+        "git_blob_oid": "ef8e02bce850d1df040dcc861bbdf11716a769f5",
+        "bytes": 731,
+        "sha256": "74352254238a03b7e8dd1d12d9c99d2abfc7d95c1527dff04703fa1e18dd2358"
+      },
+      "source_authority": {
+        "commit": "2614d6ddb164ec70cc17cce2a57ab0a1c106bb79",
+        "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/native-authority-001/authority-binding.json",
+        "mode": "100644",
+        "git_blob_oid": "ec70ae94e2da6074365c1a21b738238684cd889b",
+        "bytes": 734,
+        "sha256": "2d4e412dcffa7688b7e8fbf9cd02e2073481ef0600682693dd417add6275f225"
+      },
+      "ledger": {
+        "commit": "2614d6ddb164ec70cc17cce2a57ab0a1c106bb79",
+        "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/native-authority-001/constructor-result.json",
+        "mode": "100644",
+        "git_blob_oid": "4e4965f9dd078729e050b2b2b6178e192809244b",
+        "bytes": 14997,
+        "sha256": "964f4aa3291f0c3b19d5f28304e47ea332d329bd77718d32774ef31463e35c3a"
+      },
+      "native_patch": {
+        "bytes": 9581,
+        "commit": "27d0eee45dd6b90b3ff0f034ea9440b3c0fcd577",
+        "git_blob_oid": "d6cf2d1124fadd699366bfd7157947865a459bd1",
+        "mode": "100644",
+        "path": "coordination/engineering/mdv-original-repair-evaluation-20261021/native-patch-001.json",
+        "sha256": "138d4feff7e093d38c4b32fbea28eab52f816fcc99f3218fcac56e7ed6c34e38"
+      }
+    }
+  ]
+}

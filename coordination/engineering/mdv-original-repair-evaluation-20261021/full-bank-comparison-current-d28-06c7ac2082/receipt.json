@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "kind": "selected-joint-execution-receipt",
+  "method": "accepted selectedJointStage",
+  "baseline": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+  "trusted_code_commit": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+  "candidate": "06c7ac2082ed7cfb99369d6c1a56d3c25f36f1c0",
+  "branch": "research/mdv-original-repair-qualification-20261027-01",
+  "candidate_code_executed": false,
+  "exit_code": 0,
+  "exit_marker": {
+    "path": "exit.txt",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "report": {
+    "path": "report.json",
+    "bytes": 88258,
+    "sha256": "ab28014f6e4e3db3bb21ec3e6bd92af2372b6aa7721967eef04f193d485d1d4f"
+  },
+  "stderr": {
+    "path": "stderr.log",
+    "bytes": 126,
+    "sha256": "1ca50eaec0f64aec3153ac1dc56d7abc8fa201812b88e979475b3fa712c146c9"
+  },
+  "runtime_version": "v24.19.0",
+  "command": [
+    "node",
+    "coordination/engineering/selected-geography-effective-prevention-20261009/selected-joint-entry.mjs",
+    "/workspace/scratch/127991fc8b8e/.worldatlas-workspaces/a7d1c19eff225d01/169ad824de76cb02e8960c4a36ca1a570434a9aa5c4a3b25f25fcea1ae8b90be/work",
+    "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "06c7ac2082ed7cfb99369d6c1a56d3c25f36f1c0",
+    "/tmp/mdv-selected-joint-d28-06c7ac2082"
+  ],
+  "environment_controls": [
+    "NODE_PATH unset",
+    "NODE_OPTIONS unset",
+    "GIT_NO_LAZY_FETCH=1",
+    "GIT_NO_REPLACE_OBJECTS=1"
+  ],
+  "comparison": {
+    "status": "no-new-native-loss",
+    "proof": "complete-accepted-final-bank-and-qualified-new-intervals",
+    "compared_rows": 262166,
+    "changed_rows": 207,
+    "added_cells": 850,
+    "removed_cells": 0,
+    "reassigned_cells": 0,
+    "lost_or_reassigned_cells": 0,
+    "execution_code_inventory_count": 18
+  },
+  "checkout_restoration": {
+    "baseline_checkout": "d28ed3a4022616218f33639c50b8fcfffbeb8418",
+    "branch_restored": "research/mdv-original-repair-qualification-20261027-01",
+    "restored_head": "06c7ac2082ed7cfb99369d6c1a56d3c25f36f1c0",
+    "clean_after": true
+  },
+  "notes": [
+    "Candidate code was not executed; the accepted baseline checker compared immutable baseline/candidate final-bank inputs.",
+    "This is technical conservation evidence only, not source acceptance, selected-output approval, legal/rights determination, or science credit."
+  ]
+}
