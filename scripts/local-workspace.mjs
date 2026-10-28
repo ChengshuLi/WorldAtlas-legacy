@@ -1159,6 +1159,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     if (git('rev-parse', '--verify', `${preservedRef}^{commit}`).trim() !== expectedHead) {
       throw Error('Exact owner recovery ref is missing or changed');
     }
+    try { git('merge-base', '--is-ancestor', entry.head, expectedHead); }
+    catch { throw Error('Expected HEAD is not a descendant of the registered owner slot start'); }
     if (value.entries.some(item => item !== entry && (item.path === entry.path || item.branch === entry.branch
       || item.dependencies?.some?.(dependency => dependency === worker || dependency === entry.path || dependency === entry.branch)))) {
       throw Error('Another managed slot depends on this workspace');
@@ -1195,6 +1197,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     }
     const inventoryBody = JSON.stringify(inventory.entries);
     if (createHash('sha256').update(inventoryBody).digest('hex') !== inventory.inventorySha256) throw Error('Partial-checkout inventory digest mismatch');
+    try { git('merge-base', '--is-ancestor', inventory.startHead, expectedHead); }
+    catch { throw Error('Candidate HEAD is not a descendant of the registered owner slot start; preserve partial checkout'); }
     const reviewer = reviewReceipt;
     if (!reviewer || reviewer.result !== 'PASS' || reviewer.operation !== 'partial-removal-review'
       || !id(reviewer.reviewer) || reviewer.reviewer === worker || reviewer.worker !== worker || reviewer.slot !== slot
@@ -1228,6 +1232,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
         if (git('rev-parse', '--verify', `${expectedBranch}^{commit}`).trim() !== expectedHead
           || git('rev-parse', '--verify', `${pendingReceipt.preservedRef}^{commit}`).trim() !== expectedHead
           || worktrees(false).some(item => item.path === expectedPath)) throw Error('Pending archive no longer matches the live Git bindings');
+        try { git('merge-base', '--is-ancestor', pendingReceipt.startHead, expectedHead); }
+        catch { throw Error('Pending archive HEAD is not a descendant of the registered owner slot start; preserve for inspection'); }
         const liveState = state(), liveEntry = liveState.entries.find(item => item.worker === worker && item.slot === slot);
         if (liveEntry && (liveEntry.path !== expectedPath || liveEntry.branch !== expectedBranch
           || liveEntry.head !== pendingReceipt.startHead || liveEntry.status !== 'ready')) {
@@ -1285,6 +1291,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
     if (recoveryHead !== expectedHead || git('rev-parse', '--verify', `refs/heads/${expectedBranch}^{commit}`).trim() !== expectedHead) {
       throw Error('Candidate branch or owner recovery ref changed; preserve the slot');
     }
+    try { git('merge-base', '--is-ancestor', inventory.startHead, expectedHead); }
+    catch { throw Error('Candidate HEAD is not a descendant of the registered owner slot start; preserve the slot'); }
     if (value.entries.some(item => item !== entry && (item.path === entry.path || item.branch === entry.branch
       || item.dependencies?.some?.(dependency => dependency === worker || dependency === entry.path || dependency === entry.branch)))) {
       throw Error('Another managed slot depends on this partial checkout');
@@ -1336,6 +1344,8 @@ export function workspaceManager(repo, {freeBytes, onStartupGuidance,
       || git('rev-parse', '--verify', `${preservedRef}^{commit}`).trim() !== expectedHead) {
       throw Error('Candidate branch or recovery ref changed before preservation move');
     }
+    try { git('merge-base', '--is-ancestor', receipt.startHead, expectedHead); }
+    catch { throw Error('Candidate HEAD is not a descendant of the registered owner slot start before preservation move'); }
     const finalReaders = inspectReaders ? inspectReaders(entry.path) : (() => {
       const probe = spawnSync('lsof', ['-t', '+D', entry.path], {encoding: 'utf8', env: noLazyFetch});
       if (probe.error || ![0, 1].includes(probe.status)) throw Error('Unable to prove the partial checkout has no open readers');

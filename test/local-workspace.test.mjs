@@ -1019,6 +1019,51 @@ test('owner reconciliation preserves a finite partial-removal checkout after Git
   assert.equal(audit.totalBytes, manifest.totalBytes);
 });
 
+test('partial-removal inspection and reconciliation refuse an unrelated candidate head without changing evidence', async t => {
+  const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
+  const worker = 'partial-removal-unrelated-owner';
+  const previousIdentity = process.env.CODEX_THREAD_ID;
+  process.env.CODEX_THREAD_ID = worker;
+  t.after(() => { if (previousIdentity === undefined) delete process.env.CODEX_THREAD_ID; else process.env.CODEX_THREAD_ID = previousIdentity; });
+  const entry = await manager.allocate({worker, branch: 'geography/tls-original-repair-20261028-finalize021'});
+  manager.ensureCapabilityFile({worker});
+  fs.writeFileSync(path.join(entry.path, 'README.md'), 'descendant candidate head\n');
+  execFileSync('git', ['-C', entry.path, 'add', 'README.md']);
+  execFileSync('git', ['-C', entry.path, 'commit', '-m', 'advance retained candidate branch']);
+  const descendantHead = execFileSync('git', ['-C', entry.path, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+  const preservedRef = `refs/worldatlas-local-recovery/${createHash('sha256').update(entry.token).digest('hex')}`;
+  git('update-ref', preservedRef, descendantHead);
+  const dotGit = fs.readFileSync(path.join(entry.path, '.git'), 'utf8');
+  const adminPath = /^gitdir: (.+)\n?$/.exec(dotGit)?.[1];
+  assert.ok(adminPath && fs.existsSync(adminPath));
+  fs.rmSync(adminPath, {recursive: true});
+
+  const manifest = manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: descendantHead});
+  const unrelatedHead = git('commit-tree', `${entry.head}^{tree}`, '-m', 'unrelated candidate head').trim();
+  assert.throws(() => git('merge-base', '--is-ancestor', entry.head, unrelatedHead),
+    'the proposed candidate is not descended from the allocated start');
+  git('update-ref', `refs/heads/${entry.branch}`, unrelatedHead);
+  git('update-ref', preservedRef, unrelatedHead);
+
+  const reviewReceipt = sealOperatorReceipt({result: 'PASS', operation: 'partial-removal-review', reviewer: 'independent-reviewer',
+    worker, slot: 'work', path: entry.path, branch: entry.branch, startHead: entry.head, head: unrelatedHead,
+    gitAdminPath: manifest.gitAdminPath, preservedRef: manifest.preservedRef, entryCount: manifest.entryCount,
+    totalBytes: manifest.totalBytes, inventorySha256: manifest.inventorySha256});
+  const unrelatedManifest = {...manifest, head: unrelatedHead};
+  const args = {worker, slot: 'work', capabilityFile: manager.capabilityFilePath({worker}),
+    expectedPath: entry.path, expectedBranch: entry.branch, expectedHead: unrelatedHead,
+    inventoryManifest: unrelatedManifest, reviewReceipt};
+  const refsBefore = git('show-ref'), entriesBefore = JSON.stringify(registryEntries(manager));
+  assert.throws(() => manager.inspectPartialRemoval({worker, slot: 'work', expectedPath: entry.path,
+    expectedBranch: entry.branch, expectedHead: unrelatedHead}), /not a descendant/);
+  assert.throws(() => manager.reconcilePartialRemoval(args), /not a descendant/);
+  assert.equal(git('show-ref'), refsBefore, 'refusal leaves every ref unchanged');
+  assert.equal(JSON.stringify(registryEntries(manager)), entriesBefore, 'refusal leaves the owner slot unchanged');
+  assert.ok(fs.existsSync(entry.path), 'refusal retains the partial checkout');
+  assert.ok(fs.existsSync(manager.capabilityFilePath({worker})), 'refusal retains the owner capability');
+});
+
 test('partial-removal inspection refuses an old .git pointer aliased to another active worktree', async t => {
   const {repo, manager, git} = fixture(t, {inspectReaders: () => []});
   const worker = 'partial-removal-alias-owner';
