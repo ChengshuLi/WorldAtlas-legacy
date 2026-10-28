@@ -96,6 +96,7 @@ function fixture({legacy=false,displayPrefix='',change=()=>{},changeSupport=()=>
  const patch=put('patch.json',state.proposed);
  class FixtureReader extends ImmutableReader{
   git(...args){
+    if(args[0]==='--no-lazy-fetch')args=args.slice(1);
    if(args[0]==='ls-tree'){
     const entry=files.get(args[2]+':'+args.at(-1));assert.ok(entry,args[2]+':'+args.at(-1));
     return Buffer.from('100644 blob '+entry.pin.git_blob_oid+'\t'+args.at(-1)+'\0');
