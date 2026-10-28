@@ -70,6 +70,10 @@ function constructorFixture(change=()=>{},implementation=engine){
   const patch=put('patch.json',state.proposed);
   class FixtureReader extends implementation.ImmutableReader{
     git(...args){
+      // Production readers disable lazy fetch before probing an immutable
+      // commit. Keep the fixture's response contract focused on Git's command
+      // and operands so it remains valid under that transport guard.
+      if(args[0]==='--no-lazy-fetch')args=args.slice(1);
       if(args[0]==='ls-tree'){
         const name=args.at(-1),entry=files.get(name);assert.ok(entry,name);
         return Buffer.from(`100644 blob ${entry.pin.git_blob_oid}\t${name}\0`);

@@ -619,6 +619,26 @@ test('reviewed hosted consumers retain their current inputs through actual spars
   } finally { fs.rmSync(temporary,{recursive:true,force:true}); }
 });
 
+test('reviewed integration proof materializes the exact pinned root and canonical guides', () => {
+  const consumer='test/integration-proof.test.mjs';
+  const operands=['AGENTS.md','README.md','docs/DEVELOPMENT.md','docs/GEOGRAPHY.md','docs/HISTORY.md',
+    'docs/DATA_ARCHITECTURE.md','docs/VALIDATION.md','docs/OPERATIONS.md'];
+  const row={sha:sha('e'),mode:'100644',type:'blob'};
+  const entries=new Map([...EXECUTION_CODE,...operands,consumer,'test/fixtures/contract/input.json'].map(name=>[name,row]));
+  const request={base:sha('a'),head:sha('b'),files:[consumer]};
+  const context={base:request.base,head:request.head,entries,files:[],definition:loadPackageInputs()};
+  const plan=reviewedTestPlan(request,context);
+  assert.equal(plan.build,false);
+  for(const operand of operands) {
+    assert(plan.inputs.includes(operand));
+    assert(plan.checkout_patterns.includes('/'+operand));
+    const absent=new Map(entries);absent.delete(operand);
+    assert.throws(()=>reviewedTestPlan(request,{...context,entries:absent}),/unavailable/);
+    const definition={...context.definition,verification_paths:context.definition.verification_paths.filter(name=>name!==operand)};
+    assert.throws(()=>reviewedTestPlan(request,{...context,definition}),/verification declaration/);
+  }
+});
+
 test('reviewed regional gate materializes only its live policy for the actual sparse consumer', () => {
   const consumer='test/regional-research-gate.test.mjs',operand='data/research-geography-gate.json';
   const row={sha:sha('e'),mode:'100644',type:'blob'};
