@@ -1,0 +1,85 @@
+{
+  "accepted_indexed_body_count": 79,
+  "accepted_main_commit": "0fc69997de05473dfbebd3f888657db85b752bd9",
+  "accepted_main_selector_oid": "ccd48abf5ddad3c11309e6a94ffd3ff9c0a334d0",
+  "accepted_main_startup_index_oid": "b34e0576aff6288dfa3e8eb607886b10695f9d2b",
+  "candidate_commit": "70f7d45bde65625ee0ddd696e866317d05170f82",
+  "candidate_only_unindexed_paths": [
+    {
+      "accepted_main": null,
+      "candidate": {
+        "bytes": 186503,
+        "oid": "982f7cbc139e44acfa1cdf72ab8bf9285c2f6f76",
+        "path": "data/canonical-grid/current-startup/geography/effective-context-9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261.json.gz",
+        "sha256": "9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261"
+      },
+      "listed_in_accepted_startup_index": false,
+      "listed_in_prior_candidate_index": true
+    },
+    {
+      "accepted_main": null,
+      "candidate": {
+        "bytes": 3484898,
+        "oid": "6a29a85354eee147d1dfe42c6eae2a790a3c4310",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/31907b7688cb799996d51797d68076853258afd8d07123b49c79a7d8a464c9cd/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "31907b7688cb799996d51797d68076853258afd8d07123b49c79a7d8a464c9cd"
+      },
+      "listed_in_accepted_startup_index": false,
+      "listed_in_prior_candidate_index": true
+    },
+    {
+      "accepted_main": null,
+      "candidate": {
+        "bytes": 3104042,
+        "oid": "976dc6c607f5843258709d62add5238d2f6f5186",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/325ec8c3bb1dd509ebe9e98aa87bd41dd36a450006c91efdea27e93cd10fdf8a/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "325ec8c3bb1dd509ebe9e98aa87bd41dd36a450006c91efdea27e93cd10fdf8a"
+      },
+      "listed_in_accepted_startup_index": false,
+      "listed_in_prior_candidate_index": true
+    },
+    {
+      "accepted_main": null,
+      "candidate": {
+        "bytes": 3573993,
+        "oid": "553a2ab76f8a4aca1d49cf0bfbc5b58e509040d1",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/5a319725159f15ebd8f86660fe3e95eab5fa83ab75106db218ed2b0b2f57c7de/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "5a319725159f15ebd8f86660fe3e95eab5fa83ab75106db218ed2b0b2f57c7de"
+      },
+      "listed_in_accepted_startup_index": false,
+      "listed_in_prior_candidate_index": true
+    },
+    {
+      "accepted_main": null,
+      "candidate": {
+        "bytes": 3620506,
+        "oid": "a6099f6cb7bcb4e7208026a83bfb41cd3349eba6",
+        "path": "data/canonical-grid/current-startup/ownership-vintages/d4a65c2b92495a93152206b53535a968589dbf3f023cd4e7ff6e61e866dc0799/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "d4a65c2b92495a93152206b53535a968589dbf3f023cd4e7ff6e61e866dc0799"
+      },
+      "listed_in_accepted_startup_index": false,
+      "listed_in_prior_candidate_index": true
+    }
+  ],
+  "prior_candidate_index": {
+    "bytes": 49610,
+    "commit": "70f7d45bde65625ee0ddd696e866317d05170f82",
+    "git_blob_oid": "264f83f549a3ed44b60aa3bc9328af0e82dd6030",
+    "indexed_body_count": 79,
+    "path": "data/canonical-grid/current-startup/index.json",
+    "sha256": "8f62790a673e1c6b420ed1d27216b0d347cc9a068c68d8f6361cf4c0c8e38fc3"
+  },
+  "purpose": "finite merge reconciliation of stale MHL candidate-only current-startup files to accepted 0fc69997 preimage before rerunning the MHL finalizer; no source/native evidence changed",
+  "restore_contract": {
+    "accepted_preimage": "git restore --source=0fc69997de05473dfbebd3f888657db85b752bd9 --worktree --staged -- <accepted path>",
+    "candidate_evidence": "git restore --source=70f7d45bde65625ee0ddd696e866317d05170f82 --worktree --staged -- <candidate-only path>",
+    "scope": "only the six explicitly listed paths; all candidate blob OIDs remain reachable from the immutable prior branch commit"
+  },
+  "restored_accepted_path": {
+    "bytes": 180769,
+    "listed_in_accepted_startup_index": true,
+    "oid": "09bc523e5cfb5dcd5a88105fe112a4378b2e5d4d",
+    "path": "data/canonical-grid/current-startup/geography/effective-context-5480d5a76f55009c1b430145e14774ef967adb2f85dfb7c4648ea4ffbebf9741.json.gz",
+    "sha256": "5480d5a76f55009c1b430145e14774ef967adb2f85dfb7c4648ea4ffbebf9741"
+  }
+}

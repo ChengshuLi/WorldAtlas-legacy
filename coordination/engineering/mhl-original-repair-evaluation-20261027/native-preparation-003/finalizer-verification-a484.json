@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "kind": "mhl1019-finalizer-output-verification-a484-v1",
+  "candidate_pre_finalizer": "75725e416fcba7898f3faa47f92d2cecbcb63d93",
+  "accepted_data_commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+  "config_sha256": "f3090e1d9739a03bb2a175f09eae8636e29dc7c91de2bcb2d65f59b0efd6c547",
+  "finalizer_attempt": "attempts/finalize-current-a484-005",
+  "finalizer_status": 0,
+  "outputs": {
+    "ownership-selection.json": {
+      "bytes": 2310,
+      "sha256": "102718c7a116c6987a73f7b084ea2bd2c1043a7b8dbdb12b4ffcb02d87dc6cda",
+      "verified": true
+    },
+    "package-inputs.json": {
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3",
+      "verified": true
+    },
+    "selected-delivery-expectations.json": {
+      "bytes": 485,
+      "sha256": "bd3efd8d970d258a0f82f4763ca7e557dc4df7485180b7098ffe0f7ca960ca3a",
+      "verified": true
+    },
+    "startup-ownership.json": {
+      "bytes": 49610,
+      "sha256": "8f62790a673e1c6b420ed1d27216b0d347cc9a068c68d8f6361cf4c0c8e38fc3",
+      "verified": true
+    }
+  },
+  "selection_diff_keys": [
+    "change_evidence",
+    "prepared_bank",
+    "reference"
+  ],
+  "selection_change_evidence": {
+    "bytes": 1376,
+    "commit": "6cf478c7e6f67077c556c280b4ba58ad44ab5924",
+    "git_blob_oid": "a09162c06dc018323cea19d6a79da869b67fe425",
+    "mode": "100644",
+    "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/compose-current-delta-001/authority-registry.json",
+    "sha256": "afd21f1e93a567674d15833d644fb2a11f0663e5c3a99e949ac8bf349ff45d2c"
+  },
+  "bank_delta": {
+    "old_body_count": 79,
+    "new_body_count": 79,
+    "added_count": 7,
+    "retired_count": 7,
+    "changed_same_path_count": 0,
+    "compatibility_count": 30,
+    "compatibility_exact_overlap_count": 30,
+    "added": [
+      {
+        "bytes": 186503,
+        "path": "geography/effective-context-9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261.json.gz",
+        "sha256": "9cb8b2fe35e6befdb73ab012794c3bd9646488b24ea0ff4f5841c27ddc47b261",
+        "materialized_bytes": 186503,
+        "verified": true
+      },
+      {
+        "bytes": 3518043,
+        "path": "ownership-vintages/00f916430540272bce5b84fc672423afe61f47da1e78e427ae3d777f4bec7318/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "00f916430540272bce5b84fc672423afe61f47da1e78e427ae3d777f4bec7318",
+        "materialized_bytes": 3518043,
+        "verified": true
+      },
+      {
+        "bytes": 3484898,
+        "path": "ownership-vintages/31907b7688cb799996d51797d68076853258afd8d07123b49c79a7d8a464c9cd/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "31907b7688cb799996d51797d68076853258afd8d07123b49c79a7d8a464c9cd",
+        "materialized_bytes": 3484898,
+        "verified": true
+      },
+      {
+        "bytes": 3104042,
+        "path": "ownership-vintages/325ec8c3bb1dd509ebe9e98aa87bd41dd36a450006c91efdea27e93cd10fdf8a/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "325ec8c3bb1dd509ebe9e98aa87bd41dd36a450006c91efdea27e93cd10fdf8a",
+        "materialized_bytes": 3104042,
+        "verified": true
+      },
+      {
+        "bytes": 3573993,
+        "path": "ownership-vintages/5a319725159f15ebd8f86660fe3e95eab5fa83ab75106db218ed2b0b2f57c7de/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "5a319725159f15ebd8f86660fe3e95eab5fa83ab75106db218ed2b0b2f57c7de",
+        "materialized_bytes": 3573993,
+        "verified": true
+      },
+      {
+        "bytes": 3620506,
+        "path": "ownership-vintages/d4a65c2b92495a93152206b53535a968589dbf3f023cd4e7ff6e61e866dc0799/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "d4a65c2b92495a93152206b53535a968589dbf3f023cd4e7ff6e61e866dc0799",
+        "materialized_bytes": 3620506,
+        "verified": true
+      },
+      {
+        "bytes": 317106,
+        "path": "ownership-vintages/d7ab6e1f098ab0a28cbb214fc23438c476613a8c87923bd6363b66a10a3e21bf/native-v1/ownership/rows-0.bin.gz",
+        "sha256": "d7ab6e1f098ab0a28cbb214fc23438c476613a8c87923bd6363b66a10a3e21bf",
+        "materialized_bytes": 317106,
+        "verified": true
+      }
+    ],
+    "retired": [
+      {
+        "bytes": 180769,
+        "path": "geography/effective-context-5480d5a76f55009c1b430145e14774ef967adb2f85dfb7c4648ea4ffbebf9741.json.gz",
+        "sha256": "5480d5a76f55009c1b430145e14774ef967adb2f85dfb7c4648ea4ffbebf9741",
+        "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "verified": true
+      },
+      {
+        "bytes": 3518031,
+        "path": "ownership-vintages/04882405fbe34046fee04c41ab57825a14c4dd397e4af4c8272a1915aed636d0/native-v1/ownership/startup-runs-37748736.bin.gz",
+        "sha256": "04882405fbe34046fee04c41ab57825a14c4dd397e4af4c8272a1915aed636d0",
+        "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "verified": true
+      },
+      {
+        "bytes": 3103657,
+        "path": "ownership-vintages/1735b65d2b13d3ee3a99c8d1e36f091f5af885953da2cba8c5936e2c0919b3d3/native-v1/ownership/startup-runs-54525952.bin.gz",
+        "sha256": "1735b65d2b13d3ee3a99c8d1e36f091f5af885953da2cba8c5936e2c0919b3d3",
+        "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "verified": true
+      },
+      {
+        "bytes": 317106,
+        "path": "ownership-vintages/1f9265b35d50ff9773d056fcb6ea339c27f0c75fbe56cb87b01c75c7f2edc710/native-v1/ownership/rows-0.bin.gz",
+        "sha256": "1f9265b35d50ff9773d056fcb6ea339c27f0c75fbe56cb87b01c75c7f2edc710",
+        "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "verified": true
+      },
+      {
+        "bytes": 3572664,
+        "path": "ownership-vintages/b47e1594af4e3bee3439eef7f7b53a27b595895dd6bc727ed52b9bf40ba275b8/native-v1/ownership/startup-runs-41943040.bin.gz",
+        "sha256": "b47e1594af4e3bee3439eef7f7b53a27b595895dd6bc727ed52b9bf40ba275b8",
+        "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "verified": true
+      },
+      {
+        "bytes": 3620494,
+        "path": "ownership-vintages/c66af7f681e9f3ef5fd5b27d3b067b14435268aa1e104049184c939a40290ca1/native-v1/ownership/startup-runs-46137344.bin.gz",
+        "sha256": "c66af7f681e9f3ef5fd5b27d3b067b14435268aa1e104049184c939a40290ca1",
+        "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "verified": true
+      },
+      {
+        "bytes": 3484966,
+        "path": "ownership-vintages/ce29452e1d093801954b75938dd0130c9eab223b342175477c9eacf7678c8bb5/native-v1/ownership/startup-runs-50331648.bin.gz",
+        "sha256": "ce29452e1d093801954b75938dd0130c9eab223b342175477c9eacf7678c8bb5",
+        "prior_finalization_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+        "verified": true
+      }
+    ]
+  },
+  "prior_finalization": {
+    "commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+    "index_hash": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408",
+    "prior_ownership_hash": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+  },
+  "current_index": {
+    "bytes": 49610,
+    "sha256": "8f62790a673e1c6b420ed1d27216b0d347cc9a068c68d8f6361cf4c0c8e38fc3",
+    "equals_startup_ownership_output": true
+  },
+  "limits": {
+    "full_tests_build": false,
+    "selected_joint_comparison": false,
+    "hosted_controls": false,
+    "emitted_controls": false,
+    "acceptance": false,
+    "source_research_replayed": false,
+    "source_or_native_research_credit": false
+  }
+}

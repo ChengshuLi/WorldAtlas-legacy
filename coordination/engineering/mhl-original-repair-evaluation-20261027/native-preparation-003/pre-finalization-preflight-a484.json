@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "kind": "mhl1019-pre-finalization-preflight-a484-v1",
+  "status": "bounded finalizer permitted; no producer started in this record",
+  "accepted_current_main": {
+    "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+    "parent": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+    "verified_at": "2026-10-27T21:00:33Z",
+    "changes_from_74b9": "six evidence/docs paths only; no bank/selector/package-input/helper changes"
+  },
+  "candidate": {
+    "branch": "mhl-prep-e4c8",
+    "commit": "75725e416fcba7898f3faa47f92d2cecbcb63d93",
+    "parents": [
+      "51b99d4f5829b06dd652e6be77d2120bdf8168b7",
+      "a484514ac5b2e234eb682f92ee6a065ac1e4d298"
+    ],
+    "worktree_clean": true,
+    "tree_index_equal": true
+  },
+  "current_bank_pins": {
+    "selector": {
+      "path": "data/ownership-selection.json",
+      "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+      "git_blob_oid": "537f7b42322a9dbadfbe68da68d20c0d7e71b41c",
+      "bytes": 2293,
+      "sha256": "832f8bd84d79e61628137d20f9da006c678e21bd8e642d6e0452e95bf822396d"
+    },
+    "package_inputs": {
+      "path": ".github/package-inputs.json",
+      "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+      "git_blob_oid": "845fe07d30052ae4e6982faea86a4d5137cd5fa2",
+      "bytes": 38421,
+      "sha256": "e09d0f087dd221c17d24f4502b047fff50fff51cd5695f45e91bb672365b13c3"
+    },
+    "startup_index": {
+      "path": "data/canonical-grid/current-startup/index.json",
+      "commit": "a484514ac5b2e234eb682f92ee6a065ac1e4d298",
+      "git_blob_oid": "3bbed59f4ead5a123667b76bc9679361420a0bf8",
+      "bytes": 49610,
+      "sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+    },
+    "prior_finalization": {
+      "preparation_commit": "a8a5c2ee84b174bd7bd8177e34fc24d6d5fd8644",
+      "preparation_blob": "187cde635bef1683b07d45f1d7ceb48ea5f8771a",
+      "preparation_sha256": "c2f23b2a32cece930e97e68deadd1da07a2d67b6fb8b26547b2054d80b5eddaa",
+      "startup_ownership_blob": "3bbed59f4ead5a123667b76bc9679361420a0bf8",
+      "startup_ownership_sha256": "b64a953f432c1d359407f1106cd65b3ca60d81744f4c53e8718067f664e78408"
+    },
+    "mhl_delta": {
+      "commit": "6cf478c7e6f67077c556c280b4ba58ad44ab5924",
+      "blob": "a09162c06dc018323cea19d6a79da869b67fe425",
+      "bytes": 1376,
+      "sha256": "afd21f1e93a567674d15833d644fb2a11f0663e5c3a99e949ac8bf349ff45d2c",
+      "ancestor_of_candidate": true
+    },
+    "owner_observation": {
+      "commit": "74b9bd2dcd63fe6578d107a1e32495456bc3ac76",
+      "query_sha256": "d4efa615625ad4ec05e2d45eea7baf76bc573ff8e359fb9726cf5cac80ad44ef",
+      "output_sha256": "db171413dece96eb1f766dd636e48083f56a33072f5b028db47f9ef1e0a16ff6",
+      "effective_selected_owner_zero_count": 1019,
+      "owner_id_null_count": 1019,
+      "science_qualification": false,
+      "valid_at_a484_by_byte_identity": true
+    }
+  },
+  "capacity": {
+    "tmp_free_bytes": 3690582016,
+    "overlay_free_bytes": 128909312,
+    "ram_available_bytes": 4296273920,
+    "estimated_incremental_peak_bytes": 272629760,
+    "output_root": "/tmp/mhl-evidence-e4c8",
+    "no_shared_overlay_output": true
+  },
+  "attempt_check": {
+    "target": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalized-current-a484-001",
+    "target_absent": true,
+    "existing_finalizer_attempts_for_target": 0,
+    "active_exact_finalizer_processes": 0
+  },
+  "planned_config": {
+    "path": "coordination/engineering/mhl-original-repair-evaluation-20261027/native-preparation-003/finalize-config-current-a484.json",
+    "sha256": "a3ad3ac82486a9fa9fe2e7ff2cc0e2b71aa0c806377b0587e1f045798c44ae5c",
+    "bytes": 1973
+  },
+  "limits": [
+    "No source/native science replay",
+    "No full-world hydration",
+    "No shared/alternate Git object writes",
+    "Existing original 1,019 denominator and 18 positives + six context competitors remain immutable",
+    "Finalizer output is candidate-only; no acceptance/credit implied"
+  ]
+}
