@@ -14,6 +14,8 @@ The ONS digital-boundary product terms state that digital boundary products are 
 
 Official product listing: <https://www.data.gov.uk/dataset/687c7e75-e4f5-494f-a837-1d1a9ec45bdf/local-authority-districts-december-2019-boundaries-uk-bfe1> (the listing says “Licence: Not set” and records both OS and ONS IPR). The retained ONS item XML records OGL v3.0 and the edition above. ONS licence terms: <https://www.ons.gov.uk/methodology/geography/licences>. OGL v3 text: <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/>. OGL copyright-notice guidance: <https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/open-government-licence/copyright-notices-attribution-statements/>.
 
+OS OpenData/OGL acknowledgment guidance is available at <https://www.ordnancesurvey.co.uk/customers/public-sector/public-sector-licensing/copyright-acknowledgments>. For this item, the applicable attribution is supplied by the ONS digital-boundary product-specific OGL terms quoted above; this citation does not apply member-only supply-year or licence-number instructions.
+
 The item metadata does not state a separate OS licence class, licence number, or supply year. This packet uses the ONS digital-boundary OGL terms and their required OS acknowledgment; it does not infer a separate OS supply event. No PSGA membership or member-only terms are asserted.
 
 ## Exact validator inputs
