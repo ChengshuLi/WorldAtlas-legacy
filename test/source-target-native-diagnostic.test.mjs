@@ -228,13 +228,18 @@ function constructorFixture(change=()=>{},applicability){
   const patch=put('patch.json',state.proposed);
   class FixtureReader extends ImmutableReader{
     git(...args){
-      if(args[0]==='ls-tree'){
-        const name=args.at(-1),entry=args[2]===version?files.get(name):aliases.get(args[2]+':'+name);assert.ok(entry,name);
+      const command=args[0]==='--no-lazy-fetch'?args.slice(1):args;
+      const prefixed=args[0]==='--no-lazy-fetch';
+      if(args.includes('--lazy-fetch')||command.includes('--no-lazy-fetch')||
+        (prefixed&&!(command[0]==='cat-file'&&command[1]==='-e'&&command.length===3)))
+        throw Error('Unexpected fixture Git request: '+args.join(' '));
+      if(command[0]==='ls-tree'){
+        const name=command.at(-1),entry=command[2]===version?files.get(name):aliases.get(command[2]+':'+name);assert.ok(entry,name);
         return Buffer.from(`100644 blob ${entry.pin.git_blob_oid}\t${name}\0`);
       }
-      if(args[0]==='cat-file'&&args[1]==='-e')return Buffer.alloc(0);
-      if(args[0]==='cat-file'&&args[1]==='-s')return Buffer.from(String(byBlob.get(args[2]).length));
-      if(args[0]==='cat-file'&&args[1]==='blob')return byBlob.get(args[2]);
+      if(command[0]==='cat-file'&&command[1]==='-e')return Buffer.alloc(0);
+      if(command[0]==='cat-file'&&command[1]==='-s')return Buffer.from(String(byBlob.get(command[2]).length));
+      if(command[0]==='cat-file'&&command[1]==='blob')return byBlob.get(command[2]);
       throw Error('Unexpected fixture Git request: '+args.join(' '));
     }
   }
@@ -247,6 +252,17 @@ function constructorFixture(change=()=>{},applicability){
     diagnose:()=>diagnoseSourceTargetNativeAuthority(reader(),preimage,binding),
     preimage,binding,files,byBlob,membership,reader,state,put};
 }
+test('fixture reader permits only the exact no-lazy-fetch commit probe',()=>{
+  const reader=constructorFixture().reader(),commitProbe=[version+'^{commit}'];
+  assert.equal(reader.git('--no-lazy-fetch','cat-file','-e',...commitProbe).length,0);
+  for(const args of [
+    ['--lazy-fetch','cat-file','-e',...commitProbe],
+    ['--no-lazy-fetch','--lazy-fetch','cat-file','-e',...commitProbe],
+    ['--no-lazy-fetch','--no-lazy-fetch','cat-file','-e',...commitProbe],
+    ['--no-lazy-fetch','cat-file','-s',blob(Buffer.from('fixture'))],
+    ['--no-lazy-fetch','ls-tree','-z',version,'--','owners.json'],
+  ])assert.throws(()=>reader.git(...args),/Unexpected fixture Git request/);
+});
 function directTarget(state,{membership=true,overlap=false}={}){
   const geometry=state.originals[2].geometry;
   state.targets=[{id:c,pixelIndex:2,source_family:family,base_geometry:geometry,coverage_classes:['mapped_land_support'],territorial_exclusions:[]}];
