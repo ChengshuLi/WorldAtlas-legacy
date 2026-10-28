@@ -231,7 +231,8 @@ function constructorFixture(change=()=>{},applicability){
       const command=args[0]==='--no-lazy-fetch'?args.slice(1):args;
       const prefixed=args[0]==='--no-lazy-fetch';
       if(args.includes('--lazy-fetch')||command.includes('--no-lazy-fetch')||
-        (prefixed&&!(command[0]==='cat-file'&&command[1]==='-e'&&command.length===3)))
+        (prefixed&&!(command[0]==='cat-file'&&command[1]==='-e'&&command.length===3&&
+          command[2]===version+'^{commit}')))
         throw Error('Unexpected fixture Git request: '+args.join(' '));
       if(command[0]==='ls-tree'){
         const name=command.at(-1),entry=command[2]===version?files.get(name):aliases.get(command[2]+':'+name);assert.ok(entry,name);
@@ -257,6 +258,7 @@ test('fixture reader permits only the exact no-lazy-fetch commit probe',()=>{
   assert.equal(reader.git('--no-lazy-fetch','cat-file','-e',...commitProbe).length,0);
   for(const args of [
     ['--lazy-fetch','cat-file','-e',...commitProbe],
+    ['--no-lazy-fetch','cat-file','-e','different-commit^{commit}'],
     ['--no-lazy-fetch','--lazy-fetch','cat-file','-e',...commitProbe],
     ['--no-lazy-fetch','--no-lazy-fetch','cat-file','-e',...commitProbe],
     ['--no-lazy-fetch','cat-file','-s',blob(Buffer.from('fixture'))],
