@@ -20,6 +20,8 @@ The keeper manifest must bind the same target and list every ignored workspace f
 
 For the one TLS slot on branch `geography/tls-original-repair-20261028-finalize021`, if an ordinary release has already removed the Git worktree admin directory but failed to remove the checkout directory, do not run `worktree repair`, prune, force-remove, or recreate Git metadata. The owner may use `inspect-partial-removal` only when its exact ready slot, dangling `.git` link, absent admin directory, missing worktree-list entry, branch and owner recovery ref all match. The registered slot's `head` is its allocation start head; the preserved branch and owner recovery ref bind the current candidate head. The inventory, independent review and audit receipts retain both values separately. The helper is intentionally limited to that exact work branch and cannot reconcile other packages or review slots. It emits a finite byte inventory of the complete leftover directory, including modes, directory entries and file SHA-256 values. Have a distinct reviewer inspect that inventory and the exact target binding; record a `PASS` receipt with operation `partial-removal-review`, the reviewer worker ID, owner/slot/path/branch, allocation start head, current candidate HEAD, Git admin path, preserved ref, entry count, byte total and inventory SHA-256, then seal it with the same canonical JSON SHA-256 used by the helper's audit receipts. `reconcile-partial-removal` requires that review, the exact owner's existing capability file, no managed dependents, and proof of no open readers. It atomically moves the whole directory under the allocator's `retained-partial-removals` area, verifies the moved tree, keeps the candidate branch and recovery ref, then removes only the stale allocator entry and matching capability file. It never deletes the leftover evidence or repairs Git metadata. Pending receipts are resumable only when the exact preserved tree and both head bindings still match; ambiguous states fail closed.
 
+If the exact TLS owner task has ended and cannot perform this guarded operation, an independently authorized coordinator may use the separate `inspect-operator-partial-removal` and `reconcile-operator-partial-removal` actions. This route is restricted to the same exact TLS work branch and fixed authorization reference `team2-tls-finalize021-orphaned-owner`; it never reads, prints or uses the owner's capability. `--operator` must equal the current coordinator `CODEX_THREAD_ID`, and a different reviewer must seal `partial-removal-operator-review` over the full inventory, allocation-start and candidate heads, dangling Git admin path, preserved recovery ref, target binding and authorization reference. The route rechecks exact registry/path/branch/head/ref, ancestry, no registered worktree or managed dependent, a fresh finite inventory and no open readers immediately before moving the entire leftover directory. It keeps the candidate branch and owner recovery ref, removes only the stale registry entry, and leaves the owner capability file untouched. Its sealed audit records operator and reviewer identities and permits one successful reconciliation for that owner slot. The operator must verify user authorization and independent-review provenance; receipt digests do not authenticate either.
+
 ```sh
 node scripts/local-workspace.mjs inspect-partial-removal --repo "$TASK_REPO" --worker "$CODEX_THREAD_ID" \
   --slot work --expected-path /absolute/registered/slot --expected-branch exact/branch --expected-head EXACT40HEX \
@@ -28,6 +30,19 @@ node scripts/local-workspace.mjs reconcile-partial-removal --repo "$TASK_REPO" -
   --slot work --capability-file /absolute/exact/capability.json --expected-path /absolute/registered/slot \
   --expected-branch exact/branch --expected-head EXACT40HEX --inventory-manifest /absolute/owner-only/partial-inventory.json \
   --review-receipt /absolute/owner-only/independent-review.json
+```
+
+```sh
+node scripts/local-workspace.mjs inspect-operator-partial-removal --repo "$TASK_REPO" --operator "$CODEX_THREAD_ID" \
+  --authorization-ref team2-tls-finalize021-orphaned-owner --worker EXACT_OWNER_ID --slot work \
+  --expected-path /absolute/registered/slot --expected-branch geography/tls-original-repair-20261028-finalize021 \
+  --expected-head EXACT40HEX --expected-preserved-ref refs/worldatlas-local-recovery/EXACT64HEX \
+  > /absolute/operator-only/partial-inventory.json
+node scripts/local-workspace.mjs reconcile-operator-partial-removal --repo "$TASK_REPO" --operator "$CODEX_THREAD_ID" \
+  --authorization-ref team2-tls-finalize021-orphaned-owner --worker EXACT_OWNER_ID --slot work \
+  --expected-path /absolute/registered/slot --expected-branch geography/tls-original-repair-20261028-finalize021 \
+  --expected-head EXACT40HEX --inventory-manifest /absolute/operator-only/partial-inventory.json \
+  --review-receipt /absolute/operator-only/independent-review.json
 ```
 
 Preserve the primary checkout and shared Git store. Do not force-reset, clean, prune or delete shared content to solve a stale checkout, disk, or object problem. Remove a generated duplicate only after comparing its path, mode and bytes against its protected source and confirming no unique evidence depends on it. Release a completed slot only through the helper with its exact owner capability.
