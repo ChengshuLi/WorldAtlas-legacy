@@ -1,0 +1,147 @@
+{
+  "kind": "btn-held-199-source-free-reconciliation-v1",
+  "scope": {
+    "original_total": 256,
+    "previous_candidate": 36,
+    "this_screened_subcohort": 21,
+    "held_after_screen": 199,
+    "partition": "36 + 21 + 199 = 256",
+    "status": "research disposition only; no hold release, selection, credit, legal clearance, or scientific qualification"
+  },
+  "held_counts_by_original_label": {
+    "BTN-01": 21,
+    "BTN-02": 0,
+    "BTN-03": 0,
+    "BTN-04": 60,
+    "BTN-05": 0,
+    "BTN-06": 51,
+    "BTN-07": 0,
+    "BTN-08": 25,
+    "BTN-09": 3,
+    "BTN-10": 1,
+    "BTN-11": 29,
+    "BTN-12": 1,
+    "BTN-13": 0,
+    "BTN-14": 3,
+    "BTN-15": 0,
+    "BTN-16": 1,
+    "BTN-17": 0,
+    "BTN-18": 2,
+    "BTN-19": 2
+  },
+  "screen_supported_counts_by_original_label": {
+    "BTN-01": 0,
+    "BTN-02": 1,
+    "BTN-03": 4,
+    "BTN-04": 0,
+    "BTN-05": 1,
+    "BTN-06": 0,
+    "BTN-07": 4,
+    "BTN-08": 0,
+    "BTN-09": 0,
+    "BTN-10": 0,
+    "BTN-11": 0,
+    "BTN-12": 0,
+    "BTN-13": 9,
+    "BTN-14": 0,
+    "BTN-15": 1,
+    "BTN-16": 0,
+    "BTN-17": 1,
+    "BTN-18": 0,
+    "BTN-19": 0
+  },
+  "diagnostic": {
+    "requested": 220,
+    "supported_screen": 21,
+    "held": 199,
+    "first_failure": "unique-source-target-coverage",
+    "physical_witness_rows": 0,
+    "interpretation": "zero witness rows mean no witnesses were emitted; they are not a no-contact finding or clearance"
+  },
+  "source_role_crosswalk_review": {
+    "labels": 19,
+    "identity_result": "reviewed crosswalk matched each label's source_index to its recorded owner and exact BTN family shapeID/ordinal",
+    "limit": "identity only; no foreign contact, applicability, or legal territorial conclusion follows"
+  },
+  "source_scope": {
+    "complete_competitor_families": [
+      {
+        "family": "gb:CHN:ADM1",
+        "features": 34
+      },
+      {
+        "family": "gb:IND:ADM1",
+        "features": 36
+      },
+      {
+        "family": "gb:IND:ADM3",
+        "features": 6822
+      },
+      {
+        "family": "gb:BTN:ADM1",
+        "features": 20
+      }
+    ],
+    "negative_comparison_families": [
+      "gb:CHN:ADM1",
+      "gb:IND:ADM1",
+      "gb:IND:ADM3"
+    ],
+    "limitation": "IND ADM3 catalogue advertises 6,836 while retained payload contains 6,822; retained 447 contact incidences reference only the retained 6,822. The 14 difference is metadata coverage, not a held-row no-hit or a quota."
+  },
+  "immutable_inputs": [
+    {
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/supported-inputs-current-main-a033-001/held-original.json",
+      "commit": "a38e83ce0e27eb4bee5bb440dd6512d0c406cddf",
+      "blob": "617cb7a0ddf3ad505f3ce2b4e774380586488159",
+      "bytes": 8248,
+      "sha256": "c9f8c6fefc1620e2a5202f5dcd856eead64c6132220a6f702e6f100a0e6fda33"
+    },
+    {
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/native-diagnostic-held-220-001/native-diagnostic.json",
+      "commit": "a38e83ce0e27eb4bee5bb440dd6512d0c406cddf",
+      "blob": "8712c1a15aa75ab8dc954fc95da612d763969d02",
+      "bytes": 275230,
+      "sha256": "e38e0b7414f36d099991ad20f7d724277478a3aeedba87fa3e5aa7afa2fffb65"
+    },
+    {
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/source-evidence-held-220-002/source-evidence.json",
+      "commit": "a38e83ce0e27eb4bee5bb440dd6512d0c406cddf",
+      "blob": "cead112e71c8d9172b982b4dfb967dd73c682b07",
+      "bytes": 39246,
+      "sha256": "d89eea480b516208a540cefb52b0fb7ce5c33877caa8333742bde7cf094cbf88"
+    },
+    {
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/source-evidence-held-220-002/territorial-exclusion-provenance.json",
+      "commit": "a38e83ce0e27eb4bee5bb440dd6512d0c406cddf",
+      "blob": "2a43ba87ccae45856ecd8d1144f425795508cc6e",
+      "bytes": 2303349,
+      "sha256": "a618852baf99a8d49a8304b96bb651ae67c0a94c37e6550fa1f465e7fe2e4765"
+    },
+    {
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/native-diagnostic-held-220-20261028/proposed-native-patch-held-220.json",
+      "commit": "a38e83ce0e27eb4bee5bb440dd6512d0c406cddf",
+      "blob": "160d16061e987a5e5b245975a420e503c37f26c6",
+      "bytes": 14007,
+      "sha256": "eafe893eebd936aab98321b6105bb2285337cb6d129cc332c1e17fef9988a730"
+    }
+  ],
+  "physical_and_source_predicates": {
+    "physical_input": {
+      "commit": "ebc18bbca6280491fb9485445ff5a60b516e9f5d",
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/physical-stage-inputs-full-9.json",
+      "blob": "8e1c9c0eef73567f05319efada70f2c7fe43d8af",
+      "bytes": 89368,
+      "sha256": "81ed11c36c6077d554167248420f69d7131dadc8d21a08b34b5d5ebb51b69eb1"
+    },
+    "physical_evidence": {
+      "commit": "af6230b014eaf647f7c811fdf4609cea8b3ad7fc",
+      "path": "coordination/engineering/btn-36-source-role-prep-20261026/physical-evidence-aggregate.json",
+      "blob": "ca3ef1e73946ec080edf0b06ce767929d0099ab4",
+      "bytes": 67926,
+      "sha256": "a2ea7b237772256b614aa58ba03688edd5b7cb710b0292c93c33f5958247749b"
+    },
+    "result_scope": "Nine whole-target physical relations are context only; the 220-key native diagnostic emitted zero physical-witness rows, and no per-key physical classification is established by those aggregate rows.",
+    "source_roles": "The reviewed 19-label identity crosswalk links each source_index to its recorded owner and exact gb:BTN:ADM1 shapeID/ordinal. This is source-member identity only; it does not establish territorial applicability, contact, or legal status."
+  }
+}
