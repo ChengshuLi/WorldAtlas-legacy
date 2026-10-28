@@ -156,6 +156,7 @@ function constructorFixture(change=()=>{}){
   class FixtureReader extends ImmutableReader{
     async *stream(name,options){yield this.read(name,options);}
     git(...args){
+      if(args[0]==='--no-lazy-fetch')args=args.slice(1);
       if(args[0]==='ls-tree'){
         const name=args.at(-1),at=args[2],entry=(at===originCommit?originFiles:files).get(name);
         reads.push({commit:at,path:name});if(!entry)return Buffer.alloc(0);

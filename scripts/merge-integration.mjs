@@ -252,6 +252,9 @@ export function reviewedTestPlan(request, {base, head, entries, files, definitio
     ...['test/neon-forward-migrations.test.mjs', 'test/compact-membership-profile.test.mjs', 'test/merge-integration.test.mjs'].flatMap(consumer =>
       ['coordination/publication/cloudflare-history.json', 'data/observation-registry-history/base-v1.json',
         'data/research-geography-gate.json', 'data/hosted-type-catalog.json'].map(operand => [consumer, operand])),
+    ...['AGENTS.md', 'README.md', 'docs/DEVELOPMENT.md', 'docs/GEOGRAPHY.md', 'docs/HISTORY.md',
+      'docs/DATA_ARCHITECTURE.md', 'docs/VALIDATION.md', 'docs/OPERATIONS.md'].map(operand =>
+      ['test/integration-proof.test.mjs', operand]),
     ...['data/observation-registry-history/base-v1.json', 'data/research-geography-gate.json',
       'data/hosted-type-catalog.json'].map(operand => ['test/settlement-population-import.test.mjs', operand]),
     ...['test/neon-forward-migrations.test.mjs', 'test/settlement-population-import.test.mjs',

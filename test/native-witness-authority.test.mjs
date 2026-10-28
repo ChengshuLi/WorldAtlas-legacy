@@ -126,6 +126,7 @@ function constructorFixture(change=()=>{},{changeAdoption=()=>{},forgeAdoption}=
   const evidence=put('source-evidence.json',evidenceBody);
   class FixtureReader extends ImmutableReader{
     git(...args){
+      if(args[0]==='--no-lazy-fetch')args=args.slice(1);
       if(args[0]==='ls-tree'){
         const name=args.at(-1),entry=files.get(args[2]+':'+name);assert.ok(entry,name);
         return Buffer.from(`100644 blob ${entry.pin.git_blob_oid}\t${name}\0`);
